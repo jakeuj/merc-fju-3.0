@@ -1,0 +1,31 @@
+Vnum            30356
+Name            zhang wen~
+ShortDesc       張溫~
+LongDesc        張溫(zhang wen)
+~
+Description
+字惠愁﹐吳國中郎將。出任吳蜀同盟的答
+禮使者﹐與鄧艾一起遠赴蜀國﹐成就吳蜀
+同盟之大業。對諸葛亮之政治大家讚美﹐
+惹的孫權不快﹐被幽閉。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

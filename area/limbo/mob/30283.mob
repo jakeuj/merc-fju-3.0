@@ -1,0 +1,31 @@
+Vnum            30283
+Name            zhu ge liang~
+ShortDesc       諸葛亮~
+LongDesc        諸葛亮(zhu ge liang)
+~
+Description
+字孔明﹐號臥龍先生﹐蜀漢丞相。劉備三
+顧茅盧請他出仕後﹐他出計獻策﹐使無立
+身之地的劉備能建立蜀漢。劉備死後﹐繼
+承遺志﹐為扶漢室鞠躬盡瘁﹐死而後已。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

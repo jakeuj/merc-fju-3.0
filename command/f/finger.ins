@@ -1,0 +1,33 @@
+Name            finger~
+Cname           查詢遠端連線~
+Function        do_finger~
+Position        POS_DEAD
+Level           0
+Log             LOG_NORMAL
+Exact           NO
+Argument        YES
+Wizlog          NO
+Jail            NO
+CanLock         YES
+Dead            YES
+Order           NO
+Lost            YES
+Lock            NO
+Limit           NO
+Help
+語法﹕finger <使用者名稱>
+      finger @<使用者名稱>                    ( 神族指令 )
+
+    這個指令可以顯示出玩家遠端簽入的詳細資料。與 Unix 中的 finger
+是大同小異。不過這個指令因為可能造成系統的延遲﹐所以交付與子行程
+查詢﹐也就是說查詢的結果並不會立刻顯示在你的終端機中﹐可能是一部
+份地一部份顯現出來﹐這當查詢端距離很遠﹐或是兩方的 Name Server
+不佳時更嚴重。所以這意味著必須從工作站電腦上來的玩家才可以查詢﹐
+事實上﹐從個人電腦連線過來的玩家並不會有簽入名稱。也無法完成查詢。
+
+    要成功地完成查詢﹐必須依賴查詢端有開放此服務才能進行﹐其通訊
+埠為 79。
+
+相關語法﹕user who
+~
+End

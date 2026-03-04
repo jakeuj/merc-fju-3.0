@@ -1,0 +1,12 @@
+Higher          10
+Lower           1
+Position        POS_STANDING
+Function        ~
+Description
+·í§Aªº¤Hª«¤Q¤À²Ö®É¡M«ç»ò¿ì©O¡S·íµM¬OºÎÄ±([1;32msleep[0m)©Î¬O¥ð®§([1;32mrest[0m)Åo¡C¦ý¬O¬JµM
+ºÎµÛ¤F¡M´N¤]Å¥¤£¨ì§O¤Hªº°Ê§@¤F¡M³o®É§A¥i¥H¦Ò¼{¥ð®§([1;32mrest[0m)¡M·íµM¦³¤@§Q¥²¦³
+¤@¹ú¡M¥ð®§¸Éªº¼Æ­È¤ñ¸û§C¡C
+
+½Ð¬d¸ß¡Rsleep¡Brest¡Bstand
+~
+End

@@ -1,0 +1,14 @@
+Vnum            376
+Name            weaken book~
+ShortDesc       µê®z³N¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_WEAKEN
+Value2          5
+Weight          3
+Cost            10000
+End

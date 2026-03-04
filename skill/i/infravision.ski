@@ -1,0 +1,39 @@
+Name            infravision~
+Cname           夜視術~
+Slot            SLOT_INFRAVISION
+Msgoff          你無法再看到黑暗中的東西﹗~
+Function        cast_infravision~
+Position        POS_STANDING
+Type            TAR_CHAR_DEFENSIVE
+CostType        COST_MANA
+Cost            20
+Wait            18
+Exp             800
+Associate       SLOT_TELEPORT
+Degree          150
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_LIGHT
+AntiRating      RATING_DARKNESS
+Innate          NO
+Ply             80
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    1  45
+Limit           CLASS_DOCTOR     1  65
+Limit           CLASS_BARD       1  90
+
+#Affect
+Type            SLOT_INFRAVISION
+Location        AFF_NONE
+End
+
+Help            ~
+End

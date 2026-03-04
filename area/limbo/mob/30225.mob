@@ -1,0 +1,31 @@
+Vnum            30225
+Name            hu che~
+ShortDesc       胡車兒~
+LongDesc        胡車兒(hu che)
+~
+Description
+張繡部下勇士。出身異民族﹐張繡軍第一
+豪傑。據說可以背負五百斤重物﹐一日行
+七百里。戰曹操時﹐獻計並親自實施﹐把
+猛將典韋的鐵戟偷來。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

@@ -1,0 +1,111 @@
+Name            seven mind~
+Cname           七奇靈馭步~
+Slot            SLOT_SEVEN_MIND
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_DODGE
+Costtype        COST_MOVE
+Cost            20
+Wait            1
+Exp             5
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            NO
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help            ~
+
+#Damage
+Description
+$n使出『$W蛇行訣$Z』身行一晃﹐如蛇行般輕靈﹐滑過$N的身旁﹐躲過了$N的攻擊。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n使出『$G鶴沖天$Z』身形如鶴﹐飛身沖上雲端﹐輕易的閃過$N的攻擊。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n施展『$P鷹凌霄$Z』$n好比飛鷹﹐繞著$N身子左盤又旋﹐兜圈急轉﹐趁隙發招。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n施展『$Y鳳蝶舞$Z』把$N的攻勢﹐借勁一送﹐結果$N的攻勢如沈入大海一般。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n施展『$B龍吟行$Z』氣運單田﹐發出龍吟氣功護體﹐把$N的攻勢﹐輕易瓦解。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n施展『$R麟蹤火$Z』只見$n全身如火焚身般﹐如火麒麟附體﹐大顯神威﹐$N的攻勢完
+全無用。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n施展『$S虎躍衝$Z』$n有如猛虎一般兇猛﹐動作靈活﹐結果把$N的攻勢﹐視若無睹。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

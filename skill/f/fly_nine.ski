@@ -1,0 +1,155 @@
+Name            fly nine~
+Cname           飛流九刀~
+Slot            SLOT_FLY_NINE
+Msgoff          ~
+Check           check_blade_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            30
+Wait            5
+Exp             100
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_BLADE
+Rating          RATING_SKILL
+Innate          NO
+Ply             20
+Qutoient        1
+Adeptation      0
+Limit           CLASS_GENERAL    1  90
+Limit           CLASS_BRAVO      1  60
+Help            ~
+
+#Damage
+Description
+$G【$W飛流九刀$G】$Z第一式$P《飛千流》
+$B$n電擊般格掠向前﹐千百條絢燦明亮的$Y刀芒$B﹐
+參差不齊的在同一時間﹐像炸開了一朵$W光球$B般朝四週飛射掠舞﹐
+這顯然並不單純是些光芒﹐光芒的後面﹐還隱鐵著一片魔鬼利會般的刃。
+還沒有來得及喘息的$P$N$B目光一眩﹐已覺得滿天體為金流佈滿。$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G【$W飛流九刀$G】$Z第二式$G《血染刃》
+$W$n$B原地翻身﹐手腕一抓﹐$O$B已有如怒龍出困般﹐
+挾著強猛的功力筆直射出﹐倘的右臂同時微彎條揮﹐
+$O$P「嗡」$B的一顫﹐一把金刀頓時幻映出一個組成輪形的$W十三道光芒$B﹐
+閃射伸縮著暴迎而去﹗$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G【$W飛流九刀$G】$Z第三式$B《倒奪魂》
+$W$n$B雙目中煞氣頓現﹐他在$O$B的強烈抖動中﹐上身驀地偏斜﹐
+$O$B在斜身之際揚衝而起﹐卻在刀首指天的剎那﹐猝然自左臂之下反穿而出﹐
+這出刀之勁﹐又快又狠﹐迅捷得似一下子追戮上千百年以前流去的時光﹗$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G【$W飛流九刀$G】$Z第四式$R《網凝紅》
+$B刀刃的飛戮隱映於不規則的$Y金色網芒$B裡﹐$O$B已組合成一片層層重重的寒芒刀山﹐
+毫無空檔的包捲土來﹐有隱隱的風雷之鑿﹐空氣也在激蕩呼號﹗
+驀地$P$N$B尖號一聲打著轉子摔了出去﹐滿空的鮮血噴洒如雨﹗$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G【$W飛流九刀$G】$Z第五式$y《塵歸土》
+$W$n$O$B如電﹐捲起波波層層的芒彩力迎$P$N$Z$B﹐刀芒伸縮不定的協同挾拿﹐
+空氣中頓時充滿了刃鋒割掠的銳嘯﹐$O$B所帶出的勁力也似是陡然變得沉重了﹐
+頂端的$O$B鋒刃卻那麼快捷的切向敵人頸項﹗$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G【$W飛流九刀$G】$Z第六式$S《星落寂》
+$Z$O$B伸縮翻飛﹐快斬狠截﹐神鬼莫測的瞬息間變幻萬千﹐在眨眼裡衝舞俯捲﹐
+刀影飛閃﹐像$W銀河$B的$S群星崩落$B﹐$O$B密集而狂暴的自四面八方罩下﹗
+在旋奔之間﹐$W$N$B已如星轉般飛旋而去﹗$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G【$W飛流九刀$G】$Z第七式$G《七慾滅》
+$Z$O$B的芒彩奇幻的縱跳飛舞著﹐一剎東﹐一剎西﹐忽而右﹐忽而左﹐
+閃動得有如一個無形的﹐古怪的$Y精光$B﹐$n的出手攻拒卻又是那般惊人的準確﹐
+幾乎每在招展式現之時都已將$W$N$B的攻擊與防衛的部位拿捏死了﹗$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G【$W飛流九刀$G】$Z第八式$b《九泉水》
+$B$n右臂倏翻猝揚﹐只見$O$B金芒溜溜﹐縱橫交織﹐卻又像極西的電閃﹐
+一亮又熄﹐彷彿$n方才出手就已收式﹐$N似是不敢相信自己的眼睛﹐
+寒光突閃﹐勁風中帶著$G「嗆郎郎」$B的環震之聲抖出三個圓弧﹐
+$n的$O$B己$P「削」$B聲尖嘯﹐在一片金芒中砍向$N左脅﹗$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G【$W飛流九刀$G】$Z第九式$Y《金輪測》
+$B只見天地之間$W金芒閃爍$B﹐有如千萬個$Y金球$B一起炸裂﹐
+又像空中的$R烈陽$B突然移近了百十倍﹐豪光萬道﹐火焰遍野﹐而風號如嘯﹐
+其聲怪異淒怖得足能撕裂人們的腑臟﹐咻咻的銳氣排空四溢﹐幾乎成為有形的$S流芒。
+$W這便是$S 【飛流九刀】$W法的精華所聚﹐
+一代武中之霸$P$n$W的終生心血所在亦大半在此$Z。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

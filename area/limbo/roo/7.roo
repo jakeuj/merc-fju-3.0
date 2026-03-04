@@ -1,0 +1,14 @@
+Vnum            7
+Name            夢境~
+Description
+四周都是白茫茫的一片﹐你感覺不到自己的存在﹐伸手雖然看的道手
+指﹐不過卻連咬下去都感覺不到痛﹐這裡到底是什麼地方啊﹖
+
+~
+SectorType      SECT_INSIDE
+InDoors         Yes
+Safe            Yes
+NoRecall        Yes
+ForeverLight    Yes
+NoWhere         Yes
+End

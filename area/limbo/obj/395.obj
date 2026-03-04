@@ -1,0 +1,14 @@
+Vnum            395
+Name            fire elf book~
+ShortDesc       §ı§ß∫Î∆FØµ”D~
+Description
+~
+Unit            •ª~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_FIRE_ELF
+Value2          5
+Weight          3
+Cost            10000
+End

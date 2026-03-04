@@ -1,0 +1,14 @@
+Vnum            391
+Name            evil king book~
+ShortDesc       ¨¸¬Ó®±¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_EVIL_KING
+Value2          5
+Weight          3
+Cost            10000
+End

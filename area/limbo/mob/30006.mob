@@ -1,0 +1,31 @@
+Vnum            30006
+Name            guo si~
+ShortDesc       郭汜~
+LongDesc        郭汜(guo si)
+~
+Description
+董卓部將。董卓被殺後﹐聽從賈詡建議﹐
+率兵急襲長安﹐殺死王允等人。並與李榷
+共掌朝政。後來淪為山賊﹐被部下伍習所
+殺。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

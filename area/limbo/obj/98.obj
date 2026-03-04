@@ -1,0 +1,15 @@
+Vnum            98
+Name            white gloves~
+ShortDesc       白愁手套~
+Description
+上好白綢混著雪蠶絲製成的手套(gloves)﹐可抵擋一般兵器的攻擊。~
+Unit            雙~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_HANDS
+Takeable        Yes
+Level           20
+Value           -1
+Weight          10
+Cost            200
+Exp             10
+End

@@ -1,0 +1,89 @@
+Name            purple~
+Cname           紫府迷蹤步~
+Slot            SLOT_PURPLE
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_DODGE
+Costtype        COST_MOVE
+Cost            15
+Wait            10
+Exp             15
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            NO
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help            ~
+#Damage
+Description
+$n展開$P『紫府迷蹤步』$Z中的$S『迷途知返』$Z﹐躡空踏虛般翻越至$N的身後﹐閃開
+暴雨般的攻勢。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出$P『紫府迷蹤步』$Z中的$S『迷離忽況』$Z﹐腳下步法一盤一旋﹐不退反進﹐倏
+然往右側邁進三步﹐即已斜閃過天羅般的招式。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出$P『紫府迷蹤步』$Z中的$S『迷蹤幻影』$Z﹐步法連踏﹐忽幻化成七具幻影﹐輕
+輕鬆鬆地避開$N的招式。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n展開$P『紫府迷蹤步』$Z中的$S『迷妄移霏』$Z﹐忽左忽右﹐身形有如一片枯葉﹐輕
+輕飄開了三尺。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出$P『紫府迷蹤步』$Z中最深奧的$S『迷天螢迴』$Z﹐身形有如電閃雲飄﹐捷同鬼
+魅般的從$N旁閃身而過。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

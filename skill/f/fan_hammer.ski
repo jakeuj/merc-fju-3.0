@@ -1,0 +1,111 @@
+Name            fan hammer~
+Cname           樊氏錘法~
+Slot            SLOT_FAN_HAMMER
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            1
+Exp             5
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_HAMMER
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_FIGHTER    1  55
+Limit           CLASS_GENERAL    1  90
+Limit           CLASS_BRAVO      1  80
+Help            ~
+#Damage
+Description
+沈重的錘在$n手中有如羽毛般輕易地被舞動著﹐$n順風使出$S「鴻毛」$Z﹐對$N加以重擊。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n突然蹲下﹐將手中的$O往$N的$l掃去﹐$N猝不及防﹐被$n的$Y「地龍」$Z打倒在地。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n一個迴旋躲過了$N的攻擊的同時﹐雙手緊握武器﹐身形順勢急轉﹐施展$S「旋風」$Z﹐
+化作一股充滿死亡氣息的旋風向$N席捲而去﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出$B「流星」$Z﹐將手中的$O脫手擲出﹐$N閃避不及正中胸口﹐
+瞬間﹐$n聽見了$N的$l發出清脆的碎裂聲﹗﹗$n用手往後一招﹐將$O以內勁收回。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n看穿$N護甲的弱點﹐便發出連續而準確的重擊﹐這招$R「破甲」$Z使$N噴出幾口鮮血﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n將全身勁力集中在武器內﹐然後重重的向地面擊下。$N正在莫名其妙時﹐
+腳下的大地突然碎裂﹐無數的土石激射而出貫穿了$N的身體﹐血花四處飛濺﹐
+正是$y「大地之怒」$Z﹗﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n大吼一聲：「$P流星風暴$Z﹗」﹐手中的$O不斷的擲出、收回﹐彷彿夜空中的流星雨般
+接連不斷的向飛去﹗﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n集中意念﹐高舉著$O對$N當頭砸下﹐這一擊$Y「洪荒」$Z已到達反璞歸真的境界﹐
+$N避無可避﹗﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End
+

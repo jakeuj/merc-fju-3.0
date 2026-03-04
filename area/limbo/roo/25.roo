@@ -1,0 +1,14 @@
+Vnum            25
+Name            酆都城門~
+Description
+你現在來到一座黑色城樓之前﹐城樓上刻著三個大字: 酆都城。往
+南不遠處有一座橋﹐橋上鬼影幢幢﹐但是卻聽不到半點聲音﹐往北
+走進城樓只見一片黑漆漆的﹐只有少許暗紅色的火光若隱若現地閃
+爍著。
+
+~
+SectorType      SECT_INSIDE
+Safe            Yes
+NoRecall        Yes
+ForeverLight    Yes
+End

@@ -1,0 +1,31 @@
+Vnum            30112
+Name            huang zu~
+ShortDesc       黃祖~
+LongDesc        黃祖(huang zu)
+~
+Description
+劉表部將﹐守備江夏。酒席上殺了禰衡。
+不重用水盜出身的甘寧﹐致使甘寧投降東
+吳。後來遭到吳軍進攻﹐被已是孫權部下
+的甘寧殺死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

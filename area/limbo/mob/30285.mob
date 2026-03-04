@@ -1,0 +1,31 @@
+Vnum            30285
+Name            lu xun~
+ShortDesc       陸遜~
+LongDesc        陸遜(lu xun)
+~
+Description
+字伯言﹐孫權的軍師。用兵謀略不在前任
+軍師周瑜、魯肅、呂蒙之下。獻計奪取荊
+州﹐擊敗關羽﹐彝陵之戰任吳軍統帥﹐擊
+敗了來勢洶洶的劉備。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

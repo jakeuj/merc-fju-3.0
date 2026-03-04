@@ -1,0 +1,31 @@
+Vnum            30282
+Name            tan xiong~
+ShortDesc       譚雄~
+LongDesc        譚雄(tan xiong)
+~
+Description
+吳將。與蜀軍交戰時﹐為了幫助己方的李
+異﹐放冷箭射倒蜀將張苞的坐騎。但第二
+天就被關興生擒交給張苞﹐被張苞殺死後
+祭馬。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

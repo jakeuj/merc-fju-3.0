@@ -1,0 +1,47 @@
+Name            prompt~
+Cname           更改提示列~
+Function        do_prompt~
+Position        POS_DEAD
+Level           0
+Log             LOG_NORMAL
+Exact           NO
+Argument        NO
+Wizlog          NO
+Jail            YES
+CanLock         YES
+Dead            YES
+Order           NO
+Lost            YES
+Lock            NO
+Limit           NO
+Help
+語法﹕prompt
+語法﹕prompt all
+語法﹕prompt <^xxx>
+
+PROMPT 是用來開啟或關閉提示列。
+PROMPT ALL 讓你擁有基本標準的提示列。
+PROMPT <^xxx> 利用各種變數 ^xxx 來讓你自行設定你的提示列。
+
+^hps ﹕ 你的生命值( 以短長條狀顯示 )  ^hpl ﹕ 你的生命值(以長長條狀顯示 )
+^hp1 ﹕ 你現在的生命值( 以數字顯示 )  ^hp2 ﹕ 你最大的生命值( 以數字顯示 )
+^mps ﹕ 你的法力值( 以短長條狀顯示 )  ^mpl ﹕ 你的法力值(以長長條狀顯示 )
+^mp1 ﹕ 你現在的法力值( 以數字顯示 )  ^mp2 ﹕ 你最大的法力值( 以數字顯示 )
+^mvs ﹕ 你的體力值( 以短長條狀顯示 )  ^mvl ﹕ 你的體力值( 以長長條狀顯示 )
+^mv1 ﹕ 你現在的體力值( 以數字顯示 )  ^mv2 ﹕ 你最大的體力值( 以數字顯示 )
+^lvl ﹕ 你的等級                      ^age ﹕ 你的年齡
+^str ﹕ 你的力量                      ^int ﹕ 你的智力
+^wis ﹕ 你的學識                      ^dex ﹕ 你的敏捷
+^con ﹕ 你的體格                      ^thi ﹕ 你可攜帶的物品樣數
+^wei ﹕ 你所能承受的重量              ^exp ﹕ 你所擁有的經驗值
+^exl ﹕ 你到下次升級所需的經驗值      ^gol ﹕ 你所擁有的金錢數
+^ali ﹕ 你的陣營                      ^roo ﹕ 你所在的房間名稱
+^hit ﹕ 你的命中率                    ^arm ﹕ 你的防護力
+^dam ﹕ 你的攻擊傷害力                ^nex ﹕ 換行
+^RRR ﹕ 你所在房間的編號( 神族指令 )  ^zon ﹕ 你所在的區域名稱( 神族指令 )
+
+Example﹕ PROMPT <^hp1hp ^mp1mp ^mv1mv>
+        你的提示列就會是 "<10hp 100m 100mv>"
+
+~
+End

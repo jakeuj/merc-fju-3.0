@@ -1,0 +1,31 @@
+Vnum            30103
+Name            guo tu~
+ShortDesc       郭圖~
+LongDesc        郭圖(guo tu)
+~
+Description
+袁紹的謀臣。  與慎重的沮授對立。官渡
+之戰時持主戰論﹐因為形勢判斷有誤﹐導
+致袁軍大敗。袁紹死後﹐輔佐袁譚﹐抵抗
+曹軍而戰死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

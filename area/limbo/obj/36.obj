@@ -1,0 +1,16 @@
+Vnum            36
+Name            lion blade~
+ShortDesc       獅王戰刀~
+Description
+這是一柄巨大的戰刀(blade)﹐刀身足足有三尺長﹐重逾百斤﹐一般人恐怕難以使得動。~
+Unit            柄~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 4
+Weight          100
+Cost            200
+Exp             10
+End

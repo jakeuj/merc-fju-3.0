@@ -1,0 +1,43 @@
+Name            cast fire~
+Cname           三昧真火~
+Slot            SLOT_CAST_FIRE
+Msgoff          ~
+Check           check_unrigid_attack~
+Function        spell_cast_fire~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MANA
+Cost            35
+Wait            17
+Exp             300
+Associate       SLOT_FIRE_ELF
+Degree          20
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_FIRE
+AntiRating      RATING_WATER
+Innate          NO
+Ply             30
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SHAMAN     1  45
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  80
+
+Help
+三昧真火:
+
+火系法術中極高的威力﹐足以開山破石﹐無堅不催﹐且威力很大﹐有
+可能反噬﹐需要施術者小心的去控制﹐不然會沒有效果。
+這項法術是火系中的進階法術﹐你必須要精通許多的火系法術才有可
+能學的會。
+
+~
+End

@@ -1,0 +1,16 @@
+Vnum            31
+Name            knife~
+ShortDesc       小刀~
+Description
+一把鋒利的小刀(knife)﹐適合近身搏鬥時使用。~
+Unit            把~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 2
+Weight          20
+Cost            200
+Exp             10
+End

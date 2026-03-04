@@ -1,0 +1,31 @@
+Vnum            30241
+Name            liu hua~
+ShortDesc       劉曄~
+LongDesc        劉曄(liu hua)
+~
+Description
+字子陽。受郭嘉舉薦﹐侍奉曹操。在官渡
+之戰時﹐獻投石車圖﹐破了審配土山下射
+之計。效力於曹式三代並多次獻計。任魏
+的太中大夫。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

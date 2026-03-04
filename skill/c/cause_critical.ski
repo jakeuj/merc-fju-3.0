@@ -1,0 +1,33 @@
+Name            cause critical~
+Cname           ·¥«×¶Ë®`~
+Slot            SLOT_CAUSE_CRITICAL
+Msgoff          ~
+Check           check_unrigid_attack~
+Function        cast_cause_critical~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MANA
+Cost            25
+Wait            20
+Exp             300
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_DARKNESS
+AntiRating      RATING_LIGHT
+Innate          NO
+Ply             30
+Qutoient        1
+Adeptation      0
+Limit           CLASS_MAGE       50 95
+Limit           CLASS_SMITH      50 80
+Help            ~
+End

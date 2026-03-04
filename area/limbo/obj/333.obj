@@ -1,0 +1,14 @@
+Vnum            333
+Name            detect evil book~
+ShortDesc       °»´ú¨¸´c¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_DETECT_EVIL
+Value2          5
+Weight          3
+Cost            10000
+End

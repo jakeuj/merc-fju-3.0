@@ -1,0 +1,31 @@
+Vnum            30084
+Name            pei yuan shao~
+ShortDesc       斐元紹~
+LongDesc        斐元紹(pei yuan shao)
+~
+Description
+黃巾賊大將。黃巾之亂被鎮壓後﹐成為山
+賊的首領。在欲奪取關羽的赤兔馬時﹐一
+聽說對方是關羽﹐立即歸順。並將好友周
+倉介紹給了關羽。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

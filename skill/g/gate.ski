@@ -1,0 +1,35 @@
+Name            gate~
+Cname           Å]¬É¤§ªù~
+Slot            SLOT_GATE
+Msgoff          ~
+Function        cast_gate~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_STRING
+CostType        COST_MANA
+Cost            55
+Wait            20
+Exp             900
+Associate       SLOT_EVIL_POWER
+Degree          200
+Affect          AFFECT_NONE
+AffectID        OBJ_GATE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_EVIL
+AntiRating      RATING_SAINT
+Innate          NO
+Ply             90
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SHAMAN     10 50
+Limit           CLASS_MAGE       50 60
+Limit           CLASS_SMITH      50 70
+
+Help            ~
+End

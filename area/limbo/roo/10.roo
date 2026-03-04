@@ -1,0 +1,14 @@
+Vnum            10
+Name            ©`¦ó¾ô~
+Description
+³o¸Ì´N¬OÅý¤H®`©Èªº©`¦ó¾ô¡M¤Z¬O¦ºªº¤H³£¥²¶·¸g¹L³o¸Ì¡C¥i¬O¡M
+¥Í¦ºÃ¯¤W¦n¹³¨S¦³§Aªº¦W¦r­C¡M§A¬O¤£¬O¨Ó¿ù¦a¤è¤F¡M©Î¬O¡Cºâ
+¤F¡M©ñ§A¤@°¨§a¡C»°§Ö¦V¤Ñ¯«­n¦^§Aªº«ÍÅé§a([1;32mcrave[0m)¡C
+
+~
+SectorType      SECT_INSIDE
+Safe            Yes
+NoRecall        Yes
+ForeverLight    Yes
+NoWhere         Yes
+End

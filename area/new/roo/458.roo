@@ -1,0 +1,50 @@
+Vnum            458
+Name            ª««~¨Ï¥Î±Ð¾Ç«Ç~
+Description
+³o¶¡±Ð«Ç¬O±Ð¾É·s¤â­Ì¦p¦óµ½¥Î¥L­Ìªºª««~¡M¨ÓÁA¸Ñ¨Ï¥Îª««~ªº¤èªk.
+¥j¤H»¡:¡y ¤u±ýµ½¨ä¨Æ¡M¥²¥ý§Q¨ä¾¹ ¡z.
+
+³o¸Ì¦³¤@¶ô§i¥ÜµP (sign)¡C·s¤â½ÐÁä¤J look sign.
+
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        457
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        459
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         sign~
+Description
+
+³o¸Ì±Ð§Aª««~¦p¦ó¨Ï¥Î:
+¦b³o¸Ì¡M§Ú­ÌÂ²ºÙ¸Ë³Æ¬° EQ¡M§A¥i¥H¨Ï¥Î equip ³o­Ó«ü¥O¨Ó¬d¬Ý¥Ø«e
+¨­¤W©Ò¸Ë³Æªºª««~¡C¨Ï¥Î inventory ³o­Ó«ü¥O¨Ó¬d¬Ý¨­¤W©Ò±aªºª««~.
+§A¤]¥i¥HÂ²¤Æ equip = eq ; inventory = i ªº«ü¥O.
+¦Ó¨Ï¥Îª««~ªº°Ê§@¦³: get drop give wear wield remove µ¥µ¥.
+
+§A¥i¥HÁä¤J get  <ª««~ÃöÁä¦r>ú¦      ¨Ó¾ß¨ú¦a¤Wªºª««~.
+§A¥i¥HÁä¤J drop <ª««~ÃöÁä¦r>ú       ±N¨­¤Wªºª««~¥á±¼.
+§A¥i¥HÁä¤J give <ª««~ÃöÁä¦r> <¤H¦W> ±N¨­¤Wªºª««~µ¹¤©¬Y¤H.
+§A¥i¥HÁä¤J wear <ª««~ÃöÁä¦r>        ¸Ë³Æ¬Y¼Ëª««~¨ì¨­¤W.
+§A¥i¥HÁä¤J wield <ª««~ÃöÁä¦r>       ¸Ë³Æ¬Y¼Ëª««~¨ì¨­¤W.
+§A¥i¥HÁä¤J remove <ª««~ÃöÁä¦r>      ®³±¼¨­¤W©Ò¸Ë³Æªºª««~.
+<ª««~ÃöÁä¦r> = < all >              ¹ï©Ò¦³ª««~°µ³o¨Ç¨Æ±¡.
+
+~
+
+End
+
+End

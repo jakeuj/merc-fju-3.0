@@ -1,0 +1,256 @@
+* ³o­ÓÀÉ®×¬O¨Ó´y­zÂ§ª«ªº¸ê®ÆÀÉ®×¡M¨C­Ó¸ê®Æ¥H # Gift ¬°¶}ÀY¡M¥H End µ²§À
+*
+* Title    ¥Nªí Á|¿ìªº¦WºÙ
+* Message  ¥Nªí°e¹F®Éµ¹ª±®aªº±Ô­z
+* Date     ¥Nªí°eÂ§ªº®É¶¡¡M¥H°ê¾ä­pºâ¡M10 1 ¥Nªí¤Q¤ë¤@¸¹
+* Days     ¥Nªí¥i¥HÁ|¿ì´X¤Ñ
+* Stamp    ¥Nªí§Ç¸¹¡M°O¿ý¦bª±®aÀÉ®×¸Ì¡M©Ò¥H¤§¶¡¤£¯à­«½Æ
+* Gift     ¥NªíÂ§ª«ªºª««~¸¹½X¡M¤£¯à¨S¦³
+* Sender   ¥Nªí­þ¤@­ÓµêÀÀ¨¤¦â¨Ó°e¹F
+* Gold     ¥Nªí°e¦h¤ÖÂ§ª÷
+* High     ¥Nªí³Ì°ªµ¥¯Åª±®a¥i¥H¦¬¨ì
+* Low      ¥Nªí³Ì§Cµ¥¯Åª±®a¥i¥H¦¬¨ì
+* Duration ¥Nªí¦h¤Ö­Ó¨t²Î¤p®É·|°e¤@¦¸
+*
+* ¤w¸g¥Î¹LªºÂ§ª«§Ç¸¹¦p¤U¡M½Ð¤Å­«½Æ¨Ï¥Î
+* 175 176 177 178 179 123 124 125 126 127 128 129
+
+#Gift
+Title           ºÝ¤È¸`~
+Message
+[1;37m¤@¦~¤@«×ªººÝ¤È¸`¤S¨Ó¤F¡M¤£ª¾¹D§A¬O§_ÁÙ´r§Ö¡S¤T°ê­°Às¥ñªê¯¬§A
+¨Î¸`´r§Ö¡M¨Ã¯¬§A´Á¥½¦Ò¶¶¤ß¦p·N¡M¨Ã¥B°e¤W¤@²Éºê¤lÀ°§A¥´¥´®ð¡T[0m
+~
+Date            6 6
+Days            2
+Stamp           175
+Sender          8
+Gift            110
+Gold            0
+High            120
+Low             20
+Duration        5
+End
+
+#Gift
+Title           ºÝ¤È¸`~
+Message
+[1;34m¿Ë·Rªº«_ÀIªÌ¡M¯¬§A¦b³oºÝ¤È¸`¯à°÷¨Æ¨Æ¶¶¤ß¡M´Á¥½¦Ò¯à¤ß·Q¨Æ¦¨¡M
+³Ì«á°e¤W¤@°ïÀs²´¡MÀ°§A®ø´»¤S¸Ñ´÷¡T[0m
+~
+Date            6 6
+Days            2
+Stamp           176
+Sender          8
+Gift            111
+Gold            0
+High            120
+Low             20
+Duration        5
+End
+
+#Gift
+Title           ºÝ¤È¸`~
+Message
+[1;33m§Ú¿Ë·Rªº­^¶¯«iªÌ¡M¦b¤§«e³o¤@¬q®É¶¡¡M§A¤@©w¦Y¤F¤£¤Ö­WÀY¡M¤~¯àª¦¨ì³o­Ó¦ì¸m
+¡M¤T°ê­°Às¥ñªê»s§@¸s¶XµÛ³o­ÓºÝ¤È¨Î¸`¡M°e§A¤@­Ó¯S®íªºÂ§ª«³á¡T[0m
+~
+Date            6 6
+Days            2
+Stamp           177
+Sender          8
+Gift            112
+Gold            0
+High            120
+Low             100
+Duration        24
+End
+
+#Gift
+Title           ¤¤¬î¸`~
+Message
+[1;33m§Ú¿Ë·Rªº­^¶¯«iªÌ¡M¦b¤§«e³o¤@¬q®É¶¡¡M§A¤@©w¦Y¤F¤£¤Ö­WÀY¡M¤~¯àª¦¨ì³o­Ó¦ì¸m
+¡M¤T°ê­°Às¥ñªê»s§@¸s¶XµÛ³o­Ó¤¤¬î¨Î¸`¡M°e§A¤@­Ó¯S®íªºÂ§ª«³á¡T[0m
+~
+Date            9 24
+Days            2
+Stamp           178
+Sender          9
+Gift            118
+Gold            0
+High            120
+Low             100
+Duration        24
+End
+
+#Gift
+Title           ¤¤¬î¸`~
+Message
+[1;32mÁöµM¸g¾ú¹L¤F 921 ¤j¦a¾_¡A¤£ª¾¹D¦U¦ì±¡ªpÁÙ¦n¶Ü¡H§Æ±æ¤j®a¦U¦ì¨­Åé°·±d¡A
+¸U¨Æ¦p·N¡A¦b¦¹¤¤¬î¨Î¸`¡A¤]¯¬ºÖ§A¤ë¶ê¤H¹Î¶ê¡A¯¬§A¨Æ¨Æ¶¶¤ß¡C[0m
+~
+Date            9 24
+Days            2
+Stamp           179
+Sender          9
+Gift            117
+Gold            0
+High            120
+Low             20
+Duration        5
+End
+
+#Gift
+Title           ¸t½Ï¸`~
+Message
+[1;37m¤@¦~¤@«×ªº¸t½Ï¸`¤S¨Ó¤F¡M¤£ª¾¹D§A¬O§_ÁÙ´r§Ö¡S¤T°ê­°Às¥ñªê¯¬§A
+¨Î¸`´r§Ö¡M¨Ã¯¬§A´Á¥½¦Ò¶¶¤ß¦p·N¡M¨Ã¥B°e¤WÂ§ª«À°§A¥´¥´®ð¡T[0m
+~
+Date            12 24
+Days            2
+Stamp           123
+Sender          19
+Gift            123
+Gold            0
+High            120
+Low             20
+Duration        5
+End
+
+#Gift
+Title           ¸t½Ï¸`~
+Message
+[1;37m¤@¦~¤@«×ªº¸t½Ï¸`¤S¨Ó¤F¡M¤£ª¾¹D§A¬O§_ÁÙ´r§Ö¡S¤T°ê­°Às¥ñªê¯¬§A
+¨Î¸`´r§Ö¡M¨Ã¯¬§A´Á¥½¦Ò¶¶¤ß¦p·N¡M¨Ã¥B°e¤WÂ§ª«À°§A¥´¥´®ð¡T[0m
+~
+Date            12 24
+Days            2
+Stamp           124
+Sender          19
+Gift            124
+Gold            0
+High            120
+Low             30
+Duration        5
+End
+
+#Gift
+Title           ¸t½Ï¸`~
+Message
+[1;37m¤@¦~¤@«×ªº¸t½Ï¸`¤S¨Ó¤F¡M¤£ª¾¹D§A¬O§_ÁÙ´r§Ö¡S¤T°ê­°Às¥ñªê¯¬§A
+¨Î¸`´r§Ö¡M¨Ã¯¬§A´Á¥½¦Ò¶¶¤ß¦p·N¡M¨Ã¥B°e¤WÂ§ª«À°§A¥´¥´®ð¡T[0m
+~
+Date            12 24
+Days            2
+Stamp           125
+Sender          19
+Gift            125
+Gold            0
+High            120
+Low             40
+Duration        5
+End
+
+#Gift
+Title           ¸t½Ï¸`~
+Message
+[1;37m¤@¦~¤@«×ªº¸t½Ï¸`¤S¨Ó¤F¡M¤£ª¾¹D§A¬O§_ÁÙ´r§Ö¡S¤T°ê­°Às¥ñªê¯¬§A
+¨Î¸`´r§Ö¡M¨Ã¯¬§A´Á¥½¦Ò¶¶¤ß¦p·N¡M¨Ã¥B°e¤WÂ§ª«À°§A¥´¥´®ð¡T[0m
+~
+Date            12 24
+Days            2
+Stamp           126
+Sender          19
+Gift            126
+Gold            0
+High            120
+Low             50
+Duration        5
+End
+
+#Gift
+Title           ¸t½Ï¸`~
+Message
+[1;37m¤@¦~¤@«×ªº¸t½Ï¸`¤S¨Ó¤F¡M¤£ª¾¹D§A¬O§_ÁÙ´r§Ö¡S¤T°ê­°Às¥ñªê¯¬§A
+¨Î¸`´r§Ö¡M¨Ã¯¬§A´Á¥½¦Ò¶¶¤ß¦p·N¡M¨Ã¥B°e¤WÂ§ª«À°§A¥´¥´®ð¡T[0m
+~
+Date            12 24
+Days            2
+Stamp           127
+Sender          19
+Gift            127
+Gold            0
+High            120
+Low             60
+Duration        5
+End
+
+#Gift
+Title           ¸t½Ï¸`~
+Message
+[1;37m¤@¦~¤@«×ªº¸t½Ï¸`¤S¨Ó¤F¡M¤£ª¾¹D§A¬O§_ÁÙ´r§Ö¡S¤T°ê­°Às¥ñªê¯¬§A
+¨Î¸`´r§Ö¡M¨Ã¯¬§A´Á¥½¦Ò¶¶¤ß¦p·N¡M¨Ã¥B°e¤WÂ§ª«À°§A¥´¥´®ð¡T[0m
+~
+Date            12 24
+Days            2
+Stamp           128
+Sender          19
+Gift            128
+Gold            0
+High            120
+Low             70
+Duration        5
+End
+
+#Gift
+Title           ¸t½Ï¸`~
+Message
+[1;37m¤@¦~¤@«×ªº¸t½Ï¸`¤S¨Ó¤F¡M¤£ª¾¹D§A¬O§_ÁÙ´r§Ö¡S¤T°ê­°Às¥ñªê¯¬§A
+¨Î¸`´r§Ö¡M¨Ã¯¬§A´Á¥½¦Ò¶¶¤ß¦p·N¡M¨Ã¥B°e¤WÂ§ª«À°§A¥´¥´®ð¡T[0m
+~
+Date            12 24
+Days            2
+Stamp           129
+Sender          19
+Gift            129
+Gold            0
+High            120
+Low             80
+Duration        5
+End
+
+#Gift
+Title           ·s¦~~
+Message
+[1;37m¤[¤[¤@¦¸ªº·s¦~, ¤j®a³£¤ß±¡³£«D±`ªº´r®®, ¤]§Æ±æ§A¯à°÷¨Î¸`
+´r§Ö¡M¨Ã¯¬§A¨C¤Ñ¤]³£¯à¶¶¤ß¦p·N¡M¥t¥~°e¤WÂ§ª«À°§A¥´¥´®ð¡T[0m
+~
+Date            1 1
+Days            2
+Stamp           130
+Sender          20
+Gift            130
+Gold            0
+High            120
+Low             20
+Duration        10
+End
+
+#Gift
+Title           ·s¦~~
+Message
+[[1;32m¤@¦~¤@«×ªº·s¦~¤S¨ì¤F¡M¦b°ª¿³¤§¾l°O±o¦h¸ò¿Ë±­ªB¤Í»¡¤@Án¡R¡u·s¦~§Ö
+¼Ö¡v¡M¤T°ê¦b³o¸Ì¯¬§A·s¦~´r§Ö¡M¨Ã°e§A¤@­Ó¬õ¥]¡M¯¬§Aµo¤j°]¡T[[0m
+~
+Date            2 3
+Days            2
+Stamp           607
+Sender          21
+Gift            607
+Gold            0
+High            120
+Low             30
+Duration        5
+End
+
+End

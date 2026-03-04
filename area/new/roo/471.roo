@@ -1,0 +1,58 @@
+Vnum            471
+Name            ±Ð¾É¦p¦ó¦º¦Ó­«¥Í [crave & sac]~
+Description
+·í§A¦b¹CÀ¸ªº¾Ô°«¤¤³Q©Çª«(mob) ±þ¦º«á¡M±N·|³Q¤Ñ¯«¥l³ê§Aªº»î¾z
+¨ì[1;37m©`¦ó¾ô[0m.
+
+³o¸Ì´N¬OÅý¤H®`©Èªº©`¦ó¾ô¡M¤Z¬O¦ºªº¤H³£¥²¶·¸g¹L³o¸Ì¡C¥i¬O....
+¥Í¦ºÃ¯¤W¦n¹³¨S¦³§Aªº¦W¦r­C¡M§A¬O¤£¬O¨Ó¿ù¦a¤è¤F¡M³o¸Ì¦n¹³¤£¬O
+§A¸Ó¨Óªº¦a¤è¡M»°§Ö¦V¤Ñ¯«­n¦^§Aªº«ÍÅé§a.
+
+³o¸Ì¦³¤@­Ó§i¥ÜµP(sign)¡M¦p¦ó±Ð§A°_¨Ï¦^¥Í.
+
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       DOWN
+ExitVnum        467
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        472
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         sign~
+Description
+
+³o¸Ì±Ð§A¦p¦ó°_¨Ï¦^¥Í¤§ªk:
+³o®ÉÁä¤J crave corpse «á¡M¤Ñ¯«·|Åý§A­n¦^§Aªº«ÍÅé¡M¦Ó±N§A¥l³ê
+¨ì°­«°öZ³£¡M³o®É§A¤ß¦s·P¿E¤Ñ¯«ªº¦A³y¤§®¦.
+
+·í§ä¨ì§Aªº«ÍÅé(corpse)¡M§Aªº©Ò¦³®a·í³£¦b¨º¸Ì­±¡C¾ß¥X«ÍÅé¸Ìªº
+ªF¦è get <ª««~> corpse¡C°²¦p§A·Q­n¤@¦¸¾ß©Ò¦³ªºªF¦è¡M¤]¥i¥H¥Î
+ get all corpse ¦³®É­Ô§AªºªF¦è¤Ó¦h©Î¤Ó­«¥H­P©ó®³¤£°Ê¡M§A¥i¥H
+®³¦³¥[ÄÝ©Ê¤O¶q(str)©Î³t«×(dex)ªº¸Ë³Æ¥ý¬ï¤WµM«á¦A¾ß¡C°²¦p§A¦b
+¦P¤@­Ó¦a¤èµo²{¤]¦³¨ä¥Lªº«ÍÅé¦b¡M§A¥²¶·­n¾ß²Ä¤G¨ã©Î¬O²Ä¤T¨ã«Í
+Åé¡M«ü¥O¬O¡Rget <item> 2.corpse ©Î get <item> 3.corpse¡C¦p¦ó
+ª¾¹D¬O²Ä´X¨ã«ÍÅé©O? §A¥i¥H¥Î look ¡M¤ñ¦p»¡ look 2.corpse.
+³Ì«á­n´£¿ô§A¤@¥ó¨Æ: «ÍÅé¦b¤@¬q®É¶¡«á·|¤Æ±¼! ©Ò¥H¾ß«ÍÅé¤£­n¤Ó
+ºC¡C
+
+·í§A¾ß§¹«ÍÅé¤º©Ò¦³ªF¦è«á¡M¦A½Ð¨D¤Ñ¯«©^Äm«ÍÅé sac corpse ³o®É
+¤Ñ¤W­°¤U¤@¹Dµµ¦â¥ú¨~¡M¤Ñ¯«À°§AÁÙ¶§¤F! ³o®É¸¨¦b¬¥¶§«°¥¿¶§ªù.
+¦A«×¶i¦æ§Aªº¹CÀ¸.
+
+~
+
+End
+
+End

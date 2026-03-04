@@ -1,0 +1,14 @@
+Vnum            276
+Name            gold blade book~
+ShortDesc       紫金六陽刀法秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_GOLD_BLADE
+Value2          5
+Weight          3
+Cost            10000
+End

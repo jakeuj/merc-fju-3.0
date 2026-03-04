@@ -1,0 +1,84 @@
+Name            mobile steps~
+Cname           猛獸躍~
+Slot            SLOT_MOBILE_STEPS
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_DODGE
+Costtype        COST_MOVE
+Cost            5
+Wait            5
+Exp             5
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           NO
+Cast            NO
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS     1  95
+Help
+怪物使用的步法。
+
+~
+
+#Damage
+Description
+$n對於$N的強烈招式﹐似乎嚇了一跳﹐結果頭一縮﹐恰巧躲了過去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$N凶猛的一招打在$n身上﹐沒想到$n晃了晃﹐好像沒受到什麼傷害﹐反而更加兇暴了﹗﹗
+~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+感受到$N的殺招﹐$n連忙輕輕巧巧的跳開了﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+正當$N狂亂的攻擊前方時﹐$n早已悄悄的躡行到了$N後方。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n眼睛發亮了﹐一頭撲向$N懷裡去。$N招式使到一半﹐連忙趕緊回招自保。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

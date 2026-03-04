@@ -1,0 +1,14 @@
+Vnum            247
+Name            day stick book~
+ShortDesc       ¤é®Ì´Òªk¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_DAYSTICK
+Value2          5
+Weight          3
+Cost            10000
+End

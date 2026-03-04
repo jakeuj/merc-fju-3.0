@@ -1,0 +1,29 @@
+Vnum            25010
+Name            creeper~
+ShortDesc       °Ö¤ì³¾~
+LongDesc        °Ö¤ì³¾(creeper)
+~
+Description
+¼L¦y¦Þªø¡M¬O¬°¾ð¤ìÂå¥Í¡M°Ö°_³EÂÎ¡M¾ð¤ì³ß®®¡M
+°Ö¤ì³¾¤]¹¡À\¤@¹y¡C
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

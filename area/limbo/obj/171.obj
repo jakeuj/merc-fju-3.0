@@ -1,0 +1,13 @@
+Vnum            171
+Name            urn~
+ShortDesc       §¯³ý~
+Description
+¤@Åø³Q«Ê¦LªºÅ]¤O²~¤l¡M§A¥i¥H¸Õ¸Õ [1;32mrelease[0m ¨Ó¥´¶}«Ê¦L¡T~
+Unit            Åø~
+ItemType        ITEM_URN
+Takeable        Yes
+Level           1
+Value           0 100 100 100
+Weight          10
+Cost            1000
+End

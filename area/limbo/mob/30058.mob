@@ -1,0 +1,31 @@
+Vnum            30058
+Name            liu yan~
+ShortDesc       劉焉~
+LongDesc        劉焉(liu yan)
+~
+Description
+字君郎﹐幽州太守﹐漢魯恭王之後。招募
+討伐黃巾的義勇軍﹐引出劉備等豪傑。認
+劉備為侄﹐令其率軍討伐黃巾軍與支援青
+州。這是劉備的初次登場。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

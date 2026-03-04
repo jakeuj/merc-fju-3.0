@@ -1,0 +1,31 @@
+Vnum            30269
+Name            wei yan~
+ShortDesc       魏延~
+LongDesc        魏延(wei yan)
+~
+Description
+字文長。受劉備重託﹐任漢中太守。武藝
+高強﹐為蜀漢屢立戰功。因為與諸葛亮有
+嫌隙﹐故在其死後反叛。被授錦囊妙計的
+楊儀等殺死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

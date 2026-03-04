@@ -1,0 +1,44 @@
+Name            xnames~
+Cname           查詢不雅字~
+Function        do_xnames~
+Position        POS_DEAD
+Level           L_GOD
+Log             LOG_NORMAL
+Exact           NO
+Argument        NO
+Wizlog          NO
+Jail            NO
+CanLock         YES
+Dead            YES
+Order           NO
+Lost            NO
+Lock            NO
+Limit           NO
+Help
+指令
+xnames
+xnames +[單字] [旗標]
+xnames -[單字]
+
+xnames 這個指令可以讓你查詢目前系統中有哪些不雅字或是
+系統保留字。其中不雅字就是國罵﹐而系統保留字就是為了使
+系統正常運作﹐保留不給玩家使用的字。
+
+    若是單字的第一個字是+ 的話﹐則表示要多加一個保留字
+﹐其中旗標的含意是﹐讓他歸類成哪一類的保留字。意義是﹕
+
+    1. 系統保留字
+    2. 不雅字
+    3. 閒聊保留字
+    4. 中文名字保留字
+
+    若是單字第一個字元是- 的話﹐則表示要刪除這個保留字
+﹐他不需要旗標。其中系統保留字不能被刪除。
+
+    你所有的動作只能在這一次開機有效﹐這些動作將不會存
+檔。你必須去修改檔案方能奏效。
+
+    另外﹐如果是閒聊保留字的話且第一個字元為 @則代表會去
+檢查大小寫（適用於英文的國罵）﹐反之則不會。
+~
+End

@@ -1,0 +1,42 @@
+Name            create water~
+Cname           造水術~
+Slot            SLOT_CREATE_WATER
+Msgoff          ~
+Function        cast_create_water~
+Position        POS_STANDING
+Type            TAR_OBJ_INV
+CostType        COST_MANA
+Cost            5
+Wait            5
+Exp             1200
+Associate       SLOT_MAKE_SPRING
+Degree          300
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_WATER
+AntiRating      RATING_FIRE
+Innate          NO
+Ply             120
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    1  50
+Limit           CLASS_DOCTOR     1  65
+Limit           CLASS_BARD       1  90
+Help
+造水術:
+
+這也可以算是對於你的冒險旅程中相當方便的一個技能﹐當你又乾又
+渴時﹐可以讓你馬上就有清靜的水可以喝﹐讓你的身體狀況恢復一般
+的情況﹐不會有恢復比較慢的時候。
+不過要施展這一項法術的基本條件是你必須要擁有一個水壺﹐才能盛
+裝你所造出來的水。
+
+~
+End

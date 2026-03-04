@@ -1,0 +1,14 @@
+Vnum            209
+Name            moon steps book~
+ShortDesc       月影微步秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_MOON_STEP
+Value2          5
+Weight          3
+Cost            10000
+End

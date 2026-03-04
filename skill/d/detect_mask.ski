@@ -1,0 +1,40 @@
+Name            detect mask~
+Cname           偵測易容~
+Slot            SLOT_DETECT_MASK
+Msgoff          你再也看不見特殊的人了﹗~
+Function        cast_detect_mask~
+Check           check_unrigid_attack~
+Position        POS_STANDING
+Type            TAR_CHAR_SELF
+CostType        COST_MANA
+Cost            40
+Wait            22
+Exp             250
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        OBJ_DETECT_MASK
+CanAsk          NO
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_LIGHT
+AntiRating      RATING_DARKNESS
+Innate          NO
+Ply             35
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    30 45
+Limit           CLASS_DOCTOR     1  65
+Limit           CLASS_BARD       1  90
+
+#Affect
+Type            SLOT_DETECT_MASK
+Location        AFF_NONE
+End
+
+Help            ~
+End

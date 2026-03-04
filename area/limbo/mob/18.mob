@@ -1,0 +1,42 @@
+Vnum            18
+Name            dream girl~
+ShortDesc       美麗女子~
+LongDesc        美麗女子(dream girl)
+~
+Description
+她的神色淒苦﹐不知受了什麼哀屈。
+~
+Sentinel        Yes
+NoKill          Yes
+NoSummon        Yes
+Effect          'invis'
+Alignment       0
+Level           50
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             100
+Int             100
+Wis             100
+Dex             100
+Con             100
+Hp              -1
+Mana            -1
+Move            -1
+Class           CLASS_MAGE
+Gold            -1
+Multipile       100
+Migrate         0
+Sex             SEX_FEMALE
+
+Process
+Type            rand_prog
+Chance          30
+Text
+if rand(10)
+  shiver
+endif
+~
+End
+
+End

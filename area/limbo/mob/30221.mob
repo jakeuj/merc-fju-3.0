@@ -1,0 +1,31 @@
+Vnum            30221
+Name            liu dai~
+ShortDesc       劉岱~
+LongDesc        劉岱(liu dai)
+~
+Description
+兗州刺使﹐曾以第四鎮諸侯身份參加討伐
+董卓。後來歸順曹操﹐去討伐當時正在徐
+州的劉備。被打敗後﹐又被劉備釋放﹐去
+與曹操說和。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

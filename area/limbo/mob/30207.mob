@@ -1,0 +1,30 @@
+Vnum            30207
+Name            ma xiu~
+ShortDesc       馬休~
+LongDesc        馬休(ma xiu)
+~
+Description
+馬騰的次子。隨其父應曹操的徵召﹐同赴
+許昌﹐試圖伺機殺死曹操。可是計畫洩露
+﹐被曹操逮捕處死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

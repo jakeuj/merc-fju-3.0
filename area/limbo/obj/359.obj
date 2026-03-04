@@ -1,0 +1,14 @@
+Vnum            359
+Name            invis book~
+ShortDesc       Áô§Î³N¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_INVIS
+Value2          5
+Weight          3
+Cost            10000
+End

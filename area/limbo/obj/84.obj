@@ -1,0 +1,30 @@
+Vnum            84
+Name            snake sword~
+ShortDesc       狼蛇劍~
+Description
+這把劍是由古代名鑄造師陳洛鑄成的﹐柄上雕著一隻栩栩如生的狼﹐狼的
+眼睛正冷冷的看著你﹐劍身則略作龍形﹐仿彿要將你活生生的撕裂﹐據說
+這把劍威力無窮﹐只有最精通劍法的人才敢使用它。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 3
+Weight          20
+Cost            200
+Exp             10
+
+#Restrict
+Type            RES_STR
+Value           10
+End
+
+#Restrict
+Type            RES_SKILL
+Skill           'noname'
+ViceValue       92
+End
+End

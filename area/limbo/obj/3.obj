@@ -1,0 +1,12 @@
+Vnum            3
+Name            coins~
+ShortDesc       %d兩黃金~
+Description
+一堆黃金(coins)。~
+Unit            堆~
+ItemType        ITEM_MONEY
+Takeable        Yes
+Level           0
+Weight          1
+Cost            0
+End

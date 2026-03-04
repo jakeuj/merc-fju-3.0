@@ -1,0 +1,14 @@
+Vnum            292
+Name            sea flow blade book~
+ShortDesc       ªá»y¤Mªk¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_SEAFLOW_BLADE
+Value2          5
+Weight          3
+Cost            10000
+End

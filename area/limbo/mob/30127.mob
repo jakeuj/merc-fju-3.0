@@ -1,0 +1,31 @@
+Vnum            30127
+Name            sun qian~
+ShortDesc       孫乾~
+LongDesc        孫乾(sun qian)
+~
+Description
+字公佑﹐原是陶謙部下﹐陶謙死後﹐他輔
+佐繼任的劉備。作為劉備早期主要的參謀
+和外交官。多次建功。劉備入川後﹐他的
+待遇僅次於糜竺。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

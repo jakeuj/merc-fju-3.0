@@ -1,0 +1,40 @@
+Name            invis~
+Cname           隱形術~
+Slot            SLOT_INVIS
+Msgoff          你不再隱形了﹗~
+Function        cast_invis~
+Position        POS_STANDING
+Check           check_unrigid_attack~
+Type            TAR_CHAR_DEFENSIVE
+CostType        COST_MANA
+Cost            15
+Wait            18
+Exp             500
+Associate       SLOT_MASS_INVIS
+Degree          100
+Affect          SLOT_INVIS
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_DARKNESS
+AntiRating      RATING_LIGHT
+Innate          NO
+Ply             50
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    15 40
+Limit           CLASS_DOCTOR     50 70
+Limit           CLASS_BARD       50 95
+
+#Affect
+Type            SLOT_INVIS
+Location        AFF_NONE
+End
+
+Help            ~
+End

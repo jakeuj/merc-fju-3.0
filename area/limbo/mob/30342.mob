@@ -1,0 +1,30 @@
+Vnum            30342
+Name            xiang chong~
+ShortDesc       向寵~
+LongDesc        向寵(xiang chong)
+~
+Description
+蜀將﹐向朗之侄。諸葛亮在『出師表』中
+評價他性情、處事公正﹐有軍事才華。北
+伐時﹐奉命留守後方。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

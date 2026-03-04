@@ -1,0 +1,119 @@
+Name            wind leg~
+Cname           風神腿~
+Slot            SLOT_WINDLEG
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MOVE
+Cost            20
+Wait            12
+Exp             15
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+Enable          YES
+SaySpell        NO
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_FIGHTER    1  40
+Limit           CLASS_GENERAL    1  70
+Limit           CLASS_BRAVO      1  90
+Help            ~
+#Damage
+Description
+$n使出風神腿之$G「捕風捉影」$Z﹐身影晃動間﹐突然衝向$N前﹐去勢無影、奔若流星
+﹗﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n躍若疾風﹐一招$G「風中勁草」$Z﹐如飛絮紛飛﹐其勢有如風行草偃﹐腿影點點落
+向$N﹗﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n腳踩沙泥﹐氣守丹田﹐隨即暗勁一牽﹐$S「風捲樓殘」$Z﹐守化攻﹐立使$N潰不成軍
+﹗﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n身形一轉﹐$S「乘水風飄」$Z﹐宛如點水蜻蜓﹐一躍一進間﹐靈動地攻向$N。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n縱身飛起﹐凝勢於空﹐盡吐$B「暴雨狂風」$Z﹐一陣又一陣宛若風暴般席捲$N﹗﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n先一招「捕風捉影」﹐又一招$G「風中勁草」$Z﹐腿風連連﹐攻的$N措手不及﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n腿招如連綿無盡﹐$Y「捕風捉影」$S「風中勁草」$G「風捲樓殘」$Z一招接著一招﹐
+打的$N無法喘息﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n腿勢舞於己身四周﹐畢身勁力凝於一點﹐猛招$S「雷厲風行」$Z﹐由下而上﹐猛烈出
+招﹗﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+突然$n一聲驚天動地的狂吼﹐$N的攻勢被硬生生的擋住﹐殺招$R「神風怒嚎」$Z如浪潮
+般襲向$N﹗﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

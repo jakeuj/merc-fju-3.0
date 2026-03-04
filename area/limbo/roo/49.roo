@@ -1,0 +1,23 @@
+Vnum            49
+Name            第一殿--關卡~
+Description
+一座高大的城門聳立在你的面前﹐你想通過這兒就可以到達第二殿。
+你看到門前的守衛個個長得高頭大馬﹐且面目極其猙獰﹐要通過此
+處似乎十分不易。正當你苦惱要如何通過這裡時﹐你注意到這裡的
+守衛似乎和其他地方有些不同。
+
+~
+SectorType      SECT_INSIDE
+Safe            Yes
+NoRecall        Yes
+ForeverLight    Yes
+
+#Exit
+Direction       SOUTH
+ExitVnum        48
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

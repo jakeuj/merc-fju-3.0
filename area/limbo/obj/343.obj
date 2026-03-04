@@ -1,0 +1,14 @@
+Vnum            343
+Name            faerie fire book~
+ShortDesc       ºëÆF¤§¤õ¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_FAERIE_FIRE
+Value2          5
+Weight          3
+Cost            10000
+End

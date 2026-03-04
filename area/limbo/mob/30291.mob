@@ -1,0 +1,31 @@
+Vnum            30291
+Name            wang lei~
+ShortDesc       王累~
+LongDesc        王累(wang lei)
+~
+Description
+劉璋手下從事﹐勸諫劉璋不要請劉備入川
+未果﹐遂把自己到懸於城門上﹐請求劉璋
+不要親自去迎接劉備。劉備不聽﹐他於是
+割斷繩索自殺﹐以死做了最後一次勸諫。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

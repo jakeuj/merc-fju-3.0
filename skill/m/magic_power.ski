@@ -1,0 +1,32 @@
+Name            magic power~
+Cname           °­©ò¯«¤u~
+Slot            SLOT_MAGIC_POWER
+Msgoff          ~
+Check           check_unrigid_attack~
+Function        cast_magic_power~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MOVE
+Cost            20
+Wait            5
+Exp             200
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_CREATE
+Innate          NO
+Ply             50
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SMITH      60 95
+
+Help            ~
+End

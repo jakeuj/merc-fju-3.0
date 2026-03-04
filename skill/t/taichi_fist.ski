@@ -1,0 +1,133 @@
+Name            taichi fist~
+Cname           太極拳~
+Slot            SLOT_TAICHI_FIST
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            5
+Exp             20
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        10
+Adeptation      0
+Limit           CLASS_GENERAL    1  90
+Limit           CLASS_BRAVO      1  95
+Help
+~
+
+#Damage
+Description
+$n使出$S太極拳$Z中一招$Y『攬雀尾』$Z，右腳實，左腳虛，運起$P『擠』$Z字訣粘連
+粘隨，右掌已搭住$N左腕，橫勁發出。突然使出太極拳中的$R『粘』$Z法，$N給$n這麼
+一擠，自己這一招中千百斤的力氣猶似打入了汪洋大海，無影無蹤，無聲無息，身子卻
+被自己的拳力帶得斜跌兩步。~
+Chance		20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n回身雲合運起$R『黏』$Z字訣，將$N的進招收入胸前，$N被順勢一帶，$n隨即進身，
+左掌翻出，一招$Y『單鞭』$Z配合$P『擠』$Z字訣，正中$N胸口，打得$N氣血翻湧。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n轉身回步，一招$G『提手上勢』$Z將$N的殺招消弭無形，再一招$Y『手揮琵琶』$Z，
+右捺左收，剎時間悟到了$S太極拳$Z旨中的精微奧妙之處，這一招使得猶如行雲流水，
+瀟洒無比。運起$R『黏』$Z字訣，將$N的殺招轉化，接著$S『白鶴亮翅』$Z加上$P『擠
+』$Z字訣，將所積蓄的力量全數發在$N身上。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n變掌為拳，進身上步，一招$B『貼身捶』$Z直打得$N眼冒金星，不等招式變老，左掌
+隨即掐捧直上，抓住$N右手，右拳再一招$R『搬攔捶』$Z，直打$N胸口，直把$N打退五
+六步。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n轉過身來，右手圓轉向前，朝$N面門揮去，正是$S太極拳$Z中一招$P『高探馬』$Z。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n$R『雙風貫耳』$Z，連消帶打，雙手成圓形擊出，這一下變招，果然體會了$S太極拳$Y
+『圓轉不斷』$Z四字的精義，隨即左圈右圈，一個圓圈跟著一個圓圈，大圈、小圈
+、平圈、立圈、正圈、斜圈，一個個太極圓圈發出，登時便套得$N跌跌撞撞，身
+不由主的立足不穩，猶如中酒昏迷。 ~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n使出一招$S『雲手』$Z，左手高，右手低，一個圓圈已將$N$l套住，剛勁使出，
+喀喇一聲，$N的$l上下骨齊斷，$S『雲手』$Z使出時聯綿不斷，有如白云行空，
+一個圓圈未完，第二個圓圈已生。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+看著$N殺招一招強過一招，$n只有用$y『野馬分鬃』$Z躲其鋒芒，趁著$N不注意時，使出
+$Y『玉女穿梭』$Z直打脅下，待$N發覺時，又虛發一招$S『白蛇吐信』$Z，$N勉強躲過，
+但是躲不過暗藏的$R『扇捅臂』$Z，$n雙拳結實地打在$N胸口，$n趁勢攔撲直上，一招$B
+『指襠捶』$Z惹惱了$N，$N開始瘋狂出招。$n一式$S『蛇身下式』$Z完全閃過$N瘋狂雨驟
+的回擊，接著$B『上步七星』$Z又是雙拳直打胸口，看著$N已是強弩之末，$R『如封似閉
+』$Z最後一擊將勁力全數灌入$N體內。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+
+End

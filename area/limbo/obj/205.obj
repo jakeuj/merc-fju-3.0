@@ -1,0 +1,14 @@
+Vnum            205
+Name            dragon blade book~
+ShortDesc       Å]¤M¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_DRAGON_BLADE
+Value2          5
+Weight          3
+Cost            10000
+End

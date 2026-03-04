@@ -1,0 +1,12 @@
+Vnum            31
+Name            鬼門大道~
+Description
+你走在一條陰森森的路上﹐濃濃的霧環繞在你的四周﹐好像永遠都
+不會散去似的。整條路前後只看到零星的幾盞燈籠……
+
+~
+SectorType      SECT_INSIDE
+Safe            Yes
+NoRecall        Yes
+ForeverLight    Yes
+End

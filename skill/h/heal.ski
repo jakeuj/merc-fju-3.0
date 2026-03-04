@@ -1,0 +1,33 @@
+Name            heal~
+Cname           «ì´_³N~
+Slot            SLOT_HEAL
+Msgoff          ~
+Function        cast_heal~
+Position        POS_FIGHTING
+Check           check_unrigid_attack~
+Type            TAR_CHAR_DEFENSIVE
+CostType        COST_MANA
+Cost            50
+Wait            20
+Exp             150
+Associate       SLOT_SANCTUARY
+Degree          15
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_SAINT
+AntiRating      RATING_EVIL
+Innate          NO
+Ply             20
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  70
+Help            ~
+End

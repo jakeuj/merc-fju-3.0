@@ -1,0 +1,32 @@
+Name            cure overdose~
+Cname           ªvÀøÃÄª«¤¤¬r~
+Slot            SLOT_CURE_OVERDOSE
+Msgoff          ~
+Function        cast_cure_overdose~
+Position        POS_FIGHTING
+Type            TAR_CHAR_DEFENSIVE
+CostType        COST_MANA
+Cost            10
+Wait            12
+Exp             1200
+Associate       SLOT_REMEDAY
+Degree          10
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_CURE
+Innate          NO
+Ply             1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    1  50
+Limit           CLASS_DOCTOR     1  80
+Limit           CLASS_BARD       1  60
+Help            ~
+End

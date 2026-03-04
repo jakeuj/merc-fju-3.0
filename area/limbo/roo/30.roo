@@ -1,0 +1,14 @@
+Vnum            30
+Name            鬼門大道~
+Description
+你走在一條陰森森的路上﹐濃濃的霧環繞在你的四周﹐好像永遠都
+不會散去似的。往南看去你勉強可以分辨出一個城樓的模樣﹐往北
+隱約可以看到幾盞燈籠﹐在濃霧中顯得格外的詭異。路的兩旁各有
+一棟木造的建築﹐門都是半開的﹐但你看不清楚裡面有什麼。
+
+~
+SectorType      SECT_INSIDE
+Safe            Yes
+NoRecall        Yes
+ForeverLight    Yes
+End

@@ -1,0 +1,30 @@
+Name            steal~
+Cname           °½ÅÑ~
+Slot            SLOT_STEAL
+Function        cast_steal~
+Msgoff          ~
+Position        POS_STANDING
+Type            TAR_ARGUMENT
+CostType        COST_MOVE
+Cost            20
+Wait            20
+Exp             500
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+Enable          NO
+SaySpell        NO
+Rating          RATING_THIEF
+Innate          NO
+Ply             50
+Qutoient        1
+Adeptation      0
+Limit           CLASS_THIEF      1  95
+Help            ~
+End

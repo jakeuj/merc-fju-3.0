@@ -1,0 +1,33 @@
+Name            enchant weapon~
+Cname           加強武器威力~
+Slot            SLOT_ENCHANT_WEAPON
+Msgoff          ~
+Check           check_unrigid_attack~
+Function        cast_enchant_weapon~
+Position        POS_STANDING
+Type            TAR_OBJ_INV
+CostType        COST_MANA
+Cost            50
+Wait            24
+Exp             700
+Associate       SLOT_IDENTIFY
+Degree          150
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        NO
+Rating          RATING_CREATE
+Innate          NO
+Ply             40
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SHAMAN     1  20
+Limit           CLASS_MAGE       1  30
+Limit           CLASS_SMITH      1  95
+Help            ~
+End

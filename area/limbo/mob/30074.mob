@@ -1,0 +1,30 @@
+Vnum            30074
+Name            deng mao~
+ShortDesc       鄧茂~
+LongDesc        鄧茂(deng mao)
+~
+Description
+黃巾賊。任程遠志的副將﹐一起襲擊幽州
+﹐但是被投身幽州的張飛﹐僅以一個回合
+就刺死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

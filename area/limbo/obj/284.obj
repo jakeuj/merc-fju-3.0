@@ -1,0 +1,14 @@
+Vnum            284
+Name            hundred steps book~
+ShortDesc       百幻身法秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_HUNDRED_STEPS
+Value2          5
+Weight          3
+Cost            10000
+End

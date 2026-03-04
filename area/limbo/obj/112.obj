@@ -1,0 +1,31 @@
+Vnum            112
+Name            longan ring~
+ShortDesc       龍眼戒~
+Description
+一只用上等龍眼心製成的戒指﹐看來是不錯的樣子﹗
+~
+Unit            只~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_FINGER
+Takeable        Yes
+Level           100
+Weight          3
+Cost            700
+Value           -1
+Exp             10
+
+#Affect
+Location        APPLY_HIT
+Modifier        300
+End
+
+#Affect
+Location        APPLY_MOVE
+Modifier        150
+End
+
+#Affect
+Location        APPLY_MANA
+Modifier        150
+End
+End

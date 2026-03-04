@@ -1,0 +1,131 @@
+Name            dragon heroism blade~
+Cname           皇龍豪刀斬~
+Slot            SLOT_DRAGON_HEROISM
+Msgoff          ~
+Check           check_blade_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            15
+Wait            14
+Exp             5
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_BLADE
+Rating          RATING_SKILL
+Innate          NO
+Ply             30
+Qutoient        1
+Adeptation      0
+Limit           CLASS_FIGHTER    1  40
+Limit           CLASS_GENERAL    1  90
+Limit           CLASS_BRAVO      1  75
+Help            ~
+
+#Damage
+Description
+$Y皇龍豪刀第一斬$Z。「$S徐來如風$Z」。$n舞動$O﹐不急不徐奔向$N﹐利刃猶如
+南風般輕拂著$N﹐令$N身陷刀網而不自覺﹐驀然﹐才發現全身數十道傷
+口﹐正汩汩地流出鮮血。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$Y皇龍豪刀第二斬$Z。「$G靜瑟如林$Z」。$n刀尖垂地﹐看似不出招﹐待$N攻來﹐忽地
+全力出刀﹐以招制招﹐雖然刀速緩和﹐讓$N輕易擋下﹐伴隨而來的是﹐強大的
+力道﹐震得$N渾身發麻﹐動彈不得。$n一見破綻﹐順勢往$N的胸口劈下
+﹐破甲入肉﹐血流如柱。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$Y皇龍豪刀第三斬$Z。「$R急疾如火$Z」。$n箭步飛奔﹐衝向$N。掄起$O﹐先發制
+人。突刺．兜割．橫劈．逆斬﹐四勢齊發﹐一氣呵成﹐狀似把火燒天﹐招招致命。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$Y皇龍豪刀第四斬$Z。「$g不動如山$Z」。$n彎腰低頭﹐四平八穩的站著﹐肩架$O﹐全身
+泛起陣陣罡氣。一見$N攻來﹐不待其出招﹐旋即以五嶽壓頂之勢﹐以刀背衝撞
+$N﹐震碎其全身經脈﹐只能眼睜睜地任$n宰割﹐毫無招架餘力。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$Y皇龍豪刀第五斬$Z。「$B翻江倒海$Z」。$n縱身飛馳﹐螺旋前進﹐將$O舞得滴水不漏﹐
+天．地．正．反﹐衝天海嘯般的攻勢﹐殺得$N血肉模糊﹐氣勢之驚人﹐有如九
+重巨浪。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$Y皇龍豪刀第六斬$Z。「$P天雷地動$Z」。$n一躍三尺﹐高舉$O﹐宛如天雷殛落﹐一刀劈
+下﹐劍氣四散﹐飛砂走石﹐日月無光﹐天搖地動﹐劍氣旋風令$N無從走避。要
+害俱中﹐先血狂噴。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$Y皇龍豪刀第七斬$Z。「$W神龍再現$Z」。$n以刀劈地﹐震飛砂石﹐霎時砂煙彌漫﹐令$N
+有如身陷五里迷霧中﹐不知身在何方。忽地﹐$n震耳欲聾的大喝﹐飛越迷幕﹐急急
+砍向$N﹐勢必將其碎屍萬段。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          44 160
+End
+
+#Damage
+Description
+$Y皇龍豪刀第八斬$Z。「$y皇龍大地塹$Z」。$n凝聚全身真氣﹐將$O環身一繞﹐躍起九尺
+﹐皇龍奧義--$S風$Z．$G林$Z．$R火$Z．$G山$Z．$B海濤$Z．$P雷動$Z．$W見龍$Z．$Y萬象歸元$Z。$O漫天飛舞﹐銀
+光閃閃﹐刀氣逼人﹐看似皇龍飛竄﹐上天下地。氣．力．勁．神之強大﹐有如盤古開
+天﹐大地崩裂。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

@@ -1,0 +1,31 @@
+Vnum            30106
+Name            xia hou chun~
+ShortDesc       夏侯惇~
+LongDesc        夏侯惇(xia hou chun)
+~
+Description
+字元讓﹐魏前將軍﹐曹操的族弟。在征討
+呂布時﹐被曹性射中左眼﹐他拔箭啖目﹐
+鼓勇而戰﹐刺死曹性。  受曹操信任﹐曹
+丕繼位後﹐任大將軍。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

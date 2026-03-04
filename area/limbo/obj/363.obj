@@ -1,0 +1,14 @@
+Vnum            363
+Name            magic missile book~
+ShortDesc       Å]ªk­¸¼u¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_MAGIC_MISSILE
+Value2          5
+Weight          3
+Cost            10000
+End

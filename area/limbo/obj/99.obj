@@ -1,0 +1,15 @@
+Vnum            99
+Name            jade wrist~
+ShortDesc       軟玉手環~
+Description
+一件柔黃軟玉製的手環(jade wrist)。看起來十分地討人喜歡。~
+Unit            隻~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_WRIST
+Takeable        Yes
+Level           20
+Value           -1
+Weight          10
+Cost            190
+Exp             10
+End

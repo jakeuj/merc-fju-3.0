@@ -1,0 +1,30 @@
+Vnum            15
+Name            twosee horse~
+ShortDesc       驒騱駒~
+LongDesc        驒騱駒(twosee horse)
+~
+Description
+相傳牠為上古時的一種野獸﹐後來被人在雲南一帶所發現﹐帶回中原
+飼養後﹐發現其習性與馬極像﹐便將牠與馬併為一種。
+~
+Sentinel        Yes
+Alignment       0
+Level           15
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              150
+Mana            0
+Move            165
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+Tractable       100
+End

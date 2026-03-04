@@ -1,0 +1,30 @@
+Vnum            30370
+Name            yu quan~
+ShortDesc       于詮~
+LongDesc        于詮(yu quan)
+~
+Description
+吳將。諸葛誕反叛魏國時﹐他率領吳軍增
+援﹐被魏軍擊敗後﹐不接受魏將王基的勸
+降﹐盡節守義﹐最後戰死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

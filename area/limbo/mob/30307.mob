@@ -1,0 +1,31 @@
+Vnum            30307
+Name            ling tong~
+ShortDesc       凌統~
+LongDesc        凌統(ling tong)
+~
+Description
+字公績﹐吳將凌操之子。與甘寧有殺父之
+仇﹐常想報復﹐但後來在與樂進單挑時﹐
+險些被斬﹐多虧甘寧相救﹐二人才終於和
+解﹐並結為生死之交。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

@@ -1,0 +1,40 @@
+Name            stone skin~
+Cname           皮膚石化術~
+Slot            SLOT_STONE_SKIN
+Msgoff          你的皮膚又回到原來的狀態﹗~
+Check           check_unrigid_attack~
+Function        cast_stone_skin~
+Position        POS_STANDING
+Type            TAR_CHAR_SELF
+CostType        COST_MANA
+Cost            12
+Wait            18
+Exp             1000
+Associate       SLOT_FAERIE_FIRE
+Degree          300
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_FIRE
+AntiRating      RATING_WATER
+Innate          NO
+Ply             100
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    15  40
+Limit           CLASS_DOCTOR     50  80
+Limit           CLASS_BARD       50  95
+Help
+皮膚石化術:
+
+這個法術轉化你的法力變成一個保護磨均勻的將你的皮膚石化﹐對於
+外來的一些物理攻擊會比較的能夠承受。
+
+~
+End

@@ -1,0 +1,31 @@
+Vnum            30314
+Name            fu shi ren~
+ShortDesc       傅士仁~
+LongDesc        傅士仁(fu shi ren)
+~
+Description
+字君義﹐關羽部將。駐守公安﹐保衛關羽
+的後方。吳軍偷襲公安時降吳。在彝陵之
+戰﹐又反叛東吳﹐復投蜀國。但未獲劉備
+原諒﹐被處死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

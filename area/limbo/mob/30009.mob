@@ -1,0 +1,30 @@
+Vnum            30009
+Name            han dang~
+ShortDesc       韓當~
+LongDesc        韓當(han dang)
+~
+Description
+字亦公。東吳孫氏三代老將﹐參加了楊州
+進攻戰﹐赤壁之戰﹐進攻關羽﹐彝陵之戰
+等眾多戰役。指揮東吳水戰的一翼。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

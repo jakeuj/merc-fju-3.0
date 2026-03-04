@@ -1,0 +1,16 @@
+Vnum            30
+Name            thin dart~
+ShortDesc       柳葉鏢~
+Description
+這是一枚十分細長的飛鏢(thin dart)﹐平時可以藏在袖中﹐以發揮出絕佳的奇襲效果。~
+Unit            枚~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           43
+Value           0 -1 -1 2
+Weight          20
+Cost            200
+Exp             10
+End

@@ -1,0 +1,31 @@
+Vnum            30159
+Name            yi gi~
+ShortDesc       伊籍~
+LongDesc        伊籍(yi gi)
+~
+Description
+字機伯。原為劉表幕僚﹐曾向劉備透露的
+盧妨主和蔡瑁加  劉備的計謀。後改仕劉
+備﹐著有「蜀科」。此人機警伶俐﹐連孫
+權也嘆服於他的能言善道。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

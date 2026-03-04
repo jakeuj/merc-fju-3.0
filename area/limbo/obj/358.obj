@@ -1,0 +1,14 @@
+Vnum            358
+Name            infravision book~
+ShortDesc       ©]µø³N¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_INFRAVISION
+Value2          5
+Weight          3
+Cost            10000
+End

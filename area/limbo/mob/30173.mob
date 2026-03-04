@@ -1,0 +1,31 @@
+Vnum            30173
+Name            huang quan~
+ShortDesc       黃權~
+LongDesc        黃權(huang quan)
+~
+Description
+字公橫。劉備入川後﹐成為劉備部下。伐
+吳時統帥水軍。蜀軍被火燒連營後﹐他孤
+立無援﹐不得已降魏。但投降後﹐他仍然
+對劉備忠心不改。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

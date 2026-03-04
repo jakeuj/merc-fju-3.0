@@ -1,0 +1,32 @@
+Name            super refresh~
+Cname           強力體力恢復術~
+Slot            SLOT_SUPER_REFRESH
+Msgoff          ~
+Function        cast_super_refresh~
+Check           check_unrigid_attack~
+Position        POS_STANDING
+Type            TAR_CHAR_DEFENSIVE
+CostType        COST_MANA
+Cost            20
+Wait            15
+Exp             200
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_WIND
+AntiRating      RATING_EARTH
+Innate          NO
+Ply             12
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     75 95
+Help            ~
+End

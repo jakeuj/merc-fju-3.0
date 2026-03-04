@@ -1,0 +1,31 @@
+Vnum            30086
+Name            bian xi~
+ShortDesc       卞喜~
+LongDesc        卞喜(bian xi)
+~
+Description
+本是黃巾軍﹐使流星錘。後改仕曹操﹐把
+守  水關。企圖謀  千里走單騎的關羽﹐
+在鎮國寺設下埋伏。但關羽得到該寺方丈
+普淨的密告﹐因此殺死了卞喜。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

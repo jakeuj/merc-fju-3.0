@@ -1,0 +1,30 @@
+Vnum            30369
+Name            wu ban~
+ShortDesc       吳班~
+LongDesc        吳班(wu ban)
+~
+Description
+字元雄﹐蜀將吳懿的族弟。討發東吳時﹐
+首仗戰勝孫桓﹐並在彝陵把孫桓包圍。後
+來參加北伐﹐被魏將張虎、樂琳射死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

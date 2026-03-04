@@ -1,0 +1,14 @@
+Vnum            234
+Name            wind steps book~
+ShortDesc       ­·¼vÂÃ¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_WIND_STEPS
+Value2          5
+Weight          3
+Cost            10000
+End

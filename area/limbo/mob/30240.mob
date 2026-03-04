@@ -1,0 +1,31 @@
+Vnum            30240
+Name            dong yun~
+ShortDesc       董允~
+LongDesc        董允(dong yun)
+~
+Description
+字休昭﹐蜀國黃門侍郎。據說在他活著的
+時候﹐宦官黃皓不敢為所欲為。諸葛亮在
+北伐前上奏的「出師表」中﹐也稱其為忠
+臣。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

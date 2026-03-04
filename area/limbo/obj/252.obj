@@ -1,0 +1,14 @@
+Vnum            252
+Name            dragon fist book~
+ShortDesc       ­°Às¤Q¤K´x¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_DRAGONFIST
+Value2          5
+Weight          3
+Cost            10000
+End

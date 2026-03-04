@@ -1,0 +1,14 @@
+Vnum            581
+Name            colour stone~
+ShortDesc       ±m¦âªº¥ÛÀY~
+Description
+~
+Unit            Áû~
+ItemType        ITEM_TREASURE
+Takeable        Yes
+Level           1
+Value           0
+Weight          1
+Cost            10
+
+End

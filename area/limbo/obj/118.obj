@@ -1,0 +1,16 @@
+Vnum            118
+Name            special lunicake~
+ShortDesc       特製月餅~
+Description
+一顆特製的月餅﹐吃了可以讓你精神百倍﹐你可以吃吃看(eat)。~
+Unit            顆~
+ItemType        ITEM_PILL
+Contraband      Yes
+Takeable        Yes
+Level           100
+Value2          OBJ_CAST_ALL
+Value1          3000
+Value4          1
+Weight          1
+Cost            10
+End

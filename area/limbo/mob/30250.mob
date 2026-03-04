@@ -1,0 +1,30 @@
+Vnum            30250
+Name            gu yong~
+ShortDesc       顧雍~
+LongDesc        顧雍(gu yong)
+~
+Description
+字元歎﹐蔡邕門生。被張紘推薦﹐效力於
+孫權。沈默寡言﹐滴酒不沾。孫權登帝位
+後﹐任命他為丞相。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

@@ -1,0 +1,29 @@
+Vnum            3
+Name            big bird~
+ShortDesc       大鳥~
+LongDesc        一隻極大的鳥(big bird)飛舞著.
+~
+Description
+他的翅膀火紅﹐豔麗極度﹐不知是那裡來的神鳥。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            0
+Move            1000
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+Tractable       50
+End

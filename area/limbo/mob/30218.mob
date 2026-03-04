@@ -1,0 +1,31 @@
+Vnum            30218
+Name            li hui~
+ShortDesc       李恢~
+LongDesc        李恢(li hui)
+~
+Description
+字德昂。原是劉璋部下﹐後料劉璋必敗﹐
+於是投降劉備。說服領兵前來救援劉璋的
+馬超﹐使其歸順劉備。參加了南征和北伐
+。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

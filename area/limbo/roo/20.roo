@@ -1,0 +1,15 @@
+Vnum            20
+Name            鬼城酆都~
+Description
+這裡就是讓人害怕的奈何橋﹐凡是死的人都必須經過這裡。可是﹐生
+死簿上好像沒有你的名字耶﹐你是不是來錯地方了﹐或是。算了﹐放
+你一馬吧。趕快把你的屍體裡面的東西撿一撿(search)接著奉獻(sacrifice)
+吧。
+
+~
+SectorType      SECT_INSIDE
+Safe            Yes
+NoRecall        Yes
+ForeverLight    Yes
+NoWhere         Yes
+End

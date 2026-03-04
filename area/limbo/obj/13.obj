@@ -1,0 +1,11 @@
+Vnum            13
+Name            pond~
+ShortDesc       池塘~
+Description
+陣陣的泉水從池塘(pond)冒了出來。~
+Unit            個~
+ItemType        ITEM_FOUNTAIN
+Level           1
+Weight          5000
+Cost            0
+End

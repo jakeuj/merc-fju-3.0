@@ -1,0 +1,31 @@
+Vnum            30063
+Name            liu yao~
+ShortDesc       劉繇~
+LongDesc        劉繇(liu yao)
+~
+Description
+字正禮﹐楊州刺史。遭到孫策進攻時﹐雖
+然手下有名將太史慈﹐卻疑而不用﹐因此
+吃了敗仗。諸葛亮在『後出師表』中把他
+列為無能文官。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

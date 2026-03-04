@@ -1,0 +1,14 @@
+Vnum            357
+Name            identify book~
+ShortDesc       Å²©w³N¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_IDENTIFY
+Value2          5
+Weight          3
+Cost            10000
+End

@@ -1,0 +1,41 @@
+Name            tree touch~
+Cname           妖樹之觸~
+Slot            SLOT_TREE_TOUCH
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            1
+Exp             5
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        10
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Help
+~
+#Damage
+Description
+$n對著$N使出「妖樹之觸」，將$N緊緊抓住。~
+Chance		20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

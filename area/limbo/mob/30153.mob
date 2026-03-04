@@ -1,0 +1,31 @@
+Vnum            30153
+Name            li dian~
+ShortDesc       李典~
+LongDesc        李典(li dian)
+~
+Description
+字曼成。魏破虜將軍。從討伐黃巾軍時就
+跟隨曹操﹐歷經百戰。性格冷靜慎重﹐多
+次制止同僚的胡作非為。與張遼、樂進一
+起鎮守和淝。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

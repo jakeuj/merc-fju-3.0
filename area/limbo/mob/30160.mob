@@ -1,0 +1,31 @@
+Vnum            30160
+Name            yin mo~
+ShortDesc       尹默~
+LongDesc        尹默(yin mo)
+~
+Description
+字思潛﹐蜀中學士。曾聯合文武百官上書
+﹐勸劉備登帝位。諸葛亮第一次北伐時﹐
+任命他為博士﹐管理蜀國內政﹐也負責劉
+禪的教育工作。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

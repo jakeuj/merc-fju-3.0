@@ -1,0 +1,30 @@
+Vnum            30140
+Name            tao qian~
+ShortDesc       陶謙~
+LongDesc        陶謙(tao qian)
+~
+Description
+徐州刺史﹐討伐董卓的十八鎮諸侯之一。
+曹操為報父仇興兵攻徐州時﹐因自己年老
+多病而三讓徐州於前來援救的劉備。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

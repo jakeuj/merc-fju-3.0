@@ -1,0 +1,14 @@
+Vnum            246
+Name            dark word book~
+ShortDesc       ¯}¥@³±¦r¶ø·N³Z¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_DARK_WORD
+Value2          5
+Weight          3
+Cost            10000
+End

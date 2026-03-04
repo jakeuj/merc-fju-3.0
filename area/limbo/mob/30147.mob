@@ -1,0 +1,31 @@
+Vnum            30147
+Name            wen chou~
+ShortDesc       文醜~
+LongDesc        文醜(wen chou)
+~
+Description
+河北最強大的袁紹軍中堪與顏良並稱的猛
+將。在官渡之戰時﹐為報復顏良被殺之仇
+而出征﹐雖中了曹操的誘兵之記﹐仍擊退
+張遼、徐晃﹐但也死於關羽刀下。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

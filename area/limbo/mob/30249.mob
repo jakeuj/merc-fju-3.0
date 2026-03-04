@@ -1,0 +1,30 @@
+Vnum            30249
+Name            yan jun~
+ShortDesc       嚴峻~
+LongDesc        嚴峻(yan jun)
+~
+Description
+字曼才﹐孫權部下。與出任使者前來的諸
+葛亮舌戰。孫權要試他能不能騎馬﹐結果
+他從馬背摔了下來﹐留下一段閒話。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

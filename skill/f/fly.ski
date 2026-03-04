@@ -1,0 +1,41 @@
+Name            fly dance~
+Cname           飛翔術~
+Slot            SLOT_FLY
+Msgoff          你腳下的雲慢慢的消失不見了。~
+Function        cast_fly~
+Position        POS_STANDING
+Type            TAR_CHAR_DEFENSIVE
+CostType        COST_MANA
+Cost            15
+Wait            20
+Exp             600
+Associate       SLOT_SUPER_REFRESH
+Degree          20
+Affect          AFFECT_NONE
+AffectID        OBJ_CAST_FLY
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_WIND
+AntiRating      RATING_EARTH
+Innate          NO
+Ply             60
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    15 50
+Limit           CLASS_DOCTOR     15 95
+Limit           CLASS_BARD       15 70
+
+#Affect
+Type            SLOT_FLY
+Location        AFF_NONE
+End
+
+Help
+這個技能可以幫助你自己或別人飛翔在空中﹐可以渡過河水等障礙物。
+~
+End

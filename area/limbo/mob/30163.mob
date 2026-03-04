@@ -1,0 +1,31 @@
+Vnum            30163
+Name            wang xiu~
+ShortDesc       王修~
+LongDesc        王修(wang xiu)
+~
+Description
+字叔治。袁譚屬下大臣﹐青州別駕。袁譚
+死後被梟首﹐他違抗曹操的命令﹐在袁譚
+首級前痛哭。曹操感其忠義﹐封他為中郎
+將。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

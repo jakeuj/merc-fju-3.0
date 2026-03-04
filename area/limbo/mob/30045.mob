@@ -1,0 +1,33 @@
+Vnum            30045
+Name            dong cheng~
+ShortDesc       董承~
+LongDesc        董承(dong cheng)
+~
+Description
+東漢車騎將軍﹐因為其妹嫁給獻帝為妻﹐
+故被稱為『國舅』。奉獻帝衣帶詔之命﹐
+聯合劉備等人欲殺曹操﹐但被下人發現後
+報告曹操﹐因此慘遭殺害。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+Auction
+我幫獻帝湊一些「跑路費」﹐拿一些古董珍品來賣賣。~
+End

@@ -1,0 +1,21 @@
+CC        = cc -I/usr/include/ncurses -D_GNU_SOURCE
+PROF      = -O2 -m486
+PIPE      = -pipe
+WARNING   = -Wall
+
+C_FLAGS = $(PIPE) $(WARNING) $(PROF)
+
+L_FLAGS = -m486 -O6 -Wall -pipe -lncurses $(PROF)
+
+O_FILES = edit.o screen.o io.o const.o file.o  string.o ini.o \
+          editarea.o editroom.o editshop.o link.o exit.o
+
+edit:   $(O_FILES)
+	rm -f edit
+	$(CC) $(L_FLAGS) -o edit $(O_FILES) -lncurses
+
+clean:
+	rm -f *.o edit
+
+.c.o: main.h
+	$(CC) -c $(C_FLAGS) $<

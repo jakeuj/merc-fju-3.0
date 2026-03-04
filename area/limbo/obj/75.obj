@@ -1,0 +1,15 @@
+Vnum            75
+Name            emerald amulet~
+ShortDesc       翡翠項鍊~
+Description
+一條有上等翡翠項鍊(emerald amulet)。~
+Unit            條~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_NECK
+Takeable        Yes
+Level           20
+Value           -1
+Weight          10
+Cost            200
+Exp             10
+End

@@ -1,0 +1,30 @@
+Vnum            30044
+Name            chen pu~
+ShortDesc       程普~
+LongDesc        程普(chen pu)
+~
+Description
+字德謀﹐慣使鐵脊蛇矛。效力於東吳孫氏
+三代的老將。在赤壁之戰中任副都督﹐協
+助正都督周瑜擊敗曹操大軍。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

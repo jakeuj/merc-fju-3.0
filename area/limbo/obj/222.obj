@@ -1,0 +1,14 @@
+Vnum            222
+Name            lost steps book~
+ShortDesc       °g¤ÛÂÜ¸ñ¨B¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_LOST_STEPS
+Value2          5
+Weight          3
+Cost            10000
+End

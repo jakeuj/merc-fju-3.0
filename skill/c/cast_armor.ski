@@ -1,0 +1,38 @@
+Name            armor~
+Cname           天神守護~
+Slot            SLOT_CAST_ARMOR
+Msgoff          你覺的沒那麼保護了﹗~
+Function        spell_cast_armor~
+Position        POS_STANDING
+Type            TAR_CHAR_DEFENSIVE
+Costtype        COST_MANA
+Cost            12
+Wait            15
+Exp             1000
+Associate       SLOT_FAERIE_FOG
+Degree          250
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_WIND
+AntiRating      RATING_EARTH
+Innate          NO
+Ply             100
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    1  45
+Limit           CLASS_DOCTOR     1  70
+Limit           CLASS_BARD       1  95
+Help
+天神守護:
+
+呼叫天神﹐給予你一定程度的保護﹐讓你可以承受較大的傷害﹗
+
+~
+End

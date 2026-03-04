@@ -1,0 +1,14 @@
+Vnum            392
+Name            shoot sun book~
+ShortDesc       ®g¤é½bªk¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_SHOOT_SUN
+Value2          5
+Weight          3
+Cost            10000
+End

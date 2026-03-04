@@ -1,0 +1,14 @@
+Vnum            289
+Name            seven mind book~
+ShortDesc       ¤C©_ÆF¶¿¨B¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_SEVEN_MIND
+Value2          5
+Weight          3
+Cost            10000
+End

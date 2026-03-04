@@ -1,0 +1,31 @@
+Name            change sex~
+Cname           改變性別~
+Slot            SLOT_CHANGE_SEX
+Msgoff          你感到身體有一點改變﹗~
+Check           check_unrigid_attack~
+Function        cast_change_sex~
+Position        POS_FIGHTING
+Type            TAR_CHAR_DEFENSIVE
+CostType        COST_MANA
+Cost            2000
+Wait            25
+Exp             600
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        OBJ_CHANGE_SEX
+CanAsk          NO
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_LOST
+Innate          NO
+Ply             60
+Qutoient        1
+Adeptation      0
+Limit           CLASS_BARD       70  95
+Help            ~
+End

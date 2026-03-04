@@ -1,0 +1,99 @@
+Name            lost steps~
+Cname           迷幻蹤跡步~
+Slot            SLOT_LOST_STEPS
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_DODGE
+Costtype        COST_MOVE
+Cost            20
+Wait            1
+Exp             5
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            NO
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help            ~
+#Damage
+Description
+$n腳踩東南方﹐忽而飄到西北﹐正是$S『迷幻蹤跡』$Z的身法﹐使$N感到$B「忽焉在前﹐
+失之在後」$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n施展$S『迷幻蹤跡』$Z﹐腳踏$Y「流星步法」$Z﹐身形忽隱忽現﹐使$N如置身於濛霧
+之中﹐找不到$n的蹤跡。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出$S『迷幻蹤跡』$Z之$W「風行幻速」$Z﹐跟著躍身而起﹐在以不可能的方位速行
+而下﹐鬆地躲過$N的招式。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n在面對猛烈的攻擊下展現$S『迷幻蹤跡』$Z超水準身法﹐瀟灑如$Y群鶯飛舞$Z般﹐從
+$N的招式空隙中閃過。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n踢出$P「無量身影」$Z﹐$N只見四周都是$n的影子﹐真實難辨﹐正是$S『迷幻蹤跡』
+$Z之上乘招數。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n踏出$S『迷幻蹤跡』$Z之$S「幻幻相連」$Z﹐身形如百魅集於一身﹐使$N猛發招數﹐
+但都只打到百魅之處﹐徒勞無功。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

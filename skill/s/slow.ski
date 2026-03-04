@@ -1,0 +1,36 @@
+Name            slow~
+Cname           遲滯術~
+Slot            SLOT_SLOW
+Msgoff          你感到動作又變快了~
+Function        cast_slow~
+Position        POS_STANDING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MANA
+Cost            25
+Wait            20
+Exp             600
+Associate       SLOT_CAUSE_CRITICAL
+Degree          100
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_DARKNESS
+AntiRating      RATING_LIGHT
+Innate          NO
+Ply             60
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    10 40
+Limit           CLASS_DOCTOR     50 50
+Limit           CLASS_BARD       50 50
+Limit           CLASS_SHAMAN     10 60
+Limit           CLASS_MAGE       50 95
+Limit           CLASS_SMITH      50 80
+Help            ~
+End

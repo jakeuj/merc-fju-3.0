@@ -1,0 +1,14 @@
+Vnum            267
+Name            fonxan sword book~
+ShortDesc       «Ê¤s¼Cªk¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_FONXANSWORD
+Value2          5
+Weight          3
+Cost            10000
+End

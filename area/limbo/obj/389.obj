@@ -1,0 +1,14 @@
+Vnum            389
+Name            seven key numen book~
+ShortDesc       ¤CÆ_¦uÅ@¯«¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_SEVEN_KEY_NUMEN
+Value2          5
+Weight          3
+Cost            10000
+End

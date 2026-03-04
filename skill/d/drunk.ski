@@ -1,0 +1,112 @@
+Name            drunk~
+Cname           醉拳~
+Slot            SLOT_DRUNK
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            1
+Exp             5
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help            ~
+#Damage
+Description
+$n大喊$P「呂洞賓：醉酒提壺力千鈞」$Z﹐$n手成提酒狀﹐兩手往$N的雙肩一捉。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n大喊$Y「韓湘子：擒腕擊胸醉吹蕭」$Z﹐$n捉住$N的手﹐往他的胸部猛撞。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n大喊$G「張果老：醉酒拋杯醉連環」$Z﹐$n成醉步狀﹐搖搖擺擺往$N踢去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n大喊$P「籃采和：單提敬酒攔腰破」$Z﹐$n成半躺狀﹐手往$N的腰步一扣。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n大喊$Y「鐵拐李：旋肘膝撞醉還真」$Z﹐$n收起一腳﹐搖搖擺擺一手卻將$n夾住。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n大喊$G「曹國舅：仙人敬酒鎖喉扣」$Z﹐$n手成持杯狀﹐往$N的脖子一捉。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n大喊$S「漢鍾離：醉步抱罈窩心頂」$Z﹐$n頭一伸﹐往$N一撞。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n大喊$S「何仙姑：彈腰敬酒醉盪步」$Z﹐$n腰一彎﹐突然雙手往$N的臉部一彈。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

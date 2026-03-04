@@ -1,0 +1,14 @@
+Vnum            360
+Name            know alignment book~
+ShortDesc       瞭解陣營術秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_KNOW_ALIGNMENT
+Value2          5
+Weight          3
+Cost            10000
+End

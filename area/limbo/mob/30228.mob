@@ -1,0 +1,30 @@
+Vnum            30228
+Name            cao xing~
+ShortDesc       曹性~
+LongDesc        曹性(cao xing)
+~
+Description
+呂布麾下大將。見同僚高順被夏侯惇追趕
+﹐於陣中放箭﹐正中夏侯惇左目。不一會
+被盛怒的夏侯惇斬殺。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

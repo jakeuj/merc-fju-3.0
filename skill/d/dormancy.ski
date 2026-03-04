@@ -1,0 +1,37 @@
+Name            dormancy~
+Cname           龜息大法~
+Slot            SLOT_DORMANCY
+Msgoff          ~
+Function        cast_dormancy~
+Position        POS_STANDING
+Type            TAR_MEDITATION
+CostType        COST_MANA
+Cost            1
+Wait            1
+Exp             200
+Associate       SLOT_STEAL
+Degree          10
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            NO
+Concentration   NO
+Teach           NO
+Enable          YES
+SaySpell        NO
+Rating          RATING_THIEF
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_THIEF     10  95
+Help
+龜息大法:
+
+利用睡眠時調勻呼吸﹐讓體內真氣流轉﹐達到恢復生命
+體力與法力的內家功夫﹐也因此修習者在各方面的條件
+都必須在一般水準之上。
+~
+
+End

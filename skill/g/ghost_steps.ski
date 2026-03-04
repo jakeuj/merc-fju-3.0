@@ -1,0 +1,77 @@
+Name            ghost steps~
+Cname           幽冥身法~
+Slot            SLOT_GHOST_STEPS
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_DODGE
+Costtype        COST_MOVE
+Cost            15
+Wait            10
+Exp             15
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help            ~
+#Damage
+Description
+$n忽然以鬼魅般的速度使出幽冥身法中的一招$S「幽冥幻影」$Z﹐忽而在東﹐忽而在
+西﹐使$N無法知道$n身在何方。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n身子一軟﹐全身向後攤去﹐巧妙的躲過了$N的攻擊﹐正是幽冥身法中的$S「氣游無
+定」$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出幽冥身法中的$S「虛幻無形」$Z﹐只見他身形一晃﹐$N擊中的只是殘像。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+只見$n身形一起﹐使出幽冥身法的絕技$S「飄渺無蹤」$Z﹐無聲無息的繞到了$N身後。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

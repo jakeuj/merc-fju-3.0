@@ -1,0 +1,100 @@
+Name            six fire~
+Cname           極火六陽~
+Slot            SLOT_SIXFIRE
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MOVE
+Cost            25
+Wait            5
+Exp             100
+Associate       SLOT_FIRE_DRAGON
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+Enable          YES
+SaySpell        NO
+Rating          RATING_SKILL
+Innate          NO
+Ply             20
+Qutoient        1
+Adeptation      0
+Limit           CLASS_GENERAL    1  60
+Limit           CLASS_BRAVO      1  95
+Help            ~
+
+#Damage
+Description
+$n左掌火勁一吐﹐身形頓時向右平飄三尺﹐$N見此怪招不禁愕然﹗$n趁機勁運右臂鼓起
+$R『極火六陽』$Z將火勁悍然灌入$N的體內﹐正是$R『血陽‧極火焚天』$Z﹐$N被燒的
+哀嚎連連﹐鮮血狂吐﹗﹗﹗~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n勁運雙臂﹐雙手成爪狀不停地急旋下﹐使出$R『極火六陽』$Z中最霸道的$s『墨陽‧
+極火地劫』$Z﹐$N被絞的防守盡失下﹐$n趁勢中宮直入﹐其急旋的氣勢幾乎將$N的手臂
+絞斷﹗﹗﹗~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n運起極火真氣﹐天靈聚起一片炙火﹐身形一旋﹐雙掌內攏﹐使出$R『極火六陽』$Z中
+之$P『紫陽‧極火烈燄』$Z﹐$n一圈﹐一吐﹐催起一股凌厲的氣焰掃向$N﹗﹗﹗~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n全身火勁暴吐之下﹐縱身在高空喝道：$R『極火六陽』$Z之$W『白陽‧極火亂舞』
+$Z從空中以雙掌向$N直壓而下﹐剎那間$N的四周全部籠罩在強烈無匹的雄渾火勁中﹐
+令$N無法閃避﹗﹗﹗~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n揉身而上﹐飄然滑行﹐順勢使出$R『極火六陽』$Z之$Y『金陽‧極火金刀』$Z﹐雙掌
+火勁暴聚成刀﹐揮動之際﹐泛起一片紅光﹐有如電光之勢﹐$N頓時眼前罩上一片炙光﹐
+一陣昏眩﹐光刀迅速的朝$N各部位砍去﹗﹗﹗~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n聚烈火而上﹐跨行數十步﹐聚勁使出$R『極火六陽』$Z之$S『青陽‧極火殛頂』$Z﹐
+雙掌火勁聚成一強大的火球﹐向$N的頭部轟去﹐泛起一片紅光﹐$N頓時眼前罩上一片炙
+光﹐一陣昏眩﹐火球貫穿其頭部﹐在$N的頭留下焦黑的傷口﹗﹗﹗~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

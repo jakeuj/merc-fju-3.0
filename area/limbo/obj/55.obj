@@ -1,0 +1,15 @@
+Vnum            55
+Name            small rod~
+ShortDesc       木棍~
+Description
+路邊隨手可得的小木棍(rod)放置在一旁~
+Unit            根~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           1
+Value           0 -1 -1 10
+Weight          2
+Cost            10
+Exp             10
+End

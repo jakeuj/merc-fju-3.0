@@ -1,0 +1,35 @@
+Name            list~
+Cname           商店物品列表~
+Function        do_list~
+Position        POS_RESTING
+Level           0
+Log             LOG_NORMAL
+Exact           NO
+Argument        NO
+Wizlog          NO
+Jail            NO
+CanLock         YES
+Dead            NO
+Order           NO
+Lost            NO
+Lock            NO
+Limit           NO
+Help
+語法﹕list
+      list <物品名稱>
+      list <低等級> <高等級>
+
+這個指令是列出所賣物品的列表﹐語法 list <物品名稱>
+
+物品名稱可以沒有﹐若是沒有則會列出所有賣的物品名稱﹐等級
+以及價錢。若有物品名稱則只會列出那種物品的相關資訊。但是
+
+  1) 你所在地沒有販賣者
+  2) 你所列的物品名稱﹐販賣者沒有賣
+  3) 販賣者在睡覺或是戰鬥。
+
+這時指令失效。
+
+相關指令 buy ﹐sell ﹐value
+~
+End

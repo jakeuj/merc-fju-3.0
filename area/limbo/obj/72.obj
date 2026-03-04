@@ -1,0 +1,16 @@
+Vnum            72
+Name            tiger blade~
+ShortDesc       虎頭鋼刀~
+Description
+這是把精鋼鑄成的長刀(blade)﹐刻了個虎頭做裝飾。~
+Unit            把~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 4
+Weight          20
+Cost            200
+Exp             10
+End

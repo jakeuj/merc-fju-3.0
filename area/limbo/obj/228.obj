@@ -1,0 +1,14 @@
+Vnum            228
+Name            cloud ghost book~
+ShortDesc       ¶³ÂÜ¾y¼v¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_CLOUD_GHOST
+Value2          5
+Weight          3
+Cost            10000
+End

@@ -1,0 +1,50 @@
+Name            cry ghost~
+Cname           真．哭鬼~
+Slot            SLOT_CRY_GHOST
+Msgoff          ~
+Check           check_spear_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            1
+Exp             1
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_SPEAR
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_GENERAL    99 95
+Help
+「真‧哭鬼」:
+
+呂布的必殺招，一般從三連發到八連發，配合上方天劃戟
+更是威猛無儔，幾乎無人能檔。
+
+~
+
+#Damage
+Description
+$G$n手中的$O發出$B藍色光芒$G﹐$O在$n周遭迴旋﹐突然間﹐$n大叫$A$A
+$P          必殺招「真‧哭鬼」$G$A$A
+只見﹐$O的槍尖化做點點$W白芒$G﹐瞬間將$N週身完全籠罩﹐將$N刺成刺蝟$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

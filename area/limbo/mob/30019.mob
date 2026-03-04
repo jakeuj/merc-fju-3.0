@@ -1,0 +1,31 @@
+Vnum            30019
+Name            gong sun zan~
+ShortDesc       公孫瓚~
+LongDesc        公孫瓚(gong sun zan)
+~
+Description
+北平太守。流備的學兄﹐在與西羌族的戰
+鬥中﹐以『白馬將軍』而聞名﹐使敵不戰
+而避。為爭奪冀州而與袁紹大戰﹐再遭到
+易京大敗後﹐殺死妻子家小後自殺。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

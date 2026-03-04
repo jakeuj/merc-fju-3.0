@@ -1,0 +1,13 @@
+Vnum            62
+Name            garlic dumpling~
+ShortDesc       香蒜大肉包~
+Description
+一個令人垂涎愈滴的香蒜包子(garlic dumpling)。~
+Unit            個~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           1
+Value           25 20 3
+Weight          1
+Cost            10
+End

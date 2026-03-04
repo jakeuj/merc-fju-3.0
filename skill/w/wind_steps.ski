@@ -1,0 +1,106 @@
+Name            wind steps~
+Cname           風影藏~
+Slot            SLOT_WIND_STEPS
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_DODGE
+Costtype        COST_MOVE
+Cost            15
+Wait            10
+Exp             150
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           YES
+Cast            NO
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             30
+Qutoient        1
+Adeptation      0
+Limit           CLASS_THIEF      1  95
+Help            ~
+
+#Damage
+Description
+$n邪邪的一笑﹐身影一轉﹐一招$R「若隱若現」$Z﹐不慌不忙的閃過$N的殺著。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n雙腿不停的加快使出$B「風影迷霧」$Z﹐有如幻化千百影子﹐$N的眼前瞬間出現幾
+個人的身影﹐不知道哪個才是真的。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+只見$n右腿一使$G「蜻蜓點水」$Z﹐$n的身影轉到$N身後﹐並對著$N露出邪邪的笑容。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n突然足下不動﹐使出$Y「殘影三分」$Z﹐$N看到$n有三條人影出現在$N的眼前﹐不知
+要打那一個。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n突然叱喝一聲使$G「風中殘影」$Z﹐$n意料不到的驚人速度躲避了$N的攻擊。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+在短短的幾步間一招$P「追風趕月」$Z﹐$n就已有拋離$N很長的距離﹐使得$N無法展開
+攻擊。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n以$W「隨浪花飄」$Z﹐輕易橫越$N像洶湧浪濤的攻擊﹐使$N動作一緩﹐$n便趁機逃開。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n心神一振使出$B「無影無蹤」$Z身法更快﹐如電窮追﹐勁風四溢﹐$N只感覺被勁風吹
+襲﹐招招落空﹐$n身形一飄﹐不見蹤影。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

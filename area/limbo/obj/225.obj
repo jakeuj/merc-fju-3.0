@@ -1,0 +1,14 @@
+Vnum            225
+Name            night steps book~
+ShortDesc       百鬼夜行步秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_NIGHT_STEPS
+Value2          5
+Weight          3
+Cost            10000
+End

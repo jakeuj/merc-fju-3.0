@@ -1,0 +1,132 @@
+Name            ice freeze strike~
+Cname           寒冰綿掌~
+Slot            SLOT_ICEFREEZE_STRIKE
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            1
+Exp             5
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_GENERAL    1  70
+Limit           CLASS_BRAVO      1  90
+Help            ~
+
+#Damage
+Description
+$n邪聲一出﹐丹田一提﹐一股寒氣沿$N手臂碗蜒而上。$n趁幾使出寒冰錦掌的第一式之$A
+$Y               ★★★   ～   冰   寒   結    霜   ～   ★★★$Z$A
+昤眼間已將$N凝成一層層的冰霜。使得$N瞬間僵硬麻木﹐血氣窒媛。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n頓時間一片陰霾﹐$n使打出寒冰錦掌第二式之$A
+$P               ★★★   ～   天   冰   萬    理   ～   ★★★$Z$A
+寒氣悍然襲至招式淩厲強烈﹐越攻越狠。使得$N漸漸力怠不
+支﹐被寒掌重重擊中﹐連連中招。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_ARMS
+Innate          0 0
+End
+
+#Damage
+Description
+$n得勢不饒人﹐陸陸續續的使出寒冰錦掌第三式之$A
+$B               ★★★   ～   陰   朗   雲    霄   ～   ★★★$Z$A
+寒勁翻滾如輪﹐鋪天蓋地籠罩住$N。$N倉猝擋格﹐內勁未足﹐
+被震飛並不停的狂吐鮮血。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_HANDS
+Innate          0 0
+End
+
+#Damage
+Description
+$n轉身到$N背後﹐露出暴牙使出寒冰錦掌第四式之$A
+$R               ★★★   ～   驚   天   凝    血   ～   ★★★$Z$A
+$N狂叫一聲﹐$N身上鮮血不停的被$n抽取。$N感覺到一陣劇痛﹐
+鮮血從頸部湧襲而來。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_LEGS
+Innate          0 0
+End
+#Damage
+Description
+$n突然陰氣暴射﹐人撥身躍上半空﹐雙手合十使出寒冰錦掌第五式之$A
+$p               ★★★   ～   陰   影   迷    幻   ～   ★★★$Z$A
+無儔威力﹐行動快速﹐無數的人影飄浮。使得$N無法分辦$n真身﹐
+$N頓時遺散瓦解~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_WIELD
+Innate          0 0
+End
+#Damage
+Description
+$n出手如電﹐瞬間已到$N身前。$n使出寒冰錦掌第六式之$A
+$g               ★★★   ～   寒   天   冰   雪   ～   ★★★$Z$A
+$N避無可避﹐被轟飛半空﹐立如飄絮般轉動。寒氣透骨﹐$N被凍的死去活來。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_HANDS
+Innate          0 0
+End
+
+#Damage
+Description
+$n緊忙旋轉﹐天上風起雲湧﹐雷電交加使出寒冰錦掌第七式之$A
+$y               ★★★   ～   陰   暴   驚   靈   ～   ★★★$Z$A
+驚天巨響有如炮彈爆破激射﹐掌影有如雨迸狂射﹐$n重狂轟向$N而下﹐$N被重重擊中﹐
+身受重傷。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_LEGS
+Innate          0 0
+End
+
+#Damage
+Description
+$n突然斗逄一揚﹐以柔勁化盡$N的殺招﹐趁機使出寒冰錦掌最後一式$A
+$S               ★★★   ～   冰   天   雪    地  ～   ★★★$Z$A
+雙臂不斷引聚地心陰玄之氣﹐催生功力﹐寒勁凝聚壓縮將殺傷
+力加倍遞增氣旋澎湃急捲而下﹐強烈轟擊下﹐將$N震飛撞地。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_WIELD
+Innate          0 0
+End
+
+End

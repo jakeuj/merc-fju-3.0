@@ -1,0 +1,31 @@
+Vnum            30317
+Name            cao zhang~
+ShortDesc       曹彰~
+LongDesc        曹彰(cao zhang)
+~
+Description
+字子文﹐曹操的三子。曹操很賞識他的勇
+略﹐稱他為『黃鬚兒』。在與劉備爭奪漢
+中時﹐活躍一時。晚年因受其兄曹丕的疏
+遠﹐在失意中死去。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

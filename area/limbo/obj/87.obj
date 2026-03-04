@@ -1,0 +1,16 @@
+Vnum            87
+Name            moon blade~
+ShortDesc       追月刀 ~
+Description
+劍身整個用上好的精鐵煉製﹐白皚皚的刀光似乎告訴人們它的不凡之處。~
+Unit            把~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 4
+Weight          20
+Cost            200
+Exp             10
+End

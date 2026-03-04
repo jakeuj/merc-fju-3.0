@@ -1,0 +1,14 @@
+Vnum            213
+Name            gdragon steps book~
+ShortDesc       «C¥È¨­ªk¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_GDRAGON_STEPS
+Value2          5
+Weight          3
+Cost            10000
+End

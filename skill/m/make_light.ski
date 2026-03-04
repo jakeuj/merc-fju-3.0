@@ -1,0 +1,33 @@
+Name            make light~
+Cname           ¤d¤V¥ú¨~~
+Slot            SLOT_MAKE_LIGHT
+Msgoff          ~
+Function        spell_make_light~
+Position        POS_STANDING
+Type            TAR_IGNORE
+Costtype        COST_MANA
+Cost            15
+Wait            10
+Exp             1200
+Associate       SLOT_INFRAVISION
+Degree          300
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+SaySpell        YES
+Enable          NO
+Rating          RATING_LIGHT
+AntiRating      RATING_DARKNESS
+Innate          NO
+Ply             120
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    1  45
+Limit           CLASS_DOCTOR     1  65
+Limit           CLASS_BARD       1  90
+Help            ~
+End

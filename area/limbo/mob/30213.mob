@@ -1,0 +1,31 @@
+Vnum            30213
+Name            fu tong~
+ShortDesc       傅彤~
+LongDesc        傅彤(fu tong)
+~
+Description
+蜀國中軍護尉。蜀軍在彝陵遭到慘敗後﹐
+他奉命斷後。手持長槍﹐奮力抵抗吳軍﹐
+大喝『吾乃漢將﹐安肯降吳狗呼﹗』﹐最
+後口吐鮮血戰死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

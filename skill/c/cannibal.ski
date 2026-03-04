@@ -1,0 +1,34 @@
+Name            cannibal~
+Cname           §l¦å¤§§k~
+Slot            SLOT_CANNIBAL
+Msgoff          ~
+Check           check_unrigid_attack~
+Function        cast_cannibal~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            10
+Wait            2
+Exp             5
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_FIGHTER    1  50
+Limit           CLASS_THIEF      1  50
+Limit           CLASS_GENERAL    1  90
+Limit           CLASS_BRAVO      1  95
+Help            ~
+End

@@ -1,0 +1,11 @@
+Higher          LEVEL_PC
+Lower           1
+Position        POS_STANDING
+Function        ~
+Description
+·í§A¨­Ãh¹d´Ú¡M¤S¤£¬Û«H¿ú²ø([1;32mdeposit[0m)¡M©Î¬O¶û§Q®§¤Ó§C«ç»ò¿ì©O¡S¨SÃö«Y¡M³o¸Ì
+¥i¬O¦³ªÑ²¼([1;32mstock[0m)Åý§Aª£§@ªº¡M·íµM¤Ñ¤U¨S¦³Ã­ÁÈªº¥Í·Nªº°Õ¡T
+
+½Ð¬d¸ß¡Rstock¡Bdeposit
+~
+End

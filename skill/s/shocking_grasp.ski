@@ -1,0 +1,41 @@
+Name            shocking grasp~
+Cname           輕度電擊術~
+Slot            SLOT_SHOCKING_GRASP
+Msgoff          ~
+Function        cast_shocking_grasp~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MANA
+Cost            15
+Wait            8
+Exp             1200
+Associate       SLOT_LIGHTNING_BOLT
+Degree          300
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_LIGHTNING
+Innate          NO
+Ply             120
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      10  25
+Limit           CLASS_SCHOLAR    10  30
+Limit           CLASS_FIGHTER    10  25
+Limit           CLASS_SHAMAN     10  50
+Limit           CLASS_THIEF      15  25
+Limit           CLASS_DOCTOR     50  35
+Limit           CLASS_BARD       50  35
+Limit           CLASS_GENERAL    50  25
+Limit           CLASS_BRAVO      50  25
+Limit           CLASS_MAGE       50  95
+Limit           CLASS_SMITH      50  85
+
+Help            ~
+End

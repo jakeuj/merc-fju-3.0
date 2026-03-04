@@ -1,0 +1,31 @@
+Vnum            30306
+Name            luo tong~
+ShortDesc       駱統~
+LongDesc        駱統(luo tong)
+~
+Description
+字公緒﹐會稽烏傷人氏﹐孫權的幕僚。雖
+生活清貧仍孝順繼母﹐因此廣為人知。諸
+葛亮舌戰群儒﹐正要與他辯論時﹐被黃蓋
+阻止。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

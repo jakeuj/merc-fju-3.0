@@ -1,0 +1,15 @@
+Vnum            76
+Name            belt~
+ShortDesc       腰帶~
+Description
+一條有虎狀花紋的腰帶(belt)。~
+Unit            條~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_WAIST
+Takeable        Yes
+Level           20
+Value           -1
+Weight          10
+Cost            200
+Exp             10
+End

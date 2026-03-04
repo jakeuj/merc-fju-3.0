@@ -1,0 +1,15 @@
+Vnum            33
+Name            evil helmet~
+ShortDesc       邪惡頭盔~
+Description
+這是一頂集惡念所作成的頭盔(evil helmet)﹐強大的邪惡力量連雷公都不敢來找碴。~
+Unit            頂~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_HEAD
+Takeable        Yes
+Level           10
+Value           -1
+Weight          20
+Cost            200
+Exp             10
+End

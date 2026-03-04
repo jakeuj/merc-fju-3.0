@@ -1,0 +1,15 @@
+Vnum            94
+Name            roast drumstick~
+ShortDesc       烤雞腿~
+Description
+一隻烤得香噴噴雞腿(roast drumstick)﹐你還猶豫什麼﹖準備胃液吧。~
+Unit            隻~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           1
+Value1          100
+Value2          100
+Value3          15
+Weight          1
+Cost            10
+End

@@ -1,0 +1,16 @@
+Vnum            157
+Name            blood pill~
+ShortDesc       ¤û¶ÀºÜ¦å¤¦~
+Description
+¤@²É¥Ñ¤û¶À·Ò»sªº¸Ñ¬r¤¦ÃÄ(blood pill)¡C
+~
+Unit            ²É~
+ItemType        ITEM_PILL
+Contraband      Yes
+Takeable        Yes
+Level           2
+Value2          OBJ_CURE_POISON
+Value4          5
+Weight          1
+Cost            1000
+End

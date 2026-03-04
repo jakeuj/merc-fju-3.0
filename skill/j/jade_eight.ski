@@ -1,0 +1,143 @@
+Name            jade eight~
+Cname           破玉八擊~
+Slot            SLOT_JADE_EIGHT
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            5
+Exp             250
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             50
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    1  10
+Limit           CLASS_FIGHTER    1  45
+Limit           CLASS_SHAMAN     1  10
+Limit           CLASS_THIEF      1  35
+Limit           CLASS_DOCTOR     1  30
+Limit           CLASS_BARD       1  30
+Limit           CLASS_GENERAL    1  90
+Limit           CLASS_BRAVO      1  90
+Limit           CLASS_MAGE       1  30
+Limit           CLASS_SMITH      1  30
+Help            ~
+
+#Damage
+Description
+$n左腳一踏穩住身形﹐不慌不忙地面對$N的攻擊﹐使出$b「破玉八擊」$Z的起
+手式$g『初開天地』$Z右掌變幻、連消帶打﹐左掌則暗運內力倏地擊出﹐銳
+氣破空、掌氣四射﹐直往$N胸腹擊落。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n一看$N的招式往$n門面招乎﹐忽然腳踏八掛方位﹐一招$b「破玉八擊」$Z中
+的第貳式$p『飄掌若雨』$Z使出﹐只見$n左掌右揮﹐右掌左拍連續擊出八八
+六十四掌﹐一時掌影縱橫密如雨點﹐夾帶著幾許乎乎的破空之聲往$N周身
+擊去﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n看清$N來勢後﹐使出$b「破玉八擊」$Z中的第參式$W『飛砂走石』$Z右掌
+往地下一擊﹐一時只見碎石遍地、泥砂紛飛﹐$n左掌趁機畫一半圓﹐蓄滿真力
+後往前一拍﹐強勁的掌風夾雜著滿天石屑朝$N周身要害極速飛去﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$N的鮮血已染紅$n的雙眼﹐此時的$n似乎毫無人性﹐恍若一頭猛獸﹐只見
+$n身形忽然暴漲﹐瞬間雙掌翻飛﹐掌影交織而成一片白光﹐就在此時$N彷
+彿被眼前白光所震懾﹐忽然停住了身形﹐此時$n因心緒變易﹐招式更加飄渺無
+定﹐瞬間雙掌運力以雷霆萬鈞之勢擊向$N心窩﹐正是$b「破玉八擊」$Z中的第
+肆式$P『雷動風嘯』$Z﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+面對$N不曾間斷的攻擊﹐$n不禁心煩不已﹐身形突然充天拔起﹐至五六丈
+處﹐倏地一聲清嘯﹐如蒼鷹博兔、電射而下﹐雙掌挾帶著無窮罡氣往$N天
+靈擊落﹐這豈不是$b「破玉八擊」$Z中的第伍式$G『摧山崩嶽』$Z﹖~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$N的攻擊如狼似虎﹐使$n幾乎無法承受﹐突然$n產生一種本能的自衛反應﹐
+雙目一睜﹐本已油盡燈枯之身體此刻卻不知那來驚人力量﹐使出$b「破玉八擊」$Z
+中的第陸式$y『殘陽暴射』$Z連連揮出數十道猛勁掌力﹐威力不僅劇增數倍﹐
+自身更彷彿一道旋風﹐席捲鋪天砂石﹐直導$N要害。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n對一而再、再而三的攻擊已心生厭煩﹐而$N的死纏爛打又惹的$n怒火中
+燒﹐只聽$n大喝一聲：$r一瞬生死$Z﹐瞬間身形萬變﹐恍若百人地衝向$N﹐
+而$N在看不清來勢又分不清真假的情況已在被$n在身上連續印下十數道掌
+印。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n全身散發陣陣殺氣﹐不停的殺戮已使$n喪失心性﹐卻也令$n頓悟了$b「破玉八擊」$Z
+的最終奧義$B『開山破玉』$Z﹐$n左掌一圈往地下一擊﹐倏地一道裂痕挾帶的雄渾內力
+朝$N擊去﹐同時$n雙掌交疊並帶著一股霸道絕倫的氣勁﹐其勁若風雷、力似海嘯、狂如
+霹靂地擊破$N的防守﹐直取$N的門面﹐而其氣勁早已將方圓五尺內的一切化為烏有﹗﹗
+~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

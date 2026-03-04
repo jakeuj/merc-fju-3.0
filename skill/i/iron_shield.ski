@@ -1,0 +1,32 @@
+Name            iron shield~
+Cname           鐵布衫~
+Slot            SLOT_IRON_SHIELD
+Msgoff          在你身上凝聚的真氣漸漸散去﹗~
+Function        cast_iron_shield~
+Check           check_unrigid_attack~
+Position        POS_STANDING
+Type            TAR_CHAR_DEFENSIVE
+CostType        COST_HIT
+Cost            45
+Wait            25
+Exp             300
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_MURDER
+Innate          NO
+Ply             30
+Qutoient        1
+Adeptation      0
+Limit           CLASS_BRAVO      75  95
+Help
+~
+End

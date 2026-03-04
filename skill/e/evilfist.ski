@@ -1,0 +1,112 @@
+Name            evil fist~
+Cname           惡霸掌~
+Slot            SLOT_EVILFIST
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            10
+Exp             300
+Associate       SLOT_EVIL_KING
+Degree          50
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             60
+Qutoient        1
+Adeptation      0
+Limit           CLASS_FIGHTER    1  55
+Limit           CLASS_THIEF      1  55
+Limit           CLASS_GENERAL    1  90
+Limit           CLASS_BRAVO      1  90
+Help
+惡霸掌:
+
+本是土豪惡霸所使用的掌法﹐但是威力之強﹐令官軍中一些
+人士也跟著學習。但是練到後來﹐因為見招式越趨下流﹐不
+少潔身自愛的人士不喜練將下去﹐只剩本是惡霸之流。
+
+~
+
+#Damage
+Description
+$n邪念一動使出$S『惡向膽邊生』$Z﹐化解$N的層層防守﹐攻向$N的最弱處。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n使出一招$B『厄運當頭』$Z﹐擊向$N的天庭蓋。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n使出一招$P『惡意中傷』$Z﹐無情的往$N的身體狂攻而去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n使出$W『餓虎撲食』$Z﹐身形如餓虎般欺至$N身前﹐噬向$N。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n身形一變﹐使出$Y『扼殺訣』$Z﹐如死神般攻向$N。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n大喝一聲﹐捲起一股$R『惡勢力』$Z擊向$N﹐要$N屈服於其下。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n吐氣揚聲﹐真氣運至最高境界﹐$W終極奧義$S『鬼哭神嚎』$Z呼之欲出﹐無情地想
+將$N化為灰燼。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

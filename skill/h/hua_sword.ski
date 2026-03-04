@@ -1,0 +1,124 @@
+Name            hua sword~
+Cname           華山劍法~
+Slot            SLOT_HUA_SWORD
+Msgoff          ~
+Check           check_sword_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            10
+Wait            5
+Exp             400
+Associate       SLOT_FONXANSWORD
+Degree          50
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           YES
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_SWORD
+Rating          RATING_SKILL
+Innate          YES
+Ply             80
+Qutoient        1
+Adeptation      5
+Limit           CLASS_DEMOS      1  30
+Limit           CLASS_SCHOLAR    1  30
+Limit           CLASS_FIGHTER    1  60
+Limit           CLASS_SHAMAN     1  35
+Limit           CLASS_THIEF      1  55
+Limit           CLASS_DOCTOR     1  30
+Limit           CLASS_BARD       1  30
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  90
+Limit           CLASS_MAGE       1  50
+Limit           CLASS_SMITH      1  50
+Help
+華山劍法：
+
+這是華山派的入門劍法﹐不過由於簡單易學﹐方便實用﹐倒是有滿多
+的人都會使用﹐也有很多人在教導﹐可以防身健體。
+如果你要學習華山劍法﹐在洛陽城的一個鏢師我想他願意教導你的﹐
+只要你虛心去向他求教﹐至於走法是 ( / 3e 2s e )  便可以看到他
+在教導許多學生了﹗
+
+
+~
+
+#Damage
+Description
+面對$N的攻擊﹐$n從容不迫的以一招$Y『$S有鳳來儀$Y』$Z抵擋住。~
+Chance          10
+Value           20
+Parry           2
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n喝道$Y『$S蒼松迎客$Y』$Z﹐長劍疾使﹐讓$N無法迴避而身受重傷。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n手中長劍幻化數影﹐$Y『$S無邊落木$Y』$Z脫手而出﹐$N受到驚嚇無法閃躲。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n加快步法﹐舞出華山劍法之$Y『$S野馬奔馳$Y』$Z﹐$N因來不及防禦﹐已被刺中。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n輕躍半空猶如飛雁般的飛舞著﹐正是一招$Y『$S金雁橫空$Y』$Z﹐$N使盡全力仍然無
+法閃躲。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+待$N欲出招之際﹐$n早已發覺﹐始出$Y『$S先發制人$Y』$Z﹐讓$N反手不及。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n催動十成功力﹐使出華山秘式$Y『$S無法無天$Y』$Z﹐$N被$n氣勢所震無法移動﹐霎
+那間已遭長劍穿體而過。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

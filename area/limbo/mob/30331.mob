@@ -1,0 +1,31 @@
+Vnum            30331
+Name            ma liang~
+ShortDesc       馬良~
+LongDesc        馬良(ma liang)
+~
+Description
+字季常﹐人稱白眉馬良。劉備入川後﹐他
+是關羽的主要謀士。與諸葛亮交厚﹐尊量
+為兄。力諫劉備不打彝陵﹐卻不被採納。
+在諸葛亮南征時病死於蜀。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

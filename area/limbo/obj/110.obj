@@ -1,0 +1,17 @@
+Vnum            110
+Name            rice dumpling~
+ShortDesc       粽子~
+Description
+一粒熱騰騰的粽子﹐吃了可以讓你精神百倍﹐你可以吃吃看(eat rice)。
+~
+Unit            粒~
+ItemType        ITEM_PILL
+Contraband      Yes
+Takeable        Yes
+Level           2
+Value2          OBJ_CAST_ALL
+Value1          3000
+Value4          1
+Weight          1
+Cost            10
+End

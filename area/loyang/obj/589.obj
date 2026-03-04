@@ -1,0 +1,15 @@
+Vnum            589
+Name            saint wand~
+ShortDesc       [1;37m¸t§ú[0m~
+Description
+¦¹§ú¥þ¨­µo¥X¥Õ¦âªº¥ú¨~¡M¦ü¥G¦³«Ü¦hªºªk¤O¡C
+~
+ItemType        ITEM_WAND
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           65
+Value           0 0 0 0 RATING_SAINT 135 1000 100
+Weight          15
+Cost            1200
+End

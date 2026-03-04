@@ -1,0 +1,16 @@
+Vnum            123
+Name            x'mas turkey~
+ShortDesc       [1;33m­C½Ï[1;35m¤õÂû¤jÀ\[0m~
+Description
+³o¬O²³¯«­Ì¬°¤FÅé«ò¤j®a¦b³o»ò¬üªº¸`¤é¤¤¡MÁÙ¯à±M¤ß¦u¦b³o¨à
+©Ò­n»P¤j®a¤@¦P¤À¨Éªº¬ü­¹¡M¶â¡ã¨ý¹D¤£¿ùËç¡ã
+~
+Unit            «È~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           10
+Weight          1
+Cost            100
+Value           300 65 650
+
+End

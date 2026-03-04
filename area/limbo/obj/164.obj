@@ -1,0 +1,16 @@
+Vnum            164
+Name            kun earth potion~
+ShortDesc       坤地藥水~
+Description
+一瓶坤地藥水(kun earth potion)﹐具有偵測藏匿的效果。
+~
+Unit            瓶~
+ItemType        ITEM_POTION
+Contraband      Yes
+Takeable        Yes
+Level           10
+Value1          6
+Value2          OBJ_DETECT_HIDE
+Weight          5
+Cost            3000
+End

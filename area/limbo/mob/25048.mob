@@ -1,0 +1,30 @@
+Vnum            25048
+Name            tree frog~
+ShortDesc       翡翠樹蛙~
+LongDesc        翡翠樹蛙(tree frog)
+~
+Description
+擁有一身翠綠色的皮膚﹐眼睛下緣擁有一條
+彎彎的金黃色線條﹐常在亞熱帶的陰溼地出沒
+﹐有時會從它的腹部發出「咯、咯」的聲音。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

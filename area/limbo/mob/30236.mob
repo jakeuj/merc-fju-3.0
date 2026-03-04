@@ -1,0 +1,31 @@
+Vnum            30236
+Name            lyu meng~
+ShortDesc       呂蒙~
+LongDesc        呂蒙(lyu meng)
+~
+Description
+字子明。原是一屆武夫﹐受孫權教誨﹐學
+習文武之道﹐成長為智勇兼備的名將。魯
+肅死後就任東吳都督﹐最早看出陸遜的才
+幹﹐與陸遜合作﹐擊敗並殺死了關羽。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

@@ -1,0 +1,31 @@
+Vnum            30027
+Name            xun yu~
+ShortDesc       荀彧~
+LongDesc        荀彧(xun yu)
+~
+Description
+字文若。有王佐之才﹐曹操稱之為『吾之
+張良也』﹐備受重用。是卓越的戰略家﹐
+關渡之戰中﹐鼓勵一度消沈的曹操﹐並於
+最後使曹軍大捷。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

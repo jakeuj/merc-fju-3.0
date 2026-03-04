@@ -1,0 +1,13 @@
+Vnum            49
+Name            small bag~
+ShortDesc       小袋子~
+Description
+一個小袋子(small bag)被丟在地上。~
+Unit            個~
+ItemType        ITEM_CONTAINER
+Takeable        Yes
+Level           1
+Value           100
+Weight          5
+Cost            10
+End

@@ -1,0 +1,14 @@
+Vnum            244
+Name            ming snake book~
+ShortDesc       ­ß³DÃ@ªk¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_MING_SNAKE
+Value2          5
+Weight          3
+Cost            10000
+End

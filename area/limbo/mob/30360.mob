@@ -1,0 +1,31 @@
+Vnum            30360
+Name            shen dan~
+ShortDesc       申耽~
+LongDesc        申耽(shen dan)
+~
+Description
+魏國上庸太守。曹操棄守漢中後﹐投降劉
+備﹐進言立場不堅定的孟達欲投降魏國。
+後來孟達欲再降蜀時﹐被他攻擊﹐他也因
+此而升官。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

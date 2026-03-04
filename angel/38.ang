@@ -1,0 +1,11 @@
+Higher          LEVEL_PC
+Lower           1
+Position        POS_STANDING
+Function        ~
+Description
+ª±¹CÀ¸·íµM­n¥´­Ë¼Ä¤H¤~¦³¼Ö½ì¡M¤H»¡¥\¤Ò¦Ê©Û¡M¥´¬[®É¤]¬O¥u¥Î¤@©Û¡M¨º¦p¦ó
+¬I®i([1;32mcast[0m)¥\¤Ò¨Ó¥´­Ë¼Ä¤H©O¡S­º¥ý§A¥²¶·¾Ç²ß([1;32mlearn[0m)§Þ¯à¡MµM«á´N¥i¥H¬I®i¤F¡C
+
+½Ð¬d¸ß¡Rlearn¡Bcast
+~
+End

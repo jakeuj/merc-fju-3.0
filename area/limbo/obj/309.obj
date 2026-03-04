@@ -1,0 +1,14 @@
+Vnum            309
+Name            control weather book~
+ShortDesc       控制天氣術秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_CONTROL_WEATHER
+Value2          5
+Weight          3
+Cost            10000
+End

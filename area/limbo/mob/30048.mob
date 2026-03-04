@@ -1,0 +1,30 @@
+Vnum            30048
+Name            fan chou~
+ShortDesc       樊稠~
+LongDesc        樊稠(fan chou)
+~
+Description
+董卓部將。董卓死後﹐擊退了興兵討逆的
+馬騰﹐韓遂﹐追擊敵軍時﹐因為念舊﹐放
+走同鄉韓遂﹐他因此被李榷﹐郭汜殺害。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

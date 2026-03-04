@@ -1,0 +1,34 @@
+Vnum            410
+Name            magic sword~
+ShortDesc       魔法劍~
+Description
+這劍是以魔法作成的﹐充滿了不透明的色彩。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Glow            Yes
+Takeable        Yes
+Level           1
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            10
+Exp             25
+
+#Affect
+Location        APPLY_STR
+Modifier        3
+End
+
+#Affect
+Location        APPLY_DEX
+Modifier        -1
+End
+
+#Restrict
+Type            RES_CLASS
+Value           RES_SMITH
+End
+
+
+End

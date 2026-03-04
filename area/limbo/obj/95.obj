@@ -1,0 +1,16 @@
+Vnum            95
+Name            club~
+ShortDesc       齊眉棍~
+Description
+這是一把看起相當普通的齊眉棍(club)﹐看來是少林僧人練武專用的。~
+Unit            根~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 10
+Weight          20
+Cost            200
+Exp             10
+End

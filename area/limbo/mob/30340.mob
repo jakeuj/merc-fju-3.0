@@ -1,0 +1,30 @@
+Vnum            30340
+Name            quan cong~
+ShortDesc       全琮~
+LongDesc        全琮(quan cong)
+~
+Description
+字子璜﹐吳將。討伐山越族立過大功。與
+陸遜一起出征﹐打擊被詐降的吳將周魴誘
+來的魏軍。擊敗了薛喬﹐獲得勝利。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

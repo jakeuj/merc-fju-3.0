@@ -1,0 +1,14 @@
+Vnum            115
+Name            sparkler~
+ShortDesc       煙火~
+Description
+這是一盒特製的煙火(sparkler)﹐你可以施放(fire)看看
+~
+Unit            盒~
+ItemType        ITEM_FIREWORK
+Takeable        Yes
+Level           1
+Value           5 35
+Weight          2
+Cost            5000
+End

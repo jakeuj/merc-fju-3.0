@@ -1,0 +1,39 @@
+Name            detect invis~
+Cname           偵測隱形~
+Slot            SLOT_DETECT_INVIS
+Msgoff          你再也看不見透明的東西了﹗~
+Function        cast_detect_invis~
+Check           check_unrigid_attack~
+Position        POS_STANDING
+Type            TAR_CHAR_SELF
+CostType        COST_MANA
+Cost            40
+Wait            22
+Exp             250
+Associate       SLOT_SUMMON
+Degree          20
+Affect          AFFECT_NONE
+AffectID        OBJ_DETECT_INVS
+CanAsk          NO
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_LIGHT
+AntiRating      RATING_DARKNESS
+Innate          NO
+Ply             35
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  65
+Limit           CLASS_BARD       1  90
+
+#Affect
+Type            SLOT_DETECT_INVIS
+Location        AFF_NONE
+End
+
+Help            ~
+End

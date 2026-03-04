@@ -1,0 +1,30 @@
+Vnum            30237
+Name            hao zhao~
+ShortDesc       郝昭~
+LongDesc        郝昭(hao zhao)
+~
+Description
+字伯道。率兩千人馬鎮守軍事重鎮陳倉﹐
+與諸葛亮率領的、十倍於己的蜀軍對抗﹐
+用巧妙的戰術守住了陳倉。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

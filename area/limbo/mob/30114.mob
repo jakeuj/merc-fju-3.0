@@ -1,0 +1,30 @@
+Vnum            30114
+Name            gao pei~
+ShortDesc       高沛~
+LongDesc        高沛(gao pei)
+~
+Description
+劉璋手下大將﹐與楊懷一起負責守備沛水
+關。企圖暗算劉備﹐被劉備軍師龐統識破
+﹐斬之。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

@@ -1,0 +1,14 @@
+Vnum            317
+Name            call lightning book~
+ShortDesc       ©I¥s¤Ñ¹p¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_CALL_LIGHTNING
+Value2          5
+Weight          3
+Cost            10000
+End

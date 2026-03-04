@@ -1,0 +1,13 @@
+Vnum            104
+Name            earth ore~
+ShortDesc       地石~
+Description
+一顆看來還不錯的地石(earth ore)﹐拿給鐵匠或是鑄劍師鑄造(mint)吧﹗~
+Unit            顆~
+ItemType        ITEM_ORE
+Takeable        Yes
+Level           1
+Value           90 1 3000 300
+Weight          20
+Cost            10
+End

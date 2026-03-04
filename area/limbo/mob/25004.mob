@@ -1,0 +1,29 @@
+Vnum            25004
+Name            monkey~
+ShortDesc       猴子~
+LongDesc        猴子(monkey)
+~
+Description
+小猴子﹐最聰明﹐為人類補腦食物的極品﹐爬樹雜
+耍﹐樣樣行﹐但是極為調皮的動物之一。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

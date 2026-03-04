@@ -1,0 +1,15 @@
+Vnum            67
+Name            peanut~
+ShortDesc       椒鹽花生~
+Description
+一袋灑滿特製鹽巴﹐看起來很好吃的花生(peanut)。~
+Unit            盤~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           1
+Value1          50
+Value2          50
+Value3          10
+Weight          1
+Cost            10
+End

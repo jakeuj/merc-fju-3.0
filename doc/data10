@@ -1,0 +1,266 @@
+Subject: [¤å¥ó] Socials ¥~±¾¤èªk (Âà¸ü)                adac(Âà±H)
+
+        ¦b Envy 1.0 ¤¤, Social CMD ¬O¦bµ{¦¡¤º³¡ªº, ³o·N«ä´N¬O»¡
+        °²¦p­n­×§ï¤@­Ó Social CMD, ´N¥²¶·­«·s½sÄ¶µ{¦¡.....hmmm.
+
+        ¥H¤Uªº patch, ¬O±N Social CMD ¿W¥ß©óµ{¦¡¤¤, ¦Ó©ñ¨ì°Ï°ìÀÉ¤¤,
+        ÂÇ¥Ñ #SOCIALS ªº©w¸q¥i¥H¦Û¥Ñªº­×§ï©Ò¦³ªº Social CMD.
+
+        Hope it is useful for you.
+        Any bugs, welcome to report.
+
+-----------
+
+        °Ï°ìÀÉ¤¤ªº®æ¦¡¬°:
+#SOCIALS
+accuse~
+±±¶D~
+§A·Q«ü³d½Ö?~
+$n ¤@¥I·Q½|¤Hªº¼Ë¤l.~
+You ¹ï $M §ë¥HÄþ³dªº²´¥ú.~
+$n ¹ï $N §ë¥HÄþ³dªº²´¥ú.~
+$n ¹ï§A§ë¥HÄþ³dªº²´¥ú.~
+§A²`²`¦a¦Û³d.~
+$n ¦ü¥G¨}¤ß¤£¦w.~
+
+ack~
+Åå´j~
+You gasp and say 'ACK!' at your mistake.~
+$n ACKS at $s big mistake.~
+You ACK $M.~
+$n ACKS $N.~
+$n ACKS you.~
+You ACK yourself.~
+$n ACKS $mself.  Must be a bad day.~
+
+$~
+
+
+        --- MERC.H ---
+
+--- Add:
+typedef struct  social_data             SOCIAL_DATA;
+
+--- replace struct  social_type with following struct:
+/*
+ * Structure for a social in the socials table.
+ */
+struct  social_data
+{
+    SOCIAL_DATA *       next;
+    char *              name;
+    char *              c_name;
+    char *              char_no_arg;
+    char *              others_no_arg;
+    char *              char_found;
+    char *              others_found;
+    char *              vict_found;
+    char *              char_auto;
+    char *              others_auto;
+};
+
+--- replace:
+extern  const   struct  social_type     social_table    [ ];
+with:
+extern  const   struct  social_data     social_table    [ ];
+
+--- add following code in Global variable:
+extern          SOCIAL_DATA       *     social_first;
+
+
+        --- DB.C ---
+
+--- add following code in Local booting procedures:
+void    load_socials    args( ( FILE *fp ) );
+
+--- in boot_db(), just add "****" mark, 2 lines code:
+                else if ( !str_cmp( word, "ROOMS"    ) )
+                    load_rooms   ( fpArea );
+****            else if ( !str_cmp( word, "SOCIALS"  ) )
+****                load_socials ( fpArea );
+
+--- add load_socials()
+/*
+ * Snarf a social section.
+ */
+void load_socials( FILE *fp )
+{
+    SOCIAL_DATA *pSocial;
+
+    for ( ; ; )
+    {
+        pSocial                 = alloc_perm( sizeof( *pSocial ) );
+        pSocial->name           = fread_string( fp );
+        if ( !str_cmp( pSocial->name, "$" ) )
+            break;
+
+        pSocial->c_name         = fread_string( fp );
+        pSocial->char_no_arg    = fread_string( fp );
+        pSocial->others_no_arg  = fread_string( fp );
+        pSocial->char_found     = fread_string( fp );
+        pSocial->others_found   = fread_string( fp );
+        pSocial->vict_found     = fread_string( fp );
+        pSocial->char_auto      = fread_string( fp );
+        pSocial->others_auto    = fread_string( fp );
+
+        if ( !social_first )
+            social_first = pSocial;
+        if (  social_last  )
+            social_last->next = pSocial;
+
+        social_last     = pSocial;
+        pSocial->next   = NULL;
+        top_social++;
+    }
+
+    return;
+}
+
+
+        --- INTERP.C ---
+
+--- replace check_social():
+bool check_social( CHAR_DATA *ch, char *command, char *argument )
+{
+    CHAR_DATA *victim;
+    char       arg [ MAX_INPUT_LENGTH ];
+    SOCIAL_DATA *social;
+
+    for ( social = social_first; social; social = social->next )
+    {
+        if ( command[0] == social->name[0]
+            && !str_prefix( command, social->name ) )
+            break;
+    }
+
+    if ( !social )
+        return FALSE;
+
+    if ( !IS_NPC( ch ) && IS_SET( ch->act, PLR_NO_EMOTE ) )
+    {
+        send_to_char( "You are anti-social!\n\r", ch );
+        return TRUE;
+    }
+
+    switch ( ch->position )
+    {
+    case POS_DEAD:
+        send_to_char( "Lie still; you are DEAD.\n\r",             ch );
+        return TRUE;
+
+    case POS_INCAP:
+    case POS_MORTAL:
+        send_to_char( "You are hurt far too badly for that.\n\r", ch );
+        return TRUE;
+
+    case POS_STUNNED:
+        send_to_char( "You are too stunned to do that.\n\r",      ch );
+        return TRUE;
+
+    case POS_SLEEPING:
+        /*
+         * I just know this is the path to a 12" 'if' statement.  :(
+         * But two players asked for it already!  -- Furey
+         */
+        if ( !str_cmp( social->name, "snore" ) )
+            break;
+        send_to_char( "In your dreams, or what?\n\r",             ch );
+        return TRUE;
+
+    }
+
+    one_argument( argument, arg );
+    victim = NULL;
+    if ( arg[0] == '\0' )
+    {
+        act( social->char_no_arg,   ch, NULL, victim, TO_CHAR    );
+        act( social->others_no_arg, ch, NULL, victim, TO_ROOM    );
+    }
+    else if ( !( victim = get_char_room( ch, arg ) ) )
+    {
+        send_to_char( "They aren't here.\n\r",                    ch );
+    }
+    else if ( victim == ch )
+    {
+        act( social->char_auto,     ch, NULL, victim, TO_CHAR    );
+        act( social->others_auto,   ch, NULL, victim, TO_ROOM    );
+    }
+    else
+    {
+        act( social->char_found,    ch, NULL, victim, TO_CHAR    );
+        act( social->vict_found,    ch, NULL, victim, TO_VICT    );
+        act( social->others_found,  ch, NULL, victim, TO_NOTVICT );
+
+        if ( !IS_NPC( ch )
+            && IS_NPC( victim )
+            && !IS_AFFECTED( victim, AFF_CHARM )
+            && IS_AWAKE( victim ) )
+        {
+            switch ( number_bits( 4 ) )
+            {
+            case 0:
+                if ( ( victim->level < ch->level )
+                    && !( victim->fighting ) )
+                    multi_hit( victim, ch, TYPE_UNDEFINED );
+                break;
+
+            case 1: case 2: case 3: case 4:
+            case 5: case 6: case 7: case 8:
+                act( social->char_found,
+                    victim, NULL, ch, TO_CHAR    );
+                act( social->vict_found,
+                    victim, NULL, ch, TO_VICT    );
+                act( social->others_found,
+                    victim, NULL, ch, TO_NOTVICT );
+                break;
+
+            case 9: case 10: case 11: case 12:
+                act( "You slap $N.",  victim, NULL, ch, TO_CHAR    );
+                act( "$n slaps you.", victim, NULL, ch, TO_VICT    );
+                act( "$n slaps $N.",  victim, NULL, ch, TO_NOTVICT );
+                break;
+            }
+        }
+    }
+
+    return TRUE;
+}
+
+
+
+        --- ACT_INFO.C ---
+
+--- replace old do_socials() with following new do_socials():
+void do_socials( CHAR_DATA *ch, char *argument )
+{
+    char buf[ MAX_STRING_LENGTH ], buf1[ MAX_STRING_LENGTH ];
+    SOCIAL_DATA *social;
+    int  col;
+
+    sprintf( buf1, "Social CMDs that you can use are:\n\r" );
+    col = 0;
+    for ( social = social_first; social; social = social->next )
+    {
+        sprintf( buf, "%s(%s)", social->name, social->c_name );
+        sprintf( buf1, "%-19s", buf );
+        if ( ++col % 4 == 0 )
+            strcat( buf1, "\n\r" );
+    }
+
+    if ( col % 4 != 0 )
+        strcat( buf1, "\n\r" );
+
+    send_to_char( buf1, ch );
+    return;
+}
+
+END of patch
+
+--
+                                                ·Å©v¬R, ¥æ¤j¸ê¤u
+                                                tywen@csie.nctu.edu.tw.
+
+
+--
+[1m¡° ¨Ó·½:¡E§öªá§ø bbs.ios.ncu.edu.tw¡E[FROM: wenny] [m
+

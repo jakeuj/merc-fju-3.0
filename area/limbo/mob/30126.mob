@@ -1,0 +1,31 @@
+Vnum            30126
+Name            ju shou~
+ShortDesc       沮授~
+LongDesc        沮授(ju shou)
+~
+Description
+袁紹的謀士。獻策戰勝公孫贊﹐其謀智不
+亞於諸葛亮。在官渡之戰中﹐力主與曹操
+進行持久戰﹐但不被重視。袁紹兵敗後被
+擒﹐企圖盜馬逃走未成被斬首。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

@@ -1,0 +1,16 @@
+Vnum            168
+Name            xun wind potion~
+ShortDesc       巽風藥水~
+Description
+一瓶巽風藥水(xun wind potion)﹐具有精靈之霧的效果。
+~
+Unit            瓶~
+ItemType        ITEM_POTION
+Contraband      Yes
+Takeable        Yes
+Level           10
+Value1          6
+Value2          OBJ_FAERIE_FOG
+Weight          5
+Cost            3000
+End

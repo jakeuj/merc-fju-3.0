@@ -1,0 +1,29 @@
+Vnum            25005
+Name            cat~
+ShortDesc       貓~
+LongDesc        貓(cat)
+~
+Description
+手腳敏銳﹐愛吃新鮮魚﹐抓老鼠﹐本領高﹐溫馴的
+動物之一﹐喜歡跟著女主人﹐窩在主人的懷抱。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

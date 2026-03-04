@@ -1,0 +1,31 @@
+Vnum            17
+Name            sueswan horse~
+ShortDesc       驌驦駒~
+LongDesc        驌驦駒(sueswan horse)
+~
+Description
+牠是一匹在戰場上縱橫無阻﹐能夠助主人橫掃千軍的馬﹐這匹馬通
+常是由元帥或將軍所騎﹐牠一身潔亮的白毛﹐與一張金色的馬鞍配
+稱﹐看起來更為高貴。
+~
+Sentinel        Yes
+Alignment       0
+Level           5
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              70
+Mana            0
+Move            70
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+Tractable       100
+End

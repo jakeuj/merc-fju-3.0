@@ -1,0 +1,31 @@
+Vnum            30065
+Name            lyu kuang~
+ShortDesc       呂曠~
+LongDesc        呂曠(lyu kuang)
+~
+Description
+袁尚部將﹐呂翔之兄。先降袁譚﹐接受了
+將軍印。但後來把印獻給了曹操﹐改投曹
+操。與其弟一起進攻新野時﹐被趙雲一槍
+刺死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

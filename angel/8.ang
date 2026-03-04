@@ -1,0 +1,13 @@
+Higher          LEVEL_PC
+Lower           1
+Position        POS_STANDING
+Function        ~
+Description
+如果你要讓系統自動幫你在打死敵人後找尋屍體裡的裝備時﹐你可以輸入 autoloot﹐
+系統會自動幫你找尋﹐你可以輸入 config 看看目前的設定值喔﹗至於錢﹐系統可是
+會自動幫你拿的啦﹐除非你拿不動。
+
+請查詢﹕auto config autoloot
+~
+
+End

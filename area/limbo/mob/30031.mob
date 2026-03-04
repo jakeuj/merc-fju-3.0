@@ -1,0 +1,30 @@
+Vnum            30031
+Name            xu rong~
+ShortDesc       徐榮~
+LongDesc        徐榮(xu rong)
+~
+Description
+董卓部將。追擊遭到呂布伏兵的襲擊後敗
+逃的曹操﹐一箭射中曹操肩頭﹐但被飛馬
+趕到的夏侯惇刺死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

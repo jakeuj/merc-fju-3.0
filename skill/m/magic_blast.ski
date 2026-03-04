@@ -1,0 +1,135 @@
+Name            magic blast~
+Cname           魔幻弓法~
+Slot            SLOT_MAGIC_BLAST
+Check           check_bow_attack~
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            10
+Exp             300
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_BOW
+Rating          RATING_SKILL
+Innate          NO
+Ply             60
+Qutoient        1
+Adeptation      0
+Limit           CLASS_FIGHTER    1  60
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  90
+Limit           CLASS_THIEF      1  90
+Limit           CLASS_SMITH      1  90
+Help            ~
+
+#Damage
+Description
+$n拉開$O﹐使出$R<<紅蓮>>$Z﹐射出$r火焰$Z的箭矢﹐$N閃避不及﹐全身被$r火$Z燒傷。
+~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n全身散發出$s寒冷$Z的氣息﹐射出$s寒凍$Z的箭矢﹐正是魔幻箭法中的$S<<凍牙>>$Z。
+~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n全身佈滿了$s電網$Z﹐正是$B<<轟天>>$Z的起招步驟﹐赫然射出帶$s電$Z的箭矢﹐$s電$Z的$N嘰嘰叫。
+~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n始出$Y<<衝破>>$Z﹐聚氣的射出一箭﹐其強烈的風勢把$N吹到半空中﹐$N跌得粉身碎骨。
+~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n狂叫一聲﹐使出$W<<震天>>$Z﹐放出如下雨般的箭矢﹐$N登時變成了刺蝟。
+~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n拉滿$O﹐使出$P<<鷲羽>>$Z﹐單手一放﹐箭矢貫穿$N。
+~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n使出$S<<疾風>>$Z﹐迅速地連射數箭﹐$N躲避不及﹐被箭射成重傷.。
+~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n拿出巨大的矢﹐使出$G<<大牙>>$Z﹐奮力一射﹐對$N有如$Y石破天驚$Z的創傷。
+~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n使出魔幻箭法最強的一式----$R<<屠龍>>$Z﹐射出含有$w鬥氣$Z的強烈箭矢。
+~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

@@ -1,0 +1,31 @@
+Vnum            30010
+Name            han fu~
+ShortDesc       韓馥~
+LongDesc        韓馥(han fu)
+~
+Description
+字文節﹐冀州刺史。中逢紀之計而使冀州
+被袁紹佔據後﹐後悔莫及﹐丟下妻小﹐隻
+身逃往張邈處。膽小怕事﹐不能在亂世中
+自立。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

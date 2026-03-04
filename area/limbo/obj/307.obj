@@ -1,0 +1,14 @@
+Vnum            307
+Name            cast fire book~
+ShortDesc       ¤T¬N¯u¤õ¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_CAST_FIRE
+Value2          5
+Weight          3
+Cost            10000
+End

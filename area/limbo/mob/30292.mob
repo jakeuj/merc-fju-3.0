@@ -1,0 +1,31 @@
+Vnum            30292
+Name            zuo xian wang~
+ShortDesc       左賢王~
+LongDesc        左賢王(zuo xian wang)
+~
+Description
+地位僅在匈奴王之下。袁紹之侄高幹前來
+投奔時﹐由於懼怕曹操而將其趕走。後來
+也接擄來的蔡邕之女蔡文姬老老實實遞送
+回中原。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

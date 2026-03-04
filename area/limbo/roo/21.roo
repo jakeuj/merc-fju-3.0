@@ -1,0 +1,15 @@
+Vnum            21
+Name            奈何橋頭~
+Description
+再往前去就是奈何橋了﹐過了奈何橋就不能再回頭了﹐難道果真人
+生沒有不死的傳說嗎﹖  只見一團團的鬼影往奈何橋上走去﹐似乎
+除了轉世投胎之外﹐已經無路可走了。每個鬼同志的臉色又恐慌又
+匆忙﹐彷彿害怕接受死後的審判﹐又怕太晚去輪迴找不到好位置﹐
+還是趕快上路吧﹗
+
+~
+SectorType      SECT_INSIDE
+Safe            Yes
+NoRecall        Yes
+ForeverLight    Yes
+End

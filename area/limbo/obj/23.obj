@@ -1,0 +1,19 @@
+Vnum            23
+Name            dragon boot~
+ShortDesc       應龍長靴~
+Description
+天神專用長靴(boot)。~
+Unit            雙~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_FEET
+Takeable        Yes
+Level           120
+Weight          0
+Cost            0
+Value           -1
+
+#Affect
+Location        APPLY_DEX
+Modifier        2
+End
+End

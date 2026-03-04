@@ -1,0 +1,31 @@
+Vnum            30041
+Name            zhang liao~
+ShortDesc       張遼~
+LongDesc        張遼(zhang liao)
+~
+Description
+字文遠﹐智勇雙全的一代名將﹐曹操部下
+五大將之首。其指揮才能在合淝戰役時發
+揮的淋漓盡致﹐僅以八百精兵就大破東吳
+十萬大軍﹐威震逍遙津。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

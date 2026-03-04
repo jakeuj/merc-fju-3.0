@@ -1,0 +1,116 @@
+Name            free steps~
+Cname           逍遙遊~
+Slot            SLOT_FREE_STEPS
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_DODGE
+Costtype        COST_MOVE
+Cost            10
+Wait            10
+Exp             100
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            NO
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             10
+Qutoient        1
+Adeptation      0
+Limit           CLASS_BRAVO     80  95
+Limit           CLASS_DOCTOR    80  75
+Help            ~
+
+#Damage
+Description
+$n雙腳一使$S『足踏雙萍水上飄』$Z體態輕盈有致，有如身處水面，輕踏而過，輕飄飄的躲過攻擊。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n俯衝向前、高高躍起、一招$S『意空明清遨天翔』$Z身處高空。輕鬆自在。一落地已在三丈之外。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n加快腳步，使出$S『夜深起步捉螢趣』$Z身法似螢之靈動，千變萬化、一瞬間、$n已閃過攻擊了。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n如履夢境，使出$S『迴夢追憶尋天馬』$Z雙腳飛馳離地，頭腦陶醉在睡夢中，更是柔化萬千、一一閃過攻擊。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n雙足疾馳，一招$S『靈狐騰躍黃山頂』$Z一輕跳、一轉身、面對$N的攻擊，$n借力使力，已躍向更遠的地方。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n的周圍忽然泛起$W白煙$Z，一著$S『未覺池戲春草夢』$Z看似玩耍、實則變化無窮，身影一定，已在$N之後。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n輕飄而起，使出$S『輕風飛舞行飄渺』$Z有如腳踏輕風，飛舞而起、連踏八個方位，伺機鑽出漏洞。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n雙足一使$S『明月流星細水流』$Z步法似流水般暢流，速如$W流星$Z、霎時！
+雙腳一轉，閃過攻擊，飄落在$N之後。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n輕鬆環繞，一式$S『破曉乍現逍遙遊』$Z越跑越快，身影逐漸幻化，巧妙閃過攻擊，只見$n單足觸地
+幻影漸現實體，瞬間已在遠處落地。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End
+
+

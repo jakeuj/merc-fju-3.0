@@ -1,0 +1,14 @@
+Vnum            327
+Name            cure blindness book~
+ShortDesc       ªvÀø²´ª¼¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_CURE_BLINDNESS
+Value2          5
+Weight          3
+Cost            10000
+End

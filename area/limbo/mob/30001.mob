@@ -1,0 +1,31 @@
+Vnum            30001
+Name            yuan shao~
+ShortDesc       袁紹~
+LongDesc        袁紹(yuan shao)
+~
+Description
+字本初﹐名門望族袁家頭領。十八鎮諸侯
+伐董卓時﹐他被推舉為盟主之後﹐為稱霸
+中原而與曹操決戰。因不聽忠言且優柔寡
+斷而眾叛親離﹐導致在官渡大敗。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

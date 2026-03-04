@@ -1,0 +1,31 @@
+Vnum            30312
+Name            meng huo~
+ShortDesc       孟獲~
+LongDesc        孟獲(meng huo)
+~
+Description
+南蠻王。劉備死後﹐率蠻兵十萬﹐反叛蜀
+國。經過著名的『七擒七縱』後﹐終於歸
+順。之後諸葛亮仍然命他統治南蠻﹐自守
+疆土。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

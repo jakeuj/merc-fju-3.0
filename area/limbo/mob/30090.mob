@@ -1,0 +1,30 @@
+Vnum            30090
+Name            ding yuan~
+ShortDesc       丁原~
+LongDesc        丁原(ding yuan)
+~
+Description
+字建陽﹐荊州刺史。接受何進的邀請﹐率
+軍進洛陽。與欲廢少帝的董卓勢不兩立。
+後因義子呂布投靠董卓﹐自己反遭殺  。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

@@ -1,0 +1,31 @@
+Vnum            38
+Name            thin blade~
+ShortDesc       極風柳葉刀~
+Description
+這是一柄十分細長的刀(thin blade)﹐平時可以藏在袖中﹐以發揮出絕佳的奇襲效果。~
+Unit            柄~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           90
+Value           0 -1 -1 4
+Weight          20
+Cost            200
+Exp             10
+
+#Affect
+Location        APPLY_DEX
+Modifier        3
+End
+
+#Affect
+Location        APPLY_STR
+Modifier        -2
+End
+
+#Restrict
+Type            RES_CLASS
+Value           RES_GENERAL|RES_BRAVO
+End
+End

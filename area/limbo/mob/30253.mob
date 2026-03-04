@@ -1,0 +1,31 @@
+Vnum            30253
+Name            si ma lang~
+ShortDesc       司馬朗~
+LongDesc        司馬朗(si ma lang)
+~
+Description
+字伯達﹐司馬懿之兄﹐主簿。司馬懿的兄
+弟們個個優秀﹐人稱『八司馬』。具正史
+記載﹐他們與東漢的司徒荀爽齊名﹐成為
+名士的代名詞。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

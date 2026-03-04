@@ -1,0 +1,17 @@
+Vnum            46
+Name            hackberry sword~
+ShortDesc       朴刀~
+Description
+朴刀一向用作古代步戰﹐刀身狹長﹐以劈、刺近搏為主﹐故兵刃典籍有謂
+「雙刀為父母﹐拼命之時用朴刀」﹐又謂「刀如猛虎先走紅」﹐不出則已﹐出則見血。~
+Unit            雙~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 3
+Weight          20
+Cost            200
+Exp             10
+End

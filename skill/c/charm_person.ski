@@ -1,0 +1,38 @@
+Name            charm person~
+Cname           迷惑術~
+Slot            SLOT_CHARM_PERSON
+Msgoff          你又能控制自我了﹗~
+Check           check_unrigid_attack~
+Function        cast_charm_person~
+Position        POS_STANDING
+Type            TAR_CHAR_DEFENSIVE
+CostType        COST_MANA
+Cost            120
+Wait            25
+Exp             300
+Associate       -1
+Degree          0
+Affect          SLOT_CHARM_PERSON
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_EVIL
+AntiRating      RATING_SAINT
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SMITH       65  85
+
+#Affect
+Type            SLOT_CHARM_PERSON
+Location        AFF_NONE
+End
+
+Help            ~
+End

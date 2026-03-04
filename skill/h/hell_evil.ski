@@ -1,0 +1,164 @@
+Name            hell evil~
+Cname           邪魔禁錮~
+Slot            SLOT_HELL_EVIL
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            1
+Exp             5
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help            ~
+#Damage
+Description
+$n雙手往上一翻﹐雙腳蹲了個馬步﹐使出一招$S「妖魔聚鼎」$Z﹐將妖氣凝聚於全身上
+下﹐硬生生的把$N的招式接了下來。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n伸出右手拇指﹐食指﹐中指﹐使出一招$S「群妖攔路」$Z﹐三指由中宮飛快的探向$N
+的咽喉﹐破解了$N的攻勢。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$B$n身子半伏﹐倏的躍了起來﹐從空中使出一招$S「魑魅魍魎」$Z﹐$B右爪迅速的從
+$N頭頂上抓了下來$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$B$n雙爪向內一抱﹐身子後拱﹐一式$S「魔性狂發」$Z﹐$B縱身向$N躍了過去﹐雙爪
+外分﹐朝$N的脖子擊了下去$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$B$n加快起腳步﹐使出一招$S「妖遁魔現」$Z﹐$B繞著$N急速旋轉著﹐忽然間似有千萬
+隻手爪向$N襲擊而來﹐分擊$N身上各個不同要害$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$B$n一招$S「群魔亂舞」$Z$B使出﹐只見殘光亂影﹐$n的影子充斥著$N的眼簾之中﹐渾
+不知$N會從何處發動攻擊﹐忽然$n一躍身﹐已繞到$N身後﹐向$N腦後擊了下去。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$B$n左爪內彎﹐右爪上提﹐腳底遊走著﹐正是一式$R「妖助魔勢氣更燄」$Z﹐$B左爪擊
+向$N的天靈蓋上﹐跟著又向右邊略移半步﹐提起右爪攻向$N的左肩。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$B$n爪成刀掌﹐一招$R「煉獄妖斬手」$Z$B使將出來﹐橫劈直砍的攻向$N的面﹐手﹐胸
+﹐腹﹐足等各個部位﹐左腳爪則是一式$B「帝魔橫掃腿」$Z橫掃$N的下盤$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$B$n揮舞著雙爪﹐一招$R「天魔盜明珠」$Z$B竄了出來﹐雙爪直逼$N中宮下盤二處﹐$N
+顯得難以應付﹐$n右爪攻勢忽的一轉﹐改為直取$N雙目﹐逼的$N步步後退$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$B$n忽然停止一切攻擊﹐只是靜靜的凝視著$N﹐這正是一招$S「魔影幻攻心」$Z﹐$B$N
+漸漸的感到口乾舌燥﹐心裡面有如千萬條蟲蟻咬鍥著﹐麻癢難當。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$W$n提氣大喝一聲! 使出一招$R「惡妖探路」$Z$W急攻$N胸前﹐接著又是一招$Y「小鬼
+拜閻王」$Z$W直取$N右肩臂膀﹐此二式來勢洶湧﹐令人防不勝防﹐忽的$n招式一變﹐右
+爪使$S「無影魔幻掌」$Z$W左爪主$R「七煞火燄掌」$Z﹐$W掌風飄移不定﹐分別攻向$N
+的頭頂及背部﹐下盤則是踩著$G「魔十二宮禁步」$Z﹐$W不斷的向$N踢去﹐瞬間五式變
+化﹐眼見$N以難以躲避了$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

@@ -1,0 +1,38 @@
+Name            faerie fog~
+Cname           精靈之霧~
+Slot            SLOT_FAERIE_FOG
+Msgoff          ~
+Function        cast_faerie_fog~
+Check           check_unrigid_attack~
+Position        POS_STANDING
+Type            TAR_IGNORE
+CostType        COST_MANA
+Cost            15
+Wait            18
+Exp             600
+Associate       SLOT_SHIELD
+Degree          150
+Affect          AFFECT_NONE
+AffectID        OBJ_FAERIE_FOG
+CanAsk          NO
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_WIND
+AntiRating      RATING_EARTH
+Innate          NO
+Ply             60
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  70
+Limit           CLASS_BARD       1  95
+
+Help
+精靈之霧:
+
+你吸收大氣中的煙霧﹐一吐而出﹐可以用來讓一些隱身的人現身﹗
+~
+End

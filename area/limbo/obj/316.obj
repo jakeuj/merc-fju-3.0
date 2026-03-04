@@ -1,0 +1,14 @@
+Vnum            316
+Name            burning hands book~
+ShortDesc       ¤õµK¤§´x¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_BURNING_HANDS
+Value2          5
+Weight          3
+Cost            10000
+End

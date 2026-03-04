@@ -1,0 +1,32 @@
+Name            abstract~
+Cname           ·Ò§¯³N~
+Slot            SLOT_ABSTRACT
+Msgoff          ~
+Function        cast_abstract~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MANA
+Cost            50
+Wait            10
+Exp             600
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Innate          NO
+Ply             60
+Qutoient        1
+Adeptation      0
+Rating          RATING_LOST
+Limit           CLASS_SHAMAN     30  40
+Limit           CLASS_MAGE       50  95
+Limit           CLASS_SMITH      50  80
+Help            ~
+End

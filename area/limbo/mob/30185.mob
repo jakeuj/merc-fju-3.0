@@ -1,0 +1,31 @@
+Vnum            30185
+Name            si ma hui~
+ShortDesc       司馬徽~
+LongDesc        司馬徽(si ma hui)
+~
+Description
+學者。字德操﹐號水鏡先生。襄陽名士﹐
+為諸葛亮、龐統、徐庶等人之師。告訴馬
+躍壇溪的劉備﹐『伏龍鳳雛﹐得一可安天
+下』之事。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

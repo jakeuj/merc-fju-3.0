@@ -1,0 +1,31 @@
+Vnum            30232
+Name            cheng yi~
+ShortDesc       程昱~
+LongDesc        程昱(cheng yi)
+~
+Description
+字仲德﹐經荀彧保舉輔佐曹操﹐是曹操的
+主要軍師之一。兗州被奪後﹐激勵垂頭喪
+氣的曹操﹐鼓舞鬥志。在倉亭之戰時﹐獻
+「十面埋伏」之計大敗袁紹。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

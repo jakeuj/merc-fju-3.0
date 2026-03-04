@@ -1,0 +1,33 @@
+Name            teleport~
+Cname           ÀH¾÷¶Ç°e~
+Slot            SLOT_TELEPORT
+Msgoff          ~
+Function        cast_teleport~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_SELF
+CostType        COST_MANA
+Cost            35
+Wait            20
+Exp             550
+Associate       SLOT_DETECT_INVIS
+Degree          100
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_LIGHT
+AntiRating      RATING_DARKNESS
+Innate          NO
+Ply             55
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  65
+Limit           CLASS_BARD       1  90
+Help            ~
+End

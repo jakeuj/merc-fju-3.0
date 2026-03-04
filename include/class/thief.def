@@ -1,0 +1,44 @@
+Vnum            CLASS_THIEF
+Name            thief~
+Cname           盜  賊~
+Title           夜行動物~
+LowerLimit      10
+UpperLimit      L_HER
+LimitMsg        $Y$n說道﹕「你不知道就算是小偷忍耐也有極限的嗎﹖」
+$n就一個迴身﹐繞到$N身後給予強力一擊﹗$A$R~
+Limit           2000
+Multiplier      35
+RebirthGold     0
+RebirthWarn     L_NEVER
+Associate       CLASS_NONE
+Mana            YES
+Rudiment        NO
+Select          NO
+Force           YES
+NSkill          22
+StrMax          22
+IntMax          22
+WisMax          30
+DexMax          38
+ConMax          23
+StrFactor       110
+IntFactor       110
+WisFactor       90
+DexFactor       70
+ConFactor       110
+StrDefaultMax   1
+StrDefaultMin   1
+WisDefaultMax   1
+WisDefaultMin   1
+IntDefaultMax   1
+IntDefaultMin   1
+DexDefaultMax   1
+DexDefaultMin   1
+ConDefaultMax   1
+ConDefaultMin   1
+HeroStr         0
+HeroInt         0
+HeroWis         0
+HeroDex         2
+HeroCon         1
+End

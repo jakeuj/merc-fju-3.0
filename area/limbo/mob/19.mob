@@ -1,0 +1,30 @@
+Vnum            19
+Name            santa claus~
+ShortDesc       聖誕老公公~
+Description
+全身紅衣鑲著白邊的裝扮﹐他就是小朋友最喜愛的聖誕老公公﹐他是
+神族特地由北極跟糜鹿搶來…不是﹐請來的…
+
+~
+Sentinel        Yes
+NoKill          Yes
+Alignment       0
+Level           50
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             100
+Int             100
+Wis             100
+Dex             100
+Con             100
+Hp              -1
+Mana            -1
+Move            -1
+Class           CLASS_MAGE
+Gold            -1
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+
+End

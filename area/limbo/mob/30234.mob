@@ -1,0 +1,31 @@
+Vnum            30234
+Name            yang xiu~
+ShortDesc       楊修~
+LongDesc        楊修(yang xiu)
+~
+Description
+字德祖﹐楊彪之子。因才華出眾且博學多
+智一度深得曹操喜愛。但他恃才傲物﹐在
+一些小事上得罪了曹操﹐最終因「雞肋」
+一事被曹操以擾亂軍紀的罪名處死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

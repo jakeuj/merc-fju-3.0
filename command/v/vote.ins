@@ -1,0 +1,75 @@
+Name            vote~
+Cname           投票指令~
+Function        do_vote~
+Position        POS_SLEEPING
+Level           0
+Log             LOG_NORMAL
+Exact           NO
+Argument        NO
+Wizlog          NO
+Jail            NO
+CanLock         YES
+Dead            YES
+Order           NO
+Lost            YES
+Lock            NO
+Limit           NO
+Help
+語法﹕vote
+語法﹕vote subject <主旨>
+語法﹕vote text    <意義>
+語法﹕vote list
+語法﹕vote post
+語法﹕vote set <1-10> <圈選項目>
+語法﹕vote show
+語法﹕vote read <第幾篇>
+語法﹕vote clear
+語法﹕vote limit <限制的等級>
+語法﹕vote poll <第幾個投票> <第幾項選項>
+語法﹕vote lock <第幾個投票>
+語法﹕vote days <幾天>
+語法﹕vote club
+語法﹕vote moninal
+
+    這個指令是給玩家來舉辦投票和進行投票的指令﹐所以分為兩類指令﹐
+
+1. 舉辦一場投票
+   a. vote subject <主旨>﹐用來建立投票的目的﹗
+   b. vote text    <內容>﹐用來告訴其他人﹐這場投票的真正意義﹐可以
+      一直輸入﹐這樣就可以有很多行的內容﹗
+   c. vote level   <等級>﹐設定最低投票等級﹐不能低於等級十﹗
+   d. vote set <1-10> <可圈選的項目>﹐這個是讓其他人可以圈選的項目
+      也是這場投票的重點﹗
+   e. vote show﹐察看目前設定的狀況﹗
+   f. vote clear﹐清除目前舉辦的內容﹗
+   g. vote post﹐正式舉辦投票﹐但得繳交費用﹐目前是一場一百萬﹗
+   h. vote club 設定這是自己幫派的投票。
+   i. vote days 設定幾天後可以開票。
+   j. vote moninal 設定是否為記名或是不記名投票。
+
+   範例﹕某人想舉辦一場有關職業的投票﹐所以他的指令是
+   1. vote subject 有關職業的投票   ---> 告訴其他人這場投票主要的目的﹗
+   2. vote text ....
+      vote text ....                ---> 告訴其他人詳細的內容和意義﹗
+   3. vote level 50                 ---> 限制這是五十級以上方可投票﹗
+   4. vote set 1 將軍
+      vote set 2 刺客
+      vote set 3 .....              ---> 慢慢設定別人可圈選的項目﹐最多十個
+   5. vote post                     ---> 正式舉辦﹗
+
+2. 投票
+   a. vote list﹐可以知道目前有幾場的票可以投和其主要意義﹗
+   b. vote read <號碼>﹐可以得知這場投票的完整內容﹗
+   c. vote poll <第幾場> <第幾個選項>﹐正式投票﹐請考慮清楚﹗
+
+    此外﹐管理者可以使用 vote lock <第幾場> 來鎖定或是解除某投票的作業﹐
+請舉辦的人注意一下﹐等級最好要有限制﹐因為每場投票只能供一百個人投票﹐額
+滿就不能投票了﹐當然每個人對每場投票只能有一次投票權﹐所以請慎重考慮﹐若
+舉辦後十天內﹐未滿一百個人投票﹐也視同完成投票﹗
+
+    當然﹐這個投票的用意是主要來反應玩家的意見﹐但這不是公民投票﹐所以..
+﹐嗯﹐頗尷尬的問題﹗
+
+相關指令﹕note joke read
+~
+End

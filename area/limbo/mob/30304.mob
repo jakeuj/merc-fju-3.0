@@ -1,0 +1,30 @@
+Vnum            30304
+Name            liu feng~
+ShortDesc       劉封~
+LongDesc        劉封(liu feng)
+~
+Description
+劉備的養子。由於守衛上庸時﹐拒絕派兵
+增援被東吳圍困﹐身陷絕境的關羽。因此
+激怒了劉備﹐在成都被斬。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

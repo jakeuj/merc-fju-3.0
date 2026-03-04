@@ -1,0 +1,123 @@
+Name            evil king~
+Cname           邪皇拳~
+Slot            SLOT_EVIL_KING
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            8
+Exp             150
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             30
+Qutoient        1
+Adeptation      0
+Limit           CLASS_FIGHTER    1  55
+Limit           CLASS_THIEF      1  55
+Limit           CLASS_GENERAL    1  90
+Limit           CLASS_BRAVO      1  90
+Help            ~
+
+#Damage
+Description
+$G$n邪念一動﹐使出「$B邪影拳$G」以進步連環的方式﹐拳頭直搗$N的全身要害。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G$n大喝一聲﹐使出「$R蛇使$G」﹐拳頭如同變化無形的兇蛇一般﹐以不可思議的角度
+擊傷$N。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G$n把拳勁灌注在右手﹐使出「$Y印度賀禮$G」﹐將對手連根拔起的拋向$N。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G為了封鎖對方的行動﹐$n使出了「$W零技之礎$G」﹐將拳頭打在$N的人身大穴上﹐
+使之無法動彈而任憑宰割。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G在$N全力攻擊下﹐$n冷哼一聲﹐使出「$P黑洞效應$G」﹐吸收$N的力量隨即反擊﹐
+$N反而被$n的層層拳勁而吞噬。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G$n以左晃右搖的身法﹐瞬間抓住$N的脖子﹐使出「$P冥府之門$G」﹐以高速拖曳前進﹐
+將內力注於$N身體裡﹐造成$N氣血翻騰而無法反擊。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G$n緊緊的注視$N﹐忽然以極速的步法奔至眼前﹐在$N錯愕之際﹐扣住$N的
+咽喉﹐正是殺招「$B黑暗慟哭$G」﹐只見附近的風隨$n聽喚﹐以音速的風刃蠶食$N的
+身體。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G面對$N的奮戰而無法擊倒﹐$n心中異常忿怒﹐將拳頭朝天空並吶喊﹐隨即$b大地$G為之
+怒號﹐$B狂雷$G互相競走﹐$B勁風$G鼓鼓作響﹐手中突然冒起$P紫燄$G﹐吸收萬物精華﹐
+正是邪皇拳最可怕的一招「$R億萬暴雷漩渦$G」﹐數以萬計的拳頭打在$N身上﹐不把$N
+轟碎勢不罷休。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

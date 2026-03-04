@@ -1,0 +1,14 @@
+Vnum            349
+Name            frost breath book~
+ShortDesc       ∑œ¿s∂√¶RØµ”D~
+Description
+~
+Unit            •ª~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_FROST_BREATH
+Value2          5
+Weight          3
+Cost            10000
+End

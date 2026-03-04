@@ -1,0 +1,31 @@
+Vnum            30305
+Name            fu ying~
+ShortDesc       傅嬰~
+LongDesc        傅嬰(fu ying)
+~
+Description
+東吳孫翊部將。孫翊被部下戴員等人謀殺
+後﹐他與孫翊之妻徐氏合作﹐殺死了殺人
+兇手戴員等二人。因此功績被孫權授與牙
+門將。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

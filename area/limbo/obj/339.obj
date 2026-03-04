@@ -1,0 +1,14 @@
+Vnum            339
+Name            dispel magic book~
+ShortDesc       ¯}°£Å]ªk¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_DISPEL_MAGIC
+Value2          5
+Weight          3
+Cost            10000
+End

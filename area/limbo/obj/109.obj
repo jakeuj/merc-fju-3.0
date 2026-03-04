@@ -1,0 +1,14 @@
+Vnum            109
+Name            vellum~
+ShortDesc       ¦Ï¥Ö¯È~
+Description
+~
+Unit            ±i~
+ItemType        ITEM_VELLUM
+Takeable        Yes
+NoSave          Yes
+Level           1
+Value           0
+Weight          2
+Cost            100
+End

@@ -1,0 +1,15 @@
+Vnum            101
+Name            evil jade~
+ShortDesc       鬼玉~
+Description
+一個具有來自異空間的神奇力量的寶玉﹐你不妨呼叫(call)它看看。
+~
+Unit            顆~
+ItemType        ITEM_SPIRITJADE
+Contraband      Yes
+Takeable        Yes
+Level           1
+Value           2 10 0 1 10
+Weight          10
+Cost            10
+End

@@ -1,0 +1,31 @@
+Vnum            30199
+Name            zhang song~
+ShortDesc       張松~
+LongDesc        張松(zhang song)
+~
+Description
+字永年﹐劉璋的部下。為防止張魯進犯﹐
+勸劉備入蜀﹐並獻上西川地圖﹐與法正、
+孟達作劉備的內應﹐導致了後來的三國鼎
+立和他自己悲慘的命運。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

@@ -1,0 +1,14 @@
+Vnum            338
+Name            dispel evil book~
+ShortDesc       ¯}°£¨¸´c¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_DISPEL_EVIL
+Value2          5
+Weight          3
+Cost            10000
+End

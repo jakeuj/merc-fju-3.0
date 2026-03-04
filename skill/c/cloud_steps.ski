@@ -1,0 +1,123 @@
+Name            cloud steps~
+Cname           翦雲步~
+Slot            SLOT_CLOUD_STEPS
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_DODGE
+Costtype        COST_MOVE
+Cost            5
+Wait            1
+Exp             400
+Associate       SLOT_GDRAGON_STEPS
+Degree          50
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            NO
+Concentration   NO
+Teach           YES
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          YES
+Ply             80
+Qutoient        1
+Adeptation      5
+Limit           CLASS_DEMOS      1  30
+Limit           CLASS_SCHOLAR    1  35
+Limit           CLASS_FIGHTER    1  55
+Limit           CLASS_SHAMAN     1  40
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  45
+Limit           CLASS_BARD       1  45
+Limit           CLASS_GENERAL    1  85
+Limit           CLASS_BRAVO      1  85
+Limit           CLASS_MAGE       1  50
+Limit           CLASS_SMITH      1  55
+Help
+翦雲步：
+
+翦雲步是一個很基本入門的步法﹐鍛鍊身體的基本反應、敏捷等等都
+有相當好的效果﹐並且姿勢看來十分美麗﹐故深為大眾所喜愛﹐到處
+都有人教導此技能。
+如果你想要學習此技能的話﹐可以到洛陽的鏢師去學習( / 3e 2s e)
+或是襄陽的教頭都願意教導你﹐記得虛心求教喔﹗
+
+~
+
+#Damage
+Description
+$n突然往左右不同方位踏出數步﹐猶如置身於雲霧之間一般﹐正是$W翦雲步$Z之『$B雲
+霧迷藏$Z』教$N捉摸不定。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n使出$W翦雲步$Z之『$Y碧海晴空$Z』身形猶如萬里晴空﹐追風逐電﹐迅速移位﹐頃刻
+如風般飛到$N身旁。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n身形如雲似幻﹐身旁飄起淡淡雲霧﹐瞬間一招『$R雲蹤突現$Z』﹐從$N背後猛下殺手﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n施展$W翦雲步$Z之『$P雲遊八方$Z』﹐身隨意行﹐四方遊走﹐避開$N攻擊。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n展現$W翦雲步$Z之『$B百變雲影$Z』﹐見招拆招﹐見式破式﹐靜觀$N的弱點。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n使出$W翦雲步$Z之攻擊招式『$R百變雲霧變幻十三式$Z』﹐如狂風暴雨綿綿不斷攻擊
+$N永不停息。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n打出$W翦雲步$Z最終之『$B萬$Y里$W無$R雲$Z』﹐神出鬼沒撲到$N的身後使出斃命殺
+招。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

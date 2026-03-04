@@ -1,0 +1,30 @@
+Vnum            25029
+Name            black bear~
+ShortDesc       黑熊~
+LongDesc        黑熊(black bear)
+~
+Description
+身體長得龐然大物﹐力量是最大的一種的動物
+﹐由其他那雙熊掌﹐掌上擁有利爪﹐世上沒人
+可以與它為敵。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

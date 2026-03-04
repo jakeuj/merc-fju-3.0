@@ -1,0 +1,16 @@
+Vnum            64
+Name            jade fan~
+ShortDesc       玉骨薄扇~
+Description
+以上好純玉製成的薄扇(jade fan)﹐看起來頗有古意。~
+Unit            把~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 8
+Weight          20
+Cost            200
+Exp             10
+End

@@ -1,0 +1,79 @@
+Name            sky dragon force~
+Cname           天龍真氣~
+Slot            SLOT_SKYDRAGON_FORCE
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            10
+Wait            1
+Exp             5
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help            ~
+#Damage
+Description
+$n突然領悟出$R天龍祕招$Z$A$A
+$B             　　火　　龍　　吐　　焰　　$Z$A$A
+$n$R將天龍真氣﹐運至手掌上﹐此時手掌發出絲絲的熱氣$Z$A
+$n$W感覺到手上的天龍真氣越來越高﹐二隻手掌發出耀眼的光芒$Z$A
+$n$S低吼一聲數十道炙熱真氣如輻射般狂射$N$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n突然領悟出$R天龍祕招$Z$A$A
+$B                冰    海    翻    龍    $Z$A$A
+$n$R逆運天龍真氣﹐將真氣運至手掌﹐瞬時雙掌轉為雪白$Z$A
+$n$W體中的天龍真氣如冰錐般從手上滾滾而出﹐不吐不快$Z$A
+$n$S將雙掌向前一推﹐漫天天龍真氣如冰錐般襲向$N$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n突然領悟出$R天龍祕招$Z$A$A
+$B                雪    龍    崩    月    $Z$A$A
+$n$R躍至半空中將天龍真氣發散出來﹐宛如冰雪$Z$A
+$n$W狂吼一聲挾帶天龍真氣如冰刨墜地般狂墜而下$Z$A
+$S數不清的掌影及天龍真氣形成冰霜包圍了$N$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

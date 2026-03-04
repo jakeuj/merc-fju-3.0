@@ -1,0 +1,17 @@
+Vnum            518
+Name            wedding ring~
+ShortDesc       [1;37mµ²±B§Ù«ü[0m~
+Description
+¶H¼x¥Ã«í°í©wªºµ²±B§Ù«ü(wedding ring)¡MÄmµ¹³o¨ü¤W¤Ñ¯¬ºÖªº¨â¤H¡C
+~
+Unit            ¥u~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_BODY
+Takeable        Yes
+Level           10
+Value           -1
+Weight          1
+Cost            100
+Exp             10
+
+End

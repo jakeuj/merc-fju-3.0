@@ -1,0 +1,45 @@
+Name            flamestrike~
+Cname           烈焰術~
+Slot            SLOT_FLAMESTRIKE
+Msgoff          ~
+Function        cast_flamestrike~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MANA
+Cost            20
+Wait            12
+Exp             900
+Associate       SLOT_FIREBALL
+Degree          200
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_FIRE
+AntiRating      RATING_WATER
+Innate          NO
+Ply             90
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    10  40
+Limit           CLASS_SHAMAN     10  60
+Limit           CLASS_DOCTOR     50  45
+Limit           CLASS_BARD       50  45
+Limit           CLASS_MAGE       50  95
+Limit           CLASS_SMITH      50  80
+
+Help
+烈焰術:
+
+由施術者發出一片火焰﹐對所有在場的敵人進行攻擊﹐威力強大﹐是
+火焰之掌的升級版﹐不過必須要有一定的程度方能領悟﹐屬於火系法
+術。
+
+~
+End

@@ -1,0 +1,15 @@
+Vnum            9008
+Name            ziwei sword~
+ShortDesc       µµ·L³n¼C~
+Description
+¼C¨­¬X³nªºªø¼C¡C~
+Unit            §â~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           25
+Value           0 -1 -1 3
+Weight          2
+Cost            250
+Exp             10
+End

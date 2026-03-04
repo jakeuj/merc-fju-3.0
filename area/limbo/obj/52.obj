@@ -1,0 +1,15 @@
+Vnum            52
+Name            sword~
+ShortDesc       剛劍~
+Description
+一把銀白色閃亮的鋼劍(sword)。~
+Unit            把~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           1
+Value           0 -1 -1 3
+Weight          2
+Cost            10
+Exp             10
+End

@@ -1,0 +1,14 @@
+Vnum            15
+Name            god armor~
+ShortDesc       鎮仙戰甲~
+Description
+一件天神專用的戰甲(armor)。~
+Unit            具~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_BODY
+Takeable        Yes
+Level           120
+Value           -1
+Weight          0
+Cost            0
+End

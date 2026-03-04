@@ -1,0 +1,31 @@
+Vnum            30072
+Name            zhang liang~
+ShortDesc       張梁~
+LongDesc        張梁(zhang liang)
+~
+Description
+張角﹐張寶之弟。與其兄一起舉兵造反﹐
+發動了黃巾之亂。自稱人公將軍﹐在張角
+死後﹐繼續指揮賊兵。後敗於官軍﹐在曲
+陽戰死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

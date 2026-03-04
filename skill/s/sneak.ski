@@ -1,0 +1,36 @@
+Name            sneak~
+Cname           潛行術~
+Slot            SLOT_SNEAK
+Msgoff          你不再用輕盈的步伐行走了﹗~
+Function        skill_sneak~
+Position        POS_STANDING
+Type            TAR_CHAR_SELF
+CostType        COST_MOVE
+Cost            20
+Wait            12
+Exp             150
+Associate       SLOT_DORMANCY
+Degree          50
+Affect          SLOT_SNEAK
+AffectID        OBJ_SNEAK
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+Enable          NO
+SaySpell        NO
+Rating          RATING_THIEF
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_THIEF      1  95
+Help            ~
+
+#Affect
+Type            SLOT_SNEAK
+Location        AFF_NONE
+End
+
+End

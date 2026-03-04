@@ -1,0 +1,34 @@
+Name            cure serious~
+Cname           ¤¤«×ªvÀø~
+Slot            SLOT_CURE_SERIOUS
+Msgoff          ~
+Function        cast_cure_serious~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_DEFENSIVE
+CostType        COST_MANA
+Cost            15
+Wait            12
+Exp             600
+Associate       SLOT_CURE_BLINDNESS
+Degree          100
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_WATER
+AntiRating      RATING_FIRE
+Innate          NO
+Ply             60
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    1  50
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  80
+Help            ~
+End

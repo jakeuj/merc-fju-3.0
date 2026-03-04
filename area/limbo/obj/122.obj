@@ -1,0 +1,19 @@
+Vnum            122
+Name            magic stone~
+ShortDesc       七彩斑斕的石頭~
+Description
+一顆七彩斑斕的石頭(magic stone)
+~
+Unit            顆~
+ItemType        ITEM_MAGICSTONE
+Takeable        Yes
+Level           99
+Weight          1
+Cost            1000
+
+#IMPACT
+Location        APPLY_DEX
+Modifier        1
+End
+
+End

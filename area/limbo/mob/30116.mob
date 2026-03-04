@@ -1,0 +1,31 @@
+Vnum            30116
+Name            cai mao~
+ShortDesc       蔡瑁~
+LongDesc        蔡瑁(cai mao)
+~
+Description
+劉表就任荊州牧時招聘來的名士之一﹐是
+劉表之妻蔡氏的弟弟。劉表死後﹐他擁立
+劉琮﹐把荊州出賣給了曹操。赤壁之戰時
+任水軍都督﹐被中周瑜之計的曹操斬首。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

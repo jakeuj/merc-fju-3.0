@@ -1,0 +1,16 @@
+Vnum            162
+Name            chian sky potion~
+ShortDesc       乾天藥水~
+Description
+一瓶乾天藥水(chian sky potion)﹐具有飛翔能力的效果。
+~
+Unit            瓶~
+ItemType        ITEM_POTION
+Contraband      Yes
+Takeable        Yes
+Level           10
+Value1          6
+Value2          OBJ_CAST_FLY
+Weight          5
+Cost            3000
+End

@@ -1,0 +1,19 @@
+Vnum            26
+Name            saint girth~
+ShortDesc       神聖腰帶~
+Description
+天神專用腰帶(girth)。~
+Unit            條~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_WAIST
+Takeable        Yes
+Level           120
+Weight          0
+Cost            0
+Value           -1
+
+#Affect
+Location        APPLY_STR
+Modifier        2
+End
+End

@@ -1,0 +1,31 @@
+Vnum            30004
+Name            kuai yue~
+ShortDesc       蒯越~
+LongDesc        蒯越(kuai yue)
+~
+Description
+字異度﹐蒯良之弟。秦漢時代的謀士蒯通
+的後裔。已足智多謀著稱。曹操在得到他
+後高興地說﹕『吾不喜得荊州﹐喜得異度
+也。』
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

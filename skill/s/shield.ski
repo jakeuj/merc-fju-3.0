@@ -1,0 +1,40 @@
+Name            shield~
+Cname           護盾術~
+Slot            SLOT_SHIELD
+Msgoff          在你身前的護盾消失了﹗~
+Function        cast_shield~
+Check           check_unrigid_attack~
+Position        POS_STANDING
+Type            TAR_CHAR_DEFENSIVE
+CostType        COST_MANA
+Cost            25
+Wait            25
+Exp             300
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_WIND
+AntiRating      RATING_EARTH
+Innate          NO
+Ply             30
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  70
+Limit           CLASS_BARD       1  95
+
+Help
+護盾術:
+
+利用風的強大力量﹐在你的身前形成一個護盾﹐讓你的保護更加的周
+延﹐一般的物理傷害都會比較沒有用。
+
+~
+End

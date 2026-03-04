@@ -1,0 +1,15 @@
+Vnum            74
+Name            blue skirt~
+ShortDesc       紫翠長裙~
+Description
+一件織工精細的紫色蟬絲長裙(blue skirt)﹐上面鑲著細細的金線﹐顯得格外美麗。~
+Unit            件~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_LEGS
+Takeable        Yes
+Level           20
+Value           -1
+Weight          10
+Cost            200
+Exp             10
+End

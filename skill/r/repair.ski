@@ -1,0 +1,38 @@
+Name            repair~
+Cname           修理術~
+Slot            SLOT_REPAIR
+Msgoff          ~
+Function        cast_repair~
+Check           check_unrigid_attack~
+Position        POS_STANDING
+Type            TAR_OBJ_INV
+CostType        COST_MANA
+Cost            30
+Wait            24
+Exp             200
+Associate       SLOT_DEVELOP
+Degree          50
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        NO
+Rating          RATING_CREATE
+Innate          NO
+Ply             30
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SMITH      1  95
+Help
+修理武器:
+
+可以修理武器﹐不必找鐵匠。
+等級越高﹐修理越快﹐而且修理時不會打壞武器。
+這項技能所需具備的是對武器的知識與強健的體魄。
+~
+
+End

@@ -1,0 +1,14 @@
+Vnum            353
+Name            giant strength book~
+ShortDesc       巨人之力秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_GIANT_STRENGTH
+Value2          5
+Weight          3
+Cost            10000
+End

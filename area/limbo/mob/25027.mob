@@ -1,0 +1,30 @@
+Vnum            25027
+Name            rusa~
+ShortDesc       公水鹿~
+LongDesc        公水鹿(rusa)
+~
+Description
+水鹿頭上長了長長的鹿角﹐一看就知道它是公的
+﹐尤其很會保護它的小鹿﹐一但有人攻擊小鹿
+﹐它會奮不顧身的跟你拼命。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

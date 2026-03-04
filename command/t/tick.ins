@@ -1,0 +1,39 @@
+Name            tick~
+Cname           自動輸出指令~
+Function        do_tick~
+Position        POS_DEAD
+Level           0
+Log             LOG_NORMAL
+Exact           NO
+Argument        NO
+Wizlog          NO
+Jail            NO
+CanLock         YES
+Dead            YES
+Order           NO
+Lost            NO
+Lock            NO
+Limit           NO
+Help
+語法﹕tick
+      tick [秒數] [命令]
+      tick !clear
+      tick !off
+      tick !on
+      tick !set              <神族命令>
+
+    這個指令可以幫你在固定時間內系統自動輸入某個指令﹐而不需手動輸入。
+例如﹕tick 10 drink
+
+    系統會在每個十個系統時間中幫你輸入 drink 這個動作。你就不必手動去
+輸入了。這個指令後面若是沒有參數則是查詢目前tick的狀態。
+
+    當你設定好時間和命令後﹐你可以輸入 tick !on 來啟動 tick 的動作﹐或
+是輸入 tick !off 來關閉 tick 動作。當然你可以輸入 tick !clear 來清除之
+前的設定。
+
+    管理者可以使用 tick !set 來關閉或啟動全體 tick 的使用。
+
+相關資料﹕alias
+~
+End

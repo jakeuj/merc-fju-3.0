@@ -1,0 +1,130 @@
+Name            god eagle claw~
+Cname           天鷹爪~
+Slot            SLOT_GODEAGLE_CLAW
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            15
+Wait            10
+Exp             15
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help            ~
+#Damage
+Description
+$W$n氣聚雙腿﹐穩住下盤迎敵使出$w天鷹爪$W之$Y『撥鷹見日』$W鷹爪有如巨綱暴射
+﹐舖天蓋地﹐向$N重重擊中。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$W$n身形急降﹐先避$N的攻擊﹐繼而再上使出$w天鷹爪$W之$Z$R『大鵬展翅』$W只見爪
+影籠罩$N﹐使得$N背門﹐面門﹐後門連連中招。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$W$n見狀大驚﹐借著天地之勢使出$w天鷹爪$W之$S『鷹渡天關』$W﹐只見$n有如天鷹
+翻騰急旋﹐$N被扯動得盡失身形。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$W$n突然使出$w天鷹爪$W之$P『七彩鷹嘯』$W震耳欲襲的嘯嗚聲﹐使得$N心膽俱裂﹐
+魂飛魄散﹐$N連躲避的機會也沒有﹐就被震破耳目。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$W隱見一團異光閃爍猛動﹐光團逐漸擴張﹐形成漩渦。$n暴喝聲中使出$w天鷹爪$W之$g
+『穎簸鷹旋』$W穿身而出﹐雙爪狠狠向$N狂轟$N的心胸其勁之猛。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$W$n清嘯聲中使出$w天鷹爪$W之$g『飛鷹撩爪』$W人已撥身而起。只見白光閃動﹐$n身
+如化作千隻白鷹﹐直接撲向$N﹐$N立時被鷹爪重重撕裂﹐身受重傷。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$W千鈞一髮之際﹐$n使出$w天鷹爪$W之$y『鵬行千里』$W﹐傳來隆隆巨響。天地瞬為
+之震撼﹐速度極快﹐閃爍在$N的面前﹐鷹爪在$N胸前擊中。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$W$n猛然施展出$w天鷹爪$W之$B『浪濤暴鷹』$W天驚動地﹐威勢加倍磅礡震撼﹐鬼神
+俱驚﹐鷹爪舖天而下﹐密如星雨﹐密集狂向$N攻去$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$W$n不放過眼前良機加強功力使出$Y天鷹爪$W最後殺招$r『蒼鷹無悔』$W﹐無還擊
+之力﹐身上連珠爆發。響不絕於耳﹐$N頓時皮開肉綻。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

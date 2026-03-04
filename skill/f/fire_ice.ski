@@ -1,0 +1,164 @@
+Name            fire ice~
+Cname           炎龍寒冰掌~
+Slot            SLOT_FIRE_ICE
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MOVE
+Cost            19
+Wait            12
+Exp             15
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+Enable          YES
+SaySpell        NO
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_FIGHTER    1  40
+Limit           CLASS_SHAMAN     1  10
+Limit           CLASS_GENERAL    1  80
+Limit           CLASS_BRAVO      1  90
+Limit           CLASS_MAGE       1  30
+Limit           CLASS_SMITH      1  30
+Help            ~
+#Damage
+Description
+$n使出$s炎龍寒冰掌之烈陽掌$Z的第一招$G【陽春白雪】$Z﹐只見$n雙手一揮﹐一道
+掌氣迎面而出﹐迅速的衝向$N的面前﹐使$N呆了一陣。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出$p炎龍寒冰掌之陰風掌$Z的第一招$G【陰氣逼迫】$Z﹐只見$n往右一躍﹐快速
+的朝$N的要害發出一掌﹐掌風陰冷﹐使$N渾身不自在。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出$s炎龍寒冰掌之烈陽掌$Z的第二招$R【陽關三疊】$Z﹐$n手畫太極﹐一掌一掌慢
+慢打出﹐$N感到一股股熱氣如潮水般的洶湧而至﹐使$N喘不過氣來。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出$p炎龍寒冰掌之陰風掌$Z的第二招$R【陰寒三載】$Z﹐$n雙手慢慢的上下擺動﹐
+然後再向$N的胸口發出一掌﹐一陣刺骨的寒風侵襲$N的全身﹐使$N渾身顫抖。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出$s炎龍寒冰掌之烈陽掌$Z的第三招$Y【陽歌鉤天】$Z﹐$n舉起手來﹐大喝一聲﹐
+往$N的要害打出一掌﹐掌風迂迴曲折﹐令$N無法捉摸。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出$p炎龍寒冰掌之陰風掌$Z的第三招$Y【陰羽翻天】$Z﹐$n腳步輕移﹐在一躍一進
+間發出一掌﹐掌氣貫穿$N的全身﹐使$N無法移動。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出$s炎龍寒冰掌之烈陽掌$Z的第四招$B【楊梅千仞】$Z﹐$n內勁快速流轉﹐一掌接
+著一掌快速打向$N﹐$N感到一顆顆火球往他飛撲而至﹐填滿去路﹐使$N無路閃躲。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出$p炎龍寒冰掌之陰風掌$Z的第四招$B【陰字穹宇】$Z﹐$n凝神閉氣﹐掌心朝外﹐
+吐出體內陰寒之氣﹐使$N感到一支支冰箭飛射過來﹐無法抵抗。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出$s炎龍寒冰掌之烈陽掌$Z的第五招$P【陽天乍現】$Z﹐$n氣沉丹田﹐雙掌朝地面
+發出一掌﹐突然一道烈火由地面竄出﹐火速的燒向$N﹐使$N難以招架。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出$p炎龍寒冰掌之陰風掌$Z的第五招$P【陰陰無窮】$Z﹐$n氣灌全身﹐雙掌各朝左
+右擊出一掌﹐霎那間﹐兩道極寒之氣分別由左右擊向$N﹐把$N全身包住。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出$s炎龍寒冰掌之烈陽掌$Z的第六招$S【陽日無極】$Z﹐$n凝聚真氣於雙掌﹐忽而
+躍向空中發出一掌﹐只見一道火龍撲向$N﹐把$N整個吞食掉。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出$p炎龍寒冰掌之陰風掌$Z的第六招$S【陰極凍地】$Z﹐$n吸納天地間至陰之氣﹐
+往上擊出一掌﹐霎那間﹐一道龍形冰柱擊向$n﹐穿體而消失無蹤。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$W$n雙手向天﹐真氣盡出﹐使出$s炎龍寒冰掌$Z的奧義$Y【冰火同起﹐萬物具滅】。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

@@ -1,0 +1,98 @@
+Name            universe~
+Cname           先天乾坤功~
+Slot            SLOT_UNIVERSE
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            5
+Exp             300
+Associate       SLOT_SIXFIRE
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             60
+Qutoient        1
+Adeptation      0
+Limit           CLASS_FIGHTER    1  55
+Limit           CLASS_GENERAL    1  80
+Limit           CLASS_BRAVO      1  95
+Help            ~
+
+#Damage
+Description
+$n使出$P乾坤第一絕$Y『乾坤無定無量』$Z﹐氣凝於掌﹐緩緩推出﹐擊向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n大喝一聲﹐使出$P乾坤第二絕$Y『震驚百里』$Z﹐無形聲波化為實勁﹐擊向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n氣貫雙臂﹐氣度恢宏﹐使出$P乾坤第三絕$Y『天火燎原』$Z﹐排山倒海的掌勁﹐擊向
+$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n氣凝於淵﹐使出$P乾坤第四絕$Y『天道循環』$Z﹐$N真氣向四方暴射﹐雙掌推出﹐擊
+向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出$P乾坤第五絕$Y『雷動九天』$Z﹐雙掌上提﹐一股強大氣勁襲向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出$P乾坤第六絕$Y『逆轉乾坤』$Z﹐一聲長嘯﹐強大的真氣襲$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$W$n縱身一躍﹐使出先天乾坤功之奧義﹐拳頭如千軍萬馬般地擊向$N$Z。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

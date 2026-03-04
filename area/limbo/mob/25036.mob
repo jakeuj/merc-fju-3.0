@@ -1,0 +1,29 @@
+Vnum            25036
+Name            halcyon~
+ShortDesc       翠鳥~
+LongDesc        翠鳥(halcyon)
+~
+Description
+擁有一對灰色的翅膀﹐並且鳥背上的顏色是藍
+色﹐褐色的腹部﹐是一種極為可愛的動物。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

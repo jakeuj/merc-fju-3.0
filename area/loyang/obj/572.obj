@@ -1,0 +1,14 @@
+Vnum            572
+Name            sky stone~
+ShortDesc       º½¥ú¥Û~
+Description
+~
+Unit            Áû~
+ItemType        ITEM_TREASURE
+Hum             Yes
+Takeable        Yes
+Level           49
+Weight          1
+Cost            100
+
+End

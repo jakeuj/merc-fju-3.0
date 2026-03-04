@@ -1,0 +1,15 @@
+Vnum            78
+Name            mandyas cloth~
+ShortDesc       紫翠衣服~
+Description
+一件織工精細的紫色蟬絲質衣服(cloth)﹐上面鑲著烏金﹐可見它的名貴。~
+Unit            件~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_BODY
+Takeable        Yes
+Level           20
+Value           -1
+Weight          10
+Cost            200
+Exp             10
+End

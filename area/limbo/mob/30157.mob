@@ -1,0 +1,31 @@
+Vnum            30157
+Name            gao gan~
+ShortDesc       高幹~
+LongDesc        高幹(gao gan)
+~
+Description
+並州刺使﹐袁紹之侄。在袁紹官渡失利後
+出兵援助袁紹。後來在壺關舉兵反曹﹐與
+曹操帳下名將李典、樂進等人交手﹐英勇
+善戰﹐但最後失敗。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

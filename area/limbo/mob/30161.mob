@@ -1,0 +1,31 @@
+Vnum            30161
+Name            yu jin~
+ShortDesc       于禁~
+LongDesc        于禁(yu jin)
+~
+Description
+字文則。嚴謹忠實﹐在官渡之戰中立下大
+功﹐甚得曹操的賞識﹐被推舉為五大將之
+一。但後來卻變的貪生怕死﹐在樊城被關
+羽水淹七軍擒獲時﹐甚至乞求活命。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

@@ -1,0 +1,15 @@
+Vnum            88
+Name            figring~
+ShortDesc       金鋼指環~
+Description
+這是一只以金鋼石所製成的指環(figring)﹐可以提升空手的傷殺力。~
+Unit            只~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_FINGER
+Takeable        Yes
+Level           20
+Value           -1
+Weight          10
+Cost            200
+Exp             10
+End

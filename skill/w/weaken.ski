@@ -1,0 +1,34 @@
+Name            weaken~
+Cname           虛弱術~
+Slot            SLOT_WEAKEN
+Msgoff          你感到強壯了一些﹗~
+Check           check_unrigid_attack~
+Function        cast_weaken~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MANA
+Cost            20
+Wait            15
+Exp             600
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_POISON
+Innate          NO
+Ply             60
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    10 50
+Limit           CLASS_DOCTOR     50 75
+Limit           CLASS_BARD       50 95
+Help            ~
+End
+

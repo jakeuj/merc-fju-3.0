@@ -1,0 +1,14 @@
+Vnum            262
+Name            fire ice book~
+ShortDesc       ª¢Às´H¦B´x¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_FIRE_ICE
+Value2          5
+Weight          3
+Cost            10000
+End

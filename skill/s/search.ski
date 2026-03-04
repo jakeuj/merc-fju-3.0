@@ -1,0 +1,31 @@
+Name            search~
+Cname           ÄËªÅ´M¤H~
+Slot            SLOT_SEARCH
+Msgoff          ~
+Check           check_unrigid_attack~
+Function        cast_search~
+Position        POS_STANDING
+Type            TAR_STRING
+CostType        COST_MOVE
+Cost            50
+Wait            20
+Exp             300
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_SING
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_BARD       1  90
+Help            ~
+End

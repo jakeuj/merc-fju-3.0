@@ -1,0 +1,33 @@
+Name            pry~
+Cname           打聽技能~
+Slot            SLOT_PRY
+Msgoff          ~
+Function        cast_pry~
+Check           check_unrigid_attack~
+Position        POS_STANDING
+Type            TAR_STRING
+CostType        COST_MANA
+Cost            20
+Wait            18
+Exp             1200
+Associate       SLOT_JUDGE
+Degree          300
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   YES
+Teach           YES
+Enable          NO
+SaySpell        YES
+Rating          RATING_SING
+Innate          NO
+Ply             120
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    1  30
+Limit           CLASS_DOCTOR     1  80
+Limit           CLASS_BARD       1  90
+Help            ~
+End

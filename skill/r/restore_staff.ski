@@ -1,0 +1,36 @@
+Name            restore staff~
+Cname           ¸É¥Rªk§ú~
+Slot            SLOT_RESTORE_STAFF
+Msgoff          ~
+Function        cast_restore_staff~
+Position        POS_STANDING
+Type            TAR_OBJ_INV
+CostType        COST_MANA
+Cost            40
+Wait            25
+Exp             300
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_LOST
+Innate          NO
+Ply             0
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SHAMAN     1  55
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  75
+Limit           CLASS_SCHOLAR    1  55
+Limit           CLASS_DOCTOR     1  75
+Limit           CLASS_BARD       1  95
+
+Help            ~
+End

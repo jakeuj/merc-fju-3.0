@@ -1,0 +1,16 @@
+Vnum          119
+Name          baked chicken~
+ShortDesc     烤雞~
+Unit          隻~
+Description
+這隻烤雞外表烤得呈金黃色香酥的皮看起來非常的好吃
+﹐鮮嫩多汁的肉也烤得恰到好處﹐可以說是物超所值。
+~
+ItemType      ITEM_FOOD
+Takeable      Yes
+Level         1
+Value         55 40 8 0 0
+Weight        2
+Cost          20
+
+End

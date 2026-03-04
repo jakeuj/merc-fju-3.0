@@ -1,0 +1,31 @@
+Vnum            30066
+Name            lyu bu~
+ShortDesc       呂布~
+LongDesc        呂布(lyu bu)
+~
+Description
+字奉先﹐被譽為『人中呂布﹐馬中赤兔』
+的猛將。武藝高強﹐弓馬嫻熟﹐但生性反
+覆無常﹐幾次叛殺其主。最後也因部下背
+叛而被曹操擒獲﹐縊死後斬首。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

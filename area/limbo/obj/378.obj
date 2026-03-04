@@ -1,0 +1,14 @@
+Vnum            378
+Name            flee book~
+ShortDesc       ª÷ÂÍ²æ´ß¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_FLEE
+Value2          5
+Weight          3
+Cost            10000
+End

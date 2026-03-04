@@ -1,0 +1,19 @@
+Vnum            21
+Name            water brace~
+ShortDesc       水神護腕~
+Description
+一件由金塊打造的護腕(robe)。~
+Unit            件~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_WRIST
+Takeable        Yes
+Level           120
+Weight          0
+Cost            0
+Value           -1
+
+#Affect
+Location        APPLY_WIS
+Modifier        2
+End
+End

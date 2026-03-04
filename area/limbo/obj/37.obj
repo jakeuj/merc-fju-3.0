@@ -1,0 +1,15 @@
+Vnum            37
+Name            machete~
+ShortDesc       大刀~
+Description
+這是一柄沈重的大刀(machete)﹐刀柄綁著一條紅巾﹐使起來虎虎生風。~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 4
+Weight          20
+Cost            200
+Exp             10
+End

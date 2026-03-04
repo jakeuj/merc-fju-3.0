@@ -1,0 +1,30 @@
+Vnum            25040
+Name            shag~
+ShortDesc       牛背鷺~
+LongDesc        牛背鷺(shag)
+~
+Description
+全白的的身軀﹐細細長長的腿﹐長跟著水牛的
+後面﹐當牛犁過田後﹐牛背鷺會一直刁著剛剛
+翻過土裡的蟲兒來果腹。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

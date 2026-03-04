@@ -1,0 +1,37 @@
+Name            physique~
+Cname           易筋經~
+Slot            SLOT_PHYSIQUE
+Msgoff          ~
+Function        cast_physique~
+Position        POS_STANDING
+Type            TAR_MEDITATION
+CostType        COST_MANA
+Cost            1
+Wait            1
+Exp             100
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            NO
+Concentration   NO
+Teach           NO
+Enable          YES
+SaySpell        NO
+Rating          RATING_CURE
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    10  35
+Limit           CLASS_DOCTOR     50  50
+Limit           CLASS_BARD       50  50
+Help
+易筋經:
+
+相傳是少林寺獨門的內功﹐能使休息者源源不絕地回復
+所耗失的體力。
+~
+End

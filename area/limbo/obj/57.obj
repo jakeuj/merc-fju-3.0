@@ -1,0 +1,15 @@
+Vnum            57
+Name            soldier coat~
+ShortDesc       素色戰袍~
+Description
+禁衛軍所穿的制服(soldier coat)﹐肩上繡著一條金線。~
+Unit            件~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_BODY
+Takeable        Yes
+Level           20
+Value           -1
+Weight          10
+Cost            200
+Exp             10
+End

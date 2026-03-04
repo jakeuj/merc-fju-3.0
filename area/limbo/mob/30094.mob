@@ -1,0 +1,30 @@
+Vnum            30094
+Name            yuan yin~
+ShortDesc       袁胤~
+LongDesc        袁胤(yuan yin)
+~
+Description
+袁術之侄。袁術死後﹐他護送著袁術靈柩
+和妻小逃往盧江﹐在途中全部被殺。玉璽
+也被奪走﹐後來落到曹操手裡。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

@@ -1,0 +1,14 @@
+Vnum            203
+Name            flower hand book~
+ShortDesc       ¥É¤k§é±ö¤â¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_FLOWER
+Value2          5
+Weight          3
+Cost            10000
+End

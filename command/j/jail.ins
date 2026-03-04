@@ -1,0 +1,36 @@
+Name            jail~
+Cname           關天牢~
+Function        do_jail~
+Position        POS_DEAD
+Level           L_SUP
+Log             LOG_WIZ
+Exact           YES
+Argument        YES
+CanLock         NO
+Wizlog          NO
+Jail            NO
+Dead            YES
+Order           NO
+Lost            NO
+Lock            NO
+Limit           NO
+Help
+語法﹕jail [人名] [天數]
+      jail !release [人名]
+      jail !set     [人名] [天數]
+      jail !address [位址] [天數]
+
+    這個指令是用來關一些觸犯天條的玩家的指令﹐如果要關的時候﹐第一個參數
+為欲關天牢的玩家名稱﹐第二個參數為天數﹐在這個系統內﹐一天約為真實時間十
+分鐘。但是玩家已經被關﹐或是正在撿屍體時﹐是不能被關的﹐當然﹐也不能關管
+理者。
+
+    若是第一個參數為 !release的話﹐則是把已經被關天牢的人釋放出來。但是這
+個人必須是醒著的。
+
+    若是想要加重或是減輕某位玩家的服刑時間﹐則可以用!set來改變他的服刑時
+間﹐相同的﹐這個人必須已經在天牢之中﹐且天數不能小於或是等於 0。
+
+相關資料﹕rule aecho
+~
+End

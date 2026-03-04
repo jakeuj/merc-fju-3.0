@@ -1,0 +1,55 @@
+MODEL   = s
+CC      = tcc
+
+OBJS    = edit.obj screen.obj io.obj file.obj string.obj const.obj \
+          editarea.obj editroom.obj editshop.obj exit.obj link.obj \
+          ini.obj
+
+CFLAGS  = -O -m$(MODEL)
+LDFLAGS = -ls
+
+go.exe:      $(OBJS)
+        $(CC) -m$(MODEL) $(LDFLAGS) -e$* *.obj
+        del *.map
+
+clean:
+        @Echo off
+        if exist *.obj del *.obj
+        if exist *.map del *.map
+        if exist go.exe del go.exe
+
+edit.obj:        edit.c
+        $(CC) -c $(CFLAGS) edit.c
+
+screen.obj:     screen.c
+        $(CC) -c $(CFLAGS) screen.c
+
+io.obj:         io.c
+        $(CC) -c $(CFLAGS) io.c
+
+string.obj:     string.c
+        $(CC) -c $(CFLAGS) string.c
+
+file.obj:       file.c
+        $(CC) -c $(CFLAGS) file.c
+
+editarea.obj:   editarea.c
+        $(CC) -c $(CFLAGS) editarea.c
+
+editroom.obj:   editroom.c
+        $(CC) -c $(CFLAGS) editroom.c
+
+editshop.obj:   editshop.c
+        $(CC) -c $(CFLAGS) editshop.c
+
+exit.obj:       exit.c
+        $(CC) -c $(CFLAGS) exit.c
+
+const.obj:      const.c
+        $(CC) -c $(CFLAGS) const.c
+
+link.obj:       link.c
+        $(CC) -c $(CFLAGS) link.c
+
+ini.obj:        ini.c
+        $(CC) -c $(CFLAGS) ini.c

@@ -1,0 +1,14 @@
+Vnum            375
+Name            teleport book~
+ShortDesc       ÀH¾÷¶Ç°e¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_TELEPORT
+Value2          5
+Weight          3
+Cost            10000
+End

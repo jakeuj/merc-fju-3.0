@@ -1,0 +1,28 @@
+Vnum            592
+Name            soul blade~
+ShortDesc       [1;36m»î¤M[0m~
+Description
+³o¬O¤@§â²Óªøªº¤M¡M¤M¨­´²µo²H²HÂÅ¥ú¡M¾Ú»¡¦³¹ÚÆF¤§»î±H±J¦b¤M¤º¡C
+~
+Unit            §â~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           70
+Value           0 -1 -1 WEAPON_BLADE
+Weight          15
+Cost            1400
+Exp             15
+
+#Affect
+Location        APPLY_DEX
+Modifier        1
+End
+
+#Affect
+Location        APPLY_STR
+Modifier        1
+End
+
+End

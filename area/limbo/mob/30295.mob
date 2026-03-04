@@ -1,0 +1,30 @@
+Vnum            30295
+Name            zhu huan~
+ShortDesc       朱桓~
+LongDesc        朱桓(zhu huan)
+~
+Description
+字休穆﹐孫權部下。在濡須之戰中﹐面對
+曹仁數萬大軍﹐不動聲色﹐誘敵深入﹐以
+五千兵馬擊敗敵人﹐建立了奇功。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

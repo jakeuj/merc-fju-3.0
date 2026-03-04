@@ -1,0 +1,39 @@
+Name            protection~
+Cname           「靈神訣」~
+Slot            SLOT_PROTECTION
+Msgoff          你的保護似乎減少了﹗~
+Check           check_unrigid_attack~
+Function        cast_protection~
+Position        POS_STANDING
+Type            TAR_CHAR_SELF
+CostType        COST_MANA
+Cost            25
+Wait            20
+Exp             400
+Associate       SLOT_HEAL
+Degree          100
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_SAINT
+AntiRating      RATING_EVIL
+Innate          NO
+Ply             40
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  70
+Limit           CLASS_BARD       1  95
+
+#Affect
+Type            SLOT_PROTECTION
+Location        AFF_NONE
+End
+
+Help            ~
+End

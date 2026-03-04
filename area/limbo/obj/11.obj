@@ -1,0 +1,13 @@
+Vnum            11
+Name            bread~
+ShortDesc       大饅頭~
+Description
+美味可口的饅頭(bread)。~
+Unit            粒~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           1
+Value           50 25 5
+Weight          1
+Cost            10
+End

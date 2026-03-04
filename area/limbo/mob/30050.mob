@@ -1,0 +1,31 @@
+Vnum            30050
+Name            mi zhu~
+ShortDesc       糜竺~
+LongDesc        糜竺(mi zhu)
+~
+Description
+字子仲﹐本是富商﹐在陶謙手下任別駕從
+事。陶謙死後﹐輔佐劉備。劉備入川後﹐
+他被任命為安漢將軍﹐其位甚至在諸葛亮
+之上。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

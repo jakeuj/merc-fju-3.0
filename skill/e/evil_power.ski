@@ -1,0 +1,34 @@
+Name            evil power~
+Cname           邪惡魔力~
+Slot            SLOT_EVIL_POWER
+Msgoff          你感到一陣空虛﹐邪惡的力退去了一些﹗~
+Check           check_unrigid_attack~
+Function        cast_evil_power~
+Position        POS_STANDING
+Type            TAR_CHAR_SELF
+CostType        COST_MANA
+Cost            35
+Wait            20
+Exp             600
+Associate       SLOT_CHARM_PERSON
+Degree          100
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_EVIL
+AntiRating      RATING_SAINT
+Innate          NO
+Ply             60
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SHAMAN     10 50
+Limit           CLASS_MAGE       50 90
+Limit           CLASS_SMITH      50 80
+Help            ~
+End

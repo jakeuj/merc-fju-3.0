@@ -1,0 +1,14 @@
+Vnum            310
+Name            locate object book~
+ShortDesc       °»´úª««~¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_LOCATE_OBJECT
+Value2          5
+Weight          3
+Cost            10000
+End

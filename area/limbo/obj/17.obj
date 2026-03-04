@@ -1,0 +1,24 @@
+Vnum            17
+Name            light~
+ShortDesc       神聖金光~
+Description
+一圈天神特有的神聖光環(light)。~
+Unit            個~
+ItemType        ITEM_LIGHT
+WearLoc         ITEM_WEAR_LIGHT
+Takeable        Yes
+Level           120
+Weight          0
+Cost            0
+Value           0 0 -1
+
+#Affect
+Location        APPLY_HITROLL
+Modifier        5
+End
+
+#Affect
+Location        3
+Modifier        1
+End
+End

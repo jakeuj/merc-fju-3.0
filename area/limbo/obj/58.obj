@@ -1,0 +1,15 @@
+Vnum            58
+Name            short robe~
+ShortDesc       藏青絲短袍~
+Description
+這件藏青絲短袍(short robe)﹐剪裁合適﹐穿起來非常的合身。~
+Unit            件~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_BODY
+Takeable        Yes
+Level           20
+Value           -1
+Weight          10
+Cost            200
+Exp             10
+End

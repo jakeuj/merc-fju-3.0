@@ -1,0 +1,139 @@
+Name            shoot sun~
+Cname           射日箭法~
+Slot            SLOT_SHOOT_SUN
+Msgoff          ~
+Check           check_bow_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            10
+Exp             300
+Associate       SLOT_WATER_CLOUD_BLAST
+Degree          50
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_BOW
+Rating          RATING_SKILL
+Innate          NO
+Ply             60
+Qutoient        1
+Adeptation      0
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  80
+Limit           CLASS_FIGHTER    1  55
+Limit           CLASS_SMITH      1  55
+Limit           CLASS_THIEF      1  60
+Help            ~
+
+#Damage
+Description
+當$N靠近$n時﹐$n向後一躍﹐將$O拉滿﹐使出$Y「射日箭法」$Z
+的基本式$G「百步穿楊」$Z﹐以無法想像的高速向$N射去﹐$N避無可避﹐被
+被箭射個正著。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+正當$n把弓使的愈來愈純熟時﹐覺的是時候了﹐就以高速摩擦
+空氣的手法使出$Y「射日箭法」$B「閃光箭」$Z將箭射出﹐登時光芒大作﹐使的
+$N有如睜眼瞎子﹐防禦全失﹐任箭射個對穿。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n用弓將$N逼退數步﹐見機不可失﹐趕緊使出$Y「射日箭法」$Z中
+的$S「迴旋風式」$Z﹐$N見箭射來﹐趕緊閃了過去﹐一個念頭還沒想完﹐忽
+覺身後勁風臨体﹐箭居然像有眼睛般﹐轉個彎又朝身後射到﹐待發覺時已
+來不及﹐被箭射成重傷。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n深吸一口氣﹐然後在$N附近以極快的速度游走﹐再使出$Y「射日
+箭法」$Z﹐$R「亂箭式」$Z以極快的手法一口氣射出百來隻箭﹐$N只覺四周都是
+箭影﹐根本無從閃避﹐登時被射成刺蝟。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n閃過了攻擊後﹐正想從身後抓箭來射﹐忽覺箭已射光了﹐情
+急下﹐只好看到可以射的東西便拿起來射﹐無意間領悟了$Y「射日箭法」$Z中最
+困難的招式$P「亂箭式‧改」$Z﹐$N只見無數的樹枝石頭如雨般帶著咻咻的破
+空聲朝自已攻來﹐一時間慌了手腳﹐被射的体無完膚。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n看到$N攻勢漸密﹐想這樣下去不是辦法﹐只好拼著損耗真元
+將全身的真氣集中在手上﹐將手搭在弦上向後拉到極限﹐使出$Y「射日箭法」$Z之
+$S「聚氣成箭」$Z﹐只見弦上漸形成一隻氣箭﹐$n看準時機向後躍出數丈﹐一口氣
+將箭射出﹐$N只見眼前一閃就被箭射中﹐箭氣在体內亂竄﹐再爆發出來
+使$N登時有如血人。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n已漸漸對這戰局感到不耐煩﹐只好使出$S「聚氣成箭」$Z聚成一隻
+氣箭﹐再將体內氣血逆轉﹐登時雙眼血紅﹐弓也漸漸轉成血紅﹐最後$n大喝
+一聲向上躍高數丈﹐使出$Y「射日箭法」$Z最終式$R「日毀月沉」$Z將氣箭射出﹐只
+見氣箭所到之處無堅不摧﹐登時天昏地暗﹐氣溫急遽上升﹐$N只覺四周灼熱
+非常﹐待看到氣箭那有如毀天滅地的箭勢後﹐登時萬念具灰﹐放棄了所有的
+抵抗﹐任那濤天箭勢將自已帶入死亡的世界。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+* #Damage
+* Description
+* 身箭合一﹐$n向aaa使了一個眼色﹐aaa會意後將你整個人搭在弦上﹐$n將全
+* 身的真氣聚集在指尖﹐aaa也把真氣灌入弓中﹐一聲嘯聲後兩人合力使出$Y「
+* 射日箭法」$Z之情侶式$B「身箭合一」$Z$n有如破空之箭﹐向$N射出﹐$N見無法
+* 閃避便想硬拼﹐可惜$n將雙手手指一一旋﹐便把$N絞成碎片。~
+* Chance          20
+* Value           20
+* Parry           0
+* Situs           ATTACK_RANDOM
+* Innate          0 0
+* End
+End

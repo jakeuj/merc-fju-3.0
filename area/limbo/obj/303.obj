@@ -1,0 +1,14 @@
+Vnum            303
+Name            make spring book~
+ShortDesc       七彩造水術秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_MAKE_SPRING
+Value2          5
+Weight          3
+Cost            10000
+End

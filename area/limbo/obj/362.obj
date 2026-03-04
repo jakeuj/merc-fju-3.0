@@ -1,0 +1,14 @@
+Vnum            362
+Name            lightning breath book~
+ShortDesc       πp¿sπq¿ªØµ”D~
+Description
+~
+Unit            •ª~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_LIGHTNING_BREATH
+Value2          5
+Weight          3
+Cost            10000
+End

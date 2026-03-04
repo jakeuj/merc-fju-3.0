@@ -1,0 +1,15 @@
+Vnum            60
+Name            amethyst duds~
+ShortDesc       µµµ¼­m~
+Description
+±m¶³¯ëªºµ¼µµ·w¬V¾ã¥ó¦ç­m(duds)¡M¼h¼hÅ|Å|ªºµµ±a««¹¢ªº·Ù¬O¦n¬Ý¡C~
+Unit            ¥ó~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_BODY
+Takeable        Yes
+Level           20
+Value           -1
+Weight          10
+Cost            200
+Exp             10
+End

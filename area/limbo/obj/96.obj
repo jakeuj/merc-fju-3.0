@@ -1,0 +1,16 @@
+Vnum            96
+Name            maiu tulwar~
+ShortDesc       彎月苗刀~
+Description
+一把苗疆特製的大刀(tulwar)﹐成半月形。死在它手下的人不計其數。~
+Unit            把~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 4
+Weight          20
+Cost            200
+Exp             10
+End

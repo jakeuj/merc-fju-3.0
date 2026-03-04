@@ -1,0 +1,15 @@
+Vnum            53
+Name            robe~
+ShortDesc       長袍~
+Description
+一件由絲織成的長袍(robe)。~
+Unit            件~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_BODY
+Takeable        Yes
+Level           1
+Value1          -1
+Weight          5
+Cost            10
+Exp             10
+End

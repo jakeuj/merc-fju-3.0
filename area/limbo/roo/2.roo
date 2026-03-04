@@ -1,0 +1,11 @@
+Vnum            2
+Name            衙門~
+Description
+這裡是處理尚未解決紛爭之地﹐兩旁全都是用刑的器具﹐讓人看了好不害怕
+。只要來到這裡﹐我想你不死也半條命囉。
+~
+SectorType      SECT_INSIDE
+Safe            Yes
+NoRecall        Yes
+NoWhere         Yes
+End

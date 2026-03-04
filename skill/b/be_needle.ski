@@ -1,0 +1,169 @@
+Name            be needle~
+Cname           碧血十二針~
+Slot            SLOT_BE_NEEDLE
+Msgoff          ~
+Check           check_dagger_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            2
+Exp             250
+Associate       SLOT_SEVEN_DAGGER
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_DAGGER
+Rating          RATING_SKILL
+Innate          NO
+Ply             50
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR   25  20
+Limit           CLASS_FIGHTER   25  20
+Limit           CLASS_SHAMAN    25  20
+Limit           CLASS_THIEF     25  80
+Limit           CLASS_DOCTOR    50  90
+Limit           CLASS_BARD      50  60
+Limit           CLASS_GENERAL   50  50
+Limit           CLASS_BRAVO     50  60
+Limit           CLASS_MAGE      50  50
+Limit           CLASS_SMITH     50  50
+Help
+碧血十二針:
+
+由針灸時的下針力道而領悟﹐通常為醫生等所使用﹐但是原本使用的武器
+為針﹐因為攻守上的不利因素﹐經由一位高人研究後﹐改以短兵類武器﹐
+發覺威力更勝從前﹐於是乎連善使短兵的職業亦能施展﹐但為保存淵源﹐
+仍叫碧血十二針。
+
+~
+#Damage
+Description
+$n素手一拈﹐起手式$R『穿針引線』$Z手中$O緩緩劃出﹐溫柔向$N$l刺去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n一招$R『補補綴綴』$Z手中$O去勢無定﹐不知要刺向$N何處要害﹐難以捉摸。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n舞姿嫚妙﹐舞出$Y『針黹黻黼』$Z渾身放出一股魔力﹐誘使$N自己往$O撞去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n窺準一個空隙﹐使出$Y『風起雲湧刺』$Z連人帶$O刺向$N的$l﹐想一擊斃之。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n面帶媚笑﹐使出$B『針繡鴦鴦雙相依』$Z﹐一針一線想把$N給縫在$n身邊。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n以小指控制$O﹐一招$B『潑墨一葦織』$Z﹐射出了千百道氣劍欲將$N罩於其下。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n憶起傷心往事﹐實覺人生無趣﹐一式$Y『寫意粗石針』$Z不顧生死﹐拿起$O便往
+$N衝去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n內勁流轉﹐使出狂亂技$R『神針亂繡』$Z﹐一時滿天針影﹐氣勁漫空全往$N而去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n提氣輕身﹐使出禁斷技$P「急針亂穿線」$Z﹐煞時織出一片針網﹐緊緊地將$N裹住。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n內勁流轉﹐使出禁斷技$G『密刺亂雨繡』$Z﹐一時滿天針影﹐氣勁漫空全往$N而去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n身形一緩﹐使出禁斷技$S「慧針續斷情」$Z﹐全身不帶一絲殺意﹐柔柔地朝$N飄去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n面對$N如此強敵﹐無奈之下甘耗真元使出$Y「穿頂破軍術」$Z﹐一針往百會穴刺下。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

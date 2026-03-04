@@ -1,0 +1,16 @@
+Vnum            66
+Name            katana~
+ShortDesc       武士刀~
+Description
+這是日本武士們慣用的武器﹐刀身略有弧度﹐刀鋒閃耀著青芒。~
+Unit            把~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 4
+Weight          20
+Cost            200
+Exp             10
+End

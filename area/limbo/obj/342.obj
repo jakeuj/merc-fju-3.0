@@ -1,0 +1,14 @@
+Vnum            342
+Name            energy drain book~
+ShortDesc       吸星大法秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_ENERGY_DRAIN
+Value2          5
+Weight          3
+Cost            10000
+End

@@ -1,0 +1,16 @@
+Vnum            166
+Name            li fire potion~
+ShortDesc       離火藥水~
+Description
+一瓶離火藥水(li fire potion)﹐具有偵測魔法的效果。
+~
+Unit            瓶~
+ItemType        ITEM_POTION
+Contraband      Yes
+Takeable        Yes
+Level           10
+Value1          6
+Value2          OBJ_DETECT_MAGIC
+Weight          5
+Cost            3000
+End

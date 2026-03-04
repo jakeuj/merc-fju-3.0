@@ -1,0 +1,127 @@
+Name            ice fist~
+Cname           天霜拳~
+Slot            SLOT_ICEFIST
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            10
+Wait            1
+Exp             5
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+Enable          YES
+SaySpell        NO
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    1  30
+Limit           CLASS_FIGHTER    1  50
+Limit           CLASS_SHAMAN     1  40
+Limit           CLASS_THIEF      1  60
+Limit           CLASS_DOCTOR     1  35
+Limit           CLASS_BARD       1  35
+Limit           CLASS_GENERAL    1  90
+Limit           CLASS_BRAVO      1  90
+Limit           CLASS_MAGE       1  45
+Limit           CLASS_SMITH      1  45
+Help            ~
+
+#Damage
+Description
+$n雙臂驟分﹐使出『$W霜雪紛飛$Z』﹐拳帶扭勁﹐力透人身﹐$N臂骨立斷。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n運出雙拳﹐使出『$Y霜痕累累$Z』﹐淩厲無匹﹐拳勁到處﹐$N衣衫意片片剝落﹐胸前
+被擊中。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n攻勢如排出倒海﹐乃是『$S霜雪漫天$Z』的起手勢﹐使$N變得動作遲純﹐全身感到一
+陣寒意。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+只見$n使出『$W霜影縱橫$Z』密如雨點﹐盡擊在$N上。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n提起內力﹐臉上登時閃現忽青忽藍之色﹐一拳擊下乃是『$G霜臨$B天地$Z』﹐$N受傷
+沉重。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n立聚勁雙手﹐緊扣$N的雙臂﹐使出『$S寒霜飛雪$Z』﹐使$N無法動彈。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+數聲沉雷碰響﹐爆出驚天動地的氣勁﹐正是$n使『$R霜爆山河$Z』拳影頓時如密如
+雨下﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n運氣﹐雙臂發出爆烈的聲音﹐乃是天霜拳究極殺招『$S霜凝見拙$Z』$N突覺一股寒氣纏
+繞﹐暗叫不妙﹐$N驟生透骨劇痛﹐寒氣加速傷口冰﹐令$N難以動彈﹐卜跪地下。$A$A$S≡≡
+『$W霜  雪$S』≡≡$Z$A$S≡≡『$W狂  爆$S』≡≡$Z$A$S≡≡『$W崩  山$S』≡≡
+$Z$A$S≡≡『$W河  潰$S』≡≡$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

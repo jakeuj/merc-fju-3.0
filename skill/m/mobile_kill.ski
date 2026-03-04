@@ -1,0 +1,92 @@
+Name            mobile kill~
+Cname           猛獸擊~
+Slot            SLOT_MOBILE_KILL
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            5
+Wait            5
+Exp             5
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS     1  95
+Help
+這是猛獸用的招式。
+
+~
+#Damage
+Description
+$n用尖銳的爪子向$N抓來﹐使出$S猛獸擊$Z之「$Y旋風爪$Z」﹐激起一陣旋風﹐使$N捲入其中﹐閃避不及﹐被抓成重傷。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n感到憤恨不已﹐登時向天大吼﹐使出強大的絕技 「$R獅子吼$Z」﹐震的$N血氣翻騰﹐昏倒在地。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n用力的向$N撲來﹐被$N閃過﹐$n以不可能的角度回身使出「$Y回身擊$Z」﹐$N背後登時被抓的血肉模糊。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n看$N速度頗快﹐就雙爪一畫﹐使出「$S真空爪$Z」﹐登時二道真空波向$N襲來﹐$N無從閃避﹐被肢解成塊。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$N看到$n雙爪一紅一白﹐便知不妙﹐準備先下手﹐$n狂吼一聲使出「$R炎$S冰$Y爪$Z」雙爪同時向$N抓來﹐$N只感到忽冷忽熱﹐失去所有防禦﹐冷熱二股勁在体內相會﹐登時在$N体內爆炸。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n使出「$S猛獸擊$Z」中最快速的招式「$P迅雷擊$Z」﹐$N只見眼前一閃$n已在$N身上抓出了七七四十九道爪痕。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

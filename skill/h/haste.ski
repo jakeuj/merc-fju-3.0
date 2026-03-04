@@ -1,0 +1,33 @@
+Name            haste~
+Cname           迅捷~
+Slot            SLOT_HASTE
+Msgoff          你的速度慢了下來﹗~
+Check           check_unrigid_attack~
+Function        cast_haste~
+Position        POS_STANDING
+Type            TAR_CHAR_DEFENSIVE
+CostType        COST_MANA
+Cost            40
+Wait            25
+Exp             300
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_LIGHTNING
+Innate          NO
+Ply             30
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  70
+Limit           CLASS_BARD       1  95
+
+Help            ~
+End

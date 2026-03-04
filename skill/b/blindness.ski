@@ -1,0 +1,40 @@
+Name            blindness~
+Cname           眼盲術~
+Slot            SLOT_BLINDNESS
+Msgoff          你又可以看見了﹗~
+Check           check_unrigid_attack~
+Function        cast_blindness~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MANA
+Cost            25
+Wait            12
+Exp             900
+Associate       SLOT_SLEEP
+Degree          200
+Affect          SLOT_BLINDNESS
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_POISON
+Innate          NO
+Ply             140
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     50  60
+Limit           CLASS_BARD       50  60
+Limit           CLASS_MAGE       50  70
+Limit           CLASS_SMITH      50  90
+Help            ~
+
+#Affect
+Type            SLOT_BLINDNESS
+Location        AFF_NONE
+End
+
+End

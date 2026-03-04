@@ -1,0 +1,14 @@
+Vnum            238
+Name            know pen book~
+ShortDesc       µ§¤§¤ß¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_KNOW_PEN
+Value2          5
+Weight          3
+Cost            10000
+End

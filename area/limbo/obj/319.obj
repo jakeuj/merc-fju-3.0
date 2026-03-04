@@ -1,0 +1,14 @@
+Vnum            319
+Name            cause light book~
+ShortDesc       »´«×¶Ë®`¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_CAUSE_LIGHT
+Value2          5
+Weight          3
+Cost            10000
+End

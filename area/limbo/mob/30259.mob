@@ -1,0 +1,31 @@
+Vnum            30259
+Name            gong zhi~
+ShortDesc       鞏志~
+LongDesc        鞏志(gong zhi)
+~
+Description
+武陵太首金旋手下從事。建議投降﹐不被
+採納。金旋敗於張飛逃回﹐被其刺殺﹐取
+金旋之頭投降劉備﹐被劉備任命接任武陵
+太守。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

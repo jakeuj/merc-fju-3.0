@@ -1,0 +1,14 @@
+Vnum            258
+Name            duba fist book~
+ShortDesc       ¤C®ü¿WÅQ®±¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_DUBAFIST
+Value2          5
+Weight          3
+Cost            10000
+End

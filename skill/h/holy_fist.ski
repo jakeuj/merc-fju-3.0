@@ -1,0 +1,158 @@
+Name            holy fist~
+Cname           聖心拳~
+Slot            SLOT_HOLY_FIST
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            30
+Wait            5
+Exp             80
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             16
+Qutoient        1
+Adeptation      0
+Limit           CLASS_GENERAL   50  90
+Limit           CLASS_BRAVO     50  95
+Help            ~
+
+#Damage
+Description
+$G$n拳掌幻化為舞﹐交之而錯﹐如同千手觀音﹐使出聖心拳第一式---「$B幻朧聖皇訣$G」﹐
+$N彷彿墮入了異次元世界﹐生非生﹐死非死﹐一望無際的絕對空間。
+$N對$n出拳如同對自己出拳。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G$n冷冷的說道:$Y為自己所做的罪孽受苦吧!!$G使出聖心拳第二式---「$R天魔降伏$G」﹐
+只見:$A$A
+$G                  天空出現個無數的$B精靈$G....$A
+$G                  地上出現個無數的$R積屍$G&....$A$A
+帶領著$N進入阿鼻地獄﹐$N動彈不得的被打入黃泉比良坡。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G$n凝心一定﹐身形彷彿為不動明尊﹐使出聖心拳第三式---「$g天舞寶輪$G」﹐
+$N因帶著無數的罪孽﹐而分別被剝削了$R嗅$G﹐$Y視$G﹐$g味$G﹐$B聽$G﹐$P觸$G五感.......
+而成行尸走肉般的等待天誅。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G$n為了能使對手能夠看清自己﹐使出聖心拳第四式---「$b六道輪迴$W地獄界$G」﹐
+$N手腳有如被蛇纏住﹐彷彿墮入了此界﹐只見無數劍海刀山等待﹐
+身體承受莫大痛楚,永世不得超生。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G$n為了能使對手能夠看清自己﹐使出聖心拳第四式---「$b六道輪迴$w惡鬼界$G」﹐
+$N手腳有如被蛇纏住﹐彷彿墮入了此界﹐只覺身體瘦如枯骨﹐腹部隆起﹐
+每天所食皆為屍體腐肉﹐痛苦異常。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G$n為了能使對手能夠看清自己﹐使出聖心拳第四式---「$b六道輪迴$R畜生界$G」﹐
+$N手腳有如被蛇纏住﹐彷彿墮入了此界﹐只覺每天不是殺了對方要不
+就是為對方所食﹐終日循迴不已。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G$n為了能使對手能夠看清自己﹐使出聖心拳第四式---「$b六道輪迴$B修羅界$G」﹐
+$N手腳有如被蛇纏住﹐彷彿墮入了此界﹐只覺自己嗜血如命﹐終日廝殺博命。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G$n為了能使對手能夠看清自己﹐使出聖心拳第四式---「$b六道輪迴$Y人界$G」﹐
+$N手腳有如被蛇纏住﹐彷彿墮入了此界﹐只覺自己嚐盡喜怒哀樂﹐
+為感情所支配﹐喜怒無常的怨恨自己。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G$n為了能使對手能夠看清自己﹐使出聖心拳第四式---「$b六道輪迴$P天界$G」﹐
+$N手腳有如被蛇纏住﹐彷彿墮入了此界﹐隨時都會有來自於五界
+的不速之客﹐殺殺戮戮﹐不得安寧。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G$n無可奈何的使出聖心拳最後一式---「$Y聖佛朝曦$G」﹐$N不自覺的
+回想過去...................$A$A
+$G               $R埃 $g塵 $B沙 $s織 $Y微 $p忽 $W系 $r毛 $G厘 $b分$A$A
+$G            $r兆 $G京 $b垓 $S米 $y壤 $P溝 $w澗 $R正 $g載 $B極$A$A
+$G        $Y恆河沙             $P阿僧祇              $S那由他$G$A$A
+$N只覺得「$W天作孽猶可救,自作孽不可活。$G」便以自己最強烈的力量
+擊殺自己﹐以求解脫。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End
+

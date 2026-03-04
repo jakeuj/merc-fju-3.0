@@ -1,0 +1,15 @@
+Vnum            50
+Name            mace~
+ShortDesc       小法杖~
+Description
+一隻由木頭作成的小法杖(mace)~
+Unit            隻~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           1
+Value           0 -1 -1 7
+Weight          5
+Cost            10
+Exp             10
+End

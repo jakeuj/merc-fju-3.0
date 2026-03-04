@@ -1,0 +1,33 @@
+Name            power word~
+Cname           ¸t¨¥~
+Slot            SLOT_POWER_WORD
+Msgoff          ~
+Check           check_unrigid_attack~
+Function        cast_power_word~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MANA
+Cost            50
+Wait            25
+Exp             20
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_SAINT
+AntiRating      RATING_EVIL
+Innate          NO
+Ply             40
+Qutoient        1
+Adeptation      0
+Limit           CLASS_BARD       75  95
+
+Help            ~
+End

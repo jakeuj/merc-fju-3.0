@@ -1,0 +1,13 @@
+Vnum            63
+Name            bittern egg~
+ShortDesc       滷蛋~
+Description
+一粒又大又香的滷蛋(bittern egg)﹐真想一口把它吞掉。~
+Unit            粒~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           1
+Value           30 15 5
+Weight          1
+Cost            10
+End

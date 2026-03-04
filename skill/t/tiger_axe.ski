@@ -1,0 +1,190 @@
+Name            tiger axe~
+Cname           ÅQªê¾Ô³Z~
+Slot            SLOT_TIGER_AXE
+Msgoff          ~
+Check           check_axe_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            35
+Wait            18
+Exp             100
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_AXE
+Rating          RATING_SKILL
+Innate          NO
+Ply             10
+Qutoient        2
+Adeptation      0
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  60
+Help            ~
+
+#Damage
+Description
+$nÁa¨­¦Ó¤W¡M©¿¦a¨­§Î¤@Âà¡M¨Ï¥X$Y¡yÅQªê¾Ô³Z¡z²Ä¤@¦¡¡u°Ñ¤Ñª÷Åì¡v$Z¡M¤â¤¤$O©¹
+$N¾î¼A¹L¥h¡M$N¨­¦b¥bªÅ¡MµLªkÁ×Åý¡M¥u­n¨­¤l¦A¨I¤Ø³\¡M¥ß®ÉÂù¨¬»ôÂ_¡M­Y¬O¨I¤U
+¤T¤Ø¡M«h»ô¸y³Q$O±Ù¬°¨âºI¡T¡T¡T~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n¹B°_¤Q¼h¥\¤O¡M±N¯u¤O³eª$O¡MÀK®É¤â¤¤¤§$O¦]¯u®ðªº³e¤J¦Ó°{°{µo«G¡M$n¦^¤â¤@
+§ð¡M¨Ï¥X$Y¡yÅQªê¾Ô³Z¡z²Ä¤G¦¡¡u­Ë¦æ¨Pªi¡v$Z¡M¤â¤¤ªº$O­Y²rªê¥X¹h¡M¤@³s¥|¬å¡M
+ª½¼A$Nªº¤U½L¡T¡T~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n¤â¤¤$O³s¹º¡M¹ï$N¹º¥X¨â¹D¦å¬õªº¤Q¦r®ð«l¡M²½¥X$Y¡yÅQªê¾Ô³Z¡z²Ä¤T¦¡¡u¦a¤ß¬ª
+ÂE¡v$Z¡M¥u¨£®ð«l©¿µM®I¤J¦a©³¡M¦A±q$Nªº¥|©P¦a­±®¼¥X¦V$N¶Ã¼A¡M$N¹y®É¤£ª¾©Ò±¹
+³sÄò³Q¬å¤¤¤T©ò¡M¦b¶Ë¤f¤§¤W¯d¤U¤Q¦rªº¦å²ª¡T¡T¡T~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n±NÅé¤º¯u®ð¹BÂà¥þ¨­¡M©P¨­Àþ®É¾®¥X¤@ªÑ±j¤jªº®ð¬y¡M±þ©Û$Y¡yÅQªê¾Ô³Z¡z²Ä¥|¦¡
+¡u°f­·­Ë±Û¡v$Z¡M$nªº¥|©P®ð¬y³vº¥§Î¦¨±j¯Pªº¨g­·¡M$n±N$O»R¦¨¤@¤ù±j¤jªº§ðÀ»ºô
+¡M±N$N§¹§¹¥þ¥þÂê¤J§ðÀ»ºô¤§¤º¡T¡T¡T~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n¨­§ÎÄÆµM¦Ó¤W¡M$n´§°Ê¤â¤¤$O¥ÑªÅ¦V$N¯e½Ä¦Ó¥h¡M¨Ï¥X$Y¡yÅQªê¾Ô³Z¡z²Ä¤­¦¡¡uÅå
+¤Ñ­¸ÂE¡v$Z¡M¥u¨£$n¤â¤¤ªº$O¹³¤@¹D°{¹q¡MÅF¶©¦V$Nª½¼A¦Ó¤U¡M$N­±Á{³o¬ðµMªº¤@¦¡
+³º°{µL¥i°{¡M³Q³o©ò³e¬ï¦Ó¹L¡T¡T¡T~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$nªº©ò©ÛÀôÀô¬Û¦©¡M³s¥X$Y¡u°Ñ¤Ñª÷Åì¡v¡B¡u­Ë¦æ¨Pªi¡v¡B¡u¦a¤ß¬ªÂE¡v$Z¡M¤@©Û±µ
+µÛ¤@©Û¡M§ðªº$N±¹¤â¤£¤Î¡M¥u¦n±N±þ©Û¥þ¼Æ±µ¤U¡T¡T¡T~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n¹ª°Ê¥þ¨­¯u®ð¡M¤º«l¬yÂà¡M¤@³s¨Ï¥X$Y¡u°Ñ¤Ñª÷Åì¡v¡B¡u¦a¤ß¬ªÂE¡v¡B¡u­Ë¦æ¨Pªi
+¡v¡B¡u¥|Ãìª÷Às¡v¡B¡u¾î±½¤d­x¡v$Z¡M¤@³s¤­¦¡¦ü¦³µL¼Æ¨³¹p¯e­·¤¬½Ä¿EÀú¦V$N¦Ó¥h
+¡T¡T¡T~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n¸}½ñ$S°Å¶³¨B¤§¡iÂz®ü±¡ªÅ¡j$Z¡M³ÜµM¨Ï¥X$Y¡yÅQªê¾Ô³Z¡z²Ä¤»¦¡¡u¥|Ãìª÷Às¡v$Z
+¡M¥u¨£¥Ñ$n©Ò´§¥X¤§±j¯P®ð«l¡M³vº¥§Î¦¨¥|±ø±i¤ú»R¤öªºª÷Às¡M¦p¯e¹q«ã¹p¯ë¦V$N½Ä
+¥h¡M¥|±øª÷Às³òÂ¶µÛ$N¥Î¨ä¾W§Q¤§¤ö±N$N¼¹ªºÅéµL§¹½§ ¡T¡T¡T~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n±N$O¾î¸m©ó¯Ý¡M¤j³Ü¤@Án¡M¨Ï¥X$Y¡yÅQªê¾Ô³Z¡z²Ä¤C¦¡¡u¾î±½¤d­x¡v$Z¡M¤@®É®ð¾_
+¤sªe¡M¤@°}¨g¼É¦p¼Éªêªº®ð«l¦V$Nª½½Ä¦Ó¥h¡M¤£ª¾¬Oµo¥Í¦ó¨Æ$N©~µM³Q¦¹±¡´º©ÒÀ~¡M
+·í¦^¹L¯«­n©è¾×¤§®É¡MµoÄ±¬°®É¤w±ß¡T¡T¡T~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n¨M©w¨Ï¥X¡yÅQªê¾Ô³Z¡z¥²±þ¤§§Þ¡M$Y¡iÂÐ¤Ñ¤T¶§¡j¡yª@©þ¶§¡B´²¯Pª¢¡B¤EÀs»ô­¸¡T¡z
+$Z$nªº¤ÑÆF¥Þ«_¥X¤@ªÑªÑªº¯u®ð¡M¦Ó¯u®ð±a°Ê¥|©P¤§®ð¬y¡M®ð¬yº¥º¥Â·Â¶$nªº
+¥þ¨­¡M§Î¦¨¤@ªÑ±j¤jªºÅ@¨­°«®ð¡M¤â¤¤¤§$O¡M®ð¶Õ½Sò¡¡Mª½ª½¦V$Nªº¥þ¨­¹º¥X¤T¹DµJ
+¶Âªº¶Ë¤f¡T¡T¡T~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n¬ðµM³´¤JºÆ¨g¡M¤f¤¤¤j³Û¡G$Y¡i ¤T´Ý¤¸²G¡T¡T»È¦å´çÅé¡T¡T¬Ý§Ú¤EÅÜ¯¾¨ëÀsªêÅå¤Ñ
+¡T¡T¡j$Z¥u¨£$nªº¥ªÃä¨­§Î¤Æ¬°¤@ÀY¶ÂÁl¨gÀs¡M¦Ó¥k¤Æ¬°¥ÕÃBÅQªê¡M¥ª¬IªÅ¤¤¨gÀsÅå¤Ñ
+¤§¦¡¡M¥k¥X¦a¤WÅQªêµõ¦a¤§©Û¡M¨â¦¡¬Û¦õ¬Û¦¨¡MÅQ®ð¤Q¨¬¡M$N³s³s³Q¼A¤¤¼Æ©Û¡T¡T¡T~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+©¿µM¶¡¤Ñ¦a¬°¤§ÅÜ¦â¡M¦Ê¹pÅT¡M¦V¤ëÅF¡M¥|©Pº©°_¤ôÃú¡M¥u¨£¤ôÃú³vº¥¾®µ²¡M¡¯³·ªá¤ù
+¤ù¡¯$A$P      ¡i«æ¡ã­á¡ã±ö¡ãªá¡ã³·¡ã¸Ì¡ã¤£¡ã­ä¡E¶}¡ã¤Ñ¡ãÅP¡ã¦a¡ã¤@¡ã³e¡ãªø¡ã
+­i¡j$Z$A$n±N©Ò¾®¤§¦B»E¶°©ó¤â¤¤¡M¤â¤¤¥¨©ò¶¶¶Õ¾®¥X¸U¹D¤§¦B¾W¡M«K´Â$N¨g±Ù¦Ó¥h¡T
+¡T¡T~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n¨Ï¥XÅQªê¾Ô³Z¤§ÅQªêµ´¦¡$Y¡y¤Ñ¡ã¦t¡ã¾®¡ã±þ¡ã¾÷¡E¤@¡ã®ð¡ã¯}¡ã¤­¡ãÀ®¡z$Z¡M¥u¨£
+¤â¤¤$Oªº®ð«l¹º¯}¤j¦a¡M¨³³tªº¼A¦V$N¡T¡T¥u¨£$Nªº¨­Åé¤w³Q$Oªº§Î¦¨¤§±j¯P®ðÃz¼¹ªº
+¯»¨­¸H°©¡T¡T¡T~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

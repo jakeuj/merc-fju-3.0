@@ -1,0 +1,5 @@
+Higher          LEVEL_PC
+Lower           1
+Position        POS_SLEEPING
+Function        angel_wake~
+End

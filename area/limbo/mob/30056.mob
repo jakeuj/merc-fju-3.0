@@ -1,0 +1,31 @@
+Vnum            30056
+Name            li ru~
+ShortDesc       李儒~
+LongDesc        李儒(li ru)
+~
+Description
+董卓的女婿與軍師。屢屢獻計﹐幫助董卓
+掌大權﹐得呂布﹐破諸侯。識破了王允的
+『連環計』﹐勸諫董卓﹐但董卓不聽。董
+卓被殺後他也被處死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

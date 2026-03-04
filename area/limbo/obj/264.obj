@@ -1,0 +1,14 @@
+Vnum            264
+Name            seven dagger book~
+ShortDesc       ¤C©_ª¥°w³Z¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_SEVEN_DAGGER
+Value2          5
+Weight          3
+Cost            10000
+End

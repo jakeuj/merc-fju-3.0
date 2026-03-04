@@ -1,0 +1,31 @@
+Vnum            30096
+Name            yuan shu~
+ShortDesc       袁術~
+LongDesc        袁術(yuan shu)
+~
+Description
+字公路。袁紹的異母兄弟﹐南陽太守。為
+人怠慢刻薄。在得到玉璽後﹐僭稱帝號﹐
+導致眾叛親離﹐被劉備所破﹐吐血數升後
+慘死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

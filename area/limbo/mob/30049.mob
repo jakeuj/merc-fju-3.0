@@ -1,0 +1,29 @@
+Vnum            30049
+Name            pan feng~
+ShortDesc       潘鳳~
+LongDesc        潘鳳(pan feng)
+~
+Description
+韓馥部將。汜水關之戰手執大府與敵將華
+雄單挑﹐力量不濟﹐被斬殺。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

@@ -1,0 +1,14 @@
+Vnum            300
+Name            six fingers book~
+ShortDesc       ¤»¯ß¯«¼C¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_SIX_FINGERS
+Value2          5
+Weight          3
+Cost            10000
+End

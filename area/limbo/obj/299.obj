@@ -1,0 +1,14 @@
+Vnum            299
+Name            snow martial force book~
+ShortDesc       ³·»aªZ¾Ç¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_SNOW_MARTIAL
+Value2          5
+Weight          3
+Cost            10000
+End

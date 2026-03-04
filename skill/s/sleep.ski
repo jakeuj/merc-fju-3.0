@@ -1,0 +1,39 @@
+Name            sleep~
+Cname           睡眠術~
+Slot            SLOT_SLEEP
+Msgoff          你的精神似乎比較好了﹗~
+Check           check_unrigid_attack~
+Function        cast_sleep~
+Position        POS_STANDING
+Type            TAR_CHAR_DEFENSIVE
+CostType        COST_MANA
+Cost            25
+Wait            12
+Exp             600
+Associate       SLOT_POISON
+Degree          100
+Affect          SLOT_SLEEP
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_POISON
+Innate          NO
+Ply             60
+Qutoient        1
+Adeptation      0
+
+Limit           CLASS_MAGE       50  80
+Limit           CLASS_SMITH      50  95
+
+#Affect
+Type            SLOT_SLEEP
+Location        AFF_NONE
+End
+
+Help            ~
+End

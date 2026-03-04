@@ -1,0 +1,31 @@
+Vnum            30008
+Name            guan yu~
+ShortDesc       關羽~
+LongDesc        關羽(guan yu)
+~
+Description
+字雲長﹐桃園結義後﹐隨大哥劉備征戰﹐
+共扶漢室﹐他是勇武忠義的代名詞。曾斬
+顏良﹐誅文醜。千里尋主﹐水流七軍﹐威
+震華夏。備受劉備信任﹐五虎大將之首。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

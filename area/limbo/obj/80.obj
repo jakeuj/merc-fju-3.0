@@ -1,0 +1,15 @@
+Vnum            80
+Name            drawer~
+ShortDesc       褻褲~
+Description
+一件有蕾絲花邊的褻褲(drawer)。~
+Unit            件~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_LEGS
+Takeable        Yes
+Level           20
+Value           -1
+Weight          10
+Cost            200
+Exp             10
+End

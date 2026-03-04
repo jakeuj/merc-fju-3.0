@@ -1,0 +1,77 @@
+Vnum            6
+Name            kerry~
+ShortDesc       狼狗凱莉~
+LongDesc        一隻看似凶狠的狼狗(Kerry)搖著尾巴。
+~
+Description
+這隻是 Robin 家裡養的具有血統證明書的狼狗。
+~
+Sentinel        Yes
+Effect          'sanctuary'
+Effect          'infravision'
+Effect          'protection'
+Effect          'detect invis'
+Effect          'detect hidden'
+Alignment       100
+Level           99
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             100
+Int             100
+Wis             100
+Dex             100
+Con             100
+Hp              100000
+Mana            100000
+Move            100000
+Class           CLASS_BRAVO
+Gold            0
+Multipile       100
+Migrate         0
+Tractable       50
+Sex             SEX_FEMALE
+Enable          100 'dragon fist'
+Enable          100 'ice freeze strike'
+Enable          100 'linpo steps'
+
+Process
+Type            rand_prog
+Chance          5
+Text
+emote 對著你狂叫。
+~
+End
+
+Process
+Type            fight_prog
+Chance          80
+Text
+say $1主人不在家﹐你們就來欺負我…$0
+ say $1看我必殺的一擊…$0
+ mpadd $n HIT -20000
+ mpadd $n MANA -1000
+ mpadd $n MOVE -1000
+ mpadd $n DOSAGE 100
+ mpechoat $n $1$N$1覺得自己的精力瞬間急速下降。$0
+ mpechoaround $n $1$N的精力急速流失。$0
+~
+End
+
+Process
+Type            fight_prog
+Chance          80
+Text
+if rand(50)
+   cast 'dragon fist'
+   cast 'dragon fist'
+   break
+ endif
+ cast 'ice freeze strike'
+ cast 'ice freeze strike'
+ cast 'ice freeze strike'
+ cast 'poison'
+~
+End
+
+End

@@ -1,0 +1,14 @@
+Vnum            368
+Name            refresh book~
+ShortDesc       體力恢復術秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_REFRESH
+Value2          5
+Weight          3
+Cost            10000
+End

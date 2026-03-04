@@ -1,0 +1,31 @@
+Vnum            30296
+Name            guo huai~
+ShortDesc       郭淮~
+LongDesc        郭淮(guo huai)
+~
+Description
+字柏濟﹐魏國行軍司馬。在曹真、司馬懿
+制下統軍。後就任雍州刺使﹐追擊反叛魏
+國的夏侯霸。曾設計救出了被蜀軍圍困在
+鐵籠山的司馬昭。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

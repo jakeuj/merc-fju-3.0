@@ -1,0 +1,33 @@
+Name            mass invis~
+Cname           全體隱形~
+Slot            SLOT_MASS_INVIS
+Msgoff          你不再隱形了﹗~
+Function        cast_mass_invis~
+Check           check_unrigid_attack~
+Position        POS_STANDING
+Type            TAR_IGNORE
+CostType        COST_MANA
+Cost            20
+Wait            24
+Exp             300
+Associate       -1
+Degree          0
+Affect          SLOT_MASS_INVIS
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_DARKNESS
+AntiRating      RATING_LIGHT
+Innate          NO
+Ply             30
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     50 70
+Limit           CLASS_BARD       50 95
+Help            ~
+End

@@ -1,0 +1,145 @@
+Name            sky dragon sword~
+Cname           雙十旋龍斬~
+Slot            SLOT_SKYDRAGON_SWORD
+Msgoff          ~
+Check           check_sword_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            30
+Wait            14
+Exp             100
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_SWORD
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_GENERAL    1  80
+Limit           CLASS_BRAVO      1  95
+Help
+雙十旋龍斬﹕
+
+將從降龍掌脫胎的神龍劍法﹐從根本劍招上下工夫改革﹐即是
+雙十旋龍斬。顧名思義﹐本劍法劍招有二十﹐但因劍術造詣高
+超的人不多﹐使得本劍法多數劍招已經失佚﹐但是所存劍招中
+強大的破壞力﹐卻有直追降龍十八掌的趨勢。
+
+~
+
+#Damage
+Description
+$Y～雙十旋龍斬～$Z$A$A
+$W      $n的內勁一提﹐使出天龍氣劍指中之$Z$A$A
+$S                －『 一 劍 起 藝 』－$Z$A$A
+$W一道劍氣朝$N過來﹐其力道非常剛烈﹐將$N刺傷。$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$Y～雙十旋龍斬～$Z$A$A
+$W      $n將內勁往指上凝聚﹐使出天龍氣劍指之$Z$A$A
+$S                －『 二 劍 穿 腸 紅 』－$Z$A$A
+$W指上勁力瞬時提升數倍﹐澎湃的二道指勁向$N襲捲而去。$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$Y～雙十旋龍斬～$Z$A$A
+$W      $n的內元一提﹐使出天龍氣劍指中之$Z$A$A
+$S                －『 四 劍 八 達 』－$Z$A$A
+$W氣勢將$N籠罩﹐周圍充滿劍影﹐將$N團團圍住。$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$Y～雙十旋龍斬～$Z$A$A
+$W      $n將內勁往指上凝聚﹐使出天龍氣劍指之$Z$A$A
+$S                －『 五 劍 克 人 』－$Z$A$A
+$W手指勁力瞬時提升數倍﹐五道劍氣向$N襲捲而去。$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$Y～雙十旋龍斬～$Z$A$A
+$W      $n的天龍真氣一提﹐使出天龍氣劍指中之$Z$A$A
+$S                －『 十 劍 制 聖 』－$Z$A$A
+$W十道劍氣朝$N射去﹐周圍瞬間劍氣凝聚﹐將$N包圍。$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$Y～雙十旋龍斬～$Z$A$A
+$W      $n氣運全身﹐使出天龍氣劍指之$Z$A$A
+$S                －『 十 二 半 圓 』－$Z$A$A
+$W全身勁力瞬時提升數倍﹐十二道劍氣形成半圓狀向$N襲捲而去。$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$Y～雙十旋龍斬～$Z$A$A
+$W      $n使出全身功力﹐使出天龍氣劍指中之$Z$A$A
+$S                －『 十 五 飛 虎 』－$Z$A$A
+$W瞬間十五道劍氣將$N籠罩﹐有如猛虎般兇猛﹐使$N無力招架。$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$Y～雙十旋龍斬～$Z$A$A
+$W      $n將畢生內力灌於十指之內﹐使出天龍氣劍指之$Z$A$A
+$S                －『 雙 十 旋 龍 斬 』－$Z$A$A
+$G      從$n手指中衝出十道劍氣﹐以一化二$Z$A
+$W突然二十道劍氣﹐有如神龍般向$N襲捲而去。$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

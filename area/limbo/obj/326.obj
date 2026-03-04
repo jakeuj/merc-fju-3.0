@@ -1,0 +1,14 @@
+Vnum            326
+Name            create water book~
+ShortDesc       造水術秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_CREATE_WATER
+Value2          5
+Weight          3
+Cost            10000
+End

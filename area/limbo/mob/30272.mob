@@ -1,0 +1,30 @@
+Vnum            30272
+Name            zhu ling~
+ShortDesc       朱靈~
+LongDesc        朱靈(zhu ling)
+~
+Description
+曹操麾下武將﹐劉備討伐袁術之時任隨軍
+監軍﹐但是沒有有完成監視的目的﹐空手
+而歸﹐正史記載﹐曹操很討厭他。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

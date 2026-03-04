@@ -1,0 +1,30 @@
+Vnum            30368
+Name            gao xiang~
+ShortDesc       高翔~
+LongDesc        高翔(gao xiang)
+~
+Description
+蜀將。任右將軍﹐跟隨諸葛亮北伐。運用
+木牛流馬﹐從劍閣到祁山補給軍需。按諸
+葛亮之計﹐故意讓魏軍奪走木牛流馬。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

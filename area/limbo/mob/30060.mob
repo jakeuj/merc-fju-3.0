@@ -1,0 +1,30 @@
+Vnum            30060
+Name            liu du~
+ShortDesc       劉度~
+LongDesc        劉度(liu du)
+~
+Description
+荊州南部零陵太守。在其子劉賢和部下邢
+道榮被進攻的劉備軍打敗後﹐率兵投降。
+諸葛亮仍令他繼任零陵太守。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

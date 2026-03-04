@@ -1,0 +1,35 @@
+Name            wakeup~
+Cname           ·L­·³ê¿ô³N~
+Slot            SLOT_WAKEUP
+Msgoff          ~
+Function        cast_wakeup~
+Position        POS_STANDING
+Type            TAR_CHAR_DEFENSIVE
+Costtype        COST_MANA
+Cost            12
+Wait            20
+Exp             900
+Associate       SLOT_FLY
+Degree          200
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_WIND
+AntiRating      RATING_EARTH
+Innate          NO
+Ply             90
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    15 45
+Limit           CLASS_DOCTOR     15 95
+Limit           CLASS_BARD       15 70
+Help
+
+~
+End

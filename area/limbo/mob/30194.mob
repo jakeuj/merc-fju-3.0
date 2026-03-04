@@ -1,0 +1,31 @@
+Vnum            30194
+Name            tai shi ci~
+ShortDesc       太史慈~
+LongDesc        太史慈(tai shi ci)
+~
+Description
+字子義﹐原為劉繇部下。武藝高強﹐尤擅
+弓箭﹐曾與孫策單挑不分勝負。後被孫策
+俘獲﹐感孫策的人德而降﹐為東吳的建國
+立下大功。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

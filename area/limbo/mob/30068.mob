@@ -1,0 +1,31 @@
+Vnum            30068
+Name            tian feng~
+ShortDesc       田豐~
+LongDesc        田豐(tian feng)
+~
+Description
+字元皓﹐袁紹的謀士。博學多才﹐具有優
+秀軍師的資質。但由於性格剛直而不能迎
+合袁紹。在官渡之戰中﹐因主張打持久戰
+激怒袁紹﹐被囚禁。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

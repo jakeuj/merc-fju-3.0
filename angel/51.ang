@@ -1,0 +1,12 @@
+Higher          10
+Lower           1
+Position        POS_STANDING
+Function        ~
+Description
+·í§A·Q¸ò¬Y­Ó¤H»¡¸Ü¡M¦pªG³o­Ó¤H¦b¦P¤@¶¡©Ð¶¡¸Ì¡M§A¥i¥H¥Î [1;32msay[0m ¡M³o¼Ë¦P¤@¶¡©Ð¶¡
+¸Ìªº©Ò¦³¤H³£¥i¥HÅ¥¨ì¡M¦ý¬O§A·Q¹ï¸Üªº¤H¤£¦b¦P¤@¶¡©Ð¶¡¡M©Î¬O¦³¯µ±K­n°Ó½Í¡M§A
+¥i¥H¦Ò¼{¥Î [1;32mtell[0m ¨Ó§i¶D¥L¡M¤§«á§A¥i¥H¥Î [1;32mreply[0m ¨Ó¦^¸Ü¡C
+
+½Ð¬d¸ß¡R tell¡Bsay¡Breply
+~
+End

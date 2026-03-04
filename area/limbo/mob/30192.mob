@@ -1,0 +1,31 @@
+Vnum            30192
+Name            sun ce~
+ShortDesc       孫策~
+LongDesc        孫策(sun ce)
+~
+Description
+字伯符﹐孫堅的長子。繼承其父的遺志﹐
+平定了江東﹐打下了吳王朝的基礎。人稱
+『小霸王』﹐勇猛無比。年紀輕輕就遭人
+暗害﹐把未遂的志願託付給弟弟孫權。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

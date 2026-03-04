@@ -1,0 +1,14 @@
+Vnum            356
+Name            high explosive book~
+ShortDesc       加強威力秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_HIGH_EXPLOSIVE
+Value2          5
+Weight          3
+Cost            10000
+End

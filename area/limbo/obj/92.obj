@@ -1,0 +1,16 @@
+Vnum            92
+Name            smart pen~
+ShortDesc       靈龍天筆~
+Description
+這是儒門世代相傳的聖物﹐相傳是用千年玄鐵打造﹐無堅不摧。~
+Unit            枝~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 8
+Weight          20
+Cost            200
+Exp             10
+End

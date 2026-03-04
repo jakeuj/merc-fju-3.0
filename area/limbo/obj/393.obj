@@ -1,0 +1,14 @@
+Vnum            393
+Name            write pen book~
+ShortDesc       Á{®ÑÂI¥Þ¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_WRITE_PEN
+Value2          5
+Weight          3
+Cost            10000
+End

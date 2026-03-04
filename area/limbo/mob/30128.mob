@@ -1,0 +1,31 @@
+Vnum            30128
+Name            zhang yun~
+ShortDesc       張允~
+LongDesc        張允(zhang yun)
+~
+Description
+劉表部將﹐蔡瑁的心腹。與蔡瑁一起投降
+曹操﹐任曹操的水軍副都督。由於熟習水
+陣﹐被周瑜用反間記﹐使曹操懷疑他們有
+加害之心﹐與蔡瑁一起被斬。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

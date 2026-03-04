@@ -1,0 +1,30 @@
+Vnum            30051
+Name            wu an guo~
+ShortDesc       武安國~
+LongDesc        武安國(wu an guo)
+~
+Description
+孔融部將。在虎牢關之戰中與呂布單挑﹐
+手持鐵鎚與呂布力戰十餘回合﹐最後被呂
+布砍斷手腕﹐棄錘而逃。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

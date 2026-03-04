@@ -1,0 +1,30 @@
+Vnum            30198
+Name            zhang yan~
+ShortDesc       張燕~
+LongDesc        張燕(zhang yan)
+~
+Description
+黑山山賊的頭目。曹操戰勝袁譚後﹐率領
+十萬兵力降曹﹐因此被封為平北將軍。受
+命鞏固北方的要害。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

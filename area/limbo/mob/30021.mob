@@ -1,0 +1,31 @@
+Vnum            30021
+Name            huang pu song~
+ShortDesc       皇甫嵩~
+LongDesc        皇甫嵩(huang pu song)
+~
+Description
+字義真。奉召討伐黃巾時﹐用火攻大破張
+梁﹐張寶軍﹐掘張角墓毀屍。因與董卓不
+和﹐故在董卓把持朝政時﹐他辭官返鄉﹐
+董卓伏誅後﹐他復歸朝廷﹐任大尉。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

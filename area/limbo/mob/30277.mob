@@ -1,0 +1,31 @@
+Vnum            30277
+Name            ta dun~
+ShortDesc       蹋頓~
+LongDesc        蹋頓(ta dun)
+~
+Description
+北方的異族烏丸族族長。幫助被曹操打敗
+後逃到北方的袁熙、袁尚兄弟﹐一起抵抗
+率軍遠道而來的曹操。不敵名將張遼﹐被
+殺死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

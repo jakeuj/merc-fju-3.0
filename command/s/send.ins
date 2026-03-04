@@ -1,0 +1,31 @@
+Name            send~
+Cname           寄送物品~
+Function        do_send~
+Position        POS_FIGHTING
+Level           0
+Log             LOG_NORMAL
+Exact           NO
+Argument        YES
+Wizlog          YES
+Jail            NO
+CanLock         YES
+Dead            NO
+Order           NO
+Lost            NO
+Lock            NO
+Limit           NO
+Help
+指令 send [物品名稱] [人物名稱] [運費]
+
+    這個指令是用來運送物品給某人物﹐這個人可以是玩家﹐也可以是怪物.
+使用這個指令時﹐你首先要註明運送的物品名稱﹐這個物品必須是在自己身
+上﹐唯一的限制是﹐不能為傳家之寶。
+
+    後面再註明欲送往的人物名稱﹐這個可以是玩家﹐也可以是非玩家. 最
+後面在註明你想要用多少錢來運送這個物品﹐這個數目必須大於 0﹐沒有上
+限﹐但是越高貴的東西﹐最好用越高的運費來運送﹐否則很有可能會被土匪
+打劫走﹐運送完畢之後﹐對象者會收到這一項物品﹐但是不是直接送到其身
+上﹐而是由大鵬鳥送到那一間房間裡﹐對象者必須自己檢起﹐若被其他同房
+間的玩家給搶走﹐則需自行負責。
+~
+End

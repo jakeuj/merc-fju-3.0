@@ -1,0 +1,30 @@
+Vnum            30162
+Name            yan pu~
+ShortDesc       閻圃~
+LongDesc        閻圃(yan pu)
+~
+Description
+張魯部下。擔任參謀屢次獻計。當張魯聽
+信楊松讒言欲殺龐德時﹐他力勸不成。張
+魯投降後﹐他也被曹操封為列侯。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

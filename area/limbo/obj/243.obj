@@ -1,0 +1,14 @@
+Vnum            243
+Name            monkey stick book~
+ShortDesc       µU´Ò¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_MONKEY_STICK
+Value2          5
+Weight          3
+Cost            10000
+End

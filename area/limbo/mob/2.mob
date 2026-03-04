@@ -1,0 +1,32 @@
+Vnum            2
+Name            ghost~
+ShortDesc       女鬼~
+LongDesc        一隻張牙咧嘴披長髮的女鬼(ghost)在這裡搖動它的髮辮
+~
+Description
+最好離他遠一點吧﹐不然可能有點危險﹐看他好像很久沒有吃東西了。
+~
+Sentinel        Yes
+Aggressive      Yes
+AutoSetValue    Yes
+Effect          'detect hidden'
+Effect          'detect invis'
+Alignment       -1000
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            200
+Move            300
+Class           CLASS_MAGE
+Gold            1000
+Multipile       100
+Migrate         0
+Sex             SEX_FEMALE
+End

@@ -1,0 +1,30 @@
+Vnum            30281
+Name            bao long~
+ShortDesc       鮑隆~
+LongDesc        鮑隆(bao long)
+~
+Description
+桂陽管軍校尉﹐趙範部將。因曾射殺二虎
+而聲名大噪。詐降進攻桂陽的趙雲﹐計敗
+後被斬首。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

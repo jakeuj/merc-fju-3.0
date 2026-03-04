@@ -1,0 +1,139 @@
+Name            thunder hammer~
+Cname           紫電天雷轟~
+Slot            SLOT_THUNDER_HAMMER
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            1
+Exp             5
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_HAMMER
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_FIGHTER    1  55
+Limit           CLASS_GENERAL    1  90
+Limit           CLASS_BRAVO      1  80
+Help            ~
+
+#Damage
+Description
+$n將手中的$O高舉向天﹐引發天雷﹐使出$P「紫電天雷轟」$Z第一轟$S「冬雷霹靂」$Z
+只見無數的青色的$S雷球$Z夾帶在你的攻勢上﹐向$N砸去﹐把$N轟的體無完膚。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n反身一轉﹐將$S「冬雷霹靂」$Z使出﹐身形一閃﹐就閃到$N身後﹐向$N殘酷
+的一笑﹐順勢使出$P「紫電天雷轟」$Z第二轟$Y「電光火石」$Z將$O帶著
+$P紫電$Z向$N轟下﹐$N被這兩股絕世力量轟中﹐登時被殛的灰飛煙滅。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n狂吼一聲﹐向上一躍﹐只見一時$S晴天霹靂$Z﹐$n向下一揮﹐使出
+$Y「電光火石」$Z﹐再將滿天的$B雷電$Z集在$O上﹐夾帶著雷霆萬鈞之勢
+向$N轟去﹐正$P「紫電天雷轟」$Z第三轟$p「破雷摧五嶽」$Z﹐$N閃避不
+及被第二轟轟的到飛三丈﹐再被這驚天一轟給轟的肢離破碎。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$N躍上空中﹐正準備使出殺招﹐$n一見機不可失﹐奮力使出$P「紫電天雷轟」$Z
+第四轟$R「紫電震九霄」$Z放出集中在$O上的雷$b電$Z把$N殛在
+空中﹐痛不欲生﹐$n再反手一轉﹐使出$p「破雷摧五嶽」$Z把$N給轟的魂飛魄散。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n在$N出現空隙之際立即使出$P「紫電震九霄」$Z把他給轟的昏頭轉向﹐再順勢
+使出$P「紫電天雷轟」$Z第五轟$W「五雷轟頂」$Z﹐登時天空出現五個超大的
+$R紅色雷球$Z向$N轟去﹐將$N給轟入地底下﹐再使出$Y「電光火石」$Z將$O
+連續揮出九九八十一槌﹐把$N給轟成肉醬。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n雙眼發紅﹐一聲狂吼﹐連續使出﹐$p「破雷摧五嶽」$Z﹐$R「紫電震九霄」$Z﹐$W「五
+雷轟頂」$Z﹐把$N給轟的左右不支﹐$n一看機會來了﹐馬上解開招式的封印﹐
+使出$P「紫電天雷轟」$Z第六轟$G「狂電殛天地」$Z剎時天地出現無數的雷電
+﹐布下$Y天羅地網$Z﹐把$N給電的神智全失﹐$n看機不可失﹐使出$W御槌術$Z
+把$N給砸成肉餅。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n靜下心來﹐領悟出$P「紫電天雷轟」$Z的殺招第七轟$p「轟天爆雷毀萬物」$Z
+﹐$n手握$O向$N轟出$W「五雷轟頂」$Z把$N給轟退數十丈﹐再使出$W天槌$Z
+---$S怒雷鳴$Z﹐$O夾帶著強大的雷電向$N飛去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n一連使出$W「紫雷七擊」$Z$A
+$B                 -------冬雷霹靂----------$A
+$Y                 -------電光火石----------$A
+$p                 ------破雷摧五嶽---------$A
+$R                 ------紫電震九霄---------$A
+$W                 -------五雷轟頂----------$A
+$G                 ------狂電殛天地---------$A
+$P                 ----轟天爆雷毀萬物-------$A
+把$N給轟的狂吐鮮血﹐$n也打的意氣橫生﹐無意中使出$P「紫電天雷轟」$Z之最
+強第八轟$W「天打雷劈屠真龍」$Z身上被強大的天雷打中﹐將電力集中在自
+已的四周﹐登時出現一條$S電龍$Z向$O飛電而去﹐$O閃避不及﹐被電龍給吞噬。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End
+

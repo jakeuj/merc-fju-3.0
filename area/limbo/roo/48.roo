@@ -1,0 +1,30 @@
+Vnum            48
+Name            第一殿--通道~
+Description
+你看到前方不遠處有座城門﹐門上一個石匾刻著: 『往第二殿』四
+個大字。你發現城門下的守備格外地森嚴﹐守衛們對來往的孤魂野
+鬼都會詳加調查﹐對稍微可疑的鬼魂都不會放行。
+
+~
+SectorType      SECT_INSIDE
+Safe            Yes
+NoRecall        Yes
+ForeverLight    Yes
+
+#Exit
+Direction       NORTH
+ExitVnum        49
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        47
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

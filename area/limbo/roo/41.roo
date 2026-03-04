@@ -1,0 +1,22 @@
+Vnum            41
+Name            第一殿--正廳~
+Description
+這裡是第一殿﹐由秦廣明王管轄﹐居中而坐的便是秦廣明王﹐大廳
+右邊牆上寫著『若要來離此關﹐需要急早行善』﹐左邊牆上寫著
+『輪迴分六道﹐轉世變三生』﹐你看了不禁恐慌起來……
+
+~
+SectorType      SECT_INSIDE
+Safe            Yes
+NoRecall        Yes
+ForeverLight    Yes
+
+#Exit
+Direction       NORTH
+ExitVnum        42
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

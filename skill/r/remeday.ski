@@ -1,0 +1,34 @@
+Name            remeday~
+Cname           §®¤â¦^¬K~
+Slot            SLOT_REMEDAY
+Msgoff          ~
+Function        cast_remeday~
+Position        POS_FIGHTING
+Check           check_unrigid_attack~
+Type            TAR_CHAR_DEFENSIVE
+CostType        COST_MANA
+Cost            200
+Wait            60
+Exp             50
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_SAINT
+AntiRating      RATING_EVIL
+Innate          NO
+Ply             20
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  50
+
+Help            ~
+End

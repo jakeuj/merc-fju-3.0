@@ -1,0 +1,96 @@
+Name            linpo steps~
+Cname           凌波微步~
+Slot            SLOT_LINPO_STEPS
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_DODGE
+Costtype        COST_MOVE
+Cost            10
+Wait            10
+Exp             20
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            NO
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_GENERAL    50  95
+Help            ~
+
+#Damage
+Description
+$n展開$S『凌波微步』$Z﹐左足跨出﹐既踏$W「中孚」$Z﹐立轉$W「既濟」$Z﹐$Y「神
+光離合﹐乍陰乍陽」$Z﹐斜斜的躲過$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+只見$n施展$S『凌波微步』$Z﹐甫上$W「泰」$Z位﹐一個轉身﹐右腳踏上$W「蠱」$Z位﹐
+$Y「體迅飛鷲﹐飄忽若神」$Z﹐反而繞到$N身後。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n踏出$S『凌波微步』$Z﹐足下自然而然自$W「井」$Z位斜行﹐踏到了$W「訟」$Z位﹐
+$Y「涑輕軀以鶴立﹐若將飛而未翔」$Z﹐輕輕鬆鬆地躲過$N的招式。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n使出$S『凌波微步』$Z﹐自$W「豫」$Z位踏$W「觀」$Z位﹐$Y「翩若驚鴻﹐婉若遊龍
+」$Z﹐閃身從$N身旁繞過。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n展現$S『凌波微步』$Z﹐跟著斜踏$W「蠱」$Z位﹐$Y「忽焉縱體﹐以遨以嘻」$Z﹐身
+子輕輕飄了開去。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n斜踏$S『凌波微步』$Z﹐忽高忽低﹐有若$Y彷彿兮若輕雲之蔽月﹐飄飄兮若流風之回
+雪」般。$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

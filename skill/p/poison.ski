@@ -1,0 +1,37 @@
+Name            poison~
+Cname           毒殺術~
+Slot            SLOT_POISON
+Msgoff          你感到身體較健康了﹗~
+Check           check_unrigid_attack~
+Function        cast_poison~
+Position        POS_STANDING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MANA
+Cost            30
+Wait            20
+Exp             100
+Associate       -1
+Degree          0
+Affect          SLOT_POISON
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_POISON
+Innate          NO
+Ply             15
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SMITH      50  80
+
+#Affect
+Type            SLOT_POISON
+Location        AFF_NONE
+End
+
+Help            ~
+End

@@ -1,0 +1,44 @@
+Vnum            CLASS_SCHOLAR
+Name            scholar~
+Cname           文  官~
+Title           寒窗苦讀~
+LowerLimit      10
+UpperLimit      15
+LimitMsg        $Y$n說道﹕「雖然我的修養好﹐但是你如此找死﹐真是令人生氣﹗」
+$n轉頭發出凌厲的一擊﹐超乎想像……$A$R~
+Limit           2000
+Multiplier      15
+RebirthGold     10000
+RebirthWarn     50
+Associate       CLASS_DEMOS
+Mana            YES
+Rudiment        NO
+Select          NO
+Force           NO
+NSkill          24
+StrMax          15
+IntMax          20
+WisMax          20
+DexMax          20
+ConMax          15
+StrFactor       110
+IntFactor       90
+WisFactor       90
+DexFactor       90
+ConFactor       110
+StrDefaultMax   1
+StrDefaultMin   1
+WisDefaultMax   1
+WisDefaultMin   1
+IntDefaultMax   1
+IntDefaultMin   1
+DexDefaultMax   1
+DexDefaultMin   1
+ConDefaultMax   1
+ConDefaultMin   1
+HeroStr         0
+HeroInt         0
+HeroWis         0
+HeroDex         0
+HeroCon         0
+End

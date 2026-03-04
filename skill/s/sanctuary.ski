@@ -1,0 +1,39 @@
+Name            sanctuary~
+Cname           聖光術~
+Slot            SLOT_SANCTUARY
+Msgoff          圍繞你身邊的光環消失了﹗~
+Function        cast_sanctuary~
+Check           check_unrigid_attack~
+Position        POS_STANDING
+Type            TAR_CHAR_DEFENSIVE
+CostType        COST_MANA
+Cost            75
+Wait            30
+Exp             50
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_SAINT
+AntiRating      RATING_EVIL
+Innate          NO
+Ply             15
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  70
+Limit           CLASS_BARD       1  95
+
+#Affect
+Type            SLOT_SANCTUARY
+Location        AFF_NONE
+End
+
+Help            ~
+End

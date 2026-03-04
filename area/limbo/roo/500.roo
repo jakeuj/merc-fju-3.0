@@ -1,0 +1,53 @@
+Vnum            500
+Name            [1;32m¡i [1;37m®ÉªÅÀG¹D[1;32m ¡j[0m~
+Description
+[1;33m¢~¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢¡[0m
+[1;33m¢x [0m¥Ñ©ó¤@¬q®ÉªÅªº¥æ¤e¡M§A¨Ó¨ì¤F¥j¥Nªº¤T°ê¥@¬É¡M§A¥²¶·¦b³o¨à¥Í¦s¤U [1;33m¢x[0m
+[1;33m¢x [0m¥h¡M³o¸Ì¤]¦³³\¦hªº¥´À»»P¿i½m¦bµ¥µÛ§A¡M§A¥²¶·³q¹L³o¨Ç¦ÒÅç¡M¤è¯à [1;33m¢x[0m
+[1;33m¢x [0m¦b¤T°ê³o­Ó¤j®É¥N¤¤¥Í¦s¡M¬Æ¦Ü¯à¦¨¬°¨ä¤¤ªºÅQ¥D©O¡T²{¦b©O¡M´N½Ð§A [1;33m¢x[0m
+[1;33m¢x [0m©¹¤U¨«¡M¥H¶i¤J³o­Óµê¤Ûªº¥@¬É§a¡T                               [1;33m¢x[0m
+[1;33m¢x [0m                                                               [1;33m¢x[0m
+[1;33m¢x [0m¦pªG§AÁÙ¬O³o­Ó¥@¬Éªº·s¤â¡M½Ð§A¥ý¦V¥_¨«¡M¥HÅý§A¥ý¾AÀ³³o­Ó¥@¬É¡C [1;33m¢x[0m
+[1;33m¢x [0m­Y¬O§AÄ±±oµLªk¾AÀ³³o´Ý»Åªº®É¥N¡M¥i¥H©¹ªFÃä¨«¡M¦A¦¸°V½m¦Û¤v§a¡C [1;33m¢x[0m
+[1;33m¢x [0m¦pªG§A¤w¸g­¢¤£¤Î«Ý·Q­n¤@Åã¨­¤âªº¸Ü¡M¨º»ò´N§Ö§Ö©¹¤U¨«§a¡T¡T     [1;33m¢x[0m
+[1;33m¢¢¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢£[0m
+  [1;37mºuºuªø¦¿ªF³u¤ô  ®öªáÀÜºÉ­^¶¯      .                 .[0m
+  [1;37m¬O«D¦¨±ÑÂàÀYªÅ                              .                 .[0m
+  [1;37m«C¤s¨ÌÂÂ¦b  ´X«×¤i¶§¬õ                .[0m
+  [1;37m¥Õ¾vº®¾ö¦¿²Z¤W  ºD¬Ý¬î¤ë¬K­·
+  [1;44m[1;36m¤@³ý¿B°s³ß¬Û³{                                             [1;32m¢i¢i[0m
+  [1;44m[1;36m¥j¤µ¦h¤Ö¨Æ  ³£¥I¯º½Í¤¤                                     [1;32m¢i¢i[0m
+
+     ³o¸Ì©¹¥_([1;36mnorth[0m)¥i¥H¨ì¹F°V½m¾Ç®Õ¡M¾A¦X·s¤â¾Ç²ß¡T
+     ³o¸Ì©¹ªF([1;33meast [0m)¥i¥H¨ì¹F®ÉªÅÀG¹D¡M¾A¦X·s¤â¤É¯Å¡T
+     ³o¸Ì©¹«n([1;32msouth[0m)¥i¥H¨ì¹FÀs    ¬}¡M¾A¦X·s¤â¤É¯Å¡T
+
+~
+SectorType      SECT_INSIDE
+NoMob           Yes
+InDoors         Yes
+Safe            Yes
+NoRecall        Yes
+ForeverLight    Yes
+
+#Exit
+Direction       DOWN
+ExitVnum        501
+ExitDesc        ~
+ExitKeyword     ~
+Message         [1;33m§A¤j¨B¤@¸ó¡M¶}©l¤F§A¦hªö¦h«ºªº·s¥Í¬¡¡T[0m
+
+¦pªG§A·Q­n¦^¨ì·s¤â°Ï¨Ó¡M½Ð¥´ ¡u[1;32mnew[0m¡v §Y¥i¡C
+~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        450
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

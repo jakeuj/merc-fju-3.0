@@ -1,0 +1,98 @@
+Name            night steps~
+Cname           百鬼夜行步~
+Slot            SLOT_NIGHT_STEPS
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_DODGE
+Costtype        COST_MOVE
+Cost            15
+Wait            10
+Exp             50
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            NO
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     70  90
+Limit           CLASS_BARD       70  95
+Limit           CLASS_MAGE       70  80
+Limit           CLASS_SMITH      70  80
+Help            ~
+
+#Damage
+Description
+$n使出$P【百鬼夜行步】$Z第一式$b『鬼影重重』$Z﹐身形由一變十﹐由十變百﹐放眼
+望去盡是$n的身影﹐如使$N的招式無從下手。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n忽然沉氣吐聲﹐使出$P【百鬼夜行步】$Z第二式$Y『魔形掩身』$Z幻化成無數妖魔
+鬼怪﹐將$N的招式一一化解。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n身形疾旋﹐將周邊氣流旋動緊緊圍繞著自己﹐使出$P【百鬼夜行步】$Z第三式$B『借
+風遁形』$Z$N被轉動的氣流帶動﹐無法對$n發出攻擊。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n突然眼露青光﹐張嘴一吐﹐一陣陣青煙從$n的嘴中冒出﹐使$N不知身在何方正是$P
+【百鬼夜行步】$Z第四式$G『鬼氣掩形』$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n口中喃喃有詞﹐四周忽然障氣四起﹐正是$P【百鬼夜行步】$Z第五式$g『萬魔避障』
+$Z﹐使$N如墜五里霧中﹐無從發招。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n腳踏七星步﹐瞻之在前﹐忽焉在後﹐正是$P【百鬼夜行步】$Z最後一招$R『魔星幻式』
+$Z﹐展露神鬼莫測之像﹐將$N的攻勢盡化為無形。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

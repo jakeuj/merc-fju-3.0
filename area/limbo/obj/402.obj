@@ -1,0 +1,36 @@
+Vnum            402
+Name            dragon sword~
+ShortDesc       龍泉寶劍~
+Description
+傳說與龍有相同能力的武器之一。~
+Unit            把~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           90
+Value           0 -1 -1 3
+Weight          20
+Cost            200
+
+#Affect
+Location        APPLY_CON
+Modifier        1
+End
+
+#Affect
+Location        APPLY_DEX
+Modifier        -2
+End
+
+#Affect
+Location        APPLY_STR
+Modifier        2
+End
+
+#Restrict
+Type            RES_CLASS
+Value           RES_GENERAL|RES_BRAVO
+End
+
+End

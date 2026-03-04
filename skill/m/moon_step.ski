@@ -1,0 +1,114 @@
+Name            moon steps~
+Cname           月影微步~
+Slot            SLOT_MOON_STEP
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_DODGE
+Costtype        COST_MOVE
+Cost            15
+Wait            10
+Exp             15
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            NO
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help            ~
+#Damage
+Description
+$n面露淡淡的微笑﹐柳腰一轉﹐一招$S『月兒倒鉤』$Z﹐不慌不忙的輕輕閃過$N的殺著。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n口中輕唸$S『輕問清風聲﹐聞聲不見人』$Z﹐一雙金蓮猶如幻化千百雙﹐$N的眼前瞬
+間出現好幾個人的身影﹐不知道哪個才是真的。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+只見$n裙角一擺﹐他的身影已轉到$N身後﹐並對著$N露出淺的一笑。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n輕輕的原地旋轉﹐舞出了$S『落花散月﹐流水耀星』$Z﹐身子忽快忽慢﹐忽前忽後﹐
+實在是美不勝收﹐只見$N呆呆站立﹐不曉得在想什麼 。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n袖子輕掩嘴角﹐左手輕捻﹐一招$S『麒麟天地行﹐鳳凰開天際』$Z﹐舞出了月影微步
+的精義﹐他的身影輕輕地從$N的身邊飄過。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+但見$n不慌不忙﹐左腳輕抬﹐一式$S『天馬追月』$Z﹐身影已出現在半空中﹐有如蝴
+蝶一般﹐輕輕的飄落在$N身影的一丈外。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+月影微步的奧義﹐$S『行者莫不住一腳﹐聽君輕唱仕女音』$Z﹐在$n的舞動下﹐有如
+一朵盛開的鮮花﹐鮮艷的彩蝶。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

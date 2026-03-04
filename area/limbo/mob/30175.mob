@@ -1,0 +1,30 @@
+Vnum            30175
+Name            hou cheng~
+ShortDesc       侯成~
+LongDesc        侯成(hou cheng)
+~
+Description
+呂布部將﹐與曹軍對壘時﹐無意中違反呂
+布禁酒令而遭毒打﹐懷恨在心﹐與魏續、
+宋憲一起叛變﹐盜走呂布赤兔馬降曹。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

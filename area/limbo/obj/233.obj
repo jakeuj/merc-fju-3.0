@@ -1,0 +1,14 @@
+Vnum            233
+Name            be needle book~
+ShortDesc       ºÑ¦å¤Q¤G°w¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_BE_NEEDLE
+Value2          5
+Weight          3
+Cost            10000
+End

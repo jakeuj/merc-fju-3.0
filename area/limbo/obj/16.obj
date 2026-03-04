@@ -1,0 +1,14 @@
+Vnum            16
+Name            silver helm~
+ShortDesc       白銀破邪神盔~
+Description
+一頂專為天神製作的銀羽盔(helm)。~
+Unit            頂~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_HEAD
+Takeable        Yes
+Level           120
+Value           -1
+Weight          0
+Cost            0
+End

@@ -1,0 +1,31 @@
+Vnum            30133
+Name            zhao fan~
+ShortDesc       趙範~
+LongDesc        趙範(zhao fan)
+~
+Description
+桂陽太守。投降進攻荊州南部的趙雲﹐並
+因與趙雲同姓、同年、同鄉而結為兄弟。
+欲把兄嫂嫁給趙雲﹐被趙雲以不義為由拒
+絕。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

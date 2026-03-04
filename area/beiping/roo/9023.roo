@@ -1,0 +1,27 @@
+Vnum            9023
+Name            笷拉~
+Description
+笷拉禯瞒ㄊ緇そń琌窾ńい玂程Ч俱㎝
+程ㄣΤ┦琿Τ狥﹁ㄢ狥嘿﹡眅马﹁
+玛马
+
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        9024
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        9022
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

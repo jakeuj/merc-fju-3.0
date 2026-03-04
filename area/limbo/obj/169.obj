@@ -1,0 +1,13 @@
+Vnum            169
+Name            meat~
+ShortDesc       肉片~
+Description
+一片剛剛料理好的肉片(meat)﹐拿來吃應該不錯﹗~
+Unit            片~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           0
+Value           5 15 5
+Weight          5
+Cost            0
+End

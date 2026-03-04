@@ -1,0 +1,43 @@
+Vnum            9019
+Name            縋常~
+Description
+驹瓣琄縋びう﹚璸確こЁ禷﹍碞
+琌眖硂柑縋常祇ㄤぃ祇参い
+常砆礗Θ紀糣
+
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        9016
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9020
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9026
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        9018
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

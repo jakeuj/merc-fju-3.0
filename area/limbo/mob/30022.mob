@@ -1,0 +1,31 @@
+Vnum            30022
+Name            kong rong~
+ShortDesc       孔融~
+LongDesc        孔融(kong rong)
+~
+Description
+字文舉﹐北海太守。『建安七子之一』﹐
+孔子的後裔。以卓越的才能輔佐曹操。因
+愛恨過於鮮明﹐因此得罪了曹操﹐而被殺
+掉。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

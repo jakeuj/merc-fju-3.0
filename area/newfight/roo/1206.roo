@@ -1,0 +1,29 @@
+Vnum            1206
+Name            ªÅ¶¡~
+Description
+·í§A¨«¨ì³o¶¡©Ð¶¡¡M§Ï©»¤£¹³­è­èªºÀG¹D¤@¼Ë¡M¦b³o¸Ìªº®É¶¡§¹¥þ
+¬OÀR¤îªº¡M¤@­Óµê¤ÛÄÆ´ùªºªÅ¶¡¸Ì¡M¹³¦ü®É¶¡¨«´Y¤Wªº¤@¤pÂI¡M¦b
+®É¶¡°Ï°ì¸Ì¦³¤£¤ÖªºªÅ¶¡¹³¦ü³o¼Ëªº¡C
+
+ ³o¸Ì¦³¤@­Ó©_©Çªºªù³q©¹¤£ª¾¦Wªº¦a¤è¡M§A¥i¥H¸ÕµÛ¶i¤J([1;32menter[0m)
+
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        1205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       ENTER
+ExitVnum        1249
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -1,0 +1,30 @@
+Vnum            30152
+Name            li yi~
+ShortDesc       李異~
+LongDesc        李異(li yi)
+~
+Description
+吳將﹐孫桓部將。跟隨孫桓與蜀軍作戰。
+慣使鍍金斧。在相落馬的蜀將張苞揮斧的
+瞬間﹐被急駛而來的蜀將關興斬首。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

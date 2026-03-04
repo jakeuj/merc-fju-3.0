@@ -1,0 +1,157 @@
+Name            dragon phoenix~
+Cname           斬龍破鳳刀~
+Slot            SLOT_DRAGON_PHOE
+Msgoff          ~
+Check           check_blade_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            40
+Wait            10
+Exp             20
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_BLADE
+Rating          RATING_FIGHT
+Innate          NO
+Ply             -1
+Qutoient        5
+Adeptation      0
+Limit           CLASS_GENERAL   80  95
+Limit           CLASS_BRAVO     80  75
+Help            ~
+
+#Damage
+Description
+$B斬龍破鳳刀法$Z-------$S破龍碎$Z$A
+$n將手中的$O灌入強大的$R火勁$Z﹐反手一轉﹐使出$B魔龍勁$Z
+將$N給燒的慘叫連天﹐再將真力內斂﹐使出$S「破龍碎」$Z
+登時有如$R火龍焚天$Z﹐強大的氣勁將$N給絞碎。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$B斬龍破鳳刀法$Z-------$p飛鳳破$Z$A
+$n靜下心來感應四周的空氣流動﹐忽然將$O拋上空中﹐身子一旋
+使出$G飛龍昇天破$Z四周起了一陣龍卷風﹐把$N給捲上空中﹐$n
+看準時機﹐一躍而上使出$p「飛鳳破」$Z﹐$n有如鳳凰般帶著$O
+向$N橫腰斬而去﹐將$N給攔腰斬斷。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$B斬龍破鳳刀法$Z-------$P龍鳳呈祥$Z$A
+$n一躍而起﹐反手使出$R祥龍吐珠$Z﹐只見一個火球向$N飛去﹐$n身形
+一閃﹐閃至$N的身後﹐將$O往前一送﹐使出$R鳳凰展翅﹐登時出現
+千百的刀勢向$N砍下﹐$n再將步法一移﹐擋往$N的逃跑路線﹐打出
+$P「龍鳳呈祥」$Z﹐只見$N被這三大力量給轟的粉身碎骨。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$B斬龍破鳳刀法$Z-------$B遊龍戲鳳$Z$A
+$n腳下不停﹐使出$S龍翱天際$Z﹐不停的在$N四周游走﹐使$N看不清$n
+身在何方﹐再趁隙使$p鳳飛九天$Z直沖雲霄﹐$n用雙手將$O緊握﹐灌
+入強大的$B火魔龍勁$Z﹐長嘯一聲﹐頭下腳上的反衝而下﹐使出$G「遊龍戲鳳」$Z
+$N見滿天的刀影直墜而下﹐$N逃無可逃﹐只好閉上眼睛等死。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$B斬龍破鳳刀法$Z-------$S天龍三破$Z$A
+在一陣打猛後﹐$n殺紅了眼﹐分出三個人影﹐分別使出$S龍破天$Z﹐$R龍摧地$Z﹐
+$P龍噬人$Z﹐猛攻一陣﹐打的$N左右不支﹐最後三個人影合一﹐使出$S「天龍
+三破合成式」$G「天龍殺神」$Z﹐$N只見強大的刀氣一刀劈下﹐$N只覺
+渾身發軟﹐動彈不得﹐一刀被劈成兩半。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$B斬龍破鳳刀法$Z-------$R火鳳斬$Z$A
+$n將$O橫在身前﹐閉上眼睛﹐將丹田之氣運轉全身﹐只見四周隱約出現一隻
+$R火鳳凰$Z﹐$n將$O高舉向上﹐火鳳凰直沖雲霄﹐$n向後飛身數十丈﹐將刀劈
+下﹐只見火鳳凰向$N直衝而下﹐方圓數丈盡在籠罩之下﹐$N閃無可閃﹐被烈
+燄焚身而死。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$B斬龍破鳳刀法$Z-------$S斬龍超奧義$Z之$G霸龍斬盡天下物$Z$A
+$n狂吼一聲﹐躍上天空﹐將$O舞的滴水不漏﹐漸漸的只能看見一個$S光球$Z
+﹐光芒漸盛﹐$N見情況不對﹐正想三十六計走為上策﹐$n正好運足功力﹐向
+$N直衝而去﹐$N住後一看﹐只見一條$S光龍$Z向他衝來﹐$N舉起武器向
+光龍劈去﹐只聽$N慘叫一聲﹐就被亂刀分屍了。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$B斬龍破鳳刀法$Z-------$R破鳳超奧義$Z之$R天火鳳凰焚萬物$Z$A
+正當戰況正烈時﹐$n將內力灌入$O內﹐登時$O周圍出現無數的火燄將$O
+包圍﹐只見$O漸漸形成一個天$p火鳳凰$Z﹐$n使出$S穿心鑽$Z﹐向$N
+攻去﹐$N見無路可退﹐只好舉起兵器奮力抵抗﹐雙方一接觸﹐兵器
+立刻溶解﹐$N登時被穿個透心涼。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$B斬龍破鳳刀法$Z-------$B斬龍破鳳之不傳之秘$P零$Z$A
+$B...................................................$Z$A
+$B...................................................$Z$A
+$B...................................................$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

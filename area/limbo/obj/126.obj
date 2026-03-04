@@ -1,0 +1,17 @@
+Vnum            126
+Name            x'mas sock~
+ShortDesc       [1;33m¸t½Ï[1;35mÄû[0m~
+Description
+³o¬O½Ñ¦ì¤j¯«­ÌÄë¬¹¦Û¤vªºÄû¤l©Ò®½¥X¨Óªº¡K
+¤£¹L©ñ¤ß¦n°Õ¡Mµ´¹ï¤£·|¦³¥ô¦ó²§¨ý¡K
+¤£©ñ¤ß¡S ´ê¹L¥h»D¤@»D§r¡K ^_^
+~
+Unit            Âù~
+ItemType        ITEM_CONTAINER
+Takeable        Yes
+Level           10
+Weight          1
+Cost            100
+Value1          100
+
+End

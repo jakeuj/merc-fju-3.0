@@ -1,0 +1,115 @@
+Vnum            18
+Name            dream girl~
+ShortDesc       美麗女子~
+LongDesc        美麗女子(dream girl)
+~
+Description
+她的神色淒苦﹐不知受了什麼哀屈。
+~
+Sentinel        Yes
+NoKill          Yes
+NoSummon        Yes
+Effect          'invis'
+Alignment       0
+Level           50
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             100
+Int             100
+Wis             100
+Dex             100
+Con             100
+Hp              -1
+Mana            -1
+Move            -1
+Class           CLASS_MAGE
+Gold            -1
+Multipile       100
+Migrate         0
+Sex             SEX_FEMALE
+
+Process
+Type            rand_prog
+Chance          30
+Text
+if rand(10)
+  shiver
+endif
+~
+End
+
+Process
+Type            give_prog
+Argument        ice left~
+Text
+mpclean obj
+if isnpc($n)
+  break
+endif
+if isimmort($n)
+  break
+endif
+if isquest($n) == 'dream_soul_broken'
+  break
+endif
+if isquest($n) == 'dream_soul_ok'
+  mpsetquest $n 'dream_soul_broken'
+  break
+endif
+if class($n) != CLASS_GENERAL
+  if class($n) != CLASS_BRAVO
+    mpsetquest $n 'dream_soul_broken'
+    break
+  endif
+endif
+if isquest($n) != 'dream_soul_26'
+  tell $n 對不起﹐這對我來說完全沒有幫助﹐你請回吧﹗
+  sorry $n
+  mpsetquest $n 'dream_soul_broken'
+  mptransfer $n 501
+  break
+endif
+tell $n 謝謝你了﹐這看來可以治好我的病﹗
+emote 將冰殘(ice left)吃了下去。
+tell $n 你救了我﹐你會獲得你該得的﹗
+smile $n
+mpoload 408
+give book $n
+mpadd $n firman 10
+mpecho $6你感到全身再度疲憊﹐又昏昏沈沈睡去﹐醒來已經不在原地了﹗$0
+mpecho 你身上又多了幾張免死金牌…
+echo $6讓我們恭禧$n$6得到夢魂七絕﹗$0
+mpsetquest $n 'dream_soul_ok'
+mpremquest $n 'dream_soul'
+mpremquest $n 'dream_soul_1'
+mpremquest $n 'dream_soul_2'
+mpremquest $n 'dream_soul_3'
+mpremquest $n 'dream_soul_4'
+mpremquest $n 'dream_soul_5'
+mpremquest $n 'dream_soul_6'
+mpremquest $n 'dream_soul_7'
+mpremquest $n 'dream_soul_8'
+mpremquest $n 'dream_soul_9'
+mpremquest $n 'dream_soul_10'
+mpremquest $n 'dream_soul_11'
+mpremquest $n 'dream_soul_12'
+mpremquest $n 'dream_soul_13'
+mpremquest $n 'dream_soul_14'
+mpremquest $n 'dream_soul_15'
+mpremquest $n 'dream_soul_16'
+mpremquest $n 'dream_soul_17'
+mpremquest $n 'dream_soul_18'
+mpremquest $n 'dream_soul_19'
+mpremquest $n 'dream_soul_20'
+mpremquest $n 'dream_soul_21'
+mpremquest $n 'dream_soul_22'
+mpremquest $n 'dream_soul_23'
+mpremquest $n 'dream_soul_24'
+mpremquest $n 'dream_soul_25'
+mpremquest $n 'dream_soul_26'
+mptransfer $n 501
+~
+End
+
+End

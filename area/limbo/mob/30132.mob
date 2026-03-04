@@ -1,0 +1,31 @@
+Vnum            30132
+Name            zhang miao~
+ShortDesc       張邈~
+LongDesc        張邈(zhang miao)
+~
+Description
+陳留太守。討伐董卓時﹐任第六鎮諸侯加
+盟。雖是曹操的好友﹐卻聽從了陳宮的勸
+告反對曹操。讓呂布進攻兌州﹐最後被打
+敗了。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

@@ -1,0 +1,12 @@
+Higher          LEVEL_PC
+Lower           1
+Position        POS_STANDING
+Function        ~
+Description
+§A±`±`¦b¯¸¤W¶¢²á([1;32mchat[0m)¶Ü¡S¨ä¹ê¯¸¤W¤£¬O¥u¦³¤@­ÓÀW¹D([1;32mchannel[0m)³á¡M¦³¦U¦¡¦UÃþ
+ªºÀW¹D¥i¨Ñª±®a¿ï¾Ü¨Ï¥Î¡M§A¥i¥H¦Ò¼{¿ï¾Ü¥´¶}([1;32mchannel +xx[0m)©Î¬OÃö³¬([1;32mchannel -xx[0m)
+§AªºÀW¹D¡M©Ò¥H½Ðµ½¥Î§A¦Û¤vªºÀW¹D§a¡T
+
+½Ð¬d¸ß¡Rchannel¡Bchat
+~
+End

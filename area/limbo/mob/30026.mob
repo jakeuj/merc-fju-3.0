@@ -1,0 +1,31 @@
+Vnum            30026
+Name            zhu zhi~
+ShortDesc       朱治~
+LongDesc        朱治(zhu zhi)
+~
+Description
+字君理。仕於孫氏三代的東吳元老。建議
+孫策向袁術借兵﹐自己獨立。征服江東後
+﹐任吳郡太守。赤壁之戰時任巡警使﹐負
+責四面策應。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

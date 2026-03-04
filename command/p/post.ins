@@ -1,0 +1,48 @@
+Name            post~
+Cname           發表文章~
+Function        do_post~
+Position        POS_SLEEPING
+Level           0
+Log             LOG_NORMAL
+Exact           NO
+Argument        NO
+Wizlog          NO
+Jail            NO
+CanLock         YES
+Dead            YES
+Order           NO
+Lost            NO
+Lock            NO
+Limit           NO
+Help
+語法﹕ post edit
+語法﹕ post show
+語法﹕ post <文章標題>
+語法﹕ post *(文章編號)
+語法﹕ post !(文章編號)
+
+    這個指令可以讓你在有留言版的地方發表文章﹐有幾件事你必須注意的
+
+    1)  這個地方必須有留言版
+    2)  你的等級足夠在這個留言版發表文章
+    3)  你的編輯緩衝區裡必須要有內容 ( 請查詢 edit )
+
+    之後你可以輸入 post 後面入你想要發表文章的標題即可﹐例如﹕
+
+        post 所有裝備的資料
+
+    你就已經發表一篇有關所有裝備的資料的文章了。
+
+    若是你要回覆他人之前的文章時﹐你必須先利用 look board ﹐看看他
+的文章編號。然後有兩個選擇﹕( 假定他的文章編號為 5 )
+
+     1) post *5 --> 不會引入他之前的敘述﹐只有你發表的內容
+     2) post !5 --> 會引入他之前的敘述﹐但長度有限制﹐再加上你的發表
+                    內容。
+
+    你可以一開始使用 post edit 來編輯你的文章內容﹐之後可以使用
+post show 可以察看你的編輯的內容。
+
+相關指令﹕edit read board
+~
+End

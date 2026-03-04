@@ -1,0 +1,14 @@
+Vnum            170
+Name            letter~
+ShortDesc       信件~
+Description
+一封很普通的信件﹐不知道可以幹什麼﹖~
+Unit            封~
+ItemType        ITEM_LETTER
+Takeable        Yes
+NoSave          Yes
+Level           1
+Value           0 0 0
+Weight          1
+Cost            10
+End

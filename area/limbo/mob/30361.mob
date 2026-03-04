@@ -1,0 +1,30 @@
+Vnum            30361
+Name            pang yi~
+ShortDesc       龐義~
+LongDesc        龐義(pang yi)
+~
+Description
+劉璋部將。任巴西太守﹐防禦漢中張魯的
+入侵。劉備入主蜀後﹐他被提昇為營中司
+馬。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

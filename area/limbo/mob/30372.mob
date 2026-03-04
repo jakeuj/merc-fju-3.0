@@ -1,0 +1,31 @@
+Vnum            30372
+Name            cao xiong~
+ShortDesc       曹熊~
+LongDesc        曹熊(cao xiong)
+~
+Description
+曹操的五子。由於身體病弱﹐沒能參加曹
+操的葬禮。曹丕因此遣使責問﹐他懼怕兄
+長曹丕之威﹐自殺身亡。據正史記載他早
+逝。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

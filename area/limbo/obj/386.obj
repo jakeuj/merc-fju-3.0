@@ -1,0 +1,14 @@
+Vnum            386
+Name            eight gun book~
+ShortDesc       ±K¶Ç£»¤K·¥ºj¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_EIGHT_GUN
+Value2          5
+Weight          3
+Cost            10000
+End

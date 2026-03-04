@@ -1,0 +1,48 @@
+Name            detect hidden~
+Cname           偵測藏匿~
+Slot            SLOT_DETECT_HIDDEN
+Msgoff          你對於周遭的變化較沒有感受力了﹗~
+Check           check_unrigid_attack~
+Function        cast_detect_hidden~
+Position        POS_STANDING
+Type            TAR_CHAR_SELF
+CostType        COST_MANA
+Cost            8
+Wait            20
+Exp             900
+Associate       SLOT_PASS_DOOR
+Degree          200
+Affect          AFFECT_NONE
+AffectID        OBJ_DETECT_HIDE
+CanAsk          NO
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_EARTH
+AntiRating      RATING_WIND
+Innate          NO
+Ply             90
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  80
+Limit           CLASS_SCHOLAR    1  45
+Limit           CLASS_BARD       1  80
+
+#Affect
+Type            SLOT_DETECT_HIDDEN
+Location        AFF_NONE
+End
+
+Help
+偵測藏匿術:
+
+這一項法術可以使你對於四周的變化感受更明顯﹐可以察覺到一些隱
+匿起來的人或物﹐不會遭到偷襲或是一些隱藏的陷阱﹐對於你的冒險
+旅程不可或缺。
+
+~
+
+End

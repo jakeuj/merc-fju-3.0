@@ -1,0 +1,32 @@
+Name            cure critical~
+Cname           ·¥«×ªvÀø~
+Slot            SLOT_CURE_CRITICAL
+Msgoff          ~
+Check           check_unrigid_attack~
+Function        cast_cure_critical~
+Position        POS_FIGHTING
+Type            TAR_CHAR_DEFENSIVE
+CostType        COST_MANA
+Cost            20
+Wait            12
+Exp             100
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_WATER
+AntiRating      RATING_FIRE
+Innate          NO
+Ply             20
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  95
+Help            ~
+End

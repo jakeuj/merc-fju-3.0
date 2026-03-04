@@ -1,0 +1,14 @@
+Vnum            305
+Name            armor book~
+ShortDesc       ¤Ñ¯«¦uÅ@¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_CAST_ARMOR
+Value2          5
+Weight          3
+Cost            10000
+End

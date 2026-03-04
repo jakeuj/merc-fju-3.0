@@ -1,0 +1,13 @@
+Vnum            8
+Name            arm~
+ShortDesc       %s的手臂~
+Description
+%s的手臂(arm)被砍斷掉落此地。~
+Unit            隻~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           0
+Value           10 21 7
+Weight          5
+Cost            0
+End

@@ -1,0 +1,63 @@
+Vnum            453
+Name            flee girl~
+ShortDesc       ½¡½¡­¸»Rªº¤k«Ä~
+Description
+¤@¦ì¦~¬ö¬ù¤Q¦h·³ªº¤k«Ä¡M¥¿¦b³o¶ô¦a±y´­ªº½¡½¡°_»RµÛ¡M¥L¥¿¿W¦Û
+¦a³³¾K¦b¹Ú¤¤ªº»R«º¡M±`±`·s¤â­Ì³òÂ¶µÛ¥L¨­Ãä¤@°_¸õ»R¡M¤£ª¾¤£Ä±
+¤¤§A«Ü·Q¸ò¥L¾Ç²ß°k¶](flee)§Þ¯à¡M­Y¬O­n¸ò§Ú¤p¤k¤l¾Ç°k¶]ªº¸Ü¡M
+½ÐÁä¤J([1;32mlearn girl flee[0m)¡C
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       0
+Level           20
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             100
+Con             10
+Hp              500
+Mana            10
+Move            1000
+Class           0
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_FEMALE
+#Learn
+Adept           25
+Cost            50
+Inventory       5
+Name            'flee'
+End
+
+Process
+Type            greet_prog
+Chance          30
+Text
+say §Ú¸õ±o¦n¤£¦n¬Ý¡M·Q¤£·Q¸ò§Ú¾Ç©O¡S($2yes$2 / $2no$0)
+~
+End
+
+Process
+Type            speech_prog
+Argument        yes~
+Text
+tell $n ¦n¡K§Ú±Ð§A¦p¦ó°k¶]ªº§Þ¯à¡M½ÐÁä¤J ($2learn girl flee$0)¡C
+~
+End
+
+Process
+Type            speech_prog
+Argument        no~
+Text
+tell $n ­ó¡K¤£·Q¾Ç¡S¬O¤£¬O¶û§Ú¸õ±o¤ÓÃø¬Ý§r¡S
+ cry
+ tell $n ´Û­t¤H®a¡M§Ú­n¥h§i¶Dª¨ª¨¶ý¶ý¡M»¡§A´Û­t§Ú¡C
+~
+End
+
+End

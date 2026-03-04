@@ -1,0 +1,15 @@
+Vnum            160
+Name            fire scroll~
+ShortDesc       炎帝法卷~
+Description
+炎帝法卷(fire scroll)內記載著炎帝嚐百草後的記錄﹐
+能讓人瞭解各種物品是否具有毒性。
+~
+Unit            捲~
+ItemType        ITEM_SCROLL
+Takeable        Yes
+Level           10
+Value2          OBJ_DETECT_POISON
+Weight          2
+Cost            2000
+End

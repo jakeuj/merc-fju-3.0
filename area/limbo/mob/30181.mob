@@ -1,0 +1,31 @@
+Vnum            30181
+Name            jiang qin~
+ShortDesc       蔣欽~
+LongDesc        蔣欽(jiang qin)
+~
+Description
+字公奕。與周泰一起歸順孫策。攻打南郡
+時任先鋒﹐被曹仁擊敗﹐幾乎被周瑜問罪
+斬首。在征討關羽時﹐指揮水軍﹐包圍關
+羽。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

@@ -1,0 +1,31 @@
+Vnum            30289
+Name            bu zhi~
+ShortDesc       步騭~
+LongDesc        步騭(bu zhi)
+~
+Description
+字子山﹐孫權屬下幕僚。東吳攻打荊州關
+羽時﹐他探知了關羽與曹仁的戰況﹐為東
+吳偷襲成功力了大功。孫權稱帝後﹐他任
+驃騎將軍﹐後來任丞相。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

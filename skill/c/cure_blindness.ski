@@ -1,0 +1,33 @@
+Name            cure blindness~
+Cname           ªvÀø²´ª¼~
+Slot            SLOT_CURE_BLINDNESS
+Msgoff          ~
+Function        cast_cure_blindness~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_DEFENSIVE
+CostType        COST_MANA
+Cost            5
+Wait            12
+Exp             300
+Associate       SLOT_CURE_CRITICAL
+Degree          20
+Affect          AFFECT_NONE
+AffectID        OBJ_CURE_BLIND
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_WATER
+AntiRating      RATING_FIRE
+Innate          NO
+Ply             30
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  60
+Help            ~
+End

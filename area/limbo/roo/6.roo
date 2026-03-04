@@ -1,0 +1,27 @@
+Vnum            6
+Name            [1;33mCutty ¤u§@«Ç[0m~
+Description
+[1;36m³o¸Ì¬O¤@¶¡«Ü¼e´¯ªº©Ð¶¡¡M¨ì³B³£¾Qº¡¤F¦a´à¡M³nºøºøªº¡K¦b©Ð¶¡
+¤@¨¤¦³­Ó®Ñ®à¡M¥|©P³£¬O®Ñ¬[¡M¤W­±Â\º¡¤F®Ñ¡M¥Íª«ªº¡M¹q¸£ªº¡MÀ³
+¦³ºÉ¦³¡M¥t¥~ÁÙ¦³¤@¤j°ïªº CD ¡M¤@³¡¥÷¦n¹³ÁÙ¬O¥Î¿Nªº»¡¡M¤@¥x°ª
+¯Å­µÅT¥¿¼½©ñµÛ²M²nªº­µ¼Ö¡M§AÄ±±oÅ¥°_¨Ó«D±`ªºµÎªA¡K
+[0m
+~
+SectorType      SECT_INSIDE
+InDoors         Yes
+Safe            Yes
+NoRecall        Yes
+ForeverLight    Yes
+NoWhere         Yes
+
+#Exit
+Direction       SOUTH
+ExitVnum        5
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+IsDoor          Yes
+End
+
+
+End

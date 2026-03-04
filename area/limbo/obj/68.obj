@@ -1,0 +1,16 @@
+Vnum            68
+Name            steel pen~
+ShortDesc       精鋼筆~
+Description
+生鐵經歷鍛煉數天打造而成﹐外表黝黑。~
+Unit            枝~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 8
+Weight          20
+Cost            200
+Exp             10
+End

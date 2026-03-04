@@ -1,0 +1,30 @@
+Vnum            30069
+Name            zhang ying~
+ShortDesc       張英~
+LongDesc        張英(zhang ying)
+~
+Description
+楊州刺史劉繇麾下大將﹐守備牛諸﹐被孫
+策打敗﹐後在秣陵（建業）與孫策的部將
+陳武交戰﹐被陳武一槍刺死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

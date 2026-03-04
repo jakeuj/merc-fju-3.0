@@ -1,0 +1,5 @@
+Higher          LEVEL_PC
+Lower           LEVEL_PC
+Position        POS_STANDING
+Function        angel_nothing~
+End

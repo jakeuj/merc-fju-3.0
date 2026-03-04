@@ -1,0 +1,14 @@
+Vnum            301
+Name            sleev steps book~
+ShortDesc       ­·¶³³S¨B¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_SLEEV_STEPS
+Value2          5
+Weight          3
+Cost            10000
+End

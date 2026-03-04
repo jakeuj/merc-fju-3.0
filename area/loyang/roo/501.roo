@@ -1,0 +1,79 @@
+Vnum            501
+Name            ¬¥¶§«°¥¿¶§ªù~
+Description
+¦¹³B¬°¬¥¶§«°ªº¤¤¤ß¦ì¸m¡M¬¥¶§ªF¦³³\©÷¡B³¯¯d¡M¦è¦³¥°¹A¡Bªø¦wµ¥
+¡M«nÃä¬°©{¡B·s³¥µ¥«°¡M¥_Ãä«h¦³¿ó¡B®Ê¶§¡M¥i»¡¬O¤¤°êªº¤¤¤ß¡M¦Ó
+³o­Ó®É¥N¤]¦b¦¹¶}®i¤F§Ç¹õ¡C
+
+¥_Ãä¬O¬¥¶§ªº®c«°¡M´xºÞ¦¹«°¤j¤j¤p¤p¨Æ¥óªº³B²z¤§³B¡C¬¥¶§¤À¬°¤º
+«°»P¥~«°¡M¤¤¶¡¦³«°Àð¥æ¹j¡M«°¥«½d³òªF¦è¤G¤Q¨½¡M«n¥_¤Q¤­¨½¡M«Ø
+¦³§{¨½¤T¦Ê¤G¤Q­Ó¡C
+
+                 ¿é¤J [1;32mnew[0m   ¥i¥H¨ì¹F·s¤â°V½m°Ï
+                 ¿é¤J [1;33mfight[0m ¥i¥H¨ì¹F¤T°êÄv§Þ³õ
+
+~
+SectorType      SECT_CITY
+
+
+#Exit
+Direction       NORTH
+ExitVnum        541
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        551
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        558
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        550
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Job
+Keyword         new~
+Function        job_recall_new~
+Position        POS_STANDING
+End
+
+#Job
+Keyword         fight~
+Function        job_goto_pk_area~
+Position        POS_STANDING
+End
+
+#Enquire
+Keyword         ¥¬§iÄæ~
+End
+
+#Enquire
+Keyword         ¤½§GÄæ~
+End
+
+#Enquire
+Keyword         «°ªù~
+End
+
+#Enquire
+Keyword         ¤ô¤«~
+End
+
+End

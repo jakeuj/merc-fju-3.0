@@ -1,0 +1,30 @@
+Vnum            30358
+Name            ya dan~
+ShortDesc       雅丹~
+LongDesc        雅丹(ya dan)
+~
+Description
+西羌丞相。與越吉一起救援曹真﹐不敵久
+經沙場的諸葛亮和馬岱﹐被俘。諸葛亮在
+說服他不要幫助魏國後將他釋放。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

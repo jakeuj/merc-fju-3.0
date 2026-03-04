@@ -1,0 +1,31 @@
+Vnum            30202
+Name            chen qun~
+ShortDesc       陳群~
+LongDesc        陳群(chen qun)
+~
+Description
+字長文。輔佐曹操、曹丕兩代﹐主管行政
+事務。常常夢想建立從朝廷到庶民的道德
+秩序。他制訂的『九品官人法』是魏國的
+基本法令。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

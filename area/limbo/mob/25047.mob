@@ -1,0 +1,29 @@
+Vnum            25047
+Name            lizard~
+ShortDesc       雲山草蜥~
+LongDesc        雲山草蜥(lizard)
+~
+Description
+爬蟲類動物﹐身體有著黃黑間隔的線條﹐擁有
+滑溜的膚觸﹐穿梭在草葉之間﹐動作真是急速。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

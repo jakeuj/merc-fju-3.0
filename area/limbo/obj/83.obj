@@ -1,0 +1,36 @@
+Vnum            83
+Name            bastard axe~
+ShortDesc       蒼狼邪斧~
+Description
+這是一把極其沈重的戰斧(bastard axe)。據說裡面有著邪惡的力量。~
+Unit            把~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           90
+Value           0 -1 -1 5
+Weight          20
+Cost            200
+Exp             10
+
+#Affect
+Location        APPLY_CON
+Modifier        1
+End
+
+#Affect
+Location        APPLY_DEX
+Modifier        -2
+End
+
+#Affect
+Location        APPLY_STR
+Modifier        2
+End
+
+#Restrict
+Type            RES_CLASS
+Value           RES_GENERAL
+End
+End

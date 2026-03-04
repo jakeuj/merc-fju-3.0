@@ -1,0 +1,18 @@
+Vnum            85
+Name            damn pen~
+ShortDesc       天誅筆~
+Description
+這把是獨孤世家的家寶之一﹐名曰「天誅」相傳此筆不須任何油墨即可寫字﹐
+且寫出來的字呈金黃色﹐此外﹐又可用來作為攻擊武器﹐但是一般的人若不知
+道方法﹐是無法發揮出真正的效果的。~
+Unit            枝~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 8
+Weight          20
+Cost            200
+Exp             10
+End

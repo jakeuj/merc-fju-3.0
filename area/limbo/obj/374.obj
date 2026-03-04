@@ -1,0 +1,14 @@
+Vnum            374
+Name            stone skin book~
+ShortDesc       ¥Ö½§¥Û¤Æ³N¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_STONE_SKIN
+Value2          5
+Weight          3
+Cost            10000
+End

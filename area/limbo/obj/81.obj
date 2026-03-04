@@ -1,0 +1,16 @@
+Vnum            81
+Name            duster~
+ShortDesc       拂塵~
+Description
+這是一件打掃灰塵的拂塵(duster)~
+Unit            把~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 8
+Weight          20
+Exp             10
+Cost            200
+End

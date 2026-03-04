@@ -1,0 +1,39 @@
+Name            fire elf~
+Cname           火之精靈~
+Slot            SLOT_FIRE_ELF
+Msgoff          ~
+Check           check_unrigid_attack~
+Function        cast_fire_elf~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MANA
+Cost            50
+Wait            25
+Exp             100
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_FIRE
+AntiRating      RATING_WATER
+Innate          NO
+Ply             20
+Qutoient        1
+Adeptation      0
+Limit           CLASS_MAGE       1  95
+
+Help
+火之精靈:
+
+火系攻擊最高法術﹐呼叫火系的精靈來幫你攻擊對手﹐不過不容易控
+制﹐會遭到反撲﹐但是熟練了之後威力可是不同反響的喔﹗
+
+~
+End

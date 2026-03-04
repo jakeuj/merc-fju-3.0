@@ -1,0 +1,31 @@
+Name            lset~
+Cname           設定技能資料~
+Function        do_lset~
+Position        POS_DEAD
+Level           L_DEI
+Log             LOG_WIZ
+Exact           NO
+Argument        NO
+Wizlog          NO
+Jail            NO
+CanLock         YES
+Dead            YES
+Order           NO
+Lost            NO
+Lock            NO
+Limit           NO
+Help
+語法﹕lset <人物> <技能> <熟練度>
+語法﹕lset <人物>  all   <熟練度>
+
+LSET這個指令可以設定玩家( 只有玩家可以 )的技能或是法術的熟練度﹐
+所以在這裡﹐第一個參數必須是玩家的名字﹐第二個必須是技能或是法
+術的名稱﹐或是可以用 all代替﹐若是用 all﹐這麼接下來更改的動作﹐
+將會針對所有的法術或是技能﹐而不是單一個。接下來熟練度必須是一
+個數字﹐而且介於 1到 100之間才算合理。
+
+至於法術的名稱可以參考 llookup這個指令﹐你可以獲得更的資訊。
+
+相關資訊﹕llookup ﹐lfind﹐learn﹐llink
+~
+End

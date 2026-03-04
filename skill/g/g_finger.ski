@@ -1,0 +1,78 @@
+Name            g finger~
+Cname           驚神指法~
+Slot            SLOT_G_FINGER
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MOVE
+Cost            19
+Wait            12
+Exp             15
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           YES
+Enable          YES
+SaySpell        NO
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    1  10
+Limit           CLASS_FIGHTER    1  30
+Limit           CLASS_SHAMAN     1  10
+Limit           CLASS_THIEF      1  10
+Limit           CLASS_DOCTOR     1  20
+Limit           CLASS_BARD       1  30
+Limit           CLASS_GENERAL    1  70
+Limit           CLASS_BRAVO      1  85
+Limit           CLASS_MAGE       1  25
+Limit           CLASS_SMITH      1  20
+Help            ~
+#Damage
+Description
+$W$n使出$R『驚神指法』$W之第一招$p【驚豔一指】$W﹐化出一片迷霧﹐$p如夢如幻$W
+﹐$N被迷惑而不自覺$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$W$n手掌$B與大氣共振﹐發出龍吟之聲$R『驚神指法』$W第二招$B【驚魔一指】$W以
+一股有去無回雷霆萬鈞之勢射出$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$W$n以神御氣﹐使出上古神技$R『驚神指法』$B不傳之祕：$Y【驚神一指】$W 驚天動
+地屠魔斬佛﹐一時天昏地動﹐日月失色$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$W$n引借天地之氣﹐化為$B迴流地獄$W﹐沉重的壓力逼得$N動彈不得﹐無法呼吸$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

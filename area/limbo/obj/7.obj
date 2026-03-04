@@ -1,0 +1,13 @@
+Vnum            7
+Name            heart~
+ShortDesc       %s的心臟~
+Description
+%s的心臟(heart)掉落在此。~
+Unit            顆~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           0
+Value           10 14 7
+Weight          2
+Cost            0
+End

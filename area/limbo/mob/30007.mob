@@ -1,0 +1,31 @@
+Vnum            30007
+Name            hua xiong~
+ShortDesc       華雄~
+LongDesc        華雄(hua xiong)
+~
+Description
+董卓手下的勇將﹐身長九尺﹐十八鎮諸侯
+伐董卓時﹐他自請軍令﹐大破孫堅﹐斬鮑
+忠﹐祖茂﹐俞涉﹐潘鳳等將。後被關羽一
+舉斬殺。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

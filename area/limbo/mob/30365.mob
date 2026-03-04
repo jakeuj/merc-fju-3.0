@@ -1,0 +1,30 @@
+Vnum            30365
+Name            zhuo~
+ShortDesc       卓贗~
+LongDesc        卓贗(zhuo)
+~
+Description
+蜀將。得知同伴張任被劉備捉住後﹐率眾
+投降了劉備﹐此後協助劉備入川。與張飛
+一起去巴西方面守備。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

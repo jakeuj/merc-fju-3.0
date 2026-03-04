@@ -1,0 +1,31 @@
+Vnum            30034
+Name            cao bao~
+ShortDesc       曹豹~
+LongDesc        曹豹(cao bao)
+~
+Description
+陶謙部將﹐曹操進攻徐州時﹐他正要和夏
+侯惇單挑﹐忽起狂風﹐從而終止。後來成
+為劉備部下。但因與張飛不合﹐夥同女婿
+呂布奪取了徐州﹐他因此被張飛殺死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

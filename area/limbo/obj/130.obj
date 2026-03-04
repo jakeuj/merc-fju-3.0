@@ -1,0 +1,21 @@
+Vnum            130
+Name            thousand light~
+ShortDesc       [1;37m¤dÁH[1;36m¤§¥ú[0m~
+Description
+¥Ã»·¤£·Àªº¥ú, ·ÓÄ£§A§Úªº¤ß¤¤, Ä@§A§ÚÀH®ÉÀH¦a³£¯à¾Ö¦³§Ö¼Öªº¤ß±¡.
+~
+Unit            Á\~
+ItemType        ITEM_LIGHT
+WearLoc         ITEM_WEAR_LIGHT
+Takeable        Yes
+Level           20
+Weight          1
+Cost            100
+Value3          -1
+
+#Affect
+Location        APPLY_WIS
+Modifier        1
+End
+
+End

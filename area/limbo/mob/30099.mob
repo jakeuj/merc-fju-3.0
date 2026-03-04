@@ -1,0 +1,31 @@
+Vnum            30099
+Name            kuai liang~
+ShortDesc       蒯良~
+LongDesc        蒯良(kuai liang)
+~
+Description
+字子柔﹐蒯越之兄﹐與弟一起輔佐劉表。
+孫堅跨江擊劉表時﹐他設計殺死了過於輕
+敵的孫堅。曾多次為劉表設計獻策﹐但大
+多未為劉表採納。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

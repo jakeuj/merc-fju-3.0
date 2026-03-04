@@ -1,0 +1,15 @@
+Higher          LEVEL_PC
+Lower           1
+Position        POS_STANDING
+Function        ~
+Description
+§÷¦ÌªoÆQÂæ¾L¯ù¥i¬O¤@¼Ë³£¤£¯à¤Öªº¡M¦ý¬O°¾°¾¤£ª¾¹D¦p¦ó±o¨ì®É¡M§A¥i¥H°Ý°Ýª±®a
+¨º¸Ì¦³°Ó¤H¡M¤§«á§ä¨ì°Ó¤H¥i¥H¿é¤J( [1;32mlist[0m ) ¨Ó±oª¾¥L©Ò³c½æªºªF¦è¡M·í§A¨M©w®É
+¡M§A¥i¥H¥Î( [1;32mbuy[0m )¨Ó¶RªF¦è©Î¬O¸Ë³Æ¡M·íµM§A¤]¥i¥H¥Î( [1;32msell[0m )¨Ó½æªF¦è¡M·íµM°Ó
+¤H¬O±©§Q¬O¹Ïªº³Ã¥ë¡M¥L¥i¤£¬OÀH«K·|¶R§AªºªF¦èªº³á¡M§A¤]¥i¥H¿é¤J( [1;32mvalue[0m )¨Ó
+¥ý¦ô¦ô»ù¡M¤Ï¥¿¶R½æ¤£¦¨¡M¤¯¸q¦b¹À¡T
+
+¬ÛÃö¸ê®Æ¡Rlist¡Bsell¡Bbuy¡Bvalue
+~
+
+End

@@ -1,0 +1,125 @@
+Name            hundred steps~
+Cname           百幻身法~
+Slot            SLOT_HUNDRED_STEPS
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_DODGE
+Costtype        COST_MOVE
+Cost            15
+Wait            10
+Exp             15
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            NO
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help            ~
+
+#Damage
+Description
+$n使出百幻身法起手式$G『漫不經心』$Z﹐有心似無心﹐輕易躲過$N的攻擊。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n展現百幻身法第二式$R『隨風而逝』$Z﹐藉由清風之力﹐飄飄然般轉至$N背後﹐令$N
+不知所措。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n口中唸唸有詞﹐祭出百幻身法第三式$Y『移形換位』$Z﹐一形百影﹐迅速移位﹐已到
+$N的背後。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n口中咒語不斷﹐使出百幻身法第四式$B『峰迴路轉』$Z﹐與$N趾尺間的距離﹐頓時成
+了百尺之遠。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n展出百幻身法第五式$P『分身乏術』$Z﹐手中長劍霎時發出千丈劍氣攻擊$N﹐令$N無
+法躲避。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n嘗試使出百幻身法第六式$S『捉風捕影』$Z﹐差那間$N已被定住﹐無法動彈。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n使出百幻身法第七式$W『禦劍飛昇』$Z﹐手中長劍脫手而出﹐立於劍上翔於天中使$N
+無法攻擊。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+只見$n腳踏七星展出百幻身法最終式$y『千變萬化』$Z﹐$N已被$n困於其中﹐無法動彈。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

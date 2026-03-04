@@ -1,0 +1,38 @@
+Vnum            44
+Name            mute blade~
+ShortDesc       『不應』魔刀~
+Description
+『不應』﹐刀身無顏色﹐黯淡無光﹐但瞧在每個人眼裡﹐卻都有不同顏色有的發出
+亮烈的黑光﹐有的如青電﹐有的如赭血﹐有的竟是五彩光華﹐目為之炫。~
+Unit            把~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           90
+Value           0 -1 -1 4
+Weight          20
+Cost            200
+Exp             10
+
+#Affect
+Location        APPLY_DEX
+Modifier        1
+End
+
+#Affect
+Location        APPLY_CON
+Modifier        -2
+End
+
+#Affect
+Location        APPLY_STR
+Modifier        2
+End
+
+#Restrict
+Type            RES_CLASS
+Value           RES_GENERAL
+End
+
+End

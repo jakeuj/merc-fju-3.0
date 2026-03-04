@@ -1,0 +1,31 @@
+Vnum            30131
+Name            zhang ren~
+ShortDesc       張任~
+LongDesc        張任(zhang ren)
+~
+Description
+劉璋手下名將。在落鳳坡射死了劉備的軍
+師龐統。後中諸葛亮之計戰敗被俘﹐拒絕
+劉備的勸降﹐說完「忠臣不仕二主」後﹐
+浩然就義。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

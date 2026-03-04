@@ -1,0 +1,31 @@
+Vnum            30171
+Name            xu chu~
+ShortDesc       許褚~
+LongDesc        許褚(xu chu)
+~
+Description
+字仲康。很受曹操信任﹐與典韋一起統領
+曹操的近衛軍。在與馬超交戰中﹐單挑不
+分勝負。後曹操危難﹐他拼死護主﹐被曹
+操賜名為「虎痴」。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

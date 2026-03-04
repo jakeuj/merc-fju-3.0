@@ -1,0 +1,34 @@
+Name            chill touch~
+Cname           寒霜之觸~
+Slot            SLOT_CHILL_TOUCH
+Msgoff          你感到沒那麼冷了﹗~
+Check           check_unrigid_attack~
+Function        cast_chill_touch~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MANA
+Cost            15
+Wait            12
+Exp             1200
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_WATER
+AntiRating      RATING_FIRE
+Innate          NO
+Ply             120
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SHAMAN     15 50
+Limit           CLASS_MAGE       55 95
+Limit           CLASS_SMITH      55 70
+Help            ~
+End

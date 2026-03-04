@@ -1,0 +1,15 @@
+Vnum            36
+Name            ªÅ©Ð¶¡~
+Description
+³o¬O¤@¶¡­è¶R¨ÓªºªÅ©Ð¶¡¡M¤@®ÇÁÙ©ñµÛ¥Î¨ÓÀ£¼Òªº¤ìªO¡M¾ã­Ó©Ð¶¡¶Ã
+ªº«Ü¡M³Ì¦n»°§Ö¾ã²z¤@¤U¡C
+
+    ½Ð¨Ï¥Î [1;32mhome /? [0m¨Ó¬d¸ß¬ÛÃö¥Îªk¡C
+
+~
+SectorType      SECT_INSIDE
+Safe            Yes
+Standard        Yes
+NoFight         Yes
+NoWhere         Yes
+End

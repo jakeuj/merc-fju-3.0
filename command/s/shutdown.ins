@@ -1,0 +1,38 @@
+Name            shutdown~
+Cname           關機~
+Function        do_shutdown~
+Position        POS_DEAD
+Level           L_SUP
+Log             LOG_WIZ
+Exact           YES
+Argument        NO
+CanLock         NO
+Wizlog          NO
+Jail            NO
+Dead            YES
+Order           NO
+Lost            NO
+Lock            NO
+Limit           NO
+Help
+語法﹕shutdown
+      shutdown now
+      shutdown cancel
+      shutdown [分鐘數]
+      shutdown at xx:xx:xx
+
+    這個指令可以使系統關閉﹐如果後面不加參數或是參數為 now﹐則系統會立刻
+關閉﹐若後面加入xx分鐘﹐則系統會自動在幾分鐘後關閉.
+
+    而且﹐系統會在 1﹐3﹐5分鐘提醒玩家﹐系統將要關閉﹐請盡快離站,並且自動
+把系統鎖定﹐不讓一般玩家進入.
+
+    shutdown cancel 可以取消之前所設定的系統關閉動作.
+
+    shutdown at 這個指令可以限定在何時可以關閉系統﹐時間是用24小時制﹐但是
+系統不會鎖定遊戲.
+
+相關資料 ﹕wizlock ﹐reboot.
+
+~
+End

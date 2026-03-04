@@ -1,0 +1,31 @@
+Vnum            13
+Name            jeelin horse~
+ShortDesc       騏驎~
+LongDesc        騏驎(jeelin horse)
+~
+Description
+牠是一匹能夠日行萬里且可三日不吃不喝的好馬﹐從牠光亮的的鬃毛
+看來﹐的確是匹上等好馬﹐能夠擁有他的人﹐想必也是武林中赫赫有
+名的人物。
+~
+Sentinel        Yes
+Alignment       0
+Level           50
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              500
+Mana            0
+Move            550
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+Tractable       100
+End

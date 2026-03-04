@@ -1,0 +1,13 @@
+Vnum            107
+Name            goldmine~
+ShortDesc       聚寶盆~
+Description
+一只具有神奇力量的聚寶盆﹐你不妨扔(toss)點東西進去看看。
+~
+Unit            個~
+ItemType        ITEM_GOLDMINE
+Level           1
+Value           10000 0 1 0 0 102 103 104
+Weight          5000
+Cost            0
+End

@@ -1,0 +1,14 @@
+Vnum            350
+Name            gas breath book~
+ShortDesc       ¨¸Às¬r®ð¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_GAS_BREATH
+Value2          5
+Weight          3
+Cost            10000
+End

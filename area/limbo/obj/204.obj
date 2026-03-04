@@ -1,0 +1,14 @@
+Vnum            204
+Name            fouen eight book~
+ShortDesc       風雲八式秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_FOUEN
+Value2          5
+Weight          3
+Cost            10000
+End

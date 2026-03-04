@@ -1,0 +1,122 @@
+Name            sea flow blade~
+Cname           花語刀法~
+Slot            SLOT_SEAFLOW_BLADE
+Msgoff          ~
+Check           check_blade_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            25
+Wait            12
+Exp             200
+Associate       SLOT_FAST_BLADE
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_BLADE
+Rating          RATING_SKILL
+Innate          NO
+Ply             40
+Qutoient        1
+Adeptation      0
+Limit           CLASS_FIGHTER    1  40
+Limit           CLASS_GENERAL    1  90
+Limit           CLASS_BRAVO      1  80
+Help            ~
+
+#Damage
+Description
+$n使快$O﹐一招$G『春風彩蝶飛』$Z已然使開﹐刀光閃爍不定﹐婉如彩蝶四處飛舞$N一
+失神全身上下已被砍傷無數處。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n雙手持$O﹐刀起刀落﹐正是四季花舞刀法中的$S『夏夜星空明』$Z$N眼睜睜的看著橫
+刀砍來卻似乎無法抵抗。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n眉頭緊鎖﹐殺意急升﹐$Y『秋意愁不斷』$Z之起手式看似完成$O在$N的四周飄盪化為無
+數楓葉落地﹐$N一不定神﹐刀氣已經逼到眼前。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n手中$O越使越快﹐刀風冷冽﹐$G『冬雨寒若雪』$Z刀招應聲而出﹐$N心中大驚﹐但為時
+已晚$N已陷入險境無法閃躲。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n連環出招﹐一招$P『梅開隨風飄』$Z左攻右擊﹐如狂風般的飄流﹐$N似乎無法避開這柔
+剛並進的一擊。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n倒舉$O﹐以極美妙的姿勢持刀向前﹐正是四季花舞刀法中最柔美的招式$P『蘭香傳四方
+』$Z﹐$N已被這美麗的景像給吸引而忘了攻擊。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n刀起斜放﹐動作清雅脫俗正是$y『竹出百花殘』$Z刀訣的主要宗旨$N看到這刀招一出
+覺的相行見慚﹐竟然有自廢武學而拜$n為師的念頭。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n持刀劃半弧成半圓﹐欺敵之招$Y『菊語採人心』$Z自然而生﹐$N被$n看破心意搶得先
+機﹐$N已陷入一陣刀網之中。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

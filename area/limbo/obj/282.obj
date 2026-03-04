@@ -1,0 +1,14 @@
+Vnum            282
+Name            her blade book~
+ShortDesc       ²rÀs¤Mªk¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_HER_BLADE
+Value2          5
+Weight          3
+Cost            10000
+End

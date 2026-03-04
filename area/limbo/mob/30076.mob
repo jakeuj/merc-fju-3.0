@@ -1,0 +1,30 @@
+Vnum            30076
+Name            yan zheng~
+ShortDesc       嚴政~
+LongDesc        嚴政(yan zheng)
+~
+Description
+黃巾賊﹐張寶麾下武將。遭到朱雋等人所
+率的官軍攻擊﹐被圍在陽城縣。料想此城
+早晚陷落﹐刺殺了張寶﹐向官軍投降。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

@@ -1,0 +1,110 @@
+Name            king fist~
+Cname           王拳~
+Slot            SLOT_KING_FIST
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MOVE
+Cost            19
+Wait            12
+Exp             15
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+Enable          YES
+SaySpell        NO
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help            ~
+#Damage
+Description
+$n左拳陽﹐右掌陰﹐一招$R『天地和合』$Z﹐陰陽合一對準$N擊出一拳。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n撮拳為錐﹐弓步盤身﹐$R『春雷乍響』$Z化為閃電以雷霆萬鈞之勢往$N擊去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n運起護身氣勁$R『金剛不滅之身』$Z﹐不閃不避一拳往$N搗去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n招式一變﹐由大開大閤化成隨風柳絮﹐順著$N的空隙出掌印向$N。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n腳馭五行﹐屏氣凝神﹐全心全意使出$S『天道不滅』$Z﹐繞著$N旋轉出招。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n右肘微沉﹐左腳實﹐右腳虛﹐左捺右收﹐一擠一黏﹐$N有如大海孤舟﹐無所抵禦。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n將全身真氣逼至喉頭﹐大喝一聲$G『滅﹗』$Z﹐音波化成實物射往$N。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

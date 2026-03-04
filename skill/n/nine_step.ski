@@ -1,0 +1,125 @@
+Name            nine steps~
+Cname           九天靈影步~
+Slot            SLOT_NINE_STEP
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_DODGE
+Costtype        COST_MOVE
+Cost            5
+Wait            1
+Exp             300
+Associate       SLOT_COLOR_STEPS
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            NO
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             60
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SHAMAN     1  40
+Limit           CLASS_MAGE       1  70
+Limit           CLASS_SMITH      1  80
+Help
+九天靈影步:
+
+相傳是由奇門遁甲﹐五行八卦衍生而出﹐因之在所有職業中
+僅有道士有足夠知識學習。
+
+~
+
+#Damage
+Description
+$n展現『$R移形幻影$Z』似真似幻﹐似幻似真﹐讓$N捉摸不定﹐忽然一個轉身﹐就輕易
+閃開。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n使出『$G鬼魅身法$Z』猶如一形十影﹐追風逐電﹐迅速移位﹐頃刻如鬼魅般飛到$N
+身旁。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+面對$N的攻擊﹐只要中任何一招﹐便會筋碎骨斷﹐於是$n利用『$Y金蟬脫殼$Z』閃開。~
+Chance          10
+Value           20
+Value           100
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n凝神入定﹐口中唸唸有詞﹐瞬間伸手﹐一指發出『$R定身法$Z』嘗試把$N給定住不動﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n施展『$Y九天靈影身法$Z』身法式『$G魚遊身法$Z』﹐身隨意行﹐四方遊走﹐避
+開$N攻擊。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n展現『$Y九天靈影身法$Z』拆卸式『$W懷中抱月$Z』﹐見招拆招﹐見式破式﹐靜觀$N
+的弱點。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n使出『$Y九天靈影身法$Z』攻擊式『$R八臂邪神$Z』﹐如狂風暴雨綿綿不斷攻擊$N
+永不停息。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n打出『$Y九天靈影身法$Z』困住式『$g閻羅召喚$Z』﹐出現鬼魂﹐神出鬼沒撲到$N的
+身後。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

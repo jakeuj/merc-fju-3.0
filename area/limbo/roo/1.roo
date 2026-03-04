@@ -1,0 +1,13 @@
+Vnum            1
+Name            刑部天牢~
+Description
+這裡是讓人聞風喪膽的刑部天牢﹐除非你是犯了天條戒律﹐否則是不會來到
+這裡。望眼過去﹐四處都是銅牆鐵壁﹐除非皇帝特赦天下﹐不然你這輩子是
+別想離開這裡了。好好的面壁思過吧﹗
+
+~
+SectorType      SECT_INSIDE
+Safe            Yes
+NoRecall        Yes
+NoWhere         Yes
+End

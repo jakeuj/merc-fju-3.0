@@ -1,0 +1,33 @@
+Name            harm~
+Cname           ¶Ë®`³N~
+Slot            SLOT_HARM
+Msgoff          ~
+Check           check_unrigid_attack~
+Function        cast_harm~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MANA
+Cost            35
+Wait            15
+Exp             300
+Associate       SLOT_POWER_WORD
+Degree          30
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_SAINT
+AntiRating      RATING_EVIL
+Innate          NO
+Ply             30
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  75
+Limit           CLASS_BARD       1  95
+Help            ~
+End

@@ -1,0 +1,31 @@
+Vnum            30122
+Name            xin pi~
+ShortDesc       辛毗~
+LongDesc        辛毗(xin pi)
+~
+Description
+字佐治﹐辛評之弟﹐輔佐袁譚。袁氏滅亡
+後效力於曹操﹐頗受信任。司馬懿在五丈
+原與諸葛亮對峙時﹐他送去了魏主曹叡的
+詔書﹐平息了憤怒的軍心。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

@@ -1,0 +1,31 @@
+Vnum            30238
+Name            zhang hong~
+ShortDesc       張紘~
+LongDesc        張紘(zhang hong)
+~
+Description
+字子綱﹐著名的「江東二張」之一。具有
+敏銳的洞察力﹐被周瑜譽為有「經天緯地
+之才」。輔佐孫策與孫權﹐屢屢進諫。臨
+終上表勸孫權遷都建業。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

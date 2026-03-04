@@ -1,0 +1,31 @@
+Vnum            30284
+Name            si ma yi~
+ShortDesc       司馬懿~
+LongDesc        司馬懿(si ma yi)
+~
+Description
+字仲達﹐侍奉曹家四代的著名謀臣。以傑
+出的聰明才智﹐使諸葛亮六出祁山都無功
+而返﹐保住了三秦之地。後排除異己﹐掌
+握實權﹐為建立晉王朝打下基礎。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

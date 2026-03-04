@@ -1,0 +1,19 @@
+Vnum            25
+Name            god amulet~
+ShortDesc       神之鍊~
+Description
+天神專用項鍊(amulet)。~
+Unit            條~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_NECK
+Takeable        Yes
+Level           120
+Weight          0
+Cost            0
+Value           -1
+
+#Affect
+Location        APPLY_INT
+Modifier        2
+End
+End

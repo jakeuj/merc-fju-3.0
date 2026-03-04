@@ -1,0 +1,45 @@
+Name            fireball~
+Cname           火球術~
+Slot            SLOT_FIREBALL
+Msgoff          ~
+Function        cast_fireball~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MANA
+Cost            25
+Wait            14
+Exp             600
+Associate       SLOT_CAST_FIRE
+Degree          100
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_FIRE
+AntiRating      RATING_WATER
+Innate          NO
+Ply             60
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    10  40
+Limit           CLASS_SHAMAN     10  60
+Limit           CLASS_DOCTOR     50  45
+Limit           CLASS_BARD       50  45
+Limit           CLASS_MAGE       50  95
+Limit           CLASS_SMITH      50  80
+
+Help
+火球術:
+
+施術者在手中或是其他地方以意念將法力形成一個巨大的火球﹐再以
+此巨大的火球去攻擊敵人﹐威力強大﹐是火系法術的加強法術﹐必須
+精通火系法術之後方有可能學的會。
+
+~
+End

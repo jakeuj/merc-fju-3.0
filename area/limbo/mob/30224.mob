@@ -1,0 +1,30 @@
+Vnum            30224
+Name            han hao~
+ShortDesc       韓浩~
+LongDesc        韓浩(han hao)
+~
+Description
+字元嗣。本是袁術麾下名將﹐被夏侯惇邀
+請﹐替曹操效力。向曹操建議屯田制。在
+演義中﹐他是長沙太守韓玄之弟。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

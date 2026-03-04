@@ -1,0 +1,15 @@
+Vnum            12
+Name            lamp~
+ShortDesc       ¿OÅ¢~
+Description
+¤@·ø¥ú½u·L®zªº¿OÅ¢(lamp)¡C~
+Unit            ·ø~
+ItemType        ITEM_LIGHT
+WearLoc         ITEM_WEAR_LIGHT
+Takeable        Yes
+Level           1
+Value3          10
+Weight          1
+Cost            5
+Exp             10
+End

@@ -1,0 +1,30 @@
+Vnum            30156
+Name            lyu feng~
+ShortDesc       呂範~
+LongDesc        呂範(lyu feng)
+~
+Description
+字子衡。本是袁術幕僚﹐後對袁術失去信
+心﹐改投孫策。為了孫權之妹孫尚香與劉
+備的婚事出使荊州﹐是東吳的媒人。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

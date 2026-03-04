@@ -1,0 +1,28 @@
+Vnum            5
+Name            hipo~
+ShortDesc       河馬~
+LongDesc        極笨重的河馬(hipo)舒服的水中泡澡。
+~
+Description
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            0
+Move            1000
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+Tractable       100
+End

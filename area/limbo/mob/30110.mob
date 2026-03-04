@@ -1,0 +1,31 @@
+Vnum            30110
+Name            yu fan~
+ShortDesc       虞翻~
+LongDesc        虞翻(yu fan)
+~
+Description
+字仲翔﹐原是會稽郡史。太守王朗被孫策
+打敗後﹐他成為孫策的部下。為救治身負
+重傷的周泰﹐他推薦了名醫華陀。後來擔
+任說客說服了傅士仁。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

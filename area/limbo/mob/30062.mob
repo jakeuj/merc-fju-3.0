@@ -1,0 +1,31 @@
+Vnum            30062
+Name            liu biao~
+ShortDesc       劉表~
+LongDesc        劉表(liu biao)
+~
+Description
+字景升﹐江夏八俊之一。由於多疑和遇事
+優柔寡斷而多次失去奪取天下的機會。他
+死後﹐家族內部發生內鬨﹐給了曹操一個
+進攻的機會。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

@@ -1,0 +1,14 @@
+Vnum            250
+Name            sky dragon force book~
+ShortDesc       天龍真氣秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_SKYDRAGON_FORCE
+Value2          5
+Weight          3
+Cost            10000
+End

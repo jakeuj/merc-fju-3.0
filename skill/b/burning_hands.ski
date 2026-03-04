@@ -1,0 +1,53 @@
+Name            burning hands~
+Cname           火焰之掌~
+Slot            SLOT_BURNING_HANDS
+Msgoff          ~
+Check           check_unrigid_attack~
+Function        cast_burning_hands~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MANA
+Cost            15
+Wait            8
+Exp             1200
+Associate       SLOT_FLAMESTRIKE
+Degree          300
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_FIRE
+AntiRating      RATING_WATER
+Innate          NO
+Ply             120
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      10  25
+Limit           CLASS_SCHOLAR    10  30
+Limit           CLASS_FIGHTER    10  25
+Limit           CLASS_SHAMAN     10  50
+Limit           CLASS_THIEF      15  25
+Limit           CLASS_DOCTOR     50  35
+Limit           CLASS_BARD       50  35
+Limit           CLASS_GENERAL    50  25
+Limit           CLASS_BRAVO      50  25
+Limit           CLASS_MAGE       50  95
+Limit           CLASS_SMITH      50  85
+
+Help
+火焰之掌：
+
+一項基本的法術﹐將法力集中在雙掌中﹐再以高熱的方式凝聚能源﹐
+投在敵人身上﹐造成火焰攻擊的傷害﹐一般的人就可以學這一項法術
+﹐不過雖然是一個簡單的法術﹐如果熟練的話﹐依然有可能有極高的
+威力﹐不過還是要有基本的訓練就是了﹐如果你想要試試看的話﹐到
+襄陽找找看用火的高手或是學堂老師就可以學到了。
+
+~
+
+End

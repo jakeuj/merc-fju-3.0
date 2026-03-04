@@ -1,0 +1,60 @@
+#Ship
+Name            ¬¥¶§ªÅ¹B~
+Entrance
+­n¶}©¹¥_¥­ªº­¸¾÷¤w¸g¨ì¤F¡M½Ð­n¨ì®Ê¶§ªº®È«È·Ç³Æµn¾÷!
+~
+
+Land
+­¸¾÷¤w¸g¨ì¥_¥­¤F¡M½Ð¦U¦ì®È«ÈÃ´¦n¦w¥þ±a¡Mµ¥«Ý­¸¾÷­°¸¨!
+~
+
+Description
+[1;36m                        ¢m  ¡Ä   ¢m[0m
+[1;36m                        ¢m[m[30;47m¢«[47;37;1m¢g[m[30;47m¢ª[m[1;36m ¢m[m
+[1;36m    ¡Ä¢b¢c¢c¢c¢c¢c¢c¢c¢g¢i[m[37;46m¢ª[1;37mùþ[m[37;46m¢«[m[1;36m¢i¢g¢c¢c¢c¢c¢c¢c¢c¢b¡Ä[m
+      [1;36m ¢v*¢v>£K< *¢v[34m¢ª[43m¡Ä¡Ä¢i[44;36m¡ó[34m¢i[43m¡Ä¡Ä[m[1;34m¢«[m[1;36m¢v* >£K<¢v*[m¢v
+                      [1;37m ¢v¡¯\[37m¡´[34m/[37m¡¯¢v[0m
+
+
+~
+
+Starting        743
+Destination     9001
+Cabin           211
+Cost            100
+Sailing         2
+Waiting         4
+Pirate          5
+Delay           100
+End
+
+#Ship
+Name            ¥_¥­ªÅ¹B~
+Entrance
+­n¶}©¹¬¥¶§ªº­¸¾÷¤w¸g¨ì¤F¡M­nµn¾÷ªº®È«È½Ð¶¶§Ç¨ìµn¾÷©Wµn¾÷!
+~
+
+Land
+¶}©¹¬¥¶§ªº­¸¾÷¤w¸g¨ì¹F¤F¡M½Ð¦U¦ì®È«È§¤¦b®y¦ì¤W¡Mµ¥«Ý­¸¾÷­°¸¨!
+~
+
+Description
+[1;36m                        ¢m  ¡Ä   ¢m[0m
+[1;36m                        ¢m[m[30;47m¢«[47;37;1m¢g[m[30;47m¢ª[m[1;36m ¢m[m
+[1;36m    ¡Ä¢b¢c¢c¢c¢c¢c¢c¢c¢g¢i[m[37;46m¢ª[1;37mùþ[m[37;46m¢«[m[1;36m¢i¢g¢c¢c¢c¢c¢c¢c¢c¢b¡Ä[m
+      [1;36m ¢v*¢v>£K< *¢v[34m¢ª[43m¡Ä¡Ä¢i[44;36m¡ó[34m¢i[43m¡Ä¡Ä[m[1;34m¢«[m[1;36m¢v* >£K<¢v*[m¢v
+                      [1;37m ¢v¡¯\[37m¡´[34m/[37m¡¯¢v[0m
+
+~
+
+Starting        9001
+Destination     743
+Cabin           212
+Cost            100
+Sailing         2
+Waiting         4
+Pirate          5
+Delay           100
+End
+
+End

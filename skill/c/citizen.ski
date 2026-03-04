@@ -1,0 +1,62 @@
+Name            citizen~
+Cname           亂拳~
+Slot            SLOT_CITIZEN
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            5
+Wait            5
+Exp             5
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Help
+這是行人用的招式。
+
+~
+#Damage
+Description
+$n看$N空隙大開﹐就向$N打出「亂拳」﹐$N只見一堆的拳影向$N打來﹐$N無法全閃過﹐被打的全身青一塊紫一塊。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n看「亂拳」無法解決$N﹐只好使出「亂腿」向$N上、中、下三盤踢去﹐$N無法閃避﹐被踢的吐血倒地。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n看$N如此的難收拾﹐只好使出絕招「亂打」﹐$N只見$n用頭﹐手爪﹐腿﹐肩﹐膝﹐用的上的全向$N攻來﹐$N被打的向後飛出三丈﹐倒地不起。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

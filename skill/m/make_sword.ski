@@ -1,0 +1,32 @@
+Name            make sword~
+Cname           Å]ªk¼C~
+Slot            SLOT_MAKE_SWORD
+Function        cast_make_sword~
+Check           check_unrigid_attack~
+Msgoff          ~
+Position        POS_STANDING
+Type            TAR_CHAR_DEFENSIVE
+Costtype        COST_MANA
+Cost            100
+Wait            10
+Exp             30
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+SaySpell        YES
+Enable          NO
+Rating          RATING_CREATE
+Innate          NO
+Ply             0
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SMITH      1  90
+Help            ~
+
+End

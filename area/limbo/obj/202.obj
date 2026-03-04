@@ -1,0 +1,14 @@
+Vnum            202
+Name            evil fist book~
+ShortDesc       ´cÅQ´x¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_EVILFIST
+Value2          5
+Weight          3
+Cost            10000
+End

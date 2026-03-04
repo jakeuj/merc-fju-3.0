@@ -1,0 +1,35 @@
+Name            giant strength~
+Cname           巨人之力~
+Slot            SLOT_GIANT_STRENGTH
+Msgoff          你感到不再強壯了﹗~
+Check           check_unrigid_attack~
+Function        cast_giant_strength~
+Position        POS_STANDING
+Type            TAR_CHAR_DEFENSIVE
+CostType        COST_MANA
+Cost            20
+Wait            15
+Exp             700
+Associate       SLOT_PROTECTION
+Degree          200
+Affect          AFFECT_NONE
+AffectID        OBJ_GIANT_STR
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_SAINT
+AntiRating      RATING_EVIL
+Innate          NO
+Ply             70
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    1  45
+Limit           CLASS_DOCTOR     1  70
+Limit           CLASS_BARD       1  95
+
+Help            ~
+End

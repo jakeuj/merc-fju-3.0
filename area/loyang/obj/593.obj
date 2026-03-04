@@ -1,0 +1,15 @@
+Vnum            593
+Name            detect mask potion~
+ShortDesc       °»´ú©ö®eÃÄ¤ô~
+Description
+~
+Unit            ²~~
+ItemType        ITEM_POTION
+Contraband      Yes
+Takeable        Yes
+Level           10
+Value1          6
+Value2          OBJ_DETECT_MASK
+Weight          5
+Cost            3000
+End

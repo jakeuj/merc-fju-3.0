@@ -1,0 +1,30 @@
+Vnum            30038
+Name            zhang ji~
+ShortDesc       張濟~
+LongDesc        張濟(zhang ji)
+~
+Description
+董卓的車騎將軍。張鏽的叔父。其妻鄒氏
+是傾國美女。因軍糧不足﹐去進攻南陽的
+劉表﹐中劍身亡。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

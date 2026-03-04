@@ -1,0 +1,30 @@
+Vnum            30035
+Name            zu mao~
+ShortDesc       祖茂~
+LongDesc        祖茂(zu mao)
+~
+Description
+字大榮。討伐董卓時﹐換上敗走的孫堅的
+紅頭巾﹐吸引敵軍﹐讓被華雄軍包圍的孫
+堅逃脫﹐自己被華雄斬殺。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

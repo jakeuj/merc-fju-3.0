@@ -1,0 +1,16 @@
+Vnum            9
+Name            <<1;35mRobin 的窩<<0m~
+Description
+<<1;33m這裡感覺起來有一些髒亂﹐但是住的人不覺得就好了。桌上的電腦
+從不蓋外殼﹐旁邊還有一台兩百塊的電風扇在吹﹐因為 CPU 的風扇
+壞了。銀幕前小小的空間就是 Robin 的書桌﹐兩旁堆滿了計算統計
+用的廢紙﹐還有一些漫畫小說。
+<<0m
+~
+SectorType      SECT_INSIDE
+InDoors         Yes
+Safe            Yes
+NoRecall        Yes
+ForeverLight    Yes
+NoWhere         Yes
+End

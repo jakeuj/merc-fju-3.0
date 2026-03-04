@@ -1,0 +1,30 @@
+Vnum            30287
+Name            jiang ji~
+ShortDesc       蔣濟~
+LongDesc        蔣濟(jiang ji)
+~
+Description
+字子通﹐魏國主簿。懼怕關羽進攻﹐勸曹
+操考慮遷都。曹丕伐吳時任參謀隨軍﹐後
+任魏國太尉。據說善於識人。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

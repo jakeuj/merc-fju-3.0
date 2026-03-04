@@ -1,0 +1,31 @@
+Vnum            30308
+Name            sun zhao~
+ShortDesc       孫詔~
+LongDesc        孫詔(sun zhao)
+~
+Description
+字公禮﹐孫桓之表弟。在對魏作戰的軍事
+會議上﹐與總大將徐盛觀點對立﹐獨自發
+兵﹐也得到徐盛、甘寧等人幫助﹐大獲全
+勝。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

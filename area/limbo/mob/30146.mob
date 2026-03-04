@@ -1,0 +1,31 @@
+Vnum            30146
+Name            fu gan~
+ShortDesc       傅幹~
+LongDesc        傅幹(fu gan)
+~
+Description
+字彥材﹐魏之參軍。曹操欲進攻吳國時﹐
+以「吳蜀有天險之利﹐不宜武力進攻」為
+由勸諫曹操﹐因此得到曹操的賞識。主張
+治理內政﹐增強國力。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

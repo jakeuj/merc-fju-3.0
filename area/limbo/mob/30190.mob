@@ -1,0 +1,31 @@
+Vnum            30190
+Name            zang ba~
+ShortDesc       臧霸~
+LongDesc        臧霸(zang ba)
+~
+Description
+字宣高。為陶謙的部下﹐在討伐黃巾賊方
+面表現活躍。後來成為呂布部下﹐各處轉
+戰。在與曹操作戰時﹐聯合各處山賊﹐很
+讓曹操頭痛。呂布滅王後﹐歸順曹操。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

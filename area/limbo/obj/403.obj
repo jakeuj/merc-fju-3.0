@@ -1,0 +1,36 @@
+Vnum            403
+Name            king lance~
+ShortDesc       [1;31mÅQ¤ý[1;37m¾Ô´u[0m~
+Description
+¶W¥G·Q¹³¤§¥~ªº¶W¤j«¬¾Ô´u(lance)¡M¨C¤@À»§¡±a¦³ÅQ«l¤Î¶¯«l¡C~
+Unit            §â~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           99
+Value           0 -1 -1 7
+Weight          20
+Cost            200
+
+#Affect
+Location        APPLY_CON
+Modifier        2
+End
+
+#Affect
+Location        APPLY_DEX
+Modifier        -3
+End
+
+#Affect
+Location        APPLY_STR
+Modifier        3
+End
+
+#Restrict
+Type            RES_CLASS
+Value           RES_GENERAL
+End
+
+End

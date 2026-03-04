@@ -1,0 +1,13 @@
+Vnum            9
+Name            leg~
+ShortDesc       %s的腿~
+Description
+%s的腿(leg)被切斷掉在這裡。~
+Unit            截~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           0
+Value           10 25 5
+Weight          5
+Cost            0
+End

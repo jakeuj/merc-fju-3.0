@@ -1,0 +1,106 @@
+Name            dream dance~
+Cname           夜夢天舞~
+Slot            SLOT_DREAMDANCE
+Msgoff          ~
+check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MOVE
+Cost            20
+Wait            12
+Exp             15
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+Enable          YES
+SaySpell        NO
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help            ~
+#Damage
+Description
+$n使出一招$Y『飛燕翱翔』$Z﹐雙腿呈燕尾狀以優美的姿態向著$N疾飛而至。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n身形倏然萬變﹐使出一招$Y『雲霧飄緲』$Z﹐趁著$N驚愕之際﹐雙掌向$N拍去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n身體向上飄起﹐兩腿如落葉飛花般﹐向著$N當頭罩落﹐正是夜夢天舞中的$Y『落英繽
+紛』$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n雙腿向前蹬出﹐身體化為一道美麗的虹彩﹐使出一招$Y『飛花逐月』$Z擊向$N。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n雙手如鳥翼般向上平舉﹐使出一招$Y『白鶴掠翼』$Z﹐擊向$N。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n柔指舒張﹐姿態優美﹐忽然對著$N全身大穴疾點﹐令$N難以招架﹐正是夜夢天舞中的
+$Y『天女散花』$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n身體開始旋轉﹐由緩而急﹐美妙的身形如鳳凰般向空飛起﹐身體四周形成一股強勁的
+氣流擊向$N﹐正是夜夢天舞最終絕學$Y『鳳舞九天』$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

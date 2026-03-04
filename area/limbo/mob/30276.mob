@@ -1,0 +1,30 @@
+Vnum            30276
+Name            cai zhong~
+ShortDesc       蔡中~
+LongDesc        蔡中(cai zhong)
+~
+Description
+蔡瑁的族弟。同蔡和一起詐降東吳﹐去做
+臥底。可是由於周瑜識破﹐將吳兵引到曹
+寨後﹐被吳將甘寧斬殺。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

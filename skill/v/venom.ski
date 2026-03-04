@@ -1,0 +1,45 @@
+Name            venom~
+Cname           抹毒~
+Slot            SLOT_VENOM
+Msgoff          ~
+Function        cast_venom~
+Position        POS_STANDING
+Type            TAR_OBJ_INV
+CostType        COST_MANA
+Cost            10
+Wait            10
+Exp             300
+Associate       SLOT_PICK
+Degree          100
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_THIEF
+Innate          NO
+Ply             0
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  70
+Limit           CLASS_SCHOLAR    1  70
+Limit           CLASS_FIGHTER    1  70
+Limit           CLASS_SHAMAN     1  70
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  70
+Limit           CLASS_BARD       1  70
+Limit           CLASS_GENERAL    1  70
+Limit           CLASS_BRAVO      1  70
+Limit           CLASS_MAGE       1  70
+Limit           CLASS_SMITH      1  70
+Help
+抹毒:
+
+一種基本的抹毒技巧﹐但是先決條件是你要具備一些毒物的知識。
+~
+
+End

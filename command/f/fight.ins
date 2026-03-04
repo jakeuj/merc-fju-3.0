@@ -1,0 +1,35 @@
+Name            fight~
+Cname           ＰＫ~
+Function        do_fight~
+Position        POS_FIGHTING
+Level           0
+Log             LOG_NORMAL
+Exact           NO
+Argument        NO
+Wizlog          NO
+Jail            NO
+CanLock         YES
+Dead            NO
+Order           NO
+Lost            NO
+Lock            NO
+Limit           NO
+Help
+語法﹕fight
+      fight join
+      fight bet  <玩家號碼> <賭金>
+      fight lock                    [神族指令]
+      fight status                  [神族指令]
+
+當這個指令不家任何參數的時候﹐便會告訴你現在武鬥大會的狀態﹐
+如果你要加入的話﹐便可以使用 fight join 來加入大戰﹐關於大戰
+的一些限制寫在 PK_RULE  中﹐要對打之前先撥空看一下。
+在對打對象決定之後﹐你便可以利用 fight bet  指令來下注﹐不過
+關於金額都有限制﹐當然總和最大數也有限制。
+而神族可以用 fight lock 來暫時鎖住武鬥大會﹐以便進行除錯等工
+作。
+
+
+相關資訊﹕consider learn
+~
+End

@@ -1,0 +1,31 @@
+Vnum            30244
+Name            qin mi~
+ShortDesc       秦宓~
+LongDesc        秦宓(qin mi)
+~
+Description
+原劉璋之臣。責問劉備的使者態度傲慢。
+劉備入川後跟隨劉備。曾力勸劉備不要伐
+吳﹐被關入大獄。後來在酒席上智辯吳使
+張溫﹐使其不敢小看蜀中之人。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

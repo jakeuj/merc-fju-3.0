@@ -1,0 +1,34 @@
+Name            bless~
+Cname           群仙祝福~
+Slot            SLOT_CAST_BLESS
+Msgoff          你感到較不受保佑了﹗~
+Function        spell_cast_bless~
+Position        POS_STANDING
+Type            TAR_CHAR_DEFENSIVE
+Costtype        COST_MANA
+Cost            15
+Wait            10
+Exp             1000
+Associate       SLOT_GIANT_STRENGTH
+Degree          300
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_SAINT
+AntiRating      RATING_EVIL
+Innate          NO
+Ply             100
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    1  45
+Limit           CLASS_DOCTOR     1  70
+Limit           CLASS_BARD       1  95
+
+Help            ~
+End

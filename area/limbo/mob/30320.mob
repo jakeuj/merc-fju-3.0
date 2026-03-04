@@ -1,0 +1,30 @@
+Vnum            30320
+Name            yang feng~
+ShortDesc       楊鋒~
+LongDesc        楊鋒(yang feng)
+~
+Description
+南蠻銀治洞洞主。孟獲不知他已經投降了
+諸葛亮﹐將其招來助陣。酒宴上﹐他擒住
+了孟獲和朵思大王﹐獻給了諸葛亮。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

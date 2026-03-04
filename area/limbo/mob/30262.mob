@@ -1,0 +1,31 @@
+Vnum            30262
+Name            wang kang~
+ShortDesc       王伉~
+LongDesc        王伉(wang kang)
+~
+Description
+蜀國永昌郡太守。當雍闓、高定發動叛亂
+時﹐他不與其同流合污﹐和呂凱一起抵禦
+雍闓等人的進攻﹐堅守城池﹐一直到諸葛
+亮引領大隊人馬到來。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

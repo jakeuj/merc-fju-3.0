@@ -1,0 +1,31 @@
+Vnum            30299
+Name            guan xing~
+ShortDesc       關興~
+LongDesc        關興(guan xing)
+~
+Description
+字安國﹐關羽的次子。在劉備調解下和張
+苞結為義兄弟。征吳時為報父仇而戰﹐立
+下了大功﹐沒有辱沒名將之後的名聲。諸
+葛亮給了他很高的評價。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

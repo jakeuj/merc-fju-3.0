@@ -1,0 +1,14 @@
+Vnum            394
+Name            fly nine book~
+ShortDesc       飛流九刀秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_FLY_NINE
+Value2          5
+Weight          3
+Cost            10000
+End

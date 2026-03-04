@@ -1,0 +1,14 @@
+Vnum            249
+Name            sky dragon book~
+ShortDesc       ¤ÑÀs³Z¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_SKYDRAGON
+Value2          5
+Weight          3
+Cost            10000
+End

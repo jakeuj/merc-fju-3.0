@@ -1,0 +1,16 @@
+Vnum            127
+Name            x'mas coffee~
+ShortDesc       [1;33m¸t½Ï[1;35m©@°Ø[0m~
+Description
+¤@ªM­»®ð¥|¶hªº©@°Ø¡M¦b¦Y§¹­C½Ï¤õÂû«á¡M¨ÓªM¿@¿@ªº©@°Ø¡K
+¶â¡ãºë¯«¥þ³£¨Ó¤F¡ã
+~
+Unit            ªM~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           10
+Weight          1
+Cost            100
+Value           100 100 LIQ_WATER
+
+End

@@ -1,0 +1,19 @@
+Vnum            22
+Name            war glove~
+ShortDesc       戰神手套~
+Description
+天神專用手套(glove)。~
+Unit            雙~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_HANDS
+Takeable        Yes
+Level           120
+Weight          0
+Cost            0
+Value           -1
+
+#Affect
+Location        APPLY_MANA
+Modifier        1000
+End
+End

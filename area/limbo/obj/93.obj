@@ -1,0 +1,15 @@
+Vnum            93
+Name            poncho~
+ShortDesc       蓑衣~
+Description
+一件透氣舒適的蓑衣(poncho)﹐很適合雨天時穿著。~
+Unit            件~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_ABOUT
+Takeable        Yes
+Level           20
+Value           -1
+Weight          10
+Cost            200
+Exp             10
+End

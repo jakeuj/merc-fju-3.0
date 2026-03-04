@@ -1,0 +1,31 @@
+Name            seven key numen~
+Cname           ¤CÆ_¦uÅ@¯«~
+Slot            SLOT_SEVEN_KEY_NUMEN
+Msgoff          ~
+Function        cast_seven_key_numen~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MANA
+Cost            300
+Wait            45
+Exp             40
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_LOST
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_MAGE       90  90
+Help            ~
+End

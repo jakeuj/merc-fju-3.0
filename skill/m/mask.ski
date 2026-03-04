@@ -1,0 +1,36 @@
+Name            mask~
+Cname           易容術~
+Slot            SLOT_MASK
+Msgoff          你又恢復到以前的面貌。~
+Function        skill_mask~
+Position        POS_STANDING
+Type            TAR_CHAR_SELF
+CostType        COST_MOVE
+Cost            100
+Wait            12
+Exp             30
+Associate       -1
+Degree          0
+Affect          SLOT_MASK
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+Enable          NO
+SaySpell        NO
+Rating          RATING_THIEF
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_THIEF      1  95
+
+#Affect
+Type            SLOT_MASK
+Location        AFF_NONE
+End
+
+Help            ~
+End

@@ -1,0 +1,31 @@
+Vnum            30109
+Name            ji ling~
+ShortDesc       紀靈~
+LongDesc        紀靈(ji ling)
+~
+Description
+袁術部下﹐慣使三尖兩刃刀。劉備率軍進
+攻時﹐他與名將關羽單挑三十回合不分勝
+負。後來奉袁術之命進攻劉備﹐但由於呂
+布從中調停而退兵。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

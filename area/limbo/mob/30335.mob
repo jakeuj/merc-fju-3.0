@@ -1,0 +1,31 @@
+Vnum            30335
+Name            deng zhi~
+ShortDesc       鄧芝~
+LongDesc        鄧芝(deng zhi)
+~
+Description
+字伯苗。劉備死後﹐擔任與東吳結盟的使
+者﹐往返吳蜀之間﹐成功地締結了盟約。
+北伐時與趙雲一起擔任先鋒﹐率領一軍。
+是智勇兼備的名將。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

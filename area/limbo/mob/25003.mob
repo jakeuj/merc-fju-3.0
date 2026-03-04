@@ -1,0 +1,29 @@
+Vnum            25003
+Name            mouse~
+ShortDesc       老鼠~
+LongDesc        老鼠(mouse)
+~
+Description
+小老鼠膽子很小﹐見到人了﹐到處亂竄﹐生性最怕
+貓來抓﹐挖洞本領真是高﹐為人們的眼中釘。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

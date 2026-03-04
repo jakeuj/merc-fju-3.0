@@ -1,0 +1,15 @@
+Vnum            65
+Name            hood~
+ShortDesc       綸巾~
+Description
+常見的頭巾(hood)﹐是書生的標準裝扮。~
+Unit            條~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_HEAD
+Takeable        Yes
+Level           20
+Value           -1
+Weight          10
+Cost            200
+Exp             10
+End

@@ -1,0 +1,15 @@
+Vnum            82
+Name            cloudy shoe~
+ShortDesc       七星翻雲靴~
+Description
+這是一雙用天蠶絲所織成的鞋子(cloudy shoe)。~
+Unit            雙~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_FEET
+Takeable        Yes
+Level           20
+Value           -1
+Weight          10
+Cost            200
+Exp             10
+End

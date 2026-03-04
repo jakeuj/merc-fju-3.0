@@ -1,0 +1,11 @@
+Vnum            14
+Name            well~
+ShortDesc       古色古香的深井~
+Description
+一口深不見底的井(well)﹐其中充滿了清涼的井水﹐你可以喝喝看( drink )。~
+Unit            口~
+ItemType        ITEM_FOUNTAIN
+Level           0
+Weight          5000
+Cost            0
+End

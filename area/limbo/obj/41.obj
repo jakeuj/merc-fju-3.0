@@ -1,0 +1,15 @@
+Vnum            41
+Name            axe~
+ShortDesc       鐵斧~
+Description
+一把十分鋒利的單刃斧頭(axe)﹐全身以鋼鐵鑄成﹐拿起來十分地重。~
+Unit            把~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           1
+Value           0 -1 -1 5
+Weight          10
+Cost            10
+Exp             10
+End

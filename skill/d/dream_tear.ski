@@ -1,0 +1,139 @@
+Name            dream tear~
+Cname           夢痕淒淚~
+Slot            SLOT_DREAM_TEAR
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            25
+Wait            5
+Exp             50
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             20
+Qutoient        5
+Adeptation      0
+Limit           CLASS_BRAVO      1  95
+Help            
+~
+
+#Damage
+Description
+$n輕嘆一聲、手勢一擺，一種若有若無的$B傷感$Z，只見$n輕吟$Y『落花有意隨流水、流水無心戀落花』$Z。
+$S『夢痕淒淚』$Z之$R『落花流水』$Z已出，只見$n身隨勢走，左手為$Y陽$Z、右手為$S陰$Z，雙手疾探而出，以不可思議的角度重轟$N後心。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+只見$n口中輕聲吟道$Y『情慾糾葛間息影、忽憶紅顏為君愁』$Z掌影翻飛、
+空氣中彌漫著一股$P悔恨之情$Z，$n手擺$r折梅式$Z，正是$S『夢痕淒淚』$Z之$R『悔不當初』$Z
+左手疾探、抓住$N右肩，身隨勢走、貫滿內力的右手登時重轟$N胸口。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+面對$N的攻勢、$n輕踏葬花步、輕吟$Y『葬花若能解是非、情愛當年又怎憶』$Z
+ 正是$S『夢痕淒淚』$Z之$R『黛玉葬花』$Z側身避過$N的殺著，反手抓住$N左手、
+ 一扭一帶、$N身形盡失，$n舉起右手、聚$W勁$Z轟下，喀啦一聲、$N臂骨已斷。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+熱戰方酣時、$n突然垂首而立，神情$B哀戚$Z、兩行$S清淚$Z由眼角溢出，
+口中慢慢吟道$Y『郎君縱情天地間、可曾憐惜妾身情』$Z雙掌隱隱散出$S青氣$Z，
+$n雙掌一圈，$S青氣$Z猛然激射四方$R 『欄干孤枕』$Z一式有如撲天蓋地般襲捲$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n突然疾衝上前、$N一驚之下、一招朝$n劈來、$n側身一避、
+隨即施展$S『夢痕淒淚』$Z之$R『香消玉損』$Z。$n右手由$N掖下穿過
+一式$B『鎖魂手』$Z、牢牢扣住了$N咽喉，左手反抓$N後頸，發勁一扭、$N哀號一聲、隨即軟倒。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n想也不想，一掌橫劈而出，逼退了$N，只見$n一手朝$Y陽$Z、一手聚$S陰$Z，
+面上隱隱透出$B暗籃之色$Z，$n口中喝道$Y『心繫樑上徒神傷 可恨情郎多薄信』$Z
+雙掌一拍，頓時$S陰$Z$Y陽$Z交合，激爆出駭人$W強光$Z，正是足以撼動天地的$R『此恨綿綿』$Z
+$n雙掌一推，無匹氣勁以$R毀天滅地之勢$Z直撲$N而來。 ~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n左支右拙、漸漸不敵、一$R怒$Z之下、血氣逆轉、臉上隱隱透出$R血紅$Z，
+正準備使出$R『魔訣』$Z$S『由愛生恨』$Z、只見$n仰天狂吼$W『貪戀情愛蟀O恨、但願相逢不相識』$Z
+腳下發勁、躍離地面十三尺，雙掌掌心中匯聚$B毀滅$Z的能量，$n突然暴喝$R『滅』$Z、氣勁如$S雷$Z轟下，$N只覺得渾身被一股$W巨力$Z攏罩，接著就是四肢被撕裂的$R痛楚$Z。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n突然一飛衝天，在空中一個翻轉，
+雙掌朝天，默運$B夢魔心法$Z，只見十丈之內的草木開始$R枯萎$Z、正是$R『魔訣』$Z之$S『柔腸寸斷』$Z。只見$n雙掌上漸漸匯聚一個泛著$w黑光$Z的光球，勁勢雄渾霸道、$n雙手反轉、有如$B夢魔$Z降世般，$N彷彿看見了$S絢麗$Z的彩光，但隨即被彩光分屍了。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n突然喉頭一甜、一口$R鮮血$Z狂噴而出，$n突然仰天狂笑，狂催$B夢魔心法$Z，
+正是夢痕淒淚內最悲悵的終級招、$R『魔訣』$Z$S『生死同路』$Z只見$n已迅$S雷$Z不及掩耳的速度、衝向$N，$n手擺$B絕魂式$Z，雙掌一式$W『如雷貫耳』$Z重轟$N太陽穴、$n輕聲說道$Y『情殤柔腸皆百轉、生死同路恨無由』$Z生命力猛然爆發，小貓只看見一陣$W白光$Z，一陣撕心裂肺的$R痛楚$Z傳來，$N已經跟$n一起駕鶴西歸了。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End
+

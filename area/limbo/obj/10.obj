@@ -1,0 +1,13 @@
+Vnum            10
+Name            turd~
+ShortDesc       臭屎~
+Description
+你聞到了不遠處臭屎(turd)所飄來的味道﹐好臭﹐真不知道要怎麼辦﹖
+~
+Unit            沱~
+ItemType        ITEM_TRASH
+Takeable        Yes
+Level           0
+Weight          1
+Cost            0
+End

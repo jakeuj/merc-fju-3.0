@@ -1,0 +1,30 @@
+Vnum            46
+Name            第一殿--通道~
+Description
+你走近這裡﹐看到北方燈火通明﹐原來北方正是冥府的第一殿﹐由
+秦廣王所管轄﹐一般做善事的人﹐死後牛頭馬面都會把他先帶到秦
+廣王面前﹐在由各路諸神依其功德接引上天庭或帶去投胎轉世。
+
+~
+SectorType      SECT_INSIDE
+Safe            Yes
+NoRecall        Yes
+ForeverLight    Yes
+
+#Exit
+Direction       NORTH
+ExitVnum        47
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        45
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

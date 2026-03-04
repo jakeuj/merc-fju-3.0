@@ -1,0 +1,41 @@
+Name            create food~
+Cname           製造食物~
+Slot            SLOT_CREATE_FOOD
+Msgoff          ~
+Function        cast_create_food~
+Position        POS_STANDING
+Type            TAR_IGNORE
+CostType        COST_MANA
+Cost            5
+Wait            12
+Exp             1200
+Associate       SLOT_DETECT_HIDDEN
+Degree          300
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_EARTH
+AntiRating      RATING_WIND
+Innate          NO
+Ply             120
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  80
+Limit           CLASS_SCHOLAR    1  45
+Limit           CLASS_BARD       1  80
+
+Help
+製造食物術:
+
+這項法術可以將你的法力實體化成為一個可以實用的饅頭﹐供你旅行
+的時候更方便﹐若是飢餓的話﹐可是很難忍受的說﹐所以有了這一項
+技能的話﹐便可以讓你更方便。
+
+~
+End

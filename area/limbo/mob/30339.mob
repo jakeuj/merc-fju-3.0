@@ -1,0 +1,30 @@
+Vnum            30339
+Name            zhu ge jun~
+ShortDesc       諸葛均~
+LongDesc        諸葛均(zhu ge jun)
+~
+Description
+諸葛瑾、諸葛亮之弟。與其兄諸葛亮一起
+住在臥龍岡﹐過著晴耕雨讀的生活。諸葛
+亮出仕後﹐他效力於蜀國﹐任長水校尉。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

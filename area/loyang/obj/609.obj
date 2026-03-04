@@ -1,0 +1,13 @@
+Vnum            609
+Name            arrow~
+ShortDesc       ½b~
+Description
+~
+Unit            ¤ä~
+ItemType        ITEM_ARROW
+Loadable        Yes
+Takeable        Yes
+Level           1
+Weight          1
+Cost            10
+End

@@ -1,0 +1,31 @@
+Vnum            30261
+Name            liu cong~
+ShortDesc       劉琮~
+LongDesc        劉琮(liu cong)
+~
+Description
+劉表的次子。劉表死後﹐被蔡瑁等人擁立
+為後繼者。投降南下的曹操後﹐被任命為
+青州刺史。但在赴青州途中﹐被曹操派人
+殺死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

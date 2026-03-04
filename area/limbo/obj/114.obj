@@ -1,0 +1,14 @@
+Vnum            114
+Name            rocket~
+ShortDesc       煙火~
+Description
+這是一盒特製的煙火(rocket)﹐你可以施放(fire)看看
+~
+Unit            盒~
+ItemType        ITEM_FIREWORK
+Takeable        Yes
+Level           1
+Value           4 40
+Weight          2
+Cost            3000
+End

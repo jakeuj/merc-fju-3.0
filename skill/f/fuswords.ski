@@ -1,0 +1,161 @@
+Name            fu sword~
+Cname           神龍劍法~
+Slot            SLOT_FUSWORDS
+Msgoff          ~
+Check           check_sword_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            13
+Exp             200
+Associate       SLOT_SKYDRAGON_SWORD
+Degree          50
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           YES
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_SWORD
+Rating          RATING_SKILL
+Innate          NO
+Ply             40
+Qutoient        1
+Adeptation      0
+Limit           CLASS_FIGHTER    1  55
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Help
+神龍劍法:
+
+由降龍十八掌脫胎而成的劍法﹐但是以劍法之輕靈要使出如降龍掌
+之威力﹐似乎不是那麼容易﹐於是本劍法乃著重於勁力之轉使﹐但
+如練到一定火侯﹐加上劍招之轉化﹐那更是出神入化。僅此而論﹐
+本劍法已屬劍中之霸者。惟因如此﹐修習本劍法需要高人一等的力
+量(str)。
+
+~
+
+#Damage
+Description
+$n突然領悟了$B『劍隨心發』$Z的道理﹐弓身屈腿向前彈出﹐正是一招$S『乳燕穿林』
+$Z。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n握劍之手一緊﹐奮力向前刺出﹐一招$b『雷霆萬鈞』$Z攻向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n氣如九珠行遍周身大穴﹐力貫劍尖﹐僕布橫掃﹐正是一招$S『風起雲湧』$Z。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n手中之劍﹐幻化起無數劍圈﹐霍霍劍光將$N包圍其中﹐正是一招$Y『運轉乾坤』$Z。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n凝氣於劍﹐手中之劍忽然向前飛去﹐正是一招$Y『長虹貫日』$Z﹐去勢之疾使$N不及
+招架。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n忽然躍起丈餘﹐由半空中向$N疾攻而至正是一招$R『飛龍在天』$Z。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n瞭悟了劍法上『連綿不絕』之真義﹐手中佩劍一盪連使出$S『乳燕穿林』『雷霆萬鈞
+』『風起雲湧』$Z﹐分攻$N周身大穴。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n領悟了『以氣御劍』之真義﹐運氣於指控制空中之劍攻向$N。正是傳說中的$P『御劍
+術』$Z。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n領悟了所謂$S『以靜制動』$Z﹐立即心如明鏡﹐看出$N的破綻﹐一連使出$Y『乳燕穿
+林』『雷霆萬鈞』『風起雲湧』『運轉乾坤』『長虹貫日』$Z劍氣形成漩渦將$N包圍其
+中。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n已得劍法精要﹐一眼看對穿$N之招式﹐隨手一劍便破解他的招式並將其重創﹐正是劍
+法之極致$Y『無招勝有招』$Z。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n面露微笑﹐仰視蒼天﹐待$N攻勢已近﹐只見空中劍花閃閃﹐$n從容的收劍回竅﹐$N卻
+已受到身受重傷。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

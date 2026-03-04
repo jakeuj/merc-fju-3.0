@@ -1,0 +1,208 @@
+Name            shadow kill sword~
+Cname           暗影劍法~
+Slot            SLOT_SHADOW_KILL
+Msgoff          ~
+Check           check_sword_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            10
+Wait            1
+Exp             5
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Weapon          WEAPON_SWORD
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help            ~
+#Damage
+Description
+$n斗然使出$S『停雲催雪﹐地落八荒』$Z的絕情殺著﹐氣吞萬里如虎﹐劍虹流星墜雨
+般的向$N罩去﹐讓$N避無可避。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n喟然嘆道：不恨古人吾不見﹐恨古人、不見吾狂耳～劍影驟然隨著那悵然殺意﹐使出
+$B『雲山千疊﹐駭浪覆頂』$Z向$N層層遞去﹐招招指向要害。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n似笑非笑﹐悽悽唸起$b『棄魂散魄』$Z心訣。只見$n手上的$O一抹紫孽蒸起﹐不住
+旋動﹐激起一道風刃向$N腰間急劈。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n逆走青玄步法﹐使出$g『亂象錯形』$Z的奧秘﹐陷$N於五行易位之闇黑空間。劍首
+寂然指向京房卦之血脈卦位﹐只見$N正向跌跌撞撞地向$O奔去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n意念一起一息之間﹐身形已然$p『如入不動魔地』$Z﹐手中$O影如來如去﹐無聲亦
+無息地遞向$N。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n內照形軀、守竅通關﹐豁然頓悟了$Y『一切有形劍法﹐$y如夢幻泡影$W﹐$b如露亦
+如電$W』$Z。過去所學的闇影劍法﹐一時之間融會貫通﹐源源不斷在手中使出﹐化為
+不可思量之勢湧向$N。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n斗然使出『停雲催雪﹐地落八荒』的絕情殺著﹐氣吞萬里如虎﹐劍虹流星墜雨般的向
+$N罩去﹐讓$N避無可避。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n喟然嘆道：不恨古人吾不見﹐恨古人、不見吾狂耳～劍影驟然隨著那悵然殺意﹐使出
+『雲山千疊﹐駭浪覆頂』向$N層層遞去﹐招招指向要害。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n似笑非笑﹐悽悽唸起『棄魂散魄』心訣。只見$n手上的$O一抹紫孽蒸起﹐不住旋動
+﹐激起一道風刃向$N腰間急劈。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n逆走青玄步法﹐使出『亂象錯形』的奧秘﹐陷$N於五行易位之闇黑空間。劍首寂然
+指向京房卦之血脈卦位﹐只見$N正向跌跌撞撞地向$O奔去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n意念一起一息之間﹐身形已然『如入不動魔地』﹐手中$O影如來如去﹐無聲亦無息地
+遞向$N。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+趁著$N忙於招架這密如繁星般的攻擊之際﹐$n見機不可失﹐劍勢疾迴﹐意欲再進一招。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n的$O上枉死的冤魂﹐受不住$n陣陣殺氣的催動﹐從劍鋒脫出﹐向$N撲噬而去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+只見從$N傷口噴灑而出的鮮血﹐突然凝成無數血柱﹐如靈蛇般向$N竄去﹐攝走$N的
+魂魄。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n雙手倒握$W﹐往自己胸口送去－－卻見到$N胸口一道血柱如飛泉般噴出。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n召喚$B風$Z影化身與$N廝殺。$n的法身逕向$N背後繞去﹐雙手提劍往$N天靈直落。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+你仰天一嘆～明白這並非劍法之極致﹐正所謂$Y「飄風不終朝﹐驟雨不終日」$Z。於
+是氣歸元牝﹐周流六虛。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

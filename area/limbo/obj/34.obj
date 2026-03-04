@@ -1,0 +1,16 @@
+Vnum            34
+Name            crutch~
+ShortDesc       拐杖~
+Description
+一支不甚起眼的拐杖(crutch)。~
+Unit            支~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 10
+Weight          20
+Cost            200
+Exp             10
+End

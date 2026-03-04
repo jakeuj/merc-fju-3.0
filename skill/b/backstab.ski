@@ -1,0 +1,31 @@
+Name            backstab~
+Cname           ­I¨ë~
+Slot            SLOT_BACKSTAB
+Msgoff          ~
+Check           check_dagger_attack~
+Function        cast_backstab~
+Position        POS_STANDING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MOVE
+Cost            20
+Wait            12
+Exp             150
+Associate       -1
+Degree          0
+Affect          0
+AffectID        0
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+Enable          NO
+SaySpell        NO
+Rating          RATING_THIEF
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_THIEF      65  95
+Help            ~
+End

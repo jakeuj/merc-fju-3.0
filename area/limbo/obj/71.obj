@@ -1,0 +1,16 @@
+Vnum            71
+Name            sliver sword~
+ShortDesc       白銀劍~
+Description
+由純銀與精鐵粹練打造而成﹐劍身不時發出明亮的光彩。~
+Unit            把~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 3
+Weight          20
+Cost            200
+Exp             10
+End

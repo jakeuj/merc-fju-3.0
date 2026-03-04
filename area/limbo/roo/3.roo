@@ -1,0 +1,19 @@
+Vnum            3
+Name            開會場所~
+Description
+這裡是大神們開會討論的地方﹐這裡你可以盡情地發表你的意見。
+
+~
+SectorType      SECT_INSIDE
+Safe            Yes
+ForeverLight    Yes
+
+#Enquire
+Keyword         布告欄~
+End
+
+#Enquire
+Keyword         公佈欄~
+End
+
+End

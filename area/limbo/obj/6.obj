@@ -1,0 +1,13 @@
+Vnum            6
+Name            head~
+ShortDesc       %s的頭顱~
+Description
+%s的頭顱(head)掉落在此。~
+Unit            顆~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           0
+Value           5 15 5
+Weight          5
+Cost            0
+End

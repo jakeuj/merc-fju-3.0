@@ -1,0 +1,14 @@
+Vnum            290
+Name            ice freeze strike book~
+ShortDesc       ´H¦Bºø´x¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_ICEFREEZE_STRIKE
+Value2          5
+Weight          3
+Cost            10000
+End

@@ -1,0 +1,98 @@
+Name            lung shan~
+Cname           瀧山拳法~
+Slot            SLOT_LUNGSHAN
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            10
+Wait            5
+Exp             250
+Associate       SLOT_TACKLE
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+Enable          YES
+SaySpell        NO
+Rating          RATING_SKILL
+Innate          NO
+Ply             50
+Qutoient        1
+Adeptation      0
+Limit           CLASS_FIGHTER    1  50
+Limit           CLASS_THIEF      1  60
+Limit           CLASS_GENERAL    1  80
+Limit           CLASS_BRAVO      1  95
+Help            ~
+
+#Damage
+Description
+$n使出瀧山絕學的起手式﹐一招$G『飛瀑入山』$Z﹐對準$N打出難以捉摸的一拳。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n猶如流水般隨$N的攻勢﹐使出一招$G『追瀑溯源』$Z便往$N反擊過去。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n大喝一聲﹐雙拳一提﹐一招$G『五嶽頂天』$Z往$N的五個弱點擊出。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n步履一沉﹐凝神聚氣﹐雙拳連下使出$G『千川百嶽』$Z擊向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+縱身一躍﹐使出瀧山拳奧義$G『山泉群湧』$Z﹐拳如連珠般一連數十拳擊向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n雙拳交錯﹐運足真氣﹐使出瀧山拳奧義$G『山窮水盡』$Z﹐萬鈞之力擊向$N﹗~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n拳散靈氣﹐霎時狂風四起﹐無窮真氣自$n身旁湧出﹐使出瀧山拳秘奧義$G『山河俱
+滅』$Z﹐$N將受可怕之力所毀滅。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

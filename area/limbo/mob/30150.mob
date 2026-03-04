@@ -1,0 +1,31 @@
+Vnum            30150
+Name            lei tong~
+ShortDesc       雷銅~
+LongDesc        雷銅(lei tong)
+~
+Description
+劉璋手下大將。與吳懿等人率軍與劉備軍
+交戰﹐被包圍後投降。守備巴西時﹐英勇
+善戰﹐抵抗來犯的魏將張郃。但後來中了
+埋伏﹐被張郃刺死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

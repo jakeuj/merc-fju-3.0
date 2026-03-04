@@ -1,0 +1,14 @@
+Vnum            390
+Name            blood ten book~
+ShortDesc       血戰十式秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_BLOOD_TEN
+Value2          5
+Weight          3
+Cost            10000
+End

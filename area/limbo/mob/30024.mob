@@ -1,0 +1,31 @@
+Vnum            30024
+Name            zhou cang~
+ShortDesc       周倉~
+LongDesc        周倉(zhou cang)
+~
+Description
+原為黃巾軍餘黨﹐非常崇拜關羽。在臥牛
+山作強盜時﹐巧遇千里走單騎的關羽﹐於
+是跟隨關羽﹐作為部將奮戰沙場。關羽遇
+害後﹐他自刎殉身而死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

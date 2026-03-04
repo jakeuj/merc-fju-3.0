@@ -1,0 +1,30 @@
+Vnum            30015
+Name            yan bai hu~
+ShortDesc       顏白虎~
+LongDesc        顏白虎(yan bai hu)
+~
+Description
+自稱東吳德王﹐統治吳郡的匪首。在與孫
+策的交戰中﹐雖得到王朗的出兵援助﹐仍
+屢戰屢敗﹐在逃亡路上﹐被部下董襲所殺。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

@@ -1,0 +1,117 @@
+Name            ryo~
+Cname           草薙拳法~
+Slot            SLOT_RYO
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            5
+Exp             250
+Associate       SLOT_HASHIN
+Degree          50
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             50
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    1  10
+Limit           CLASS_FIGHTER    1  45
+Limit           CLASS_SHAMAN     1  10
+Limit           CLASS_THIEF      1  35
+Limit           CLASS_DOCTOR     1  30
+Limit           CLASS_BARD       1  30
+Limit           CLASS_GENERAL    1  90
+Limit           CLASS_BRAVO      1  90
+Limit           CLASS_MAGE       1  30
+Limit           CLASS_SMITH      1  30
+Help
+草薙拳法:
+
+從東瀛傳來的武術﹐創始者為草薙京﹐本拳法如練到熟練﹐
+極有可能領悟秘拳．八神。
+
+~
+#Damage
+Description
+$n使出一招$Y『暗殺炎』$Z﹐手中放出一團紅蓮之火飛向$N的身上。~
+Chance          20
+Value           150
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n手中帶著火燄﹐使出一招$R『鬼燒』$Z擊向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n縱身跳起﹐使出一招$S『朧車』$Z﹐朝$N的身上踢了數下。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n忽地一吼﹐一招$P『琴月陽』$Z以迅捷無比的速度把$N抓起來﹐轟!～ 轟!!～$N大叫
+著$R火$Z了﹗著$R火$Z了﹗~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n忽然飛跳上前﹐使出一招$R『神懸』$Z﹐用帶火炎的拳頭朝$N的身上打過去。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n衝向前去﹐雙手握拳﹐使出$B『葵花』$Z﹐朝$N的頭部連打三下。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n全身凝氣不動﹐右手抓著一團紅蓮之火全身$W燃燒$Z著$R火燄$Z使出大絕招$Y『大蛇
+雉』$Z﹐朝$N放出紅蓮之火。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

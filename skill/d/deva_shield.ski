@@ -1,0 +1,35 @@
+Name            deva shield~
+Cname           金剛護體~
+Slot            SLOT_DEVA_SHIELD
+Msgoff          在你身上的一道道真氣漸漸散去﹗~
+Function        cast_deva_shield~
+Check           check_unrigid_attack~
+Position        POS_STANDING
+Type            TAR_CHAR_DEFENSIVE
+CostType        COST_MOVE
+Cost            70
+Wait            25
+Exp             300
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_CURE
+Innate          NO
+Ply             30
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SMITH      75  70
+Limit           CLASS_BARD       75  70
+Limit           CLASS_DOCTOR     75  95
+
+Help
+~
+End

@@ -1,0 +1,19 @@
+Vnum            24
+Name            earth Leggings~
+ShortDesc       土地公護腿~
+Description
+天神專用護腿(leggings)。~
+Unit            雙~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_LEGS
+Takeable        Yes
+Level           120
+Weight          0
+Cost            0
+Value           -1
+
+#Affect
+Location        APPLY_CON
+Modifier        2
+End
+End

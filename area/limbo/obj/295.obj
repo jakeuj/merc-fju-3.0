@@ -1,0 +1,14 @@
+Vnum            295
+Name            shadow kill sword book~
+ShortDesc       ·t¼v¼Cªk¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_SHADOW_KILL
+Value2          5
+Weight          3
+Cost            10000
+End

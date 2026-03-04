@@ -1,0 +1,30 @@
+Vnum            30367
+Name            che li gi~
+ShortDesc       徹里吉~
+LongDesc        徹里吉(che li gi)
+~
+Description
+西羌王﹐從曹操時代就一直向魏國進貢。
+接受了曹真的請求﹐派遣越吉、雅丹率鐵
+甲車兵增援﹐被諸葛亮擊敗﹐越吉戰死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

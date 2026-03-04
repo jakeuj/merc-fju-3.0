@@ -1,0 +1,14 @@
+Vnum            331
+Name            cure serious book~
+ShortDesc       中度治療秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_CURE_SERIOUS
+Value2          5
+Weight          3
+Cost            10000
+End

@@ -1,0 +1,31 @@
+Vnum            30120
+Name            xu huang~
+ShortDesc       徐晃~
+LongDesc        徐晃(xu huang)
+~
+Description
+字公明。曹操部下五大將之一。原為楊奉
+部下﹐被滿寵說服後改仕曹操。曾為援救
+樊城﹐突破敵軍的重重包圍。曹操為他的
+果敢勇猛而驚嘆。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

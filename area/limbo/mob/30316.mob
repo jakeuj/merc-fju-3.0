@@ -1,0 +1,31 @@
+Vnum            30316
+Name            zhang bao~
+ShortDesc       張苞~
+LongDesc        張苞(zhang bao)
+~
+Description
+張飛的長子。為報殺父之仇﹐參加了彝陵
+之戰﹐立下了顯赫的戰功。諸葛亮對他和
+關興寄予厚望﹐常常帶在身邊。在參加北
+伐時﹐不幸摔傷致死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

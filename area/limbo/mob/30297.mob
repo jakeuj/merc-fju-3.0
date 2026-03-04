@@ -1,0 +1,35 @@
+Vnum            30297
+Name            cao pi~
+ShortDesc       曹丕~
+LongDesc        曹丕(cao pi)
+~
+Description
+字子桓﹐曹操的次子。因長子曹昂戰死﹐
+被立為世子。父親死後﹐繼任魏王。逼迫
+獻帝禪讓﹐建立魏王朝﹐即位皇帝。把後
+事託付給司馬懿和曹休後死去。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Sex             SEX_MALE
+Auction
+時機歹歹﹐只好變賣物品來維持宮中的生計囉﹗~
+End

@@ -1,0 +1,38 @@
+Name            meditation~
+Cname           打禪七~
+Slot            SLOT_MEDITATION
+Msgoff          ~
+Function        cast_meditation~
+Position        POS_STANDING
+Type            TAR_MEDITATION
+CostType        COST_MANA
+Cost            1
+Wait            1
+Exp             200
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            NO
+Concentration   NO
+Teach           NO
+Enable          YES
+SaySpell        NO
+Rating          RATING_LOST
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SHAMAN     10  40
+Limit           CLASS_MAGE       50  95
+Limit           CLASS_SMITH      50  80
+Help
+打禪七:
+
+佛家坐禪的功夫﹐對於心智方面的鎮靜有十分的效果﹐
+因此在恢復法力方面也是一門獨特的內家功夫。
+~
+
+End

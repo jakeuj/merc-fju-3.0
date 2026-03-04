@@ -1,0 +1,144 @@
+Name            dream blade~
+Cname           相思碎夢刀法~
+Slot            SLOT_DREAM_BLADE
+Msgoff          ~
+Check           check_blade_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            25
+Wait            15
+Exp             200
+Associate       SLOT_SEAFLOW_BLADE
+Degree          50
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_BLADE
+Rating          RATING_SKILL
+Innate          NO
+Ply             40
+Qutoient        1
+Adeptation      0
+Limit           CLASS_FIGHTER   30  50
+Limit           CLASS_GENERAL   50  90
+Limit           CLASS_BRAVO     50  85
+Help
+相思碎夢刀法:
+
+招式優美華麗﹐不像猛龍刀法般樸實﹐本刀法講究的是身形移動﹐
+因此不是一般人能學會的﹐要學此刀法本身功力必須有一定水準﹐
+有興趣的話可以去找襄陽的將軍﹐他們通常都是擅長此刀法的好手。
+
+~
+#Damage
+Description
+$S$n右手執$O﹐形如流水﹐使出$Y『悠美如夢』$Z$S﹐刀光淡淡﹐如遠山的望眉﹐夕
+照的依稀﹐刀光閃在$N的眸裡﹐$N冷不防地受到猛烈的攻擊﹗$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$S$n右手反轉﹐$O自鞘中翻覆而握﹐使出$Y『輕盈若詩』$Z$S﹐刀光像一首動人的詩﹐
+輕的像一陣微風﹐柔的像一抹月色﹐$N招架不及﹐著了一道嚴重的刀傷﹗$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$S$n隨嘆息而出刀﹐使出$Y『夢裡花落』$Z$S﹐悠遠的刀光去勢之疾﹐快逾電光﹐閃電
+般斬向$N的腹中﹐$N臉上的表情﹐正如心肺被撕裂的痛楚﹗$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$S$n想也不想﹐亮出了手上的$O﹐使出$Y『細雨黃昏』$Z$S﹐刀光驚豔般的亮起﹐如
+流星自長空劃過﹐$N感到無可抗拒的震怖﹐跌入嗜血的刀網中﹗$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$S$n突然衝了出去﹐刀光綽約﹐像一抹夕暉﹐一場細雨﹐驚豔一撇$Y『飛花逐月』$Z$S
+﹐$N看見了如彩色一般的夢﹐刀過處﹐黑裡濺出厲紅﹐帶出了殘酷的現實﹗$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$S$n輕彈刀鋒﹐震起彷似一種相見時喜悅的輕顫$Y『秋風趕塵』$Z$S﹐一刀揮出﹐像一
+道歲月的夢痕﹐刀落時還帶著些許美麗的風華﹐$N沒有退路﹐無法閃躲﹐不能招架﹗$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$S$n拔刀作龍吟﹐比琴鳴箏響還動聽﹐ 帶著微微的香氣和呻吟﹐$Y『相思若夢』$Z$S
+刀光紛飛﹐似千道銀雨﹐森寒的刀勁猶如一張天羅地網﹐$N的去路已被封鎖、切斷﹗$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$S$n使出$Y『慾斷魂飛』$Z$S﹐$O陡然而起﹐瞬然而止﹐刀光漾起一種淒美的顏色﹐在
+晨曦的長空中﹐化作一道璨耀精虹﹐一縷急風﹐並透了刀氣與刀風﹐急取$N﹗$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$B$n笑意微泛﹐眼裡彷彿出現一道陰影﹐一瞬而過﹐刀光一閃。。。$Z$A
+$W     ～～$Z    $S碎夢奧義。迴天夢舞$Z$W ～～$Z$A
+$B$n笑意微泛﹐眼裡彷彿出現一道陰影﹐一瞬而過﹐刀光一閃。。。$Z$A
+$W     ～～$Z    $R碎夢奧義。迴天夢舞$Z$W～～$Z$A
+$Y                   ＝＝$R醉   夢$Y＝＝$Z$A
+$W刀盪刀風﹐刀美如夢﹐彩色繽紛﹐絕美的刀光﹐如同驚豔遇著
+風華﹐空間為奇彩所充滿﹐五彩光華﹐如癡如醉﹐似一連串的迷夢
+在空中閃現﹐迷絢於一連串夢一般的幻像裏。。$Z$A
+$Y                   ＝＝$R驚   夢$Y＝＝$Z$A
+$W刀光綽約﹐騰起一陣凌厲而且豔麗的殺意﹐刀氣如浪分濤裂似排山
+倒海的擊出﹐刀光散開﹐發出奪目的光彩﹐血似的鮮紅色﹐悽豔亮烈﹐
+驚醒彩色的夢。。$Z$A
+$Y                   ＝＝$R碎   夢$Y＝＝$Z$A
+$W天雷忽起﹐大地浮沉﹐刀光摒出一道道的強光﹐裂蒼天而出﹐震蒼
+生而鳴﹐狂飆忽起﹐彷彿潛伏地底的怒龍﹐裂夢而起﹐上七重天﹐
+昇九萬里﹐勢所無匹。$Z~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

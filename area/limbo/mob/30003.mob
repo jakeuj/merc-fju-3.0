@@ -1,0 +1,31 @@
+Vnum            30003
+Name            wang lang~
+ShortDesc       王朗~
+LongDesc        王朗(wang lang)
+~
+Description
+會稽太守﹐後任曹操部下﹐與華歆一起逼
+獻帝讓位﹐後來在與諸葛亮的舌戰中﹐被
+罵的羞愧難當﹐落馬而死。諸葛亮在『後
+出師表』中把他列為昏庸的高官。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

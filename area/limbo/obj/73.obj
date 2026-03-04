@@ -1,0 +1,15 @@
+Vnum            73
+Name            chainlet~
+ShortDesc       斷玉手鍊~
+Description
+精細的一條小鍊子(chainlet)﹐可以結在雙手的腕上。~
+Unit            條~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_WAIST
+Takeable        Yes
+Level           20
+Value           -1
+Weight          10
+Cost            200
+Exp             10
+End

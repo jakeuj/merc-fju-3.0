@@ -1,0 +1,13 @@
+Vnum            2
+Name            coin~
+ShortDesc       黃金~
+Description
+一兩黃金(coin)。~
+Unit            兩~
+ItemType        ITEM_MONEY
+Takeable        Yes
+Level           1
+Value1          1
+Weight          1
+Cost            0
+End

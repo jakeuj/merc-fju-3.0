@@ -1,0 +1,159 @@
+Name            dream soul~
+Cname           夢魂七絕~
+Slot            SLOT_DREAM_SOUL
+Msgoff          ~
+Check           check_blade_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            30
+Wait            16
+Exp             50
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_BLADE
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Sex             SEX_FEMALE
+Limit           CLASS_GENERAL   80  95
+Limit           CLASS_BRAVO     80  85
+
+Help
+刀招中充滿了無盡悲憤之情 相傳是由一位傷心的女子所創
+但此刀訣數十年前就以失傳 但仍有人傳說著有七位夢魂使
+仍保留著此刀訣的各一章節。
+~
+
+#Damage
+Description
+$n雙眉緊蹙﹐閃出一抹$P哀傷$Z﹐橫刀胸前﹐正是夢魂七絕$R《彩蝶伊魂飛》$Z的起手式
+﹐$O感受到主人的傷感﹐頓時變的$b黯淡無光$Z﹐只見$n口中輕吟$R『彩蝶伊魂飛
+傷微風輕柔 銀髮憂思 控訴千古風流』$Z﹐刀光剎那間暴長﹐$N只覺的$r心$Z頭一痛
+﹐胸口早被狠狠的劈中了一刀。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+面對$N的攻勢﹐$n垂首而立﹐輕吟道$g『昔日伊人 森森白骨 痛斥所託非人…』$Z
+﹐心中油然升起一股$b恨意$Z﹐雙目精光暴射﹐狂舞$O﹐將$N的攻勢一一彈開﹐
+$n縱身而上﹐狂催$W夢魂七絕$G《情郎今何在》$Z﹐無匹刀光直撲$N﹐
+將$N退路盡封﹐面對如此駭人恨意﹐$N只能坐以待斃。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+正當鬥的難分難解之時﹐$n虛晃一刀﹐轉身便走﹐待$N追來﹐只見$n$S雙目一閉$Z
+﹐反手持刀﹐將$O舞的$s密不透風$Z﹐正有夢魂刀意中的$y『坐困愁城 冷面冰心
+難辨昨日是非』$Y《恐難辨是非》$Z應聲而出﹐$N只覺的雙目一痛﹐血淚已奪眶而出。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$N一招劈來﹐$n側身閃避﹐順勢劈出一刀﹐隨即施展夢魂七絕$R《怒燄焚琴音》$Z
+﹐剎那間﹐$N只覺的眼前一$b黑$Z﹐耳邊響起$B『往日情 昨日愛 恰似毒蛇猛獸』$Z
+﹐黑暗中突然透出數道$S銀光$Z﹐不及細看﹐$O已從四面八方$R怒劈$Z而來﹐
+$N如墮$y地獄$Z﹐早已傷痕累累。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n狂攻數招﹐突然躍升半空﹐雙手持刀﹐$O受到感應﹐刀身暴射$W銀光$Z﹐
+只見$n口中低吟$P『顧影自憐 悽悽苦苦 淚洗三千銀絲』$Z一語畢﹐$n雙目暴睜
+﹐喝道$y『哀哉』$Z﹐$O瞬間化做$S萬千銀龍$Z﹐朝著$N狂噬而下。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n一個迴身﹐以$r氣$Z御刀﹐只見$O緩緩飄升﹐刀身並被一道奇怪$B藍光$Z包覆著﹐
+$n口中輕頌$S『輓聲慢慢 黃菊片片 化做白煙嬝嬝』$Z﹐
+包覆著刀身的$B藍光$Z突然暴裂四射﹐正是夢魂七絕中的$S『輕弔輓歌詞』$Z﹐
+$n手捏劍訣﹐氣勁暴發﹐數百道$b藍光$Z形成巨刀﹐如$R怒滔$Z般撲向$N﹐
+$N只能看著驚天刀勢﹐將自己頭身分家。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+只見$n周身$G氣勁冒湧$Z﹐$O$G嗡嗡作響$Z﹐猛招蓄勢待發﹐正是$W夢魂七絕$Z末招
+$W『伊人雲影渺』$Z的起手式﹐$N眼見不對﹐急忙聚集全身氣勁﹐向$n狂攻而來﹐
+孰知招至$n五尺﹐猛遭彈開﹐$n行功已足﹐四散的$Y氣勁$Z回湧$O內﹐
+刀身透出$W強烈白光$Z﹐$n舉刀向天﹐手捏劍訣向地﹐喝道$G『夢魂飄兮 風靜雲寂
+斷魂--葬--花--幽--谷』$Z谷字甫畢﹐$n疾衝向$N﹐一瞬間﹐劈出$R九九八十一刀$Z
+﹐一陣煙塵過後﹐已不見$N蹤影。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n左閃右避﹐漸感不支﹐心一橫﹐決意施展夢魂七絕中最強殺招$R『斷‧魂』$Z﹐
+心意已決﹐氣隨意轉﹐$O猛然透出$R七$G彩$Y光$B芒$Z﹐逼的人不能直視﹐
+$n縱身上前﹐劈出夢魂七絕 ─$A
+$A
+$R         微風輕柔 銀髮憂思 控訴千古風流 ---彩蝶依魂飛$A
+$G         昔日伊人 森森白骨 痛斥所託非人 ---情郎今何在$A
+$Y         坐困愁城 冷面冰心 難辨昨日是非 ---恐難辨是非$A
+$B         往日情緣 昨日愛戀 恰似毒蛇猛獸 ---怒焚舊琴音$A
+$P         顧影自憐 悽悽苦苦 淚洗三千銀絲 ---淚灑寒江雪$A
+$S         輓聲慢慢 黃菊片片 化做白煙嬝嬝 ---輕吟弔輓詞$A
+$W         夢魂飄兮 風靜雲寂 斷魂葬花幽谷 ---伊人雲影渺$A
+$A
+剎那間﹐$N眼中映出了瑰麗的彩霞﹐$n縱身而上﹐劈出了四夢 ─$A
+$A
+$W         情斷夢難絕     義亡夢難捨$A
+         人殤夢尚留     絕夢憾終生$A
+$A
+剎那間﹐$N彷彿遭受$R七情的浩劫$Z﹐痛不欲生﹐一陣$r血$Z光乍現﹐
+$N只覺得一切終於解脫了﹐往後倒下。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

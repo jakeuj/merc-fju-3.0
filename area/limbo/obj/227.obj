@@ -1,0 +1,14 @@
+Vnum            227
+Name            b_a_1 book~
+ShortDesc       Å]Ã~³N¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_B_A_1
+Value2          5
+Weight          3
+Cost            10000
+End

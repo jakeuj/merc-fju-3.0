@@ -1,0 +1,14 @@
+Vnum            408
+Name            dream soul book~
+ShortDesc       ¹Ú»î¤Cµ´¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_DREAM_SOUL
+Value2          5
+Weight          3
+Cost            100000
+End

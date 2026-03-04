@@ -1,0 +1,15 @@
+Vnum            607
+Name            red seal~
+ShortDesc       [1;31m¤j¬õ¥][0m~
+Description
+¬õ¥]¸Ì­±¤£ª¾¹D¸Ë¤F¦h¤Ö¿ú¡M¥á¨ì¦a¤W¦A¾ß°_¨Ó´N¥i¥H¤F¡T
+
+~
+Unit            ­Ó~
+ItemType        ITEM_MONEY
+Takeable        Yes
+Level           2
+Value           3000
+Weight          1
+Cost            30
+End

@@ -1,0 +1,12 @@
+Higher          10
+Lower           1
+Position        POS_STANDING
+Function        ~
+Description
+¸Ë³Æ¶R¤F¨º»ò¦h¡M¤£¬ï¤W¥h¤]¬O¨S¦³¥Î¡M¨º«ç»ò¿ì©O¡S·íµM¬O¸Ë³Æ([1;32mwear[0m)¤W¥h°Ú¡M
+³o¸Ì§Ú­Ì¦³­Ó¶K¤ß¤p³]­p¡M´N¬O [1;32mwear all[0m ¨t²Î·|À°§A¬ï¤W©Ò¦³ªº¸Ë³Æªº³á¡C¨ì©³
+­n¸Ë³Æ­þ¤@®M©O¡S·íµM¬O­n¥ý¤ñ¸û([1;32mcompare[0m)¬Ý¬Ý¦nÃaÅo¡C
+
+½Ð¬d¸ß¡Rcompare¡Bwear
+~
+End

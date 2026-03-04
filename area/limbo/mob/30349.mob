@@ -1,0 +1,31 @@
+Vnum            30349
+Name            wang ji~
+ShortDesc       王基~
+LongDesc        王基(wang ji)
+~
+Description
+字伯興﹐魏國鎮國將軍。鎮壓過毋丘儉的
+叛亂。諸葛誕反叛時﹐他任正先鋒出戰﹐
+大破李異、唐恣軍﹐殺死于詮。據說喜好
+研究『易經』。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

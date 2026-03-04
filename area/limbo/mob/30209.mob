@@ -1,0 +1,31 @@
+Vnum            30209
+Name            ma chao~
+ShortDesc       馬超~
+LongDesc        馬超(ma chao)
+~
+Description
+字孟起﹐馬騰的長子。少年英武﹐被稱為
+『錦馬超』。為報殺父之仇而起兵攻曹﹐
+曾殺得曹操割鬚棄袍﹐但最終仍被擊敗。
+投奔劉備後﹐被封為五虎大將之一。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

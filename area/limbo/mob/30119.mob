@@ -1,0 +1,30 @@
+Vnum            30119
+Name            jiang yi qu~
+ShortDesc       蔣義渠~
+LongDesc        蔣義渠(jiang yi qu)
+~
+Description
+袁紹麾下大將﹐在黎陽郡接應在官渡之戰
+中敗給曹操的袁紹﹐重聚散兵遊勇﹐讓袁
+紹平安回到冀州。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

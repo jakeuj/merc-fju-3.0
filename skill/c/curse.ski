@@ -1,0 +1,43 @@
+Name            curse~
+Cname           詛咒術~
+Slot            SLOT_CURSE
+Msgoff          你不再受到詛咒術的影響﹗~
+Function        cast_curse~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MANA
+Cost            20
+Wait            12
+Exp             1200
+Associate       SLOT_GATE
+Degree          300
+Affect          SLOT_CURSE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_EVIL
+AntiRating      RATING_SAINT
+Innate          NO
+Ply             120
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    10 40
+Limit           CLASS_SHAMAN     10 40
+Limit           CLASS_DOCTOR     50 60
+Limit           CLASS_BARD       50 95
+Limit           CLASS_MAGE       50 60
+Limit           CLASS_SMITH      50 70
+
+#Affect
+Type            SLOT_CURSE
+Location        AFF_NONE
+End
+
+Help            ~
+End

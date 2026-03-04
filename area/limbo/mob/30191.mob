@@ -1,0 +1,31 @@
+Vnum            30191
+Name            su fei~
+ShortDesc       蘇飛~
+LongDesc        蘇飛(su fei)
+~
+Description
+黃祖部將。江夏都督。同情因強盜出身而
+得不到重用的的同僚甘寧﹐勸其另謀高就
+﹐後來與孫權軍交戰時被捕﹐但被甘寧救
+下性命。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

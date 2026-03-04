@@ -1,0 +1,31 @@
+Vnum            30201
+Name            chen jiao~
+ShortDesc       陳矯~
+LongDesc        陳矯(chen jiao)
+~
+Description
+字季弼。與曹仁一起鎮守荊州南郡﹐但是
+敗在諸葛亮的妙計之下。後來成為魏國尚
+書令﹐幫助曹丕登基作了皇帝。明帝時升
+任司徒。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

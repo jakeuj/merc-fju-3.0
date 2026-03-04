@@ -1,0 +1,15 @@
+Vnum            56
+Name            soldier armor~
+ShortDesc       白翎戰甲~
+Description
+禁衛軍所用的戰甲(soldier)﹐看起來很笨重﹐但似乎有蠻好的保護。~
+Unit            件~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_BODY
+Takeable        Yes
+Level           10
+Value           -1
+Weight          10
+Cost            200
+Exp             10
+End

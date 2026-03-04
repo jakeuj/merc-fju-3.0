@@ -1,0 +1,160 @@
+Name            hashin~
+Cname           秘拳．八神~
+Slot            SLOT_HASHIN
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            30
+Wait            5
+Exp             100
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             16
+Qutoient        1
+Adeptation      0
+Limit           CLASS_GENERAL   50  90
+Limit           CLASS_BRAVO     50  95
+Help
+秘拳．八神﹕
+
+這是從東瀛傳到中原的武術﹐與草薙拳法一脈相承﹐創始者為八神庵﹐
+本拳法招式華麗霸道﹐通常為刺客所喜歡用。
+
+~
+
+#Damage
+Description
+$N怒吼一聲以泰山壓頂之勢從空中對$n發動攻擊﹐$n不慌不忙使出了一招
+$Y「$P百式‧$R鬼燒$Y」$Z﹐身形一起﹐全身發出$P淡紫火焰$Z﹐將$N逼退了幾步。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$N看穿$n的攻擊﹐正對$n施於反擊時﹐其動作已在$n意料之中﹐
+$n發出一聲不屑的冷笑﹐不慌不忙的使出$Y「$P外式‧$G百合折$Y」$Z﹐
+當$N擊中$n的殘像時﹐$n已閃到$N身後﹐以腳突刺其背心﹗~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n右手一掠﹐氣勁將$N$l刮出絲絲血痕。$n兇性大起﹐雙手如電使出
+$Y「$P百貳拾七式‧$G葵花$Y」$Z﹐雙手連劈帶刺將$N打的傷痕累累。
+$N閃躲不及﹐被$n以雙拳擊倒在地﹗~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n抬起手來虛晃幾個假勢﹐在避開$N的攻擊之後﹐突然跳到空中﹐
+一個旋身﹐趁$N還在錯愕之際﹐抬起腳來使出
+$Y「$P外式轟斧‧$B陰  $R死神$Y」$Z﹐重重的往$N身上劈下去。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$N眼見不敵﹐一個縱身往後跳起想要逃離戰場。$n將內力逼至右手掌中﹐一瞬間
+真氣充盈﹐右手一放﹐使出了$Y「$P百八式‧$B闇擴$Y」$Z﹐
+一道$P紫炎$Z立刻捲住$N$l$A轉眼吞噬全身﹗~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+面對$n凌厲無疇的攻勢﹐$N只守不攻邊打邊退。$n覷準破綻﹐狂笑聲中使出
+$Y「$P貳百拾貳式‧$S琴月 陰$Y」$Z低身奔至跟前﹐
+左手抓住$N$l將之壓倒在地﹐陡然間將$P紫炎之氣$Z灌注$N體內將之爆破﹗~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n左手使了一招虛招﹐$N心神稍疏﹐$n突然沈身衝了過去﹐用右手猛的將$N抓了過來﹐
+$n暴喝聲中雙手如電使出傳說神技$Y「$P禁千貳百拾壹式$Y‧$P八稚女$Y」$Z猛擊$N﹐
+剎那間指尖勁氣四面八方攻向$N的$l要害﹗~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n斂氣凝神﹐把全身精力聚合在右手﹐使出失傳絕學$Y「$P裏百八式$Y‧$S八酒杯$Y」$Z。
+剎那間天地變色日月無光﹐爆雷一道道擊向四面八方﹐慘呼聲中$N被閃電猛擊$l
+失去行動能力﹗~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$G$n一陣怨念衝上心頭﹐一股爆氣無處可發。突然雙手一聚﹐將全身爆發力$Z
+$G都集中在手上﹐瘋狂的往$N衝過去﹐狂吼聲中雙手如刀使出必殺神技$Z
+$Y「$G八稚女$Y」$Z﹐將$N壓在地上猛刺﹐$N逃避不及血濺當場﹗~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$P$n一陣怨念衝上心頭﹐一股爆氣無處可發。突然雙手一聚﹐將全身爆發力$Z
+$P都集中在手上瘋狂的往$N衝過去﹐狂吼聲中雙手如刀使出$Z$A$A
+                  $S必 $R殺 $P神 $Y技$Z$A
+$W         ----  $G「 $R八 $P稚 $Y女 $G」  $W----$Z$A$A
+將$N壓在地上猛刺﹐$N逃避不及血濺當場﹗~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End
+

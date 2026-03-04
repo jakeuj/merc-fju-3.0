@@ -1,0 +1,12 @@
+Vnum            8
+Name            <<1;31m試煉房<<0m~
+Description
+<<1;31m這裡是 IMM 用來試驗 MOB 強度的地方。
+<<0m
+~
+SectorType      SECT_INSIDE
+InDoors         Yes
+NoRecall        Yes
+ForeverLight    Yes
+NoWhere         Yes
+End

@@ -1,0 +1,92 @@
+Name            sun blade~
+Cname           皓日刀法~
+Slot            SLOT_SUN_BLADE
+Msgoff          ~
+Check           check_blade_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            10
+Wait            1
+Exp             5
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_BLADE
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_FIGHTER    1  50
+Limit           CLASS_GENERAL    1  90
+Limit           CLASS_BRAVO      1  90
+Help            ~
+
+#Damage
+Description
+$n手中$O騰出﹐使出一式『$W浩氣萬千$Z』﹐刀勢充滿浩瀚正氣往$N$l劈去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n一招『$S諸葛星宿$Z』﹐只見$N神威大展﹐手中$O如猛虎般往$N$l砍去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n高舉手中$O﹐一招『$R虎威尊龍$Z』﹐刀勢夾著勁風﹐雷霆萬鈞地往$N$l劈去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n將手中$O一撩﹐一招『$B戰意無窮$Z』往$N$l斬去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n刀式一旋﹐左右連環兩刀﹐一招『$G左擁右抱$Z』刀勢由兩邊把$N圍住﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n將$O由上往下直劈﹐一招『$Y不落皇旗$Z』狠狠往$N劈去﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

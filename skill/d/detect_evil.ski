@@ -1,0 +1,48 @@
+Name            detect evil~
+Cname           偵測邪惡~
+Slot            SLOT_DETECT_EVIL
+Msgoff          你雙眼發出的紅光消失了﹗~
+Check           check_unrigid_attack~
+Function        cast_detect_evil~
+Position        POS_STANDING
+Type            TAR_CHAR_SELF
+CostType        COST_MANA
+Cost            5
+Wait            12
+Exp             1200
+Associate       SLOT_DISPEL_EVIL
+Degree          300
+Affect          AFFECT_NONE
+AffectID        OBJ_DETECT_EVIL
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_SAINT
+AntiRating      RATING_EVIL
+Innate          NO
+Ply             30
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  30
+Limit           CLASS_SCHOLAR    1  55
+Limit           CLASS_FIGHTER    1  30
+Limit           CLASS_SHAMAN     1  40
+Limit           CLASS_THIEF      1  30
+Limit           CLASS_DOCTOR     1  75
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  30
+Limit           CLASS_BRAVO      1  30
+Limit           CLASS_MAGE       1  40
+Limit           CLASS_SMITH      1  40
+
+#Affect
+Type            SLOT_DETECT_EVIL
+Location        AFF_NONE
+End
+
+Help            ~
+End

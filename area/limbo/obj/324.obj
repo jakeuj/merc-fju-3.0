@@ -1,0 +1,14 @@
+Vnum            324
+Name            colour spray book~
+ShortDesc       ¤C±mÀO­i¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_COLOUR_SPRAY
+Value2          5
+Weight          3
+Cost            10000
+End

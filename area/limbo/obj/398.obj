@@ -1,0 +1,14 @@
+Vnum            398
+Name            meditation book~
+ShortDesc       ¥´ÁI¤C¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_MEDITATION
+Value2          5
+Weight          3
+Cost            10000
+End

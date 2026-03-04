@@ -1,0 +1,31 @@
+Vnum            30186
+Name            xu shu~
+ShortDesc       徐庶~
+LongDesc        徐庶(xu shu)
+~
+Description
+字元直。司馬徽的門生﹐曾任劉備軍師。
+因老母被曹操所囚﹐只得離開劉備﹐改仕
+曹操﹐但終生未為曹操設一謀。在離開劉
+備前﹐向他舉薦了臥龍諸葛亮。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

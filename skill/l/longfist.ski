@@ -1,0 +1,231 @@
+Name            long fist~
+Cname           泰山長拳~
+Slot            SLOT_LONGFIST
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            10
+Wait            5
+Exp             400
+Associate       SLOT_LUNGSHAN
+Degree          50
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           YES
+Enable          YES
+SaySpell        NO
+Rating          RATING_SKILL
+Innate          YES
+Ply             80
+Qutoient        1
+Adeptation      5
+Limit           CLASS_DEMOS      1  30
+Limit           CLASS_SCHOLAR    1  30
+Limit           CLASS_FIGHTER    1  55
+Limit           CLASS_SHAMAN     1  30
+Limit           CLASS_THIEF      1  55
+Limit           CLASS_DOCTOR     1  35
+Limit           CLASS_BARD       1  35
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  35
+Limit           CLASS_SMITH      1  35
+Help
+泰山長拳：
+
+這是一個許多人都會的技能﹐許多的武館有都有教導這一項技能﹐他
+的特徵是不需要武器﹐可以作為近身的防護﹐並且可以是一項鍛鍊身
+體的好技能﹐也是一些較高級的技能進階之前所必須學習的。
+如果你要學習這一個技能的話﹐我想有一些地方是你可以考慮的﹐像
+是洛陽的武器店老闆( / 2s w )  ﹐或是下卞的賣藝維生的大漢﹐襄
+陽的教頭都有教導泰山長拳﹐可以前往試試看。
+
+~
+
+#Damage
+Description
+$n雙手如勾﹐一招$W『金龍探爪』$Z﹐身形如一條金龍往$N攻了過去。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n氣沉丹田﹐$S『龍行一式』$Z蓄勢待發﹐一拳打向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n身形一轉﹐使出$G『秋風落葉』$Z﹐向$N橫掃而去。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n擊出$B『龍門三擊浪』$Z﹐拳勁直直的撞向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n突然一招$R『翻身打盤』$Z﹐身形刁鑽的朝$N一拳直去。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n雙手一展﹐使出$W『金鵰展翅』$Z﹐由上而下拳打$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n大喝一聲﹐$b『蒼龍歸海』$Z﹐雙手緩緩的推向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n勢如猛虎出閘﹐$p『黑虎偷心』$Z直襲$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n使出$S『進步連環』$Z﹐一連三拳打向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n斥喝一聲﹐使出$Y『獨劈華山』$Z﹐一掌向$N斬了下去。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n身形一退﹐一招$Y『倒打金鐘』$Z反而打向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n一轉身﹐$Y『黃龍捲尾』$Z一拳向$N飛去。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n一招$R『如封似閉』$Z﹐雙手忽上忽下﹐游移不定的擊向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n右手往前一推﹐一招$B『推窗望月』$Z向$N推去。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n左手陰拳﹐打出一招$W『白猿摘果』$Z﹐直襲$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n身形一扭﹐使出$Y『玉帶圍腰』$Z﹐拳背直擊$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n雙手握拳﹐$S『抽撤連環』$Z向$N擊去。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n雙手合掌﹐$W『寒雞拜佛』$Z刺向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

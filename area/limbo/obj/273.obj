@@ -1,0 +1,14 @@
+Vnum            273
+Name            ghost steps book~
+ShortDesc       «Õ­ß¨­ªk¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_GHOST_STEPS
+Value2          5
+Weight          3
+Cost            10000
+End

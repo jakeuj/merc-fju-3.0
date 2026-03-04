@@ -1,0 +1,14 @@
+Vnum            283
+Name            hua sword book~
+ShortDesc       華山劍法秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_HUA_SWORD
+Value2          5
+Weight          3
+Cost            10000
+End

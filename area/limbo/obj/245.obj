@@ -1,0 +1,14 @@
+Vnum            245
+Name            dragon leg book~
+ShortDesc       ­°Às»Lªk¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_DRAGONLEG
+Value2          5
+Weight          3
+Cost            10000
+End

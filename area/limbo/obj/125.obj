@@ -1,0 +1,23 @@
+Vnum            125
+Name            x'mas star~
+ShortDesc       [1;33m§B§Q«í[1;35m¤§¬P[0m~
+Description
+¤@Áû´¿¸g¤Þ»â³\¦h¸t®{ªº©ú«G¨°¬P¡M¥¦©Ò´²µoªº¬X²Ó¥ú¯í
+¥O¤H·P¨ìµL­­ªºµÎºZ¡M¥é¦ò®É¥úªºªl¬y´N¦]¦¹¦Ó°±¤î¡Mª½
+¨ì¥Ã»·¡K
+~
+Unit            Áû~
+ItemType        ITEM_LIGHT
+WearLoc         ITEM_WEAR_LIGHT
+Takeable        Yes
+Level           10
+Weight          1
+Cost            100
+Value3          -1
+
+#Affect
+Location        APPLY_AGE
+Modifier        -5
+End
+
+End

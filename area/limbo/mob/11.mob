@@ -1,0 +1,30 @@
+Vnum            11
+Name            black horse~
+ShortDesc       烏黑駒~
+LongDesc        烏黑駒(black horse)
+~
+Description
+牠是生於大漠的優良品種﹐是隻能夠在大沙漠生存的好馬﹐且牠具有
+日奔千里的能力﹐比起赤兔馬﹐只稍微略差壹級。
+~
+Sentinel        Yes
+Alignment       0
+Level           80
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              700
+Mana            0
+Move            800
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+Tractable       100
+End

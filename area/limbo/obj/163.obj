@@ -1,0 +1,16 @@
+Vnum            163
+Name            gen mount potion~
+ShortDesc       艮山藥水~
+Description
+一瓶艮山藥水(gen mount potion)﹐具有巨人之力的效果。
+~
+Unit            瓶~
+ItemType        ITEM_POTION
+Contraband      Yes
+Takeable        Yes
+Level           10
+Value1          6
+Value2          OBJ_GIANT_STR
+Weight          5
+Cost            3000
+End

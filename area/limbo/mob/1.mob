@@ -1,0 +1,40 @@
+Vnum            1
+Name            officer~
+ShortDesc       陰曹判官~
+LongDesc        陰曹判官(officer)揮舞著判官筆﹐仔細檢查你的生死簿
+~
+Description
+他看了看你的生死簿﹐說道: 小子﹐你的陽壽未盡﹐走吧﹗
+~
+Sentinel        Yes
+Alignment       0
+Level           50
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             100
+Int             100
+Wis             100
+Dex             100
+Con             100
+Hp              -1
+Mana            -1
+Move            -1
+Class           CLASS_MAGE
+Gold            -1
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+
+Process
+Type            fight_prog
+Chance          100
+Text
+if rand(30)
+  say 敢到地獄來撒野﹐小子你活膩了﹗
+  cast 'cast fire'
+endif
+~
+End
+
+End

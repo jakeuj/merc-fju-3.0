@@ -1,0 +1,17 @@
+Vnum            43
+Name            red sleeve blade~
+ShortDesc       『紅袖』寶刀~
+Description
+『紅袖』﹐刀鋒是透明的﹐刀身緋紅﹐像透明的玻璃鑲裹著緋紅色的骨脊﹐
+刀略短﹐刀彎處如絕代佳人的纖腰﹐讓人一見鐘情﹐一見難忘。~
+Unit            把~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 4
+Weight          20
+Cost            200
+Exp             10
+End

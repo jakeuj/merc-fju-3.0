@@ -1,0 +1,37 @@
+Vnum            401
+Name            dragon sword~
+ShortDesc       穿龍劍~
+Description
+這把是獨孤世家世代相傳的寶物之一﹐相傳這把劍(sword)
+不但有削鐵如泥之能﹐還具有一種神奇的魔力﹐但是使用
+的方法只有獨孤世家的人知道。~
+Unit            把~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           90
+Value           0 -1 -1 3
+Weight          20
+Cost            200
+
+#Affect
+Location        APPLY_DEX
+Modifier        2
+End
+
+#Affect
+Location        APPLY_CON
+Modifier        -1
+End
+
+#Affect
+Location        APPLY_STR
+Modifier        1
+End
+
+#Restrict
+Type            RES_CLASS
+Value           RES_GENERAL|RES_BRAVO
+End
+
+End

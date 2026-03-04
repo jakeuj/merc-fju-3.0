@@ -1,0 +1,16 @@
+Vnum            28
+Name            crayon~
+ShortDesc       炭筆~
+Description
+一支由樹枝燒製而成的碳筆(crayon)﹐可用來到處塗鴉。~
+Unit            隻~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           43
+Value           0 -1 -1 8
+Weight          20
+Cost            200
+Exp             10
+End

@@ -1,0 +1,14 @@
+Vnum            255
+Name            dream dance book~
+ShortDesc       ©]¹Ú¤Ñ»R¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_DREAMDANCE
+Value2          5
+Weight          3
+Cost            10000
+End

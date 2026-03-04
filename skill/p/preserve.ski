@@ -1,0 +1,32 @@
+Name            preserve~
+Cname           ¨¾»G³N~
+Slot            SLOT_PRESERVE
+Msgoff          ~
+Function        cast_preserve~
+Check           check_unrigid_attack~
+Position        POS_STANDING
+Type            TAR_OBJ_INV
+CostType        COST_MANA
+Cost            12
+Wait            24
+Exp             50
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_THIEF
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_THIEF      1  95
+Help            ~
+
+End

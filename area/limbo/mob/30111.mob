@@ -1,0 +1,31 @@
+Vnum            30111
+Name            wu yi~
+ShortDesc       吳懿~
+LongDesc        吳懿(wu yi)
+~
+Description
+字子遠﹐劉璋的義兄。劉備攻打西川時投
+降。以後任劉備的部下﹐參加了北伐。其
+妹嫁給了劉備（吳夫人）﹐生劉理、劉永
+。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

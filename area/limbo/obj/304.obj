@@ -1,0 +1,14 @@
+Vnum            304
+Name            make light book~
+ShortDesc       ¤d¤V¥ú¨~¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_MAKE_LIGHT
+Value2          5
+Weight          3
+Cost            10000
+End

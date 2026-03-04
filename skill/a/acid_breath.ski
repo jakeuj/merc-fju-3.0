@@ -1,0 +1,31 @@
+Name            acid breath~
+Cname           ¼ÉÀs»Ä»k~
+Slot            SLOT_ACID_BREATH
+Msgoff          ~
+Function        cast_acid_breath~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Rating          RATING_LOST
+CostType        COST_HIT
+Cost            50
+Wait            15
+Exp             150
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Innate          NO
+Ply             15
+Qutoient        1
+Adeptation      0
+Rating          RATING_LOST
+Limit           CLASS_MAGE       70  70
+Help            ~
+End

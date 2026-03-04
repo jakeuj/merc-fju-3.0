@@ -1,0 +1,38 @@
+Name            ipcs~
+Cname           共享計憶體~
+Function        do_ipcs~
+Position        POS_DEAD
+Level           L_SUP
+Log             LOG_NORMAL
+Exact           NO
+Argument        NO
+Wizlog          NO
+Jail            NO
+CanLock         YES
+Dead            YES
+Order           NO
+Lost            NO
+Lock            NO
+Limit           NO
+Help
+指令 ipcs
+
+    這個命令可以察看共享記憶體﹐所謂共享記憶體就是給主行程和
+子行程之間溝通資訊的存放空間。這一塊記憶體的大小定義在 ipc.c
+中﹐系統內定值為 100塊。
+
+    因為子行程所要傳達的資訊量有些可能很大﹐所以一般的訊號或
+是訊息是不敷使用的﹐藉由共享記憶體可以解決此一問題。但是共享
+記憶體正常下是不會隨著行程的結束而終止﹐但是本系統會嘗試去刪
+除﹐並且重建。若是失敗請使用 linux指令 ipcsrm 來進行刪除。
+
+    藉由這個指令可以察看所有共享記憶體的狀況﹐分別有﹕
+    1). 編號
+    2). 是否被鎖定
+    3). 是否已經完成作業
+    4). 使用的次數
+    5). 訊息的型態
+
+    因為訊息的本文太大﹐所以不會顯示出來。
+~
+End

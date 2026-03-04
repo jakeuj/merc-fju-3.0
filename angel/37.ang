@@ -1,0 +1,13 @@
+Higher          LEVEL_PC
+Lower           1
+Position        POS_STANDING
+Function        ~
+Description
+·í§A¨­Ãh¹d´Ú®É¡M¤S©È³Q°½¨«¡M§Ú­Ì³o¸Ì¦³­Ó¶K¤ßªº¤p³]­p¡M´N¬O§A¥i¥H¨ì¨C­Ó«°
+¸Ìªº¿ú²ø¸Ì¥h¦s´Ú([1;32mdeposit[0m)¡M§A¥i¥H¨ì¨C¶¡¿ú²ø¥h¬d¸ß([1;32mcheck[0m)¦Û¤vªº¦s´Ú¡M©Î¬O
+¬d¸ß([1;32mscore[0m)¦Û¤vªºª¬ºA®É¡M³£·|Åã¥Ü¡C§A¤]¥i¥H¨ì¨C¶¡¿ú²ø¥h»â¦^([1;32mwithdraw[0m)§A
+ªº¦s´Ú¡C¥Ø«e¦s´Ú¥i¬O¦³§Q®§ªº³á¡C
+
+½Ð¬d¸ß¡Rdeposit¡Bcheck¡Bwithdraw¡Bscore
+~
+End

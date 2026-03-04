@@ -1,0 +1,13 @@
+Vnum            117
+Name            lunicake~
+ShortDesc       月餅~
+Description
+一個中秋節的禮物﹐你可以拿來吃吃(eat)看。~
+Unit            顆~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           1
+Value           500 400 4
+Weight          3
+Cost            5
+End

@@ -1,0 +1,202 @@
+Name            six fingers~
+Cname           六脈神劍~
+Slot            SLOT_SIX_FINGERS
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MOVE
+Cost            19
+Wait            12
+Exp             15
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+Enable          YES
+SaySpell        NO
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help            ~
+#Damage
+Description
+$n拇指一拈﹐體內真氣流轉﹐$R『少商劍』$Z劍路雄勁﹐霸道的向$N激射而去﹐頗有石
+破天驚﹐風雨大至之勢。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n食指一伸﹐$R『商陽劍』$Z意隨心轉﹐一道真氣由指端沖出﹐直射$N﹐難以捉模。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n旦然的彈出中指﹐$R『中衝劍』$Z﹐大開大闔﹐有若宛龍般﹐劍氣縱橫﹐凌厲的朝向
+$N而去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n緩緩的伸出無名指﹐「絲絲」聲起﹐$R『關衝劍』$Z拙滯古樸﹐雄厚無比的劍氣籠罩
+住$N全身﹐直直的撞向其$l。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n小指靈巧的轉動﹐一招$R『少衝劍』$Z便刁鑽的朝$N飛去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n輕巧的轉動小指﹐$R『少澤劍』$Z忽來忽去﹐有如靈蛇般的斜射$N。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$R$n大喝一聲﹐鼓動全身真氣﹐內勁流轉﹐雙手六劍齊發﹐十指分彈﹐霎時劍氣縱橫﹐
+似有無數迅雷疾風互衝激盪向$N而去$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n暗運$R『少商劍』$Z﹐體內真氣流轉﹐劍路雄勁﹐劍氣由食指激出﹐霸道的向$N激射
+而去﹐頗有石破天驚﹐風雨大至之勢。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n運使$R『商陽劍』$Z﹐意隨心轉﹐一道真氣由拇指沖出﹐直射$N﹐難以捉模。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n默使$R『中衝劍』$Z﹐大開大闔﹐有若宛龍般﹐劍氣縱橫﹐由中指前端凌厲的朝向$N
+而去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n緩緩的伸出手﹐「絲絲」聲起﹐$R『關衝劍』$Z拙滯古樸﹐雄厚無比的劍氣籠罩住$N
+全身﹐劍氣直直的撞向其$l。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n小指靈巧的轉動﹐一招$R『少衝劍』$Z便刁鑽的朝$N飛去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n手指輕巧的轉動﹐$R『少澤劍』$Z忽來忽去﹐有如靈蛇般的斜射$N。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$R$n大喝一聲﹐鼓動全身真氣﹐內勁流轉﹐手中六指指指點點﹐六劍齊發﹐霎時劍氣
+縱橫﹐似有無數迅雷疾風互衝激盪向$N而去$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$S$n六脈神劍詭異的氣勁鑽入$N體內﹐$N臉上突然一陣青白﹐看來已受了不小的內傷。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$R$n六脈神劍的劍意斬斷了$N身上的動脈﹐$N開始泊泊的流出鮮血。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$Y$n忽然頓悟六脈神劍$S氣遊百穴$Z、$S連綿不絕$Z$Y的要訣﹐劍氣自然而然的破體而
+出﹐欲罷不能。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

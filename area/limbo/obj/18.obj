@@ -1,0 +1,19 @@
+Vnum            18
+Name            thunder shield~
+ShortDesc       雷神之盾~
+Description
+專為天神打造的雷神之盾(shield)。~
+Unit            具~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_SHIELD
+Takeable        Yes
+Level           120
+Weight          0
+Cost            0
+Value           -1
+
+#Affect
+Location        APPLY_STR
+Modifier        2
+End
+End

@@ -1,0 +1,14 @@
+Vnum            294
+Name            sha steps book~
+ShortDesc       ­¸¥P±s¼C¨B¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_SHA_STEPS
+Value2          5
+Weight          3
+Cost            10000
+End

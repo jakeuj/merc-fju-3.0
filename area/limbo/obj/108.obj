@@ -1,0 +1,14 @@
+Vnum            108
+Name            sigil~
+ShortDesc       符咒~
+Description
+一張可以更改物品名稱的符咒﹐不妨用 rename 試試看﹗
+~
+Unit            張~
+ItemType        ITEM_SIGIL
+Takeable        Yes
+Level           1
+Value           0
+Weight          2
+Cost            30000
+End

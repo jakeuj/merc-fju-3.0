@@ -1,0 +1,30 @@
+Vnum            10
+Name            red horse~
+ShortDesc       赤兔馬~
+LongDesc        赤兔馬(red horse)
+~
+Description
+相傳牠原為魏晉南北朝時﹐呂布的座騎﹐也曾為三國時關雲長的座騎﹐但
+為何又重現江湖﹐卻沒有人知道﹐能駕馭赤兔者﹐必為英雄豪傑也。
+~
+Sentinel        Yes
+Alignment       0
+Level           90
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              900
+Mana            0
+Move            4500
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+Tractable       100
+End

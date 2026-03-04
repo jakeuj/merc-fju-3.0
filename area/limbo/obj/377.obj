@@ -1,0 +1,14 @@
+Vnum            377
+Name            word of recall book~
+ShortDesc       回天乏術秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_WORD_OF_RECALL
+Value2          5
+Weight          3
+Cost            10000
+End

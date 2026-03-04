@@ -1,0 +1,117 @@
+Name            gdragon steps~
+Cname           青玄身法~
+Slot            SLOT_GDRAGON_STEPS
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_DODGE
+Costtype        COST_MOVE
+Cost            15
+Wait            10
+Exp             100
+Associate       SLOT_MIRAGE_STEPS
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            NO
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             20
+Qutoient        1
+Adeptation      0
+Limit           CLASS_FIGHTER   30  50
+Limit           CLASS_THIEF     30  70
+Limit           CLASS_GENERAL   50  80
+Limit           CLASS_BRAVO     50  80
+Limit           CLASS_MAGE      50  50
+Limit           CLASS_SMITH     50  50
+Help
+青玄身法:
+
+翦雲步練至極致後﹐將兵法中的虛實之說融入其間﹐所衍生而出
+的就是青玄身法。因此青玄身法多半是武官修練居多。
+~
+
+#Damage
+Description
+$n的腳踏七星﹐使出了『$W青玄身法$Z』中的『$B混沌初開$Z』將$N的攻擊化為無物。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+面對$N的攻擊﹐$n略一提氣使出『$W青玄身法$Z』中的『$G隨風舞動$Z』﹐$A
+$n彷彿已化成輕風﹐穿梭在$N招式的縫隙之中﹐逍遙自在。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n的身影不動﹐等到$N的攻擊到時﹐突然消失在$N面前﹐正是一招『$R殘以欺人$Z』。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$N以雷霆萬鈞的攻勢向$n攻來﹐$n運足內力向$N攻去﹐$A
+$N看$n攻來也鼓足全力一拼﹐在四掌快相接時﹐$n以一招『$Y聲東擊西$Z』$A
+笑嘻嘻的看著$N以全力打在一塊石頭上。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n身形旋繞﹐輕巧的一招『$Y飛龍在天$Z』數個轉身﹐將$N的攻勢化為如清風吹過一般
+的無害。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+當$N的攻勢漸密﹐快撐不往時﹐$n大喝一聲『$C玄天幻步$Z』$A
+足下開始踏著五行八掛﹐身体隨風搖擺﹐$N只覺眼前人影晃動﹐目眩神迷﹐$A
+已失去$n的身影。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n快步移位﹐身影忽快忽慢﹐變化莫測﹐正是『$W青玄身法$Z』中的最高境界 －－『
+$S實虛不分$Z』－－使$N的攻擊失效。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

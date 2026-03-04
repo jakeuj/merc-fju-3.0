@@ -1,0 +1,31 @@
+Vnum            30364
+Name            yong kai~
+ShortDesc       雍闓~
+LongDesc        雍闓(yong kai)
+~
+Description
+建寧太守。勾結孟獲﹐背叛蜀國。後來中
+了諸葛亮的離間計﹐與越雋太守高定互相
+猜疑。終於被高定的部下鄂煥所殺﹐叛亂
+也平息了。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

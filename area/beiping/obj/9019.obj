@@ -1,0 +1,15 @@
+Vnum            9019
+Name            dragon bracelet~
+ShortDesc       Àsù³Å@µÃ~
+Description
+°ª¶¥­x©x¥ÎªºÅ@µÃ¡C~
+Unit            °¦~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_WRIST
+Takeable        Yes
+Level           25
+Value           -1
+Weight          10
+Cost            250
+Exp             10
+End

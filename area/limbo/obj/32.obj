@@ -1,0 +1,16 @@
+Vnum            32
+Name            anlace~
+ShortDesc       短劍~
+Description
+一把普通的短劍(anlace)﹐把手部份用布纏繞了好幾圈以防止武器脫手。~
+Unit            把~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 3
+Weight          20
+Cost            200
+Exp             10
+End

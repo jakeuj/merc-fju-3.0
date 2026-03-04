@@ -1,0 +1,31 @@
+Vnum            30089
+Name            zou jing~
+ShortDesc       鄒靖~
+LongDesc        鄒靖(zou jing)
+~
+Description
+幽州的校尉。向幽州刺史劉焉獻計﹐從平
+民中招募義勇軍﹐抵禦黃巾賊﹐被採納。
+見此告事後應徵的正是劉備﹐關羽和張飛
+三人。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

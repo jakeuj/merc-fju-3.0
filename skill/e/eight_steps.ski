@@ -1,0 +1,129 @@
+Name            eight steps~
+Cname           醉八仙~
+Slot            SLOT_EIGHT_STEPS
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_DODGE
+Costtype        COST_MOVE
+Cost            20
+Wait            1
+Exp             5
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            NO
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help            ~
+
+#Damage
+Description
+$n還身一轉﹐使用$Y醉八仙$Z---$B『呂洞賓』$Z的$B『醉酒提壺力千鈞』$Z﹐身體輕
+飄飄如風中之雪花﹐輕輕的用四兩撥千金的技巧躲開。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n仰頭一望﹐施展$Y醉八仙$Z---$W『曹國舅』$Z的$W『仙人敬酒鎖喉扣』$Z﹐身形如
+棉花一般纏著$n的身軀﹐形影不離﹐讓對手無法出招。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n晃身一走﹐揮灑$Y醉八仙$Z---$W『張國老』$Z的$W『醉酒拋杯踢連環』$Z﹐身影左
+晃右晃﹐搖擺不定﹐看似喝醉﹐但是$N的攻擊卻絲毫沾不了身。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n屈身一彎﹐憶起$Y醉八仙$Z---$W『鐵拐李』$Z的$W『旋肘膝撞醉還真』$Z﹐身軀跌
+跌撞撞﹐看似步法韻亂﹐但是卻亂中有序﹐閃躲連連。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n雙手一抱﹐變化$Y醉八仙$Z---$W『漢鐘離』$Z的$W『醉步抱罈窩心頂』$Z﹐手上抱著
+酒罈﹐意隨念轉﹐腳踏五行八卦﹐瀟灑的繞過$N。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n返身一退﹐踏出$Y醉八仙$Z---$W『籃采禾』$Z的$W『單提敬酒攔腰破』$Z﹐全身酒
+氣沖天﹐身法卻快如疾風﹐絲毫不見身影﹐只聞到淡淡的酒香。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n一時興起﹐表演$Y醉八仙$Z---$W『韓湘子』$Z的$W『擒腕擊胸醉吹簫』$Z﹐手中的
+蕭奏起幽雅的音樂﹐酒醉的身軀隨樂起舞﹐令$N不知如何下手。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n醉身起舞﹐舞出$Y醉八仙$Z---$W『何仙姑』$Z的$W『彈腰獻酒醉盪步』$Z﹐飄零優
+美的舞步幻化出一片片的花瓣﹐隨風飄盪﹐使人捉摸不定。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

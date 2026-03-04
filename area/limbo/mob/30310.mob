@@ -1,0 +1,30 @@
+Vnum            30310
+Name            liu xun~
+ShortDesc       劉循~
+LongDesc        劉循(liu xun)
+~
+Description
+劉璋的長子。奉父命率軍防守雒城﹐抵禦
+往成都進軍的劉備軍﹐敗北。據記載﹐他
+抵禦了劉備軍的進攻近一年。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

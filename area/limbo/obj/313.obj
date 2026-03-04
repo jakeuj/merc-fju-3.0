@@ -1,0 +1,14 @@
+Vnum            313
+Name            acid blast book~
+ShortDesc       »Ä²G³N¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_ACID_BLAST
+Value2          5
+Weight          3
+Cost            10000
+End

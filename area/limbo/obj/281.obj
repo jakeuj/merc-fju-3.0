@@ -1,0 +1,14 @@
+Vnum            281
+Name            henma steps book~
+ShortDesc       幻滅嵐影身法秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_HENMA_STEPS
+Value2          5
+Weight          3
+Cost            10000
+End

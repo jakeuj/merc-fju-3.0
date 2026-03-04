@@ -1,0 +1,31 @@
+Vnum            30257
+Name            lyu kai~
+ShortDesc       呂凱~
+LongDesc        呂凱(lyu kai)
+~
+Description
+字季平﹐永昌郡功曹。死守永昌郡﹐抵禦
+雍闓等的進攻。諸葛亮南征孟獲時﹐他獻
+上了『平蠻指掌圖』以助軍略﹐被諸葛亮
+任命為行軍教授。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

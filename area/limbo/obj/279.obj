@@ -1,0 +1,14 @@
+Vnum            279
+Name            hate sword book~
+ShortDesc       ¼C§g¤Q¤G«ë¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_HATE_SWORD
+Value2          5
+Weight          3
+Cost            10000
+End

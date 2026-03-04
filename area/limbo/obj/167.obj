@@ -1,0 +1,16 @@
+Vnum            167
+Name            dai swamp potion~
+ShortDesc       兌澤藥水~
+Description
+一瓶兌澤藥水(dai swamp potion)﹐具有潛行的效果。
+~
+Unit            瓶~
+ItemType        ITEM_POTION
+Contraband      Yes
+Takeable        Yes
+Level           10
+Value1          6
+Value2          OBJ_SNEAK
+Weight          5
+Cost            3000
+End

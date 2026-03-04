@@ -1,0 +1,16 @@
+Vnum            29
+Name            iron blade~
+ShortDesc       鐵刀~
+Description
+這是一把鐵製的大刀(iron blade)﹐黑漆漆的刀身上還帶了點鏽。~
+Unit            把~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           43
+Value           0 -1 -1 3
+Weight          20
+Cost            200
+Exp             10
+End

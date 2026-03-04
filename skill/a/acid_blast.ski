@@ -1,0 +1,35 @@
+Name            acid blast~
+Cname           »Ä²G³N~
+Slot            SLOT_ACID_BLAST
+Msgoff          ~
+Function        cast_acid_blast~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MANA
+Cost            20
+Wait            12
+Exp             1200
+Associate       SLOT_BLINDNESS
+Degree          300
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Innate          NO
+Ply             120
+Qutoient        1
+Adeptation      0
+Rating          RATING_POISON
+Limit           CLASS_SCHOLAR    30  35
+Limit           CLASS_SHAMAN     30  40
+Limit           CLASS_DOCTOR     50  50
+Limit           CLASS_BARD       50  50
+Limit           CLASS_MAGE       50  95
+Limit           CLASS_SMITH      50  80
+Help            ~
+End

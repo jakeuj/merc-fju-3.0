@@ -1,0 +1,31 @@
+Vnum            30054
+Name            yang biao~
+ShortDesc       楊彪~
+LongDesc        楊彪(yang biao)
+~
+Description
+東漢的司徒﹐後來成為太尉。在獻帝逃亡
+時﹐獻計勸說獻帝依靠曹操。後因與袁術
+有血緣關係而被曹操關入監獄。經孔融勸
+說曹操才得以保命。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

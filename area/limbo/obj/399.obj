@@ -1,0 +1,14 @@
+Vnum            399
+Name            anti physique book~
+ShortDesc       ¸g¯ß°f¦æ¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_ANTI_PHYSIQUE
+Value2          5
+Weight          3
+Cost            10000
+End

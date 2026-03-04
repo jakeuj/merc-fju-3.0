@@ -1,0 +1,31 @@
+Vnum            30136
+Name            chen zhen~
+ShortDesc       陳震~
+LongDesc        陳震(chen zhen)
+~
+Description
+字孝起﹐袁紹部下。劉備寄居袁紹處時﹐
+他曾為劉備給當時在曹營的關羽送信。
+後來跟隨劉備。劉備任荊州牧時﹐任命他
+為從事。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

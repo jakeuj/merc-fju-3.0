@@ -1,0 +1,14 @@
+Vnum            298
+Name            sun blade book~
+ShortDesc       µq¤é¤Mªk¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_SUN_BLADE
+Value2          5
+Weight          3
+Cost            10000
+End

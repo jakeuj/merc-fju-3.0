@@ -1,0 +1,14 @@
+Vnum            361
+Name            lightning bolt book~
+ShortDesc       ¤p¹p²y¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_LIGHTNING_BOLT
+Value2          5
+Weight          3
+Cost            10000
+End

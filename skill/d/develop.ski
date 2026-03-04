@@ -1,0 +1,37 @@
+Name            develop~
+Cname           強化武器~
+Slot            SLOT_DEVELOP
+Msgoff          ~
+Function        cast_develop~
+Position        POS_STANDING
+Type            TAR_OBJ_INV
+CostType        COST_MOVE
+Cost            50
+Wait            25
+Exp             200
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_CREATE
+Innate          NO
+Ply             50
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SMITH      1  95
+Help
+強化武器:
+
+可以增強武器類的耐久度﹐等級越高可以增強越多。
+由一倍到四倍增強。輸入指令 i 就可以知道幾倍增強。
+不過對於武器的知識要十分熟練才可以。
+~
+
+End

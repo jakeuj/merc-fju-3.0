@@ -1,0 +1,46 @@
+Name            faerie fire~
+Cname           精靈之火~
+Slot            SLOT_FAERIE_FIRE
+Msgoff          圍繞你身體的粉紅色光芒消失了﹗~
+Check           check_unrigid_attack~
+Function        cast_faerie_fire~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MANA
+Cost            18
+Wait            24
+Exp             600
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_FIRE
+AntiRating      RATING_WATER
+Innate          NO
+Ply             60
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    15  40
+Limit           CLASS_DOCTOR     50  80
+Limit           CLASS_BARD       50  95
+
+#Affect
+Type            SLOT_FAERIE_FIRE
+Location        AFF_NONE
+End
+
+Help
+精靈之火:
+
+轉化你的法力喚來火的精靈﹐將你的對象披覆一層粉紅色的火焰﹐破
+壞他的防禦﹐讓你的物理攻擊更有利﹗
+
+~
+End

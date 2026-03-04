@@ -1,0 +1,31 @@
+Vnum            30294
+Name            geng ji~
+ShortDesc       耿紀~
+LongDesc        耿紀(geng ji)
+~
+Description
+字季行﹐少府之侍中。不滿已即王位的曹
+操專橫跋扈﹐怒而在許昌與韋康、金禕等
+人發動叛亂。但被夏侯惇等人鎮壓﹐叛亂
+失敗﹐被處死。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

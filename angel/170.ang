@@ -1,0 +1,12 @@
+Higher          LEVEL_PC
+Lower           1
+Position        POS_STANDING
+Function        ~
+Description
+·í§A¦³ºÃ°Ý®É¡M§A¤£¥²¨Ï¥Î¶¢²á([1;32mchat[0m)ªºÀW¹D¡M§A¥i¥H¥H [1;32mquestion[0m ¨Ó´£¥X°ÝÃD¡M
+¦pªG¦³¤Hª¾¹Dµª®×ªº¸Ü¡M¤]¥i¥H¨Ï¥Î [1;32manswer[0m ¨Ó¦^µª§Aªº°ÝÃD³á¡C³o¼Ë¥i¥H¨Ï¶¢²á
+ÀW¹D¥Î¶q¤Ö¤@ÂI¡C
+
+½Ð¬d¸ß¡Rchat¡Bquestion¡Banswer
+~
+End

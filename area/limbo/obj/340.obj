@@ -1,0 +1,14 @@
+Vnum            340
+Name            earthquake book~
+ShortDesc       ¦a¾_³N¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_EARTHQUAKE
+Value2          5
+Weight          3
+Cost            10000
+End

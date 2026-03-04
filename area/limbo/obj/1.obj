@@ -1,0 +1,12 @@
+Vnum            1
+Name            protype~
+ShortDesc       物品原型~
+Description
+物品原型(protype)~
+Unit            個~
+ItemType        ITEM_TRASH
+Takeable        Yes
+Level           1
+Weight          1
+Cost            10
+End

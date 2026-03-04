@@ -1,0 +1,13 @@
+Vnum            111
+Name            longan~
+ShortDesc       龍眼~
+Description
+一堆看起來可以果腹的水果﹐吃吃看吧(eat)。~
+Unit            堆~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           1
+Value           300 200 5
+Weight          3
+Cost            5
+End

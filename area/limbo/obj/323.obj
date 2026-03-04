@@ -1,0 +1,14 @@
+Vnum            323
+Name            chill touch book~
+ShortDesc       §tÁ÷¤§Ä²¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_CHILL_TOUCH
+Value2          5
+Weight          3
+Cost            10000
+End

@@ -1,0 +1,17 @@
+Vnum            45
+Name            detain sword~
+ShortDesc       『挽留』奇劍~
+Description
+『挽留』﹐整把劍身是直的﹐只有劍的把手是彎的﹐彎如半月令人懷疑要如何持劍。
+上頭刻著「挽留天涯挽留人﹐挽留歲月挽留你」。~
+Unit            把~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 3
+Weight          20
+Cost            200
+Exp             10
+End

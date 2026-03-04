@@ -1,0 +1,31 @@
+Vnum            30245
+Name            liu qi~
+ShortDesc       劉琦~
+LongDesc        劉琦(liu qi)
+~
+Description
+劉表的長子。遭到欲立劉琮為後的蔡夫人
+等人的排擠﹐感到處境危險﹐故求救於諸
+葛亮﹐諸葛亮以「申生在內則死﹐重耳在
+外而安」勸他駐守外地﹐才逃過劫難。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

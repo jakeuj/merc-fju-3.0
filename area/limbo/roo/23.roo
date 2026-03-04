@@ -1,0 +1,14 @@
+Vnum            23
+Name            奈何橋尾~
+Description
+這裡已經是奈何橋的橋尾了﹐再往前走就要進鬼門關了﹐鬼門關前
+排了好長的隊伍﹐隊伍裡大致上有三種人﹐一種是魂魄出竅﹐來地
+府觀光的﹐另外一種就是陽壽已盡﹐而被鉤魂使者帶過來的﹐最後
+一種﹐就是像你這種孤魂野鬼﹐死後沒地方去﹐只好來地府報到的。
+
+~
+SectorType      SECT_INSIDE
+Safe            Yes
+NoRecall        Yes
+ForeverLight    Yes
+End

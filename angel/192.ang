@@ -1,0 +1,12 @@
+Higher          LEVEL_PC
+Lower           1
+Position        POS_STANDING
+Function        ~
+Description
+¹ï¤F¡M§Ú¬Ý¦Û¤vªºª¬ºA([1;32mscore[0m)¨º­Ó°V½mÂI¼Æ¥i¥H·F¹À©O¡S¨º­Ó¬OÅý§A§â§Aªº
+°ò¥»¼Æ­È¤O¶q([1;32mstr[0m)¡B´¼¼z([1;32mint[0m)¡B¾ÇÃÑ([1;32mwis[0m)¡B±Ó±¶([1;32mdex[0m)¡BÅé®æ([1;32mcon[0m)
+¤É¯Å([1;32mtrain[0m)¥Îªº³á¡M¤É¯Å§A¥i¥H§ä¬ÛÃöªº©Çª«¡M©Î¬Oª±®a¤É¯Å([1;32mtrain[0m)³á¡T
+
+½Ð¬d¸ß¡Rtrain¡Bscore
+~
+End

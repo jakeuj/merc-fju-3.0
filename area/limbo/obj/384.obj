@@ -1,0 +1,14 @@
+Vnum            384
+Name            judge book~
+ShortDesc       鑑賞技能術秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_JUDGE
+Value2          5
+Weight          3
+Cost            10000
+End

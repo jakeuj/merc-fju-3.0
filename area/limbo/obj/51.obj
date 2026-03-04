@@ -1,0 +1,15 @@
+Vnum            51
+Name            dagger~
+ShortDesc       匕首~
+Description
+一把銀灰色的匕首(dagger)~
+Unit            把~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           1
+Value           0 -1 -1 2
+Weight          5
+Cost            10
+Exp             10
+End

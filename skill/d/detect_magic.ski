@@ -1,0 +1,47 @@
+Name            detect magic~
+Cname           偵測魔法~
+Slot            SLOT_DETECT_MAGIC
+Msgoff          你無法再發現魔法物質了﹗~
+Check           check_unrigid_attack~
+Function        cast_detect_magic~
+Position        POS_STANDING
+Type            TAR_CHAR_SELF
+CostType        COST_MANA
+Cost            5
+Wait            12
+Exp             15
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        OBJ_DETECT_MAGIC
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_LOST
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+
+#Affect
+Type            SLOT_DETECT_MAGIC
+Location        AFF_NONE
+End
+
+Help            ~
+End

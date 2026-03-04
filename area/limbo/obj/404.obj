@@ -1,0 +1,31 @@
+Vnum            404
+Name            tai chi sword~
+ShortDesc       真武太極劍~
+Description
+據說是張三豐所使用的名劍﹐本身從何而來已不可考。~
+Unit            把~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           95
+Value           0 -1 -1 3
+Weight          10
+Cost            200
+
+#Affect
+Location        APPLY_DEX
+Modifier        2
+End
+
+#Affect
+Location        APPLY_CON
+Modifier        -2
+End
+
+#Affect
+Location        APPLY_STR
+Modifier        1
+End
+
+End

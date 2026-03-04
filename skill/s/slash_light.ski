@@ -1,0 +1,101 @@
+Name            slash light~
+Cname           極樂劍芒~
+Slot            SLOT_SLASH_LIGHT
+Msgoff          ~
+Check           check_sword_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            1
+Exp             5
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_SWORD
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_GENERAL    1  80
+Limit           CLASS_BRAVO      1  95
+Help
+極樂劍芒：
+
+天道九劍第九劍﹐擁有無比的殺傷力。
+~
+#Damage
+Description
+$n殺氣一提﹐使出$Y極樂劍芒$Z之－－「$S劍$R殺$Z」﹐手中雙刃由左而右從$N胸口貫
+穿而過。$N結果被$n確確實實的命中要﹐$N身上立即多了一道見骨的傷痕。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n氣游百穴﹐使出$Y極樂劍芒$Z之－－「$S劍$R破$Z」﹐手中雙刃由右而左從$N腰脊貫
+穿而過。$N結果被$n確確實實的命中要﹐$N身上立即多了一道見骨的傷痕。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n大喝一聲﹐使出$Y極樂劍芒$Z之－－「$S劍$R滅$Z」﹐手中雙刃由上而下從
+$N腹部貫穿而過。$N結果被$n確確實實的命中要﹐$N身上立即多了
+一道見骨的傷痕。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n縱身飛奔﹐使出$Y極樂劍芒$Z之－－「$S劍$R絕$Z」﹐手中雙刃由下而上從$N胸後貫
+穿而過。$N結果被$n確確實實的命中要﹐$N身上立即多了一道見骨的傷痕。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n躍升狂吼﹐使出$Y極樂劍芒$Z之－－「$S劍$R斷$Z」﹐手中雙刃由前而後從$N頸部貫
+穿而過。$N結果被$n確確實實的命中要﹐$N身上立即多了一道見骨的傷痕。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n快速奔馳﹐使出$Y極樂劍芒$Z之－－「$S劍$R殘$Z」﹐手中雙刃由後而前從$N心口貫
+穿而過。$N結果被$n確確實實的命中要害﹐$N身上立即多了一道深可見骨的傷痕。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

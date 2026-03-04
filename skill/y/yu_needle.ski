@@ -1,0 +1,182 @@
+Name            yu needle~
+Cname           七奇針訣~
+Slot            SLOT_YU_NEEDLE
+Msgoff          ~
+Check           check_pen_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            1
+Exp             5
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_PEN
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  90
+Limit           CLASS_MAGE       1  80
+Limit           CLASS_SMITH      1  80
+Help            ~
+#Damage
+Description
+$n一招$W『白蛇吐信』$Z﹐下身稍曲﹐步履前跨﹐雙掌微分﹐手指尖往$N的胸前$S『鳩
+尾穴』$Z用力戳了去﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n手掌一張﹐一式$W『惡虎撲羊』$Z﹐縱身一跳﹐由上往下向$N的頭頂$S『百會穴』$Z
+撲了去﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n雙手一拉一按一壓﹐將$N的左手背$S『合谷穴』$Z制住﹐往外迴轉一圈﹐用力地將$N
+拋了開去﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n拗膝微蹲﹐倏地身軀一轉﹐繞到了$N的背後﹐中指向$N背後$S『命門穴』$Z戳了去﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n身行突然地往後退了數步﹐$N跟進﹐忽然$n身行立停﹐手肘一曲﹐轉退為進﹐肘尖往
+$N腹部$S『氣血穴』$Z急頂而去﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n呼嘯一聲﹐身法輕靈地往$N背後縱了去﹐雙手一打一戳﹐向$N的左邊$S『太陽穴』$Z
+﹐後腦$S『風府穴』$Z攻擊﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n一招$S『轉身六合』$Z﹐身形輕輕左右搖擺﹐雙手上下翻動﹐急速地向著$N或拍打﹐
+或擒拿﹐往$N的全身各大要穴招呼﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n左手一揮﹐右手一勾﹐一招$W『飛花落葉』$Z﹐把手中$O舞向$N的雙臂$S『尺澤穴』
+$Z﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n運使$O﹐左右開弓﹐綿綿不盡﹐戳向$N的胸前$S『膻中穴』$Z﹐背後$S『腎俞穴』$Z﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n身軀一蹲﹐雙手掐$O﹐平平往前直刺﹐一招$W『海底翻花』$Z蓄勢待發﹐迎向$N的腳
+底$S『湧泉穴』$Z﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n身法輕靈﹐一招$W『飛步拗鸞』$Z﹐輕身一躍﹐$O刺向$N肩胛$S『雲門穴』$Z﹐肩頂
+$S『肩膠穴』$Z。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n雙臂向外一張﹐一式$W『大鵬展翅』$Z﹐緊跟一招$W『平沙落雁』$Z﹐手中$O疾向$N
+的咽喉$S『天突穴』$Z刺去﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n身形一轉﹐一式$W『轉身六合』$Z﹐將手中$O舞成一股氣流﹐迴旋在$N四週﹐倏地一
+招$W『回望春月』$Z﹐將$O刺向$N腦門$S『天柱穴』$Z﹐$S『啞門穴』$Z﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n大喝一聲『$Y絕命七針$Z』﹐鼓動全身內勁﹐手中$O舞成七點光點﹐分別向$N的$Y『百
+會穴』﹐『印堂穴』﹐『天突穴』﹐『膻中穴』﹐『中脘穴』﹐『鳩尾穴』﹐『氣海穴』
+$Z﹐急急突刺﹗~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$R$n『絕命七針』刺透了$N身上的任脈大穴﹐$N的身上血斑點點。$Z~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

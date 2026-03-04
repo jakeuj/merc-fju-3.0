@@ -1,0 +1,32 @@
+Vnum            405
+Name            gan jan sword~
+ShortDesc       干將劍~
+Description
+一把上古名劍﹐跟莫邪是屬於一對的﹐是由名鑄劍師干將
+所製造的名劍(sword)。~
+Unit            把~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           90
+Value           0 -1 -1 3
+Weight          10
+Cost            200
+
+#Affect
+Location        APPLY_DEX
+Modifier        1
+End
+
+#Affect
+Location        APPLY_CON
+Modifier        -1
+End
+
+#Affect
+Location        APPLY_STR
+Modifier        1
+End
+
+End

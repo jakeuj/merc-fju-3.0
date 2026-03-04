@@ -1,0 +1,44 @@
+Vnum            CLASS_DEMOS
+Name            demos~
+Cname           平  民~
+Title           藜民黔首~
+LowerLimit      -1
+UpperLimit      -1
+LimitMsg        $Y$n遭受太多的打擊﹐惡氣橫生﹐一股氣無處可發﹗
+面對$N的不斷挑釁﹐於是向$N打出$e的猛烈一擊﹗$A$R~
+Limit           500
+Multiplier      10
+RebirthGold     0
+RebirthWarn     10
+Associate       CLASS_NONE
+Mana            YES
+Rudiment        YES
+Select          YES
+Force           NO
+NSkill          20
+StrMax          15
+IntMax          15
+WisMax          15
+DexMax          15
+ConMax          15
+StrFactor       98
+IntFactor       98
+WisFactor       98
+DexFactor       98
+ConFactor       98
+StrDefaultMax   1
+StrDefaultMin   1
+WisDefaultMax   1
+WisDefaultMin   1
+IntDefaultMax   1
+IntDefaultMin   1
+DexDefaultMax   1
+DexDefaultMin   1
+ConDefaultMax   1
+ConDefaultMin   1
+HeroStr         0
+HeroInt         0
+HeroWis         0
+HeroDex         0
+HeroCon         0
+End

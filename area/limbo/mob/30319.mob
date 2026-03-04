@@ -1,0 +1,30 @@
+Vnum            30319
+Name            sun lang~
+ShortDesc       孫朗~
+LongDesc        孫朗(sun lang)
+~
+Description
+字早安﹐孫堅之五子。吳夫人之妹（吳國
+太）所生。父親死後﹐逃到江南。後來任
+吳國的定武中郎將。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

@@ -1,0 +1,31 @@
+Vnum            30346
+Name            si ma fu~
+ShortDesc       司馬孚~
+LongDesc        司馬孚(si ma fu)
+~
+Description
+字叔達﹐司馬懿之弟﹐魏國太傅。始終保
+持魏臣立場。曹髦死後﹐痛哭哀悼。據說
+司馬炎篡奪帝位之後﹐他還為廢帝曹奐效
+力。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

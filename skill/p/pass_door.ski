@@ -1,0 +1,45 @@
+Name            pass door~
+Cname           穿透術~
+Slot            SLOT_PASS_DOOR
+Msgoff          你身體又回到固體了﹗~
+Function        cast_pass_door~
+Position        POS_STANDING
+Type            TAR_CHAR_SELF
+CostType        COST_MANA
+Cost            12
+Wait            22
+Exp             600
+Associate       SLOT_FIXITY
+Degree          100
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_EARTH
+AntiRating      RATING_WIND
+Innate          NO
+Ply             60
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DOCTOR     1  80
+Limit           CLASS_SCHOLAR    1  45
+Limit           CLASS_BARD       1  80
+
+#Affect
+Type            SLOT_PASS_DOOR
+Location        AFF_NONE
+End
+
+Help
+穿透術﹕
+
+這一項法術可以讓你的身體分子變的比較稀疏﹐讓你可以穿過一些薄
+的物質像是一些門等等﹐便可以沒有鑰匙也沒有關係了﹗
+
+~
+End

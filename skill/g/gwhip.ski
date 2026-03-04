@@ -1,0 +1,149 @@
+Name            gwhip~
+Cname           紫龍鞭法~
+Slot            SLOT_GWHIP
+Msgoff          ~
+Check           check_whip_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            15
+Wait            10
+Exp             300
+Associate       SLOT_MING_SNAKE
+Degree          50
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_WHIP
+Rating          RATING_SKILL
+Innate          NO
+Ply             60
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  20
+Limit           CLASS_SCHOLAR    1  25
+Limit           CLASS_FIGHTER    1  55
+Limit           CLASS_SHAMAN     1  30
+Limit           CLASS_THIEF      1  70
+Limit           CLASS_DOCTOR     1  30
+Limit           CLASS_BARD       1  30
+Limit           CLASS_GENERAL    1  80
+Limit           CLASS_BRAVO      1  90
+Limit           CLASS_MAGE       1  40
+Limit           CLASS_SMITH      1  45
+Help
+紫龍鞭法：
+
+這項技能如其名﹐當你揮鞭時有如一條紫龍亂舞﹐將你的敵人但入一
+場無可比擬的風暴中﹐造成無比的破壞力﹐不過﹐揮鞭人人都會﹐要
+能夠出類拔萃則需要投入一些苦功﹐這一項技能看重的是較靈活的手
+腕與清楚的頭腦﹐方能發揮與眾不同的傷害力。如果想學的話﹐建議
+你可以到襄陽看看﹐那裡有用鞭的高手﹐或許他願意教導你。
+
+~
+#Damage
+Description
+$n用一招「$Y峰迴路轉$Z」﹐手中$O如一條銀蛇般刺向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出紫龍鞭法中的「$G龍尾甩$Z」﹐手中$O疾劈$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n奮力使出一招「$P御風而行$Z」﹐身形陡然滑出數尺﹐手中$O拂向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n手中$O中宮直進﹐一式「$G旭日東昇$Z」對準$N刺出。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n縱身一躍﹐手中$O一招「$Y巨龍蓋頂$Z」對準$N直直劈下。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n的$O螺旋甩出﹐一招$g毒龍鑽$Z刺向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n手中$O向外一分﹐使一招「$P柳暗花明$Z」反手對準$N刺去。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n腳踏七星步﹐身形一轉手中$O使一招「$B空谷秋虹$Z」畫出一道光弧斬向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n一招$s天道擊$Z﹐內力暴射﹐$O疾點向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n突然暴喝一聲﹐一招$R雷厲風行$Z﹐$O挾著一股巨力衝向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n使出一招$y龍尾刺$Z﹐手中$O如針般刺向$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

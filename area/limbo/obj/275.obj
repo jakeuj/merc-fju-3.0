@@ -1,0 +1,14 @@
+Vnum            275
+Name            god eagle claw book~
+ShortDesc       ¤ÑÆN¤ö¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_GODEAGLE_CLAW
+Value2          5
+Weight          3
+Cost            10000
+End

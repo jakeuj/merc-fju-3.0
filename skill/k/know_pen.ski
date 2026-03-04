@@ -1,0 +1,85 @@
+Name            know pen~
+Cname           筆之心~
+Slot            SLOT_KNOW_PEN
+Msgoff          ~
+Check           check_pen_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MOVE
+Cost            19
+Wait            12
+Exp             350
+Associate       SLOT_WRITE_PEN
+Degree          50
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           YES
+Enable          YES
+SaySpell        NO
+Weapon          WEAPON_PEN
+Rating          RATING_SKILL
+Innate          NO
+Ply             70
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SCHOLAR    1  40
+Limit           CLASS_SHAMAN     1  35
+Limit           CLASS_THIEF      1  30
+Limit           CLASS_DOCTOR     1  85
+Limit           CLASS_BARD       1  85
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  80
+Help
+筆之心:
+
+文人墨客手中的毛筆﹐經武人鑽研後所得之武技。招式注重借力打力﹐
+以四兩而撥千金﹐故使用者多為手無縛雞之力的書生。
+
+~
+
+#Damage
+Description
+$n手中$O一翻﹐一招$S『行雲流水』$Z手裡的$O如一條長龍流轉﹐往$N刺去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n身形流轉﹐連踩七步﹐手中$O一招$S『七步成詩』$Z往$N點去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n手中$O搖晃﹐步法微頓﹐倏地一招$S『把酒問天』$Z將$O揮出﹐連出三下往$N點去。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n將手裡的$O高高舉起﹐忽地手中$O急變招數﹐一招$S『菊園盡興』$Z連綿不絕的往
+$N急點。~
+Chance          10
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

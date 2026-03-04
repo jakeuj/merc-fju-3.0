@@ -1,0 +1,14 @@
+Vnum            224
+Name            rulai book~
+ShortDesc       如來神掌秘笈~
+Description
+~
+Unit            本~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_RULAI
+Value2          5
+Weight          3
+Cost            10000
+End

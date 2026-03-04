@@ -1,0 +1,31 @@
+Vnum            30251
+Name            guan ping~
+ShortDesc       關平~
+LongDesc        關平(guan ping)
+~
+Description
+河北關定之子﹐關羽的義子。作為其義父
+的左右手轉戰南北﹐與關羽一起在麥城被
+殺。因他性情穩重謙和﹐很受其部下諸將
+的愛戴。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

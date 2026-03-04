@@ -1,0 +1,16 @@
+Vnum            39
+Name            silver needle~
+ShortDesc       小銀針~
+Description
+這是一支醫生專用的銀針(needle)﹐如果懂得使用技巧的話﹐將可發揮出極大的威力。~
+Unit            支~
+ItemType        ITEM_WEAPON
+Glow            Yes
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           10
+Value           0 -1 -1 8
+Weight          20
+Cost            200
+Exp             10
+End

@@ -1,0 +1,30 @@
+Vnum            47
+Name            第一殿--通道~
+Description
+你走進這裡﹐南方不遠處所傳來的陣陣慘叫聲不斷的震撼著你﹐不
+用懷疑﹐地獄近了……只見身旁的鬼卒都不懷好意的對你笑著﹐臉
+上的表情彷彿是說﹕『嘿嘿﹗你死定了﹗』
+
+~
+SectorType      SECT_INSIDE
+Safe            Yes
+NoRecall        Yes
+ForeverLight    Yes
+
+#Exit
+Direction       NORTH
+ExitVnum        48
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        46
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

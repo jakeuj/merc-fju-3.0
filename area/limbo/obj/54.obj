@@ -1,0 +1,15 @@
+Vnum            54
+Name            hat~
+ShortDesc       皮帽~
+Description
+一頂由羊皮製成的小皮帽(hat)~
+Unit            頂~
+ItemType        ITEM_ARMOR
+WearLoc         ITEM_WEAR_HEAD
+Takeable        Yes
+Level           1
+Value           -1
+Weight          5
+Cost            10
+Exp             10
+End

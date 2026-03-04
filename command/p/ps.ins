@@ -1,0 +1,28 @@
+Name            ps~
+Cname           系統行程查詢~
+Function        do_ps~
+Position        POS_DEAD
+Level           0
+Log             LOG_NORMAL
+Exact           NO
+Argument        NO
+Wizlog          NO
+Jail            NO
+CanLock         YES
+Dead            YES
+Order           NO
+Lost            NO
+Lock            NO
+Limit           NO
+Help
+指令 ps [agmux]
+
+  查詢系統行程的資料﹐後面的參數是﹕
+
+  a 查詢所有行程﹐但不查詢背景執行的程式。
+  g 查詢與執行使用者的群族相同的行程﹐但不包括背景執行的程式。
+  m 查詢與遊戲有相同的 session ID 的行程﹐但不包括背景執行的程式。
+  u 查詢與執行使用者的使用號碼相同的行程﹐但不包括背景執行的程式。
+  x 查詢背景執行的行程。
+~
+End

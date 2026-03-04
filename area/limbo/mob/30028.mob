@@ -1,0 +1,31 @@
+Vnum            30028
+Name            chun yu qiong~
+ShortDesc       淳于瓊~
+LongDesc        淳于瓊(chun yu qiong)
+~
+Description
+袁紹手下大將。原與袁紹﹐曹操一樣﹐同
+是西園八校尉之一。關渡之戰時﹐在烏巢
+看守軍糧﹐因貪酒誤事。被曹操趁機火攻
+後﹐導致袁軍大敗。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

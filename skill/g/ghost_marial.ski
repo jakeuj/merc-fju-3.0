@@ -1,0 +1,103 @@
+Name            ghost marial~
+Cname           鬼拳~
+Slot            SLOT_GHOST_MARIAL
+Msgoff          ~
+Check           check_unrigid_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+CostType        COST_MOVE
+Cost            20
+Wait            7
+Exp             150
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   NO
+Teach           NO
+Enable          YES
+SaySpell        NO
+Rating          RATING_SKILL
+Innate          NO
+Ply             20
+Qutoient        1
+Adeptation      0
+Limit           CLASS_THIEF      1  60
+Limit           CLASS_DOCTOR     1  50
+Limit           CLASS_BARD       1  50
+Limit           CLASS_GENERAL    1  80
+Limit           CLASS_BRAVO      1  90
+Limit           CLASS_MAGE       1  50
+Limit           CLASS_SMITH      1  50
+Help            ~
+
+#Damage
+Description
+$n雙手微抬﹐腳步緩緩移動﹐不斷積蓄內勁﹐只見$n雙眼放射出慘綠的光茫﹐突地平
+地一聲響﹐$n大喝一聲$G【鬼氣貫腦】$Z$N只覺腦中一震﹐宛如被重物擊中﹐疼痛欲
+裂﹐而$n趁此機會﹐雙掌幻化出無數掌影﹐向$N的全身罩下。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n雙手暗捏印訣﹐側身橫移數步﹐地下畢L出數個腳印﹐口中唸唸有詞﹐突然雙手印訣
+一散﹐無數指氣從雙掌間透出﹐正是$W『魔域』$Z殺招之一$P【鬼指叩魂】$Z霎時滿天
+指氣縱橫在$N身上劃出無數傷痕﹐地上也是被指氣劃出交差縱橫的條橫。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n雙手暴長﹐臉部青絲暴露﹐濃烈的惡臭從$n的雙掌透出﹐只見$n雙手不停疾舞﹐勁氣
+中夾帶著令人聞之欲嘔的毒氣﹐正是$W『魔域』$Z絕學之一$y【魔風毒手】$Z地面草木
+霎時枯黑一片﹐使得$N也受到毒氣的影響﹐受到不輕的傷害。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n將$P『百鬼夜行步』$Z運至極限﹐瞻之在前﹐忽焉在後﹐如鬼魅般穿梭在$N四周﹐只
+見$n身形一弓﹐雙掌前劈﹐一道半月形的勁氣猛然像$N湧去﹐正是$W『魔域』$Z絕學之
+$Y【鬼魅拜月】$Z雄渾的勁氣﹐刮的地面如飛沙走石般向$N狂襲而去。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n屈體弓身﹐雙掌緊貼地面﹐全身籠罩在一片藍光中﹐地面宛如波濤般浮動﹐隨著蓄積
+的內勁﹐藍光不斷增加﹐只見$n突然將雙掌一合﹐一道駭人藍箭向$N疾射而去﹐正是$W
+『魔域』$Z不傳之祕$S【萬魔同體】$Z如皓天蔽月﹐使天地為之黯淡無光。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$n猛然躍至青空﹐幻化出無數身影﹐使出$W『魔域』$Z奧意之一$R【極凍飛殺】$Z$N
+如同風中殘蠋般﹐在強勁的掌風中﹐勉力求生﹐但似乎已是強弓之末﹐眼看就要被拳
+浪所吞沒。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End

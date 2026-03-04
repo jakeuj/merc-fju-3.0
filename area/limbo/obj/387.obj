@@ -1,0 +1,14 @@
+Vnum            387
+Name            modo slash book~
+ShortDesc       ·¥¹DÅ]¼C¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_MODO_SLASH
+Value2          5
+Weight          3
+Cost            10000
+End

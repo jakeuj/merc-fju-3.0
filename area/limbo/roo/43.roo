@@ -1,0 +1,31 @@
+Vnum            43
+Name            第一殿--孽鏡臺~
+Description
+你走進這裡﹐看到前方不遠處有一座高臺﹐臺上立著一面閃閃發亮
+的大鏡子﹐無數的人正排隊登臺照孽鏡﹐你看到照完孽鏡的人﹐有
+的滿臉愧疚﹐有的充滿恐懼﹐有的面色蒼白﹐有的滿面憂愁﹐大概
+是因為生平的罪行完全暴露於孽鏡臺前﹐而怕下地獄吧。
+
+~
+SectorType      SECT_INSIDE
+Safe            Yes
+NoRecall        Yes
+ForeverLight    Yes
+
+#Exit
+Direction       NORTH
+ExitVnum        44
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        42
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -1,0 +1,14 @@
+Vnum            388
+Name            slash light book~
+ShortDesc       ·¥¼Ö¼C¨~¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_SLASH_LIGHT
+Value2          5
+Weight          3
+Cost            10000
+End

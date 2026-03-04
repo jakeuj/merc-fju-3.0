@@ -1,0 +1,31 @@
+Vnum            30273
+Name            pan zhang~
+ShortDesc       潘璋~
+LongDesc        潘璋(pan zhang)
+~
+Description
+字文珪。與朱然協力﹐生擒了關羽﹐並因
+此功獲賞關羽的青龍偃月刀。後來在被關
+興追殺途中﹐恍惚看到了關羽的亡靈﹐正
+在驚愕之際被關興斬殺。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

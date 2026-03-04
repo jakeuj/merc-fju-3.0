@@ -1,0 +1,31 @@
+Name            identify~
+Cname           Å²©w³N~
+Slot            SLOT_IDENTIFY
+Msgoff          ~
+Function        cast_identify~
+Check           check_unrigid_attack~
+Position        POS_STANDING
+Type            TAR_OBJ_INV
+CostType        COST_MANA
+Cost            15
+Wait            24
+Exp             100
+Associate       SLOT_MAKE_SWORD
+Degree          75
+Affect          AFFECT_NONE
+AffectID        OBJ_CAST_IDENT
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_CREATE
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_SMITH      1  95
+Help            ~
+End

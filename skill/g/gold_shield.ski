@@ -1,0 +1,33 @@
+Name            gold shield~
+Cname           金鐘罩~
+Slot            SLOT_GOLD_SHIELD
+Msgoff          在你身上的一道道真氣漸漸散去﹗~
+Function        cast_gold_shield~
+Check           check_unrigid_attack~
+Position        POS_STANDING
+Type            TAR_CHAR_DEFENSIVE
+CostType        COST_HIT
+Cost            50
+Wait            25
+Exp             300
+Associate       -1
+Degree          0
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          YES
+Valid           YES
+Cast            YES
+Concentration   YES
+Teach           NO
+Enable          NO
+SaySpell        YES
+Rating          RATING_FIGHT
+Innate          NO
+Ply             30
+Qutoient        1
+Adeptation      0
+Limit           CLASS_GENERAL    75  95
+
+Help
+~
+End

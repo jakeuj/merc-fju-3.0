@@ -1,0 +1,31 @@
+Vnum            30180
+Name            zhou you~
+ShortDesc       周瑜~
+LongDesc        周瑜(zhou you)
+~
+Description
+字公瑾﹐人稱美周郎。東吳都督﹐遵孫策
+遺命輔佐年幼的孫權。智謀高遠﹐是東吳
+的棟梁。在赤壁之戰中﹐以五萬破曹軍八
+十三萬﹐創造了以少勝多的傑出戰例。
+~
+Sentinel        Yes
+Alignment       0
+Level           10
+Hitroll         0
+Protect         -1
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             10
+Con             10
+Hp              100
+Mana            100
+Move            100
+Class           CLASS_SCHOLAR
+Gold            0
+Multipile       100
+Migrate         0
+Sex             SEX_MALE
+End

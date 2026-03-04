@@ -1,0 +1,14 @@
+Vnum            352
+Name            general purpose book~
+ShortDesc       ÀH·N²q´ú¯µÓD~
+Description
+~
+Unit            ¥»~
+ItemType        ITEM_BOOK
+Takeable        Yes
+Level           1
+Value1          SLOT_GENERAL_PURPOSE
+Value2          5
+Weight          3
+Cost            10000
+End

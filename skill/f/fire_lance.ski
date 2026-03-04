@@ -1,0 +1,139 @@
+Name            fire lance~
+Cname           燎原槍法~
+Slot            SLOT_FIRE_LANCE
+Msgoff          ~
+Check           check_spear_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            15
+Exp             100
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_SPEAR
+Rating          RATING_FIGHT
+Innate          NO
+Ply             20
+Qutoient        1
+Adeptation      0
+Limit           CLASS_GENERAL    1  95
+Help            ~
+
+#Damage
+Description
+$R燎原槍法「三十擊」$W－$Y《曙光乍現》$Z$A$A$n把手中的槍一橫﹐立即施展$S「橫
+掃千軍」$Z﹐刺出無數個槍影﹐無法招架接著再使出$P「火龍出洞」$Z﹐一道紅光破體
+而出﹐朝$N吞蝕而去。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$R燎原槍法「三十擊」$W－$G《風捲雲殘》$Z$A$A$n握住槍的中心﹐迴身施展出$S「龍
+捲風」$Z﹐地上塵土由下捲起﹐一時飛沙走石﹐全身氣流迴旋四周﹐身體一縱施展$Y「
+流星雨」$Z﹐無數個星點從天而降﹐籠罩於星雨之下而無法躲避。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$R燎原槍法「三十擊」$W－$P《虛有其表》$Z$A$A$n眼見對方太強﹐不易以硬碰硬﹐轉
+身而走﹐突然把槍一轉﹐施展出$Y「回馬槍」$Z﹐$N措手不及﹐連忙閃避﹐此時再施出
+$R「燎原一炬」$Z﹐槍如火焰隨風而起﹐$N感到迫在眉梢﹐必已中招。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$R燎原槍法「三十擊」$W－$Y《疾電奔雷》$Z$A$A$n把槍往天空一舉﹐一道閃電從天劃
+下﹐此時施展$W「電光火石」$Z﹐槍如同閃電射出﹐地上燒出一道火牆把對手包圍﹐無
+法動彈﹐此時使出$G「左右生風」$Z﹐槍先點左方﹐一觸對方﹐槍尾立時往另一方吐去。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$R燎原槍法「三十擊」$W－$S《不知火舞》$Z$A$A$n口中喃喃自語﹐突然四周氣流如火
+奔放﹐往天空一躍使出$P「火鳳凰」$Z﹐全身怒火之氣朝$N奔去﹐如同日冕燒盡一切﹐
+此時轉身一起﹐施展$R「浴火重生」$Z﹐立即離開熾火之地。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$R燎原槍法「三十擊」$W－$B《疾風驚蟄》$Z$A$A$n施展$G「靈蛇出洞」$Z﹐槍如蛇吐
+信一般的射出﹐靈巧的鑽入對方的防禦之中﹐突然把槍一收﹐使出$P「平地風生」$Z﹐
+腳跺槍尾﹐把槍翹起並修正了角度﹐運勁一挑﹐槍立即由地上激射斜上﹐正中$N。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$R燎原槍法「三十擊」$W－$G《橫掃千軍》$Z$A$A$n運起內功﹐槍身發出嗡嗡的聲響﹐
+此時揮灑出$R「三昧真火」$Z﹐體內三道內勁併發﹐狂風波浪般化作三波﹐一氣呵成﹐
+再使出$S「飛鷹旋」$Z﹐身已飛起﹐大鵬展翅﹐由天而下﹐旋轉飄零攻擊$N的每一處。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$R燎原槍法「三十擊」$W－$S《石破天驚》$Z$A$A$n施展$Y「怒火燒盡九重天」$Z﹐體
+內真氣不斷湧出﹐氣流天旋地轉傳繞全身﹐使出燎原槍法最狠殺招——$B「威凌天下」
+$Z﹐槍勢如千軍萬馬﹐一湧而上。~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+#Damage
+Description
+$R燎原槍法「三十擊」$W－$P《禁斷殘念》$Z$A$A$n使出$G「湧泉再現」$Z﹐突然舌根
+一甜﹐一團血從口中噴出﹐此時全身真氣湧現﹐捨命使出燎原槍法之最終奧祕——$B『
+風花雪月﹐百花飄零』$Z。$A$A$W$n使出$B燎原槍法之禁斷$Z——$G「花葉飄殺」$W﹐
+花葉飄落﹐流水無情﹐絕命殺氣有如落花隨風飄向$N。$Z$A$W$n使出$B燎原槍法之禁斷
+$Z——$S「水波雲動」$W﹐斷水無痕﹐風飄雲散﹐招式如潮浪一波波的淹沒著$N。$Z$A
+$W$n使出$B燎原槍法之禁斷$Z——$Y「幻蝶彩飛」$W﹐彩蝶亂舞﹐五彩繽紛﹐如寂靜夜
+空的朵朵星光點向$N。$Z$A$W$n使出$B燎原槍法之禁斷$Z——$P「百花齊放」$W﹐花飲
+玉露﹐千里殘香﹐槍旋轉如風車風起雲湧捲向$N。$Z$A$W$n使出$B燎原槍法之禁斷$Z—
+—$B「萬浪波瀾」$W﹐浪花激石﹐萬馬奔騰﹐槍影如水幕飄散隨風籠罩著$N。$Z$A~
+Chance          20
+Value           20
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+End
