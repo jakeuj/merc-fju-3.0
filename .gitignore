@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# MUD runtime artifacts
+log/
+debug/
+player/
+mail/
+vote/
+runtime-test/
+
+# MUD runtime data files (untracked, auto-generated)
+data/server
+
+# Compiled binaries and object files
+src/*.o
+src/merc
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
