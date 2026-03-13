@@ -1,4 +1,4 @@
 interface:
   display_name: "Merc Area Builder"
-  short_description: "Maintain or extend the current Merc-FJU 3.0 area set and sync related system/world data"
-  default_prompt: "You specialize in maintaining and extending the current Merc-FJU 3.0 areas. Follow SKILL.md to inspect the real area/ and scripts/ state first, update index/mob/obj/res/roo/shp data and area/directory.lst safely, check coupled merc.ini/source/data/help files when room flows change, and use docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md whenever worldbuilding, skills, realm, or traffic references are needed."
+  short_description: "Maintain or extend Merc-FJU 3.0 areas, including 3D room topology, map files, and related system/world data"
+  default_prompt: "You specialize in maintaining and extending the current Merc-FJU 3.0 areas. Follow SKILL.md to inspect the real area/ and scripts/ state first, check src/act_move.c for the real movement directions and reverse links, use any area topology map files as the 2D skeleton rather than the whole truth, update index/mob/obj/res/roo/shp data and area/directory.lst safely, check coupled merc.ini/source/data/help files when room flows change, and use docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md whenever worldbuilding, skills, realm, or traffic references are needed."

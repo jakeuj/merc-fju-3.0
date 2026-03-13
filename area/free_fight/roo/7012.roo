@@ -1,8 +1,9 @@
 Vnum            7012
 Name            三國競技場~
 Description
-這裡就是光榮的三國競技場﹐你看著外圍的觀眾在那呼喊﹐你不經熱
-血沸騰﹐全身充滿了鬥志。
+這裡是三國競技場東北側的外圍通道﹐看台上的觀眾不斷高聲吶喊﹐
+催促場上的戰士繼續廝殺。東面有道門可以回到休息室﹐往西與往南
+則會真正踏入血戰的核心地帶。
 ~
 SectorType      SECT_CITY
 
@@ -17,6 +18,14 @@ End
 #Exit
 Direction       WEST
 ExitVnum        7011
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        7044
 ExitDesc        ~
 ExitKeyword     ~
 ExitKey         0
