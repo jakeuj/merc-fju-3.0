@@ -3,22 +3,41 @@
 # Bash-friendly launcher for environments that do not ship csh/tcsh.
 # Usage:
 #   cd src
-#   ./startup.bash [merc.ini]
+#   ./startup.bash [existing-ini]
+#
+# Without an argument, this script generates merc.ini from merc.sample.ini
+# and rewrites HOME DIRECTORY to the current repo root.
 
-set -u
+set -eu
 
-INI_FILE="${1:-merc.ini}"
-LOG_DIR="../log"
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd -- "${SCRIPT_DIR}/.." && pwd)"
+TEMPLATE_INI="${SCRIPT_DIR}/merc.sample.ini"
+LOCAL_INI="${SCRIPT_DIR}/merc.ini"
+INI_FILE="${1:-${LOCAL_INI}}"
+LOG_DIR="${REPO_ROOT}/log"
 SLEEP_SECONDS=360
 LOG_INDEX=1000
 
 ulimit -s 1024 >/dev/null 2>&1 || true
 
-if [ -f shutdown.txt ]; then
-  rm -f shutdown.txt
+if [ -f "${SCRIPT_DIR}/shutdown.txt" ]; then
+  rm -f "${SCRIPT_DIR}/shutdown.txt"
 fi
 
 mkdir -p "${LOG_DIR}"
+
+if [ $# -eq 0 ]; then
+  if [ ! -f "${TEMPLATE_INI}" ]; then
+    echo "bug: no merc.sample.ini template exists." >&2
+    exit 1
+  fi
+
+  perl -0pe "s#^HOME DIRECTORY\\s*=\\s*.*#HOME DIRECTORY\\t\\t=\\t${REPO_ROOT}#m" "${TEMPLATE_INI}" \
+    > "${LOCAL_INI}"
+fi
+
+cd "${SCRIPT_DIR}"
 
 while true; do
   while [ -e "${LOG_DIR}/${LOG_INDEX}.log" ]; do
@@ -27,15 +46,15 @@ while true; do
 
   LOG_FILE="${LOG_DIR}/${LOG_INDEX}.log"
 
-  if [ ! -e ../src/merc ]; then
+  if [ ! -e "${SCRIPT_DIR}/merc" ]; then
     echo "bug: no merc exists." >>"${LOG_FILE}" 2>&1
     exit 0
   fi
 
-  ../src/merc "${INI_FILE}" >>"${LOG_FILE}" 2>&1
+  "${SCRIPT_DIR}/merc" "${INI_FILE}" >>"${LOG_FILE}" 2>&1
 
-  if [ -e shutdown.txt ]; then
-    rm -f shutdown.txt
+  if [ -e "${SCRIPT_DIR}/shutdown.txt" ]; then
+    rm -f "${SCRIPT_DIR}/shutdown.txt"
     exit 0
   fi
 

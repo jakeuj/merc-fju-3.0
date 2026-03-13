@@ -3,7 +3,7 @@
 ## Repo Reality Check
 - Use the current `merc-fju-3.0` workspace, not older wrapper-based flows.
 - Do not assume `start-merc.sh`, `start-merc.ps1`, `start-merc.cmd`, or `scripts/bootstrap.sh`; they are not present in this repo snapshot.
-- Primary checked-in config: `src/merc.ini`
+- Primary checked-in config template: `src/merc.sample.ini`
 - Primary startup entry: `src/startup`
 
 ## Build
@@ -55,6 +55,13 @@ cd src
 ./startup.bash &
 ```
 
+Default behavior:
+- generates `src/merc.ini` from `src/merc.sample.ini`
+- rewrites `HOME DIRECTORY` to the current repo root
+- keeps the checked-in template ini untouched
+
+`src/startup` should now follow the same generated-ini pattern when `csh` is available.
+
 What `startup` does:
 - clears `shutdown.txt` if present
 - chooses the next free `../log/<number>.log`
@@ -65,9 +72,14 @@ What `startup` does:
 Check binary and config:
 ```bash
 ls -l src/merc
-grep -n "HOME DIRECTORY" src/merc.ini
-grep -n "MUD PORT" src/merc.ini
+grep -n "HOME DIRECTORY" src/merc.sample.ini
+grep -n "MUD PORT" src/merc.sample.ini
 ```
+
+INI selection behavior:
+- `./merc some.ini` -> use the explicit ini file
+- `./merc` -> use env var `merc` if set, otherwise fallback to `merc.ini`
+- for local multi-machine work, prefer `./startup.bash` first so `merc.ini` is generated correctly
 
 Check runtime directories:
 ```bash
@@ -87,11 +99,28 @@ ls -t log | head
 tail -n 80 log/1000.log
 ```
 
+Check for tracked runtime noise after tests:
+```bash
+git status --short
+```
+
+Common tracked files that may change during local startup checks:
+- `debug/error`
+- `etc/net.log`
+- `etc/stock`
+
+If those changes are only test side effects and not part of the task:
+```bash
+git checkout -- debug/error etc/net.log etc/stock
+```
+
 Smoke test without `startup`:
 ```bash
 cd /mnt/h/repos/merc-fju-3.0
 mkdir -p log player
-perl -0pe 's#^HOME DIRECTORY\s*=\s*.*#HOME DIRECTORY\t\t=\t/mnt/h/repos/merc-fju-3.0#m' src/merc.ini > src/merc.test.ini
+cp src/merc.sample.ini src/merc.ini
+perl -0pi -e 's#^HOME DIRECTORY\s*=\s*.*#HOME DIRECTORY\t\t=\t/mnt/h/repos/merc-fju-3.0#m' src/merc.ini
+cp src/merc.ini src/merc.test.ini
 cd src
 timeout 8s ./merc merc.test.ini > ../log/merc-startup-smoke.log 2>&1
 tail -n 80 ../log/merc-startup-smoke.log
@@ -101,6 +130,7 @@ Use this to separate:
 - `startup` shell problems
 - wrong `HOME DIRECTORY`
 - real world-data load failures
+- tracked runtime file noise that should not be committed
 
 ## Common Failures
 
@@ -190,6 +220,25 @@ test -w log && echo ok || echo fail
 Fix:
 - repair ownership or permissions for the blocked directory
 - verify with `test -w <dir>` before retrying
+
+### Tracked runtime files changed after startup tests
+Meaning:
+- the repo contains some checked-in runtime-ish files
+- local smoke tests touched them, but that does not automatically mean they belong in the commit
+
+Check:
+```bash
+git status --short
+```
+
+Typical examples:
+- `debug/error`
+- `etc/net.log`
+- `etc/stock`
+
+Fix:
+- if the task was only build/startup verification, reset those files before committing
+- if the task intentionally changed runtime defaults or seed data, review them like normal source changes
 
 ### Startup log shows data-load failure
 Examples:

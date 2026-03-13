@@ -2,12 +2,26 @@
 # Written by Furey.
 # With additions from Tony.
 # With additions from Denny
+#
+# Legacy csh launcher kept for compatibility.
+# Prefer startup.bash for current local development on Linux/macOS/WSL.
 
 # Set limits.
 nohup
 nice
 limit stack 1024k
 if ( -e shutdown.txt ) rm -f shutdown.txt
+
+set repo_root = `cd .. && pwd`
+set local_ini = merc.ini
+
+if ( ! -e merc.sample.ini ) then
+  echo 'bug: no merc.sample.ini template exists.'
+  exit 1
+endif
+
+perl -0pe "s#^HOME DIRECTORY\\s*=\\s*.*#HOME DIRECTORY\t\t=\t${repo_root}#m" merc.sample.ini \
+  >! $local_ini
 
 while ( 1 )
     # If you want to have logs in a different directory,
@@ -29,7 +43,7 @@ while ( 1 )
       exit 0
     endif
 
-    ../src/merc merc.ini >>&! $logfile
+    ../src/merc $local_ini >>&! $logfile
 
     if ( -e shutdown.txt ) then
         rm -f shutdown.txt

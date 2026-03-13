@@ -58,7 +58,9 @@ make clean && make
 
 ## 設定
 
-編輯 `etc/merc.ini`，至少設定以下三項：
+版控中的 ini 模板目前放在 `src/merc.sample.ini`。本機開發 / 測試時，建議不要直接手改 tracked 模板，而是讓啟動腳本自動產生本機用的 `src/merc.ini`。
+
+若要手動檢查模板內容，至少留意以下三項：
 
 ```ini
 NAME            <你的遊戲名稱>
@@ -66,12 +68,22 @@ MUD PORT        <連線埠號>
 HOME DIRECTORY  <遊戲實際路徑>
 ```
 
+若是部署到正式環境，再視需要將本機生成的 `merc.ini` 或等價設定配置到 `etc/merc.ini`。
+
 ## 啟動
 
 ```bash
+# 推薦：現代 Linux / macOS / WSL
+cd src
+./startup.bash &
+
+# 保留：legacy csh 版本
 cd src
 ./startup &
 ```
+
+`startup.bash` 是目前建議的本機開發入口；它會從 `src/merc.sample.ini` 自動產生 `src/merc.ini`，並把 `HOME DIRECTORY` 改成目前 repo 根目錄。  
+`startup` 仍保留作為 legacy `csh` 啟動腳本，供舊流程與相容用途使用。
 
 第一個連線的玩家將成為超級管理者（Implementor）。
 

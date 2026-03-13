@@ -10,7 +10,7 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 ## 快速開始
 1. 先確認問題屬於哪一類：程式流程、設定檔、資料格式、建置啟動、或 bug 追查。
 2. 先讀 `README.md` 與 `references/overview.md`，建立目前 3.0 repo 的總覽。
-3. 需要講程式邏輯時，直接開對應的 `src/*.c`、`include/*.h`、`src/merc.ini`、`document/*.txt`，不要只憑記憶回答。
+3. 需要講程式邏輯時，直接開對應的 `src/*.c`、`include/*.h`、`src/merc.sample.ini` / `src/merc.ini`、`document/*.txt`，不要只憑記憶回答。
 4. 回答時優先把「入口檔案」「呼叫鏈」「對應資料檔」一起講清楚，讓使用者知道下一步該去哪裡改。
 5. 如果問題其實是區域建置或管理員指令，改用更專門的技能，例如 `merc-area-builder` 或 `mud-command-handbook`。
 
@@ -19,13 +19,13 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 - 目前 repo 根目錄沒有 `start-merc.sh`、`start-merc.ps1`、`start-merc.cmd`、`scripts/bootstrap.sh` 這類 wrapper；講啟動流程時應以 `README.md` 與 `src/startup` 為準
 - `docs/` 目前主要是 `docs/3yWebsite/` 文件站，不要引用不存在的 `docs/DATA_LAYOUT.md` 或 `docs/RUNTIME_RESET.md`
 - `scripts/` 目前可見腳本只有 `scripts/convert_big5_to_utf8.py`
-- `etc/` 目前存在多個 runtime / 半動態檔案，但工作樹裡沒有 `etc/merc.ini`；設定解說應先看 `src/merc.ini`，再說明部署時可能會複製到 `etc/`
+- `etc/` 目前存在多個 runtime / 半動態檔案，但工作樹裡沒有 `etc/merc.ini`；設定解說應先看 `src/merc.sample.ini` 與本機生成的 `src/merc.ini`，再說明部署時可能會複製到 `etc/`
 
 ## 回答流程
 
 ### 1. 先分類問題
 - **建置/啟動**：看 `README.md`、`src/Makefile*`、`src/startup`
-- **設定檔**：看 `src/merc.ini`，必要時再比對 `etc/` 與 `src/ini.c`
+- **設定檔**：看 `src/merc.sample.ini`、本機生成的 `src/merc.ini`，必要時再比對 `etc/` 與 `src/ini.c`
 - **資料載入**：看 `src/db.c`、`src/load.c`、`src/reload.c` 以及 `document/*.txt`
 - **遊戲邏輯**：依主題追 `src/act_*.c`、`fight.c`、`magic.c`、`skill.c`、`job.c`、`variable.c`
 - **檔案儲存/玩家資料**：看 `src/file.c`、`src/save.c`、`src/ini.c` 與 `player/`, `mail/`, `board/`, `data/`, `etc/`
@@ -50,10 +50,12 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 - 目前 README 記載的標準流程是 `cd src` 後執行 `make clean && make`
 - FreeBSD 需先把 `Makefile.bsd` 複製成 `Makefile`
 - 啟動方式以 `src/startup` 為主；回答時應先確認它是 legacy 啟動腳本，不要憑空提不存在的 wrapper
+- 若使用者問 `merc` 不帶參數會吃哪個 ini，應直接追 `src/comm.c` 的 `main()`：它會先看命令列參數，再看環境變數 `merc`，最後 fallback 到 `INI_FILE`
 - 若使用者問「為什麼開不起來」，先分清楚是編譯失敗、啟動腳本問題，還是區域/資料載入錯誤
 
 ### 設定檔
-- `src/merc.ini` 是目前 repo 內可直接讀到的主要設定來源
+- `src/merc.sample.ini` 是目前 repo 內可直接讀到的主要設定模板；本機執行時常會先由啟動腳本生成 `src/merc.ini`
+- `src/merc.h` 目前把 `INI_FILE` 定義成 `merc.ini`
 - 重點欄位通常包含：
 - `MUD PORT`
 - `NAME`
