@@ -56,6 +56,14 @@ cd src
 - `job.c`, `variable.c`, `system.c`: global game rules and fixed behaviors
 - `file.c`, `save.c`: persistence and file I/O
 
+## Command vs Job Dispatch
+- `interp.c` first resolves normal commands from the command table and dispatches to `do_*` handlers.
+- After that, it can also dispatch room, mob, or object `job` handlers by matching the player's typed command against loaded `job->keyword`.
+- `act_move.c`, `act_obj.c`, and `act_info.c` are common homes for built-in verbs such as movement, object actions, and look/info commands.
+- `job.c` is the lookup/registration point for named job functions that area or data files can bind through `#Job`.
+- Important implication: `#Keyword` in a room description is only descriptive text for `look`/`examine`; it does not create a usable command by itself.
+- Current repo example: `area/newfight/roo/1211.roo` hints at `bore hole`, but there is no `do_bore` in the checked-in source, and `job.c` currently exposes only a small set of job functions. So text can imply an interaction that is not currently implemented.
+
 ## Data Format References
 - `document/mob.txt`
 - `document/obj.txt`

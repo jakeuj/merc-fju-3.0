@@ -71,6 +71,13 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 - `file.c`, `save.c`, `ini.c`：設定與檔案 I/O
 - `angel.c`, `bus.c`, `ship.c`, `bounty.c`：具體系統模組與對應資料檔
 
+### 指令與房間互動入口
+- 一般玩家指令先看 `interp.c`，它會先在命令表中找對應的 `do_*` 函式
+- 移動與常見動作通常落在 `act_move.c`、`act_obj.c`、`act_info.c` 等檔案，例如 `do_enter` 在 `act_move.c`
+- `interp.c` 不只派送一般指令；若房間、房內 NPC、房內物件載入了 `job`，也會依 `keyword` 把玩家輸入轉到對應 job function
+- `job.c` 是 room / mob / object job function 的註冊表入口；如果某個互動不是現成 `do_*` 指令，也不是已註冊 job，那就算 area 文案寫了提示，玩家仍然不能真的執行
+- 以目前 repo 狀態來看，`bore` 是典型例子：`area/newfight/roo/1211.roo` 的 `#Keyword hole~` 會提示玩家輸入 `bore`，但目前找不到 `do_bore`，而 `job.c` 也只註冊少數 job，因此不能把這類文案直接當成「功能已存在」
+
 ### 資料目錄與程式的對應
 - `area/`：世界區域資料
 - `angel/`：守護神資料
@@ -87,6 +94,9 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 - 若是啟動期錯誤，先看 `log/`、`debug/`，再回頭找載入該資料的程式碼
 - 若是資料錯誤，先找是哪個 parser 讀它，再核對 `document/*.txt` 格式
 - 若是功能行為不符預期，從使用者看到的指令或效果回推到 `act_*.c`、`interp.c`、系統模組
+- 若是「房間文字明明提示可以做某動作，但指令不能用」，優先分辨它是：
+- 內建命令缺失：去找 `do_*` 是否存在、是否註冊到命令表
+- room job 缺失：去找 `.roo/.mob/.obj` 是否有 `#Job`，以及 `src/job.c` 是否有對應 function
 
 ## 回答原則
 - 保持繁體中文，必要時保留英文函式名、結構名、檔名

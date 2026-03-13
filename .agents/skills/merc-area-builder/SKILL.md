@@ -66,9 +66,13 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 - `mob/*.mob`：參照 `document/mob.txt`；確認 `Level`、`Alignment`、旗標、`Process` 是否符合該區用途
 - `obj/*.obj`：參照 `document/obj.txt`；若物品要由商店或 reset 產生，確認與 `res`、`shp` 對上
 - `roo/*.roo`：參照 `document/room.txt`；出口要成對檢查，避免只改單向出口
+- `roo/*.roo` 不只要看出口；若房間靠 `#Keyword` 描述暗示玩家輸入特殊動作，例如 `bore hole`、`enter xxx`、`climb xxx`、`push xxx`，就把它視為正式玩法路徑的一部分。搬房、改名或改文案時，要一起檢查關鍵字、動詞提示、相鄰房間與相關程式/觸發是否仍對得上
+- 但要分清楚兩種不同層級：`#Keyword` 只負責 `look/examine` 類描述，不會自動產生新指令；真正的特殊房間互動若不是內建在 `act_move.c` / 其他 `do_*` 指令裡，就必須靠 `#Job` 綁到 `src/job.c` 已註冊的房間 job function
 - `res/*.res`：參照 `document/reset.txt`；任何 `M/E/G/O/D` 關聯都要重新核對 VNUM
 - `shp/*.shp`：參照 `document/shop.txt`；確認 `Keeper`、販售類型與商品來源一致
 - `map`：若目標區有 `map`，先讀原檔再改，不要自行發明格式
+- 特別注意像 `area/newfight/roo/1211.roo` 這種房間：`#Keyword hole~` 的描述直接提示玩家用 `bore` 通過裂縫。這類「描述 -> 指令」配對若斷掉，玩家即使看到房間也不一定知道怎麼前進
+- 以目前 repo 狀態來看，`bore` 還不是現成可用指令：我沒有找到 `do_bore`，而 `src/job.c` 目前只註冊少數 room job（如 `job_recall_new`、`job_goto_pk_area`）。因此若需求是讓 `bore hole` 真的可用，就要決定是新增通用 `do_bore`，還是新增 room job 再在對應 `.roo` 裡加 `#Job`
 - 若遇到 parser 細節不確定，回看 `doc/area-file-format.txt`：字串以 `~` 結尾、數值可用 `|` 組合、空白與多行字串的解析方式都以它為準
 - 若在 `mob/obj` 上看到某些傳統 Merc 欄位和本專案行為不完全一致，記得原始 Merc 文件本來就提到部分數值會由系統依 level 或內部規則生成，不是每個欄位都照檔案原值生效
 - 若物件涉及卷軸、藥水、法杖、法器或其他 spell 型效果，補看 `doc/skills-and-spells-guide.txt`；原始 Merc 文件提醒 area object 內使用的是 spell slot / area reference，不一定等於系統內部 skill index
@@ -89,6 +93,7 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 - 若 docs 或 `maps.json` 提到票價、站名、推薦等級或主節點用途，區域內的房間描述、告示、交通 NPC 與 `area` 指令導引也要保持同一套說法
 - 若區域涉及新手教學、出生後第一輪探索或練功導流，補看 `docs/3yWebsite/docs/newbie.md`：把它當教學節奏與玩家期望對照表，確認新手區與主城服務點仍支援 `area`、`learn`、`enable`、`group`、`recall`、`score` 等被攻略反覆提到的流程
 - `newbie.md` 也反映歷史攻略中依賴的服務 NPC 與互動，例如學習、修裝、補給、救濟金、轉職、官職/國家導引；若你搬動房間、NPC 或傳送點，要一起檢查教學文本、看板與 NPC 對話是否仍說得通
+- `newbie.md` 與歷史攻略若提到像 `bore hole`、特定房間關鍵字、地圖捷徑或任務互動詞，也要把它們當成新手導流的一部分，不可只留房間物件或關鍵字卻刪掉玩家能理解的提示
 - 若區域涉及技能教師、秘笈掉落、訓練場、職業試煉、法器或技能型獎勵，補看 `docs/3yWebsite/docs/skills.md`：把它當技能命名、來源類型與資源成本對照表，確認 NPC、物件、掉落與文案使用同一套技能名稱與分類
 - `skills.md` 也提供「可教導 / 僅領悟 / 秘笈 study / 任務獎勵」這類來源線索；若你移動技能來源，除了 `mob/obj/res/shp`，也要同步檢查 help、任務提示、掉落敘述與相關主城服務 NPC 是否仍合理
 - 若區域涉及國家首都、國界、官署、建國/入國導引、國家公告板或國家專屬服務，補看 `docs/3yWebsite/docs/realm.md`：把它當 `realm` 指令、官職權限與 Capital 支援需求對照表，確認房間、NPC、銀行、看板與傳送設定符合國家系統預期
@@ -132,6 +137,11 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 - 從 2.0 舊 repo 搬資料時，不要整包照抄；先比對目前 3.0 已存在的 area/data/help/src 耦合，再決定哪些欄位保留、哪些要改寫
 - 若匯入的是更接近原始 Merc 的 reset 寫法，記得 `R` 也是合法 reset 類型，用於亂數出口；不要只認得 `M/E/G/O/D`
 - 新手區或主城服務鏈改動時，優先維持 `newbie.md` 中玩家預期仍找得到的核心流程：出生後移動、補給、學習技能、致能、組隊、回城、轉職與國家導引；若必須改路徑，記得同步補新提示
+- 房間若依賴 `#Keyword` 提示特殊動詞才能前進或觸發事件，優先維持「玩家看到描述就能推得出指令」這個原則；不要把關鍵字改名、把提示刪掉，或讓描述中的動詞與實際可用指令不一致
+- 若要新增這類互動，先確認它屬於哪一種：
+- 通用移動/操作：實作或修改 `src/act_move.c` / 其他 `do_*` 指令，並確認命令表已註冊
+- 房間特例：在 `src/job.c` / job registry 增加 room job，並在對應 `.roo` 寫 `#Job`
+- 不要以為只寫 `#Keyword hole~` 就會自動讓 `bore hole` 可用；`#Keyword` 是提示與檢視描述，不是命令綁定本身
 - 技能相關區域改動時，優先維持 `skills.md` 中能被玩家辨識的技能名稱、來源關係與熟練度詞彙；不要在房間、NPC、秘笈、help 與 docs 間混用不同譯名或把「可教導」誤寫成「只能領悟」
 - 國家相關區域改動時，優先維持 `realm.md` 中玩家預期的流程與限制：首都要有公告/信件承載點、建國/入國要找得到銀行與官署支援、叛國與離境不要把玩家送回錯誤領地或失去必要導引
 - 世界觀或官方敘事相關改動時，優先維持 `system.md` 的時間線、勢力稱呼與官方語氣；不要把新技能開放順序、Immortal 身分、授權提示或 `help fju` / `credit` 類文案寫成與歷史資料衝突
@@ -142,13 +152,15 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 3. 檢查 `area/directory.lst`、目標區 `index`、相關 `res/shp/roo` 是否互相對得上
 4. 若牽涉交通或主城導流，再對照 `docs/3yWebsite/docs/maps.md` / `docs/3yWebsite/docs/data/maps.json`，確認站名、票價、主節點用途、`Serial` / `Capital` 與玩家可見提示一致
 5. 若牽涉新手區、主城服務點或教學導引，再對照 `docs/3yWebsite/docs/newbie.md`，確認玩家進場後仍能靠 room/NPC/告示走完基本流程，不會卡在缺 NPC、缺提示、缺指令說明
-6. 若牽涉技能來源、訓練 NPC、秘笈物件或職業導引，再對照 `docs/3yWebsite/docs/skills.md` / `docs/3yWebsite/docs/data/skills.json`，確認技能名稱、來源類型、熟練度詞彙、study / 領悟提示與區域內實作一致
-7. 若牽涉國家首都、領地入口、官署、公告板或建國/叛國流程，再對照 `docs/3yWebsite/docs/realm.md` / `docs/3yWebsite/docs/data/realm_commands.json`，確認 `Capital`、公告/信件載體、銀行條件、官職導引與 recall/離境邏輯一致
-8. 若牽涉世界觀敘事、官方公告、元老/神族 NPC 或公開版提示，再對照 `docs/3yWebsite/docs/system.md`、`docs/3yWebsite/docs/data/news.json`、`docs/3yWebsite/docs/data/immortals.json`，確認歷史事件、官方稱呼、公告文案與 `help fju` / `credit` 相關提示一致
-9. 若環境允許，實際啟動遊戲或執行區域 reload；`doc/merc-release-notes.txt` 也提醒 Merc 本身的開機流程就是很好的 area syntax checker，所以要優先讀第一個錯誤，而不是一次猜全部
-10. 查看 `debug/`、`log/` 是否出現 `Load_room`、`load_mobiles`、reset 或檔案開啟錯誤
+6. 若房間有 `#Keyword` 或描述暗示特殊互動，再逐房檢查玩家實際看到的名詞與動詞是否還能導向正確操作，例如 `hole -> bore hole` 這類提示不能只剩關鍵字、不剩可理解的引導
+7. 若房間描述提示的是非內建指令，再確認它的實作位置真的存在：不是 `do_*` 命令，就是 `#Job -> src/job.c` 可解析的 function；不要讓 area 文案先行、程式端卻沒有入口
+8. 若牽涉技能來源、訓練 NPC、秘笈物件或職業導引，再對照 `docs/3yWebsite/docs/skills.md` / `docs/3yWebsite/docs/data/skills.json`，確認技能名稱、來源類型、熟練度詞彙、study / 領悟提示與區域內實作一致
+9. 若牽涉國家首都、領地入口、官署、公告板或建國/叛國流程，再對照 `docs/3yWebsite/docs/realm.md` / `docs/3yWebsite/docs/data/realm_commands.json`，確認 `Capital`、公告/信件載體、銀行條件、官職導引與 recall/離境邏輯一致
+10. 若牽涉世界觀敘事、官方公告、元老/神族 NPC 或公開版提示，再對照 `docs/3yWebsite/docs/system.md`、`docs/3yWebsite/docs/data/news.json`、`docs/3yWebsite/docs/data/immortals.json`，確認歷史事件、官方稱呼、公告文案與 `help fju` / `credit` 相關提示一致
+11. 若環境允許，實際啟動遊戲或執行區域 reload；`doc/merc-release-notes.txt` 也提醒 Merc 本身的開機流程就是很好的 area syntax checker，所以要優先讀第一個錯誤，而不是一次猜全部
+12. 查看 `debug/`、`log/` 是否出現 `Load_room`、`load_mobiles`、reset 或檔案開啟錯誤
    原始 Merc 文件也提到 area diagnostics 常會附帶 area 檔名與行號；若有這種訊息，優先沿著第一個定位點回修
-11. 回報時要列出：改了哪些區域檔、哪些系統檔被連動修改、是否引用了 docs 服務資料、以及還沒驗證到的風險
+13. 回報時要列出：改了哪些區域檔、哪些系統檔被連動修改、是否引用了 docs 服務資料、以及還沒驗證到的風險
 
 ## 參考資料
 - `document/README`

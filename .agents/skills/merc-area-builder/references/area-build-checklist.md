@@ -22,12 +22,14 @@
 2. `mob/*.mob`：欄位順序遵循 `document/mob.txt`，並核對 `Level`、旗標、`Process`。
 3. `obj/*.obj`：依 `document/obj.txt` 填寫，若會由 reset 或商店使用，確保後續 `res` / `shp` 對得上。
 4. `roo/*.roo`：依 `document/room.txt` 填寫，每個出口都確認 `ExitVnum` 指向存在房間，且盡量成對。
-5. `res/*.res`：依 `document/reset.txt` 重新核對所有 `M/E/G/O/D` 關聯。
-6. `shp/*.shp`：依 `document/shop.txt` 設定 `Keeper`、販售類型與價格。
-7. `map`：若該區已有 `map`，沿用原格式，不要自行發明新格式。
-8. 若 parser 細節不確定，回看 `doc/area-file-format.txt`：字串 `~` 結尾、數值 `|` 組合、空白與多行字串解析都以它為準。
-9. 若要理解複雜 NPC trigger / 腳本概念，可補看 `doc/mobprogram-guide.txt` 再對照本專案現況。
-10. 若物件帶 spell 效果，補看 `doc/skills-and-spells-guide.txt`；area object 引用的 spell slot / area value 不一定等於系統內部 skill index。
+5. 若 `roo` 內有 `#Keyword`，確認它不只是靜態描述，而是和玩家實際互動對得上；像 `hole` 這種關鍵字若提示玩家 `bore hole`，就要把該動詞、路徑與提示一起視為正式玩法。
+6. 若互動不是內建方向/通用指令，再確認它的實作層級：只寫 `#Keyword` 不夠，還需要現成 `do_*` 指令或 `.roo` 內 `#Job` 綁到 `src/job.c` 已註冊的 function。
+7. `res/*.res`：依 `document/reset.txt` 重新核對所有 `M/E/G/O/D` 關聯。
+8. `shp/*.shp`：依 `document/shop.txt` 設定 `Keeper`、販售類型與價格。
+9. `map`：若該區已有 `map`，沿用原格式，不要自行發明新格式。
+10. 若 parser 細節不確定，回看 `doc/area-file-format.txt`：字串 `~` 結尾、數值 `|` 組合、空白與多行字串解析都以它為準。
+11. 若要理解複雜 NPC trigger / 腳本概念，可補看 `doc/mobprogram-guide.txt` 再對照本專案現況。
+12. 若物件帶 spell 效果，補看 `doc/skills-and-spells-guide.txt`；area object 引用的 spell slot / area value 不一定等於系統內部 skill index。
 
 ## 3. 舊 repo 比對檢查
 - 只在需要補資料、查歷史設計或確認舊文案時回查 `merc-fju-2.0-utf8`。
@@ -53,6 +55,7 @@
 - 若 docs 提到推薦等級或地圖節點用途，區域內的房間描述、告示與 `area` 指令導引也要用同一套命名與分級邏輯。
 - 若有出生後導流、新手教學房、訓練場、轉職或國家導引，對照 `docs/3yWebsite/docs/newbie.md`，確認 `area`、`learn`、`enable`、`group`、`recall`、`score` 等關鍵流程仍有 room/NPC/看板支撐。
 - 若搬動新手服務 NPC、補給點、修裝、救濟金、轉職或官署位置，要同步修正新手提示與玩家第一輪探索路線，避免攻略文字與現況斷線。
+- 若房間靠 `#Keyword` 提示特殊互動，例如 `bore hole`、`enter gate`、`climb tree`，確認玩家從 room 描述就能推得出該指令，且改名後沒有留下失效提示。
 - 若有技能教師、秘笈掉落、訓練場、法器或職業任務，對照 `docs/3yWebsite/docs/skills.md` / `docs/3yWebsite/docs/data/skills.json`，確認技能名稱、來源類型、熟練度詞彙、資源消耗與區域內 NPC/物件/掉落一致。
 - 若技能需 `study`、領悟、預備功夫或特殊資源消耗，房間提示、NPC 對話、物件說明與 help 文字要反映同一套規則，不要只在其中一處更新。
 - 若有國家首都、領地入口、官署、公告板、建國/入國/離境流程，對照 `docs/3yWebsite/docs/realm.md` / `docs/3yWebsite/docs/data/realm_commands.json`，確認 `Capital`、銀行、官職導引、新聞/信件載體與國家專屬服務都有落點。
@@ -69,6 +72,7 @@
 - 若編號規劃拿不準，可補看 `doc/vnum-assignments.txt` 與 `doc/area-file-format.txt` 的原始 Merc 背景，但實際採用仍以目前 3.0 世界資料為準。
 - 若區域有交通節點，再核對 `docs/3yWebsite/docs/maps.md` 是否仍和 `data/bus.txt` / `data/ship.txt`、區域內提示文字、驛站 NPC 配置對得上。
 - 若區域有新手導引或服務鏈，再核對 `docs/3yWebsite/docs/newbie.md` 提到的指令、NPC 類型、推薦練功流與告示文字是否仍找得到落點。
+- 若區域有房間關鍵字互動，再核對 room 名詞、`#Keyword`、提示動詞、相鄰房間與實際可走通的路線是否一致。
 - 若區域有技能來源或秘笈物件，再核對 `docs/3yWebsite/docs/skills.md` 是否仍和 `mob/obj/res/shp`、掉落提示、訓練 NPC 與相關 help 文案對得上。
 - 若區域有國家流程或 Capital 功能，再核對 `docs/3yWebsite/docs/realm.md` 是否仍和 `Capital`、board/note 類物件、銀行/官署服務點、國家提示與 recall 設定對得上。
 - 若區域有官方敘事、公告或 Immortal/元老 NPC，再核對 `docs/3yWebsite/docs/system.md` 是否仍和新聞時間線、NPC 稱謂、help/credit 文案與公告板內容對得上。
