@@ -7,6 +7,7 @@
 - 全局計畫：`plans/0001-world-map-area-rebuild.md`
 - 單區計畫：`plans/area/0002-loyang-outskirts.md`
 - 世界圖參考：`area/world_map.md`
+- ref 索引：`ref/Readme.md`
 
 ## Fixed Prompt
 
@@ -33,6 +34,8 @@
 - status: `todo`
 - plan: `plans/area/0002-loyang-outskirts.md`
 - parent_region: `loyang`
+- theme: `歷史城市風`
+- subtheme: `軍旅風`
 - world_links: `洛陽東郊`, `龍渠丘陵`, `洛陽地下水區入口`
 - next_action: 建立 `area/loyang_outskirts/map.md` 第一版 spec 草案
 - notes: 第一個正式新 AREA，目的是驗證 spec-first `map.md -> mapmd-json -> .roo`
@@ -42,6 +45,8 @@
 - status: `todo`
 - plan: `not created yet`
 - parent_region: `beiping`
+- theme: `軍旅風`
+- subtheme: `歷史城市風`
 - world_links: `北平郊區`, `易京`, `白狼山`
 - next_action: 在 `loyang_outskirts` 穩定後建立單區計畫檔
 - notes: 北方交通與邊關混合型候選
@@ -51,6 +56,8 @@
 - status: `todo`
 - plan: `not created yet`
 - parent_region: `future regional chain`
+- theme: `江湖風`
+- subtheme: `軍旅風`
 - world_links: `襄陽`, `新野`, `江夏`, `荊襄大道`
 - next_action: 等 `loyang_outskirts` 與 `beiping_outskirts` 後再評估
 - notes: docs 依據足夠，但 repo 內尚未有直接母城 area，成本較高
@@ -75,4 +82,4 @@
 
 建議可直接使用的 prompt：
 
-`根據 plans/area/0002-loyang-outskirts.md 與 area/world_map.md，建立 area/loyang_outskirts/map.md 的第一版 spec 草案。`
+`根據 plans/area/0002-loyang-outskirts.md、area/world_map.md 與 ref/Readme.md，建立 area/loyang_outskirts/map.md 的第一版 spec 草案。`

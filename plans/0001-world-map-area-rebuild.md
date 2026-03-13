@@ -18,15 +18,19 @@
 ## Workflow
 
 - 世界層參考使用 `area/world_map.md`
+- 歷史 / 外部世界規劃索引使用 `ref/Readme.md`
 - 日常追蹤看板使用 `area/rebuild_plan.md`
 - spec-first 區域設計使用 `area/<new_area>/map.md`
 - 若需要 `.roo` scaffold，使用 `.agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py`
+- 題材與沉浸式設計使用 `.agents/skills/merc-area-builder/references/theme-design-patterns.md`
 
 ## Tracking Model
 
 `area/rebuild_plan.md` 應固定包含：
 
 - candidate area 清單
+- `theme`
+- `subtheme`
 - `todo`
 - `in_progress`
 - `done`
@@ -53,6 +57,29 @@
 2. `beiping_outskirts`
 3. `jingxiang_road`
 
+## Theme Allocation
+
+依 `theme-design-patterns.md`，世界級規劃不能只看拓樸，也要看題材分布。第一批候選先固定題材定位：
+
+- `loyang_outskirts`
+  - theme: `歷史城市風`
+  - subtheme: `軍旅風`
+  - 缺口角色：補主城外郊、巡邏線、郊野導流與地下入口過渡
+- `beiping_outskirts`
+  - theme: `軍旅風`
+  - subtheme: `歷史城市風`
+  - 缺口角色：補北方邊關、驛站、渡口與邊境緊張感
+- `jingxiang_road`
+  - theme: `江湖風`
+  - subtheme: `軍旅風`
+  - 缺口角色：補中長距離官道、流言、伏兵與支線遭遇
+
+後續新增候選 area 時，必須一併記錄：
+
+- `theme`
+- `subtheme`
+- 它在六大題材中的缺口價值
+
 ## First Implementation Target
 
 第一個正式新 AREA 固定從 `loyang_outskirts` 開始，原因：
@@ -61,6 +88,8 @@
 - `world_map.md`、`maps.md`、`maps.json`、`map/loyang.html` 都有依據
 - 服務點、交通點與 `#Enquire` 場景完整
 - 容易做出道路、外郊、地下入口並存的 3D spec
+- 題材上可用 `歷史城市風` 為主、`軍旅風` 為輔，最適合做第一個完整範例
+- `ref/Readme.md` 已明確指出 `area-template-wild_loyang_east.md` 與 `sanguo-area-specfirst/` 是最值得優先借鏡的來源
 
 ## Acceptance Criteria
 

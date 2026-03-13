@@ -31,8 +31,9 @@ source of truth 要分兩種：
  目前專案使用的是拆目錄資料結構，不是原始單檔 `.are`；若回看 `doc/area-file-format.txt` 裡的 `#AREA/#HELPS/#MOBILES/#OBJECTS/#ROOMS/#RESETS/#SHOPS/#SPECIALS`，要把它當概念對照，不要逐段照抄成 3.0 目錄格式。
 4. 需要世界觀、技能、國家系統、交通、公告脈絡時，連同 `docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md` 一起使用，從 `docs/3yWebsite/docs/*.md` 與 `docs/3yWebsite/docs/data/*.json` 取資料。
 5. 若是新增 AREA，先決定是手寫 `.roo`，還是用 `references/map-spec-template.md` + `scripts/generate_roo_from_map_md.py` 走「spec -> scaffold」流程。
-6. 若任務屬於長期 area 重建，先讀 `plans/` 與 `area/rebuild_plan.md`；詳細規則見 `references/rebuild-workflow.md`。
-7. 修改完成後，至少做靜態搜尋、編碼檢查與必要的啟動/載入驗證，再回報受影響檔案與風險。
+6. 若任務需要參考 repo 內的 `ref/` 世界藍圖、spec-first scaffold、world builder 或題材分布資料，先讀 `ref/Readme.md` 當索引，再挑需要的檔案或子資料夾深入。
+7. 若任務屬於長期 area 重建，先讀 `plans/` 與 `area/rebuild_plan.md`；詳細規則見 `references/rebuild-workflow.md`。
+8. 修改完成後，至少做靜態搜尋、編碼檢查與必要的啟動/載入驗證，再回報受影響檔案與風險。
 
 ## 主題靈感與沉浸式設計
 
@@ -88,6 +89,11 @@ source of truth 要分兩種：
 - `area/rebuild_plan.md` 是日常追蹤看板，負責 `todo / in_progress / done / blocked / next_action`
 - 若使用固定 prompt `繼續實作下一個待建 area`，先讀 `area/rebuild_plan.md` 再決定下一個目標
 
+### ref/ 現況
+- `ref/Readme.md` 是 `ref/` 的入口索引，先用它判斷該讀世界藍圖、template、spec-first scaffold、生成器，還是模擬系統
+- 若任務是世界級 area rebuild，優先從 `ref/Readme.md` 指向的世界藍圖、`world-graph.json` 與題材分布資料開始
+- 若任務是像 `loyang_outskirts` 這種新 area spec，優先從 `ref/Readme.md` 指向的 `area-template-wild_loyang_east.md`、`sanguo-area-specfirst/` 與 `sanguo-area-scaffold/` 開始
+
 ### scripts/ 現況
 - repo 根目錄 `scripts/` 目前可見的腳本只有 `scripts/convert_big5_to_utf8.py`
 - 本 skill 另外提供 `scripts/generate_roo_from_map_md.py`，用來把受限結構的 `map.md` 轉成 `.roo` scaffold；它不是自由文字 Markdown compiler
@@ -126,6 +132,7 @@ source of truth 要分兩種：
   - `plans/0001-*.md` 這類全局 plan
   - `plans/area/NNNN-*.md` 這類單區 plan
   - `area/world_map.md`
+- 若 repo 內存在 `ref/Readme.md`，先用它決定還要不要補讀世界藍圖、題材分布表、單區 template 或 spec-first scaffold 範例
 - `map.md` 是人類可讀 spec；若要用腳本產生 `.roo`，只能使用其中受限、結構化的機器可讀區塊，不能把自由 prose 直接拿去 compile
 - 若是搬修舊版資料，先用搜尋確認舊名稱、舊城名、舊勢力詞是否殘留在 `roo`、`mob`、`obj`、`res`、`shp`、help 或 system data
 - 若現行 repo 缺資料或看不出原始設計，回查 `https://github.com/jakeuj/merc-fju-2.0-utf8` 的對應路徑，再把需要的內容 mapping 回 3.0
@@ -148,6 +155,7 @@ source of truth 要分兩種：
 - 若地圖檔是平面格狀表示，只把它當作主要平面骨架；任何 `up/down/enter/out` 這類立體或內外層連線，仍要回到 `.roo` 與 `src/act_move.c` 一起核對，不要因為地圖檔沒畫出來就忽略
 - 若是新增 AREA，預設要先寫 `area/<new_area>/map.md`；它是 spec-first 設計檔，優先於任何舊式 area-local 地圖檔
 - 若世界層參考已整理在 `area/world_map.md`，先用它決定新 AREA 要接到哪個母城、外郊或 world connector
+- 若 `ref/Readme.md` 已提供更細的 area template 或相近節點 scaffold，優先借鏡它們來決定 cluster 命名、房間語氣、題材配置與 world links
 - 若想用腳本加速，使用 `references/map-spec-template.md` 提供的受限 Markdown 結構，再交給 `scripts/generate_roo_from_map_md.py` 產生 `.roo` scaffold
 - 這個 Python script 的定位是 scaffold generator，不是完整 compiler：它會產生初版 `.roo`、驗證方向/引用/Job，但不會幫你猜缺漏描述、補世界觀或默默創造不存在的 reverse exit
 - graph schema 可以額外攜帶 `coord`、`cluster`、`labels` 等 metadata，供未來 map/export tooling 使用；目前 `.roo` projection 不會輸出它們
@@ -279,6 +287,7 @@ source of truth 要分兩種：
 - `references/theme-design-patterns.md`
 - `references/rebuild-workflow.md`
 - `references/map-spec-template.md`
+- `../ref/Readme.md`
 - `scripts/generate_roo_from_map_md.py`
 - `docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md`
 - 舊版對照：`https://github.com/jakeuj/merc-fju-2.0-utf8`
