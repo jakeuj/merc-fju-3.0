@@ -1,11 +1,28 @@
 ---
 name: merc-area-builder
-description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域資料時使用：依 document/README、area/ 現況與 src/act_move.c 的實際移動方向處理 limbo、loyang、beiping、new、newfight、pk_area、free_fight 的 index/mob/obj/res/roo/shp 與區域地圖檔結構，將地圖視為包含 north/east/south/west 與 up/down/enter/out 的立體拓樸，更新 area/directory.lst、同步檢查 merc.ini 與固定房號/傳送/提示文字，並在需要世界觀、技能、國家或交通背景時搭配 docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md 取用 docs 與 JSON 資料。
+description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域資料時使用：依 document/README、src/load.c、src/act_move.c 與 area/ 現況處理 limbo、loyang、beiping、new、newfight、pk_area、free_fight 的 index/mob/obj/res/roo/shp 與區域地圖檔結構，將地圖視為包含 north/east/south/west 與 up/down/enter/out 的立體拓樸，並把 #Exit/#Keyword/#Job/#Enquire 視為 room spec 的正式部分；新增 AREA 時先以 map.md 當規格來源，必要時再用 Python scaffold 產生初版 .roo，更新 area/directory.lst、同步檢查 merc.ini 與固定房號/傳送/提示文字，並在需要世界觀、技能、國家或交通背景時搭配 docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md 取用 docs 與 JSON 資料。
 ---
 
 # Merc Area Builder
 
 此技能協助你在目前的 `merc-fju-3.0` 工作區內維護或擴充區域資料。優先依 repo 現況工作，不要沿用「scripts 與 area 已被精簡」那條舊假設。
+
+## 三層架構
+
+目前的 `map.md` 設計採三層：
+
+- Authoring layer：`map.md` 內的人類可讀 prose 與嵌入的 `mapmd-json`
+- Internal model layer：`mapmd-json` 是 canonical machine-readable graph schema
+- Projection layer：目前只有 `.roo`
+
+`map.md` is the design document, while the embedded `mapmd-json` block is the canonical machine-readable graph schema used by generators.
+
+source of truth 要分兩種：
+
+- 人類設計語意的 source of truth = `map.md`
+- 機器生成的 canonical source of truth = `mapmd-json`
+
+因此若 prose 和 `mapmd-json` 衝突，generator 一律以 `mapmd-json` 為準，並要求回頭修正 spec，不要讓兩套敘述長期分裂。
 
 ## 快速開始
 1. 先確認任務是要修改既有區域、搬修舊版內容，還是新增區域。
@@ -13,7 +30,8 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 3. 以 `document/README`、`document/mob.txt`、`document/obj.txt`、`document/room.txt`、`document/reset.txt`、`document/shop.txt` 為主要格式依據；若要確認原始 Merc parser / vnum 習慣，再補看 `doc/area-file-format.txt`、`doc/vnum-assignments.txt`、`doc/merc-release-notes.txt`。
  目前專案使用的是拆目錄資料結構，不是原始單檔 `.are`；若回看 `doc/area-file-format.txt` 裡的 `#AREA/#HELPS/#MOBILES/#OBJECTS/#ROOMS/#RESETS/#SHOPS/#SPECIALS`，要把它當概念對照，不要逐段照抄成 3.0 目錄格式。
 4. 需要世界觀、技能、國家系統、交通、公告脈絡時，連同 `docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md` 一起使用，從 `docs/3yWebsite/docs/*.md` 與 `docs/3yWebsite/docs/data/*.json` 取資料。
-5. 修改完成後，至少做靜態搜尋、編碼檢查與必要的啟動/載入驗證，再回報受影響檔案與風險。
+5. 若是新增 AREA，先決定是手寫 `.roo`，還是用 `references/map-spec-template.md` + `scripts/generate_roo_from_map_md.py` 走「spec -> scaffold」流程。
+6. 修改完成後，至少做靜態搜尋、編碼檢查與必要的啟動/載入驗證，再回報受影響檔案與風險。
 
 ## 先看目前專案現況
 
@@ -33,14 +51,21 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 - 既有區域通常至少有 `index`、`mob/`、`obj/`、`res/`、`roo/`、`shp/`
 - 戰鬥區與部分主城區還可能附帶區域地圖檔；它不一定放在區根目錄，也可能放在 `roo/` 內，視既有區格式而定
 - 地圖不要只當成平面格子：`src/act_move.c` 目前支援 `north/east/south/west/up/down/enter/out`，規劃與修復出口時要把它當成立體拓樸
+- `mapmd-json` 的內部模型是 graph-native：room = node、exit = edge，而 `#Keyword` / `#Job` / `#Enquire` 是掛在 node 上的互動與導流 metadata
 - 不要再把 `mineral/` 視為目前 repo 的既定必備目錄；只有任務真的需要礦脈/採集物時才新增，並同步確認載入格式
 - `beiping` 額外有 `map`
 - `pk_area/roo` 目前有 `map`、`map2`
 - `free_fight/roo` 目前有一個名為 `pk_area` 的地圖檔；名稱雖舊，但內容是在畫 `7001-7044` 的房間布局
 - 修改既有區時保留原本地圖檔名與格式；不要因為檔名看起來怪就先改名
+- 目前 area 內地圖檔分布並不一致：`limbo` 沒有、`beiping` 在區根目錄、`loyang` 在 `roo/` 下有多張、`free_fight` 則沿用舊名 `pk_area`
+- 目前沒有證據顯示這些 area-local 地圖檔一定會被 runtime 直接讀取；它們比較適合視為維護輔助或歷史資料
+- `help/map.hlp` 是玩家可見的世界地圖，和每個 AREA 的設計規格檔是不同層次的東西
+- 目前沒有通用 MUD map 標準適合直接拿來當 Merc-FJU 的 room source of truth；本 skill 使用的是 Merc-first、Git-friendly 的內部 graph schema
 
 ### scripts/ 現況
-- `scripts/` 目前可見的腳本只有 `scripts/convert_big5_to_utf8.py`
+- repo 根目錄 `scripts/` 目前可見的腳本只有 `scripts/convert_big5_to_utf8.py`
+- 本 skill 另外提供 `scripts/generate_roo_from_map_md.py`，用來把受限結構的 `map.md` 轉成 `.roo` scaffold；它不是自由文字 Markdown compiler
+- 這支 script 目前只做一件事：把 `mapmd-json` graph schema 驗證後投影成 `.roo` scaffold；它不是 Mudlet、SQLite 或其他外部 mapper exporter
 - 不要假設 `scripts/check-data.py` 或其他舊工具一定存在；驗證步驟應先以 repo 實際檔案為準
 - 若任務涉及大量舊資料匯入、回填或外部檔案導入，可用 `convert_big5_to_utf8.py` 協助確認 UTF-8 轉碼
 
@@ -59,12 +84,15 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 - 先確認是改哪個區：`limbo`、主城（`loyang`、`beiping`）、新手區（`new`、`newfight`）、戰鬥區（`pk_area`、`free_fight`），不同區域耦合不同
 - 先查 `area/directory.lst` 的順序與註解，避免把物件或房間引用到尚未載入的區域
 - 先看 `src/act_move.c` 裡目前可用的方向與反向配對；現行實作至少有 `north/east/south/west/up/down/enter/out`，不要假設出口只會是平面四向
+- 先看 `src/load.c`，確認 `.roo` 的正式 schema：頂層區塊至少有 `#Exit`、`#Keyword`、`#Job`、`#Enquire`
+- 把 `mapmd-json` 當作 canonical machine-readable graph schema 來想，不要把 `.roo` 反過來當設計源頭
 - 先檢查目標區是否已有地圖檔（例如 `map`、`map2` 或 `roo/` 內的格狀檔）；若有，先把它當作房間拓樸的事實來源，再回頭查各 `.roo` 出口與描述
 - 若牽涉固定房號、出生地、交通、懸賞、教學流程，主動搜尋 `src/`、`etc/`、`data/`、`help/` 是否也要一起改
 
 ### 2. 先用現有區域當模板
 - 優先比對 `area/loyang`、`area/beiping`、`area/new` 等現存區域，而不是依賴過往已被移除又後來復原前的假設
-- 若是新增區域，先從最接近的既有區域複製結構與格式，再逐步替換名稱、VNUM、描述與 reset
+- 若是新增區域，先建立 `area/<new_area>/map.md` 當設計規格，再從最接近的既有區域複製結構與格式，逐步落地成 `roo` / `mob` / `obj` / `res` / `shp`
+- `map.md` 是人類可讀 spec；若要用腳本產生 `.roo`，只能使用其中受限、結構化的機器可讀區塊，不能把自由 prose 直接拿去 compile
 - 若是搬修舊版資料，先用搜尋確認舊名稱、舊城名、舊勢力詞是否殘留在 `roo`、`mob`、`obj`、`res`、`shp`、help 或 system data
 - 若現行 repo 缺資料或看不出原始設計，回查 `https://github.com/jakeuj/merc-fju-2.0-utf8` 的對應路徑，再把需要的內容 mapping 回 3.0
 
@@ -75,13 +103,19 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 - `roo/*.roo`：參照 `document/room.txt`；出口要成對檢查，避免只改單向出口
 - `roo/` 內若另有地圖檔，也把它視為正式資料的一部分；修房間時先用地圖核對座標關係，再決定哪些出口或描述不合理
 - 地圖與出口檢查要包含立體方向：除了 `north/east/south/west`，還要主動檢查 `up/down/enter/out` 是否也和 `src/act_move.c` 的反向關係對得上
+- 合法方向 enum 目前只用 `north`、`south`、`east`、`west`、`up`、`down`、`enter`、`out`；文件、template、script 必須維持同一份定義
 - `roo/*.roo` 不只要看出口；若房間靠 `#Keyword` 描述暗示玩家輸入特殊動作，例如 `bore hole`、`enter xxx`、`climb xxx`、`push xxx`，就把它視為正式玩法路徑的一部分。搬房、改名或改文案時，要一起檢查關鍵字、動詞提示、相鄰房間與相關程式/觸發是否仍對得上
 - 但要分清楚兩種不同層級：`#Keyword` 只負責 `look/examine` 類描述，不會自動產生新指令；真正的特殊房間互動若不是內建在 `act_move.c` / 其他 `do_*` 指令裡，就必須靠 `#Job` 綁到 `src/job.c` 已註冊的房間 job function
+- `#Enquire` 也要視為 room spec 的正式部分；它會被 `do_enquire` 用來做問路與服務查詢，所以只要房間承載訓練、商店、車站、碼頭、銀行、佈告欄等玩家可問路的功能，就應該進 spec
+- `labels` 不是 `#Keyword` 的替代品；`labels` 是 graph/editor/export metadata，`keywords` 才是 Merc runtime interaction metadata
 - `res/*.res`：參照 `document/reset.txt`；任何 `M/E/G/O/D` 關聯都要重新核對 VNUM
 - `shp/*.shp`：參照 `document/shop.txt`；確認 `Keeper`、販售類型與商品來源一致
 - `map`：若目標區有 `map`，先讀原檔再改，不要自行發明格式
 - 若地圖檔是平面格狀表示，只把它當作主要平面骨架；任何 `up/down/enter/out` 這類立體或內外層連線，仍要回到 `.roo` 與 `src/act_move.c` 一起核對，不要因為地圖檔沒畫出來就忽略
-- 若是新增 AREA，預設也要補一份對應的區域地圖檔，好讓後續能從拓樸角度檢查房間布局、動線與死路；放置位置與檔名優先比照最接近的既有區
+- 若是新增 AREA，預設要先寫 `area/<new_area>/map.md`；它是 spec-first 設計檔，優先於任何舊式 area-local 地圖檔
+- 若想用腳本加速，使用 `references/map-spec-template.md` 提供的受限 Markdown 結構，再交給 `scripts/generate_roo_from_map_md.py` 產生 `.roo` scaffold
+- 這個 Python script 的定位是 scaffold generator，不是完整 compiler：它會產生初版 `.roo`、驗證方向/引用/Job，但不會幫你猜缺漏描述、補世界觀或默默創造不存在的 reverse exit
+- graph schema 可以額外攜帶 `coord`、`cluster`、`labels` 等 metadata，供未來 map/export tooling 使用；目前 `.roo` projection 不會輸出它們
 - 若地圖檔與實際 `.roo` 出口不一致，先整理成「地圖預期相鄰關係 -> 實際出口」的對照，再決定要修地圖、修出口，或兩者一起修
 - 特別注意像 `area/newfight/roo/1211.roo` 這種房間：`#Keyword hole~` 的描述直接提示玩家用 `bore` 通過裂縫。這類「描述 -> 指令」配對若斷掉，玩家即使看到房間也不一定知道怎麼前進
 - 以目前 repo 狀態來看，`bore` 還不是現成可用指令：我沒有找到 `do_bore`，而 `src/job.c` 目前只註冊少數 room job（如 `job_recall_new`、`job_goto_pk_area`）。因此若需求是讓 `bore hole` 真的可用，就要決定是新增通用 `do_bore`，還是新增 room job 再在對應 `.roo` 裡加 `#Job`
@@ -147,15 +181,19 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 - 若需要大量搬移舊區，先做 mapping 表，列出舊 VNUM -> 新 VNUM，再開始改檔
 - 規劃新區或修戰鬥迷宮時，先畫或更新區域地圖檔，再批次檢查每個房間的上下左右出口是否和格位一致；休息室、入口廳、傳送點這類不在主格網內的房間，要用額外節點思考，不要硬塞成主地圖中心
 - 若區域有樓層、洞口、室內外切換、城門內外、建築入口或其他垂直/內外層結構，先把平面骨架與立體節點分開思考；`up/down/enter/out` 的配對以 `src/act_move.c` 的 `rev_dir[]` 為準，不要自行猜反向方向
+- 若區域很大（例如上百個 room），把 `map.md` 當主索引，並拆成 `map-core.md`、`map-floor-2.md`、`map-services.md`、`map-special-routes.md` 之類的子檔；Python scaffold 只接受主檔明確列出的 `includes`
+- graph 上預設追求 edge 完整性，所以 reverse exit 會預設要求成對；若 runtime intent 就是單向通道，才用 `one_way` 明確標示這是刻意偏離對稱圖的合法例外
 - 台詞、地名、勢力名、技能名以目前專案與 docs 參考資料為準，避免混入其他版本設定
 - 從 2.0 舊 repo 搬資料時，不要整包照抄；先比對目前 3.0 已存在的 area/data/help/src 耦合，再決定哪些欄位保留、哪些要改寫
 - 若匯入的是更接近原始 Merc 的 reset 寫法，記得 `R` 也是合法 reset 類型，用於亂數出口；不要只認得 `M/E/G/O/D`
 - 新手區或主城服務鏈改動時，優先維持 `newbie.md` 中玩家預期仍找得到的核心流程：出生後移動、補給、學習技能、致能、組隊、回城、轉職與國家導引；若必須改路徑，記得同步補新提示
 - 房間若依賴 `#Keyword` 提示特殊動詞才能前進或觸發事件，優先維持「玩家看到描述就能推得出指令」這個原則；不要把關鍵字改名、把提示刪掉，或讓描述中的動詞與實際可用指令不一致
+- `#Enquire` 不是裝飾資料；它是玩家查服務與找地點的入口。若你在 spec 中把某房間設計成「可問路找到」，就要同步規劃 `.roo` 內的 `#Enquire` 同義詞
 - 若要新增這類互動，先確認它屬於哪一種：
 - 通用移動/操作：實作或修改 `src/act_move.c` / 其他 `do_*` 指令，並確認命令表已註冊
 - 房間特例：在 `src/job.c` / job registry 增加 room job，並在對應 `.roo` 寫 `#Job`
 - 不要以為只寫 `#Keyword hole~` 就會自動讓 `bore hole` 可用；`#Keyword` 是提示與檢視描述，不是命令綁定本身
+- 同理，不要以為只把某服務寫進房間描述就能被 `enquire` 找到；若玩家要能問路找到它，就要規劃並落地 `#Enquire`
 - 技能相關區域改動時，優先維持 `skills.md` 中能被玩家辨識的技能名稱、來源關係與熟練度詞彙；不要在房間、NPC、秘笈、help 與 docs 間混用不同譯名或把「可教導」誤寫成「只能領悟」
 - 國家相關區域改動時，優先維持 `realm.md` 中玩家預期的流程與限制：首都要有公告/信件承載點、建國/入國要找得到銀行與官署支援、叛國與離境不要把玩家送回錯誤領地或失去必要導引
 - 世界觀或官方敘事相關改動時，優先維持 `system.md` 的時間線、勢力稱呼與官方語氣；不要把新技能開放順序、Immortal 身分、授權提示或 `help fju` / `credit` 類文案寫成與歷史資料衝突
@@ -165,17 +203,19 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 2. 若有匯入舊資料或懷疑編碼不穩，執行 `python scripts/convert_big5_to_utf8.py` 或等價方式確認檔案可被 UTF-8 正常讀取
 3. 檢查 `area/directory.lst`、目標區 `index`、相關 `res/shp/roo` 是否互相對得上
 4. 若目標區有地圖檔，逐格核對地圖上的相鄰房號與 `.roo` 出口是否一致，並確認房間描述是否符合所在方位或區塊用途；若有 `up/down/enter/out`，再回到 `src/act_move.c` 檢查立體反向關係
-5. 若牽涉交通或主城導流，再對照 `docs/3yWebsite/docs/maps.md` / `docs/3yWebsite/docs/data/maps.json`，確認站名、票價、主節點用途、`Serial` / `Capital` 與玩家可見提示一致
-6. 若牽涉新手區、主城服務點或教學導引，再對照 `docs/3yWebsite/docs/newbie.md`，確認玩家進場後仍能靠 room/NPC/告示走完基本流程，不會卡在缺 NPC、缺提示、缺指令說明
-7. 若房間有 `#Keyword` 或描述暗示特殊互動，再逐房檢查玩家實際看到的名詞與動詞是否還能導向正確操作，例如 `hole -> bore hole` 這類提示不能只剩關鍵字、不剩可理解的引導
-8. 若房間描述提示的是非內建指令，再確認它的實作位置真的存在：不是 `do_*` 命令，就是 `#Job -> src/job.c` 可解析的 function；不要讓 area 文案先行、程式端卻沒有入口
-9. 若牽涉技能來源、訓練 NPC、秘笈物件或職業導引，再對照 `docs/3yWebsite/docs/skills.md` / `docs/3yWebsite/docs/data/skills.json`，確認技能名稱、來源類型、熟練度詞彙、study / 領悟提示與區域內實作一致
-10. 若牽涉國家首都、領地入口、官署、公告板或建國/叛國流程，再對照 `docs/3yWebsite/docs/realm.md` / `docs/3yWebsite/docs/data/realm_commands.json`，確認 `Capital`、公告/信件載體、銀行條件、官職導引與 recall/離境邏輯一致
-11. 若牽涉世界觀敘事、官方公告、元老/神族 NPC 或公開版提示，再對照 `docs/3yWebsite/docs/system.md`、`docs/3yWebsite/docs/data/news.json`、`docs/3yWebsite/docs/data/immortals.json`，確認歷史事件、官方稱呼、公告文案與 `help fju` / `credit` 相關提示一致
-12. 若環境允許，實際啟動遊戲或執行區域 reload；`doc/merc-release-notes.txt` 也提醒 Merc 本身的開機流程就是很好的 area syntax checker，所以要優先讀第一個錯誤，而不是一次猜全部
-13. 查看 `debug/`、`log/` 是否出現 `Load_room`、`load_mobiles`、reset 或檔案開啟錯誤
+5. 若使用 `scripts/generate_roo_from_map_md.py`，先跑 `--validate-only`，確認房號、方向、reverse exit、Job function 與受限 Markdown 結構都合法，再決定是否輸出 `.roo`
+6. 若牽涉交通或主城導流，再對照 `docs/3yWebsite/docs/maps.md` / `docs/3yWebsite/docs/data/maps.json`，確認站名、票價、主節點用途、`Serial` / `Capital` 與玩家可見提示一致
+7. 若牽涉新手區、主城服務點或教學導引，再對照 `docs/3yWebsite/docs/newbie.md`，確認玩家進場後仍能靠 room/NPC/告示走完基本流程，不會卡在缺 NPC、缺提示、缺指令說明
+8. 若房間有 `#Keyword` 或描述暗示特殊互動，再逐房檢查玩家實際看到的名詞與動詞是否還能導向正確操作，例如 `hole -> bore hole` 這類提示不能只剩關鍵字、不剩可理解的引導
+9. 若房間設計成可被問路找到，再逐房檢查 `#Enquire` 同義詞是否已落地，不要讓 spec 有服務節點、遊戲中卻問不到
+10. 若房間描述提示的是非內建指令，再確認它的實作位置真的存在：不是 `do_*` 命令，就是 `#Job -> src/job.c` 可解析的 function；不要讓 area 文案先行、程式端卻沒有入口
+11. 若牽涉技能來源、訓練 NPC、秘笈物件或職業導引，再對照 `docs/3yWebsite/docs/skills.md` / `docs/3yWebsite/docs/data/skills.json`，確認技能名稱、來源類型、熟練度詞彙、study / 領悟提示與區域內實作一致
+12. 若牽涉國家首都、領地入口、官署、公告板或建國/叛國流程，再對照 `docs/3yWebsite/docs/realm.md` / `docs/3yWebsite/docs/data/realm_commands.json`，確認 `Capital`、公告/信件載體、銀行條件、官職導引與 recall/離境邏輯一致
+13. 若牽涉世界觀敘事、官方公告、元老/神族 NPC 或公開版提示，再對照 `docs/3yWebsite/docs/system.md`、`docs/3yWebsite/docs/data/news.json`、`docs/3yWebsite/docs/data/immortals.json`，確認歷史事件、官方稱呼、公告文案與 `help fju` / `credit` 相關提示一致
+14. 若環境允許，實際啟動遊戲或執行區域 reload；`doc/merc-release-notes.txt` 也提醒 Merc 本身的開機流程就是很好的 area syntax checker，所以要優先讀第一個錯誤，而不是一次猜全部
+15. 查看 `debug/`、`log/` 是否出現 `Load_room`、`load_mobiles`、reset 或檔案開啟錯誤
    原始 Merc 文件也提到 area diagnostics 常會附帶 area 檔名與行號；若有這種訊息，優先沿著第一個定位點回修
-14. 回報時要列出：改了哪些區域檔、哪些系統檔被連動修改、是否引用了 docs 服務資料、是否動到區域地圖檔、以及還沒驗證到的風險
+16. 回報時要列出：改了哪些區域檔、哪些系統檔被連動修改、是否引用了 docs 服務資料、是否動到區域地圖檔、是否使用 Python scaffold 產生 `.roo`、以及還沒驗證到的風險
 
 ## 參考資料
 - `document/README`
@@ -192,5 +232,7 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 - `doc/skills-and-spells-guide.txt`
 - `references/area-build-checklist.md`
 - `references/historical-large-city-example.md`
+- `references/map-spec-template.md`
+- `scripts/generate_roo_from_map_md.py`
 - `docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md`
 - 舊版對照：`https://github.com/jakeuj/merc-fju-2.0-utf8`
