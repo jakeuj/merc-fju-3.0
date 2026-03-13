@@ -34,6 +34,23 @@ source of truth 要分兩種：
 6. 若任務屬於長期 area 重建，先讀 `plans/` 與 `area/rebuild_plan.md`；詳細規則見 `references/rebuild-workflow.md`。
 7. 修改完成後，至少做靜態搜尋、編碼檢查與必要的啟動/載入驗證，再回報受影響檔案與風險。
 
+## 主題靈感與沉浸式設計
+
+- 在生成新 AREA、補寫房間描述、NPC、任務、技能、道具、裝備或互動事件時，可以主動借鏡下列題材的敘事節奏、場景意象與玩法結構：
+- 歷史 / 演義系：`三國志`、`三國演義`
+- 武俠 / 奇幻系：`幻想三國志`、`金庸群俠傳` 與其他相近的華語武俠 RPG 氛圍
+- 借鏡的重點是「題材母型」與「玩家感受」：城郊軍營、關隘哨站、江湖門派、奇人異士、失傳秘笈、護送任務、名將傳聞、山寨伏兵、水路暗道、地脈異象等
+- 優先把這些靈感轉譯成符合 Merc-FJU 世界的原生內容：房間敘述節奏、地名風格、NPC 身分、支線鉤子、掉落邏輯、技能來源、裝備典故與服務節點
+- 若靈感來自受著作權保護的特定作品，預設做「改寫後的致敬／變體」，不要直接整包照抄專有角色名、逐句台詞、完整門派設定或劇情橋段；除非目前 repo / docs 已明確把該名稱視為專案既有 canon
+- 若靈感來自歷史人物或《三國演義》這類公共領域題材，仍要優先對齊本專案既有世界線、國家、城市、技能與 help 用語，不要只因典故好用就破壞現有設定一致性
+- 在 spec prose 中，不只描述地圖拓樸，也主動寫出「這個節點想讓玩家感受到什麼」：例如軍鎮壓力、郊野詭譎、江湖祕聞、邊關肅殺、地下水道潮濕危險
+- 在 room/NPC/quest 設計上，優先讓玩家從文字就能推得出玩法：誰可問路、誰像師父、哪裡像埋伏點、哪個物件可能可檢視、哪句傳聞暗示支線
+- 技能、武功、道具與裝備命名可帶有古風、兵法、江湖或異聞色彩，但要避免和既有 `skills.md` / help / docs 的名稱體系衝突；若要新增來源，需同步規劃 teacher、study 物件、掉落或任務導引
+- 若一個區域明顯採用某種主題語彙（例如軍旅、俠客、山寨、妖異水脈），就讓房間描述、NPC 口吻、物件命名、遭遇事件與 `#Enquire` 詞彙維持同一語氣，不要風格跳躍
+- 若需要題材資料支撐世界觀、地理、國家、技能或玩家導流，優先仍以 `docs/3yWebsite` 與 repo 既有內容為主，再把外部作品當作 flavor inspiration，而不是新的 source of truth
+- 若需要可直接套用的主題模板，讀 `references/theme-design-patterns.md`；它目前提供六大題材：`軍旅風`、`江湖風`、`仙俠風`、`歷史城市風`、`詭異民俗風`、`探險遺跡風`，並附房間語氣、NPC 類型、任務鉤子、物件 / 傳聞模板、`#Keyword` / `#Enquire` 詞庫、混搭規則、世界分區 heuristic 與 `map.md` 建議欄位
+- 若任務不是只做單區，而是涉及世界層 area 規劃、題材平均化、州郡 / 主城 / 郊外 / 秘境的風格分工，優先讀 `references/theme-design-patterns.md` 的「世界級題材配置」與「世界分區建議」
+
 ## 先看目前專案現況
 
 ### area/ 現況
@@ -207,6 +224,9 @@ source of truth 要分兩種：
 - 若區域很大（例如上百個 room），把 `map.md` 當主索引，並拆成 `map-core.md`、`map-floor-2.md`、`map-services.md`、`map-special-routes.md` 之類的子檔；Python scaffold 只接受主檔明確列出的 `includes`
 - graph 上預設追求 edge 完整性，所以 reverse exit 會預設要求成對；若 runtime intent 就是單向通道，才用 `one_way` 明確標示這是刻意偏離對稱圖的合法例外
 - 台詞、地名、勢力名、技能名以目前專案與 docs 參考資料為準，避免混入其他版本設定
+- 可借鏡三國史傳、演義、武俠群像、奇幻三國等題材來增加帶入感，但要先抽取題材母型再落成 repo 內可維護的原生設計，不要讓 area 變成跨 IP 名稱大拼盤
+- 若同時在規劃多個 area，主動檢查六大題材分布是否失衡；優先補足缺少的題材類型，而不是讓每個新區都落到同一種風格
+- 規劃單一 area 時，也要說清楚它在世界層的 `Theme` / `Subtheme` 與缺口角色，例如「補主城外郊的軍旅風」、「補洛陽周邊的歷史城市風與江湖風過渡帶」
 - 從 2.0 舊 repo 搬資料時，不要整包照抄；先比對目前 3.0 已存在的 area/data/help/src 耦合，再決定哪些欄位保留、哪些要改寫
 - 若匯入的是更接近原始 Merc 的 reset 寫法，記得 `R` 也是合法 reset 類型，用於亂數出口；不要只認得 `M/E/G/O/D`
 - 新手區或主城服務鏈改動時，優先維持 `newbie.md` 中玩家預期仍找得到的核心流程：出生後移動、補給、學習技能、致能、組隊、回城、轉職與國家導引；若必須改路徑，記得同步補新提示
@@ -256,6 +276,7 @@ source of truth 要分兩種：
 - `doc/skills-and-spells-guide.txt`
 - `references/area-build-checklist.md`
 - `references/historical-large-city-example.md`
+- `references/theme-design-patterns.md`
 - `references/rebuild-workflow.md`
 - `references/map-spec-template.md`
 - `scripts/generate_roo_from_map_md.py`
