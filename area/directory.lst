@@ -5,11 +5,23 @@
 * 請注意﹐這個是有前後順序的﹐所以物品不能向後參考。
 
 * 基本區域
+* limbo 房間 0001-0500 (預設基本區域)
 limbo
 
+* loyang 房間 0501-0744 (洛陽)
 loyang
+
+* beiping 房間 9001-9063 (北平)
 beiping
+
+* new 房間 0450-0477 (新手試煉)
 new
+
+* newfight 房間 1201-1295 (新手戰鬥區)
 newfight
+
+* pk_area 房間 1301-1333 (PK區)
 pk_area
+
+* free_fight 房間 7001-7044 (自由戰鬥區)
 free_fight
