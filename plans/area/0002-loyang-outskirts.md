@@ -112,3 +112,35 @@
 - `loyang` 仍是現有母城，不在這一輪重建範圍內
 - 第一版重點是 topology 與 room-spec intent，不是完整內容量產
 - 地下水區在第一版可以先作為入口節點，不必一次做完整地下區域
+
+## Implementation Outcome
+
+`loyang_outskirts` 已完成第一個可整合的實作里程碑，驗證了這條流程：
+
+`plan -> map.md -> mapmd-json -> .roo scaffold -> mob/obj/res/shp -> directory integration -> smoke test`
+
+本次實際落地內容：
+
+- 建立 `area/loyang_outskirts/map.md`
+- 以 generator 產生 `roo/7501-7512.roo`
+- 補上最小 `index`、`mob`、`obj`、`res`、`shp`
+- 將 `loyang_outskirts` 掛入 `area/directory.lst`
+- 把 `loyang/556` 與 `loyang_outskirts/7501` 接成正式邊界出口
+- 在 WSL 內用 `./merc merc.ini` 做 smoke test，成功跑到「開始正常運作」
+
+## Lessons From This Case
+
+- `mapmd-json` 不能只描述 area 內部互連；第一個正式新 area 落地後，已證明需要支援 external exit，才能把 spec 當成真正的 source of truth
+- `delivery_gate` 很重要：如果沒有它，固定 prompt 很容易在 area 還該 commit 或還在整合時，就誤跳下一區
+- reset parser 比文件更保守；像 `.res` 結尾和空白行這種細節，最好優先比對現有 repo 內可正常載入的範例
+- WSL smoke test 足以把「資料載入錯誤」和「只是常駐程式被 timeout 終止」清楚分開
+
+## Recommended Next Implementation Scopes
+
+若後續仍留在 `loyang_outskirts`，優先考慮：
+
+- 把 `east` 方向正式接到未來 `龍渠丘陵`
+- 把 `down` 方向正式接到未來 `洛陽地下水區`
+- 視需要補更多 reset、服務 NPC、戰鬥遭遇與地圖提示
+
+若 `delivery_gate` 已改成可前進下一區，則下一個候選應回到 `beiping_outskirts`

@@ -14,6 +14,13 @@
 - `delivery_gate: blocked`
   - 表示先解 blocker，不得把「做下一區」當成替代方案
 
+## Smoke Test Hygiene
+
+- 若本輪要做 area 載入或啟動 smoke test，先清空 `debug/*` 內容
+- 成功不能只看 process 暫時存活；至少要確認啟動輸出或 log 內有像 `三國歪傳之降龍伏虎開始正常運作` 這類明確成功訊號
+- 即使已看到成功訊號，仍要回頭檢查 `debug/*` 是否出現本次新增 area 相關的新錯誤或警告
+- 只有在上述三點都完成後，才可把 `delivery_gate` 推進到 `implementation_ready_for_commit` 或 `validated_ready_to_advance`
+
 ## References
 
 - 全局計畫：`plans/0001-world-map-area-rebuild.md`

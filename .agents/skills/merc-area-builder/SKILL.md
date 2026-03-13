@@ -34,6 +34,7 @@ source of truth 要分兩種：
 6. 若任務需要參考 repo 內的 `ref/` 世界藍圖、spec-first scaffold、world builder 或題材分布資料，先讀 `ref/Readme.md` 當索引，再挑需要的檔案或子資料夾深入。
 7. 若任務屬於長期 area 重建，先讀 `plans/` 與 `area/rebuild_plan.md`；詳細規則見 `references/rebuild-workflow.md`。
 8. 修改完成後，至少做靜態搜尋、編碼檢查與必要的啟動/載入驗證，再回報受影響檔案與風險。
+9. 若要做 area 載入 smoke test，先清空 `debug/*` 內容，再執行測試；測試後用成功訊號與新產生的 debug 訊息一起判讀。
 
 ## 主題靈感與沉浸式設計
 
@@ -49,8 +50,11 @@ source of truth 要分兩種：
 - 技能、武功、道具與裝備命名可帶有古風、兵法、江湖或異聞色彩，但要避免和既有 `skills.md` / help / docs 的名稱體系衝突；若要新增來源，需同步規劃 teacher、study 物件、掉落或任務導引
 - 若一個區域明顯採用某種主題語彙（例如軍旅、俠客、山寨、妖異水脈），就讓房間描述、NPC 口吻、物件命名、遭遇事件與 `#Enquire` 詞彙維持同一語氣，不要風格跳躍
 - 若需要題材資料支撐世界觀、地理、國家、技能或玩家導流，優先仍以 `docs/3yWebsite` 與 repo 既有內容為主，再把外部作品當作 flavor inspiration，而不是新的 source of truth
-- 若需要可直接套用的主題模板，讀 `references/theme-design-patterns.md`；它目前提供六大題材：`軍旅風`、`江湖風`、`仙俠風`、`歷史城市風`、`詭異民俗風`、`探險遺跡風`，並附房間語氣、NPC 類型、任務鉤子、物件 / 傳聞模板、`#Keyword` / `#Enquire` 詞庫、混搭規則、世界分區 heuristic 與 `map.md` 建議欄位
-- 若任務不是只做單區，而是涉及世界層 area 規劃、題材平均化、州郡 / 主城 / 郊外 / 秘境的風格分工，優先讀 `references/theme-design-patterns.md` 的「世界級題材配置」與「世界分區建議」
+- 若需要可直接套用的主題模板，先讀 `references/theme-design-patterns.md` 這份索引，再按需分流：
+- 世界級題材分布與州郡 / 主城 / 郊外 / 秘境配置，讀 `references/theme-world-allocation.md`
+- `歷史城市風` / `軍旅風`，讀 `references/theme-patterns-civic-military.md`
+- `江湖風` / `仙俠風`，讀 `references/theme-patterns-jianghu-mystic.md`
+- `詭異民俗風` / `探險遺跡風`，讀 `references/theme-patterns-folklore-ruins.md`
 
 ## 先看目前專案現況
 
@@ -71,6 +75,7 @@ source of truth 要分兩種：
 - 戰鬥區與部分主城區還可能附帶區域地圖檔；它不一定放在區根目錄，也可能放在 `roo/` 內，視既有區格式而定
 - 地圖不要只當成平面格子：`src/act_move.c` 目前支援 `north/east/south/west/up/down/enter/out`，規劃與修復出口時要把它當成立體拓樸
 - `mapmd-json` 的內部模型是 graph-native：room = node、exit = edge，而 `#Keyword` / `#Job` / `#Enquire` 是掛在 node 上的互動與導流 metadata
+- `mapmd-json` 現在也允許 external exit：若某個出口本來就要接到 spec 外、但 repo 內已存在的既有房號，可在 exit 上標示 `external: true`，讓 generator 保留這個出口，同時略過 same-spec target / reverse-link 驗證
 - 不要再把 `mineral/` 視為目前 repo 的既定必備目錄；只有任務真的需要礦脈/採集物時才新增，並同步確認載入格式
 - `beiping` 額外有 `map`
 - `pk_area/roo` 目前有 `map`、`map2`
@@ -88,6 +93,7 @@ source of truth 要分兩種：
 - 單一 area 計畫使用 `plans/area/NNNN-area-slug.md`
 - `area/rebuild_plan.md` 是日常追蹤看板，負責 `todo / in_progress / done / blocked / next_action`
 - 若使用固定 prompt `繼續實作下一個待建 area`，先讀 `area/rebuild_plan.md` 再決定下一個目標
+- 長期重建流程還應使用 `delivery_gate` 與 `next_prompt` 來判斷：現在該先 commit、續做當前 area，還是已可前進下一區
 
 ### ref/ 現況
 - `ref/Readme.md` 是 `ref/` 的入口索引，先用它判斷該讀世界藍圖、template、spec-first scaffold、生成器，還是模擬系統
@@ -109,6 +115,7 @@ source of truth 要分兩種：
 - repo 根目錄 `scripts/` 目前可見的腳本只有 `scripts/convert_big5_to_utf8.py`
 - 本 skill 另外提供 `scripts/generate_roo_from_map_md.py`，用來把受限結構的 `map.md` 轉成 `.roo` scaffold；它不是自由文字 Markdown compiler
 - 這支 script 目前只做一件事：把 `mapmd-json` graph schema 驗證後投影成 `.roo` scaffold；它不是 Mudlet、SQLite 或其他外部 mapper exporter
+- external exit 仍會輸出成正式 `.roo #Exit`，只是驗證時不要求目標房間也出現在同一份 spec 內
 - 不要假設 `scripts/check-data.py` 或其他舊工具一定存在；驗證步驟應先以 repo 實際檔案為準
 - 若任務涉及大量舊資料匯入、回填或外部檔案導入，可用 `convert_big5_to_utf8.py` 協助確認 UTF-8 轉碼
 
@@ -126,8 +133,14 @@ source of truth 要分兩種：
 ### 1. 盤點目標與耦合
 - 先確認是改哪個區：`limbo`、主城（`loyang`、`beiping`）、新手區（`new`、`newfight`）、戰鬥區（`pk_area`、`free_fight`），不同區域耦合不同
 - 若任務是長期重建的一部分，先讀 `area/rebuild_plan.md`：
-  - 有 `in_progress` 就先續做該區
-  - 否則選第一個 `todo` 且無 blocker 的 area
+- 有 `in_progress` 就先續做該區
+- 否則選第一個 `todo` 且無 blocker 的 area
+- 這裡的 `next area` 一律指 next actionable area，不是 candidate queue 的下一個新候選；只要 `in_progress` 還在，就不得自行跳到下一個 `todo`
+- 再讀該區的 `delivery_gate`：
+- `spec_ready_for_commit` / `implementation_ready_for_commit`：先 commit，不進下一區
+- `validated_ready_to_advance`：才可進下一個 `todo`
+- `spec_in_progress` / `implementation_in_progress`：續做當前 area
+- `blocked`：先處理 blocker
 - 對應的決策完整計畫再回到 `plans/` 內的全局或單區 plan
 - 先查 `area/directory.lst` 的順序與註解，避免把物件或房間引用到尚未載入的區域
 - 先看 `src/act_move.c` 裡目前可用的方向與反向配對；現行實作至少有 `north/east/south/west/up/down/enter/out`，不要假設出口只會是平面四向
@@ -169,11 +182,13 @@ source of truth 要分兩種：
 - 若 `ref/Readme.md` 已提供更細的 area template 或相近節點 scaffold，優先借鏡它們來決定 cluster 命名、房間語氣、題材配置與 world links
 - 若想用腳本加速，使用 `references/map-spec-template.md` 提供的受限 Markdown 結構，再交給 `scripts/generate_roo_from_map_md.py` 產生 `.roo` scaffold
 - 這個 Python script 的定位是 scaffold generator，不是完整 compiler：它會產生初版 `.roo`、驗證方向/引用/Job，但不會幫你猜缺漏描述、補世界觀或默默創造不存在的 reverse exit
+- 但若 exit 明確標了 `external: true`，它可以作為「接到既有 area 房號」的合法例外；這正是像 `loyang/556 <-> loyang_outskirts/7501` 這類整合場景需要的行為
 - graph schema 可以額外攜帶 `coord`、`cluster`、`labels` 等 metadata，供未來 map/export tooling 使用；目前 `.roo` projection 不會輸出它們
 - 若 area 屬於長期重建看板的一部分，完成一輪實作後要同步回寫 `area/rebuild_plan.md`：
   - 更新 status
   - 更新 next_action
   - 補上 done 或 blocked
+- 若本輪已做到可 commit 的安全里程碑，記得把 `delivery_gate` 推到 `spec_ready_for_commit` 或 `implementation_ready_for_commit`；不要只更新 `status` 而漏掉 gate
 - 若地圖檔與實際 `.roo` 出口不一致，先整理成「地圖預期相鄰關係 -> 實際出口」的對照，再決定要修地圖、修出口，或兩者一起修
 - 特別注意像 `area/newfight/roo/1211.roo` 這種房間：`#Keyword hole~` 的描述直接提示玩家用 `bore` 通過裂縫。這類「描述 -> 指令」配對若斷掉，玩家即使看到房間也不一定知道怎麼前進
 - 以目前 repo 狀態來看，`bore` 還不是現成可用指令：我沒有找到 `do_bore`，而 `src/job.c` 目前只註冊少數 room job（如 `job_recall_new`、`job_goto_pk_area`）。因此若需求是讓 `bore hole` 真的可用，就要決定是新增通用 `do_bore`，還是新增 room job 再在對應 `.roo` 裡加 `#Job`
@@ -275,10 +290,13 @@ source of truth 要分兩種：
 12. 若牽涉國家首都、領地入口、官署、公告板或建國/叛國流程，再對照 `docs/3yWebsite/docs/realm.md` / `docs/3yWebsite/docs/data/realm_commands.json`，確認 `Capital`、公告/信件載體、銀行條件、官職導引與 recall/離境邏輯一致
 13. 若牽涉世界觀敘事、官方公告、元老/神族 NPC 或公開版提示，再對照 `docs/3yWebsite/docs/system.md`、`docs/3yWebsite/docs/data/news.json`、`docs/3yWebsite/docs/data/immortals.json`，確認歷史事件、官方稱呼、公告文案與 `help fju` / `credit` 相關提示一致
 14. 若環境允許，實際啟動遊戲或執行區域 reload；`doc/merc-release-notes.txt` 也提醒 Merc 本身的開機流程就是很好的 area syntax checker，所以要優先讀第一個錯誤，而不是一次猜全部
-15. 查看 `debug/`、`log/` 是否出現 `Load_room`、`load_mobiles`、reset 或檔案開啟錯誤
+15. 若有做 smoke test，先清空 `debug/*` 內容，再開始測試，避免把舊 bug 誤當成這次新增 area 的結果
+16. 成功與否不能只看 process 是否暫時存活；至少要確認 log 或啟動輸出中出現像 `三國歪傳之降龍伏虎開始正常運作` 這類明確成功訊號
+17. 即使已看到成功訊號，仍要回頭檢查 `debug/*`、`log/` 是否出現和本次新增 area 相關的新 bug、warning、`Load_room`、`load_mobiles`、reset 或檔案開啟錯誤
+18. 查看 `debug/`、`log/` 是否出現 `Load_room`、`load_mobiles`、reset 或檔案開啟錯誤
    原始 Merc 文件也提到 area diagnostics 常會附帶 area 檔名與行號；若有這種訊息，優先沿著第一個定位點回修
-16. 回報時要列出：改了哪些區域檔、哪些系統檔被連動修改、是否引用了 docs 服務資料、是否動到區域地圖檔、是否使用 Python scaffold 產生 `.roo`、以及還沒驗證到的風險
-17. 若任務來自長期重建計畫，也要回報：是否更新 `area/rebuild_plan.md`、下一個推薦 area 是哪個、以及固定 prompt 下次會落到哪份計畫
+19. 回報時要列出：改了哪些區域檔、哪些系統檔被連動修改、是否引用了 docs 服務資料、是否動到區域地圖檔、是否使用 Python scaffold 產生 `.roo`、以及還沒驗證到的風險
+20. 若任務來自長期重建計畫，也要回報：是否更新 `area/rebuild_plan.md`、下一個推薦 area 是哪個、以及固定 prompt 下次會落到哪份計畫
 
 ## 參考資料
 - `document/README`
@@ -296,6 +314,10 @@ source of truth 要分兩種：
 - `references/area-build-checklist.md`
 - `references/historical-large-city-example.md`
 - `references/theme-design-patterns.md`
+- `references/theme-world-allocation.md`
+- `references/theme-patterns-civic-military.md`
+- `references/theme-patterns-jianghu-mystic.md`
+- `references/theme-patterns-folklore-ruins.md`
 - `references/rebuild-workflow.md`
 - `references/map-spec-template.md`
 - `../ref/Readme.md`
