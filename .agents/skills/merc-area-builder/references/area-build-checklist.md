@@ -49,6 +49,16 @@
 - `data/ship.txt`
 - `help/` 內玩家可見提示
 - 若任務也需要世界觀、技能、國家或交通背景，連同 `docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md` 一起使用。
+- 若有驛站、渡口、碼頭、主城入口或跨區導流，對照 `docs/3yWebsite/docs/maps.md` / `docs/3yWebsite/docs/data/maps.json`，確認站名、票價、主節點用途、`Serial` / `Capital` 與 room/help/NPC 提示一致。
+- 若 docs 提到推薦等級或地圖節點用途，區域內的房間描述、告示與 `area` 指令導引也要用同一套命名與分級邏輯。
+- 若有出生後導流、新手教學房、訓練場、轉職或國家導引，對照 `docs/3yWebsite/docs/newbie.md`，確認 `area`、`learn`、`enable`、`group`、`recall`、`score` 等關鍵流程仍有 room/NPC/看板支撐。
+- 若搬動新手服務 NPC、補給點、修裝、救濟金、轉職或官署位置，要同步修正新手提示與玩家第一輪探索路線，避免攻略文字與現況斷線。
+- 若有技能教師、秘笈掉落、訓練場、法器或職業任務，對照 `docs/3yWebsite/docs/skills.md` / `docs/3yWebsite/docs/data/skills.json`，確認技能名稱、來源類型、熟練度詞彙、資源消耗與區域內 NPC/物件/掉落一致。
+- 若技能需 `study`、領悟、預備功夫或特殊資源消耗，房間提示、NPC 對話、物件說明與 help 文字要反映同一套規則，不要只在其中一處更新。
+- 若有國家首都、領地入口、官署、公告板、建國/入國/離境流程，對照 `docs/3yWebsite/docs/realm.md` / `docs/3yWebsite/docs/data/realm_commands.json`，確認 `Capital`、銀行、官職導引、新聞/信件載體與國家專屬服務都有落點。
+- 若牽涉叛國、懸賞、罪惡島或國土 recall，確認 `realm !quit` / `!leave` 類流程的懲罰與離境邏輯不會和房間傳送、出生點、國界提示互相衝突。
+- 若有世界觀主線、官方公告板、元老/神族 NPC、試煉傳送或公開版提示，對照 `docs/3yWebsite/docs/system.md` / `docs/3yWebsite/docs/data/news.json` / `docs/3yWebsite/docs/data/immortals.json`，確認敘事、公告順序、官方稱謂與玩家可見文案一致。
+- 若區域或 help 涉及 `help fju`、`credit`、授權說明或官方製作群彩蛋，確認文字沒有違反 `system.md` / `announce` 轉錄出的版權要求，也不要誤刪應保留的提示。
 
 ## 5. 編碼與靜態驗證
 - 全部檔案維持 UTF-8；若有從舊 repo 匯入或懷疑編碼不穩，執行 `python scripts/convert_big5_to_utf8.py` 或等價方式確認。
@@ -57,6 +67,11 @@
 - 區名、舊城名、舊勢力詞是否殘留
 - 重要房號是否仍被 `src/`、`data/`、`help/` 引用
 - 若編號規劃拿不準，可補看 `doc/vnum-assignments.txt` 與 `doc/area-file-format.txt` 的原始 Merc 背景，但實際採用仍以目前 3.0 世界資料為準。
+- 若區域有交通節點，再核對 `docs/3yWebsite/docs/maps.md` 是否仍和 `data/bus.txt` / `data/ship.txt`、區域內提示文字、驛站 NPC 配置對得上。
+- 若區域有新手導引或服務鏈，再核對 `docs/3yWebsite/docs/newbie.md` 提到的指令、NPC 類型、推薦練功流與告示文字是否仍找得到落點。
+- 若區域有技能來源或秘笈物件，再核對 `docs/3yWebsite/docs/skills.md` 是否仍和 `mob/obj/res/shp`、掉落提示、訓練 NPC 與相關 help 文案對得上。
+- 若區域有國家流程或 Capital 功能，再核對 `docs/3yWebsite/docs/realm.md` 是否仍和 `Capital`、board/note 類物件、銀行/官署服務點、國家提示與 recall 設定對得上。
+- 若區域有官方敘事、公告或 Immortal/元老 NPC，再核對 `docs/3yWebsite/docs/system.md` 是否仍和新聞時間線、NPC 稱謂、help/credit 文案與公告板內容對得上。
 - 用 `git diff` / `git status` 確認變更集中在預期檔案。
 
 ## 6. 啟動與遊戲內驗證

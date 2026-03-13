@@ -84,12 +84,27 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 - `data/bus.txt`
 - `data/ship.txt`
 - `help/` 內玩家可見提示
+- 若區域涉及驛站、渡口、碼頭、首都入口或新手導流，補看 `docs/3yWebsite/docs/maps.md`：把它當交通命名與動線對照表，確認 `Serial` / `Capital`、房間名稱、玩家提示、巴士站名與實際世界線一致
+- `maps.md` 明確把地圖視為 `Serial/Capital` 之間的動線來源；若你新增或改寫交通節點，除了 area 檔本身，也要同步核對 `data/bus.txt`、`data/ship.txt`、相關 NPC / `res` 與 help 提示，不要只改單一端
+- 若 docs 或 `maps.json` 提到票價、站名、推薦等級或主節點用途，區域內的房間描述、告示、交通 NPC 與 `area` 指令導引也要保持同一套說法
+- 若區域涉及新手教學、出生後第一輪探索或練功導流，補看 `docs/3yWebsite/docs/newbie.md`：把它當教學節奏與玩家期望對照表，確認新手區與主城服務點仍支援 `area`、`learn`、`enable`、`group`、`recall`、`score` 等被攻略反覆提到的流程
+- `newbie.md` 也反映歷史攻略中依賴的服務 NPC 與互動，例如學習、修裝、補給、救濟金、轉職、官職/國家導引；若你搬動房間、NPC 或傳送點，要一起檢查教學文本、看板與 NPC 對話是否仍說得通
+- 若區域涉及技能教師、秘笈掉落、訓練場、職業試煉、法器或技能型獎勵，補看 `docs/3yWebsite/docs/skills.md`：把它當技能命名、來源類型與資源成本對照表，確認 NPC、物件、掉落與文案使用同一套技能名稱與分類
+- `skills.md` 也提供「可教導 / 僅領悟 / 秘笈 study / 任務獎勵」這類來源線索；若你移動技能來源，除了 `mob/obj/res/shp`，也要同步檢查 help、任務提示、掉落敘述與相關主城服務 NPC 是否仍合理
+- 若區域涉及國家首都、國界、官署、建國/入國導引、國家公告板或國家專屬服務，補看 `docs/3yWebsite/docs/realm.md`：把它當 `realm` 指令、官職權限與 Capital 支援需求對照表，確認房間、NPC、銀行、看板與傳送設定符合國家系統預期
+- `realm.md` 也反映 `realm !join`、`!leave`、`!quit`、`!news`、`!read`、`!help`、`!attribution` 這些流程依賴的場景；若你搬動首都、領地入口、國家辦事處或懸賞/罪惡島相關區域，要一起檢查國家導引文字、公告板、銀行需求與 recall 落點是否仍合理
+- 若區域涉及世界觀敘事、官方公告脈絡、元老/神族 NPC、授權文字或系統級 help/credit 提示，補看 `docs/3yWebsite/docs/system.md`：把它當故事時間線、官方用語與配件規範對照表，確認 area 描述、公告板、NPC 稱謂與玩家可見提示不會偏離 Merc-FJU 世界線
+- `system.md` 也整理公告時間線、Immortal 名冊與版權要求；若你新增官方風格 NPC、歷史事件、傳送試煉、系統公告或公開版說明，要一起檢查 `help fju`、`credit`、相關 help 文案與遊戲內用語是否仍符合規範
 
 ### 5. 需要世界觀/參考資料時串接 sango-docs-service
 - 遇到下列情境時，連同 `docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md` 一起用：
 - 要替區域補世界觀、歷史事件、國家勢力或角色背景
 - 要確認技能描述、掉落來源、NPC 對應或玩家指南
 - 要比對地圖交通、巴士站、下載資料或公告時間線
+- 要確認新手教學節奏、常用指令導引、規則告示或玩家常見卡點
+- 要確認技能命名、熟練度詞彙、資源消耗、秘笈 / study 流程或職業技能來源
+- 要確認國家指令流程、官職/權限、首都房間功能、入國/叛國導流或國家公告板
+- 要確認故事時間線、系統公告、Immortal/官方 NPC 映射、版權提示或公開版用語
 
 優先資料來源：
 - 主題總覽：`docs/3yWebsite/docs/index.md`
@@ -101,6 +116,11 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 - 下載與手冊：`docs/3yWebsite/docs/download.md` 與 `docs/3yWebsite/docs/data/downloads.json`
 
 回答或規劃時，清楚標示資料來自哪個 docs 檔或 JSON，並說明它會影響區域建置流程的哪一步。
+其中 `maps.md` / `maps.json` 不只是背景閱讀：它們可直接用來核對主城與區域節點命名、巴士/船運站點、價格、推薦等級提示與地圖導流，特別適合檢查新手區、主城外圍、驛站與跨區傳送。
+其中 `newbie.md` 不只是玩家手冊：它可直接用來核對新手區的教學順序、服務 NPC、常用指令提示、規則告示與升級導流，特別適合檢查 `new`、`newfight`、洛陽周邊與任何出生後第一批會接觸到的房間。
+其中 `skills.md` / `skills.json` 不只是技能索引：它們可直接用來核對技能中文/英文名稱、來源類型、熟練度詞彙、資源消耗與 study 相關物件，特別適合檢查訓練 NPC、秘笈掉落、職業試煉與技能獎勵區域。
+其中 `realm.md` / `realm_commands.json` 不只是國家介紹：它們可直接用來核對 Capital 房間、國家公告板、銀行門檻、官職權限、入國/離境/叛國流程與國家專屬服務，特別適合檢查主城、國界、官署與國家領地。
+其中 `system.md` / `news.json` / `immortals.json` 不只是背景資料：它們可直接用來核對故事時間線、公告順序、Immortal 稱謂、官方 NPC 風格、`help fju` / `credit` 提示與公開版相關文案，特別適合檢查主線敘事、官方公告板與系統服務區。
 
 ## 規劃原則
 - 先以現有 VNUM 生態為準，不要直接照搬其他 repo 或舊草案中的千位段假設
@@ -111,15 +131,24 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 - 台詞、地名、勢力名、技能名以目前專案與 docs 參考資料為準，避免混入其他版本設定
 - 從 2.0 舊 repo 搬資料時，不要整包照抄；先比對目前 3.0 已存在的 area/data/help/src 耦合，再決定哪些欄位保留、哪些要改寫
 - 若匯入的是更接近原始 Merc 的 reset 寫法，記得 `R` 也是合法 reset 類型，用於亂數出口；不要只認得 `M/E/G/O/D`
+- 新手區或主城服務鏈改動時，優先維持 `newbie.md` 中玩家預期仍找得到的核心流程：出生後移動、補給、學習技能、致能、組隊、回城、轉職與國家導引；若必須改路徑，記得同步補新提示
+- 技能相關區域改動時，優先維持 `skills.md` 中能被玩家辨識的技能名稱、來源關係與熟練度詞彙；不要在房間、NPC、秘笈、help 與 docs 間混用不同譯名或把「可教導」誤寫成「只能領悟」
+- 國家相關區域改動時，優先維持 `realm.md` 中玩家預期的流程與限制：首都要有公告/信件承載點、建國/入國要找得到銀行與官署支援、叛國與離境不要把玩家送回錯誤領地或失去必要導引
+- 世界觀或官方敘事相關改動時，優先維持 `system.md` 的時間線、勢力稱呼與官方語氣；不要把新技能開放順序、Immortal 身分、授權提示或 `help fju` / `credit` 類文案寫成與歷史資料衝突
 
 ## 驗證
 1. 先用搜尋工具檢查 VNUM、區名、房號引用是否一致
 2. 若有匯入舊資料或懷疑編碼不穩，執行 `python scripts/convert_big5_to_utf8.py` 或等價方式確認檔案可被 UTF-8 正常讀取
 3. 檢查 `area/directory.lst`、目標區 `index`、相關 `res/shp/roo` 是否互相對得上
-4. 若環境允許，實際啟動遊戲或執行區域 reload；`doc/merc-release-notes.txt` 也提醒 Merc 本身的開機流程就是很好的 area syntax checker，所以要優先讀第一個錯誤，而不是一次猜全部
-5. 查看 `debug/`、`log/` 是否出現 `Load_room`、`load_mobiles`、reset 或檔案開啟錯誤
+4. 若牽涉交通或主城導流，再對照 `docs/3yWebsite/docs/maps.md` / `docs/3yWebsite/docs/data/maps.json`，確認站名、票價、主節點用途、`Serial` / `Capital` 與玩家可見提示一致
+5. 若牽涉新手區、主城服務點或教學導引，再對照 `docs/3yWebsite/docs/newbie.md`，確認玩家進場後仍能靠 room/NPC/告示走完基本流程，不會卡在缺 NPC、缺提示、缺指令說明
+6. 若牽涉技能來源、訓練 NPC、秘笈物件或職業導引，再對照 `docs/3yWebsite/docs/skills.md` / `docs/3yWebsite/docs/data/skills.json`，確認技能名稱、來源類型、熟練度詞彙、study / 領悟提示與區域內實作一致
+7. 若牽涉國家首都、領地入口、官署、公告板或建國/叛國流程，再對照 `docs/3yWebsite/docs/realm.md` / `docs/3yWebsite/docs/data/realm_commands.json`，確認 `Capital`、公告/信件載體、銀行條件、官職導引與 recall/離境邏輯一致
+8. 若牽涉世界觀敘事、官方公告、元老/神族 NPC 或公開版提示，再對照 `docs/3yWebsite/docs/system.md`、`docs/3yWebsite/docs/data/news.json`、`docs/3yWebsite/docs/data/immortals.json`，確認歷史事件、官方稱呼、公告文案與 `help fju` / `credit` 相關提示一致
+9. 若環境允許，實際啟動遊戲或執行區域 reload；`doc/merc-release-notes.txt` 也提醒 Merc 本身的開機流程就是很好的 area syntax checker，所以要優先讀第一個錯誤，而不是一次猜全部
+10. 查看 `debug/`、`log/` 是否出現 `Load_room`、`load_mobiles`、reset 或檔案開啟錯誤
    原始 Merc 文件也提到 area diagnostics 常會附帶 area 檔名與行號；若有這種訊息，優先沿著第一個定位點回修
-6. 回報時要列出：改了哪些區域檔、哪些系統檔被連動修改、是否引用了 docs 服務資料、以及還沒驗證到的風險
+11. 回報時要列出：改了哪些區域檔、哪些系統檔被連動修改、是否引用了 docs 服務資料、以及還沒驗證到的風險
 
 ## 參考資料
 - `document/README`
