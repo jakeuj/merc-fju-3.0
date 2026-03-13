@@ -9,7 +9,7 @@ Hatchet
 
 This document contains information from 'database.doc', 'dbsup.doc', and
 'values.doc', part of the original Diku mud release and copyrighted by the
-Diku folks.  See their 'license.doc'.
+Diku folks.  See their 'diku-license.doc'.
 
 
 

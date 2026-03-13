@@ -14,6 +14,9 @@
 | `area/directory.lst` | 新增正式區時加入 `<slug>`，並保持載入順序正確；既有區搬修時確認名稱與目錄一致。 |
 | 現有模板 | 優先參考 `area/loyang`、`area/beiping`、`area/new`、`area/newfight`、`area/pk_area`、`area/free_fight` 的實際格式。 |
 
+備註：
+若回看 `doc/area-file-format.txt`，記得那是原始 Merc 的單檔 `.are` 結構；在本專案裡要把它當成概念映射，不是逐段照抄。
+
 ## 2. 檔案填寫步驟
 1. `index`：確認 `Name`、`Serial`、`Capital`、Description 與實際區域用途一致。
 2. `mob/*.mob`：欄位順序遵循 `document/mob.txt`，並核對 `Level`、旗標、`Process`。
@@ -22,6 +25,9 @@
 5. `res/*.res`：依 `document/reset.txt` 重新核對所有 `M/E/G/O/D` 關聯。
 6. `shp/*.shp`：依 `document/shop.txt` 設定 `Keeper`、販售類型與價格。
 7. `map`：若該區已有 `map`，沿用原格式，不要自行發明新格式。
+8. 若 parser 細節不確定，回看 `doc/area-file-format.txt`：字串 `~` 結尾、數值 `|` 組合、空白與多行字串解析都以它為準。
+9. 若要理解複雜 NPC trigger / 腳本概念，可補看 `doc/mobprogram-guide.txt` 再對照本專案現況。
+10. 若物件帶 spell 效果，補看 `doc/skills-and-spells-guide.txt`；area object 引用的 spell slot / area value 不一定等於系統內部 skill index。
 
 ## 3. 舊 repo 比對檢查
 - 只在需要補資料、查歷史設計或確認舊文案時回查 `merc-fju-2.0-utf8`。
@@ -30,6 +36,7 @@
 - 舊 VNUM 是否要沿用、重映射，還是放棄
 - 舊出口、舊出生點、舊交通/懸賞/提示文字是否仍符合 3.0 目標
 - 舊 `mob/obj/roo/res/shp` 搬回來後是否會和現有 3.0 資料衝突
+- 舊 reset 若含 `R` 類型亂數出口，不要誤判成異常；先對照 `doc/area-file-format.txt` 與 `doc/security-features.txt`
 - 從舊 repo 複製回來的文字檔，重新確認 UTF-8、路徑、區名、勢力名與現行世界設定
 
 ## 4. 系統連動檢查
@@ -49,10 +56,13 @@
 - VNUM 是否重複
 - 區名、舊城名、舊勢力詞是否殘留
 - 重要房號是否仍被 `src/`、`data/`、`help/` 引用
+- 若編號規劃拿不準，可補看 `doc/vnum-assignments.txt` 與 `doc/area-file-format.txt` 的原始 Merc 背景，但實際採用仍以目前 3.0 世界資料為準。
 - 用 `git diff` / `git status` 確認變更集中在預期檔案。
 
 ## 6. 啟動與遊戲內驗證
 - 若環境允許，實際啟動遊戲或重載區域。
+- 把 Merc 開機流程當成 syntax checker：優先讀第一個 area/load 錯誤，不要一次猜整串連鎖問題。
+- 若錯誤訊息附 area 檔名或行號，先沿著第一個定位點修，不要跳著改。
 - 檢查 `log/`、`debug/` 是否出現：
 - `Load_room`
 - `load_mobiles`
@@ -66,6 +76,12 @@
 - `document/room.txt`
 - `document/reset.txt`
 - `document/shop.txt`
-- `references/wow-area-example.md`
+- `doc/area-file-format.txt`
+- `doc/vnum-assignments.txt`
+- `doc/merc-release-notes.txt`
+- `doc/mobprogram-guide.txt`
+- `doc/security-features.txt`
+- `doc/skills-and-spells-guide.txt`
+- `references/historical-large-city-example.md`
 - `docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md`
 - `https://github.com/jakeuj/merc-fju-2.0-utf8`

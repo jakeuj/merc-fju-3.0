@@ -29,7 +29,7 @@ contribution and integrate it into Merc, we will not remove it later if you
 change your mind.
 
 You are welcome to use any element of Merc in your own mud, as long as you
-follow the terms in 'license.doc' and 'license.txt'.  If you take things from
+follow the terms in 'diku-license.doc' and 'merc-license-terms.txt'.  If you take things from
 Merc we'd appreciate e-mail from you.
 
 

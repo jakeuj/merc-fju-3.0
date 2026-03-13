@@ -9,7 +9,7 @@ Hatchet
 
 Many of the changes from 2.1 to 2.2 were contributed by the MERC imps out
 on the net as well as from our playtesters.  Kudos to them!
-See 'contrib.txt' for acknowledgements.
+See 'contributors-and-acknowledgements.txt' for acknowledgements.
 
 We have 'lost' a few platforms due to the addition of MOBPrograms.
 'mob_prog.c' and 'mob_commands.c' might provide warnings and/or errors on
@@ -51,7 +51,7 @@ Other various tweeks, additions and bugfixes.
 === What's new in 2.0
 
 Many of the changes from 2.0 Beta to 2.0 were contributed by our beta testers.
-See 'contrib.txt' for acknowledgements.
+See 'contributors-and-acknowledgements.txt' for acknowledgements.
 
 Several new platforms are supported.
 
@@ -97,7 +97,7 @@ The 'lib' directory is gone.  Most of the *.txt files have been moved into
 'help.are' as 'help' entries.
 
 The 'doc' directory is much larger.  All the files have been rewritten (with
-the exception of 'license.doc').
+the exception of 'diku-license.doc').
 
 The help file 'help.are' has been rewritten.  It is now complete and correct.
 
@@ -128,14 +128,14 @@ Many new Unix-based operating systems are supported, and a single-user MS-DOS
 version is supported as well.
 
 The code for classes has been consolidated into tables in const.c, making it
-much easier to add new classes.  See 'class.txt'.
+much easier to add new classes.  See 'class-table-overview.txt'.
 
 The skill / spell code has been rewritten.  The entire cast_* layer has been
 removed.  The miserable SPELLO declarations have been replaced by more
 extensive declarations of skills and spells in 'const.c'.  In particular, the
 slot number in #OBJECT area is no longer equal to the internal index number of
 a skill or spell, so adding new skills and spells is an order of magnitude
-easier.  See 'skill.txt'.
+easier.  See 'skills-and-spells-guide.txt'.
 
 The horrible 'board.c' code has been sent to /dev/null.  In its place we have a
 new 'notes' facility.

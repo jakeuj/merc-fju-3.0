@@ -32,7 +32,7 @@ We have ported Merc directly to these platforms:
 	Sun	Sun-4	SunOS 4.1.2
 
 Users have contributed ports to the following platforms, and we have folded
-their changes into the base code.  See 'contrib.txt' for acknowledgments.
+their changes into the base code.  See 'contributors-and-acknowledgements.txt' for acknowledgments.
 
 	Apple	68030	Macintosh
 	Dec	uVax	Ultrix

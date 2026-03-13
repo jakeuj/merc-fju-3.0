@@ -79,7 +79,7 @@ cd src
 
 ## 版權
 
-本版本基於 **Merc 2.2**，版權需遵守 `doc/license.doc` 及 `doc/license.txt` 的 Diku/Merc 授權條款。
+本版本基於 **Merc 2.2**，版權需遵守 `doc/diku-license.doc` 及 `doc/merc-license-terms.txt` 的 Diku/Merc 授權條款。
 
 本地修改版（三國歪傳製作群）版權說明請見 [document/COPYRIGHT](document/COPYRIGHT)，重點摘要：
 

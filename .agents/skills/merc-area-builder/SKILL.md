@@ -10,7 +10,8 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 ## 快速開始
 1. 先確認任務是要修改既有區域、搬修舊版內容，還是新增區域。
 2. 先讀 `area/directory.lst` 與目標區域目錄，理解實際載入順序與檔案結構。
-3. 以 `document/README`、`document/mob.txt`、`document/obj.txt`、`document/room.txt`、`document/reset.txt`、`document/shop.txt` 為格式依據，不要憑其他 Merc 變體記憶硬寫。
+3. 以 `document/README`、`document/mob.txt`、`document/obj.txt`、`document/room.txt`、`document/reset.txt`、`document/shop.txt` 為主要格式依據；若要確認原始 Merc parser / vnum 習慣，再補看 `doc/area-file-format.txt`、`doc/vnum-assignments.txt`、`doc/merc-release-notes.txt`。
+ 目前專案使用的是拆目錄資料結構，不是原始單檔 `.are`；若回看 `doc/area-file-format.txt` 裡的 `#AREA/#HELPS/#MOBILES/#OBJECTS/#ROOMS/#RESETS/#SHOPS/#SPECIALS`，要把它當概念對照，不要逐段照抄成 3.0 目錄格式。
 4. 需要世界觀、技能、國家系統、交通、公告脈絡時，連同 `docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md` 一起使用，從 `docs/3yWebsite/docs/*.md` 與 `docs/3yWebsite/docs/data/*.json` 取資料。
 5. 修改完成後，至少做靜態搜尋、編碼檢查與必要的啟動/載入驗證，再回報受影響檔案與風險。
 
@@ -68,6 +69,10 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 - `res/*.res`：參照 `document/reset.txt`；任何 `M/E/G/O/D` 關聯都要重新核對 VNUM
 - `shp/*.shp`：參照 `document/shop.txt`；確認 `Keeper`、販售類型與商品來源一致
 - `map`：若目標區有 `map`，先讀原檔再改，不要自行發明格式
+- 若遇到 parser 細節不確定，回看 `doc/area-file-format.txt`：字串以 `~` 結尾、數值可用 `|` 組合、空白與多行字串的解析方式都以它為準
+- 若在 `mob/obj` 上看到某些傳統 Merc 欄位和本專案行為不完全一致，記得原始 Merc 文件本來就提到部分數值會由系統依 level 或內部規則生成，不是每個欄位都照檔案原值生效
+- 若物件涉及卷軸、藥水、法杖、法器或其他 spell 型效果，補看 `doc/skills-and-spells-guide.txt`；原始 Merc 文件提醒 area object 內使用的是 spell slot / area reference，不一定等於系統內部 skill index
+- 進階 NPC 行為或 trigger 語法若不確定，可補看 `doc/mobprogram-guide.txt` 理解原始 MOBProgram 概念，再對照本專案現況的 `Process`/腳本風格
 
 ### 4. 同步系統設定
 - 只要牽涉出生點、recall、新手流程、戰鬥傳送或固定服務點，就要一起檢查：
@@ -99,18 +104,22 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 
 ## 規劃原則
 - 先以現有 VNUM 生態為準，不要直接照搬其他 repo 或舊草案中的千位段假設
+- 若需要原始 Merc 的 vnum 習慣與限制背景，可參考 `doc/vnum-assignments.txt` 與 `doc/area-file-format.txt`；至少維持「同類型資料不可撞號」這條底線
 - 新增 VNUM 前，先全文搜尋 `area/`、`src/`、`data/` 是否已被使用
 - 若只是在既有區內擴房、擴 NPC、擴物件，優先維持該區原本的編號習慣
 - 若需要大量搬移舊區，先做 mapping 表，列出舊 VNUM -> 新 VNUM，再開始改檔
 - 台詞、地名、勢力名、技能名以目前專案與 docs 參考資料為準，避免混入其他版本設定
 - 從 2.0 舊 repo 搬資料時，不要整包照抄；先比對目前 3.0 已存在的 area/data/help/src 耦合，再決定哪些欄位保留、哪些要改寫
+- 若匯入的是更接近原始 Merc 的 reset 寫法，記得 `R` 也是合法 reset 類型，用於亂數出口；不要只認得 `M/E/G/O/D`
 
 ## 驗證
 1. 先用搜尋工具檢查 VNUM、區名、房號引用是否一致
 2. 若有匯入舊資料或懷疑編碼不穩，執行 `python scripts/convert_big5_to_utf8.py` 或等價方式確認檔案可被 UTF-8 正常讀取
 3. 檢查 `area/directory.lst`、目標區 `index`、相關 `res/shp/roo` 是否互相對得上
-4. 若環境允許，實際啟動遊戲或執行區域 reload，並查看 `debug/`、`log/` 是否出現 `Load_room`、`load_mobiles`、reset 或檔案開啟錯誤
-5. 回報時要列出：改了哪些區域檔、哪些系統檔被連動修改、是否引用了 docs 服務資料、以及還沒驗證到的風險
+4. 若環境允許，實際啟動遊戲或執行區域 reload；`doc/merc-release-notes.txt` 也提醒 Merc 本身的開機流程就是很好的 area syntax checker，所以要優先讀第一個錯誤，而不是一次猜全部
+5. 查看 `debug/`、`log/` 是否出現 `Load_room`、`load_mobiles`、reset 或檔案開啟錯誤
+   原始 Merc 文件也提到 area diagnostics 常會附帶 area 檔名與行號；若有這種訊息，優先沿著第一個定位點回修
+6. 回報時要列出：改了哪些區域檔、哪些系統檔被連動修改、是否引用了 docs 服務資料、以及還沒驗證到的風險
 
 ## 參考資料
 - `document/README`
@@ -119,7 +128,13 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 - `document/room.txt`
 - `document/reset.txt`
 - `document/shop.txt`
+- `doc/area-file-format.txt`
+- `doc/vnum-assignments.txt`
+- `doc/merc-release-notes.txt`
+- `doc/mobprogram-guide.txt`
+- `doc/security-features.txt`
+- `doc/skills-and-spells-guide.txt`
 - `references/area-build-checklist.md`
-- `references/wow-area-example.md`
+- `references/historical-large-city-example.md`
 - `docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md`
 - 舊版對照：`https://github.com/jakeuj/merc-fju-2.0-utf8`
