@@ -59,6 +59,7 @@ Default behavior:
 - generates `src/merc.ini` from `src/merc.sample.ini`
 - rewrites `HOME DIRECTORY` to the current repo root
 - keeps the checked-in template ini untouched
+- if `src/merc.sample.ini` was fixed after an earlier bad generation, delete `src/merc.ini` first so startup regenerates it from the repaired template
 
 `src/startup` should now follow the same generated-ini pattern when `csh` is available.
 
@@ -74,6 +75,13 @@ Check binary and config:
 ls -l src/merc
 grep -n "HOME DIRECTORY" src/merc.sample.ini
 grep -n "MUD PORT" src/merc.sample.ini
+```
+
+If startup still behaves like the old broken config after fixing `src/merc.sample.ini`:
+```bash
+rm -f src/merc.ini
+cd src
+./startup.bash
 ```
 
 INI selection behavior:
@@ -98,6 +106,11 @@ Check recent logs:
 ls -t log | head
 tail -n 80 log/1000.log
 ```
+
+Interpret startup success from the latest log first:
+- `三國歪傳之降龍伏虎開始正常運作.` means the server reached normal runtime
+- `Broken pipe` or `write_to_descriptor: 寫入錯誤` right after a manual probe often just means the test client disconnected
+- `debug/bugs` may still contain older startup failures and should not outweigh a newer successful `log/*.log`
 
 Check for tracked runtime noise after tests:
 ```bash
@@ -177,6 +190,23 @@ pwd
 Fix:
 - edit `src/merc.ini` so `HOME DIRECTORY` matches the actual repo path used at runtime
 - for one-off verification, generate a temporary `src/merc.test.ini` instead of immediately rewriting the checked-in file
+- if the template was just repaired, deleting `src/merc.ini` and rerunning startup is usually safer than hand-editing a stale generated file
+
+### `generate_ticket: 沒有中獎的資料.`
+Meaning:
+- the ini was parsed without any `Ticket Set = ...` entries
+- this is an ini/template completeness issue, not proof that a separate ticket data file is missing
+
+Check:
+```bash
+grep -n "Ticket Set" src/merc.sample.ini
+grep -n "Ticket Set" src/merc.ini
+```
+
+Fix:
+- restore the missing `Ticket Set` lines in `src/merc.sample.ini`
+- delete stale `src/merc.ini`
+- rerun `./startup.bash` so the regenerated `merc.ini` includes the repaired ticket configuration
 
 ### `startup` exists but `csh` is missing
 Meaning:
@@ -264,3 +294,11 @@ tail -n 120 log/1000.log
 5. Start with `src/startup`
 6. Read the newest `log/*.log`
 7. If logs show world-data errors, stop blaming local ops and fix the data
+## Windows + WSL 啟動
+
+- 若 CLion / PowerShell 難以直接把 `src/startup.bash` 當 shell script 跑，優先使用 repo 根目錄的 `startup-wsl.ps1`
+- `startup-wsl.ps1` 應以自己的所在位置推導 repo 根目錄，再用 `wsl.exe wslpath -a` 轉成 WSL 路徑
+- PowerShell wrapper 只負責進入 WSL 並呼叫 `src/startup.bash`；不要在 wrapper 內重複實作 `merc.ini` 生成與 log loop
+- 若 wrapper 失敗，先檢查：
+- `Get-Command wsl.exe`
+- `wsl.exe bash -lc 'command -v wslpath && command -v bash'`

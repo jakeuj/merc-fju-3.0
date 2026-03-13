@@ -5,7 +5,7 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定與�
 
 # Merc Local Ops
 
-此技能用來處理 `merc-fju-3.0` 目前 repo 內真實存在的本機操作流程。先以 `README.md`、`src/startup`、`src/merc.sample.ini`、`src/merc.ini`、`etc/`、`log/`、`debug/` 為準，不要沿用不存在的 `start-merc.sh`、Windows wrapper 或 `scripts/bootstrap.sh` 假設。
+此技能用來處理 `merc-fju-3.0` 目前 repo 內真實存在的本機操作流程。先以 `README.md`、`src/startup`、`src/startup.bash`、`startup-wsl.ps1`、`src/merc.sample.ini`、`src/merc.ini`、`etc/`、`log/`、`debug/` 為準，不要沿用不存在的 `start-merc.sh` 或 `scripts/bootstrap.sh` 假設。
 
 ## 快速開始
 1. 先確認使用者是在 Linux / BSD shell、Windows PowerShell，還是 Windows + WSL 混合操作。
@@ -19,14 +19,18 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定與�
 - `scripts/` 目前可見腳本只有 `scripts/convert_big5_to_utf8.py`
 - 實際存在的啟動入口是 `src/startup`
 - 另外現在已有可在 WSL / bash 直接使用的 `src/startup.bash`
+- repo 根目錄另外有 `startup-wsl.ps1`，供 Windows PowerShell / CLion 轉進 WSL 後呼叫 `src/startup.bash`
 - tracked 的 ini 模板現在是 `src/merc.sample.ini`
 - `src/startup` 與 `src/startup.bash` 都會以 `src/merc.sample.ini` 為模板產生本機用 `src/merc.ini`，並自動把 `HOME DIRECTORY` 指到目前 repo 根目錄
+- `startup-wsl.ps1` 應以 `$PSScriptRoot` 推導 repo 根目錄，再透過 `wslpath` 換算成 WSL 路徑；避免把 `H:\...` 或 `/mnt/h/...` 寫死進 repo
 - `src/merc` 本體若不帶參數，會先看環境變數 `merc`，否則 fallback 到內建預設 `merc.ini`
 - 版本控制內可直接檢視的主要模板設定檔是 `src/merc.sample.ini`
 - `etc/` 目前有多個 runtime / 半動態檔，但工作樹內沒有 `etc/merc.ini`
 - 在這個工作區的常見現況下，Windows 端可能只有 `powershell` / `wsl.exe`，而真正可用的 `make`、`gcc` 在 WSL 內；要先探測，不要直接判定「無法編譯」
 - `src/startup` 是 `csh` 腳本；在常見 WSL / Ubuntu 環境裡不一定有 `csh` 或 `tcsh`
 - 生成後的 `src/merc.ini` 才是 `./merc` 無參數時真正會吃到的本機設定；模板 `src/merc.sample.ini` 不應直接拿來當跨機器共用實機設定
+- 若 `src/merc.sample.ini` 被修正或替換，既有的 `src/merc.ini` 不會自動刷新；必要時要刪掉舊的 `src/merc.ini` 再重新跑 `startup` / `startup.bash`
+- `src/merc.sample.ini` 若看起來被截斷、缺少後半段設定或 `Ticket Set` 之類關鍵項目，會直接造成啟動期誤判；先把模板完整性查清楚，不要只盯著 binary
 - `mail/`、`debug/`、`vote/`、`board/`、`data/`、`etc/` 常已存在，但 `log/`、`player/` 可能需要在本機先建立
 - 某些 runtime 檔雖然看起來像執行期產物，卻是 tracked 檔；目前至少要留意 `debug/error`、`etc/net.log`、`etc/stock`
 
@@ -53,13 +57,16 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定與�
 - `MUD PORT`
 - `HOME DIRECTORY`
 - 各種 `* DIRECTORY`
+- 若啟動訊息出現 `generate_ticket: 沒有中獎的資料.`，先回頭檢查 ini 內是否真的有 `Ticket Set = ...`，因為這組資料是從 ini 建立，不是另外讀某個 ticket 檔
 - 若路徑和目前工作區不一致，優先建議直接修正設定，而不是發明額外 wrapper
 - 若只是要本機 smoke test，可接受先由 `merc.sample.ini` 產生本機 `merc.ini` 或臨時 `merc.test.ini` 指到目前 workspace，再用它啟動；回報時要明講這是測試用設定，不是永久修正
 
 ### 3. 啟動與停止
 - 啟動流程以 `src/startup` 為主
 - 若目前環境沒有 `csh` / `tcsh`，優先改用 `src/startup.bash`
+- 若使用者是在 Windows IDE 內啟動，優先考慮 repo 根目錄的 `startup-wsl.ps1`
 - `src/startup` 與 `src/startup.bash` 的預設流程都應優先視為「自動產生本機 ini 並啟動」
+- `startup-wsl.ps1` 應只負責橋接 PowerShell 與 WSL，不要複製 bash 啟動邏輯
 - 先確認 `csh` / `tcsh` 是否存在；若沒有，直接指出 `startup` 目前不可直接執行，不要假裝它是通的
 - `startup` 會：
 - 在 `src/` 內移除 `shutdown.txt`
@@ -74,6 +81,8 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定與�
 - 若建置是在 WSL 內完成，也優先假設啟動要在同一個 WSL 環境內做，再檢查 `HOME DIRECTORY` 與 runtime 目錄是否仍對應到 WSL 可見路徑
 - 若 `startup` 因缺少 `csh` 無法執行，但 `merc` binary 本體可跑，允許先用 `./merc <temp-ini>` 做 smoke test，把 shell 問題和遊戲載入問題拆開
 - 若直接執行 `./merc`，要記得它預設仍會讀 `merc.ini`；因此本機跨機器流程應先確保 `startup` / `startup.bash` 已生成正確的本機 `merc.ini`
+- 若使用 `startup-wsl.ps1`，確認 `wsl.exe` 與 WSL 內的 `wslpath` 可用，再讓它轉呼叫 `src/startup.bash`
+- 若剛修過 `src/merc.sample.ini`，啟動前先刪掉舊的 `src/merc.ini`，避免用到先前生成的壞設定；重新生成後再檢查 `HOME DIRECTORY`
 
 ### 4. 目錄可寫性與 runtime
 - 啟動前常要檢查：
@@ -87,10 +96,12 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定與�
 - 啟動或 smoke test 後，若 `git status` 出現 `debug/error`、`etc/net.log`、`etc/stock` 之類 tracked runtime 檔變動，要先判斷那是測試副作用還是任務本身的一部分
 - 若不可寫，先指出哪個目錄是 blocker，再給最小修復步驟
 - 不要預設這一定是 WSL ACL 問題；先以目前實際 OS / 檔案權限為準
+- 讀 log 時優先看 `log/*.log` 是否已出現「開始正常運作」或資料載入總結；`debug/bugs` 常會混著舊錯誤，不能單看最後幾筆就判定目前仍失敗
 
 ### 5. 排錯分流
 - **編譯錯誤**：處理 `src/*.c`、`include/*.h`、`Makefile*`
 - **設定錯誤**：處理 `src/merc.sample.ini`、本機生成的 `src/merc.ini` 與 `HOME DIRECTORY` / 目錄路徑
+- **模板與生成檔不同步**：處理 `src/merc.sample.ini` 已修正但 `src/merc.ini` 仍是舊內容，需要刪掉重生
 - **啟動腳本問題**：處理 `src/startup`、`shutdown.txt`、`merc` 是否存在
 - **Shell / 工具鏈錯置**：處理 PowerShell 沒有 `make`、WSL 有工具鏈、路徑轉換、`wsl.exe` 可否進入工作區
 - **Shell 相依缺件**：處理 `startup` 依賴 `csh` / `tcsh`、WSL 只有 `bash` 時的 fallback
@@ -106,6 +117,7 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定與�
 - 若 `startup` 存在但 shell 相依缺件，明確說「入口存在，但目前環境缺少 `csh` / `tcsh`，因此不能直接用它」
 - 若要做 smoke test，可先建立缺少的 runtime 目錄並用臨時 ini 驗證 binary 是否能進到資料載入階段
 - 若啟動測試碰到 tracked runtime 檔，但那些變動不是本次交付物，回報時要明講並在結束前清回乾淨
+- 若 `debug/bugs` 只剩舊錯誤，但最新 `log/*.log` 已出現「開始正常運作」，要明講 `debug/bugs` 是歷史噪音，不代表這次啟動仍失敗
 - 若 log 已顯示 `Load_room`、重複 VNUM、mob/obj/reset parse error，立即切換成資料層錯誤描述
 - 若使用者只是要查狀態或看 log，不要一開始就建議修改腳本
 

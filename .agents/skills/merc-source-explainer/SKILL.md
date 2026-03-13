@@ -55,6 +55,7 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 
 ### 設定檔
 - `src/merc.sample.ini` 是目前 repo 內可直接讀到的主要設定模板；本機執行時常會先由啟動腳本生成 `src/merc.ini`
+- `src/merc.sample.ini` 修好之後，不代表現有 `src/merc.ini` 會跟著更新；若要解釋「明明模板修了但啟動還是舊行為」，要把生成檔不同步一起講出來
 - `src/merc.h` 目前把 `INI_FILE` 定義成 `merc.ini`
 - 重點欄位通常包含：
 - `MUD PORT`
@@ -64,6 +65,7 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 - `Help Extension` / `Social Extension` / `Skill Extension`
 - `Player Angel`、`Attack Value`、`Skill Value` 等遊戲開關
 - 若使用者問某欄位由誰使用，進一步追 `src/ini.c` 與實際讀取該值的模組
+- 若使用者問 `generate_ticket: 沒有中獎的資料.` 是哪裡來的，應追 `src/db.c -> generate_ticket()` 與 `src/ini.c` 的 `Ticket Set` 解析；`order_list` 是從 ini 建立，不是額外 ticket 檔案
 
 ### 原始碼模組分工
 - `act_*.c`：玩家指令與互動
