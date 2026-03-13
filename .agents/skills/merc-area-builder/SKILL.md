@@ -1,6 +1,6 @@
 ---
 name: merc-area-builder
-description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域資料時使用：依 document/README、src/load.c、src/act_move.c 與 area/ 現況處理 limbo、loyang、beiping、new、newfight、pk_area、free_fight 的 index/mob/obj/res/roo/shp 與區域地圖檔結構，將地圖視為包含 north/east/south/west 與 up/down/enter/out 的立體拓樸，並把 #Exit/#Keyword/#Job/#Enquire 視為 room spec 的正式部分；新增 AREA 時先以 map.md 當規格來源，必要時再用 Python scaffold 產生初版 .roo，更新 area/directory.lst、同步檢查 merc.ini 與固定房號/傳送/提示文字，並在需要世界觀、技能、國家或交通背景時搭配 docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md 取用 docs 與 JSON 資料。
+description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域資料時使用：依 document/README、src/load.c、src/act_move.c 與 area/ 現況處理 limbo、loyang、beiping、new、newfight、pk_area、free_fight 的 index/mob/obj/res/roo/shp 與區域地圖檔結構，將地圖視為包含 north/east/south/west 與 up/down/enter/out 的立體拓樸，並把 #Exit/#Keyword/#Job/#Enquire 視為 room spec 的正式部分；新增 AREA 時先以 map.md 當規格來源，必要時再用 Python scaffold 產生初版 .roo，也支援以 plans/ 與 area/rebuild_plan.md 維護長期 area 重建流程，更新 area/directory.lst、同步檢查 merc.ini 與固定房號/傳送/提示文字，並在需要世界觀、技能、國家或交通背景時搭配 docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md 取用 docs 與 JSON 資料。
 ---
 
 # Merc Area Builder
@@ -31,7 +31,8 @@ source of truth 要分兩種：
  目前專案使用的是拆目錄資料結構，不是原始單檔 `.are`；若回看 `doc/area-file-format.txt` 裡的 `#AREA/#HELPS/#MOBILES/#OBJECTS/#ROOMS/#RESETS/#SHOPS/#SPECIALS`，要把它當概念對照，不要逐段照抄成 3.0 目錄格式。
 4. 需要世界觀、技能、國家系統、交通、公告脈絡時，連同 `docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md` 一起使用，從 `docs/3yWebsite/docs/*.md` 與 `docs/3yWebsite/docs/data/*.json` 取資料。
 5. 若是新增 AREA，先決定是手寫 `.roo`，還是用 `references/map-spec-template.md` + `scripts/generate_roo_from_map_md.py` 走「spec -> scaffold」流程。
-6. 修改完成後，至少做靜態搜尋、編碼檢查與必要的啟動/載入驗證，再回報受影響檔案與風險。
+6. 若任務屬於長期 area 重建，先讀 `plans/` 與 `area/rebuild_plan.md`；詳細規則見 `references/rebuild-workflow.md`。
+7. 修改完成後，至少做靜態搜尋、編碼檢查與必要的啟動/載入驗證，再回報受影響檔案與風險。
 
 ## 先看目前專案現況
 
@@ -61,6 +62,14 @@ source of truth 要分兩種：
 - 目前沒有證據顯示這些 area-local 地圖檔一定會被 runtime 直接讀取；它們比較適合視為維護輔助或歷史資料
 - `help/map.hlp` 是玩家可見的世界地圖，和每個 AREA 的設計規格檔是不同層次的東西
 - 目前沒有通用 MUD map 標準適合直接拿來當 Merc-FJU 的 room source of truth；本 skill 使用的是 Merc-first、Git-friendly 的內部 graph schema
+- 若 repo 內存在 `plans/` 與 `area/rebuild_plan.md`，表示這個專案也在使用長期重建工作流；此時除了單次 area 任務外，還要同步遵守追蹤看板與固定 prompt 規則
+
+### plans/ 現況
+- `plans/` 是正式長期規劃入口，不是臨時草稿區
+- 全局計畫使用 `plans/NNNN-topic-slug.md`
+- 單一 area 計畫使用 `plans/area/NNNN-area-slug.md`
+- `area/rebuild_plan.md` 是日常追蹤看板，負責 `todo / in_progress / done / blocked / next_action`
+- 若使用固定 prompt `繼續實作下一個待建 area`，先讀 `area/rebuild_plan.md` 再決定下一個目標
 
 ### scripts/ 現況
 - repo 根目錄 `scripts/` 目前可見的腳本只有 `scripts/convert_big5_to_utf8.py`
@@ -82,6 +91,10 @@ source of truth 要分兩種：
 
 ### 1. 盤點目標與耦合
 - 先確認是改哪個區：`limbo`、主城（`loyang`、`beiping`）、新手區（`new`、`newfight`）、戰鬥區（`pk_area`、`free_fight`），不同區域耦合不同
+- 若任務是長期重建的一部分，先讀 `area/rebuild_plan.md`：
+  - 有 `in_progress` 就先續做該區
+  - 否則選第一個 `todo` 且無 blocker 的 area
+- 對應的決策完整計畫再回到 `plans/` 內的全局或單區 plan
 - 先查 `area/directory.lst` 的順序與註解，避免把物件或房間引用到尚未載入的區域
 - 先看 `src/act_move.c` 裡目前可用的方向與反向配對；現行實作至少有 `north/east/south/west/up/down/enter/out`，不要假設出口只會是平面四向
 - 先看 `src/load.c`，確認 `.roo` 的正式 schema：頂層區塊至少有 `#Exit`、`#Keyword`、`#Job`、`#Enquire`
@@ -92,6 +105,10 @@ source of truth 要分兩種：
 ### 2. 先用現有區域當模板
 - 優先比對 `area/loyang`、`area/beiping`、`area/new` 等現存區域，而不是依賴過往已被移除又後來復原前的假設
 - 若是新增區域，先建立 `area/<new_area>/map.md` 當設計規格，再從最接近的既有區域複製結構與格式，逐步落地成 `roo` / `mob` / `obj` / `res` / `shp`
+- 若是按重建計畫新增 area，先同時讀：
+  - `plans/0001-*.md` 這類全局 plan
+  - `plans/area/NNNN-*.md` 這類單區 plan
+  - `area/world_map.md`
 - `map.md` 是人類可讀 spec；若要用腳本產生 `.roo`，只能使用其中受限、結構化的機器可讀區塊，不能把自由 prose 直接拿去 compile
 - 若是搬修舊版資料，先用搜尋確認舊名稱、舊城名、舊勢力詞是否殘留在 `roo`、`mob`、`obj`、`res`、`shp`、help 或 system data
 - 若現行 repo 缺資料或看不出原始設計，回查 `https://github.com/jakeuj/merc-fju-2.0-utf8` 的對應路徑，再把需要的內容 mapping 回 3.0
@@ -113,9 +130,14 @@ source of truth 要分兩種：
 - `map`：若目標區有 `map`，先讀原檔再改，不要自行發明格式
 - 若地圖檔是平面格狀表示，只把它當作主要平面骨架；任何 `up/down/enter/out` 這類立體或內外層連線，仍要回到 `.roo` 與 `src/act_move.c` 一起核對，不要因為地圖檔沒畫出來就忽略
 - 若是新增 AREA，預設要先寫 `area/<new_area>/map.md`；它是 spec-first 設計檔，優先於任何舊式 area-local 地圖檔
+- 若世界層參考已整理在 `area/world_map.md`，先用它決定新 AREA 要接到哪個母城、外郊或 world connector
 - 若想用腳本加速，使用 `references/map-spec-template.md` 提供的受限 Markdown 結構，再交給 `scripts/generate_roo_from_map_md.py` 產生 `.roo` scaffold
 - 這個 Python script 的定位是 scaffold generator，不是完整 compiler：它會產生初版 `.roo`、驗證方向/引用/Job，但不會幫你猜缺漏描述、補世界觀或默默創造不存在的 reverse exit
 - graph schema 可以額外攜帶 `coord`、`cluster`、`labels` 等 metadata，供未來 map/export tooling 使用；目前 `.roo` projection 不會輸出它們
+- 若 area 屬於長期重建看板的一部分，完成一輪實作後要同步回寫 `area/rebuild_plan.md`：
+  - 更新 status
+  - 更新 next_action
+  - 補上 done 或 blocked
 - 若地圖檔與實際 `.roo` 出口不一致，先整理成「地圖預期相鄰關係 -> 實際出口」的對照，再決定要修地圖、修出口，或兩者一起修
 - 特別注意像 `area/newfight/roo/1211.roo` 這種房間：`#Keyword hole~` 的描述直接提示玩家用 `bore` 通過裂縫。這類「描述 -> 指令」配對若斷掉，玩家即使看到房間也不一定知道怎麼前進
 - 以目前 repo 狀態來看，`bore` 還不是現成可用指令：我沒有找到 `do_bore`，而 `src/job.c` 目前只註冊少數 room job（如 `job_recall_new`、`job_goto_pk_area`）。因此若需求是讓 `bore hole` 真的可用，就要決定是新增通用 `do_bore`，還是新增 room job 再在對應 `.roo` 裡加 `#Job`
@@ -180,6 +202,7 @@ source of truth 要分兩種：
 - 若只是在既有區內擴房、擴 NPC、擴物件，優先維持該區原本的編號習慣
 - 若需要大量搬移舊區，先做 mapping 表，列出舊 VNUM -> 新 VNUM，再開始改檔
 - 規劃新區或修戰鬥迷宮時，先畫或更新區域地圖檔，再批次檢查每個房間的上下左右出口是否和格位一致；休息室、入口廳、傳送點這類不在主格網內的房間，要用額外節點思考，不要硬塞成主地圖中心
+- 若專案使用固定 prompt `繼續實作下一個待建 area`，就把 `area/rebuild_plan.md` 視為下一步選擇器，而不是重新猜測優先順序
 - 若區域有樓層、洞口、室內外切換、城門內外、建築入口或其他垂直/內外層結構，先把平面骨架與立體節點分開思考；`up/down/enter/out` 的配對以 `src/act_move.c` 的 `rev_dir[]` 為準，不要自行猜反向方向
 - 若區域很大（例如上百個 room），把 `map.md` 當主索引，並拆成 `map-core.md`、`map-floor-2.md`、`map-services.md`、`map-special-routes.md` 之類的子檔；Python scaffold 只接受主檔明確列出的 `includes`
 - graph 上預設追求 edge 完整性，所以 reverse exit 會預設要求成對；若 runtime intent 就是單向通道，才用 `one_way` 明確標示這是刻意偏離對稱圖的合法例外
@@ -216,6 +239,7 @@ source of truth 要分兩種：
 15. 查看 `debug/`、`log/` 是否出現 `Load_room`、`load_mobiles`、reset 或檔案開啟錯誤
    原始 Merc 文件也提到 area diagnostics 常會附帶 area 檔名與行號；若有這種訊息，優先沿著第一個定位點回修
 16. 回報時要列出：改了哪些區域檔、哪些系統檔被連動修改、是否引用了 docs 服務資料、是否動到區域地圖檔、是否使用 Python scaffold 產生 `.roo`、以及還沒驗證到的風險
+17. 若任務來自長期重建計畫，也要回報：是否更新 `area/rebuild_plan.md`、下一個推薦 area 是哪個、以及固定 prompt 下次會落到哪份計畫
 
 ## 參考資料
 - `document/README`
@@ -232,6 +256,7 @@ source of truth 要分兩種：
 - `doc/skills-and-spells-guide.txt`
 - `references/area-build-checklist.md`
 - `references/historical-large-city-example.md`
+- `references/rebuild-workflow.md`
 - `references/map-spec-template.md`
 - `scripts/generate_roo_from_map_md.py`
 - `docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md`
