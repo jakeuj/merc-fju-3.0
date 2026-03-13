@@ -38,6 +38,15 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 - 不要假設 `scripts/check-data.py` 或其他舊工具一定存在；驗證步驟應先以 repo 實際檔案為準
 - 若任務涉及大量舊資料匯入、回填或外部檔案導入，可用 `convert_big5_to_utf8.py` 協助確認 UTF-8 轉碼
 
+### 舊版資料比對來源
+- 若目前 repo 的 `area/`、`data/`、`help/` 或固定房號資料不完整，或你需要確認舊區原本長相，允許回查舊 repo `jakeuj/merc-fju-2.0-utf8`
+- 優先把舊 repo 視為「歷史對照來源」，不是直接覆蓋真相；真正要採用哪份資料，仍以目前 3.0 任務目標與現行 repo 狀態決定
+- 特別適合用在：
+- 補回舊區的 `mob/obj/roo/res/shp`
+- 對照舊 VNUM、舊出口、舊出生點、舊交通/懸賞/提示文字
+- 確認某個房號、NPC、物件、技能掉落或 help 文案在舊版是否存在
+- 若從舊 repo 搬資料回來，必須重新檢查 UTF-8、VNUM 衝突、目錄結構與現行設定是否一致
+
 ## 工作流程
 
 ### 1. 盤點目標與耦合
@@ -49,6 +58,7 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 - 優先比對 `area/loyang`、`area/beiping`、`area/new` 等現存區域，而不是依賴過往已被移除又後來復原前的假設
 - 若是新增區域，先從最接近的既有區域複製結構與格式，再逐步替換名稱、VNUM、描述與 reset
 - 若是搬修舊版資料，先用搜尋確認舊名稱、舊城名、舊勢力詞是否殘留在 `roo`、`mob`、`obj`、`res`、`shp`、help 或 system data
+- 若現行 repo 缺資料或看不出原始設計，回查 `https://github.com/jakeuj/merc-fju-2.0-utf8` 的對應路徑，再把需要的內容 mapping 回 3.0
 
 ### 3. 處理資料檔
 - `index`：保留既有欄位順序與字串格式；起始房、區域名稱、描述與 `Capital` 要互相對應
@@ -93,6 +103,7 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 - 若只是在既有區內擴房、擴 NPC、擴物件，優先維持該區原本的編號習慣
 - 若需要大量搬移舊區，先做 mapping 表，列出舊 VNUM -> 新 VNUM，再開始改檔
 - 台詞、地名、勢力名、技能名以目前專案與 docs 參考資料為準，避免混入其他版本設定
+- 從 2.0 舊 repo 搬資料時，不要整包照抄；先比對目前 3.0 已存在的 area/data/help/src 耦合，再決定哪些欄位保留、哪些要改寫
 
 ## 驗證
 1. 先用搜尋工具檢查 VNUM、區名、房號引用是否一致
@@ -111,3 +122,4 @@ description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域�
 - `references/area-build-checklist.md`
 - `references/wow-area-example.md`
 - `docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md`
+- 舊版對照：`https://github.com/jakeuj/merc-fju-2.0-utf8`

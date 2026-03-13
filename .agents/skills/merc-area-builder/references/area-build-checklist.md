@@ -1,38 +1,71 @@
 # Merc 區域建立檢查清單
 
 ## 0. 前置規劃
-- 決定 *area slug*（`area/<slug>`），建議使用英文字母小寫與底線，例如 `stormwind`、`orgrimmar`。
-- 規劃 VNUM 區段（房間、怪物、物品、重置、商店共用同一段）。Stormwind 以 100xx、Orgrimmar 以 101xx 為例，確保不與 `area/index` 既有範圍衝突。
-- 指定 Serial（區域流水號）與 Capital（起始房間 VNUM），可沿用 100、101 這類百位數讓資料表排序。
-- 蒐集區域簡述、交通、怪物等級等敘述，用於 `index` 的 Description。
+- 確認這次是修改既有區域、搬修舊版資料，還是新增區域。
+- 先讀 `area/directory.lst`，確認目前實際載入的區域與順序。
+- 決定目標 `area/<slug>`，並先檢查 `area/` 是否已有同名目錄。
+- 規劃 VNUM 前，先搜尋 `area/`、`src/`、`data/` 是否已使用相同房號/物件/NPC 編號。
+- 若目前 repo 缺少舊區內容、固定房號來源或歷史文案，回查舊 repo `https://github.com/jakeuj/merc-fju-2.0-utf8` 當歷史對照來源。
 
 ## 1. 建立目錄與登錄
 | 項目 | 動作 |
 | --- | --- |
-| `area/<slug>/` | 建立 `index`, `mob/`, `obj/`, `roo/`, `res/`, `shp/` 資料夾；如需要 `mineral/`、`reset/` 也在此建立。 |
-| `area/directory.lst` | 追加 `<slug>` 新行，確保伺服器開機會載入此區。保持字母排序並與既有內容相同縮排。 |
+| `area/<slug>/` | 依需求建立或整理 `index`, `mob/`, `obj/`, `roo/`, `res/`, `shp/`；只有真的需要時才新增 `mineral/`。 |
+| `area/directory.lst` | 新增正式區時加入 `<slug>`，並保持載入順序正確；既有區搬修時確認名稱與目錄一致。 |
+| 現有模板 | 優先參考 `area/loyang`、`area/beiping`、`area/new`、`area/newfight`、`area/pk_area`、`area/free_fight` 的實際格式。 |
 
 ## 2. 檔案填寫步驟
-1. `index`：填入 Echo、Editor、Name、Fog、Upper/Lower、Serial、Capital 以及多段 Description（以 `~` 結尾）。
-2. `mob/*.mob`：一個 VNUM 一檔。欄位順序與 `document/mob.txt` 一致，必要旗標（`Sentinel`、`StayArea` 等）逐行寫出。
-3. `obj/*.obj`：道具資料遵守 `document/obj.txt`。使用 `Values` 陣列定義屬性，自行決定 `WearFlags`、`ExtraFlags`。
-4. `roo/*.roo`：每個房間獨立檔案，欄位參照 `document/room.txt`（Name、Description、SectorType、出入口 `#Exit` 區塊等）。
-5. `res/*.res`：可集中於單一檔案，如 `stormwind.res`。指令語法詳見 `document/reset.txt`。
-6. `shp/*.shp`：需要商店時設定 `Type`, `Keeper`, `Object`, `OpenHour/CloseHour`, `Sellprofit/Buyprofit`，語法參考 `document/shop.txt`。
+1. `index`：確認 `Name`、`Serial`、`Capital`、Description 與實際區域用途一致。
+2. `mob/*.mob`：欄位順序遵循 `document/mob.txt`，並核對 `Level`、旗標、`Process`。
+3. `obj/*.obj`：依 `document/obj.txt` 填寫，若會由 reset 或商店使用，確保後續 `res` / `shp` 對得上。
+4. `roo/*.roo`：依 `document/room.txt` 填寫，每個出口都確認 `ExitVnum` 指向存在房間，且盡量成對。
+5. `res/*.res`：依 `document/reset.txt` 重新核對所有 `M/E/G/O/D` 關聯。
+6. `shp/*.shp`：依 `document/shop.txt` 設定 `Keeper`、販售類型與價格。
+7. `map`：若該區已有 `map`，沿用原格式，不要自行發明新格式。
 
-## 3. 寫作指引
-- 全部檔案維持 UTF-8，避免含 BOM。若複製舊資料，先跑 `python3 scripts/check-data.py` 確認編碼。
-- 中文敘述以全形標點撰寫，英文明確保大小寫一致。對話與 emote 以 `Process` 區塊撰寫。
-- `mob` 與 `obj` 的 `AutoSetValue`, `Effect`, `Process` 等欄位依需求加減。
-- `roo` 出入口需互相對應，並確保 `ExitVnum` 指向存在的房間；若有門鎖機制，記得在 `res` 內加入對應 `D` 指令。
-- 商店 NPC 需在 `res` 內以 `M` 指令刷新，並以 `G` 將販售品綁定到 keeper。
+## 3. 舊 repo 比對檢查
+- 只在需要補資料、查歷史設計或確認舊文案時回查 `merc-fju-2.0-utf8`。
+- 把舊 repo 視為「對照來源」，不是直接照抄目標。
+- 特別檢查：
+- 舊 VNUM 是否要沿用、重映射，還是放棄
+- 舊出口、舊出生點、舊交通/懸賞/提示文字是否仍符合 3.0 目標
+- 舊 `mob/obj/roo/res/shp` 搬回來後是否會和現有 3.0 資料衝突
+- 從舊 repo 複製回來的文字檔，重新確認 UTF-8、路徑、區名、勢力名與現行世界設定
 
-## 4. 驗證與測試
-- 執行 `python3 scripts/check-data.py`：快速檢查 UTF-8 與必要標記。
-- 以 `git status` 確認只有目標區域的檔案變更；必要時 `git diff` 檢查 VNUM 與旗標。
-- 進入遊戲後可用 `reload area <slug>` 或重新啟動 `./startup` 載入，並使用 `goto <vnum>`、`stat obj <vnum>` 等指令逐一巡查。
-- 若資料量大，建議在 `res` 檔案頂端加入註解分段，方便維護者巡覽。
+## 4. 系統連動檢查
+- 只要牽涉出生點、recall、新手流程、戰鬥區或固定服務點，就檢查：
+- `src/merc.ini`
+- `src/variable.c`
+- `src/job.c`
+- `data/bounty.txt`
+- `data/bus.txt`
+- `data/ship.txt`
+- `help/` 內玩家可見提示
+- 若任務也需要世界觀、技能、國家或交通背景，連同 `docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md` 一起使用。
 
-## 5. 延伸參考
-- `document/mob.txt`, `document/obj.txt`, `document/room.txt`, `document/reset.txt`, `document/shop.txt`
-- `references/wow-area-example.md`：Stormwind 與 Orgrimmar 範例清單，快速檢視 commit 8df189ef 的寫法。
+## 5. 編碼與靜態驗證
+- 全部檔案維持 UTF-8；若有從舊 repo 匯入或懷疑編碼不穩，執行 `python scripts/convert_big5_to_utf8.py` 或等價方式確認。
+- 用搜尋工具檢查：
+- VNUM 是否重複
+- 區名、舊城名、舊勢力詞是否殘留
+- 重要房號是否仍被 `src/`、`data/`、`help/` 引用
+- 用 `git diff` / `git status` 確認變更集中在預期檔案。
+
+## 6. 啟動與遊戲內驗證
+- 若環境允許，實際啟動遊戲或重載區域。
+- 檢查 `log/`、`debug/` 是否出現：
+- `Load_room`
+- `load_mobiles`
+- reset / parse error
+- 檔案開啟失敗
+- 若 log 已出現資料載入錯誤，優先修 area/data 問題，不要誤判成純啟動器問題。
+
+## 7. 延伸參考
+- `document/mob.txt`
+- `document/obj.txt`
+- `document/room.txt`
+- `document/reset.txt`
+- `document/shop.txt`
+- `references/wow-area-example.md`
+- `docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md`
+- `https://github.com/jakeuj/merc-fju-2.0-utf8`
