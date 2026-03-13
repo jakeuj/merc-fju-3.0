@@ -1,9 +1,9 @@
 ---
-name: mud-source-explainer
+name: merc-source-explainer
 description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設定檔與資料目錄時使用：追程式流程、回答 src/*.c 與 include/*.h 的責任、說明 merc.ini 與 area/angel/command/skill/social/data/help 等檔案如何被載入、協助定位 bug 或功能修改入口，並在需要建置/啟動脈絡時依 README 與 src/startup 的實際狀態回答。
 ---
 
-# Mud Source Explainer
+# Merc Source Explainer
 
 此技能用來解說 `merc-fju-3.0` 目前實際存在的原始碼與資料樹。先以 repo 真實檔案為準，不要沿用舊版 2.0、WSL wrapper、或已不存在腳本的假設。
 

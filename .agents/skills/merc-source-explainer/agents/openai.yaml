@@ -1,0 +1,4 @@
+interface:
+  display_name: "Merc Source Explainer"
+  short_description: "Explain the current Merc-FJU 3.0 source tree, config loading, data layout, and code entry points"
+  default_prompt: "Use $merc-source-explainer to explain the current Merc-FJU 3.0 source tree in this workspace. Follow SKILL.md to inspect real src/, document/, area/, data/, and config files first, trace code paths from the actual C sources, explain how merc.ini and game data are loaded, and point to the concrete files a developer should edit or debug next."
