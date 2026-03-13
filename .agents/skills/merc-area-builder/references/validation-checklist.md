@@ -18,7 +18,8 @@
 14. 若環境允許，實際啟動遊戲或執行區域 reload；優先讀第一個錯誤，而不是一次猜全部
 15. 若有做 smoke test，先清空 `debug/*` 內容，再開始測試，避免把舊 bug 誤當成這次新增 area 的結果
 16. 成功與否不能只看 process 是否暫時存活；至少要確認 log 或啟動輸出中出現明確成功訊號
-17. 即使已看到成功訊號，仍要回頭檢查 `debug/*`、`log/` 是否出現和本次新增 area 相關的新 bug、warning、`Load_room`、`load_mobiles`、reset 或檔案開啟錯誤
-18. 查看 `debug/`、`log/` 是否出現 `Load_room`、`load_mobiles`、reset 或檔案開啟錯誤；若有 area diagnostics 附帶 area 檔名與行號，優先沿著第一個定位點回修
-19. 回報時要列出：改了哪些區域檔、哪些系統檔被連動修改、是否引用了 docs 服務資料、是否動到區域地圖檔、是否使用 Python scaffold 產生 `.roo`、以及還沒驗證到的風險
-20. 若任務來自長期重建計畫，也要回報：是否更新 `area/rebuild_plan.md`、下一個推薦 area 是哪個、以及固定 prompt 下次會落到哪份計畫
+17. 若這輪有改 `obj/*.obj`，特別是特殊 `ItemType`，額外檢查 `debug/badobject`；不要只看 `debug/bugs`
+18. 即使已看到成功訊號，仍要回頭檢查 `debug/*`、`log/` 是否出現和本次新增 area 相關的新 bug、warning、`Load_room`、`load_mobiles`、reset 或檔案開啟錯誤
+19. 查看 `debug/`、`log/` 是否出現 `Load_room`、`load_mobiles`、reset 或檔案開啟錯誤；若有 area diagnostics 附帶 area 檔名與行號，優先沿著第一個定位點回修
+20. 回報時要列出：改了哪些區域檔、哪些系統檔被連動修改、是否引用了 docs 服務資料、是否動到區域地圖檔、是否使用 Python scaffold 產生 `.roo`、以及還沒驗證到的風險
+21. 若任務來自長期重建計畫，也要回報：是否更新 `area/rebuild_plan.md`、下一個推薦 area 是哪個、以及固定 prompt 下次會落到哪份計畫

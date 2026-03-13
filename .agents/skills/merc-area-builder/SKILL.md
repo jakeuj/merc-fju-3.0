@@ -103,6 +103,7 @@ source of truth 要分兩種：
 ### 3. 處理資料檔
 - `index/mob/obj/roo/res/shp/map`、`#Keyword/#Job/#Enquire`、`external: true` 與 scaffold generator 的細則，讀 `references/file-handling-rules.md`
 - 若任務重點是修出口、整合新 area、補 `#Enquire`、比對地圖檔或確認 `.roo` schema，這份檔要補讀
+- 若任務有新增或修改 `obj/*.obj`，尤其是特殊 `ItemType`，也要補讀這份檔；不要只照文件猜 `Value*` 欄位，先比對 repo 內已成功載入的同類物件範例
 
 ### 4. 同步系統設定
 - `merc.ini`、`variable.c`、`job.c`、`bus/ship/bounty` 與 docs 對照點，讀 `references/system-sync-checks.md`

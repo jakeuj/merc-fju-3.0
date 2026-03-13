@@ -7,6 +7,8 @@
 - `index`：保留既有欄位順序與字串格式；起始房、區域名稱、描述與 `Capital` 要互相對應
 - `mob/*.mob`：參照 `document/mob.txt`；確認 `Level`、`Alignment`、旗標、`Process` 是否符合該區用途
 - `obj/*.obj`：參照 `document/obj.txt`；若物品要由商店或 reset 產生，確認與 `res`、`shp` 對上
+- `obj/*.obj` 若屬於特殊 `ItemType`，不要只照文件猜 `Value` / `Value0..3` 的落點；先在 repo 內搜尋已成功載入的同類物件範例，再決定欄位配置
+- `ITEM_LIGHT` 類物件尤其要小心：至少比對是否需要 `WearLoc ITEM_WEAR_LIGHT` 與正確的燈光時間欄位；若只看到 `debug/badobject` 才回修，通常已經太晚
 - `roo/*.roo`：參照 `document/room.txt`；出口要成對檢查，避免只改單向出口
 - `roo/` 內若另有地圖檔，也把它視為正式資料的一部分；修房間時先用地圖核對座標關係，再決定哪些出口或描述不合理
 - 地圖與出口檢查要包含立體方向：除了 `north/east/south/west`，還要主動檢查 `up/down/enter/out` 是否也和 `src/act_move.c` 的反向關係對得上
@@ -45,5 +47,6 @@
 - 特別注意像 `area/newfight/roo/1211.roo` 這種房間：`#Keyword hole~` 的描述直接提示玩家用 `bore` 通過裂縫
 - 以目前 repo 狀態來看，`bore` 還不是現成可用指令：若需求是讓 `bore hole` 真的可用，就要決定是新增通用 `do_bore`，還是新增 room job 再在對應 `.roo` 裡加 `#Job`
 - 若遇到 parser 細節不確定，回看 `doc/area-file-format.txt`
+- 若物件 parser 行為和文件不完全一致，優先以 repo 內已成功載入的同類物件為準，再用 `debug/badobject` 驗證這次修改是否乾淨
 - 若物件涉及卷軸、藥水、法杖、法器或其他 spell 型效果，補看 `doc/skills-and-spells-guide.txt`
 - 進階 NPC 行為或 trigger 語法若不確定，可補看 `doc/mobprogram-guide.txt`
