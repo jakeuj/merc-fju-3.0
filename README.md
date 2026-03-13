@@ -85,6 +85,8 @@ cd src
 `startup.bash` 是目前建議的本機開發入口；它會從 `src/merc.sample.ini` 自動產生 `src/merc.ini`，並把 `HOME DIRECTORY` 改成目前 repo 根目錄。  
 `startup` 仍保留作為 legacy `csh` 啟動腳本，供舊流程與相容用途使用。
 
+若是在 Windows + WSL 環境下想從 IDE 直接啟動，可使用 repo 根目錄的 `startup-wsl.ps1`。該腳本會依自己的所在位置動態換算 WSL 路徑，再轉呼叫 `src/startup.bash`，不需要在腳本內寫死每台機器的 repo 路徑。
+
 第一個連線的玩家將成為超級管理者（Implementor）。
 
 若遇問題，請查閱 `log/` 或 `debug/` 目錄中的錯誤訊息。
