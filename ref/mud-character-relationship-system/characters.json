@@ -1,0 +1,29 @@
+{
+  "characters": [
+    {
+      "id": "cao_cao",
+      "name": "曹操",
+      "faction": "wei"
+    },
+    {
+      "id": "xiahou_dun",
+      "name": "夏侯惇",
+      "faction": "wei"
+    },
+    {
+      "id": "liu_bei",
+      "name": "劉備",
+      "faction": "shu"
+    },
+    {
+      "id": "guan_yu",
+      "name": "關羽",
+      "faction": "shu"
+    },
+    {
+      "id": "sun_quan",
+      "name": "孫權",
+      "faction": "wu"
+    }
+  ]
+}

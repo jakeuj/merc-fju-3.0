@@ -1,0 +1,2983 @@
+{
+  "meta": {
+    "name": "三國 MUD 世界圖",
+    "version": "1.0.0",
+    "description": "三國 MUD 世界 world-graph.json，作為世界拓撲、區域規劃與 generator 的上位 schema。",
+    "nodeCountTarget": 130,
+    "edgeDirectionPolicy": "named_world_direction",
+    "notes": [
+      "nodes 是 AREA 級世界節點，不是最終 room。",
+      "edges 是世界節點間的連線；實作時可展開成 map.md / mapmd-json / .roo。",
+      "secret / dungeon / fort / outskirts 可再細拆成子 area 或房間層。"
+    ]
+  },
+  "regions": [
+    {
+      "id": "zhongyuan",
+      "label": "中原"
+    },
+    {
+      "id": "guanzhong",
+      "label": "關中西域"
+    },
+    {
+      "id": "youzhou",
+      "label": "幽州遼東"
+    },
+    {
+      "id": "yanzhao",
+      "label": "兗州河北"
+    },
+    {
+      "id": "jingzhou",
+      "label": "荊州"
+    },
+    {
+      "id": "jiangdong",
+      "label": "江東"
+    },
+    {
+      "id": "shu",
+      "label": "蜀漢"
+    },
+    {
+      "id": "south",
+      "label": "荊南南蠻"
+    },
+    {
+      "id": "world_events",
+      "label": "世界事件與秘境"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "city_loyang",
+      "label": "洛陽",
+      "type": "city",
+      "theme": "歷史城市",
+      "region": "zhongyuan",
+      "levelRange": "1-15",
+      "subtheme": "帝都 / 新手主城",
+      "tags": [
+        "capital",
+        "hub"
+      ]
+    },
+    {
+      "id": "district_loyang_palace",
+      "label": "洛陽皇城",
+      "type": "district",
+      "theme": "歷史城市",
+      "region": "zhongyuan",
+      "levelRange": "5-15",
+      "subtheme": "宮城 / 官府",
+      "tags": [
+        "service"
+      ]
+    },
+    {
+      "id": "district_loyang_east_market",
+      "label": "洛陽東市",
+      "type": "district",
+      "theme": "歷史城市",
+      "region": "zhongyuan",
+      "levelRange": "1-10",
+      "subtheme": "市集 / 商業",
+      "tags": [
+        "service",
+        "trade"
+      ]
+    },
+    {
+      "id": "district_loyang_west_market",
+      "label": "洛陽西市",
+      "type": "district",
+      "theme": "歷史城市",
+      "region": "zhongyuan",
+      "levelRange": "1-10",
+      "subtheme": "市集 / 商業",
+      "tags": [
+        "service",
+        "trade"
+      ]
+    },
+    {
+      "id": "district_loyang_scholar",
+      "label": "洛陽書院街",
+      "type": "district",
+      "theme": "歷史城市",
+      "region": "zhongyuan",
+      "levelRange": "5-15",
+      "subtheme": "書肆 / 士人",
+      "tags": [
+        "quest"
+      ]
+    },
+    {
+      "id": "wild_loyang_east",
+      "label": "洛陽東郊",
+      "type": "outskirts",
+      "theme": "江湖",
+      "region": "zhongyuan",
+      "levelRange": "1-12",
+      "subtheme": "城郊 / 官道",
+      "tags": [
+        "starter"
+      ]
+    },
+    {
+      "id": "wild_longqu_hills",
+      "label": "龍渠丘陵",
+      "type": "wild",
+      "theme": "探險遺跡",
+      "region": "zhongyuan",
+      "levelRange": "8-18",
+      "subtheme": "丘陵 / 遺跡",
+      "tags": [
+        "explore"
+      ]
+    },
+    {
+      "id": "wild_fengqiu_forest",
+      "label": "封丘森林",
+      "type": "wild",
+      "theme": "詭異民俗",
+      "region": "zhongyuan",
+      "levelRange": "10-20",
+      "subtheme": "森林 / 怪談",
+      "tags": [
+        "haunted"
+      ]
+    },
+    {
+      "id": "wild_farming_village",
+      "label": "河畔農村",
+      "type": "wild",
+      "theme": "歷史城市",
+      "region": "zhongyuan",
+      "levelRange": "1-10",
+      "subtheme": "農田 / 村落",
+      "tags": [
+        "village"
+      ]
+    },
+    {
+      "id": "road_puyang",
+      "label": "往濮陽官道",
+      "type": "road",
+      "theme": "軍旅",
+      "region": "zhongyuan",
+      "levelRange": "8-18",
+      "subtheme": "官道 / 北行",
+      "tags": [
+        "connector"
+      ]
+    },
+    {
+      "id": "road_wan",
+      "label": "往宛官道",
+      "type": "road",
+      "theme": "江湖",
+      "region": "zhongyuan",
+      "levelRange": "8-18",
+      "subtheme": "官道 / 南行",
+      "tags": [
+        "connector"
+      ]
+    },
+    {
+      "id": "road_chenliu",
+      "label": "往陳留驛路",
+      "type": "road",
+      "theme": "歷史城市",
+      "region": "zhongyuan",
+      "levelRange": "8-18",
+      "subtheme": "東行驛道",
+      "tags": [
+        "connector"
+      ]
+    },
+    {
+      "id": "dng_loyang_sewer",
+      "label": "洛陽地下水區",
+      "type": "dungeon",
+      "theme": "仙俠",
+      "region": "zhongyuan",
+      "levelRange": "12-22",
+      "subtheme": "下水道 / 地下水脈",
+      "tags": [
+        "underground"
+      ]
+    },
+    {
+      "id": "dng_sewer_depths",
+      "label": "地下深渠",
+      "type": "dungeon",
+      "theme": "詭異民俗",
+      "region": "zhongyuan",
+      "levelRange": "15-25",
+      "subtheme": "深層水道",
+      "tags": [
+        "underground"
+      ]
+    },
+    {
+      "id": "dng_royal_tomb",
+      "label": "帝王古墓",
+      "type": "dungeon",
+      "theme": "探險遺跡",
+      "region": "zhongyuan",
+      "levelRange": "18-30",
+      "subtheme": "古墓 / 機關",
+      "tags": [
+        "dungeon"
+      ]
+    },
+    {
+      "id": "sec_catacomb_depths",
+      "label": "忘川地穴",
+      "type": "secret",
+      "theme": "仙俠",
+      "region": "zhongyuan",
+      "levelRange": "25-35",
+      "subtheme": "地穴 / 靈異",
+      "tags": [
+        "secret"
+      ]
+    },
+    {
+      "id": "wild_old_bridge",
+      "label": "古橋渡口",
+      "type": "wild",
+      "theme": "江湖",
+      "region": "zhongyuan",
+      "levelRange": "6-16",
+      "subtheme": "渡口 / 傳聞",
+      "tags": [
+        "travel"
+      ]
+    },
+    {
+      "id": "wild_tea_pavilion",
+      "label": "十里茶亭",
+      "type": "wild",
+      "theme": "江湖",
+      "region": "zhongyuan",
+      "levelRange": "5-15",
+      "subtheme": "茶亭 / 問路",
+      "tags": [
+        "rest"
+      ]
+    },
+    {
+      "id": "city_changan",
+      "label": "長安",
+      "type": "city",
+      "theme": "歷史城市",
+      "region": "guanzhong",
+      "levelRange": "18-30",
+      "subtheme": "關中都城",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "district_changan_palace",
+      "label": "長安宮城",
+      "type": "district",
+      "theme": "歷史城市",
+      "region": "guanzhong",
+      "levelRange": "20-30",
+      "subtheme": "皇城 / 官署",
+      "tags": [
+        "service"
+      ]
+    },
+    {
+      "id": "district_changan_west_market",
+      "label": "長安西市",
+      "type": "district",
+      "theme": "歷史城市",
+      "region": "guanzhong",
+      "levelRange": "18-28",
+      "subtheme": "市場 / 商旅",
+      "tags": [
+        "trade"
+      ]
+    },
+    {
+      "id": "district_changan_noble",
+      "label": "長安勳貴里",
+      "type": "district",
+      "theme": "歷史城市",
+      "region": "guanzhong",
+      "levelRange": "20-30",
+      "subtheme": "士族 / 深宅",
+      "tags": [
+        "quest"
+      ]
+    },
+    {
+      "id": "wild_changan_outer",
+      "label": "長安外城",
+      "type": "outskirts",
+      "theme": "江湖",
+      "region": "guanzhong",
+      "levelRange": "18-28",
+      "subtheme": "城郊 / 外郭",
+      "tags": [
+        "outskirts"
+      ]
+    },
+    {
+      "id": "fort_hangu",
+      "label": "函谷關",
+      "type": "fort",
+      "theme": "軍旅",
+      "region": "guanzhong",
+      "levelRange": "22-34",
+      "subtheme": "關隘 / 咽喉",
+      "tags": [
+        "chokepoint"
+      ]
+    },
+    {
+      "id": "fort_hangu_outer",
+      "label": "函谷關前道",
+      "type": "fort",
+      "theme": "軍旅",
+      "region": "guanzhong",
+      "levelRange": "20-32",
+      "subtheme": "關前營寨",
+      "tags": [
+        "fort"
+      ]
+    },
+    {
+      "id": "fort_hangu_watch",
+      "label": "函谷關望樓",
+      "type": "fort",
+      "theme": "軍旅",
+      "region": "guanzhong",
+      "levelRange": "24-36",
+      "subtheme": "望樓 / 哨戒",
+      "tags": [
+        "fort"
+      ]
+    },
+    {
+      "id": "road_western_trade",
+      "label": "西行商道",
+      "type": "road",
+      "theme": "歷史城市",
+      "region": "guanzhong",
+      "levelRange": "20-32",
+      "subtheme": "通西域商道",
+      "tags": [
+        "connector"
+      ]
+    },
+    {
+      "id": "city_hongnong",
+      "label": "弘農",
+      "type": "city",
+      "theme": "歷史城市",
+      "region": "guanzhong",
+      "levelRange": "16-28",
+      "subtheme": "東西轉接城",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "wild_hongnong_farmland",
+      "label": "弘農近郊",
+      "type": "wild",
+      "theme": "歷史城市",
+      "region": "guanzhong",
+      "levelRange": "14-24",
+      "subtheme": "農田 / 城外",
+      "tags": [
+        "outskirts"
+      ]
+    },
+    {
+      "id": "fort_hulao",
+      "label": "虎牢關",
+      "type": "fort",
+      "theme": "軍旅",
+      "region": "guanzhong",
+      "levelRange": "24-36",
+      "subtheme": "東門戶關卡",
+      "tags": [
+        "chokepoint",
+        "battle"
+      ]
+    },
+    {
+      "id": "city_anding",
+      "label": "安定",
+      "type": "city",
+      "theme": "軍旅",
+      "region": "guanzhong",
+      "levelRange": "24-36",
+      "subtheme": "邊鎮 / 補給",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "city_tianshui",
+      "label": "天水",
+      "type": "city",
+      "theme": "軍旅",
+      "region": "guanzhong",
+      "levelRange": "28-40",
+      "subtheme": "西北城鎮",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "city_xiliang",
+      "label": "西涼",
+      "type": "city",
+      "theme": "軍旅",
+      "region": "guanzhong",
+      "levelRange": "32-45",
+      "subtheme": "邊疆主城",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "wild_xiliang_steppe",
+      "label": "西涼荒原",
+      "type": "wild",
+      "theme": "探險遺跡",
+      "region": "guanzhong",
+      "levelRange": "30-42",
+      "subtheme": "草原 / 胡地",
+      "tags": [
+        "explore"
+      ]
+    },
+    {
+      "id": "wild_oasis_settlement",
+      "label": "綠洲聚落",
+      "type": "wild",
+      "theme": "歷史城市",
+      "region": "guanzhong",
+      "levelRange": "30-42",
+      "subtheme": "綠洲 / 商旅",
+      "tags": [
+        "rest"
+      ]
+    },
+    {
+      "id": "dng_desert_ruins",
+      "label": "荒漠遺跡",
+      "type": "dungeon",
+      "theme": "探險遺跡",
+      "region": "guanzhong",
+      "levelRange": "35-48",
+      "subtheme": "遺跡 / 地宮",
+      "tags": [
+        "dungeon"
+      ]
+    },
+    {
+      "id": "sec_nomad_sky_temple",
+      "label": "蒼天祭壇",
+      "type": "secret",
+      "theme": "仙俠",
+      "region": "guanzhong",
+      "levelRange": "42-55",
+      "subtheme": "祭壇 / 胡族神話",
+      "tags": [
+        "secret"
+      ]
+    },
+    {
+      "id": "wild_red_canyon",
+      "label": "赤崖峽谷",
+      "type": "wild",
+      "theme": "軍旅",
+      "region": "guanzhong",
+      "levelRange": "32-44",
+      "subtheme": "峽谷 / 伏兵",
+      "tags": [
+        "danger"
+      ]
+    },
+    {
+      "id": "wild_salt_road",
+      "label": "鹽商古道",
+      "type": "road",
+      "theme": "江湖",
+      "region": "guanzhong",
+      "levelRange": "28-40",
+      "subtheme": "商旅 / 匪徒",
+      "tags": [
+        "connector"
+      ]
+    },
+    {
+      "id": "fort_border_camp",
+      "label": "邊塞大營",
+      "type": "fort",
+      "theme": "軍旅",
+      "region": "guanzhong",
+      "levelRange": "34-46",
+      "subtheme": "軍營 / 邊防",
+      "tags": [
+        "fort"
+      ]
+    },
+    {
+      "id": "wild_horse_plain",
+      "label": "牧馬平原",
+      "type": "wild",
+      "theme": "軍旅",
+      "region": "guanzhong",
+      "levelRange": "30-42",
+      "subtheme": "馬群 / 牧場",
+      "tags": [
+        "mounts"
+      ]
+    },
+    {
+      "id": "dng_sand_burial_pit",
+      "label": "流沙葬坑",
+      "type": "dungeon",
+      "theme": "詭異民俗",
+      "region": "guanzhong",
+      "levelRange": "38-50",
+      "subtheme": "流沙 / 亡魂",
+      "tags": [
+        "haunted"
+      ]
+    },
+    {
+      "id": "sec_western_star_observatory",
+      "label": "西境觀星臺",
+      "type": "secret",
+      "theme": "仙俠",
+      "region": "guanzhong",
+      "levelRange": "45-58",
+      "subtheme": "古台 / 星象",
+      "tags": [
+        "secret"
+      ]
+    },
+    {
+      "id": "wild_wind_gate",
+      "label": "風門隘口",
+      "type": "fort",
+      "theme": "軍旅",
+      "region": "guanzhong",
+      "levelRange": "34-46",
+      "subtheme": "隘口 / 關防",
+      "tags": [
+        "chokepoint"
+      ]
+    },
+    {
+      "id": "road_return_changan",
+      "label": "還京官驛",
+      "type": "road",
+      "theme": "歷史城市",
+      "region": "guanzhong",
+      "levelRange": "20-30",
+      "subtheme": "返長安驛道",
+      "tags": [
+        "connector"
+      ]
+    },
+    {
+      "id": "wild_black_rock_hills",
+      "label": "黑石丘陵",
+      "type": "wild",
+      "theme": "探險遺跡",
+      "region": "guanzhong",
+      "levelRange": "33-45",
+      "subtheme": "黑石 / 洞穴",
+      "tags": [
+        "explore"
+      ]
+    },
+    {
+      "id": "dng_black_rock_cave",
+      "label": "黑石洞",
+      "type": "dungeon",
+      "theme": "探險遺跡",
+      "region": "guanzhong",
+      "levelRange": "38-50",
+      "subtheme": "山洞 / 古器",
+      "tags": [
+        "dungeon"
+      ]
+    },
+    {
+      "id": "sec_iron_sky_vault",
+      "label": "鐵蒼穹秘庫",
+      "type": "secret",
+      "theme": "探險遺跡",
+      "region": "guanzhong",
+      "levelRange": "50-62",
+      "subtheme": "秘庫 / 古兵器",
+      "tags": [
+        "secret"
+      ]
+    },
+    {
+      "id": "city_beiping",
+      "label": "北平",
+      "type": "city",
+      "theme": "歷史城市",
+      "region": "youzhou",
+      "levelRange": "20-32",
+      "subtheme": "北方重鎮",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "district_beiping_market",
+      "label": "北平市集",
+      "type": "district",
+      "theme": "歷史城市",
+      "region": "youzhou",
+      "levelRange": "20-30",
+      "subtheme": "市集 / 商行",
+      "tags": [
+        "trade"
+      ]
+    },
+    {
+      "id": "district_beiping_station",
+      "label": "北平車站",
+      "type": "district",
+      "theme": "歷史城市",
+      "region": "youzhou",
+      "levelRange": "20-30",
+      "subtheme": "驛站 / 車馬",
+      "tags": [
+        "travel"
+      ]
+    },
+    {
+      "id": "wild_beiping_outer",
+      "label": "北平郊區",
+      "type": "outskirts",
+      "theme": "江湖",
+      "region": "youzhou",
+      "levelRange": "18-28",
+      "subtheme": "郊外 / 官道",
+      "tags": [
+        "outskirts"
+      ]
+    },
+    {
+      "id": "road_yijing",
+      "label": "易京官道",
+      "type": "road",
+      "theme": "軍旅",
+      "region": "youzhou",
+      "levelRange": "22-32",
+      "subtheme": "北方驛道",
+      "tags": [
+        "connector"
+      ]
+    },
+    {
+      "id": "fort_yijing",
+      "label": "易京",
+      "type": "fort",
+      "theme": "軍旅",
+      "region": "youzhou",
+      "levelRange": "26-38",
+      "subtheme": "軍事據點",
+      "tags": [
+        "chokepoint"
+      ]
+    },
+    {
+      "id": "fort_northern_watch",
+      "label": "北方哨樓",
+      "type": "fort",
+      "theme": "軍旅",
+      "region": "youzhou",
+      "levelRange": "28-40",
+      "subtheme": "哨站 / 狼煙",
+      "tags": [
+        "fort"
+      ]
+    },
+    {
+      "id": "wild_bailang",
+      "label": "白狼山",
+      "type": "wild",
+      "theme": "探險遺跡",
+      "region": "youzhou",
+      "levelRange": "30-42",
+      "subtheme": "山區 / 異族",
+      "tags": [
+        "explore"
+      ]
+    },
+    {
+      "id": "wild_wolf_forest",
+      "label": "狼林",
+      "type": "wild",
+      "theme": "詭異民俗",
+      "region": "youzhou",
+      "levelRange": "32-44",
+      "subtheme": "林區 / 狼群",
+      "tags": [
+        "haunted"
+      ]
+    },
+    {
+      "id": "dng_ancient_cave",
+      "label": "古洞遺跡",
+      "type": "dungeon",
+      "theme": "探險遺跡",
+      "region": "youzhou",
+      "levelRange": "35-48",
+      "subtheme": "洞窟 / 遺物",
+      "tags": [
+        "dungeon"
+      ]
+    },
+    {
+      "id": "sec_spirit_peak",
+      "label": "白狼靈峰",
+      "type": "secret",
+      "theme": "仙俠",
+      "region": "youzhou",
+      "levelRange": "42-55",
+      "subtheme": "靈峰 / 祭天",
+      "tags": [
+        "secret"
+      ]
+    },
+    {
+      "id": "city_xiangping",
+      "label": "襄平",
+      "type": "city",
+      "theme": "軍旅",
+      "region": "youzhou",
+      "levelRange": "34-46",
+      "subtheme": "遼東邊城",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "wild_liaodong_plain",
+      "label": "遼東平原",
+      "type": "wild",
+      "theme": "軍旅",
+      "region": "youzhou",
+      "levelRange": "32-44",
+      "subtheme": "草原 / 騎兵",
+      "tags": [
+        "wild"
+      ]
+    },
+    {
+      "id": "wild_barbarian_camp",
+      "label": "胡營舊地",
+      "type": "wild",
+      "theme": "軍旅",
+      "region": "youzhou",
+      "levelRange": "34-46",
+      "subtheme": "部族營地",
+      "tags": [
+        "enemy"
+      ]
+    },
+    {
+      "id": "road_north_border",
+      "label": "北境邊道",
+      "type": "road",
+      "theme": "軍旅",
+      "region": "youzhou",
+      "levelRange": "34-46",
+      "subtheme": "往更北疆道",
+      "tags": [
+        "connector"
+      ]
+    },
+    {
+      "id": "sec_starfall_crater",
+      "label": "星墜天坑",
+      "type": "secret",
+      "theme": "仙俠",
+      "region": "youzhou",
+      "levelRange": "46-60",
+      "subtheme": "天坑 / 隕石",
+      "tags": [
+        "secret"
+      ]
+    },
+    {
+      "id": "city_chenliu",
+      "label": "陳留",
+      "type": "city",
+      "theme": "歷史城市",
+      "region": "yanzhao",
+      "levelRange": "15-26",
+      "subtheme": "中原樞紐城",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "district_chenliu_station",
+      "label": "陳留驛站",
+      "type": "district",
+      "theme": "歷史城市",
+      "region": "yanzhao",
+      "levelRange": "15-25",
+      "subtheme": "驛站 / 補給",
+      "tags": [
+        "travel"
+      ]
+    },
+    {
+      "id": "wild_chenliu_west",
+      "label": "陳留西郊",
+      "type": "outskirts",
+      "theme": "江湖",
+      "region": "yanzhao",
+      "levelRange": "14-24",
+      "subtheme": "郊野 / 盜匪",
+      "tags": [
+        "outskirts"
+      ]
+    },
+    {
+      "id": "city_puyang",
+      "label": "濮陽",
+      "type": "city",
+      "theme": "軍旅",
+      "region": "yanzhao",
+      "levelRange": "20-32",
+      "subtheme": "河北前沿",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "wild_old_battlefield",
+      "label": "古戰場",
+      "type": "wild",
+      "theme": "軍旅",
+      "region": "yanzhao",
+      "levelRange": "22-34",
+      "subtheme": "古戰地 / 殘兵",
+      "tags": [
+        "battle"
+      ]
+    },
+    {
+      "id": "city_nanpi",
+      "label": "南皮",
+      "type": "city",
+      "theme": "歷史城市",
+      "region": "yanzhao",
+      "levelRange": "24-36",
+      "subtheme": "河北城鎮",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "wild_hebei_plain",
+      "label": "河北平原",
+      "type": "wild",
+      "theme": "軍旅",
+      "region": "yanzhao",
+      "levelRange": "24-36",
+      "subtheme": "平原 / 官道",
+      "tags": [
+        "wild"
+      ]
+    },
+    {
+      "id": "sec_yellow_turban_ruins",
+      "label": "黃巾殘營",
+      "type": "secret",
+      "theme": "詭異民俗",
+      "region": "yanzhao",
+      "levelRange": "28-40",
+      "subtheme": "殘營 / 怨魂",
+      "tags": [
+        "secret"
+      ]
+    },
+    {
+      "id": "fort_river_crossing",
+      "label": "渡河營寨",
+      "type": "fort",
+      "theme": "軍旅",
+      "region": "yanzhao",
+      "levelRange": "26-38",
+      "subtheme": "河渡要地",
+      "tags": [
+        "fort"
+      ]
+    },
+    {
+      "id": "road_nanpi_beiping",
+      "label": "河北北道",
+      "type": "road",
+      "theme": "歷史城市",
+      "region": "yanzhao",
+      "levelRange": "24-36",
+      "subtheme": "往北平官道",
+      "tags": [
+        "connector"
+      ]
+    },
+    {
+      "id": "road_chenliu_loyang",
+      "label": "洛陳驛路",
+      "type": "road",
+      "theme": "歷史城市",
+      "region": "yanzhao",
+      "levelRange": "12-22",
+      "subtheme": "洛陽往返",
+      "tags": [
+        "connector"
+      ]
+    },
+    {
+      "id": "wild_floodplain",
+      "label": "河濱灘地",
+      "type": "wild",
+      "theme": "詭異民俗",
+      "region": "yanzhao",
+      "levelRange": "20-30",
+      "subtheme": "濕地 / 夜霧",
+      "tags": [
+        "haunted"
+      ]
+    },
+    {
+      "id": "dng_river_cavern",
+      "label": "河蝕洞窟",
+      "type": "dungeon",
+      "theme": "探險遺跡",
+      "region": "yanzhao",
+      "levelRange": "28-40",
+      "subtheme": "洞窟 / 水蝕",
+      "tags": [
+        "dungeon"
+      ]
+    },
+    {
+      "id": "sec_dragonbone_ford",
+      "label": "龍骨淺灘",
+      "type": "secret",
+      "theme": "探險遺跡",
+      "region": "yanzhao",
+      "levelRange": "35-48",
+      "subtheme": "古獸遺骸",
+      "tags": [
+        "secret"
+      ]
+    },
+    {
+      "id": "city_wan",
+      "label": "宛",
+      "type": "city",
+      "theme": "歷史城市",
+      "region": "jingzhou",
+      "levelRange": "14-24",
+      "subtheme": "南北轉接城",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "wild_wan_outer",
+      "label": "宛城外道",
+      "type": "outskirts",
+      "theme": "江湖",
+      "region": "jingzhou",
+      "levelRange": "14-24",
+      "subtheme": "郊道 / 茶棚",
+      "tags": [
+        "outskirts"
+      ]
+    },
+    {
+      "id": "city_xinye",
+      "label": "新野",
+      "type": "city",
+      "theme": "江湖",
+      "region": "jingzhou",
+      "levelRange": "18-30",
+      "subtheme": "邊鎮 / 義士",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "wild_xinye_fields",
+      "label": "新野郊野",
+      "type": "wild",
+      "theme": "江湖",
+      "region": "jingzhou",
+      "levelRange": "18-28",
+      "subtheme": "田野 / 村落",
+      "tags": [
+        "wild"
+      ]
+    },
+    {
+      "id": "city_xiangyang",
+      "label": "襄陽",
+      "type": "city",
+      "theme": "軍旅",
+      "region": "jingzhou",
+      "levelRange": "24-38",
+      "subtheme": "荊州門戶",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "fort_fancheng",
+      "label": "樊城",
+      "type": "fort",
+      "theme": "軍旅",
+      "region": "jingzhou",
+      "levelRange": "26-40",
+      "subtheme": "北岸城防",
+      "tags": [
+        "fort"
+      ]
+    },
+    {
+      "id": "road_jingxiang",
+      "label": "荊襄大道",
+      "type": "road",
+      "theme": "江湖",
+      "region": "jingzhou",
+      "levelRange": "22-34",
+      "subtheme": "商旅主幹道",
+      "tags": [
+        "connector"
+      ]
+    },
+    {
+      "id": "city_jiangxia",
+      "label": "江夏",
+      "type": "city",
+      "theme": "軍旅",
+      "region": "jingzhou",
+      "levelRange": "28-42",
+      "subtheme": "水軍重鎮",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "fort_river_fort",
+      "label": "水軍寨",
+      "type": "fort",
+      "theme": "軍旅",
+      "region": "jingzhou",
+      "levelRange": "30-44",
+      "subtheme": "江防 / 水寨",
+      "tags": [
+        "fort"
+      ]
+    },
+    {
+      "id": "wild_yunmeng",
+      "label": "雲夢大澤",
+      "type": "wild",
+      "theme": "詭異民俗",
+      "region": "jingzhou",
+      "levelRange": "30-44",
+      "subtheme": "大澤 / 迷霧",
+      "tags": [
+        "explore"
+      ]
+    },
+    {
+      "id": "dng_sunken_temple",
+      "label": "沉沒古廟",
+      "type": "dungeon",
+      "theme": "仙俠",
+      "region": "jingzhou",
+      "levelRange": "36-50",
+      "subtheme": "古廟 / 水下",
+      "tags": [
+        "dungeon"
+      ]
+    },
+    {
+      "id": "sec_spirit_marsh",
+      "label": "澤靈沼境",
+      "type": "secret",
+      "theme": "仙俠",
+      "region": "jingzhou",
+      "levelRange": "44-58",
+      "subtheme": "靈境 / 水魂",
+      "tags": [
+        "secret"
+      ]
+    },
+    {
+      "id": "city_chaisang",
+      "label": "柴桑",
+      "type": "city",
+      "theme": "歷史城市",
+      "region": "jingzhou",
+      "levelRange": "30-42",
+      "subtheme": "江岸城鎮",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "wild_reed_bank",
+      "label": "蘆葦水岸",
+      "type": "wild",
+      "theme": "江湖",
+      "region": "jingzhou",
+      "levelRange": "24-36",
+      "subtheme": "水岸 / 漁火",
+      "tags": [
+        "wild"
+      ]
+    },
+    {
+      "id": "dng_boat_graveyard",
+      "label": "沉舟墓場",
+      "type": "dungeon",
+      "theme": "探險遺跡",
+      "region": "jingzhou",
+      "levelRange": "34-48",
+      "subtheme": "沉船 / 水鬼",
+      "tags": [
+        "dungeon"
+      ]
+    },
+    {
+      "id": "sec_spirit_gate",
+      "label": "靈界入口",
+      "type": "secret",
+      "theme": "仙俠",
+      "region": "jingzhou",
+      "levelRange": "48-62",
+      "subtheme": "界門 / 幽冥",
+      "tags": [
+        "secret"
+      ]
+    },
+    {
+      "id": "city_xuzhou",
+      "label": "徐州",
+      "type": "city",
+      "theme": "歷史城市",
+      "region": "jiangdong",
+      "levelRange": "20-32",
+      "subtheme": "東線樞紐",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "city_shouchun",
+      "label": "壽春",
+      "type": "city",
+      "theme": "歷史城市",
+      "region": "jiangdong",
+      "levelRange": "24-36",
+      "subtheme": "淮南據點",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "wild_shouchun_fields",
+      "label": "壽春田野",
+      "type": "wild",
+      "theme": "歷史城市",
+      "region": "jiangdong",
+      "levelRange": "22-34",
+      "subtheme": "田野 / 村舍",
+      "tags": [
+        "wild"
+      ]
+    },
+    {
+      "id": "city_jianye",
+      "label": "建業",
+      "type": "city",
+      "theme": "歷史城市",
+      "region": "jiangdong",
+      "levelRange": "30-44",
+      "subtheme": "江東都城",
+      "tags": [
+        "hub",
+        "capital"
+      ]
+    },
+    {
+      "id": "district_jianye_port",
+      "label": "建業港區",
+      "type": "district",
+      "theme": "歷史城市",
+      "region": "jiangdong",
+      "levelRange": "30-42",
+      "subtheme": "碼頭 / 商港",
+      "tags": [
+        "trade",
+        "travel"
+      ]
+    },
+    {
+      "id": "fort_naval_base",
+      "label": "水軍大營",
+      "type": "fort",
+      "theme": "軍旅",
+      "region": "jiangdong",
+      "levelRange": "32-46",
+      "subtheme": "東吳水軍",
+      "tags": [
+        "fort"
+      ]
+    },
+    {
+      "id": "wild_jianye_west",
+      "label": "建業西郊",
+      "type": "outskirts",
+      "theme": "江湖",
+      "region": "jiangdong",
+      "levelRange": "28-40",
+      "subtheme": "郊野 / 水鄉",
+      "tags": [
+        "outskirts"
+      ]
+    },
+    {
+      "id": "city_kuaiji",
+      "label": "會稽",
+      "type": "city",
+      "theme": "江湖",
+      "region": "jiangdong",
+      "levelRange": "34-48",
+      "subtheme": "山城 / 門派",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "wild_mountain_pass",
+      "label": "會稽山道",
+      "type": "wild",
+      "theme": "江湖",
+      "region": "jiangdong",
+      "levelRange": "34-46",
+      "subtheme": "山道 / 棧路",
+      "tags": [
+        "wild"
+      ]
+    },
+    {
+      "id": "dng_temple_ruins",
+      "label": "山中古寺",
+      "type": "dungeon",
+      "theme": "仙俠",
+      "region": "jiangdong",
+      "levelRange": "40-54",
+      "subtheme": "古寺 / 異聞",
+      "tags": [
+        "dungeon"
+      ]
+    },
+    {
+      "id": "wild_river_delta",
+      "label": "江東水域",
+      "type": "wild",
+      "theme": "探險遺跡",
+      "region": "jiangdong",
+      "levelRange": "34-48",
+      "subtheme": "河汊 / 航道",
+      "tags": [
+        "water"
+      ]
+    },
+    {
+      "id": "wild_pirate_islands",
+      "label": "海盜群島",
+      "type": "wild",
+      "theme": "江湖",
+      "region": "jiangdong",
+      "levelRange": "40-54",
+      "subtheme": "群島 / 海寇",
+      "tags": [
+        "water"
+      ]
+    },
+    {
+      "id": "sec_water_ruins",
+      "label": "水底遺跡",
+      "type": "secret",
+      "theme": "仙俠",
+      "region": "jiangdong",
+      "levelRange": "48-62",
+      "subtheme": "水府遺跡",
+      "tags": [
+        "secret"
+      ]
+    },
+    {
+      "id": "road_shouchun_xuzhou",
+      "label": "淮東官道",
+      "type": "road",
+      "theme": "歷史城市",
+      "region": "jiangdong",
+      "levelRange": "20-32",
+      "subtheme": "徐州壽春道",
+      "tags": [
+        "connector"
+      ]
+    },
+    {
+      "id": "city_chengdu",
+      "label": "成都",
+      "type": "city",
+      "theme": "歷史城市",
+      "region": "shu",
+      "levelRange": "34-48",
+      "subtheme": "蜀漢都城",
+      "tags": [
+        "hub",
+        "capital"
+      ]
+    },
+    {
+      "id": "district_chengdu_market",
+      "label": "成都市井",
+      "type": "district",
+      "theme": "歷史城市",
+      "region": "shu",
+      "levelRange": "34-46",
+      "subtheme": "市場 / 民居",
+      "tags": [
+        "trade"
+      ]
+    },
+    {
+      "id": "district_chengdu_scholar",
+      "label": "成都學舍",
+      "type": "district",
+      "theme": "歷史城市",
+      "region": "shu",
+      "levelRange": "36-48",
+      "subtheme": "文士 / 書院",
+      "tags": [
+        "quest"
+      ]
+    },
+    {
+      "id": "wild_chengdu_outer",
+      "label": "成都近郊",
+      "type": "outskirts",
+      "theme": "江湖",
+      "region": "shu",
+      "levelRange": "30-42",
+      "subtheme": "郊外 / 農田",
+      "tags": [
+        "outskirts"
+      ]
+    },
+    {
+      "id": "city_jiangzhou",
+      "label": "江州",
+      "type": "city",
+      "theme": "歷史城市",
+      "region": "shu",
+      "levelRange": "36-50",
+      "subtheme": "上游港城",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "fort_yongan",
+      "label": "永安",
+      "type": "fort",
+      "theme": "軍旅",
+      "region": "shu",
+      "levelRange": "40-54",
+      "subtheme": "險關 / 堡壘",
+      "tags": [
+        "chokepoint"
+      ]
+    },
+    {
+      "id": "fort_yiling",
+      "label": "夷陵",
+      "type": "fort",
+      "theme": "軍旅",
+      "region": "shu",
+      "levelRange": "42-56",
+      "subtheme": "咽喉 / 關道",
+      "tags": [
+        "chokepoint"
+      ]
+    },
+    {
+      "id": "city_jiangling",
+      "label": "江陵",
+      "type": "city",
+      "theme": "歷史城市",
+      "region": "shu",
+      "levelRange": "38-52",
+      "subtheme": "荊蜀轉接",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "wild_wuling",
+      "label": "武陵山",
+      "type": "wild",
+      "theme": "仙俠",
+      "region": "shu",
+      "levelRange": "40-54",
+      "subtheme": "深山 / 靈木",
+      "tags": [
+        "explore"
+      ]
+    },
+    {
+      "id": "wild_spirit_forest",
+      "label": "靈木森林",
+      "type": "wild",
+      "theme": "仙俠",
+      "region": "shu",
+      "levelRange": "42-56",
+      "subtheme": "靈木 / 妖藤",
+      "tags": [
+        "wild"
+      ]
+    },
+    {
+      "id": "wild_hidden_valley",
+      "label": "隱谷",
+      "type": "wild",
+      "theme": "探險遺跡",
+      "region": "shu",
+      "levelRange": "44-58",
+      "subtheme": "隱谷 / 秘徑",
+      "tags": [
+        "explore"
+      ]
+    },
+    {
+      "id": "dng_ancient_tomb_shu",
+      "label": "蜀漢古墓",
+      "type": "dungeon",
+      "theme": "探險遺跡",
+      "region": "shu",
+      "levelRange": "48-62",
+      "subtheme": "古墓 / 石門",
+      "tags": [
+        "dungeon"
+      ]
+    },
+    {
+      "id": "city_changsha",
+      "label": "長沙",
+      "type": "city",
+      "theme": "歷史城市",
+      "region": "south",
+      "levelRange": "30-42",
+      "subtheme": "荊南主城",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "city_lingling",
+      "label": "零陵",
+      "type": "city",
+      "theme": "江湖",
+      "region": "south",
+      "levelRange": "34-46",
+      "subtheme": "山城 / 奇聞",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "city_guiyang",
+      "label": "桂陽",
+      "type": "city",
+      "theme": "江湖",
+      "region": "south",
+      "levelRange": "36-48",
+      "subtheme": "南嶺城鎮",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "city_nanhai",
+      "label": "南海",
+      "type": "city",
+      "theme": "探險遺跡",
+      "region": "south",
+      "levelRange": "40-54",
+      "subtheme": "海港 / 遠航",
+      "tags": [
+        "hub"
+      ]
+    },
+    {
+      "id": "wild_nanman_jungle",
+      "label": "南蠻密林",
+      "type": "wild",
+      "theme": "探險遺跡",
+      "region": "south",
+      "levelRange": "42-56",
+      "subtheme": "密林 / 部族",
+      "tags": [
+        "explore"
+      ]
+    },
+    {
+      "id": "dng_serpent_temple",
+      "label": "蛇神殿",
+      "type": "dungeon",
+      "theme": "詭異民俗",
+      "region": "south",
+      "levelRange": "48-62",
+      "subtheme": "蛇殿 / 血祭",
+      "tags": [
+        "dungeon"
+      ]
+    },
+    {
+      "id": "sec_jungle_ruins",
+      "label": "叢林遺城",
+      "type": "secret",
+      "theme": "仙俠",
+      "region": "south",
+      "levelRange": "54-68",
+      "subtheme": "遺城 / 古國",
+      "tags": [
+        "secret"
+      ]
+    },
+    {
+      "id": "sec_chibi_battlefield",
+      "label": "赤壁古戰場",
+      "type": "secret",
+      "theme": "軍旅",
+      "region": "world_events",
+      "levelRange": "50-65",
+      "subtheme": "戰場幻境",
+      "tags": [
+        "event"
+      ]
+    },
+    {
+      "id": "sec_machine_city",
+      "label": "機關古城",
+      "type": "secret",
+      "theme": "探險遺跡",
+      "region": "world_events",
+      "levelRange": "55-70",
+      "subtheme": "機關 / 古城",
+      "tags": [
+        "event"
+      ]
+    },
+    {
+      "id": "sec_nether_world",
+      "label": "冥域",
+      "type": "secret",
+      "theme": "仙俠",
+      "region": "world_events",
+      "levelRange": "60-75",
+      "subtheme": "幽冥 / 終局",
+      "tags": [
+        "event"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "city_xiliang",
+      "to": "city_tianshui",
+      "direction": "east"
+    },
+    {
+      "from": "city_tianshui",
+      "to": "city_xiliang",
+      "direction": "west"
+    },
+    {
+      "from": "city_tianshui",
+      "to": "city_anding",
+      "direction": "east"
+    },
+    {
+      "from": "city_anding",
+      "to": "city_tianshui",
+      "direction": "west"
+    },
+    {
+      "from": "city_anding",
+      "to": "city_changan",
+      "direction": "east"
+    },
+    {
+      "from": "city_changan",
+      "to": "city_anding",
+      "direction": "west"
+    },
+    {
+      "from": "city_changan",
+      "to": "city_hongnong",
+      "direction": "east"
+    },
+    {
+      "from": "city_hongnong",
+      "to": "city_changan",
+      "direction": "west"
+    },
+    {
+      "from": "city_hongnong",
+      "to": "fort_hangu",
+      "direction": "east"
+    },
+    {
+      "from": "fort_hangu",
+      "to": "city_hongnong",
+      "direction": "west"
+    },
+    {
+      "from": "fort_hangu",
+      "to": "fort_hulao",
+      "direction": "east"
+    },
+    {
+      "from": "fort_hulao",
+      "to": "fort_hangu",
+      "direction": "west"
+    },
+    {
+      "from": "fort_hulao",
+      "to": "city_loyang",
+      "direction": "east"
+    },
+    {
+      "from": "city_loyang",
+      "to": "fort_hulao",
+      "direction": "west"
+    },
+    {
+      "from": "city_loyang",
+      "to": "city_chenliu",
+      "direction": "east"
+    },
+    {
+      "from": "city_chenliu",
+      "to": "city_loyang",
+      "direction": "west"
+    },
+    {
+      "from": "city_chenliu",
+      "to": "city_xuzhou",
+      "direction": "east"
+    },
+    {
+      "from": "city_xuzhou",
+      "to": "city_chenliu",
+      "direction": "west"
+    },
+    {
+      "from": "city_loyang",
+      "to": "district_loyang_palace",
+      "direction": "enter"
+    },
+    {
+      "from": "district_loyang_palace",
+      "to": "city_loyang",
+      "direction": "out"
+    },
+    {
+      "from": "city_loyang",
+      "to": "district_loyang_east_market",
+      "direction": "east"
+    },
+    {
+      "from": "district_loyang_east_market",
+      "to": "city_loyang",
+      "direction": "west"
+    },
+    {
+      "from": "city_loyang",
+      "to": "district_loyang_west_market",
+      "direction": "west"
+    },
+    {
+      "from": "district_loyang_west_market",
+      "to": "city_loyang",
+      "direction": "east"
+    },
+    {
+      "from": "city_loyang",
+      "to": "district_loyang_scholar",
+      "direction": "north"
+    },
+    {
+      "from": "district_loyang_scholar",
+      "to": "city_loyang",
+      "direction": "south"
+    },
+    {
+      "from": "city_loyang",
+      "to": "wild_loyang_east",
+      "direction": "east"
+    },
+    {
+      "from": "wild_loyang_east",
+      "to": "city_loyang",
+      "direction": "west"
+    },
+    {
+      "from": "wild_loyang_east",
+      "to": "wild_longqu_hills",
+      "direction": "east"
+    },
+    {
+      "from": "wild_longqu_hills",
+      "to": "wild_loyang_east",
+      "direction": "west"
+    },
+    {
+      "from": "wild_loyang_east",
+      "to": "wild_fengqiu_forest",
+      "direction": "north"
+    },
+    {
+      "from": "wild_fengqiu_forest",
+      "to": "wild_loyang_east",
+      "direction": "south"
+    },
+    {
+      "from": "wild_loyang_east",
+      "to": "wild_farming_village",
+      "direction": "south"
+    },
+    {
+      "from": "wild_farming_village",
+      "to": "wild_loyang_east",
+      "direction": "north"
+    },
+    {
+      "from": "city_loyang",
+      "to": "road_puyang",
+      "direction": "north"
+    },
+    {
+      "from": "road_puyang",
+      "to": "city_loyang",
+      "direction": "south"
+    },
+    {
+      "from": "city_loyang",
+      "to": "road_wan",
+      "direction": "south"
+    },
+    {
+      "from": "road_wan",
+      "to": "city_loyang",
+      "direction": "north"
+    },
+    {
+      "from": "city_loyang",
+      "to": "road_chenliu",
+      "direction": "east"
+    },
+    {
+      "from": "road_chenliu",
+      "to": "city_loyang",
+      "direction": "west"
+    },
+    {
+      "from": "wild_loyang_east",
+      "to": "wild_old_bridge",
+      "direction": "south"
+    },
+    {
+      "from": "wild_old_bridge",
+      "to": "wild_loyang_east",
+      "direction": "north"
+    },
+    {
+      "from": "wild_old_bridge",
+      "to": "wild_tea_pavilion",
+      "direction": "east"
+    },
+    {
+      "from": "wild_tea_pavilion",
+      "to": "wild_old_bridge",
+      "direction": "west"
+    },
+    {
+      "from": "city_loyang",
+      "to": "dng_loyang_sewer",
+      "direction": "down"
+    },
+    {
+      "from": "dng_loyang_sewer",
+      "to": "city_loyang",
+      "direction": "up"
+    },
+    {
+      "from": "dng_loyang_sewer",
+      "to": "dng_sewer_depths",
+      "direction": "down"
+    },
+    {
+      "from": "dng_sewer_depths",
+      "to": "dng_loyang_sewer",
+      "direction": "up"
+    },
+    {
+      "from": "dng_sewer_depths",
+      "to": "dng_royal_tomb",
+      "direction": "down"
+    },
+    {
+      "from": "dng_royal_tomb",
+      "to": "dng_sewer_depths",
+      "direction": "up"
+    },
+    {
+      "from": "dng_royal_tomb",
+      "to": "sec_catacomb_depths",
+      "direction": "down"
+    },
+    {
+      "from": "sec_catacomb_depths",
+      "to": "dng_royal_tomb",
+      "direction": "up"
+    },
+    {
+      "from": "city_changan",
+      "to": "district_changan_palace",
+      "direction": "enter"
+    },
+    {
+      "from": "district_changan_palace",
+      "to": "city_changan",
+      "direction": "out"
+    },
+    {
+      "from": "city_changan",
+      "to": "district_changan_west_market",
+      "direction": "west"
+    },
+    {
+      "from": "district_changan_west_market",
+      "to": "city_changan",
+      "direction": "east"
+    },
+    {
+      "from": "city_changan",
+      "to": "district_changan_noble",
+      "direction": "north"
+    },
+    {
+      "from": "district_changan_noble",
+      "to": "city_changan",
+      "direction": "south"
+    },
+    {
+      "from": "city_changan",
+      "to": "wild_changan_outer",
+      "direction": "south"
+    },
+    {
+      "from": "wild_changan_outer",
+      "to": "city_changan",
+      "direction": "north"
+    },
+    {
+      "from": "city_changan",
+      "to": "road_return_changan",
+      "direction": "out"
+    },
+    {
+      "from": "road_return_changan",
+      "to": "city_changan",
+      "direction": "enter"
+    },
+    {
+      "from": "city_changan",
+      "to": "fort_hangu",
+      "direction": "east"
+    },
+    {
+      "from": "fort_hangu",
+      "to": "city_changan",
+      "direction": "west"
+    },
+    {
+      "from": "fort_hangu",
+      "to": "fort_hangu_outer",
+      "direction": "west"
+    },
+    {
+      "from": "fort_hangu_outer",
+      "to": "fort_hangu",
+      "direction": "east"
+    },
+    {
+      "from": "fort_hangu",
+      "to": "fort_hangu_watch",
+      "direction": "up"
+    },
+    {
+      "from": "fort_hangu_watch",
+      "to": "fort_hangu",
+      "direction": "down"
+    },
+    {
+      "from": "city_changan",
+      "to": "road_western_trade",
+      "direction": "west"
+    },
+    {
+      "from": "road_western_trade",
+      "to": "city_changan",
+      "direction": "east"
+    },
+    {
+      "from": "road_western_trade",
+      "to": "wild_salt_road",
+      "direction": "west"
+    },
+    {
+      "from": "wild_salt_road",
+      "to": "road_western_trade",
+      "direction": "east"
+    },
+    {
+      "from": "wild_salt_road",
+      "to": "city_anding",
+      "direction": "west"
+    },
+    {
+      "from": "city_anding",
+      "to": "wild_salt_road",
+      "direction": "east"
+    },
+    {
+      "from": "city_anding",
+      "to": "city_tianshui",
+      "direction": "west"
+    },
+    {
+      "from": "city_tianshui",
+      "to": "city_anding",
+      "direction": "east"
+    },
+    {
+      "from": "city_tianshui",
+      "to": "city_xiliang",
+      "direction": "west"
+    },
+    {
+      "from": "city_xiliang",
+      "to": "city_tianshui",
+      "direction": "east"
+    },
+    {
+      "from": "city_xiliang",
+      "to": "wild_xiliang_steppe",
+      "direction": "north"
+    },
+    {
+      "from": "wild_xiliang_steppe",
+      "to": "city_xiliang",
+      "direction": "south"
+    },
+    {
+      "from": "wild_xiliang_steppe",
+      "to": "wild_oasis_settlement",
+      "direction": "west"
+    },
+    {
+      "from": "wild_oasis_settlement",
+      "to": "wild_xiliang_steppe",
+      "direction": "east"
+    },
+    {
+      "from": "wild_xiliang_steppe",
+      "to": "wild_red_canyon",
+      "direction": "south"
+    },
+    {
+      "from": "wild_red_canyon",
+      "to": "wild_xiliang_steppe",
+      "direction": "north"
+    },
+    {
+      "from": "wild_xiliang_steppe",
+      "to": "wild_horse_plain",
+      "direction": "north"
+    },
+    {
+      "from": "wild_horse_plain",
+      "to": "wild_xiliang_steppe",
+      "direction": "south"
+    },
+    {
+      "from": "wild_xiliang_steppe",
+      "to": "dng_desert_ruins",
+      "direction": "down"
+    },
+    {
+      "from": "dng_desert_ruins",
+      "to": "wild_xiliang_steppe",
+      "direction": "up"
+    },
+    {
+      "from": "dng_desert_ruins",
+      "to": "dng_sand_burial_pit",
+      "direction": "down"
+    },
+    {
+      "from": "dng_sand_burial_pit",
+      "to": "dng_desert_ruins",
+      "direction": "up"
+    },
+    {
+      "from": "dng_desert_ruins",
+      "to": "sec_nomad_sky_temple",
+      "direction": "down"
+    },
+    {
+      "from": "sec_nomad_sky_temple",
+      "to": "dng_desert_ruins",
+      "direction": "up"
+    },
+    {
+      "from": "wild_red_canyon",
+      "to": "fort_border_camp",
+      "direction": "west"
+    },
+    {
+      "from": "fort_border_camp",
+      "to": "wild_red_canyon",
+      "direction": "east"
+    },
+    {
+      "from": "fort_border_camp",
+      "to": "wild_wind_gate",
+      "direction": "west"
+    },
+    {
+      "from": "wild_wind_gate",
+      "to": "fort_border_camp",
+      "direction": "east"
+    },
+    {
+      "from": "wild_black_rock_hills",
+      "to": "dng_black_rock_cave",
+      "direction": "down"
+    },
+    {
+      "from": "dng_black_rock_cave",
+      "to": "wild_black_rock_hills",
+      "direction": "up"
+    },
+    {
+      "from": "dng_black_rock_cave",
+      "to": "sec_iron_sky_vault",
+      "direction": "down"
+    },
+    {
+      "from": "sec_iron_sky_vault",
+      "to": "dng_black_rock_cave",
+      "direction": "up"
+    },
+    {
+      "from": "wild_oasis_settlement",
+      "to": "sec_western_star_observatory",
+      "direction": "up"
+    },
+    {
+      "from": "sec_western_star_observatory",
+      "to": "wild_oasis_settlement",
+      "direction": "down"
+    },
+    {
+      "from": "city_hongnong",
+      "to": "wild_hongnong_farmland",
+      "direction": "south"
+    },
+    {
+      "from": "wild_hongnong_farmland",
+      "to": "city_hongnong",
+      "direction": "north"
+    },
+    {
+      "from": "city_hongnong",
+      "to": "fort_hulao",
+      "direction": "east"
+    },
+    {
+      "from": "fort_hulao",
+      "to": "city_hongnong",
+      "direction": "west"
+    },
+    {
+      "from": "city_xiliang",
+      "to": "wild_black_rock_hills",
+      "direction": "south"
+    },
+    {
+      "from": "wild_black_rock_hills",
+      "to": "city_xiliang",
+      "direction": "north"
+    },
+    {
+      "from": "city_beiping",
+      "to": "district_beiping_market",
+      "direction": "east"
+    },
+    {
+      "from": "district_beiping_market",
+      "to": "city_beiping",
+      "direction": "west"
+    },
+    {
+      "from": "city_beiping",
+      "to": "district_beiping_station",
+      "direction": "south"
+    },
+    {
+      "from": "district_beiping_station",
+      "to": "city_beiping",
+      "direction": "north"
+    },
+    {
+      "from": "city_beiping",
+      "to": "wild_beiping_outer",
+      "direction": "out"
+    },
+    {
+      "from": "wild_beiping_outer",
+      "to": "city_beiping",
+      "direction": "enter"
+    },
+    {
+      "from": "wild_beiping_outer",
+      "to": "road_yijing",
+      "direction": "north"
+    },
+    {
+      "from": "road_yijing",
+      "to": "wild_beiping_outer",
+      "direction": "south"
+    },
+    {
+      "from": "road_yijing",
+      "to": "fort_yijing",
+      "direction": "north"
+    },
+    {
+      "from": "fort_yijing",
+      "to": "road_yijing",
+      "direction": "south"
+    },
+    {
+      "from": "fort_yijing",
+      "to": "fort_northern_watch",
+      "direction": "up"
+    },
+    {
+      "from": "fort_northern_watch",
+      "to": "fort_yijing",
+      "direction": "down"
+    },
+    {
+      "from": "fort_yijing",
+      "to": "wild_bailang",
+      "direction": "east"
+    },
+    {
+      "from": "wild_bailang",
+      "to": "fort_yijing",
+      "direction": "west"
+    },
+    {
+      "from": "wild_bailang",
+      "to": "wild_wolf_forest",
+      "direction": "north"
+    },
+    {
+      "from": "wild_wolf_forest",
+      "to": "wild_bailang",
+      "direction": "south"
+    },
+    {
+      "from": "wild_bailang",
+      "to": "dng_ancient_cave",
+      "direction": "down"
+    },
+    {
+      "from": "dng_ancient_cave",
+      "to": "wild_bailang",
+      "direction": "up"
+    },
+    {
+      "from": "dng_ancient_cave",
+      "to": "sec_spirit_peak",
+      "direction": "up"
+    },
+    {
+      "from": "sec_spirit_peak",
+      "to": "dng_ancient_cave",
+      "direction": "down"
+    },
+    {
+      "from": "wild_bailang",
+      "to": "wild_barbarian_camp",
+      "direction": "east"
+    },
+    {
+      "from": "wild_barbarian_camp",
+      "to": "wild_bailang",
+      "direction": "west"
+    },
+    {
+      "from": "wild_barbarian_camp",
+      "to": "city_xiangping",
+      "direction": "east"
+    },
+    {
+      "from": "city_xiangping",
+      "to": "wild_barbarian_camp",
+      "direction": "west"
+    },
+    {
+      "from": "city_xiangping",
+      "to": "wild_liaodong_plain",
+      "direction": "north"
+    },
+    {
+      "from": "wild_liaodong_plain",
+      "to": "city_xiangping",
+      "direction": "south"
+    },
+    {
+      "from": "city_xiangping",
+      "to": "road_north_border",
+      "direction": "north"
+    },
+    {
+      "from": "road_north_border",
+      "to": "city_xiangping",
+      "direction": "south"
+    },
+    {
+      "from": "wild_bailang",
+      "to": "sec_starfall_crater",
+      "direction": "up"
+    },
+    {
+      "from": "sec_starfall_crater",
+      "to": "wild_bailang",
+      "direction": "down"
+    },
+    {
+      "from": "city_chenliu",
+      "to": "district_chenliu_station",
+      "direction": "south"
+    },
+    {
+      "from": "district_chenliu_station",
+      "to": "city_chenliu",
+      "direction": "north"
+    },
+    {
+      "from": "city_chenliu",
+      "to": "wild_chenliu_west",
+      "direction": "west"
+    },
+    {
+      "from": "wild_chenliu_west",
+      "to": "city_chenliu",
+      "direction": "east"
+    },
+    {
+      "from": "city_chenliu",
+      "to": "road_chenliu_loyang",
+      "direction": "west"
+    },
+    {
+      "from": "road_chenliu_loyang",
+      "to": "city_chenliu",
+      "direction": "east"
+    },
+    {
+      "from": "city_chenliu",
+      "to": "city_puyang",
+      "direction": "north"
+    },
+    {
+      "from": "city_puyang",
+      "to": "city_chenliu",
+      "direction": "south"
+    },
+    {
+      "from": "city_puyang",
+      "to": "wild_old_battlefield",
+      "direction": "west"
+    },
+    {
+      "from": "wild_old_battlefield",
+      "to": "city_puyang",
+      "direction": "east"
+    },
+    {
+      "from": "city_puyang",
+      "to": "city_nanpi",
+      "direction": "north"
+    },
+    {
+      "from": "city_nanpi",
+      "to": "city_puyang",
+      "direction": "south"
+    },
+    {
+      "from": "wild_old_battlefield",
+      "to": "sec_yellow_turban_ruins",
+      "direction": "down"
+    },
+    {
+      "from": "sec_yellow_turban_ruins",
+      "to": "wild_old_battlefield",
+      "direction": "up"
+    },
+    {
+      "from": "city_puyang",
+      "to": "wild_floodplain",
+      "direction": "east"
+    },
+    {
+      "from": "wild_floodplain",
+      "to": "city_puyang",
+      "direction": "west"
+    },
+    {
+      "from": "wild_floodplain",
+      "to": "dng_river_cavern",
+      "direction": "down"
+    },
+    {
+      "from": "dng_river_cavern",
+      "to": "wild_floodplain",
+      "direction": "up"
+    },
+    {
+      "from": "dng_river_cavern",
+      "to": "sec_dragonbone_ford",
+      "direction": "down"
+    },
+    {
+      "from": "sec_dragonbone_ford",
+      "to": "dng_river_cavern",
+      "direction": "up"
+    },
+    {
+      "from": "city_nanpi",
+      "to": "wild_hebei_plain",
+      "direction": "east"
+    },
+    {
+      "from": "wild_hebei_plain",
+      "to": "city_nanpi",
+      "direction": "west"
+    },
+    {
+      "from": "wild_hebei_plain",
+      "to": "fort_river_crossing",
+      "direction": "south"
+    },
+    {
+      "from": "fort_river_crossing",
+      "to": "wild_hebei_plain",
+      "direction": "north"
+    },
+    {
+      "from": "city_nanpi",
+      "to": "road_nanpi_beiping",
+      "direction": "north"
+    },
+    {
+      "from": "road_nanpi_beiping",
+      "to": "city_nanpi",
+      "direction": "south"
+    },
+    {
+      "from": "road_nanpi_beiping",
+      "to": "city_beiping",
+      "direction": "north"
+    },
+    {
+      "from": "city_beiping",
+      "to": "road_nanpi_beiping",
+      "direction": "south"
+    },
+    {
+      "from": "road_puyang",
+      "to": "city_puyang",
+      "direction": "north"
+    },
+    {
+      "from": "city_puyang",
+      "to": "road_puyang",
+      "direction": "south"
+    },
+    {
+      "from": "road_chenliu",
+      "to": "city_chenliu",
+      "direction": "east"
+    },
+    {
+      "from": "city_chenliu",
+      "to": "road_chenliu",
+      "direction": "west"
+    },
+    {
+      "from": "road_wan",
+      "to": "city_wan",
+      "direction": "south"
+    },
+    {
+      "from": "city_wan",
+      "to": "road_wan",
+      "direction": "north"
+    },
+    {
+      "from": "city_wan",
+      "to": "wild_wan_outer",
+      "direction": "out"
+    },
+    {
+      "from": "wild_wan_outer",
+      "to": "city_wan",
+      "direction": "enter"
+    },
+    {
+      "from": "city_wan",
+      "to": "city_xinye",
+      "direction": "south"
+    },
+    {
+      "from": "city_xinye",
+      "to": "city_wan",
+      "direction": "north"
+    },
+    {
+      "from": "city_xinye",
+      "to": "wild_xinye_fields",
+      "direction": "east"
+    },
+    {
+      "from": "wild_xinye_fields",
+      "to": "city_xinye",
+      "direction": "west"
+    },
+    {
+      "from": "city_xinye",
+      "to": "city_xiangyang",
+      "direction": "south"
+    },
+    {
+      "from": "city_xiangyang",
+      "to": "city_xinye",
+      "direction": "north"
+    },
+    {
+      "from": "city_xiangyang",
+      "to": "fort_fancheng",
+      "direction": "north"
+    },
+    {
+      "from": "fort_fancheng",
+      "to": "city_xiangyang",
+      "direction": "south"
+    },
+    {
+      "from": "city_xiangyang",
+      "to": "road_jingxiang",
+      "direction": "south"
+    },
+    {
+      "from": "road_jingxiang",
+      "to": "city_xiangyang",
+      "direction": "north"
+    },
+    {
+      "from": "road_jingxiang",
+      "to": "city_jiangxia",
+      "direction": "south"
+    },
+    {
+      "from": "city_jiangxia",
+      "to": "road_jingxiang",
+      "direction": "north"
+    },
+    {
+      "from": "city_jiangxia",
+      "to": "fort_river_fort",
+      "direction": "east"
+    },
+    {
+      "from": "fort_river_fort",
+      "to": "city_jiangxia",
+      "direction": "west"
+    },
+    {
+      "from": "city_jiangxia",
+      "to": "city_chaisang",
+      "direction": "east"
+    },
+    {
+      "from": "city_chaisang",
+      "to": "city_jiangxia",
+      "direction": "west"
+    },
+    {
+      "from": "city_jiangxia",
+      "to": "wild_yunmeng",
+      "direction": "south"
+    },
+    {
+      "from": "wild_yunmeng",
+      "to": "city_jiangxia",
+      "direction": "north"
+    },
+    {
+      "from": "wild_yunmeng",
+      "to": "dng_sunken_temple",
+      "direction": "down"
+    },
+    {
+      "from": "dng_sunken_temple",
+      "to": "wild_yunmeng",
+      "direction": "up"
+    },
+    {
+      "from": "dng_sunken_temple",
+      "to": "sec_spirit_marsh",
+      "direction": "down"
+    },
+    {
+      "from": "sec_spirit_marsh",
+      "to": "dng_sunken_temple",
+      "direction": "up"
+    },
+    {
+      "from": "wild_yunmeng",
+      "to": "sec_spirit_gate",
+      "direction": "down"
+    },
+    {
+      "from": "sec_spirit_gate",
+      "to": "wild_yunmeng",
+      "direction": "up"
+    },
+    {
+      "from": "wild_reed_bank",
+      "to": "city_chaisang",
+      "direction": "east"
+    },
+    {
+      "from": "city_chaisang",
+      "to": "wild_reed_bank",
+      "direction": "west"
+    },
+    {
+      "from": "city_xiangyang",
+      "to": "wild_reed_bank",
+      "direction": "south"
+    },
+    {
+      "from": "wild_reed_bank",
+      "to": "city_xiangyang",
+      "direction": "north"
+    },
+    {
+      "from": "wild_reed_bank",
+      "to": "dng_boat_graveyard",
+      "direction": "down"
+    },
+    {
+      "from": "dng_boat_graveyard",
+      "to": "wild_reed_bank",
+      "direction": "up"
+    },
+    {
+      "from": "city_xuzhou",
+      "to": "road_shouchun_xuzhou",
+      "direction": "south"
+    },
+    {
+      "from": "road_shouchun_xuzhou",
+      "to": "city_xuzhou",
+      "direction": "north"
+    },
+    {
+      "from": "road_shouchun_xuzhou",
+      "to": "city_shouchun",
+      "direction": "south"
+    },
+    {
+      "from": "city_shouchun",
+      "to": "road_shouchun_xuzhou",
+      "direction": "north"
+    },
+    {
+      "from": "city_shouchun",
+      "to": "wild_shouchun_fields",
+      "direction": "out"
+    },
+    {
+      "from": "wild_shouchun_fields",
+      "to": "city_shouchun",
+      "direction": "enter"
+    },
+    {
+      "from": "city_shouchun",
+      "to": "city_jianye",
+      "direction": "south"
+    },
+    {
+      "from": "city_jianye",
+      "to": "city_shouchun",
+      "direction": "north"
+    },
+    {
+      "from": "city_jianye",
+      "to": "district_jianye_port",
+      "direction": "east"
+    },
+    {
+      "from": "district_jianye_port",
+      "to": "city_jianye",
+      "direction": "west"
+    },
+    {
+      "from": "city_jianye",
+      "to": "fort_naval_base",
+      "direction": "south"
+    },
+    {
+      "from": "fort_naval_base",
+      "to": "city_jianye",
+      "direction": "north"
+    },
+    {
+      "from": "city_jianye",
+      "to": "wild_jianye_west",
+      "direction": "west"
+    },
+    {
+      "from": "wild_jianye_west",
+      "to": "city_jianye",
+      "direction": "east"
+    },
+    {
+      "from": "city_jianye",
+      "to": "city_kuaiji",
+      "direction": "east"
+    },
+    {
+      "from": "city_kuaiji",
+      "to": "city_jianye",
+      "direction": "west"
+    },
+    {
+      "from": "city_kuaiji",
+      "to": "wild_mountain_pass",
+      "direction": "south"
+    },
+    {
+      "from": "wild_mountain_pass",
+      "to": "city_kuaiji",
+      "direction": "north"
+    },
+    {
+      "from": "wild_mountain_pass",
+      "to": "dng_temple_ruins",
+      "direction": "down"
+    },
+    {
+      "from": "dng_temple_ruins",
+      "to": "wild_mountain_pass",
+      "direction": "up"
+    },
+    {
+      "from": "city_jianye",
+      "to": "wild_river_delta",
+      "direction": "south"
+    },
+    {
+      "from": "wild_river_delta",
+      "to": "city_jianye",
+      "direction": "north"
+    },
+    {
+      "from": "wild_river_delta",
+      "to": "wild_pirate_islands",
+      "direction": "south"
+    },
+    {
+      "from": "wild_pirate_islands",
+      "to": "wild_river_delta",
+      "direction": "north"
+    },
+    {
+      "from": "wild_pirate_islands",
+      "to": "sec_water_ruins",
+      "direction": "down"
+    },
+    {
+      "from": "sec_water_ruins",
+      "to": "wild_pirate_islands",
+      "direction": "up"
+    },
+    {
+      "from": "city_chengdu",
+      "to": "district_chengdu_market",
+      "direction": "east"
+    },
+    {
+      "from": "district_chengdu_market",
+      "to": "city_chengdu",
+      "direction": "west"
+    },
+    {
+      "from": "city_chengdu",
+      "to": "district_chengdu_scholar",
+      "direction": "north"
+    },
+    {
+      "from": "district_chengdu_scholar",
+      "to": "city_chengdu",
+      "direction": "south"
+    },
+    {
+      "from": "city_chengdu",
+      "to": "wild_chengdu_outer",
+      "direction": "out"
+    },
+    {
+      "from": "wild_chengdu_outer",
+      "to": "city_chengdu",
+      "direction": "enter"
+    },
+    {
+      "from": "city_chengdu",
+      "to": "city_jiangzhou",
+      "direction": "east"
+    },
+    {
+      "from": "city_jiangzhou",
+      "to": "city_chengdu",
+      "direction": "west"
+    },
+    {
+      "from": "city_jiangzhou",
+      "to": "fort_yongan",
+      "direction": "east"
+    },
+    {
+      "from": "fort_yongan",
+      "to": "city_jiangzhou",
+      "direction": "west"
+    },
+    {
+      "from": "fort_yongan",
+      "to": "fort_yiling",
+      "direction": "east"
+    },
+    {
+      "from": "fort_yiling",
+      "to": "fort_yongan",
+      "direction": "west"
+    },
+    {
+      "from": "fort_yiling",
+      "to": "city_jiangling",
+      "direction": "east"
+    },
+    {
+      "from": "city_jiangling",
+      "to": "fort_yiling",
+      "direction": "west"
+    },
+    {
+      "from": "city_jiangling",
+      "to": "wild_wuling",
+      "direction": "south"
+    },
+    {
+      "from": "wild_wuling",
+      "to": "city_jiangling",
+      "direction": "north"
+    },
+    {
+      "from": "wild_wuling",
+      "to": "wild_spirit_forest",
+      "direction": "east"
+    },
+    {
+      "from": "wild_spirit_forest",
+      "to": "wild_wuling",
+      "direction": "west"
+    },
+    {
+      "from": "wild_wuling",
+      "to": "wild_hidden_valley",
+      "direction": "west"
+    },
+    {
+      "from": "wild_hidden_valley",
+      "to": "wild_wuling",
+      "direction": "east"
+    },
+    {
+      "from": "wild_hidden_valley",
+      "to": "dng_ancient_tomb_shu",
+      "direction": "down"
+    },
+    {
+      "from": "dng_ancient_tomb_shu",
+      "to": "wild_hidden_valley",
+      "direction": "up"
+    },
+    {
+      "from": "city_chaisang",
+      "to": "city_changsha",
+      "direction": "south"
+    },
+    {
+      "from": "city_changsha",
+      "to": "city_chaisang",
+      "direction": "north"
+    },
+    {
+      "from": "city_changsha",
+      "to": "city_lingling",
+      "direction": "south"
+    },
+    {
+      "from": "city_lingling",
+      "to": "city_changsha",
+      "direction": "north"
+    },
+    {
+      "from": "city_lingling",
+      "to": "city_guiyang",
+      "direction": "south"
+    },
+    {
+      "from": "city_guiyang",
+      "to": "city_lingling",
+      "direction": "north"
+    },
+    {
+      "from": "city_guiyang",
+      "to": "city_nanhai",
+      "direction": "south"
+    },
+    {
+      "from": "city_nanhai",
+      "to": "city_guiyang",
+      "direction": "north"
+    },
+    {
+      "from": "city_guiyang",
+      "to": "wild_nanman_jungle",
+      "direction": "west"
+    },
+    {
+      "from": "wild_nanman_jungle",
+      "to": "city_guiyang",
+      "direction": "east"
+    },
+    {
+      "from": "wild_nanman_jungle",
+      "to": "dng_serpent_temple",
+      "direction": "down"
+    },
+    {
+      "from": "dng_serpent_temple",
+      "to": "wild_nanman_jungle",
+      "direction": "up"
+    },
+    {
+      "from": "dng_serpent_temple",
+      "to": "sec_jungle_ruins",
+      "direction": "down"
+    },
+    {
+      "from": "sec_jungle_ruins",
+      "to": "dng_serpent_temple",
+      "direction": "up"
+    },
+    {
+      "from": "city_changsha",
+      "to": "wild_wuling",
+      "direction": "west"
+    },
+    {
+      "from": "sec_spirit_gate",
+      "to": "sec_nether_world",
+      "direction": "down"
+    },
+    {
+      "from": "wild_longqu_hills",
+      "to": "sec_machine_city",
+      "direction": "down"
+    },
+    {
+      "from": "city_chaisang",
+      "to": "sec_chibi_battlefield",
+      "direction": "south"
+    },
+    {
+      "from": "fort_hulao",
+      "to": "sec_machine_city",
+      "direction": "down"
+    },
+    {
+      "from": "wild_old_battlefield",
+      "to": "sec_chibi_battlefield",
+      "direction": "south"
+    }
+  ]
+}

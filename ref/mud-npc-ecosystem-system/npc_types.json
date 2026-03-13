@@ -1,0 +1,34 @@
+{
+  "npc_types": [
+    {
+      "id": "bandit",
+      "name": "山賊",
+      "behavior": "ambush"
+    },
+    {
+      "id": "guard",
+      "name": "官兵",
+      "behavior": "patrol"
+    },
+    {
+      "id": "merchant",
+      "name": "商隊",
+      "behavior": "trade_route"
+    },
+    {
+      "id": "refugee",
+      "name": "流民",
+      "behavior": "wander"
+    },
+    {
+      "id": "beast",
+      "name": "野獸",
+      "behavior": "territorial"
+    },
+    {
+      "id": "spirit",
+      "name": "妖物",
+      "behavior": "haunt"
+    }
+  ]
+}

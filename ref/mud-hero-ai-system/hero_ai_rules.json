@@ -1,0 +1,24 @@
+{
+  "ai_rules": [
+    {
+      "hero": "cao_cao",
+      "behavior": "expand_territory"
+    },
+    {
+      "hero": "liu_bei",
+      "behavior": "form_alliance"
+    },
+    {
+      "hero": "sun_quan",
+      "behavior": "naval_control"
+    },
+    {
+      "hero": "lu_bu",
+      "behavior": "duel_champion"
+    },
+    {
+      "hero": "zhuge_liang",
+      "behavior": "strategic_event"
+    }
+  ]
+}

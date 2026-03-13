@@ -1,0 +1,29 @@
+{
+  "event_id": "huangjin_rebellion",
+  "name": "黃巾之亂",
+  "trigger": {
+    "type": "world_start",
+    "value": true
+  },
+  "affected_regions": [
+    "中原",
+    "冀州",
+    "兗州"
+  ],
+  "effects": {
+    "spawn_npc": [
+      "yellow_turban_rebel",
+      "yellow_turban_general"
+    ],
+    "change_control": [
+      "village",
+      "farmland"
+    ],
+    "unlock_dungeon": [
+      "yellow_turban_camp"
+    ],
+    "quests": [
+      "suppress_rebellion"
+    ]
+  }
+}

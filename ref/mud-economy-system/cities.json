@@ -1,0 +1,34 @@
+{
+  "cities": [
+    {
+      "id": "city_loyang",
+      "goods": [
+        "weapon",
+        "grain",
+        "armor"
+      ]
+    },
+    {
+      "id": "city_xiangyang",
+      "goods": [
+        "grain",
+        "military_supply"
+      ]
+    },
+    {
+      "id": "city_jianye",
+      "goods": [
+        "ship",
+        "fish",
+        "salt"
+      ]
+    },
+    {
+      "id": "city_chengdu",
+      "goods": [
+        "silk",
+        "grain"
+      ]
+    }
+  ]
+}

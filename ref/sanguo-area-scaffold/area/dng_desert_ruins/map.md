@@ -1,0 +1,66 @@
+# 荒漠遺跡
+
+## Metadata
+
+- Id: `dng_desert_ruins`
+- Label: 荒漠遺跡
+- Type: dungeon
+- Theme: 探險遺跡
+- Subtheme: 遺跡 / 地宮
+- Region: 關中西域 (`guanzhong`)
+- LevelRange: 35-48
+- Tags: dungeon
+
+## World Connections
+
+- up: wild_xiliang_steppe
+- down: dng_sand_burial_pit
+- down: sec_nomad_sky_temple
+
+## map.md Prose Scaffold
+
+Theme: 探險遺跡
+Subtheme: 遺跡 / 地宮
+Mood: 幽深、危險、秘密感強
+SignatureScenes:
+- 入口前廳
+- 陰暗通道
+- 封印或機關
+NPC roles:
+- 守關怪物
+- 殘魂
+- 迷途者
+Quest hooks:
+- 深入調查
+- 尋回遺物
+- 破解封印
+Interaction cues:
+- #Enquire 入口
+- #Keyword 石門
+- #Keyword 符文
+Rumor seeds:
+- 傳聞說 荒漠遺跡 一帶近來有不同尋常的動靜。
+Secret node or hidden hook:
+- 深處可能藏有條件解鎖的支路或事件房。
+
+## Graph Context
+
+Adjacent nodes:
+- dng_sand_burial_pit
+- sec_nomad_sky_temple
+- wild_xiliang_steppe
+
+## Suggested Room Clusters
+
+- 入口前廳
+- 主通道
+- 支路房
+- 核心區 / Boss 房
+
+## TODO
+
+- 補 3~8 個代表房間節點
+- 決定 #Keyword / #Enquire / #Job
+- 對齊鄰接 AREA 的進出口語意
+- 補 NPC、怪物、掉落、任務與服務節點
+- 依等級帶調整危險度與資源密度

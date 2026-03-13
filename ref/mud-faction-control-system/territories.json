@@ -1,0 +1,24 @@
+{
+  "territories": [
+    {
+      "area": "city_loyang",
+      "controller": "wei"
+    },
+    {
+      "area": "city_xiangyang",
+      "controller": "shu"
+    },
+    {
+      "area": "city_jianye",
+      "controller": "wu"
+    },
+    {
+      "area": "city_chengdu",
+      "controller": "shu"
+    },
+    {
+      "area": "city_changan",
+      "controller": "wei"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "battle_schema": {
+    "battle_id": "string",
+    "area": "area_id",
+    "attackers": "faction_id",
+    "defenders": "faction_id",
+    "result": "pending | attacker_win | defender_win"
+  }
+}

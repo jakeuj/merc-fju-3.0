@@ -1,0 +1,27 @@
+{
+  "event_id": "wuzhangyuan",
+  "name": "五丈原之戰",
+  "trigger": {
+    "type": "endgame",
+    "value": true
+  },
+  "affected_regions": [
+    "關中",
+    "五丈原"
+  ],
+  "effects": {
+    "spawn_npc": [
+      "shu_army",
+      "wei_army"
+    ],
+    "change_control": [
+      "battlefield"
+    ],
+    "unlock_dungeon": [
+      "ancient_stratagem"
+    ],
+    "quests": [
+      "final_campaign"
+    ]
+  }
+}
