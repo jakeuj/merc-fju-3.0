@@ -1,0 +1,4 @@
+interface:
+  display_name: "Merc Local Ops"
+  short_description: "Build, start, and troubleshoot the current Merc-FJU 3.0 local runtime from real repo entry points"
+  default_prompt: "Use $merc-local-ops to work from the current Merc-FJU 3.0 repo reality: build from src/, inspect src/merc.ini and src/startup, check runtime directories such as log/player/mail/debug/vote, and separate local environment issues from world-data load failures."
