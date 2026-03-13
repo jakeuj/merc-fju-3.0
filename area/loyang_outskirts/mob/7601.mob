@@ -1,0 +1,32 @@
+Vnum            7601
+Name            roadside tea seller~
+ShortDesc       路亭茶販~
+Description
+一名在東郊路亭做小買賣的茶販守著他的木桶與陶杯﹐不時伸長脖子
+往西看看橋頭和來路﹐像是在確認今天是否還會有更多旅人經過。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       50
+Level           8
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             12
+Wis             12
+Dex             10
+Con             10
+Hp              800
+Mana            100
+Move            100
+Class           0
+Gold            50
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

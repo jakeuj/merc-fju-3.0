@@ -1,0 +1,19 @@
+{
+  "factions": [
+    {
+      "id": "wei",
+      "name": "魏",
+      "leader": "曹操"
+    },
+    {
+      "id": "shu",
+      "name": "蜀",
+      "leader": "劉備"
+    },
+    {
+      "id": "wu",
+      "name": "吳",
+      "leader": "孫權"
+    }
+  ]
+}

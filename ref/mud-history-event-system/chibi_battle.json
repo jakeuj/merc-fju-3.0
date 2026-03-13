@@ -1,0 +1,28 @@
+{
+  "event_id": "chibi_battle",
+  "name": "赤壁之戰",
+  "trigger": {
+    "type": "world_progress",
+    "value": "late_mid"
+  },
+  "affected_regions": [
+    "荊州",
+    "江夏",
+    "赤壁"
+  ],
+  "effects": {
+    "spawn_npc": [
+      "sun_liu_alliance",
+      "cao_cao_navy"
+    ],
+    "change_control": [
+      "river_forts"
+    ],
+    "unlock_dungeon": [
+      "burning_fleet"
+    ],
+    "quests": [
+      "fire_attack"
+    ]
+  }
+}

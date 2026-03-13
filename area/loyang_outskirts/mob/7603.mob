@@ -1,0 +1,32 @@
+Vnum            7603
+Name            canal skulker looter~
+ShortDesc       渠邊流寇~
+Description
+這名流寇縮著肩膀蹲在陰影邊緣﹐眼神不時在田埂、農舍和暗井口之
+間游移。他顯然熟悉這附近巡檢變少的時段﹐手上的短刀也已磨得發
+亮。
+~
+StayArea        Yes
+Wimpy           Yes
+AlignEvil       Yes
+Alignment       -200
+Level           11
+Hitroll         4
+Protect         -1
+Damroll         3
+Str             12
+Int             9
+Wis             8
+Dex             12
+Con             11
+Hp              1400
+Mana            60
+Move            120
+Class           CLASS_THIEF
+Gold            120
+Multipile       100
+AttackRatio     105
+DodgeRatio      105
+Migrate         0
+Sex             SEX_MALE
+End

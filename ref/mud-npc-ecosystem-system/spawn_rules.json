@@ -1,0 +1,33 @@
+{
+  "spawn_rules": [
+    {
+      "area_type": "road",
+      "spawn": [
+        "merchant",
+        "bandit"
+      ]
+    },
+    {
+      "area_type": "city",
+      "spawn": [
+        "guard",
+        "merchant",
+        "refugee"
+      ]
+    },
+    {
+      "area_type": "wild",
+      "spawn": [
+        "bandit",
+        "beast"
+      ]
+    },
+    {
+      "area_type": "dungeon",
+      "spawn": [
+        "spirit",
+        "beast"
+      ]
+    }
+  ]
+}

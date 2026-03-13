@@ -9,6 +9,11 @@ The embedded `mapmd-json` block is the canonical machine-readable graph schema.
 Current output is a `.roo` projection only. Optional graph metadata such as
 `coord`, `cluster`, and `labels` may be parsed and validated, but they are not
 emitted into generated `.roo` files.
+
+Boundary exits that intentionally target an existing room outside the current
+spec may be declared with `"external": true`. They are still emitted into the
+generated `.roo`, but validation will skip same-spec existence and reverse-link
+checks for those exits.
 """
 
 from __future__ import annotations
@@ -258,13 +263,14 @@ def validate_room(vnum: int, room: dict[str, Any], state: SpecState, known_jobs:
                     f"room {vnum}",
                 )
             seen_dirs.add(direction)
+            is_external = bool(exit_spec.get("external", False))
             if not isinstance(target, int) or target <= 0:
                 state.add_issue(
                     "error",
                     f"Room {vnum} exit `{direction}` has invalid `to` value `{target}`.",
                     f"room {vnum}",
                 )
-            elif target not in state.rooms:
+            elif target not in state.rooms and not is_external:
                 state.add_issue(
                     "error",
                     f"Room {vnum} exit `{direction}` targets missing room {target}.",
@@ -348,6 +354,8 @@ def validate_reverse_links(state: SpecState) -> None:
             direction = str(exit_spec.get("direction", "")).lower()
             target = exit_spec.get("to")
             if direction not in REVERSE_DIRECTIONS or not isinstance(target, int):
+                continue
+            if exit_spec.get("external", False):
                 continue
             if exit_spec.get("one_way", False):
                 continue

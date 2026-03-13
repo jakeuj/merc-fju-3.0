@@ -1,0 +1,67 @@
+{
+  "heroes": [
+    {
+      "id": "cao_cao",
+      "name": "曹操",
+      "faction": "wei",
+      "traits": [
+        "strategist",
+        "ambition"
+      ],
+      "abilities": [
+        "army_command",
+        "politics"
+      ]
+    },
+    {
+      "id": "liu_bei",
+      "name": "劉備",
+      "faction": "shu",
+      "traits": [
+        "charisma",
+        "alliances"
+      ],
+      "abilities": [
+        "recruit",
+        "inspire"
+      ]
+    },
+    {
+      "id": "sun_quan",
+      "name": "孫權",
+      "faction": "wu",
+      "traits": [
+        "naval_power"
+      ],
+      "abilities": [
+        "naval_command"
+      ]
+    },
+    {
+      "id": "lu_bu",
+      "name": "呂布",
+      "faction": "warlord",
+      "traits": [
+        "duelist",
+        "unpredictable"
+      ],
+      "abilities": [
+        "duel",
+        "betray"
+      ]
+    },
+    {
+      "id": "zhuge_liang",
+      "name": "諸葛亮",
+      "faction": "shu",
+      "traits": [
+        "genius",
+        "planner"
+      ],
+      "abilities": [
+        "strategy_event",
+        "weather_control"
+      ]
+    }
+  ]
+}

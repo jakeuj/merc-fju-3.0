@@ -1,0 +1,23 @@
+Vnum            7508
+Name            渠畔農舍~
+Description
+一間低矮農舍靠著水渠而建，屋前晾著幾束尚未捆好的稻草與兩只木桶。雖說離洛陽不算遠，屋主人仍把門窗補得很結實，像是提防夜裡從丘陵或水道摸來的不速之客。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        7507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         農舍~
+Description
+木門上新補過的橫木很顯眼，門旁還掛著一盞能照到田埂邊緣的舊燈，像是主人不願讓夜色完全吞沒周圍。
+~
+End
+
+End

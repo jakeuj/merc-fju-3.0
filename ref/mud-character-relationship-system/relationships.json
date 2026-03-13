@@ -1,0 +1,24 @@
+{
+  "relationships": [
+    {
+      "from": "cao_cao",
+      "to": "xiahou_dun",
+      "type": "general"
+    },
+    {
+      "from": "liu_bei",
+      "to": "guan_yu",
+      "type": "brother"
+    },
+    {
+      "from": "liu_bei",
+      "to": "sun_quan",
+      "type": "ally"
+    },
+    {
+      "from": "cao_cao",
+      "to": "liu_bei",
+      "type": "enemy"
+    }
+  ]
+}

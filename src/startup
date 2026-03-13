@@ -20,6 +20,11 @@ if ( ! -e merc.sample.ini ) then
   exit 1
 endif
 
+mkdir -p ${repo_root}/player
+foreach header ( a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z )
+  mkdir -p ${repo_root}/player/$header
+end
+
 perl -0pe "s#^HOME DIRECTORY\\s*=\\s*.*#HOME DIRECTORY\t\t=\t${repo_root}#m" merc.sample.ini \
   >! $local_ini
 

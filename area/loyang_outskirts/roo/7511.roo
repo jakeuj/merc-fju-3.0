@@ -1,0 +1,50 @@
+Vnum            7511
+Name            覆板暗井~
+Description
+枯草後方藏著一口被厚石板半掩的舊井，井沿長滿濕滑青苔，空氣裡有一股明顯的潮味。石板旁留著幾道近期搬動過的刮痕，像是有人仍在利用這條井路往來。往下望去，黯淡井壁邊還能隱約辨出一段鐵梯。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        7507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        7512
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         石板~
+Description
+石板邊角磨損得不自然，若仔細看，還能發現泥土上有被人反覆拖移的痕跡。井口沒有完全封死，似乎就是故意留給熟門熟路的人上下。
+~
+End
+
+#Keyword
+Keyword         井梯~
+Description
+井壁內側釘著一段向下延伸的鐵梯，表面滿是潮氣與鏽色，但還勉強能承重。若要下去，順著井口往下即可。
+~
+End
+
+#Enquire
+Keyword         地下水區~
+End
+
+#Enquire
+Keyword         暗井~
+End
+
+#Enquire
+Keyword         井口~
+End
+
+End

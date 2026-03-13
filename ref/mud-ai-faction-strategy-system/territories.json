@@ -1,0 +1,24 @@
+{
+  "territories": [
+    {
+      "area": "洛陽",
+      "controller": "wei"
+    },
+    {
+      "area": "襄陽",
+      "controller": "shu"
+    },
+    {
+      "area": "建業",
+      "controller": "wu"
+    },
+    {
+      "area": "長安",
+      "controller": "wei"
+    },
+    {
+      "area": "成都",
+      "controller": "shu"
+    }
+  ]
+}

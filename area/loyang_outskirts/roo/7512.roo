@@ -1,0 +1,31 @@
+Vnum            7512
+Name            井下檢修道~
+Description
+井底連著一小段狹窄檢修道，腳下石面長年受潮，踩上去會發出低悶的回音。水氣從更深處持續湧來，夾著陳舊淤泥與腐木味，讓人明白這裡只是地下水區真正入口前的一段前哨。抬頭仍能透過井口見到些微天光。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        7511
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         水門~
+Description
+檢修道更深處有一扇生鏽水門半掩在黑暗中，門縫後不時傳來水流拍擊石壁的聲音，像是在提醒你真正的地下水路還在前方。
+~
+End
+
+#Enquire
+Keyword         出口~
+End
+
+#Enquire
+Keyword         上去~
+End
+
+End

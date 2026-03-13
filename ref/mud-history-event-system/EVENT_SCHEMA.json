@@ -1,0 +1,15 @@
+{
+  "event_id": "example_event",
+  "name": "事件名稱",
+  "trigger": {
+    "type": "time | player | world_state",
+    "value": "condition"
+  },
+  "affected_regions": [],
+  "effects": {
+    "spawn_npc": [],
+    "change_control": [],
+    "unlock_dungeon": [],
+    "quests": []
+  }
+}

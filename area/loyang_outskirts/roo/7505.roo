@@ -1,0 +1,24 @@
+Vnum            7505
+Name            東郊官道~
+Description
+官道在此稍微抬高，土色也從城外的灰白轉為帶黃的硬地。道路兩旁的草已比橋頭處更高，偶有馬蹄與車輪壓出的深痕。西邊仍有巡兵足跡，東邊卻逐漸只剩地勢起伏與風聲，預告著丘陵地帶的開始。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        7504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        7509
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

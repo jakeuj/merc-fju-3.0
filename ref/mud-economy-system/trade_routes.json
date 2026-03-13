@@ -1,0 +1,25 @@
+{
+  "routes": [
+    {
+      "from": "city_loyang",
+      "to": "city_xiangyang",
+      "goods": [
+        "grain"
+      ]
+    },
+    {
+      "from": "city_xiangyang",
+      "to": "city_jianye",
+      "goods": [
+        "military_supply"
+      ]
+    },
+    {
+      "from": "city_chengdu",
+      "to": "city_loyang",
+      "goods": [
+        "silk"
+      ]
+    }
+  ]
+}

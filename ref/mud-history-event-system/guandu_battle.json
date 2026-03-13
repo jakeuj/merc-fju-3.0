@@ -1,0 +1,28 @@
+{
+  "event_id": "guandu_battle",
+  "name": "官渡之戰",
+  "trigger": {
+    "type": "world_progress",
+    "value": "mid_game"
+  },
+  "affected_regions": [
+    "官渡",
+    "濮陽",
+    "陳留"
+  ],
+  "effects": {
+    "spawn_npc": [
+      "yuan_shao_army",
+      "cao_cao_army"
+    ],
+    "change_control": [
+      "guandu"
+    ],
+    "unlock_dungeon": [
+      "supply_depot"
+    ],
+    "quests": [
+      "burn_supply"
+    ]
+  }
+}

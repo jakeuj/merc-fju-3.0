@@ -1,0 +1,32 @@
+Vnum            7602
+Name            east gate patrol soldier~
+ShortDesc       東郊巡檢兵~
+Description
+一名披著半舊皮甲的巡檢兵站得筆直﹐手總是不自覺按在腰間刀柄附
+近。看得出他已在東郊路上來回巡了很久﹐對每一個停在告示牌前太
+久的人都多看兩眼。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       150
+Level           10
+Hitroll         3
+Protect         -2
+Damroll         2
+Str             12
+Int             10
+Wis             10
+Dex             11
+Con             11
+Hp              1200
+Mana            100
+Move            100
+Class           CLASS_THIEF
+Gold            80
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
