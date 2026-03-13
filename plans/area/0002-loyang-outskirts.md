@@ -43,6 +43,12 @@
 - `east`：通往龍渠丘陵
 - `down`：通往洛陽地下水區
 
+## Birthplace Policy
+
+- `loyang_outskirts` 是主城外郊與過渡帶，不是出生地
+- `index` 的 `Capital` 應維持 `0`
+- 若玩家需要選擇出生地，仍應由 `loyang` 這種已具備主城服務鏈的 area 承擔
+
 ## Required Spec Content
 
 `area/loyang_outskirts/map.md` 應包含：

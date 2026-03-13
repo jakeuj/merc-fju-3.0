@@ -210,6 +210,7 @@
    - 可通過 validate 的 `map.md`
    - 第一批 `roo`
    - 最小 `mob/obj/res/shp`
+2.1 新 AREA 預設 `Capital 0`，除非它被明確指定為出生地 / 首都 / 系統級 home 候選；像城郊、外野、地下入口前哨這類過渡區不應自動進入出生地列表
 3. 掛入 `directory.lst` 後，必做一次本機 smoke test，並以最新啟動 log 判定是否成功
 4. 若 smoke test 成功，才可把 gate 推進到 `implementation_ready_for_commit`
 5. smoke test 前先清空 `debug/*` 內容，並建立本輪 `log/*` 觀察基線；看到成功訊號後，仍要再檢查 `debug/*` 是否有本次新增 area 相關的新 bug / warning

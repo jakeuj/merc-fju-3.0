@@ -5,6 +5,8 @@
 ## 資料檔處理
 
 - `index`：保留既有欄位順序與字串格式；起始房、區域名稱、描述與 `Capital` 要互相對應
+- 新增 AREA 時，`Capital` 預設設為 `0`；只有當這個 area 被明確設計成可作出生地、真正首都、或系統級回城 / 國家核心節點時，才應填非零 `Capital`
+- 若把 `Capital` 設成非零，先確認它真的應該出現在出生地 / 首都 / home 選單，並且已具備對應服務鏈，不要讓單純的外郊或過渡區誤進出生地清單
 - `mob/*.mob`：參照 `document/mob.txt`；確認 `Level`、`Alignment`、旗標、`Process` 是否符合該區用途
 - `obj/*.obj`：參照 `document/obj.txt`；若物品要由商店或 reset 產生，確認與 `res`、`shp` 對上
 - `obj/*.obj` 若屬於特殊 `ItemType`，不要只照文件猜 `Value` / `Value0..3` 的落點；先在 repo 內搜尋已成功載入的同類物件範例，再決定欄位配置

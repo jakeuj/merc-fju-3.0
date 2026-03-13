@@ -6,6 +6,7 @@
 - 若需要原始 Merc 的 vnum 習慣與限制背景，可參考 `doc/vnum-assignments.txt` 與 `doc/area-file-format.txt`
 - 新增 VNUM 前，先全文搜尋 `area/`、`src/`、`data/` 是否已被使用
 - 若只是在既有區內擴房、擴 NPC、擴物件，優先維持該區原本的編號習慣
+- 新 AREA 預設不是出生地；除非需求明確要求，否則 `index` 的 `Capital` 應維持 `0`
 - 若需要大量搬移舊區，先做 mapping 表，列出舊 VNUM -> 新 VNUM，再開始改檔
 - 規劃新區或修戰鬥迷宮時，先畫或更新區域地圖檔，再批次檢查每個房間的上下左右出口是否和格位一致；休息室、入口廳、傳送點這類不在主格網內的房間，要用額外節點思考
 - 若專案使用固定 prompt `繼續實作下一個待建 area`，就把 `area/rebuild_plan.md` 視為下一步選擇器，而不是重新猜測優先順序
