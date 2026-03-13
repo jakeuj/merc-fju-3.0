@@ -24,6 +24,43 @@
 - 若需要 `.roo` scaffold，使用 `.agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py`
 - 題材與沉浸式設計使用 `.agents/skills/merc-area-builder/references/theme-design-patterns.md`
 
+## Ref Usage Policy
+
+本輪 area rebuild 對 `ref/` 的使用優先級固定如下。
+
+本輪直接使用：
+
+- 世界藍圖與拓樸
+  - `world-graph.json`
+  - `三國-MUD-世界設計總藍圖-Architecture-Map.md`
+  - `三國-MUD-題材分布表.md`
+- AREA scaffold 與 template
+  - `area-template-wild_loyang_east.md`
+  - `sanguo-area-specfirst/`
+  - `sanguo-area-scaffold/`
+
+本輪只作背景索引，不作直接實作依據：
+
+- 生成器與編輯器原型
+  - `mud-world-builder/`
+  - `mud-ai-map-generator/`
+  - `mudlet-map-generator/`
+  - `mud-world-map-editor/`
+  - `mud-world-map-editor-pro/`
+- 模擬與系統原型
+  - `mud-ai-faction-strategy-system/`
+  - `mud-character-relationship-system/`
+  - `mud-economy-system/`
+  - `mud-faction-control-system/`
+  - `mud-hero-ai-system/`
+  - `mud-history-event-system/`
+  - `mud-npc-ecosystem-system/`
+
+規則：
+
+- 只有當 area rebuild 明確進入工具化、經濟、勢力或歷史事件模擬階段，才把上述原型納入本輪實作依據
+- 在那之前，這些資料夾只保留為未來延伸方向
+
 ## Tracking Model
 
 `area/rebuild_plan.md` 應固定包含：

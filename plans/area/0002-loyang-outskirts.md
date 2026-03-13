@@ -62,6 +62,16 @@
 - `sanguo-area-specfirst/` 中相近的 `wild_*` 節點
 - 必要時再補 `sanguo-area-scaffold/`
 
+本輪先不使用：
+
+- `mud-world-builder/` 與其他 editor / generator 原型
+- 經濟、勢力、歷史事件、NPC 生態等模擬系統原型
+
+原因：
+
+- `loyang_outskirts` 第一版目標是完成 `map.md` 拓樸與題材草案
+- 還沒進入工具化生成、經濟模擬或動態事件階段
+
 ## Suggested Room Clusters
 
 - `city-edge`
