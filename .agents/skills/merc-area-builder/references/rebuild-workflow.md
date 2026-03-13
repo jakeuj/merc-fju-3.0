@@ -70,6 +70,21 @@
 3. 若 gate 是任何 `*_in_progress`，就續做當前 area
 4. 若 gate 是 `blocked`，先解 blocker
 
+## Ref Compliance Check
+
+若這輪 area 工作是透過 `ref/Readme.md` 來選擇 template、world blueprint 或 scaffold，則單區 plan 應補上：
+
+- `ref_inputs_used`
+- `ref_inputs_deferred`
+- `theme_basis`
+- `compliance_check`
+
+目的：
+
+- 明確標示這一輪真正採用的 `ref/` 依據
+- 明確標示哪些 generator / editor prototype 或模擬系統是刻意 deferred
+- 確保下一輪接手時，不會把超出本輪範圍的 `ref/` 原型誤當成正式依據
+
 ## Update Rules
 
 每次完成一輪 area 工作後，都要同步回寫 `area/rebuild_plan.md`：

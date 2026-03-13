@@ -68,6 +68,10 @@
 - candidate area 清單
 - `theme`
 - `subtheme`
+- `ref_inputs_used`
+- `ref_inputs_deferred`
+- `theme_basis`
+- `compliance_check`
 - `todo`
 - `in_progress`
 - `done`
@@ -76,6 +80,22 @@
 - `next_prompt`
 - `delivery_gate`
 - 固定主 prompt
+
+## Ref Compliance Check
+
+為了確保每輪產出沒有偏離 `ref/Readme.md` 定義的本輪參考範圍，每個單區 plan 都要補上：
+
+- `ref_inputs_used`
+- `ref_inputs_deferred`
+- `theme_basis`
+- `compliance_check`
+
+規則：
+
+- `ref_inputs_used` 只列這一輪真正拿來做設計或實作決策的 `ref/` 檔案或資料夾
+- `ref_inputs_deferred` 要明講哪些 `ref/` 類別是知道它存在，但刻意不作本輪直接依據
+- `theme_basis` 要指出題材判定依據，例如 `題材分布表`、`theme-world-allocation`、單區 template
+- `compliance_check` 要直接回答：本區是否仍符合 `ref/Readme.md` 本輪允許來源；若有例外，也要明講原因
 
 ## Delivery Gates
 

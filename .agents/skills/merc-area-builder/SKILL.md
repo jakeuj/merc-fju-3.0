@@ -33,6 +33,7 @@ source of truth 要分兩種：
 5. 若是新增 AREA，先決定是手寫 `.roo`，還是用 `references/map-spec-template.md` + `scripts/generate_roo_from_map_md.py` 走「spec -> scaffold」流程。
 6. 若任務需要參考 repo 內的 `ref/` 世界藍圖、spec-first scaffold、world builder 或題材分布資料，先讀 `ref/Readme.md` 當索引，再挑需要的檔案或子資料夾深入。
 7. 若任務屬於長期 area 重建，先讀 `plans/` 與 `area/rebuild_plan.md`；詳細規則見 `references/rebuild-workflow.md`。
+7.1 若這輪工作有用 `ref/Readme.md` 來做選讀決策，回寫單區 plan 或追蹤看板時，補上 `ref_inputs_used`、`ref_inputs_deferred`、`theme_basis`、`compliance_check`。
 8. 修改完成後，至少做靜態搜尋、編碼檢查與必要的啟動/載入驗證，再回報受影響檔案與風險。
 9. 若要做 area 載入 smoke test，先清空 `debug/*` 內容，再執行測試；測試後用成功訊號與新產生的 debug 訊息一起判讀。
 
@@ -90,6 +91,11 @@ source of truth 要分兩種：
   - `plans/area/NNNN-*.md` 這類單區 plan
   - `area/world_map.md`
 - 若 repo 內存在 `ref/Readme.md`，先用它決定還要不要補讀世界藍圖、題材分布表、單區 template 或 spec-first scaffold 範例
+- 若這輪確實是用 `ref/Readme.md` 在做選讀決策，完成後不要只回報「有參考 ref」；要明確回寫：
+  - `ref_inputs_used`
+  - `ref_inputs_deferred`
+  - `theme_basis`
+  - `compliance_check`
 - `map.md` 是人類可讀 spec；若要用腳本產生 `.roo`，只能使用其中受限、結構化的機器可讀區塊，不能把自由 prose 直接拿去 compile
 - 若是搬修舊版資料，先用搜尋確認舊名稱、舊城名、舊勢力詞是否殘留在 `roo`、`mob`、`obj`、`res`、`shp`、help 或 system data
 - 若現行 repo 缺資料或看不出原始設計，回查 `https://github.com/jakeuj/merc-fju-2.0-utf8` 的對應路徑，再把需要的內容 mapping 回 3.0

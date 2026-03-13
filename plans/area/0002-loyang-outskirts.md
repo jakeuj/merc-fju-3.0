@@ -72,6 +72,33 @@
 - `loyang_outskirts` 第一版目標是完成 `map.md` 拓樸與題材草案
 - 還沒進入工具化生成、經濟模擬或動態事件階段
 
+## Ref Compliance Check
+
+- `ref_inputs_used`
+  - `ref/Readme.md`
+  - `area-template-wild_loyang_east.md`
+  - `sanguo-area-specfirst/`
+  - `sanguo-area-scaffold/` as fallback scaffold reference
+- `ref_inputs_deferred`
+  - `mud-world-builder/`
+  - `mud-ai-map-generator/`
+  - `mudlet-map-generator/`
+  - `mud-world-map-editor/`
+  - `mud-world-map-editor-pro/`
+  - `mud-ai-faction-strategy-system/`
+  - `mud-character-relationship-system/`
+  - `mud-economy-system/`
+  - `mud-faction-control-system/`
+  - `mud-hero-ai-system/`
+  - `mud-history-event-system/`
+  - `mud-npc-ecosystem-system/`
+- `theme_basis`
+  - `三國-MUD-題材分布表.md`
+  - `references/theme-world-allocation.md`
+  - `area-template-wild_loyang_east.md`
+- `compliance_check`
+  - compliant；目前 world links、cluster、題材與敘事語氣都來自 `ref/Readme.md` 定義的本輪允許來源，沒有把 editor / generator prototype 或模擬系統拿來當直接實作依據
+
 ## Suggested Room Clusters
 
 - `city-edge`
@@ -134,6 +161,7 @@
 - `delivery_gate` 很重要：如果沒有它，固定 prompt 很容易在 area 還該 commit 或還在整合時，就誤跳下一區
 - reset parser 比文件更保守；像 `.res` 結尾和空白行這種細節，最好優先比對現有 repo 內可正常載入的範例
 - WSL smoke test 足以把「資料載入錯誤」和「只是常駐程式被 timeout 終止」清楚分開
+- `ref/Readme.md compliance check` 很值得保留：它能清楚界定哪些外部原型只是知道存在，哪些才是本輪真的採用的依據
 
 ## Recommended Next Implementation Scopes
 

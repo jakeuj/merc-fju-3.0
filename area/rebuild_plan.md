@@ -42,6 +42,7 @@
 - 這套流程中的 `next area` 指的是 next actionable area，不是 candidate queue 的下一個新名字
 - 因此只要仍存在 `in_progress` 項目，就不得跳去下一個 `todo`；除非目前區域已明確標成 `done`、`blocked` 或 `abandoned`
 - 若使用者只說「繼續下一個 area / next area」，預設語意仍是「續做目前可執行的 area」，不是直接切換到候選序列的下一個新區
+- 每次從 `todo` 推進到 `in_progress`，或完成一輪單區實作後，都要同步檢查對應單區 plan 是否已補上 `ref_inputs_used / ref_inputs_deferred / theme_basis / compliance_check`
 
 ## Candidate Queue
 
@@ -55,6 +56,7 @@
 
 - status: `todo`
 - delivery_gate: `spec_in_progress`
+- compliance_check: `pending plan creation`
 - plan: `not created yet`
 - parent_region: `beiping`
 - theme: `軍旅風`
@@ -68,6 +70,7 @@
 
 - status: `todo`
 - delivery_gate: `spec_in_progress`
+- compliance_check: `pending plan creation`
 - plan: `not created yet`
 - parent_region: `future regional chain`
 - theme: `江湖風`
@@ -83,6 +86,7 @@
 
 - status: `in_progress`
 - delivery_gate: `implementation_ready_for_commit`
+- compliance_check: `compliant with current ref/Readme.md scope`
 - plan: `plans/area/0002-loyang-outskirts.md`
 - parent_region: `loyang`
 - theme: `歷史城市風`
@@ -111,6 +115,7 @@
 - 目前的 next actionable area 仍是 `loyang_outskirts`
 - 只有當 `loyang_outskirts` 被移到 `Done`、`Blocked` 或明確標示 `Abandoned` 之後，`beiping_outskirts` 才會成為下一個 area
 - 目前 `delivery_gate` 已進到 `implementation_ready_for_commit`，表示這一輪的安全動作是先 commit 當前里程碑，再決定是否續做或切下一區
+- 真正切下一區前，下一個單區 plan 也必須先補齊 `ref/Readme.md compliance check`
 
 建議可直接使用的 prompt：
 
