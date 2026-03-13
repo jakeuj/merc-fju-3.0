@@ -1,0 +1,14 @@
+Vnum            7653
+Name            patrol torch~
+ShortDesc       巡路火把(torch)~
+Description
+一支裹著油布的巡路火把(torch)靠在牆邊。
+~
+Unit            支~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           4
+Value           12
+Weight          1
+Cost            20
+End

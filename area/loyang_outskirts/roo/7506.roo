@@ -1,0 +1,31 @@
+Vnum            7506
+Name            龍渠分水口~
+Description
+一道人工水渠自護城河旁引出，在這裡分成較窄的水路，沿著田地邊界蜿蜒而去。水聲壓低了官道上的交談，偶爾還能看見農人挑著木桶來此取水。這裡雖還算安全，卻已多了一點遠離城門視線的鬆動感。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        7502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        7507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         水渠~
+Description
+渠水清中帶著泥味，兩側木樁與石塊勉強維持著水路邊界，看得出這條分水口平時也兼作附近農田的命脈。
+~
+End
+
+End

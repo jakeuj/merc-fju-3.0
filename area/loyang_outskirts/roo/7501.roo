@@ -1,0 +1,43 @@
+Vnum            7501
+Name            東陽門外橋頭~
+Description
+高聳的東陽門就在西邊，城牆與角樓把晨光切成整齊的陰影。橋頭鋪著寬大的石板，來往行人都要在此略停，接受守卒盤問後才能沿著官道東行。護城河水自北往南緩慢流過，讓人一離城便感到洛陽的秩序仍緊貼在背後。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        556
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        7502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         城門~
+Description
+東陽門的門洞深而寬闊，門上鐵葉與銅釘在日光下泛著冷光。只要再往西折返一段路，就能重新回到洛陽城內。
+~
+End
+
+#Enquire
+Keyword         洛陽~
+End
+
+#Enquire
+Keyword         東陽門~
+End
+
+#Enquire
+Keyword         回城~
+End
+
+End

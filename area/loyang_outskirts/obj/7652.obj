@@ -1,0 +1,14 @@
+Vnum            7652
+Name            tea flask~
+ShortDesc       粗陶茶壺(tea flask)~
+Description
+一只裝著溫茶的粗陶茶壺(tea flask)被擱在地上。
+~
+Unit            壺~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           3
+Value           8 8 LIQ_WATER
+Weight          2
+Cost            35
+End

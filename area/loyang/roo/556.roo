@@ -5,7 +5,8 @@ Description
 盤問來往的行人﹐不讓作亂的人猖狂。
 
 再看城外﹐一條深深的護城河環繞著洛陽﹐看來果然是一個易守難攻
-的城。
+的城。東邊的橋頭與官道已逐漸整理成新的東郊路線﹐可往城外近郊
+探索。
 
 ~
 SectorType      SECT_CITY
@@ -14,6 +15,14 @@ SectorType      SECT_CITY
 #Exit
 Direction       WEST
 ExitVnum        555
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        7501
 ExitDesc        ~
 ExitKeyword     ~
 ExitKey         0

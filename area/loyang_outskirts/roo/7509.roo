@@ -1,0 +1,32 @@
+Vnum            7509
+Name            龍渠丘陵口~
+Description
+官道在這裡開始沿著低丘邊緣蜿蜒，地勢明顯高低不平，視野也被土坡與灌木切碎。回望西邊仍能辨出洛陽方向的煙塵與車馬，但往東的風聲更硬，像在催促旅人正式離開城郊的庇蔭。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        7505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        7510
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         丘陵~
+End
+
+#Enquire
+Keyword         東路~
+End
+
+End

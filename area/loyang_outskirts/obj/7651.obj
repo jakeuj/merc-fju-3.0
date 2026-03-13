@@ -1,0 +1,14 @@
+Vnum            7651
+Name            travel ration cake~
+ShortDesc       東郊行糧餅(ration cake)~
+Description
+一塊包著油紙的東郊行糧餅(ration cake)被放在這裡。
+~
+Unit            塊~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           3
+Value           12 20 4 0
+Weight          1
+Cost            25
+End

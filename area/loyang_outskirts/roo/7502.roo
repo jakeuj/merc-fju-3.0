@@ -1,0 +1,32 @@
+Vnum            7502
+Name            護城河石橋~
+Description
+石橋跨在護城河上，橋面雖寬，卻因巡卒與商旅往來顯得有些逼仄。西邊是洛陽城威嚴的東門，東邊的道路則慢慢展開，兩側開始出現田埂與引水溝渠，提醒你已經離開純粹的城區。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        7501
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        7503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        7506
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

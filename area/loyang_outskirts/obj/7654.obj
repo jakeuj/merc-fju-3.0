@@ -1,0 +1,16 @@
+Vnum            7654
+Name            canal knife~
+ShortDesc       渠邊短刀(canal knife)~
+Description
+一把刀刃磨得發白的渠邊短刀(canal knife)落在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           6
+Value           0 -1 -1 10
+Weight          8
+Cost            60
+Exp             10
+End

@@ -1,0 +1,16 @@
+Vnum            7510
+Name            丘陵巡路~
+Description
+巡路沿著丘腰向東延伸，兩側的土坡已足以遮住洛陽城影，只剩偶爾能看見的旗影與道路標石證明這裡仍屬官道系統。再往前便是更長的龍渠丘陵路段，巡卒的身影也變得稀疏許多。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        7509
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

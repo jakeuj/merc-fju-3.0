@@ -1,0 +1,52 @@
+Vnum            7507
+Name            田埂岔口~
+Description
+狹長的田埂在此分成兩條，一條往東去農舍，一條往南靠近被雜草半掩的舊井。回頭往北仍能看到官道邊的告示牌，讓這處岔口帶著一種介於民生與隱患之間的微妙氣氛。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        7504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        7506
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        7508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        7511
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         農舍~
+End
+
+#Enquire
+Keyword         水渠~
+End
+
+#Enquire
+Keyword         暗井~
+End
+
+End

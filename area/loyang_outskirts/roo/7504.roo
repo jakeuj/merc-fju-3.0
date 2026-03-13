@@ -1,0 +1,51 @@
+Vnum            7504
+Name            巡檢告示牌~
+Description
+官道邊豎著一面厚木告示牌，上頭釘著新舊不一的紙張，內容有巡邏更次、盤查令與最近郊外盜匪的傳聞。牌下常有旅人停步觀看，也有人趁機打聽前方路況，讓這裡成了東郊最自然的問路點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        7503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        7505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        7507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         告示牌~
+Description
+最新一張告示提醒行人入夜後勿獨行丘陵，若要尋找地下水道入口，最好先問清楚白天巡檢留下的方向。
+~
+End
+
+#Enquire
+Keyword         巡哨~
+End
+
+#Enquire
+Keyword         告示~
+End
+
+#Enquire
+Keyword         丘陵~
+End
+
+End
