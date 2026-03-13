@@ -231,6 +231,9 @@ void boot_db( void )
   /* 初值化表格 */
   tablize( FORMAT_CLEAN, NULL, 0, NULL, 0 );
 
+  /* 補齊玩家資料夾與 a-z/A-Z bucket，避免 cleanup 啟動時找不到目錄。 */
+  ensure_player_directories();
+
   /* 起始化股票最大持有數 */
   if ( MAX_STOCK_COST <= 0 )
     mudlog( LOG_ERR, "boot_db: 股票最大面值 %d 不合理.", MAX_STOCK_COST );

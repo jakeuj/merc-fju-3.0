@@ -4796,6 +4796,9 @@ IMMLIST_DATA *  imm_lookup      args( ( const char * ) );
 void            system_cleanup  args( ( void ) );
 bool            jail_someone    args( ( CD *, CD *, int, bool ) );
 
+/* save.c */
+void            ensure_player_directories args( ( void ) );
+
 /* friend.c */
 extern  int             max_friend;
 void    extract_friend  args( ( CD * ) );

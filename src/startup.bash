@@ -26,6 +26,11 @@ if [ -f "${SCRIPT_DIR}/shutdown.txt" ]; then
 fi
 
 mkdir -p "${LOG_DIR}"
+mkdir -p "${REPO_ROOT}/player"
+
+for header in {a..z} {A..Z}; do
+  mkdir -p "${REPO_ROOT}/player/${header}"
+done
 
 if [ $# -eq 0 ]; then
   if [ ! -f "${TEMPLATE_INI}" ]; then

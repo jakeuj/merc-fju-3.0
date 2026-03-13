@@ -28,6 +28,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <ctype.h>
+#include <errno.h>
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -58,6 +59,66 @@ void    fprint_const    args( ( FILE *, char *, const char * ) );
 void    fprint_number   args( ( FILE *, char *, int ) );
 void    create_dir      args( ( const char * ) );
 void    save_basic_file args( ( CHAR_DATA * ) );
+static bool ensure_directory_exists args( ( const char * ) );
+
+static bool ensure_directory_exists( const char * pathname )
+{
+  struct stat file_stat;
+
+  PUSH_FUNCTION( "ensure_directory_exists" );
+
+  if ( !pathname || !*pathname )
+  {
+    mudlog( LOG_DEBUG, "ensure_directory_exists: 來源不正確." );
+    RETURN( FALSE );
+  }
+
+  if ( stat( pathname, &file_stat ) == 0 )
+  {
+    if ( !S_ISDIR( file_stat.st_mode ) )
+      mudlog( LOG_DEBUG, "ensure_directory_exists: %s 已經建立, 但不是目錄.", pathname );
+
+    RETURN( S_ISDIR( file_stat.st_mode ) );
+  }
+
+  if ( mkdir( pathname, S_IRWXU | S_IRWXG ) != 0 && errno != EEXIST )
+  {
+    mudlog( LOG_DEBUG, "ensure_directory_exists: 無法建立目錄 %s.", pathname );
+    RETURN( FALSE );
+  }
+
+  if ( stat( pathname, &file_stat ) != 0 || !S_ISDIR( file_stat.st_mode ) )
+  {
+    mudlog( LOG_DEBUG, "ensure_directory_exists: %s 建立後仍不是目錄.", pathname );
+    RETURN( FALSE );
+  }
+
+  RETURN( TRUE );
+}
+
+void ensure_player_directories( void )
+{
+  char bucket[MAX_STRING_LENGTH];
+  char header;
+
+  PUSH_FUNCTION( "ensure_player_directories" );
+
+  if ( !ensure_directory_exists( player_dir ) ) RETURN_NULL();
+
+  for ( header = 'a'; header <= 'z'; header++ )
+  {
+    sprintf( bucket, "%s/%c", player_dir, header );
+    ensure_directory_exists( bucket );
+  }
+
+  for ( header = 'A'; header <= 'Z'; header++ )
+  {
+    sprintf( bucket, "%s/%c", player_dir, header );
+    ensure_directory_exists( bucket );
+  }
+
+  RETURN_NULL();
+}
 
 char * initial( const char * str )
 {
@@ -76,6 +137,8 @@ void create_dir( const char * name )
   char pathname[MAX_STRING_LENGTH];
 
   PUSH_FUNCTION( "create_dir" );
+
+  ensure_player_directories();
 
   if ( !name || !*name )
   {
