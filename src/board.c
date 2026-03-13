@@ -439,6 +439,8 @@ void load_post( const char * pathname, BOARD_DATA * pBoard )
   char        filename[ MAXNAMLEN ];
   char        postfile[ MAXNAMLEN ];
   char        postname[ MAXNAMLEN ];
+  struct stat st;
+  bool        empty_sheet;
   bool        fMatch;
   FILE_DATA * pFile;
   POST_DATA * pPost;
@@ -447,6 +449,37 @@ void load_post( const char * pathname, BOARD_DATA * pBoard )
 
   /* 先設定索引檔的檔名 */
   sprintf( filename , "%s%s" , pathname , board_sheet );
+
+  empty_sheet = FALSE;
+
+  /*
+   * 如果留言板清單檔存在但是空檔，代表目前沒有任何文章，
+   * 直接略過即可，沒必要噴 ERROR。不存在時則建立空檔。
+   */
+  if ( stat( filename, &st ) != 0 )
+  {
+    FILE * fp;
+
+    if ( ( fp = FOPEN( filename, "w" ) ) )
+    {
+      FCLOSE( fp );
+      empty_sheet = TRUE;
+    }
+    else
+    {
+      mudlog( LOG_ERR, "load_post: 無法建立清單檔 %s.", filename );
+      RETURN_NULL();
+    }
+  }
+  else if ( st.st_size == 0 )
+  {
+    empty_sheet = TRUE;
+  }
+
+  if ( empty_sheet )
+  {
+    RETURN_NULL();
+  }
 
   if ( !( pFile = f_open( filename , "r" ) ) )
   {
