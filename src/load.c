@@ -26,7 +26,9 @@
 ***************************************************************************/
 
 #include <sys/types.h>
+#include <sys/stat.h>
 #include <ctype.h>
+#include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -88,6 +90,9 @@ void set_angel_default    args( ( ANGEL_DATA    * ) );
 void set_joke_default     args( ( JOKE_DATA     * ) );
 void set_server_default   args( ( SERVER_DATA  * ) );
 void set_note_default     args( ( NOTE_DATA    * ) );
+static bool ensure_bootstrap_parent_dirs args( ( const char * ) );
+static bool ensure_bootstrap_file        args( ( const char *, const char *, const char * ) );
+static FILE_DATA * open_bootstrap_file   args( ( const char *, const char *, const char * ) );
 
 EXTRA_DESCR_DATA * load_extra_descr     args( ( FILE_DATA * ) );
 EXIT_DATA     * load_exit               args( ( FILE_DATA * ) );
@@ -124,6 +129,144 @@ SITUS_DATA    * load_a_situs            args( ( FILE_DATA * ) );
   }
 
 #define TEST_READ_ERROR         { if ( FileError ) break; }
+
+static bool ensure_bootstrap_parent_dirs( const char * filename )
+{
+  struct stat pSt;
+  char        directory[MAX_FILE_LENGTH];
+  char      * slash;
+  char      * pScan;
+
+  PUSH_FUNCTION( "ensure_bootstrap_parent_dirs" );
+
+  if ( !filename || !*filename )
+  {
+    mudlog( LOG_DEBUG, "ensure_bootstrap_parent_dirs: 檔案名稱不正確." );
+    RETURN( FALSE );
+  }
+
+  str_cpy( directory, filename );
+
+  if ( !( slash = strrchr( directory, '/' ) ) ) RETURN( TRUE );
+  *slash = '\x0';
+
+  if ( directory[0] == '\x0' ) RETURN( TRUE );
+
+  if ( directory[0] == '/' ) pScan = directory + 1;
+  else if ( directory[1] == ':' && directory[2] == '/' ) pScan = directory + 3;
+  else pScan = directory;
+
+  for ( ; *pScan; pScan++ )
+  {
+    if ( *pScan != '/' ) continue;
+
+    *pScan = '\x0';
+
+    if ( stat( directory, &pSt ) == 0 )
+    {
+      if ( !S_ISDIR( pSt.st_mode ) )
+      {
+        *pScan = '/';
+        mudlog( LOG_DEBUG
+          , "ensure_bootstrap_parent_dirs: %s 已存在, 但不是目錄."
+          , directory );
+        RETURN( FALSE );
+      }
+    }
+
+    else if ( mkdir( directory, S_IRWXU | S_IRWXG ) != 0 && errno != EEXIST )
+    {
+      *pScan = '/';
+      mudlog( LOG_DEBUG
+        , "ensure_bootstrap_parent_dirs: 無法建立目錄 %s."
+        , directory );
+      RETURN( FALSE );
+    }
+
+    *pScan = '/';
+  }
+
+  if ( stat( directory, &pSt ) == 0 )
+  {
+    if ( !S_ISDIR( pSt.st_mode ) )
+    {
+      mudlog( LOG_DEBUG
+        , "ensure_bootstrap_parent_dirs: %s 已存在, 但不是目錄."
+        , directory );
+      RETURN( FALSE );
+    }
+  }
+
+  else if ( mkdir( directory, S_IRWXU | S_IRWXG ) != 0 && errno != EEXIST )
+  {
+    mudlog( LOG_DEBUG
+      , "ensure_bootstrap_parent_dirs: 無法建立目錄 %s."
+      , directory );
+    RETURN( FALSE );
+  }
+
+  RETURN( TRUE );
+}
+
+static bool ensure_bootstrap_file( const char * filename,
+  const char * content, const char * filetype )
+{
+  struct stat pSt;
+  FILE      * pFile;
+
+  PUSH_FUNCTION( "ensure_bootstrap_file" );
+
+  if ( !filename || !*filename || !content || !filetype )
+  {
+    mudlog( LOG_DEBUG, "ensure_bootstrap_file: 來源不正確." );
+    RETURN( FALSE );
+  }
+
+  if ( stat( filename, &pSt ) == 0 )
+  {
+    if ( !S_ISREG( pSt.st_mode ) )
+    {
+      mudlog( LOG_DEBUG, "%s %s 已存在, 但不是一般檔案。", filetype, filename );
+      RETURN( FALSE );
+    }
+
+    if ( pSt.st_size > 0 ) RETURN( TRUE );
+  }
+
+  else if ( errno != ENOENT )
+  {
+    mudlog( LOG_DEBUG, "ensure_bootstrap_file: 無法檢查 %s %s。", filetype, filename );
+    RETURN( FALSE );
+  }
+
+  if ( !ensure_bootstrap_parent_dirs( filename ) ) RETURN( FALSE );
+
+  if ( !( pFile = FOPEN( filename, "w" ) ) )
+  {
+    mudlog( LOG_DEBUG, "ensure_bootstrap_file: 無法建立 %s %s。", filetype, filename );
+    RETURN( FALSE );
+  }
+
+  fputs( content, pFile );
+  FCLOSE( pFile );
+  set_file_mode( filename );
+
+  mudlog( LOG_INFO, "%s %s 不存在或為空, 已建立預設內容。", filetype, filename );
+  RETURN( TRUE );
+}
+
+static FILE_DATA * open_bootstrap_file( const char * filename,
+  const char * content, const char * filetype )
+{
+  FILE_DATA * pFile;
+
+  PUSH_FUNCTION( "open_bootstrap_file" );
+
+  if ( !ensure_bootstrap_file( filename, content, filetype ) ) RETURN( NULL );
+  if ( ( pFile = f_open( filename, "r" ) ) ) RETURN( pFile );
+
+  RETURN( NULL );
+}
 
 /* 設定區域檔中的區域的預設值 */
 void set_area_default( AREA_DATA * pArea )
@@ -342,7 +485,7 @@ void set_object_default( OBJ_INDEX_DATA * pObjIndex )
   pObjIndex->filename    = NULL;
   pObjIndex->unit        = DefaultUnit;
   pObjIndex->job         = NULL;
-  pObjIndex->restrict    = NULL;
+  pObjIndex->restrictions    = NULL;
   pObjIndex->message     = NULL;
   pObjIndex->affected    = NULL;
   pObjIndex->impact      = NULL;
@@ -435,7 +578,7 @@ void set_skill_default( SKILL_DATA * pSkill )
   pSkill->limit           = NULL;
   pSkill->check           = NULL;
   pSkill->damage          = NULL;
-  pSkill->restrict        = NULL;
+  pSkill->restrictions        = NULL;
   pSkill->function        = NULL;
   pSkill->affected        = NULL;
   pSkill->type            = TAR_IGNORE;
@@ -2683,7 +2826,7 @@ OBJ_INDEX_DATA * load_object( const char * filename )
           break;
         }
 
-        for ( zRestrict = pObjIndex->restrict; zRestrict; zRestrict = zRestrict->next )
+        for ( zRestrict = pObjIndex->restrictions; zRestrict; zRestrict = zRestrict->next )
         {
           if ( zRestrict->type == pRestrict->type
             && zRestrict->type != RES_SKILL )
@@ -2695,8 +2838,8 @@ OBJ_INDEX_DATA * load_object( const char * filename )
         }
 
         TEST_READ_ERROR
-        pRestrict->next     = pObjIndex->restrict;
-        pObjIndex->restrict = pRestrict;
+        pRestrict->next     = pObjIndex->restrictions;
+        pObjIndex->restrictions = pRestrict;
         break;
       }
 
@@ -4624,7 +4767,7 @@ void load_welcome_immortal( const char * filename )
 
   PUSH_FUNCTION( "load_welcome_immortal" );
 
-  if ( !( pFile = f_open( filename , "r" ) ) )
+  if ( !( pFile = open_bootstrap_file( filename, "\n", "歡迎神族畫面檔" ) ) )
     mudlog( LOG_ERR , "Load_welcome_immortal﹕開啟歡迎神族畫面檔 %s 有問題。"
     , filename );
 
@@ -4641,7 +4784,7 @@ void load_welcome( const char * filename )
 
   PUSH_FUNCTION( "load_welcome" );
 
-  if ( !( pFile = f_open( filename , "r" ) ) )
+  if ( !( pFile = open_bootstrap_file( filename, "\n", "歡迎畫面檔" ) ) )
     mudlog( LOG_ERR , "Load_welcome﹕開啟歡迎畫面檔 %s 有問題。" , filename );
 
   welcome_message = str_dup( map_file( pFile ) );
@@ -4655,7 +4798,7 @@ void load_motd( const char * filename )
 
   PUSH_FUNCTION( "load_motd" );
 
-  if ( !( pFile = f_open( filename , "r" ) ) )
+  if ( !( pFile = open_bootstrap_file( filename, "\n", "今日消息檔" ) ) )
     mudlog( LOG_ERR , "Load_motd﹕開啟今日消息檔 %s 有問題。" , filename );
 
   motd_message = str_dup( map_file( pFile ) );
@@ -5519,7 +5662,7 @@ void load_site( const char * filename )
 
   PUSH_FUNCTION( "load_site" );
 
-  if ( !( File = f_open( filename , "r" ) ) )
+  if ( !( File = open_bootstrap_file( filename, "#END\n", "禁止連線檔案" ) ) )
     mudlog( LOG_ERR , "Load_site﹕無法開啟禁止連線檔案 %s。" , filename );
 
   for ( ;; )
@@ -5575,7 +5718,7 @@ void load_server( const char * filename )
 
   PUSH_FUNCTION( "load_server" );
 
-  if ( !( File = f_open( filename , "r" ) ) )
+  if ( !( File = open_bootstrap_file( filename, "#END\n", "工作站檔案" ) ) )
     mudlog( LOG_ERR , "Load_server﹕無法開啟工作站檔案 %s。", filename );
 
   for ( count = 0; ; )
@@ -5618,7 +5761,7 @@ void load_xnames( const char * filename )
 
   PUSH_FUNCTION( "load_xname" );
 
-  if ( !( File = f_open( filename , "r" ) ) )
+  if ( !( File = open_bootstrap_file( filename, "#END\n", "保留字檔案" ) ) )
     mudlog( LOG_ERR , "Load_xnames﹕無法開啟保留字檔案 %s。" , filename );
 
   for ( ;; )
@@ -5752,7 +5895,7 @@ void load_skill( const char * path , const char * index )
                 break;
               }
 
-              for ( zRestrict = pSkill->restrict; zRestrict; zRestrict = zRestrict->next )
+              for ( zRestrict = pSkill->restrictions; zRestrict; zRestrict = zRestrict->next )
               {
                 if ( zRestrict->type == pRestrict->type
                   && zRestrict->type != RES_SKILL )
@@ -5762,8 +5905,8 @@ void load_skill( const char * path , const char * index )
                 }
               }
 
-              pRestrict->next  = pSkill->restrict;
-              pSkill->restrict = pRestrict;
+              pRestrict->next  = pSkill->restrictions;
+              pSkill->restrictions = pRestrict;
               break;
             }
 

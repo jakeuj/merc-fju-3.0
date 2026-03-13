@@ -1,0 +1,3 @@
+[submodule "docs/3yWebsite"]
+	path = docs/3yWebsite
+	url = https://github.com/jakeuj/3yWebsite

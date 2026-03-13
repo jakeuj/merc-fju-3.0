@@ -1,7 +1,12 @@
-# 輔大三國歪傳之降龍伏虎 (Merc-FJU 2.0 UTF-8)
+# 輔大三國歪傳之降龍伏虎 (Merc-FJU 3.0 Rewrite)
 
-> 本專案為 **Merc 2.2** 修改版——輔仁大學「三國歪傳之降龍伏虎」MUD 遊戲伺服器，
-> 已將原始 Big5 編碼全面轉換為 **UTF-8**，方便在現代 Linux / macOS 環境下編譯與使用。
+> 📢 **2026-03-13 更新**：本 repo `merc-fju-3.0` 為 [jakeuj/merc-fju-2.0-utf8](https://github.com/jakeuj/merc-fju-2.0-utf8)
+> 的 Rewrite（重寫）；2.0 會持續保留作為歷史參照，而 3.0 會在 Apple Silicon、Docker
+> 與現代 Linux/macOS 環境上延伸既有改造並統整程式碼/資料。
+
+> Merc-FJU 3.0 以 **Merc 2.2** 為核心，沿用 2.0 僅保留的 UTF-8 轉檔成果，
+> 並在此乾淨基礎上重新整理 Docker 工具鏈、啟動腳本、程式碼與區域資料。
+> 想了解最初的 UTF-8 轉換，請前往 2.0 repo；此 README 只留下 3.0 的入口，詳細操作請閱讀下方連結。
 
 ## 目錄結構
 
@@ -105,7 +110,7 @@ cd src
 
 ## UTF-8 轉換說明
 
-本 fork 使用 [convert_big5_to_utf8.py](convert_big5_to_utf8.py) 將原始 Big5/CP950 編碼的大量（近三千個）文字檔批次轉換為 UTF-8，以利現代工具鏈與版本控制使用。轉換腳本會：
+本 fork 使用 [convert_big5_to_utf8.py](scripts/convert_big5_to_utf8.py) 將原始 Big5/CP950 編碼的大量（近三千個）文字檔批次轉換為 UTF-8，以利現代工具鏈與版本控制使用。轉換腳本會：
 
 - 依序嘗試 `utf-8`、`utf-8-sig`、`big5hkscs`、`cp950` 等常見編碼來解碼來源檔案，並記錄實際來源編碼。
 - 僅在需要時重新寫入 UTF-8，若原檔已是 UTF-8 則自動跳過，並在輸出摘要顯示各類統計。
