@@ -212,7 +212,8 @@
    - 最小 `mob/obj/res/shp`
 3. 掛入 `directory.lst` 後，必做一次本機 smoke test，並以最新啟動 log 判定是否成功
 4. 若 smoke test 成功，才可把 gate 推進到 `implementation_ready_for_commit`
-5. smoke test 前先清空 `debug/*` 內容；看到成功訊號後，仍要再檢查 `debug/*` 是否有本次新增 area 相關的新 bug / warning
+5. smoke test 前先清空 `debug/*` 內容，並建立本輪 `log/*` 觀察基線；看到成功訊號後，仍要再檢查 `debug/*` 是否有本次新增 area 相關的新 bug / warning
+6. 若 smoke test 需要用 `timeout` 控制，時間必須高於正常開機時間；預設優先給 `45` 到 `60` 秒，並在成功後回看本輪 log，避免把測試工具造成的提早中止誤判成 area 載入失敗
 
 ## Assumptions
 

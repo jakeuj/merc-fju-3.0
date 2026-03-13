@@ -110,10 +110,11 @@
 8. 再把邊界出口同步改到既有 area 的 `.roo`
 9. 掛入 `area/directory.lst`
 10. 先清空 `debug/*` 內容
-11. 做本機 smoke test
-12. 確認 log 或啟動輸出中有像 `三國歪傳之降龍伏虎開始正常運作` 這類成功訊號
-13. 再回頭檢查 `debug/*` 是否留下和本次新增 area 相關的新錯誤或警告
-14. smoke test 成功後，把 `delivery_gate` 推到 `implementation_ready_for_commit`
+11. 先建立本輪 `log/*` 觀察基線，例如記下最新 log 檔名，或清空這輪要看的單一 log
+12. 做本機 smoke test；若使用 `timeout`，優先給 `45` 到 `60` 秒
+13. 確認啟動輸出或本輪 log 中有像 `三國歪傳之降龍伏虎開始正常運作` 這類成功訊號
+14. 再回頭檢查 `debug/*` 是否留下和本次新增 area 相關的新錯誤或警告，並補看本輪 log 是否有 area warning / error
+15. smoke test 成功後，把 `delivery_gate` 推到 `implementation_ready_for_commit`
 
 ## Notes From The First Real Case
 
@@ -123,6 +124,8 @@
 - `.res` parser 可能比文件更保守，遇到 parse error 時優先比對 repo 內既有成功範例
 - `debug/bugs` 可能殘留舊錯誤；啟動是否成功要以最新啟動輸出和 log 內是否出現「開始正常運作」為準
 - 若測試前有先清空 `debug/*`，那麼測試後的 `debug/*` 訊息就應視為本輪新增訊號，不能再用「歷史殘留」理由忽略
+- `log/*` 不一定要整批清空，但至少要先建立本輪觀察基線，避免把舊 log 和這輪結果混在一起
+- 若 `timeout` 太短，常會在人已經看到成功訊號後仍留下「系統不正常終止」這種測試噪音；timeout 應高於正常開機時間
 
 ## Recommended Reporting
 

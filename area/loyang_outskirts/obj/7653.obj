@@ -6,9 +6,10 @@ Description
 ~
 Unit            支~
 ItemType        ITEM_LIGHT
+WearLoc         ITEM_WEAR_LIGHT
 Takeable        Yes
 Level           4
-Value           12
+Value3          12
 Weight          1
 Cost            20
 End

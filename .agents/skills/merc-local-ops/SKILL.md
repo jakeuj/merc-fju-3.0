@@ -67,7 +67,7 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定與�
 - 若使用者是在 Windows IDE 內啟動，優先考慮 repo 根目錄的 `startup-wsl.ps1`
 - `src/startup` 與 `src/startup.bash` 的預設流程都應優先視為「自動產生本機 ini 並啟動」
 - `startup-wsl.ps1` 應只負責橋接 PowerShell 與 WSL，不要複製 bash 啟動邏輯
-- 做 smoke test 或 area 載入驗證前，先清空 `debug/` 內既有檔案內容，再開始啟動；否則測試後很難分辨哪些是本次執行的新訊號、哪些只是歷史殘留
+- 做 smoke test 或 area 載入驗證前，先清空 `debug/` 內既有檔案內容，並先建立本輪 `log/` 觀察基線（例如記下最新 log 檔名，或清空這輪要看的單一 log）；否則測試後很難分辨哪些是本次執行的新訊號、哪些只是歷史殘留
 - 先確認 `csh` / `tcsh` 是否存在；若沒有，直接指出 `startup` 目前不可直接執行，不要假裝它是通的
 - `startup` 會：
 - 在 `src/` 內移除 `shutdown.txt`
@@ -84,6 +84,7 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定與�
 - 若直接執行 `./merc`，要記得它預設仍會讀 `merc.ini`；因此本機跨機器流程應先確保 `startup` / `startup.bash` 已生成正確的本機 `merc.ini`
 - 若使用 `startup-wsl.ps1`，確認 `wsl.exe` 與 WSL 內的 `wslpath` 可用，再讓它轉呼叫 `src/startup.bash`
 - 若剛修過 `src/merc.sample.ini`，啟動前先刪掉舊的 `src/merc.ini`，避免用到先前生成的壞設定；重新生成後再檢查 `HOME DIRECTORY`
+- 若用 `timeout` 做 smoke test，時間要明顯高於正常開機時間；預設優先用 `45` 到 `60` 秒，避免因測試工具太早殺行程而誤看到「系統不正常終止」
 - 成功訊號至少要記錄像 `三國歪傳之降龍伏虎開始正常運作` 這種明確啟動完成字樣；不要只因為程式暫時沒退出就視為成功
 - 即使已看到成功訊號，仍要回頭檢查 `debug/*` 是否留下和本次修改、尤其是新增 area 相關的錯誤或警告
 
@@ -99,7 +100,7 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定與�
 - 啟動或 smoke test 後，若 `git status` 出現 `debug/error`、`etc/net.log`、`etc/stock` 之類 tracked runtime 檔變動，要先判斷那是測試副作用還是任務本身的一部分
 - 若不可寫，先指出哪個目錄是 blocker，再給最小修復步驟
 - 不要預設這一定是 WSL ACL 問題；先以目前實際 OS / 檔案權限為準
-- 讀 log 時優先看 `log/*.log` 是否已出現「開始正常運作」或資料載入總結；`debug/bugs` 常會混著舊錯誤，不能單看最後幾筆就判定目前仍失敗
+- 讀 log 時優先看本輪新產生的 `log/*.log`，或你在測前先建立基線後鎖定的那份 log，確認是否已出現「開始正常運作」或資料載入總結；`debug/bugs` 常會混著舊錯誤，不能單看最後幾筆就判定目前仍失敗
 - 若本輪測試前已先清空 `debug/*`，那麼測試後新增的 `debug/bugs`、`debug/error`、`debug/failenable` 等內容就應優先視為本次執行的新結果，必須逐一判斷是否和本次 area 改動有關
 
 ### 5. 排錯分流
