@@ -91,8 +91,19 @@ source of truth 要分兩種：
 
 ### ref/ 現況
 - `ref/Readme.md` 是 `ref/` 的入口索引，先用它判斷該讀世界藍圖、template、spec-first scaffold、生成器，還是模擬系統
+- 目前和 `plans/0001-world-map-area-rebuild.md` 對齊的本輪直接使用類別只有兩種：
+- 世界藍圖與拓樸
+- AREA Scaffold 與 Template
+- 目前先不進本輪實作依據的類別有兩種：
+- 生成器與編輯器原型
+- 模擬與系統原型
+- 這些 deferred 類別不是沒價值，而是留到未來要做 map tooling、自動化編輯器、經濟/勢力/NPC 生態/歷史事件系統時再讀；不要在第一輪 area spec 工作就把它們全載進來
 - 若任務是世界級 area rebuild，優先從 `ref/Readme.md` 指向的世界藍圖、`world-graph.json` 與題材分布資料開始
-- 若任務是像 `loyang_outskirts` 這種新 area spec，優先從 `ref/Readme.md` 指向的 `area-template-wild_loyang_east.md`、`sanguo-area-specfirst/` 與 `sanguo-area-scaffold/` 開始
+- 若任務是像 `loyang_outskirts` 這種新 area spec，讀取順序固定為：
+- `ref/Readme.md`
+- `area-template-wild_loyang_east.md`
+- `sanguo-area-specfirst/` 中相近 `wild_*` 節點
+- 必要時才補讀 `sanguo-area-scaffold/`
 
 ### scripts/ 現況
 - repo 根目錄 `scripts/` 目前可見的腳本只有 `scripts/convert_big5_to_utf8.py`
