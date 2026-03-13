@@ -41,4 +41,10 @@ Description
 
 End
 
+#Job
+Keyword         pray~
+Function        job_pray_fire_god~
+Position        POS_STANDING
+End
+
 End

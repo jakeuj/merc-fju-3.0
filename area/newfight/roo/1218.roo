@@ -26,4 +26,10 @@ Description
 
 End
 
+#Job
+Keyword         hit~
+Function        job_hit_wall~
+Position        POS_STANDING
+End
+
 End
