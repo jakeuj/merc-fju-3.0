@@ -2880,7 +2880,6 @@ FUNCTION( do_list )
 
 FUNCTION( do_sell )
 {
-  char        buf[MAX_STRING_LENGTH];
   char        arg[MAX_INPUT_LENGTH];
   char        chinese[MAX_STRING_LENGTH];
   CHAR_DATA * keeper;
@@ -2937,8 +2936,24 @@ FUNCTION( do_sell )
   chinese_number( cost, chinese );
   act( "$n忍痛地賣了$p﹗", ch, obj, NULL, TO_ROOM );
 
-  sprintf( buf, "唉﹐為了錢﹐你只好忍痛以%s兩黃金把$p給割愛了。", chinese );
-  act( smash_act_keyword( buf, "nesp" ) , ch, obj, NULL, TO_CHAR );
+  {
+    int needed;
+    char * message;
+
+    needed = snprintf( NULL, 0, "唉﹐為了錢﹐你只好忍痛以%s兩黃金把$p給割愛了。", chinese );
+
+    if ( needed < 0 )
+    {
+      mudlog( LOG_ERR, "do_sell: 無法建立賣出訊息." );
+      RETURN_NULL();
+    }
+
+    message = alloc_string( needed + 1 );
+    snprintf( message, needed + 1
+      , "唉﹐為了錢﹐你只好忍痛以%s兩黃金把$p給割愛了。", chinese );
+    act( smash_act_keyword( message, "nesp" ) , ch, obj, NULL, TO_CHAR );
+    free_string( message );
+  }
   message_driver( ch, obj, ACT_WHEN_SELL );
 
   if ( !over_scale( ch ) ) gold_to_char( ch, cost );
@@ -2960,7 +2975,6 @@ FUNCTION( do_sell )
 
 FUNCTION( do_value )
 {
-  char        buf[MAX_STRING_LENGTH];
   char        arg[MAX_INPUT_LENGTH];
   char        chinese[MAX_STRING_LENGTH];
   CHAR_DATA * keeper;
@@ -3007,8 +3021,24 @@ FUNCTION( do_value )
   }
 
   chinese_number( cost, chinese );
-  sprintf( buf, "$n告訴你﹕「我願意出價%s兩黃金來買你的$p。」", chinese );
-  act( smash_act_keyword( buf, "nesNESp" ) , keeper, obj, ch, TO_VICT );
+  {
+    int needed;
+    char * message;
+
+    needed = snprintf( NULL, 0, "$n告訴你﹕「我願意出價%s兩黃金來買你的$p。」", chinese );
+
+    if ( needed < 0 )
+    {
+      mudlog( LOG_ERR, "do_value: 無法建立估價訊息." );
+      RETURN_NULL();
+    }
+
+    message = alloc_string( needed + 1 );
+    snprintf( message, needed + 1
+      , "$n告訴你﹕「我願意出價%s兩黃金來買你的$p。」", chinese );
+    act( smash_act_keyword( message, "nesNESp" ) , keeper, obj, ch, TO_VICT );
+    free_string( message );
+  }
   ch->reply = keeper;
 
   message_driver( ch, obj, ACT_WHEN_VALUE );
@@ -3517,7 +3547,8 @@ FUNCTION( do_rename )
     smash_point( buf1 );
     fix_color( buf1 );
 
-    sprintf( buf, "%s\e[0m", buf1 );
+    str_cpy( buf, buf1 );
+    str_cat( buf, "\e[0m" );
 
     if ( obj->item_type == ITEM_SPIRITJADE && obj->value[5] < 99 )
       obj->value[5]++;
@@ -3592,7 +3623,9 @@ FUNCTION( do_paint )
     RETURN_NULL();
   }
 
-  sprintf( buf, "%s%s\n\r", vellum->description, buf1 );
+  str_cpy( buf, vellum->description );
+  str_cat( buf, buf1 );
+  str_cat( buf, "\n\r" );
   free_string( vellum->description );
   vellum->description = str_dup( buf );
 
