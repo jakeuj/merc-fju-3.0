@@ -1,0 +1,24 @@
+Vnum            9102
+Name            驛道石坊~
+Description
+官道旁立著一座舊石坊，坊額上仍能辨識出北境驛道四字。馬蹄與車轍在地面留下深淺不一的痕跡，顯示這條路白日從不停歇。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        9101
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        9103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

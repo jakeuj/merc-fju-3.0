@@ -1,0 +1,32 @@
+Vnum            9101
+Name            北門外哨卡~
+Description
+厚實木柵與拒馬沿著城外官道排開，幾名北平守卒正輪流盤查出城行旅。南側還看得見獨樂寺的飛簷輪廓，往北則是筆直延伸的驛道，風裡帶著邊關塵土味。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        9001
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        9102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         回城~
+End
+
+#Enquire
+Keyword         北平~
+End
+
+End

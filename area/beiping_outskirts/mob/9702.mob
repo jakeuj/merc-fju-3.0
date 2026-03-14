@@ -1,0 +1,31 @@
+Vnum            9702
+Name            riverbank quartermaster~
+ShortDesc       河灘軍需老兵~
+Description
+這名老兵背脊微駝，手上卻還握著一支算盤，邊點貨邊留意四周的動靜。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       80
+Level           12
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             13
+Wis             12
+Dex             9
+Con             11
+Hp              900
+Mana            100
+Move            100
+Class           0
+Gold            60
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
