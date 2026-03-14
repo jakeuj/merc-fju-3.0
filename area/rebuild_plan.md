@@ -49,27 +49,27 @@
 
 ## Candidate Queue
 
-1. `jingxiang_road`
+1. `wild_longqu_hills`
 
 ## Todo
 
-(目前無待處理 `todo`；先完成 `in_progress` 的 `jingxiang_road`。)
+(目前無待處理 `todo`；先完成 `in_progress` 的 `wild_longqu_hills`。)
 
 ## In Progress
 
-### `jingxiang_road`
+### `wild_longqu_hills`
 
 - status: `in_progress`
-- delivery_gate: `implementation_ready_for_commit`
+- delivery_gate: `spec_ready_for_commit`
 - compliance_check: `compliant with current ref/Readme.md scope`
-- plan: `plans/area/0004-jingxiang-road.md`
-- parent_region: `future regional chain`
-- theme: `江湖風`
-- subtheme: `軍旅風`
-- world_links: `襄陽`, `新野`, `江夏`, `荊襄大道`
-- next_action: 先 commit `jingxiang_road` 的 implementation 里程碑；目前 `index/mob/obj/res/shp/roo` 已落地、`area/directory.lst` 已掛入，之後再視荊州母城 runtime 狀態補 boundary room 雙向連結
-- next_prompt: `先 commit 目前 jingxiang_road 的 implementation 里程碑；commit 後若要續做，優先評估襄陽 / 新野 / 江夏 的 runtime area 是否已可承接 world link。`
-- notes: `jingxiang_road` 已通過 scaffold validator、macOS native build、Linux Makefile.lin build 與 `startup.bash` smoke test；`log/1013.log` 含成功訊號，外部世界連線因母城 area 尚未存在而保留在 spec
+- plan: `plans/area/0005-wild-longqu-hills.md`
+- parent_region: `loyang outer chain`
+- theme: `探險遺跡`
+- subtheme: `仙俠風`
+- world_links: `洛陽東郊`, `龍渠丘陵`, `地下遺跡`
+- next_action: 先 commit `wild_longqu_hills` 的單區 plan + map.md spec 里程碑；commit 後再決定是否進入 implementation（index/mob/obj/res/shp）並正式接上 `loyang_outskirts/7510`
+- next_prompt: `先 commit 目前 wild_longqu_hills 的 spec 里程碑；commit 後若要落地 runtime 資產，再續做 wild_longqu_hills implementation。`
+- notes: `plans/area/0005-wild-longqu-hills.md` 與 `area/wild_longqu_hills/map.md` 第一版已建立，`mapmd-json` 已通過 scaffold validator；`west` 邊界對應既有 `loyang_outskirts/7510`
 
 
 ## Done
@@ -80,6 +80,8 @@
 - `loyang_outskirts` 已完成第一輪整合並進入可前進下一區狀態
 - `plans/area/0003-beiping-outskirts.md` 已建立
 - `beiping_outskirts` 已完成第一輪整合與 smoke test 驗證，`delivery_gate` 達到 `validated_ready_to_advance`
+- `plans/area/0004-jingxiang-road.md` 已建立
+- `jingxiang_road` 已完成第一輪 implementation、commit `abd53ac`，並達成可前進下一區狀態
 
 ## Blocked
 
@@ -87,14 +89,14 @@
 
 ## Current Recommended Next Step
 
-先 commit 目前 `jingxiang_road` 的 implementation 里程碑；commit 後再視荊州母城 runtime 狀態決定是否補 world link 邊界整合。
+先 commit 目前 `wild_longqu_hills` 的 spec 里程碑；commit 後再決定是否落地 implementation，並把它正式接到 `loyang_outskirts/7510`。
 
 語意提醒：
 
-- 目前的 next actionable area 仍是 `jingxiang_road`
-- 目前 `delivery_gate` 是 `implementation_ready_for_commit`，本輪安全動作是先 commit，不跳下一區
-- `beiping_outskirts` 已完成並驗證，可由 `Done` 歷程回查
+- 目前的 next actionable area 仍是 `wild_longqu_hills`
+- 目前 `delivery_gate` 是 `spec_ready_for_commit`，本輪安全動作是先 commit，不跳下一區
+- `jingxiang_road` 已完成第一輪 implementation 並提交，可由 `Done` 歷程回查
 
 建議可直接使用的 prompt：
 
-`先 commit 目前 jingxiang_road 的 implementation 里程碑；commit 後若要續做，優先評估襄陽 / 新野 / 江夏 的 runtime area 是否已可承接 world link。`
+`先 commit 目前 wild_longqu_hills 的 spec 里程碑；commit 後若要落地 runtime 資產，再續做 wild_longqu_hills implementation。`

@@ -143,6 +143,7 @@
 1. `loyang_outskirts`
 2. `beiping_outskirts`
 3. `jingxiang_road`
+4. `wild_longqu_hills`
 
 ## Theme Allocation
 
@@ -160,6 +161,10 @@
   - theme: `江湖風`
   - subtheme: `軍旅風`
   - 缺口角色：補中長距離官道、流言、伏兵與支線遭遇
+- `wild_longqu_hills`
+  - theme: `探險遺跡`
+  - subtheme: `仙俠風`
+  - 缺口角色：補洛陽東郊往外野探索帶的第二段，讓城郊與地下遺跡之間多一層丘陵轉接
 
 後續新增候選 area 時，必須一併記錄：
 
