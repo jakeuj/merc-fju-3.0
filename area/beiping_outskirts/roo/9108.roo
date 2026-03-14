@@ -1,0 +1,20 @@
+Vnum            9108
+Name            北境丘坡~
+Description
+地勢在這裡抬升成起伏丘坡，碎石路往東延伸到更荒涼的山前地帶。站在坡頂回望，北平城郭只剩一條模糊灰線。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        9104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         白狼山~
+End
+
+End

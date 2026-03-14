@@ -1,0 +1,32 @@
+Vnum            9104
+Name            永定河堤~
+Description
+河堤由夯土與碎石層層壘成，遠處可見渡船與拉纜木樁。水聲壓過人語，讓這裡比官道顯得更濕冷也更空曠。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        9103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9108
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9106
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

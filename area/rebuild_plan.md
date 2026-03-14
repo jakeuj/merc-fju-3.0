@@ -27,7 +27,7 @@
 ## References
 
 - 全局計畫：`plans/0001-world-map-area-rebuild.md`
-- 單區計畫：`plans/area/0002-loyang-outskirts.md`
+- 單區計畫：`plans/area/0002-loyang-outskirts.md`、`plans/area/0003-beiping-outskirts.md`
 - 世界圖參考：`area/world_map.md`
 - ref 索引：`ref/Readme.md`
 
@@ -49,25 +49,9 @@
 
 ## Candidate Queue
 
-1. `loyang_outskirts`
-2. `beiping_outskirts`
-3. `jingxiang_road`
+1. `jingxiang_road`
 
 ## Todo
-
-### `beiping_outskirts`
-
-- status: `todo`
-- delivery_gate: `spec_in_progress`
-- compliance_check: `pending plan creation`
-- plan: `not created yet`
-- parent_region: `beiping`
-- theme: `軍旅風`
-- subtheme: `歷史城市風`
-- world_links: `北平郊區`, `易京`, `白狼山`
-- next_action: 在 `loyang_outskirts` 穩定後建立單區計畫檔
-- next_prompt: `在 loyang_outskirts 完成並可前進後，建立 beiping_outskirts 的單區計畫與 map.md spec 草案。`
-- notes: 北方交通與邊關混合型候選
 
 ### `jingxiang_road`
 
@@ -79,31 +63,22 @@
 - theme: `江湖風`
 - subtheme: `軍旅風`
 - world_links: `襄陽`, `新野`, `江夏`, `荊襄大道`
-- next_action: 等 `loyang_outskirts` 與 `beiping_outskirts` 後再評估
-- next_prompt: `在 loyang_outskirts 與 beiping_outskirts 完成後，建立 jingxiang_road 的單區計畫與 map.md spec 草案。`
+- next_action: 在 `beiping_outskirts` 完成並可前進後建立單區計畫與 map.md spec 草案
+- next_prompt: `在 beiping_outskirts 完成並可前進後，建立 jingxiang_road 的單區計畫與 map.md spec 草案。`
 - notes: docs 依據足夠，但 repo 內尚未有直接母城 area，成本較高
 
 ## In Progress
 
-### `loyang_outskirts`
-
-- status: `in_progress`
-- delivery_gate: `implementation_ready_for_commit`
-- compliance_check: `compliant with current ref/Readme.md scope`
-- plan: `plans/area/0002-loyang-outskirts.md`
-- parent_region: `loyang`
-- theme: `歷史城市風`
-- subtheme: `軍旅風`
-- world_links: `洛陽東郊`, `龍渠丘陵`, `洛陽地下水區入口`
-- next_action: 先 commit 目前 `loyang_outskirts` 的整合里程碑；commit 後再決定是否補龍渠丘陵 / 地下水區的後續 world link 或將狀態推進到 `validated_ready_to_advance`
-- next_prompt: `先 commit 目前 loyang_outskirts 的整合里程碑；commit 後若仍需後續世界連接，續做 loyang_outskirts，否則再繼續實作下一個待建 area。`
-- notes: `area/loyang_outskirts` 已具備 `index`、`mob`、`obj`、`res`、`roo`、`shp` 最小集合，並已成功掛入 `area/directory.lst`；`556 <-> 7501` 邊界出口已落地，WSL smoke test 也已進到「開始正常運作」
+(目前無進行中的 area；下一個可執行候選為 `jingxiang_road`。)
 
 ## Done
 
 - `area/world_map.md` 已建立，並整合 `help/map.hlp`、`docs/3yWebsite/docs/maps.md`、`docs/3yWebsite/docs/data/maps.json`、`docs/3yWebsite/map/*.html`
 - `plans/0001-world-map-area-rebuild.md` 已建立
 - `plans/area/0002-loyang-outskirts.md` 已建立
+- `loyang_outskirts` 已完成第一輪整合並進入可前進下一區狀態
+- `plans/area/0003-beiping-outskirts.md` 已建立
+- `beiping_outskirts` 已完成第一輪整合與 smoke test 驗證，`delivery_gate` 達到 `validated_ready_to_advance`
 
 ## Blocked
 
@@ -111,15 +86,14 @@
 
 ## Current Recommended Next Step
 
-先 commit 目前 `loyang_outskirts` 的整合里程碑，再決定是否續做後續 world link，或把它推進到可前往下一區的狀態。
+建立 `jingxiang_road` 的單區 plan 與 `map.md` spec 草案，作為下一個 spec-first 里程碑。
 
 語意提醒：
 
-- 目前的 next actionable area 仍是 `loyang_outskirts`
-- 只有當 `loyang_outskirts` 被移到 `Done`、`Blocked` 或明確標示 `Abandoned` 之後，`beiping_outskirts` 才會成為下一個 area
-- 目前 `delivery_gate` 已進到 `implementation_ready_for_commit`，表示這一輪的安全動作是先 commit 當前里程碑，再決定是否續做或切下一區
-- 真正切下一區前，下一個單區 plan 也必須先補齊 `ref/Readme.md compliance check`
+- 目前已無 `in_progress` area
+- 下一個 next actionable area 是 `jingxiang_road`
+- `beiping_outskirts` 已完成並驗證，可由 `Done` 歷程回查
 
 建議可直接使用的 prompt：
 
-`先 commit 目前 loyang_outskirts 的整合里程碑；commit 後若仍需後續世界連接，續做 loyang_outskirts，否則再繼續實作下一個待建 area。`
+`在 beiping_outskirts 完成並可前進後，建立 jingxiang_road 的單區計畫與 map.md spec 草案。`

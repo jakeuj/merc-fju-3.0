@@ -1,0 +1,13 @@
+Vnum            9752
+Name            iron whistle token~
+ShortDesc       巡哨鐵哨(iron whistle)~
+Description
+一枚巡哨鐵哨(iron whistle)落在地上，吹口邊緣磨得發亮。
+~
+Unit            枚~
+ItemType        ITEM_TREASURE
+Takeable        Yes
+Level           12
+Weight          1
+Cost            90
+End

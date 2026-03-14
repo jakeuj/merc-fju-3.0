@@ -1,0 +1,16 @@
+Vnum            9107
+Name            河灘蘆葦帶~
+Description
+濕地裡長滿半人高的蘆葦，泥地踩下去會發出黏滯的聲響。偶爾有黑影在蘆葦深處閃動，像是躲避巡檢的流匪或偷渡客。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        9106
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -1,0 +1,24 @@
+Vnum            9105
+Name            邊關整隊場~
+Description
+一片被反覆踩實的土場供巡隊整隊換班，長矛架與拒馬整齊排在北緣。再往前就是更偏遠的邊境官道，許多傳聞都從那頭吹進北平。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        9103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         邊關~
+End
+
+#Enquire
+Keyword         官道~
+End
+
+End

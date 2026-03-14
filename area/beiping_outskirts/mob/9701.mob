@@ -1,0 +1,31 @@
+Vnum            9701
+Name            beiping sentry captain~
+ShortDesc       北門哨卡校尉~
+Description
+一名披著舊披風的校尉站在哨卡前，目光銳利地掃過每個進出城門的旅人。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       120
+Level           15
+Hitroll         2
+Protect         0
+Damroll         1
+Str             14
+Int             11
+Wis             12
+Dex             13
+Con             14
+Hp              1500
+Mana            100
+Move            100
+Class           0
+Gold            80
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
