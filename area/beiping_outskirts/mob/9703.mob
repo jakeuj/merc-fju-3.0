@@ -1,0 +1,31 @@
+Vnum            9703
+Name            marsh bandit scout~
+ShortDesc       蘆葦地探路馬賊~
+Description
+一名衣著凌亂的馬賊探子伏在蘆葦後，手按短刀，像在等待落單旅人經過。
+~
+Sentinel        No
+StayArea        Yes
+NoKill          No
+Alignment       -120
+Level           16
+Hitroll         2
+Protect         0
+Damroll         2
+Str             13
+Int             9
+Wis             9
+Dex             14
+Con             12
+Hp              1600
+Mana            100
+Move            100
+Class           0
+Gold            120
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

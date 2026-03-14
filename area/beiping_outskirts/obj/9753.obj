@@ -1,0 +1,16 @@
+Vnum            9753
+Name            border short saber~
+ShortDesc       邊軍短刀(short saber)~
+Description
+一把刀鞘磨損的邊軍短刀(short saber)擱在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           14
+Value           0 -1 -1 12
+Weight          3
+Cost            180
+Exp             10
+End

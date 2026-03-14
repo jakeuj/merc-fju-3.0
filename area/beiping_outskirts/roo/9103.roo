@@ -1,0 +1,40 @@
+Vnum            9103
+Name            旗亭路口~
+Description
+一座高桿旗亭立在路口中央，紅黑兩色旗幟標示著邊哨方向與河堤支線。旅人通常在此決定是繼續北上，還是先往東補給再走。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        9102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        9105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         易京~
+End
+
+#Enquire
+Keyword         河堤~
+End
+
+End

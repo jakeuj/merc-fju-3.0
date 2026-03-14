@@ -1,0 +1,24 @@
+Vnum            9106
+Name            河灘貨棧~
+Description
+幾間臨時搭起的木棚靠在河灘高處，堆著鹽包、草料與粗麻袋。看守貨棧的老兵一邊記帳，一邊盯著過往可疑身影。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        9104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9107
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End
