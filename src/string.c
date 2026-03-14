@@ -74,10 +74,8 @@ FUNCTION( do_test )
   int               vnum;
   int               loop;
   int               nMatch;
-  int               count;
   char            * color;
   char            * amount;
-  bool              found;
 
   PUSH_FUNCTION( "do_test" );
 
@@ -91,8 +89,6 @@ FUNCTION( do_test )
     MOB_INDEX_DATA * pIndex;
     int              vnum;
     char           * pString;
-    int              temp;
-
     vnum = atoi( argument );
     if ( !( pIndex = get_mob_index( vnum ) ) )
     {
@@ -107,7 +103,6 @@ FUNCTION( do_test )
       RETURN_NULL();
     }
 
-    temp = 0;
     /* exec_script( pString, ch, &temp ); */
   }
 
@@ -123,8 +118,7 @@ FUNCTION( do_test )
 
   for ( loop = 1; loop <= 100; loop++ )
   {
-    count = 0;
-    for ( found = FALSE, nMatch = vnum = 0; nMatch < top_mob_index; vnum++ )
+    for ( nMatch = vnum = 0; nMatch < top_mob_index; vnum++ )
     {
       if ( ( pMobIndex = get_mob_index( vnum ) ) )
       {
@@ -141,8 +135,6 @@ FUNCTION( do_test )
           else if ( pMobIndex->count >= 3  ) amount = "多  ";
           else                               amount = "普通";
 
-          found  = TRUE;
-          count += pMobIndex->count;
           i[loop / 10 ] += pMobIndex->count;
           j[loop / 10 ] ++;
 

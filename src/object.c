@@ -626,7 +626,7 @@ char * check_obj_value( int type, int loc, int value, int * ret, bool unused )
       if ( value <= 0 || value > 10000 )
       {
         *ret = 1;
-        RETURN( "礦物打造成功\機率必須介於 1 到 10000﹗" );
+        RETURN( "礦物打造成功機率必須介於 1 到 10000﹗" );
       }
       break;
 
@@ -719,7 +719,7 @@ char * check_obj_value( int type, int loc, int value, int * ret, bool unused )
       if ( value <= 0 || value > 10000 )
       {
         *ret = 1;
-        RETURN( "煙火施放成功\機率必須介於 1 到 10000 之間﹗" );
+        RETURN( "煙火施放成功機率必須介於 1 到 10000 之間﹗" );
       }
       break;
     }

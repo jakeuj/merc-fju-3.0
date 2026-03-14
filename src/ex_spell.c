@@ -381,7 +381,7 @@ SKILL( cast_backstab )
     dam = spell_damage( ch, level, TYPE_DEX, SPELL_CLASS_MAG );
     dam = number_range( dam * 3 / 4, dam * 5 / 4 );
     dam = URANGE( 0, dam, MAG_ATTACK_DAM );
-    sact( ch, victim, pObj, "轉瞬間﹐$O已經刺入$N的身體了﹐$n突襲成功\﹗" );
+    sact( ch, victim, pObj, "轉瞬間﹐$O已經刺入$N的身體了﹐$n突襲成功﹗" );
   }
 
   damage( ch, victim, dam, sn, ATTACK_RANDOM );

@@ -457,7 +457,7 @@ FUNCTION( do_vote )
       "有關於%s的選項﹗\n\r"
       , pVote->poster, pVote->subject, count + 1, pVote->message[count] );
 
-    sprintf( buf, "%s沈思頗久﹐終於在\e[1;32m%s\e[0m上面蓋\上"
+    sprintf( buf, "%s沈思頗久﹐終於在\e[1;32m%s\e[0m上面蓋上"
       "他神聖的一票﹗"
       , mob_name( NULL, ch ), pVote->subject );
 

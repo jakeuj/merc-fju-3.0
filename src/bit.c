@@ -802,7 +802,7 @@ char * room_bit_name( ROOM_INDEX_DATA * pRoom )
   if ( pRoom->ManaCure      ) str_cat( buf, " 法力診療所"   );
   if ( pRoom->MoveCure      ) str_cat( buf, " 體力診療所"   );
   if ( pRoom->HitCure       ) str_cat( buf, " 生命力診療所" );
-  if ( pRoom->PracRoom      ) str_cat( buf, " 練功\場"   );
+  if ( pRoom->PracRoom      ) str_cat( buf, " 練功場"   );
 
   RETURN( ( buf[0] != '\x0' ) ? buf+1 : "(沒有)" );
 }
@@ -1403,7 +1403,7 @@ char * get_obj_value_usage( int type, int * array )
     sprintf( buf ,
       "V0  (出現物品)=%6d "
       "V1  (法術等級)=%6d "
-      "V2  (成功\機會)=%6d\n\r"
+      "V2  (成功機會)=%6d\n\r"
       "V3  (打造價格)=%6d "
       "V4  (沒有使用)=%6d "
       "V5  (沒有使用)=%6d\n\r"

@@ -319,7 +319,7 @@ FUNCTION( do_note )
         && str_cmp( ch->name , pnote->sender )
         && ch->last_note < pnote->date_stamp )
       {
-        send_to_char( "\e[1;32m你收到一封新信﹐請用 \e[1;32mnote\e[0m 來閱\讀。"
+        send_to_char( "\e[1;32m你收到一封新信﹐請用 \e[1;32mnote\e[0m 來閱讀。"
                       "\e[0m\a\n\r" , ch );
         RETURN_NULL();
       }
@@ -1669,7 +1669,7 @@ FUNCTION( do_phone )
   if ( victim->desc && set_descriptor_stack( victim->desc ) )
   {
     victim->desc->stack = FALSE;
-    act( "$N正在閱\讀文件中﹐請稍後再呼叫﹗", ch, NULL, victim, TO_CHAR );
+    act( "$N正在閱讀文件中﹐請稍後再呼叫﹗", ch, NULL, victim, TO_CHAR );
     RETURN_NULL();
   }
 
@@ -1763,7 +1763,7 @@ FUNCTION( do_tell )
       && victim->desc
       && ( is_edit( victim->desc ) || set_descriptor_stack( victim->desc ) ) )
     {
-      act( "$N目前正在閱\讀或是編輯文件中﹗", ch, NULL, victim, TO_CHAR );
+      act( "$N目前正在閱讀或是編輯文件中﹗", ch, NULL, victim, TO_CHAR );
     }
 
   }
@@ -1783,7 +1783,7 @@ FUNCTION( do_tell )
         && victim->desc
         && ( is_edit( victim->desc ) || set_descriptor_stack( victim->desc ) ) )
       {
-        act( "$N目前正在閱\讀或是編輯文件中﹗", ch, NULL, victim, TO_CHAR );
+        act( "$N目前正在閱讀或是編輯文件中﹗", ch, NULL, victim, TO_CHAR );
       }
 
     }
@@ -2494,7 +2494,7 @@ FUNCTION( do_backup )
 
     if ( ( tick = atoi( argument ) ) <= 0 )
     {
-      send_to_char( "你取消了自動備份的功\能﹗\n\r", ch );
+      send_to_char( "你取消了自動備份的功能﹗\n\r", ch );
 
       ch->pcdata->autobackup      = -1;
       ch->pcdata->autobackup_tick = -1;
@@ -2569,7 +2569,7 @@ FUNCTION( do_save )
       ch->pcdata->autosave      = -1;
       ch->pcdata->autosave_tick = -1;
 
-      send_to_char( "你取消了自動存檔的功\能﹗\n\r", ch );
+      send_to_char( "你取消了自動存檔的功能﹗\n\r", ch );
       RETURN_NULL();
     }
 
@@ -3376,7 +3376,7 @@ FUNCTION( do_ask )
 
   if ( !( pIndex = ObjLetter ) )
   {
-    act( "對不起﹐$t沒有打工的功\能﹗", ch, mud_name, NULL, TO_CHAR );
+    act( "對不起﹐$t沒有打工的功能﹗", ch, mud_name, NULL, TO_CHAR );
     RETURN_NULL();
   }
 
@@ -3623,7 +3623,7 @@ FUNCTION( do_joke )
   {
     if ( !argument || !*argument || !is_number( argument ) )
     {
-      send_to_char( "你要閱\讀哪一篇笑話呢﹖\n\r", ch );
+      send_to_char( "你要閱讀哪一篇笑話呢﹖\n\r", ch );
       RETURN_NULL();
     }
 
@@ -3657,7 +3657,7 @@ FUNCTION( do_joke )
 
     if ( !zJoke )
     {
-      send_to_char( "對不起﹐你已經閱\讀完這裡所有的笑話了﹗\n\r", ch );
+      send_to_char( "對不起﹐你已經閱讀完這裡所有的笑話了﹗\n\r", ch );
       RETURN_NULL();
     }
 
@@ -3921,7 +3921,7 @@ FUNCTION( do_donate )
 
   if ( DonateLock && !IS_IMMORTAL( ch ) )
   {
-    send_to_char( "對不起﹐目前這個功\能暫時不開啟﹗\n\r", ch );
+    send_to_char( "對不起﹐目前這個功能暫時不開啟﹗\n\r", ch );
     RETURN_NULL();
   }
 
@@ -3959,7 +3959,7 @@ FUNCTION( do_donate )
   {
     if ( DonateLock )
     {
-      send_to_char( "這個功\能在鎖定時不能執行﹗\n\r", ch );
+      send_to_char( "這個功能在鎖定時不能執行﹗\n\r", ch );
       RETURN_NULL();
     }
 
@@ -4025,7 +4025,7 @@ FUNCTION( do_donate )
   {
     if ( DonateLock )
     {
-      send_to_char( "這個功\能在鎖定時不能執行﹗\n\r", ch );
+      send_to_char( "這個功能在鎖定時不能執行﹗\n\r", ch );
       RETURN_NULL();
     }
 
@@ -4050,7 +4050,7 @@ FUNCTION( do_donate )
   else if ( !str_prefix( arg, "lock" ) && IS_IMMORTAL( ch ) )
   {
     DonateLock = !DonateLock;
-    act( "你$1$t$0$T基金會的功\能﹗"
+    act( "你$1$t$0$T基金會的功能﹗"
       , ch, DonateLock ? "關閉" : "開啟", mud_name, TO_CHAR );
   }
 

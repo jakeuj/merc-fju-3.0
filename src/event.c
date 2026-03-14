@@ -265,7 +265,7 @@ void event_drought( void )
       && pObj != auction_info->obj
       && pObj->in_room )
     {
-      sprintf( buf, "%s因為旱災而乾枯\了﹗\n\r", obj_name( NULL, pObj ) );
+      sprintf( buf, "%s因為旱災而乾枯了﹗\n\r", obj_name( NULL, pObj ) );
       sendmsg_to_someroom( buf, pObj->in_room );
       extract_obj( pObj );
     }

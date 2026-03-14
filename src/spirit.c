@@ -274,7 +274,7 @@ FUNCTION( do_call )
 
     set_enable( spirit, pSkill );
 
-    act( "$n已經將部份$w的功\力灌給$N﹗", ch, pSkill, spirit, TO_ALL );
+    act( "$n已經將部份$w的功力灌給$N﹗", ch, pSkill, spirit, TO_ALL );
 
     if ( IS_IMMORTAL( ch ) )
       mudlog( LOG_WIZARD, "%s 灌輸小鬼技能 %s.", ch->name, pSkill->name );

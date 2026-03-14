@@ -297,7 +297,7 @@ void close_all_socket( void )
     if ( ch->desc ) close_socket( ch->desc );
   }
 
-  mudlog( LOG_INFO , "系統成功\回存玩家資料." );
+  mudlog( LOG_INFO , "系統成功回存玩家資料." );
 
   /* 儲存幫會資料 */
   mudlog( LOG_INFO, "嘗試儲存幫會資料." );
@@ -366,7 +366,7 @@ FUNCTION( do_prof )
 
   if ( ProfCycle <= 0 )
   {
-    act( "$t目前沒有使用量統計功\能。", ch, mud_name, NULL, TO_CHAR );
+    act( "$t目前沒有使用量統計功能。", ch, mud_name, NULL, TO_CHAR );
     RETURN_NULL();
   }
 

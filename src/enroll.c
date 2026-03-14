@@ -155,7 +155,7 @@ void mprog_enroll_trigger( CHAR_DATA * ch )
       break;
 
     case 2:
-      sprintf( buf, "踏破鐵鞋無覓處﹐得來全不費功\夫。%s\e[0m﹐受死吧。"
+      sprintf( buf, "踏破鐵鞋無覓處﹐得來全不費功夫。%s\e[0m﹐受死吧。"
         , mob_name( ch, victim ) );
       break;
     }

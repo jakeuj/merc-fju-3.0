@@ -2660,7 +2660,7 @@ FUNCTION( do_lore )
   if ( !IS_NPC( victim )
     || ( IS_NPC( victim ) && IS_SET( victim->act, ACT_NOKILL ) ) )
   {
-    send_to_char( "天神不允許\你有這種邪惡的思想。\n\r", ch );
+    send_to_char( "天神不允許你有這種邪惡的思想。\n\r", ch );
     RETURN_NULL();
   }
 
@@ -2704,7 +2704,7 @@ FUNCTION( do_consider )
   if ( !IS_NPC( victim )
     || ( IS_NPC( victim ) && IS_SET( victim->act, ACT_NOKILL ) ) )
   {
-    send_to_char( "天神不允許\你有這種邪惡的思想。\n\r", ch );
+    send_to_char( "天神不允許你有這種邪惡的思想。\n\r", ch );
     RETURN_NULL();
   }
 
@@ -4259,7 +4259,7 @@ FUNCTION( do_pry )
     "中文名稱﹕%s\n\r"
     "攻擊武器﹕%s\n\r"
     "互相教導﹕%s\n\r"
-    "技能功\能﹕%s\n\r"
+    "技能功能﹕%s\n\r"
     "技能分類﹕%s\n\r"
     "浪費數值﹕"
     , pSkill->name
@@ -4292,7 +4292,7 @@ FUNCTION( do_pry )
     send_to_buffer( "從缺\n\r" );
   }
 
-  send_to_buffer( "預備功\夫﹕" );
+  send_to_buffer( "預備功夫﹕" );
 
   for ( aSkill = skill_list; aSkill; aSkill = aSkill->next )
     if ( aSkill->associate == pSkill->slot ) break;

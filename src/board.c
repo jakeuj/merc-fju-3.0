@@ -66,8 +66,6 @@ FUNCTION( do_board )
 {
   BOARD_DATA * pBoard;
   char         arg[MAX_INPUT_LENGTH];
-  int          count;
-
   PUSH_FUNCTION( "do_board" );
 
   if ( !board_list )
@@ -85,7 +83,7 @@ FUNCTION( do_board )
     send_to_buffer( "\e[1;33;44m編號 版      名 房間號碼 讀取 "
       "寫入 數量 限制 鎖定                               \e[0m\n\r" );
 
-    for ( count = 0, pBoard = board_list; pBoard; pBoard = pBoard->next )
+    for ( pBoard = board_list; pBoard; pBoard = pBoard->next )
     {
       send_to_buffer( "%4d %10s %8d %4d %4d %4d %4d  %2s\n\r"
         , pBoard->slot

@@ -206,8 +206,8 @@ FUNCTION( do_query )
   else if ( !str_prefix( arg, "info" ) )
   {
     print_to_char( ch,
-      "練功\次數限制﹕%d 次\n\r"
-      "練 功\ 處 罰 ﹕%d 天\n\r"
+      "練功次數限制﹕%d 次\n\r"
+      "練 功 處 罰 ﹕%d 天\n\r"
       "作 答 時 間  ﹕%d 秒\n\r"
       "答 錯 次 數  ﹕%d 次\n\r"
       "提 醒 間 隔  ﹕%d 秒\n\r"
@@ -369,7 +369,7 @@ void send_answer( CHAR_DATA * ch, CHAR_DATA * looker )
 
   clear_buffer();
   send_to_buffer(
-    "由於你有重覆練功\的情況﹐所以系統出個問題考考你﹕\n\r%s"
+    "由於你有重覆練功的情況﹐所以系統出個問題考考你﹕\n\r%s"
     "題目﹕\e[1;32m%s\e[0m\n\r"
     , VERTICAL_LINE, pQuestion->title );
 

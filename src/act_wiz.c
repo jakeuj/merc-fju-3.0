@@ -714,7 +714,6 @@ FUNCTION( do_rstat )
   ROOM_INDEX_DATA * location;
   OBJ_DATA        * obj;
   CHAR_DATA       * rch;
-  CHAR_DATA       * owner;
   SHIP_DATA       * pShip;
   MINE_DATA       * pMine;
   ENQUIRE_DATA    * pEnquire;
@@ -737,8 +736,6 @@ FUNCTION( do_rstat )
     send_to_char( "這間房間是私人房間。\n\r", ch );
     RETURN_NULL();
   }
-
-  owner  = owner_name( location );
 
   clear_buffer();
   send_to_buffer(
@@ -2946,7 +2943,7 @@ FUNCTION( do_notell )
   if ( get_trust( ch ) < LEVEL_IMMORTAL
     && !IS_SET( ch->wizflags, WIZ_NOTELL ) )
   {
-    send_to_char( "你的權力不足﹐不能設定別人不許\告訴別人話語﹗\n\r", ch );
+    send_to_char( "你的權力不足﹐不能設定別人不許告訴別人話語﹗\n\r", ch );
     RETURN_NULL();
   }
 
@@ -5240,13 +5237,13 @@ FUNCTION( do_rset )
     if ( location->PracRoom )
     {
       location->PracRoom = FALSE;
-      send_to_char( "你把這間房間練功\場旗標清除﹗\n\r", ch );
+      send_to_char( "你把這間房間練功場旗標清除﹗\n\r", ch );
     }
 
     else
     {
       location->PracRoom = TRUE;
-      send_to_char( "你設定這間房間練功\場旗標﹗\n\r", ch );
+      send_to_char( "你設定這間房間練功場旗標﹗\n\r", ch );
     }
 
     if ( location->player ) write_new_room( location );

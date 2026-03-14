@@ -2174,7 +2174,7 @@ bool countersign_club( CHAR_DATA * ch, CLUB_DATA * pClub )
   /* 連署成功 */
   if ( count_club_member( pClub, CLUB_MEMBER ) >= ClubCountersignCount )
   {
-    sprintf( buf, "%s\e[0m(%s)連署成功\﹐幫派成立。\n\r"
+    sprintf( buf, "%s\e[0m(%s)連署成功﹐幫派成立。\n\r"
       , pClub->cname, pClub->name );
     send_to_all_char( buf );
 
@@ -2863,7 +2863,7 @@ ROOM_INDEX_DATA * club_location( CLUB_DATA * pClub )
   pRoom->name            = str_dup( buf );
 
   sprintf( buf,
-    "這裡是 %s\e[0m (%s)幫的幫派聚集點﹐你看到許\多人來來去去。\n\r"
+    "這裡是 %s\e[0m (%s)幫的幫派聚集點﹐你看到許多人來來去去。\n\r"
     "後面有一只大箱子﹐裡面存放著各式各樣的裝備﹐身為幫眾的你可以使用\n\r"
     "\e[1;32mstore\e[0m 這個指令來存取﹗\n\r\n\r"
     , pClub->cname, pClub->name );

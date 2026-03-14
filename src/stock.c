@@ -852,8 +852,6 @@ void bote_stock( CHAR_DATA * ch )
   int  count;
   int  value;
   int  stock;
-  int  total;
-
   PUSH_FUNCTION( "bote_stock" );
 
   if ( !ch )
@@ -864,14 +862,12 @@ void bote_stock( CHAR_DATA * ch )
 
   if ( IS_NPC( ch ) || StockBote <= 0 || !ch->pcdata ) RETURN_NULL();
 
-  for ( total = loop = 0; loop < MAX_STOCK; loop++ )
+  for ( loop = 0; loop < MAX_STOCK; loop++ )
   {
     if ( ( count = ch->pcdata->stock[loop] ) > 0
       && ( stock = ch->pcdata->asset[loop] ) > 0 )
     {
       if ( ( value  = ( stock * count / StockBote ) ) <= 0 ) continue;
-      total += value;
-
       if ( ch->bank + value <= MAX_ASSET )
       {
         chinese_number( value, buf );

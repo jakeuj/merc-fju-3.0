@@ -1165,7 +1165,7 @@ FUNCTION( do_wake )
     cease_stack( victim->desc );
     act( "你已經打斷$N的暫存模式了﹗", ch, NULL, victim, TO_CHAR );
 
-    send_to_char( "\n\r                        ---閱\讀或是編輯模式被中斷---"
+    send_to_char( "\n\r                        ---閱讀或是編輯模式被中斷---"
       "\a\a\n\r", victim );
 
     RETURN_NULL();
@@ -1477,7 +1477,7 @@ FUNCTION( do_recall )
 
     lose = IS_NPC( ch ) ? 200 : 100;
     gain_exp( ch, 0 - lose );
-    act( "你成功\脫逃﹗損失了\e[1;5;31m$i$0經驗值。", ch, &lose, NULL, TO_CHAR );
+    act( "你成功脫逃﹗損失了\e[1;5;31m$i$0經驗值。", ch, &lose, NULL, TO_CHAR );
     stop_fighting( ch, TRUE );
   }
 
@@ -1527,7 +1527,7 @@ FUNCTION( do_ply )
 
   if ( ch->in_room == RoomDead || ch->in_room == RoomCorpse )
   {
-    act( "對不起﹐在$r是不可以練功\的﹗", ch, NULL, NULL, TO_CHAR );
+    act( "對不起﹐在$r是不可以練功的﹗", ch, NULL, NULL, TO_CHAR );
     RETURN_NULL();
   }
 
@@ -3016,4 +3016,3 @@ FUNCTION( do_enquire )
 
   RETURN_NULL();
 }
-

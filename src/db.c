@@ -624,7 +624,6 @@ void reset_area( AREA_DATA * pArea )
   CHAR_DATA       * horse;
   EXIT_DATA       * pexit;
   bool              last  = TRUE;
-  int               level = 0;
   int               d0;
   int               d1;
 
@@ -653,8 +652,6 @@ void reset_area( AREA_DATA * pArea )
         continue;
       }
 
-      level = URANGE( 0, pMobIndex->level - 2, LEVEL_HERO );
-
       if ( pMobIndex->count >= pReset->arg2 )
       {
         last = FALSE;
@@ -681,7 +678,6 @@ void reset_area( AREA_DATA * pArea )
       }
 
       char_to_room( mob, pRoomIndex );
-      level = URANGE( 0, mob->level - 2, LEVEL_HERO );
       last  = TRUE;
       break;
 
@@ -2102,7 +2098,7 @@ void check_mobile( void )
     mudlog( LOG_ERR, "check_mobile: 沒有小鬼號碼 %d.", MobVampireVnum );
 
   if ( !( MobPractice = get_mob_index( MobPracticeVnum ) ) )
-    mudlog( LOG_ERR, "check_mobile: 沒有練功\怪物號碼 %d.", MobPracticeVnum );
+    mudlog( LOG_ERR, "check_mobile: 沒有練功怪物號碼 %d.", MobPracticeVnum );
 
   RETURN_NULL();
 }

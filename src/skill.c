@@ -1348,10 +1348,10 @@ bool learn_expert_skill( CHAR_DATA * ch, SKILL_DATA * pSkill )
   if ( max <= 0 ) RETURN( FALSE );
   ch->skill[slot] = max;
 
-  act( "$A$A$A$7恭禧你從$w領會到$2$W$7這一門功\夫﹗$0$A$A$A"
+  act( "$A$A$A$7恭禧你從$w領會到$2$W$7這一門功夫﹗$0$A$A$A"
     , ch, pSkill, aSkill, TO_CHAR );
 
-  act( "$A$A$A$7$n$7得天獨厚﹐學會了$2$W$7這一項功\夫﹗$0$A$A$A"
+  act( "$A$A$A$7$n$7得天獨厚﹐學會了$2$W$7這一項功夫﹗$0$A$A$A"
     , ch, NULL, aSkill, TO_ROOM );
 
   RETURN( TRUE );

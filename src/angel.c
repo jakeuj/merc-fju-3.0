@@ -1410,7 +1410,7 @@ ANGEL( angel_board )
   if ( ch->in_room && ch->in_room->board )
   {
     if ( fPrint ) send_to_char(
-      "嗯﹐這裡有個留言版﹐試試看能不能閱\讀(\e[1;32mread\e[0m)"
+      "嗯﹐這裡有個留言版﹐試試看能不能閱讀(\e[1;32mread\e[0m)"
       "裡面的文章。\n\r", ch );
 
     RETURN( TRUE );
@@ -1561,19 +1561,18 @@ ANGEL( angel_mobile )
 
 ANGEL( angel_note )
 {
-  int         notes;
   NOTE_DATA * pnote;
 
   PUSH_FUNCTION( "angel_note" );
 
-  for ( notes = 0, pnote = note_list; pnote; pnote = pnote->next )
+  for ( pnote = note_list; pnote; pnote = pnote->next )
   {
     if ( is_note_to( ch, pnote ) && str_cmp( ch->name, pnote->sender )
       && pnote->date_stamp > ch->last_note )
     {
       if ( fPrint ) send_to_char(
         "你有新的信件進來﹐趕快用 \e[1;32mnotes\e[0m "
-        "來閱\讀這封信吧﹗\n\r", ch );
+        "來閱讀這封信吧﹗\n\r", ch );
 
       RETURN( TRUE );
     }

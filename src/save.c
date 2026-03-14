@@ -459,7 +459,7 @@ void fwrite_char( CHAR_DATA * ch, FILE * fp )
   /* 記錄傳送點 */
   if ( ch->pcdata )
   {
-    fprintf( fp, str_space( "Recall" , BLANK_LENGTH ) );
+    fprintf( fp, "%s", str_space( "Recall" , BLANK_LENGTH ) );
 
     for ( loop = 0; loop < MAX_RECALL; loop++ )
       fprintf( fp ,"%-5d ", ch->pcdata->recall[loop] );
@@ -684,7 +684,7 @@ void fwrite_obj( CHAR_DATA * ch, OBJ_DATA * obj, FILE * fp
     fprint_number( fp, "Armor"      , obj->armor            );
   }
 
-  fprintf( fp, str_space( "Values" , BLANK_LENGTH ) );
+  fprintf( fp, "%s", str_space( "Values" , BLANK_LENGTH ) );
   for ( loop = 0; loop < MAX_OBJECT_VALUE; loop++ )
       fprintf( fp ,"%d ", obj->value[loop] );
   fprintf( fp ,"\n" );
@@ -915,8 +915,8 @@ bool fread_char( CHAR_DATA * ch, FILE_DATA * fp )
   SKILL_DATA  * pSkill;
   bool          fMatch;
   int           useless;
-
   PUSH_FUNCTION( "fread_char" );
+  (void) useless;
 
   for ( ; ; )
   {

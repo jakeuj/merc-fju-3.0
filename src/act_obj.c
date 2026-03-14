@@ -1187,7 +1187,7 @@ FUNCTION( do_give )
 
     if ( ch->gold < obj->value[3] )
     {
-      act( "$N說道﹕「打造這個東西至少要$i兩銀子吧﹐還不一定會成功\﹗」"
+      act( "$N說道﹕「打造這個東西至少要$i兩銀子吧﹐還不一定會成功﹗」"
         , ch, &amount, victim, TO_CHAR );
 
       RETURN_NULL();
@@ -1209,7 +1209,7 @@ FUNCTION( do_give )
     else
     {
       target = create_object( pIndex, -1 );
-      act( "大功\告成﹐$p終於打造成$P﹐拿去穿穿看吧﹗", ch, obj, target, TO_CHAR );
+      act( "大功告成﹐$p終於打造成$P﹐拿去穿穿看吧﹗", ch, obj, target, TO_CHAR );
 
       if ( target->Takeable == FALSE
         || ( ch->carry_number + get_obj_number( target ) > can_carry_n( ch ) )
@@ -2118,7 +2118,7 @@ FUNCTION( do_study )
 
   if ( arg[0] == '\x0' )
   {
-    send_to_char( "你要閱\讀什麼秘笈﹖\n\r", ch );
+    send_to_char( "你要閱讀什麼秘笈﹖\n\r", ch );
     RETURN_NULL();
   }
 
@@ -2182,7 +2182,7 @@ FUNCTION( do_study )
 
   message_driver( ch, pObj, ACT_WHEN_STUDY );
 
-  act( "恭禧$n從$p領會到$2$W$0這一門功\夫﹐但是$p慢慢化作一陣青煙消失了﹗"
+  act( "恭禧$n從$p領會到$2$W$0這一門功夫﹐但是$p慢慢化作一陣青煙消失了﹗"
     , ch, pObj, pSkill, TO_ALL );
 
   extract_obj( pObj );

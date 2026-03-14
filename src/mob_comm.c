@@ -522,8 +522,6 @@ FUNCTION( do_mpmload )
 {
   char             arg[ MAX_INPUT_LENGTH ];
   MOB_INDEX_DATA * pMobIndex;
-  CHAR_DATA      * victim;
-
   PUSH_FUNCTION( "do_mpmload" );
 
   one_argument( argument, arg );
@@ -542,7 +540,7 @@ FUNCTION( do_mpmload )
     RETURN_NULL();
   }
 
-  if ( ch->in_room ) victim = shape_mobile( pMobIndex, ch->in_room );
+  if ( ch->in_room ) shape_mobile( pMobIndex, ch->in_room );
   RETURN_NULL();
 }
 

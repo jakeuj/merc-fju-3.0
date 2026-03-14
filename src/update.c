@@ -1460,7 +1460,7 @@ void obj_update( void )
     switch ( obj->item_type )
     {
     default:              message = "$p無聲無息地消失了。";       break;
-    case ITEM_FOUNTAIN:   message = "$p失去水分而乾枯\了。";      break;
+    case ITEM_FOUNTAIN:   message = "$p失去水分而乾枯了。";      break;
     case ITEM_CORPSE_NPC: message = "$p轉眼間就化為一片塵土。";   break;
     case ITEM_CORPSE_PC:  message = "$p化為一片塵土散在空氣中。"; break;
     case ITEM_FOOD:       message = "$p敗壞而分解掉了。";         break;
@@ -1625,7 +1625,7 @@ void time_update( void )
     if ( current_time >= reboot_time - THIRD_WARN * 60 && third_warn )
     {
       str_cpy( buf, "\e[1m驀地城門開始被進攻﹐從這聲音來看﹐似乎"
-        "馬上就會被攻陷。\n\r這時候再不走就來不及了﹐你看到許\多人"
+        "馬上就會被攻陷。\n\r這時候再不走就來不及了﹐你看到許多人"
         "攜家帶眷的逃亡。\n\r你也迫不及待的想要離開這個危險的地方﹐"
         "畢竟留的青山在﹐不怕沒材燒。\n\r\n\r\e[0m" );
 
@@ -1699,7 +1699,7 @@ void time_update( void )
     if ( current_time >= shutdown_time - THIRD_WARN * 60 && third_warn )
     {
       str_cpy( buf, "\a\a\e[1m驀地城門開始被進攻﹐從這聲音來看﹐似乎"
-        "馬上就會被攻陷。\n\r這時候再不走就來不及了﹐你看到許\多人"
+        "馬上就會被攻陷。\n\r這時候再不走就來不及了﹐你看到許多人"
         "攜家帶眷的逃亡。\n\r你也迫不及待的想要離開這個危險的地方﹐"
         "畢竟留的青山在﹐不怕沒材燒。\n\r\n\r\e[0m" );
 

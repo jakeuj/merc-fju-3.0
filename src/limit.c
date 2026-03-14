@@ -30,11 +30,9 @@ bool check_hand( CHAR_DATA * ch , int type )
 {
   OBJ_DATA   * obj;
   SITUS_DATA * pSitus;
-  int          kind;
-
   PUSH_FUNCTION( "check_hand" );
 
-  for ( kind = 0 ,obj = ch->carrying; obj; obj = obj->next_content )
+  for ( obj = ch->carrying; obj; obj = obj->next_content )
   {
     if ( ( obj->item_type != ITEM_WEAPON )
       || ( type != WEAPON_ALL && obj->value[3] != type ) ) continue;

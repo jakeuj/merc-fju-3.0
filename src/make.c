@@ -115,7 +115,7 @@ FUNCTION( do_home )
 
     if ( !pRoom->Upgrade || !pRoom->PracRoom )
     {
-      send_to_char( "這房間並沒有你想要的功\能﹗\n\r", ch );
+      send_to_char( "這房間並沒有你想要的功能﹗\n\r", ch );
       RETURN_NULL();
     }
 
@@ -183,7 +183,7 @@ FUNCTION( do_home )
     {
       if ( ch->bank < HomeObject )
       {
-        act( "$n銀行裡必須有$i兩黃金才能升級多水功\能。"
+        act( "$n銀行裡必須有$i兩黃金才能升級多水功能。"
           , ch, &HomeObject, NULL, TO_CHAR );
         RETURN_NULL();
       }
@@ -210,7 +210,7 @@ FUNCTION( do_home )
       pRoom->Upgrade  = TRUE;
       ch->bank = UMAX( 0, ch->bank - HomeObject );
 
-      act( "你花了一筆錢把$r改裝了多水的功\能﹗", ch, NULL, NULL, TO_CHAR );
+      act( "你花了一筆錢把$r改裝了多水的功能﹗", ch, NULL, NULL, TO_CHAR );
       act( "$r被$n改裝成為多水的地方了﹗", ch, NULL, NULL, TO_ROOM );
       write_new_room( pRoom );
     }
@@ -219,7 +219,7 @@ FUNCTION( do_home )
     {
       if ( ch->bank < HomeObject )
       {
-        act( "$n銀行裡必須有$i兩黃金才能升級多食物功\能。"
+        act( "$n銀行裡必須有$i兩黃金才能升級多食物功能。"
           , ch, &HomeObject, NULL, TO_CHAR );
         RETURN_NULL();
       }
@@ -246,7 +246,7 @@ FUNCTION( do_home )
       pRoom->Upgrade  = TRUE;
       ch->bank = UMAX( 0, ch->bank - HomeObject );
 
-      act( "你花了一筆錢把$r改裝了多食物的功\能﹗", ch, NULL, NULL, TO_CHAR );
+      act( "你花了一筆錢把$r改裝了多食物的功能﹗", ch, NULL, NULL, TO_CHAR );
       act( "$r被$n改裝成為多食物的地方了﹗", ch, NULL, NULL, TO_ROOM );
       write_new_room( pRoom );
     }
@@ -255,7 +255,7 @@ FUNCTION( do_home )
     {
       if ( ch->bank < HomeObject )
       {
-        act( "$n銀行裡必須有$i兩黃金才能升級錢莊功\能。"
+        act( "$n銀行裡必須有$i兩黃金才能升級錢莊功能。"
           , ch, &HomeObject, NULL, TO_CHAR );
         RETURN_NULL();
       }
@@ -282,7 +282,7 @@ FUNCTION( do_home )
       pRoom->Upgrade       = TRUE;
       ch->bank = UMAX( 0, ch->bank - HomeObject );
 
-      act( "你花了一筆錢把$r改裝了錢莊的功\能﹗", ch, NULL, NULL, TO_CHAR );
+      act( "你花了一筆錢把$r改裝了錢莊的功能﹗", ch, NULL, NULL, TO_CHAR );
       act( "$r被$n改裝成為錢莊的地方了﹗", ch, NULL, NULL, TO_ROOM );
       write_new_room( pRoom );
     }
@@ -291,7 +291,7 @@ FUNCTION( do_home )
     {
       if ( ch->bank < HomeObject )
       {
-        act( "$n銀行裡必須有$i兩黃金才能升級鏢局功\能。"
+        act( "$n銀行裡必須有$i兩黃金才能升級鏢局功能。"
           , ch, &HomeObject, NULL, TO_CHAR );
         RETURN_NULL();
       }
@@ -318,7 +318,7 @@ FUNCTION( do_home )
       pRoom->Upgrade    = TRUE;
       ch->bank = UMAX( 0, ch->bank - HomeObject );
 
-      act( "你花了一筆錢把$r改裝了鏢局的功\能﹗", ch, NULL, NULL, TO_CHAR );
+      act( "你花了一筆錢把$r改裝了鏢局的功能﹗", ch, NULL, NULL, TO_CHAR );
       act( "$r被$n改裝成為鏢局的地方了﹗", ch, NULL, NULL, TO_ROOM );
       write_new_room( pRoom );
     }
@@ -327,7 +327,7 @@ FUNCTION( do_home )
     {
       if ( ch->bank < HomeObject )
       {
-        act( "$n銀行裡必須有$i兩黃金才能升級生命恢復所功\能。"
+        act( "$n銀行裡必須有$i兩黃金才能升級生命恢復所功能。"
           , ch, &HomeObject, NULL, TO_CHAR );
         RETURN_NULL();
       }
@@ -354,7 +354,7 @@ FUNCTION( do_home )
       pRoom->Upgrade  = TRUE;
       ch->bank = UMAX( 0, ch->bank - HomeObject );
 
-      act( "你花了一筆錢把$r改裝了生命恢復所的功\能﹗", ch, NULL, NULL, TO_CHAR );
+      act( "你花了一筆錢把$r改裝了生命恢復所的功能﹗", ch, NULL, NULL, TO_CHAR );
       act( "$r被$n改裝成為生命恢復所的地方了﹗", ch, NULL, NULL, TO_ROOM );
       write_new_room( pRoom );
     }
@@ -363,7 +363,7 @@ FUNCTION( do_home )
     {
       if ( ch->bank < HomeObject )
       {
-        act( "$n銀行裡必須有$i兩黃金才能升級練功\場功\能。"
+        act( "$n銀行裡必須有$i兩黃金才能升級練功場功能。"
           , ch, &HomeObject, NULL, TO_CHAR );
         RETURN_NULL();
       }
@@ -392,8 +392,8 @@ FUNCTION( do_home )
       pRoom->NoFight  = FALSE;
       ch->bank = UMAX( 0, ch->bank - HomeObject );
 
-      act( "你花了一筆錢把$r改裝了練功\場的功\能﹗", ch, NULL, NULL, TO_CHAR );
-      act( "$r被$n改裝成為練功\場的地方了﹗", ch, NULL, NULL, TO_ROOM );
+      act( "你花了一筆錢把$r改裝了練功場的功能﹗", ch, NULL, NULL, TO_CHAR );
+      act( "$r被$n改裝成為練功場的地方了﹗", ch, NULL, NULL, TO_ROOM );
       write_new_room( pRoom );
     }
 
@@ -401,7 +401,7 @@ FUNCTION( do_home )
     {
       if ( ch->bank < HomeObject )
       {
-        act( "$n銀行裡必須有$i兩黃金才能升級法力恢復所功\能。"
+        act( "$n銀行裡必須有$i兩黃金才能升級法力恢復所功能。"
           , ch, &HomeObject, NULL, TO_CHAR );
         RETURN_NULL();
       }
@@ -428,7 +428,7 @@ FUNCTION( do_home )
       pRoom->Upgrade  = TRUE;
       ch->bank = UMAX( 0, ch->bank - HomeObject );
 
-      act( "你花了一筆錢把$r改裝了法力恢復所的功\能﹗", ch, NULL, NULL, TO_CHAR );
+      act( "你花了一筆錢把$r改裝了法力恢復所的功能﹗", ch, NULL, NULL, TO_CHAR );
       act( "$r被$n改裝成為法力恢復所的地方了﹗", ch, NULL, NULL, TO_ROOM );
       write_new_room( pRoom );
     }
@@ -437,7 +437,7 @@ FUNCTION( do_home )
     {
       if ( ch->bank < HomeObject )
       {
-        act( "$n銀行裡必須有$i兩黃金才能升級體力恢復所功\能。"
+        act( "$n銀行裡必須有$i兩黃金才能升級體力恢復所功能。"
           , ch, &HomeObject, NULL, TO_CHAR );
         RETURN_NULL();
       }
@@ -464,14 +464,14 @@ FUNCTION( do_home )
       pRoom->Upgrade  = TRUE;
       ch->bank = UMAX( 0, ch->bank - HomeObject );
 
-      act( "你花了一筆錢把$r改裝了體力恢復所的功\能﹗", ch, NULL, NULL, TO_CHAR );
+      act( "你花了一筆錢把$r改裝了體力恢復所的功能﹗", ch, NULL, NULL, TO_CHAR );
       act( "$r被$n改裝成為體力恢復所的地方了﹗", ch, NULL, NULL, TO_ROOM );
       write_new_room( pRoom );
     }
 
     else
     {
-      send_to_char( "沒有你所選擇的功\能﹗\n\r可以升級成為"
+      send_to_char( "沒有你所選擇的功能﹗\n\r可以升級成為"
         "生命恢復(hitcure) 法力恢復(manacure) \n\r體力恢復(movecure)"
         "增加食物(foodful) 增加水源(waterful) 等選項。\n\r", ch );
       RETURN_NULL();
@@ -541,12 +541,12 @@ FUNCTION( do_home )
     if ( LockCreateHome )
     {
       LockCreateHome = FALSE;
-      send_to_char( "你把建立修改房間功\能給打開了﹗\n\r", ch );
+      send_to_char( "你把建立修改房間功能給打開了﹗\n\r", ch );
     }
     else
     {
       LockCreateHome = TRUE;
-      send_to_char( "你把建立修改房間功\能給鎖定了﹗\n\r", ch );
+      send_to_char( "你把建立修改房間功能給鎖定了﹗\n\r", ch );
     }
   }
 
@@ -651,7 +651,7 @@ FUNCTION( do_home )
 
     if ( LockCreateHome )
     {
-      send_to_char( "對不起﹐目前管理者把這個功\能給鎖定住了﹗\n\r", ch );
+      send_to_char( "對不起﹐目前管理者把這個功能給鎖定住了﹗\n\r", ch );
       RETURN_NULL();
     }
 
@@ -811,7 +811,7 @@ FUNCTION( do_home )
 
     if ( LockCreateHome )
     {
-      send_to_char( "對不起﹐目前管理者把這個功\能給鎖定住了﹗\n\r", ch );
+      send_to_char( "對不起﹐目前管理者把這個功能給鎖定住了﹗\n\r", ch );
       RETURN_NULL();
     }
 
@@ -892,7 +892,7 @@ FUNCTION( do_home )
 
     if ( LockCreateHome )
     {
-      send_to_char( "對不起﹐目前管理者把這個功\能給鎖定住了﹗\n\r", ch );
+      send_to_char( "對不起﹐目前管理者把這個功能給鎖定住了﹗\n\r", ch );
       RETURN_NULL();
     }
 
@@ -943,7 +943,7 @@ FUNCTION( do_home )
 
     if ( LockCreateHome )
     {
-      send_to_char( "對不起﹐目前管理者把這個功\能給鎖定住了﹗\n\r", ch );
+      send_to_char( "對不起﹐目前管理者把這個功能給鎖定住了﹗\n\r", ch );
       RETURN_NULL();
     }
 
@@ -1061,7 +1061,7 @@ FUNCTION( do_home )
 
     if ( LockCreateHome )
     {
-      send_to_char( "對不起﹐目前管理者把這個功\能給鎖定住了﹗\n\r", ch );
+      send_to_char( "對不起﹐目前管理者把這個功能給鎖定住了﹗\n\r", ch );
       RETURN_NULL();
     }
 

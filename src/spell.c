@@ -379,7 +379,7 @@ SKILL( spell_cast_bless )
     RETURN( FALSE );
 
   case 0:
-    act( "$7$n$7順手一揮﹐許\多的小精靈從空中冒了下來"
+    act( "$7$n$7順手一揮﹐許多的小精靈從空中冒了下來"
          "﹐圍繞著$N$7唱著聖歌﹐祝福著$E。$0", ch, NULL, victim, TO_ALL );
     break;
 
@@ -392,7 +392,7 @@ SKILL( spell_cast_bless )
     break;
 
   case 2:
-    act( "$7$n$7緩緩的揮舞著手﹐接著許\許\多多的皎潔的光之精靈慢慢的漂浮了"
+    act( "$7$n$7緩緩的揮舞著手﹐接著許許多多的皎潔的光之精靈慢慢的漂浮了"
          "過來﹐圍繞著$N$7並且包圍著$E﹐緩緩的形成了一面明亮的光之祝福﹐接"
          "著天上的天使都探頭下來爭賭這天上人間奇景。$0"
          , ch, NULL, victim, TO_ALL );
@@ -449,7 +449,7 @@ SKILL( spell_cast_fire )
 
   case 3:
     sact( ch, victim, NULL,
-      "$n將雙手用力旋轉﹐互相碰撞﹐猛地爆出許\多火花﹐接著一個個火花"
+      "$n將雙手用力旋轉﹐互相碰撞﹐猛地爆出許多火花﹐接著一個個火花"
       "像是有生命一般向著$N追去﹗" );
     break;
 
@@ -468,7 +468,7 @@ SKILL( spell_cast_fire )
   case 6:
     sact( ch, victim, NULL,
       "$n坐了下來﹐集中精神默唸一些聽不懂的咒語﹗$A"
-      "接著在$N身邊突然出現許\多的$R火焰$Z﹐將$E吞沒﹗﹗" );
+      "接著在$N身邊突然出現許多的$R火焰$Z﹐將$E吞沒﹗﹗" );
     break;
 
   case 7:
@@ -842,7 +842,7 @@ SKILL( cast_locate_object )
       if ( level < ( LEVEL_HERO / 2 ) )
       {
         send_to_buffer( "遠方傳來一陣聲音﹐雖然被你發現了﹐"
-          "可是以你的功\力是找不到我的﹐哈哈﹗\n\r" );
+          "可是以你的功力是找不到我的﹐哈哈﹗\n\r" );
       }
       else
       {
@@ -1074,7 +1074,7 @@ SKILL( cast_blindness )
   af.level      = level;
   affect_to_char( vic, &af );
   send_to_char( "黑光一閃﹐你暫時眼盲了﹗\n\r", vic );
-  if ( ch != vic ) send_to_char( "成功\施展眼盲術了﹗\n\r", ch );
+  if ( ch != vic ) send_to_char( "成功施展眼盲術了﹗\n\r", ch );
   RETURN( TRUE );
 }
 
@@ -1380,7 +1380,7 @@ SKILL( cast_charm_person )
   affect_to_char( victim, &af );
 
   act( "突然之間﹐你覺得$n好像你失散多年的主人﹗", ch, NULL, victim, TO_VICT );
-  if ( ch != victim ) send_to_char( "好了﹐迷惑成功\﹗\n\r", ch );
+  if ( ch != victim ) send_to_char( "好了﹐迷惑成功﹗\n\r", ch );
   RETURN( TRUE );
 }
 
@@ -1597,7 +1597,7 @@ SKILL( cast_cure_blindness )
     affect_release( victim, SLOT_BLINDNESS );
     send_to_char( "你又重見光明了﹗\n\r", victim );
 
-    if ( ch != victim ) send_to_char( "醫治眼盲成功\﹗\n\r", ch );
+    if ( ch != victim ) send_to_char( "醫治眼盲成功﹗\n\r", ch );
     RETURN( TRUE );
   }
   else
@@ -1640,7 +1640,7 @@ SKILL( cast_cure_critical )
   if ( victim->hit == get_curr_hit( victim ) )
     send_to_char( "你全身的傷口都消失了﹗\n\r", victim );
 
-  if ( ch != victim ) send_to_char( "好了﹐醫治成功\﹗\n\r", ch );
+  if ( ch != victim ) send_to_char( "好了﹐醫治成功﹗\n\r", ch );
   RETURN( TRUE );
 }
 
@@ -1863,7 +1863,7 @@ SKILL( cast_curse )
   affect_to_char( vic, &af );
 
   send_to_char( "你感到一陣暗黑壓抑著你的力量。\n\r", vic );
-  if ( ch != vic ) send_to_char( "詛咒成功\。\n\r", ch );
+  if ( ch != vic ) send_to_char( "詛咒成功。\n\r", ch );
   RETURN( TRUE );
 }
 
@@ -2054,8 +2054,6 @@ SKILL( cast_dispel_magic )
   AFFECT_DATA * paf_next;
   SKILL_DATA  * pSkill;
   int           chance;
-  int           lev;
-
   PUSH_FUNCTION( "cast_dispel_magic" );
 
   if ( !( paf = ch->affected ) )
@@ -2068,8 +2066,6 @@ SKILL( cast_dispel_magic )
   {
     paf_next = paf->next;
     chance   = 0;
-    lev      = UMAX( 1, UMIN( MAX_LEVEL, paf->level ) );
-
     if ( !( pSkill = get_skill( paf->type ) ) ) continue;
 
     switch( pSkill->type )
@@ -2276,7 +2272,7 @@ SKILL( cast_fireball )
 
   case 3:
     sact( ch, victim, NULL,
-      "只見$n一個發氣﹐許\多的如石塊般大的火球出現在$e四周不停圍繞著﹗$A"
+      "只見$n一個發氣﹐許多的如石塊般大的火球出現在$e四周不停圍繞著﹗$A"
       "接著這一顆顆火球四面八方的擊向$N﹐頗為壯觀﹗" );
     break;
 
@@ -2391,7 +2387,7 @@ SKILL( cast_faerie_fire )
   af.modifier  = number_range( level, level * 3 );
   af.level     = level;
   affect_to_char( victim, &af );
-  send_to_char( "你被一團粉紅的煙霧包圍﹐就像一隻粉紅豹\一樣。\n\r", victim );
+  send_to_char( "你被一團粉紅的煙霧包圍﹐就像一隻粉紅豹一樣。\n\r", victim );
   act( "$n被一團粉紅煙霧包圍著。", victim, NULL, NULL, TO_ROOM );
   RETURN( TRUE );
 }
@@ -3255,7 +3251,7 @@ SKILL( cast_protection )
   af.level     = 0;
   affect_to_char( victim, &af );
 
-  act( "$n閉目凝神﹐用穀\衣心法的內力運轉了一次「靈神訣」。$A"
+  act( "$n閉目凝神﹐用穀衣心法的內力運轉了一次「靈神訣」。$A"
        "一股青氣從$n身上散出﹐匯聚在$e的頂心﹐然後緩緩淡去。"
        , ch, NULL, NULL, TO_ALL );
 
@@ -3376,7 +3372,7 @@ SKILL( cast_shield )
   affect_to_char( victim, &aff );
 
   act( "$n被一個力場圍繞著。", victim, NULL, NULL, TO_ROOM );
-  send_to_char( "你被一個力場圍繞著﹐保護提昇了些許\。\n\r", victim );
+  send_to_char( "你被一個力場圍繞著﹐保護提昇了些許。\n\r", victim );
   RETURN( TRUE );
 }
 
@@ -3395,7 +3391,7 @@ SKILL( cast_gold_shield )
 
   if ( ch != victim )
   {
-    send_to_char( "對不起﹐這一門功\夫只能施展在自己身上﹗\n\r", ch );
+    send_to_char( "對不起﹐這一門功夫只能施展在自己身上﹗\n\r", ch );
     RETURN( FALSE );
   }
 
@@ -3437,7 +3433,7 @@ SKILL( cast_iron_shield )
 
   if ( ch != victim )
   {
-    send_to_char( "對不起﹐這一門功\夫只能施展在自己身上﹗\n\r", ch );
+    send_to_char( "對不起﹐這一門功夫只能施展在自己身上﹗\n\r", ch );
     RETURN( FALSE );
   }
 
@@ -3479,7 +3475,7 @@ SKILL( cast_deva_shield )
 
   if ( ch != victim )
   {
-    send_to_char( "對不起﹐這一門功\夫只能施展在自己身上﹗\n\r", ch );
+    send_to_char( "對不起﹐這一門功夫只能施展在自己身上﹗\n\r", ch );
     RETURN( FALSE );
   }
 
@@ -3688,7 +3684,7 @@ SKILL( cast_teleport )
   }
 
   act( "$n祭起一張陰界傳送符。忽然四周吹起了一陣涼颼颼的陰風﹐陰風之中彷彿"
-       "有許\多人影在晃動﹐然後一陣火光突然爆起﹗", ch, NULL, NULL, TO_CHAR );
+       "有許多人影在晃動﹐然後一陣火光突然爆起﹗", ch, NULL, NULL, TO_CHAR );
 
   if ( !victim->in_room
     || victim->mount
@@ -4678,7 +4674,7 @@ SKILL( cast_steal )
       RETURN( TRUE );
     }
 
-    mudlog( LOG_INFO, "[STEAL] %s 偷錢成功\﹐對象﹕%s."
+    mudlog( LOG_INFO, "[STEAL] %s 偷錢成功﹐對象﹕%s."
       , ch->name, victim->name );
     gold_to_char( ch, amount );
     gold_from_char( victim, amount );
@@ -4716,7 +4712,7 @@ SKILL( cast_steal )
     RETURN( TRUE );
   }
 
-  mudlog( LOG_INFO, "[STEAL] %s 偷東西成功\﹐對象﹕%s 物品 %s ."
+  mudlog( LOG_INFO, "[STEAL] %s 偷東西成功﹐對象﹕%s 物品 %s ."
     , ch->name, victim->name , obj->name );
 
   obj_from_char( obj );
@@ -5229,7 +5225,7 @@ SKILL( cast_mint )
   {
     target = create_object( pIndex, -1 );
 
-    act( "大功\告成﹐$n終於從$p打造出$P﹗", ch, obj, target, TO_ALL );
+    act( "大功告成﹐$n終於從$p打造出$P﹗", ch, obj, target, TO_ALL );
 
     if ( target->Takeable == FALSE
       || ( ch->carry_number + get_obj_number( target ) > can_carry_n( ch ) )
@@ -5255,24 +5251,12 @@ SKILL( cast_mint )
 SKILL( cast_magic_power )
 {
   CHAR_DATA * victim = ( CHAR_DATA * ) vo;
-  int         chance;
-
   PUSH_FUNCTION( "cast_magic_power" );
 
   if ( !victim )
   {
     mudlog( LOG_DEBUG, "cast_magic_power: 缺乏來源." );
     RETURN( FALSE );
-  }
-
-  if ( IS_NPC( victim ) )
-  {
-    chance = level + ( get_curr_dex( ch ) * 3 - get_curr_dex( victim ) * 2 );
-  }
-
-  else
-  {
-    chance = get_curr_dex( ch ) - get_curr_dex( victim );
   }
 
   RETURN( TRUE );

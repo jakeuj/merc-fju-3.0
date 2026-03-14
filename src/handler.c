@@ -1277,7 +1277,7 @@ void extract_char( CHAR_DATA * ch, bool fPull )
     talk_channel( auction_info->seller
       , "唉﹐連賣個東西﹐都會被仇家追殺﹐不賣了﹗"
       , CHANNEL_AUCTION
-      , "\e[1;33m含著淚\說道" );
+      , "\e[1;33m含著淚說道" );
 
     init_auction();
   }

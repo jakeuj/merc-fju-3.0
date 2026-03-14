@@ -91,7 +91,7 @@ void delete_share_memory( int aShmid )
 
   /* 先卸下共享記憶體區塊 */
   if ( shmdt( shm_ptr ) == 0 )
-    mudlog( LOG_INFO, "shmdt: 成功\卸下共享計憶體." );
+    mudlog( LOG_INFO, "shmdt: 成功卸下共享計憶體." );
   else
     mudlog( LOG_INFO, "shmdt: 卸下共享記憶體失敗." );
 
@@ -104,7 +104,7 @@ void delete_share_memory( int aShmid )
   }
   else
   {
-    mudlog( LOG_INFO, "shmctl: 成功\刪除 IPC KEY %d.", aShmid );
+    mudlog( LOG_INFO, "shmctl: 成功刪除 IPC KEY %d.", aShmid );
   }
 
   /* 標記已經清除, 卸下 */

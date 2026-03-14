@@ -491,8 +491,6 @@ bool get_proc( pid_t pid, struct ProcFile * proc )
   int    fd;
   char   filename[MAX_FILE_LENGTH];
   char   buffer[512];
-  char * arg;
-
   PUSH_FUNCTION( "get_proc" );
 
   /* 檢查 PID 是否 合法 */
@@ -606,7 +604,6 @@ bool get_proc( pid_t pid, struct ProcFile * proc )
   int    fd;
   char   filename[MAX_FILE_LENGTH];
   char   buffer[512];
-  char * arg;
 
   PUSH_FUNCTION( "get_proc" );
 
@@ -648,7 +645,6 @@ bool get_proc( pid_t pid, struct ProcFile * proc )
   /* 關閉檔案描述子 */
   close( fd );
 
-  arg = buffer;
   sscanf( buffer, "%s %d %d %d %d %d,%d %s %d,%d"
     , proc->cmd, &proc->pid, &proc->ppid, &proc->pgrp, &proc->sid
     , &proc->maj_flt, &proc->min_flt, proc->ttyname
