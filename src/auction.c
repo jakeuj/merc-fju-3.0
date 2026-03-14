@@ -452,7 +452,7 @@ void auction_update( void )
 
   PUSH_FUNCTION( "auction_update" );
 
-  if ( !auction_info->times < 0
+  if ( auction_info->times < 0
     || !auction_info->seller
     || !auction_info->obj )
   {

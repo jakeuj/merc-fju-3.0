@@ -45,7 +45,7 @@ SKILL_DATA * skill_isname( const char * name )
 
   for ( pSkill = skill_list; pSkill; pSkill = pSkill->next )
   {
-    if ( LOWER( pSkill->name[0] == LOWER( name[0] ) ) )
+    if ( LOWER( pSkill->name[0] ) == LOWER( name[0] ) )
     {
       str_cpy( ( pSource = source ), pSkill->name );
       str_cpy( ( pTarget = target ), name         );
