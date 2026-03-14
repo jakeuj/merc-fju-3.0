@@ -27,7 +27,7 @@
 ## References
 
 - 全局計畫：`plans/0001-world-map-area-rebuild.md`
-- 單區計畫：`plans/area/0002-loyang-outskirts.md`、`plans/area/0003-beiping-outskirts.md`
+- 單區計畫：`plans/area/0002-loyang-outskirts.md`、`plans/area/0003-beiping-outskirts.md`、`plans/area/0004-jingxiang-road.md`
 - 世界圖參考：`area/world_map.md`
 - ref 索引：`ref/Readme.md`
 
@@ -53,23 +53,24 @@
 
 ## Todo
 
+(目前無待處理 `todo`；先完成 `in_progress` 的 `jingxiang_road`。)
+
+## In Progress
+
 ### `jingxiang_road`
 
-- status: `todo`
-- delivery_gate: `spec_in_progress`
-- compliance_check: `pending plan creation`
-- plan: `not created yet`
+- status: `in_progress`
+- delivery_gate: `spec_ready_for_commit`
+- compliance_check: `compliant with current ref/Readme.md scope`
+- plan: `plans/area/0004-jingxiang-road.md`
 - parent_region: `future regional chain`
 - theme: `江湖風`
 - subtheme: `軍旅風`
 - world_links: `襄陽`, `新野`, `江夏`, `荊襄大道`
-- next_action: 在 `beiping_outskirts` 完成並可前進後建立單區計畫與 map.md spec 草案
-- next_prompt: `在 beiping_outskirts 完成並可前進後，建立 jingxiang_road 的單區計畫與 map.md spec 草案。`
-- notes: docs 依據足夠，但 repo 內尚未有直接母城 area，成本較高
+- next_action: 先 commit `jingxiang_road` 的單區 plan + map.md spec 里程碑；commit 後再決定是否進入 implementation（index/mob/obj/res/shp）
+- next_prompt: `先 commit 目前 jingxiang_road 的 spec 里程碑；commit 後若要落地 runtime 資產，再續做 jingxiang_road implementation。`
+- notes: `plans/area/0004-jingxiang-road.md` 與 `area/jingxiang_road/map.md` 第一版已建立，`mapmd-json` 可通過 scaffold validator
 
-## In Progress
-
-(目前無進行中的 area；下一個可執行候選為 `jingxiang_road`。)
 
 ## Done
 
@@ -86,14 +87,14 @@
 
 ## Current Recommended Next Step
 
-建立 `jingxiang_road` 的單區 plan 與 `map.md` spec 草案，作為下一個 spec-first 里程碑。
+先 commit 目前 `jingxiang_road` 的 spec 里程碑（plan + map.md）；commit 後再決定是否進 implementation。
 
 語意提醒：
 
-- 目前已無 `in_progress` area
-- 下一個 next actionable area 是 `jingxiang_road`
+- 目前的 next actionable area 仍是 `jingxiang_road`
+- 目前 `delivery_gate` 是 `spec_ready_for_commit`，本輪安全動作是先 commit，不跳下一區
 - `beiping_outskirts` 已完成並驗證，可由 `Done` 歷程回查
 
 建議可直接使用的 prompt：
 
-`在 beiping_outskirts 完成並可前進後，建立 jingxiang_road 的單區計畫與 map.md spec 草案。`
+`先 commit 目前 jingxiang_road 的 spec 里程碑；commit 後若要落地 runtime 資產，再續做 jingxiang_road implementation。`
