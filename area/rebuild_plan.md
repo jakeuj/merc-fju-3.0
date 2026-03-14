@@ -49,27 +49,27 @@
 
 ## Candidate Queue
 
-1. `dng_royal_tomb`
+1. `sec_catacomb_depths`
 
 ## Todo
 
-(目前無待處理 `todo`；先完成 `in_progress` 的 `dng_royal_tomb`。)
+(目前無待處理 `todo`；先完成 `in_progress` 的 `sec_catacomb_depths`。)
 
 ## In Progress
 
-### `dng_royal_tomb`
+### `sec_catacomb_depths`
 
 - status: `in_progress`
-- delivery_gate: `implementation_ready_for_commit`
+- delivery_gate: `spec_ready_for_commit`
 - compliance_check: `compliant with current ref/Readme.md scope`
-- plan: `plans/area/0008-dng-royal-tomb.md`
+- plan: `plans/area/0009-sec-catacomb-depths.md`
 - parent_region: `loyang underground chain`
-- theme: `探險遺跡`
-- subtheme: `古墓 / 機關`
-- world_links: `地下深渠`, `帝王古墓`, `更深墓室群`
-- next_action: 先 commit `dng_royal_tomb` 的 implementation 里程碑；commit 後將下一個 actionable area 推進到 `sec_catacomb_depths` spec，延續洛陽地下鏈
-- next_prompt: `先 commit 目前 dng_royal_tomb 的 implementation 里程碑；commit 後續做 sec_catacomb_depths spec。`
-- notes: `index/mob/obj/res/shp/roo` 已落地並掛入 `area/directory.lst`，`dng_sewer_depths/9470` 已正式接上 `9481`；`log/1017.log` smoke test 有成功訊號，更深墓室群 world link 仍只保留在 spec
+- theme: `仙俠`
+- subtheme: `地穴 / 靈異`
+- world_links: `帝王古墓`, `忘川地穴`, `更深異象裂谷`
+- next_action: 先 commit `sec_catacomb_depths` 的單區 plan + map.md spec 里程碑；commit 後再決定是否進入 implementation（index/mob/obj/res/shp）並正式接上 `dng_royal_tomb/9490`
+- next_prompt: `先 commit 目前 sec_catacomb_depths 的 spec 里程碑；commit 後若要落地 runtime 資產，再續做 sec_catacomb_depths implementation。`
+- notes: `plans/area/0009-sec-catacomb-depths.md` 與 `area/sec_catacomb_depths/map.md` 第一版已建立，`up` 邊界對應既有 `dng_royal_tomb/9490`，更深異象裂谷 world link 目前只保留在 spec
 
 
 ## Done
@@ -89,7 +89,7 @@
 - `plans/area/0007-dng-sewer-depths.md` 已建立
 - `dng_sewer_depths` 已完成第一輪 implementation、commit `3717a7d`，並達成可前進下一區狀態
 - `plans/area/0008-dng-royal-tomb.md` 已建立
-- `dng_royal_tomb` 已完成第一輪 implementation、待提交本輪里程碑
+- `dng_royal_tomb` 已完成第一輪 implementation、commit `30e2fa3`，並達成可前進下一區狀態
 
 ## Blocked
 
@@ -97,14 +97,14 @@
 
 ## Current Recommended Next Step
 
-先 commit 目前 `dng_royal_tomb` 的 implementation 里程碑；commit 後把下一個 actionable area 推進到 `sec_catacomb_depths` spec。
+先 commit 目前 `sec_catacomb_depths` 的 spec 里程碑；commit 後再決定是否落地 implementation，並把它正式接到 `dng_royal_tomb/9490`。
 
 語意提醒：
 
-- 目前的 next actionable area 仍是 `dng_royal_tomb`
-- 目前 `delivery_gate` 是 `implementation_ready_for_commit`，本輪安全動作是先 commit，不跳下一區
-- `dng_sewer_depths` 已完成第一輪 implementation 並提交，可由 `Done` 歷程回查
+- 目前的 next actionable area 仍是 `sec_catacomb_depths`
+- 目前 `delivery_gate` 是 `spec_ready_for_commit`，本輪安全動作是先 commit，不跳下一區
+- `dng_royal_tomb` 已完成第一輪 implementation 並提交，可由 `Done` 歷程回查
 
 建議可直接使用的 prompt：
 
-`先 commit 目前 dng_royal_tomb 的 implementation 里程碑；commit 後續做 sec_catacomb_depths spec。`
+`先 commit 目前 sec_catacomb_depths 的 spec 里程碑；commit 後若要落地 runtime 資產，再續做 sec_catacomb_depths implementation。`

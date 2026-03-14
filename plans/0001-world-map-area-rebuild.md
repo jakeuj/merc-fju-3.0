@@ -147,6 +147,7 @@
 5. `dng_loyang_sewer`
 6. `dng_sewer_depths`
 7. `dng_royal_tomb`
+8. `sec_catacomb_depths`
 
 ## Theme Allocation
 
@@ -180,6 +181,10 @@
   - theme: `探險遺跡`
   - subtheme: `古墓 / 機關`
   - 缺口角色：補深層水道下方的帝王古墓段，讓洛陽地下鏈能從水道系統自然轉入古墓與機關秘境
+- `sec_catacomb_depths`
+  - theme: `仙俠`
+  - subtheme: `地穴 / 靈異`
+  - 缺口角色：補帝王古墓底下的靈異地穴與異象核心，讓洛陽地下鏈在古墓之後再延伸出 secret zone
 
 後續新增候選 area 時，必須一併記錄：
 
