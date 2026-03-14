@@ -111,5 +111,5 @@ clean:
 	@echo "[1;33mCleaning all object files and merc[0m"
 	@rm -f *.o merc
 
-.c.o: merc.h
+%.o: %.c merc.h
 	$(CC) -c $(C_FLAGS) $<
