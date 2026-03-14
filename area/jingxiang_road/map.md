@@ -208,11 +208,10 @@
       "exits": [
         { "direction": "north", "to": 9306 }
       ],
-      "jobs": [
+      "keywords": [
         {
-          "keyword": "拉桿",
-          "function": "job_pull_bar",
-          "position": "POS_STANDING"
+          "keyword": "破布包",
+          "description": "破布包裡塞著幾張寫滿暗記的碎紙，提到哪幾隊押運最近改走偏路，像是專給熟門熟路的人看的提示。"
         }
       ]
     },

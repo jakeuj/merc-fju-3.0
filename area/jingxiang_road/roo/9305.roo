@@ -1,0 +1,32 @@
+Vnum            9305
+Name            西岔田道~
+Description
+官道往西收窄成田道，路邊可見臨時埋鍋與熄滅炭灰，像是鏢隊或行商夜宿後留下的痕跡。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        9304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        9306
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         新野~
+End
+
+#Enquire
+Keyword         西路~
+End
+
+End

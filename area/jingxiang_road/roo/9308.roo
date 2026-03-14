@@ -1,0 +1,24 @@
+Vnum            9308
+Name            南向長坡~
+Description
+地勢向南緩緩下沉，遠方可見河霧貼地飄移。這段路白天看似平和，入夜後卻常傳出劫道與追緝消息。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        9304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         江夏~
+End
+
+#Enquire
+Keyword         南路~
+End
+
+End

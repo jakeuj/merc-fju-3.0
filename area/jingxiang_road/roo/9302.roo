@@ -1,0 +1,39 @@
+Vnum            9302
+Name            官道巡檢亭~
+Description
+木亭內掛著點名牌與輪值簿冊，幾名巡檢兵正在核對來往旅人的行牒。氣氛不算緊張，卻讓人不敢多停。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        9301
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         行牒~
+Description
+巡檢兵要求旅人先出示行牒，再詢問來路與去向。
+~
+End
+
+#Enquire
+Keyword         巡檢~
+End
+
+#Enquire
+Keyword         官道~
+End
+
+End

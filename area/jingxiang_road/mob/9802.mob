@@ -1,0 +1,32 @@
+Vnum            9802
+Name            relay post clerk~
+ShortDesc       驛館帳房~
+Description
+一名穿著深色短袍的帳房靠著木桶與草料堆，手上總拿著半濕的帳冊，
+嘴裡還不時低聲核對驛馬、乾糧與油燈的數目。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       80
+Level           20
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             13
+Wis             12
+Dex             10
+Con             11
+Hp              1400
+Mana            120
+Move            100
+Class           0
+Gold            100
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

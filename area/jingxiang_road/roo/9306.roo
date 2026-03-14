@@ -1,0 +1,24 @@
+Vnum            9306
+Name            押運土道~
+Description
+這段土道比主路更顛簸，卻能避開官道上最顯眼的盤查點。幾道新鮮車痕往西北斜去，顯示近來押運頻繁。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        9305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

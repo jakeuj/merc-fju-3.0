@@ -1,0 +1,14 @@
+Vnum            9851
+Name            post ration packet~
+ShortDesc       驛路乾糧包(ration packet)~
+Description
+一包扎得緊實的驛路乾糧包(ration packet)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           18
+Value           14 24 4 0
+Weight          1
+Cost            60
+End

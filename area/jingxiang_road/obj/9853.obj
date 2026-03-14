@@ -1,0 +1,15 @@
+Vnum            9853
+Name            relay hand lantern~
+ShortDesc       驛路手提燈(lantern)~
+Description
+一盞還殘留油味的驛路手提燈(lantern)被擱在地上。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+WearLoc         ITEM_WEAR_LIGHT
+Takeable        Yes
+Level           19
+Value3          18
+Weight          1
+Cost            80
+End

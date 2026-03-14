@@ -1,0 +1,59 @@
+Vnum            9304
+Name            分岔馬樁~
+Description
+路心插著多根舊馬樁，旁邊懸著簡易木牌，標記南往江夏、西折新野。押鏢人常在此分隊，避免整支隊伍走同一路線。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        9303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9308
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        9305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9309
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         木牌~
+Description
+木牌上粗筆寫著「南江夏、西新野」，還有人另外刻了避盜小徑的暗記。
+~
+End
+
+#Enquire
+Keyword         江夏~
+End
+
+#Enquire
+Keyword         新野~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

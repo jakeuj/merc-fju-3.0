@@ -1,0 +1,39 @@
+Vnum            9309
+Name            驛館後院~
+Description
+後院堆著草料與木桶，牆角有一口常年半掩的地窖門。驛卒對此總是語焉不詳，只說別在深夜下去。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        9304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       ENTER
+ExitVnum        9310
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         地窖門~
+Description
+厚木門板潮得發黑，門環上纏著新換的麻繩，像是近期才被頻繁開關。
+~
+End
+
+#Enquire
+Keyword         驛館~
+End
+
+#Enquire
+Keyword         地窖~
+End
+
+End

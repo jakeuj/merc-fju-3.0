@@ -60,16 +60,16 @@
 ### `jingxiang_road`
 
 - status: `in_progress`
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 - compliance_check: `compliant with current ref/Readme.md scope`
 - plan: `plans/area/0004-jingxiang-road.md`
 - parent_region: `future regional chain`
 - theme: `江湖風`
 - subtheme: `軍旅風`
 - world_links: `襄陽`, `新野`, `江夏`, `荊襄大道`
-- next_action: 先 commit `jingxiang_road` 的單區 plan + map.md spec 里程碑；commit 後再決定是否進入 implementation（index/mob/obj/res/shp）
-- next_prompt: `先 commit 目前 jingxiang_road 的 spec 里程碑；commit 後若要落地 runtime 資產，再續做 jingxiang_road implementation。`
-- notes: `plans/area/0004-jingxiang-road.md` 與 `area/jingxiang_road/map.md` 第一版已建立，`mapmd-json` 可通過 scaffold validator
+- next_action: 先 commit `jingxiang_road` 的 implementation 里程碑；目前 `index/mob/obj/res/shp/roo` 已落地、`area/directory.lst` 已掛入，之後再視荊州母城 runtime 狀態補 boundary room 雙向連結
+- next_prompt: `先 commit 目前 jingxiang_road 的 implementation 里程碑；commit 後若要續做，優先評估襄陽 / 新野 / 江夏 的 runtime area 是否已可承接 world link。`
+- notes: `jingxiang_road` 已通過 scaffold validator、macOS native build、Linux Makefile.lin build 與 `startup.bash` smoke test；`log/1013.log` 含成功訊號，外部世界連線因母城 area 尚未存在而保留在 spec
 
 
 ## Done
@@ -87,14 +87,14 @@
 
 ## Current Recommended Next Step
 
-先 commit 目前 `jingxiang_road` 的 spec 里程碑（plan + map.md）；commit 後再決定是否進 implementation。
+先 commit 目前 `jingxiang_road` 的 implementation 里程碑；commit 後再視荊州母城 runtime 狀態決定是否補 world link 邊界整合。
 
 語意提醒：
 
 - 目前的 next actionable area 仍是 `jingxiang_road`
-- 目前 `delivery_gate` 是 `spec_ready_for_commit`，本輪安全動作是先 commit，不跳下一區
+- 目前 `delivery_gate` 是 `implementation_ready_for_commit`，本輪安全動作是先 commit，不跳下一區
 - `beiping_outskirts` 已完成並驗證，可由 `Done` 歷程回查
 
 建議可直接使用的 prompt：
 
-`先 commit 目前 jingxiang_road 的 spec 里程碑；commit 後若要落地 runtime 資產，再續做 jingxiang_road implementation。`
+`先 commit 目前 jingxiang_road 的 implementation 里程碑；commit 後若要續做，優先評估襄陽 / 新野 / 江夏 的 runtime area 是否已可承接 world link。`

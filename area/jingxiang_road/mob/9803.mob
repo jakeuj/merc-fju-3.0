@@ -1,0 +1,33 @@
+Vnum            9803
+Name            roadside rumor broker~
+ShortDesc       蘆棚掮客~
+Description
+這名掮客縮在蘆棚陰影下，像是在等人又像是在躲人。只要誰多看他兩
+眼，他便會本能地把手按到腰間短刀，像是不願讓人知道自己剛換到什
+麼消息。
+~
+StayArea        Yes
+Wimpy           Yes
+AlignEvil       Yes
+Alignment       -180
+Level           24
+Hitroll         5
+Protect         -2
+Damroll         4
+Str             13
+Int             11
+Wis             10
+Dex             14
+Con             12
+Hp              2600
+Mana            80
+Move            130
+Class           CLASS_THIEF
+Gold            180
+Multipile       100
+AttackRatio     110
+DodgeRatio      108
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

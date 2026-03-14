@@ -1,0 +1,31 @@
+Vnum            9801
+Name            jingxiang road patrol corporal~
+ShortDesc       官道巡檢伍長~
+Description
+這名伍長披著塵灰未盡的皮甲，手邊夾著一卷盤查簿冊，眼神一刻也沒
+離開南北往來的行旅。看得出他比起攔人，更在意誰刻意避開他的視線。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       140
+Level           22
+Hitroll         4
+Protect         -1
+Damroll         3
+Str             14
+Int             11
+Wis             12
+Dex             12
+Con             13
+Hp              2200
+Mana            120
+Move            110
+Class           CLASS_THIEF
+Gold            120
+Multipile       100
+AttackRatio     105
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

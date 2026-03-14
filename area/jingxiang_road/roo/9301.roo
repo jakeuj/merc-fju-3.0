@@ -1,0 +1,24 @@
+Vnum            9301
+Name            北向路碑~
+Description
+一面刻著荊襄里程的石碑立在道旁，碑角還貼著剛換上的巡檢告示。北面道路筆直，馬蹄印密得幾乎重疊。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        9302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         襄陽~
+End
+
+#Enquire
+Keyword         北路~
+End
+
+End

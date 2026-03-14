@@ -1,0 +1,24 @@
+Vnum            9303
+Name            荊襄主道中段~
+Description
+寬闊官道在此略微下沉，兩側是半乾的車轍與被踏平的草埂。南北往來的商隊在這段最常交錯，消息也傳得最快。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        9302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -1,0 +1,23 @@
+Vnum            9307
+Name            蘆棚歇腳點~
+Description
+幾座臨時蘆棚圍成半圈，棚下留有舊水缸與破布包。看似平常歇腳點，卻常有人在夜裡悄悄交換情報。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        9306
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         破布包~
+Description
+破布包裡塞著幾張寫滿暗記的碎紙，提到哪幾隊押運最近改走偏路，像是專給熟門熟路的人看的提示。
+~
+End
+
+End

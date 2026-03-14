@@ -1,0 +1,24 @@
+Vnum            9310
+Name            石階地窖~
+Description
+地窖內潮氣濃重，石階向下延伸到更暗的甬道口。牆面刻著模糊路記，似乎指向不在官圖上的秘密路線。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       OUT
+ExitVnum        9309
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         出口~
+End
+
+#Enquire
+Keyword         暗道~
+End
+
+End

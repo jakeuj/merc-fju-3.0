@@ -1,0 +1,16 @@
+Vnum            9854
+Name            escort short blade~
+ShortDesc       押運短刀(short blade)~
+Description
+一把刀背磨得發亮的押運短刀(short blade)落在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           22
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            220
+Exp             10
+End
