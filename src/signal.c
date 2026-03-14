@@ -46,8 +46,14 @@ void   checkprof        args( ( int ) );
 #define         MAX_PROF        200
 #define         MAX_PROF_COUNT  500
 
-char     ProfFunction    [26][MAX_PROF][50];
-int      ProfCount       [26][MAX_PROF];
+/*
+ * On macOS, a very large tentative definition lands in the Mach-O common
+ * section and can trigger a segment alignment warning at link time.
+ * Make the profiler tables explicitly zero-initialized so they are emitted
+ * as normal BSS instead.
+ */
+char     ProfFunction    [26][MAX_PROF][50] = {{{0}}};
+int      ProfCount       [26][MAX_PROF] = {{0}};
 
 void signal_setup( void )
 {
