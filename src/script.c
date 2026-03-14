@@ -123,7 +123,9 @@ char * find_else( const char * str )
         mudlog( LOG_DEBUG, "find_else: %d too more else. %d %d %s"
           , mob_vnum, depth , count, str );
 
-        for ( ; *str; str++ );
+        for ( ; *str; str++ )
+        {
+        }
         RETURN( ( char * ) str );
       }
 

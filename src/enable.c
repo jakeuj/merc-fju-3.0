@@ -373,7 +373,9 @@ size_t enable_count( CHAR_DATA * ch )
   size_t        count = 0 ;
 
   PUSH_FUNCTION( "enable_count" );
-  for ( enable = ch->enable; enable; enable = enable->next, count++);
+  for ( enable = ch->enable; enable; enable = enable->next, count++ )
+  {
+  }
   RETURN( count );
 }
 

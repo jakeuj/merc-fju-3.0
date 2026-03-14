@@ -247,7 +247,7 @@ char * format_string( const char * pString, int len )
   /* 空字串 */
   if ( !pString || !*pString )
   {
-    for ( loop = 0; len > 0; loop++ ) buf[loop] = ' ';
+    for ( loop = 0; loop < len; loop++ ) buf[loop] = ' ';
     buf[loop] = '\x0';
     RETURN( buf );
   }

@@ -219,7 +219,9 @@ size_t str_len( const char * argument )
 
   PUSH_FUNCTION( "str_len" );
 
-  for ( len = 0; *argument; argument++ , len++ );
+  for ( len = 0; *argument; argument++ , len++ )
+  {
+  }
 
   RETURN( len );
 }

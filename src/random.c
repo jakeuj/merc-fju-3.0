@@ -36,7 +36,7 @@ int     number_mm       args( ( void ) );
 static  int     rgiState[2+55];
 
 /* 啟始化亂數表 */
-void init_mm( )
+void init_mm( void )
 {
   int * piState;
   int   iState;
@@ -84,7 +84,9 @@ int number_door( void )
   int door;
 
   PUSH_FUNCTION( "number_door" );
-  while ( ( door = number_mm() & ( 8-1 ) ) > 5 ) ;
+  while ( ( door = number_mm() & ( 8-1 ) ) > 5 )
+  {
+  }
   RETURN( door );
 }
 
@@ -116,8 +118,12 @@ int number_range( int from, int to )
   if ( from > to ) SWAP( from , to );
   if ( ( to = to - from + 1 ) <= 1 ) RETURN( from );
 
-  for ( power = 2; power < to; power <<= 1 );
-  while ( ( number = number_mm() & ( power - 1 ) ) >= to );
+  for ( power = 2; power < to; power <<= 1 )
+  {
+  }
+  while ( ( number = number_mm() & ( power - 1 ) ) >= to )
+  {
+  }
   RETURN( from + number );
 }
 
@@ -127,7 +133,9 @@ int number_percent( void )
   int percent;
 
   PUSH_FUNCTION( "number_percent" );
-  while ( ( percent = number_mm() & ( 128 - 1 ) ) > 99 );
+  while ( ( percent = number_mm() & ( 128 - 1 ) ) > 99 )
+  {
+  }
   RETURN( 1 + percent );
 }
 
