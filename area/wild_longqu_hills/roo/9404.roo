@@ -1,0 +1,39 @@
+Vnum            9404
+Name            斷碑荒坡~
+Description
+荒坡中央立著半截殘碑，碑面文字早被風沙磨平，只剩幾道像山川又像符記的刻痕。站在這裡往東北看去，丘陵線像一道又一道掩住視線的波浪。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        9403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         斷碑~
+Description
+斷碑底部殘留著不屬於官府里程碑的紋路，看起來更像某種祭祀或鎮壓用的遺物。
+~
+End
+
+#Enquire
+Keyword         石碑~
+End
+
+#Enquire
+Keyword         前路~
+End
+
+End

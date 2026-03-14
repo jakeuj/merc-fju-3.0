@@ -1,0 +1,14 @@
+Vnum            9952
+Name            spring water skin~
+ShortDesc       山泉水囊(water skin)~
+Description
+一只裝著山泉的水囊(water skin)掛在岩角旁。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           8
+Value           10 10 LIQ_WATER
+Weight          2
+Cost            45
+End

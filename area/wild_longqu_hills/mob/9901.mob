@@ -1,0 +1,33 @@
+Vnum            9901
+Name            hill trail hunter~
+ShortDesc       山道獵戶~
+Description
+這名獵戶背著舊弓與草繩，目光總在山路、石縫與獸跡之間來回游移。
+他不像官道上的商販那麼健談，卻顯然比多數旅人更知道哪一段坡最近
+不太平靜。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       70
+Level           10
+Hitroll         1
+Protect         0
+Damroll         0
+Str             11
+Int             11
+Wis             12
+Dex             12
+Con             11
+Hp              1100
+Mana            100
+Move            120
+Class           0
+Gold            70
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

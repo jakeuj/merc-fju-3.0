@@ -1,0 +1,32 @@
+Vnum            9402
+Name            風蝕坡道~
+Description
+坡道兩側裸露著被風雨削薄的黃土層，腳下碎石一踩就滑。沿坡往上時，城郊的喧聲被風聲取代，只剩遠處偶爾傳來鳥鳴與獸類奔竄的回響。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        9401
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         山路~
+End
+
+#Enquire
+Keyword         入口~
+End
+
+End

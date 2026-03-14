@@ -1,0 +1,31 @@
+Vnum            9902
+Name            ridge watch scout~
+ShortDesc       巡脊斥候~
+Description
+這名斥候踩著高脊邊的碎石不斷換位，像是在同時注意山道來人與低谷
+裡的動靜。能被派到這裡的人，多半不只會打鬥，也懂得讀地勢。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       120
+Level           14
+Hitroll         3
+Protect         -1
+Damroll         2
+Str             13
+Int             10
+Wis             11
+Dex             14
+Con             12
+Hp              1700
+Mana            100
+Move            130
+Class           CLASS_THIEF
+Gold            100
+Multipile       100
+AttackRatio     105
+DodgeRatio      108
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

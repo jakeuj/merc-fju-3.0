@@ -1,0 +1,47 @@
+Vnum            9408
+Name            裂縫前台~
+Description
+斷裂岩層在此向內凹出一片避風的平台，岩壁邊緣隱約可見向下延伸的窄口裂縫。地面散著乾掉的草繩與碎裂木樁，像曾有人試圖封住下方的入口。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        9404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9409
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        9410
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         裂縫~
+Description
+裂縫邊緣帶著潮氣，底下不時送上冷風，像有一條更深的石道正等著人下去。
+~
+End
+
+#Enquire
+Keyword         裂縫~
+End
+
+#Enquire
+Keyword         下方~
+End
+
+End

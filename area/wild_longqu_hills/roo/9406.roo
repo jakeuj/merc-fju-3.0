@@ -1,0 +1,36 @@
+Vnum            9406
+Name            獵戶歇腳岩~
+Description
+一塊向外突出的平岩剛好能避風，岩下擱著熄掉的火盆與兩只半空的水囊。熟悉山路的人多半會在這裡歇腳、交換哪段坡最近不太安穩的消息。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        9405
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9407
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         獵戶~
+End
+
+#Enquire
+Keyword         山路~
+End
+
+#Enquire
+Keyword         失蹤者~
+End
+
+End

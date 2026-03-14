@@ -1,0 +1,33 @@
+Vnum            9903
+Name            fissure skulker~
+ShortDesc       裂縫伏匪~
+Description
+這名伏匪蜷在裂縫前的亂石旁，像是把自己的呼吸都壓進陰影裡。他顯
+然熟悉哪裡能躲開視線，也知道哪些倒楣旅人會被祭壇與石碑吸引到這
+一帶。
+~
+StayArea        Yes
+Wimpy           Yes
+AlignEvil       Yes
+Alignment       -180
+Level           16
+Hitroll         4
+Protect         -2
+Damroll         3
+Str             13
+Int             10
+Wis             9
+Dex             14
+Con             12
+Hp              2000
+Mana            80
+Move            130
+Class           CLASS_THIEF
+Gold            140
+Multipile       100
+AttackRatio     108
+DodgeRatio      108
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

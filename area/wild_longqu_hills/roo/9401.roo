@@ -1,0 +1,32 @@
+Vnum            9401
+Name            丘陵東口~
+Description
+官道留下的車轍在這裡徹底碎成亂石與黃土坡，向西仍能隱約望見洛陽東郊巡路的旗影，向東則只剩連綿起伏的丘脊與被風磨白的石面。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        7510
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         洛陽~
+End
+
+#Enquire
+Keyword         回路~
+End
+
+End

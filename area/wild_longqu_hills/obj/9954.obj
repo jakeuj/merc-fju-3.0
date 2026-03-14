@@ -1,0 +1,16 @@
+Vnum            9954
+Name            fissure short blade~
+ShortDesc       裂縫短刃(short blade)~
+Description
+一把刀尖略帶缺口的裂縫短刃(short blade)掉在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           12
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            95
+Exp             10
+End

@@ -1,0 +1,24 @@
+Vnum            9407
+Name            龍渠高脊~
+Description
+高脊一側可遠望洛陽平野，另一側則是層層丘壑和被霧氣吞掉的低谷。站在此處，已幾乎看不見官道秩序留下的任何痕跡，只有地形本身在決定你能走到哪裡。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        9406
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9409
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

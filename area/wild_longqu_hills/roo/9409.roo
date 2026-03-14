@@ -1,0 +1,39 @@
+Vnum            9409
+Name            埋石祭壇~
+Description
+幾塊被泥沙半掩的石塊圍出簡陋圓形，中間殘留灰燼與風化符痕。它不像官府設施，也不像山民隨手堆起的記號，更像早被遺忘的山祭遺址。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       NORTH
+ExitVnum        9408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        9407
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         祭壇~
+Description
+祭壇中央只有一圈淡得快看不出的刻痕，像某種本該鎮住地底之物的舊禁制。
+~
+End
+
+#Enquire
+Keyword         祭壇~
+End
+
+#Enquire
+Keyword         遺跡~
+End
+
+End

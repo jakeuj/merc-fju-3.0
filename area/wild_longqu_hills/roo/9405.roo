@@ -1,0 +1,31 @@
+Vnum            9405
+Name            野獵土徑~
+Description
+這條土徑比主路狹窄許多，沿途可見獸蹄、箭尾與粗略搭起的陷索。它不像正規道路，卻顯然有人長期往返其間。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        9403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9406
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         獸跡~
+Description
+泥面上的獸跡深淺不一，有些像山麂，有些卻大得不太尋常，讓人分不清是野獸還是被什麼拖行過。
+~
+End
+
+End

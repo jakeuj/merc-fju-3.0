@@ -1,0 +1,51 @@
+Vnum            9403
+Name            岔石路~
+Description
+幾塊巨大亂石把山路分成數股細徑，石縫間還看得見舊時車輪硬壓出的痕跡。若不熟地勢，很容易在這裡把正路與野徑弄混。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        9402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9405
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         石縫~
+Description
+石縫裡卡著幾片破布與乾掉的草繩，像是有人曾在此臨時做過方向記號。
+~
+End
+
+#Enquire
+Keyword         地標~
+End
+
+#Enquire
+Keyword         岔路~
+End
+
+#Enquire
+Keyword         山路~
+End
+
+End

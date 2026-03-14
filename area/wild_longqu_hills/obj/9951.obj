@@ -1,0 +1,14 @@
+Vnum            9951
+Name            smoked venison strip~
+ShortDesc       風乾鹿肉條(venison strip)~
+Description
+一束風乾鹿肉條(venison strip)被放在這裡。
+~
+Unit            束~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           8
+Value           12 18 4 0
+Weight          1
+Cost            40
+End

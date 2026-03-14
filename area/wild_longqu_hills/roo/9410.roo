@@ -1,0 +1,24 @@
+Vnum            9410
+Name            裂縫石階~
+Description
+石階緊貼岩壁向下盤旋，腳邊積著濕冷泥水與碎裂石片。再往深處看去，只剩一片吞光的黑暗，像是丘陵底下另有不屬於地表的世界。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        9408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         出口~
+End
+
+#Enquire
+Keyword         地底~
+End
+
+End

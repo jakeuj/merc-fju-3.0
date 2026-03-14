@@ -60,16 +60,16 @@
 ### `wild_longqu_hills`
 
 - status: `in_progress`
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 - compliance_check: `compliant with current ref/Readme.md scope`
 - plan: `plans/area/0005-wild-longqu-hills.md`
 - parent_region: `loyang outer chain`
 - theme: `探險遺跡`
 - subtheme: `仙俠風`
 - world_links: `洛陽東郊`, `龍渠丘陵`, `地下遺跡`
-- next_action: 先 commit `wild_longqu_hills` 的單區 plan + map.md spec 里程碑；commit 後再決定是否進入 implementation（index/mob/obj/res/shp）並正式接上 `loyang_outskirts/7510`
-- next_prompt: `先 commit 目前 wild_longqu_hills 的 spec 里程碑；commit 後若要落地 runtime 資產，再續做 wild_longqu_hills implementation。`
-- notes: `plans/area/0005-wild-longqu-hills.md` 與 `area/wild_longqu_hills/map.md` 第一版已建立，`mapmd-json` 已通過 scaffold validator；`west` 邊界對應既有 `loyang_outskirts/7510`
+- next_action: 先 commit `wild_longqu_hills` 的 implementation 里程碑；目前 `index/mob/obj/res/shp/roo` 已落地、`area/directory.lst` 已掛入、`7510 <-> 9401` 邊界已接通，之後再決定是否往洛陽地下水區或更外圈野外繼續擴張
+- next_prompt: `先 commit 目前 wild_longqu_hills 的 implementation 里程碑；commit 後若要續做，優先補 loyang_outskirts 另一條地下支線：洛陽地下水區。`
+- notes: `wild_longqu_hills` 已通過 scaffold validator、macOS native build、Linux Makefile.lin build 與 `startup.bash` smoke test；`log/1014.log` 含成功訊號，`9410` 以下 deeper underground world link 仍保留在 spec
 
 
 ## Done
@@ -89,14 +89,14 @@
 
 ## Current Recommended Next Step
 
-先 commit 目前 `wild_longqu_hills` 的 spec 里程碑；commit 後再決定是否落地 implementation，並把它正式接到 `loyang_outskirts/7510`。
+先 commit 目前 `wild_longqu_hills` 的 implementation 里程碑；commit 後若要延續洛陽鏈，優先規劃 `洛陽地下水區`。
 
 語意提醒：
 
 - 目前的 next actionable area 仍是 `wild_longqu_hills`
-- 目前 `delivery_gate` 是 `spec_ready_for_commit`，本輪安全動作是先 commit，不跳下一區
+- 目前 `delivery_gate` 是 `implementation_ready_for_commit`，本輪安全動作是先 commit，不跳下一區
 - `jingxiang_road` 已完成第一輪 implementation 並提交，可由 `Done` 歷程回查
 
 建議可直接使用的 prompt：
 
-`先 commit 目前 wild_longqu_hills 的 spec 里程碑；commit 後若要落地 runtime 資產，再續做 wild_longqu_hills implementation。`
+`先 commit 目前 wild_longqu_hills 的 implementation 里程碑；commit 後若要續做，優先補 loyang_outskirts 另一條地下支線：洛陽地下水區。`

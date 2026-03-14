@@ -1,0 +1,15 @@
+Vnum            9953
+Name            hunter oil lamp~
+ShortDesc       獵戶油燈(oil lamp)~
+Description
+一盞獵戶油燈(oil lamp)被擱在石面上。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+WearLoc         ITEM_WEAR_LIGHT
+Takeable        Yes
+Level           9
+Value3          15
+Weight          1
+Cost            55
+End
