@@ -489,7 +489,6 @@ void damage( CHAR_DATA * ch, CHAR_DATA * victim, int dam, int dt, int situs )
 
     else if ( victim->pIndexData && victim->pIndexData->deadmsg )
     {
-      char   statement[MAX_STRING_LENGTH];
       char   name1[MAX_STRING_LENGTH];
       char   name2[MAX_STRING_LENGTH];
       char * pString;
@@ -500,10 +499,31 @@ void damage( CHAR_DATA * ch, CHAR_DATA * victim, int dam, int dt, int situs )
       str_cpy( name1, mob_name( NULL, victim ) );
       str_cpy( name2, mob_name( NULL, ch     ) );
 
-      sprintf( statement, "%s臨死前使出最後的真氣對%s喊出﹕\n\r%s\e[0m\n\r"
-        , name1, name2, pString );
+      {
+        int needed;
 
-      send_to_all_char( statement );
+        needed = snprintf( NULL, 0, "%s臨死前使出最後的真氣對%s喊出﹕\n\r%s\e[0m\n\r"
+          , name1, name2, pString );
+
+        if ( needed < 0 )
+        {
+          mudlog( LOG_ERR, "damage: 無法建立死前訊息." );
+        }
+
+        else
+        {
+          char * dynamic_statement;
+
+          dynamic_statement = alloc_string( needed + 1 );
+
+          snprintf( dynamic_statement, needed + 1
+            , "%s臨死前使出最後的真氣對%s喊出﹕\n\r%s\e[0m\n\r"
+            , name1, name2, pString );
+
+          send_to_all_char( dynamic_statement );
+          free_string( dynamic_statement );
+        }
+      }
     }
 
     Reborn = raw_kill( ch , victim, TRUE );

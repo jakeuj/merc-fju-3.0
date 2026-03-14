@@ -474,7 +474,12 @@ int main( int argc, char ** argv )
   signal_setup();
 
   /* 取得目前目錄 */
-  getcwd( CurrentDir, sizeof( CurrentDir ) - 1 );
+  if ( !getcwd( CurrentDir, sizeof( CurrentDir ) - 1 ) )
+  {
+    mudlog( LOG_INFO, strerror( errno ) );
+    mudlog( LOG_ERR, "無法取得目前目錄." );
+    CurrentDir[0] = '\x0';
+  }
 
   /* 啟始化時間 */
   gettimeofday( &now_time, NULL );
@@ -683,7 +688,16 @@ void game_loop( void )
   while ( !merc_down )
   {
     /* 保留一個檔案代碼以供使用 */
-    if ( !fpReserve ) fopen( null_file, "r" );
+    if ( !fpReserve )
+    {
+      fpReserve = fopen( null_file, "r" );
+
+      if ( !fpReserve )
+      {
+        mudlog( LOG_INFO, strerror( errno ) );
+        mudlog( LOG_ERR, "game_loop: 無法保留檔案代碼." );
+      }
+    }
     clear_reload_status();
 
     /* 設定時間 */

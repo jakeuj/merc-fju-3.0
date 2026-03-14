@@ -180,14 +180,36 @@ FUNCTION( do_bounty )
         pMob->gold   = 0;
 
         chinese_number( pBounty->value, buf1 );
-        sprintf( buf, "%s﹐凡是可以除掉%s\e[1;33m的人﹐都可以領賞%s%s%s﹗"
-          , pBounty->msg
-          , mob_name( NULL, pMob )
-          , bounty_type( pBounty->type )
-          , buf1
-          , bounty_unit( pBounty->type ) );
+        {
+          int needed;
+          char * bulletin;
 
-        talk_channel_2( buf, CHANNEL_BULLETIN, "懸賞" );
+          needed = snprintf( NULL, 0, "%s﹐凡是可以除掉%s\e[1;33m的人﹐都可以領賞%s%s%s﹗"
+            , pBounty->msg
+            , mob_name( NULL, pMob )
+            , bounty_type( pBounty->type )
+            , buf1
+            , bounty_unit( pBounty->type ) );
+
+          if ( needed < 0 )
+          {
+            mudlog( LOG_ERR, "do_bounty: 無法建立懸賞公告." );
+            RETURN_NULL();
+          }
+
+          bulletin = alloc_string( needed + 1 );
+
+          snprintf( bulletin, needed + 1
+            , "%s﹐凡是可以除掉%s\e[1;33m的人﹐都可以領賞%s%s%s﹗"
+            , pBounty->msg
+            , mob_name( NULL, pMob )
+            , bounty_type( pBounty->type )
+            , buf1
+            , bounty_unit( pBounty->type ) );
+
+          talk_channel_2( bulletin, CHANNEL_BULLETIN, "懸賞" );
+          free_string( bulletin );
+        }
 
         send_to_char( "你手動觸發這次的懸賞事件﹗\n\r", ch );
         RETURN_NULL();
@@ -306,7 +328,6 @@ void bounty_update( void )
   BOUNTY_DATA     * pBounty;
   ROOM_INDEX_DATA * pRoom;
   CHAR_DATA       * pMob;
-  char              buf[MAX_STRING_LENGTH];
   char              buf1[MAX_STRING_LENGTH];
 
   PUSH_FUNCTION( "bounty_update" );
@@ -336,14 +357,36 @@ void bounty_update( void )
     pMob->gold   = 0;
 
     chinese_number( pBounty->value, buf1 );
-    sprintf( buf, "%s﹐凡是可以除掉%s\e[1;33m的人﹐都可以領賞%s%s%s﹗"
-      , pBounty->msg
-      , mob_name( NULL, pMob )
-      , bounty_type( pBounty->type )
-      , buf1
-      , bounty_unit( pBounty->type ) );
+    {
+      int needed;
+      char * bulletin;
 
-    talk_channel_2( buf, CHANNEL_BULLETIN, "懸賞" );
+      needed = snprintf( NULL, 0, "%s﹐凡是可以除掉%s\e[1;33m的人﹐都可以領賞%s%s%s﹗"
+        , pBounty->msg
+        , mob_name( NULL, pMob )
+        , bounty_type( pBounty->type )
+        , buf1
+        , bounty_unit( pBounty->type ) );
+
+      if ( needed < 0 )
+      {
+        mudlog( LOG_ERR, "bounty_update: 無法建立懸賞公告." );
+        RETURN_NULL();
+      }
+
+      bulletin = alloc_string( needed + 1 );
+
+      snprintf( bulletin, needed + 1
+        , "%s﹐凡是可以除掉%s\e[1;33m的人﹐都可以領賞%s%s%s﹗"
+        , pBounty->msg
+        , mob_name( NULL, pMob )
+        , bounty_type( pBounty->type )
+        , buf1
+        , bounty_unit( pBounty->type ) );
+
+      talk_channel_2( bulletin, CHANNEL_BULLETIN, "懸賞" );
+      free_string( bulletin );
+    }
   }
 
   if ( NowBounty <= 0 ) RETURN_NULL();
@@ -376,7 +419,6 @@ void bounty_update( void )
 void check_bounty( CHAR_DATA * ch, CHAR_DATA * victim )
 {
   BOUNTY_DATA * pBounty;
-  char          buf[MAX_STRING_LENGTH];
   char          buf1[MAX_STRING_LENGTH];
 
   PUSH_FUNCTION( "check_bounty" );
@@ -426,16 +468,39 @@ void check_bounty( CHAR_DATA * ch, CHAR_DATA * victim )
   }
 
   chinese_number( pBounty->value, buf1 );
-  sprintf( buf, "因為%s\e[1;33m(%s)除掉了懸賞中的%s﹐"
-    "所以特地獎賞%s%s%s﹗\e[0m"
-    , ch->cname
-    , ch->name
-    , mob_name( NULL, victim )
-    , bounty_type( pBounty->type )
-    , buf1
-    , bounty_unit( pBounty->type ) );
+  {
+    int needed;
+    char * bulletin;
 
-  talk_channel_2( buf, CHANNEL_BULLETIN, "公告" );
+    needed = snprintf( NULL, 0, "因為%s\e[1;33m(%s)除掉了懸賞中的%s﹐"
+      "所以特地獎賞%s%s%s﹗\e[0m"
+      , ch->cname
+      , ch->name
+      , mob_name( NULL, victim )
+      , bounty_type( pBounty->type )
+      , buf1
+      , bounty_unit( pBounty->type ) );
+
+    if ( needed < 0 )
+    {
+      mudlog( LOG_ERR, "check_bounty: 無法建立公告字串." );
+      RETURN_NULL();
+    }
+
+    bulletin = alloc_string( needed + 1 );
+
+    snprintf( bulletin, needed + 1, "因為%s\e[1;33m(%s)除掉了懸賞中的%s﹐"
+      "所以特地獎賞%s%s%s﹗\e[0m"
+      , ch->cname
+      , ch->name
+      , mob_name( NULL, victim )
+      , bounty_type( pBounty->type )
+      , buf1
+      , bounty_unit( pBounty->type ) );
+
+    talk_channel_2( bulletin, CHANNEL_BULLETIN, "公告" );
+    free_string( bulletin );
+  }
 
   print_to_char( ch
     , "因為你除掉了懸賞中的%s﹐所以特地獎賞你%s%s%s﹗\e[0m\n\r"
