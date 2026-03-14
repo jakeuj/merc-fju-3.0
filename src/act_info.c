@@ -1538,7 +1538,6 @@ FUNCTION( do_score )
 FUNCTION( do_time )
 {
   char             arg[MAX_INPUT_LENGTH];
-  struct timeval   sTime;
   CHAR_DATA      * victim;
   CHAR_DATA      * people;
   int              iTime;
@@ -1567,9 +1566,6 @@ FUNCTION( do_time )
 
     if ( shutdown_time > 0 ) send_to_buffer( "%s\e[0m關閉時間是%s。\n\r"
       , mud_name , time_format( shutdown_time, "%r, %a-%d-%b-%y" ) );
-
-    sTime.tv_sec  = current_time - mud_boot_time;
-    sTime.tv_usec = 0;
 
     send_to_buffer( "%s\e[0m到目前為止已經正常運作了%s。\n\r"
       , mud_name, get_worktime_string() );
@@ -2761,7 +2757,6 @@ void set_title( CHAR_DATA * ch, char * title )
 FUNCTION( do_cname )
 {
   char buf[MAX_STRING_LENGTH];
-  char buf2[MAX_STRING_LENGTH];
 
   PUSH_FUNCTION( "do_cname" );
 
@@ -2813,18 +2808,35 @@ FUNCTION( do_cname )
   smash_point( buf );
   fix_color( buf );
 
-  sprintf( buf2, "%s從此改名換姓為%s\e[0m﹐這個消息很快就傳了開來﹗"
-    , mob_name( NULL, ch ), buf );
+  {
+    int needed;
+    char * message;
 
-  free_string( ch->cname );
+    needed = snprintf( NULL, 0, "%s從此改名換姓為%s\e[0m﹐這個消息很快就傳了開來﹗"
+      , mob_name( NULL, ch ), buf );
 
-  ch->cname = str_dup( buf );
-  ch->pcdata->rechristen--;
+    if ( needed < 0 )
+    {
+      mudlog( LOG_ERR, "do_cname: 無法建立改名字串." );
+      RETURN_NULL();
+    }
 
-  act( "你把你的中文名字改成$t﹐你還有$I次機會改中文名稱。"
-    , ch, ch->cname, &ch->pcdata->rechristen, TO_CHAR );
+    message = alloc_string( needed + 1 );
+    snprintf( message, needed + 1
+      , "%s從此改名換姓為%s\e[0m﹐這個消息很快就傳了開來﹗"
+      , mob_name( NULL, ch ), buf );
 
-  talk_channel_2( buf2, CHANNEL_BULLETIN, "快報" );
+    free_string( ch->cname );
+
+    ch->cname = str_dup( buf );
+    ch->pcdata->rechristen--;
+
+    act( "你把你的中文名字改成$t﹐你還有$I次機會改中文名稱。"
+      , ch, ch->cname, &ch->pcdata->rechristen, TO_CHAR );
+
+    talk_channel_2( message, CHANNEL_BULLETIN, "快報" );
+    free_string( message );
+  }
 
   RETURN_NULL();
 }
@@ -4096,7 +4108,8 @@ char * date_string( int iTime )
   {
     Status = TRUE;
     chinese_number( work_day, chinese );
-    sprintf( temp , "%s天" , chinese );
+    str_cpy( temp, chinese );
+    str_cat( temp, "天" );
     str_cat( buf, temp );
   }
 
@@ -4104,19 +4117,22 @@ char * date_string( int iTime )
   {
     Status = TRUE;
     chinese_number( work_hour, chinese );
-    sprintf( temp, "%s小時" , chinese );
+    str_cpy( temp, chinese );
+    str_cat( temp, "小時" );
     str_cat( buf, temp );
   }
 
   if ( work_minute || Status )
   {
     chinese_number( work_minute, chinese );
-    sprintf( temp, "%s分" , chinese );
+    str_cpy( temp, chinese );
+    str_cat( temp, "分" );
     str_cat( buf, temp );
   }
 
   chinese_number( work_second, chinese );
-  sprintf( temp, "%s秒" , chinese );
+  str_cpy( temp, chinese );
+  str_cat( temp, "秒" );
   str_cat( buf, temp );
 
   RETURN( buf );
