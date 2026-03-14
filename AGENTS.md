@@ -18,6 +18,7 @@ This repository is a Merc MUD codebase with both legacy runtime/build paths and 
   - `.agents/skills/merc-area-builder/SKILL.md`
 - If the task is about local build, startup, `merc.ini`, logs, debug output, or environment/runtime troubleshooting, also check:
   - `.agents/skills/merc-local-ops/SKILL.md`
+  - Treat the primary supported local environments as `Windows + WSL (Ubuntu)` and `macOS + Docker (Ubuntu)`.
 - If the task is about explaining source structure, load flow, or finding code entry points, also check:
   - `.agents/skills/merc-source-explainer/SKILL.md`
 - Read only the relevant skill sections needed for the task, but do not skip the skill when the task clearly matches it.
@@ -103,12 +104,15 @@ This repository is a Merc MUD codebase with both legacy runtime/build paths and 
 
 ## Build commands
 
+- Preferred `Windows + WSL (Ubuntu)` local build:
+  - `cd src && make clean && make`
+- Preferred `macOS + Docker (Ubuntu)` validation build:
+  - `docker run --rm -v "$PWD":/workspace/merc-fju-3.0 -w /workspace/merc-fju-3.0 ubuntu:24.04 bash -lc 'apt-get update && apt-get install -y build-essential perl && mkdir -p log player mail debug vote && make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc'`
 - Preferred Linux / Codex Cloud build:
   - `make -C src -f Makefile.lin merc`
 - Clean rebuild when needed:
   - `make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc`
-- Local macOS / general repo build alternative:
-  - `make -C src clean && make -C src`
+- Do not treat a Darwin/macOS-native build as proof that Ubuntu is clean; if the task mentions Linux parity, warnings, or container deployment, validate in Ubuntu.
 
 ## Important build detail
 
@@ -134,6 +138,8 @@ This repository is a Merc MUD codebase with both legacy runtime/build paths and 
 - Generated local runtime config: `src/merc.ini`
 - Preferred launcher in modern shells:
   - `cd src && ./startup.bash`
+- On `Windows + WSL (Ubuntu)`, prefer running `startup.bash` inside WSL or bridge from `startup-wsl.ps1`.
+- On `macOS + Docker (Ubuntu)`, prefer Ubuntu container smoke tests with `timeout 45` to `60` seconds and inspect the mounted `log/` + `debug/`.
 - Legacy launcher:
   - `cd src && ./startup`
 - `src/startup` depends on `csh` / `tcsh`; if unavailable, treat that as a shell dependency issue and use `startup.bash` or direct binary tests.

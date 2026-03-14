@@ -41,10 +41,19 @@
 - **函式庫**：`crypt` library（一般 Linux 內附）
 - `/proc` 虛擬檔案系統支援（不需 root 權限）
 
+## 開發環境
+
+目前 README 主要針對兩種實際開發路徑：
+
+- `Windows + WSL (Ubuntu)`：日常編譯與本機啟動主路徑
+- `macOS + Docker (Ubuntu)`：用 Ubuntu 容器驗證 Linux build / warning / smoke test
+
+若要確認 Linux 相容性，請以 Ubuntu 結果為準；不要把 macOS 原生 build 視為 Ubuntu 也一定乾淨。
+
 ## 編譯
 
 ```bash
-# 一般 Linux
+# Windows + WSL (Ubuntu) / 一般 Linux
 cd src
 make clean && make
 
@@ -56,39 +65,26 @@ make clean && make
 
 編譯完成後，`src/` 目錄下會產生可執行檔 `merc`。
 
-若是在 Codex Web / Codex Cloud 的 Linux 容器內，建議改用：
+若要在 `macOS + Docker (Ubuntu)` 驗證 Linux build，建議改用：
+
+```bash
+docker run --rm -v "$PWD":/workspace/merc-fju-3.0 -w /workspace/merc-fju-3.0 \
+  ubuntu:24.04 bash -lc '
+    apt-get update &&
+    apt-get install -y build-essential perl &&
+    mkdir -p log player mail debug vote &&
+    make -C src -f Makefile.lin clean &&
+    make -C src -f Makefile.lin merc
+  '
+```
+
+若是在明確的 Linux / Ubuntu 容器內，建議改用：
 
 ```bash
 make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc
 ```
 
 原因是雲端容器通常走 Linux build path，而 `src/Makefile.lin` 現在已補上和主 `Makefile` 一致的 `LIBS` 判斷：非 Darwin 平台會自動連結 `-lcrypt`。若你在舊工作樹看到 `crypt` unresolved，先更新到包含此修正的版本，不要先假設缺少系統套件。
-
-## Codex Web / Cloud 手動環境設定
-
-Codex Cloud task 的官方流程是：建立容器並 checkout 指定 branch / commit、執行 setup script（快取恢復時改跑 maintenance script）、套用網路設定、再進入 agent phase。若 repo 有 `AGENTS.md`，agent 會用它尋找專案特定的 build / lint / test 指令。
-
-對這個 repo，建議的手動設定如下：
-
-```bash
-# Setup script
-mkdir -p log player mail debug vote
-make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc
-```
-
-```bash
-# Maintenance script
-mkdir -p log player mail debug vote
-make -C src -f Makefile.lin merc
-```
-
-補充說明：
-
-- Codex Cloud 容器中的 repo 路徑通常會是 `/workspace/merc-fju-3.0`
-- setup / maintenance script 階段有網路；agent phase 預設沒有網路
-- setup script 裡的 `export` 不會自動延續到 agent phase；需要持久化時請改用環境變數設定或寫入 shell 啟動檔
-- 容器快取最長保留 12 小時；修改 setup script、maintenance script、環境變數或 secrets 時會自動失效
-- 若以雲端容器做 smoke test，記得確認 `src/merc.ini` 的 `HOME DIRECTORY` 指向 `/workspace/merc-fju-3.0`
 
 ## 設定
 
@@ -104,10 +100,15 @@ HOME DIRECTORY  <遊戲實際路徑>
 
 若是部署到正式環境，再視需要將本機生成的 `merc.ini` 或等價設定配置到 `etc/merc.ini`。
 
+環境對應重點：
+
+- `Windows + WSL (Ubuntu)`：`HOME DIRECTORY` 應對到 WSL 路徑，例如 `/mnt/h/...`
+- `macOS + Docker (Ubuntu)`：若在容器內測試，`HOME DIRECTORY` 應對到容器掛載路徑，例如 `/workspace/merc-fju-3.0`
+
 ## 啟動
 
 ```bash
-# 推薦：現代 Linux / macOS / WSL
+# 推薦：Windows + WSL (Ubuntu) / 一般 bash 環境
 cd src
 ./startup.bash &
 
@@ -120,6 +121,25 @@ cd src
 `startup` 仍保留作為 legacy `csh` 啟動腳本，供舊流程與相容用途使用。
 
 若是在 Windows + WSL 環境下想從 IDE 直接啟動，可使用 repo 根目錄的 `startup-wsl.ps1`。該腳本會依自己的所在位置動態換算 WSL 路徑，再轉呼叫 `src/startup.bash`，不需要在腳本內寫死每台機器的 repo 路徑。
+
+若是在 `macOS + Docker (Ubuntu)` 驗證 Linux 啟動，可在容器內做 smoke test：
+
+```bash
+docker run --rm -v "$PWD":/workspace/merc-fju-3.0 -w /workspace/merc-fju-3.0 \
+  ubuntu:24.04 bash -lc '
+    apt-get update &&
+    apt-get install -y build-essential perl &&
+    mkdir -p log player mail debug vote &&
+    make -C src -f Makefile.lin merc &&
+    rm -f debug/* &&
+    timeout 60s bash -lc "cd src && ./startup.bash"
+  '
+```
+
+驗證成功時，請在最新 `log/*.log` 尋找：
+- `三國歪傳之降龍伏虎開始正常運作.`
+
+即使看到成功訊號，仍要檢查 `debug/*` 是否有新產生的 warning / error。
 
 第一個連線的玩家將成為超級管理者（Implementor）。
 

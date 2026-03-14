@@ -7,12 +7,50 @@
 - Primary startup entry: `src/startup`
 
 ## Build
+Preferred environments:
+- `Windows + WSL (Ubuntu)`: build and run inside WSL
+- `macOS + Docker (Ubuntu)`: build and smoke test inside Ubuntu containers
+
+Do not treat a macOS-native build as proof that Ubuntu is also clean.
+
+### Windows + WSL (Ubuntu)
+Probe from PowerShell:
+```powershell
+Get-Command make, gcc, wsl -ErrorAction SilentlyContinue
+```
+
+Check the WSL toolchain:
+```powershell
+wsl.exe bash -lc 'cd /mnt/h/repos/merc-fju-3.0/src && command -v make && command -v gcc'
+```
+
+Build inside WSL:
+```powershell
+wsl.exe bash -lc 'cd /mnt/h/repos/merc-fju-3.0/src && make clean && make'
+```
+
+### macOS + Docker (Ubuntu)
+Build inside Ubuntu:
+```bash
+docker run --rm -v "$PWD":/workspace/merc-fju-3.0 -w /workspace/merc-fju-3.0 \
+  ubuntu:24.04 bash -lc '
+    apt-get update &&
+    apt-get install -y build-essential perl &&
+    mkdir -p log player mail debug vote &&
+    make -C src -f Makefile.lin clean &&
+    make -C src -f Makefile.lin merc
+  '
+```
+
+This is the preferred Linux validation path when the host is macOS.
+
+### Other Linux / Ubuntu
 ```bash
 cd src
 make clean && make
 ```
 
-Codex Web / Codex Cloud (Linux container):
+For explicit Linux build path:
 ```bash
 make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc
 ```
@@ -21,21 +59,6 @@ Why:
 - `src/Makefile.lin` is the Linux build path that Codex Cloud containers will typically use
 - this repo now expects `Makefile.lin` to carry `-lcrypt` on non-Darwin platforms
 - if `make -C src -f Makefile.lin` still fails on `crypt`, verify the workspace contains the patched `src/Makefile.lin` before adding packages
-
-PowerShell -> probe local toolchain first:
-```powershell
-Get-Command make, gcc, wsl -ErrorAction SilentlyContinue
-```
-
-If PowerShell has no `make` but `wsl.exe` exists, check the WSL toolchain:
-```powershell
-wsl.exe bash -lc 'cd /mnt/h/repos/merc-fju-3.0/src && command -v make && command -v gcc'
-```
-
-If that succeeds, build inside WSL:
-```powershell
-wsl.exe bash -lc 'cd /mnt/h/repos/merc-fju-3.0/src && make clean && make'
-```
 
 Path rule:
 - `H:\repos\merc-fju-3.0` -> `/mnt/h/repos/merc-fju-3.0`
@@ -48,23 +71,9 @@ cp Makefile.bsd Makefile
 make clean && make
 ```
 
-Codex Cloud setup script baseline:
-```bash
-mkdir -p log player mail debug vote
-make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc
-```
-
-Codex Cloud maintenance script baseline:
-```bash
-mkdir -p log player mail debug vote
-make -C src -f Makefile.lin merc
-```
-
 Notes:
-- setup / maintenance scripts run with internet access
-- setup script exports do not persist into the agent phase
-- agent phase internet is off by default unless the environment enables it
-- cached containers resume by rerunning the maintenance script, not the full setup script
+- on macOS, prefer Ubuntu Docker tests when you want Linux parity
+- if mac build is clean but Docker Ubuntu warns, trust the Docker result for Linux compatibility
 
 ## Startup
 From `src/`:
@@ -82,6 +91,23 @@ WSL / bash-friendly launcher:
 cd src
 ./startup.bash &
 ```
+
+Docker Ubuntu smoke test from macOS host:
+```bash
+docker run --rm -v "$PWD":/workspace/merc-fju-3.0 -w /workspace/merc-fju-3.0 \
+  ubuntu:24.04 bash -lc '
+    apt-get update &&
+    apt-get install -y build-essential perl &&
+    mkdir -p log player mail debug vote &&
+    make -C src -f Makefile.lin merc &&
+    rm -f debug/* &&
+    timeout 60s bash -lc "cd src && ./startup.bash"
+  '
+```
+
+Then inspect the newest `log/*.log` on the mounted workspace and look for:
+- `三國歪傳之降龍伏虎開始正常運作.`
+- any newly-created `debug/*` files
 
 Default behavior:
 - generates `src/merc.ini` from `src/merc.sample.ini`
@@ -105,9 +131,9 @@ grep -n "HOME DIRECTORY" src/merc.sample.ini
 grep -n "MUD PORT" src/merc.sample.ini
 ```
 
-Cloud workspace path:
-- expect repo root to be `/workspace/merc-fju-3.0`
-- if doing a temporary smoke test in Codex Cloud, ensure generated `src/merc.ini` points `HOME DIRECTORY` there
+Container workspace path:
+- in Docker Ubuntu examples, use `/workspace/merc-fju-3.0`
+- ensure generated `src/merc.ini` points `HOME DIRECTORY` there when the process runs inside the container
 
 If startup still behaves like the old broken config after fixing `src/merc.sample.ini`:
 ```bash
