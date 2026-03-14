@@ -56,6 +56,40 @@ make clean && make
 
 編譯完成後，`src/` 目錄下會產生可執行檔 `merc`。
 
+若是在 Codex Web / Codex Cloud 的 Linux 容器內，建議改用：
+
+```bash
+make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc
+```
+
+原因是雲端容器通常走 Linux build path，而 `src/Makefile.lin` 現在已補上和主 `Makefile` 一致的 `LIBS` 判斷：非 Darwin 平台會自動連結 `-lcrypt`。若你在舊工作樹看到 `crypt` unresolved，先更新到包含此修正的版本，不要先假設缺少系統套件。
+
+## Codex Web / Cloud 手動環境設定
+
+Codex Cloud task 的官方流程是：建立容器並 checkout 指定 branch / commit、執行 setup script（快取恢復時改跑 maintenance script）、套用網路設定、再進入 agent phase。若 repo 有 `AGENTS.md`，agent 會用它尋找專案特定的 build / lint / test 指令。
+
+對這個 repo，建議的手動設定如下：
+
+```bash
+# Setup script
+mkdir -p log player mail debug vote
+make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc
+```
+
+```bash
+# Maintenance script
+mkdir -p log player mail debug vote
+make -C src -f Makefile.lin merc
+```
+
+補充說明：
+
+- Codex Cloud 容器中的 repo 路徑通常會是 `/workspace/merc-fju-3.0`
+- setup / maintenance script 階段有網路；agent phase 預設沒有網路
+- setup script 裡的 `export` 不會自動延續到 agent phase；需要持久化時請改用環境變數設定或寫入 shell 啟動檔
+- 容器快取最長保留 12 小時；修改 setup script、maintenance script、環境變數或 secrets 時會自動失效
+- 若以雲端容器做 smoke test，記得確認 `src/merc.ini` 的 `HOME DIRECTORY` 指向 `/workspace/merc-fju-3.0`
+
 ## 設定
 
 版控中的 ini 模板目前放在 `src/merc.sample.ini`。本機開發 / 測試時，建議不要直接手改 tracked 模板，而是讓啟動腳本自動產生本機用的 `src/merc.ini`。

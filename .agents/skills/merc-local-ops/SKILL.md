@@ -1,18 +1,19 @@
 ---
 name: merc-local-ops
-description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定與啟停排錯時使用：依 README、src/Makefile、src/startup、src/merc.sample.ini / src/merc.ini 與 log/debug 實際狀態，協助編譯 merc、檢查模板 ini 與本機生成 ini、確認 log/player/mail/debug/vote 等目錄可寫、處理 shutdown.txt 與啟動失敗，並在 Windows PowerShell、WSL、Linux / BSD 間判斷真正的建置執行面，避免因 PowerShell 找不到 make 就卡住，同時把資料載入錯誤和純環境問題分開。
+description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Codex Web / Codex Cloud 手動環境設定與啟停排錯時使用：依 README、AGENTS.md、src/Makefile、src/Makefile.lin、src/startup、src/merc.sample.ini / src/merc.ini 與 log/debug 實際狀態，協助編譯 merc、檢查模板 ini 與本機生成 ini、確認 log/player/mail/debug/vote 等目錄可寫、處理 shutdown.txt 與啟動失敗，並在 Windows PowerShell、WSL、Linux / BSD 與 Codex Cloud 容器間判斷真正的建置執行面，避免因 PowerShell 找不到 make 或 Linux 舊 Makefile 漏掉 crypt 連結就卡住，同時把資料載入錯誤和純環境問題分開。
 ---
 
 # Merc Local Ops
 
-此技能用來處理 `merc-fju-3.0` 目前 repo 內真實存在的本機操作流程。先以 `README.md`、`src/startup`、`src/startup.bash`、`startup-wsl.ps1`、`src/merc.sample.ini`、`src/merc.ini`、`etc/`、`log/`、`debug/` 為準，不要沿用不存在的 `start-merc.sh` 或 `scripts/bootstrap.sh` 假設。
+此技能用來處理 `merc-fju-3.0` 目前 repo 內真實存在的本機操作流程，以及 Codex Web / Codex Cloud 容器中的手動環境設定。先以 `README.md`、`AGENTS.md`、`src/startup`、`src/startup.bash`、`startup-wsl.ps1`、`src/merc.sample.ini`、`src/merc.ini`、`etc/`、`log/`、`debug/` 為準，不要沿用不存在的 `start-merc.sh` 或 `scripts/bootstrap.sh` 假設。
 
 ## 快速開始
 1. 先確認使用者是在 Linux / BSD shell、Windows PowerShell，還是 Windows + WSL 混合操作。
 2. 若目標是建置，先判斷 `make` / `gcc` 實際在哪個環境可用；不要只因為目前 shell 是 PowerShell 就假設 repo 不能編。
-3. 若目標是啟動，先確認 `src/merc` 已編好、`src/merc.sample.ini` / 本機生成的 `src/merc.ini` 或部署用 `etc/merc.ini` 路徑正確、runtime 目錄可寫，然後以 `src/startup` 為中心回答。
-4. 若啟動失敗，先判斷是編譯問題、設定路徑問題、目錄不可寫、`shutdown.txt` 殘留，還是遊戲資料載入錯誤。
-5. 需要指令與排錯順序時，再讀 `references/local-ops-cheatsheet.md`。
+3. 若目標是 Codex Web / Codex Cloud，先以 Linux 容器為前提檢查 `src/Makefile.lin` 是否已正確帶入 `-lcrypt`，並區分 setup script、maintenance script 與 agent phase 的責任。
+4. 若目標是啟動，先確認 `src/merc` 已編好、`src/merc.sample.ini` / 本機生成的 `src/merc.ini` 或部署用 `etc/merc.ini` 路徑正確、runtime 目錄可寫，然後以 `src/startup` 為中心回答。
+5. 若啟動失敗，先判斷是編譯問題、設定路徑問題、目錄不可寫、`shutdown.txt` 殘留，還是遊戲資料載入錯誤。
+6. 需要指令與排錯順序時，再讀 `references/local-ops-cheatsheet.md`。
 
 ## 先看目前 repo 現況
 - 目前 repo 根目錄沒有 `start-merc.sh`、`start-merc.ps1`、`start-merc.cmd`
@@ -28,6 +29,10 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定與�
 - `etc/` 目前有多個 runtime / 半動態檔，但工作樹內沒有 `etc/merc.ini`
 - 在這個工作區的常見現況下，Windows 端可能只有 `powershell` / `wsl.exe`，而真正可用的 `make`、`gcc` 在 WSL 內；要先探測，不要直接判定「無法編譯」
 - `src/startup` 是 `csh` 腳本；在常見 WSL / Ubuntu 環境裡不一定有 `csh` 或 `tcsh`
+- `src/Makefile.lin` 現在已補上和主 `Makefile` 一致的 `LIBS` 判斷：Linux / Codex Cloud 容器會帶 `-lcrypt`，Darwin 則不帶；若在 Codex Web 看到 `crypt` unresolved，先確認是不是還在用舊版工作樹
+- Codex Cloud / Codex Web 的 Linux 容器預設工作目錄會是 `/workspace/<repo-name>`；目前 repo 對應應視為 `/workspace/merc-fju-3.0`
+- Codex Cloud setup script 與 maintenance script 都有網路，agent phase 預設沒有網路；setup script 中的 `export` 不會自動延續到 agent phase
+- 若 repo 根目錄有 `AGENTS.md`，Codex Cloud task 會用它決定應優先執行哪些 build / lint / test 指令；回答雲端環境問題時要優先參照該檔
 - 生成後的 `src/merc.ini` 才是 `./merc` 無參數時真正會吃到的本機設定；模板 `src/merc.sample.ini` 不應直接拿來當跨機器共用實機設定
 - 若 `src/merc.sample.ini` 被修正或替換，既有的 `src/merc.ini` 不會自動刷新；必要時要刪掉舊的 `src/merc.ini` 再重新跑 `startup` / `startup.bash`
 - `src/merc.sample.ini` 若看起來被截斷、缺少後半段設定或 `Ticket Set` 之類關鍵項目，會直接造成啟動期誤判；先把模板完整性查清楚，不要只盯著 binary
@@ -48,6 +53,11 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定與�
 - 若 WSL 內有工具鏈，優先把建置命令改成在 WSL 執行，而不是停在「PowerShell 找不到 make」
 - Windows 路徑轉 WSL 路徑時，像 `H:\repos\merc-fju-3.0` 應轉成 `/mnt/h/repos/merc-fju-3.0`
 - 若編譯失敗，先處理 `src/` 內的錯誤，不要先懷疑 runtime 或區域資料
+- 若使用 Codex Web / Codex Cloud Linux 容器，優先命令改成：
+- `make -C src -f Makefile.lin merc`
+- 若要重建全部物件：
+- `make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc`
+- 若 `Makefile.lin` 報 `crypt` 解析失敗，先檢查當前工作樹是否包含 `LIBS` / `$(LIBS)` 修正，不要先去安裝額外套件
 
 ### 2. 設定
 - 先檢查 `src/merc.sample.ini`
@@ -59,12 +69,14 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定與�
 - 各種 `* DIRECTORY`
 - 若啟動訊息出現 `generate_ticket: 沒有中獎的資料.`，先回頭檢查 ini 內是否真的有 `Ticket Set = ...`，因為這組資料是從 ini 建立，不是另外讀某個 ticket 檔
 - 若路徑和目前工作區不一致，優先建議直接修正設定，而不是發明額外 wrapper
+- 若是在 Codex Cloud 容器做 smoke test，`HOME DIRECTORY` 應對到 `/workspace/merc-fju-3.0`，不要沿用本機 macOS / WSL 路徑
 - 若只是要本機 smoke test，可接受先由 `merc.sample.ini` 產生本機 `merc.ini` 或臨時 `merc.test.ini` 指到目前 workspace，再用它啟動；回報時要明講這是測試用設定，不是永久修正
 
 ### 3. 啟動與停止
 - 啟動流程以 `src/startup` 為主
 - 若目前環境沒有 `csh` / `tcsh`，優先改用 `src/startup.bash`
 - 若使用者是在 Windows IDE 內啟動，優先考慮 repo 根目錄的 `startup-wsl.ps1`
+- 若使用者是在 Codex Web / Codex Cloud，只要目標是驗證可編譯或跑 smoke test，可直接用 `make -C src -f Makefile.lin merc` 與必要的 runtime 目錄建立命令；不需要先強求 `startup` 流程
 - `src/startup` 與 `src/startup.bash` 的預設流程都應優先視為「自動產生本機 ini 並啟動」
 - `startup-wsl.ps1` 應只負責橋接 PowerShell 與 WSL，不要複製 bash 啟動邏輯
 - 做 smoke test 或 area 載入驗證前，先清空 `debug/` 內既有檔案內容，並先建立本輪 `log/` 觀察基線（例如記下最新 log 檔名，或清空這輪要看的單一 log）；否則測試後很難分辨哪些是本次執行的新訊號、哪些只是歷史殘留
@@ -97,6 +109,7 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定與�
 - `vote/`
 - 必要時也檢查 `board/`、`etc/`、`data/`
 - 若 `log/` 或 `player/` 根本不存在，先把它視為需要建立的 runtime 目錄，不要只回報「不可寫」
+- 若是 Codex Cloud setup / maintenance script，建立 runtime 目錄可直接用 `mkdir -p log player mail debug vote`
 - 啟動或 smoke test 後，若 `git status` 出現 `debug/error`、`etc/net.log`、`etc/stock` 之類 tracked runtime 檔變動，要先判斷那是測試副作用還是任務本身的一部分
 - 若不可寫，先指出哪個目錄是 blocker，再給最小修復步驟
 - 不要預設這一定是 WSL ACL 問題；先以目前實際 OS / 檔案權限為準
@@ -105,6 +118,7 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定與�
 
 ### 5. 排錯分流
 - **編譯錯誤**：處理 `src/*.c`、`include/*.h`、`Makefile*`
+- **Codex Cloud 環境錯誤**：處理 setup script、maintenance script、`AGENTS.md`、快取恢復、agent phase 無網路與 `/workspace/...` 路徑
 - **設定錯誤**：處理 `src/merc.sample.ini`、本機生成的 `src/merc.ini` 與 `HOME DIRECTORY` / 目錄路徑
 - **模板與生成檔不同步**：處理 `src/merc.sample.ini` 已修正但 `src/merc.ini` 仍是舊內容，需要刪掉重生
 - **啟動腳本問題**：處理 `src/startup`、`shutdown.txt`、`merc` 是否存在
@@ -119,6 +133,8 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定與�
 - 明確指出命令應在哪個目錄執行
 - 若 repo 內沒有使用者提到的 launcher 或腳本，直接說不存在，再改用現有入口回答
 - 若 PowerShell 找不到 `make`，先檢查 WSL 是否可用與 repo 是否可從 `/mnt/<drive>/...` 存取；只有在 WSL 也沒有工具鏈時，才回報缺少編譯環境
+- 若使用者明講是 Codex Web / Codex Cloud，優先提供 setup script、maintenance script、環境變數與快取策略，不要只回答本機 shell 指令
+- 若使用者提到 `make -C src -f Makefile.lin` 與 `crypt` 解析失敗，直接指出這是舊 Linux Makefile 連結步驟缺少 `-lcrypt`，目前 repo 應改用已修正的 `src/Makefile.lin`
 - 若 `startup` 存在但 shell 相依缺件，明確說「入口存在，但目前環境缺少 `csh` / `tcsh`，因此不能直接用它」
 - 若要做 smoke test，可先建立缺少的 runtime 目錄並用臨時 ini 驗證 binary 是否能進到資料載入階段
 - 若啟動測試碰到 tracked runtime 檔，但那些變動不是本次交付物，回報時要明講並在結束前清回乾淨

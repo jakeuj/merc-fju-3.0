@@ -12,6 +12,16 @@ cd src
 make clean && make
 ```
 
+Codex Web / Codex Cloud (Linux container):
+```bash
+make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc
+```
+
+Why:
+- `src/Makefile.lin` is the Linux build path that Codex Cloud containers will typically use
+- this repo now expects `Makefile.lin` to carry `-lcrypt` on non-Darwin platforms
+- if `make -C src -f Makefile.lin` still fails on `crypt`, verify the workspace contains the patched `src/Makefile.lin` before adding packages
+
 PowerShell -> probe local toolchain first:
 ```powershell
 Get-Command make, gcc, wsl -ErrorAction SilentlyContinue
@@ -37,6 +47,24 @@ cd src
 cp Makefile.bsd Makefile
 make clean && make
 ```
+
+Codex Cloud setup script baseline:
+```bash
+mkdir -p log player mail debug vote
+make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc
+```
+
+Codex Cloud maintenance script baseline:
+```bash
+mkdir -p log player mail debug vote
+make -C src -f Makefile.lin merc
+```
+
+Notes:
+- setup / maintenance scripts run with internet access
+- setup script exports do not persist into the agent phase
+- agent phase internet is off by default unless the environment enables it
+- cached containers resume by rerunning the maintenance script, not the full setup script
 
 ## Startup
 From `src/`:
@@ -76,6 +104,10 @@ ls -l src/merc
 grep -n "HOME DIRECTORY" src/merc.sample.ini
 grep -n "MUD PORT" src/merc.sample.ini
 ```
+
+Cloud workspace path:
+- expect repo root to be `/workspace/merc-fju-3.0`
+- if doing a temporary smoke test in Codex Cloud, ensure generated `src/merc.ini` points `HOME DIRECTORY` there
 
 If startup still behaves like the old broken config after fixing `src/merc.sample.ini`:
 ```bash
@@ -180,6 +212,7 @@ Interpretation:
 ### Wrong `HOME DIRECTORY`
 Meaning:
 - `merc.ini` still points at an old machine path
+- on Codex Cloud, it may still point at a macOS / WSL path instead of `/workspace/merc-fju-3.0`
 
 Check:
 ```bash
