@@ -146,6 +146,7 @@
 4. `wild_longqu_hills`
 5. `dng_loyang_sewer`
 6. `dng_sewer_depths`
+7. `dng_royal_tomb`
 
 ## Theme Allocation
 
@@ -175,6 +176,10 @@
   - theme: `詭異民俗風`
   - subtheme: `深層水道`
   - 缺口角色：補洛陽地下水區之下的真正深層水道，讓地下鏈可以從前哨延伸到封印與機關痕跡更重的 deeper section
+- `dng_royal_tomb`
+  - theme: `探險遺跡`
+  - subtheme: `古墓 / 機關`
+  - 缺口角色：補深層水道下方的帝王古墓段，讓洛陽地下鏈能從水道系統自然轉入古墓與機關秘境
 
 後續新增候選 area 時，必須一併記錄：
 
