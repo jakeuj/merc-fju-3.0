@@ -1,0 +1,14 @@
+Vnum            10151
+Name            dry ration wrap~
+ShortDesc       防潮乾糧包(ration wrap)~
+Description
+一包以油布裹好的防潮乾糧包(ration wrap)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           12
+Value           12 20 4 0
+Weight          1
+Cost            45
+End

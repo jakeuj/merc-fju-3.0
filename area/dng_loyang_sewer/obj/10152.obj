@@ -1,0 +1,14 @@
+Vnum            10152
+Name            sealed water flask~
+ShortDesc       封口水囊(water flask)~
+Description
+一只用布塞緊口子的封口水囊(water flask)靠在牆邊。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           12
+Value           8 8 LIQ_WATER
+Weight          2
+Cost            50
+End

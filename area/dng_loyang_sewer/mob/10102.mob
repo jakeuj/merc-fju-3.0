@@ -1,0 +1,31 @@
+Vnum            10102
+Name            sewer lurker shade~
+ShortDesc       積水怪影~
+Description
+這團怪影像是從積水倒影裡長出來的，輪廓模糊不定，只在水光晃動時
+露出近似人形的邊緣。你很難看清它究竟站在哪裡，卻能確定它一直在
+看著你。
+~
+StayArea        Yes
+AlignEvil       Yes
+Alignment       -160
+Level           16
+Hitroll         4
+Protect         -1
+Damroll         3
+Str             12
+Int             9
+Wis             8
+Dex             13
+Con             12
+Hp              1900
+Mana            100
+Move            110
+Class           CLASS_THIEF
+Gold            110
+Multipile       100
+AttackRatio     106
+DodgeRatio      106
+Migrate         0
+Sex             SEX_NEUTRAL
+End

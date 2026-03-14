@@ -1,0 +1,31 @@
+Vnum            9458
+Name            殘符水門~
+Description
+厚重水門上殘留著大片剝落符墨，只剩零碎線條仍在潮氣中勉強辨形。門後不斷傳來低沉水擊聲，像更深處還有另一套水路在運作。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9457
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         符痕~
+Description
+符痕一部分像道門符咒，一部分又像水利標記，混在一起時反而更讓人不安。
+~
+End
+
+#Enquire
+Keyword         水門~
+End
+
+#Enquire
+Keyword         符文~
+End
+
+End

@@ -1,0 +1,44 @@
+Vnum            9453
+Name            石拱匯流道~
+Description
+幾道地下水脈在這裡匯進石拱通道，水聲混在一起後變得難以判讀方向。頭頂拱壁還留著模糊記號，像是以前維修人員用來區分支渠的標誌。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9452
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9454
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9456
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         深處~
+End
+
+#Enquire
+Keyword         水門~
+End
+
+#Enquire
+Keyword         匯流~
+End
+
+End

@@ -1,0 +1,39 @@
+Vnum            9454
+Name            黑水沉井~
+Description
+通道盡頭陷成一口向下延伸的沉井，黑色水面反射不出任何清楚影像。井壁邊緣釘著舊鐵環與斷裂繩索，像曾有人頻繁在這裡上下。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9453
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        9460
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         鐵環~
+Description
+鐵環上佈滿鏽色與刮痕，表示這口沉井不只是自然形成，而是被長期拿來當作通往更深處的節點。
+~
+End
+
+#Enquire
+Keyword         沉井~
+End
+
+#Enquire
+Keyword         下方~
+End
+
+End

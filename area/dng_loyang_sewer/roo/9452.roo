@@ -1,0 +1,39 @@
+Vnum            9452
+Name            潮濕檢修渠~
+Description
+石渠兩側貼著濕滑青苔，腳邊薄水不斷沿坡緩慢流向更深處。這裡仍看得出人工整修的痕跡，但越往前，那些規整線條就越像被什麼東西啃掉了。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9451
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9453
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9455
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         水痕~
+Description
+石壁上的水痕分成新舊兩層，舊痕幾乎高過你的胸口，讓人很難不去想像暴雨時這裡會變成什麼模樣。
+~
+End
+
+End

@@ -1,0 +1,15 @@
+Vnum            10153
+Name            maintenance hand lamp~
+ShortDesc       檢修油燈(hand lamp)~
+Description
+一盞檢修油燈(hand lamp)被擱在石台上。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+WearLoc         ITEM_WEAR_LIGHT
+Takeable        Yes
+Level           12
+Value3          16
+Weight          1
+Cost            65
+End

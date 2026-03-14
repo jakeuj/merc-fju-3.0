@@ -17,6 +17,14 @@
 - 明確標示與 `loyang_outskirts/7512` 的 `up` 邊界意圖
 - 先不建立 `index/mob/obj/res/shp`，避免在地下 deeper 線還未穩定前過早掛載
 
+## Scope (Milestone 2: Implementation)
+
+- 以 `map.md` 生成 `roo/*.roo` 第一版並補齊最小 runtime 資產
+- 建立 `index/mob/obj/res/shp`
+- 將 `dng_loyang_sewer` 掛入 `area/directory.lst`
+- 讓 `loyang_outskirts/7512` 與 `dng_loyang_sewer/9451` 形成正式雙向邊界
+- `更深水道` world link 仍保留在 spec，不直接接到不存在的 runtime area
+
 ## World Links (Spec Intent)
 
 - `up`: 通往 `loyang_outskirts` room `7512`
@@ -51,6 +59,30 @@
 - reverse exit 成對，除非明確標示 `one_way`
 - `up` 外部連線對得上既有 `loyang_outskirts/7512` 的地下入口語意
 
+## Validation Results (Spec Stage)
+
+- `python3 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/dng_loyang_sewer/map.md --validate-only`
+  - passed
+
+## Validation Results (Implementation Stage)
+
+- `python3 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/dng_loyang_sewer/map.md --validate-only`
+  - passed
+- `make -C src clean && make -C src merc`
+  - passed
+- `make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc`
+  - passed
+- `cd src && timeout 45 bash ./startup.bash`
+  - passed with startup success signal in `log/1015.log`
+  - no new `dng_loyang_sewer`-specific `Load_room` / reset / object parse failure observed
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `dng_loyang_sewer`
+- `area/dng_loyang_sewer/roo/*.roo` 由 `map.md` scaffold 生成
+- `area/loyang_outskirts/roo/7512.roo` 已正式補上 down 出口到 `9451`
+- `9460` 以下的更深水道仍停留在 spec，不先做假的 runtime boundary
+
 ## Next Step Prompt
 
-`先 commit 目前 dng_loyang_sewer 的 spec 里程碑；commit 後再補 implementation 級資產，並把它正式接到 loyang_outskirts/7512。`
+`先 commit 目前 dng_loyang_sewer 的 implementation 里程碑；commit 後若要續推洛陽地下鏈，優先補 dng_sewer_depths 的 spec。`

@@ -1,0 +1,31 @@
+Vnum            9459
+Name            失物堆積室~
+Description
+角落堆著破布包、碎陶片與被水泡爛的木牌，像多年來被水流和人手一起推來這裡的殘渣。偶爾還能看出一兩件屬於地表旅人的遺失物，讓這裡多了幾分不祥。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        9457
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         失物~
+Description
+失物裡混著市井常見的小東西，證明地表早就有人因各種理由摸到這片地下水區。
+~
+End
+
+#Enquire
+Keyword         失物~
+End
+
+#Enquire
+Keyword         來路~
+End
+
+End

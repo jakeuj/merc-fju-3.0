@@ -1,0 +1,32 @@
+Vnum            9451
+Name            入口水門~
+Description
+狹窄檢修道在這裡銜接上一道半開的舊水門，門軸因長年受潮而發出低沉摩擦聲。往上還能辨出井口傳來的微弱天光，往裡則只剩水聲與石壁反覆回響。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        7512
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9452
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         入口~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

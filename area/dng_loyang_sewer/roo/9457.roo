@@ -1,0 +1,44 @@
+Vnum            9457
+Name            封印泵室前廊~
+Description
+前廊兩側石壁刻滿半殘符痕，地面還嵌著幾條導水槽。這裡本該是單純的泵室前帶，現在卻像同時肩負著壓水與鎮壓某種東西的用途。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9456
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9458
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9459
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         符痕~
+End
+
+#Enquire
+Keyword         前廊~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

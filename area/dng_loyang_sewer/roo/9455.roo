@@ -1,0 +1,24 @@
+Vnum            9455
+Name            生鏽側渠~
+Description
+側渠比主水路低矮得多，兩側卡滿腐朽木板與鏽掉的鐵柵。水流在這裡變慢，夾雜著地表沖落的雜物與早該消失的生活痕跡。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        9452
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9456
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

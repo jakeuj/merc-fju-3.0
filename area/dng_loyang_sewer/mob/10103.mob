@@ -1,0 +1,31 @@
+Vnum            10103
+Name            pump hall remnant spirit~
+ShortDesc       泵室殘魂~
+Description
+這縷殘魂徘徊在封印痕跡附近，時而像巡視泵室的舊役工，時而又像被
+壓在地下多年的怨念。它沒有完整面目，只有一雙時明時滅的淡光，在
+黑暗裡格外令人不安。
+~
+StayArea        Yes
+AlignEvil       Yes
+Alignment       -200
+Level           18
+Hitroll         5
+Protect         -2
+Damroll         4
+Str             12
+Int             10
+Wis             10
+Dex             12
+Con             13
+Hp              2200
+Mana            140
+Move            100
+Class           CLASS_THIEF
+Gold            140
+Multipile       100
+AttackRatio     108
+DodgeRatio      104
+Migrate         0
+Sex             SEX_NEUTRAL
+End

@@ -1,0 +1,16 @@
+Vnum            10154
+Name            rust hook blade~
+ShortDesc       鏽鉤短刃(hook blade)~
+Description
+一把帶著鏽蝕水痕的鏽鉤短刃(hook blade)落在積水邊。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           14
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            110
+Exp             10
+End

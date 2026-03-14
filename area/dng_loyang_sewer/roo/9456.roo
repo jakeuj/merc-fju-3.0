@@ -1,0 +1,39 @@
+Vnum            9456
+Name            碎欄積水間~
+Description
+一道斷裂木欄把積水困成幾處淺池，池底沉著難辨原貌的碎物與泥沙。這裡像是被匆忙棄置的暫存點，卻又有人時不時回來翻找。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9455
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        9453
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9457
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         碎欄~
+Description
+木欄斷面上有新舊不一的劈痕，像是有人故意把封住的側間重新撬開。
+~
+End
+
+End

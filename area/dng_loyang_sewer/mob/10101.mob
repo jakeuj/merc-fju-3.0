@@ -1,0 +1,33 @@
+Vnum            10101
+Name            sewer maintenance drifter~
+ShortDesc       迷途修渠工~
+Description
+這名修渠工披著早被水氣浸硬的舊布衫，手裡還抓著一支鐵鉤與半盞殘
+燈。看他那副時而清醒、時而失神的模樣，很難判斷他究竟是在守著這
+片地下水區，還是早已被困在這裡太久。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       20
+Level           14
+Hitroll         1
+Protect         0
+Damroll         0
+Str             11
+Int             11
+Wis             11
+Dex             10
+Con             11
+Hp              1300
+Mana            120
+Move            90
+Class           0
+Gold            80
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

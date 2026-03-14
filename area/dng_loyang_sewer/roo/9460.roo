@@ -1,0 +1,24 @@
+Vnum            9460
+Name            深井鐵梯~
+Description
+沉井內側釘著向下延伸的鐵梯，濕冷鐵鏽味幾乎蓋過一切。再往井底下望去，只有更黑、更深、更安靜的空間在等人下探。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        9454
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         出口~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End
