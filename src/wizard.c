@@ -1683,6 +1683,7 @@ void system_cleanup( void )
   char            filename[MAX_FILE_LENGTH];
   char            exec_cmd[MAX_STRING_LENGTH];
   char            header;
+  int             rc;
   DIR           * reading;
   struct dirent * next;
   struct stat     Status;
@@ -1737,7 +1738,9 @@ void system_cleanup( void )
             {
               snprintf( exec_cmd, sizeof( exec_cmd ), "rm -rf %s%s"
                 , directory, next->d_name );
-              system( exec_cmd );
+              rc = system( exec_cmd );
+              if ( rc != 0 )
+                mudlog( LOG_ERR, "do_cleanup: 執行失敗 %s (rc=%d).", exec_cmd, rc );
 
               /* 更正英雄榜 */
               check_hero( next->d_name );
@@ -2158,6 +2161,7 @@ bool jail_someone( CHAR_DATA * ch, CHAR_DATA * victim, int dur, bool fPrint )
 FUNCTION( do_nuke )
 {
   int                loop;
+  int                rc;
   char               arg[MAX_INPUT_LENGTH];
   char               exec_cmd[MAX_STRING_LENGTH];
   DESCRIPTOR_DATA * man;
@@ -2205,7 +2209,13 @@ FUNCTION( do_nuke )
   }
 
   sprintf( exec_cmd, "rm -rf %s/%c/%s", player_dir, arg[0], arg );
-  system( exec_cmd );
+  rc = system( exec_cmd );
+  if ( rc != 0 )
+  {
+    mudlog( LOG_ERR, "do_nuke: 執行失敗 %s (rc=%d).", exec_cmd, rc );
+    act( "砍檔指令執行失敗﹐請檢查 log。", ch, NULL, NULL, TO_CHAR );
+    RETURN_NULL();
+  }
 
   /* 更正英雄榜 */
   check_hero( arg );

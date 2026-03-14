@@ -4520,7 +4520,14 @@ void load_social( const char * path , const char * index )
   str_cpy( directory, path );
   fill_path( directory );
 
-  snprintf( indexfile, sizeof( indexfile ), "%s%s", directory, index );
+  if ( str_len( directory ) + str_len( index ) + 1 > sizeof( indexfile ) )
+  {
+    mudlog( LOG_ERR, "Load_social﹕社交索引檔路徑太長 %s%s。", directory, index );
+    RETURN_NULL();
+  }
+
+  str_cpy( indexfile, directory );
+  str_cat( indexfile, index );
 
   if ( ( aFile = f_open( indexfile , "r" ) ) )
   {
@@ -4531,7 +4538,17 @@ void load_social( const char * path , const char * index )
 
       if ( word[0] == '*' ) continue;
 
-      snprintf( buf, sizeof( buf ), "%s%c", directory, LOWER( word[0] ) );
+      if ( str_len( directory ) + str_len( word ) + str_len( social_ext ) + 4
+        > sizeof( buf ) )
+      {
+        mudlog( LOG_ERR, "Load_social﹕社交檔路徑太長 %s/%s。"
+          , directory, word );
+        continue;
+      }
+
+      str_cpy( buf, directory );
+      buf[str_len( buf )] = LOWER( word[0] );
+      buf[str_len( buf ) + 1] = '\x0';
       fill_path( buf );
       str_cat( buf , word      );
       str_cat( buf, "."        );
@@ -5854,8 +5871,21 @@ void load_skill( const char * path , const char * index )
       if ( word[0] == '*' ) continue;
 
       /* 處理欲開啟命令檔案的名稱 */
-      sprintf( buf , "%s%c/%s.%s"
-        , directory , LOWER( word[0] ) , word, skill_ext );
+      if ( str_len( directory ) + str_len( word ) + str_len( skill_ext ) + 5
+        > sizeof( buf ) )
+      {
+        mudlog( LOG_ERR, "Load_skill﹕技能檔路徑太長 %s/%s。"
+          , directory, word );
+        continue;
+      }
+
+      str_cpy( buf, directory );
+      buf[str_len( buf )] = LOWER( word[0] );
+      buf[str_len( buf ) + 1] = '/';
+      buf[str_len( buf ) + 2] = '\x0';
+      str_cat( buf, word );
+      str_cat( buf, "." );
+      str_cat( buf, skill_ext );
 
       if ( ( aFile = f_open( buf , "r" ) ) )
       {
