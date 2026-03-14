@@ -49,27 +49,27 @@
 
 ## Candidate Queue
 
-1. `dng_loyang_sewer`
+1. `dng_sewer_depths`
 
 ## Todo
 
-(目前無待處理 `todo`；先完成 `in_progress` 的 `dng_loyang_sewer`。)
+(目前無待處理 `todo`；先完成 `in_progress` 的 `dng_sewer_depths`。)
 
 ## In Progress
 
-### `dng_loyang_sewer`
+### `dng_sewer_depths`
 
 - status: `in_progress`
-- delivery_gate: `implementation_ready_for_commit`
+- delivery_gate: `spec_ready_for_commit`
 - compliance_check: `compliant with current ref/Readme.md scope`
-- plan: `plans/area/0006-dng-loyang-sewer.md`
+- plan: `plans/area/0007-dng-sewer-depths.md`
 - parent_region: `loyang underground chain`
-- theme: `仙俠風`
-- subtheme: `詭異民俗風`
-- world_links: `洛陽東郊`, `洛陽地下水區`, `更深水道`
-- next_action: 先 commit `dng_loyang_sewer` 的 implementation 里程碑；commit 後將下一個 actionable area 推進到 `dng_sewer_depths` spec，延續洛陽地下鏈
-- next_prompt: `先 commit 目前 dng_loyang_sewer 的 implementation 里程碑；commit 後續做 dng_sewer_depths spec。`
-- notes: `index/mob/obj/res/shp/roo` 已落地並掛入 `area/directory.lst`，`loyang_outskirts/7512` 已正式接上 `9451`；`log/1015.log` smoke test 有成功訊號，更深水道 world link 仍只保留在 spec
+- theme: `詭異民俗風`
+- subtheme: `深層水道`
+- world_links: `洛陽地下水區`, `地下深渠`, `更深封印墓井`
+- next_action: 先 commit `dng_sewer_depths` 的單區 plan + map.md spec 里程碑；commit 後再決定是否進入 implementation（index/mob/obj/res/shp）並正式接上 `dng_loyang_sewer/9460`
+- next_prompt: `先 commit 目前 dng_sewer_depths 的 spec 里程碑；commit 後若要落地 runtime 資產，再續做 dng_sewer_depths implementation。`
+- notes: `plans/area/0007-dng-sewer-depths.md` 與 `area/dng_sewer_depths/map.md` 第一版已建立，`up` 邊界對應既有 `dng_loyang_sewer/9460`，更深封印墓井 world link 目前只保留在 spec
 
 
 ## Done
@@ -84,6 +84,8 @@
 - `jingxiang_road` 已完成第一輪 implementation、commit `abd53ac`，並達成可前進下一區狀態
 - `plans/area/0005-wild-longqu-hills.md` 已建立
 - `wild_longqu_hills` 已完成第一輪 implementation、commit `c6f5c9a`，並達成可前進下一區狀態
+- `plans/area/0006-dng-loyang-sewer.md` 已建立
+- `dng_loyang_sewer` 已完成第一輪 implementation、commit `efb756e`，並達成可前進下一區狀態
 
 ## Blocked
 
@@ -91,14 +93,14 @@
 
 ## Current Recommended Next Step
 
-先 commit 目前 `dng_loyang_sewer` 的 implementation 里程碑；commit 後把下一個 actionable area 推進到 `dng_sewer_depths` spec。
+先 commit 目前 `dng_sewer_depths` 的 spec 里程碑；commit 後再決定是否落地 implementation，並把它正式接到 `dng_loyang_sewer/9460`。
 
 語意提醒：
 
-- 目前的 next actionable area 仍是 `dng_loyang_sewer`
-- 目前 `delivery_gate` 是 `implementation_ready_for_commit`，本輪安全動作是先 commit，不跳下一區
-- `wild_longqu_hills` 已完成第一輪 implementation 並提交，可由 `Done` 歷程回查
+- 目前的 next actionable area 仍是 `dng_sewer_depths`
+- 目前 `delivery_gate` 是 `spec_ready_for_commit`，本輪安全動作是先 commit，不跳下一區
+- `dng_loyang_sewer` 已完成第一輪 implementation 並提交，可由 `Done` 歷程回查
 
 建議可直接使用的 prompt：
 
-`先 commit 目前 dng_loyang_sewer 的 implementation 里程碑；commit 後續做 dng_sewer_depths spec。`
+`先 commit 目前 dng_sewer_depths 的 spec 里程碑；commit 後若要落地 runtime 資產，再續做 dng_sewer_depths implementation。`

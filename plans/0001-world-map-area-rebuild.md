@@ -145,6 +145,7 @@
 3. `jingxiang_road`
 4. `wild_longqu_hills`
 5. `dng_loyang_sewer`
+6. `dng_sewer_depths`
 
 ## Theme Allocation
 
@@ -170,6 +171,10 @@
   - theme: `仙俠風`
   - subtheme: `詭異民俗風`
   - 缺口角色：補洛陽東郊暗井入口之後的地下水路前帶，讓洛陽鏈同時往地表外圈與地下支線延伸
+- `dng_sewer_depths`
+  - theme: `詭異民俗風`
+  - subtheme: `深層水道`
+  - 缺口角色：補洛陽地下水區之下的真正深層水道，讓地下鏈可以從前哨延伸到封印與機關痕跡更重的 deeper section
 
 後續新增候選 area 時，必須一併記錄：
 
