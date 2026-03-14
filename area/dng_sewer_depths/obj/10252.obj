@@ -1,0 +1,14 @@
+Vnum            10252
+Name            hardskin water pouch~
+ShortDesc       硬皮水囊~
+Description
+一只收口很緊的硬皮水囊靠在牆邊。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           15
+Value           10 10 LIQ_WATER
+Weight          2
+Cost            65
+End

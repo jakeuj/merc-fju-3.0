@@ -55,7 +55,7 @@
 ## Planned World Links
 
 - `up` from `9461`: planned link to `dng_loyang_sewer` room `9460`
-- `down` from `9470`: planned continuation to `更深封印墓井 / 地底遺構`
+- `down` from `9470`: planned continuation to `古墓深井 / 地底遺構`
 
 ## Runtime Metadata Notes
 
@@ -76,7 +76,7 @@
                                                                                            |
                                                                                         [9470] 下沉井口
 
-[9470] down -> future deeper sealed depths
+[9470] down -> future royal tomb depths
 ```
 
 ## mapmd-json
@@ -106,7 +106,7 @@
       {
         "direction": "down",
         "source_vnum": 9470,
-        "target_area": "dng_royal_tomb_depths",
+        "target_area": "dng_royal_tomb",
         "label": "更深封印墓井"
       }
     ],

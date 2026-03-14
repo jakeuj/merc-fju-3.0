@@ -1,0 +1,32 @@
+Vnum            9461
+Name            鐵梯底座~
+Description
+鐵梯在這裡沒入一片帶著黑色油光的淺水，井壁上的鏽痕像被無數雙手反覆抓過。抬頭還能勉強望見上層那一絲較亮的灰光，往前則只剩濃重潮氣與深處傳來的低沉拍水聲。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        9460
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9462
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         鐵梯~
+End
+
+End

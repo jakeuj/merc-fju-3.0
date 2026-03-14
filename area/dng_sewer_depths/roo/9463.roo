@@ -1,0 +1,47 @@
+Vnum            9463
+Name            淤泥閘門~
+Description
+一道厚重石閘半陷在淤泥裡，閘槽兩側還看得出粗糙機關滑軌。它像曾用來控制深渠水勢，如今卻只剩卡死的木樁和被泥水吞沒的轉柄。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9462
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9464
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9465
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         木樁~
+Description
+木樁被水泡得發黑開裂，像是有人曾急著用它臨時卡住閘門，卻再也沒有回來處理。
+~
+End
+
+#Enquire
+Keyword         黑水~
+End
+
+#Enquire
+Keyword         閘門~
+End
+
+End

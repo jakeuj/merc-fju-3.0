@@ -1,0 +1,31 @@
+Vnum            10202
+Name            blackwater lurking shade~
+ShortDesc       黑水伏影~
+Description
+黑水表面這團暗影幾乎沒有清楚輪廓，只有在水波翻動時才露出近似人形
+的邊線。它像是整條深渠潮氣與惡意共同凝出的產物，總在你以為前方空
+無一物時悄悄貼近。
+~
+StayArea        Yes
+AlignEvil       Yes
+Alignment       -220
+Level           18
+Hitroll         5
+Protect         -2
+Damroll         4
+Str             12
+Int             9
+Wis             8
+Dex             13
+Con             12
+Hp              2300
+Mana            110
+Move            115
+Class           CLASS_THIEF
+Gold            130
+Multipile       100
+AttackRatio     108
+DodgeRatio      108
+Migrate         0
+Sex             SEX_NEUTRAL
+End

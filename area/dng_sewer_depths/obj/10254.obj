@@ -1,0 +1,16 @@
+Vnum            10254
+Name            lockgate iron hook~
+ShortDesc       鎖閘鐵鉤~
+Description
+一把帶著厚重鏽斑的鎖閘鐵鉤落在地上。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           17
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            135
+Exp             12
+End

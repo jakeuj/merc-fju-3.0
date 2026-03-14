@@ -60,16 +60,16 @@
 ### `dng_sewer_depths`
 
 - status: `in_progress`
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 - compliance_check: `compliant with current ref/Readme.md scope`
 - plan: `plans/area/0007-dng-sewer-depths.md`
 - parent_region: `loyang underground chain`
 - theme: `詭異民俗風`
 - subtheme: `深層水道`
-- world_links: `洛陽地下水區`, `地下深渠`, `更深封印墓井`
-- next_action: 先 commit `dng_sewer_depths` 的單區 plan + map.md spec 里程碑；commit 後再決定是否進入 implementation（index/mob/obj/res/shp）並正式接上 `dng_loyang_sewer/9460`
-- next_prompt: `先 commit 目前 dng_sewer_depths 的 spec 里程碑；commit 後若要落地 runtime 資產，再續做 dng_sewer_depths implementation。`
-- notes: `plans/area/0007-dng-sewer-depths.md` 與 `area/dng_sewer_depths/map.md` 第一版已建立，`up` 邊界對應既有 `dng_loyang_sewer/9460`，更深封印墓井 world link 目前只保留在 spec
+- world_links: `洛陽地下水區`, `地下深渠`, `古墓深井`
+- next_action: 先 commit `dng_sewer_depths` 的 implementation 里程碑；commit 後將下一個 actionable area 推進到 `dng_royal_tomb` spec，延續洛陽地下鏈
+- next_prompt: `先 commit 目前 dng_sewer_depths 的 implementation 里程碑；commit 後續做 dng_royal_tomb spec。`
+- notes: `index/mob/obj/res/shp/roo` 已落地並掛入 `area/directory.lst`，`dng_loyang_sewer/9460` 已正式接上 `9461`；`log/1016.log` smoke test 有成功訊號，更深古墓深井 world link 仍只保留在 spec
 
 
 ## Done
@@ -93,14 +93,14 @@
 
 ## Current Recommended Next Step
 
-先 commit 目前 `dng_sewer_depths` 的 spec 里程碑；commit 後再決定是否落地 implementation，並把它正式接到 `dng_loyang_sewer/9460`。
+先 commit 目前 `dng_sewer_depths` 的 implementation 里程碑；commit 後把下一個 actionable area 推進到 `dng_royal_tomb` spec。
 
 語意提醒：
 
 - 目前的 next actionable area 仍是 `dng_sewer_depths`
-- 目前 `delivery_gate` 是 `spec_ready_for_commit`，本輪安全動作是先 commit，不跳下一區
+- 目前 `delivery_gate` 是 `implementation_ready_for_commit`，本輪安全動作是先 commit，不跳下一區
 - `dng_loyang_sewer` 已完成第一輪 implementation 並提交，可由 `Done` 歷程回查
 
 建議可直接使用的 prompt：
 
-`先 commit 目前 dng_sewer_depths 的 spec 里程碑；commit 後若要落地 runtime 資產，再續做 dng_sewer_depths implementation。`
+`先 commit 目前 dng_sewer_depths 的 implementation 里程碑；commit 後續做 dng_royal_tomb spec。`

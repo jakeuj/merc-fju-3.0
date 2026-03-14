@@ -1,0 +1,39 @@
+Vnum            9469
+Name            遺失祭具間~
+Description
+角落堆著裂開的陶盞、沉重銅片與被水泡鬆的木匣，像曾有人把祭具與維修器具一併拖進這裡暫放。室內瀰漫著一股混雜鐵鏽、潮泥與香灰的古怪氣味。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        9467
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        9466
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         祭具~
+Description
+祭具形制混雜得很奇怪，有些像廟宇器物，有些卻更像配合機關使用的零件。
+~
+End
+
+#Enquire
+Keyword         祭具~
+End
+
+#Enquire
+Keyword         來路~
+End
+
+End

@@ -1,0 +1,31 @@
+Vnum            9466
+Name            漂木堆渠間~
+Description
+一堆被黑水推來的漂木與爛布在這裡卡成半堵矮牆，木料底下不時冒出細碎氣泡。若仔細翻看，還能發現幾件不該出現在深層水道裡的祭繩與銅片。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9465
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9469
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         漂木~
+Description
+漂木間夾著幾段帶符墨痕跡的麻繩，像是某種封印儀式殘留下來的耗材。
+~
+End
+
+End

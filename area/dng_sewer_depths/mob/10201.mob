@@ -1,0 +1,33 @@
+Vnum            10201
+Name            sewer relic scavenger~
+ShortDesc       井底拾遺者~
+Description
+這名拾遺者披著拼湊起來的油布與舊麻繩，正蹲在牆角整理從黑水裡撈上
+來的零碎器物。他的眼神警惕卻不兇狠，像是早就習慣在這片深渠裡靠小
+心與經驗換一條活路。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       15
+Level           16
+Hitroll         1
+Protect         0
+Damroll         0
+Str             11
+Int             11
+Wis             12
+Dex             10
+Con             11
+Hp              1500
+Mana            120
+Move            90
+Class           0
+Gold            120
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

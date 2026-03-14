@@ -1,0 +1,31 @@
+Vnum            10203
+Name            lockgate remnant repairer~
+ShortDesc       鎖閘殘修者~
+Description
+這名殘修者仍披著早已辨不出原色的工袍，手裡緊抓著鏽蝕工具，像到現
+在都還沒放棄守著這道鎖閘。它的動作斷續而僵硬，卻在靠近封印深槽時
+顯得格外執著。
+~
+StayArea        Yes
+AlignEvil       Yes
+Alignment       -180
+Level           20
+Hitroll         6
+Protect         -2
+Damroll         5
+Str             13
+Int             10
+Wis             9
+Dex             12
+Con             13
+Hp              2600
+Mana            130
+Move            105
+Class           CLASS_THIEF
+Gold            160
+Multipile       100
+AttackRatio     110
+DodgeRatio      106
+Migrate         0
+Sex             SEX_MALE
+End

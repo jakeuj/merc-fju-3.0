@@ -1,0 +1,31 @@
+Vnum            9465
+Name            維修偏室~
+Description
+偏室裡倒著幾架腐朽木梯與拆散的滑輪，牆角還留著半箱沒來得及搬走的鐵件。這裡像曾有人試圖修復深渠設施，但工作只做到一半便突然中止。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        9463
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9466
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         鐵件~
+Description
+鐵件邊角帶著符刻與卡榫痕，顯示這些機關原本就不只是普通水利設施。
+~
+End
+
+End

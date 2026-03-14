@@ -1,0 +1,32 @@
+Vnum            9464
+Name            回聲深渠~
+Description
+深渠在這裡略為抬高，兩側石壁把每一滴水聲都放大成不安的迴響。再往前看，隱約能看見一片像鎖閘又像祭門的黑影橫在通道盡頭。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9463
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9467
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         深處~
+End
+
+#Enquire
+Keyword         回音~
+End
+
+End

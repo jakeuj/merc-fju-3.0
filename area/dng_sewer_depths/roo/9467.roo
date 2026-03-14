@@ -1,0 +1,44 @@
+Vnum            9467
+Name            鎖閘前廊~
+Description
+前廊地面嵌著數道導水槽，槽邊則刻著早被磨鈍的鎮壓紋路。站在這裡時，深處傳來的水聲反而變小，像有什麼東西把更下方的空間整個吞住了。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9464
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9469
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9468
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         封印~
+End
+
+#Enquire
+Keyword         前廊~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

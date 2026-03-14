@@ -1,0 +1,15 @@
+Vnum            10251
+Name            oilsealed lamp fold~
+ShortDesc       油封火摺~
+Description
+一支以油布細心裹起的油封火摺被收在角落。
+~
+Unit            支~
+ItemType        ITEM_LIGHT
+WearLoc         ITEM_WEAR_LIGHT
+Takeable        Yes
+Level           15
+Value3          18
+Weight          1
+Cost            80
+End

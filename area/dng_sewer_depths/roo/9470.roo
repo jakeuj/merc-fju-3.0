@@ -1,0 +1,24 @@
+Vnum            9470
+Name            下沉井口~
+Description
+封印深槽底部還藏著一道向下開裂的沉井口，井緣佈滿被黑水磨亮的石面與殘破鎖扣。從這裡往下只看得見一整片吞光的濕黑，像是更深處仍有一層真正被刻意隔開的地底構造。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        9468
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         井口~
+End
+
+#Enquire
+Keyword         下方~
+End
+
+End

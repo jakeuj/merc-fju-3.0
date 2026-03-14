@@ -1,0 +1,14 @@
+Vnum            10253
+Name            dried herb cake~
+ShortDesc       乾燥藥餅~
+Description
+一塊勉強保持乾燥的藥餅被包在粗布裡。
+~
+Unit            塊~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           15
+Value           14 24 4 0
+Weight          1
+Cost            55
+End

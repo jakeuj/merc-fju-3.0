@@ -1,0 +1,31 @@
+Vnum            9462
+Name            黑水甬道~
+Description
+甬道地面覆著一層不知深淺的黑水，踩下去時總會晚半拍才傳回濺水聲。牆面殘留的刻線像是舊時維修記號，但多數早被潮氣與污泥蓋過。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9461
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9463
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         水痕~
+Description
+牆上的水痕高低交錯，顯示這條深渠有時只是積水，有時卻會被整股黑水灌滿。
+~
+End
+
+End

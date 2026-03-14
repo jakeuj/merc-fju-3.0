@@ -1,0 +1,39 @@
+Vnum            9468
+Name            封印深槽~
+Description
+石槽中央陷成一圈更黑、更深的井口，邊緣圍著半殘銅鎖與斷裂石柱。井口下方沒有任何可見光影，只有一股帶著寒意的濕風緩慢往上冒，像深處仍有什麼被壓在更底下。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9467
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        9470
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         銅鎖~
+Description
+銅鎖表面滿是舊符和裂紋，既像鎖具，也像某種專門用來鎮壓井底異物的法器。
+~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+#Enquire
+Keyword         井口~
+End
+
+End

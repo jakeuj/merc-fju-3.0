@@ -17,6 +17,14 @@
 - 明確標示與 `dng_loyang_sewer/9460` 的 `up` 邊界意圖
 - 先保留更深層 `down` world link 為 spec，不提早指向不存在的 runtime area
 
+## Scope (Milestone 2: Implementation)
+
+- 以 `map.md` 生成 `roo/*.roo` 第一版並補齊最小 runtime 資產
+- 建立 `index/mob/obj/res/shp`
+- 將 `dng_sewer_depths` 掛入 `area/directory.lst`
+- 讓 `dng_loyang_sewer/9460` 與 `dng_sewer_depths/9461` 形成正式雙向邊界
+- `dng_royal_tomb` world link 仍保留在 spec，不直接接到不存在的 runtime area
+
 ## World Links (Spec Intent)
 
 - `up`: 通往 `dng_loyang_sewer` room `9460`
@@ -56,6 +64,25 @@
 - `python3 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/dng_sewer_depths/map.md --validate-only`
   - passed
 
+## Validation Results (Implementation Stage)
+
+- `python3 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/dng_sewer_depths/map.md --validate-only`
+  - passed
+- `make -C src clean && make -C src merc`
+  - passed
+- `make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc`
+  - passed
+- `cd src && timeout 45 bash ./startup.bash`
+  - passed with startup success signal in `log/1016.log`
+  - no new `dng_sewer_depths`-specific `Load_room` / reset / object parse failure observed
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `dng_sewer_depths`
+- `area/dng_sewer_depths/roo/*.roo` 由 `map.md` scaffold 生成
+- `area/dng_loyang_sewer/roo/9460.roo` 已正式補上 down 出口到 `9461`
+- `9470` 以下的更深古墓深井仍停留在 spec，不先做假的 runtime boundary
+
 ## Next Step Prompt
 
-`先 commit 目前 dng_sewer_depths 的 spec 里程碑；commit 後若要落地 runtime 資產，再把它正式接到 dng_loyang_sewer/9460。`
+`先 commit 目前 dng_sewer_depths 的 implementation 里程碑；commit 後若要續推洛陽地下鏈，優先補 dng_royal_tomb spec。`
