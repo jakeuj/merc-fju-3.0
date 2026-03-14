@@ -1,0 +1,39 @@
+Vnum            9484
+Name            青燈門檻~
+Description
+門檻兩側各立著一座銅燈座，燈芯早已熄滅，卻仍散著淡淡焦苦味。越往前走，地面石紋越工整，也越像在提醒你正一步步靠近真正重要的墓室。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9483
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9488
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         銅燈~
+Description
+銅燈座表面覆著青綠鏽層，內壁還殘留一圈乾硬油痕，像有人曾長期維持這裡的照明。
+~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+#Enquire
+Keyword         墓道~
+End
+
+End

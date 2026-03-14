@@ -1,0 +1,24 @@
+Vnum            9490
+Name            下層石階~
+Description
+石階緊貼井壁向下盤旋，階面鋪滿積灰與碎石，卻仍保有整齊得近乎刻意的角度。越往下望去，越能感覺到更深層墓室像把整片空氣都壓得更沉。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        9489
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         出口~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

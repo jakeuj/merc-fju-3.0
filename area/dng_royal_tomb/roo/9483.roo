@@ -1,0 +1,47 @@
+Vnum            9483
+Name            石門墓道~
+Description
+墓道兩側站著半身沒入石牆的鎮墓武士浮雕，前方則是一道已被推開些許的厚重石門。空氣裡幾乎沒有水氣，只剩陳土與金屬冷味慢慢滲進肺裡。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9482
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9484
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9485
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         石門~
+Description
+石門邊緣留下被強行推移過的磨痕，顯示古墓曾有人從外側進入，也曾有人試圖再度封上。
+~
+End
+
+#Enquire
+Keyword         石門~
+End
+
+#Enquire
+Keyword         前路~
+End
+
+End

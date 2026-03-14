@@ -1,0 +1,39 @@
+Vnum            9486
+Name            殘碑耳室~
+Description
+耳室牆邊斜靠著一塊裂成兩半的墓碑殘片，碑文大半剝落，只剩幾個與封號、葬制有關的字樣仍可辨識。這裡不像主墓室，卻像記錄整座古墓身份的備份角落。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9485
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9487
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         殘碑~
+Description
+殘碑上仍可見幾筆肅穆端正的墓志字形，像在提醒你這裡埋葬的身分遠高於一般豪強。
+~
+End
+
+#Enquire
+Keyword         墓志~
+End
+
+#Enquire
+Keyword         碑文~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            9481
+Name            裂井前廳~
+Description
+裂井落點在這裡擴成一小片石砌前廳，牆面滿是被潮氣喚醒的舊刻痕。抬頭還能望見上方井口殘留的一線濕黑光影，往內則只剩冷硬石壁與沉封土氣。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        9470
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9482
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         古墓~
+End
+
+End

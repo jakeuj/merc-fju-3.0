@@ -1,0 +1,44 @@
+Vnum            9488
+Name            封墓前台~
+Description
+前台中央有一道向下凹陷的封墓井，井緣圍著四根帶鎖槽的石柱。四周牆面刻滿被磨蝕的鎮壓紋路，讓人一眼便知真正重要的墓室還在更底下。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9484
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9487
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9489
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         封墓~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         古墓~
+End
+
+End

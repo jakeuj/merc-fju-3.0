@@ -1,0 +1,15 @@
+Vnum            10351
+Name            sealed oil torch~
+ShortDesc       封油火炬~
+Description
+一支仔細封油保存的火炬被橫放在牆邊。
+~
+Unit            支~
+ItemType        ITEM_LIGHT
+WearLoc         ITEM_WEAR_LIGHT
+Takeable        Yes
+Level           18
+Value3          20
+Weight          1
+Cost            95
+End

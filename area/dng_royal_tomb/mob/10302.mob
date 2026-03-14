@@ -1,0 +1,31 @@
+Vnum            10302
+Name            tomb guardian remnant shade~
+ShortDesc       鎮墓殘影~
+Description
+這縷殘影盤踞在墓道陰影與銅燈冷光之間，輪廓時而像披甲守衛，時而又
+像被封在古墓多年的怨魂。它沒有真正的腳步聲，卻總能比你更早出現在
+下一段陰影裡。
+~
+StayArea        Yes
+AlignEvil       Yes
+Alignment       -260
+Level           21
+Hitroll         6
+Protect         -2
+Damroll         5
+Str             12
+Int             10
+Wis             9
+Dex             13
+Con             12
+Hp              2800
+Mana            140
+Move            115
+Class           CLASS_THIEF
+Gold            180
+Multipile       100
+AttackRatio     110
+DodgeRatio      108
+Migrate         0
+Sex             SEX_NEUTRAL
+End

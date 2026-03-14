@@ -1,0 +1,14 @@
+Vnum            10352
+Name            preserved grain cake~
+ShortDesc       保存乾糧餅~
+Description
+一塊以油紙妥善包住的保存乾糧餅被放在木盒旁。
+~
+Unit            塊~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           18
+Value           16 28 4 0
+Weight          1
+Cost            70
+End

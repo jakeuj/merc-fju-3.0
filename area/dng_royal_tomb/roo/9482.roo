@@ -1,0 +1,31 @@
+Vnum            9482
+Name            落井石台~
+Description
+石台表面刻著一道早被磨損的環形紋，像是專門接應自上方落下之人的緩衝台。周圍散著幾片裂開的銅扣與石屑，顯示古墓防護曾在這裡啟動過。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9481
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9483
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         銅扣~
+Description
+銅扣表面佈滿細小榫孔，像是原本配合某種墜落或封門機關使用的構件。
+~
+End
+
+End

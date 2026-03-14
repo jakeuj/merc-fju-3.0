@@ -1,0 +1,39 @@
+Vnum            9489
+Name            封墓井口~
+Description
+井口周圍留著明顯拖鍊痕與碎裂石楔，像曾有一套能把整個井口重新封死的重型機關。低頭往下看時，只見石階與黑暗一圈圈往更深處盤去。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9488
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        9490
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         石柱~
+Description
+石柱上的鎖槽和鐵鍊痕一一對位，顯示這口封墓井曾被設計成可開可閉的重機關。
+~
+End
+
+#Enquire
+Keyword         井口~
+End
+
+#Enquire
+Keyword         下方~
+End
+
+End

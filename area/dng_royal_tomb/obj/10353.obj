@@ -1,0 +1,14 @@
+Vnum            10353
+Name            narrow neck water flask~
+ShortDesc       細頸水瓶~
+Description
+一只便於攜帶的細頸水瓶靜靜靠在石壁邊。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           18
+Value           10 10 LIQ_WATER
+Weight          2
+Cost            75
+End

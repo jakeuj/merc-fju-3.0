@@ -1,0 +1,33 @@
+Vnum            10301
+Name            tomb relic drifter~
+ShortDesc       墓道拾遺者~
+Description
+這名拾遺者披著滿是灰塵的舊披巾，腰間掛著幾把細工具與布袋，像是靠
+在古墓邊緣撿拾殘存器物維生。他神情緊張卻不兇惡，似乎比任何人都清
+楚這裡哪些地方可以靠近、哪些地方最好別碰。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       20
+Level           19
+Hitroll         1
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             12
+Dex             10
+Con             11
+Hp              1700
+Mana            130
+Move            95
+Class           0
+Gold            150
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

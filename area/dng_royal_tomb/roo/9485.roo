@@ -1,0 +1,31 @@
+Vnum            9485
+Name            陪葬側室~
+Description
+側室四角擺著破損木架與傾倒陶甕，牆邊則堆著幾件包覆麻布的長形器物。它們多半已被時間毀壞，但仍能看出這裡曾被用來陳列某些重要陪葬品。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        9483
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9486
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         麻布~
+Description
+麻布早已脆裂，卻仍勉強包住器物輪廓，像怕有人一眼看出裡面原本藏的是什麼。
+~
+End
+
+End

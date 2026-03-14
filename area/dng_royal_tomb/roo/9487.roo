@@ -1,0 +1,31 @@
+Vnum            9487
+Name            銅匣角間~
+Description
+角間裡散著幾個翻倒的銅匣與斷裂木盒，匣內大多空了，卻還留著細碎金屬片與乾硬絹布。這些遺物不像單純遭竊，更像曾有人急著從這裡帶走某些核心物件。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9486
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        9488
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         銅匣~
+Description
+銅匣內壁還留著細密鎖孔與卡槽，顯示它們曾用來收納不只金銀，還可能是某種印信或機關鑰件。
+~
+End
+
+End

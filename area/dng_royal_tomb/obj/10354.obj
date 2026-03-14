@@ -1,0 +1,16 @@
+Vnum            10354
+Name            tomb bronze spear~
+ShortDesc       墓道銅矛~
+Description
+一柄仍帶著舊時寒光的墓道銅矛斜靠在石柱旁。
+~
+Unit            柄~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           20
+Value           0 -1 -1 WEAPON_SWORD
+Weight          5
+Cost            165
+Exp             15
+End

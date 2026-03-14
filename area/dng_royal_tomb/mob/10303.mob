@@ -1,0 +1,31 @@
+Vnum            10303
+Name            sealed well stone sentinel~
+ShortDesc       守井石俑~
+Description
+這尊石俑半蹲在封墓井邊，表面原本的彩繪早被歲月磨掉，只剩裂痕裡殘
+留的暗色痕跡。它動起來時像整塊石頭都在低鳴，明顯仍把自己視為這座
+古墓最後一道守備。
+~
+StayArea        Yes
+AlignEvil       Yes
+Alignment       -220
+Level           23
+Hitroll         7
+Protect         -3
+Damroll         6
+Str             14
+Int             8
+Wis             8
+Dex             10
+Con             14
+Hp              3300
+Mana            100
+Move            90
+Class           CLASS_THIEF
+Gold            210
+Multipile       100
+AttackRatio     112
+DodgeRatio      102
+Migrate         0
+Sex             SEX_NEUTRAL
+End
