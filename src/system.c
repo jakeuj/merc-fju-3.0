@@ -489,6 +489,8 @@ int get_tick( void )
 bool get_proc( pid_t pid, struct ProcFile * proc )
 {
   int    fd;
+  ssize_t nread;
+  char * arg;
   char   filename[MAX_FILE_LENGTH];
   char   buffer[512];
   PUSH_FUNCTION( "get_proc" );
@@ -521,12 +523,13 @@ bool get_proc( pid_t pid, struct ProcFile * proc )
   }
 
   /* 讀取 proc file stat 的內容 */
-  if ( ( read( fd, buffer , sizeof( buffer ) - 1 ) ) <= 0 )
+  if ( ( nread = read( fd, buffer , sizeof( buffer ) - 1 ) ) <= 0 )
   {
     mudlog( LOG_INFO , "Get_proc: read:%s" , strerror( errno ) );
     close( fd );
     RETURN( FALSE );
   }
+  buffer[nread] = '\0';
 
   /* 關閉檔案描述子 */
   close( fd );
@@ -580,12 +583,13 @@ bool get_proc( pid_t pid, struct ProcFile * proc )
   }
 
   /* 讀取 proc file status 的內容 */
-  if ( ( read( fd, buffer , sizeof( buffer ) - 1 ) ) <= 0 )
+  if ( ( nread = read( fd, buffer , sizeof( buffer ) - 1 ) ) <= 0 )
   {
     mudlog( LOG_INFO , "Get_proc: read:%s" , strerror( errno ) );
     close( fd );
     RETURN( FALSE );
   }
+  buffer[nread] = '\0';
 
   /* 關閉檔案描述子 */
   close( fd );
