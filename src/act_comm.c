@@ -2246,6 +2246,7 @@ FUNCTION( do_suicide )
   char            * pArg;
   char              cEnd;
   int               level;
+  int               rc;
 
   PUSH_FUNCTION( "do_suicide" );
 
@@ -2366,7 +2367,11 @@ FUNCTION( do_suicide )
   sprintf( exec_cmd, "rm -rf %s/%s/%s"
     , player_dir, initial( ch->name ), normalize( ch->name ) );
 
-  system( exec_cmd );
+  rc = system( exec_cmd );
+
+  if ( rc != 0 )
+    mudlog( LOG_ERR, "do_suicide: 無法刪除玩家檔案 %s (rc=%d).", exec_cmd, rc );
+
   RETURN_NULL();
 }
 
@@ -3029,7 +3034,6 @@ FUNCTION( do_split )
 
 FUNCTION( do_gtell )
 {
-  char        buf[MAX_STRING_LENGTH];
   char        buf1[MAX_STRING_LENGTH];
   CHAR_DATA * gch;
 
@@ -3051,13 +3055,32 @@ FUNCTION( do_gtell )
   }
 
   ansi_transcribe( argument, buf1 );
-  sprintf( buf, "\e[1;33m%s\e[1;33m告訴隊上的人﹕「%s」。\e[0m\n\r"
-    , mob_name( NULL, ch ), buf1 );
-
-  for ( gch = char_list; gch; gch = gch->next )
   {
-    if ( !verify_char( gch ) ) continue;
-    if ( is_same_group( gch, ch ) ) send_to_char( buf, gch );
+    int needed;
+    char * message;
+
+    needed = snprintf( NULL, 0, "\e[1;33m%s\e[1;33m告訴隊上的人﹕「%s」。\e[0m\n\r"
+      , mob_name( NULL, ch ), buf1 );
+
+    if ( needed < 0 )
+    {
+      mudlog( LOG_ERR, "do_gtell: 無法建立隊聊字串." );
+      RETURN_NULL();
+    }
+
+    message = alloc_string( needed + 1 );
+
+    snprintf( message, needed + 1
+      , "\e[1;33m%s\e[1;33m告訴隊上的人﹕「%s」。\e[0m\n\r"
+      , mob_name( NULL, ch ), buf1 );
+
+    for ( gch = char_list; gch; gch = gch->next )
+    {
+      if ( !verify_char( gch ) ) continue;
+      if ( is_same_group( gch, ch ) ) send_to_char( message, gch );
+    }
+
+    free_string( message );
   }
 
   RETURN_NULL();

@@ -353,8 +353,8 @@ char * restrict_value( RESTRICT_DATA * pRestrict, CHAR_DATA * ch )
 {
   CLASS_DATA * pClass;
   SKILL_DATA * pSkill;
-  static char  buf[512];
-  char         chinese[512];
+  static char  buf[MAX_STRING_LENGTH];
+  char         chinese[64];
 
   PUSH_FUNCTION( "restrict_value" );
 
@@ -364,42 +364,42 @@ char * restrict_value( RESTRICT_DATA * pRestrict, CHAR_DATA * ch )
   {
   case RES_STR:
     chinese_number( pRestrict->value, chinese );
-    sprintf( buf, "限制力量不能低於%s。", chinese );
+    snprintf( buf, sizeof( buf ), "限制力量不能低於%s。", chinese );
     break;
 
   case RES_INT:
     chinese_number( pRestrict->value, chinese );
-    sprintf( buf, "限制智力不能低於%s。", chinese );
+    snprintf( buf, sizeof( buf ), "限制智力不能低於%s。", chinese );
     break;
 
   case RES_WIS:
     chinese_number( pRestrict->value, chinese );
-    sprintf( buf, "限制學識不能低於%s。", chinese );
+    snprintf( buf, sizeof( buf ), "限制學識不能低於%s。", chinese );
     break;
 
   case RES_DEX:
     chinese_number( pRestrict->value, chinese );
-    sprintf( buf, "限制敏捷不能低於%s。", chinese );
+    snprintf( buf, sizeof( buf ), "限制敏捷不能低於%s。", chinese );
     break;
 
   case RES_CON:
     chinese_number( pRestrict->value, chinese );
-    sprintf( buf, "限制體格不能低於%s。", chinese );
+    snprintf( buf, sizeof( buf ), "限制體格不能低於%s。", chinese );
     break;
 
   case RES_HP:
     chinese_number( pRestrict->value, chinese );
-    sprintf( buf, "限制生命力不能低於%s。", chinese );
+    snprintf( buf, sizeof( buf ), "限制生命力不能低於%s。", chinese );
     break;
 
   case RES_MANA:
     chinese_number( pRestrict->value, chinese );
-    sprintf( buf, "限制法力不能低於%s。", chinese );
+    snprintf( buf, sizeof( buf ), "限制法力不能低於%s。", chinese );
     break;
 
   case RES_MOVE:
     chinese_number( pRestrict->value, chinese );
-    sprintf( buf, "限制體力不能低於%s。", chinese );
+    snprintf( buf, sizeof( buf ), "限制體力不能低於%s。", chinese );
     break;
 
   case RES_CLASS:
@@ -420,7 +420,7 @@ char * restrict_value( RESTRICT_DATA * pRestrict, CHAR_DATA * ch )
   case RES_TRUST:
 
     chinese_number( pRestrict->value, chinese );
-    sprintf( buf, "限制信任值不能低於%s。", chinese );
+    snprintf( buf, sizeof( buf ), "限制信任值不能低於%s。", chinese );
     break;
 
   case RES_SKILL:
@@ -428,7 +428,7 @@ char * restrict_value( RESTRICT_DATA * pRestrict, CHAR_DATA * ch )
     if ( !( pSkill = get_skill( pRestrict->value ) ) ) RETURN( "未知" );
 
     chinese_number( pRestrict->vicevalue, chinese );
-    sprintf( buf, "限制技能%s熟練度不能低於為%s%s%s%s。"
+    snprintf( buf, sizeof( buf ), "限制技能%s熟練度不能低於為%s%s%s%s。"
       , pSkill->cname, adeptation_name( pRestrict->vicevalue )
       , SkillValue || IS_IMMORTAL( ch ) ? "「熟練度﹕" : ""
       , SkillValue || IS_IMMORTAL( ch ) ? chinese      : ""
@@ -450,7 +450,7 @@ char * restrict_value( RESTRICT_DATA * pRestrict, CHAR_DATA * ch )
 
   case RES_LEVEL:
     chinese_number( pRestrict->value, chinese );
-    sprintf( buf, "等級不能低於%s。", chinese );
+    snprintf( buf, sizeof( buf ), "等級不能低於%s。", chinese );
     break;
 
   case RES_NOSKILL:
@@ -458,7 +458,7 @@ char * restrict_value( RESTRICT_DATA * pRestrict, CHAR_DATA * ch )
     if ( !( pSkill = get_skill( pRestrict->value ) ) ) RETURN( "未知" );
 
     chinese_number( pRestrict->vicevalue, chinese );
-    sprintf( buf, "限制相剋技能%s熟練不能高於%s%s%s%s。"
+    snprintf( buf, sizeof( buf ), "限制相剋技能%s熟練不能高於%s%s%s%s。"
       , pSkill->cname, adeptation_name( pRestrict->vicevalue )
       , SkillValue || IS_IMMORTAL( ch ) ? "「熟練度﹕" : ""
       , SkillValue || IS_IMMORTAL( ch ) ? chinese      : ""
@@ -469,7 +469,7 @@ char * restrict_value( RESTRICT_DATA * pRestrict, CHAR_DATA * ch )
   case RES_ALIGN:
 
     chinese_number( pRestrict->value, chinese );
-    sprintf( buf, "陣營必須%s%s。"
+    snprintf( buf, sizeof( buf ), "陣營必須%s%s。"
       , pRestrict->vicevalue ? "高於" : "低於", chinese );
     break;
 
