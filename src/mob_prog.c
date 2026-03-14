@@ -952,8 +952,8 @@ char * mprog_process_if( char * ifchck, char * com_list, CHAR_DATA * mob,
       CHAR_DATA * actor, OBJ_DATA * obj, void * vo, CHAR_DATA * rndm )
 {
   char   buf[ MAX_INPUT_LENGTH ];
-  char * morebuf = '\x0';
-  char * cmnd = '\x0';
+  char * morebuf = NULL;
+  char * cmnd = NULL;
   bool   loopdone = FALSE;
   bool   flag = FALSE;
   int    legal;

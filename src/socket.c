@@ -39,7 +39,7 @@ char * get_user_name( int desc, struct sockaddr_in * there )
 {
   struct sockaddr_in   here;          /* 本地的結構 */
   struct sockaddr_in   sin;           /* 對方的結構*/
-  int                  length;
+  socklen_t            length;
   int                  s;
   unsigned int         remote;
   unsigned int         local;
@@ -348,7 +348,7 @@ FUNCTION( do_finger )
       RETURN_NULL();
     }
 
-    if ( pDesc->finger_data && pDesc->finger_data[0] )
+    if ( pDesc->finger_data[0] )
       act( "$t", ch, pDesc->finger_data, NULL, TO_CHAR );
 
     else
