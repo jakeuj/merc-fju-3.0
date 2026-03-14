@@ -21,12 +21,13 @@ FUNCTION( do_wanted )
 {
   char          arg[MAX_INPUT_LENGTH];
   char          buf[MAX_STRING_LENGTH];
-  char          buf1[MAX_STRING_LENGTH];
+  char        * buf1;
   CHAR_DATA   * victim;
   WANTED_DATA * pWanted;
   bool          bChange;
   int           reward;
   int           loop;
+  int           needed;
 
   PUSH_FUNCTION( "do_wanted" );
 
@@ -162,10 +163,18 @@ FUNCTION( do_wanted )
     chinese_number( reward, buf );
     act( "$n花了$t兩銀子買$N的項上人頭﹗", ch, buf, victim, TO_CHAR );
 
-    sprintf( buf1, "%s\e[0m(%s)花了%s兩銀子來買%s\e[0m(%s)的項上人頭﹗"
+    needed = snprintf( NULL, 0, "%s\e[0m(%s)花了%s兩銀子來買%s\e[0m(%s)的項上人頭﹗"
+      , ch->cname, ch->name, buf, victim->cname, victim->name );
+
+    if ( needed < 0 ) RETURN_NULL();
+
+    buf1 = alloc_string( needed + 1 );
+    snprintf( buf1, needed + 1,
+      "%s\e[0m(%s)花了%s兩銀子來買%s\e[0m(%s)的項上人頭﹗"
       , ch->cname, ch->name, buf, victim->cname, victim->name );
 
     talk_channel_2( buf1, CHANNEL_BULLETIN, "懸賞" );
+    free_string( buf1 );
     act( "你被$N懸賞了﹐請你走路小心一點吧﹗", victim, NULL, ch, TO_CHAR );
 
     RETURN_NULL();

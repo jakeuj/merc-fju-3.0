@@ -1696,7 +1696,13 @@ void system_cleanup( void )
 
   for ( header = 'a'; header <= 'z'; header++ )
   {
-    sprintf( directory, "%s/%c/", player_dir, header );
+    if ( str_len( player_dir ) + 4 > sizeof( directory ) ) continue;
+
+    str_cpy( directory, player_dir );
+    str_cat( directory, "/" );
+    directory[str_len( directory )] = header;
+    directory[str_len( directory ) + 1] = '/';
+    directory[str_len( directory ) + 2] = '\x0';
 
     /* 開啟子目錄 */
     if ( ( reading = opendir( directory ) ) )
@@ -1707,10 +1713,19 @@ void system_cleanup( void )
         if ( !strcmp( next->d_name, "." ) || !strcmp( next->d_name, ".." ) )
           continue;
 
-        sprintf( filename, "%s%s", directory, next->d_name );
+        if ( str_len( directory ) + str_len( next->d_name ) + 1 > sizeof( filename ) )
+          continue;
+
+        str_cpy( filename, directory );
+        str_cat( filename, next->d_name );
         if ( !is_directory( filename ) ) continue;
 
-        sprintf( filename, "%s%s/data", directory, next->d_name );
+        if ( str_len( directory ) + str_len( next->d_name ) + 6 > sizeof( filename ) )
+          continue;
+
+        str_cpy( filename, directory );
+        str_cat( filename, next->d_name );
+        str_cat( filename, "/data" );
 
         if ( stat( filename, &Status ) == 0 )
         {
@@ -1720,7 +1735,8 @@ void system_cleanup( void )
 
             if ( ( nTimes - Status.st_mtime ) > nHold || Status.st_size <= 0 )
             {
-              sprintf( exec_cmd, "rm -rf %s%s", directory, next->d_name );
+              snprintf( exec_cmd, sizeof( exec_cmd ), "rm -rf %s%s"
+                , directory, next->d_name );
               system( exec_cmd );
 
               /* 更正英雄榜 */

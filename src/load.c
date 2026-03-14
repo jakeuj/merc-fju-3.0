@@ -4520,7 +4520,7 @@ void load_social( const char * path , const char * index )
   str_cpy( directory, path );
   fill_path( directory );
 
-  sprintf( indexfile , "%s%s" , directory , index );
+  snprintf( indexfile, sizeof( indexfile ), "%s%s", directory, index );
 
   if ( ( aFile = f_open( indexfile , "r" ) ) )
   {
@@ -4531,7 +4531,7 @@ void load_social( const char * path , const char * index )
 
       if ( word[0] == '*' ) continue;
 
-      sprintf( buf , "%s%c" , directory , LOWER( word[0] ) );
+      snprintf( buf, sizeof( buf ), "%s%c", directory, LOWER( word[0] ) );
       fill_path( buf );
       str_cat( buf , word      );
       str_cat( buf, "."        );
@@ -5832,7 +5832,14 @@ void load_skill( const char * path , const char * index )
   fill_path( directory );
 
   /* 處理索引檔案名稱 */
-  sprintf( indexfile , "%s%s" , directory , index );
+  if ( str_len( directory ) + str_len( index ) + 1 > sizeof( indexfile ) )
+  {
+    mudlog( LOG_ERR, "Load_instrument﹕索引檔路徑太長 %s%s。", directory, index );
+    RETURN_NULL();
+  }
+
+  str_cpy( indexfile, directory );
+  str_cat( indexfile, index );
 
   /* 開啟索引檔案, 不能沒有這個檔案 */
   if ( ( pFile = f_open( indexfile , "r" ) ) )
@@ -6697,7 +6704,17 @@ void load_instrument( const char * path , const char * index )
       if ( word[0] == '*' ) continue;
 
       /* 處理欲開啟命令檔案的名稱 */
-      sprintf( buf , "%s%c" , directory , LOWER( word[0] ) );
+      if ( str_len( directory ) + str_len( word ) + str_len( command_ext ) + 4
+        > sizeof( buf ) )
+      {
+        mudlog( LOG_ERR, "Load_instrument﹕命令檔路徑太長 %s/%s。"
+          , directory, word );
+        continue;
+      }
+
+      str_cpy( buf, directory );
+      buf[str_len( buf )] = LOWER( word[0] );
+      buf[str_len( buf ) + 1] = '\x0';
 
       fill_path( buf            );
       str_cat( buf, word        );

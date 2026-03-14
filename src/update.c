@@ -51,10 +51,59 @@ void    check_train     args( ( CHAR_DATA * ) );
 void    variable_update args( ( void ) );
 void    dosage_update   args( ( void ) );
 void    increase_update args( ( void ) );
+static void broadcast_formatted args( ( const char *, const char *, const char * ) );
+static void broadcast_formatted_3 args( ( const char *, const char *, const char *
+  , const char * ) );
 
 #define HIT_GAIN        1
 #define MANA_GAIN       2
 #define MOVE_GAIN       3
+
+static void broadcast_formatted( const char * format, const char * arg1
+  , const char * arg2 )
+{
+  char * buf;
+  int    needed;
+
+  if ( !format ) return;
+
+  needed = snprintf( NULL, 0, format
+    , arg1 ? arg1 : ""
+    , arg2 ? arg2 : "" );
+
+  if ( needed < 0 ) return;
+
+  buf = alloc_string( needed + 1 );
+  snprintf( buf, needed + 1, format
+    , arg1 ? arg1 : ""
+    , arg2 ? arg2 : "" );
+  send_to_all_char( buf );
+  free_string( buf );
+}
+
+static void broadcast_formatted_3( const char * format, const char * arg1
+  , const char * arg2, const char * arg3 )
+{
+  char * buf;
+  int    needed;
+
+  if ( !format ) return;
+
+  needed = snprintf( NULL, 0, format
+    , arg1 ? arg1 : ""
+    , arg2 ? arg2 : ""
+    , arg3 ? arg3 : "" );
+
+  if ( needed < 0 ) return;
+
+  buf = alloc_string( needed + 1 );
+  snprintf( buf, needed + 1, format
+    , arg1 ? arg1 : ""
+    , arg2 ? arg2 : ""
+    , arg3 ? arg3 : "" );
+  send_to_all_char( buf );
+  free_string( buf );
+}
 
 /* 提昇玩家等級 */
 void advance_level( CHAR_DATA * ch )
@@ -65,7 +114,6 @@ void advance_level( CHAR_DATA * ch )
   int  add_prac;
   int  mana_factor;
   int  move_factor;
-  char buf1[MAX_STRING_LENGTH];
   char buf2[MAX_STRING_LENGTH];
   CLASS_DATA * pClass;
 
@@ -160,10 +208,8 @@ void advance_level( CHAR_DATA * ch )
   {
     chinese_number( hero_count() + 1, buf2 );
 
-    sprintf( buf1, "\e[1;36m讓我們恭禧%s成為%s第%s位英雄﹗\e[0m\n\r"
+    broadcast_formatted_3( "\e[1;36m讓我們恭禧%s成為%s第%s位英雄﹗\e[0m\n\r"
       , mob_name( NULL, ch ), mud_name, buf2 );
-
-    send_to_all_char( buf1 );
 
     act( "恭禧你成為$t第$T位英雄﹗", ch, mud_name, buf2, TO_CHAR );
 
@@ -1603,8 +1649,8 @@ void time_update( void )
 
       send_to_all_char( buf );
       chinese_number( FIRST_WARN, buf1 );
-      sprintf( buf , "「系統通知」%s%s分鐘後重新開機﹗\n\r", mud_name, buf1 );
-      send_to_all_char( buf );
+      broadcast_formatted( "「系統通知」%s%s分鐘後重新開機﹗\n\r"
+        , mud_name, buf1 );
 
       first_warn = FALSE;
       wizlock    = TRUE;
@@ -1619,8 +1665,8 @@ void time_update( void )
 
       send_to_all_char( buf );
       chinese_number( SECOND_WARN, buf1 );
-      sprintf( buf , "「系統通知」%s%s分鐘後重新開機﹗\n\r", mud_name, buf1 );
-      send_to_all_char( buf );
+      broadcast_formatted( "「系統通知」%s%s分鐘後重新開機﹗\n\r"
+        , mud_name, buf1 );
 
       second_warn = FALSE;
       wizlock     = TRUE;
@@ -1637,8 +1683,8 @@ void time_update( void )
 
       send_to_all_char( buf );
       chinese_number( THIRD_WARN, buf1 );
-      sprintf( buf , "「系統通知」%s%s分鐘後重新開機﹗\n\r", mud_name, buf1 );
-      send_to_all_char( buf );
+      broadcast_formatted( "「系統通知」%s%s分鐘後重新開機﹗\n\r"
+        , mud_name, buf1 );
 
       third_warn = FALSE;
       wizlock    = TRUE;
@@ -1653,9 +1699,8 @@ void time_update( void )
         "。\n\r不久後﹐我們一定會重建家園的。\n\r\n\r\e[0m" );
       send_to_all_char( buf );
 
-      sprintf( buf , "%s\e[0m已經啟動了自我毀滅程序﹐程式重新啟動﹗\n\r"
-        , mud_name );
-      send_to_all_char( buf );
+      broadcast_formatted( "%s\e[0m已經啟動了自我毀滅程序﹐程式重新啟動﹗\n\r"
+        , mud_name, NULL );
       mudlog( LOG_INFO, "啟動自我毀滅程序, 程式重新啟動." );
       do_reboot( NULL, "" );
       RETURN_NULL();
@@ -1676,8 +1721,8 @@ void time_update( void )
       send_to_all_char( buf );
 
       chinese_number( FIRST_WARN, buf1 );
-      sprintf( buf , "「系統警告」%s%s分鐘後關閉系統﹗\n\r", mud_name, buf1 );
-      send_to_all_char( buf );
+      broadcast_formatted( "「系統警告」%s%s分鐘後關閉系統﹗\n\r"
+        , mud_name, buf1 );
 
       first_warn = FALSE;
       wizlock    = TRUE;
@@ -1693,8 +1738,8 @@ void time_update( void )
       send_to_all_char( buf );
 
       chinese_number( SECOND_WARN, buf1 );
-      sprintf( buf , "「系統警告」%s%s分鐘後關閉系統﹗\n\r", mud_name, buf1 );
-      send_to_all_char( buf );
+      broadcast_formatted( "「系統警告」%s%s分鐘後關閉系統﹗\n\r"
+        , mud_name, buf1 );
 
       second_warn = FALSE;
       wizlock     = TRUE;
@@ -1711,8 +1756,8 @@ void time_update( void )
 
       send_to_all_char( buf );
       chinese_number( THIRD_WARN, buf1 );
-      sprintf( buf , "「系統警告」%s%s分鐘後關閉系統﹗\n\r", mud_name, buf1 );
-      send_to_all_char( buf );
+      broadcast_formatted( "「系統警告」%s%s分鐘後關閉系統﹗\n\r"
+        , mud_name, buf1 );
 
       third_warn = FALSE;
       wizlock    = TRUE;
@@ -1729,8 +1774,8 @@ void time_update( void )
 
       send_to_all_char( buf );
 
-      sprintf( buf , "%s已經啟動了自我毀滅程序﹐程式關閉﹗\n\r" , mud_name );
-      send_to_all_char( buf );
+      broadcast_formatted( "%s已經啟動了自我毀滅程序﹐程式關閉﹗\n\r"
+        , mud_name, NULL );
       mudlog( LOG_INFO, "啟動自我毀滅程序﹐程式關閉。" );
 
       do_shutdown( NULL, "" );

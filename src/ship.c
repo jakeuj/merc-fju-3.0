@@ -663,17 +663,18 @@ void ship_update( void )
     {
       if ( --pShip->waiting_tick <= 0 )
       {
-        sprintf( buf, "%s\e[0m出發了﹐請旅客找個好位置坐下。\n\r順便欣賞沿途"
+        snprintf( buf, sizeof( buf ), "%s\e[0m出發了﹐請旅客找個好位置坐下。\n\r順便欣賞沿途"
           "明媚的風光﹐%s\e[0m竭誠感謝你的光臨﹗\n\r"
           , pShip->name, mud_name );
 
         sendmsg_to_someroom( buf, pShip->cabin );
 
         chinese_number( pShip->sailing, buf1 );
-        sprintf( buf, "%s\e[0m出發了﹐請欲搭乘本班船的旅客﹐"
-          "再等%s小時等下一班﹗\n\r", pShip->name, buf1 );
-
-        sendmsg_to_someroom( buf, pShip->starting );
+        sendmsg_to_someroom( pShip->name, pShip->starting );
+        sendmsg_to_someroom( "\e[0m出發了﹐請欲搭乘本班船的旅客﹐再等"
+          , pShip->starting );
+        sendmsg_to_someroom( buf1, pShip->starting );
+        sendmsg_to_someroom( "小時等下一班﹗\n\r", pShip->starting );
 
         pShip->sailing_tick = pShip->sailing;
         pShip->waiting_tick = -1;
