@@ -122,7 +122,7 @@ const   struct  ansi_table      ansi_token      []      =
   { "$HIM$", "\e[1;35m" },
   { "$HIC$", "\e[1;36m" },
   { "$HIW$", "\e[1;37m" },
-  { ""      }
+  { "", NULL }
 };
 
 /* 轉換 >> 為 ESC 控制碼 */
