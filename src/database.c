@@ -402,7 +402,7 @@ BASIC_DATA * load_basic( const char * name )
 
 bool fread_a_line( FILE * pFile, char * buffer )
 {
-  char Char;
+  int Char;
 
   PUSH_FUNCTION( "fread_a_line" );
 

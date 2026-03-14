@@ -476,7 +476,12 @@ ENABLE_DATA * exert_fight_enable( CHAR_DATA * ch , CHAR_DATA * victim, bool bKil
       /* 已經有打鬥對象 */
       if ( ch->fighting == victim )
       {
-        sprintf( buffer, "'%s'", pSkill->name );
+        if ( snprintf( buffer, sizeof( buffer ), "'%s'", pSkill->name )
+             >= sizeof( buffer ) )
+        {
+          mudlog( LOG_ERR, "exert_fight_enable: 技能名稱過長 %s.", pSkill->name );
+          RETURN( NULL );
+        }
       }
 
       else
@@ -497,12 +502,24 @@ ENABLE_DATA * exert_fight_enable( CHAR_DATA * ch , CHAR_DATA * victim, bool bKil
 
           if ( rch == victim )
           {
-            if ( number > 1 ) sprintf( buf, "%d.%s", number, name );
+            if ( number > 1
+              && snprintf( buf, sizeof( buf ), "%d.%s", number, name )
+                 >= sizeof( buf ) )
+            {
+              mudlog( LOG_ERR, "exert_fight_enable: 對象名稱過長 %s.", name );
+              RETURN( NULL );
+            }
+
             break;
           }
         }
 
-        sprintf( buffer, "'%s' %s" , pSkill->name , buf );
+        if ( snprintf( buffer, sizeof( buffer ), "'%s' %s", pSkill->name, buf )
+             >= sizeof( buffer ) )
+        {
+          mudlog( LOG_ERR, "exert_fight_enable: 指令過長 %s %s.", pSkill->name, buf );
+          RETURN( NULL );
+        }
       }
 
       do_cast( ch, buffer );

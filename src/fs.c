@@ -1667,12 +1667,24 @@ char * mud_path( const char * pathname )
   {
     str_cpy( directory, pathname );
     smash_path( directory );
-    sprintf( buf, "%s/%s/", home_dir, directory );
+
+    if ( snprintf( buf, sizeof( buf ), "%s/%s/", home, directory )
+         >= sizeof( buf ) )
+    {
+      mudlog( LOG_ERR, "mud_path: 路徑過長 %s/%s/.", home, directory );
+      str_cpy( buf, home );
+      str_cat( buf, "/" );
+    }
   }
 
   else
   {
-    sprintf( buf, "%s/", home_dir );
+    if ( snprintf( buf, sizeof( buf ), "%s/", home )
+         >= sizeof( buf ) )
+    {
+      mudlog( LOG_ERR, "mud_path: 路徑過長 %s/.", home );
+      buf[0] = '\x0';
+    }
   }
 
   RETURN( buf );
@@ -1893,9 +1905,15 @@ void scan_directory( CHAR_DATA * ch, char * path, char * str )
       || !S_ISREG( pSt.st_mode ) )
       continue;
 
-    sprintf( filename, "%s%s/%s"
-      , ( path && *path == '/' ) ? "" : "/"
-      , path, result.gl_pathv[loop] );
+    if ( snprintf( filename, sizeof( filename ), "%s%s/%s"
+         , ( path && *path == '/' ) ? "" : "/"
+         , path ? path : ""
+         , result.gl_pathv[loop] ) >= sizeof( filename ) )
+    {
+      mudlog( LOG_ERR, "scan_directory: 路徑過長 %s/%s."
+        , path ? path : "", result.gl_pathv[loop] );
+      continue;
+    }
 
     send_to_buffer( "%s﹕%s\n\r", str, filename );
   }

@@ -577,7 +577,6 @@ int init_socket( int port )
 
 #ifdef __linux__
   struct hostent   * hp;
-  int                wildcard;
 #endif
 
   int                optval = 1;
@@ -612,8 +611,7 @@ int init_socket( int port )
   memset( &sa , 0 , sizeof( struct sockaddr_in ) );
   sa.sin_family = hp->h_addrtype;
   sa.sin_port   = htons( ( unsigned short ) port );
-  wildcard = INADDR_ANY;
-  memcpy( &sa.sin_addr, &wildcard, sizeof( long ) );
+  sa.sin_addr.s_addr = htonl( INADDR_ANY );
 
 #else
 

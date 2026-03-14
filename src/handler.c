@@ -2170,7 +2170,7 @@ bool check_repeat( CHAR_DATA * ch, const char * arg )
 
   for ( loop = 0; loop < CHAT_REPEAT; loop++ )
   {
-    if ( !man->last_chat[loop] || !*(man->last_chat[loop] ) ) continue;
+    if ( !*( man->last_chat[loop] ) ) continue;
 
     /* 如果是的話的懲罰 */
     if ( !str_cmp( man->last_chat[loop] , arg ) )

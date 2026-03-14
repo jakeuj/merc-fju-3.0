@@ -242,89 +242,91 @@ void default_file( void )
 
 #undef DEFAULT_FILE
 
-#if defined( ADJUST )
-#undef ADJUST
-#endif
+static void adjust_path( char * target )
+{
+  char tempfile[MAX_FILE_LENGTH];
 
-#define ADJUST( target )                             \
-   sprintf( tempfile , "%s%s" , home_dir , target ); \
-   str_cpy( target , tempfile );                     \
+  if ( snprintf( tempfile, sizeof( tempfile ), "%s%s", home_dir, target )
+       >= sizeof( tempfile ) )
+  {
+    mudlog( LOG_ERR, "adjust_filename: 路徑過長 %s%s.", home_dir, target );
+    return;
+  }
+
+  str_cpy( target, tempfile );
+}
 
 /* 修正檔案名稱並加上絕對路徑給他 */
 void adjust_filename( void )
 {
-  char tempfile[MAX_FILE_LENGTH];
-
   PUSH_FUNCTION( "adjust_filename" );
 
-  ADJUST( help_dir        );
-  ADJUST( social_dir      );
-  ADJUST( angel_dir       );
-  ADJUST( area_dir        );
-  ADJUST( board_dir       );
-  ADJUST( greet_dir       );
-  ADJUST( vote_dir        );
-  ADJUST( joke_dir        );
-  ADJUST( note_dir        );
-  ADJUST( sector_dir      );
-  ADJUST( class_dir       );
-  ADJUST( liq_dir         );
-  ADJUST( player_dir      );
-  ADJUST( ideas_file      );
-  ADJUST( typo_file       );
-  ADJUST( newplayer_file  );
-  ADJUST( symbol_file     );
-  ADJUST( check_file      );
-  ADJUST( wizard_file     );
-  ADJUST( net_file        );
-  ADJUST( bus_file        );
-  ADJUST( donate_file     );
-  ADJUST( gift_file       );
-  ADJUST( date_file       );
-  ADJUST( bounty_file     );
-  ADJUST( event_file      );
-  ADJUST( ship_file       );
-  ADJUST( promotion_file  );
-  ADJUST( purge_file      );
-  ADJUST( quest_file      );
-  ADJUST( immlist_file    );
-  ADJUST( sale_file       );
-  ADJUST( situs_file      );
-  ADJUST( club_file       );
-  ADJUST( internal_file   );
-  ADJUST( site_file       );
-  ADJUST( station_file    );
-  ADJUST( question_file   );
-  ADJUST( xname_file      );
-  ADJUST( stock_file      );
-  ADJUST( welcome_file    );
-  ADJUST( welcome_imm     );
-  ADJUST( address_file    );
-  ADJUST( error_file      );
-  ADJUST( hero_file       );
-  ADJUST( bugs_file       );
-  ADJUST( failload_file   );
-  ADJUST( failexit_file   );
-  ADJUST( badobject_file  );
-  ADJUST( failpass_file   );
-  ADJUST( database_file   );
-  ADJUST( failenable_file );
-  ADJUST( bad_file        );
-  ADJUST( suspect_file    );
-  ADJUST( xname_log       );
-  ADJUST( chat_log        );
-  ADJUST( suicide_log     );
-  ADJUST( MOBProgs_dir    );
-  ADJUST( skill_dir       );
-  ADJUST( ins_dir         );
-  ADJUST( wizflags_log    );
-  ADJUST( motd_file       );
+  adjust_path( help_dir        );
+  adjust_path( social_dir      );
+  adjust_path( angel_dir       );
+  adjust_path( area_dir        );
+  adjust_path( board_dir       );
+  adjust_path( greet_dir       );
+  adjust_path( vote_dir        );
+  adjust_path( joke_dir        );
+  adjust_path( note_dir        );
+  adjust_path( sector_dir      );
+  adjust_path( class_dir       );
+  adjust_path( liq_dir         );
+  adjust_path( player_dir      );
+  adjust_path( ideas_file      );
+  adjust_path( typo_file       );
+  adjust_path( newplayer_file  );
+  adjust_path( symbol_file     );
+  adjust_path( check_file      );
+  adjust_path( wizard_file     );
+  adjust_path( net_file        );
+  adjust_path( bus_file        );
+  adjust_path( donate_file     );
+  adjust_path( gift_file       );
+  adjust_path( date_file       );
+  adjust_path( bounty_file     );
+  adjust_path( event_file      );
+  adjust_path( ship_file       );
+  adjust_path( promotion_file  );
+  adjust_path( purge_file      );
+  adjust_path( quest_file      );
+  adjust_path( immlist_file    );
+  adjust_path( sale_file       );
+  adjust_path( situs_file      );
+  adjust_path( club_file       );
+  adjust_path( internal_file   );
+  adjust_path( site_file       );
+  adjust_path( station_file    );
+  adjust_path( question_file   );
+  adjust_path( xname_file      );
+  adjust_path( stock_file      );
+  adjust_path( welcome_file    );
+  adjust_path( welcome_imm     );
+  adjust_path( address_file    );
+  adjust_path( error_file      );
+  adjust_path( hero_file       );
+  adjust_path( bugs_file       );
+  adjust_path( failload_file   );
+  adjust_path( failexit_file   );
+  adjust_path( badobject_file  );
+  adjust_path( failpass_file   );
+  adjust_path( database_file   );
+  adjust_path( failenable_file );
+  adjust_path( bad_file        );
+  adjust_path( suspect_file    );
+  adjust_path( xname_log       );
+  adjust_path( chat_log        );
+  adjust_path( suicide_log     );
+  adjust_path( MOBProgs_dir    );
+  adjust_path( skill_dir       );
+  adjust_path( ins_dir         );
+  adjust_path( wizflags_log    );
+  adjust_path( motd_file       );
 
-  if ( PlayerArea[0] ) ADJUST( PlayerArea      );
+  if ( PlayerArea[0] ) adjust_path( PlayerArea );
   RETURN_NULL();
 }
-
-#undef ADJUST
 
 /* 讀入參考檔案 */
 void read_ini( const char * filename )
