@@ -4513,6 +4513,7 @@ void load_social( const char * path , const char * index )
   char            directory[ MAX_FILE_LENGTH ];
   char            indexfile[ MAX_FILE_LENGTH ];
   char            buf[ MAX_FILE_LENGTH ];
+  int             dirlen;
 
   PUSH_FUNCTION( "load_social" );
 
@@ -4547,8 +4548,9 @@ void load_social( const char * path , const char * index )
       }
 
       str_cpy( buf, directory );
-      buf[str_len( buf )] = LOWER( word[0] );
-      buf[str_len( buf ) + 1] = '\x0';
+      dirlen = str_len( buf );
+      buf[dirlen] = LOWER( word[0] );
+      buf[dirlen + 1] = '\x0';
       fill_path( buf );
       str_cat( buf , word      );
       str_cat( buf, "."        );
@@ -5839,6 +5841,7 @@ void load_skill( const char * path , const char * index )
   char            indexfile[ MAX_FILE_LENGTH ];
   char            buf[MAX_FILE_LENGTH];
   char            directory[ MAX_FILE_LENGTH ];
+  int             dirlen;
   bool            fMatch;
   bool            finish;
 
@@ -5880,9 +5883,10 @@ void load_skill( const char * path , const char * index )
       }
 
       str_cpy( buf, directory );
-      buf[str_len( buf )] = LOWER( word[0] );
-      buf[str_len( buf ) + 1] = '/';
-      buf[str_len( buf ) + 2] = '\x0';
+      dirlen = str_len( buf );
+      buf[dirlen] = LOWER( word[0] );
+      buf[dirlen + 1] = '/';
+      buf[dirlen + 2] = '\x0';
       str_cat( buf, word );
       str_cat( buf, "." );
       str_cat( buf, skill_ext );
@@ -6709,6 +6713,7 @@ void load_instrument( const char * path , const char * index )
   char        indexfile[ MAX_FILE_LENGTH ];
   char        buf[MAX_FILE_LENGTH];
   char        directory[ MAX_FILE_LENGTH ];
+  int         dirlen;
   bool        fMatch;
   bool        finish;
 
@@ -6743,8 +6748,9 @@ void load_instrument( const char * path , const char * index )
       }
 
       str_cpy( buf, directory );
-      buf[str_len( buf )] = LOWER( word[0] );
-      buf[str_len( buf ) + 1] = '\x0';
+      dirlen = str_len( buf );
+      buf[dirlen] = LOWER( word[0] );
+      buf[dirlen + 1] = '\x0';
 
       fill_path( buf            );
       str_cat( buf, word        );
