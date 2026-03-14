@@ -159,6 +159,35 @@ If those changes are only test side effects and not part of the task:
 git checkout -- debug/error etc/net.log etc/stock
 ```
 
+If you want to keep local runtime noise out of `git status` without changing repo rules:
+```bash
+git update-index --skip-worktree \
+  debug/error \
+  debug/failenable \
+  etc/address \
+  etc/net.log \
+  etc/stock \
+  data/immlist \
+  etc/database \
+  etc/player.new \
+  etc/wizard.log
+```
+
+Check current local skip list:
+```bash
+git ls-files -v | rg '^S '
+```
+
+Undo for one file when you really need to edit and commit it:
+```bash
+git update-index --no-skip-worktree etc/net.log
+```
+
+For untracked local-only noise such as `src/shutdown.txt`, prefer `.git/info/exclude`:
+```bash
+printf '\nsrc/shutdown.txt\n' >> .git/info/exclude
+```
+
 Smoke test without `startup`:
 ```bash
 cd /mnt/h/repos/merc-fju-3.0

@@ -38,6 +38,8 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Co
 - `src/merc.sample.ini` 若看起來被截斷、缺少後半段設定或 `Ticket Set` 之類關鍵項目，會直接造成啟動期誤判；先把模板完整性查清楚，不要只盯著 binary
 - `mail/`、`debug/`、`vote/`、`board/`、`data/`、`etc/` 常已存在，但 `log/`、`player/` 可能需要在本機先建立
 - 某些 runtime 檔雖然看起來像執行期產物，卻是 tracked 檔；目前至少要留意 `debug/error`、`etc/net.log`、`etc/stock`
+- 對這類「已被 git 追蹤、但本機常被執行期改寫」的檔案，優先建議使用本機 `git update-index --skip-worktree`，不要修改 repo 的 `.gitignore`
+- 對 `src/shutdown.txt` 這類未追蹤且只想本機忽略的檔案，優先放進 `.git/info/exclude`，避免把個人偏好寫進 repo
 
 ## 工作流程
 
@@ -126,6 +128,7 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Co
 - **Shell 相依缺件**：處理 `startup` 依賴 `csh` / `tcsh`、WSL 只有 `bash` 時的 fallback
 - **Runtime 目錄缺漏**：處理 `log/`、`player/` 尚未建立但 binary 本身其實可啟動
 - **Tracked runtime 汙染**：處理測試後被碰到的 `debug/error`、`etc/net.log`、`etc/stock` 等 tracked 檔，避免誤 commit
+- **本機 runtime 靜音**：處理如何在不改遠端 repo 規則的前提下，用 `skip-worktree` 或 `.git/info/exclude` 降低本機反覆出現的 runtime 噪音
 - **資料載入錯誤**：看 `log/*.log`、`debug/`，並把問題轉交到 area / world-data 修復，不要繼續當作純本機 ops 問題
 
 ## 回答規則
@@ -138,6 +141,10 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Co
 - 若 `startup` 存在但 shell 相依缺件，明確說「入口存在，但目前環境缺少 `csh` / `tcsh`，因此不能直接用它」
 - 若要做 smoke test，可先建立缺少的 runtime 目錄並用臨時 ini 驗證 binary 是否能進到資料載入階段
 - 若啟動測試碰到 tracked runtime 檔，但那些變動不是本次交付物，回報時要明講並在結束前清回乾淨
+- 若使用者希望長期降低本機 runtime 噪音：
+- 對 tracked 檔用 `git update-index --skip-worktree <path>`
+- 對未追蹤但只想本機忽略的檔案用 `.git/info/exclude`
+- 不要把這類個人本機靜音需求直接寫進 repo `.gitignore`，除非它對整個團隊都合理
 - 若 `debug/bugs` 只剩舊錯誤，但最新 `log/*.log` 已出現「開始正常運作」，要明講 `debug/bugs` 是歷史噪音，不代表這次啟動仍失敗
 - 但若測試前已先清空 `debug/*`，就不能再把測試後的 debug 訊息當成歷史噪音略過；必須回頭判斷它們是否是這次新增 area / reset / room / mob / obj 帶出的新問題
 - 若 log 已顯示 `Load_room`、重複 VNUM、mob/obj/reset parse error，立即切換成資料層錯誤描述
