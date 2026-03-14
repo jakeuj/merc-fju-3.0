@@ -716,7 +716,12 @@ FUNCTION( do_ps )
       char filename[MAX_FILE_LENGTH];
 
       /* 檔名或是目錄名稱 */
-      sprintf( filename, "%s/%s", PROC_DIR, next->d_name );
+      if ( str_len( PROC_DIR ) + str_len( next->d_name ) + 2 > sizeof( filename ) )
+        continue;
+
+      str_cpy( filename, PROC_DIR );
+      str_cat( filename, "/" );
+      str_cat( filename, next->d_name );
 
       if ( ( atoi( next->d_name ) <= 1
         || ( lstat( filename, &st ) < 0 )
@@ -1100,7 +1105,11 @@ bool open_loading_file( float * load_1, float * load_10, float * load_15 )
 
   if ( !( pFile = fopen( LOADING_FILE , "r" ) ) ) RETURN( FALSE );
 
-  fscanf( pFile, "%f %f %f", load_1, load_10, load_15 );
+  if ( fscanf( pFile, "%f %f %f", load_1, load_10, load_15 ) != 3 )
+  {
+    fclose( pFile );
+    RETURN( FALSE );
+  }
   fclose( pFile );
 
   RETURN( TRUE );

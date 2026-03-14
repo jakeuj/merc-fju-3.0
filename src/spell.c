@@ -794,7 +794,6 @@ SKILL( cast_search )
 SKILL( cast_locate_object )
 {
   int        count;
-  char       buf[MAX_STRING_LENGTH];
   OBJ_DATA * obj;
   OBJ_DATA * in_obj;
   char     * pString = ( char * ) vo;
@@ -809,7 +808,6 @@ SKILL( cast_locate_object )
   }
 
   act( "$n低頭閉目﹐開始施展遊識神通。", ch, NULL, NULL, TO_ALL );
-  buf[0] = '\x0';
 
   clear_buffer();
   for ( count = 0, found = FALSE, obj = object_list; obj; obj = obj->next )

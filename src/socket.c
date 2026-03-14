@@ -736,7 +736,7 @@ FUNCTION( do_tcp )
   for ( count = 0, clear_buffer(); ; )
   {
     if ( feof( pFile ) ) break;
-    fread( &buf, 128, 1, pFile );
+    if ( fread( &buf, 128, 1, pFile ) != 1 ) break;
 
     buf[126] = '\x0';
 
