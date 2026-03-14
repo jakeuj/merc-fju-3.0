@@ -50,12 +50,21 @@
 
 若要確認 Linux 相容性，請以 Ubuntu 結果為準；不要把 macOS 原生 build 視為 Ubuntu 也一定乾淨。
 
+目前 repo 也已驗證：
+- `make -C src clean && make -C src merc` 在 macOS 原生路徑應可 warning-free 編譯
+- `make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc` 在 Ubuntu 路徑應可 warning-free 編譯
+
+若任一邊重新出現 warning，請優先視為 regression，並同步檢查另一邊是否也受影響。
+
 ## 編譯
 
 ```bash
 # Windows + WSL (Ubuntu) / 一般 Linux
 cd src
 make clean && make
+
+# macOS 原生驗證
+make -C src clean && make -C src merc
 
 # FreeBSD
 cp Makefile.bsd Makefile
@@ -85,6 +94,10 @@ make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc
 ```
 
 原因是雲端容器通常走 Linux build path，而 `src/Makefile.lin` 現在已補上和主 `Makefile` 一致的 `LIBS` 判斷：非 Darwin 平台會自動連結 `-lcrypt`。若你在舊工作樹看到 `crypt` unresolved，先更新到包含此修正的版本，不要先假設缺少系統套件。
+
+若這次任務是清 warning 或確認 cross-platform parity，建議至少跑兩條驗證：
+- macOS 原生：`make -C src clean && make -C src merc`
+- Ubuntu / Docker：`make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc`
 
 ## 設定
 

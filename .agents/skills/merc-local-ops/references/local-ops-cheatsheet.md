@@ -13,6 +13,16 @@ Preferred environments:
 
 Do not treat a macOS-native build as proof that Ubuntu is also clean.
 
+Current repo baseline:
+- `make -C src clean && make -C src merc` should build clean on macOS
+- `make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc` should build clean on Ubuntu
+- if either path starts warning again, treat it as a regression and verify both sides
+
+### macOS native
+```bash
+make -C src clean && make -C src merc
+```
+
 ### Windows + WSL (Ubuntu)
 Probe from PowerShell:
 ```powershell
@@ -248,6 +258,8 @@ If PowerShell cannot run `make`:
 ```powershell
 wsl.exe bash -lc 'cd /mnt/h/repos/merc-fju-3.0/src && make clean && make'
 ```
+
+For warning-parity tasks, also run the macOS native build and the Ubuntu `Makefile.lin` build; one side being clean does not prove the other side is still clean.
 
 ### PowerShell says `make` is not recognized
 Meaning:

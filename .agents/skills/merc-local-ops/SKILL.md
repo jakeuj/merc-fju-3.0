@@ -34,6 +34,7 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 - `src/startup` 是 `csh` 腳本；在 WSL / Ubuntu 裡不一定有 `csh` 或 `tcsh`
 - `src/Makefile.lin` 現在已補上和主 `Makefile` 一致的 `LIBS` 判斷：Ubuntu build path 會帶 `-lcrypt`，Darwin 則不帶
 - 在 macOS 上若要驗證 Ubuntu 行為，優先用 Docker 掛載工作樹到 Ubuntu 容器，再跑 `Makefile.lin` 與 `startup.bash` smoke test
+- 目前 repo 已驗證可同時通過 `make -C src clean && make -C src merc` 與 `make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc`，兩邊都應維持 warning-free；任一邊重新出現 warning 都應先視為 regression
 - 生成後的 `src/merc.ini` 才是 `./merc` 無參數時真正會吃到的本機設定；模板 `src/merc.sample.ini` 不應直接拿來當跨機器共用實機設定
 - 若 `src/merc.sample.ini` 被修正或替換，既有的 `src/merc.ini` 不會自動刷新；必要時要刪掉舊的 `src/merc.ini` 再重新跑 `startup` / `startup.bash`
 - `src/merc.sample.ini` 若看起來被截斷、缺少後半段設定或 `Ticket Set` 之類關鍵項目，會直接造成啟動期誤判；先把模板完整性查清楚，不要只盯著 binary
@@ -45,8 +46,10 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 ## 工作流程
 
 ### 1. 建置
+- `macOS` 宿主機原生 build 基準：`make -C src clean && make -C src merc`
 - `Windows + WSL (Ubuntu)`：先從 PowerShell 探測 `wsl.exe` 與 WSL 內的工具鏈，再在 WSL 內執行 `cd src && make clean && make`
 - `macOS + Docker (Ubuntu)`：優先在 Ubuntu 容器內執行 `make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc`
+- 若任務和 warning、toolchain parity、跨平台回歸有關，預設要同時驗證 macOS 原生與 Ubuntu build；不要只驗單邊
 - 若目前 shell 是 PowerShell，先檢查：
 - `Get-Command make, gcc, wsl -ErrorAction SilentlyContinue`
 - 若 PowerShell 沒有 `make`，但 `wsl.exe` 存在，接著檢查：
@@ -135,6 +138,7 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 - 若 PowerShell 找不到 `make`，先檢查 WSL 是否可用與 repo 是否可從 `/mnt/<drive>/...` 存取；只有在 WSL 也沒有工具鏈時，才回報缺少編譯環境
 - 若使用者提到 `make -C src -f Makefile.lin` 與 `crypt` 解析失敗，直接指出這是舊 Linux Makefile 連結步驟缺少 `-lcrypt`，目前 repo 應改用已修正的 `src/Makefile.lin`
 - 若使用者明講是 `Mac+Docker(Ubuntu)`，優先把 Linux 驗證放進 Docker 裡，不要把 Darwin build 結果誤當 Ubuntu 結果
+- 若使用者問「還有沒有 warning」或要做 warning cleanup，預設答案基準應同時包含 macOS 原生與 Ubuntu build；目前 repo 目標是兩邊都 warning-free
 - 若 `startup` 存在但 shell 相依缺件，明確說「入口存在，但目前環境缺少 `csh` / `tcsh`，因此不能直接用它」
 - 若要做 smoke test，可先建立缺少的 runtime 目錄並用臨時 ini 驗證 binary 是否能進到資料載入階段
 - 若啟動測試碰到 tracked runtime 檔，但那些變動不是本次交付物，回報時要明講並在結束前清回乾淨

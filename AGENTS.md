@@ -104,6 +104,8 @@ This repository is a Merc MUD codebase with both legacy runtime/build paths and 
 
 ## Build commands
 
+- Preferred `macOS` native validation build:
+  - `make -C src clean && make -C src merc`
 - Preferred `Windows + WSL (Ubuntu)` local build:
   - `cd src && make clean && make`
 - Preferred `macOS + Docker (Ubuntu)` validation build:
@@ -113,6 +115,7 @@ This repository is a Merc MUD codebase with both legacy runtime/build paths and 
 - Clean rebuild when needed:
   - `make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc`
 - Do not treat a Darwin/macOS-native build as proof that Ubuntu is clean; if the task mentions Linux parity, warnings, or container deployment, validate in Ubuntu.
+- Current repo baseline expects both the macOS native build and the Ubuntu `Makefile.lin` build to be warning-free; if either side regresses, validate both before closing the task.
 
 ## Important build detail
 
@@ -150,6 +153,9 @@ This repository is a Merc MUD codebase with both legacy runtime/build paths and 
 
 - For compile-focused tasks, the default validation is:
   - `make -C src -f Makefile.lin merc`
+- For warning-cleanup or cross-platform parity tasks, the default validation is both:
+  - `make -C src clean && make -C src merc`
+  - `make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc`
 - For config-related tasks, also inspect:
   - `grep -n "HOME DIRECTORY" src/merc.sample.ini src/merc.ini`
 - For startup-related tasks, check the newest file in `log/` and relevant files under `debug/`.
