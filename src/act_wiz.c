@@ -493,7 +493,14 @@ FUNCTION( do_transfer )
         && d->character->in_room
         && can_see( ch, d->character ) )
       {
-        sprintf( arg3, "%s %s", d->character->name, arg2 );
+        if ( snprintf( arg3, sizeof( arg3 ), "%s %s"
+          , d->character->name, arg2 ) >= sizeof( arg3 ) )
+        {
+          mudlog( LOG_ERR, "do_transfer: 參數過長 %s %s."
+            , d->character->name, arg2 );
+          continue;
+        }
+
         do_transfer( ch, arg3 );
       }
     }
