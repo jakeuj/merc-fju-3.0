@@ -1,6 +1,6 @@
 ---
 name: merc-source-explainer
-description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設定檔與資料目錄時使用：追程式流程、回答 src/*.c 與 include/*.h 的責任、說明 merc.ini 與 area/angel/command/skill/social/data/help 等檔案如何被載入、協助定位 bug 或功能修改入口，並在需要建置/啟動脈絡時依 README 與 src/startup 的實際狀態回答。
+description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設定檔與資料目錄時使用：追程式流程、回答 src/*.c 與 include/*.h 的責任、說明 merc.ini 與 area/angel/command/skill/social/data/help 等檔案如何被載入、協助定位 bug 或功能修改入口，並在需要建置/啟動脈絡時依 README、src/startup、src/startup.bash 的實際狀態回答，包括說明 legacy csh launcher、bash launcher 與 IDE shell 設定差異。
 ---
 
 # Merc Source Explainer
@@ -17,6 +17,7 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 ## 先看目前 repo 現況
 - 核心程式碼在 `src/`，包含 `merc.ini`、`startup`、`Makefile` 與大量 `*.c`
 - 目前 repo 根目錄沒有 `start-merc.sh`、`start-merc.ps1`、`start-merc.cmd`、`scripts/bootstrap.sh` 這類 wrapper；講啟動流程時應以 `README.md` 與 `src/startup` 為準
+- `src/startup` 是 legacy `csh` launcher，`src/startup.bash` 則是目前給 bash 環境使用的入口；若使用者貼的是 `/bin/zsh .../startup.bash` 或 `BASH_SOURCE[0]: parameter not set`，要先指出是 shell 不相容，不要誤判成 MUD 載入失敗
 - `docs/` 目前主要是 `docs/3yWebsite/` 文件站，不要引用不存在的 `docs/DATA_LAYOUT.md` 或 `docs/RUNTIME_RESET.md`
 - `scripts/` 目前可見腳本只有 `scripts/convert_big5_to_utf8.py`
 - `etc/` 目前存在多個 runtime / 半動態檔案，但工作樹裡沒有 `etc/merc.ini`；設定解說應先看 `src/merc.sample.ini` 與本機生成的 `src/merc.ini`，再說明部署時可能會複製到 `etc/`
@@ -49,7 +50,8 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 ### 建置與啟動
 - 目前 README 記載的標準流程是 `cd src` 後執行 `make clean && make`
 - FreeBSD 需先把 `Makefile.bsd` 複製成 `Makefile`
-- 啟動方式以 `src/startup` 為主；回答時應先確認它是 legacy 啟動腳本，不要憑空提不存在的 wrapper
+- 啟動方式要分清楚：`src/startup` 是 legacy `csh`，`src/startup.bash` 是目前 bash-friendly 入口；回答時不要把兩者混成同一種 shell 條件
+- `src/startup.bash` 內使用 `BASH_SOURCE[0]`，所以若被 `zsh` 執行會在很前面就失敗；這類問題要先歸類成 shell / IDE interpreter 問題，而不是遊戲 binary 或 world-data 問題
 - 若使用者問 `merc` 不帶參數會吃哪個 ini，應直接追 `src/comm.c` 的 `main()`：它會先看命令列參數，再看環境變數 `merc`，最後 fallback 到 `INI_FILE`
 - 若使用者問「為什麼開不起來」，先分清楚是編譯失敗、啟動腳本問題，還是區域/資料載入錯誤
 

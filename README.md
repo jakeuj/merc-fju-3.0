@@ -135,6 +135,23 @@ cd src
 
 若是在 Windows + WSL 環境下想從 IDE 直接啟動，可使用 repo 根目錄的 `startup-wsl.ps1`。該腳本會依自己的所在位置動態換算 WSL 路徑，再轉呼叫 `src/startup.bash`，不需要在腳本內寫死每台機器的 repo 路徑。
 
+若是在 CLion 直接啟動 `src/startup.bash`，請把 interpreter 明確設成 `/bin/bash`，不要設成 `/bin/zsh`。這支腳本使用 Bash 專屬的 `BASH_SOURCE[0]`；若用 `zsh` 執行，會出現 `BASH_SOURCE[0]: parameter not set`。
+
+可用的 Shell Script 設定範例：
+
+```text
+Script path: /absolute/path/to/merc-fju-3.0/src/startup.bash
+Interpreter: /bin/bash
+Working directory: /absolute/path/to/merc-fju-3.0/src
+```
+
+若只是從 CLion 內建 terminal 手動執行，也請用：
+
+```bash
+cd src
+./startup.bash
+```
+
 若是在 `macOS + Docker (Ubuntu)` 驗證 Linux 啟動，可在容器內做 smoke test：
 
 ```bash

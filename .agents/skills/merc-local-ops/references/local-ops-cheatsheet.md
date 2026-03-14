@@ -102,6 +102,11 @@ cd src
 ./startup.bash &
 ```
 
+If an IDE insists on invoking the script through `zsh`, force Bash explicitly:
+```bash
+/bin/bash /absolute/path/to/src/startup.bash
+```
+
 Docker Ubuntu smoke test from macOS host:
 ```bash
 docker run --rm -v "$PWD":/workspace/merc-fju-3.0 -w /workspace/merc-fju-3.0 \
@@ -323,6 +328,26 @@ head -n 5 startup
 Interpretation:
 - if no `csh` / `tcsh` is installed, `startup` cannot be the immediate test path
 - fall back to direct `./merc <temp-ini>` smoke testing first
+
+### `startup.bash` fails with `BASH_SOURCE[0]: parameter not set`
+Meaning:
+- the Bash launcher was executed by `zsh` or another non-Bash shell
+- common trigger: CLion or a terminal command like `/bin/zsh /path/to/src/startup.bash`
+
+Fix:
+```bash
+cd /absolute/path/to/src
+./startup.bash
+```
+
+Or force Bash explicitly:
+```bash
+/bin/bash /absolute/path/to/src/startup.bash
+```
+
+CLion hint:
+- for a Shell Script run configuration, set interpreter to `/bin/bash`
+- do not set interpreter to `/bin/zsh`
 
 ### Immediate exit because of `shutdown.txt`
 Check:

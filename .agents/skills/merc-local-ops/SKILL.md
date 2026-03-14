@@ -1,6 +1,6 @@
 ---
 name: merc-local-ops
-description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Docker smoke test 與啟停排錯時使用：依 README、AGENTS.md、src/Makefile、src/Makefile.lin、src/startup、src/merc.sample.ini / src/merc.ini 與 log/debug 實際狀態，協助在 Windows+WSL(Ubuntu) 與 Mac+Docker(Ubuntu) 兩條主要開發路徑上編譯 merc、檢查模板 ini 與本機生成 ini、確認 log/player/mail/debug/vote 等目錄可寫、處理 shutdown.txt 與啟動失敗，並把 toolchain / shell / 容器問題和 world-data 載入錯誤分開。
+description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Docker smoke test 與啟停排錯時使用：依 README、AGENTS.md、src/Makefile、src/Makefile.lin、src/startup、src/startup.bash、src/merc.sample.ini / src/merc.ini 與 log/debug 實際狀態，協助在 Windows+WSL(Ubuntu) 與 Mac+Docker(Ubuntu) 兩條主要開發路徑上編譯 merc、檢查模板 ini 與本機生成 ini、確認 log/player/mail/debug/vote 等目錄可寫、處理 shutdown.txt、CLion / IDE shell 設定錯誤、用 zsh 執行 bash 腳本導致的 `BASH_SOURCE` 類錯誤，以及把 toolchain / shell / 容器問題和 world-data 載入錯誤分開。
 ---
 
 # Merc Local Ops
@@ -32,6 +32,7 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 - `etc/` 目前有多個 runtime / 半動態檔，但工作樹內沒有 `etc/merc.ini`
 - 在這個工作區的常見現況下，Windows 端常只有 `powershell` / `wsl.exe`，真正可用的 `make`、`gcc` 在 WSL 內；要先探測，不要直接判定「無法編譯」
 - `src/startup` 是 `csh` 腳本；在 WSL / Ubuntu 裡不一定有 `csh` 或 `tcsh`
+- `src/startup.bash` 是 Bash 腳本，依賴 `BASH_SOURCE[0]` 推導腳本位置；若被 `zsh startup.bash` 或 CLion 的 zsh shell runner 執行，會因 `BASH_SOURCE[0]: parameter not set` 類錯誤直接失敗
 - `src/Makefile.lin` 現在已補上和主 `Makefile` 一致的 `LIBS` 判斷：Ubuntu build path 會帶 `-lcrypt`，Darwin 則不帶
 - 在 macOS 上若要驗證 Ubuntu 行為，優先用 Docker 掛載工作樹到 Ubuntu 容器，再跑 `Makefile.lin` 與 `startup.bash` smoke test
 - 目前 repo 已驗證可同時通過 `make -C src clean && make -C src merc` 與 `make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc`，兩邊都應維持 warning-free；任一邊重新出現 warning 都應先視為 regression
@@ -77,6 +78,7 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 - 啟動流程以 `src/startup` 為主
 - 若目前環境沒有 `csh` / `tcsh`，優先改用 `src/startup.bash`
 - 若使用者是在 Windows IDE 內啟動，優先考慮 repo 根目錄的 `startup-wsl.ps1`
+- 若使用者是在 CLion 或其他 IDE 內直接跑 `src/startup.bash`，明確提醒 interpreter 要設成 `bash`，不要設成 `zsh`；若 IDE 只是在 terminal 內手動執行，也要用 `bash ./startup.bash` 或直接 `./startup.bash`
 - 若使用者是在 macOS 上驗證 Ubuntu，可在 Docker 容器內用 `timeout 45s` 到 `60s` 跑 `cd src && ./startup.bash`
 - `src/startup` 與 `src/startup.bash` 的預設流程都應優先視為「自動產生本機 ini 並啟動」
 - `startup-wsl.ps1` 應只負責橋接 PowerShell 與 WSL，不要複製 bash 啟動邏輯
@@ -124,6 +126,7 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 - **模板與生成檔不同步**：處理 `src/merc.sample.ini` 已修正但 `src/merc.ini` 仍是舊內容，需要刪掉重生
 - **啟動腳本問題**：處理 `src/startup`、`shutdown.txt`、`merc` 是否存在
 - **Shell / 工具鏈錯置**：處理 PowerShell 沒有 `make`、WSL 有工具鏈、路徑轉換、`wsl.exe` 可否進入工作區
+- **Shell 類型錯置**：處理把 Bash 腳本交給 `zsh` / IDE 預設 shell 執行，導致 `BASH_SOURCE`、陣列展開、`set -eu` 等 Bash-only 行為出錯
 - **Docker / Ubuntu 路徑錯置**：處理 macOS 宿主機路徑、容器掛載路徑、`HOME DIRECTORY`、容器內 runtime 目錄
 - **Shell 相依缺件**：處理 `startup` 依賴 `csh` / `tcsh`、WSL 只有 `bash` 時的 fallback
 - **Runtime 目錄缺漏**：處理 `log/`、`player/` 尚未建立但 binary 本身其實可啟動
@@ -140,6 +143,7 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 - 若使用者明講是 `Mac+Docker(Ubuntu)`，優先把 Linux 驗證放進 Docker 裡，不要把 Darwin build 結果誤當 Ubuntu 結果
 - 若使用者問「還有沒有 warning」或要做 warning cleanup，預設答案基準應同時包含 macOS 原生與 Ubuntu build；目前 repo 目標是兩邊都 warning-free
 - 若 `startup` 存在但 shell 相依缺件，明確說「入口存在，但目前環境缺少 `csh` / `tcsh`，因此不能直接用它」
+- 若使用者貼出 `/bin/zsh .../src/startup.bash` 或 `BASH_SOURCE[0]: parameter not set`，先直接指出這是「用錯 shell」而不是 repo 腳本本身壞掉；最短修正是改成 `cd src && ./startup.bash` 或 `/bin/bash src/startup.bash`
 - 若要做 smoke test，可先建立缺少的 runtime 目錄並用臨時 ini 驗證 binary 是否能進到資料載入階段
 - 若啟動測試碰到 tracked runtime 檔，但那些變動不是本次交付物，回報時要明講並在結束前清回乾淨
 - 若使用者希望長期降低本機 runtime 噪音：
