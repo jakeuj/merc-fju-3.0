@@ -144,6 +144,7 @@
 2. `beiping_outskirts`
 3. `jingxiang_road`
 4. `wild_longqu_hills`
+5. `dng_loyang_sewer`
 
 ## Theme Allocation
 
@@ -165,6 +166,10 @@
   - theme: `探險遺跡`
   - subtheme: `仙俠風`
   - 缺口角色：補洛陽東郊往外野探索帶的第二段，讓城郊與地下遺跡之間多一層丘陵轉接
+- `dng_loyang_sewer`
+  - theme: `仙俠風`
+  - subtheme: `詭異民俗風`
+  - 缺口角色：補洛陽東郊暗井入口之後的地下水路前帶，讓洛陽鏈同時往地表外圈與地下支線延伸
 
 後續新增候選 area 時，必須一併記錄：
 

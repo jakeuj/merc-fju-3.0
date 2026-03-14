@@ -49,27 +49,27 @@
 
 ## Candidate Queue
 
-1. `wild_longqu_hills`
+1. `dng_loyang_sewer`
 
 ## Todo
 
-(目前無待處理 `todo`；先完成 `in_progress` 的 `wild_longqu_hills`。)
+(目前無待處理 `todo`；先完成 `in_progress` 的 `dng_loyang_sewer`。)
 
 ## In Progress
 
-### `wild_longqu_hills`
+### `dng_loyang_sewer`
 
 - status: `in_progress`
-- delivery_gate: `implementation_ready_for_commit`
+- delivery_gate: `spec_ready_for_commit`
 - compliance_check: `compliant with current ref/Readme.md scope`
-- plan: `plans/area/0005-wild-longqu-hills.md`
-- parent_region: `loyang outer chain`
-- theme: `探險遺跡`
-- subtheme: `仙俠風`
-- world_links: `洛陽東郊`, `龍渠丘陵`, `地下遺跡`
-- next_action: 先 commit `wild_longqu_hills` 的 implementation 里程碑；目前 `index/mob/obj/res/shp/roo` 已落地、`area/directory.lst` 已掛入、`7510 <-> 9401` 邊界已接通，之後再決定是否往洛陽地下水區或更外圈野外繼續擴張
-- next_prompt: `先 commit 目前 wild_longqu_hills 的 implementation 里程碑；commit 後若要續做，優先補 loyang_outskirts 另一條地下支線：洛陽地下水區。`
-- notes: `wild_longqu_hills` 已通過 scaffold validator、macOS native build、Linux Makefile.lin build 與 `startup.bash` smoke test；`log/1014.log` 含成功訊號，`9410` 以下 deeper underground world link 仍保留在 spec
+- plan: `plans/area/0006-dng-loyang-sewer.md`
+- parent_region: `loyang underground chain`
+- theme: `仙俠風`
+- subtheme: `詭異民俗風`
+- world_links: `洛陽東郊`, `洛陽地下水區`, `更深水道`
+- next_action: 先 commit `dng_loyang_sewer` 的單區 plan + map.md spec 里程碑；commit 後再決定是否進入 implementation（index/mob/obj/res/shp）並正式接上 `loyang_outskirts/7512`
+- next_prompt: `先 commit 目前 dng_loyang_sewer 的 spec 里程碑；commit 後若要落地 runtime 資產，再續做 dng_loyang_sewer implementation。`
+- notes: `plans/area/0006-dng-loyang-sewer.md` 與 `area/dng_loyang_sewer/map.md` 第一版已建立，`up` 邊界對應既有 `loyang_outskirts/7512`，deeper sewer world link 目前只保留在 spec
 
 
 ## Done
@@ -82,6 +82,8 @@
 - `beiping_outskirts` 已完成第一輪整合與 smoke test 驗證，`delivery_gate` 達到 `validated_ready_to_advance`
 - `plans/area/0004-jingxiang-road.md` 已建立
 - `jingxiang_road` 已完成第一輪 implementation、commit `abd53ac`，並達成可前進下一區狀態
+- `plans/area/0005-wild-longqu-hills.md` 已建立
+- `wild_longqu_hills` 已完成第一輪 implementation、commit `c6f5c9a`，並達成可前進下一區狀態
 
 ## Blocked
 
@@ -89,14 +91,14 @@
 
 ## Current Recommended Next Step
 
-先 commit 目前 `wild_longqu_hills` 的 implementation 里程碑；commit 後若要延續洛陽鏈，優先規劃 `洛陽地下水區`。
+先 commit 目前 `dng_loyang_sewer` 的 spec 里程碑；commit 後再決定是否落地 implementation，並把它正式接到 `loyang_outskirts/7512`。
 
 語意提醒：
 
-- 目前的 next actionable area 仍是 `wild_longqu_hills`
-- 目前 `delivery_gate` 是 `implementation_ready_for_commit`，本輪安全動作是先 commit，不跳下一區
-- `jingxiang_road` 已完成第一輪 implementation 並提交，可由 `Done` 歷程回查
+- 目前的 next actionable area 仍是 `dng_loyang_sewer`
+- 目前 `delivery_gate` 是 `spec_ready_for_commit`，本輪安全動作是先 commit，不跳下一區
+- `wild_longqu_hills` 已完成第一輪 implementation 並提交，可由 `Done` 歷程回查
 
 建議可直接使用的 prompt：
 
-`先 commit 目前 wild_longqu_hills 的 implementation 里程碑；commit 後若要續做，優先補 loyang_outskirts 另一條地下支線：洛陽地下水區。`
+`先 commit 目前 dng_loyang_sewer 的 spec 里程碑；commit 後若要落地 runtime 資產，再續做 dng_loyang_sewer implementation。`
