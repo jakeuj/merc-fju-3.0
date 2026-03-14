@@ -29,6 +29,10 @@ FUNCTION( do_enable )
   int              adept;
   char             arg[MAX_INPUT_LENGTH];
   char             buf[MAX_STRING_LENGTH];
+  SKILL_DATA     * fightSkill;
+  SKILL_DATA     * dodgeSkill;
+  SKILL_DATA     * fleeSkill;
+  SKILL_DATA     * medSkill;
   ENABLE_DATA    * pEnable;
   ENABLE_DATA    * zEnable;
   ENABLE_DATA    * pFight;
@@ -140,31 +144,28 @@ FUNCTION( do_enable )
     }
     else
     {
+      fightSkill = pFight ? pFight->skill : NULL;
+      dodgeSkill = pDodge ? pDodge->skill : NULL;
+      fleeSkill  = pFlee  ? pFlee->skill  : NULL;
+      medSkill   = pMed   ? pMed->skill   : NULL;
+
       send_to_buffer( "%s", VERTICAL_LINE );
 
       send_to_buffer( "攻擊預設技能﹕%-20s %-20s\n\r"
-        , ( pFight && ( pSkill = pFight->skill ) )
-          ? pSkill->cname : "\e[1;31m從缺\e[0m"
-        , ( pFight && ( pSkill = pFight->skill ) )
-          ? pSkill->name : "" );
+        , fightSkill ? fightSkill->cname : "\e[1;31m從缺\e[0m"
+        , fightSkill ? fightSkill->name : "" );
 
       send_to_buffer( "閃躲預設技能﹕%-20s %-20s\n\r"
-        , ( pDodge && ( pSkill = pDodge->skill ) )
-          ? pSkill->cname : "\e[1;31m從缺\e[0m"
-        , ( pDodge && ( pSkill = pDodge->skill ) )
-          ? pSkill->name : "" );
+        , dodgeSkill ? dodgeSkill->cname : "\e[1;31m從缺\e[0m"
+        , dodgeSkill ? dodgeSkill->name : "" );
 
       send_to_buffer( "逃跑預設技能﹕%-20s %-20s\n\r"
-        , ( pFlee && ( pSkill = pFlee->skill ) )
-          ? pSkill->cname : "\e[1;31m從缺\e[0m"
-        , ( pFlee && ( pSkill = pFlee->skill ) )
-          ? pSkill->name : "" );
+        , fleeSkill ? fleeSkill->cname : "\e[1;31m從缺\e[0m"
+        , fleeSkill ? fleeSkill->name : "" );
 
       send_to_buffer( "冥想預設技能﹕%-20s %-20s\n\r"
-        , ( pMed && ( pSkill = pMed->skill ) )
-          ? pSkill->cname : "\e[1;31m從缺\e[0m"
-        , ( pMed && ( pSkill = pMed->skill ) )
-          ? pSkill->name : "" );
+        , medSkill ? medSkill->cname : "\e[1;31m從缺\e[0m"
+        , medSkill ? medSkill->name : "" );
     }
 
     print_buffer( ch );

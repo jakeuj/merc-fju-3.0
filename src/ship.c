@@ -21,7 +21,8 @@ FUNCTION( do_ship )
   char        buf[MAX_STRING_LENGTH];
   char        buf1[MAX_STRING_LENGTH];
   SHIP_DATA * pShip;
-  AREA_DATA * pArea;
+  AREA_DATA * pStartArea;
+  AREA_DATA * pDestArea;
   int         count;
   int         slot;
 
@@ -46,16 +47,14 @@ FUNCTION( do_ship )
     for ( count = 1, pShip = ship_list; pShip; pShip = pShip->next, count++ )
     {
       if ( pShip->lock ) continue;
+      pStartArea = pShip->starting ? pShip->starting->area : NULL;
+      pDestArea  = pShip->destination ? pShip->destination->area : NULL;
 
       send_to_buffer( "%-11s %-12s %-11s %-12s %4d %2d:%2d %-17s\n\r"
-        , ( pShip->starting
-          && ( pArea = pShip->starting->area )
-          && pArea->name ) ? pArea->name : "不知名區域"
+        , ( pStartArea && pStartArea->name ) ? pStartArea->name : "不知名區域"
         , pShip->starting && pShip->starting->name
           ? pShip->starting->name : "不知名地方"
-        , ( pShip->destination
-          && ( pArea = pShip->destination->area )
-          && pArea->name ) ? pArea->name : "不知名區域"
+        , ( pDestArea && pDestArea->name ) ? pDestArea->name : "不知名區域"
         , pShip->starting && pShip->destination->name
           ? pShip->destination->name : "不知名地方"
         , pShip->cost, pShip->sailing, pShip->waiting

@@ -3784,6 +3784,8 @@ SKILL( cast_acid_breath )
     RETURN( FALSE );
   }
 
+  dam = spell_damage( ch, level, TYPE_INT, SPELL_CLASS_MOB );
+
   if ( level < 40 )
   {
     if ( saves_spell( level, victim ) ) dam /= 2;
@@ -3802,8 +3804,6 @@ SKILL( cast_acid_breath )
     "巨龍翅膀奮力一揮﹐只見塵煙瀰漫﹐接著一陣巨大的吐息由$n向"
     "$N發出。\n\r緊接著黑暗一片﹐你什麼都看不到﹐腦中感受到一股酸味"
     "﹐你感到一陣暈眩。" );
-
-  dam = spell_damage( ch, level, TYPE_INT, SPELL_CLASS_MOB );
 
   if ( number_percent() < 2 * level && !saves_spell( level, victim ) )
   {

@@ -75,9 +75,15 @@ void advance_level( CHAR_DATA * ch )
   if ( ch->level > LEVEL_HERO || !( pClass = ch->class ) ) RETURN_NULL();
 
   /* 增加法力的處理 */
-  add_mana     = ( pClass->fMana )
-    ? add_mana = number_range( 2, ( 2 * get_curr_int( ch )
-    + get_curr_wis( ch ) ) / 6 ) : 1;
+  if ( pClass->fMana )
+  {
+    add_mana = number_range( 2, ( 2 * get_curr_int( ch )
+      + get_curr_wis( ch ) ) / 6 );
+  }
+  else
+  {
+    add_mana = 1;
+  }
 
   mana_factor  = ( pClass->factor[INT_ITEM] + pClass->factor[WIS_ITEM] );
   add_mana     = UMIN( 10000, ( add_mana * 200 ) ) / UMAX( 1, mana_factor );
