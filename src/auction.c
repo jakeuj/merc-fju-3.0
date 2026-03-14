@@ -8,6 +8,7 @@
 *                                                                          *
 ***************************************************************************/
 #include <sys/types.h>
+#include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -16,6 +17,34 @@
 
 void            system_auction       args( ( void ) );
 extern void     set_sale_default     args( ( SALE_DATA     * ) );
+
+static void talk_auctionf( CHAR_DATA * seller, const char * action
+  , const char * format, ... )
+{
+  va_list args;
+  va_list copy;
+  char  * message;
+  int     needed;
+
+  va_start( args, format );
+  va_copy( copy, args );
+  needed = vsnprintf( NULL, 0, format, copy );
+  va_end( copy );
+
+  if ( needed < 0 )
+  {
+    va_end( args );
+    mudlog( LOG_ERR, "talk_auctionf: 無法建立拍賣訊息." );
+    return;
+  }
+
+  message = alloc_string( needed + 1 );
+  vsnprintf( message, needed + 1, format, args );
+  va_end( args );
+
+  talk_channel( seller, message, CHANNEL_AUCTION, action );
+  free_string( message );
+}
 
 void init_auction( void )
 {
@@ -293,18 +322,16 @@ FUNCTION( do_auction )
   chinese_number( auction_info->price, buf1 );
   obj_from_char( auction_info->obj );
 
-  sprintf( buf, "傳家之寶 %s 現在只賣 %s 兩黃金﹗手快有﹐"
-                "手慢無﹐好評發售中。要買要快喔﹗\e[0m"
+  talk_auctionf( ch, "\e[1;33m大聲叫賣著"
+    , "傳家之寶 %s 現在只賣 %s 兩黃金﹗手快有﹐"
+      "手慢無﹐好評發售中。要買要快喔﹗\e[0m"
     , obj_name( NULL, auction_info->obj ), buf1 );
-
-  talk_channel( ch, buf , CHANNEL_AUCTION , "\e[1;33m大聲叫賣著" );
   message_driver( ch, auction_info->obj, ACT_WHEN_AUCTION );
   RETURN_NULL();
 }
 
 FUNCTION( do_bet )
 {
-  char buf[MAX_STRING_LENGTH];
   char arg[MAX_INPUT_LENGTH];
   int  price;
   int  money;
@@ -427,16 +454,16 @@ FUNCTION( do_bet )
 
   if ( auction_info->visible )
   {
-    sprintf( buf, "我出價 %d 兩黃金買 %s﹗\e[0m"
+    talk_auctionf( ch, "\e[1;33m嘶喊著"
+      , "我出價 %d 兩黃金買 %s﹗\e[0m"
       , price , obj_name( NULL, auction_info->obj ) );
   }
 
   else
   {
-    sprintf( buf, "我出價 %d 兩黃金買盒中物﹗\e[0m", price );
+    talk_auctionf( ch, "\e[1;33m嘶喊著"
+      , "我出價 %d 兩黃金買盒中物﹗\e[0m", price );
   }
-
-  talk_channel( ch, buf, CHANNEL_AUCTION, "\e[1;33m嘶喊著" );
   message_driver( ch, auction_info->obj, ACT_WHEN_BET );
   RETURN_NULL();
 }
@@ -449,6 +476,7 @@ void auction_update( void )
   SALE_DATA      * pSale;
   OBJ_DATA       * auc_obj = NULL;
   OBJ_INDEX_DATA * pIndex;
+  bool             announced = FALSE;
 
   PUSH_FUNCTION( "auction_update" );
 
@@ -472,7 +500,8 @@ void auction_update( void )
       {
         chinese_number( auction_info->times -1, buf1 );
         chinese_number( auction_info->price   , buf2 );
-        sprintf( buf, "%s 目前由 %s 叫價 \e[1;32m%s\e[0m 兩黃金第%s次﹗\e[0m"
+        talk_auctionf( auction_info->seller, "\e[1;33m大聲嘶喊著"
+          , "%s 目前由 %s 叫價 \e[1;32m%s\e[0m 兩黃金第%s次﹗\e[0m"
           , obj_name( NULL, auction_info->obj ), auction_info->buyer->name
           , buf2, buf1 );
       }
@@ -481,13 +510,11 @@ void auction_update( void )
       {
         chinese_number( auction_info->times - 1, buf1 );
         chinese_number( auction_info->price   , buf2 );
-        sprintf( buf, "盒中物目前由 %s 喊價 \e[1;32m%s\e[0m"
+        talk_auctionf( auction_info->seller, "\e[1;33m大聲嘶喊著"
+          , "盒中物目前由 %s 喊價 \e[1;32m%s\e[0m"
                       " 兩黃金﹐第%s次﹗\e[0m"
           , auction_info->buyer->name, buf2, buf1 );
       }
-
-      talk_channel( auction_info->seller, buf, CHANNEL_AUCTION
-        , "\e[1;33m大聲嘶喊著" );
     }
 
     else
@@ -495,7 +522,8 @@ void auction_update( void )
       if ( auction_info->visible )
       {
         chinese_number( auction_info->price, buf1 );
-        sprintf( buf, "%s 目前的出價是%s兩黃金﹗有沒有人要出更高"
+        talk_auctionf( auction_info->seller, "\e[1;33m大聲叫賣著"
+          , "%s 目前的出價是%s兩黃金﹗有沒有人要出更高"
                       "的價錢啊﹖\e[0m"
         , obj_name( NULL, auction_info->obj ), buf1 );
       }
@@ -503,12 +531,10 @@ void auction_update( void )
       else
       {
         chinese_number( auction_info->price, buf1 );
-        sprintf( buf, "盒中物目前的出價是%s兩黃金﹗有沒有人要出更高"
+        talk_auctionf( auction_info->seller, "\e[1;33m大聲叫賣著"
+          , "盒中物目前的出價是%s兩黃金﹗有沒有人要出更高"
           "的價錢啊﹖\e[0m", buf1 );
       }
-
-      talk_channel( auction_info->seller, buf, CHANNEL_AUCTION
-        , "\e[1;33m大聲叫賣著" );
     }
   }
 
@@ -539,11 +565,13 @@ void auction_update( void )
       if ( auction_info->visible )
       {
         chinese_number( auction_info->price, buf1 );
-        sprintf( buf, "%s 以%s兩黃金的價格賣給了 %s﹗\e[0m"
+        talk_auctionf( auction_info->seller, "\e[1;33m大聲宣布著"
+          , "%s 以%s兩黃金的價格賣給了 %s﹗\e[0m"
           , obj_name( NULL, auction_info->obj ), buf1
           , ( !is_affected( auction_info->buyer, SLOT_INVIS )
             && !is_affected( auction_info->buyer, SLOT_MASS_INVIS ) )
             ? auction_info->buyer->name : "某不知名人物");
+        announced = TRUE;
 
         pIndex = auction_info->obj->pIndexData;
 
@@ -569,11 +597,13 @@ void auction_update( void )
       else
       {
         chinese_number( auction_info->price, buf1 );
-        sprintf( buf, "盒中物以%s兩黃金的價格賣給了 %s﹗\e[0m"
+        talk_auctionf( auction_info->seller, "\e[1;33m大聲宣布著"
+          , "盒中物以%s兩黃金的價格賣給了 %s﹗\e[0m"
           , buf1
           , ( !is_affected( auction_info->buyer, SLOT_INVIS )
             && !is_affected( auction_info->buyer, SLOT_MASS_INVIS ) )
             ? auction_info->buyer->name : "某不知名人物");
+        announced = TRUE;
       }
 
       if ( !IS_NPC( auction_info->seller )
@@ -597,8 +627,9 @@ void auction_update( void )
       }
     }
 
-    talk_channel( auction_info->seller, buf, CHANNEL_AUCTION,
-      "\e[1;33m宣布道" );
+    if ( !announced )
+      talk_channel( auction_info->seller, buf, CHANNEL_AUCTION,
+        "\e[1;33m宣布道" );
 
     init_auction();
   }
@@ -616,7 +647,6 @@ void system_auction( void )
   OBJ_DATA       * pObj;
   int              count = 0;
   char           * message;
-  char             buf[MAX_STRING_LENGTH];
 
   PUSH_FUNCTION( "system_auction" );
 
@@ -671,18 +701,18 @@ void system_auction( void )
 
   if ( zSale->visible )
   {
-    sprintf( buf, "傳家之寶 %s 現在只賣 %d 兩黃金﹗手快有﹐"
-                  "手慢無﹐好評發售中。要買要快喔﹗\e[0m"
+    talk_auctionf( seller, "\e[1;33m大聲叫賣著"
+      , "傳家之寶 %s 現在只賣 %d 兩黃金﹗手快有﹐"
+        "手慢無﹐好評發售中。要買要快喔﹗\e[0m"
       , obj_name( NULL, pObj ), zSale->cost );
   }
 
   else
   {
-    sprintf( buf, "盒子裡不知道裝了什麼鬼﹐反正俗俗賣﹐只要 %d 兩黃金﹗"
-      "﹐請各位有錢捧個生意場﹐沒錢的捧個人場吧﹗"
+    talk_auctionf( seller, "\e[1;33m大聲叫賣著"
+      , "盒子裡不知道裝了什麼鬼﹐反正俗俗賣﹐只要 %d 兩黃金﹗"
+        "﹐請各位有錢捧個生意場﹐沒錢的捧個人場吧﹗"
       , zSale->cost );
   }
-
-  talk_channel( seller, buf , CHANNEL_AUCTION , "\e[1;33m大聲叫賣著" );
   RETURN_NULL();
 }
