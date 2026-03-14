@@ -445,12 +445,10 @@ void damage( CHAR_DATA * ch, CHAR_DATA * victim, int dam, int dt, int situs )
           && ( pArea = ( victim->in_room->area ) )
           && pArea->fight )
         {
-          sprintf( buf, "\e[1;36m%s 在對戰區之 %s 把"
+          snprintf( buf, sizeof( buf ), "\e[1;36m%s 在對戰區之 %s 把 %s 趕出去了﹗\e[0m"
             , mob_name( NULL, ch )
-            , (victim->in_room) ? victim->in_room->name : "某地" );
-
-          sprintf( buf, "%s %s 趕出去了﹗\e[0m"
-            , buf, mob_name( NULL, victim ) );
+            , (victim->in_room) ? victim->in_room->name : "某地"
+            , mob_name( NULL, victim ) );
 
           /* 紀錄勝與敗 */
           if ( ch->pcdata )     ch->pcdata->fightwin++;
@@ -459,11 +457,10 @@ void damage( CHAR_DATA * ch, CHAR_DATA * victim, int dam, int dt, int situs )
         }
         else
         {
-          sprintf( buf, "\e[1;36m%s 在 %s 殺了"
+          snprintf( buf, sizeof( buf ), "\e[1;36m%s 在 %s 殺了 %s﹗\e[0m"
             , mob_name( NULL, ch )
-            , (victim->in_room) ? victim->in_room->name : "某地" );
-
-          sprintf( buf, "%s %s﹗\e[0m", buf, mob_name( NULL, victim ) );
+            , (victim->in_room) ? victim->in_room->name : "某地"
+            , mob_name( NULL, victim ) );
         }
       }
       else

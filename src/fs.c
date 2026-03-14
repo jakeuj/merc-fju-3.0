@@ -384,13 +384,15 @@ FUNCTION( do_rm )
   if ( chdir( dirname ) != 0 )
   {
     send_to_char( "無法切換路徑。\n\r", ch );
-    chdir( CurrentDir );
+    if ( chdir( CurrentDir ) != 0 )
+      mudlog( LOG_ERR, "do_rm: 無法切回目錄 %s.", CurrentDir );
     RETURN_NULL();
   }
 
   rc    = glob( filename, 0, NULL, &result );
   count = 0;
-  chdir( CurrentDir );
+  if ( chdir( CurrentDir ) != 0 )
+    mudlog( LOG_ERR, "do_rm: 無法切回目錄 %s.", CurrentDir );
 
   if ( rc == GLOB_NOSPACE )
   {
@@ -1081,13 +1083,15 @@ FUNCTION( do_grep )
   if ( chdir( dirname ) != 0 )
   {
     send_to_char( "無法切換路徑。\n\r", ch );
-    chdir( CurrentDir );
+    if ( chdir( CurrentDir ) != 0 )
+      mudlog( LOG_ERR, "do_grep: 無法切回目錄 %s.", CurrentDir );
     RETURN_NULL();
   }
 
   rc    = glob( filename, 0, NULL, &result );
   count = 0;
-  chdir( CurrentDir );
+  if ( chdir( CurrentDir ) != 0 )
+    mudlog( LOG_ERR, "do_grep: 無法切回目錄 %s.", CurrentDir );
 
   if ( rc == GLOB_NOSPACE )
   {
@@ -1312,13 +1316,15 @@ FUNCTION( do_ls )
   if ( chdir( dirname ) != 0 )
   {
     send_to_char( "無法切換路徑﹗\n\r", ch );
-    chdir( CurrentDir );
+    if ( chdir( CurrentDir ) != 0 )
+      mudlog( LOG_ERR, "do_ls: 無法切回目錄 %s.", CurrentDir );
     RETURN_NULL();
   }
 
   rc    = glob( filename, flags, NULL, &result );
   count = 0;
-  chdir( CurrentDir );
+  if ( chdir( CurrentDir ) != 0 )
+    mudlog( LOG_ERR, "do_ls: 無法切回目錄 %s.", CurrentDir );
 
   if ( rc == GLOB_NOSPACE )
   {
@@ -1640,12 +1646,16 @@ struct stat * mud_lstat( char * pathname, char * filename, struct stat * pSt )
   {
     str_cpy( directory, pathname );
     smash_path( directory );
-    sprintf( buf, "%s/%s/%s", home, directory, filename );
+    if ( snprintf( buf, sizeof( buf ), "%s/%s/%s", home, directory, filename )
+         >= sizeof( buf ) )
+      RETURN( NULL );
   }
 
   else
   {
-    sprintf( buf, "%s/%s", home, filename );
+    if ( snprintf( buf, sizeof( buf ), "%s/%s", home, filename )
+         >= sizeof( buf ) )
+      RETURN( NULL );
   }
 
   if ( lstat( buf, pSt ) == 0 ) RETURN( pSt );
@@ -1887,12 +1897,14 @@ void scan_directory( CHAR_DATA * ch, char * path, char * str )
 
   if ( chdir( pathname ) != 0 )
   {
-    chdir( CurrentDir );
+    if ( chdir( CurrentDir ) != 0 )
+      mudlog( LOG_ERR, "scan_directory: 無法切回目錄 %s.", CurrentDir );
     RETURN_NULL();
   }
 
   rc = glob( str, 0, NULL, &result );
-  chdir( CurrentDir );
+  if ( chdir( CurrentDir ) != 0 )
+    mudlog( LOG_ERR, "scan_directory: 無法切回目錄 %s.", CurrentDir );
 
   if ( rc == GLOB_NOSPACE ) RETURN_NULL();
 
@@ -1987,7 +1999,8 @@ int glob_file( const char * path, const char * ext, glob_t * result )
   else               strcpy( buf, "*" );
 
   rc = glob( buf, GLOB_NOSORT, NULL, result );
-  chdir( CurrentDir );
+  if ( chdir( CurrentDir ) != 0 )
+    mudlog( LOG_ERR, "glob_file: 無法切回目錄 %s.", CurrentDir );
 
   if ( rc == GLOB_NOSPACE )
   {
