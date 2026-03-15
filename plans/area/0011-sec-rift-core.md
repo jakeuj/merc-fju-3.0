@@ -86,7 +86,8 @@
 - `area/sec_rift_core/roo/*.roo` 由 `map.md` scaffold 生成
 - `area/sec_rift_below/roo/9512.roo` 已正式補上 down 出口到 `9601`
 - `sec_rift_core` 第一輪 implementation 未出現新的 area-specific `debug/badobject` / `Load_room` / reset parse 失敗
+- implementation milestone 已提交：`48393ff feat: implement rift core runtime area`
 
 ## Next Step Prompt
 
-`先 commit 目前 sec_rift_core 的 implementation 里程碑；commit 後若要續推洛陽地下鏈，優先補更深裂界區的 spec。`
+`建立更深裂界區的單區 plan 與 map.md spec，延續 sec_rift_core/9612 所預留的下層 world link。`

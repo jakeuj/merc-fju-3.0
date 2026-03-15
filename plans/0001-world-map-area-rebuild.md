@@ -168,6 +168,7 @@
 8. `sec_catacomb_depths`
 9. `sec_rift_below`
 10. `sec_rift_core`
+11. `sec_rift_deeps`
 
 ## Theme Allocation
 
@@ -213,6 +214,10 @@
   - theme: `仙俠`
   - subtheme: `心核 / 裂谷底層`
   - 缺口角色：補異象裂谷沉門下方的裂谷心核與祕境底層核心，讓洛陽地下鏈能在更深層形成一個真正的高風險終點與後續延伸樞紐
+- `sec_rift_deeps`
+  - theme: `仙俠`
+  - subtheme: `裂界 / 深層封印`
+  - 缺口角色：補裂谷心核封界下方的更深裂界與深層封印帶，讓洛陽地下鏈在心核之後仍保有更下層的延伸空間
 
 後續新增候選 area 時，必須一併記錄：
 
