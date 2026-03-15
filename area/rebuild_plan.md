@@ -66,18 +66,24 @@
 
 ## Todo
 
-- `sec_rift_below`
-  - delivery_gate: `spec_in_progress`
-  - parent_region: `loyang underground chain`
-  - reserved_room_block: `9501-9520`
-  - theme: `仙俠`
-  - subtheme: `裂谷 / 異象秘境`
-  - next_action: 建立 `plans/area/0010-sec-rift-below.md` 與 `area/sec_rift_below/map.md` 第一版，並以 `9501-9520` 作為第一段從 `xx01` 起跳的 reserved_room_block
-  - notes: 承接 `sec_catacomb_depths/9499` 的 down world link；`9501-9520` 目前未與既有 94xx/95xx 地下鏈房號衝突，且符合未來新 area 首段從 `xx01` 起跳的規則，這一輪先做 spec，不急著直接掛 runtime
+(目前無待處理 `todo`；先完成 `in_progress` 的 `sec_rift_below`。)
 
 ## In Progress
 
-(目前無 `in_progress` 項目；下一步從 `todo` 的 `sec_rift_below` 起手。)
+### `sec_rift_below`
+
+- status: `in_progress`
+- delivery_gate: `spec_ready_for_commit`
+- compliance_check: `compliant with current ref/Readme.md scope`
+- plan: `plans/area/0010-sec-rift-below.md`
+- parent_region: `loyang underground chain`
+- reserved_room_block: `9501-9520`
+- theme: `仙俠`
+- subtheme: `裂谷 / 異象秘境`
+- world_links: `忘川地穴`, `異象裂谷`, `裂谷心核`
+- next_action: 先 commit `sec_rift_below` 的單區 plan + map.md spec 里程碑；commit 後再決定是否進入 implementation（index/mob/obj/res/shp）並正式接上 `sec_catacomb_depths/9499`
+- next_prompt: `先 commit 目前 sec_rift_below 的 spec 里程碑；commit 後若要落地 runtime 資產，再續做 sec_rift_below implementation。`
+- notes: `plans/area/0010-sec-rift-below.md` 與 `area/sec_rift_below/map.md` 第一版已建立，`up` 邊界對應既有 `sec_catacomb_depths/9499`，`9501-9520` 已作為第一段從 `xx01` 起跳的 reserved_room_block，validator 已通過
 
 
 ## Done
@@ -106,16 +112,16 @@
 
 ## Current Recommended Next Step
 
-建立 `sec_rift_below` 的單區 plan 與 `map.md` spec，延續洛陽地下鏈由 `sec_catacomb_depths/9499` 向下進入更深異象裂谷的世界連線，並先保留 `9501-9520` 作為第一段從 `xx01` 起跳的 room block。
+先 commit 目前 `sec_rift_below` 的 spec 里程碑；commit 後再決定是否落地 implementation，並把它正式接到 `sec_catacomb_depths/9499`。
 
 語意提醒：
 
-- 目前已沒有 `in_progress` 項目，因此 next actionable area 會切到 `todo` 第一個 `sec_rift_below`
+- 目前的 next actionable area 仍是 `sec_rift_below`
 - `sec_catacomb_depths` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0009-sec-catacomb-depths.md` 回查
-- `sec_rift_below` 這一輪先做 spec，不急著預先掛入 runtime
+- `sec_rift_below` 的 spec 已完成並通過 validator，現在 gate 是 `spec_ready_for_commit`
 - 依新 room reservation policy，這區先固定保留 `9501-9520`；這不是單純找空位，而是第一個遵循「新 area 從 `xx01` 起跳」的案例
 - 既有地下鏈 `9451/9461/9481/9491` 保留原狀，不在這一輪 retroactive 重編
 
 建議可直接使用的 prompt：
 
-`建立 sec_rift_below 的單區 plan 與 map.md spec，延續 sec_catacomb_depths/9499 的 down world link，並以 9501-9520 作為第一段從 xx01 起跳的 reserved_room_block。`
+`先 commit 目前 sec_rift_below 的 spec 里程碑；commit 後若要落地 runtime 資產，再續做 sec_rift_below implementation。`
