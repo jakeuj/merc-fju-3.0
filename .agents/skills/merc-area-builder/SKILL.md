@@ -37,6 +37,7 @@ source of truth 要分兩種：
 8. 修改完成後，至少做靜態搜尋、編碼檢查與必要的啟動/載入驗證，再回報受影響檔案與風險。
 9. 若要做 area 載入 smoke test，先清空 `debug/*` 內容並建立本輪 `log/*` 觀察基線，再執行測試；若使用 `timeout`，優先給 `45` 到 `60` 秒；測試後用成功訊號、這輪 log 與新產生的 debug 訊息一起判讀。
 10. 若這輪有新增 `mob/*.mob` 或 `obj/*.obj`，不要只靠文件猜 parser 會接受什麼：先比對 repo 內已成功載入的同類範例，特別是 `Class` 常數與 `ITEM_FOOD` / `ITEM_DRINK_CON` 的 `Value*` 欄位，測試成功後仍要檢查 `debug/badobject`。
+11. area 設計與純資料實作預設先走快速本機驗證；只有碰到 `src/`、`Makefile*`、`startup*`、`merc.sample.ini`、疑似平台差異，或要替大里程碑做 pre-merge gate 時，才升級到 Ubuntu / Docker 雙平台驗證。
 
 ## 主題靈感與沉浸式設計
 
@@ -120,9 +121,11 @@ source of truth 要分兩種：
 ## 驗證
 1. 至少檢查 VNUM / 房號引用、`index/res/shp/roo` 對應與地圖出口一致性
 2. 若用了 scaffold script，先跑 `--validate-only`
-3. 若牽涉交通、新手、技能、國家或世界觀，對照對應 docs / JSON
-4. 若環境允許，做實際載入或 smoke test，並確認成功訊號與 `debug/` / `log/` 沒有新增 area 錯誤
-5. 完整驗證清單讀 `references/validation-checklist.md`
+3. 若是 `spec / plan / tracker` 類工作，通常做到 `--validate-only` 即可，不必為了沒有 runtime 變更的任務硬跑雙平台 build
+4. 若是純 area data work，預設先做本機 build + smoke test；只有在碰到 `src/`、跨平台風險、或 merge 前信心 gate 時再補 Ubuntu / Docker
+5. 若牽涉交通、新手、技能、國家或世界觀，對照對應 docs / JSON
+6. 若環境允許，做實際載入或 smoke test，並確認成功訊號與 `debug/` / `log/` 沒有新增 area 錯誤
+7. 完整驗證清單讀 `references/validation-checklist.md`
 
 ## 參考資料
 - `document/README`

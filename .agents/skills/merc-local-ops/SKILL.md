@@ -50,6 +50,7 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 - `macOS` 宿主機原生 build 基準：`make -C src clean && make -C src merc`
 - `Windows + WSL (Ubuntu)`：先從 PowerShell 探測 `wsl.exe` 與 WSL 內的工具鏈，再在 WSL 內執行 `cd src && make clean && make`
 - `macOS + Docker (Ubuntu)`：優先在 Ubuntu 容器內執行 `make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc`
+- 若任務只是 area plan、tracker、`map.md` spec，或純 area data 且沒有碰 `src/`，預設不要把 Docker / Ubuntu build 當每一步的固定成本；先做本機快速驗證，必要時再升級
 - 若任務和 warning、toolchain parity、跨平台回歸有關，預設要同時驗證 macOS 原生與 Ubuntu build；不要只驗單邊
 - 若目前 shell 是 PowerShell，先檢查：
 - `Get-Command make, gcc, wsl -ErrorAction SilentlyContinue`
@@ -59,6 +60,7 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 - Windows 路徑轉 WSL 路徑時，像 `H:\repos\merc-fju-3.0` 應轉成 `/mnt/h/repos/merc-fju-3.0`
 - 若要在 macOS 上重現 Ubuntu 問題，優先用 Docker 啟 Ubuntu 容器，不要拿宿主機的 Darwin build 當 Linux 結果
 - 若 `Makefile.lin` 報 `crypt` 解析失敗，先檢查當前工作樹是否包含 `LIBS` / `$(LIBS)` 修正，不要先去安裝額外套件
+- 適合升級到 Ubuntu / Docker 的常見時機：有改 `src/`、`Makefile*`、`startup*`、`merc.sample.ini`、看到平台相依錯誤，或準備把一整段 area milestone merge 回主線前做較高信心驗證
 
 ### 2. 設定
 - 先檢查 `src/merc.sample.ini`

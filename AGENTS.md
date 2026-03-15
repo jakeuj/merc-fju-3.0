@@ -95,6 +95,10 @@ This repository is a Merc MUD codebase with both legacy runtime/build paths and 
   - verify VNUMs and boundary links
   - verify `index / mob / obj / res / shp / roo` consistency
   - check `area/directory.lst` ordering
+- Default validation scope for area-only work:
+  - `spec / plan / tracker only`: `--validate-only` is usually enough
+  - `area data only` (`roo/mob/obj/res/shp/directory.lst` without `src/` changes): prefer fast local validation first, typically macOS native build plus local smoke test
+  - only escalate to Ubuntu / Docker / `Makefile.lin` when the task touches `src/`, `Makefile*`, `startup*`, `merc.sample.ini`, when the failure looks platform-specific, or when doing a higher-confidence pre-merge gate for a larger milestone
 - For area smoke tests:
   - clear or baseline `debug/*` first
   - establish which `log/*` file(s) belong to this run
@@ -114,6 +118,7 @@ This repository is a Merc MUD codebase with both legacy runtime/build paths and 
   - `make -C src -f Makefile.lin merc`
 - Clean rebuild when needed:
   - `make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc`
+- For day-to-day area planning and area-data work, do not require both macOS and Ubuntu validation on every small step; treat Ubuntu / Docker validation as conditional escalation, not the default cost of every area change
 - Do not treat a Darwin/macOS-native build as proof that Ubuntu is clean; if the task mentions Linux parity, warnings, or container deployment, validate in Ubuntu.
 - Current repo baseline expects both the macOS native build and the Ubuntu `Makefile.lin` build to be warning-free; if either side regresses, validate both before closing the task.
 
