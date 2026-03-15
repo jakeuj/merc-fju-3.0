@@ -1,0 +1,32 @@
+Vnum            9504
+Name            冷光裂潭~
+Description
+裂壁在這裡內凹成一座半封閉石潭，潭中沒有水，只有一層像液體般緩慢起伏的淡色冷光。站得越久，越難分辨那光是在潭底流動，還是正從更深處往上滲出。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9510
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         冷光~
+End
+
+#Enquire
+Keyword         裂谷~
+End
+
+End

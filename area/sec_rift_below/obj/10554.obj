@@ -1,0 +1,16 @@
+Vnum            10554
+Name            gate scar blade~
+ShortDesc       守痕斷刃~
+Description
+一柄刃面滿是門痕裂紋的短刃斜立在沉門前。
+~
+Unit            柄~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           34
+Value           0 -1 -1 WEAPON_SWORD
+Weight          5
+Cost            260
+Exp             22
+End

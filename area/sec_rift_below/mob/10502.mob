@@ -1,0 +1,31 @@
+Vnum            10502
+Name            riftwind wraith~
+ShortDesc       裂風幽影~
+Description
+幽影像一團被強風吹得不斷變形的灰白影子，沒有真正固定的軀體，只有一
+雙時而亮起的冷色瞳點。每當它掠過裂潭與風脊附近，四周風勢都會跟著變
+得更尖更急。
+~
+StayArea        Yes
+AlignEvil       Yes
+Alignment       -260
+Level           34
+Hitroll         8
+Protect         -4
+Damroll         8
+Str             14
+Int             9
+Wis             10
+Dex             13
+Con             14
+Hp              4600
+Mana            220
+Move            125
+Class           CLASS_THIEF
+Gold            310
+Multipile       100
+AttackRatio     116
+DodgeRatio      108
+Migrate         0
+Sex             SEX_NEUTRAL
+End

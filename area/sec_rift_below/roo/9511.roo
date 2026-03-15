@@ -1,0 +1,32 @@
+Vnum            9511
+Name            井下浮階~
+Description
+井壁內側浮著一圈圈彼此錯落的石階，像不是砌成，而是被下方異象一層層托起。每走一步，都能感到腳下傳來極輕的震動，彷彿更深處有什麼正在持續脈動。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        9510
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9512
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

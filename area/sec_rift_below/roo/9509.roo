@@ -1,0 +1,24 @@
+Vnum            9509
+Name            裂風觀台~
+Description
+觀台懸在裂谷外側，腳下就是深不見底的黑空。每次裂風掠過時，遠方幾道冷光會短暫勾出下層輪廓，像某座更大的門扉正沉在黑暗深處等待再次開啟。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         裂風~
+End
+
+#Enquire
+Keyword         下方~
+End
+
+End

@@ -1,0 +1,33 @@
+Vnum            10501
+Name            rift wayfinder shade~
+ShortDesc       裂谷引路殘靈~
+Description
+這道殘靈披著被裂風撕得細碎的長袍，輪廓時明時滅，像一直在被周圍冷
+光重新拼合。它總站在祭痕石棧一帶，像替仍敢往更深處走的人守著最後
+一個還能說話的歇腳點。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       40
+Level           31
+Hitroll         1
+Protect         0
+Damroll         0
+Str             11
+Int             13
+Wis             13
+Dex             12
+Con             11
+Hp              2500
+Mana            180
+Move            120
+Class           0
+Gold            230
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

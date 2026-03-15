@@ -1,0 +1,31 @@
+Vnum            9502
+Name            回音落橋~
+Description
+斷裂石橋只剩中段還勉強連著兩側崖壁，腳步一落下，聲音就會被裂谷深處一層層反送回來。每一道回音都比上一道更陌生，像有別的東西在模仿你的步伐。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9501
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         回音~
+Description
+回音不是單純延遲的聲波，更像裂谷本身正用另一種節奏把聲音吐還回來。
+~
+End
+
+End

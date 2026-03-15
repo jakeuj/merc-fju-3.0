@@ -1,0 +1,31 @@
+Vnum            9506
+Name            霧瀑背廊~
+Description
+一層極細的白霧自上方裂壁無聲垂落，像瀑卻不見水勢，從背後望去只能看見霧幕後有幾道殘破刻痕若隱若現。走近時，皮膚會感到像細針般的冷麻。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         霧瀑~
+Description
+白霧不像單純濕氣，更像裂谷把冷意磨成了看得見的薄幕。
+~
+End
+
+End

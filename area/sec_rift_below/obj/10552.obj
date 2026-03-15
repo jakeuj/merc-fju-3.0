@@ -1,0 +1,14 @@
+Vnum            10552
+Name            condensed mist ration~
+ShortDesc       凝霧乾糧~
+Description
+一份以薄膜封好的乾糧被安放在祭痕旁。
+~
+Unit            份~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           30
+Value           16 26 4 0
+Weight          1
+Cost            85
+End

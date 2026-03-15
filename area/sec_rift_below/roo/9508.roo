@@ -1,0 +1,39 @@
+Vnum            9508
+Name            斷脈晶槽~
+Description
+數條細長晶槽嵌在石壁中，原本應該導引某種穩定流向，如今卻只剩斷續流竄的冷色微芒。每一道光在槽內折返時，都像在試圖尋找已經消失的出口。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9509
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        9511
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         晶槽~
+Description
+晶槽切面平整得過於人工，讓人懷疑裂谷裡曾有某種真正成形的引流設施。
+~
+End
+
+End

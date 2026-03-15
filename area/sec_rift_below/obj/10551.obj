@@ -1,0 +1,15 @@
+Vnum            10551
+Name            rift windlamp~
+ShortDesc       裂谷風燈~
+Description
+一盞被裂風壓得微微傾斜的風燈掛在石棧邊。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+WearLoc         ITEM_WEAR_LIGHT
+Takeable        Yes
+Level           30
+Value3          24
+Weight          1
+Cost            160
+End

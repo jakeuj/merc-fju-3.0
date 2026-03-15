@@ -13,6 +13,14 @@ ExitKeyword     ~
 ExitKey         0
 End
 
+#Exit
+Direction       DOWN
+ExitVnum        9501
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
 #Enquire
 Keyword         退路~
 End

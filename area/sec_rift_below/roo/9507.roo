@@ -1,0 +1,39 @@
+Vnum            9507
+Name            祭痕石棧~
+Description
+石棧邊緣刻著一圈圈早已磨損的祭痕，像有人曾在這裡試圖向裂谷深處獻上什麼。刻痕之間仍卡著細碎晶粉，每當風壓改變，就會閃出一瞬間幾乎看不見的淡芒。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9506
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         祭痕~
+Description
+祭痕不像宗廟儀式留下的工整刻線，更像臨時在危險之地匆忙劃出的鎮壓與祈求符記。
+~
+End
+
+#Enquire
+Keyword         祭痕~
+End
+
+#Enquire
+Keyword         裂谷~
+End
+
+End

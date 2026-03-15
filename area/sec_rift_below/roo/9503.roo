@@ -1,0 +1,47 @@
+Vnum            9503
+Name            浮紋風脊~
+Description
+一道貼壁延伸的狹長風脊懸在裂谷之中，石面上浮著像水紋般不斷位移的淡色紋路。風沿著紋路滑過時，會帶起細小冷光，像整條路正在被某種力量暫時托住。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         風脊~
+Description
+風脊像被風與地脈共同磨成的一道細梁，細得令人懷疑它隨時會被下一陣異風削斷。
+~
+End
+
+#Enquire
+Keyword         裂風~
+End
+
+#Enquire
+Keyword         前路~
+End
+
+End

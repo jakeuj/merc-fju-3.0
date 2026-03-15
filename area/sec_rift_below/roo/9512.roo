@@ -1,0 +1,35 @@
+Vnum            9512
+Name            祕境沉門~
+Description
+沉門半埋在裂谷底部石層之中，門面沒有紋飾，只有一道像被黑夜壓縮後留下的狹細門縫。冷光到了這裡反而變得稀薄，彷彿真正該發亮的東西全被門後吞了進去。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9511
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         沉門~
+Description
+沉門不像人工打造的陵墓門扉，更像裂谷最深處自行凝成的一道邊界。
+~
+End
+
+#Enquire
+Keyword         沉門~
+End
+
+#Enquire
+Keyword         下方~
+End
+
+#Enquire
+Keyword         出口~
+End
+
+End

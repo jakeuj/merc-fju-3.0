@@ -1,0 +1,32 @@
+Vnum            9501
+Name            裂谷著階~
+Description
+石階在這裡徹底失去規矩，變成貼著裂壁勉強延伸的窄階。頭頂還能隱約看見忘川地穴的冷光線影，但下方風聲已像從更深井口倒灌上來，帶著讓人胸口發緊的低鳴。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        9499
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         下方~
+End
+
+End

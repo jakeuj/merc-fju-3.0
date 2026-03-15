@@ -1,0 +1,32 @@
+Vnum            9510
+Name            異鳴深井口~
+Description
+主線在此收束成一道筆直向下的深井，井壁每隔片刻就會傳出極低的共鳴，像下方有巨大空腔正緩慢呼吸。井口周圍的石面布滿被風與冷光共同侵蝕出的細密溝痕。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        9511
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         深井~
+End
+
+#Enquire
+Keyword         下方~
+End
+
+End

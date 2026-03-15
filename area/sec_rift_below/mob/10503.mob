@@ -1,0 +1,30 @@
+Vnum            10503
+Name            sunken gate warden~
+ShortDesc       沉門守痕者~
+Description
+守痕者像一道立在沉門前的黑色刻印，只有在你直視它時，才會察覺那其實
+是一具仍在緩慢活動的守門身影。它的手臂與肩背佈滿像門縫般的細裂痕，
+彷彿整個身體原本就是沉門延伸出來的一部分。
+~
+StayArea        Yes
+Alignment       -320
+Level           38
+Hitroll         10
+Protect         -7
+Damroll         10
+Str             16
+Int             10
+Wis             11
+Dex             12
+Con             15
+Hp              6100
+Mana            260
+Move            130
+Class           CLASS_FIGHTER
+Gold            420
+Multipile       100
+AttackRatio     120
+DodgeRatio      110
+Migrate         0
+Sex             SEX_NEUTRAL
+End
