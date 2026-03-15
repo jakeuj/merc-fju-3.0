@@ -9,6 +9,10 @@
 - 若把 `Capital` 設成非零，先確認它真的應該出現在出生地 / 首都 / home 選單，並且已具備對應服務鏈，不要讓單純的外郊或過渡區誤進出生地清單
 - `mob/*.mob`：參照 `document/mob.txt`；確認 `Level`、`Alignment`、旗標、`Process` 是否符合該區用途
 - `mob/*.mob` 的 `Class` 不要臆測新常數；先在 repo 內搜尋已成功載入的 mob 範例，沿用 parser 目前真的接受的值，再進 smoke test
+- 若 `mob/*.mob` 使用 `AutoEnable`，要記得它不是單純的 shorthand：`src/load.c` 會在載入時呼叫 `get_adeptation()` 依怪物 `Level`、`AttackRatio` / `DodgeRatio`、技能傷害表與技能型態推算熟練度；推到極端值時會寫 `debug/failenable`
+- `debug/failenable` 的 `太差` / `太高` 屬於怪物技能配置失衡訊號，不是玩家 `enable` 指令告警；回修時優先檢查對應 mob 的 `AutoEnable` 是否應改成固定 `Enable`，或是否該換技能 / 調整攻閃係數
+- 若任務目標是快速、穩定地消除 `debug/failenable`，預設優先把問題 `AutoEnable` 改成固定 `Enable`：這樣只會固定單一怪物、單一技能的結果，不必連動調整 `AttackRatio`、`DodgeRatio` 或全域技能資料，風險最低
+- 只有當你明確在做戰鬥平衡重調、確定該怪應保留「依等級 / 係數自動推導技能熟練度」的設計，或已確認原本是技能選錯而非熟練度推導失衡時，才優先保留 `AutoEnable` 去改技能或係數
 - `obj/*.obj`：參照 `document/obj.txt`；若物品要由商店或 reset 產生，確認與 `res`、`shp` 對上
 - `obj/*.obj` 若屬於特殊 `ItemType`，不要只照文件猜 `Value` / `Value0..3` 的落點；先在 repo 內搜尋已成功載入的同類物件範例，再決定欄位配置
 - `ITEM_LIGHT` 類物件尤其要小心：至少比對是否需要 `WearLoc ITEM_WEAR_LIGHT` 與正確的燈光時間欄位；若只看到 `debug/badobject` 才回修，通常已經太晚
@@ -52,6 +56,8 @@
 - 以目前 repo 狀態來看，`bore` 還不是現成可用指令：若需求是讓 `bore hole` 真的可用，就要決定是新增通用 `do_bore`，還是新增 room job 再在對應 `.roo` 裡加 `#Job`
 - 若遇到 parser 細節不確定，回看 `doc/area-file-format.txt`
 - 若物件 parser 行為和文件不完全一致，優先以 repo 內已成功載入的同類物件為準，再用 `debug/badobject` 驗證這次修改是否乾淨
+- 若是 `debug/failenable`，先沿著第一個 `怪物編號 + 技能` 定位到對應 `mob/*.mob`；若本輪只想消除 warning，通常比起重算 `AttackRatio` / `DodgeRatio`，把問題 `AutoEnable` 改成明確 `Enable <practice> '<skill>'` 更穩定
+- 這個偏好背後的理由要說清楚：`Enable` 是固定結果，`AutoEnable` 是推導規則；修 warning 時先固定結果，通常比改推導規則更可預測，也比較不會意外影響同一隻怪的其他技能表現
 - 即使啟動 log 已出現成功訊號，只要這輪有改 `obj/*.obj`，仍要回頭檢查 `debug/badobject`；把它當成新 area 物件是否真的過關的正式 gate，不是可有可無的附帶檢查
 - 若物件涉及卷軸、藥水、法杖、法器或其他 spell 型效果，補看 `doc/skills-and-spells-guide.txt`
 - 進階 NPC 行為或 trigger 語法若不確定，可補看 `doc/mobprogram-guide.txt`

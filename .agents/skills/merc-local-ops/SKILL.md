@@ -121,6 +121,9 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 - 不要預設這一定是 WSL ACL 問題；先以目前實際 OS / 檔案權限為準
 - 讀 log 時優先看本輪新產生的 `log/*.log`，或你在測前先建立基線後鎖定的那份 log，確認是否已出現「開始正常運作」或資料載入總結；`debug/bugs` 常會混著舊錯誤，不能單看最後幾筆就判定目前仍失敗
 - 若本輪測試前已先清空 `debug/*`，那麼測試後新增的 `debug/bugs`、`debug/error`、`debug/failenable` 等內容就應優先視為本次執行的新結果，必須逐一判斷是否和本次 area 改動有關
+- `debug/failenable` 不是玩家 `enable` 數量不足，也不是 `max_enable` 上限告警；它是怪物載入 `AutoEnable` 時，`src/load.c -> get_adeptation()` 算出的熟練度極端值警告
+- 若 `debug/failenable` 出現 `怪物編號 %d 技能 %s 太差/太高`，先把它歸類成 `mob/*.mob` 的 area data 問題：檢查對應怪物的 `AutoEnable`、`AttackRatio`、`DodgeRatio`、Level 與技能型態，再決定要改成固定 `Enable`，或改技能 / 係數；不要誤往玩家 `enable` 指令或本機 shell 問題排查
+- 若只是要消除這類載入警告，預設推薦固定 `Enable`，因為它是鎖定單一怪物技能結果的最小修復；保留 `AutoEnable` 去改 ratio 或技能資料，較容易擴大成平衡調整而不是單純排錯
 
 ### 5. 排錯分流
 - **編譯錯誤**：處理 `src/*.c`、`include/*.h`、`Makefile*`

@@ -192,12 +192,13 @@ git status --short
 
 Common tracked files that may change during local startup checks:
 - `debug/error`
+- `debug/failenable`
 - `etc/net.log`
 - `etc/stock`
 
 If those changes are only test side effects and not part of the task:
 ```bash
-git checkout -- debug/error etc/net.log etc/stock
+git checkout -- debug/error debug/failenable etc/net.log etc/stock
 ```
 
 If you want to keep local runtime noise out of `git status` without changing repo rules:
@@ -218,6 +219,12 @@ Check current local skip list:
 ```bash
 git ls-files -v | rg '^S '
 ```
+
+Interpret `debug/failenable` carefully:
+- It is not the player-side `enable` count warning from `angel_enable`.
+- It is written by `LOG_FAILENABLE` when a mob `AutoEnable` resolves to an extreme practice value during load.
+- `太差` means the computed practice hit the high end (for example `>= 100`); `太高` means it hit the low end (for example `<= 1`).
+- Triage it as world-data: inspect the named mob VNUM and its `mob/*.mob` entries before blaming startup scripts or local environment.
 
 Undo for one file when you really need to edit and commit it:
 ```bash

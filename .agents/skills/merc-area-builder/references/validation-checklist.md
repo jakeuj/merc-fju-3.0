@@ -23,6 +23,9 @@
 19. 若這輪有改 `obj/*.obj`，特別是特殊 `ItemType`，額外檢查 `debug/badobject`；不要只看 `debug/bugs`
 20. 只要這輪新增或修改過物件，即使已看到成功訊號，`debug/badobject` 仍應視為 release blocker；若有新條目，先回修再宣告 area smoke test 通過
 21. 即使已看到成功訊號，仍要回頭檢查 `debug/*`、`log/` 是否出現和本次新增 area 相關的新 bug、warning、`Load_room`、`load_mobiles`、reset 或檔案開啟錯誤
-22. 查看 `debug/`、`log/` 是否出現 `Load_room`、`load_mobiles`、reset 或檔案開啟錯誤；若有 area diagnostics 附帶 area 檔名與行號，優先沿著第一個定位點回修
-23. 回報時要列出：改了哪些區域檔、哪些系統檔被連動修改、是否引用了 docs 服務資料、是否動到區域地圖檔、是否使用 Python scaffold 產生 `.roo`、以及還沒驗證到的風險
-24. 若任務來自長期重建計畫，也要回報：是否更新 `area/rebuild_plan.md`、下一個推薦 area 是哪個、以及固定 prompt 下次會落到哪份計畫
+22. 若這輪有改 `mob/*.mob` 的 `AutoEnable` / `Enable`，額外檢查 `debug/failenable`；把它視為怪物技能配置 gate，而不是可以忽略的雜訊
+23. 若 `debug/failenable` 出現 `怪物編號 %d 技能 %s 太差/太高`，先沿著第一個 VNUM 回查 `mob/*.mob`，並確認那是 `AutoEnable` 推算極端值，不是玩家 `enable` 數量或 `max_enable` 上限問題
+24. 若本輪修法是把 `AutoEnable` 改成固定 `Enable`，回報時要明講這是「固定結果以消除載入警告」而不是「重新平衡整個技能系統」；若反而選擇保留 `AutoEnable`，也要明講你是依什麼理由改技能或 `AttackRatio` / `DodgeRatio`
+25. 查看 `debug/`、`log/` 是否出現 `Load_room`、`load_mobiles`、reset 或檔案開啟錯誤；若有 area diagnostics 附帶 area 檔名與行號，優先沿著第一個定位點回修
+26. 回報時要列出：改了哪些區域檔、哪些系統檔被連動修改、是否引用了 docs 服務資料、是否動到區域地圖檔、是否使用 Python scaffold 產生 `.roo`、以及還沒驗證到的風險
+27. 若任務來自長期重建計畫，也要回報：是否更新 `area/rebuild_plan.md`、下一個推薦 area 是哪個、以及固定 prompt 下次會落到哪份計畫
