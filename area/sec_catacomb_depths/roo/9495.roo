@@ -1,0 +1,39 @@
+Vnum            9495
+Name            秘壇側室~
+Description
+側室中央立著一座形制古怪的低壇，壇面不是供奉器具，而是刻滿像計量地脈流向的細痕。壇腳邊散著碎裂石片與燒黑灰印，像曾有人在此做過某種試煉或引導。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        9493
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9496
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         祭壇~
+Description
+祭壇邊緣刻痕不像單純祭祀圖樣，更像某種校準異象或測試通行資格的裝置。
+~
+End
+
+#Enquire
+Keyword         祭壇~
+End
+
+#Enquire
+Keyword         入口條件~
+End
+
+End

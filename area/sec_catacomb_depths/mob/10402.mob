@@ -1,0 +1,30 @@
+Vnum            10402
+Name            rift wandering wraith~
+ShortDesc       裂隙遊魂~
+Description
+這縷遊魂像被裂隙冷光勉強勾出邊界，時散時聚，彷彿根本不屬於固定形
+體。它偶爾會在光紋邊緣停頓，像是在聆聽你聽不見的另一種回音。
+~
+StayArea        Yes
+AlignEvil       Yes
+Alignment       -280
+Level           28
+Hitroll         7
+Protect         -2
+Damroll         6
+Str             12
+Int             10
+Wis             9
+Dex             14
+Con             12
+Hp              3400
+Mana            170
+Move            125
+Class           CLASS_THIEF
+Gold            220
+Multipile       100
+AttackRatio     112
+DodgeRatio      110
+Migrate         0
+Sex             SEX_NEUTRAL
+End

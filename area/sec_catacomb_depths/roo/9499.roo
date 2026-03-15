@@ -1,0 +1,24 @@
+Vnum            9499
+Name            下層裂谷階~
+Description
+石階貼著裂谷內壁向下盤旋，腳邊偶爾會掠過一絲像流光又像霧影的淡線。再往更下方看去，只剩被冷光吞掉的深黑空間，像祕境真正的底層仍遠未結束。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        9498
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         下方~
+End
+
+End

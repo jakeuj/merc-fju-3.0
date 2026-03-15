@@ -1,0 +1,31 @@
+Vnum            10403
+Name            anomaly altar guardian~
+ShortDesc       異象守壇者~
+Description
+守壇者的身形像由石粉、灰燼與淡色流光一層層堆疊起來，輪廓雖近似人，
+卻完全沒有活物的呼吸與重量。它立在異象前台附近時，周圍空氣都會跟
+著產生細微顫動。
+~
+StayArea        Yes
+AlignEvil       Yes
+Alignment       -240
+Level           30
+Hitroll         8
+Protect         -3
+Damroll         7
+Str             14
+Int             9
+Wis             10
+Dex             11
+Con             14
+Hp              3900
+Mana            180
+Move            105
+Class           CLASS_THIEF
+Gold            260
+Multipile       100
+AttackRatio     114
+DodgeRatio      104
+Migrate         0
+Sex             SEX_NEUTRAL
+End

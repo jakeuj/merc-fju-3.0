@@ -1,0 +1,47 @@
+Vnum            9493
+Name            光紋廊道~
+Description
+廊道石面被一道道淡青色光紋切開，紋路沿著地面與牆邊不規則延伸，像某種古老陣式已被地脈重新喚醒。走在這裡時，連自己的腳步聲都變得陌生。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9492
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9494
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9495
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         光紋~
+Description
+光紋既像刻痕又像流動液光，讓人很難判斷它究竟是機關、符陣，還是地穴本身的異變。
+~
+End
+
+#Enquire
+Keyword         光紋~
+End
+
+#Enquire
+Keyword         前路~
+End
+
+End

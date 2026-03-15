@@ -1,0 +1,31 @@
+Vnum            9492
+Name            寒霧前帶~
+Description
+前帶地面覆著一層不貼地流動的寒霧，踩上去時會像踏進極薄水面般微微下陷。石壁沒有墓葬紋飾，只剩天然裂理與若隱若現的淡光。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9491
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9493
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         寒霧~
+Description
+寒霧不像單純濕氣，更像被某種地脈異象長期困在這裡的冷意。
+~
+End
+
+End

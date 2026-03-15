@@ -1,0 +1,16 @@
+Vnum            10454
+Name            altar warding staff~
+ShortDesc       守壇短杖~
+Description
+一柄刻著細碎光紋的守壇短杖斜靠在祭壇旁。
+~
+Unit            柄~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           27
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            210
+Exp             18
+End

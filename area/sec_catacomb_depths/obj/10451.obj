@@ -1,0 +1,15 @@
+Vnum            10451
+Name            coldglow lamp~
+ShortDesc       冷光燈~
+Description
+一盞散著微弱冷光的異樣小燈被放在石台旁。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+WearLoc         ITEM_WEAR_LIGHT
+Takeable        Yes
+Level           25
+Value3          22
+Weight          1
+Cost            120
+End

@@ -1,0 +1,14 @@
+Vnum            10452
+Name            spirit-scribed ration~
+ShortDesc       靈紋乾糧~
+Description
+一份壓得緊實的靈紋乾糧被包在灰白布片裡。
+~
+Unit            份~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           25
+Value           18 30 4 0
+Weight          1
+Cost            95
+End

@@ -1,0 +1,44 @@
+Vnum            9498
+Name            異象裂口~
+Description
+核廳之外的地面在此突然斷開，裂口深處泛著與上方光紋相呼應的淡色光帶。每當冷風自下吹上時，整片地穴都會跟著發出像遠鐘般的低鳴。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9494
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9497
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        9499
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         出口~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+#Enquire
+Keyword         異象~
+End
+
+End

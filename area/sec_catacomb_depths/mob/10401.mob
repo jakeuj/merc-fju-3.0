@@ -1,0 +1,33 @@
+Vnum            10401
+Name            catacomb wayfinder~
+ShortDesc       地穴引路者~
+Description
+這名引路者披著帶霜白塵屑的長布衣，腰間掛著幾枚石符與細索，看起來
+早已摸熟這座地穴的光紋與裂隙脾氣。他始終壓低聲音說話，像怕驚動某
+些比活人更早盤踞在這裡的東西。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       25
+Level           26
+Hitroll         1
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             13
+Dex             11
+Con             11
+Hp              2100
+Mana            150
+Move            100
+Class           0
+Gold            190
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

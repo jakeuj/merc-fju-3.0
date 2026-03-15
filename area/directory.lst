@@ -23,6 +23,9 @@ dng_sewer_depths
 * dng_royal_tomb 房間 9481-9490 (帝王古墓)
 dng_royal_tomb
 
+* sec_catacomb_depths 房間 9491-9499 (忘川地穴)
+sec_catacomb_depths
+
 * wild_longqu_hills 房間 9401-9410 (龍渠丘陵)
 wild_longqu_hills
 

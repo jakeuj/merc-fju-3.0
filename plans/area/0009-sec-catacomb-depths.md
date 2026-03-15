@@ -17,6 +17,14 @@
 - 明確標示與 `dng_royal_tomb/9490` 的 `up` 邊界意圖
 - 先不建立 runtime 資產，避免在秘境條件與 deeper progression 尚未定穩前提早掛載
 
+## Scope (Milestone 2: Implementation)
+
+- 建立 `area/sec_catacomb_depths/index` 第一版
+- 產生並掛入 `roo/9491-9499.roo`
+- 補最小 `mob / obj / res / shp`
+- 將 `sec_catacomb_depths` 掛入 `area/directory.lst`
+- 讓 `dng_royal_tomb/9490` 與 `sec_catacomb_depths/9491` 形成正式雙向邊界
+
 ## World Links (Spec Intent)
 
 - `up`: 通往 `dng_royal_tomb` room `9490`
@@ -57,6 +65,26 @@
 - `python3 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_catacomb_depths/map.md --validate-only`
   - passed
 
+## Validation Results (Implementation Stage)
+
+- `python3 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_catacomb_depths/map.md --validate-only`
+  - passed
+- `make -C src clean && make -C src merc`
+  - passed
+- `make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc`
+  - passed
+- `cd src && timeout 45 bash ./startup.bash`
+  - passed with startup success signal in `log/1020.log`
+  - no new `sec_catacomb_depths`-specific `Load_room` / reset / object parse failure observed after regenerating missing `.roo`
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `sec_catacomb_depths`
+- `area/sec_catacomb_depths/roo/*.roo` 由 `map.md` scaffold 生成
+- `area/dng_royal_tomb/roo/9490.roo` 已正式補上 down 出口到 `9491`
+- 初次 smoke test 曾因漏生 `.roo` 導致 `Load_shop` 找不到 `9495`；補生成房間檔後已解除
+- 第二次啟動卡在殘留 shared memory；清除 IPC 後重新 smoke test 成功，因此 blocker 不屬於 area data 本身
+
 ## Next Step Prompt
 
-`先 commit 目前 sec_catacomb_depths 的 spec 里程碑；commit 後若要落地 runtime 資產，再把它正式接到 dng_royal_tomb/9490。`
+`先 commit 目前 sec_catacomb_depths 的 implementation 里程碑；commit 後若要續推洛陽地下鏈，優先補 sec_rift_below spec。`

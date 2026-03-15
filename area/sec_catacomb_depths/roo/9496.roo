@@ -1,0 +1,31 @@
+Vnum            9496
+Name            殘燈石台~
+Description
+幾座細長石台沿牆排開，每座台面都放著熄滅已久的殘燈與細小骨灰般的灰粉。燈芯雖死，台面下方卻仍隱隱透出與核廳相近的淡色冷光。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9495
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9497
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         殘燈~
+Description
+殘燈油槽早已乾透，卻還殘留著一層薄得不正常的幽光，好像燈火從未真正熄滅。
+~
+End
+
+End

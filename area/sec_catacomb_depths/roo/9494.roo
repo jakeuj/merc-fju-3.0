@@ -1,0 +1,32 @@
+Vnum            9494
+Name            異象核廳~
+Description
+核廳中央懸著一團看不清邊界的淡色光暈，四周空氣都被它扭得微微顫動。站得越近，越能感到古墓的沉重規則正在這裡被另一種更古怪的力量改寫。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9493
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9498
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         異象~
+End
+
+#Enquire
+Keyword         核心~
+End
+
+End

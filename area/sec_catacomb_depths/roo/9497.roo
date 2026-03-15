@@ -1,0 +1,39 @@
+Vnum            9497
+Name            裂隙邊台~
+Description
+邊台外側就是一道向下延伸的黑色裂隙，裂壁間不時閃過像星點般的微弱光芒。這裡的空氣既冷又輕，站久了會讓人產生自己正慢慢被拉向更深處的錯覺。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9496
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        9498
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         裂隙~
+Description
+裂隙邊緣平滑得不自然，像不是天然崩裂，而是被某種力量長期撐開成通道。
+~
+End
+
+#Enquire
+Keyword         裂隙~
+End
+
+#Enquire
+Keyword         出口~
+End
+
+End

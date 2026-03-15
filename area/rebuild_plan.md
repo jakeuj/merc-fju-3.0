@@ -60,16 +60,16 @@
 ### `sec_catacomb_depths`
 
 - status: `in_progress`
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 - compliance_check: `compliant with current ref/Readme.md scope`
 - plan: `plans/area/0009-sec-catacomb-depths.md`
 - parent_region: `loyang underground chain`
 - theme: `仙俠`
 - subtheme: `地穴 / 靈異`
 - world_links: `帝王古墓`, `忘川地穴`, `更深異象裂谷`
-- next_action: 先 commit `sec_catacomb_depths` 的單區 plan + map.md spec 里程碑；commit 後再決定是否進入 implementation（index/mob/obj/res/shp）並正式接上 `dng_royal_tomb/9490`
-- next_prompt: `先 commit 目前 sec_catacomb_depths 的 spec 里程碑；commit 後若要落地 runtime 資產，再續做 sec_catacomb_depths implementation。`
-- notes: `plans/area/0009-sec-catacomb-depths.md` 與 `area/sec_catacomb_depths/map.md` 第一版已建立，`up` 邊界對應既有 `dng_royal_tomb/9490`，更深異象裂谷 world link 目前只保留在 spec
+- next_action: 先 commit `sec_catacomb_depths` 的 implementation 里程碑；commit 後再建立 `sec_rift_below` 的單區 plan 與 map.md spec
+- next_prompt: `先 commit 目前 sec_catacomb_depths 的 implementation 里程碑；commit 後再建立 sec_rift_below 的 spec。`
+- notes: `sec_catacomb_depths` 已完成第一輪 implementation，`dng_royal_tomb/9490` 邊界已正式接上，`log/1020.log` 已出現成功啟動訊號；下一步是先提交目前里程碑，再往更深異象裂谷延伸
 
 
 ## Done
@@ -90,21 +90,20 @@
 - `dng_sewer_depths` 已完成第一輪 implementation、commit `3717a7d`，並達成可前進下一區狀態
 - `plans/area/0008-dng-royal-tomb.md` 已建立
 - `dng_royal_tomb` 已完成第一輪 implementation、commit `30e2fa3`，並達成可前進下一區狀態
-
 ## Blocked
 
 - none
 
 ## Current Recommended Next Step
 
-先 commit 目前 `sec_catacomb_depths` 的 spec 里程碑；commit 後再決定是否落地 implementation，並把它正式接到 `dng_royal_tomb/9490`。
+先 commit 目前 `sec_catacomb_depths` 的 implementation 里程碑；commit 後再建立 `sec_rift_below` 的 spec，延續洛陽地下鏈的更深裂谷。
 
 語意提醒：
 
 - 目前的 next actionable area 仍是 `sec_catacomb_depths`
-- 目前 `delivery_gate` 是 `spec_ready_for_commit`，本輪安全動作是先 commit，不跳下一區
-- `dng_royal_tomb` 已完成第一輪 implementation 並提交，可由 `Done` 歷程回查
+- 目前 `delivery_gate` 是 `implementation_ready_for_commit`，本輪安全動作是先 commit，不跳下一區
+- `sec_catacomb_depths` 已完成第一輪 implementation 驗證，可由 `plans/area/0009-sec-catacomb-depths.md` 與 `log/1020.log` 回查
 
 建議可直接使用的 prompt：
 
-`先 commit 目前 sec_catacomb_depths 的 spec 里程碑；commit 後若要落地 runtime 資產，再續做 sec_catacomb_depths implementation。`
+`先 commit 目前 sec_catacomb_depths 的 implementation 里程碑；commit 後再建立 sec_rift_below 的 spec。`
