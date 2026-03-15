@@ -1,0 +1,15 @@
+Vnum            10751
+Name            boundary lantern~
+ShortDesc       界井殘燈~
+Description
+一盞被安置在深層石臺旁的殘燈仍透著極淡冷光。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+WearLoc         ITEM_WEAR_LIGHT
+Takeable        Yes
+Level           44
+Value3          30
+Weight          1
+Cost            240
+End

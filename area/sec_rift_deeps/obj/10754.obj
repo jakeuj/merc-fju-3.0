@@ -1,0 +1,16 @@
+Vnum            10754
+Name            lockscar blade~
+ShortDesc       鎖痕裂刃~
+Description
+一柄刃面布滿暗色鎖痕的裂刃斜倚在井臺邊。
+~
+Unit            柄~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           48
+Value           0 -1 -1 WEAPON_SWORD
+Weight          5
+Cost            420
+Exp             32
+End

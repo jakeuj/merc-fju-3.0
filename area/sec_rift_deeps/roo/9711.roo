@@ -1,0 +1,40 @@
+Vnum            9711
+Name            井緣浮階~
+Description
+幾塊懸離石面的浮階沿著井壁蜿蜒下沉，每一級都刻著早已模糊的壓界文字。站在這裡時，會清楚聽見下方傳來有節律卻不似人聲的回應，像深井本身在等待誰繼續下探。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        9710
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        9708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        9712
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         界井~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

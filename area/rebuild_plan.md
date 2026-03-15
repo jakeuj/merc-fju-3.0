@@ -62,7 +62,7 @@
 
 ## Candidate Queue
 
-1. `sec_rift_deeps`
+(目前無新的 candidate area；待下一輪決定。)
 
 ## Todo
 
@@ -70,18 +70,7 @@
 
 ## In Progress
 
-- `sec_rift_deeps`
-  - delivery_gate: `implementation_in_progress`
-  - parent_region: `loyang underground chain`
-  - reserved_room_block: `9701-9720`
-  - theme: `仙俠`
-  - subtheme: `裂界 / 深層封印`
-  - ref_inputs_used: `ref/Readme.md`, `area/world_map.md`, `ref/world-graph.md`, `ref/三國-MUD-題材分布表.md`, `area/sec_rift_core/map.md`
-  - ref_inputs_deferred: `ref/sanguo-area-scaffold/`, `mud-world-builder/`, `mud-ai-map-generator/`, `mudlet-map-generator/`, `mud-world-map-editor/`, `mud-world-map-editor-pro/`, 各類經濟/勢力/歷史事件模擬系統
-  - theme_basis: `ref/world-graph.md`, `ref/三國-MUD-題材分布表.md`, `area/world_map.md`
-  - compliance_check: compliant；本輪僅使用世界圖、題材分布表與既有 `sec_rift_core` spec 脈絡，不把 generator prototype 或模擬系統當成直接 runtime 依據
-  - next_action: 以 `area/sec_rift_deeps/map.md` 生成第一批 `roo` 與最小 runtime 資產，並把 `sec_rift_core/9612` 的 down 邊界正式接到 `sec_rift_deeps/9701`
-  - notes: `plans/area/0012-sec-rift-deeps.md` 與 `area/sec_rift_deeps/map.md` 第一版已建立；`--validate-only` 已通過；承接 `sec_rift_core/9612` 的 down world link，runtime 仍未掛載
+(目前無 `in_progress` 項目。)
 
 
 ## Done
@@ -108,23 +97,25 @@
 - `sec_rift_below` 已完成第一輪 implementation、commit `3d88215`，並達成可前進下一區狀態
 - `plans/area/0011-sec-rift-core.md` 已建立
 - `sec_rift_core` 已完成第一輪 implementation、commit `48393ff`，並達成可前進下一區狀態
+- `plans/area/0012-sec-rift-deeps.md` 已建立
+- `sec_rift_deeps` 已完成第一輪 implementation，完成本機 build 與 smoke test，並達成可前進下一區狀態
 ## Blocked
 
 - none
 
 ## Current Recommended Next Step
 
-以 `sec_rift_deeps/map.md` 生成第一批 `roo` 與最小 runtime 資產，延續洛陽地下鏈由 `sec_rift_core/9612` 向下正式接入 `sec_rift_deeps/9701`，並保留 `9712` 的 deeper stub 作為未來裂界禁底延伸點。
+目前 `sec_rift_deeps` 已完成第一輪 implementation 與 smoke test；若要繼續使用固定 prompt，下一步需要先決定新的 candidate area，或規劃裂界禁底的下一段單區 plan。
 
 語意提醒：
 
-- 目前 `sec_rift_deeps` 已進入 `in_progress`，固定 prompt 下次會優先續做這一區，不會跳往新的候選 area
+- 目前已沒有 `in_progress` 項目，因此若再次使用固定 prompt，需先補出新的 candidate area / todo 項目
 - `sec_catacomb_depths` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0009-sec-catacomb-depths.md` 回查
 - `sec_rift_below` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0010-sec-rift-below.md` 回查
 - `sec_rift_core` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0011-sec-rift-core.md` 回查
-- 依新 room reservation policy，`sec_rift_below` 已使用 `9501-9520`，`sec_rift_core` 已使用 `9601-9620`；`sec_rift_deeps` 已保留並規劃 `9701-9720`
+- 依新 room reservation policy，`sec_rift_below` 已使用 `9501-9520`，`sec_rift_core` 已使用 `9601-9620`，`sec_rift_deeps` 已完成 `9701-9712` 第一版落地
 - 既有地下鏈 `9451/9461/9481/9491` 保留原狀，不在這一輪 retroactive 重編
 
 建議可直接使用的 prompt：
 
-`實作 sec_rift_deeps 的第一批 runtime area，從 map.md 生成 roo、補最小 index/mob/obj/res/shp，並把 sec_rift_core/9612 正式接到 sec_rift_deeps/9701。`
+`盤點下一個可接續的 area candidate，或為裂界禁底的下一段 world link 建立新的單區 plan。`

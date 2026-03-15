@@ -68,6 +68,23 @@
 - `python3 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_rift_deeps/map.md --validate-only`
   - passed
 
+## Validation Results (Implementation Stage)
+
+- `python3 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_rift_deeps/map.md`
+  - passed and wrote `roo/9701-9712.roo`
+- `make -C src clean && make -C src merc`
+  - passed
+- `cd src && bash ./startup.bash` with 50s timeout wrapper
+  - timed out as expected for smoke test harness, but `log/1026.log` contains startup success signal `三國歪傳之降龍伏虎開始正常運作`
+  - no new `sec_rift_deeps`-specific parse / reset / object warning observed
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `sec_rift_deeps`
+- `area/sec_rift_deeps/roo/*.roo` 由 `map.md` scaffold 生成
+- `area/sec_rift_core/roo/9612.roo` 已正式補上 down 出口到 `9701`
+- `sec_rift_deeps` 第一輪 implementation 未出現新的 area-specific `debug/badobject` / `Load_room` / reset parse 失敗
+
 ## Next Step Prompt
 
-`以 sec_rift_deeps/map.md 生成第一批 roo 與最小 runtime 資產，並把 sec_rift_core/9612 的 down 邊界正式接到 sec_rift_deeps/9701。`
+`盤點下一個可接續的 area candidate，或為裂界禁底的下一段 world link 建立新的單區 plan。`

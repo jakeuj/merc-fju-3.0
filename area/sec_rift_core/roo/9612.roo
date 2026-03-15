@@ -13,6 +13,14 @@ ExitKeyword     ~
 ExitKey         0
 End
 
+#Exit
+Direction       DOWN
+ExitVnum        9701
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
 #Keyword
 Keyword         封界~
 Description

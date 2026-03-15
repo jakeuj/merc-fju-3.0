@@ -1,0 +1,32 @@
+Vnum            9701
+Name            界井落點~
+Description
+自上方封界落下後，腳下是一片由黑灰石板拼出的狹窄井臺，周圍霧氣不再流動，而像被某種沉重法則壓在原地。抬頭仍能看見細細一線冷光垂落，但下方與前方都已被更深的回音包圍。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        9612
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9702
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         封印~
+End
+
+End

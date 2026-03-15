@@ -1,0 +1,32 @@
+Vnum            9710
+Name            墜界斷台~
+Description
+長橋盡頭是一座被截斷的方形石台，台邊原本應有完整護欄，如今只剩斷裂基座。台面中央向下開著一口幽暗井口，井內沒有風，卻不斷送上比石壁還冷的沉重氣息。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9711
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         界井~
+End
+
+#Enquire
+Keyword         下層~
+End
+
+End

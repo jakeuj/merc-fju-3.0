@@ -318,8 +318,7 @@
       "coord": [4, -2, -15],
       "labels": ["world-link-down", "boss-threshold"],
       "exits": [
-        { "direction": "up", "to": 9711 },
-        { "direction": "down", "to": 9801, "external": true, "one_way": true }
+        { "direction": "up", "to": 9711 }
       ],
       "keywords": [
         {

@@ -1,0 +1,39 @@
+Vnum            9708
+Name            禁紋裂面~
+Description
+裂面原本應是一道完整石幕，如今卻被自內而外撕出數條不規則開口，邊緣仍殘留焦黑的禁紋。透過裂隙往內看，只能見到比夜色更沉的黑影層層疊在更深處，讓人本能地不願久望。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9707
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9709
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        9711
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         裂面~
+Description
+石幕上的裂口筆直而深，像有某種力量曾自下而上撞擊過這道封界。
+~
+End
+
+End
