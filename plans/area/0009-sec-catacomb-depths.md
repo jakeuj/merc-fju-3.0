@@ -84,7 +84,8 @@
 - `area/dng_royal_tomb/roo/9490.roo` 已正式補上 down 出口到 `9491`
 - 初次 smoke test 曾因漏生 `.roo` 導致 `Load_shop` 找不到 `9495`；補生成房間檔後已解除
 - 第二次啟動卡在殘留 shared memory；清除 IPC 後重新 smoke test 成功，因此 blocker 不屬於 area data 本身
+- implementation milestone 已提交：`7d21770 feat: implement catacomb depths runtime area`
 
 ## Next Step Prompt
 
-`先 commit 目前 sec_catacomb_depths 的 implementation 里程碑；commit 後若要續推洛陽地下鏈，優先補 sec_rift_below spec。`
+`建立 sec_rift_below 的單區 plan 與 map.md spec，延續 sec_catacomb_depths/9499 的 down world link。`

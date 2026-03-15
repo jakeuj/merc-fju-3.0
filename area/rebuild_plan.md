@@ -49,27 +49,21 @@
 
 ## Candidate Queue
 
-1. `sec_catacomb_depths`
+1. `sec_rift_below`
 
 ## Todo
 
-(目前無待處理 `todo`；先完成 `in_progress` 的 `sec_catacomb_depths`。)
+- `sec_rift_below`
+  - delivery_gate: `spec_in_progress`
+  - parent_region: `loyang underground chain`
+  - theme: `仙俠`
+  - subtheme: `裂谷 / 異象秘境`
+  - next_action: 建立 `plans/area/0010-sec-rift-below.md` 與 `area/sec_rift_below/map.md` 第一版
+  - notes: 承接 `sec_catacomb_depths/9499` 的 down world link，先做 spec，不急著直接掛 runtime
 
 ## In Progress
 
-### `sec_catacomb_depths`
-
-- status: `in_progress`
-- delivery_gate: `implementation_ready_for_commit`
-- compliance_check: `compliant with current ref/Readme.md scope`
-- plan: `plans/area/0009-sec-catacomb-depths.md`
-- parent_region: `loyang underground chain`
-- theme: `仙俠`
-- subtheme: `地穴 / 靈異`
-- world_links: `帝王古墓`, `忘川地穴`, `更深異象裂谷`
-- next_action: 先 commit `sec_catacomb_depths` 的 implementation 里程碑；commit 後再建立 `sec_rift_below` 的單區 plan 與 map.md spec
-- next_prompt: `先 commit 目前 sec_catacomb_depths 的 implementation 里程碑；commit 後再建立 sec_rift_below 的 spec。`
-- notes: `sec_catacomb_depths` 已完成第一輪 implementation，`dng_royal_tomb/9490` 邊界已正式接上，`log/1020.log` 已出現成功啟動訊號；下一步是先提交目前里程碑，再往更深異象裂谷延伸
+(目前無 `in_progress` 項目；下一步從 `todo` 的 `sec_rift_below` 起手。)
 
 
 ## Done
@@ -90,20 +84,22 @@
 - `dng_sewer_depths` 已完成第一輪 implementation、commit `3717a7d`，並達成可前進下一區狀態
 - `plans/area/0008-dng-royal-tomb.md` 已建立
 - `dng_royal_tomb` 已完成第一輪 implementation、commit `30e2fa3`，並達成可前進下一區狀態
+- `plans/area/0009-sec-catacomb-depths.md` 已建立
+- `sec_catacomb_depths` 已完成第一輪 implementation、commit `7d21770`，並達成可前進下一區狀態
 ## Blocked
 
 - none
 
 ## Current Recommended Next Step
 
-先 commit 目前 `sec_catacomb_depths` 的 implementation 里程碑；commit 後再建立 `sec_rift_below` 的 spec，延續洛陽地下鏈的更深裂谷。
+建立 `sec_rift_below` 的單區 plan 與 `map.md` spec，延續洛陽地下鏈由 `sec_catacomb_depths/9499` 向下進入更深異象裂谷的世界連線。
 
 語意提醒：
 
-- 目前的 next actionable area 仍是 `sec_catacomb_depths`
-- 目前 `delivery_gate` 是 `implementation_ready_for_commit`，本輪安全動作是先 commit，不跳下一區
-- `sec_catacomb_depths` 已完成第一輪 implementation 驗證，可由 `plans/area/0009-sec-catacomb-depths.md` 與 `log/1020.log` 回查
+- 目前已沒有 `in_progress` 項目，因此 next actionable area 會切到 `todo` 第一個 `sec_rift_below`
+- `sec_catacomb_depths` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0009-sec-catacomb-depths.md` 回查
+- `sec_rift_below` 這一輪先做 spec，不急著預先掛入 runtime
 
 建議可直接使用的 prompt：
 
-`先 commit 目前 sec_catacomb_depths 的 implementation 里程碑；commit 後再建立 sec_rift_below 的 spec。`
+`建立 sec_rift_below 的單區 plan 與 map.md spec，延續 sec_catacomb_depths/9499 的 down world link。`
