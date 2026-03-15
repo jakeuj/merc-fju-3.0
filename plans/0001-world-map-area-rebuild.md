@@ -66,6 +66,7 @@
 `area/rebuild_plan.md` 應固定包含：
 
 - candidate area 清單
+- `reserved_room_block`
 - `theme`
 - `subtheme`
 - `ref_inputs_used`
@@ -80,6 +81,23 @@
 - `next_prompt`
 - `delivery_gate`
 - 固定主 prompt
+
+## Room VNUM Reservation Policy
+
+新建 area 的 room vnum 預設採「首段從 `xx01` 起跳」策略，目的是讓 spec-first area 在第一版落地後，既保有可讀、可追蹤的擴充空間，也延續 repo 既有 `501`、`9001`、`9101` 這種起號習慣。
+
+規則：
+
+- 新 area 立項時，先在 tracker 與單區 plan 記錄 `reserved_room_block`
+- 未來新 area 的第一段 `reserved_room_block` 必須從某個新百位段的 `xx01` 開始
+- block 大小依 area 首版規模浮動，但仍需保留 headroom；計算方式為「首版預估房數 + 至少 `8` 格 room headroom」後，往上取到最近的 `10`
+- block 的結尾採整十收尾，例如 `9501-9520`、`9601-9630`、`9701-9750`
+- 若估算後會跨出同一百位段，直接改用下一個百位段的 `xx01`，不要切成跨百位的保留段
+- `planned_vnum_range` 預設應宣告整個首段保留區，而不是只寫到目前已落地的最後一號
+- `mapmd-json` 內實際已使用的 room vnum 不必連號，但同一輪新 area 預設應先落在同一個首段保留區內
+- extension block 合法，但只在原首段保留區用完後才允許新增，且必須在單區 plan、`map.md` metadata 與 tracker 明確註記
+- `area/directory.lst` 的新 area 房號註解應同步反映首段保留區，而不是只反映當前已建立的最後一號
+- 目前 `9451/9461/9481/9491` 這類地下鏈切段屬於舊流程遺留；既有 area 保留現狀，但未來新 area 不再沿用同一百位拆給多區的做法
 
 ## Ref Compliance Check
 
@@ -245,6 +263,7 @@
 4. 若 smoke test 成功，才可把 gate 推進到 `implementation_ready_for_commit`
 5. smoke test 前先清空 `debug/*` 內容，並建立本輪 `log/*` 觀察基線；看到成功訊號後，仍要再檢查 `debug/*` 是否有本次新增 area 相關的新 bug / warning
 6. 若 smoke test 需要用 `timeout` 控制，時間必須高於正常開機時間；預設優先給 `45` 到 `60` 秒，並在成功後回看本輪 log，避免把測試工具造成的提早中止誤判成 area 載入失敗
+7. 建立下一個新 AREA 前，先為它選定從 `xx01` 起跳的 `reserved_room_block`，並確認該 block 尚未與現有 `area/`、`src/`、`data/` 中的 room vnum 使用情況衝突
 
 ## Assumptions
 

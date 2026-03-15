@@ -6,6 +6,15 @@
 - 若需要原始 Merc 的 vnum 習慣與限制背景，可參考 `doc/vnum-assignments.txt` 與 `doc/area-file-format.txt`
 - 新增 VNUM 前，先全文搜尋 `area/`、`src/`、`data/` 是否已被使用
 - 若只是在既有區內擴房、擴 NPC、擴物件，優先維持該區原本的編號習慣
+- 新建 area 的 room vnum 預設先保留單一 `reserved_room_block`，且第一段必須從某個 `xx01` 起跳
+- block 大小依 area 首版規模浮動；用「預估房數 + 至少 `8` 格 headroom」後往上取到最近的 `10`
+- `planned_vnum_range` 預設應宣告整個首段保留 block，而不是只寫到目前最後一間房
+- block 應以整十收尾，例如 `9501-9520`、`9601-9630`；若估算後會跨百位段，就改用下一個百位段的 `xx01`
+- `mapmd-json` 內房號可以不連號，但同一輪新 area 預設仍應先使用同一個首段保留 block
+- 既有 area 後續擴充時，優先吃自己首段保留 block 內的剩餘 room vnum，不要一開始就把擴充假設成必須重編整區
+- 若保留 block 用完，需要第二段 extension block，必須在單區 plan 與 `map.md` metadata 明確註記 `extension block`
+- `area/directory.lst` 的新 area 註解房號範圍要同步反映首段保留 block，而不是只寫目前已落地的最末號
+- `9451/9461/9481/9491` 這類地下鏈切段屬於舊流程遺留；既有 area 保留現狀，但未來新 area 不再沿用同一百位拆多區的做法
 - 新 AREA 預設不是出生地；除非需求明確要求，否則 `index` 的 `Capital` 應維持 `0`
 - 若需要大量搬移舊區，先做 mapping 表，列出舊 VNUM -> 新 VNUM，再開始改檔
 - 規劃新區或修戰鬥迷宮時，先畫或更新區域地圖檔，再批次檢查每個房間的上下左右出口是否和格位一致；休息室、入口廳、傳送點這類不在主格網內的房間，要用額外節點思考

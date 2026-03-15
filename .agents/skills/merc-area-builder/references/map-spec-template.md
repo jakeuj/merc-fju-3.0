@@ -110,6 +110,9 @@ area metadata 再分兩類：
 - tolerated-but-ignored
   - `area.serial`
   - `area.capital`
+  - `area.planned_vnum_range`
+  - `area.reserved_room_block`
+  - `area.room_vnum_policy`
   - `area.design_notes`
 
 `labels` are non-runtime graph/editor annotations and are distinct from Merc runtime keywords.
@@ -125,6 +128,9 @@ area metadata 再分兩類：
     "title": "測試區",
     "serial": 99,
     "capital": "洛陽",
+    "planned_vnum_range": "9101-9120",
+    "reserved_room_block": "9101-9120",
+    "room_vnum_policy": "xx01_variable_block",
     "design_notes": "這些欄位目前只作為文件與未來地圖工具預留"
   },
   "rooms": [
@@ -190,6 +196,14 @@ area metadata 再分兩類：
 - `cluster`: 可選，非空字串，表示房間分群
 - `labels`: 可選，字串陣列，只做 graph/editor/export annotation
 - `notes`: 純註解，script 忽略
+
+### Area metadata 常用欄位
+
+- `planned_vnum_range`: 建議填整個首段保留 room block，而不是只填目前已落地的最後一號
+- `reserved_room_block`: 明確記錄這個 area 第一段從 `xx01` 起跳的 room vnum 區段
+- `room_vnum_policy`: 建議填 `xx01_variable_block`；表示新 area 首段由 `xx01` 起號，block 大小依首版規模與 headroom 浮動
+
+這三個欄位目前屬於 documentation metadata，不會被 generator 輸出到 `.roo`，但應作為 spec-first area 的正式規劃介面。
 
 ### Exit 欄位
 

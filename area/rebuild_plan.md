@@ -47,6 +47,19 @@
 - 若使用者只說「繼續下一個 area / next area」，預設語意仍是「續做目前可執行的 area」，不是直接切換到候選序列的下一個新區
 - 每次從 `todo` 推進到 `in_progress`，或完成一輪單區實作後，都要同步檢查對應單區 plan 是否已補上 `ref_inputs_used / ref_inputs_deferred / theme_basis / compliance_check`
 
+## Room Block Rules
+
+- 新 area 立項時，先記錄 `reserved_room_block`
+- 未來新 area 的第一段 `reserved_room_block` 必須從某個 `xx01` 起跳
+- `reserved_room_block` 大小依首版 area 規模浮動；用「預估房數 + 至少 `8` 格 headroom」後往上取到最近的 `10`
+- `reserved_room_block` 以整十收尾，例如 `9501-9520`、`9601-9630`
+- 若 `next_action` 包含建立新 area spec，先確認該 block 未與現有 `area/`、`src/`、`data/` 中已使用的 room vnum 衝突，且不要跨百位切段
+- 第一版若只落地部分房間，`planned_vnum_range` 預設仍應反映整個首段保留 block
+- 既有 area 後續擴充時，優先使用自己首段保留 block 內的剩餘房號
+- 只有原首段保留 block 用完時，才允許新增第二段 extension block
+- 若使用 extension block，必須同步記錄在 tracker、單區 plan 與 `map.md` metadata，避免後續維護時看不出房號來源
+- `9451/9461/9481/9491` 這類地下鏈切段屬於舊流程遺留，保留現狀；未來新 area 不再沿用同一百位拆多區的做法
+
 ## Candidate Queue
 
 1. `sec_rift_below`
@@ -56,10 +69,11 @@
 - `sec_rift_below`
   - delivery_gate: `spec_in_progress`
   - parent_region: `loyang underground chain`
+  - reserved_room_block: `9501-9520`
   - theme: `仙俠`
   - subtheme: `裂谷 / 異象秘境`
-  - next_action: 建立 `plans/area/0010-sec-rift-below.md` 與 `area/sec_rift_below/map.md` 第一版
-  - notes: 承接 `sec_catacomb_depths/9499` 的 down world link，先做 spec，不急著直接掛 runtime
+  - next_action: 建立 `plans/area/0010-sec-rift-below.md` 與 `area/sec_rift_below/map.md` 第一版，並以 `9501-9520` 作為第一段從 `xx01` 起跳的 reserved_room_block
+  - notes: 承接 `sec_catacomb_depths/9499` 的 down world link；`9501-9520` 目前未與既有 94xx/95xx 地下鏈房號衝突，且符合未來新 area 首段從 `xx01` 起跳的規則，這一輪先做 spec，不急著直接掛 runtime
 
 ## In Progress
 
@@ -92,14 +106,16 @@
 
 ## Current Recommended Next Step
 
-建立 `sec_rift_below` 的單區 plan 與 `map.md` spec，延續洛陽地下鏈由 `sec_catacomb_depths/9499` 向下進入更深異象裂谷的世界連線。
+建立 `sec_rift_below` 的單區 plan 與 `map.md` spec，延續洛陽地下鏈由 `sec_catacomb_depths/9499` 向下進入更深異象裂谷的世界連線，並先保留 `9501-9520` 作為第一段從 `xx01` 起跳的 room block。
 
 語意提醒：
 
 - 目前已沒有 `in_progress` 項目，因此 next actionable area 會切到 `todo` 第一個 `sec_rift_below`
 - `sec_catacomb_depths` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0009-sec-catacomb-depths.md` 回查
 - `sec_rift_below` 這一輪先做 spec，不急著預先掛入 runtime
+- 依新 room reservation policy，這區先固定保留 `9501-9520`；這不是單純找空位，而是第一個遵循「新 area 從 `xx01` 起跳」的案例
+- 既有地下鏈 `9451/9461/9481/9491` 保留原狀，不在這一輪 retroactive 重編
 
 建議可直接使用的 prompt：
 
-`建立 sec_rift_below 的單區 plan 與 map.md spec，延續 sec_catacomb_depths/9499 的 down world link。`
+`建立 sec_rift_below 的單區 plan 與 map.md spec，延續 sec_catacomb_depths/9499 的 down world link，並以 9501-9520 作為第一段從 xx01 起跳的 reserved_room_block。`
