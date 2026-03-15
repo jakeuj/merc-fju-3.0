@@ -113,6 +113,13 @@
 - 將完成項移到 `done`，或把問題移到 `blocked`
 - 補上下一個推薦 area 或下一個推薦 prompt
 
+此外，收尾時要額外做一次「經驗回寫判斷」，避免同類問題反覆重踩：
+
+- 若問題只屬於當前 area 的 world link、題材決策、reserved block、deferred item 或特殊 blocker，回寫單區 plan 與 tracker
+- 若問題屬於 repo 現實中的 parser / loader / data-format / smoke-test 規則，而且未來同類 area 高機率再遇到，回寫到對應的 `skills/references`
+- 若問題暴露的是固定 prompt、branch 策略、delivery gate、驗證節奏等全局流程缺口，回寫到全局 plan 或本檔
+- 若只是一次性的 typo、局部內容修稿或不具可重用性的偶發失誤，可不必擴寫成長期規則
+
 ## Integration Checklist For A New Area
 
 當一個新 AREA 從 spec 要走到真正可載入時，建議固定照下面順序：
