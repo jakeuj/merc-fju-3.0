@@ -87,7 +87,8 @@
 - `area/sec_catacomb_depths/roo/9499.roo` 已正式補上 down 出口到 `9501`
 - 初次 smoke test 曾因 `10503.mob` 使用不支援的 `CLASS_WARRIOR` 失敗；改為 `CLASS_FIGHTER` 後已解除
 - 第二次 smoke test 出現 `10552` / `10553` 的 item value 警告；補成合法 food / drink 值後已清除 `debug/badobject`
+- implementation milestone 已提交：`3d88215 feat: implement rift below runtime area`
 
 ## Next Step Prompt
 
-`先 commit 目前 sec_rift_below 的 implementation 里程碑；commit 後若要續推洛陽地下鏈，優先補更深裂谷心核區的 spec。`
+`建立更深裂谷心核區的單區 plan 與 map.md spec，延續 sec_rift_below/9512 所預留的下層 world link。`

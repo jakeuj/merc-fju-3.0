@@ -62,28 +62,22 @@
 
 ## Candidate Queue
 
-1. `sec_rift_below`
+1. `sec_rift_core`
 
 ## Todo
 
-(目前無待處理 `todo`；先完成 `in_progress` 的 `sec_rift_below`。)
+- `sec_rift_core`
+  - delivery_gate: `spec_in_progress`
+  - parent_region: `loyang underground chain`
+  - reserved_room_block: `9601-9620`
+  - theme: `仙俠`
+  - subtheme: `心核 / 裂谷底層`
+  - next_action: 建立 `plans/area/0011-sec-rift-core.md` 與 `area/sec_rift_core/map.md` 第一版
+  - notes: 承接 `sec_rift_below/9512` 的 down world link；`9601-9620` 先保留為下一段從 `xx01` 起跳的 room block，這一輪先做 spec，不急著直接掛 runtime
 
 ## In Progress
 
-### `sec_rift_below`
-
-- status: `in_progress`
-- delivery_gate: `implementation_ready_for_commit`
-- compliance_check: `compliant with current ref/Readme.md scope`
-- plan: `plans/area/0010-sec-rift-below.md`
-- parent_region: `loyang underground chain`
-- reserved_room_block: `9501-9520`
-- theme: `仙俠`
-- subtheme: `裂谷 / 異象秘境`
-- world_links: `忘川地穴`, `異象裂谷`, `裂谷心核`
-- next_action: 先 commit `sec_rift_below` 的 implementation 里程碑；commit 後再建立更深裂谷心核區的單區 plan 與 map.md spec
-- next_prompt: `先 commit 目前 sec_rift_below 的 implementation 里程碑；commit 後若要續推洛陽地下鏈，優先補更深裂谷心核區的 spec。`
-- notes: `sec_rift_below` 已完成第一輪 implementation，`sec_catacomb_depths/9499` 邊界已正式接上，`log/1024.log` 已出現成功啟動訊號；初次 parser / badobject 問題都已在本輪修正
+(目前無 `in_progress` 項目；下一步從 `todo` 的 `sec_rift_core` 起手。)
 
 
 ## Done
@@ -106,22 +100,24 @@
 - `dng_royal_tomb` 已完成第一輪 implementation、commit `30e2fa3`，並達成可前進下一區狀態
 - `plans/area/0009-sec-catacomb-depths.md` 已建立
 - `sec_catacomb_depths` 已完成第一輪 implementation、commit `7d21770`，並達成可前進下一區狀態
+- `plans/area/0010-sec-rift-below.md` 已建立
+- `sec_rift_below` 已完成第一輪 implementation、commit `3d88215`，並達成可前進下一區狀態
 ## Blocked
 
 - none
 
 ## Current Recommended Next Step
 
-先 commit 目前 `sec_rift_below` 的 implementation 里程碑；commit 後再建立更深裂谷心核區的 spec，延續洛陽地下鏈的裂谷底層。
+建立 `sec_rift_core` 的單區 plan 與 `map.md` spec，延續洛陽地下鏈由 `sec_rift_below/9512` 向下進入更深裂谷心核的世界連線，並先保留 `9601-9620` 作為下一段 room block。
 
 語意提醒：
 
-- 目前的 next actionable area 仍是 `sec_rift_below`
+- 目前已沒有 `in_progress` 項目，因此 next actionable area 會切到 `todo` 第一個 `sec_rift_core`
 - `sec_catacomb_depths` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0009-sec-catacomb-depths.md` 回查
-- `sec_rift_below` 的 implementation 已完成並通過 build + smoke test，現在 gate 是 `implementation_ready_for_commit`
-- 依新 room reservation policy，這區先固定保留 `9501-9520`；這不是單純找空位，而是第一個遵循「新 area 從 `xx01` 起跳」的案例
+- `sec_rift_below` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0010-sec-rift-below.md` 回查
+- 依新 room reservation policy，`sec_rift_below` 已使用 `9501-9520` 作為第一段保留 block；下一段 `sec_rift_core` 先預留 `9601-9620`
 - 既有地下鏈 `9451/9461/9481/9491` 保留原狀，不在這一輪 retroactive 重編
 
 建議可直接使用的 prompt：
 
-`先 commit 目前 sec_rift_below 的 implementation 里程碑；commit 後若要續推洛陽地下鏈，優先補更深裂谷心核區的 spec。`
+`建立 sec_rift_core 的單區 plan 與 map.md spec，延續 sec_rift_below/9512 的 down world link，並以 9601-9620 作為下一段 reserved_room_block。`

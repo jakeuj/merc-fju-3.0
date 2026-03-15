@@ -167,6 +167,7 @@
 7. `dng_royal_tomb`
 8. `sec_catacomb_depths`
 9. `sec_rift_below`
+10. `sec_rift_core`
 
 ## Theme Allocation
 
@@ -208,6 +209,10 @@
   - theme: `仙俠`
   - subtheme: `裂谷 / 異象秘境`
   - 缺口角色：補忘川地穴下方的更深異象裂谷與秘境底層入口，讓洛陽地下鏈在 secret zone 之後還能延伸到更高風險的下層探索帶
+- `sec_rift_core`
+  - theme: `仙俠`
+  - subtheme: `心核 / 裂谷底層`
+  - 缺口角色：補異象裂谷沉門下方的裂谷心核與祕境底層核心，讓洛陽地下鏈能在更深層形成一個真正的高風險終點與後續延伸樞紐
 
 後續新增候選 area 時，必須一併記錄：
 
