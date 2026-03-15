@@ -141,6 +141,23 @@
 - 若 `delivery_gate` 是任何 `*_in_progress`，表示仍應留在當前 area
 - 若 `delivery_gate` 是 `blocked`，先處理 blocker 或明確調整狀態，不能拿「做下一區」當繞路
 
+## Branch Policy
+
+固定 prompt 不只要遵守 `delivery_gate`，也要遵守 branch gate。
+
+規則：
+
+- 若目前在 `develop` 或 `main`，且下一步是從 `todo` 啟動一個新的 area milestone，預設先切 `codex/<area>-implementation`
+- 若目前 area 已經進入 `in_progress`，則在當前工作分支續做，不要同一區中途再切新 branch
+- 若只是 merge 後的小型 `docs / tracker / plan` 收尾，可直接留在 `develop`
+- 若使用者明講要直接在 `develop` 做，或指定其他 branch 策略，則以使用者指示為準
+
+目的：
+
+- 避免 `develop` 直接承接長串 area implementation commit
+- 讓每個 area milestone 或一小段主題鏈更容易整批 merge
+- 讓固定 prompt 在「開始新 area」這一步有一致行為，不必每輪重新口頭提醒
+
 ## Fixed Prompt
 
 日後延續工作使用固定主 prompt：

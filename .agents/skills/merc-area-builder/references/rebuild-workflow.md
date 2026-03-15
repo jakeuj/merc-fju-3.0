@@ -70,6 +70,23 @@
 3. 若 gate 是任何 `*_in_progress`，就續做當前 area
 4. 若 gate 是 `blocked`，先解 blocker
 
+## Branch Gate Rules
+
+固定 prompt 除了要看 `delivery_gate`，也要看目前所在 branch 是否適合承接新的 area milestone。
+
+決策規則：
+
+1. 若目前在 `develop` 或 `main`，且這次要從 `todo` 啟動一個新的 area milestone，預設先建立 `codex/<area>-implementation` 分支，再開始 spec / implementation
+2. 若目前 area 已經是 `in_progress`，則優先留在當前工作分支續做，不要為了同一區中途再切新 branch
+3. 若這輪只是 merge 後的小型 `docs / tracker / plan` 收尾，可留在 `develop`
+4. 若使用者明講「直接在 develop 做」或指定其他 branch 策略，依使用者指示覆蓋預設規則
+
+目的：
+
+- 避免固定 prompt 在 `develop` 上直接累積一長串新 area 實作 commit
+- 讓每一段 area milestone 更容易整批 merge / review / rollback
+- 把「是否該先切分支」制度化，而不是靠當輪臨時記憶
+
 ## Ref Compliance Check
 
 若這輪 area 工作是透過 `ref/Readme.md` 來選擇 template、world blueprint 或 scaffold，則單區 plan 應補上：
