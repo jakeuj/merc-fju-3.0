@@ -1,0 +1,39 @@
+Vnum            9608
+Name            碎界晶層~
+Description
+大片半透明晶層像被外力硬生生剝離後又重新凝住，層面之間夾著細碎黑線，像更深處某種東西曾試圖從這裡往上推開世界的邊界。每一道裂紋都在冷光下顯得過分清楚。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9607
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9609
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        9611
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         晶層~
+Description
+晶層切面過於平整，像它們不是自然生長，而是曾被某種規律強迫排列成封界的一部分。
+~
+End
+
+End

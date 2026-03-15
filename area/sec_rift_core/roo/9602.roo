@@ -1,0 +1,24 @@
+Vnum            9602
+Name            回脈折道~
+Description
+折道兩側石壁布滿一圈圈向內收束的細紋，像整段通道都在替更深處的脈動回收外散的力量。走在這裡時，連呼吸都會不自覺跟著某種拍點放慢。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9601
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

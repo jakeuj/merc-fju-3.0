@@ -1,0 +1,32 @@
+Vnum            9604
+Name            心核環橋~
+Description
+環橋繞著一座看不見底的中空井心盤旋，橋下只有一層層被冷光照亮的霧。每當脈動傳到此處，整座橋面便會浮出一瞬即逝的淡紋，像橋本身也只是心核外層的一部分。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9610
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         心核~
+End
+
+#Enquire
+Keyword         下層~
+End
+
+End

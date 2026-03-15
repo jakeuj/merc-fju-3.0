@@ -1,0 +1,39 @@
+Vnum            9607
+Name            鎮界台~
+Description
+台面邊緣刻著彼此咬合的鎮界刻紋，中央則留有一圈早已空掉的安置槽。看起來像有人曾把某件關鍵器物放在這裡，強行維持底層封界不至於立刻鬆脫。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9606
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         鎮界~
+Description
+鎮界刻紋殘缺卻仍維持著某種秩序，顯示這裡的封印從未真正完全失效。
+~
+End
+
+#Enquire
+Keyword         封界~
+End
+
+#Enquire
+Keyword         鎮界~
+End
+
+End

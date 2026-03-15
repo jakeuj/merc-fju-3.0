@@ -1,0 +1,32 @@
+Vnum            9611
+Name            下井浮磴~
+Description
+井道內側浮著幾塊彼此錯落的石磴，像只在脈動穩定時才會短暫顯出形體。每往下踩一步，都能感到腳底傳來比上層更沉的反震，彷彿你正在靠近某條被勉強壓住的界線。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        9610
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9612
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -1,0 +1,31 @@
+Vnum            9605
+Name            靜鳴晶庭~
+Description
+晶庭中豎著幾根不再發亮的細長晶柱，柱面卻仍不時泛起極淡的環紋。這裡安靜得近乎異常，唯有把手掌貼近晶柱時，才會感到一股像遠鐘尾音般的低微回鳴。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        9603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9606
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         晶柱~
+Description
+晶柱表面布滿細緻裂痕，像它們原本承受過遠比現在更猛烈的脈流。
+~
+End
+
+End

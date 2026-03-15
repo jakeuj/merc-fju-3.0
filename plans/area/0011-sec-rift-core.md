@@ -18,6 +18,14 @@
 - 明確標示與 `sec_rift_below/9512` 的 `up` 邊界意圖
 - 先保留更深層 `down` world link 為 spec，不提早指向不存在的 runtime area
 
+## Scope (Milestone 2: Implementation)
+
+- 以 `map.md` 生成 `roo/9601-9612.roo` 第一版並補齊最小 runtime 資產
+- 建立 `index/mob/obj/res/shp`
+- 將 `sec_rift_core` 掛入 `area/directory.lst`
+- 讓 `sec_rift_below/9512` 與 `sec_rift_core/9601` 形成正式雙向邊界
+- 更深層 `down` world link 仍停留在 spec，不直接接到不存在的 runtime area
+
 ## World Links (Spec Intent)
 
 - `up`: 通往 `sec_rift_below` room `9512`
@@ -60,6 +68,25 @@
 - `python3 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_rift_core/map.md --validate-only`
   - passed
 
+## Validation Results (Implementation Stage)
+
+- `python3 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_rift_core/map.md`
+  - passed and wrote `roo/9601-9612.roo`
+- `make -C src clean && make -C src merc`
+  - passed
+- `make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc`
+  - passed
+- `cd src && timeout 45 bash ./startup.bash`
+  - passed with startup success signal in `log/1025.log`
+  - no new `sec_rift_core`-specific parse / reset / object warning observed
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `sec_rift_core`
+- `area/sec_rift_core/roo/*.roo` 由 `map.md` scaffold 生成
+- `area/sec_rift_below/roo/9512.roo` 已正式補上 down 出口到 `9601`
+- `sec_rift_core` 第一輪 implementation 未出現新的 area-specific `debug/badobject` / `Load_room` / reset parse 失敗
+
 ## Next Step Prompt
 
-`先 commit 目前 sec_rift_core 的 spec 里程碑；commit 後若要續推洛陽地下鏈，再落地 sec_rift_core implementation。`
+`先 commit 目前 sec_rift_core 的 implementation 里程碑；commit 後若要續推洛陽地下鏈，優先補更深裂界區的 spec。`

@@ -1,0 +1,35 @@
+Vnum            9612
+Name            底層封界~
+Description
+封界像一整面沉在黑暗裡的石幕，表面沒有任何完整文字，只有一圈圈彼此交疊的斷紋與極淡冷芒。站在它前面時，會清楚感到更深處正有某種東西持續拍擊這道邊界，只是還沒真正突破出來。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9611
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         封界~
+Description
+這道封界不像門，也不像牆，更像有人把整段深層邊界本身硬生生留在了這裡。
+~
+End
+
+#Enquire
+Keyword         封界~
+End
+
+#Enquire
+Keyword         下層~
+End
+
+#Enquire
+Keyword         出口~
+End
+
+End

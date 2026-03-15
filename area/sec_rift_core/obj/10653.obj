@@ -1,0 +1,14 @@
+Vnum            10653
+Name            stillspring flask~
+ShortDesc       靜泉石瓶~
+Description
+一只在手心裡仍帶著微冷震感的石瓶擱在一旁。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           36
+Value           10 10 LIQ_WATER
+Weight          2
+Cost            115
+End

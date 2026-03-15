@@ -1,0 +1,24 @@
+Vnum            9606
+Name            回聲槽~
+Description
+牆邊嵌著數道半圓形槽溝，像是專門用來導走某種聲波或脈流的舊裝置。當核心脈動經過時，槽內會先後亮起細光，像在替更深處的封界計算某種仍未停下的節律。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9607
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

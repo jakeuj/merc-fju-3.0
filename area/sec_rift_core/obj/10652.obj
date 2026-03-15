@@ -1,0 +1,14 @@
+Vnum            10652
+Name            seal grain ration~
+ShortDesc       鎮界乾糧~
+Description
+一份用細繩與薄布封起的乾糧被放在鎮界台邊。
+~
+Unit            份~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           36
+Value           18 28 4 0
+Weight          1
+Cost            110
+End

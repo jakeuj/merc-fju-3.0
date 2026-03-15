@@ -1,0 +1,16 @@
+Vnum            10654
+Name            sealscar blade~
+ShortDesc       守脈裂刃~
+Description
+一柄刃身帶著淡色脈紋的裂刃靠在封界前。
+~
+Unit            柄~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           40
+Value           0 -1 -1 WEAPON_SWORD
+Weight          5
+Cost            320
+Exp             26
+End

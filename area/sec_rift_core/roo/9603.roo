@@ -1,0 +1,47 @@
+Vnum            9603
+Name            脈動主廊~
+Description
+主廊中央每隔幾步就有一道向上微鼓的石脊，像有看不見的搏動正從地底一節節傳上來。廊內沒有風，卻總有細小晶塵在半空緩慢偏移，彷彿整片空間都被心核脈流輕輕推動。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         脈動~
+Description
+這股脈動不像自然地震，更像某種活著的核心正在用極慢的節奏呼吸。
+~
+End
+
+#Enquire
+Keyword         心核~
+End
+
+#Enquire
+Keyword         前路~
+End
+
+End

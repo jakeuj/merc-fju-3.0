@@ -1,0 +1,31 @@
+Vnum            10602
+Name            fractured echo shade~
+ShortDesc       碎界幽相~
+Description
+幽相像一團被封界裂痕映出的殘影，邊緣始終在細微抖動，彷彿它的形體隨
+時會被下層拍擊徹底撕開。它掠過脈動主廊時，地面的淡紋都會跟著暗下幾
+分。
+~
+StayArea        Yes
+AlignEvil       Yes
+Alignment       -320
+Level           40
+Hitroll         10
+Protect         -6
+Damroll         10
+Str             16
+Int             10
+Wis             10
+Dex             13
+Con             15
+Hp              6200
+Mana            260
+Move            140
+Class           CLASS_THIEF
+Gold            420
+Multipile       100
+AttackRatio     120
+DodgeRatio      112
+Migrate         0
+Sex             SEX_NEUTRAL
+End

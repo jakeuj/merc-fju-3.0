@@ -48,6 +48,9 @@ sec_catacomb_depths
 * sec_rift_below 房間 9501-9512 (異象裂谷)
 sec_rift_below
 
+* sec_rift_core 房間 9601-9612 (裂谷心核)
+sec_rift_core
+
 * beiping_outskirts 房間 9101-9108 (北平郊區)
 beiping_outskirts
 

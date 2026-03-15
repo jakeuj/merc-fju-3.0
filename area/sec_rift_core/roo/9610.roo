@@ -1,0 +1,32 @@
+Vnum            9610
+Name            裂界下井~
+Description
+主線盡頭是一座向下筆直收束的井道，井壁內側偶爾會浮出一道像門框又像裂縫的暗紋。每當核心脈動傳到這裡，井下便會回傳更沉、更慢的一次震鳴，像有另一重心跳埋在更深處。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        9611
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         下層~
+End
+
+#Enquire
+Keyword         裂界~
+End
+
+End

@@ -1,0 +1,15 @@
+Vnum            10651
+Name            pulse lantern~
+ShortDesc       脈動晶燈~
+Description
+一盞隨著心核脈動忽明忽暗的晶燈被安置在台旁。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+WearLoc         ITEM_WEAR_LIGHT
+Takeable        Yes
+Level           36
+Value3          26
+Weight          1
+Cost            180
+End

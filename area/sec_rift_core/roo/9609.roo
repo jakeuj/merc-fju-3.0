@@ -1,0 +1,24 @@
+Vnum            9609
+Name            斷環觀座~
+Description
+觀座原本應該是一座完整環台，如今只剩半圈還附著在壁面上。從這裡往外看去，可以同時看到心核環橋與晶層裂面，像過去曾有人專門在此監看整個底層核心的穩定度。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         封界~
+End
+
+#Enquire
+Keyword         下層~
+End
+
+End

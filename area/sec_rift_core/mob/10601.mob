@@ -1,0 +1,33 @@
+Vnum            10601
+Name            core guide remnant~
+ShortDesc       心核引導者~
+Description
+這道引導者殘影立在鎮界台附近，身形像由淡色晶粉與微光拼起來的舊影。
+它說話時聲音極輕，卻總像能和周圍脈動對在同一拍點上，令人不自覺跟
+著壓低呼吸。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       60
+Level           37
+Hitroll         1
+Protect         0
+Damroll         0
+Str             12
+Int             14
+Wis             14
+Dex             12
+Con             11
+Hp              3200
+Mana            220
+Move            135
+Class           0
+Gold            260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

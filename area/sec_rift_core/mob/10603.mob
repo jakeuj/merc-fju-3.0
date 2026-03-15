@@ -1,0 +1,30 @@
+Vnum            10603
+Name            sealpulse warden~
+ShortDesc       封界守脈者~
+Description
+守脈者像一道站在封界前的厚重剪影，身上遍布如同脈管的淡色裂光。每當
+心核震動傳來，那些裂光便會一齊亮起，像它整個存在只是為了替這道底層
+封界承受衝擊。
+~
+StayArea        Yes
+Alignment       -380
+Level           45
+Hitroll         12
+Protect         -9
+Damroll         12
+Str             17
+Int             11
+Wis             12
+Dex             12
+Con             16
+Hp              8200
+Mana            320
+Move            145
+Class           CLASS_FIGHTER
+Gold            560
+Multipile       100
+AttackRatio     124
+DodgeRatio      114
+Migrate         0
+Sex             SEX_NEUTRAL
+End

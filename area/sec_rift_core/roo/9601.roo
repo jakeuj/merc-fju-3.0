@@ -1,0 +1,32 @@
+Vnum            9601
+Name            沉門後前帶~
+Description
+沉門後方不是想像中的黑暗甬道，而是一段過於平整的石帶，地面每隔片刻便會傳出一次像心跳般的微震。回頭仍能看見上方沉門的狹細門縫，但前方空氣已像被某種規律緩慢牽引。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        9512
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         心核~
+End
+
+End
