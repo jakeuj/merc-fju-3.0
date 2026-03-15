@@ -36,6 +36,7 @@ source of truth 要分兩種：
 7.1 若這輪工作有用 `ref/Readme.md` 來做選讀決策，回寫單區 plan 或追蹤看板時，補上 `ref_inputs_used`、`ref_inputs_deferred`、`theme_basis`、`compliance_check`。
 8. 修改完成後，至少做靜態搜尋、編碼檢查與必要的啟動/載入驗證，再回報受影響檔案與風險。
 9. 若要做 area 載入 smoke test，先清空 `debug/*` 內容並建立本輪 `log/*` 觀察基線，再執行測試；若使用 `timeout`，優先給 `45` 到 `60` 秒；測試後用成功訊號、這輪 log 與新產生的 debug 訊息一起判讀。
+10. 若這輪有新增 `mob/*.mob` 或 `obj/*.obj`，不要只靠文件猜 parser 會接受什麼：先比對 repo 內已成功載入的同類範例，特別是 `Class` 常數與 `ITEM_FOOD` / `ITEM_DRINK_CON` 的 `Value*` 欄位，測試成功後仍要檢查 `debug/badobject`。
 
 ## 主題靈感與沉浸式設計
 
@@ -103,7 +104,7 @@ source of truth 要分兩種：
 ### 3. 處理資料檔
 - `index/mob/obj/roo/res/shp/map`、`#Keyword/#Job/#Enquire`、`external: true` 與 scaffold generator 的細則，讀 `references/file-handling-rules.md`
 - 若任務重點是修出口、整合新 area、補 `#Enquire`、比對地圖檔或確認 `.roo` schema，這份檔要補讀
-- 若任務有新增或修改 `obj/*.obj`，尤其是特殊 `ItemType`，也要補讀這份檔；不要只照文件猜 `Value*` 欄位，先比對 repo 內已成功載入的同類物件範例
+- 若任務有新增或修改 `mob/*.mob` / `obj/*.obj`，尤其是 mob `Class` 或特殊 `ItemType`，也要補讀這份檔；不要只照文件猜常數或 `Value*` 欄位，先比對 repo 內已成功載入的同類範例
 
 ### 4. 同步系統設定
 - `merc.ini`、`variable.c`、`job.c`、`bus/ship/bounty` 與 docs 對照點，讀 `references/system-sync-checks.md`
