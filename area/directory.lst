@@ -4,15 +4,34 @@
 * 有玩家自己寫的區域是不必寫入的﹐因為系統會自動讀取。
 * 請注意﹐這個是有前後順序的﹐所以物品不能向後參考。
 
-* 基本區域
+* 舊版既有區域
 * limbo 房間 0001-0500 (預設基本區域)
 limbo
 
 * loyang 房間 0501-0744 (洛陽)
 loyang
 
+* beiping 房間 9001-9063 (北平)
+beiping
+
+* new 房間 0450-0477 (新手試煉)
+new
+
+* newfight 房間 1201-1295 (新手戰鬥區)
+newfight
+
+* pk_area 房間 1301-1333 (PK區)
+pk_area
+
+* free_fight 房間 7001-7044 (自由戰鬥區)
+free_fight
+
+* 新版重建區域
 * loyang_outskirts 房間 7501-7512 (洛陽東郊)
 loyang_outskirts
+
+* wild_longqu_hills 房間 9401-9410 (龍渠丘陵)
+wild_longqu_hills
 
 * dng_loyang_sewer 房間 9451-9460 (洛陽地下水區)
 dng_loyang_sewer
@@ -26,26 +45,8 @@ dng_royal_tomb
 * sec_catacomb_depths 房間 9491-9499 (忘川地穴)
 sec_catacomb_depths
 
-* wild_longqu_hills 房間 9401-9410 (龍渠丘陵)
-wild_longqu_hills
-
-* beiping 房間 9001-9063 (北平)
-beiping
-
 * beiping_outskirts 房間 9101-9108 (北平郊區)
 beiping_outskirts
 
 * jingxiang_road 房間 9301-9310 (荊襄大道)
 jingxiang_road
-
-* new 房間 0450-0477 (新手試煉)
-new
-
-* newfight 房間 1201-1295 (新手戰鬥區)
-newfight
-
-* pk_area 房間 1301-1333 (PK區)
-pk_area
-
-* free_fight 房間 7001-7044 (自由戰鬥區)
-free_fight
