@@ -30,6 +30,7 @@ source of truth 要分兩種：
 3. 以 `document/README`、`document/mob.txt`、`document/obj.txt`、`document/room.txt`、`document/reset.txt`、`document/shop.txt` 為主要格式依據；若要確認原始 Merc parser / vnum 習慣，再補看 `doc/area-file-format.txt`、`doc/vnum-assignments.txt`、`doc/merc-release-notes.txt`。
  目前專案使用的是拆目錄資料結構，不是原始單檔 `.are`；若回看 `doc/area-file-format.txt` 裡的 `#AREA/#HELPS/#MOBILES/#OBJECTS/#ROOMS/#RESETS/#SHOPS/#SPECIALS`，要把它當概念對照，不要逐段照抄成 3.0 目錄格式。
 4. 需要世界觀、技能、國家系統、交通、公告脈絡時，連同 `docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md` 一起使用，從 `docs/3yWebsite/docs/*.md` 與 `docs/3yWebsite/docs/data/*.json` 取資料。
+4.1 若這輪會新增、移除、重排或大幅重寫目前實際可載入的 area，除了 runtime / spec 檔，也同步檢查 `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 是否要更新；若只是引用舊站地圖或世界觀，仍不要把 `docs/3yWebsite/` 當現行 area 台帳。
 5. 若是新增 AREA，先決定是手寫 `.roo`，還是用 `references/map-spec-template.md` + `scripts/generate_roo_from_map_md.py` 走「spec -> scaffold」流程。
 6. 若任務需要參考 repo 內的 `ref/` 世界藍圖、spec-first scaffold、world builder 或題材分布資料，先讀 `ref/Readme.md` 當索引，再挑需要的檔案或子資料夾深入。
 7. 若任務屬於長期 area 重建，先讀 `plans/` 與 `area/rebuild_plan.md`；詳細規則見 `references/rebuild-workflow.md`。
@@ -116,6 +117,7 @@ source of truth 要分兩種：
 - `merc.ini`、`variable.c`、`job.c`、`bus/ship/bounty` 與 docs 對照點，讀 `references/system-sync-checks.md`
 - 若任務碰到交通、新手導流、技能來源、國家系統或官方敘事，這份檔是必要 reference
 - 若這輪新增的是目前 repo 真正會載入的技能，而不只是一次性測試檔，優先同步 `docs/current-game/skills.md` / `docs/current-game/skills.json` 或其他 repo 自有紀錄；`docs/3yWebsite/` 預設只拿來參考世界觀、命名與舊技能脈絡，不直接當現行技能台帳
+- 若這輪新增或重排的是目前 repo 真正會載入的 area，優先同步 `docs/current-game/areas.md` / `docs/current-game/areas.json`；`docs/3yWebsite/` 的地圖與舊站頁面預設只當背景參考，不直接當現行 area registry
 
 ### 5. 需要世界觀/參考資料時串接 sango-docs-service
 - 何時一起用 `sango-docs-service`、優先 docs / JSON 清單與回報要求，讀 `references/docs-service-integration.md`

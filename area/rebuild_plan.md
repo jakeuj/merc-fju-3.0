@@ -76,6 +76,8 @@
 ## Done
 
 - `area/world_map.md` 已建立，並整合 `help/map.hlp`、`docs/3yWebsite/docs/maps.md`、`docs/3yWebsite/docs/data/maps.json`、`docs/3yWebsite/map/*.html`
+- `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已建立，整理目前 loadable runtime area registry 與重建鏈摘要
+- `docs/CNAME` 已設定 `sango.jakeuj.com`，讓 current-game GitHub Pages 可掛上專用網域
 - `plans/0001-world-map-area-rebuild.md` 已建立
 - `plans/area/0002-loyang-outskirts.md` 已建立
 - `loyang_outskirts` 已完成第一輪整合並進入可前進下一區狀態
