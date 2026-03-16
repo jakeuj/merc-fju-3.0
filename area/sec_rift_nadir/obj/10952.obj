@@ -1,0 +1,14 @@
+Vnum            10952
+Name            seal ration~
+ShortDesc       深封乾糧~
+Description
+一份用灰布與細索封起的乾糧被整齊擺在殘壇旁。
+~
+Unit            份~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           44
+Value           20 32 5 0
+Weight          1
+Cost            150
+End

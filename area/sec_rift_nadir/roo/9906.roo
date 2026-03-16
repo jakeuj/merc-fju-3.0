@@ -1,0 +1,39 @@
+Vnum            9906
+Name            殘壇側室~
+Description
+側室裡只剩半座塌損祭壇，壇面還能看見被反覆替換過器物的痕跡。四周散落的石片都刻著相近的禁紋，彷彿過去一直有人在此維持封印，直到某次再也沒有回來。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         祭壇~
+Description
+祭壇中段被高熱與巨力同時摧裂，留下的痕跡不像單純祭祀，更像一次倉促的鎮壓。
+~
+End
+
+#Enquire
+Keyword         祭壇~
+End
+
+#Enquire
+Keyword         封印~
+End
+
+End

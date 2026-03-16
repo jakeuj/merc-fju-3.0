@@ -1,0 +1,32 @@
+Vnum            9904
+Name            裂律長橋~
+Description
+長橋跨在看不見底的裂口上方，橋面每隔數步便嵌著一道細窄金屬鎖條。它們隨著遠處低鳴不時微微收縮，像橋本身不只是道路，而是整座深層封印的一節鎮鎖。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9910
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         鎮界~
+End
+
+#Enquire
+Keyword         下層~
+End
+
+End

@@ -1,0 +1,14 @@
+Vnum            10853
+Name            darkspring flask~
+ShortDesc       幽泉石瓶~
+Description
+一只瓶身布滿細微禁紋的石瓶被穩穩置在台邊。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           44
+Value           10 10 LIQ_WATER
+Weight          2
+Cost            145
+End

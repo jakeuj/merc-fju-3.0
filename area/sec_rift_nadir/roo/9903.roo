@@ -1,0 +1,47 @@
+Vnum            9903
+Name            封印回廊~
+Description
+回廊兩側立著半埋入石中的殘柱，每根柱面都還留著彼此呼應的封印紋。那些紋路明明已缺損，卻仍會在遠處界井微震時依序亮起，像一座龐大的鎮界系統仍在勉強運行。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        9905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         封印紋~
+Description
+紋路彼此銜接成完整迴路，顯示這裡原本就是為了把更深處的異常長久鎖在下方。
+~
+End
+
+#Enquire
+Keyword         封印~
+End
+
+#Enquire
+Keyword         前路~
+End
+
+End

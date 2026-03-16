@@ -1,0 +1,39 @@
+Vnum            9907
+Name            鎮鎖壁~
+Description
+整面石壁被數十道粗細不一的鎖條釘入裂縫，鎖條盡頭還連著深埋於地面的鐵樁。每當界井深處傳來沉響，這些鎖條便會齊齊顫鳴，像在承受下方某種東西持續而緩慢的掙動。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9906
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         鎖條~
+Description
+鎖條表面覆著古舊符漆，顯示它們不只是物理束縛，也是封印的一部分。
+~
+End
+
+#Enquire
+Keyword         鎮界~
+End
+
+#Enquire
+Keyword         鎖鏈~
+End
+
+End

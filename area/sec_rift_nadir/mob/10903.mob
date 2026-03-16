@@ -1,0 +1,30 @@
+Vnum            10903
+Name            abyssseal warden~
+ShortDesc       禁牢守界者~
+Description
+守界者像一道立在井底前的沉重黑影，身上交錯著暗紅與冷白兩種彼此抗
+衡的紋光。每當界井深處傳來低鳴，它周身禁文便會一齊浮亮，像整個存
+在只為了替這層深界繼續承擔衝擊。
+~
+StayArea        Yes
+Alignment       -520
+Level           54
+Hitroll         14
+Protect         -14
+Damroll         15
+Str             18
+Int             12
+Wis             13
+Dex             13
+Con             17
+Hp              9800
+Mana            380
+Move            160
+Class           CLASS_FIGHTER
+Gold            760
+Multipile       100
+AttackRatio     130
+DodgeRatio      118
+Migrate         0
+Sex             SEX_NEUTRAL
+End

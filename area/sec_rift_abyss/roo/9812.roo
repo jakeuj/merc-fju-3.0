@@ -1,4 +1,4 @@
-Vnum            9712
+Vnum            9812
 Name            禁底界井~
 Description
 井底並非實地，而是一圈勉強懸住的黑石井臺，四周刻滿層層交錯的古老禁文。正中央的井心只有一片看不見底的黯黑，偶爾會有極微弱的紅光像眼瞼般一閃即逝，讓人確信更深處仍有什麼被鎮在下方。
@@ -7,15 +7,16 @@ SectorType      SECT_INSIDE
 
 #Exit
 Direction       UP
-ExitVnum        9711
+ExitVnum        9811
 ExitDesc        ~
 ExitKeyword     ~
 ExitKey         0
 End
 
+
 #Exit
 Direction       DOWN
-ExitVnum        9801
+ExitVnum        9901
 ExitDesc        ~
 ExitKeyword     ~
 ExitKey         0
