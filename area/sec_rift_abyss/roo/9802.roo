@@ -1,0 +1,24 @@
+Vnum            9802
+Name            回音石棧~
+Description
+石棧像貼著裂壁硬生生削出的一線走道，腳步聲會在下方空洞裡被拖得極長，最後變成不像自己的回響。壁面佈滿細小環紋，像每一次回音都會被某種禁制重新收束。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9801
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

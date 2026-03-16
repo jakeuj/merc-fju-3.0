@@ -130,19 +130,23 @@
 - `sec_rift_core` 已完成第一輪 implementation、commit `48393ff`，並達成可前進下一區狀態
 - `plans/area/0012-sec-rift-deeps.md` 已建立
 - `sec_rift_deeps` 已完成第一輪 implementation，完成本機 build 與 smoke test，並達成可前進下一區狀態
+- `plans/area/0013-sec-rift-abyss.md` 已建立
+- `sec_rift_abyss` 已完成第一輪 implementation，完成本機 Linux build，並達成可前進下一區狀態
 ## Blocked
 
 - none
 
 ## Current Recommended Next Step
 
-目前 `sec_rift_deeps` 已完成第一輪 implementation 與 smoke test；若要繼續使用固定 prompt，下一步需要先決定新的 candidate area，或規劃裂界禁底的下一段單區 plan。
+目前 `sec_rift_abyss` 已完成第一輪 implementation；若要繼續使用固定 prompt，下一步需要先決定新的 candidate area，或規劃裂界禁底更下層的下一段單區 plan。
 
 在沒有現成 `todo` 的前提下，下一輪建議先做一個很短的 docs-assisted candidate pass：
 
 1. 從 `docs/3yWebsite/docs/data/players.json` 抽出高頻出現的教學 / 補給 / 轉職 / 練功節點。
 2. 從 `docs/3yWebsite/docs/data/skills.json` 核對這些節點對應的技能鏈與 teacher 服務。
 3. 再決定下一個 area 應該優先補哪條路段、城郊、訓練區或職業耦合節點，而不是只看世界圖空白處。
+
+（註：目前 repo 無 `docs/3yWebsite/docs/data/players.json` 與 `skills.json`，下一輪若要做 docs-assisted pass，需先補回 dataset 或改用現存資料來源。）
 
 語意提醒：
 
@@ -155,4 +159,4 @@
 
 建議可直接使用的 prompt：
 
-`先參考 docs/3yWebsite/docs/data/players.json 與 skills.json，盤點下一個可接續的 area candidate，或為裂界禁底的下一段 world link 建立新的單區 plan。`
+`先盤點下一個可接續的 area candidate，或為 sec_rift_abyss 之下的更深裂界禁牢建立新的單區 plan。`
