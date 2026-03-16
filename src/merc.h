@@ -243,7 +243,7 @@
 #define STOCK_RELEASE   10000
 
 /* 遊戲本身的一些參數的宣告 */
-#define MAX_SKILL                  270               /* 最多技能數量   */
+#define MAX_SKILL                  273               /* 最多技能數量   */
 #define MAX_RECALL                 10                /* 最多回歸位置   */
 #define MAX_INNATE                 10
 #define MAX_STOCK                  100               /* 最多股票公司   */
@@ -3439,6 +3439,14 @@ extern void     set_immlist_default     args( ( IMMLIST_DATA    * ) );
 #define SLOT_SEVEN_STAR               262
 #define SLOT_TREE_TOUCH               263
 #define SLOT_MAKE_SWORD               264
+#define SLOT_TACKLE                   265
+#define SLOT_MILITARY_BLADE           266
+#define SLOT_MILITARY_STEPS           267
+#define SLOT_IMPERIAL_SWORD           268
+#define SLOT_IMPERIAL_STEPS           269
+#define SLOT_NIGHT_BLADE              270
+#define SLOT_SHADOW_NIGHT_STEPS       271
+#define SLOT_CAVALRY_LANCE            272
 
 DECLARE_DO_FUN( do_advance      );
 DECLARE_DO_FUN( do_aecho        );

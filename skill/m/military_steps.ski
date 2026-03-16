@@ -1,0 +1,96 @@
+Name            military steps~
+Cname           鎮軍步~
+Slot            SLOT_MILITARY_STEPS
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_DODGE
+Costtype        COST_MOVE
+Cost            12
+Wait            5
+Exp             20
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            NO
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help
+鎮軍步：
+
+軍中步法不求飄忽詭譎，而求重心穩、轉向快、應變齊。守軍與騎卒
+都用這套步法維持陣線與追擊節奏。
+
+~
+
+#Damage
+Description
+$n穩住下盤，雙足一錯，以$Y「錯列換位」$Z貼著$N的攻勢滑身避開。~
+Chance          20
+Value           70
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n肩腰一沉，踏出$Y「守線沉樁」$Z，硬是在間不容髮之間讓$N的攻勢落空。~
+Chance          20
+Value           100
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n借著甲胄與步勢的配合，使出$Y「巡街回鋒」$Z，側身旋出一道穩健弧線，避過$N重擊。~
+Chance          20
+Value           130
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n步履忽快忽慢，一記$Y「列伍進退」$Z拿捏得恰到好處，讓$N連續數招全數撲空。~
+Chance          20
+Value           170
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n借勢轉身，足下排出$Y「軍門八轉」$Z的步序，整個人宛如融進軍陣空隙般從容退開。~
+Chance          20
+Value           210
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

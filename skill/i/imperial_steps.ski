@@ -1,0 +1,96 @@
+Name            imperial steps~
+Cname           龍驤御步~
+Slot            SLOT_IMPERIAL_STEPS
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_DODGE
+Costtype        COST_MOVE
+Cost            15
+Wait            6
+Exp             20
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            NO
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help
+龍驤御步：
+
+殿前衛士的高階步法，重心沉穩而轉換極快，能在厚甲與禮制裝束下
+仍保持宛如龍驤虎步的威儀與靈動。
+
+~
+
+#Damage
+Description
+$n足下一轉，使出$Y「玉階斜影」$Z，輕巧地讓$N的招式偏離半尺。~
+Chance          20
+Value           100
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n袍甲微揚，整個人藉著$Y「殿角回身」$Z的步勢從劍光縫隙中側退而出。~
+Chance          20
+Value           140
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n步法連環不絕，一式$Y「龍驤三轉」$Z走得氣度森嚴，令$N攻勢再快也難以沾身。~
+Chance          20
+Value           190
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n肩背微沉，足下疾走$Y「金闕游龍」$Z，整個人像貼著皇城廊柱般滑出了$N的殺著。~
+Chance          20
+Value           250
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n真氣貫足，步勢陡然化作$Y「天門御巡」$Z，身形在方寸之間挪移數次，令$N完全失手。~
+Chance          20
+Value           330
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

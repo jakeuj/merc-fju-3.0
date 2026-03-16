@@ -1,0 +1,98 @@
+Name            imperial sword~
+Cname           禁城御劍~
+Slot            SLOT_IMPERIAL_SWORD
+Msgoff          ~
+Check           check_sword_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            24
+Wait            7
+Exp             20
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_SWORD
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help
+禁城御劍：
+
+皇城殿前護衛與御前武士所習的劍式。講究先聲奪人、後手制命，
+每一劍都帶著「皇城不可犯」的威壓。
+
+~
+
+#Damage
+Description
+$n挺劍直進，先以$Y「丹陛立威」$Z封住中路，再趁勢刺向$N的要害。~
+Chance          20
+Value           150
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n手中$O一振，劍光化出$Y「金階回龍」$Z的弧勢，從側面反壓$N的攻勢。~
+Chance          20
+Value           220
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n腰背一挺，使出$Y「玉殿清鋒」$Z，劍勢堂皇沉穩，逼得$N連退數步仍難脫其鋒。~
+Chance          20
+Value           320
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n目射寒光，手中$O疾轉如輪，一記$Y「龍闕斷岳」$Z挾著磅礡勁道自空而落。~
+Chance          20
+Value           450
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n低喝一聲，皇城煞氣盡凝於劍尖，赫然使出$Y「御極天誅」$Z，劍勢如雷轟然斬向$N。~
+Chance          20
+Value           620
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

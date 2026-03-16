@@ -1,0 +1,96 @@
+Name            shadowtrace steps~
+Cname           流影換形步~
+Slot            SLOT_SHADOW_NIGHT_STEPS
+Msgoff          ~
+Position        POS_FIGHTING
+Type            TAR_DODGE
+Costtype        COST_MOVE
+Cost            12
+Wait            4
+Exp             20
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            NO
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help
+流影換形步：
+
+夜行者與浪人用來保命的身法，特色是突然失衡、再突然補位，讓對手
+永遠抓不到真正的重心與出手節奏。
+
+~
+
+#Damage
+Description
+$n腳尖一點，使出$Y「掠瓦藏身」$Z，整個人像被夜色一卷般滑出了$N的攻勢。~
+Chance          20
+Value           80
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n側肩一晃，身形驟然歪出$Y「借影移步」$Z的弧線，讓$N一擊只中殘影。~
+Chance          20
+Value           120
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n足下連踩，步勢化作$Y「暗巷回折」$Z，在極窄的空隙中硬是轉出了生門。~
+Chance          20
+Value           180
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n像是故意露出破綻，卻在$N撲上的瞬間使出$Y「流光欺身」$Z，從近身處猛然換位。~
+Chance          20
+Value           240
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n身形飄忽難測，整個人以$Y「無月藏鋒」$Z踏出數道殘影，令$N連真正的人都找不著。~
+Chance          20
+Value           320
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

@@ -1,0 +1,98 @@
+Name            cavalry lance~
+Cname           驍騎槍式~
+Slot            SLOT_CAVALRY_LANCE
+Msgoff          ~
+Check           check_spear_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            6
+Exp             20
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_SPEAR
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help
+驍騎槍式：
+
+軍中騎兵用來衝陣破線的槍式，講求前壓、挑刺與回馬再殺。步騎兼用，
+但最精華仍在一擊穿陣的凌厲勢頭。
+
+~
+
+#Damage
+Description
+$n抖腕送槍，一式$Y「先鋒點陣」$Z直取中線，槍尖像流星般點向$N。~
+Chance          20
+Value           130
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n槍身一壓，順勢挑出$Y「奔騎挑旗」$Z，逼得$N在強橫的槍勁前連退不止。~
+Chance          20
+Value           190
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n跨步疾進，手中$O驟然拉出$Y「衝關裂陣」$Z的筆直槍勢，狠狠貫向$N。~
+Chance          20
+Value           260
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n腰身一轉，使出$Y「回馬斷鞍」$Z，槍影先退後進，詭而不亂地掃向$N下盤。~
+Chance          20
+Value           340
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n大喝一聲，整個人如驍騎破軍般使出$Y「踏營驚魂」$Z，槍鋒挾著萬軍前衝之勢轟向$N。~
+Chance          20
+Value           430
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

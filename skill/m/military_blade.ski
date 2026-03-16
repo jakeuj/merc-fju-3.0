@@ -1,0 +1,98 @@
+Name            military blade~
+Cname           鎮軍刀法~
+Slot            SLOT_MILITARY_BLADE
+Msgoff          ~
+Check           check_blade_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            18
+Wait            6
+Exp             20
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_BLADE
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help
+鎮軍刀法：
+
+城中守軍與禁旅巡卒所用的制式刀法。招式講究收放整齊、前壓穩健，
+不以江湖奇變取勝，而以軍陣氣勢壓人。
+
+~
+
+#Damage
+Description
+$n沉肩跨步，一式$Y「列陣開鋒」$Z順著刀勢直逼中宮，逼得$N只能硬接這股軍旅殺氣。~
+Chance          20
+Value           120
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n側身錯位，反手使出$Y「鎮門橫斬」$Z，刀光如城門落閘般猛然壓向$N。~
+Chance          20
+Value           160
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n大喝一聲，手中$O挾著$Y「軍威震街」$Z的勁道連環迫進，將$N的退路盡數封死。~
+Chance          20
+Value           220
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n踏前半步，刀身一旋，使出$Y「鐵騎壓城」$Z，自上而下劈出一記沉猛絕倫的重斬。~
+Chance          20
+Value           290
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n目光一厲，將軍令殺氣盡數灌入$O，使出$Y「肅軍斷命」$Z，整條刀勢如雷霆般貫向$N。~
+Chance          20
+Value           360
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End

@@ -263,3 +263,10 @@ seven_star              * 技能編號 262 SLOT_SEVEN_STAR
 tree_touch              * 技能編號 263 SLOT_TREE_TOUCH
 make_sword              * 技能編號 264 SLOT_MAKE_SWORD
 tackle                  * 技能編號 265 SLOT_TACKLE
+military_blade          * 技能編號 266 SLOT_MILITARY_BLADE
+military_steps          * 技能編號 267 SLOT_MILITARY_STEPS
+imperial_sword          * 技能編號 268 SLOT_IMPERIAL_SWORD
+imperial_steps          * 技能編號 269 SLOT_IMPERIAL_STEPS
+night_blade             * 技能編號 270 SLOT_NIGHT_BLADE
+shadowtrace_steps       * 技能編號 271 SLOT_SHADOW_NIGHT_STEPS
+cavalry_lance           * 技能編號 272 SLOT_CAVALRY_LANCE

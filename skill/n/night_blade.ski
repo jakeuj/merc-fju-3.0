@@ -1,0 +1,98 @@
+Name            night blade~
+Cname           夜梟奪命刀~
+Slot            SLOT_NIGHT_BLADE
+Msgoff          ~
+Check           check_blade_attack~
+Position        POS_FIGHTING
+Type            TAR_CHAR_OFFENSIVE
+Costtype        COST_MOVE
+Cost            20
+Wait            5
+Exp             20
+Associate       -1
+Degree          5
+Affect          AFFECT_NONE
+AffectID        AFFECT_NONE
+CanAsk          NO
+Valid           NO
+Cast            YES
+Concentration   NO
+Teach           NO
+SaySpell        NO
+Enable          YES
+Weapon          WEAPON_BLADE
+Rating          RATING_SKILL
+Innate          NO
+Ply             -1
+Qutoient        1
+Adeptation      0
+Limit           CLASS_DEMOS      1  95
+Limit           CLASS_SCHOLAR    1  95
+Limit           CLASS_FIGHTER    1  95
+Limit           CLASS_SHAMAN     1  95
+Limit           CLASS_THIEF      1  95
+Limit           CLASS_DOCTOR     1  95
+Limit           CLASS_BARD       1  95
+Limit           CLASS_GENERAL    1  95
+Limit           CLASS_BRAVO      1  95
+Limit           CLASS_MAGE       1  95
+Limit           CLASS_SMITH      1  95
+Help
+夜梟奪命刀：
+
+這套刀法流傳於大盜、浪人與亡命之徒之間。招式不求堂皇，卻講究
+奇襲、換手與一擊斷命的狠辣節奏。
+
+~
+
+#Damage
+Description
+$n手中$O忽隱忽現，一招$Y「暗巷穿喉」$Z趁著視線死角直取$N要害。~
+Chance          20
+Value           110
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n借著身形前欺，使出$Y「夜梟抄月」$Z，反手一刀貼著$N肋下斜斜抹過。~
+Chance          20
+Value           170
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n冷笑一聲，刀勢驟快，$Y「碎影連環」$Z一招接一招逼得$N完全喘不過氣。~
+Chance          20
+Value           260
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n身形貼地一旋，手中$O猛然上撩，赫然是$Y「翻簷索命」$Z的狠辣殺著。~
+Chance          20
+Value           360
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+#Damage
+Description
+$n殺意大盛，整個人如夜梟撲食般撲向$N，$Y「絕路斷魂」$Z一出便不留半分活口。~
+Chance          20
+Value           520
+Parry           0
+Situs           ATTACK_RANDOM
+Innate          0 0
+End
+
+End
