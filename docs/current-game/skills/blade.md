@@ -39,7 +39,7 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 出神入化﹗; 武 官 >= 一級, max 心神領會﹗; 將 軍 >= 一級, max 一代宗師﹗`
 - Restrictions: `attrs: 力量 >= 十五; skills: 猛龍刀法 >= 心神領會`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[140, 160, 180, 200, 220, 240, 260, 285, 315]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -144,7 +144,7 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 出神入化﹗; 武 官 >= 一級, max 心神領會﹗; 將 軍 >= 一級, max 一代宗師﹗`
 - Restrictions: `-`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[75, 90, 105, 120, 135, 150, 165, 185]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -228,7 +228,7 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `將 軍 >= 一級, max 一代宗師﹗`
 - Restrictions: `attrs: 敏捷 >= 二十, 力量 >= 二十五; skills: 魔刀 >= 登峰造極; classes: 將 軍`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[240, 270, 300, 330, 360, 400, 440, 480, 520, 580]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`

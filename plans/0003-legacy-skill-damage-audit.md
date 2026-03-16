@@ -331,17 +331,17 @@
 
 目前狀態：
 
-- `status = batch_d_implemented`
-- `current_focus = bow ladder`
-- `current_batch = Batch D`
+- `status = batch_e_implemented`
+- `current_focus = blade ladder`
+- `current_batch = Batch E`
 
 ## Immediate Next Steps
 
-1. 以已完成的 Batch C 為基線，重看 `long fist` 的城市 / 教學 / 服務樣本是否因模板回升而需要再分流
-2. 若拳法鏈 smoke / failenable 表現穩定，選下一條玩家向攻擊鏈進行同樣的多因子 pre-check
+1. 以已完成的 Batch E 為基線，重看目前掛著 `tiger blade` 的代表樣本是否仍需要 fallout 調整
+2. 若刀法鏈 smoke / failenable 表現穩定，選下一條玩家向攻擊鏈進行同樣的多因子 pre-check
 3. 後續若再有 city / teacher 樣本仍掛 `gdragon steps`，以 `cloud steps` 是否更符合其自保定位為優先判準
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
-5. 下一個高價值候選可回到將軍主鏈，優先看 `her blade -> dragon blade -> tiger blade`
+5. 下一個高價值候選可回到同為將軍線的 `dream blade -> sea flow blade -> fast blade`
 
 ## Batch A Result
 
@@ -833,6 +833,124 @@
   - 改用 `IPC KEY 4585`
 - 檢查：
   - `log/smoke-batch-d.log`
+  - `debug/failenable`
+  - `debug/failload`
+  - `debug/badobject`
+  - `debug/error`
+
+## Batch E Pre-Check
+
+### Scope
+
+- `her blade`
+- `dragon blade`
+- `tiger blade`
+
+### Reference Basis
+
+- `docs/3yWebsite/skill/blade.html`
+  - 明確給出 `her blade -> dragon blade -> tiger blade`
+  - 並保留完整職業 / 屬性 / 前置熟練度限制
+- `docs/3yWebsite/newhand/players/general/0104232.html`
+  - 將軍文明確把這條鏈列為主線刀法
+  - `her blade`
+    - `LV10`
+    - 建議等級 `LV10`
+    - 特性：可連擊、初期所用刀法
+  - `dragon blade`
+    - `LV10、力量15、her blade 心神領會`
+    - 建議等級 `LV100`
+  - `tiger blade`
+    - `LV50、敏捷20、力量25、dragon blade 登峰造極`
+    - 建議等級 `LV100`
+    - 特性：威力強大，攻傷 `1600~5500`
+
+### Mandatory Pre-Check Snapshot
+
+`her blade`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `15 / COST_MOVE / 8`
+- weapon / check: `WEAPON_BLADE / check_blade_attack`
+- chance set: `10`
+- parry set: `0`
+- damage entries: `8`
+- value set before rebuild: `20`
+
+`dragon blade`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `15 / COST_MOVE / 14`
+- weapon / check: `WEAPON_BLADE / check_blade_attack`
+- chance set: `20`
+- parry set: `0`
+- damage entries: `9`
+- value set before rebuild: `20`
+
+`tiger blade`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `30 / COST_MOVE / 18`
+- weapon / check: `WEAPON_BLADE / check_blade_attack`
+- chance set: `20`
+- parry set: `0`
+- damage entries: `10`
+- value set before rebuild: `20`
+
+### Interpretation
+
+- 這條鏈的 `weapon_identity`、`tempo` 與 `resource profile` 已經保留出明顯差異
+- `her blade`
+  - 入門、較快、較省
+- `dragon blade`
+  - 更慢，但仍維持中階成本
+- `tiger blade`
+  - 最慢、最耗體、而且舊站文案直接明指「威力強大」
+- 因此本批和 Batch C 類似，核心問題仍是 `Value` 被系統性壓平
+- 修法應維持：
+  - `her blade` 站穩 starter / early-general blade root
+  - `dragon blade` 成為清楚中階主力
+  - `tiger blade` 承接高威力、大刀、重成本定位
+
+## Batch E Result
+
+### Runtime Changes
+
+`her blade`
+
+- before: `20 x 8`
+- after: `75, 90, 105, 120, 135, 150, 165, 185`
+- average: `128.13`
+
+`dragon blade`
+
+- before: `20 x 9`
+- after: `140, 160, 180, 200, 220, 240, 260, 285, 315`
+- average: `222.22`
+
+`tiger blade`
+
+- before: `20 x 10`
+- after: `240, 270, 300, 330, 360, 400, 440, 480, 520, 580`
+- average: `392.0`
+
+### Design Notes
+
+- 本批只調 `Value`，刻意保留原本的大刀手感差異：
+  - `her blade` 仍是比較快、比較省的 early blade
+  - `dragon blade` 用更長 `Wait` 換更高單段輸出
+  - `tiger blade` 以 `Cost 30 / Wait 18` 承接真正的高階重兵爆發
+- 這樣的梯度也較符合舊站對 `tiger blade`「威力強大」的文字定位
+
+### Validation
+
+- `make -C src -f Makefile.lin merc`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-e.log`
   - `debug/failenable`
   - `debug/failload`
   - `debug/badobject`

@@ -34,7 +34,7 @@ Description
 $n殺氣一提﹐使出$Y古銅飛霞$R之－－$Y「大軍壓境」$Z﹐$A手中$O由左而右斬向$N的身
 上。~
 Chance          20
-Value           20
+Value           240
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -44,7 +44,7 @@ End
 Description
 $n驚天狂吼一聲$A$Y【三∼千∼奧∼義】之【飛∼花∼逝∼影  取∼命∼無∼痕】$Z~
 Chance          20
-Value           20
+Value           270
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -55,7 +55,7 @@ Description
 $n將$Y「三千飄香」「三千黑氣」「三千一氣」「三千極破」$Z全數串連起來﹐如疾電
 狂雷劈的$N滿身是傷﹗﹗﹗~
 Chance          20
-Value           20
+Value           300
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -66,7 +66,7 @@ Description
 $n凝聚全身邪勁﹐喝道：$Y『古皇奧義』之【煉獄龍傲勁】$Z﹐$A$n手中的$O聚起強大的
 $R地獄煉火$Z﹐燒的$N呼天叫地﹗﹗﹗~
 Chance          20
-Value           20
+Value           330
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -78,7 +78,7 @@ $n使出之$Y『古皇奧義  驚天六絕殺』$Z第一式$Y「開天破」$Z�
 $S風$Z、$R火$Z、$B電$Z、$G雷$Z烈勁相輔相承﹐攝魂奪命﹐
 $A$N頓時不知所措被這臨門一刀當場命中﹗﹗﹗~
 Chance          20
-Value           20
+Value           360
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -90,7 +90,7 @@ $n順勢使出殺招$Y『古皇奧義  驚天六絕殺』$Z第二式$G「闢地�
 $A$n將地心真力操控於手中的$O﹐攝人如磁攝鐵﹐勢勁凌厲可摧山嶽﹐$A
 氣旋聚萬鈞之力﹐令$N運勁亦無法自拔﹐陷入碎地之中﹗﹗﹗~
 Chance          20
-Value           20
+Value           400
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -102,7 +102,7 @@ $n身形潛伏於地底之中﹐$Y『古皇奧義  驚天六絕殺』$Z第三式
 $A$n運聚陰玄之氣於手中$O﹐引聚地心之$r黯幻幽火$Z﹐勢勁凌厲可摧天滅地﹐
 $A$n所形成氣勁猶如萬鈞重力﹐將$N團團圍於$R煉火之中$Z﹗﹗﹗~
 Chance          20
-Value           20
+Value           440
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -115,7 +115,7 @@ $n幻化成無數身形﹐忽左忽右﹐令$N無法捉摸$Y『古皇奧義  驚
 $N聚集強大之$G幽冥之氣$Z於$O之上﹐$n欲以$G幽冥大氣$Z斬絕大地﹐障人耳目喪人神智﹐$A
 每於$N迷恍於一片混沌之時﹐給予$N強力的致命一擊﹗﹗﹗~
 Chance          20
-Value           20
+Value           480
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -128,7 +128,7 @@ $W「元始搏」$Z﹐$A
 $n聚集宇宙強大浩翰之氣於$O之上﹐$n將創造宇宙的$b元始之氣$Z﹐$A
 至強至剛﹐威力足以毀天滅地﹐$N對這殺著完全不知所措﹐霎時橫屍此處﹗﹗﹗~
 Chance          20
-Value           20
+Value           520
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -145,7 +145,7 @@ $G      皇室大千之古皇絕式$Y『三千同一氣•黯夢雲驚斷』$Z�
 只見四道氣勁劃破天際﹐向$N的四周直墜﹗﹗$A
 只見$N的身體已被四道氣勁所形成之強烈氣爆炸的粉身碎骨﹗﹗﹗~
 Chance          20
-Value           20
+Value           580
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

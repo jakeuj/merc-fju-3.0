@@ -35,7 +35,7 @@ Help            ~
 Description
 $n縱身而上﹐忽地身形一轉﹐使出$R「迴龍逆斬」﹐$Z手中$O往$N橫劈過去。~
 Chance          20
-Value           20
+Value           140
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -45,7 +45,7 @@ End
 Description
 $n運起元功﹐將真力貫進$O﹐一招$R「呼龍嘯天」$Z﹐$O直劈$N﹗﹗~
 Chance          20
-Value           20
+Value           160
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -55,7 +55,7 @@ End
 Description
 $n手中$O連劃﹐一招$R「夜龍一炬」$Z忽地挺出$N直劈﹗﹗~
 Chance          20
-Value           20
+Value           180
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -65,7 +65,7 @@ End
 Description
 $n一招$R「萬劫盡捨」$Z將手中$O舞成一片刀網砍向$N。~
 Chance          20
-Value           20
+Value           200
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -75,7 +75,7 @@ End
 Description
 $n揮動手中$O使出$R「一字刀法」$Z﹐只見$O像一道閃電﹐直劈$N而下。~
 Chance          20
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -85,7 +85,7 @@ End
 Description
 $n使出$R「離刀斬」$Z﹐只見刀片像雪片般紛紛向$N落下。~
 Chance          20
-Value           20
+Value           240
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -95,7 +95,7 @@ End
 Description
 $n大喝一聲﹐使出$R「江山易手」$Z﹐一時氣震山河﹐一陣刀氣往$N直衝而來。~
 Chance          20
-Value           20
+Value           260
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -106,7 +106,7 @@ Description
 $n決定使出必殺之技﹐$Y【蟠龍鎖關】$Z$R『忌天、恨地、魚龍再現﹗』$Z﹐拋起$O﹐
 空中轉體三周半﹐氣勢磅礡﹗~
 Chance          20
-Value           20
+Value           285
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -117,7 +117,7 @@ Description
 $n突然陷入瘋狂﹐口中大喊﹐$Y【 蒼天已死﹗﹗魔刀當立﹗﹗看攝魂屠仙大法﹗﹗ 】
 $Z只見$n以刀刃指向$N的傷口﹐凌空吸取$E的鮮血﹗﹗~
 Chance          20
-Value           20
+Value           315
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
