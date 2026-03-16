@@ -19,8 +19,11 @@ title: Current Game Skills
 
 - `docs/current-game/skills-index.md`
 - `docs/current-game/skills/step.md`
+- `docs/current-game/skills/sword.md`
+- `docs/current-game/skills/bow.md`
+- 以及其餘依舊站葉節點生成的分類子頁
 
-這兩頁由 `scripts/generate_current_game_skills_pages.py` 生成，後續若 `skills.json` 更新，應重新執行該 script。
+這些頁面由 `scripts/generate_current_game_skills_pages.py` 生成，後續若 `skills.json` 更新，應重新執行該 script。
 
 ## 邊界
 
