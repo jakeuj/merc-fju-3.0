@@ -36,10 +36,11 @@ source of truth 要分兩種：
 7.1 若這輪工作有用 `ref/Readme.md` 來做選讀決策，回寫單區 plan 或追蹤看板時，補上 `ref_inputs_used`、`ref_inputs_deferred`、`theme_basis`、`compliance_check`。
 8. 修改完成後，至少做靜態搜尋、編碼檢查與必要的啟動/載入驗證，再回報受影響檔案與風險。
 9. 若要做 area 載入 smoke test，先清空 `debug/*` 內容並建立本輪 `log/*` 觀察基線，再執行測試；若使用 `timeout`，優先給 `45` 到 `60` 秒；測試後用成功訊號、這輪 log 與新產生的 debug 訊息一起判讀。
-10. 若這輪有新增 `mob/*.mob` 或 `obj/*.obj`，不要只靠文件猜 parser 會接受什麼：先比對 repo 內已成功載入的同類範例，特別是 `Class` 常數與 `ITEM_FOOD` / `ITEM_DRINK_CON` 的 `Value*` 欄位，測試成功後仍要檢查 `debug/badobject`。
-11. area 設計與純資料實作預設先走快速本機驗證；只有碰到 `src/`、`Makefile*`、`startup*`、`merc.sample.ini`、疑似平台差異，或要替大里程碑做 pre-merge gate 時，才升級到 Ubuntu / Docker 雙平台驗證。
-12. 若固定 prompt 要從 `todo` 開始一個新的 area milestone，而目前分支是 `develop` 或 `main`，預設先建立 `codex/<area>-implementation` 分支再開始 spec / implementation；除非使用者明講要直接在主分支上做，或這輪只是 merge 後的極小 docs / tracker 收尾。
-13. 每輪 area 工作收尾時，主動做一次「經驗回寫判斷」：單區特殊決策回寫到該 area plan / tracker；可重複踩到的 parser、loader、驗證規則回寫到 `skills/references`；屬於全局 workflow 缺口的，再回寫到全局 plan 或 `rebuild-workflow.md`。
+10. 若這輪有新增 `mob/*.mob` 或 `obj/*.obj`，不要只靠文件猜 parser 會接受什麼：先比對 repo 內已成功載入的同類範例，特別是 `Class` 常數與 `ITEM_FOOD` / `ITEM_DRINK_CON` 的 `Value*` 欄位，測試成功後仍要檢查 `debug/badobject`。若同時新增怪物會 `Enable` 的技能，還要把它視為 loader-risk data change，而不只是 area 純資料。
+11. 新增 `skill/*.ski` 時，至少同步檢查四個登錄點：`src/merc.h` 的 `SLOT_*`、`skill/skill.lst`、`data/symbol.def`、實際的 `skill/<letter>/<name>.ski`。`skill.lst` key、技能 `Name` 與檔名路徑都必須和 repo 內既有技能全域唯一，避免覆蓋舊技能或造成 `Load_skill` 重覆載入。
+12. area 設計與純資料實作預設先走快速本機驗證；只有碰到 `src/`、`Makefile*`、`startup*`、`merc.sample.ini`、疑似平台差異，或要替大里程碑做 pre-merge gate 時，才升級到 Ubuntu / Docker 雙平台驗證。若這輪有新增 skill、改 mob `Enable` 鏈，或碰到 loader 相關警告，至少要補實際載入 smoke test，不可只停在靜態比對。
+13. 若固定 prompt 要從 `todo` 開始一個新的 area milestone，而目前分支是 `develop` 或 `main`，預設先建立 `codex/<area>-implementation` 分支再開始 spec / implementation；除非使用者明講要直接在主分支上做，或這輪只是 merge 後的極小 docs / tracker 收尾。
+14. 每輪 area 工作收尾時，主動做一次「經驗回寫判斷」：單區特殊決策回寫到該 area plan / tracker；可重複踩到的 parser、loader、驗證規則回寫到 `skills/references`；屬於全局 workflow 缺口的，再回寫到全局 plan 或 `rebuild-workflow.md`。
 
 ## 主題靈感與沉浸式設計
 
@@ -108,10 +109,13 @@ source of truth 要分兩種：
 - `index/mob/obj/roo/res/shp/map`、`#Keyword/#Job/#Enquire`、`external: true` 與 scaffold generator 的細則，讀 `references/file-handling-rules.md`
 - 若任務重點是修出口、整合新 area、補 `#Enquire`、比對地圖檔或確認 `.roo` schema，這份檔要補讀
 - 若任務有新增或修改 `mob/*.mob` / `obj/*.obj`，尤其是 mob `Class` 或特殊 `ItemType`，也要補讀這份檔；不要只照文件猜常數或 `Value*` 欄位，先比對 repo 內已成功載入的同類範例
+- 若任務有新增 `skill/*.ski`、替 NPC 換技能、或讓新的 mob `Enable` 指到新技能，先搜尋 repo 內是否已有同名 skill / 同 slot / 同 `skill.lst` key；新增 skill 只是 area data 的一部分，但驗證要求應比一般 `mob/obj` 更高
+- NPC 專用且不打算讓玩家學習的技能，預設明確寫 `Valid NO`、`CanAsk NO`、`Teach NO`；但名稱、slot 與 loader 登錄仍要完整，不能因為是 NPC-only 就省略
 
 ### 4. 同步系統設定
 - `merc.ini`、`variable.c`、`job.c`、`bus/ship/bounty` 與 docs 對照點，讀 `references/system-sync-checks.md`
 - 若任務碰到交通、新手導流、技能來源、國家系統或官方敘事，這份檔是必要 reference
+- 若這輪新增的是目前 repo 真正會載入的技能，而不只是一次性測試檔，優先同步 `docs/current-game/skills.md` / `docs/current-game/skills.json` 或其他 repo 自有紀錄；`docs/3yWebsite/` 預設只拿來參考世界觀、命名與舊技能脈絡，不直接當現行技能台帳
 
 ### 5. 需要世界觀/參考資料時串接 sango-docs-service
 - 何時一起用 `sango-docs-service`、優先 docs / JSON 清單與回報要求，讀 `references/docs-service-integration.md`

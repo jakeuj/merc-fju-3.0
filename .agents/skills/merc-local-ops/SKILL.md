@@ -108,6 +108,7 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 - 若使用 `startup-wsl.ps1`，確認 `wsl.exe` 與 WSL 內的 `wslpath` 可用，再讓它轉呼叫 `src/startup.bash`
 - 若 `startup-wsl.ps1` 本身正常，但 WSL 一進 `startup.bash` 就報 `bash\r`，先修腳本行尾，不要誤判成 `wsl.exe` 或 PowerShell 橋接壞掉
 - 若剛修過 `src/merc.sample.ini`，啟動前先刪掉舊的 `src/merc.ini`，避免用到先前生成的壞設定；重新生成後再檢查 `HOME DIRECTORY`
+- 若執行目的是 world-data / loader 驗證，但預設 `MUD PORT` 已被占用，可複製 `src/merc.ini` 成臨時 `src/merc.test.ini`，把 `MUD PORT` 與相鄰服務 port 改成未占用值，再直接跑 `./merc merc.test.ini`；這能把 bind 問題和資料載入問題拆開
 - 若用 `timeout` 做 smoke test，時間要明顯高於正常開機時間；預設優先用 `45` 到 `60` 秒，避免因測試工具太早殺行程而誤看到「系統不正常終止」
 - 成功訊號至少要記錄像 `三國歪傳之降龍伏虎開始正常運作` 這種明確啟動完成字樣；不要只因為程式暫時沒退出就視為成功
 - 若 `log/*.log` 已出現「開始正常運作」，但尾端接著出現「系統不正常終止」，先確認是否只是 smoke test 的 `timeout` 主動中止；這和啟動失敗是兩件事
@@ -130,7 +131,9 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 - 若本輪測試前已先清空 `debug/*`，那麼測試後新增的 `debug/bugs`、`debug/error`、`debug/failenable` 等內容就應優先視為本次執行的新結果，必須逐一判斷是否和本次 area 改動有關
 - `debug/failenable` 不是玩家 `enable` 數量不足，也不是 `max_enable` 上限告警；它是怪物載入 `AutoEnable` 時，`src/load.c -> get_adeptation()` 算出的熟練度極端值警告
 - 若 `debug/failenable` 出現 `怪物編號 %d 技能 %s 太差/太高`，先把它歸類成 `mob/*.mob` 的 area data 問題：檢查對應怪物的 `AutoEnable`、`AttackRatio`、`DodgeRatio`、Level 與技能型態，再決定要改成固定 `Enable`，或改技能 / 係數；不要誤往玩家 `enable` 指令或本機 shell 問題排查
-- 若只是要消除這類載入警告，預設推薦固定 `Enable`，因為它是鎖定單一怪物技能結果的最小修復；保留 `AutoEnable` 去改 ratio 或技能資料，較容易擴大成平衡調整而不是單純排錯
+- 若只是要做短期止血、或對象是服務型 / 非戰鬥核心 NPC，固定 `Enable` 仍是最小修復；但若對象是守衛、禁軍、高手、盜賊這類戰鬥核心 NPC，應升級成 area / docs 層面的技能定位調整，不要把 `Enable 100` 當長期答案
+- 若 log 或終端出現 `Load_skill﹕技能名稱 XXX 重覆`，優先檢查三件事：是否覆蓋了既有 `skill/<letter>/*.ski`、`skill/skill.lst` 是否重複 key、不同 skill 檔的 `Name` 是否撞名；這通常是 skill 登錄或檔名衝突，不是 build / shell 問題
+- 若 log 或終端出現 `Fread_number: 讀取檔案已定義字串 SLOT_... 錯誤`，優先檢查新 `SLOT_*` 是否只加在 `src/merc.h`，卻漏了 `data/symbol.def`；這是 loader 常數表不同步，不是 area parser 壞掉
 
 ### 5. 排錯分流
 - **編譯錯誤**：處理 `src/*.c`、`include/*.h`、`Makefile*`

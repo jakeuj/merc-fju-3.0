@@ -56,7 +56,7 @@
 - 若有出生後導流、新手教學房、訓練場、轉職或國家導引，對照 `docs/3yWebsite/docs/newbie.md`，確認 `area`、`learn`、`enable`、`group`、`recall`、`score` 等關鍵流程仍有 room/NPC/看板支撐。
 - 若搬動新手服務 NPC、補給點、修裝、救濟金、轉職或官署位置，要同步修正新手提示與玩家第一輪探索路線，避免攻略文字與現況斷線。
 - 若房間靠 `#Keyword` 提示特殊互動，例如 `bore hole`、`enter gate`、`climb tree`，確認玩家從 room 描述就能推得出該指令，且改名後沒有留下失效提示。
-- 若有技能教師、秘笈掉落、訓練場、法器或職業任務，對照 `docs/3yWebsite/docs/skills.md` / `docs/3yWebsite/docs/data/skills.json`，確認技能名稱、來源類型、熟練度詞彙、資源消耗與區域內 NPC/物件/掉落一致。
+- 若有技能教師、秘笈掉落、訓練場、法器或職業任務，先用 `docs/3yWebsite/docs/skills.md` / `docs/3yWebsite/docs/data/skills.json` 核對舊版語彙與來源脈絡；若這輪還新增了目前 repo 真正會載入的新技能，再同步檢查 `docs/current-game/skills.md` / `docs/current-game/skills.json` 與 runtime 檔案，避免把新資料寫回舊站鏡像。
 - 若技能需 `study`、領悟、預備功夫或特殊資源消耗，房間提示、NPC 對話、物件說明與 help 文字要反映同一套規則，不要只在其中一處更新。
 - 若有國家首都、領地入口、官署、公告板、建國/入國/離境流程，對照 `docs/3yWebsite/docs/realm.md` / `docs/3yWebsite/docs/data/realm_commands.json`，確認 `Capital`、銀行、官職導引、新聞/信件載體與國家專屬服務都有落點。
 - 若牽涉叛國、懸賞、罪惡島或國土 recall，確認 `realm !quit` / `!leave` 類流程的懲罰與離境邏輯不會和房間傳送、出生點、國界提示互相衝突。
@@ -73,7 +73,7 @@
 - 若區域有交通節點，再核對 `docs/3yWebsite/docs/maps.md` 是否仍和 `data/bus.txt` / `data/ship.txt`、區域內提示文字、驛站 NPC 配置對得上。
 - 若區域有新手導引或服務鏈，再核對 `docs/3yWebsite/docs/newbie.md` 提到的指令、NPC 類型、推薦練功流與告示文字是否仍找得到落點。
 - 若區域有房間關鍵字互動，再核對 room 名詞、`#Keyword`、提示動詞、相鄰房間與實際可走通的路線是否一致。
-- 若區域有技能來源或秘笈物件，再核對 `docs/3yWebsite/docs/skills.md` 是否仍和 `mob/obj/res/shp`、掉落提示、訓練 NPC 與相關 help 文案對得上。
+- 若區域有技能來源或秘笈物件，再核對 `docs/3yWebsite/docs/skills.md` 提供的舊版脈絡是否仍和 `mob/obj/res/shp`、掉落提示、訓練 NPC 與相關 help 文案對得上；若是目前 repo 額外補的新技能，改查 `docs/current-game/skills.md` / `docs/current-game/skills.json`。
 - 若區域有國家流程或 Capital 功能，再核對 `docs/3yWebsite/docs/realm.md` 是否仍和 `Capital`、board/note 類物件、銀行/官署服務點、國家提示與 recall 設定對得上。
 - 若區域有官方敘事、公告或 Immortal/元老 NPC，再核對 `docs/3yWebsite/docs/system.md` 是否仍和新聞時間線、NPC 稱謂、help/credit 文案與公告板內容對得上。
 - 用 `git diff` / `git status` 確認變更集中在預期檔案。

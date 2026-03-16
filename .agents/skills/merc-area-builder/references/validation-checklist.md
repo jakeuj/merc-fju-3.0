@@ -12,7 +12,7 @@
 8. 若房間有 `#Keyword` 或描述暗示特殊互動，再逐房檢查玩家實際看到的名詞與動詞是否還能導向正確操作
 9. 若房間設計成可被問路找到，再逐房檢查 `#Enquire` 同義詞是否已落地
 10. 若房間描述提示的是非內建指令，再確認它的實作位置真的存在：不是 `do_*` 命令，就是 `#Job -> src/job.c` 可解析的 function
-11. 若牽涉技能來源、訓練 NPC、秘笈物件或職業導引，再對照 `docs/3yWebsite/docs/skills.md` / `docs/3yWebsite/docs/data/skills.json`
+11. 若牽涉技能來源、訓練 NPC、秘笈物件或職業導引，再對照 `docs/3yWebsite/docs/skills.md` / `docs/3yWebsite/docs/data/skills.json`；若這輪還新增了目前 repo 的新技能，再補查 `docs/current-game/skills.md` / `docs/current-game/skills.json`
 12. 若牽涉國家首都、領地入口、官署、公告板或建國/叛國流程，再對照 `docs/3yWebsite/docs/realm.md` / `docs/3yWebsite/docs/data/realm_commands.json`
 13. 若牽涉世界觀敘事、官方公告、元老/神族 NPC 或公開版提示，再對照 `docs/3yWebsite/docs/system.md`、`docs/3yWebsite/docs/data/news.json`、`docs/3yWebsite/docs/data/immortals.json`
 14. 若這輪有新增或修改 `mob/*.mob`，先比對 `Class` 是否來自 repo 內已成功載入的常數；不要把文件或直覺猜到的 class name 直接拿去賭 parser 會接受

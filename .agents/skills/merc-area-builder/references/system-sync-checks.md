@@ -29,8 +29,8 @@
 
 ## 技能來源
 
-- 若區域涉及技能教師、秘笈掉落、訓練場、職業試煉、法器或技能型獎勵，補看 `docs/3yWebsite/docs/skills.md`
-- `skills.md` 也提供「可教導 / 僅領悟 / 秘笈 study / 任務獎勵」這類來源線索；若你移動技能來源，除了 `mob/obj/res/shp`，也要同步檢查 help、任務提示、掉落敘述與相關主城服務 NPC
+- 若區域涉及技能教師、秘笈掉落、訓練場、職業試煉、法器或技能型獎勵，先補看 `docs/3yWebsite/docs/skills.md`
+- `docs/3yWebsite/docs/skills.md` 提供的是舊版「可教導 / 僅領悟 / 秘笈 study / 任務獎勵」脈絡；若你移動技能來源，除了 `mob/obj/res/shp`，也要同步檢查 help、任務提示、掉落敘述與相關主城服務 NPC。若本輪新增了目前 repo 的新技能，再另外補 `docs/current-game/skills.md` / `docs/current-game/skills.json`
 
 ## 國家系統
 
