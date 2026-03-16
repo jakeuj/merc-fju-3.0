@@ -64,6 +64,7 @@ Legacy chain: `cloud steps -> gdragon steps -> mirage steps`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Legacy page source: `skill/step.html`
 
 ### 離影迷蹤步 / `mirage steps`
 
@@ -82,6 +83,7 @@ Legacy chain: `cloud steps -> gdragon steps -> mirage steps`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Legacy page source: `skill/step.html`
 
 ## legacy-step-cloud-ghost
 
@@ -104,6 +106,7 @@ Legacy chain: `cloud ghost -> wind color steps`
 - Chance values: `[10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Legacy page source: `skill/step.html`
 
 ### 破風彩雲步 / `wind color steps`
 
@@ -122,6 +125,7 @@ Legacy chain: `cloud ghost -> wind color steps`
 - Chance values: `[20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Legacy page source: `skill/step.html`
 
 ## legacy-step-nine
 
@@ -144,6 +148,7 @@ Legacy chain: `nine steps -> color steps`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Legacy page source: `skill/step.html`
 
 ### 九天靈影步 / `nine steps`
 
@@ -162,6 +167,7 @@ Legacy chain: `nine steps -> color steps`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Legacy page source: `skill/step.html`
 
 ## legacy-step-shade
 
@@ -184,6 +190,7 @@ Legacy chain: `shade steps -> wind steps`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Legacy page source: `skill/step.html`
 
 ### 風影藏 / `wind steps`
 
@@ -202,6 +209,7 @@ Legacy chain: `shade steps -> wind steps`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Legacy page source: `skill/step.html`
 
 ## legacy-step-sleev
 
@@ -224,6 +232,7 @@ Legacy chain: `sleev steps -> sky steps`
 - Chance values: `[20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Legacy page source: `skill/step.html`
 
 ### 風雲袖步 / `sleev steps`
 
@@ -242,6 +251,7 @@ Legacy chain: `sleev steps -> sky steps`
 - Chance values: `[20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0']`
+- Legacy page source: `skill/step.html`
 
 ## legacy-step-standalone
 
@@ -264,6 +274,7 @@ Legacy chain: `eight steps / free steps / hundred steps / night steps`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Legacy page source: `skill/step.html`
 
 ### 逍遙遊 / `free steps`
 
@@ -282,12 +293,13 @@ Legacy chain: `eight steps / free steps / hundred steps / night steps`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Legacy page source: `skill/step.html`
 
 ### 百幻身法 / `hundred steps`
 
 - Audit: `legacy_unreviewed`
 - Family: `legacy-step-standalone`
-- Legacy prerequisite: `百鬼夜行步(night steps)`
+- Legacy prerequisite: `從缺`
 - Legacy next: `-`
 - Runtime file: `skill/h/hundred_steps.ski`
 - Runtime slot: `SLOT_HUNDRED_STEPS`
@@ -300,6 +312,7 @@ Legacy chain: `eight steps / free steps / hundred steps / night steps`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Legacy page source: `skill/step.html`
 
 ### 百鬼夜行步 / `night steps`
 
@@ -318,4 +331,5 @@ Legacy chain: `eight steps / free steps / hundred steps / night steps`
 - Chance values: `[10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Legacy page source: `skill/step.html`
 

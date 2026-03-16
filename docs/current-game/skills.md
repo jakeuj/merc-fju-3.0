@@ -70,6 +70,10 @@ title: Current Game Skills
   - 舊站 HTML / JSON 的來源頁
   - 舊站技能鏈中的前後關係
   - 舊站顯示的 prerequisite
+- `legacy_requirements`
+  - 舊站 HTML 解析出的 `職業限制`
+  - `限 制` 中的屬性門檻、技能熟練度門檻、職業限制
+  - `教 導` 來源
 - `runtime`
   - 是否存在於目前 repo
   - `skill_file`
@@ -92,6 +96,7 @@ title: Current Game Skills
 這個 schema 的目標是讓後續工作能直接回答：
 
 - 這個技能在舊站屬於哪條鏈
+- 它在舊站有哪些職業限制、屬性限制、前置技能限制、教學來源
 - 目前 runtime 還在不在
 - 它是玩家技能還是 NPC-only
 - 它現在是否已納入某個 rebuild 批次
@@ -197,10 +202,11 @@ title: Current Game Skills
 
 ## 2026-03 Step Family Registry Seed
 
-目前 `docs/current-game/skills.json` 已完成兩層 seed：
+目前 `docs/current-game/skills.json` 已完成三層 seed：
 
 - 舊站 `docs/3yWebsite/docs/data/skills.json` 的全部 `31` 筆條目
-- `docs/3yWebsite/skill/step.html` 額外才看得到的步法鏈 descendants
+- `docs/3yWebsite/skill/*.html` 額外才看得到的 descendants
+- 舊站 HTML 才有的 `職業限制 / 限制 / 教導` 結構化欄位
 
 所以現在至少能直接看出這些舊設計：
 
@@ -217,7 +223,8 @@ title: Current Game Skills
 
 - 已納入：
   - 舊站 `skills.json` 全條目
-  - 步法全家族的額外升階節點
+  - 舊站 `skill/*.html` 各頁的額外升階節點
+  - 舊站 HTML 中的職業限制、屬性限制、前置技能熟練度限制、教學來源
   - 2026-03 NPC-only 新技能
 - 尚未納入：
   - 其他舊站 HTML 頁裡、但沒有被 `skills.json` 扁平抽出的升階 descendants
