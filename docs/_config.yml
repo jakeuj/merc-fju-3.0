@@ -1,0 +1,6 @@
+title: Merc FJU 3.0 Current Game Docs
+description: Current-game documentation and runtime notes for the cleaned merc-fju-3.0 repository.
+theme: minima
+markdown: kramdown
+exclude:
+  - 3yWebsite

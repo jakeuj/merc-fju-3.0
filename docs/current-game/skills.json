@@ -1,0 +1,84 @@
+{
+  "scope": "Current repo supplemental skill registry for merc-fju-3.0 runtime additions. docs/3yWebsite remains reference-only.",
+  "source_of_truth": [
+    "skill/*.ski",
+    "skill/skill.lst",
+    "src/merc.h",
+    "data/symbol.def",
+    "mob/*.mob",
+    "obj/*.obj",
+    "res/*.res"
+  ],
+  "skills": [
+    {
+      "english_name": "military blade",
+      "chinese_name": "鎮軍刀法",
+      "skill_file": "skill/m/military_blade.ski",
+      "skill_lst_key": "military_blade",
+      "slot_symbol": "SLOT_MILITARY_BLADE",
+      "category": "offensive",
+      "npc_only": true,
+      "intended_roles": ["城市守衛", "城門守衛", "禁軍護衛"]
+    },
+    {
+      "english_name": "military steps",
+      "chinese_name": "鎮軍步",
+      "skill_file": "skill/m/military_steps.ski",
+      "skill_lst_key": "military_steps",
+      "slot_symbol": "SLOT_MILITARY_STEPS",
+      "category": "dodge",
+      "npc_only": true,
+      "intended_roles": ["城市守軍", "騎卒", "低中階軍職 NPC"]
+    },
+    {
+      "english_name": "imperial sword",
+      "chinese_name": "禁城御劍",
+      "skill_file": "skill/i/imperial_sword.ski",
+      "skill_lst_key": "imperial_sword",
+      "slot_symbol": "SLOT_IMPERIAL_SWORD",
+      "category": "offensive",
+      "npc_only": true,
+      "intended_roles": ["殿前護衛", "御前護衛", "皇宮禁衛軍高階樣本"]
+    },
+    {
+      "english_name": "imperial steps",
+      "chinese_name": "龍驤御步",
+      "skill_file": "skill/i/imperial_steps.ski",
+      "skill_lst_key": "imperial_steps",
+      "slot_symbol": "SLOT_IMPERIAL_STEPS",
+      "category": "dodge",
+      "npc_only": true,
+      "intended_roles": ["殿前護衛", "御前護衛"]
+    },
+    {
+      "english_name": "night blade",
+      "chinese_name": "夜梟奪命刀",
+      "skill_file": "skill/n/night_blade.ski",
+      "skill_lst_key": "night_blade",
+      "slot_symbol": "SLOT_NIGHT_BLADE",
+      "category": "offensive",
+      "npc_only": true,
+      "intended_roles": ["盜賊", "浪人", "大盜類 NPC"]
+    },
+    {
+      "english_name": "shadowtrace steps",
+      "chinese_name": "流影換形步",
+      "skill_file": "skill/s/shadowtrace_steps.ski",
+      "skill_lst_key": "shadowtrace_steps",
+      "slot_symbol": "SLOT_SHADOW_NIGHT_STEPS",
+      "category": "dodge",
+      "npc_only": true,
+      "intended_roles": ["盜賊", "浪人", "大盜類 NPC"]
+    },
+    {
+      "english_name": "cavalry lance",
+      "chinese_name": "驍騎槍式",
+      "skill_file": "skill/c/cavalry_lance.ski",
+      "skill_lst_key": "cavalry_lance",
+      "slot_symbol": "SLOT_CAVALRY_LANCE",
+      "category": "offensive",
+      "npc_only": true,
+      "intended_roles": ["騎兵", "持槍軍職 NPC"]
+    }
+  ]
+}
