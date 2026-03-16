@@ -296,17 +296,15 @@
 
 目前狀態：
 
-- `status = ready_for_batch_b`
+- `status = batch_b_implemented`
 - `current_focus = dodge ladder`
 - `current_batch = Batch B`
 
 ## Immediate Next Steps
 
-1. 盤 `cloud steps` / `gdragon steps` / `sky steps` 現行 `#Damage Value`
-2. 依 `players.json` / `skills.json` 定出入門、中階、高階的 dodge 梯度
-3. 小批次修 skill 檔
-4. build + smoke test
-5. 抽對應 guard / teacher 樣本與 failenable 結果
+1. 依 Batch B 實作結果回看對應 mob / teacher 樣本
+2. 抽查目前大量掛著 `gdragon steps` 的城市 / 教學 / 服務 NPC
+3. 決定是先做 Batch B follow-up，還是轉入 Batch C 的拳法鏈
 
 ## Batch A Result
 
@@ -446,6 +444,19 @@
 - parry set: `0`
 - damage innate set: `0 0`
 
+`sleev steps`
+
+- type: `TAR_DODGE`
+- cost: `10`
+- costtype: `COST_MOVE`
+- wait: `10`
+- canask / teach: `YES / NO`
+- damage entries: `4`
+- chance set: `20`
+- value set: `20`
+- parry set: `0`
+- damage innate set: `0 0`
+
 `sky steps`
 
 - type: `TAR_DODGE`
@@ -463,13 +474,16 @@
 
 - `cloud steps -> gdragon steps` 是舊站與 runtime 都能確認的同鏈關係。
 - `sky steps` 不是 `cloud/gdragon` 直線升階；它更像 `sleev steps -> sky steps` 這條分支上的高階步法。
-- 三者的 `Value` 都被壓成 `20`，表示 dodge template 確實存在系統性清值。
+- `sleev steps` 也必須一起看，因為 `sky` 的 prerequisite、runtime `Associate`、以及舊站玩家文都指向 `sleev -> sky`，不是孤立高階技。
+- 四者的 `Value` 都被壓成 `20`，表示 dodge template 確實存在系統性清值。
 - 但這批也沒有被完全壓成同質：
   - `cloud steps` 只有 `Cost 5`、`Wait 1`，明顯保留了入門高頻、低成本特性。
   - `gdragon steps` 雖然也是 `Value 20`，但 `Cost 15`、`Wait 10`，代表它不可能單靠「更快」來成立高階定位。
+  - `sleev steps` 與 `sky steps` 同為 `Cost 10 / Wait 10`，但 `sleev` 只有 `4` 段 damage entry、可學範圍更寬，較像平行分支的根技能。
   - `sky steps` 同樣 `Wait 10`，但 `Cost 10` 低於 `gdragon steps`，和舊站「花費體力很少」的描述相符。
 - 因此 Batch B 不應直接把三者當同一條單線梯度一起上調；較合理的做法是：
   - 先把 `cloud -> gdragon` 當主鏈修 dodge template
+  - 把 `sleev -> sky` 當平行分支一起檢查，避免只修 `sky` 卻讓 prerequisite 仍停在被清值的殘缺模板
   - 再把 `sky steps` 當平行高階步法，保留其「較省體力」特色來做橫向比較
 
 ### Implementation-Ready Direction
@@ -477,8 +491,60 @@
 下一步修值前，建議採這個順序：
 
 1. 先針對 `cloud steps` / `gdragon steps` 設計入門與中高階 dodge template 差距
-2. `sky steps` 不追求單純高於 `gdragon` 的所有數值，而是維持：
+2. 補進 `sleev steps` 的 branch baseline，至少讓 `sky` 的 prerequisite 不再維持全 `20` 殘缺模板
+3. `sky steps` 不追求單純高於 `gdragon` 的所有數值，而是維持：
    - 高階定位
    - 相對省體力
    - 與 `sleev steps` 分支相符的武官 / bravo 路線特色
-3. 修值後抽查目前大量掛著 `gdragon steps` 的城市 / 教學 / 服務 NPC，確認 failenable 與實戰模板是否較合理
+4. 修值後抽查目前大量掛著 `gdragon steps` 的城市 / 教學 / 服務 NPC，確認 failenable 與實戰模板是否較合理
+
+## Batch B Result
+
+### Scope
+
+- `cloud steps`
+- `gdragon steps`
+- `sleev steps`
+- `sky steps`
+
+### Runtime Changes
+
+- `skill/c/cloud_steps.ski`
+  - `Value`: `35, 45, 55, 65, 75, 85, 95`
+  - 保留 `Chance 10`, `Cost 5`, `Wait 1`
+- `skill/g/gdragon_steps.ski`
+  - `Value`: `80, 95, 110, 125, 140, 155, 170`
+  - 保留 `Chance 20`, `Cost 15`, `Wait 10`
+- `skill/s/sleev_steps.ski`
+  - `Value`: `60, 80, 100, 120`
+  - 保留 `Chance 20`, `Cost 10`, `Wait 10`
+- `skill/s/sky_steps.ski`
+  - `Value`: `95, 115, 135, 155, 175, 195`
+  - 保留 `Chance 20`, `Cost 10`, `Wait 10`
+
+### Design Notes
+
+- `cloud -> gdragon` 形成明確主鏈梯度
+- `sleev -> sky` 補回平行分支梯度，不再讓 `sky` 掛在全 `20` 的 prerequisite 上
+- 本批只調 `Value`，刻意不動 `Chance / Wait / Cost / CostType`
+- `sky steps` 仍維持相對省體力的高階步法定位，不把它硬拉成全面碾壓 `gdragon`
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- `log/smoke-batch-b.log`
+  - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - 尾端 `系統不正常終止` 為 `timeout 50s` 截停後的正常關機
+- `debug/*`
+  - 無新的 `failenable`
+  - 無新的 `failload`
+  - `badobject` 為空
+
+### Follow-up
+
+- 先抽查目前掛著 `gdragon steps` 的城市 / 教學 NPC，確認這批 dodge ladder 對 runtime 表現的實際影響
+- 若本批不再需要補 city/teacher follow-up，可轉進 Batch C 的 `long fist / lung shan / tackle`

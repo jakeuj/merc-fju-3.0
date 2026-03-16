@@ -39,7 +39,7 @@ Help            ~
 Description
 $n兩袖交互揮舞使出$Y『拂袖而去』$Z﹐如風車旋動﹐引動氣流急轉躲避了$N的殺招。~
 Chance          20
-Value           20
+Value           60
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -49,7 +49,7 @@ Description
 $n跟著躍起﹐使出$G『長袖善舞』$Z。從$N的破洞招式衝出去﹐身子輕飄飄的飄浮在
 半空。~
 Chance          20
-Value           20
+Value           80
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -58,7 +58,7 @@ End
 Description
 $n使出$B『袖手旁觀』$Z﹐看到$N的招式一到﹐$n就輕飄的躲開。~
 Chance          20
-Value           20
+Value           100
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -67,7 +67,7 @@ End
 Description
 $n使用$W『化袖為霧』$Z一陣陣的濃霧發出$n的身上﹐使得$N停止攻擊。~
 Chance          20
-Value           20
+Value           120
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

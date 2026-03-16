@@ -20,7 +20,7 @@ title: Current Game 步法 Skills
 | legacy-step-cloud-ghost | cloud ghost -> wind color steps | 2 | legacy_unreviewed |
 | legacy-step-nine | nine steps -> color steps | 2 | legacy_unreviewed |
 | legacy-step-shade | shade steps -> wind steps | 2 | legacy_unreviewed |
-| legacy-step-sleev | sleev steps -> sky steps | 2 | batch_b_prechecked, legacy_unreviewed |
+| legacy-step-sleev | sleev steps -> sky steps | 2 | batch_b_prechecked |
 | legacy-step-standalone | eight steps<br>free steps<br>hundred steps<br>night steps | 4 | legacy_unreviewed |
 
 ## Skill Cards
@@ -257,7 +257,7 @@ Legacy chain: `sleev steps -> sky steps`
 
 ### 風雲袖步 / `sleev steps`
 
-- Audit: `legacy_unreviewed`
+- Audit: `batch_b_prechecked`
 - Family: `legacy-step-sleev`
 - Legacy prerequisite: `從缺`
 - Legacy next: `sky steps`

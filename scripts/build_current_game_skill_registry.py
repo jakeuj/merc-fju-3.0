@@ -523,7 +523,9 @@ def build_registry() -> dict:
         chinese_name = (legacy_catalog or {}).get("中文名稱") or custom and custom["chinese_name"] or name
         player_facing = name not in NPC_RUNTIME_SKILLS and name != "技能的熟練度共分十二個等級"
         npc_only = name in NPC_RUNTIME_SKILLS
-        combat = dict(runtime.get("combat_dimensions", {
+        existing_combat = dict(existing.get(name, {}).get("combat_dimensions", {}))
+        combat = dict(existing_combat)
+        combat.update(runtime.get("combat_dimensions", {
             "damage_values": [],
             "chance_values": [],
             "parry_values": [],
@@ -536,6 +538,8 @@ def build_registry() -> dict:
             "prepared_for_adjustment": bool(runtime.get("exists")),
             "notes": [],
         }))
+        if existing_combat.get("notes"):
+            combat["notes"] = list(existing_combat["notes"])
         if not runtime.get("exists"):
             combat.setdefault("prepared_for_adjustment", False)
         if legacy_requirements["restrictions"]["raw_lines"] and not combat.get("notes"):
