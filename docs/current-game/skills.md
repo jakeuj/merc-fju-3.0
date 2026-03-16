@@ -15,6 +15,13 @@ title: Current Game Skills
 
 對應的機器可讀整合台帳在 `docs/current-game/skills.json`。
 
+目前 GitHub Pages 可讀頁入口：
+
+- `docs/current-game/skills-index.md`
+- `docs/current-game/skills/step.md`
+
+這兩頁由 `scripts/generate_current_game_skills_pages.py` 生成，後續若 `skills.json` 更新，應重新執行該 script。
+
 ## 邊界
 
 - `docs/3yWebsite/`：reference-only，主要提供舊版世界觀、命名語彙、公告與技能體系脈絡。
