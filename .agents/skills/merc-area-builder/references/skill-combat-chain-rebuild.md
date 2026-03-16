@@ -1,0 +1,63 @@
+# Skill Combat Chain Rebuild
+
+當任務是在追「mob 技能配置是否因舊資料清值、簡化或錯位，導致實際功能偏弱」時，先把問題當成 runtime data audit，而不是先假設是全域戰鬥倍率問題。
+
+## 先讀哪些檔
+
+- `plans/0002-skill-combat-chain-audit.md`
+- `plans/failenable-npc-skill-audit.md`
+- `docs/current-game/skill-combat-audit.json`
+- `docs/current-game/skills.md`
+- `docs/current-game/skills.json`
+- `docs/3yWebsite/docs/data/skills.json`
+- `docs/3yWebsite/docs/data/players.json`
+- `skill/skill.lst`
+
+## 目前已確認的結論
+
+- `Attack Value`、`Skill Value`、`Mob Practice` 不是直接戰鬥倍率來源；不要把它們當成第一優先修值點。
+- `military blade`、`military steps`、`imperial sword`、`imperial steps`、`night blade`、`shadowtrace steps`、`cavalry lance` 是刻意存在的 NPC-only 技能。
+- guard-family 試點已經證明：問題確實可能來自 mob 掛了錯位或過弱的 legacy 技能鏈，但目前證據更偏向「局部配置失真」，不是「整個技能系統全面被閹割」。
+
+## 執行順序
+
+1. 先掃 `area/*/mob/*.mob` 的 `Enable`、`AutoEnable`、`#Learn`
+2. 先把目標 mob 分成三類：
+ - `ok`：舊技能仍符合角色身份鏈
+ - `restore_candidate`：技能名或熟練度明顯錯位，已有足夠 legacy/runtime 證據可直接改
+ - `suspect`：看起來怪，但證據不足
+3. 優先處理會直接影響城市守衛、宮廷守衛、城內戰鬥 NPC、常駐教學/服務 NPC 的樣本
+4. 若證據足夠，直接修改 runtime data，不要只停在分析
+5. 修改後同步更新 `docs/current-game/skill-combat-audit.json`
+6. 若判讀規則或範圍有變，再補 `plans/0002-skill-combat-chain-audit.md`
+
+## 舊技能判讀原則
+
+- 舊技能還在被 mob 使用，不等於它就是壞資料。
+- 先問「這個技能鏈在舊站是給誰走的」：
+ - `skills.json` 看技能名、類型、升階鏈、可否教導
+ - `players.json` 看玩家攻略裡它實際屬於哪種職系或成長路線
+- 若舊技能在玩家攻略裡是入門技能或江湖路線，但現在掛在正式軍旅 / 皇城守衛身上，優先視為錯位。
+- 若 mob 本身是技師、老師父、招式投影怪、劇情型小怪或特殊 boss，保留舊技能的門檻較低，不要為了統一而亂改。
+
+## 高價值殘留點
+
+- 注意 `skill name typo` 或殘留 alias；例如 `area/loyang/mob/571.mob` 的 `gdragon step`
+- 注意 `Enable 100` 的 legacy skill 是否其實只是多年未審的預設值
+- 注意城防 / 皇城 / 夜行 NPC 是否還掛著玩家向入門技能，而不是身份專用技能
+
+## 驗證
+
+- `make -C src -f Makefile.lin merc`
+- 若有 runtime data 變更，做一次 smoke test
+- 檢查 `log/*`、`debug/*`
+- 特別看 `Load_skill`、`Load_mobiles`、`LOG_FAILENABLE`
+
+## 回報格式
+
+回報時至少交代：
+
+- 哪些舊技能樣本已確認可以保留
+- 哪些 mob 已修正
+- 哪些樣本仍是 `suspect`
+- 下一輪最值得接續的子批次

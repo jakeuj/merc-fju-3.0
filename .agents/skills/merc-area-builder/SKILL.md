@@ -138,6 +138,7 @@ source of truth 要分兩種：
 - 若任務有新增或修改 `mob/*.mob` / `obj/*.obj`，尤其是 mob `Class` 或特殊 `ItemType`，也要補讀這份檔；不要只照文件猜常數或 `Value*` 欄位，先比對 repo 內已成功載入的同類範例
 - 若任務有新增 `skill/*.ski`、替 NPC 換技能、或讓新的 mob `Enable` 指到新技能，先搜尋 repo 內是否已有同名 skill / 同 slot / 同 `skill.lst` key；新增 skill 只是 area data 的一部分，但驗證要求應比一般 `mob/obj` 更高
 - NPC 專用且不打算讓玩家學習的技能，預設明確寫 `Valid NO`、`CanAsk NO`、`Teach NO`；但名稱、slot 與 loader 登錄仍要完整，不能因為是 NPC-only 就省略
+- 若任務明確是在追「mob 技能偏弱 / 舊技能殘留 / 技能鏈重建」，再補讀 `references/skill-combat-chain-rebuild.md`；這類任務要先區分全域係數、legacy skill 合理保留、與真的需要 runtime 替換的錯位樣本
 
 ### 4. 同步系統設定
 - `merc.ini`、`variable.c`、`job.c`、`bus/ship/bounty` 與 docs 對照點，讀 `references/system-sync-checks.md`
@@ -184,6 +185,7 @@ source of truth 要分兩種：
 - `references/theme-patterns-folklore-ruins.md`
 - `references/current-repo-state.md`
 - `references/file-handling-rules.md`
+- `references/skill-combat-chain-rebuild.md`
 - `references/system-sync-checks.md`
 - `references/docs-service-integration.md`
 - `references/planning-principles.md`
