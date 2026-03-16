@@ -35,7 +35,7 @@ Description
 $G$n身形靈動﹐矮身低頭﹐$P幔羅千葉刀法第一式「旋風式」$G使了出來﹐手中的$Z$O
 $G飛快的向$N直砍而下﹐腿也朝$N下盤踢去﹐快刀神腿﹐逼的$N手忙腳亂。$Z~
 Chance          20
-Value           20
+Value           190
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -46,7 +46,7 @@ Description
 $G$n身子向後一傾﹐順勢一招$P幔羅千葉刀法第二式「龍翔鳳舞」$G向$N襲擊而到﹐$n
 身形忽然飄盪﹐忽東忽西﹐手中$Z$O$G飛快的舞著﹐刀光殘影﹐只看的$N眼花瞭亂。$Z~
 Chance          20
-Value           20
+Value           205
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -57,7 +57,7 @@ Description
 $G$n忽然身形一變﹐向後退了半步﹐使出一招$P幔羅千葉刀法第三式「退步斬馬刀」$G﹐
 手中$Z$O$G橫劈$N的大腿﹐接著刀背一翻﹐順勢向$N的腰際滑了過來﹐狠斬$N的腰眼。$Z~
 Chance          20
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -69,7 +69,7 @@ $G$n左手虛托﹐身子略向左斜﹐一刀飛出﹐正是一式$P幔羅千�
 $G直向$N臂膀砍到﹐刀鋒飛快的從$N右臂掃過直飛向面門﹐又往左臂砍到﹐$N驚慌的想要
 逃開。$Z~
 Chance          20
-Value           20
+Value           235
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -80,7 +80,7 @@ Description
 $G$n手中刀柄向上﹐刀背向外﹐身子向前微躬﹐一式$P幔羅千葉刀法第五式「參拜北斗」
 $G向$N的胸前招呼了過來﹐瞬間$n刀背一翻﹐直砍$N的左臂﹐逼的$N向後連退了三步。$Z~
 Chance          20
-Value           20
+Value           250
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -92,7 +92,7 @@ $G$n刀舞身轉﹐腳下不停的移動著﹐繞著$N不停的尋找破綻﹐$n
 刀法第六式「轉身劈山」$G﹐身子向右邊一轉﹐斜刺刺一刀的向$N劈到﹐待$N發覺時已不
 及反應了。$Z~
 Chance          20
-Value           20
+Value           265
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -104,7 +104,7 @@ $G$n身子向左滑了半步﹐刀背略沉﹐刀走中偏鋒﹐一招$P幔羅�
 」$G向$N斬了過來﹐$N急忙招架﹐$n又向左滑半步﹐刀背上提﹐刀鋒直進﹐向$N胸口砍了
 下來。$Z~
 Chance          20
-Value           20
+Value           280
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -116,7 +116,7 @@ $G$n手中的刀一個虛劈﹐雙腿蹲了個弓步﹐忽然向$N飛奔而去�
 著虛砍﹐一招$P幔羅千葉刀法第八式「雷電交作」$G使了出來﹐迅速的向$N的腦袋招呼了
 過來。$Z~
 Chance          20
-Value           20
+Value           295
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -128,7 +128,7 @@ $G$n運起全身內力﹐真氣從丹田中遊走全身﹐最後在手中食指�
 千斤墜」﹐手中使出一招$P幔羅千葉刀法第九式「獨劈華山」$G威猛的向$N急劈而下﹐眼
 見$N就難已活命了。$Z~
 Chance          20
-Value           20
+Value           310
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -140,7 +140,7 @@ $G$n向後退了一步﹐集精聚神的舞起千葉刀法的精要﹐忽然迅�
 法第十式「分花拂柳」$G此招﹐身形如行雲流水般的飄盪﹐東飄西盪﹐$Z$O$G輕慢的向$N
 的小腹砍了下去﹐柔中帶鋼﹐鋼中有柔。$Z~
 Chance          20
-Value           20
+Value           325
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -152,7 +152,7 @@ $G$n將$Z$O$G舞得滴水不漏﹐刀快如飛葉﹐忽然轉守為攻﹐向$N�
 十一式「四雁南飛」$G﹐$n手中的$Z$O$G快速的飛舞著﹐分別以上、下、左、右四個門路
 向$N攻來﹐$N看來已無法招架了。$Z~
 Chance          20
-Value           20
+Value           340
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -164,7 +164,7 @@ $G$n蓄勢待發﹐忽然使出一招$P幔羅千葉刀法第十二式「懷中�
 飛快向前傾﹐手中的$Z$O$G則是舞動的飛快異常﹐直進中宮﹐忽的刀背一翻﹐橫劈$N的
 左肩﹐此招變化之快﹐$N實是閃躲不易。$Z~
 Chance          20
-Value           20
+Value           355
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -176,7 +176,7 @@ $G$n在$N身邊不停的移動﹐一招$P幔羅千葉刀法第十三式「荊軻
 然將手中的$Z$O$G腹向$N拍到﹐接著又是刀柄一轉﹐向$N的小腹直戳而下﹐$n又舞著$Z
 $O$G向$N的下盤斜劈了下去﹐$N慌忙的想避開這招。$Z~
 Chance          20
-Value           20
+Value           370
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -188,7 +188,7 @@ $G$n將手中的$Z$O$G飛快的舞著﹐一招$P幔羅千葉刀法第十四式�
 取$N的面門﹐腳下踢著「連環十八腿」﹐向$N的門戶打了過來﹐招式毒辣前所未見﹐忽然
 刀背一轉﹐狠狠的向$N的右膀子砍了過來。$Z~
 Chance          20
-Value           20
+Value           385
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -200,7 +200,7 @@ $G$n提起真氣狂舞$Z$O$G﹐刀氣環繞在$n的四周發出嗶爆聲﹐一�
 五式「諫果回甘」$G﹐刀光殘影﹐$Z$O$G迅捷的在$n頭頂上飛舞著﹐忽然間猛烈的向$N
 迎面劈來﹐只聽到$N慘叫一聲﹐眼看$N已經不能活命了。$Z~
 Chance          20
-Value           20
+Value           400
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -212,7 +212,7 @@ $G$n把$Z$O$G往腰際一收﹐擺了個「先禮後兵」﹐隨後身子旋轉�
 然向$N急刺而出﹐這正是一招$P幔羅千葉刀法第十六式「藏刀式」$G﹐$n飛快的向$N砍
 了七七四十九刀﹐刀刀致命﹐招招狠毒﹐眼看$N就要不行了。$Z~
 Chance          20
-Value           20
+Value           420
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -224,7 +224,7 @@ $G$n眼觀六路﹐耳聽八方﹐聚精會神的與$N纏鬥著﹐$n將$Z$O$G狂
 千葉刀法第十七式「陽關折柳」$G﹐只見刀光閃閃﹐$n全身上下被刀氣所攏罩著﹐驟然
 將$Z$O$G一變二﹐二變四﹐四變八﹐分別及擊向$N全身上下八大要害。$Z~
 Chance          20
-Value           20
+Value           440
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -236,7 +236,7 @@ $G$n形影飄盪﹐若隱若現﹐手中的$Z$O$G詭異的飛舞著﹐這正是$
 式「惡虎攔路」$G﹐待$N稍一分神﹐立即一剁一砍﹐向$N的周身大穴招呼而來﹐刀刀命
 中要害﹐令$N感到搏手搏腳﹐毫無反擊能力。$Z~
 Chance          20
-Value           20
+Value           460
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -248,7 +248,7 @@ $G$n運起六陽心法﹐只見$n頭頂冒出絲絲白煙﹐$P幔羅千葉刀法
 $G迅捷的使出﹐四周突然天旋地轉﹐分不出東西南北﹐$N已感到頭昏﹐$n瞬間欺進$N的
 身邊﹐舉起$Z$O$G便往$N腦袋砍下。$Z~
 Chance          20
-Value           20
+Value           480
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -261,7 +261,7 @@ $N招呼而來﹐$n手中的$Z$O$G刀鋒閃閃發光﹐刀未至﹐氣先到﹐�
 刀氣向$N襲擊而來﹐逼的$N連連倒退﹐接著強勁的$Z$O$G又跟著砍了過來﹐有如猛虎下
 山之勢。$Z~
 Chance          20
-Value           20
+Value           500
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -273,7 +273,7 @@ $G$n刀快似箭﹐刀光閃閃﹐片片燐光﹐以一招$P幔羅千葉刀法�
 $G向$N襲掩而到﹐急砍向$N的小腹、右臂、左肩等處﹐接著臂轉刀至﹐刀轉刀氣橫生﹐$n
 全身上下被籠照在刀氣之下﹐突然一股氣又向$N擊了過來﹐直向$N腦門衝了過去。$Z~
 Chance          20
-Value           20
+Value           520
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -286,7 +286,7 @@ $G$n左手一揮﹐手中又多了一把$Z$O$G﹐雙刀其發﹐如虎添翼﹐�
 峰迴路轉﹐$n身形飄盪不定﹐陰陽倒置﹐$N全身動彈不得﹐刀氣如九龍騰出﹐分路向四
 面八方襲擊而去。$Z~
 Chance          20
-Value           20
+Value           550
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

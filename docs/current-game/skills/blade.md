@@ -60,7 +60,7 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 五十級, max 登峰造極﹗; 武 官 >= 三十級, max 出類拔萃﹗; 將 軍 >= 五十級, max 一代宗師﹗`
 - Restrictions: `-`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[95, 115, 135, 155, 175, 195, 215, 240, 270]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -102,7 +102,7 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 神乎其技﹗; 將 軍 >= 一級, max 一代宗師﹗`
 - Restrictions: `attrs: 敏捷 >= 二十五, 力量 >= 二十; skills: 花語刀法 >= 登峰造極; classes: 刺 客/將 軍`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[190, 205, 220, 235, 250, 265, 280, 295, 310, 325, 340, 355, 370, 385, 400, 420, 440, 460, 480, 500, 520, 550]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -186,7 +186,7 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 登峰造極﹗; 武 官 >= 一級, max 心神領會﹗; 將 軍 >= 一級, max 一代宗師﹗`
 - Restrictions: `attrs: 敏捷 >= 十五, 力量 >= 十五; skills: 相思碎夢刀法 >= 出類拔萃`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[140, 165, 190, 215, 240, 265, 290, 325]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
