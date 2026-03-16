@@ -5,14 +5,21 @@ title: Current Game Skills
 
 # Current Game Skills
 
-這份文件只記錄目前 `merc-fju-3.0` repo 額外補上的技能資訊，用來避免和 `docs/3yWebsite/` 的舊站參考資料混在一起。
+這份文件記錄目前 `merc-fju-3.0` 的整合技能台帳規則，用來把：
 
-對應的機器可讀補充台帳在 `docs/current-game/skills.json`。
+- 舊站技能設計證據
+- 現行 runtime 技能存在狀態
+- 目前 audit / rebuild 進度
+
+放在同一個可追蹤的地方，而不再只記「repo 額外補上的技能」。
+
+對應的機器可讀整合台帳在 `docs/current-game/skills.json`。
 
 ## 邊界
 
 - `docs/3yWebsite/`：reference-only，主要提供舊版世界觀、命名語彙、公告與技能體系脈絡。
-- `docs/current-game/skills.md`：現行 repo 額外新增或重定義的技能補充說明。
+- `docs/current-game/skills.md`：現行 repo 的整合技能台帳說明。
+- `docs/current-game/skills.json`：整合型技能總表；同時保留 legacy chain、runtime presence、NPC-only 設計與 audit 狀態。
 
 ## 舊站參考基線
 
@@ -40,7 +47,48 @@ title: Current Game Skills
 - 對應 `mob/*.mob` 的 `Enable` / `AutoEnable`
 - 必要時的 `obj/*.obj` 與 `res/*.res`
 
-這份文件只做開發紀錄，不取代上述 runtime 資料。
+這份文件與 `docs/current-game/skills.json` 都只做開發紀錄，不取代上述 runtime 資料。
+
+## Current Registry Schema
+
+`docs/current-game/skills.json` 現在不再只記 supplemental additions，而是改成整合型 registry。每筆 skill 目前可包含：
+
+- `legacy_navigation`
+  - 舊站技能導覽層的群組與葉節點
+  - 例如 `武器技能 / 劍`、`法術技能 / 雷系`、`其他技能 / 步法`
+- `legacy_catalog`
+  - `docs/3yWebsite/docs/data/skills.json` 的原始抽取欄位
+  - 用來保留舊站頁面上已被扁平抽出的技能資料
+- `legacy_reference`
+  - 舊站 HTML / JSON 的來源頁
+  - 舊站技能鏈中的前後關係
+  - 舊站顯示的 prerequisite
+- `runtime`
+  - 是否存在於目前 repo
+  - `skill_file`
+  - `skill_lst_key`
+  - `slot_symbol`
+  - `type`
+  - 需要時補 `cost / wait / associate / canask / teach / valid / enable`
+- `combat_dimensions`
+  - `damage_values`
+  - `chance_values`
+  - `parry_values`
+  - `innate_values`
+  - `wait / cost / cost_type / weapon / check`
+  - 以及後續調整批次要補的備註
+- `status`
+  - 是否玩家向
+  - 是否 NPC-only
+  - 目前 audit 狀態，例如 `runtime_active`、`batch_b_prechecked`、`legacy_unreviewed`
+
+這個 schema 的目標是讓後續工作能直接回答：
+
+- 這個技能在舊站屬於哪條鏈
+- 目前 runtime 還在不在
+- 它是玩家技能還是 NPC-only
+- 它現在是否已納入某個 rebuild 批次
+- 它目前的 combat template 長什麼樣，之後要改哪些維度
 
 ## Legacy Skill Damage 重建注意事項
 
@@ -116,6 +164,83 @@ title: Current Game Skills
 | `dragon sleeve sword` | `skill/d/dragonsleeve.ski` | 高階刺客劍法 | 調整為高於 `fonxan sword` 的高階模板。 |
 
 這一批的目的不是宣告全體 legacy skill 都已平衡完成，而是先把「同一條玩家向技能鏈不應全部等傷」這個最低限度的 runtime 梯階補回來，並作為後續步法、拳法、刀法批次的對照基線。
+
+## 2026-03 Batch B 前置盤點結論
+
+第二批預備處理的步法樣本是 `cloud steps`、`gdragon steps`、`sky steps`，但前置盤點後已確認它們不是單一直線：
+
+- `cloud steps -> gdragon steps`
+  - 舊站 `skills.json` 與 runtime `Associate` 都支持這條主鏈
+- `sleev steps -> sky steps`
+  - 舊站 `players.json` 與 runtime `Associate` 都支持這條分支
+
+所以 Batch B 的正確做法不是把 `cloud / gdragon / sky` 當同一條 ladder 一起上調，而是：
+
+- 把 `cloud -> gdragon` 當主鏈處理
+- 把 `sky steps` 當平行高階步法處理，保留它「花費體力很少」的特色
+
+前置盤點也確認：
+
+- 三者目前 `#Damage Value` 都仍是 `20`
+- 但 `Cost / Wait` 沒有被壓平
+- `cloud steps` 仍保有低耗、極短 wait 的入門高頻特性
+- `gdragon steps` 與 `sky steps` 都是 `Wait 10`，但 `sky steps` 的 `Cost 10` 低於 `gdragon steps` 的 `Cost 15`
+
+這代表 Batch B 下一步修值時，應優先重建 dodge template，而不是抹掉原本殘留的節奏與耗能差異。
+
+## 2026-03 Step Family Registry Seed
+
+目前 `docs/current-game/skills.json` 已完成兩層 seed：
+
+- 舊站 `docs/3yWebsite/docs/data/skills.json` 的全部 `31` 筆條目
+- `docs/3yWebsite/skill/step.html` 額外才看得到的步法鏈 descendants
+
+所以現在至少能直接看出這些舊設計：
+
+- `cloud steps -> gdragon steps -> mirage steps`
+- `sleev steps -> sky steps`
+- `nine steps -> color steps`
+- `cloud ghost -> wind color steps`
+- `shade steps -> wind steps`
+- `night steps` / `free steps` / `hundred steps` / `eight steps` 為獨立或特殊高階線
+
+這一批的意義是把舊站 HTML 才看得到的鏈路拓樸，正式轉進 current-game registry，避免之後只靠舊的扁平 JSON 推錯技能鏈。
+
+目前 coverage 仍是第一版，但已不再只有步法：
+
+- 已納入：
+  - 舊站 `skills.json` 全條目
+  - 步法全家族的額外升階節點
+  - 2026-03 NPC-only 新技能
+- 尚未納入：
+  - 其他舊站 HTML 頁裡、但沒有被 `skills.json` 扁平抽出的升階 descendants
+  - 每個 skill 對應的 mob 使用樣本
+  - 每次 rebuild 後的 before/after combat audit 快照
+
+所以後續若要做全技能總表，正確方向是繼續擴這份 schema，而不是回頭把 `docs/3yWebsite/docs/data/skills.json` 當成現行 registry。
+
+## 舊站分類骨架保留
+
+新台帳現在也保留了舊站技能導覽骨架，不只保留單筆 skill 資料。也就是說，這些既有分類已經能在 `docs/current-game/skills.json` 裡直接表達：
+
+- `武器技能`
+  - `劍` `刀` `弓` `槍` `棍`
+  - `斧` `鞭` `筆扇` `短兵` `拳法`
+  - `氣功`
+- `法術技能`
+  - `火系` `風系` `光系` `聖系` `雷系`
+  - `水系` `土系` `暗系` `邪系` `毒系`
+- `職業技能`
+  - `格鬥系` `暗殺系` `法師系` `鑄造系` `吟唱系`
+  - `醫療系` `盜賊系`
+- `其他技能`
+  - `步法` `技能` `技能熟練度`
+
+其中有一個 normalization：
+
+- 舊站抽取 JSON 裡有 `雷電系`
+- 新台帳的導覽骨架統一記成 `雷系`
+- 但原始 `legacy_catalog` 欄位仍保留舊字樣，不會覆蓋掉原始資料
 
 ## 維護規則
 

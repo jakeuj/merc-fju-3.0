@@ -1,119 +1,6424 @@
 {
-  "scope": "Current repo supplemental skill registry for merc-fju-3.0 runtime additions. docs/3yWebsite remains reference-only.",
-  "reference_baseline": [
-    "docs/3yWebsite/docs/data/skills.json",
-    "docs/3yWebsite/docs/data/players.json"
-  ],
-  "reference_usage": {
-    "skills_json": "Legacy skill naming, category, shareability, resource cost, and upgrade-chain baseline.",
-    "players_json": "Legacy player-route context for starter skills, class-facing progression, and role alignment checks."
+  "registry_version": 3,
+  "scope": "Integrated current-game skill registry for merc-fju-3.0. It combines old-site catalog data, runtime presence, and skill-combat audit fields without replacing runtime source files.",
+  "coverage": {
+    "seeded_families": [
+      "all entries from docs/3yWebsite/docs/data/skills.json",
+      "legacy step family descendants recovered from docs/3yWebsite/skill/step.html",
+      "2026-03 npc-only runtime additions"
+    ],
+    "planned_expansion": [
+      "other old-site HTML page descendants beyond the flattened JSON roots",
+      "per-skill mob usage cross-links",
+      "post-adjustment before/after combat audit snapshots"
+    ]
   },
-  "legacy_reference_signals": [
-    {
-      "source_file": "docs/3yWebsite/docs/data/skills.json",
-      "runtime_key": "legacy:cloud steps",
-      "notes": "Old-site baseline marks cloud steps as a dodge skill and points its upgrade chain to gdragon steps."
-    },
-    {
-      "source_file": "docs/3yWebsite/docs/data/players.json",
-      "runtime_key": "legacy:player-route:cloud-gdragon",
-      "notes": "Bravo/general player guides confirm cloud steps -> gdragon steps as an actual player-facing route, not just a catalog field."
-    },
-    {
-      "source_file": "docs/3yWebsite/docs/data/skills.json",
-      "runtime_key": "legacy:hua sword",
-      "notes": "Old-site baseline keeps hua sword as a shareable entry sword line that upgrades to fonxan sword."
-    },
-    {
-      "source_file": "docs/3yWebsite/docs/data/players.json",
-      "runtime_key": "legacy:player-route:starter-baseline",
-      "notes": "The new-player guide places cloud steps, hua sword, long fist, and flee in an early learn baseline."
-    },
-    {
-      "source_file": "docs/3yWebsite/docs/data/players.json",
-      "runtime_key": "legacy:player-route:two-sword",
-      "notes": "Bravo guides place two sword in an advanced player sword route, which helps explain why it was a poor fit for city-guard NPC identity."
-    }
-  ],
-  "source_of_truth": [
-    "skill/*.ski",
-    "skill/skill.lst",
-    "src/merc.h",
-    "data/symbol.def",
-    "mob/*.mob",
-    "obj/*.obj",
-    "res/*.res"
+  "source_layers": {
+    "legacy_html": [
+      "docs/3yWebsite/skill/*.html"
+    ],
+    "legacy_json": [
+      "docs/3yWebsite/docs/data/skills.json",
+      "docs/3yWebsite/docs/data/players.json"
+    ],
+    "runtime": [
+      "skill/*.ski",
+      "skill/skill.lst",
+      "src/merc.h",
+      "data/symbol.def"
+    ]
+  },
+  "combat_dimension_schema": {
+    "purpose": "Keep one audit-ready place for current skill templates and future tuning deltas.",
+    "fields": [
+      "damage_values",
+      "chance_values",
+      "parry_values",
+      "innate_values",
+      "wait",
+      "cost",
+      "cost_type",
+      "weapon",
+      "check"
+    ],
+    "usage_notes": [
+      "Do not tune by damage_values alone; read chance/parry/innate/wait/cost/weapon/check together.",
+      "For runtime-missing or reference-only entries, leave combat fields empty until a verified source exists.",
+      "When a batch changes a skill, append batch-specific notes rather than overwriting historical context."
+    ]
+  },
+  "notes": [
+    "This file is an integrated working registry, not the runtime source of truth.",
+    "Legacy chain topology should prefer old-site HTML when docs/3yWebsite/docs/data/skills.json flattens a page into one root row.",
+    "combat_dimensions is intended to hold both current runtime values and future tuning metadata."
   ],
   "skills": [
     {
       "english_name": "military blade",
       "chinese_name": "鎮軍刀法",
-      "skill_file": "skill/m/military_blade.ski",
-      "skill_lst_key": "military_blade",
-      "slot_symbol": "SLOT_MILITARY_BLADE",
-      "category": "offensive",
-      "npc_only": true,
-      "intended_roles": ["城市守衛", "城門守衛", "禁軍護衛"]
+      "category_group": "current-runtime",
+      "legacy_catalog": null,
+      "legacy_reference": null,
+      "family": "npc-military",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/m/military_blade.ski",
+        "skill_lst_key": "military_blade",
+        "slot_symbol": "SLOT_MILITARY_BLADE",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 18,
+        "cost_type": "COST_MOVE",
+        "wait": 6,
+        "weapon": "WEAPON_BLADE",
+        "check": "check_blade_attack",
+        "associate": "-1",
+        "canask": false,
+        "teach": false,
+        "valid": false,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            120,
+            160,
+            220,
+            290,
+            360
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 6,
+          "cost": 18,
+          "cost_type": "COST_MOVE",
+          "weapon": "WEAPON_BLADE",
+          "check": "check_blade_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          120,
+          160,
+          220,
+          290,
+          360
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 6,
+        "cost": 18,
+        "cost_type": "COST_MOVE",
+        "weapon": "WEAPON_BLADE",
+        "check": "check_blade_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": false,
+        "npc_only": true,
+        "audit_state": "runtime_active"
+      },
+      "intended_roles": [
+        "城市守衛",
+        "城門守衛",
+        "禁軍護衛"
+      ],
+      "legacy_navigation": null
     },
     {
       "english_name": "military steps",
       "chinese_name": "鎮軍步",
-      "skill_file": "skill/m/military_steps.ski",
-      "skill_lst_key": "military_steps",
-      "slot_symbol": "SLOT_MILITARY_STEPS",
-      "category": "dodge",
-      "npc_only": true,
-      "intended_roles": ["城市守軍", "騎卒", "低中階軍職 NPC"]
+      "category_group": "current-runtime",
+      "legacy_catalog": null,
+      "legacy_reference": null,
+      "family": "npc-military",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/m/military_steps.ski",
+        "skill_lst_key": "military_steps",
+        "slot_symbol": "SLOT_MILITARY_STEPS",
+        "type": "TAR_DODGE",
+        "cost": 12,
+        "cost_type": "COST_MOVE",
+        "wait": 5,
+        "weapon": null,
+        "check": null,
+        "associate": "-1",
+        "canask": false,
+        "teach": false,
+        "valid": false,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            70,
+            100,
+            130,
+            170,
+            210
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 5,
+          "cost": 12,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          70,
+          100,
+          130,
+          170,
+          210
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 5,
+        "cost": 12,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": false,
+        "npc_only": true,
+        "audit_state": "runtime_active"
+      },
+      "intended_roles": [
+        "城市守軍",
+        "騎卒",
+        "低中階軍職 NPC"
+      ],
+      "legacy_navigation": null
     },
     {
       "english_name": "imperial sword",
       "chinese_name": "禁城御劍",
-      "skill_file": "skill/i/imperial_sword.ski",
-      "skill_lst_key": "imperial_sword",
-      "slot_symbol": "SLOT_IMPERIAL_SWORD",
-      "category": "offensive",
-      "npc_only": true,
-      "intended_roles": ["殿前護衛", "御前護衛", "皇宮禁衛軍高階樣本"]
+      "category_group": "current-runtime",
+      "legacy_catalog": null,
+      "legacy_reference": null,
+      "family": "npc-imperial",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/i/imperial_sword.ski",
+        "skill_lst_key": "imperial_sword",
+        "slot_symbol": "SLOT_IMPERIAL_SWORD",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 24,
+        "cost_type": "COST_MOVE",
+        "wait": 7,
+        "weapon": "WEAPON_SWORD",
+        "check": "check_sword_attack",
+        "associate": "-1",
+        "canask": false,
+        "teach": false,
+        "valid": false,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            150,
+            220,
+            320,
+            450,
+            620
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 7,
+          "cost": 24,
+          "cost_type": "COST_MOVE",
+          "weapon": "WEAPON_SWORD",
+          "check": "check_sword_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          150,
+          220,
+          320,
+          450,
+          620
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 7,
+        "cost": 24,
+        "cost_type": "COST_MOVE",
+        "weapon": "WEAPON_SWORD",
+        "check": "check_sword_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": false,
+        "npc_only": true,
+        "audit_state": "runtime_active"
+      },
+      "intended_roles": [
+        "殿前護衛",
+        "御前護衛",
+        "皇宮禁衛軍高階樣本"
+      ],
+      "legacy_navigation": null
     },
     {
       "english_name": "imperial steps",
       "chinese_name": "龍驤御步",
-      "skill_file": "skill/i/imperial_steps.ski",
-      "skill_lst_key": "imperial_steps",
-      "slot_symbol": "SLOT_IMPERIAL_STEPS",
-      "category": "dodge",
-      "npc_only": true,
-      "intended_roles": ["殿前護衛", "御前護衛"]
+      "category_group": "current-runtime",
+      "legacy_catalog": null,
+      "legacy_reference": null,
+      "family": "npc-imperial",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/i/imperial_steps.ski",
+        "skill_lst_key": "imperial_steps",
+        "slot_symbol": "SLOT_IMPERIAL_STEPS",
+        "type": "TAR_DODGE",
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "wait": 6,
+        "weapon": null,
+        "check": null,
+        "associate": "-1",
+        "canask": false,
+        "teach": false,
+        "valid": false,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            100,
+            140,
+            190,
+            250,
+            330
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 6,
+          "cost": 15,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          100,
+          140,
+          190,
+          250,
+          330
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 6,
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": false,
+        "npc_only": true,
+        "audit_state": "runtime_active"
+      },
+      "intended_roles": [
+        "殿前護衛",
+        "御前護衛"
+      ],
+      "legacy_navigation": null
     },
     {
       "english_name": "night blade",
       "chinese_name": "夜梟奪命刀",
-      "skill_file": "skill/n/night_blade.ski",
-      "skill_lst_key": "night_blade",
-      "slot_symbol": "SLOT_NIGHT_BLADE",
-      "category": "offensive",
-      "npc_only": true,
-      "intended_roles": ["盜賊", "浪人", "大盜類 NPC"]
+      "category_group": "current-runtime",
+      "legacy_catalog": null,
+      "legacy_reference": null,
+      "family": "npc-night",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/n/night_blade.ski",
+        "skill_lst_key": "night_blade",
+        "slot_symbol": "SLOT_NIGHT_BLADE",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 20,
+        "cost_type": "COST_MOVE",
+        "wait": 5,
+        "weapon": "WEAPON_BLADE",
+        "check": "check_blade_attack",
+        "associate": "-1",
+        "canask": false,
+        "teach": false,
+        "valid": false,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            110,
+            170,
+            260,
+            360,
+            520
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 5,
+          "cost": 20,
+          "cost_type": "COST_MOVE",
+          "weapon": "WEAPON_BLADE",
+          "check": "check_blade_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          110,
+          170,
+          260,
+          360,
+          520
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 5,
+        "cost": 20,
+        "cost_type": "COST_MOVE",
+        "weapon": "WEAPON_BLADE",
+        "check": "check_blade_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": false,
+        "npc_only": true,
+        "audit_state": "runtime_active"
+      },
+      "intended_roles": [
+        "盜賊",
+        "浪人",
+        "大盜類 NPC"
+      ],
+      "legacy_navigation": null
     },
     {
       "english_name": "shadowtrace steps",
       "chinese_name": "流影換形步",
-      "skill_file": "skill/s/shadowtrace_steps.ski",
-      "skill_lst_key": "shadowtrace_steps",
-      "slot_symbol": "SLOT_SHADOW_NIGHT_STEPS",
-      "category": "dodge",
-      "npc_only": true,
-      "intended_roles": ["盜賊", "浪人", "大盜類 NPC"]
+      "category_group": "current-runtime",
+      "legacy_catalog": null,
+      "legacy_reference": null,
+      "family": "npc-night",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/s/shadowtrace_steps.ski",
+        "skill_lst_key": "shadowtrace_steps",
+        "slot_symbol": "SLOT_SHADOW_NIGHT_STEPS",
+        "type": "TAR_DODGE",
+        "cost": 12,
+        "cost_type": "COST_MOVE",
+        "wait": 4,
+        "weapon": null,
+        "check": null,
+        "associate": "-1",
+        "canask": false,
+        "teach": false,
+        "valid": false,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            80,
+            120,
+            180,
+            240,
+            320
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 4,
+          "cost": 12,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          80,
+          120,
+          180,
+          240,
+          320
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 4,
+        "cost": 12,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": false,
+        "npc_only": true,
+        "audit_state": "runtime_active"
+      },
+      "intended_roles": [
+        "盜賊",
+        "浪人",
+        "大盜類 NPC"
+      ],
+      "legacy_navigation": null
     },
     {
       "english_name": "cavalry lance",
       "chinese_name": "驍騎槍式",
-      "skill_file": "skill/c/cavalry_lance.ski",
-      "skill_lst_key": "cavalry_lance",
-      "slot_symbol": "SLOT_CAVALRY_LANCE",
-      "category": "offensive",
-      "npc_only": true,
-      "intended_roles": ["騎兵", "持槍軍職 NPC"]
+      "category_group": "current-runtime",
+      "legacy_catalog": null,
+      "legacy_reference": null,
+      "family": "npc-military",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/c/cavalry_lance.ski",
+        "skill_lst_key": "cavalry_lance",
+        "slot_symbol": "SLOT_CAVALRY_LANCE",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 20,
+        "cost_type": "COST_MOVE",
+        "wait": 6,
+        "weapon": "WEAPON_SPEAR",
+        "check": "check_spear_attack",
+        "associate": "-1",
+        "canask": false,
+        "teach": false,
+        "valid": false,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            130,
+            190,
+            260,
+            340,
+            430
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 6,
+          "cost": 20,
+          "cost_type": "COST_MOVE",
+          "weapon": "WEAPON_SPEAR",
+          "check": "check_spear_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          130,
+          190,
+          260,
+          340,
+          430
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 6,
+        "cost": 20,
+        "cost_type": "COST_MOVE",
+        "weapon": "WEAPON_SPEAR",
+        "check": "check_spear_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": false,
+        "npc_only": true,
+        "audit_state": "runtime_active"
+      },
+      "intended_roles": [
+        "騎兵",
+        "持槍軍職 NPC"
+      ],
+      "legacy_navigation": null
+    },
+    {
+      "english_name": "技能的熟練度共分十二個等級",
+      "chinese_name": "技能的熟練度共分十二個等級",
+      "category_group": "其他技能",
+      "legacy_catalog": {
+        "path": "skill/learnlv.html",
+        "category": "其他技能",
+        "display_name": "技能的熟練度共分十二個等級"
+      },
+      "legacy_reference": {
+        "page": "skill/learnlv.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [],
+        "prerequisite": null,
+        "upgrade_target": null,
+        "upgrade_chance": null
+      },
+      "family": "legacy-meta",
+      "runtime": {
+        "exists": false
+      },
+      "combat_dimensions": {
+        "damage_values": [],
+        "chance_values": [],
+        "parry_values": [],
+        "innate_values": [],
+        "wait": null,
+        "cost": null,
+        "cost_type": null,
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": false,
+        "notes": [
+          "Informational old-site entry; not a runtime skill definition."
+        ]
+      },
+      "status": {
+        "player_facing": false,
+        "npc_only": false,
+        "audit_state": "legacy_reference_only"
+      },
+      "legacy_navigation": {
+        "group": "其他技能",
+        "leaf": "技能熟練度",
+        "page_path": "skill/learnlv.html"
+      }
+    },
+    {
+      "english_name": "ghost axe",
+      "chinese_name": "神盤鬼斧六絕式",
+      "category_group": "武器技能",
+      "legacy_catalog": {
+        "path": "skill/axe.html",
+        "category": "武器技能",
+        "英文名稱": "ghost axe",
+        "中文名稱": "神盤鬼斧六絕式",
+        "攻擊武器": "斧",
+        "互相教導": "可以",
+        "技能功能": "攻擊類",
+        "技能分類": "技能",
+        "浪費數值": "體力",
+        "領悟技能": "霸虎戰訣(tiger axe)",
+        "領悟機率": "極低",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/axe.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "tiger axe"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "霸虎戰訣(tiger axe)",
+        "upgrade_chance": "極低"
+      },
+      "family": "legacy-page:axe",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/g/ghost_axe.ski",
+        "skill_lst_key": "ghost_axe",
+        "slot_symbol": "SLOT_GHOST_AXE",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 30,
+        "cost_type": "COST_MOVE",
+        "wait": 15,
+        "weapon": "WEAPON_AXE",
+        "check": "check_axe_attack",
+        "associate": "SLOT_TIGER_AXE",
+        "canask": true,
+        "teach": true,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 15,
+          "cost": 30,
+          "cost_type": "COST_MOVE",
+          "weapon": "WEAPON_AXE",
+          "check": "check_axe_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 15,
+        "cost": 30,
+        "cost_type": "COST_MOVE",
+        "weapon": "WEAPON_AXE",
+        "check": "check_axe_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "武器技能",
+        "leaf": "斧",
+        "page_path": "skill/axe.html"
+      }
+    },
+    {
+      "english_name": "pry",
+      "chinese_name": "打聽技能",
+      "category_group": "職業技能",
+      "legacy_catalog": {
+        "path": "skill/bard.html",
+        "category": "職業技能",
+        "英文名稱": "pry",
+        "中文名稱": "打聽技能",
+        "攻擊武器": "空手",
+        "互相教導": "不可以",
+        "技能分類": "吟唱系",
+        "浪費數值": "法力",
+        "領悟技能": "從缺",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/bard.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [],
+        "prerequisite": "從缺",
+        "upgrade_target": "從缺",
+        "upgrade_chance": null
+      },
+      "family": "legacy-page:bard",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/p/pry.ski",
+        "skill_lst_key": "pry",
+        "slot_symbol": "SLOT_PRY",
+        "type": "TAR_STRING",
+        "cost": 20,
+        "cost_type": null,
+        "wait": 18,
+        "weapon": null,
+        "check": "check_unrigid_attack",
+        "associate": "SLOT_JUDGE",
+        "canask": false,
+        "teach": true,
+        "valid": false,
+        "enable": false,
+        "combat_dimensions": {
+          "damage_values": [],
+          "chance_values": [],
+          "parry_values": [],
+          "innate_values": [],
+          "wait": 18,
+          "cost": 20,
+          "cost_type": null,
+          "weapon": null,
+          "check": "check_unrigid_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [],
+        "chance_values": [],
+        "parry_values": [],
+        "innate_values": [],
+        "wait": 18,
+        "cost": 20,
+        "cost_type": null,
+        "weapon": null,
+        "check": "check_unrigid_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "職業技能",
+        "leaf": "吟唱系",
+        "page_path": "skill/bard.html"
+      }
+    },
+    {
+      "english_name": "her blade",
+      "chinese_name": "猛龍刀法",
+      "category_group": "武器技能",
+      "legacy_catalog": {
+        "path": "skill/blade.html",
+        "category": "武器技能",
+        "英文名稱": "her blade",
+        "中文名稱": "猛龍刀法",
+        "攻擊武器": "大刀",
+        "互相教導": "不可以",
+        "技能功能": "攻擊類",
+        "技能分類": "技能",
+        "浪費數值": "體力",
+        "領悟技能": "魔刀(dragon blade)",
+        "領悟機率": "很低",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/blade.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "dragon blade"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "魔刀(dragon blade)",
+        "upgrade_chance": "很低"
+      },
+      "family": "legacy-page:blade",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/h/her_blade.ski",
+        "skill_lst_key": "her_blade",
+        "slot_symbol": "SLOT_HER_BLADE",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "wait": 8,
+        "weapon": "WEAPON_BLADE",
+        "check": "check_blade_attack",
+        "associate": "SLOT_DRAGON_BLADE",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 8,
+          "cost": 15,
+          "cost_type": "COST_MOVE",
+          "weapon": "WEAPON_BLADE",
+          "check": "check_blade_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 8,
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "weapon": "WEAPON_BLADE",
+        "check": "check_blade_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "武器技能",
+        "leaf": "刀",
+        "page_path": "skill/blade.html"
+      }
+    },
+    {
+      "english_name": "shoot sun",
+      "chinese_name": "射日箭法",
+      "category_group": "武器技能",
+      "legacy_catalog": {
+        "path": "skill/bow.html",
+        "category": "武器技能",
+        "英文名稱": "shoot sun",
+        "中文名稱": "射日箭法",
+        "攻擊武器": "弓",
+        "互相教導": "不可以",
+        "技能功能": "攻擊類",
+        "技能分類": "技能",
+        "浪費數值": "體力",
+        "領悟技能": "水雲箭法(water cloud blast)",
+        "領悟機率": "很低",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/bow.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "water cloud blast"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "水雲箭法(water cloud blast)",
+        "upgrade_chance": "很低"
+      },
+      "family": "legacy-page:bow",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/s/shoot_sun.ski",
+        "skill_lst_key": "shoot_sun",
+        "slot_symbol": "SLOT_SHOOT_SUN",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 20,
+        "cost_type": "COST_MOVE",
+        "wait": 10,
+        "weapon": "WEAPON_BOW",
+        "check": "check_bow_attack",
+        "associate": "SLOT_WATER_CLOUD_BLAST",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 10,
+          "cost": 20,
+          "cost_type": "COST_MOVE",
+          "weapon": "WEAPON_BOW",
+          "check": "check_bow_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 10,
+        "cost": 20,
+        "cost_type": "COST_MOVE",
+        "weapon": "WEAPON_BOW",
+        "check": "check_bow_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "武器技能",
+        "leaf": "弓",
+        "page_path": "skill/bow.html"
+      }
+    },
+    {
+      "english_name": "hate sword",
+      "chinese_name": "劍君十二恨",
+      "category_group": "職業技能",
+      "legacy_catalog": {
+        "path": "skill/bravo.html",
+        "category": "職業技能",
+        "英文名稱": "hate sword",
+        "中文名稱": "劍君十二恨",
+        "攻擊武器": "長劍",
+        "互相教導": "不可以",
+        "技能功能": "攻擊類",
+        "技能分類": "暗殺系",
+        "浪費數值": "體力",
+        "領悟技能": "從缺",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/bravo.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [],
+        "prerequisite": "從缺",
+        "upgrade_target": "從缺",
+        "upgrade_chance": null
+      },
+      "family": "legacy-page:bravo",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/h/hate_sword.ski",
+        "skill_lst_key": "hate_sword",
+        "slot_symbol": "SLOT_HATE_SWORD",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 40,
+        "cost_type": "COST_MOVE",
+        "wait": 9,
+        "weapon": "WEAPON_SWORD",
+        "check": "check_sword_attack",
+        "associate": "-1",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 9,
+          "cost": 40,
+          "cost_type": "COST_MOVE",
+          "weapon": "WEAPON_SWORD",
+          "check": "check_sword_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 9,
+        "cost": 40,
+        "cost_type": "COST_MOVE",
+        "weapon": "WEAPON_SWORD",
+        "check": "check_sword_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "職業技能",
+        "leaf": "暗殺系",
+        "page_path": "skill/bravo.html"
+      }
+    },
+    {
+      "english_name": "be needle",
+      "chinese_name": "碧血十二針",
+      "category_group": "武器技能",
+      "legacy_catalog": {
+        "path": "skill/dagger.html",
+        "category": "武器技能",
+        "英文名稱": "be needle",
+        "中文名稱": "碧血十二針",
+        "攻擊武器": "短兵",
+        "互相教導": "不可以",
+        "技能功能": "攻擊類",
+        "技能分類": "技能",
+        "浪費數值": "體力",
+        "領悟技能": "七奇炙針訣(seven dagger)",
+        "領悟機率": "極低",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/dagger.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "seven dagger"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "七奇炙針訣(seven dagger)",
+        "upgrade_chance": "極低"
+      },
+      "family": "legacy-page:dagger",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/b/be_needle.ski",
+        "skill_lst_key": "be_needle",
+        "slot_symbol": "SLOT_BE_NEEDLE",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 20,
+        "cost_type": "COST_MOVE",
+        "wait": 2,
+        "weapon": "WEAPON_DAGGER",
+        "check": "check_dagger_attack",
+        "associate": "SLOT_SEVEN_DAGGER",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 2,
+          "cost": 20,
+          "cost_type": "COST_MOVE",
+          "weapon": "WEAPON_DAGGER",
+          "check": "check_dagger_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 2,
+        "cost": 20,
+        "cost_type": "COST_MOVE",
+        "weapon": "WEAPON_DAGGER",
+        "check": "check_dagger_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "武器技能",
+        "leaf": "短兵",
+        "page_path": "skill/dagger.html"
+      }
+    },
+    {
+      "english_name": "cause light",
+      "chinese_name": "輕度傷害",
+      "category_group": "法術技能",
+      "legacy_catalog": {
+        "path": "skill/dark.html",
+        "category": "法術技能",
+        "英文名稱": "cause light",
+        "中文名稱": "輕度傷害",
+        "攻擊武器": "空手",
+        "互相教導": "不可以",
+        "技能功能": "攻擊類",
+        "技能分類": "暗系",
+        "浪費數值": "法力",
+        "領悟技能": "中度傷害(cause serious)",
+        "領悟機率": "極高",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/dark.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "cause serious"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "中度傷害(cause serious)",
+        "upgrade_chance": "極高"
+      },
+      "family": "legacy-page:dark",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/c/cause_light.ski",
+        "skill_lst_key": "cause_light",
+        "slot_symbol": "SLOT_CAUSE_LIGHT",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 15,
+        "cost_type": null,
+        "wait": 12,
+        "weapon": null,
+        "check": "check_unrigid_attack",
+        "associate": "SLOT_CAUSE_SERIOUS",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": false,
+        "combat_dimensions": {
+          "damage_values": [],
+          "chance_values": [],
+          "parry_values": [],
+          "innate_values": [],
+          "wait": 12,
+          "cost": 15,
+          "cost_type": null,
+          "weapon": null,
+          "check": "check_unrigid_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [],
+        "chance_values": [],
+        "parry_values": [],
+        "innate_values": [],
+        "wait": 12,
+        "cost": 15,
+        "cost_type": null,
+        "weapon": null,
+        "check": "check_unrigid_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "法術技能",
+        "leaf": "暗系",
+        "page_path": "skill/dark.html"
+      }
+    },
+    {
+      "english_name": "anti physique",
+      "chinese_name": "經脈逆行",
+      "category_group": "職業技能",
+      "legacy_catalog": {
+        "path": "skill/doctor.html",
+        "category": "職業技能",
+        "英文名稱": "anti physique",
+        "中文名稱": "經脈逆行",
+        "攻擊武器": "空手",
+        "互相教導": "不可以",
+        "技能功能": "冥想類",
+        "技能分類": "醫療系",
+        "浪費數值": "法力",
+        "領悟技能": "從缺",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/doctor.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [],
+        "prerequisite": "從缺",
+        "upgrade_target": "從缺",
+        "upgrade_chance": null
+      },
+      "family": "legacy-page:doctor",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/a/anti_physique.ski",
+        "skill_lst_key": "anti_physique",
+        "slot_symbol": "SLOT_ANTI_PHYSIQUE",
+        "type": "TAR_MEDITATION",
+        "cost": 1,
+        "cost_type": null,
+        "wait": 1,
+        "weapon": null,
+        "check": null,
+        "associate": "-1",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [],
+          "chance_values": [],
+          "parry_values": [],
+          "innate_values": [],
+          "wait": 1,
+          "cost": 1,
+          "cost_type": null,
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [],
+        "chance_values": [],
+        "parry_values": [],
+        "innate_values": [],
+        "wait": 1,
+        "cost": 1,
+        "cost_type": null,
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "職業技能",
+        "leaf": "醫療系",
+        "page_path": "skill/doctor.html"
+      }
+    },
+    {
+      "english_name": "create food",
+      "chinese_name": "製造食物",
+      "category_group": "法術技能",
+      "legacy_catalog": {
+        "path": "skill/earth.html",
+        "category": "法術技能",
+        "英文名稱": "create food",
+        "中文名稱": "製造食物",
+        "攻擊武器": "空手",
+        "互相教導": "不可以",
+        "技能功能": "未知",
+        "技能分類": "土系",
+        "浪費數值": "法力",
+        "領悟技能": "偵測藏匿(detect hidden)",
+        "領悟機率": "極高",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/earth.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "detect hidden"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "偵測藏匿(detect hidden)",
+        "upgrade_chance": "極高"
+      },
+      "family": "legacy-page:earth",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/c/create_food.ski",
+        "skill_lst_key": "create_food",
+        "slot_symbol": "SLOT_CREATE_FOOD",
+        "type": "TAR_IGNORE",
+        "cost": 5,
+        "cost_type": null,
+        "wait": 12,
+        "weapon": null,
+        "check": null,
+        "associate": "SLOT_DETECT_HIDDEN",
+        "canask": false,
+        "teach": false,
+        "valid": true,
+        "enable": false,
+        "combat_dimensions": {
+          "damage_values": [],
+          "chance_values": [],
+          "parry_values": [],
+          "innate_values": [],
+          "wait": 12,
+          "cost": 5,
+          "cost_type": null,
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [],
+        "chance_values": [],
+        "parry_values": [],
+        "innate_values": [],
+        "wait": 12,
+        "cost": 5,
+        "cost_type": null,
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "法術技能",
+        "leaf": "土系",
+        "page_path": "skill/earth.html"
+      }
+    },
+    {
+      "english_name": "universe",
+      "chinese_name": "先天乾坤功",
+      "category_group": "武器技能",
+      "legacy_catalog": {
+        "path": "skill/energy.html",
+        "category": "武器技能",
+        "英文名稱": "universe",
+        "中文名稱": "先天乾坤功",
+        "攻擊武器": "空手",
+        "互相教導": "不可以",
+        "技能功能": "攻擊類",
+        "技能分類": "技能",
+        "浪費數值": "體力",
+        "領悟技能": "極火六陽(six fire)",
+        "領悟機率": "極低",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/energy.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "six fire"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "極火六陽(six fire)",
+        "upgrade_chance": "極低"
+      },
+      "family": "legacy-page:energy",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/u/universe.ski",
+        "skill_lst_key": "universe",
+        "slot_symbol": "SLOT_UNIVERSE",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 20,
+        "cost_type": "COST_MOVE",
+        "wait": 5,
+        "weapon": null,
+        "check": "check_unrigid_attack",
+        "associate": "SLOT_SIXFIRE",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 5,
+          "cost": 20,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": "check_unrigid_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 5,
+        "cost": 20,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": "check_unrigid_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "武器技能",
+        "leaf": "氣功",
+        "page_path": "skill/energy.html"
+      }
+    },
+    {
+      "english_name": "curse",
+      "chinese_name": "詛咒術",
+      "category_group": "法術技能",
+      "legacy_catalog": {
+        "path": "skill/evil.html",
+        "category": "法術技能",
+        "英文名稱": "curse",
+        "中文名稱": "詛咒術",
+        "攻擊武器": "空手",
+        "互相教導": "不可以",
+        "技能功能": "攻擊類",
+        "技能分類": "邪系",
+        "浪費數值": "法力",
+        "領悟技能": "魔界之門(gate)",
+        "領悟機率": "極高",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/evil.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "gate"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "魔界之門(gate)",
+        "upgrade_chance": "極高"
+      },
+      "family": "legacy-page:evil",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/c/curse.ski",
+        "skill_lst_key": "curse",
+        "slot_symbol": "SLOT_CURSE",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 20,
+        "cost_type": null,
+        "wait": 12,
+        "weapon": null,
+        "check": "check_unrigid_attack",
+        "associate": "SLOT_GATE",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": false,
+        "combat_dimensions": {
+          "damage_values": [],
+          "chance_values": [],
+          "parry_values": [],
+          "innate_values": [],
+          "wait": 12,
+          "cost": 20,
+          "cost_type": null,
+          "weapon": null,
+          "check": "check_unrigid_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [],
+        "chance_values": [],
+        "parry_values": [],
+        "innate_values": [],
+        "wait": 12,
+        "cost": 20,
+        "cost_type": null,
+        "weapon": null,
+        "check": "check_unrigid_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "法術技能",
+        "leaf": "邪系",
+        "page_path": "skill/evil.html"
+      }
+    },
+    {
+      "english_name": "know pen",
+      "chinese_name": "筆之心",
+      "category_group": "武器技能",
+      "legacy_catalog": {
+        "path": "skill/fan.html",
+        "category": "武器技能",
+        "英文名稱": "know pen",
+        "中文名稱": "筆之心",
+        "攻擊武器": "筆扇",
+        "互相教導": "可以",
+        "技能功能": "攻擊類",
+        "技能分類": "技能",
+        "浪費數值": "體力",
+        "領悟技能": "臨書點穴(write pen)",
+        "領悟機率": "很低",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/fan.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "write pen"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "臨書點穴(write pen)",
+        "upgrade_chance": "很低"
+      },
+      "family": "legacy-page:fan",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/k/know_pen.ski",
+        "skill_lst_key": "know_pen",
+        "slot_symbol": "SLOT_KNOW_PEN",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 19,
+        "cost_type": null,
+        "wait": 12,
+        "weapon": "WEAPON_PEN",
+        "check": "check_pen_attack",
+        "associate": "SLOT_WRITE_PEN",
+        "canask": true,
+        "teach": true,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 12,
+          "cost": 19,
+          "cost_type": null,
+          "weapon": "WEAPON_PEN",
+          "check": "check_pen_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          10,
+          10,
+          10,
+          10
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 12,
+        "cost": 19,
+        "cost_type": null,
+        "weapon": "WEAPON_PEN",
+        "check": "check_pen_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "武器技能",
+        "leaf": "筆扇",
+        "page_path": "skill/fan.html"
+      }
+    },
+    {
+      "english_name": "burning hands",
+      "chinese_name": "火焰之掌",
+      "category_group": "法術技能",
+      "legacy_catalog": {
+        "path": "skill/fire.html",
+        "category": "法術技能",
+        "英文名稱": "burning hands",
+        "中文名稱": "火焰之掌",
+        "攻擊武器": "空手",
+        "互相教導": "不可以",
+        "技能功能": "攻擊類",
+        "技能分類": "火系",
+        "浪費數值": "法力",
+        "領悟技能": "烈焰術(flamestrike)",
+        "領悟機率": "極高",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/fire.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "flamestrike"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "烈焰術(flamestrike)",
+        "upgrade_chance": "極高"
+      },
+      "family": "legacy-page:fire",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/b/burning_hands.ski",
+        "skill_lst_key": "burning_hands",
+        "slot_symbol": "SLOT_BURNING_HANDS",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 15,
+        "cost_type": null,
+        "wait": 8,
+        "weapon": null,
+        "check": "check_unrigid_attack",
+        "associate": "SLOT_FLAMESTRIKE",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": false,
+        "combat_dimensions": {
+          "damage_values": [],
+          "chance_values": [],
+          "parry_values": [],
+          "innate_values": [],
+          "wait": 8,
+          "cost": 15,
+          "cost_type": null,
+          "weapon": null,
+          "check": "check_unrigid_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [],
+        "chance_values": [],
+        "parry_values": [],
+        "innate_values": [],
+        "wait": 8,
+        "cost": 15,
+        "cost_type": null,
+        "weapon": null,
+        "check": "check_unrigid_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "法術技能",
+        "leaf": "火系",
+        "page_path": "skill/fire.html"
+      }
+    },
+    {
+      "english_name": "long fist",
+      "chinese_name": "泰山長拳",
+      "category_group": "武器技能",
+      "legacy_catalog": {
+        "path": "skill/fist.html",
+        "category": "武器技能",
+        "英文名稱": "long fist",
+        "中文名稱": "泰山長拳",
+        "攻擊武器": "空手",
+        "互相教導": "可以",
+        "技能功能": "攻擊類",
+        "技能分類": "技能",
+        "浪費數值": "體力",
+        "領悟技能": "瀧山拳法(lung shan)",
+        "領悟機率": "很低",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/fist.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "lung shan"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "瀧山拳法(lung shan)",
+        "upgrade_chance": "很低"
+      },
+      "family": "legacy-page:fist",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/l/longfist.ski",
+        "skill_lst_key": "longfist",
+        "slot_symbol": "SLOT_LONGFIST",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 10,
+        "cost_type": "COST_MOVE",
+        "wait": 5,
+        "weapon": null,
+        "check": "check_unrigid_attack",
+        "associate": "SLOT_LUNGSHAN",
+        "canask": true,
+        "teach": true,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 5,
+          "cost": 10,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": "check_unrigid_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 5,
+        "cost": 10,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": "check_unrigid_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "武器技能",
+        "leaf": "拳法",
+        "page_path": "skill/fist.html"
+      }
+    },
+    {
+      "english_name": "dragon phoenix",
+      "chinese_name": "斬龍破鳳刀",
+      "category_group": "職業技能",
+      "legacy_catalog": {
+        "path": "skill/general.html",
+        "category": "職業技能",
+        "英文名稱": "dragon phoenix",
+        "中文名稱": "斬龍破鳳刀",
+        "攻擊武器": "大刀",
+        "互相教導": "不可以",
+        "技能功能": "攻擊類",
+        "技能分類": "格鬥系",
+        "浪費數值": "體力",
+        "領悟技能": "從缺",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/general.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [],
+        "prerequisite": "從缺",
+        "upgrade_target": "從缺",
+        "upgrade_chance": null
+      },
+      "family": "legacy-page:general",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/d/dragon_phoe.ski",
+        "skill_lst_key": "dragon_phoe",
+        "slot_symbol": "SLOT_DRAGON_PHOE",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 40,
+        "cost_type": "COST_MOVE",
+        "wait": 10,
+        "weapon": "WEAPON_BLADE",
+        "check": "check_blade_attack",
+        "associate": "-1",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 10,
+          "cost": 40,
+          "cost_type": "COST_MOVE",
+          "weapon": "WEAPON_BLADE",
+          "check": "check_blade_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 10,
+        "cost": 40,
+        "cost_type": "COST_MOVE",
+        "weapon": "WEAPON_BLADE",
+        "check": "check_blade_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "職業技能",
+        "leaf": "格鬥系",
+        "page_path": "skill/general.html"
+      }
+    },
+    {
+      "english_name": "bless",
+      "chinese_name": "群仙祝福",
+      "category_group": "法術技能",
+      "legacy_catalog": {
+        "path": "skill/holy.html",
+        "category": "法術技能",
+        "英文名稱": "bless",
+        "中文名稱": "群仙祝福",
+        "攻擊武器": "空手",
+        "互相教導": "不可以",
+        "技能功能": "防禦類",
+        "技能分類": "聖系",
+        "浪費數值": "法力",
+        "領悟技能": "巨人之力(giant strength)",
+        "領悟機率": "極高",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/holy.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "giant strength"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "巨人之力(giant strength)",
+        "upgrade_chance": "極高"
+      },
+      "family": "legacy-page:holy",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/c/cast_bless.ski",
+        "skill_lst_key": "cast_bless",
+        "slot_symbol": "SLOT_CAST_BLESS",
+        "type": "TAR_CHAR_DEFENSIVE",
+        "cost": 15,
+        "cost_type": "COST_MANA",
+        "wait": 10,
+        "weapon": null,
+        "check": null,
+        "associate": "SLOT_GIANT_STRENGTH",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": false,
+        "combat_dimensions": {
+          "damage_values": [],
+          "chance_values": [],
+          "parry_values": [],
+          "innate_values": [],
+          "wait": 10,
+          "cost": 15,
+          "cost_type": "COST_MANA",
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [],
+        "chance_values": [],
+        "parry_values": [],
+        "innate_values": [],
+        "wait": 10,
+        "cost": 15,
+        "cost_type": "COST_MANA",
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "法術技能",
+        "leaf": "聖系",
+        "page_path": "skill/holy.html"
+      }
+    },
+    {
+      "english_name": "young gun",
+      "chinese_name": "楊家槍法",
+      "category_group": "武器技能",
+      "legacy_catalog": {
+        "path": "skill/lance.html",
+        "category": "武器技能",
+        "英文名稱": "young gun",
+        "中文名稱": "楊家槍法",
+        "攻擊武器": "槍矛",
+        "互相教導": "不可以",
+        "技能功能": "攻擊類",
+        "技能分類": "技能",
+        "浪費數值": "體力",
+        "領悟技能": "密傳˙八極槍(eight gun)",
+        "領悟機率": "極低",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/lance.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "eight gun"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "密傳˙八極槍(eight gun)",
+        "upgrade_chance": "極低"
+      },
+      "family": "legacy-page:lance",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/y/younggun.ski",
+        "skill_lst_key": "younggun",
+        "slot_symbol": "SLOT_YOUNGGUN",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 20,
+        "cost_type": "COST_MOVE",
+        "wait": 14,
+        "weapon": "WEAPON_SPEAR",
+        "check": "check_spear_attack",
+        "associate": "SLOT_EIGHT_GUN",
+        "canask": false,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 14,
+          "cost": 20,
+          "cost_type": "COST_MOVE",
+          "weapon": "WEAPON_SPEAR",
+          "check": "check_spear_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 14,
+        "cost": 20,
+        "cost_type": "COST_MOVE",
+        "weapon": "WEAPON_SPEAR",
+        "check": "check_spear_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "武器技能",
+        "leaf": "槍",
+        "page_path": "skill/lance.html"
+      }
+    },
+    {
+      "english_name": "make light",
+      "chinese_name": "千丈光芒",
+      "category_group": "法術技能",
+      "legacy_catalog": {
+        "path": "skill/light.html",
+        "category": "法術技能",
+        "英文名稱": "make light",
+        "中文名稱": "千丈光芒",
+        "攻擊武器": "空手",
+        "互相教導": "不可以",
+        "技能功能": "未知",
+        "技能分類": "光系",
+        "浪費數值": "法力",
+        "領悟技能": "夜視術(infravision)",
+        "領悟機率": "極高",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/light.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "infravision"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "夜視術(infravision)",
+        "upgrade_chance": "極高"
+      },
+      "family": "legacy-page:light",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/m/make_light.ski",
+        "skill_lst_key": "make_light",
+        "slot_symbol": "SLOT_MAKE_LIGHT",
+        "type": "TAR_IGNORE",
+        "cost": 15,
+        "cost_type": "COST_MANA",
+        "wait": 10,
+        "weapon": null,
+        "check": null,
+        "associate": "SLOT_INFRAVISION",
+        "canask": false,
+        "teach": false,
+        "valid": true,
+        "enable": false,
+        "combat_dimensions": {
+          "damage_values": [],
+          "chance_values": [],
+          "parry_values": [],
+          "innate_values": [],
+          "wait": 10,
+          "cost": 15,
+          "cost_type": "COST_MANA",
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [],
+        "chance_values": [],
+        "parry_values": [],
+        "innate_values": [],
+        "wait": 10,
+        "cost": 15,
+        "cost_type": "COST_MANA",
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "法術技能",
+        "leaf": "光系",
+        "page_path": "skill/light.html"
+      }
+    },
+    {
+      "english_name": "dark hell",
+      "chinese_name": "死黑核爆裂地獄",
+      "category_group": "職業技能",
+      "legacy_catalog": {
+        "path": "skill/mage.html",
+        "category": "職業技能",
+        "英文名稱": "dark hell",
+        "中文名稱": "死黑核爆裂地獄",
+        "攻擊武器": "空手",
+        "互相教導": "不可以",
+        "技能功能": "攻擊類",
+        "技能分類": "法師系",
+        "浪費數值": "法力",
+        "領悟技能": "七鑰守護神(seven key numen)",
+        "領悟機率": "極低",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/mage.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "seven key numen"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "七鑰守護神(seven key numen)",
+        "upgrade_chance": "極低"
+      },
+      "family": "legacy-page:mage",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/d/dark_hell.ski",
+        "skill_lst_key": "dark_hell",
+        "slot_symbol": "SLOT_DARK_HELL",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 100,
+        "cost_type": null,
+        "wait": 30,
+        "weapon": null,
+        "check": "check_unrigid_attack",
+        "associate": "SLOT_SEVEN_KEY_NUMEN",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": false,
+        "combat_dimensions": {
+          "damage_values": [],
+          "chance_values": [],
+          "parry_values": [],
+          "innate_values": [],
+          "wait": 30,
+          "cost": 100,
+          "cost_type": null,
+          "weapon": null,
+          "check": "check_unrigid_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [],
+        "chance_values": [],
+        "parry_values": [],
+        "innate_values": [],
+        "wait": 30,
+        "cost": 100,
+        "cost_type": null,
+        "weapon": null,
+        "check": "check_unrigid_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "職業技能",
+        "leaf": "法師系",
+        "page_path": "skill/mage.html"
+      }
+    },
+    {
+      "english_name": "acid blast",
+      "chinese_name": "酸液術",
+      "category_group": "法術技能",
+      "legacy_catalog": {
+        "path": "skill/poison.html",
+        "category": "法術技能",
+        "英文名稱": "acid blast",
+        "中文名稱": "酸液術",
+        "攻擊武器": "空手",
+        "互相教導": "不可以",
+        "技能功能": "攻擊類",
+        "技能分類": "毒系",
+        "浪費數值": "法力",
+        "領悟技能": "眼盲術(blindness)",
+        "領悟機率": "極高",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/poison.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "blindness"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "眼盲術(blindness)",
+        "upgrade_chance": "極高"
+      },
+      "family": "legacy-page:poison",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/a/acid_blast.ski",
+        "skill_lst_key": "acid_blast",
+        "slot_symbol": "SLOT_ACID_BLAST",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 20,
+        "cost_type": null,
+        "wait": 12,
+        "weapon": null,
+        "check": null,
+        "associate": "SLOT_BLINDNESS",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": false,
+        "combat_dimensions": {
+          "damage_values": [],
+          "chance_values": [],
+          "parry_values": [],
+          "innate_values": [],
+          "wait": 12,
+          "cost": 20,
+          "cost_type": null,
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [],
+        "chance_values": [],
+        "parry_values": [],
+        "innate_values": [],
+        "wait": 12,
+        "cost": 20,
+        "cost_type": null,
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "法術技能",
+        "leaf": "毒系",
+        "page_path": "skill/poison.html"
+      }
+    },
+    {
+      "english_name": "mount",
+      "chinese_name": "騎術",
+      "category_group": "其他技能",
+      "legacy_catalog": {
+        "path": "skill/skill.html",
+        "category": "其他技能",
+        "英文名稱": "mount",
+        "中文名稱": "騎術",
+        "攻擊武器": "空手",
+        "互相教導": "不可以",
+        "技能功能": "騎術",
+        "技能分類": "技能",
+        "浪費數值": "體力",
+        "領悟技能": "從缺",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/skill.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [],
+        "prerequisite": "從缺",
+        "upgrade_target": "從缺",
+        "upgrade_chance": null
+      },
+      "family": "legacy-page:skill",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/m/mount.ski",
+        "skill_lst_key": "mount",
+        "slot_symbol": "SLOT_MOUNT",
+        "type": "TAR_MOUNT",
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "wait": 10,
+        "weapon": null,
+        "check": null,
+        "associate": "-1",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": false,
+        "combat_dimensions": {
+          "damage_values": [],
+          "chance_values": [],
+          "parry_values": [],
+          "innate_values": [],
+          "wait": 10,
+          "cost": 15,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [],
+        "chance_values": [],
+        "parry_values": [],
+        "innate_values": [],
+        "wait": 10,
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "其他技能",
+        "leaf": "技能",
+        "page_path": "skill/skill.html"
+      }
+    },
+    {
+      "english_name": "enchant weapon",
+      "chinese_name": "加強武器威力",
+      "category_group": "職業技能",
+      "legacy_catalog": {
+        "path": "skill/smith.html",
+        "category": "職業技能",
+        "英文名稱": "enchant weapon",
+        "中文名稱": "加強武器威力",
+        "攻擊武器": "空手",
+        "互相教導": "不可以",
+        "技能功能": "物品類",
+        "技能分類": "鑄造系",
+        "浪費數值": "法力",
+        "領悟技能": "鑑定術(identify)",
+        "領悟機率": "一般",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/smith.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "identify"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "鑑定術(identify)",
+        "upgrade_chance": "一般"
+      },
+      "family": "legacy-page:smith",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/e/enchant_weapon.ski",
+        "skill_lst_key": "enchant_weapon",
+        "slot_symbol": "SLOT_ENCHANT_WEAPON",
+        "type": "TAR_OBJ_INV",
+        "cost": 50,
+        "cost_type": null,
+        "wait": 24,
+        "weapon": null,
+        "check": "check_unrigid_attack",
+        "associate": "SLOT_IDENTIFY",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": false,
+        "combat_dimensions": {
+          "damage_values": [],
+          "chance_values": [],
+          "parry_values": [],
+          "innate_values": [],
+          "wait": 24,
+          "cost": 50,
+          "cost_type": null,
+          "weapon": null,
+          "check": "check_unrigid_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [],
+        "chance_values": [],
+        "parry_values": [],
+        "innate_values": [],
+        "wait": 24,
+        "cost": 50,
+        "cost_type": null,
+        "weapon": null,
+        "check": "check_unrigid_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "職業技能",
+        "leaf": "鑄造系",
+        "page_path": "skill/smith.html"
+      }
+    },
+    {
+      "english_name": "monkey stick",
+      "chinese_name": "猴棍",
+      "category_group": "武器技能",
+      "legacy_catalog": {
+        "path": "skill/stick.html",
+        "category": "武器技能",
+        "英文名稱": "monkey stick",
+        "中文名稱": "猴棍",
+        "攻擊武器": "棍棒",
+        "互相教導": "不可以",
+        "技能功能": "攻擊類",
+        "技能分類": "技能",
+        "浪費數值": "體力",
+        "領悟技能": "日晃棍法(day stick)",
+        "領悟機率": "極低",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/stick.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "day stick"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "日晃棍法(day stick)",
+        "upgrade_chance": "極低"
+      },
+      "family": "legacy-page:stick",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/m/monkey_stick.ski",
+        "skill_lst_key": "monkey_stick",
+        "slot_symbol": "SLOT_MONKEY_STICK",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 30,
+        "cost_type": "COST_MOVE",
+        "wait": 17,
+        "weapon": "WEAPON_CLUB",
+        "check": "check_club_attack",
+        "associate": "SLOT_DAYSTICK",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 17,
+          "cost": 30,
+          "cost_type": "COST_MOVE",
+          "weapon": "WEAPON_CLUB",
+          "check": "check_club_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 17,
+        "cost": 30,
+        "cost_type": "COST_MOVE",
+        "weapon": "WEAPON_CLUB",
+        "check": "check_club_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "武器技能",
+        "leaf": "棍",
+        "page_path": "skill/stick.html"
+      }
+    },
+    {
+      "english_name": "hua sword",
+      "chinese_name": "華山劍法",
+      "category_group": "武器技能",
+      "legacy_catalog": {
+        "path": "skill/sword.html",
+        "category": "武器技能",
+        "英文名稱": "hua sword",
+        "中文名稱": "華山劍法",
+        "攻擊武器": "長劍",
+        "互相教導": "可以",
+        "技能功能": "攻擊類",
+        "技能分類": "技能",
+        "浪費數值": "體力",
+        "領悟技能": "封山劍法(fonxan sword)",
+        "領悟機率": "很低",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/sword.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "fonxan sword"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "封山劍法(fonxan sword)",
+        "upgrade_chance": "很低"
+      },
+      "family": "legacy-page:sword",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/h/hua_sword.ski",
+        "skill_lst_key": "hua_sword",
+        "slot_symbol": "SLOT_HUA_SWORD",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 10,
+        "cost_type": "COST_MOVE",
+        "wait": 5,
+        "weapon": "WEAPON_SWORD",
+        "check": "check_sword_attack",
+        "associate": "SLOT_FONXANSWORD",
+        "canask": true,
+        "teach": true,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            60,
+            75,
+            90,
+            105,
+            120,
+            135,
+            150
+          ],
+          "chance_values": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "parry_values": [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 5,
+          "cost": 10,
+          "cost_type": "COST_MOVE",
+          "weapon": "WEAPON_SWORD",
+          "check": "check_sword_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          60,
+          75,
+          90,
+          105,
+          120,
+          135,
+          150
+        ],
+        "chance_values": [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "parry_values": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 5,
+        "cost": 10,
+        "cost_type": "COST_MOVE",
+        "weapon": "WEAPON_SWORD",
+        "check": "check_sword_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "武器技能",
+        "leaf": "劍",
+        "page_path": "skill/sword.html"
+      }
+    },
+    {
+      "english_name": "venom",
+      "chinese_name": "抹毒",
+      "category_group": "職業技能",
+      "legacy_catalog": {
+        "path": "skill/thief.html",
+        "category": "職業技能",
+        "英文名稱": "venom",
+        "中文名稱": "抹毒",
+        "攻擊武器": "空手",
+        "互相教導": "不可以",
+        "技能功能": "物品類",
+        "技能分類": "盜賊系",
+        "浪費數值": "法力",
+        "領悟技能": "開鎖(pick)",
+        "領悟機率": "低",
+        "預備功夫": "從缺",
+        "職業限制": "伶 人則等級最低要 一級才能學習﹐熟練度最高可以到 出神入化﹗ 刺 客則等級最低要 一級才能學習﹐熟練度最高可以到 出神入化﹗ 郎 中則等級最低要 一級才能學習﹐熟練度最高可以到 出神入化﹗ 武 官則等級最低要 一級才能學習﹐熟練度最高可以到 出神入化﹗ 將 軍則等級最低要 一級才能學習﹐熟練度最高可以到 出神入化﹗ 天 師則等級最低要 一級才能學習﹐熟練度最高可以到 出神入化﹗ 文 官則等級最低要 一級才能學習﹐熟練度最高可以到 出神入化﹗ 道 士則等級最低要 一級才能學習﹐熟練度最高可以到 出神入化﹗ 鑄劍師則等級最低要 一級才能學習﹐熟練度最高可以到 出神入化﹗ 盜 賊則等級最低要 一級才能學習﹐熟練度最高可以到 一代宗師﹗ 平 民不能學習此技能﹗",
+        "限 制": "一、本技能限制學識不能低於五。",
+        "教 導": "一、襄平的藥材行老闆(druggest)有教導抹毒﹐他可能會教導你﹐費用 1500 兩。"
+      },
+      "legacy_reference": {
+        "page": "skill/thief.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "pick"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "開鎖(pick)",
+        "upgrade_chance": "低"
+      },
+      "family": "legacy-page:thief",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/v/venom.ski",
+        "skill_lst_key": "venom",
+        "slot_symbol": "SLOT_VENOM",
+        "type": "TAR_OBJ_INV",
+        "cost": 10,
+        "cost_type": null,
+        "wait": 10,
+        "weapon": null,
+        "check": null,
+        "associate": "SLOT_PICK",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": false,
+        "combat_dimensions": {
+          "damage_values": [],
+          "chance_values": [],
+          "parry_values": [],
+          "innate_values": [],
+          "wait": 10,
+          "cost": 10,
+          "cost_type": null,
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [],
+        "chance_values": [],
+        "parry_values": [],
+        "innate_values": [],
+        "wait": 10,
+        "cost": 10,
+        "cost_type": null,
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "職業技能",
+        "leaf": "盜賊系",
+        "page_path": "skill/thief.html"
+      }
+    },
+    {
+      "english_name": "shocking grasp",
+      "chinese_name": "輕度電擊術",
+      "category_group": "法術技能",
+      "legacy_catalog": {
+        "path": "skill/thunder.html",
+        "category": "法術技能",
+        "英文名稱": "shocking grasp",
+        "中文名稱": "輕度電擊術",
+        "攻擊武器": "空手",
+        "互相教導": "不可以",
+        "技能功能": "攻擊類",
+        "技能分類": "雷電系",
+        "浪費數值": "法力",
+        "領悟技能": "小雷球(lightning bolt)",
+        "領悟機率": "極高",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/thunder.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "lightning bolt"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "小雷球(lightning bolt)",
+        "upgrade_chance": "極高"
+      },
+      "family": "legacy-page:thunder",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/s/shocking_grasp.ski",
+        "skill_lst_key": "shocking_grasp",
+        "slot_symbol": "SLOT_SHOCKING_GRASP",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 15,
+        "cost_type": null,
+        "wait": 8,
+        "weapon": null,
+        "check": null,
+        "associate": "SLOT_LIGHTNING_BOLT",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": false,
+        "combat_dimensions": {
+          "damage_values": [],
+          "chance_values": [],
+          "parry_values": [],
+          "innate_values": [],
+          "wait": 8,
+          "cost": 15,
+          "cost_type": null,
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [],
+        "chance_values": [],
+        "parry_values": [],
+        "innate_values": [],
+        "wait": 8,
+        "cost": 15,
+        "cost_type": null,
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "法術技能",
+        "leaf": "雷系",
+        "page_path": "skill/thunder.html"
+      }
+    },
+    {
+      "english_name": "cure light",
+      "chinese_name": "輕度治療",
+      "category_group": "法術技能",
+      "legacy_catalog": {
+        "path": "skill/water.html",
+        "category": "法術技能",
+        "英文名稱": "cure light",
+        "中文名稱": "輕度治療",
+        "攻擊武器": "空手",
+        "互相教導": "不可以",
+        "技能功能": "防禦類",
+        "技能分類": "水系",
+        "浪費數值": "法力",
+        "領悟技能": "療毒術(cure poison)",
+        "領悟機率": "極高",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/water.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "cure poison"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "療毒術(cure poison)",
+        "upgrade_chance": "極高"
+      },
+      "family": "legacy-page:water",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/c/cure_light.ski",
+        "skill_lst_key": "cure_light",
+        "slot_symbol": "SLOT_CURE_LIGHT",
+        "type": "TAR_CHAR_DEFENSIVE",
+        "cost": 10,
+        "cost_type": null,
+        "wait": 12,
+        "weapon": null,
+        "check": null,
+        "associate": "SLOT_CURE_POISON",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": false,
+        "combat_dimensions": {
+          "damage_values": [],
+          "chance_values": [],
+          "parry_values": [],
+          "innate_values": [],
+          "wait": 12,
+          "cost": 10,
+          "cost_type": null,
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [],
+        "chance_values": [],
+        "parry_values": [],
+        "innate_values": [],
+        "wait": 12,
+        "cost": 10,
+        "cost_type": null,
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "法術技能",
+        "leaf": "水系",
+        "page_path": "skill/water.html"
+      }
+    },
+    {
+      "english_name": "gwhip",
+      "chinese_name": "紫龍鞭法",
+      "category_group": "武器技能",
+      "legacy_catalog": {
+        "path": "skill/whip.html",
+        "category": "武器技能",
+        "英文名稱": "gwhip",
+        "中文名稱": "紫龍鞭法",
+        "攻擊武器": "鞭",
+        "互相教導": "不可以",
+        "技能功能": "攻擊類",
+        "技能分類": "技能",
+        "浪費數值": "體力",
+        "領悟技能": "冥蛇鞭法(ming snake)",
+        "領悟機率": "很低",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/whip.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "ming snake"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "冥蛇鞭法(ming snake)",
+        "upgrade_chance": "很低"
+      },
+      "family": "legacy-page:whip",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/g/gwhip.ski",
+        "skill_lst_key": "gwhip",
+        "slot_symbol": "SLOT_GWHIP",
+        "type": "TAR_CHAR_OFFENSIVE",
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "wait": 10,
+        "weapon": "WEAPON_WHIP",
+        "check": "check_whip_attack",
+        "associate": "SLOT_MING_SNAKE",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 10,
+          "cost": 15,
+          "cost_type": "COST_MOVE",
+          "weapon": "WEAPON_WHIP",
+          "check": "check_whip_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 10,
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "weapon": "WEAPON_WHIP",
+        "check": "check_whip_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "武器技能",
+        "leaf": "鞭",
+        "page_path": "skill/whip.html"
+      }
+    },
+    {
+      "english_name": "refresh",
+      "chinese_name": "體力恢復術",
+      "category_group": "法術技能",
+      "legacy_catalog": {
+        "path": "skill/wind.html",
+        "category": "法術技能",
+        "英文名稱": "refresh",
+        "中文名稱": "體力恢復術",
+        "攻擊武器": "空手",
+        "互相教導": "不可以",
+        "技能功能": "防禦類",
+        "技能分類": "風系",
+        "浪費數值": "法力",
+        "領悟技能": "微風喚醒術(wakeup)",
+        "領悟機率": "極高",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "skill/wind.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "wakeup"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "微風喚醒術(wakeup)",
+        "upgrade_chance": "極高"
+      },
+      "family": "legacy-page:wind",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/r/refresh.ski",
+        "skill_lst_key": "refresh",
+        "slot_symbol": "SLOT_REFRESH",
+        "type": "TAR_CHAR_DEFENSIVE",
+        "cost": 12,
+        "cost_type": null,
+        "wait": 18,
+        "weapon": null,
+        "check": "check_unrigid_attack",
+        "associate": "SLOT_WAKEUP",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": false,
+        "combat_dimensions": {
+          "damage_values": [],
+          "chance_values": [],
+          "parry_values": [],
+          "innate_values": [],
+          "wait": 18,
+          "cost": 12,
+          "cost_type": null,
+          "weapon": null,
+          "check": "check_unrigid_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [],
+        "chance_values": [],
+        "parry_values": [],
+        "innate_values": [],
+        "wait": 18,
+        "cost": 12,
+        "cost_type": null,
+        "weapon": null,
+        "check": "check_unrigid_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_catalog_seeded"
+      },
+      "legacy_navigation": {
+        "group": "法術技能",
+        "leaf": "風系",
+        "page_path": "skill/wind.html"
+      }
+    },
+    {
+      "english_name": "cloud steps",
+      "chinese_name": "翦雲步",
+      "category_group": "其他技能",
+      "legacy_catalog": {
+        "path": "skill/step.html",
+        "category": "其他技能",
+        "英文名稱": "cloud steps",
+        "中文名稱": "翦雲步",
+        "攻擊武器": "空手",
+        "互相教導": "可以",
+        "技能功能": "閃躲類",
+        "技能分類": "技能",
+        "浪費數值": "體力",
+        "領悟技能": "青玄身法(gdragon steps)",
+        "領悟機率": "很低",
+        "預備功夫": "從缺"
+      },
+      "legacy_reference": {
+        "page": "docs/3yWebsite/skill/step.html",
+        "data_path": "docs/3yWebsite/docs/data/skills.json",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "gdragon steps"
+        ],
+        "prerequisite": "從缺"
+      },
+      "family": "legacy-step-cloud",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/c/cloud_steps.ski",
+        "skill_lst_key": "cloud_steps",
+        "slot_symbol": "SLOT_CLOUD_STEPS",
+        "type": "TAR_DODGE",
+        "cost": 5,
+        "cost_type": "COST_MOVE",
+        "wait": 1,
+        "weapon": null,
+        "check": null,
+        "associate": "SLOT_GDRAGON_STEPS",
+        "canask": true,
+        "teach": true,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 1,
+          "cost": 5,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 1,
+        "cost": 5,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "batch_b_prechecked"
+      },
+      "legacy_navigation": {
+        "group": "其他技能",
+        "leaf": "步法",
+        "page_path": "skill/step.html"
+      }
+    },
+    {
+      "english_name": "gdragon steps",
+      "chinese_name": "青玄身法",
+      "category_group": "其他技能",
+      "legacy_catalog": null,
+      "legacy_reference": {
+        "page": "docs/3yWebsite/skill/step.html",
+        "data_path": "docs/3yWebsite/skill/step.html",
+        "chain_root": false,
+        "previous": [
+          "cloud steps"
+        ],
+        "next": [
+          "mirage steps"
+        ],
+        "prerequisite": "翦雲步(cloud steps)",
+        "upgrade_target": "離影迷蹤步(mirage steps)",
+        "upgrade_chance": "極低"
+      },
+      "family": "legacy-step-cloud",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/g/gdragon_steps.ski",
+        "skill_lst_key": "gdragon_steps",
+        "slot_symbol": "SLOT_GDRAGON_STEPS",
+        "type": "TAR_DODGE",
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "wait": 10,
+        "weapon": null,
+        "check": null,
+        "associate": "SLOT_MIRAGE_STEPS",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 10,
+          "cost": 15,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 10,
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "batch_b_prechecked"
+      },
+      "legacy_navigation": {
+        "group": "其他技能",
+        "leaf": "步法",
+        "page_path": "skill/step.html"
+      }
+    },
+    {
+      "english_name": "mirage steps",
+      "chinese_name": "離影迷蹤步",
+      "category_group": "其他技能",
+      "legacy_catalog": null,
+      "legacy_reference": {
+        "page": "docs/3yWebsite/skill/step.html",
+        "data_path": "docs/3yWebsite/skill/step.html",
+        "chain_root": false,
+        "previous": [
+          "gdragon steps"
+        ],
+        "next": [],
+        "prerequisite": "青玄身法(gdragon steps)",
+        "upgrade_target": null,
+        "upgrade_chance": null
+      },
+      "family": "legacy-step-cloud",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/m/mirage_steps.ski",
+        "skill_lst_key": "mirage_steps",
+        "slot_symbol": "SLOT_MIRAGE_STEPS",
+        "type": "TAR_DODGE",
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "wait": 10,
+        "weapon": null,
+        "check": null,
+        "associate": "-1",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 10,
+          "cost": 15,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 10,
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_unreviewed"
+      },
+      "legacy_navigation": {
+        "group": "其他技能",
+        "leaf": "步法",
+        "page_path": "skill/step.html"
+      }
+    },
+    {
+      "english_name": "cloud ghost",
+      "chinese_name": "雲蹤魅影",
+      "category_group": "其他技能",
+      "legacy_catalog": null,
+      "legacy_reference": {
+        "page": "docs/3yWebsite/skill/step.html",
+        "data_path": "docs/3yWebsite/skill/step.html",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "wind color steps"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "破風彩雲步(wind color steps)",
+        "upgrade_chance": "極低"
+      },
+      "family": "legacy-step-cloud-ghost",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/c/cloud_ghost.ski",
+        "skill_lst_key": "cloud_ghost",
+        "slot_symbol": "SLOT_CLOUD_GHOST",
+        "type": "TAR_DODGE",
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "wait": 10,
+        "weapon": null,
+        "check": null,
+        "associate": "SLOT_WINDCOLOR_STEPS",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 10,
+          "cost": 15,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 10,
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_unreviewed"
+      },
+      "legacy_navigation": {
+        "group": "其他技能",
+        "leaf": "步法",
+        "page_path": "skill/step.html"
+      }
+    },
+    {
+      "english_name": "wind color steps",
+      "chinese_name": "破風彩雲步",
+      "category_group": "其他技能",
+      "legacy_catalog": null,
+      "legacy_reference": {
+        "page": "docs/3yWebsite/skill/step.html",
+        "data_path": "docs/3yWebsite/skill/step.html",
+        "chain_root": false,
+        "previous": [
+          "cloud ghost"
+        ],
+        "next": [],
+        "prerequisite": "雲蹤魅影(cloud ghost)",
+        "upgrade_target": null,
+        "upgrade_chance": null
+      },
+      "family": "legacy-step-cloud-ghost",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/w/windcolor_steps.ski",
+        "skill_lst_key": "windcolor_steps",
+        "slot_symbol": "SLOT_WINDCOLOR_STEPS",
+        "type": "TAR_DODGE",
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "wait": 10,
+        "weapon": null,
+        "check": null,
+        "associate": "-1",
+        "canask": false,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 10,
+          "cost": 15,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 10,
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_unreviewed"
+      },
+      "legacy_navigation": {
+        "group": "其他技能",
+        "leaf": "步法",
+        "page_path": "skill/step.html"
+      }
+    },
+    {
+      "english_name": "color steps",
+      "chinese_name": "七彩幻步",
+      "category_group": "其他技能",
+      "legacy_catalog": null,
+      "legacy_reference": {
+        "page": "docs/3yWebsite/skill/step.html",
+        "data_path": "docs/3yWebsite/skill/step.html",
+        "chain_root": false,
+        "previous": [
+          "nine steps"
+        ],
+        "next": [],
+        "prerequisite": "九天靈影步(nine steps)",
+        "upgrade_target": null,
+        "upgrade_chance": null
+      },
+      "family": "legacy-step-nine",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/c/color_steps.ski",
+        "skill_lst_key": "color_steps",
+        "slot_symbol": "SLOT_COLOR_STEPS",
+        "type": "TAR_DODGE",
+        "cost": 10,
+        "cost_type": "COST_MOVE",
+        "wait": 5,
+        "weapon": null,
+        "check": null,
+        "associate": "-1",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 5,
+          "cost": 10,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 5,
+        "cost": 10,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_unreviewed"
+      },
+      "legacy_navigation": {
+        "group": "其他技能",
+        "leaf": "步法",
+        "page_path": "skill/step.html"
+      }
+    },
+    {
+      "english_name": "nine steps",
+      "chinese_name": "九天靈影步",
+      "category_group": "其他技能",
+      "legacy_catalog": null,
+      "legacy_reference": {
+        "page": "docs/3yWebsite/skill/step.html",
+        "data_path": "docs/3yWebsite/skill/step.html",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "color steps"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "七彩幻步(color steps)",
+        "upgrade_chance": "極低"
+      },
+      "family": "legacy-step-nine",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/n/nine_step.ski",
+        "skill_lst_key": "nine_step",
+        "slot_symbol": "SLOT_NINE_STEP",
+        "type": "TAR_DODGE",
+        "cost": 5,
+        "cost_type": "COST_MOVE",
+        "wait": 1,
+        "weapon": null,
+        "check": null,
+        "associate": "SLOT_COLOR_STEPS",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            100,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 1,
+          "cost": 5,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          100,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 1,
+        "cost": 5,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_unreviewed"
+      },
+      "legacy_navigation": {
+        "group": "其他技能",
+        "leaf": "步法",
+        "page_path": "skill/step.html"
+      }
+    },
+    {
+      "english_name": "shade steps",
+      "chinese_name": "換星步",
+      "category_group": "其他技能",
+      "legacy_catalog": null,
+      "legacy_reference": {
+        "page": "docs/3yWebsite/skill/step.html",
+        "data_path": "docs/3yWebsite/skill/step.html",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "wind steps"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "風影藏(wind steps)",
+        "upgrade_chance": "極低"
+      },
+      "family": "legacy-step-shade",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/s/shade_steps.ski",
+        "skill_lst_key": "shade_steps",
+        "slot_symbol": "SLOT_SHADE_STEPS",
+        "type": "TAR_DODGE",
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "wait": 10,
+        "weapon": null,
+        "check": null,
+        "associate": "SLOT_WIND_STEPS",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 10,
+          "cost": 15,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 10,
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_unreviewed"
+      },
+      "legacy_navigation": {
+        "group": "其他技能",
+        "leaf": "步法",
+        "page_path": "skill/step.html"
+      }
+    },
+    {
+      "english_name": "wind steps",
+      "chinese_name": "風影藏",
+      "category_group": "其他技能",
+      "legacy_catalog": null,
+      "legacy_reference": {
+        "page": "docs/3yWebsite/skill/step.html",
+        "data_path": "docs/3yWebsite/skill/step.html",
+        "chain_root": false,
+        "previous": [
+          "shade steps"
+        ],
+        "next": [],
+        "prerequisite": "換星步(shade steps)",
+        "upgrade_target": null,
+        "upgrade_chance": null
+      },
+      "family": "legacy-step-shade",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/w/wind_steps.ski",
+        "skill_lst_key": "wind_steps",
+        "slot_symbol": "SLOT_WIND_STEPS",
+        "type": "TAR_DODGE",
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "wait": 10,
+        "weapon": null,
+        "check": null,
+        "associate": "-1",
+        "canask": false,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 10,
+          "cost": 15,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 10,
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_unreviewed"
+      },
+      "legacy_navigation": {
+        "group": "其他技能",
+        "leaf": "步法",
+        "page_path": "skill/step.html"
+      }
+    },
+    {
+      "english_name": "sky steps",
+      "chinese_name": "俠客天雲身法",
+      "category_group": "其他技能",
+      "legacy_catalog": null,
+      "legacy_reference": {
+        "page": "docs/3yWebsite/skill/step.html",
+        "data_path": "docs/3yWebsite/skill/step.html",
+        "chain_root": false,
+        "previous": [
+          "sleev steps"
+        ],
+        "next": [],
+        "prerequisite": "風雲袖步(sleev steps)",
+        "upgrade_target": null,
+        "upgrade_chance": null
+      },
+      "family": "legacy-step-sleev",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/s/sky_steps.ski",
+        "skill_lst_key": "sky_steps",
+        "slot_symbol": "SLOT_SKY_STEPS",
+        "type": "TAR_DODGE",
+        "cost": 10,
+        "cost_type": "COST_MOVE",
+        "wait": 10,
+        "weapon": null,
+        "check": null,
+        "associate": "-1",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 10,
+          "cost": 10,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 10,
+        "cost": 10,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "batch_b_prechecked"
+      },
+      "legacy_navigation": {
+        "group": "其他技能",
+        "leaf": "步法",
+        "page_path": "skill/step.html"
+      }
+    },
+    {
+      "english_name": "sleev steps",
+      "chinese_name": "風雲袖步",
+      "category_group": "其他技能",
+      "legacy_catalog": null,
+      "legacy_reference": {
+        "page": "docs/3yWebsite/skill/step.html",
+        "data_path": "docs/3yWebsite/skill/step.html",
+        "chain_root": true,
+        "previous": [],
+        "next": [
+          "sky steps"
+        ],
+        "prerequisite": "從缺",
+        "upgrade_target": "俠客天雲身法(sky steps)",
+        "upgrade_chance": "極低"
+      },
+      "family": "legacy-step-sleev",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/s/sleev_steps.ski",
+        "skill_lst_key": "sleev_steps",
+        "slot_symbol": "SLOT_SLEEV_STEPS",
+        "type": "TAR_DODGE",
+        "cost": 10,
+        "cost_type": "COST_MOVE",
+        "wait": 10,
+        "weapon": null,
+        "check": null,
+        "associate": "SLOT_SKY_STEPS",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 10,
+          "cost": 10,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 10,
+        "cost": 10,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_unreviewed"
+      },
+      "legacy_navigation": {
+        "group": "其他技能",
+        "leaf": "步法",
+        "page_path": "skill/step.html"
+      }
+    },
+    {
+      "english_name": "eight steps",
+      "chinese_name": "醉八仙",
+      "category_group": "其他技能",
+      "legacy_catalog": null,
+      "legacy_reference": {
+        "page": "docs/3yWebsite/skill/step.html",
+        "data_path": "docs/3yWebsite/skill/step.html",
+        "chain_root": true,
+        "previous": [],
+        "next": [],
+        "prerequisite": "從缺",
+        "upgrade_target": null,
+        "upgrade_chance": null
+      },
+      "family": "legacy-step-standalone",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/e/eight_steps.ski",
+        "skill_lst_key": "eight_steps",
+        "slot_symbol": "SLOT_EIGHT_STEPS",
+        "type": "TAR_DODGE",
+        "cost": 20,
+        "cost_type": "COST_MOVE",
+        "wait": 1,
+        "weapon": null,
+        "check": "check_unrigid_attack",
+        "associate": "-1",
+        "canask": false,
+        "teach": false,
+        "valid": false,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 1,
+          "cost": 20,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": "check_unrigid_attack",
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 1,
+        "cost": 20,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": "check_unrigid_attack",
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_unreviewed"
+      },
+      "legacy_navigation": {
+        "group": "其他技能",
+        "leaf": "步法",
+        "page_path": "skill/step.html"
+      }
+    },
+    {
+      "english_name": "free steps",
+      "chinese_name": "逍遙遊",
+      "category_group": "其他技能",
+      "legacy_catalog": null,
+      "legacy_reference": {
+        "page": "docs/3yWebsite/skill/step.html",
+        "data_path": "docs/3yWebsite/skill/step.html",
+        "chain_root": true,
+        "previous": [],
+        "next": [],
+        "prerequisite": "從缺",
+        "upgrade_target": null,
+        "upgrade_chance": null
+      },
+      "family": "legacy-step-standalone",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/f/free_steps.ski",
+        "skill_lst_key": "free_steps",
+        "slot_symbol": "SLOT_FREE_STEPS",
+        "type": "TAR_DODGE",
+        "cost": 10,
+        "cost_type": "COST_MOVE",
+        "wait": 10,
+        "weapon": null,
+        "check": null,
+        "associate": "-1",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 10,
+          "cost": 10,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 10,
+        "cost": 10,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_unreviewed"
+      },
+      "legacy_navigation": {
+        "group": "其他技能",
+        "leaf": "步法",
+        "page_path": "skill/step.html"
+      }
+    },
+    {
+      "english_name": "hundred steps",
+      "chinese_name": "百幻身法",
+      "category_group": "其他技能",
+      "legacy_catalog": null,
+      "legacy_reference": {
+        "page": "docs/3yWebsite/skill/step.html",
+        "data_path": "docs/3yWebsite/skill/step.html",
+        "chain_root": true,
+        "previous": [
+          "night steps"
+        ],
+        "next": [],
+        "prerequisite": "百鬼夜行步(night steps)",
+        "upgrade_target": null,
+        "upgrade_chance": null
+      },
+      "family": "legacy-step-standalone",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/h/hundred_steps.ski",
+        "skill_lst_key": "hundred_steps",
+        "slot_symbol": "SLOT_HUNDRED_STEPS",
+        "type": "TAR_DODGE",
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "wait": 10,
+        "weapon": null,
+        "check": null,
+        "associate": "-1",
+        "canask": false,
+        "teach": false,
+        "valid": false,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 10,
+          "cost": 15,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 10,
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_unreviewed"
+      },
+      "legacy_navigation": {
+        "group": "其他技能",
+        "leaf": "步法",
+        "page_path": "skill/step.html"
+      }
+    },
+    {
+      "english_name": "night steps",
+      "chinese_name": "百鬼夜行步",
+      "category_group": "其他技能",
+      "legacy_catalog": null,
+      "legacy_reference": {
+        "page": "docs/3yWebsite/skill/step.html",
+        "data_path": "docs/3yWebsite/skill/step.html",
+        "chain_root": true,
+        "previous": [],
+        "next": [],
+        "prerequisite": "從缺",
+        "upgrade_target": null,
+        "upgrade_chance": null
+      },
+      "family": "legacy-step-standalone",
+      "runtime": {
+        "exists": true,
+        "skill_file": "skill/n/night_steps.ski",
+        "skill_lst_key": "night_steps",
+        "slot_symbol": "SLOT_NIGHT_STEPS",
+        "type": "TAR_DODGE",
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "wait": 10,
+        "weapon": null,
+        "check": null,
+        "associate": "-1",
+        "canask": true,
+        "teach": false,
+        "valid": true,
+        "enable": true,
+        "combat_dimensions": {
+          "damage_values": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "chance_values": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "parry_values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "innate_values": [
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0",
+            "0 0"
+          ],
+          "wait": 10,
+          "cost": 15,
+          "cost_type": "COST_MOVE",
+          "weapon": null,
+          "check": null,
+          "prepared_for_adjustment": true,
+          "notes": []
+        }
+      },
+      "combat_dimensions": {
+        "damage_values": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "chance_values": [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "parry_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "innate_values": [
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0",
+          "0 0"
+        ],
+        "wait": 10,
+        "cost": 15,
+        "cost_type": "COST_MOVE",
+        "weapon": null,
+        "check": null,
+        "prepared_for_adjustment": true,
+        "notes": []
+      },
+      "status": {
+        "player_facing": true,
+        "npc_only": false,
+        "audit_state": "legacy_unreviewed"
+      },
+      "legacy_navigation": {
+        "group": "其他技能",
+        "leaf": "步法",
+        "page_path": "skill/step.html"
+      }
     }
-  ]
+  ],
+  "legacy_site_navigation": {
+    "source": "docs/3yWebsite/skill/index.html and per-page category layout",
+    "groups": {
+      "武器技能": [
+        "劍",
+        "刀",
+        "弓",
+        "槍",
+        "棍",
+        "斧",
+        "鞭",
+        "筆扇",
+        "短兵",
+        "拳法",
+        "氣功"
+      ],
+      "法術技能": [
+        "火系",
+        "風系",
+        "光系",
+        "聖系",
+        "雷系",
+        "水系",
+        "土系",
+        "暗系",
+        "邪系",
+        "毒系"
+      ],
+      "職業技能": [
+        "格鬥系",
+        "暗殺系",
+        "法師系",
+        "鑄造系",
+        "吟唱系",
+        "醫療系",
+        "盜賊系"
+      ],
+      "其他技能": [
+        "步法",
+        "技能",
+        "技能熟練度"
+      ]
+    },
+    "normalization_notes": [
+      "Old-site docs/data/skills.json may flatten page-level navigation into broad category values only.",
+      "雷電系 is normalized into 雷系 for navigation parity with the old site category menu.",
+      "技能熟練度 is kept as a navigation leaf even though it is informational rather than a runtime skill."
+    ]
+  }
 }

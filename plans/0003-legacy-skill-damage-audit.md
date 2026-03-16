@@ -234,7 +234,8 @@
 
 目標：
 
-- 建立第一條 dodge legacy ladder
+- 建立第一批 dodge legacy ladder
+- 先確認 `cloud -> gdragon` 與 `sleev -> sky` 的交叉分支關係，再決定修值方式
 - 驗證步法梯度是否能更合理對應 guard / teacher / bravo/general 路線
 
 ### Batch C
@@ -371,3 +372,95 @@
 目前可直接改用：
 
 > 請直接續做 `plans/0003-legacy-skill-damage-audit.md` 的 Batch B，先處理 `cloud steps`、`gdragon steps`、`sky steps` 的 dodge ladder 重建。先讀 `docs/3yWebsite/docs/data/players.json`、`docs/3yWebsite/docs/data/skills.json`、對應 `skill/*.ski`，然後直接修改 skill value、做 build / smoke test、更新 plan 與必要的 audit。
+
+## Batch B Pre-Check
+
+### Reference Basis
+
+- `docs/3yWebsite/docs/data/players.json`
+  - `新手上路`
+    - `cloud steps` 是新手 early learn baseline
+  - `刺客精練-步法`
+    - `cloud steps` 列為可直接學習的步法
+    - `gdragon steps` 與 `cloud steps` 同段出現，對應 `cloud` 的高階方向
+    - `sky steps` 明確寫成由 `sleev steps` 領悟，不是 `cloud` 的直升下一段
+    - `sky steps` 被描述為「武官系數一數二的步法，花費體力很少、必備」
+  - `將軍精練-步法`
+    - 和刺客文同樣把 `sky steps` 放在 `sleev steps` 鏈上
+- `docs/3yWebsite/docs/data/skills.json`
+  - 只有 `cloud steps` 有單獨技能頁
+  - `cloud steps` 明確標註可領悟 `gdragon steps`
+- runtime `skill/*.ski`
+  - `cloud_steps.ski`
+    - `Associate SLOT_GDRAGON_STEPS`
+  - `gdragon_steps.ski`
+    - `Associate SLOT_MIRAGE_STEPS`
+  - `sleev_steps.ski`
+    - `Associate SLOT_SKY_STEPS`
+  - `sky_steps.ski`
+    - `Associate -1`
+
+### Mandatory Pre-Check Snapshot
+
+`cloud steps`
+
+- type: `TAR_DODGE`
+- cost: `5`
+- costtype: `COST_MOVE`
+- wait: `1`
+- canask / teach: `YES / YES`
+- damage entries: `7`
+- chance set: `10`
+- value set: `20`
+- parry set: `0`
+- damage innate set: `0 0`
+
+`gdragon steps`
+
+- type: `TAR_DODGE`
+- cost: `15`
+- costtype: `COST_MOVE`
+- wait: `10`
+- canask / teach: `YES / NO`
+- damage entries: `7`
+- chance set: `20`
+- value set: `20`
+- parry set: `0`
+- damage innate set: `0 0`
+
+`sky steps`
+
+- type: `TAR_DODGE`
+- cost: `10`
+- costtype: `COST_MOVE`
+- wait: `10`
+- canask / teach: `YES / NO`
+- damage entries: `6`
+- chance set: `20`
+- value set: `20`
+- parry set: `0`
+- damage innate set: `0 0`
+
+### Interpretation
+
+- `cloud steps -> gdragon steps` 是舊站與 runtime 都能確認的同鏈關係。
+- `sky steps` 不是 `cloud/gdragon` 直線升階；它更像 `sleev steps -> sky steps` 這條分支上的高階步法。
+- 三者的 `Value` 都被壓成 `20`，表示 dodge template 確實存在系統性清值。
+- 但這批也沒有被完全壓成同質：
+  - `cloud steps` 只有 `Cost 5`、`Wait 1`，明顯保留了入門高頻、低成本特性。
+  - `gdragon steps` 雖然也是 `Value 20`，但 `Cost 15`、`Wait 10`，代表它不可能單靠「更快」來成立高階定位。
+  - `sky steps` 同樣 `Wait 10`，但 `Cost 10` 低於 `gdragon steps`，和舊站「花費體力很少」的描述相符。
+- 因此 Batch B 不應直接把三者當同一條單線梯度一起上調；較合理的做法是：
+  - 先把 `cloud -> gdragon` 當主鏈修 dodge template
+  - 再把 `sky steps` 當平行高階步法，保留其「較省體力」特色來做橫向比較
+
+### Implementation-Ready Direction
+
+下一步修值前，建議採這個順序：
+
+1. 先針對 `cloud steps` / `gdragon steps` 設計入門與中高階 dodge template 差距
+2. `sky steps` 不追求單純高於 `gdragon` 的所有數值，而是維持：
+   - 高階定位
+   - 相對省體力
+   - 與 `sleev steps` 分支相符的武官 / bravo 路線特色
+3. 修值後抽查目前大量掛著 `gdragon steps` 的城市 / 教學 / 服務 NPC，確認 failenable 與實戰模板是否較合理
