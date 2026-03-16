@@ -1,0 +1,798 @@
+{
+  "scope": "Skill combat chain audit ledger for merc-fju-3.0. This ledger tracks pilot findings before wider runtime rebalance.",
+  "last_updated": "2026-03-16",
+  "runtime_source_of_truth": [
+    "skill/*.ski",
+    "skill/skill.lst",
+    "src/merc.h",
+    "data/symbol.def",
+    "area/*/mob/*.mob",
+    "area/*/obj/*.obj",
+    "area/*/res/*.res",
+    "src/merc.sample.ini",
+    "src/merc.ini"
+  ],
+  "reference_priority": [
+    "docs/3yWebsite/docs/data/skills.json",
+    "docs/3yWebsite/docs/skills.md",
+    "Current runtime files under skill/, area/, src/, data/",
+    "ref/ inputs for theme and naming only"
+  ],
+  "ref_inputs_used": [
+    "ref/Readme.md"
+  ],
+  "ref_inputs_deferred": [
+    "world-graph.json",
+    "三國-MUD-世界設計總藍圖-Architecture-Map.md",
+    "三國-MUD-題材分布表.md"
+  ],
+  "theme_basis": "Pilot batch follows existing loyang/beiping military, palace, and night-runner identity lines. New reference inputs are deferred until after the current runtime ladder is stabilized.",
+  "compliance_check": "No runtime data changed in this audit pass. Existing area tracker and area load order remain untouched.",
+  "summary_counts": {
+    "skill_files": 272,
+    "skill_valid_yes": 174,
+    "skill_valid_no": 98,
+    "skill_enable_yes": 153,
+    "skill_enable_no": 119,
+    "skill_canask_yes": 148,
+    "skill_canask_no": 124,
+    "mob_enable_lines": 98
+  },
+  "global_findings": [
+    {
+      "key": "Attack Value",
+      "finding": "Display-only combat damage number toggle in fight messages, not a damage scalar.",
+      "source": [
+        "src/fight.c",
+        "src/ini.c"
+      ]
+    },
+    {
+      "key": "Skill Value",
+      "finding": "Display-only skill adeptation toggle for skill and enable listings, not an adeptation scalar.",
+      "source": [
+        "src/act_move.c",
+        "src/enable.c",
+        "src/bit.c",
+        "src/ini.c"
+      ]
+    },
+    {
+      "key": "Mob Practice",
+      "finding": "Practice helper mob vnum used by make.c, not a direct battle strength coefficient.",
+      "source": [
+        "src/make.c",
+        "src/db.c",
+        "src/ini.c"
+      ]
+    }
+  ],
+  "legacy_reference_snapshots": [
+    {
+      "source_file": "docs/3yWebsite/docs/data/skills.json",
+      "runtime_key": "legacy:cloud steps",
+      "legacy_fields": {
+        "english_name": "cloud steps",
+        "chinese_name": "翦雲步",
+        "shareable": "可以",
+        "function": "閃躲類",
+        "legacy_upgrade": "青玄身法(gdragon steps)"
+      },
+      "notes": "Used as the strongest direct old-site signal for the cloud-steps to gdragon-steps progression chain."
+    },
+    {
+      "source_file": "docs/3yWebsite/docs/data/skills.json",
+      "runtime_key": "legacy:hua",
+      "legacy_fields": {
+        "english_name": "hua",
+        "chinese_name": "華山劍法",
+        "shareable": "可以",
+        "function": "攻擊類",
+        "legacy_upgrade": "封山劍法(fonxan sword)"
+      },
+      "notes": "Used to explain why hua sword remains a valid old-world teacher route even when palace guards now use a different runtime ladder."
+    },
+    {
+      "source_file": "docs/3yWebsite/docs/data/skills.json",
+      "runtime_key": "legacy:pry",
+      "legacy_fields": {
+        "english_name": "pry",
+        "chinese_name": "打聽技能",
+        "shareable": "不可以",
+        "category": "吟唱系"
+      },
+      "notes": "Used as a legacy player-facing classification signal only. Current repo may still expose pry through NPC teach routes."
+    }
+  ],
+  "pilot_batches": [
+    {
+      "id": "pilot-loyang-beiping-guard-lineage",
+      "areas": [
+        "loyang",
+        "beiping"
+      ],
+      "focus_skills": [
+        "military blade",
+        "military steps",
+        "imperial sword",
+        "imperial steps",
+        "night blade",
+        "shadowtrace steps",
+        "cavalry lance"
+      ],
+      "focus_roles": [
+        "城市守衛",
+        "城門守衛",
+        "騎兵",
+        "禁軍護衛",
+        "殿前護衛",
+        "御前護衛",
+        "京城大盜",
+        "扶桑浪人"
+      ]
+    }
+  ],
+  "archetypes": [
+    {
+      "id": "city_guard_mid",
+      "offensive_skill": "military blade",
+      "offensive_adept_range": [
+        55,
+        65
+      ],
+      "dodge_skill": "military steps",
+      "dodge_adept_range": [
+        55,
+        65
+      ]
+    },
+    {
+      "id": "city_guard_high",
+      "offensive_skill": "military blade",
+      "offensive_adept_range": [
+        65,
+        75
+      ],
+      "dodge_skill": "military steps",
+      "dodge_adept_range": [
+        60,
+        70
+      ]
+    },
+    {
+      "id": "cavalry_mid",
+      "offensive_skill": "cavalry lance",
+      "offensive_adept_range": [
+        60,
+        70
+      ],
+      "dodge_skill": "military steps",
+      "dodge_adept_range": [
+        50,
+        60
+      ]
+    },
+    {
+      "id": "palace_entry",
+      "offensive_skill": "imperial sword",
+      "offensive_adept_range": [
+        45,
+        55
+      ],
+      "dodge_skill": "military steps",
+      "dodge_adept_range": [
+        45,
+        55
+      ]
+    },
+    {
+      "id": "palace_high",
+      "offensive_skill": "imperial sword",
+      "offensive_adept_range": [
+        75,
+        85
+      ],
+      "dodge_skill": "imperial steps",
+      "dodge_adept_range": [
+        70,
+        80
+      ]
+    },
+    {
+      "id": "palace_top",
+      "offensive_skill": "imperial sword",
+      "offensive_adept_range": [
+        90,
+        95
+      ],
+      "dodge_skill": "imperial steps",
+      "dodge_adept_range": [
+        85,
+        90
+      ]
+    },
+    {
+      "id": "night_runner_entry",
+      "offensive_skill": "night blade",
+      "offensive_adept_range": [
+        50,
+        60
+      ],
+      "dodge_skill": "shadowtrace steps",
+      "dodge_adept_range": [
+        55,
+        60
+      ]
+    },
+    {
+      "id": "night_runner_mid",
+      "offensive_skill": "night blade",
+      "offensive_adept_range": [
+        55,
+        65
+      ],
+      "dodge_skill": "shadowtrace steps",
+      "dodge_adept_range": [
+        60,
+        65
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "domain": "global_coeff",
+      "runtime_key": "Attack Value",
+      "source_file": "src/merc.ini",
+      "current_value": 1,
+      "reference_value": {
+        "role": "display_gate_only",
+        "expected_behavior": "show raw damage numbers in combat text"
+      },
+      "reference_source": [
+        "src/fight.c",
+        "src/ini.c",
+        "src/merc.sample.ini"
+      ],
+      "status": "intentional_divergence",
+      "notes": "Keep tracked for completeness, but first-pass audit confirms it is not a combat damage scaler.",
+      "pilot_batch": "global-baseline"
+    },
+    {
+      "domain": "global_coeff",
+      "runtime_key": "Skill Value",
+      "source_file": "src/merc.ini",
+      "current_value": 0,
+      "reference_value": {
+        "role": "display_gate_only",
+        "expected_behavior": "hide adept percentages and 熟練度 text for mortals"
+      },
+      "reference_source": [
+        "src/act_move.c",
+        "src/enable.c",
+        "src/bit.c",
+        "src/ini.c",
+        "src/merc.sample.ini"
+      ],
+      "status": "intentional_divergence",
+      "notes": "Keep tracked because it affects audit visibility, but it does not directly reduce NPC battle output.",
+      "pilot_batch": "global-baseline"
+    },
+    {
+      "domain": "global_coeff",
+      "runtime_key": "Mob Practice",
+      "source_file": "src/merc.ini",
+      "current_value": 22,
+      "reference_value": {
+        "role": "practice_helper_vnum",
+        "expected_behavior": "resolve to a valid practice helper mob"
+      },
+      "reference_source": [
+        "src/make.c",
+        "src/db.c",
+        "src/ini.c",
+        "area/limbo/mob/22.mob"
+      ],
+      "status": "ok",
+      "notes": "Included because it was listed in the initial scope, but current code path shows it is not a direct balance knob for combat output.",
+      "pilot_batch": "global-baseline"
+    },
+    {
+      "domain": "skill_definition",
+      "runtime_key": "skill:military blade",
+      "source_file": "skill/m/military_blade.ski",
+      "current_value": {
+        "valid": false,
+        "enable": true,
+        "teach": false,
+        "canask": false,
+        "type": "TAR_CHAR_OFFENSIVE"
+      },
+      "reference_value": {
+        "npc_only": true,
+        "expected_flags": {
+          "valid": false,
+          "enable": true,
+          "teach": false,
+          "canask": false
+        }
+      },
+      "reference_source": [
+        "docs/current-game/skills.json",
+        "docs/current-game/skills.md"
+      ],
+      "status": "intentional_divergence",
+      "notes": "NPC-only military attack skill. Valid NO is intentional so it stays out of normal player skill lookup while remaining mob-enableable.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "skill_definition",
+      "runtime_key": "skill:military steps",
+      "source_file": "skill/m/military_steps.ski",
+      "current_value": {
+        "valid": false,
+        "enable": true,
+        "teach": false,
+        "canask": false,
+        "type": "TAR_DODGE"
+      },
+      "reference_value": {
+        "npc_only": true,
+        "expected_flags": {
+          "valid": false,
+          "enable": true,
+          "teach": false,
+          "canask": false
+        }
+      },
+      "reference_source": [
+        "docs/current-game/skills.json",
+        "docs/current-game/skills.md"
+      ],
+      "status": "intentional_divergence",
+      "notes": "NPC-only dodge line for military archetypes.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "skill_definition",
+      "runtime_key": "skill:imperial sword",
+      "source_file": "skill/i/imperial_sword.ski",
+      "current_value": {
+        "valid": false,
+        "enable": true,
+        "teach": false,
+        "canask": false,
+        "type": "TAR_CHAR_OFFENSIVE"
+      },
+      "reference_value": {
+        "npc_only": true,
+        "expected_flags": {
+          "valid": false,
+          "enable": true,
+          "teach": false,
+          "canask": false
+        }
+      },
+      "reference_source": [
+        "docs/current-game/skills.json",
+        "docs/current-game/skills.md"
+      ],
+      "status": "intentional_divergence",
+      "notes": "Palace-only offensive ladder. Hidden from player lookup by design.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "skill_definition",
+      "runtime_key": "skill:imperial steps",
+      "source_file": "skill/i/imperial_steps.ski",
+      "current_value": {
+        "valid": false,
+        "enable": true,
+        "teach": false,
+        "canask": false,
+        "type": "TAR_DODGE"
+      },
+      "reference_value": {
+        "npc_only": true,
+        "expected_flags": {
+          "valid": false,
+          "enable": true,
+          "teach": false,
+          "canask": false
+        }
+      },
+      "reference_source": [
+        "docs/current-game/skills.json",
+        "docs/current-game/skills.md"
+      ],
+      "status": "intentional_divergence",
+      "notes": "Palace-only dodge ladder. Hidden from player lookup by design.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "skill_definition",
+      "runtime_key": "skill:night blade",
+      "source_file": "skill/n/night_blade.ski",
+      "current_value": {
+        "valid": false,
+        "enable": true,
+        "teach": false,
+        "canask": false,
+        "type": "TAR_CHAR_OFFENSIVE"
+      },
+      "reference_value": {
+        "npc_only": true,
+        "expected_flags": {
+          "valid": false,
+          "enable": true,
+          "teach": false,
+          "canask": false
+        }
+      },
+      "reference_source": [
+        "docs/current-game/skills.json",
+        "docs/current-game/skills.md"
+      ],
+      "status": "intentional_divergence",
+      "notes": "Night-runner offensive ladder for thief/ronin style NPCs.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "skill_definition",
+      "runtime_key": "skill:shadowtrace steps",
+      "source_file": "skill/s/shadowtrace_steps.ski",
+      "current_value": {
+        "valid": false,
+        "enable": true,
+        "teach": false,
+        "canask": false,
+        "type": "TAR_DODGE"
+      },
+      "reference_value": {
+        "npc_only": true,
+        "expected_flags": {
+          "valid": false,
+          "enable": true,
+          "teach": false,
+          "canask": false
+        }
+      },
+      "reference_source": [
+        "docs/current-game/skills.json",
+        "docs/current-game/skills.md"
+      ],
+      "status": "intentional_divergence",
+      "notes": "Night-runner dodge ladder paired with night blade.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "skill_definition",
+      "runtime_key": "skill:cavalry lance",
+      "source_file": "skill/c/cavalry_lance.ski",
+      "current_value": {
+        "valid": false,
+        "enable": true,
+        "teach": false,
+        "canask": false,
+        "type": "TAR_CHAR_OFFENSIVE"
+      },
+      "reference_value": {
+        "npc_only": true,
+        "expected_flags": {
+          "valid": false,
+          "enable": true,
+          "teach": false,
+          "canask": false
+        }
+      },
+      "reference_source": [
+        "docs/current-game/skills.json",
+        "docs/current-game/skills.md"
+      ],
+      "status": "intentional_divergence",
+      "notes": "NPC-only cavalry offensive ladder.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "mob_enable",
+      "runtime_key": "mob:501",
+      "source_file": "area/loyang/mob/501.mob",
+      "current_value": {
+        "offensive_skill": "military blade",
+        "offensive_adept": 55,
+        "dodge_skill": "military steps",
+        "dodge_adept": 55
+      },
+      "reference_value": {
+        "archetype": "city_guard_mid"
+      },
+      "reference_source": [
+        "docs/current-game/skills.json",
+        "plans/failenable-npc-skill-audit.md"
+      ],
+      "status": "ok",
+      "notes": "Current values align with the city guard mid-band target and serve as a baseline sample.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "mob_enable",
+      "runtime_key": "mob:503",
+      "source_file": "area/loyang/mob/503.mob",
+      "current_value": {
+        "offensive_skill": "military blade",
+        "offensive_adept": 70,
+        "dodge_skill": "military steps",
+        "dodge_adept": 65
+      },
+      "reference_value": {
+        "archetype": "city_guard_high"
+      },
+      "reference_source": [
+        "docs/current-game/skills.json",
+        "plans/failenable-npc-skill-audit.md"
+      ],
+      "status": "ok",
+      "notes": "Gate guard values already fit the intended higher guard ladder.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "mob_enable",
+      "runtime_key": "mob:545",
+      "source_file": "area/loyang/mob/545.mob",
+      "current_value": {
+        "offensive_skill": "cavalry lance",
+        "offensive_adept": 65,
+        "dodge_skill": "military steps",
+        "dodge_adept": 55
+      },
+      "reference_value": {
+        "archetype": "cavalry_mid"
+      },
+      "reference_source": [
+        "docs/current-game/skills.json",
+        "plans/failenable-npc-skill-audit.md"
+      ],
+      "status": "ok",
+      "notes": "Current cavalry sample already matches the intended lance-plus-military-step profile.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "mob_enable",
+      "runtime_key": "mob:565",
+      "source_file": "area/loyang/mob/565.mob",
+      "current_value": {
+        "offensive_skill": "imperial sword",
+        "offensive_adept": 82,
+        "dodge_skill": "imperial steps",
+        "dodge_adept": 78
+      },
+      "reference_value": {
+        "archetype": "palace_high"
+      },
+      "reference_source": [
+        "docs/current-game/skills.json",
+        "plans/failenable-npc-skill-audit.md"
+      ],
+      "status": "ok",
+      "notes": "High palace guard sample matches the intended upper palace band.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "mob_enable",
+      "runtime_key": "mob:569",
+      "source_file": "area/loyang/mob/569.mob",
+      "current_value": {
+        "offensive_skill": "imperial sword",
+        "offensive_adept": 92,
+        "dodge_skill": "imperial steps",
+        "dodge_adept": 88
+      },
+      "reference_value": {
+        "archetype": "palace_top"
+      },
+      "reference_source": [
+        "docs/current-game/skills.json",
+        "plans/failenable-npc-skill-audit.md"
+      ],
+      "status": "ok",
+      "notes": "Top palace guard sample already lands in the intended elite range.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "mob_enable",
+      "runtime_key": "mob:9001",
+      "source_file": "area/beiping/mob/9001.mob",
+      "current_value": {
+        "offensive_skill": "imperial sword",
+        "offensive_adept": 45,
+        "dodge_skill": "military steps",
+        "dodge_adept": 45
+      },
+      "reference_value": {
+        "archetype": "palace_entry"
+      },
+      "reference_source": [
+        "docs/current-game/skills.json",
+        "plans/failenable-npc-skill-audit.md"
+      ],
+      "status": "ok",
+      "notes": "Entry palace sample is consistent with the first rung of the palace ladder.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "mob_enable",
+      "runtime_key": "mob:9002",
+      "source_file": "area/beiping/mob/9002.mob",
+      "current_value": {
+        "offensive_skill": "military blade",
+        "offensive_adept": 75,
+        "dodge_skill": "military steps",
+        "dodge_adept": 68
+      },
+      "reference_value": {
+        "archetype": "city_guard_high"
+      },
+      "reference_source": [
+        "docs/current-game/skills.json",
+        "plans/failenable-npc-skill-audit.md"
+      ],
+      "status": "ok",
+      "notes": "Current palace warrior sample fits the high military rung rather than the palace sword ladder.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "mob_enable",
+      "runtime_key": "mob:9008",
+      "source_file": "area/beiping/mob/9008.mob",
+      "current_value": {
+        "offensive_skill": "night blade",
+        "offensive_adept": 58,
+        "dodge_skill": "shadowtrace steps",
+        "dodge_adept": 62
+      },
+      "reference_value": {
+        "archetype": "night_runner_mid"
+      },
+      "reference_source": [
+        "docs/current-game/skills.json",
+        "plans/failenable-npc-skill-audit.md"
+      ],
+      "status": "ok",
+      "notes": "Night-runner mid sample already lands on the intended dodge-heavy ladder.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "mob_enable",
+      "runtime_key": "mob:9009",
+      "source_file": "area/beiping/mob/9009.mob",
+      "current_value": {
+        "offensive_skill": "imperial sword",
+        "offensive_adept": 78,
+        "dodge_skill": "imperial steps",
+        "dodge_adept": 76
+      },
+      "reference_value": {
+        "archetype": "palace_high"
+      },
+      "reference_source": [
+        "docs/current-game/skills.json",
+        "plans/failenable-npc-skill-audit.md"
+      ],
+      "status": "ok",
+      "notes": "Royal guard sample already fits the intended palace high ladder.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "mob_enable",
+      "runtime_key": "mob:9011",
+      "source_file": "area/beiping/mob/9011.mob",
+      "current_value": {
+        "offensive_skill": "night blade",
+        "offensive_adept": 52,
+        "dodge_skill": "shadowtrace steps",
+        "dodge_adept": 58
+      },
+      "reference_value": {
+        "archetype": "night_runner_entry"
+      },
+      "reference_source": [
+        "docs/current-game/skills.json",
+        "plans/failenable-npc-skill-audit.md"
+      ],
+      "status": "ok",
+      "notes": "Ronin sample lands in the lower night-runner bracket as intended.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "mob_enable",
+      "runtime_key": "mob:559",
+      "source_file": "area/loyang/mob/559.mob",
+      "current_value": {
+        "offensive_skill": "two sword",
+        "offensive_adept": 1,
+        "dodge_skill": "gdragon steps",
+        "dodge_adept": 26
+      },
+      "reference_value": {
+        "archetype": "city_guard_mid",
+        "candidate_replacement": {
+          "offensive_skill": "military blade",
+          "dodge_skill": "military steps"
+        }
+      },
+      "reference_source": [
+        "docs/current-game/skills.json",
+        "docs/3yWebsite/docs/data/skills.json",
+        "plans/failenable-npc-skill-audit.md"
+      ],
+      "status": "restore_candidate",
+      "notes": "This guard-family sample is a clear outlier against the current military ladder. The legacy docs confirm cloud steps -> gdragon steps as an old progression chain, so the dodge side still has a plausible lineage; the two sword adept 1 line remains the real mismatch against the current military identity ladder.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "mob_teach",
+      "runtime_key": "mob:536:#Learn",
+      "source_file": "area/loyang/mob/536.mob",
+      "current_value": {
+        "teach_entries": [
+          "hua sword",
+          "flee",
+          "cloud steps",
+          "pry"
+        ]
+      },
+      "reference_value": {
+        "teacher_role": "escort trainer / utility mentor",
+        "expected_behavior": "teach utility and entry combat support skills"
+      },
+      "reference_source": [
+        "skill/h/hua_sword.ski",
+        "skill/f/flee.ski",
+        "skill/c/cloud_steps.ski",
+        "skill/p/pry.ski",
+        "docs/3yWebsite/docs/data/skills.json"
+      ],
+      "status": "ok",
+      "notes": "The teaching list is broad but internally consistent with a utility mentor role. Legacy docs explicitly support hua sword and cloud steps as old player-facing teachable lines. Pry is legacy-classified as a singing-system skill and non-shareable in old docs, so its current NPC teaching route should be treated as an intentional runtime divergence, not an automatic bug.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "mob_teach",
+      "runtime_key": "mob:507:#Learn",
+      "source_file": "area/loyang/mob/507.mob",
+      "current_value": {
+        "teach_entries": [
+          "repair"
+        ]
+      },
+      "reference_value": {
+        "teacher_role": "smith utility mentor",
+        "expected_behavior": "teach repair only"
+      },
+      "reference_source": [
+        "skill/r/repair.ski"
+      ],
+      "status": "ok",
+      "notes": "This is a stable non-combat teaching route and serves as a control sample for the mob_teach domain.",
+      "pilot_batch": "global-baseline"
+    },
+    {
+      "domain": "skill_item",
+      "runtime_key": "obj:84:RES_SKILL",
+      "source_file": "area/limbo/obj/84.obj",
+      "current_value": {
+        "skill": "noname",
+        "vicevalue": 92
+      },
+      "reference_value": {
+        "expected_behavior": "RES_SKILL should point to a real runtime skill name"
+      },
+      "reference_source": [
+        "area/limbo/obj/84.obj",
+        "skill/*.ski"
+      ],
+      "status": "suspect",
+      "notes": "The item uses a placeholder-like skill reference. This is outside the current pilot but is a good cross-domain example of a skill acquisition path that needs follow-up.",
+      "pilot_batch": "global-baseline"
+    }
+  ]
+}
