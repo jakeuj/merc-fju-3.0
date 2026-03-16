@@ -170,6 +170,8 @@ This repository is a Merc MUD codebase with both legacy runtime/build paths and 
 - Setup and maintenance scripts have internet access.
 - Agent internet access may be disabled unless the environment explicitly enables it.
 - Exports made in setup scripts do not automatically persist into the agent phase.
+- In the current Windows wrapper environment, `rg` may fail to start with an access-denied style error; when that happens, use PowerShell-native discovery such as `Get-ChildItem`, `Select-String`, and `Get-Content` instead of treating it as a repo issue.
+- In the current Windows Python environment, UTF-8 skill or repo files may trigger `cp950` decode failures in validation/helper scripts; when that happens, rerun with UTF-8 mode such as `python -X utf8 ...` or `PYTHONUTF8=1` instead of assuming the file contents are invalid.
 
 ## Scope guidance
 

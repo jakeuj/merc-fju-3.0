@@ -31,6 +31,8 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 - 版本控制內可直接檢視的主要模板設定檔是 `src/merc.sample.ini`
 - `etc/` 目前有多個 runtime / 半動態檔，但工作樹內沒有 `etc/merc.ini`
 - 在這個工作區的常見現況下，Windows 端常只有 `powershell` / `wsl.exe`，真正可用的 `make`、`gcc` 在 WSL 內；要先探測，不要直接判定「無法編譯」
+- 在目前的 Windows 包裝環境下，`rg` 也可能在啟動前就被拒絕；若搜尋檔案或文字時遇到 access denied / 無法啟動，先改用 PowerShell 內建的 `Get-ChildItem`、`Select-String`、`Get-Content`，不要把它誤判成 repo、WSL 或權限配置本身壞掉
+- 在目前的 Windows Python 環境下，讀取 UTF-8 的 `SKILL.md`、計畫文件或其他中文檔時，也可能遇到預設 `cp950` 解碼失敗；若 helper / validation script 丟出 `UnicodeDecodeError`，先改用 `python -X utf8 ...` 或設定 `PYTHONUTF8=1` 重跑，不要先把它判成檔案格式損壞
 - `src/startup` 是 `csh` 腳本；在 WSL / Ubuntu 裡不一定有 `csh` 或 `tcsh`
 - `src/startup.bash` 是 Bash 腳本，依賴 `BASH_SOURCE[0]` 推導腳本位置；若被 `zsh startup.bash` 或 CLion 的 zsh shell runner 執行，會因 `BASH_SOURCE[0]: parameter not set` 類錯誤直接失敗
 - `Windows + WSL (Ubuntu)` 若看到 `/usr/bin/env: 'bash\r': No such file or directory`，優先判斷是 `src/startup.bash` 被存成 `CRLF`，讓 shebang 變成 `#!/usr/bin/env bash\r`
@@ -59,6 +61,12 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 - 若任務和 warning、toolchain parity、跨平台回歸有關，預設要同時驗證 macOS 原生與 Ubuntu build；不要只驗單邊
 - 若目前 shell 是 PowerShell，先檢查：
 - `Get-Command make, gcc, wsl -ErrorAction SilentlyContinue`
+- 若目前 shell 是 PowerShell，且只是要搜尋檔案或內容，優先接受原生命令 fallback：
+- `Get-ChildItem -Recurse -File`
+- `Get-ChildItem -Recurse -File | Select-String -Pattern '<text>'`
+- 若目前 shell 是 PowerShell，且 Python 腳本讀 UTF-8 中文檔失敗，優先接受 UTF-8 模式 fallback：
+- `$env:PYTHONUTF8='1'; python <script> ...`
+- `python -X utf8 <script> ...`
 - 若 PowerShell 沒有 `make`，但 `wsl.exe` 存在，接著檢查：
 - `wsl.exe bash -lc 'cd /mnt/<drive>/<path>/src && command -v make && command -v gcc'`
 - 若 WSL 內有工具鏈，優先把建置命令改成在 WSL 執行，而不是停在「PowerShell 找不到 make」
@@ -141,6 +149,8 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 - **模板與生成檔不同步**：處理 `src/merc.sample.ini` 已修正但 `src/merc.ini` 仍是舊內容，需要刪掉重生
 - **啟動腳本問題**：處理 `src/startup`、`shutdown.txt`、`merc` 是否存在
 - **Shell / 工具鏈錯置**：處理 PowerShell 沒有 `make`、WSL 有工具鏈、路徑轉換、`wsl.exe` 可否進入工作區
+- **Windows wrapper 搜尋受限**：處理 `rg` 在 PowerShell 包裝環境下無法啟動，並改用 `Get-ChildItem` / `Select-String` 繼續工作
+- **Windows Python 編碼差異**：處理 helper script 在預設 `cp950` 下讀 UTF-8 檔案失敗，並改用 UTF-8 模式重跑
 - **Shell 類型錯置**：處理把 Bash 腳本交給 `zsh` / IDE 預設 shell 執行，導致 `BASH_SOURCE`、陣列展開、`set -eu` 等 Bash-only 行為出錯
 - **Docker / Ubuntu 路徑錯置**：處理 macOS 宿主機路徑、容器掛載路徑、`HOME DIRECTORY`、容器內 runtime 目錄
 - **Shell 相依缺件**：處理 `startup` 依賴 `csh` / `tcsh`、WSL 只有 `bash` 時的 fallback
@@ -154,6 +164,8 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 - 明確指出命令應在哪個目錄執行
 - 若 repo 內沒有使用者提到的 launcher 或腳本，直接說不存在，再改用現有入口回答
 - 若 PowerShell 找不到 `make`，先檢查 WSL 是否可用與 repo 是否可從 `/mnt/<drive>/...` 存取；只有在 WSL 也沒有工具鏈時，才回報缺少編譯環境
+- 若 `rg` 在 Windows 包裝環境下被拒絕啟動，直接改用 PowerShell 原生命令完成搜尋；不要因為 repo 指南平常偏好 `rg`，就把這種 wrapper 限制當成任務 blocker
+- 若 Python helper / validation script 在 Windows 上報 `cp950` 的 `UnicodeDecodeError`，優先改用 UTF-8 模式重跑；只有在 UTF-8 模式下仍失敗，才回頭檢查檔案內容或 script 本身
 - 若使用者提到 `make -C src -f Makefile.lin` 與 `crypt` 解析失敗，直接指出這是舊 Linux Makefile 連結步驟缺少 `-lcrypt`，目前 repo 應改用已修正的 `src/Makefile.lin`
 - 若使用者明講是 `Mac+Docker(Ubuntu)`，優先把 Linux 驗證放進 Docker 裡，不要把 Darwin build 結果誤當 Ubuntu 結果
 - 若使用者問「還有沒有 warning」或要做 warning cleanup，預設答案基準應同時包含 macOS 原生與 Ubuntu build；目前 repo 目標是兩邊都 warning-free
