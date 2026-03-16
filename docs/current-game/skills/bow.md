@@ -60,7 +60,7 @@ Legacy chain: `shoot sun -> water cloud blast -> fun wu blast`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 登峰造極﹗; 武 官 >= 一級, max 出類拔萃﹗; 將 軍 >= 一級, max 一代宗師﹗; 鑄劍師 >= 一級, max 出類拔萃﹗; 盜 賊 >= 一級, max 神乎其技﹗`
 - Restrictions: `attrs: 敏捷 >= 十`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[80, 95, 110, 125, 140, 160, 180]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`

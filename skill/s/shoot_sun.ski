@@ -39,7 +39,7 @@ Description
 的基本式$G「百步穿楊」$Z﹐以無法想像的高速向$N射去﹐$N避無可避﹐被
 被箭射個正著。~
 Chance          20
-Value           20
+Value           80
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -51,7 +51,7 @@ Description
 空氣的手法使出$Y「射日箭法」$B「閃光箭」$Z將箭射出﹐登時光芒大作﹐使的
 $N有如睜眼瞎子﹐防禦全失﹐任箭射個對穿。~
 Chance          20
-Value           20
+Value           95
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -64,7 +64,7 @@ $n用弓將$N逼退數步﹐見機不可失﹐趕緊使出$Y「射日箭法」$Z
 覺身後勁風臨体﹐箭居然像有眼睛般﹐轉個彎又朝身後射到﹐待發覺時已
 來不及﹐被箭射成重傷。~
 Chance          20
-Value           20
+Value           110
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -76,7 +76,7 @@ $n深吸一口氣﹐然後在$N附近以極快的速度游走﹐再使出$Y「�
 箭法」$Z﹐$R「亂箭式」$Z以極快的手法一口氣射出百來隻箭﹐$N只覺四周都是
 箭影﹐根本無從閃避﹐登時被射成刺蝟。~
 Chance          20
-Value           20
+Value           125
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -89,7 +89,7 @@ $n閃過了攻擊後﹐正想從身後抓箭來射﹐忽覺箭已射光了﹐情
 困難的招式$P「亂箭式•改」$Z﹐$N只見無數的樹枝石頭如雨般帶著咻咻的破
 空聲朝自已攻來﹐一時間慌了手腳﹐被射的体無完膚。~
 Chance          20
-Value           20
+Value           140
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -103,7 +103,7 @@ $S「聚氣成箭」$Z﹐只見弦上漸形成一隻氣箭﹐$n看準時機向�
 將箭射出﹐$N只見眼前一閃就被箭射中﹐箭氣在体內亂竄﹐再爆發出來
 使$N登時有如血人。~
 Chance          20
-Value           20
+Value           160
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -118,7 +118,7 @@ $n已漸漸對這戰局感到不耐煩﹐只好使出$S「聚氣成箭」$Z聚�
 非常﹐待看到氣箭那有如毀天滅地的箭勢後﹐登時萬念具灰﹐放棄了所有的
 抵抗﹐任那濤天箭勢將自已帶入死亡的世界。~
 Chance          20
-Value           20
+Value           180
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

@@ -331,15 +331,17 @@
 
 目前狀態：
 
-- `status = batch_c_implemented`
-- `current_focus = fist ladder`
-- `current_batch = Batch C`
+- `status = batch_d_implemented`
+- `current_focus = bow ladder`
+- `current_batch = Batch D`
 
 ## Immediate Next Steps
 
 1. 以已完成的 Batch C 為基線，重看 `long fist` 的城市 / 教學 / 服務樣本是否因模板回升而需要再分流
 2. 若拳法鏈 smoke / failenable 表現穩定，選下一條玩家向攻擊鏈進行同樣的多因子 pre-check
 3. 後續若再有 city / teacher 樣本仍掛 `gdragon steps`，以 `cloud steps` 是否更符合其自保定位為優先判準
+4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
+5. 下一個高價值候選可回到將軍主鏈，優先看 `her blade -> dragon blade -> tiger blade`
 
 ## Batch A Result
 
@@ -730,3 +732,108 @@
 - 這一輪 fallout 的核心不是把 `long fist` 從城市 / 教學 / 服務樣本全面移除，而是把 killable civic sample 從「過高熟練度的 starter baseline」拉回合理區間
 - `512`、`570` 都屬 `adept rollback`，不是身份鏈重寫
 - `537`、`9003` 目前仍可視為 `NoKill` 服務樣本的合理保留，後續只有在同批再出現 failenable / runtime 問題時才需要重審
+
+## Batch D Pre-Check
+
+### Scope
+
+- `shoot sun`
+- `water cloud blast`
+- `fun wu blast`
+
+### Reference Basis
+
+- `docs/3yWebsite/skill/bow.html`
+  - 明確給出 `shoot sun -> water cloud blast -> fun wu blast`
+  - 並保留完整職業 / 屬性 / 前置熟練度限制
+- `docs/3yWebsite/newhand/players/general/0104234.html`
+  - 將軍文明確把這條鏈當成弓法主線
+  - `shoot sun`
+    - `LV10、敏捷10`
+    - 建議等級 `LV50`
+    - 特性：可連擊
+  - `water cloud blast`
+    - `LV10、敏捷15、力量15、shoot sun 出類拔萃`
+    - 建議等級 `LV70`
+    - 特性：自動連擊
+  - `fun wu blast`
+    - `LV50、敏捷35、力量25、體格25、water cloud blast 出神入化`
+    - 建議等級 `LV90`
+    - 特性：自動連擊 3 到 5 下、花費體力少、威力強大
+
+### Mandatory Pre-Check Snapshot
+
+`shoot sun`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 10`
+- weapon / check: `WEAPON_BOW / check_bow_attack`
+- chance set: `20`
+- parry set: `0`
+- damage entries: `7`
+- value set before rebuild: `20`
+
+`water cloud blast`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 15`
+- weapon / check: `WEAPON_BOW / check_bow_attack`
+- runtime file has no `#Damage`
+- actual damage path: `src/spell.c -> cast_water_cloud_blast()`
+- code-side base damage ladder before weapon multiplier: `300, 350, 400, 450, 500, 600, 700, 800, 900, 1000`
+- repeat loop: `for (tt = 0; tt <= level / 33; tt++)`
+
+`fun wu blast`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 15`
+- weapon / check: `WEAPON_BOW / check_bow_attack`
+- runtime file has no `#Damage`
+- actual damage path: `src/spell.c -> cast_fun_wu_blast()`
+- code-side base damage ladder before weapon multiplier: `450, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1400`
+- repeat loop: `for (tt = 0; tt <= level / 20; tt++)`
+
+### Interpretation
+
+- 這條弓法鏈不是和 Batch A / B / C 一樣的純 `#Damage Value` 清值問題
+- 只有 `shoot sun` 仍依賴 `.ski` 內的 `#Damage`
+- `water cloud blast` 與 `fun wu blast` 雖然 skill 檔沒有 `#Damage`，但不是殘缺；它們主要靠 `spell.c` 的專屬函式與 bow weapon multiplier 出傷
+- 因此 Batch D 不應把後兩者硬補成假 `#Damage` 模板
+- 這一批更合理的修法是：
+  - 把 `shoot sun` 補回合理 root-template
+  - 把 `water cloud blast / fun wu blast` 明確記為 `code-driven offensive exception`
+
+## Batch D Result
+
+### Runtime Changes
+
+`shoot sun`
+
+- before: `20, 20, 20, 20, 20, 20, 20`
+- after: `80, 95, 110, 125, 140, 160, 180`
+- average: `127.14`
+
+### Design Notes
+
+- `shoot sun` 重新站穩弓法 root 的 offensive template，不再是全 `20` 的系統性清值殘留
+- `water cloud blast` 與 `fun wu blast` 本輪不改 skill data
+- 這不是漏修，而是根據 source pre-check 的刻意保留：
+  - 兩者真正的 ladder 已存在於 `spell.c`
+  - 再往 `.ski` 補假 `#Damage` 反而會混淆 loader / runtime 邏輯
+- 因此 Batch D 的輸出是：
+  - 一筆 root-template 修復
+  - 一筆對 `code-driven bow ladder` 的明確建模
+
+### Validation
+
+- `make -C src -f Makefile.lin merc`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-d.log`
+  - `debug/failenable`
+  - `debug/failload`
+  - `debug/badobject`
+  - `debug/error`

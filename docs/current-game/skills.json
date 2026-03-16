@@ -37855,13 +37855,13 @@
         "enable": true,
         "combat_dimensions": {
           "damage_values": [
-            20,
-            20,
-            20,
-            20,
-            20,
-            20,
-            20
+            80,
+            95,
+            110,
+            125,
+            140,
+            160,
+            180
           ],
           "chance_values": [
             20,
@@ -37901,13 +37901,13 @@
       },
       "combat_dimensions": {
         "damage_values": [
-          20,
-          20,
-          20,
-          20,
-          20,
-          20,
-          20
+          80,
+          95,
+          110,
+          125,
+          140,
+          160,
+          180
         ],
         "chance_values": [
           20,
