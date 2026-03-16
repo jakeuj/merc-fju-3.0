@@ -187,6 +187,7 @@
 10. `sec_rift_core`
 11. `sec_rift_deeps`
 12. `sec_rift_abyss`
+13. `sec_rift_nadir`
 
 ## Theme Allocation
 
@@ -240,6 +241,10 @@
   - theme: `仙俠`
   - subtheme: `禁底 / 封印底座`
   - 缺口角色：補裂界深層禁底界井下方的實際落地區，讓洛陽地下鏈從「下探預留」轉成可探索的禁底段
+- `sec_rift_nadir`
+  - theme: `仙俠`
+  - subtheme: `禁底 / 裂界禁牢`
+  - 缺口角色：補裂界禁底下方的真正禁牢段，讓洛陽地下鏈在禁底之後仍可延伸到封印核心前帶
 
 後續新增候選 area 時，必須一併記錄：
 

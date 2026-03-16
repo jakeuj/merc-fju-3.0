@@ -132,13 +132,15 @@
 - `sec_rift_deeps` 已完成第一輪 implementation，完成本機 build 與 smoke test，並達成可前進下一區狀態
 - `plans/area/0013-sec-rift-abyss.md` 已建立
 - `sec_rift_abyss` 已完成第一輪 implementation，完成本機 Linux build，並達成可前進下一區狀態
+- `plans/area/0014-sec-rift-nadir.md` 已建立
+- `sec_rift_nadir` 已完成第一輪 implementation，完成本機 Linux build，並達成可前進下一區狀態
 ## Blocked
 
 - none
 
 ## Current Recommended Next Step
 
-目前 `sec_rift_abyss` 已完成第一輪 implementation；若要繼續使用固定 prompt，下一步需要先決定新的 candidate area，或規劃裂界禁底更下層的下一段單區 plan。
+目前 `sec_rift_nadir` 已完成第一輪 implementation；若要繼續使用固定 prompt，下一步需要先決定新的 candidate area，或規劃裂界禁牢更下層的下一段單區 plan。
 
 在沒有現成 `todo` 的前提下，下一輪建議先做一個很短的 docs-assisted candidate pass：
 
@@ -159,4 +161,4 @@
 
 建議可直接使用的 prompt：
 
-`先盤點下一個可接續的 area candidate，或為 sec_rift_abyss 之下的更深裂界禁牢建立新的單區 plan。`
+`先盤點下一個可接續的 area candidate，或為 sec_rift_nadir 之下的更深封印核心建立新的單區 plan。`

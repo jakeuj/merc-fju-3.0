@@ -1,0 +1,24 @@
+Vnum            9909
+Name            觀界偏座~
+Description
+偏座像半嵌在石壁內的觀測平台，前方仍留有幾道朝向裂面的狹長視口。坐在此處時，可以同時看見主橋鎖條的收縮與裂面暗影的翻動，像這裡本來就是專門監看封印狀態的地方。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        9908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         觀界~
+End
+
+#Enquire
+Keyword         裂面~
+End
+
+End

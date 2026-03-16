@@ -1,0 +1,31 @@
+Vnum            10902
+Name            chainscar echo shade~
+ShortDesc       鎖痕幽相~
+Description
+幽相像一團被鎖紋扯裂後仍不肯散去的殘影，形體邊緣不時竄出細細黑
+線。它在長橋與裂面之間滑行時，總像有什麼更深的東西正透過它試探
+這層封印是否還撐得住。
+~
+StayArea        Yes
+AlignEvil       Yes
+Alignment       -420
+Level           49
+Hitroll         12
+Protect         -10
+Damroll         13
+Str             17
+Int             11
+Wis             11
+Dex             14
+Con             16
+Hp              7600
+Mana            320
+Move            152
+Class           CLASS_THIEF
+Gold            560
+Multipile       100
+AttackRatio     126
+DodgeRatio      116
+Migrate         0
+Sex             SEX_NEUTRAL
+End
