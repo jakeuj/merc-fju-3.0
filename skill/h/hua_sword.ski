@@ -53,7 +53,7 @@ Help
 Description
 面對$N的攻擊﹐$n從容不迫的以一招$Y『$S有鳳來儀$Y』$Z抵擋住。~
 Chance          10
-Value           20
+Value           60
 Parry           2
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -63,7 +63,7 @@ End
 Description
 $n喝道$Y『$S蒼松迎客$Y』$Z﹐長劍疾使﹐讓$N無法迴避而身受重傷。~
 Chance          10
-Value           20
+Value           75
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -73,7 +73,7 @@ End
 Description
 $n手中長劍幻化數影﹐$Y『$S無邊落木$Y』$Z脫手而出﹐$N受到驚嚇無法閃躲。~
 Chance          10
-Value           20
+Value           90
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -83,7 +83,7 @@ End
 Description
 $n加快步法﹐舞出華山劍法之$Y『$S野馬奔馳$Y』$Z﹐$N因來不及防禦﹐已被刺中。~
 Chance          10
-Value           20
+Value           105
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -94,7 +94,7 @@ Description
 $n輕躍半空猶如飛雁般的飛舞著﹐正是一招$Y『$S金雁橫空$Y』$Z﹐$N使盡全力仍然無
 法閃躲。~
 Chance          10
-Value           20
+Value           120
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -104,7 +104,7 @@ End
 Description
 待$N欲出招之際﹐$n早已發覺﹐始出$Y『$S先發制人$Y』$Z﹐讓$N反手不及。~
 Chance          10
-Value           20
+Value           135
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -115,7 +115,7 @@ Description
 $n催動十成功力﹐使出華山秘式$Y『$S無法無天$Y』$Z﹐$N被$n氣勢所震無法移動﹐霎
 那間已遭長劍穿體而過。~
 Chance          10
-Value           20
+Value           150
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

@@ -179,20 +179,92 @@
 
 目前狀態：
 
-- `status = ready_for_batch_a`
-- `current_focus = offensive sword ladder`
-- `current_batch = Batch A`
+- `status = ready_for_batch_b`
+- `current_focus = dodge ladder`
+- `current_batch = Batch B`
 
 ## Immediate Next Steps
 
-1. 盤 `hua sword` / `fonxan sword` / `dragon sleeve sword` 現行 `#Damage Value`
-2. 依 `players.json` / `skills.json` 定出入門、中階、高階的目標梯度
+1. 盤 `cloud steps` / `gdragon steps` / `sky steps` 現行 `#Damage Value`
+2. 依 `players.json` / `skills.json` 定出入門、中階、高階的 dodge 梯度
 3. 小批次修 skill 檔
 4. build + smoke test
-5. 抽對應 mob / failenable 結果回寫到 `docs/current-game/skill-combat-audit.json`
+5. 抽對應 guard / teacher 樣本與 failenable 結果
+
+## Batch A Result
+
+### Scope
+
+- `hua sword`
+- `fonxan sword`
+- `dragon sleeve sword`
+
+### Reference Basis
+
+- `docs/3yWebsite/docs/data/skills.json`
+  - `hua sword -> fonxan sword`
+- `docs/3yWebsite/docs/data/players.json`
+  - `新手上路`
+    - `hua sword` 是新手 early learn baseline
+  - `刺客精練-劍法`
+    - `hua sword` 建議 `LV1`
+    - `fonxan sword` 建議 `LV30`
+    - `dragon sleeve sword` 建議 `LV50`
+  - `刺客精練-前言與說明`
+    - `華山劍法 -> 封山劍法 -> 龍袖劍法`
+    - 明確指出 `封山` 是不能廢掉的中階主力
+
+### Runtime Changes
+
+`hua sword`
+
+- before: `20,20,20,20,20,20,20`
+- after: `60,75,90,105,120,135,150`
+- average: `105.0`
+
+`fonxan sword`
+
+- before: `20,20,20,20,20,20,20,20`
+- after: `110,130,150,170,190,210,230,250`
+- average: `180.0`
+
+`dragon sleeve sword`
+
+- before: `20,20,20,20,20,20,20,20`
+- after: `180,210,240,270,300,330,360,420`
+- average: `288.75`
+
+### Interpretation
+
+- `hua sword` 被重新定位為「新手可學但不再和高階劍法同模板」的入門劍路
+- `fonxan sword` 被拉成清楚高於 `hua sword` 的中階主力
+- `dragon sleeve sword` 被拉成足以站穩高階玩家劍法位置的 Batch A 頂點
+
+這一批先處理「同鏈的 damage ladder 是否存在」，還沒有對其他劍法支線做橫向平衡。
+
+### Validation
+
+- `make -C src -f Makefile.lin merc`
+- smoke test:
+  - 先以臨時 `merc.test.ini` 避開本機 port / IPC 衝突
+  - 成功訊號：`三國歪傳之降龍伏虎開始正常運作`
+- 本輪未見新的：
+  - `Load_skill`
+  - `Load_mobiles`
+  - `debug/failenable`
+  - `debug/failload`
+
+### Notes
+
+- 這一批主要修的是 skill template，因此目前不一定會立刻改變現行 explicit `Enable` mob 的 loader 警告
+- 但它已經建立後續 area / teacher / boss 設計可依賴的第一條玩家向 offensive 劍法梯度
 
 ## Next Prompt
 
 可直接續跑的 prompt：
 
 > 請直接續做 `plans/0003-legacy-skill-damage-audit.md` 的 Batch A，先處理 `hua sword`、`fonxan sword`、`dragon sleeve sword` 的 damage ladder 重建。先讀 `docs/3yWebsite/docs/data/players.json`、`docs/3yWebsite/docs/data/skills.json`、對應 `skill/*.ski`，然後直接修改 skill value、做 build / smoke test、更新 plan 與必要的 audit。
+
+目前可直接改用：
+
+> 請直接續做 `plans/0003-legacy-skill-damage-audit.md` 的 Batch B，先處理 `cloud steps`、`gdragon steps`、`sky steps` 的 dodge ladder 重建。先讀 `docs/3yWebsite/docs/data/players.json`、`docs/3yWebsite/docs/data/skills.json`、對應 `skill/*.ski`，然後直接修改 skill value、做 build / smoke test、更新 plan 與必要的 audit。
