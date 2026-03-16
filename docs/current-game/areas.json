@@ -1,0 +1,334 @@
+{
+  "scope": "current loadable runtime areas",
+  "source_of_truth": [
+    "area/directory.lst",
+    "area/<area>/index",
+    "area/<area>/map.md",
+    "plans/area/*.md",
+    "area/rebuild_plan.md",
+    "area/world_map.md"
+  ],
+  "areas": [
+    {
+      "name": "limbo",
+      "title": "特殊地方",
+      "room_range": "0001-0500",
+      "load_order": 1,
+      "category": "legacy core",
+      "origin": "legacy",
+      "parent_area": null,
+      "theme_primary": null,
+      "theme_secondary": null,
+      "summary": "預設基本區域，提供基礎房間與物件載入骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/limbo/index"
+      ]
+    },
+    {
+      "name": "loyang",
+      "title": "洛陽城",
+      "room_range": "0501-0744",
+      "load_order": 2,
+      "category": "legacy core",
+      "origin": "legacy",
+      "parent_area": null,
+      "theme_primary": null,
+      "theme_secondary": null,
+      "summary": "主要主城與出生地之一，也是洛陽地表鏈與地下鏈的母城。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/loyang/index"
+      ]
+    },
+    {
+      "name": "beiping",
+      "title": "北平",
+      "room_range": "9001-9063",
+      "load_order": 3,
+      "category": "legacy core",
+      "origin": "legacy",
+      "parent_area": null,
+      "theme_primary": null,
+      "theme_secondary": null,
+      "summary": "北方主城與交通節點，承接北平郊區外郊鏈的母城角色。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/beiping/index"
+      ]
+    },
+    {
+      "name": "new",
+      "title": "新手區",
+      "room_range": "0450-0477",
+      "load_order": 4,
+      "category": "newbie / training",
+      "origin": "legacy",
+      "parent_area": null,
+      "theme_primary": null,
+      "theme_secondary": null,
+      "summary": "提供新手教學、基礎指令與初期導覽的教學 area。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/new/index"
+      ]
+    },
+    {
+      "name": "newfight",
+      "title": "新手練功區",
+      "room_range": "1201-1295",
+      "load_order": 5,
+      "category": "newbie / training",
+      "origin": "legacy",
+      "parent_area": null,
+      "theme_primary": null,
+      "theme_secondary": null,
+      "summary": "承接新手區後的初期升級與安全戰鬥流程。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/newfight/index"
+      ]
+    },
+    {
+      "name": "pk_area",
+      "title": "PK區",
+      "room_range": "1301-1333",
+      "load_order": 6,
+      "category": "special combat",
+      "origin": "legacy",
+      "parent_area": null,
+      "theme_primary": null,
+      "theme_secondary": null,
+      "summary": "專供玩家或幫派對戰的特殊戰鬥 area。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/pk_area/index"
+      ]
+    },
+    {
+      "name": "free_fight",
+      "title": "三國競技場",
+      "room_range": "7001-7044",
+      "load_order": 7,
+      "category": "special combat",
+      "origin": "legacy",
+      "parent_area": null,
+      "theme_primary": null,
+      "theme_secondary": null,
+      "summary": "自由戰鬥用途的競技場 area。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/free_fight/index"
+      ]
+    },
+    {
+      "name": "loyang_outskirts",
+      "title": "洛陽東郊",
+      "room_range": "7501-7512",
+      "load_order": 8,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "loyang",
+      "theme_primary": "歷史城市風",
+      "theme_secondary": "軍旅風",
+      "summary": "把洛陽東陽門外的官道、農田與暗井入口整成第一圈城郊過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/loyang_outskirts/index",
+        "area/loyang_outskirts/map.md",
+        "plans/area/0002-loyang-outskirts.md",
+        "area/rebuild_plan.md"
+      ]
+    },
+    {
+      "name": "wild_longqu_hills",
+      "title": "龍渠丘陵",
+      "room_range": "9401-9410",
+      "load_order": 9,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "loyang_outskirts",
+      "theme_primary": "探險遺跡",
+      "theme_secondary": "仙俠風",
+      "summary": "承接洛陽東郊東向邊界，將節奏推進到丘陵遺跡與外野探索帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/wild_longqu_hills/index",
+        "area/wild_longqu_hills/map.md",
+        "plans/area/0005-wild-longqu-hills.md",
+        "area/rebuild_plan.md"
+      ]
+    },
+    {
+      "name": "dng_loyang_sewer",
+      "title": "洛陽地下水區",
+      "room_range": "9451-9460",
+      "load_order": 10,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "loyang_outskirts",
+      "theme_primary": "仙俠風",
+      "theme_secondary": "詭異民俗風",
+      "summary": "把洛陽東郊暗井延伸成正式地下水脈與水門前帶，建立地下鏈入口層。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/dng_loyang_sewer/index",
+        "area/dng_loyang_sewer/map.md",
+        "plans/area/0006-dng-loyang-sewer.md",
+        "area/rebuild_plan.md"
+      ]
+    },
+    {
+      "name": "dng_sewer_depths",
+      "title": "地下深渠",
+      "room_range": "9461-9470",
+      "load_order": 11,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "dng_loyang_sewer",
+      "theme_primary": "詭異民俗風",
+      "theme_secondary": "深層水道",
+      "summary": "由地下水區更下探到黑水主渠、機關側室與封印深槽的深層危險帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/dng_sewer_depths/index",
+        "area/dng_sewer_depths/map.md",
+        "plans/area/0007-dng-sewer-depths.md",
+        "area/rebuild_plan.md"
+      ]
+    },
+    {
+      "name": "dng_royal_tomb",
+      "title": "帝王古墓",
+      "room_range": "9481-9490",
+      "load_order": 12,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "dng_sewer_depths",
+      "theme_primary": "探險遺跡",
+      "theme_secondary": "古墓 / 機關",
+      "summary": "把黑水深渠下方接成帝王古墓前帶，完成水道向古墓機關秘境的主題轉折。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/dng_royal_tomb/index",
+        "area/dng_royal_tomb/map.md",
+        "plans/area/0008-dng-royal-tomb.md",
+        "area/rebuild_plan.md"
+      ]
+    },
+    {
+      "name": "sec_catacomb_depths",
+      "title": "忘川地穴",
+      "room_range": "9491-9499",
+      "load_order": 13,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "dng_royal_tomb",
+      "theme_primary": "仙俠",
+      "theme_secondary": "地穴 / 靈異",
+      "summary": "由帝王古墓再往下推進到靈異地穴、異象核心與秘壇風險。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_catacomb_depths/index",
+        "area/sec_catacomb_depths/map.md",
+        "plans/area/0009-sec-catacomb-depths.md",
+        "area/rebuild_plan.md"
+      ]
+    },
+    {
+      "name": "sec_rift_below",
+      "title": "異象裂谷",
+      "room_range": "9501-9512",
+      "load_order": 14,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_catacomb_depths",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂谷 / 異象秘境",
+      "summary": "承接忘川地穴最深處，落成裂風、冷光與祕境沉門前帶的裂谷區。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_below/index",
+        "area/sec_rift_below/map.md",
+        "plans/area/0010-sec-rift-below.md",
+        "area/rebuild_plan.md"
+      ]
+    },
+    {
+      "name": "sec_rift_core",
+      "title": "裂谷心核",
+      "room_range": "9601-9612",
+      "load_order": 15,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_below",
+      "theme_primary": "仙俠",
+      "theme_secondary": "心核 / 裂谷底層",
+      "summary": "把異象裂谷下方接成心核主廊、晶脈支線與底層封界的核心區。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_core/index",
+        "area/sec_rift_core/map.md",
+        "plans/area/0011-sec-rift-core.md",
+        "area/rebuild_plan.md"
+      ]
+    },
+    {
+      "name": "sec_rift_deeps",
+      "title": "裂界深層",
+      "room_range": "9701-9712",
+      "load_order": 16,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_core",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂界 / 深層封印",
+      "summary": "由裂谷心核下探到封印回廊、禁制支線與禁底界井前帶，保留更深裂界禁底的延伸空間。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_deeps/index",
+        "area/sec_rift_deeps/map.md",
+        "plans/area/0012-sec-rift-deeps.md",
+        "area/rebuild_plan.md"
+      ]
+    },
+    {
+      "name": "beiping_outskirts",
+      "title": "北平郊區",
+      "room_range": "9101-9108",
+      "load_order": 17,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "beiping",
+      "theme_primary": "軍旅風",
+      "theme_secondary": "歷史城市風",
+      "summary": "把北平北側外郊整理成哨卡、驛道、河灘與北境山徑前帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/beiping_outskirts/index",
+        "area/beiping_outskirts/map.md",
+        "plans/area/0003-beiping-outskirts.md",
+        "area/rebuild_plan.md"
+      ]
+    },
+    {
+      "name": "jingxiang_road",
+      "title": "荊襄大道",
+      "room_range": "9301-9310",
+      "load_order": 18,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": null,
+      "theme_primary": "江湖風",
+      "theme_secondary": "軍旅風",
+      "summary": "先把荊州走廊的巡檢亭、驛館支線與地窖前帶落成為可載入的幹道型 area。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/jingxiang_road/index",
+        "area/jingxiang_road/map.md",
+        "plans/area/0004-jingxiang-road.md",
+        "area/rebuild_plan.md"
+      ]
+    }
+  ]
+}

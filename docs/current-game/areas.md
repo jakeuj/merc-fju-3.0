@@ -1,0 +1,74 @@
+---
+layout: default
+title: Current Game Areas
+---
+
+# Current Game Areas
+
+這份文件只記錄目前 `merc-fju-3.0` repo 會實際載入的 area 台帳與近來重建區域摘要，用來避免和 `docs/3yWebsite/` 的舊站參考資料混在一起。
+
+對應的機器可讀補充台帳在 `docs/current-game/areas.json`。
+
+## 邊界
+
+- `docs/3yWebsite/`：reference-only，主要提供舊版世界觀、地圖、命名語彙與歷史脈絡。
+- `docs/current-game/areas.md`：現行 repo 會載入的 area 索引與重建區補充說明。
+
+## Runtime Source Of Truth
+
+真正決定目前遊戲 area 是否存在、載入順序為何、房間邊界如何銜接的來源仍然是 repo 內的 runtime 與規劃檔案，包括 `area/directory.lst`、`area/<area>/index`、`area/<area>/map.md`、`plans/area/*.md`、`area/rebuild_plan.md`、`area/world_map.md`。
+
+這份文件只做開發紀錄，不取代上述 runtime / planning 資料。
+
+## Area Catalog
+
+| Area | 中文名稱 / 用途 | 房間範圍 | 分類 | 備註 |
+| --- | --- | --- | --- | --- |
+| `limbo` | 特殊地方 / 預設基本區域 | `0001-0500` | `legacy core` | 基本房間與基礎物件載入區，固定作為第一個 area。 |
+| `loyang` | 洛陽城 / 主城 | `0501-0744` | `legacy core` | 可作出生地與 recall 主城，洛陽重建鏈的母城。 |
+| `beiping` | 北平 / 北方主城 | `9001-9063` | `legacy core` | 北方交通樞紐，北平郊區鏈的母城。 |
+| `new` | 新手區 / 教學區 | `0450-0477` | `newbie / training` | 提供新手導覽、基礎指令與遊戲節奏入門。 |
+| `newfight` | 新手練功區 / 初期升級區 | `1201-1295` | `newbie / training` | 承接新手區後的低等戰鬥與練功流程。 |
+| `pk_area` | PK區 / 對戰場 | `1301-1333` | `special combat` | 玩家與幫派對戰專用區。 |
+| `free_fight` | 三國競技場 / 自由戰鬥區 | `7001-7044` | `special combat` | 特殊戰鬥用途 area。 |
+| `loyang_outskirts` | 洛陽東郊 / 洛陽外郊過渡帶 | `7501-7512` | `rebuild addition` | 洛陽地表鏈起點，連回 `loyang` 並往丘陵與地下入口延伸。 |
+| `wild_longqu_hills` | 龍渠丘陵 / 城郊外圈丘陵探索帶 | `9401-9410` | `rebuild addition` | 承接洛陽東郊東向邊界，轉入較危險的野外與遺跡前帶。 |
+| `dng_loyang_sewer` | 洛陽地下水區 / 地下前哨 | `9451-9460` | `rebuild addition` | 由洛陽東郊暗井下探的第一層地下水道。 |
+| `dng_sewer_depths` | 地下深渠 / 深層黑水水道 | `9461-9470` | `rebuild addition` | 洛陽地下鏈的第二段，強化封印與黑水深渠壓力。 |
+| `dng_royal_tomb` | 帝王古墓 / 古墓機關秘境前帶 | `9481-9490` | `rebuild addition` | 從深渠轉入古墓與機關探索段。 |
+| `sec_catacomb_depths` | 忘川地穴 / 靈異地穴 secret zone | `9491-9499` | `rebuild addition` | 由古墓往下銜接異象核心與秘壇風險。 |
+| `sec_rift_below` | 異象裂谷 / 裂谷秘境前帶 | `9501-9512` | `rebuild addition` | 地穴之下的裂風與冷光裂谷區。 |
+| `sec_rift_core` | 裂谷心核 / 底層核心區 | `9601-9612` | `rebuild addition` | 承接異象裂谷，進入心核脈動與封界壓力。 |
+| `sec_rift_deeps` | 裂界深層 / 深層封印帶 | `9701-9712` | `rebuild addition` | 裂谷核心之下的第二層核心區，保留更深裂界禁底的後續延伸。 |
+| `beiping_outskirts` | 北平郊區 / 北境外郊過渡帶 | `9101-9108` | `rebuild addition` | 由 `beiping` 往易京與白狼山方向展開的第一段外郊。 |
+| `jingxiang_road` | 荊襄大道 / 荊州走廊幹道 | `9301-9310` | `rebuild addition` | 目前以 world-link stub 方式保留襄陽、新野、江夏的後續母城掛接。 |
+
+## Recent Rebuild Areas
+
+### 洛陽地表鏈
+
+- `loyang_outskirts`：把洛陽東陽門外的橋頭、官道、龍渠農田與地下入口整成第一圈城郊過渡帶，作為洛陽重建鏈的地表起點。
+- `wild_longqu_hills`：承接洛陽東郊的丘陵巡路，將玩家節奏從主城近郊推進到丘陵遺跡與外野探索線。
+
+### 洛陽地下鏈
+
+- `dng_loyang_sewer`：把洛陽東郊暗井正式延伸成可載入的地下水脈與水門前帶，建立地下鏈入口層。
+- `dng_sewer_depths`：從地下水區更下探到黑水主渠、機關側室與封印深槽，讓地下鏈進入真正的深層危險帶。
+- `dng_royal_tomb`：把黑水深渠下方的下沉井口接成帝王古墓前帶，完成水道向古墓機關秘境的主題轉折。
+- `sec_catacomb_depths`：由帝王古墓再往下推進到靈異地穴與異象核心，建立高風險高回報的第一層 secret zone。
+- `sec_rift_below`：承接忘川地穴最深處，落成裂谷著階、風脊與祕境沉門前帶，讓地下鏈進入更深的異象裂谷區。
+- `sec_rift_core`：把異象裂谷下方接成心核主廊、晶脈支線與底層封界，形成真正的地下高風險核心節點。
+- `sec_rift_deeps`：再由裂谷心核下探到封印回廊、禁制支線與禁底界井前帶，為未來裂界禁底保留延伸空間。
+
+### 北方鏈
+
+- `beiping_outskirts`：把北平北側外郊整理成哨卡、驛道、河灘與北境山徑前帶，補齊往易京與白狼山方向的邊關過渡感。
+
+### 荊州幹道鏈
+
+- `jingxiang_road`：先把荊州走廊的巡檢亭、驛館支線與可疑地窖落成為可載入 area，母城連線則維持在 spec 的 world-link 層。
+
+## 維護規則
+
+- 若 runtime 新增、移除或重排 area，應同步更新 `docs/current-game/areas.md` 與 `docs/current-game/areas.json`。
+- 若重建區有新的 `map.md`、world link 或 room block 變更，優先以 `area/directory.lst`、`area/<area>/index`、`plans/area/*.md` 與 `area/rebuild_plan.md` 為準再回寫這份文件。
