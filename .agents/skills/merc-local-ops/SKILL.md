@@ -33,6 +33,9 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 - 在這個工作區的常見現況下，Windows 端常只有 `powershell` / `wsl.exe`，真正可用的 `make`、`gcc` 在 WSL 內；要先探測，不要直接判定「無法編譯」
 - `src/startup` 是 `csh` 腳本；在 WSL / Ubuntu 裡不一定有 `csh` 或 `tcsh`
 - `src/startup.bash` 是 Bash 腳本，依賴 `BASH_SOURCE[0]` 推導腳本位置；若被 `zsh startup.bash` 或 CLion 的 zsh shell runner 執行，會因 `BASH_SOURCE[0]: parameter not set` 類錯誤直接失敗
+- `Windows + WSL (Ubuntu)` 若看到 `/usr/bin/env: 'bash\r': No such file or directory`，優先判斷是 `src/startup.bash` 被存成 `CRLF`，讓 shebang 變成 `#!/usr/bin/env bash\r`
+- 這類 shebang 行尾錯誤可先用 `Format-Hex src/startup.bash | Select-Object -First 3`，或在 WSL 內 `head -n 1 ./startup.bash | od -An -t x1` 確認第一行結尾是否為 `0D 0A`
+- 若 repo 需要長期避免這類問題，優先在 `.gitattributes` 明確固定 `*.sh`、`*.bash` 與 `src/startup` 為 `LF`
 - `src/Makefile.lin` 現在已補上和主 `Makefile` 一致的 `LIBS` 判斷：Ubuntu build path 會帶 `-lcrypt`，Darwin 則不帶
 - 在 macOS 上若要驗證 Ubuntu 行為，優先用 Docker 掛載工作樹到 Ubuntu 容器，再跑 `Makefile.lin` 與 `startup.bash` smoke test
 - 目前 repo 已驗證可同時通過 `make -C src clean && make -C src merc` 與 `make -C src -f Makefile.lin clean && make -C src -f Makefile.lin merc`，兩邊都應維持 warning-free；任一邊重新出現 warning 都應先視為 regression
@@ -42,7 +45,9 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 - `mail/`、`debug/`、`vote/`、`board/`、`data/`、`etc/` 常已存在，但 `log/`、`player/` 可能需要在本機先建立
 - 某些 runtime 檔雖然看起來像執行期產物，卻是 tracked 檔；目前至少要留意 `debug/error`、`etc/net.log`、`etc/stock`
 - 對這類「已被 git 追蹤、但本機常被執行期改寫」的檔案，優先建議使用本機 `git update-index --skip-worktree`，不要修改 repo 的 `.gitignore`
+- 目前這個 repo 常見適合本地 `skip-worktree` 的 tracked runtime 檔包含 `debug/badfile`、`debug/badobject`、`debug/bugs`、`debug/chat.log`、`debug/error`、`debug/failenable`、`debug/failexit`、`debug/failload`、`debug/failpass`、`debug/suicide.log`、`debug/suspect`、`debug/xnames.log`、`etc/net.log`、`etc/stock`、`mail/.mud`、`vote/.mud`、`board/.mud`
 - 對 `src/shutdown.txt` 這類未追蹤且只想本機忽略的檔案，優先放進 `.git/info/exclude`，避免把個人偏好寫進 repo
+- 目前這個 repo 常見適合本地 `.git/info/exclude` 的未追蹤 runtime 產物包含 `/src/merc.ini`、`/src/shutdown.txt`、`/log/*.log`、`/player/*`
 
 ## 工作流程
 
@@ -101,9 +106,11 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 - 若 `startup` 因缺少 `csh` 無法執行，但 `merc` binary 本體可跑，允許先用 `./merc <temp-ini>` 做 smoke test，把 shell 問題和遊戲載入問題拆開
 - 若直接執行 `./merc`，要記得它預設仍會讀 `merc.ini`；因此本機跨機器流程應先確保 `startup` / `startup.bash` 已生成正確的本機 `merc.ini`
 - 若使用 `startup-wsl.ps1`，確認 `wsl.exe` 與 WSL 內的 `wslpath` 可用，再讓它轉呼叫 `src/startup.bash`
+- 若 `startup-wsl.ps1` 本身正常，但 WSL 一進 `startup.bash` 就報 `bash\r`，先修腳本行尾，不要誤判成 `wsl.exe` 或 PowerShell 橋接壞掉
 - 若剛修過 `src/merc.sample.ini`，啟動前先刪掉舊的 `src/merc.ini`，避免用到先前生成的壞設定；重新生成後再檢查 `HOME DIRECTORY`
 - 若用 `timeout` 做 smoke test，時間要明顯高於正常開機時間；預設優先用 `45` 到 `60` 秒，避免因測試工具太早殺行程而誤看到「系統不正常終止」
 - 成功訊號至少要記錄像 `三國歪傳之降龍伏虎開始正常運作` 這種明確啟動完成字樣；不要只因為程式暫時沒退出就視為成功
+- 若 `log/*.log` 已出現「開始正常運作」，但尾端接著出現「系統不正常終止」，先確認是否只是 smoke test 的 `timeout` 主動中止；這和啟動失敗是兩件事
 - 即使已看到成功訊號，仍要回頭檢查 `debug/*` 是否留下和本次修改、尤其是新增 area 相關的錯誤或警告
 
 ### 4. 目錄可寫性與 runtime
@@ -154,6 +161,7 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 - 若使用者希望長期降低本機 runtime 噪音：
 - 對 tracked 檔用 `git update-index --skip-worktree <path>`
 - 對未追蹤但只想本機忽略的檔案用 `.git/info/exclude`
+- 套用後可用 `git ls-files -v | grep '^S '`，或 PowerShell 的 `git ls-files -v | Select-String '^S '` 驗證哪些 tracked 檔已被本地靜音
 - 不要把這類個人本機靜音需求直接寫進 repo `.gitignore`，除非它對整個團隊都合理
 - 若 `debug/bugs` 只剩舊錯誤，但最新 `log/*.log` 已出現「開始正常運作」，要明講 `debug/bugs` 是歷史噪音，不代表這次啟動仍失敗
 - 但若測試前已先清空 `debug/*`，就不能再把測試後的 debug 訊息當成歷史噪音略過；必須回頭判斷它們是否是這次新增 area / reset / room / mob / obj 帶出的新問題

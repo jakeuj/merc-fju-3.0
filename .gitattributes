@@ -2,4 +2,5 @@
 
 # Shell/csh startup scripts must stay LF for Linux/WSL containers.
 *.sh text eol=lf
+*.bash text eol=lf
 src/startup text eol=lf
