@@ -18,12 +18,17 @@ title: Current Game Skills
 目前 GitHub Pages 可讀頁入口：
 
 - `docs/current-game/skills-index.md`
+- `docs/current-game/skill-file-format.md`
+- `docs/current-game/skill-loader-reference.md`
+- `docs/current-game/skill-constants.md`
+- `docs/current-game/skill-pry-crosswalk.md`
 - `docs/current-game/skills/step.md`
 - `docs/current-game/skills/sword.md`
 - `docs/current-game/skills/bow.md`
 - 以及其餘依舊站葉節點生成的分類子頁
 
 這些頁面由 `scripts/generate_current_game_skills_pages.py` 生成，後續若 `skills.json` 更新，應重新執行該 script。
+只有 `skill-file-format.md` 這類 schema / loader 說明頁是手寫維護，不走生成流程。
 
 ## 邊界
 

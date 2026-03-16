@@ -11,6 +11,10 @@ title: Merc FJU 3.0 Docs
 
 - [Current Game 首頁](./current-game/)
 - [技能補充說明](./current-game/skills.html)
+- [`.ski` 技能檔格式說明](./current-game/skill-file-format.html)
+- [`.ski` 進階 Loader Reference](./current-game/skill-loader-reference.html)
+- [`.ski` 常數查表](./current-game/skill-constants.html)
+- [`.ski` `pry` 文案對照](./current-game/skill-pry-crosswalk.html)
 - [技能可讀總覽](./current-game/skills-index.html)
 - [技能分類子頁](./current-game/skills/step.html)
 - [技能機器可讀台帳](./current-game/skills.json)

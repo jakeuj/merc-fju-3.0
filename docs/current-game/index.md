@@ -10,6 +10,10 @@ title: Current Game Docs
 ## 目前已有內容
 
 - [技能補充說明](./skills.html)
+- [`.ski` 技能檔格式說明](./skill-file-format.html)
+- [`.ski` 進階 Loader Reference](./skill-loader-reference.html)
+- [`.ski` 常數查表](./skill-constants.html)
+- [`.ski` `pry` 文案對照](./skill-pry-crosswalk.html)
 - [技能可讀總覽](./skills-index.html)
 - [技能分類子頁](./skills/step.html)
 - [技能機器可讀台帳](./skills.json)
