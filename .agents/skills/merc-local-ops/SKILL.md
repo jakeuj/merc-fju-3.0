@@ -45,7 +45,7 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 - `mail/`、`debug/`、`vote/`、`board/`、`data/`、`etc/` 常已存在，但 `log/`、`player/` 可能需要在本機先建立
 - 某些 runtime 檔雖然看起來像執行期產物，卻是 tracked 檔；目前至少要留意 `debug/error`、`etc/net.log`、`etc/stock`
 - 對這類「已被 git 追蹤、但本機常被執行期改寫」的檔案，優先建議使用本機 `git update-index --skip-worktree`，不要修改 repo 的 `.gitignore`
-- 目前這個 repo 常見適合本地 `skip-worktree` 的 tracked runtime 檔包含 `debug/badfile`、`debug/badobject`、`debug/bugs`、`debug/chat.log`、`debug/error`、`debug/failenable`、`debug/failexit`、`debug/failload`、`debug/failpass`、`debug/suicide.log`、`debug/suspect`、`debug/xnames.log`、`etc/net.log`、`etc/stock`、`mail/.mud`、`vote/.mud`、`board/.mud`
+- 目前這個 repo 常見適合本地 `skip-worktree` 的 tracked runtime 檔包含 `debug/badfile`、`debug/badobject`、`debug/bugs`、`debug/chat.log`、`debug/error`、`debug/failenable`、`debug/failexit`、`debug/failload`、`debug/failpass`、`debug/suicide.log`、`debug/suspect`、`debug/xnames.log`、`etc/net.log`、`etc/stock`、`etc/database`、`etc/address`、`mail/.mud`、`vote/.mud`、`board/.mud`
 - 對 `src/shutdown.txt` 這類未追蹤且只想本機忽略的檔案，優先放進 `.git/info/exclude`，避免把個人偏好寫進 repo
 - 目前這個 repo 常見適合本地 `.git/info/exclude` 的未追蹤 runtime 產物包含 `/src/merc.ini`、`/src/shutdown.txt`、`/log/*.log`、`/player/*`
 
