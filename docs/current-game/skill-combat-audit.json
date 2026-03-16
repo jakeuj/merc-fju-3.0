@@ -577,10 +577,84 @@
     ],
     "suspect": []
   },
+  "legacy_long_fist_city_service_sweep_2026_03_17": {
+    "scope": [
+      "area/loyang/mob/512.mob",
+      "area/loyang/mob/537.mob",
+      "area/loyang/mob/570.mob",
+      "area/beiping/mob/9003.mob"
+    ],
+    "excluded_non_city_or_special_clusters": [
+      {
+        "vnums": [
+          548,
+          549,
+          550,
+          551,
+          552,
+          553,
+          554
+        ],
+        "reason": "Sky shaman cluster in special Taoist rooms 650-656. They still use long fist, but they are not city/service baseline samples for the current Batch C prep."
+      }
+    ],
+    "reference_basis": [
+      "docs/3yWebsite/newhand/newbies/index.html",
+      "docs/3yWebsite/docs/data/players.json",
+      "docs/3yWebsite/skill/holy.html",
+      "area/loyang/res/loyang.res",
+      "area/beiping/res/beipeing.res"
+    ],
+    "entry_self_defense": [
+      {
+        "vnum": 512,
+        "area": "loyang",
+        "role": "地政官吏",
+        "current_chain": [
+          "long fist",
+          "cloud steps"
+        ],
+        "reason": "Killable civil-office NPC at the palace approach. After the Batch B step rebalance it now reads as a baseline self-defense sample rather than an advanced combatant."
+      }
+    ],
+    "reasonable_to_keep": [
+      {
+        "vnum": 537,
+        "area": "loyang",
+        "role": "訓練師",
+        "current_chain": [
+          "long fist",
+          "gdragon steps"
+        ],
+        "reason": "NoKill trainer tied directly to newbie-facing attribute training. Long fist remains acceptable as a generic self-defense fallback, and is not the current runtime weakness."
+      },
+      {
+        "vnum": 570,
+        "area": "loyang",
+        "role": "詩人",
+        "current_chain": [
+          "long fist",
+          "shade steps"
+        ],
+        "reason": "Legacy holy docs explicitly anchor this poet as the detect evil teacher. Long fist plus shade steps functions as a literary civic flavor line rather than a plain city mismatch."
+      },
+      {
+        "vnum": 9003,
+        "area": "beiping",
+        "role": "藥鋪伙計",
+        "current_chain": [
+          "long fist",
+          "gdragon steps"
+        ],
+        "reason": "NoKill shop service NPC with low runtime combat exposure. Kept unchanged for now; if Batch C later makes long fist too dominant, revisit together with its dodge line."
+      }
+    ],
+    "identity_mismatch": []
+  },
   "next_execution_queue": [
     {
       "target": "batch-c-fist-ladder",
-      "reason": "Batch B civic follow-up is now resolved. The next highest-value task is the long fist / lung shan / tackle multi-factor pre-check and ladder rebuild."
+      "reason": "Batch B civic follow-up is now resolved, and the city/service long-fist sweep has isolated the true baseline samples. The next highest-value task is the long fist / lung shan / tackle multi-factor pre-check and ladder rebuild."
     },
     {
       "target": "future object gate sweep",

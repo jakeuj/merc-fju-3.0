@@ -303,7 +303,7 @@
 ## Immediate Next Steps
 
 1. 直接轉入 Batch C，先完成 `long fist / lung shan / tackle` 的多因子 pre-check
-2. 盤出 `long fist` 目前掛在城市 / 教學 / 服務 NPC 上的樣本，區分入門自保與身份錯位
+2. 以已完成的城市 / 教學 / 服務 `long fist` sweep 為基線，區分哪些只是 generic fallback，哪些才需要跟著拳法梯階重建再重判
 3. 後續若再有 city / teacher 樣本仍掛 `gdragon steps`，以 `cloud steps` 是否更符合其自保定位為優先判準
 
 ## Batch A Result
@@ -550,4 +550,5 @@
 - `512` 地政官吏與 `572` 郎中已從 `gdragon steps` 回調到 `cloud steps`
 - `537`、`538`、`539`、`9003` 目前先保留，因為其主要定位仍是教學 / 店務 / 法術服務
 - `570` 詩人已根據 `detect evil` 舊站教學紀錄與 `shade steps` 的 scholar/bard-compatible 定位，從 civic suspect 轉成合理保留
+- 已完成城市 / 教學 / 服務 `long fist` sweep：`512` 歸入入門自保；`537`、`570`、`9003` 歸入合理保留；目前沒有新的 long-fist civic mismatch
 - 下一個關鍵 decision point 已轉為 Batch C 的 `long fist / lung shan / tackle`
