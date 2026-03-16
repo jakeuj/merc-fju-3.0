@@ -31,5 +31,6 @@ AttackRatio     100
 DodgeRatio      100
 Migrate         0
 Sex             SEX_MALE
-Enable          100 'gdragon steps'
+Enable          48 'imperial sword'
+Enable          45 'military steps'
 End

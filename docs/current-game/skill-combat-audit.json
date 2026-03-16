@@ -28,7 +28,7 @@
     "三國-MUD-題材分布表.md"
   ],
   "theme_basis": "Pilot batch follows existing loyang/beiping military, palace, and night-runner identity lines. New reference inputs are deferred until after the current runtime ladder is stabilized.",
-  "compliance_check": "No runtime data changed in this audit pass. Existing area tracker and area load order remain untouched.",
+  "compliance_check": "Runtime data changed in this pass for area/loyang/mob/571.mob and area/beiping/mob/9014.mob. Existing area tracker and area load order remain untouched.",
   "summary_counts": {
     "skill_files": 272,
     "skill_valid_yes": 174,
@@ -145,7 +145,342 @@
       "notes": "Used to show that two sword belongs to an advanced player sword route, which makes mob 559's two sword adept 1 line a role mismatch rather than merely a low number."
     }
   ],
+  "legacy_area_sweep_2026_03_16_round2": {
+    "scope": [
+      "area/loyang/mob/*.mob",
+      "area/beiping/mob/*.mob"
+    ],
+    "reasonable_to_keep": [
+      {
+        "vnum": 537,
+        "area": "loyang",
+        "role": "訓練師",
+        "legacy_chain": [
+          "long fist",
+          "gdragon steps"
+        ],
+        "reason": "NoKill teacher NPC. Legacy self-defense remains acceptable because its main function is training rather than frontline combat."
+      },
+      {
+        "vnum": 538,
+        "area": "loyang",
+        "role": "醫生",
+        "legacy_chain": [
+          "gdragon steps"
+        ],
+        "reason": "Support NPC with only a dodge line. Not a current combat rebalance priority."
+      },
+      {
+        "vnum": 539,
+        "area": "loyang",
+        "role": "術士",
+        "legacy_chain": [
+          "gdragon steps",
+          "burning hands",
+          "nine steps"
+        ],
+        "reason": "Spell-focused civic NPC. Existing combat identity is magic-led rather than a weakened guard-family residue."
+      },
+      {
+        "vnum": 546,
+        "area": "loyang",
+        "role": "戰馬",
+        "legacy_chain": [
+          "gdragon steps"
+        ],
+        "reason": "Mount/animal sample; outside the current city-court-human combat ladder cleanup."
+      },
+      {
+        "vnum": 548,
+        "area": "loyang",
+        "role": "sky shaman",
+        "legacy_chain": [
+          "long fist",
+          "gdragon steps"
+        ],
+        "reason": "Special combat cluster, not a city or court identity sample."
+      },
+      {
+        "vnum": 549,
+        "area": "loyang",
+        "role": "sky shaman",
+        "legacy_chain": [
+          "long fist",
+          "gdragon steps"
+        ],
+        "reason": "Special combat cluster, not a city or court identity sample."
+      },
+      {
+        "vnum": 550,
+        "area": "loyang",
+        "role": "sky shaman",
+        "legacy_chain": [
+          "long fist",
+          "gdragon steps"
+        ],
+        "reason": "Special combat cluster, not a city or court identity sample."
+      },
+      {
+        "vnum": 551,
+        "area": "loyang",
+        "role": "sky shaman",
+        "legacy_chain": [
+          "long fist",
+          "gdragon steps"
+        ],
+        "reason": "Special combat cluster, not a city or court identity sample."
+      },
+      {
+        "vnum": 552,
+        "area": "loyang",
+        "role": "sky shaman",
+        "legacy_chain": [
+          "long fist",
+          "gdragon steps"
+        ],
+        "reason": "Special combat cluster, not a city or court identity sample."
+      },
+      {
+        "vnum": 553,
+        "area": "loyang",
+        "role": "sky shaman",
+        "legacy_chain": [
+          "long fist",
+          "gdragon steps"
+        ],
+        "reason": "Special combat cluster, not a city or court identity sample."
+      },
+      {
+        "vnum": 554,
+        "area": "loyang",
+        "role": "sky shaman",
+        "legacy_chain": [
+          "long fist",
+          "gdragon steps"
+        ],
+        "reason": "Special combat cluster, not a city or court identity sample."
+      },
+      {
+        "vnum": 556,
+        "area": "loyang",
+        "role": "侍從",
+        "legacy_chain": [
+          "gdragon steps"
+        ],
+        "reason": "Single dodge-only self-defense line; insufficient evidence that this is currently a combat weakness worth immediate change."
+      },
+      {
+        "vnum": 572,
+        "area": "loyang",
+        "role": "郎中",
+        "legacy_chain": [
+          "gdragon steps"
+        ],
+        "reason": "Civic support NPC with self-defense only. Low priority for combat-chain restoration."
+      },
+      {
+        "vnum": 583,
+        "area": "loyang",
+        "role": "蔡邕",
+        "legacy_chain": [
+          "color steps",
+          "universe"
+        ],
+        "reason": "Named high-tier sample with its own established legacy line, not part of the weakened city/court baseline."
+      },
+      {
+        "vnum": 591,
+        "area": "loyang",
+        "role": "little_wind",
+        "legacy_chain": [
+          "linpo steps",
+          "rulai"
+        ],
+        "reason": "High-tier special sample outside the current audit target."
+      },
+      {
+        "vnum": 593,
+        "area": "loyang",
+        "role": "world traveller",
+        "legacy_chain": [
+          "ryo"
+        ],
+        "reason": "Named special NPC with non-civic combat identity."
+      },
+      {
+        "vnum": 594,
+        "area": "loyang",
+        "role": "ugly dog",
+        "legacy_chain": [
+          "ryo"
+        ],
+        "reason": "Special/non-civic sample."
+      },
+      {
+        "vnum": 595,
+        "area": "loyang",
+        "role": "servant",
+        "legacy_chain": [
+          "ryo",
+          "linpo steps"
+        ],
+        "reason": "High-tier special sample, not a normal city service NPC."
+      },
+      {
+        "vnum": 596,
+        "area": "loyang",
+        "role": "fly thief",
+        "legacy_chain": [
+          "ryo"
+        ],
+        "reason": "Special/non-civic sample."
+      },
+      {
+        "vnum": 597,
+        "area": "loyang",
+        "role": "flower",
+        "legacy_chain": [
+          "ryo"
+        ],
+        "reason": "Special/non-civic sample."
+      },
+      {
+        "vnum": 598,
+        "area": "loyang",
+        "role": "liner",
+        "legacy_chain": [
+          "sky blade",
+          "mirage steps"
+        ],
+        "reason": "High-tier special sample outside the city/court cleanup lane."
+      },
+      {
+        "vnum": 599,
+        "area": "loyang",
+        "role": "funer",
+        "legacy_chain": [
+          "dream soul",
+          "mirage steps"
+        ],
+        "reason": "High-tier special sample outside the city/court cleanup lane."
+      },
+      {
+        "vnum": 600,
+        "area": "loyang",
+        "role": "nuner",
+        "legacy_chain": [
+          "mirage steps"
+        ],
+        "reason": "High-tier special sample outside the city/court cleanup lane."
+      },
+      {
+        "vnum": 601,
+        "area": "loyang",
+        "role": "tener",
+        "legacy_chain": [
+          "dream tear",
+          "mirage steps"
+        ],
+        "reason": "High-tier special sample outside the city/court cleanup lane."
+      },
+      {
+        "vnum": 602,
+        "area": "loyang",
+        "role": "bastard ghost",
+        "legacy_chain": [
+          "rulai",
+          "linpo steps"
+        ],
+        "reason": "Boss/special sample outside the current runtime convergence target."
+      },
+      {
+        "vnum": 603,
+        "area": "loyang",
+        "role": "evil god",
+        "legacy_chain": [
+          "evil king",
+          "linpo steps"
+        ],
+        "reason": "Boss/special sample outside the current runtime convergence target."
+      },
+      {
+        "vnum": 604,
+        "area": "loyang",
+        "role": "six demon king",
+        "legacy_chain": [
+          "tiger blade",
+          "mirage steps"
+        ],
+        "reason": "Boss/special sample outside the current runtime convergence target."
+      },
+      {
+        "vnum": 9003,
+        "area": "beiping",
+        "role": "藥鋪伙計",
+        "legacy_chain": [
+          "long fist",
+          "gdragon steps"
+        ],
+        "reason": "NoKill shop-service NPC. Legacy self-defense is acceptable until a broader civic-service rebalance exists."
+      }
+    ],
+    "fixed_this_round": [
+      {
+        "vnum": 571,
+        "area": "loyang",
+        "role": "流氓",
+        "before": [
+          "long fist 100",
+          "gdragon step 100"
+        ],
+        "after": [
+          "evil fist 60",
+          "gdragon steps 55"
+        ],
+        "reason": "Street-thug identity fits evil fist better than a generic starter punch line, and the singular gdragon step string was confirmed to be a typo residue rather than a real alias."
+      },
+      {
+        "vnum": 9014,
+        "area": "beiping",
+        "role": "錦衣侍者",
+        "before": [
+          "gdragon steps 100"
+        ],
+        "after": [
+          "imperial sword 48",
+          "military steps 45"
+        ],
+        "reason": "Sword-equipped court retainer in a guarded grain-supply node was underpowered with dodge-only legacy setup. Low-entry palace/self-defense pairing is a better runtime fit."
+      }
+    ],
+    "suspect": [
+      {
+        "vnum": 512,
+        "area": "loyang",
+        "role": "地政官吏",
+        "legacy_chain": [
+          "long fist",
+          "gdragon steps"
+        ],
+        "reason": "Civil-official identity may be overfitted to a generic fighter starter chain, but current evidence is insufficient to choose between pure self-defense downgrade and a dedicated civic-combat profile."
+      },
+      {
+        "vnum": 570,
+        "area": "loyang",
+        "role": "詩人",
+        "legacy_chain": [
+          "long fist",
+          "shade steps"
+        ],
+        "reason": "Mixed scholar/poet flavor and unusual dodge pairing suggest a future pass, but current references do not yet justify a direct rewrite."
+      }
+    ]
+  },
   "next_execution_queue": [
+    {
+      "target": "civic legacy suspect sweep",
+      "reason": "Follow up on mob 512 and mob 570 after the current city/court round. They are the clearest remaining civic samples whose legacy combat lines may still be role-misaligned."
+    },
     {
       "target": "future object gate sweep",
       "reason": "Obj 84 is now validated as a legitimate noname-gated legacy item. Only expand this queue if more RES_SKILL-gated equipment appears in later audits."
@@ -846,6 +1181,55 @@
       ],
       "status": "ok",
       "notes": "Runtime now gives this junior palace-leader sample an imperial-sword plus military-step pairing. This keeps it above empty entry guards but below the more formal palace guard ladder that uses stronger imperial tiers and, later, imperial steps.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "mob_enable",
+      "runtime_key": "mob:571",
+      "source_file": "area/loyang/mob/571.mob",
+      "current_value": {
+        "offensive_skill": "evil fist",
+        "offensive_adept": 60,
+        "dodge_skill": "gdragon steps",
+        "dodge_adept": 55
+      },
+      "reference_value": {
+        "archetype": "street_thug_mid",
+        "expected_behavior": "urban hooligan should use a thug-coded unarmed offense rather than a generic starter punch line, and the dodge skill should resolve to a real runtime key"
+      },
+      "reference_source": [
+        "area/loyang/mob/571.mob",
+        "skill/e/evilfist.ski",
+        "skill/g/gdragon_steps.ski",
+        "plans/failenable-npc-skill-audit.md"
+      ],
+      "status": "ok",
+      "notes": "This sample was directly corrected in runtime. gdragon step was confirmed to be a typo residue: the repo has only gdragon steps as a registered skill. The offensive line was also lifted from generic long fist into evil fist to better match a street-thug identity without forcing a weapon-based NPC-only chain onto an unarmed mob.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "mob_enable",
+      "runtime_key": "mob:9014",
+      "source_file": "area/beiping/mob/9014.mob",
+      "current_value": {
+        "offensive_skill": "imperial sword",
+        "offensive_adept": 48,
+        "dodge_skill": "military steps",
+        "dodge_adept": 45
+      },
+      "reference_value": {
+        "archetype": "court_retainer_entry",
+        "expected_behavior": "sword-equipped court retainer should have a usable low-entry sword/dodge pair rather than a dodge-only legacy setup"
+      },
+      "reference_source": [
+        "area/beiping/mob/9014.mob",
+        "area/beiping/res/beipeing.res",
+        "area/beiping/obj/9008.obj",
+        "skill/i/imperial_sword.ski",
+        "skill/m/military_steps.ski"
+      ],
+      "status": "ok",
+      "notes": "This sample stands in guarded grain-supply rooms, wears a full equipment set, and wields a sword. Replacing the old dodge-only gdragon setup with a modest imperial-sword plus military-steps pair gives it a coherent court-retainer combat profile while keeping it below the palace_junior_leader rung.",
       "pilot_batch": "pilot-loyang-beiping-guard-lineage"
     },
     {

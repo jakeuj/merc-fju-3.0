@@ -258,11 +258,69 @@
 
 這輪沒有修改 `84.obj` runtime data，因為現有證據比較支持「它本來就是這樣設計」。
 
+### 9. loyang / beiping 城市與宮廷 legacy sweep 第二輪
+
+這輪把試點範圍從 guard-family 再往外擴一小圈，直接重掃 loyang / beiping 目前仍掛 legacy combat skill 的城市 / 宮廷 / 地痞 / 教學戰鬥樣本，並分成三類：
+
+- 可合理保留
+  - `537` 訓練師
+  - `538` / `539` / `572` 等支援型 NPC
+  - `9003` 藥鋪伙計
+  - 以及 `548-554`、`583`、`591`、`593-604` 這些已偏特殊 / named / 高階樣本
+- 明顯錯位或過弱，已直接修正
+  - `571` 流氓
+  - `9014` 錦衣侍者
+- 證據不足，先記 suspect
+  - `512` 地政官吏
+  - `570` 詩人
+
+這裡最重要的新結論有兩個：
+
+- `area/loyang/mob/571.mob` 的 `gdragon step` 已可確認是 typo / 殘留錯值，不是 alias
+  - repo 內真實存在且唯一登錄的技能只有 `gdragon steps`
+  - 全 repo 搜尋沒有第二條可載入的 `gdragon step` 技能定義
+- 並非所有 legacy skill 都應直接抹掉
+  - `NoKill` 的教學 / 店務 NPC，或已經長期自成一條 named / boss 線的樣本，現階段更適合先保留並記錄理由
+
+### 10. 本輪 runtime 修正：`571` / `9014`
+
+`571` `流氓` 由：
+
+- `long fist 100`
+- `gdragon step 100`
+
+調整為：
+
+- `evil fist 60`
+- `gdragon steps 55`
+
+理由：
+
+- `evil fist` 本身就帶有地痞 / 惡霸語境，比 generic starter 拳路 `long fist` 更符合身份
+- `gdragon step` 的 singular 拼法不是現行 runtime skill key，修回 `gdragon steps` 才是正確 loader 路徑
+
+`9014` `錦衣侍者` 由：
+
+- `gdragon steps 100`
+
+調整為：
+
+- `imperial sword 48`
+- `military steps 45`
+
+理由：
+
+- 這個樣本實際上穿全套裝備、持 `紫微軟劍`，並駐在京城軍糧節點，不是單純無戰鬥力的背景僕役
+- 先補成低階宮廷 / 京城侍從可用的劍步組，並刻意壓在 `9018` 這種正式小隊長之下
+
 ## Next Execution Queue
 
 下一輪若開始真正動 runtime data，建議順序固定為：
 
-1. `skill_item` 子批次
+1. `civic legacy suspect` 子批次
+   - 先追 `512` 地政官吏與 `570` 詩人的身份戰技是否仍錯位
+   - 這兩筆是目前 loyang / beiping 城市樣本裡最值得繼續判讀、但證據還不夠直接改的 suspect
+2. `skill_item` 子批次
    - `84.obj` 已確認屬 legacy 設計正例
    - 若後續還有其他 `RES_SKILL` 物件，再擴成全量 object gate 盤點；目前 limbo 內未看到第二個同型樣本
 
@@ -340,9 +398,9 @@
 本輪已完成的 runtime 驗證：
 
 - `bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
-- `timeout 45s sh -lc 'cd src && ./merc merc.ini' > log/smoke-559.log 2>&1`
+- `timeout 45s sh -lc 'cd src && ./merc merc.ini' > log/smoke-legacy-round2.log 2>&1`
 - 成功訊號：`三國歪傳之降龍伏虎開始正常運作`
-- `debug/failenable`、`debug/failload`、`debug/badobject` 未出現新的內容；`debug/error` 只有 timeout 截停造成的關機訊號
+- 本輪額外關注 `Load_skill`、`Load_mobiles`、`LOG_FAILENABLE`，尤其針對 `571` 的 typo 修正與 `9014` 的新 `Enable` 組
 
 ## Ref Metadata
 
@@ -353,6 +411,6 @@
   - `三國-MUD-世界設計總藍圖-Architecture-Map.md`
   - `三國-MUD-題材分布表.md`
 - `theme_basis`
-  - 這輪以 loyang / beiping 現有守軍、皇城、夜行 NPC 的舊版體感與現行 runtime 身份戰技補完為主，不以新世界藍圖重寫強度體系
+  - 這輪以 loyang / beiping 現有守軍、皇城、夜行、城市雜兵 / 教學 NPC 的舊版體感與現行 runtime 身份戰技補完為主，不以新世界藍圖重寫強度體系
 - `compliance_check`
-  - 本輪先擴充 legacy reference 判讀，之後已落地 `area/loyang/mob/559.mob` 的單點 runtime 修正；未動用 area tracker，也未改動 area load order
+  - 本輪已直接落地 `area/loyang/mob/571.mob` 與 `area/beiping/mob/9014.mob` 的 runtime 修正；未動用 area tracker，也未改動 area load order

@@ -25,8 +25,8 @@ Gold            -1
 Multipile       100
 Migrate         0
 Sex             SEX_MALE
-Enable          100 'long fist'
-Enable          100 'gdragon step'
+Enable          60 'evil fist'
+Enable          55 'gdragon steps'
 
 Process
 Type            greet_prog
