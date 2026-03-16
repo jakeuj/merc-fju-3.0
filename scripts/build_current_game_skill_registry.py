@@ -578,6 +578,7 @@ def build_registry() -> dict:
         "source_layers": {
             "legacy_html": ["docs/3yWebsite/skill/*.html"],
             "legacy_json": ["docs/3yWebsite/docs/data/skills.json", "docs/3yWebsite/docs/data/players.json"],
+            "legacy_guides": ["docs/3yWebsite/newhand/newbies/index.html"],
             "runtime": ["skill/*.ski", "skill/skill.lst", "src/merc.h", "data/symbol.def"],
         },
         "legacy_site_navigation": legacy_site_navigation,
@@ -593,6 +594,7 @@ def build_registry() -> dict:
         "notes": [
             "This file is an integrated working registry, not the runtime source of truth.",
             "Old-site HTML is the preferred source for descendant skills and requirement details when docs/3yWebsite/docs/data/skills.json flattens a page into one root row.",
+            "docs/3yWebsite/newhand/newbies/index.html is used as a starter-play reference for early learnable skills, beginner enable expectations, and class progression context.",
             "combat_dimensions is intended to hold both current runtime values and future tuning metadata.",
         ],
         "skills": skills,

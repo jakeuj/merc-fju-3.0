@@ -16,12 +16,23 @@
 - `skill/*.ski` 中有 `#Damage Value` 的技能共 `145` 筆
 - 其中 `133` 筆所有 `Value` 都是 `20`
 - 舊站 `players.json` 與 `skills.json` 明確描述了玩家向技能升階鏈
+- 舊站 `newhand/newbies/index.html` 也補上了新手期的技能分類與致能建議
 
 這代表現況很可能出現：
 
 - 新手技與高階技實際威力接近
 - 宗師級 NPC 掛高階 legacy skill，卻仍可能被 loader 判定為「太差」
 - 新 area / teacher / boss 設計若直接沿用舊技能名，會持續繼承失真的底層模板
+
+另外 `docs/3yWebsite/newhand/newbies/index.html` 已明確把技能使用面分成：
+
+- 攻擊類
+- 步法類
+- 逃跑類
+- 法術類
+- 雜類
+
+並建議新手至少致能一個攻擊類、一個步法、與一個逃跑類技能。這表示後續做玩家向 skill ladder 重建時，不能只看單一 offensive 鏈，也要保留新手戰鬥組合的最小成立條件。
 
 ## Source Of Truth
 
@@ -37,6 +48,7 @@
 
 - `docs/3yWebsite/docs/data/skills.json`
 - `docs/3yWebsite/docs/data/players.json`
+- `docs/3yWebsite/newhand/newbies/index.html`
 
 ## Core Hypothesis
 
@@ -171,6 +183,7 @@
 
 - `華山劍法 -> 封山劍法 -> 龍袖劍法`
 - `封山` 與 `龍袖` 都被視為明顯高於入門的實戰技能
+- `newhand/newbies/index.html` 也把技能學習與致能當成新手核心流程，支撐 `hua sword` 這類入門攻擊技不該和高階劍法等傷
 
 但 runtime 目前至少已確認：
 
@@ -188,6 +201,7 @@
 
 - `long fist` 是新手常見入門技能
 - 後續還會往更高階空手鏈發展
+- `newhand/newbies/index.html` 也把攻擊類列為新手必備致能類型，支撐入門拳法不該被視為可一路撐到高階的等價模板
 
 這條鏈適合當作：
 
@@ -387,6 +401,10 @@
     - `sky steps` 被描述為「武官系數一數二的步法，花費體力很少、必備」
   - `將軍精練-步法`
     - 和刺客文同樣把 `sky steps` 放在 `sleev steps` 鏈上
+- `docs/3yWebsite/newhand/newbies/index.html`
+  - 新手導引明確把步法列為必備致能類型之一
+  - 並且把攻擊 / 步法 / 逃跑列為新手最少應同時致能的三類技能
+  - 因此 `cloud steps` 不只是 old-site chain 的 root，也屬於實際新手戰鬥組合的一環
 - `docs/3yWebsite/docs/data/skills.json`
   - 只有 `cloud steps` 有單獨技能頁
   - `cloud steps` 明確標註可領悟 `gdragon steps`

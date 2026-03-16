@@ -33,14 +33,16 @@ title: Current Game Skills
 
 ## 舊站參考基線
 
-目前這份文件在技能脈絡上，已明確參考兩份舊站 JSON：
+目前這份文件在技能脈絡上，已明確參考兩份舊站 JSON 與一份新手導引頁：
 
 - `docs/3yWebsite/docs/data/skills.json`
   - 用來抓舊版技能的中文名、分類、可否互相教導、資源消耗與升階鏈
 - `docs/3yWebsite/docs/data/players.json`
   - 用來補強玩家攻略裡實際出現的技能路線、入門技能組與職系定位
+- `docs/3yWebsite/newhand/newbies/index.html`
+  - 用來補強新手期實際會接觸到的技能分類、學習方式、以及「至少致能一個攻擊類、一個步法、一個逃跑類」的戰鬥建議
 
-這兩份資料目前是 `reference baseline`，不是現行 runtime registry。
+這三份資料目前是 `reference baseline`，不是現行 runtime registry。
 也就是說：
 
 - 新遊戲裡技能是否真的存在，仍以 `skill/*.ski`、`skill/skill.lst`、`src/merc.h`、`data/symbol.def` 為準
@@ -160,6 +162,9 @@ title: Current Game Skills
   - 舊站標成可互相教導、可往 `fonxan sword` 升階的入門劍法
 - `players.json -> 新手上路`
   - 把 `cloud steps`、`hua sword`、`long fist`、`flee` 放在早期 learn 清單
+- `newhand/newbies/index.html -> skills / enableskill`
+  - 把技能分成攻擊、步法、逃跑、法術、雜類五大類
+  - 明確建議新手至少致能一個攻擊類、一個步法、以及一個逃跑類技能
 - `players.json -> 刺客精練-前言與說明 / 弱弱的刺客之道 Part 2`
   - 把 `two sword / 雙十` 放在刺客高階劍法脈絡，而不是城防或禁軍制式技能脈絡
 
