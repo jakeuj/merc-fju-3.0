@@ -10,15 +10,22 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 ## 快速開始
 1. 先確認問題屬於哪一類：程式流程、設定檔、資料格式、建置啟動、或 bug 追查。
 2. 先讀 `README.md` 與 `references/overview.md`，建立目前 3.0 repo 的總覽。
-3. 需要講程式邏輯時，直接開對應的 `src/*.c`、`include/*.h`、`src/merc.sample.ini` / `src/merc.ini`、`document/*.txt`，不要只憑記憶回答。
-4. 回答時優先把「入口檔案」「呼叫鏈」「對應資料檔」一起講清楚，讓使用者知道下一步該去哪裡改。
-5. 如果問題其實是區域建置或管理員指令，改用更專門的技能，例如 `merc-area-builder` 或 `mud-command-handbook`。
+3. 若題目和 `.ski`、`pry` 技能說明、`SLOT_* / EFFECT_* / ATTACK_*`、或技能學習限制有關，優先看：
+   - `docs/current-game/skill-file-format.md`
+   - `docs/current-game/skill-loader-reference.md`
+   - `docs/current-game/skill-constants.md`
+   - `docs/current-game/skill-pry-crosswalk.md`
+4. 需要講程式邏輯時，直接開對應的 `src/*.c`、`include/*.h`、`src/merc.sample.ini` / `src/merc.ini`、`document/*.txt`，不要只憑記憶回答。
+5. 如果文件與程式不一致，以 `src/*.c`、`src/merc.h`、runtime data 檔為準，並明確指出哪個說明頁需要回補。
+6. 回答時優先把「入口檔案」「呼叫鏈」「對應資料檔」一起講清楚，讓使用者知道下一步該去哪裡改。
+7. 如果問題其實是區域建置或管理員指令，改用更專門的技能，例如 `merc-area-builder` 或 `mud-command-handbook`。
 
 ## 先看目前 repo 現況
 - 核心程式碼在 `src/`，包含 `merc.ini`、`startup`、`Makefile` 與大量 `*.c`
 - 目前 repo 根目錄沒有 `start-merc.sh`、`start-merc.ps1`、`start-merc.cmd`、`scripts/bootstrap.sh` 這類 wrapper；講啟動流程時應以 `README.md` 與 `src/startup` 為準
 - `src/startup` 是 legacy `csh` launcher，`src/startup.bash` 則是目前給 bash 環境使用的入口；若使用者貼的是 `/bin/zsh .../startup.bash` 或 `BASH_SOURCE[0]: parameter not set`，要先指出是 shell 不相容，不要誤判成 MUD 載入失敗
 - `docs/` 目前主要是 `docs/3yWebsite/` 文件站，不要引用不存在的 `docs/DATA_LAYOUT.md` 或 `docs/RUNTIME_RESET.md`
+- `docs/current-game/` 現在已有 hand-maintained 的 `.ski` / `pry` 文件頁，可當作技能資料格式與玩家文案對照的第一層入口，但涉及 runtime 爭議時仍要回頭查 `src/load.c`、`src/act_info.c`、`src/merc.h`
 - `scripts/` 目前可見腳本只有 `scripts/convert_big5_to_utf8.py`
 - `etc/` 目前存在多個 runtime / 半動態檔案，但工作樹裡沒有 `etc/merc.ini`；設定解說應先看 `src/merc.sample.ini` 與本機生成的 `src/merc.ini`，再說明部署時可能會複製到 `etc/`
 
@@ -28,6 +35,7 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 - **建置/啟動**：看 `README.md`、`src/Makefile*`、`src/startup`
 - **設定檔**：看 `src/merc.sample.ini`、本機生成的 `src/merc.ini`，必要時再比對 `etc/` 與 `src/ini.c`
 - **資料載入**：看 `src/db.c`、`src/load.c`、`src/reload.c` 以及 `document/*.txt`
+- **技能格式 / 學習說明 / pry 文案**：先看 `docs/current-game/skill-*.md`，再交叉驗證 `src/act_info.c`、`src/load.c`、`src/bit.c`、`src/class.c`、`src/function.c`
 - **遊戲邏輯**：依主題追 `src/act_*.c`、`fight.c`、`magic.c`、`skill.c`、`job.c`、`variable.c`
 - **檔案儲存/玩家資料**：看 `src/file.c`、`src/save.c`、`src/ini.c` 與 `player/`, `mail/`, `board/`, `data/`, `etc/`
 
@@ -44,6 +52,11 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 - `document/obj.txt`
 - `document/reset.txt`
 - `document/shop.txt`
+- 技能檔 / `pry` 對照優先看：
+- `docs/current-game/skill-file-format.md`
+- `docs/current-game/skill-loader-reference.md`
+- `docs/current-game/skill-constants.md`
+- `docs/current-game/skill-pry-crosswalk.md`
 
 ## 常見解說主題
 
@@ -94,6 +107,17 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 - `data/`, `board/`, `etc/`：系統資料與部分 runtime / 半動態資料
 - `player/`, `mail/`, `log/`, `debug/`, `vote/`：執行後會變動的資料
 
+### `.ski` / `pry` 問題的最短路徑
+- 先用 `docs/current-game/skill-file-format.md` 找欄位
+- 再用 `docs/current-game/skill-loader-reference.md` 確認 loader / function whitelist
+- 需要常數時看 `docs/current-game/skill-constants.md`
+- 需要把玩家文案對回 `.ski` 時看 `docs/current-game/skill-pry-crosswalk.md`
+- 若文件與 runtime 不一致：
+- `pry` 輸出優先追 `src/act_info.c -> do_pry()`
+- 熟練稱號優先追 `src/bit.c -> adeptation_name()`
+- 職業中文名優先追 `src/class.c -> class_name()`
+- skill parser 與結構優先追 `src/load.c`、`src/merc.h`
+
 ### Bug 追查
 - 不要一開始就猜答案；先找第一個報錯點
 - 若是編譯錯誤，先看 `src/` 的對應 `.c/.h`
@@ -115,6 +139,10 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 - `references/overview.md`
 - `src/merc.ini`
 - `src/startup`
+- `docs/current-game/skill-file-format.md`
+- `docs/current-game/skill-loader-reference.md`
+- `docs/current-game/skill-constants.md`
+- `docs/current-game/skill-pry-crosswalk.md`
 - `document/mob.txt`
 - `document/obj.txt`
 - `document/room.txt`

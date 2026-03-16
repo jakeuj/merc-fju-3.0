@@ -43,13 +43,25 @@
 - `src/load.c`
 - `src/handler.c`
 - `src/fight.c`
+- `src/act_info.c`
+- `src/bit.c`
+- `src/class.c`
 - `document/mob.txt`
+
+技能文件與玩家可讀說明基線：
+
+- `docs/current-game/skill-file-format.md`
+- `docs/current-game/skill-loader-reference.md`
+- `docs/current-game/skill-constants.md`
+- `docs/current-game/skill-pry-crosswalk.md`
 
 技能鏈與玩家體感基線以舊站資料為準：
 
 - `docs/3yWebsite/docs/data/skills.json`
 - `docs/3yWebsite/docs/data/players.json`
 - `docs/3yWebsite/newhand/newbies/index.html`
+
+另外，repo 現在已補上 current-game 技能文件頁；之後遇到「玩家文案和 `.ski` 是否一致」這類問題時，先用文件頁快速對照，再回頭以 runtime source 決定最終答案，避免把舊 help 範例或玩家整理文直接當成現況。
 
 ## Core Hypothesis
 

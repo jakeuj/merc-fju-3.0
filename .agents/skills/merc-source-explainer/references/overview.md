@@ -5,6 +5,7 @@
 - Use `README.md` as the first source for build and startup expectations.
 - Do not assume helper wrappers such as `start-merc.sh`, `start-merc.ps1`, `start-merc.cmd`, or `scripts/bootstrap.sh`; they are not present in this repo snapshot.
 - Do not cite `docs/DATA_LAYOUT.md` or `docs/RUNTIME_RESET.md`; `docs/` currently contains the `3yWebsite` docs site instead.
+- `docs/current-game/` now also contains hand-maintained runtime docs for `.ski` and `pry` behavior; use those as the first documentation layer for skill-format questions, then verify against `src/load.c`, `src/act_info.c`, `src/bit.c`, `src/class.c`, and `src/merc.h`.
 
 ## Core Paths
 | Path | Purpose |
@@ -15,6 +16,7 @@
 | `angel/`, `command/`, `skill/`, `social/` | Gameplay data files loaded by specific subsystems |
 | `data/`, `board/`, `etc/` | System data and semi-dynamic files |
 | `help/`, `greeting/`, `joke/` | Player-facing text |
+| `docs/current-game/` | Current-game docs site, including `.ski` field, loader, constants, and `pry` crosswalk pages |
 | `player/`, `mail/`, `log/`, `debug/`, `vote/` | Runtime-changing directories |
 | `document/` | Merc-FJU format manuals and project-specific docs |
 | `doc/` | Upstream Merc/Diku license and reference docs |
@@ -70,5 +72,11 @@ cd src
 - `document/room.txt`
 - `document/reset.txt`
 - `document/shop.txt`
+
+## Skill Docs References
+- `docs/current-game/skill-file-format.md`
+- `docs/current-game/skill-loader-reference.md`
+- `docs/current-game/skill-constants.md`
+- `docs/current-game/skill-pry-crosswalk.md`
 
 Use these before explaining or changing area-format details.
