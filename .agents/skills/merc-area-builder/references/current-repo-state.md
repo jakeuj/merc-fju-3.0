@@ -62,12 +62,18 @@
 
 ## scripts/ 現況
 
-- repo 根目錄 `scripts/` 目前可見的腳本只有 `scripts/convert_big5_to_utf8.py`
+- repo 根目錄 `scripts/` 目前主要可見腳本包含：
+- `scripts/convert_big5_to_utf8.py`
+- `scripts/build_current_game_skill_registry.py`
+- `scripts/generate_current_game_skills_pages.py`
+- `scripts/world_consistency_checker.py`（另提供執行別名 `scripts/world-consistency-checker.py`）
 - 本 skill 另外提供 `scripts/generate_roo_from_map_md.py`，用來把受限結構的 `map.md` 轉成 `.roo` scaffold；它不是自由文字 Markdown compiler
 - 這支 script 目前只做一件事：把 `mapmd-json` graph schema 驗證後投影成 `.roo` scaffold；它不是 Mudlet、SQLite 或其他外部 mapper exporter
 - external exit 仍會輸出成正式 `.roo #Exit`，只是驗證時不要求目標房間也出現在同一份 spec 內
 - 不要假設 `scripts/check-data.py` 或其他舊工具一定存在；驗證步驟應先以 repo 實際檔案為準
 - 若任務涉及大量舊資料匯入、回填或外部檔案導入，可用 `convert_big5_to_utf8.py` 協助確認 UTF-8 轉碼
+- `world_consistency_checker.py` 目前可做 runtime-aware 靜態檢查：`duplicate vnum`、broken exit target、reverse exit mismatch、orphan/disconnected rooms、unreachable area、以及 `area/directory.lst` 與實際 area/index/roo 結構不一致
+- reachability 檢查只看 room exit graph，不會自動理解 `#Job`、recall、bus/ship 或其他傳送邏輯；看到 `unreachable-area` 時，要先判斷它是不是設計上的 teleport-only 區域，再決定是修資料還是把它列入 allowlist/root set
 
 ## 舊版資料比對來源
 

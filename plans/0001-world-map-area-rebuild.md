@@ -2,7 +2,7 @@
 
 ## Summary
 
-以 `area/world_map.md` 為世界層參考，建立一套可長期持續的 AREA 重建流程。第一個正式新 AREA 以 `loyang_outskirts` 為起點，但這份計畫的目的不只是一個新區，而是先把「全局追蹤 + 單區 spec-first 流程 + 可重複 prompt」一起定好。
+以 `area/world_map.md` 為世界層參考，建立一套可長期持續、可讓 Agent 安全續跑的 AREA 重建流程。第一個正式新 AREA 以 `loyang_outskirts` 為起點，但這份計畫的目的不只是一個新區，而是先把「全局追蹤 + 單區 spec-first 流程 + 可重複 prompt + 驗證與交付治理」一起定好，讓後續世界能穩定擴張到更多 AREA，而不是每輪重新發明流程。
 
 ## Plan Storage Convention
 
@@ -15,6 +15,30 @@
 
 - `0002`：第一個 area 實作計畫
 
+## Pipeline Architecture
+
+全局 AREA rebuild pipeline 固定分成下列層級：
+
+1. `World Graph`
+   - 人工維護世界拓樸、題材分布與 progression
+   - 主要入口是 `area/world_map.md`
+2. `Area Queue`
+   - 由 `area/rebuild_plan.md` 管理 `todo / in_progress / done / blocked`
+   - 固定 prompt 只從這裡決定 next actionable area
+3. `Area Plan`
+   - 由 `plans/area/NNNN-area-slug.md` 固定單區邊界、題材、房號保留與外部連線
+4. `Area Spec`
+   - 由 `area/<new_area>/map.md` 承接 narrative spec 與 `mapmd-json`
+5. `Projection + Implementation`
+   - 先由 generator 投影 `.roo`
+   - 再補 `mob / obj / res / shp / directory.lst / boundary rooms`
+6. `Runtime Validation`
+   - 以 build、smoke test、log/debug 檢查證明 area 可載入
+7. `Commit / Merge Gate`
+   - 只有符合 `delivery_gate` 的 area 才能往下個 milestone 或下一區前進
+
+這個順序是正式流程，不應跳過中間的 queue、plan 或 validation。
+
 ## Workflow
 
 - 世界層參考使用 `area/world_map.md`
@@ -23,6 +47,53 @@
 - spec-first 區域設計使用 `area/<new_area>/map.md`
 - 若需要 `.roo` scaffold，使用 `.agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py`
 - 題材與沉浸式設計使用 `.agents/skills/merc-area-builder/references/theme-design-patterns.md`
+
+## World Graph Governance
+
+`area/world_map.md` 與其對應的世界拓樸決策屬於 world graph layer。預設規則：
+
+- Agent 不得因為單區實作方便，就自行改寫全局 world graph 或 candidate order
+- 若某輪任務真的要改世界拓樸、主鏈 progression、題材分布或大型 world link，應把它視為獨立的 world design task，而不是夾帶在單區 implementation 中
+- 單區 plan 只能在既有 world graph 約束下展開；若發現 graph 與實作需求衝突，要先回寫全局計畫或 tracker 說明，再決定是否進入 graph 變更
+
+## Area Unit Of Work
+
+AREA rebuild 的預設工作單位是「一輪任務只處理一個 area milestone」。
+
+規則：
+
+- 固定 prompt 一次只推進一個 area
+- 同一輪最多只允許一個 `in_progress` area
+- 若當前 area 尚未達到可 commit 或可前進的 gate，不得順手開下一個 area 當平行支線
+- 單區任務可分成 spec milestone 與 implementation milestone，但仍算同一個 area unit of work
+
+目的：
+
+- 降低 Agent 同時改多區造成的 world-state 漂移
+- 讓 commit、review、smoke test 與問題回溯都能對準單一 area
+- 讓 `area/rebuild_plan.md` 真正能當 queue，而不是鬆散記事本
+
+## Area Plan Contract
+
+每個 `plans/area/NNNN-area-slug.md` 至少應固定回答以下欄位，避免單區設計漂離世界層約束：
+
+- `theme`
+- `subtheme`
+- `reserved_room_block`
+- `planned_vnum_range`
+- `external_links`
+- `delivery_gate`
+- `ref_inputs_used`
+- `ref_inputs_deferred`
+- `theme_basis`
+- `compliance_check`
+
+補充規則：
+
+- `external_links` 要明講此區會接到哪些既有 area / room，避免 generator 與 runtime boundary room 各自講各話
+- `planned_vnum_range` 代表首段保留區，不等於目前已落地的最後一號
+- `delivery_gate` 雖然由 tracker 驅動，但單區 plan 也應保留當前語意與變更理由，方便回讀設計脈絡
+- 若這輪只是先做 spec、尚未動 runtime data，也要先把 external links 與 boundary assumptions 寫清楚
 
 ## Ref Usage Policy
 
@@ -81,6 +152,13 @@
 - `next_prompt`
 - `delivery_gate`
 - 固定主 prompt
+
+另外，單區驗證證據不一定要全部塞進 tracker，但每輪至少要能在單區 plan、commit 訊息或工作回報中回答：
+
+- 本輪用了哪些輸入來源
+- 生成了哪些檔案或人工補了哪些 runtime data
+- 驗證看了哪個 build / log / debug 結果
+- 為何目前可停在這個 `delivery_gate`
 
 ## Room VNUM Reservation Policy
 
@@ -141,6 +219,12 @@
 - 若 `delivery_gate` 是任何 `*_in_progress`，表示仍應留在當前 area
 - 若 `delivery_gate` 是 `blocked`，先處理 blocker 或明確調整狀態，不能拿「做下一區」當繞路
 
+配套要求：
+
+- `spec_ready_for_commit` 代表 `map.md`、external links、reserved block 與題材依據已形成穩定里程碑
+- `implementation_ready_for_commit` 代表 runtime data 已落地且至少完成一輪必要驗證，但尚未推到「可安全開下一區」
+- `validated_ready_to_advance` 代表本區已完成本輪應做的 build / smoke test / log-debug 檢查，且沒有待處理 blocker
+
 ## Branch Policy
 
 固定 prompt 不只要遵守 `delivery_gate`，也要遵守 branch gate。
@@ -152,11 +236,42 @@
 - 若只是 merge 後的小型 `docs / tracker / plan` 收尾，可直接留在 `develop`
 - 若使用者明講要直接在 `develop` 做，或指定其他 branch 策略，則以使用者指示為準
 
+若採 GitHub review 流程，建議以「一個 area milestone 對應一個 branch / PR」為優先，而不是把多個 area 合併成單一 review 單位；但這是交付建議，不是目前 tracker 的硬性 gate。
+
 目的：
 
 - 避免 `develop` 直接承接長串 area implementation commit
 - 讓每個 area milestone 或一小段主題鏈更容易整批 merge
 - 讓固定 prompt 在「開始新 area」這一步有一致行為，不必每輪重新口頭提醒
+
+## Runtime Validation Contract
+
+每個 area implementation milestone 至少要回答以下驗證問題：
+
+1. build 是否成功
+2. area 是否能被 loader 正常載入
+3. 是否出現 `duplicate vnum`、`parse error`、`Load_room`、boundary exit 錯誤或新 warning
+4. smoke test 的成功訊號與對應 log 是哪一份
+5. `debug/*` 是否出現本輪新增 area 相關的新訊息
+
+規則：
+
+- `spec / plan / tracker only` 任務可停在 `--validate-only`
+- 一旦已改到 loadable runtime area data，預設至少要做對應 build 與 smoke test
+- 若只是 generator 成功但 boundary room、`area/directory.lst` 或 loader 仍未驗證，不可直接視為 `validated_ready_to_advance`
+- 驗證失敗時，先留在當前 area 修正，不要改去做下一區
+
+## Commit And Review Unit
+
+全局上以「單一 area milestone」作為 commit 與 review 的最小單位。
+
+規則：
+
+- 同一次 commit / review 盡量只包含一個 area 的主要 spec 或 implementation 變更
+- 若同時需要改既有邊界 room、`area/directory.lst` 或 docs，仍視為該 area milestone 的一部分
+- 除非是純全局 docs / tracker 收尾，否則不要把兩個不同 area 的主要 runtime 變更混在同一輪
+
+這個規則能讓未來若引入 PR、graph diff 或 CI gate 時，不必重構整個工作方式。
 
 ## Fixed Prompt
 
@@ -170,6 +285,17 @@
 - 否則選第一個 `todo` 且無 blocker 的 area
 - 這裡的 `next area` 一律解讀為 next actionable area，而不是 candidate queue 的下一個新候選
 - 因此只要 `in_progress` 仍存在，就不得切到下一個 `todo`；除非目前區域已轉成 `done`、`blocked` 或 `abandoned`
+
+Agent loop 可視為：
+
+1. 讀 `area/rebuild_plan.md`
+2. 取 `in_progress`，否則取第一個可做的 `todo`
+3. 讀對應單區 plan
+4. 更新或驗證 `map.md`
+5. 投影 `.roo` 並補 runtime data
+6. 做對應 validation
+7. 依結果更新 `delivery_gate`
+8. 只有在 gate 允許時才結束當前區或移往下一區
 
 ## Candidate Order
 
@@ -269,6 +395,8 @@
 - 後續新增 plan 不需再重新發明命名規則
 - 代理能只靠固定主 prompt + `area/rebuild_plan.md` 找到下一步
 - `loyang_outskirts` 能作為第一個完整驗證 spec-first 流程的範例
+- 全局流程已明確區分 `world graph / queue / area plan / area spec / runtime validation / delivery gate`
+- 後續若導入 PR、graph diff 或 CI，不需要推翻現有 area rebuild 工作方式
 
 ## Proven By First Case
 
@@ -301,6 +429,25 @@
 5. smoke test 前先清空 `debug/*` 內容，並建立本輪 `log/*` 觀察基線；看到成功訊號後，仍要再檢查 `debug/*` 是否有本次新增 area 相關的新 bug / warning
 6. 若 smoke test 需要用 `timeout` 控制，時間必須高於正常開機時間；預設優先給 `45` 到 `60` 秒，並在成功後回看本輪 log，避免把測試工具造成的提早中止誤判成 area 載入失敗
 7. 建立下一個新 AREA 前，先為它選定從 `xx01` 起跳的 `reserved_room_block`，並確認該 block 尚未與現有 `area/`、`src/`、`data/` 中的 room vnum 使用情況衝突
+
+## Tooling Roadmap
+
+GPT pipeline 提到的幾個方向適合納入長期 roadmap，但目前仍屬「建議中的工具化」，不應假裝已是既有 gate：
+
+1. `world-check.py` 或同級工具
+   - 目標：檢查 duplicate vnum、orphan exits、broken reverse links、unreachable rooms
+   - 現況：已先以 `scripts/world_consistency_checker.py` / `scripts/world-consistency-checker.py` 落地第一版，覆蓋 duplicate vnum、broken exits、orphan/disconnected rooms、unreachable area、`directory.lst` 一致性；仍未取代 smoke test，也尚未理解 `#Job` / 傳送型 travel graph
+2. world graph diff
+   - 目標：在每次 area milestone 後明確顯示 world link 前後差異
+   - 現況：先在單區 plan / commit 訊息中人工記錄外部連線變更
+3. CI pipeline
+   - 目標：自動化 `build -> load -> smoke test -> world consistency check`
+   - 現況：先以本機或 cloud 驗證為主，等規則穩定後再固化成 CI
+
+原則：
+
+- 新工具應服務既有 workflow，不應反過來逼流程遷就半成品工具
+- 只有當工具能穩定降低誤判與人工成本時，才提升為正式 gate
 
 ## Assumptions
 
