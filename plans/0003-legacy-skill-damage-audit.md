@@ -686,3 +686,35 @@
 - Batch C 完成後，`long fist` 不再適合被當成「一路撐到高階」的 generic模板
 - 但先前已分類的城市 / 教學 / 服務樣本，仍應優先按角色定位而不是單看技能名重判
 - 下一步應以 smoke / failenable 結果決定是否需要回頭調整 `512`、`537`、`570`、`9003` 這些 long-fist baseline 樣本
+
+## Batch C Fallout Recheck
+
+### Scope
+
+- `512` 地政官吏
+- `537` 訓練師
+- `570` 詩人
+- `9003` 藥鋪伙計
+
+### Decision
+
+- `512`
+  - 保留 `long fist + cloud steps`
+  - 但在 Batch C 還原拳法梯度後，`long fist 100` 已不再符合城市文職的入門自保基線
+  - 調整為 `long fist 70 + cloud steps 70`
+- `537`
+  - 維持 `long fist 100 + gdragon steps 100`
+  - `NoKill` 訓練師樣本，不屬可被玩家擊倒的城市自保樣本
+- `570`
+  - 保留 `long fist + shade steps`
+  - `detect evil` 舊站教學來源與 `shade steps` 的 scholar / bard 相容性仍支持其 flavor
+  - 但在 Batch C 後，`long fist 100` 對詩人樣本偏高，因此回調為 `long fist 70 + shade steps 100`
+- `9003`
+  - 維持 `long fist 100 + gdragon steps 100`
+  - `NoKill` 服務樣本，先不因拳法梯度回升而重寫其固定 enable
+
+### Interpretation
+
+- 這一輪 fallout 的核心不是把 `long fist` 從城市 / 教學 / 服務樣本全面移除，而是把 killable civic sample 從「過高熟練度的 starter baseline」拉回合理區間
+- `512`、`570` 都屬 `adept rollback`，不是身份鏈重寫
+- `537`、`9003` 目前仍可視為 `NoKill` 服務樣本的合理保留，後續只有在同批再出現 failenable / runtime 問題時才需要重審

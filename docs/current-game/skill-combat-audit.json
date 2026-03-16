@@ -614,7 +614,17 @@
           "long fist",
           "cloud steps"
         ],
-        "reason": "Killable civil-office NPC at the palace approach. After the Batch B step rebalance it now reads as a baseline self-defense sample rather than an advanced combatant."
+        "reason": "Killable civil-office NPC at the palace approach. After Batch C restored the long-fist ladder, keeping the skill name remained acceptable but adept 100 no longer fit a civil-service baseline, so the sample was retuned to long fist 70 plus cloud steps 70."
+      },
+      {
+        "vnum": 570,
+        "area": "loyang",
+        "role": "詩人",
+        "current_chain": [
+          "long fist",
+          "shade steps"
+        ],
+        "reason": "The old-site holy docs still justify this poet as the detect evil teacher and shade steps remains a literary-compatible dodge line. The fallout change was therefore not a chain rewrite but an adept rollback: keep the flavor pair, lower long fist from 100 to 70 so the restored starter ladder does not make a civic poet hit like a full combatant."
       }
     ],
     "reasonable_to_keep": [
@@ -636,7 +646,7 @@
           "long fist",
           "shade steps"
         ],
-        "reason": "Legacy holy docs explicitly anchor this poet as the detect evil teacher. Long fist plus shade steps functions as a literary civic flavor line rather than a plain city mismatch."
+        "reason": "Legacy holy docs explicitly anchor this poet as the detect evil teacher. Shade steps remains the right flavor line; only long fist adept needed rollback after Batch C."
       },
       {
         "vnum": 9003,
@@ -653,8 +663,8 @@
   },
   "next_execution_queue": [
     {
-      "target": "batch-c-fallout-recheck",
-      "reason": "Batch C has now rebuilt the long fist / lung shan / tackle value ladder while preserving the rest of the delivery profile. The next highest-value task is to recheck city, teaching, and service long-fist samples against the restored starter-to-advanced template."
+      "target": "batch-c-fallout-recheck-complete",
+      "reason": "The first fallout pass has now rechecked 512, 537, 570, and 9003. Two killable civic samples kept their identity chains but had long-fist adept rolled back; NoKill service samples remain unchanged. The next task is to watch for any further civic outliers or move to the next legacy ladder."
     },
     {
       "target": "future object gate sweep",

@@ -425,6 +425,43 @@
    - `84.obj` 已確認屬 legacy 設計正例
    - 若後續還有其他 `RES_SKILL` 物件，再擴成全量 object gate 盤點；目前 limbo 內未看到第二個同型樣本
 
+### 14. Batch C fallout recheck：`512 / 537 / 570 / 9003`
+
+這輪把 Batch C 後最直接受影響的四個 `long fist` 城市 / 教學 / 服務樣本重新盤了一次，重點改成：
+
+- 不再只問「技能名要不要換掉」
+- 而是分開問：
+  - 角色身份鏈是否仍合理
+  - `long fist 100` 在 restored ladder 下是否過高
+
+結論如下：
+
+- `512` `地政官吏`
+  - 仍屬 `entry_self_defense`
+  - 保留 `long fist + cloud steps`
+  - 但把 `long fist` 由 `100` 回調到 `70`
+  - 原因是它是可被攻擊的宮城外文職服務節點；在 Batch C 後，`long fist 100` 已不再像 generic fallback，而更像完整戰鬥樣本
+- `570` `詩人`
+  - 保留 `long fist + shade steps`
+  - 舊站 `holy.html` 對 `detect evil` teacher 的證據仍成立，`shade steps` 也仍屬文人相容支線
+  - 但同樣把 `long fist` 由 `100` 回調到 `70`
+  - 這讓它維持文人氣質自保，不會因拳法模板重建後變成過強 civic combatant
+- `537` `訓練師`
+  - 維持現狀
+  - `NoKill` 新手服務節點，現階段沒有足夠收益去再調
+- `9003` `藥鋪伙計`
+  - 維持現狀
+  - `NoKill` 店務樣本，低暴露、低優先
+
+所以這輪 fallout recheck 的實際動作不是再換技能鏈，而是：
+
+- `512`
+  - `long fist 100 -> 70`
+- `570`
+  - `long fist 100 -> 70`
+
+這也進一步確認：Batch C 之後真正需要補的，往往不是整條 civic chain 推倒重來，而是把「原本歷史上隨手填的 `Enable 100`」回調到和角色身份相符的等級。
+
 ## Pilot Batch
 
 第一個試點批次固定為：

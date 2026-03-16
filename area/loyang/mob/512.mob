@@ -29,6 +29,6 @@ AttackRatio     100
 DodgeRatio      100
 Migrate         0
 Sex             SEX_MALE
-Enable          100 'long fist'
+Enable          70 'long fist'
 Enable          70 'cloud steps'
 End

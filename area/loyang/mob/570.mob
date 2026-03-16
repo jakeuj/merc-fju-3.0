@@ -35,7 +35,7 @@ Inventory       70
 Name            'detect evil'
 End
 
-Enable          100 'long fist'
+Enable          70 'long fist'
 Enable          100 'shade steps'
 
 End
