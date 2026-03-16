@@ -1,3 +1,6 @@
+* 舊版 / 既有技能登錄區
+* - 1 到 265 為 repo 原本已存在的技能與舊系統延續技能。
+* - 包含玩家技能、法術、職業技能，以及較早就存在的 NPC/猛獸專用技能。
 twosword                * 技能號碼   1 SLOT_TWOSWORD
 evilfist                * 技能號碼   2 SLOT_EVILFIST
 flower                  * 技能號碼   3 SLOT_FLOWER
@@ -263,6 +266,9 @@ seven_star              * 技能編號 262 SLOT_SEVEN_STAR
 tree_touch              * 技能編號 263 SLOT_TREE_TOUCH
 make_sword              * 技能編號 264 SLOT_MAKE_SWORD
 tackle                  * 技能編號 265 SLOT_TACKLE
+* 現行 repo 新增技能登錄區
+* - 266 到 272 為 merc-fju-3.0 目前補入的新技能。
+* - 主要用於軍旅 / 皇城 / 夜行 / 騎兵等 NPC 身份戰技，不屬舊站玩家技能主鏈。
 military_blade          * 技能編號 266 SLOT_MILITARY_BLADE
 military_steps          * 技能編號 267 SLOT_MILITARY_STEPS
 imperial_sword          * 技能編號 268 SLOT_IMPERIAL_SWORD
