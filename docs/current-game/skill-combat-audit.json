@@ -497,6 +497,16 @@
     ],
     "reasonable_to_keep": [
       {
+        "vnum": 570,
+        "area": "loyang",
+        "role": "詩人",
+        "legacy_chain": [
+          "long fist",
+          "shade steps"
+        ],
+        "reason": "Old-site holy skill docs explicitly point to the Loyang poet as the detect evil teacher, and shade steps itself is a scholar/bard-compatible dodge line rather than a pure thief-only ladder. Current evidence supports keeping this as a literary/civic flavor sample."
+      },
+      {
         "vnum": 537,
         "area": "loyang",
         "role": "訓練師",
@@ -565,23 +575,12 @@
         "reason": "Killable city doctor already fights through a burning hands prog. Downgrading its dodge line to cloud steps preserves self-protection without leaving a healer on the rebuilt advanced dodge ladder."
       }
     ],
-    "suspect": [
-      {
-        "vnum": 570,
-        "area": "loyang",
-        "role": "詩人",
-        "legacy_chain": [
-          "long fist",
-          "shade steps"
-        ],
-        "reason": "Still needs a separate civic-flavor pass. The scholar/poet role remains unusual, but Batch B did not add enough evidence to rewrite its shade steps pairing."
-      }
-    ]
+    "suspect": []
   },
   "next_execution_queue": [
     {
-      "target": "civic legacy suspect sweep",
-      "reason": "Follow up on mob 570 after the Batch B civic step follow-up. It is now the clearest remaining city sample whose legacy combat line may still be role-misaligned."
+      "target": "batch-c-fist-ladder",
+      "reason": "Batch B civic follow-up is now resolved. The next highest-value task is the long fist / lung shan / tackle multi-factor pre-check and ladder rebuild."
     },
     {
       "target": "future object gate sweep",

@@ -347,6 +347,7 @@
 
 相對地，這輪仍先保留：
 
+- `570` 詩人
 - `537` 訓練師
 - `538` 醫生
 - `539` 小道士
@@ -354,13 +355,32 @@
 
 原因是它們不是 `NoKill` 就是明顯以教學 / 法術 / 店務為主，目前沒有足夠收益支持再動。
 
+### 12. `570` 詩人：由 suspect 轉為合理保留
+
+這輪補完 `570` 的 old-site 與 runtime 證據後，判讀已足夠從 suspect 移到合理保留：
+
+- 舊站 `skill/holy.html` 直接記載
+  - `洛陽城的詩人(poet man)` 有教導 `detect evil`
+- `570.mob` 目前的教學內容正是
+  - `detect evil`
+- `shade steps` 本身在 runtime 與舊站都不是純盜賊專用
+  - 可學職系包含 `伶人 / 郎中 / 文官 / 道士 / 將軍 / 天師 / 鑄劍師`
+  - 舊站步法頁把它列為 `換星步 -> 風影藏` 的獨立支線
+
+因此 `570` 更像是：
+
+- 一個帶有文人氣質、能教導聖系偵測技的洛陽特色 NPC
+- 掛 `shade steps` 屬於風格化自保，而不是像 `gdragon steps` 那樣明顯踩進已重建的入門主鏈 / 升階主鏈衝突
+
+現階段不建議為了「城市 NPC 看起來要弱一些」而硬把它改回 `cloud steps` 或其他 generic dodge，避免抹掉這個樣本少數還保有的職系味道。
+
 ## Next Execution Queue
 
 下一輪若開始真正動 runtime data，建議順序固定為：
 
-1. `civic legacy suspect` 子批次
-   - 先追 `570` 詩人的身份戰技是否仍錯位
-   - 在 `512` / `572` 已回調後，`570` 成為目前 loyang / beiping 城市樣本裡最值得繼續判讀的 civic suspect
+1. `Batch C` 拳法鏈子批次
+   - 先做 `long fist / lung shan / tackle` 的多因子 pre-check
+   - 這會決定後續像 `long fist 100` 這類城市 / 教學 / 服務樣本是否仍需要再做第二輪身份分流
 2. `skill_item` 子批次
    - `84.obj` 已確認屬 legacy 設計正例
    - 若後續還有其他 `RES_SKILL` 物件，再擴成全量 object gate 盤點；目前 limbo 內未看到第二個同型樣本

@@ -302,8 +302,8 @@
 
 ## Immediate Next Steps
 
-1. 視 Batch B follow-up 結果，決定先處理 `570` 詩人的 civic suspect，或直接轉入 Batch C
-2. 若轉入 Batch C，先完成 `long fist / lung shan / tackle` 的多因子 pre-check
+1. 直接轉入 Batch C，先完成 `long fist / lung shan / tackle` 的多因子 pre-check
+2. 盤出 `long fist` 目前掛在城市 / 教學 / 服務 NPC 上的樣本，區分入門自保與身份錯位
 3. 後續若再有 city / teacher 樣本仍掛 `gdragon steps`，以 `cloud steps` 是否更符合其自保定位為優先判準
 
 ## Batch A Result
@@ -549,4 +549,5 @@
 - 已完成城市 / 教學 / 服務 NPC 的 Batch B follow-up 抽查
 - `512` 地政官吏與 `572` 郎中已從 `gdragon steps` 回調到 `cloud steps`
 - `537`、`538`、`539`、`9003` 目前先保留，因為其主要定位仍是教學 / 店務 / 法術服務
-- 下一個關鍵 decision point 是：先追 `570` 詩人的 civic suspect，或直接轉進 Batch C 的 `long fist / lung shan / tackle`
+- `570` 詩人已根據 `detect evil` 舊站教學紀錄與 `shade steps` 的 scholar/bard-compatible 定位，從 civic suspect 轉成合理保留
+- 下一個關鍵 decision point 已轉為 Batch C 的 `long fist / lung shan / tackle`
