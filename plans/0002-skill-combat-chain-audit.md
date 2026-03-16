@@ -241,13 +241,30 @@
 
 也就是說，`84.obj` 不再是目前最明確的 loader-risk 修正點；它應從「立即修值目標」降級為「已 resolve 名稱存在性、待補設計意圖驗證」。
 
+### 8. `skill_item` 子批次首筆 `84.obj` 已完成設計意圖判讀
+
+這輪已把 `area/limbo/obj/84.obj` 的 `RES_SKILL 'noname'` 從「名稱存在性確認」再往前推到「設計意圖確認」：
+
+- runtime 端有真實技能檔 `skill/n/noname.ski`
+- repo 內有對應秘笈 `area/limbo/obj/215.obj`
+  - `ShortDesc = 無名劍法秘笈`
+  - `Value1 = SLOT_NONAME`
+- 舊站 `docs/3yWebsite/skill/sword.html` 也有 `無名劍法(noname)` 的技能頁
+
+因此目前可以把 `84.obj` 判定為：
+
+- 一把明確綁定 `無名劍法` 熟練度門檻的 legacy 劍系裝備
+- 不是 placeholder、不是錯 skill name，也不是目前最需要修掉的 skill_item 異常
+
+這輪沒有修改 `84.obj` runtime data，因為現有證據比較支持「它本來就是這樣設計」。
+
 ## Next Execution Queue
 
 下一輪若開始真正動 runtime data，建議順序固定為：
 
 1. `skill_item` 子批次
-   - 重查 `area/limbo/obj/84.obj` 及其他 `RES_SKILL` 物件
-   - 這一批的問題不再是「技能不存在」，而是「legacy 技能門檻是否仍符合現行掉落 / 裝備意圖」
+   - `84.obj` 已確認屬 legacy 設計正例
+   - 若後續還有其他 `RES_SKILL` 物件，再擴成全量 object gate 盤點；目前 limbo 內未看到第二個同型樣本
 
 ## Pilot Batch
 

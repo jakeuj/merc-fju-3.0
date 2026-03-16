@@ -147,8 +147,8 @@
   ],
   "next_execution_queue": [
     {
-      "target": "skill_item follow-up batch",
-      "reason": "Reclassify RES_SKILL references by design intent now that noname is confirmed to be a real registered runtime skill."
+      "target": "future object gate sweep",
+      "reason": "Obj 84 is now validated as a legitimate noname-gated legacy item. Only expand this queue if more RES_SKILL-gated equipment appears in later audits."
     }
   ],
   "pilot_batches": [
@@ -905,17 +905,20 @@
       },
       "reference_value": {
         "expected_behavior": "RES_SKILL should point to a real runtime skill name",
-        "resolved_runtime_skill": "noname"
+        "resolved_runtime_skill": "noname",
+        "linked_item_teach_path": "area/limbo/obj/215.obj -> SLOT_NONAME"
       },
       "reference_source": [
         "area/limbo/obj/84.obj",
+        "area/limbo/obj/215.obj",
         "skill/n/noname.ski",
         "skill/skill.lst",
         "src/merc.h",
-        "data/symbol.def"
+        "data/symbol.def",
+        "docs/3yWebsite/skill/sword.html"
       ],
-      "status": "intentional_divergence",
-      "notes": "The referenced skill name is real and fully registered in runtime, so this is no longer a missing-skill suspect. It remains outside the current pilot and should be revisited later as a design-intent question for legacy skill-gated equipment rather than a loader-risk placeholder.",
+      "status": "ok",
+      "notes": "The referenced skill name is real, fully registered in runtime, linked to an in-repo noname skill book (obj 215), and consistent with the old-site sword skill page for noname. Treat this as a validated legacy skill-gated weapon rather than a placeholder or loader-risk anomaly.",
       "pilot_batch": "global-baseline"
     }
   ]
