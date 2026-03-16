@@ -147,14 +147,6 @@
   ],
   "next_execution_queue": [
     {
-      "target": "area/loyang/mob/559.mob",
-      "reason": "Highest-confidence restore candidate after combining skills.json lineage with players.json role context."
-    },
-    {
-      "target": "loyang/beiping guard-family sweep",
-      "reason": "Look for additional legacy-but-role-misaligned enables adjacent to mob 559."
-    },
-    {
       "target": "skill_item follow-up batch",
       "reason": "Reclassify RES_SKILL references by design intent now that noname is confirmed to be a real registered runtime skill."
     }
@@ -237,6 +229,32 @@
       "dodge_skill": "military steps",
       "dodge_adept_range": [
         45,
+        55
+      ]
+    },
+    {
+      "id": "city_guard_entry",
+      "offensive_skill": "military blade",
+      "offensive_adept_range": [
+        40,
+        45
+      ],
+      "dodge_skill": "military steps",
+      "dodge_adept_range": [
+        40,
+        45
+      ]
+    },
+    {
+      "id": "palace_junior_leader",
+      "offensive_skill": "imperial sword",
+      "offensive_adept_range": [
+        50,
+        55
+      ],
+      "dodge_skill": "military steps",
+      "dodge_adept_range": [
+        50,
         55
       ]
     },
@@ -762,10 +780,10 @@
       "runtime_key": "mob:559",
       "source_file": "area/loyang/mob/559.mob",
       "current_value": {
-        "offensive_skill": "two sword",
-        "offensive_adept": 1,
-        "dodge_skill": "gdragon steps",
-        "dodge_adept": 26
+        "offensive_skill": "military blade",
+        "offensive_adept": 55,
+        "dodge_skill": "military steps",
+        "dodge_adept": 55
       },
       "reference_value": {
         "archetype": "city_guard_mid",
@@ -777,10 +795,57 @@
       "reference_source": [
         "docs/current-game/skills.json",
         "docs/3yWebsite/docs/data/skills.json",
+        "docs/3yWebsite/docs/data/players.json",
         "plans/failenable-npc-skill-audit.md"
       ],
-      "status": "restore_candidate",
-      "notes": "This guard-family sample is a clear outlier against the current military ladder. The legacy docs confirm cloud steps -> gdragon steps as an old progression chain, and players.json shows that route as a common player-facing dodge lineage, so the dodge side still has a plausible lineage. The two sword adept 1 line remains the real mismatch because old player guides place two sword in an advanced bravo sword route rather than a city-guard identity ladder.",
+      "status": "ok",
+      "notes": "Runtime now aligns this sample to the city_guard_mid military ladder. The old gdragon/two sword mix remains documented as the resolved legacy mismatch: players.json places cloud->gdragon on a common player dodge route and two sword on an advanced bravo sword route, which justified replacing both lines for a city-guard identity.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "mob_enable",
+      "runtime_key": "mob:9010",
+      "source_file": "area/beiping/mob/9010.mob",
+      "current_value": {
+        "offensive_skill": "military blade",
+        "offensive_adept": 40,
+        "dodge_skill": "military steps",
+        "dodge_adept": 40
+      },
+      "reference_value": {
+        "archetype": "city_guard_entry",
+        "expected_behavior": "entry-level city gate guard should have a defined military offensive/dodge pair"
+      },
+      "reference_source": [
+        "area/beiping/mob/9010.mob",
+        "docs/current-game/skills.json",
+        "plans/failenable-npc-skill-audit.md"
+      ],
+      "status": "ok",
+      "notes": "Runtime now gives this boundary gate-guard sample a defined low-entry military pair. This keeps it below the city_guard_mid samples while removing the previous no-Enable gap.",
+      "pilot_batch": "pilot-loyang-beiping-guard-lineage"
+    },
+    {
+      "domain": "mob_enable",
+      "runtime_key": "mob:9018",
+      "source_file": "area/beiping/mob/9018.mob",
+      "current_value": {
+        "offensive_skill": "imperial sword",
+        "offensive_adept": 50,
+        "dodge_skill": "military steps",
+        "dodge_adept": 50
+      },
+      "reference_value": {
+        "archetype": "palace_junior_leader",
+        "expected_behavior": "junior imperial squad leader should have at least a low-to-mid military or palace ladder pairing"
+      },
+      "reference_source": [
+        "area/beiping/mob/9018.mob",
+        "docs/current-game/skills.json",
+        "plans/failenable-npc-skill-audit.md"
+      ],
+      "status": "ok",
+      "notes": "Runtime now gives this junior palace-leader sample an imperial-sword plus military-step pairing. This keeps it above empty entry guards but below the more formal palace guard ladder that uses stronger imperial tiers and, later, imperial steps.",
       "pilot_batch": "pilot-loyang-beiping-guard-lineage"
     },
     {

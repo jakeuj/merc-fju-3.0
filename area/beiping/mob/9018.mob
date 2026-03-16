@@ -29,4 +29,6 @@ Gold            -1
 Multipile       100
 Migrate         0
 Sex             SEX_MALE
+Enable          50 'imperial sword'
+Enable          50 'military steps'
 End

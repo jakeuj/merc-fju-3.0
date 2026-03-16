@@ -168,6 +168,64 @@
     - 舊站 `skills.json` 已確認 `cloud steps -> gdragon steps` 是既有步法升階鏈；`players.json` 也確認這條鏈屬新手 / 武官常見步法脈絡，因此 `gdragon steps` 可保留作 legacy 對照
     - `players.json` 另把 `雙十` 放在刺客高階劍法脈絡，進一步說明 `two sword 1` 不只是數值偏低，而是角色身份鏈本身錯位
 
+### 5. `559.mob` 已完成第一個 runtime 修正試點
+
+目前 `area/loyang/mob/559.mob` 已由：
+
+- `gdragon steps 26`
+- `two sword 1`
+
+調整為：
+
+- `military steps 55`
+- `military blade 55`
+
+這次修正的意義是：
+
+- 讓 `559` 正式回到 `city_guard_mid` 的軍旅身份鏈
+- 把最明確的 `restore_candidate` 轉成已落地樣本
+- 用最小 runtime 變更驗證目前的審計方法確實能導出可載入、可啟動的修正
+
+### 6. `loyang / beiping` guard-family sweep 第一輪結果
+
+`559.mob` 修正後，已重新掃過 loyang / beiping 兩區與本試點最相關的 guard-family 樣本：
+
+- 已在既定梯階內，無需再動的核心樣本
+  - `501`, `503`, `545`, `560`, `565`, `569`, `576`, `577`, `578`
+  - `9001`, `9002`, `9008`, `9009`, `9011`
+- 這輪沒有再發現第二個「像 `559` 一樣仍掛 legacy 錯位技能鏈」的明確 outlier
+
+但 sweep 也補出兩個新的邊界樣本：
+
+- `9010` `城門衛軍`
+  - guard-family 身份明確，但目前完全沒有 `Enable`
+  - 比較像「尚未配置 entry-level 軍旅技能」而不是 legacy 錯鏈殘留
+- `9018` `禁衛軍小隊長`
+  - 皇城 guard-family 身份明確，但目前也沒有 `Enable`
+  - 比較像「缺少小隊長級軍旅 / 皇城技能配置」而不是沿用錯技能
+
+因此下一輪不再把重點放在「清理錯位 legacy skill」，而是：
+
+- 補一個 `guard entry / junior leader` 子批次
+- 先定義低階城防與低階禁衛的目標帶，再落 runtime 值
+
+### 7. `9010` / `9018` 已完成 entry-level guard 子批次
+
+這輪已把北平兩個缺 `Enable` 的 guard-family 邊界樣本補齊：
+
+- `9010` `城門衛軍`
+  - 補為 `military blade 40` + `military steps 40`
+  - 定位為低階城門軍職，略低於 `501/559` 的 `city_guard_mid`
+- `9018` `禁衛軍小隊長`
+  - 補為 `imperial sword 50` + `military steps 50`
+  - 定位為皇城入門到正式禁衛之間的過渡帶，低於 `9009` 這類高階皇城守衛
+
+這樣的好處是：
+
+- 把兩個「沒有技能」的 guard 樣本先拉回可戰鬥、可分層的狀態
+- 保留 `9001 -> 9009` 的皇城主鏈，不讓小隊長直接跳進高階 `imperial steps`
+- 讓北平 guard-family 從城門低階、禁衛入門到御前高階有連續梯度
+
 ### 4. `RES_SKILL 'noname'` 目前不能再直接標成 placeholder 壞資料
 
 第二輪交叉比對後，`area/limbo/obj/84.obj` 的 `RES_SKILL 'noname'` 已確認：
@@ -187,13 +245,7 @@
 
 下一輪若開始真正動 runtime data，建議順序固定為：
 
-1. `area/loyang/mob/559.mob`
-   - 先處理最明確的 `restore_candidate`
-   - 目標是把 offensive / dodge 都拉回 `city_guard_mid` 的軍旅身份鏈
-2. `loyang / beiping` 同 archetype guard-family 掃描
-   - 確認是否還有和 `559` 同類的低熟練舊技殘留
-   - 特別找 `legacy skill still present but role-misaligned` 樣本
-3. `skill_item` 子批次
+1. `skill_item` 子批次
    - 重查 `area/limbo/obj/84.obj` 及其他 `RES_SKILL` 物件
    - 這一批的問題不再是「技能不存在」，而是「legacy 技能門檻是否仍符合現行掉落 / 裝備意圖」
 
@@ -268,6 +320,13 @@
 - 回看 `log/*` 與 `debug/*`
 - 特別檢查 `Load_skill`、`Load_mobiles`、`LOG_FAILENABLE`
 
+本輪已完成的 runtime 驗證：
+
+- `bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- `timeout 45s sh -lc 'cd src && ./merc merc.ini' > log/smoke-559.log 2>&1`
+- 成功訊號：`三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload`、`debug/badobject` 未出現新的內容；`debug/error` 只有 timeout 截停造成的關機訊號
+
 ## Ref Metadata
 
 - `ref_inputs_used`
@@ -279,4 +338,4 @@
 - `theme_basis`
   - 這輪以 loyang / beiping 現有守軍、皇城、夜行 NPC 的舊版體感與現行 runtime 身份戰技補完為主，不以新世界藍圖重寫強度體系
 - `compliance_check`
-  - 本輪只擴充全域計畫與機器可讀審計台帳的 legacy reference 判讀，未修改 runtime data；未動用 area tracker，也未改動 area load order
+  - 本輪先擴充 legacy reference 判讀，之後已落地 `area/loyang/mob/559.mob` 的單點 runtime 修正；未動用 area tracker，也未改動 area load order

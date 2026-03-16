@@ -29,6 +29,8 @@ Gold            -1
 Multipile       100
 Migrate         0
 Sex             SEX_MALE
+Enable          40 'military blade'
+Enable          40 'military steps'
 
 Process
 Type            greet_prog

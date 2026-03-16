@@ -1,5 +1,40 @@
 {
   "scope": "Current repo supplemental skill registry for merc-fju-3.0 runtime additions. docs/3yWebsite remains reference-only.",
+  "reference_baseline": [
+    "docs/3yWebsite/docs/data/skills.json",
+    "docs/3yWebsite/docs/data/players.json"
+  ],
+  "reference_usage": {
+    "skills_json": "Legacy skill naming, category, shareability, resource cost, and upgrade-chain baseline.",
+    "players_json": "Legacy player-route context for starter skills, class-facing progression, and role alignment checks."
+  },
+  "legacy_reference_signals": [
+    {
+      "source_file": "docs/3yWebsite/docs/data/skills.json",
+      "runtime_key": "legacy:cloud steps",
+      "notes": "Old-site baseline marks cloud steps as a dodge skill and points its upgrade chain to gdragon steps."
+    },
+    {
+      "source_file": "docs/3yWebsite/docs/data/players.json",
+      "runtime_key": "legacy:player-route:cloud-gdragon",
+      "notes": "Bravo/general player guides confirm cloud steps -> gdragon steps as an actual player-facing route, not just a catalog field."
+    },
+    {
+      "source_file": "docs/3yWebsite/docs/data/skills.json",
+      "runtime_key": "legacy:hua sword",
+      "notes": "Old-site baseline keeps hua sword as a shareable entry sword line that upgrades to fonxan sword."
+    },
+    {
+      "source_file": "docs/3yWebsite/docs/data/players.json",
+      "runtime_key": "legacy:player-route:starter-baseline",
+      "notes": "The new-player guide places cloud steps, hua sword, long fist, and flee in an early learn baseline."
+    },
+    {
+      "source_file": "docs/3yWebsite/docs/data/players.json",
+      "runtime_key": "legacy:player-route:two-sword",
+      "notes": "Bravo guides place two sword in an advanced player sword route, which helps explain why it was a poor fit for city-guard NPC identity."
+    }
+  ],
   "source_of_truth": [
     "skill/*.ski",
     "skill/skill.lst",

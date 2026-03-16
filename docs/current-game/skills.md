@@ -14,6 +14,21 @@ title: Current Game Skills
 - `docs/3yWebsite/`：reference-only，主要提供舊版世界觀、命名語彙、公告與技能體系脈絡。
 - `docs/current-game/skills.md`：現行 repo 額外新增或重定義的技能補充說明。
 
+## 舊站參考基線
+
+目前這份文件在技能脈絡上，已明確參考兩份舊站 JSON：
+
+- `docs/3yWebsite/docs/data/skills.json`
+  - 用來抓舊版技能的中文名、分類、可否互相教導、資源消耗與升階鏈
+- `docs/3yWebsite/docs/data/players.json`
+  - 用來補強玩家攻略裡實際出現的技能路線、入門技能組與職系定位
+
+這兩份資料目前是 `reference baseline`，不是現行 runtime registry。
+也就是說：
+
+- 新遊戲裡技能是否真的存在，仍以 `skill/*.ski`、`skill/skill.lst`、`src/merc.h`、`data/symbol.def` 為準
+- 舊站 JSON 只用來回答「這個技能在舊世界裡原本屬什麼脈絡」與「新技能替換是否有合理對照」
+
 ## Runtime Source Of Truth
 
 真正決定目前遊戲技能是否存在、可否載入、NPC 會不會使用的來源仍然是：
@@ -38,6 +53,26 @@ title: Current Game Skills
 | `night blade` | `skill/n/night_blade.ski` | 夜行刀法 | 盜賊、浪人、大盜類 NPC | 保留高機動與狠辣風格。 |
 | `shadowtrace steps` | `skill/s/shadowtrace_steps.ski` | 夜行步法 | 盜賊、浪人、大盜類 NPC | 和 `night blade` 配套，避免只掛基礎步法。 |
 | `cavalry lance` | `skill/c/cavalry_lance.ski` | 軍旅槍術 | 騎兵與持槍軍職 NPC | 補足軍旅兵器技能缺口。 |
+
+## 目前已落地的 legacy reference 訊號
+
+這一批現行技能文件目前已正確接上的舊站訊號包括：
+
+- `skills.json -> cloud steps`
+  - 舊站標成閃躲類，且可領悟 `gdragon steps`
+- `players.json -> 刺客精練-步法 / 將軍精練-步法`
+  - 兩篇都把 `cloud steps -> gdragon steps` 當成玩家向步法路線
+- `skills.json -> hua sword`
+  - 舊站標成可互相教導、可往 `fonxan sword` 升階的入門劍法
+- `players.json -> 新手上路`
+  - 把 `cloud steps`、`hua sword`、`long fist`、`flee` 放在早期 learn 清單
+- `players.json -> 刺客精練-前言與說明 / 弱弱的刺客之道 Part 2`
+  - 把 `two sword / 雙十` 放在刺客高階劍法脈絡，而不是城防或禁軍制式技能脈絡
+
+這些訊號目前主要拿來支撐兩件事：
+
+- 說明為什麼 `military blade` / `military steps` / `imperial sword` / `imperial steps` 這批 NPC-only 技能是合理替換，不只是任意重命名
+- 區分哪些舊技能屬於「可保留作 legacy 對照」，哪些則已經和現行 NPC 身份鏈錯位
 
 ## 維護規則
 
