@@ -52,7 +52,7 @@ Help
 Description
 $n雙手如勾﹐一招$W『金龍探爪』$Z﹐身形如一條金龍往$N攻了過去。~
 Chance          20
-Value           20
+Value           45
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -62,7 +62,7 @@ End
 Description
 $n氣沉丹田﹐$S『龍行一式』$Z蓄勢待發﹐一拳打向$N。~
 Chance          20
-Value           20
+Value           50
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -72,7 +72,7 @@ End
 Description
 $n身形一轉﹐使出$G『秋風落葉』$Z﹐向$N橫掃而去。~
 Chance          20
-Value           20
+Value           55
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -82,7 +82,7 @@ End
 Description
 $n擊出$B『龍門三擊浪』$Z﹐拳勁直直的撞向$N。~
 Chance          20
-Value           20
+Value           60
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -92,7 +92,7 @@ End
 Description
 $n突然一招$R『翻身打盤』$Z﹐身形刁鑽的朝$N一拳直去。~
 Chance          20
-Value           20
+Value           65
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -102,7 +102,7 @@ End
 Description
 $n雙手一展﹐使出$W『金鵰展翅』$Z﹐由上而下拳打$N。~
 Chance          20
-Value           20
+Value           70
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -112,7 +112,7 @@ End
 Description
 $n大喝一聲﹐$b『蒼龍歸海』$Z﹐雙手緩緩的推向$N。~
 Chance          20
-Value           20
+Value           75
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -122,7 +122,7 @@ End
 Description
 $n勢如猛虎出閘﹐$p『黑虎偷心』$Z直襲$N。~
 Chance          20
-Value           20
+Value           80
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -132,7 +132,7 @@ End
 Description
 $n使出$S『進步連環』$Z﹐一連三拳打向$N。~
 Chance          20
-Value           20
+Value           85
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -142,7 +142,7 @@ End
 Description
 $n斥喝一聲﹐使出$Y『獨劈華山』$Z﹐一掌向$N斬了下去。~
 Chance          20
-Value           20
+Value           90
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -152,7 +152,7 @@ End
 Description
 $n身形一退﹐一招$Y『倒打金鐘』$Z反而打向$N。~
 Chance          20
-Value           20
+Value           95
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -162,7 +162,7 @@ End
 Description
 $n一轉身﹐$Y『黃龍捲尾』$Z一拳向$N飛去。~
 Chance          20
-Value           20
+Value           100
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -172,7 +172,7 @@ End
 Description
 $n一招$R『如封似閉』$Z﹐雙手忽上忽下﹐游移不定的擊向$N。~
 Chance          20
-Value           20
+Value           105
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -182,7 +182,7 @@ End
 Description
 $n右手往前一推﹐一招$B『推窗望月』$Z向$N推去。~
 Chance          20
-Value           20
+Value           110
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -192,7 +192,7 @@ End
 Description
 $n左手陰拳﹐打出一招$W『白猿摘果』$Z﹐直襲$N。~
 Chance          20
-Value           20
+Value           115
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -202,7 +202,7 @@ End
 Description
 $n身形一扭﹐使出$Y『玉帶圍腰』$Z﹐拳背直擊$N。~
 Chance          20
-Value           20
+Value           120
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -212,7 +212,7 @@ End
 Description
 $n雙手握拳﹐$S『抽撤連環』$Z向$N擊去。~
 Chance          20
-Value           20
+Value           125
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -222,7 +222,7 @@ End
 Description
 $n雙手合掌﹐$W『寒雞拜佛』$Z刺向$N。~
 Chance          20
-Value           20
+Value           135
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

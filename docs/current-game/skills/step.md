@@ -44,7 +44,7 @@ Legacy chain: `cloud steps -> gdragon steps -> mirage steps`
 - CanAsk / Teach / Valid / Enable: `Yes / Yes / Yes / Yes`
 - Class limits: `伶 人 >= 一級, max 心神領會﹗; 刺 客 >= 一級, max 登峰造極﹗; 平 民 >= 一級, max 馬馬虎虎﹗; 郎 中 >= 一級, max 心神領會﹗; 武 官 >= 一級, max 出類拔萃﹗; 將 軍 >= 一級, max 登峰造極﹗; 天 師 >= 一級, max 出類拔萃﹗; 文 官 >= 一級, max 馬馬虎虎﹗; 道 士 >= 一級, max 心神領會﹗; 鑄劍師 >= 一級, max 出類拔萃﹗; 盜 賊 >= 一級, max 一代宗師﹗`
 - Restrictions: `-`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[35, 45, 55, 65, 75, 85, 95]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -65,7 +65,7 @@ Legacy chain: `cloud steps -> gdragon steps -> mirage steps`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 五十級, max 登峰造極﹗; 武 官 >= 三十級, max 出類拔萃﹗; 將 軍 >= 五十級, max 登峰造極﹗; 天 師 >= 五十級, max 出類拔萃﹗; 鑄劍師 >= 五十級, max 出類拔萃﹗; 盜 賊 >= 三十級, max 出神入化﹗`
 - Restrictions: `skills: 翦雲步 >= 出類拔萃`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[80, 95, 110, 125, 140, 155, 170]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -249,7 +249,7 @@ Legacy chain: `sleev steps -> sky steps`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 一代宗師﹗; 將 軍 >= 一級, max 神乎其技﹗`
 - Restrictions: `attrs: 力量 >= 二十, 敏捷 >= 二十五; skills: 風雲袖步 >= 出類拔萃; classes: 刺 客/將 軍`
-- Damage values: `[20, 20, 20, 20, 20, 20]`
+- Damage values: `[95, 115, 135, 155, 175, 195]`
 - Chance values: `[20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -270,7 +270,7 @@ Legacy chain: `sleev steps -> sky steps`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `伶 人 >= 一級, max 馬馬虎虎﹗; 刺 客 >= 一級, max 登峰造極﹗; 郎 中 >= 一級, max 馬馬虎虎﹗; 武 官 >= 一級, max 馬馬虎虎﹗; 將 軍 >= 一級, max 登峰造極﹗; 天 師 >= 一級, max 心神領會﹗; 文 官 >= 一級, max 粗通皮毛﹗; 道 士 >= 一級, max 初窺門徑﹗; 鑄劍師 >= 一級, max 心神領會﹗; 盜 賊 >= 一級, max 心神領會﹗`
 - Restrictions: `-`
-- Damage values: `[20, 20, 20, 20]`
+- Damage values: `[60, 80, 100, 120]`
 - Chance values: `[20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0']`

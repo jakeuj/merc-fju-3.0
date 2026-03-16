@@ -408,13 +408,19 @@
 - `long fist` 目前在城市 / 教學 / 服務樣本裡，更多是「入門自保」與「generic fallback」訊號，而不是自動代表錯配
 - 所以下一輪做 `long fist / lung shan / tackle` 時，重點應該放在技能梯階本身是否失真，而不是先假設所有掛 `long fist` 的城市 NPC 都要換掉
 
+補記：
+
+- `plans/0003-legacy-skill-damage-audit.md` 的 Batch C 現已完成第一輪實作
+- `long fist / lung shan / tackle` 已按多因子 pre-check 結果，只重建 `Value` 梯階，保留原本的 `Chance / Parry / Wait / Cost / CostType / Weapon / Check`
+- 因此這份計畫接下來不再是「是否要做 Batch C」，而是「Batch C 之後哪些城市 / 教學 / 服務樣本需要第二輪身份分流」
+
 ## Next Execution Queue
 
 下一輪若開始真正動 runtime data，建議順序固定為：
 
-1. `Batch C` 拳法鏈子批次
-   - 先做 `long fist / lung shan / tackle` 的多因子 pre-check
-   - 這會決定後續像 `long fist 100` 這類城市 / 教學 / 服務樣本是否仍需要再做第二輪身份分流
+1. `Batch C` fallout recheck
+   - 針對 `512`、`537`、`570`、`9003` 等 `long fist` 城市 / 教學 / 服務樣本，重看 restored ladder 後是否仍合理
+   - 這一步才決定哪些樣本要保留 generic fallback，哪些需要第二輪身份分流
 2. `skill_item` 子批次
    - `84.obj` 已確認屬 legacy 設計正例
    - 若後續還有其他 `RES_SKILL` 物件，再擴成全量 object gate 盤點；目前 limbo 內未看到第二個同型樣本

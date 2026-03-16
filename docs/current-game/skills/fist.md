@@ -16,7 +16,7 @@ title: Current Game 拳法 Skills
 
 | Family | Legacy Chain | Skills | Audit States |
 | --- | --- | --- | --- |
-| legacy-page:fist | evil fist -> evil king<br>ghost strike -> ghost marial<br>king fist -> sky dragon<br>long fist -> lung shan -> tackle<br>rulai<br>ryo -> hashin | 12 | legacy_catalog_seeded |
+| legacy-page:fist | evil fist -> evil king<br>ghost strike -> ghost marial<br>king fist -> sky dragon<br>long fist -> lung shan -> tackle<br>rulai<br>ryo -> hashin | 12 | batch_c_implemented, legacy_catalog_seeded |
 
 ## Skill Cards
 
@@ -152,7 +152,7 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 
 ### 泰山長拳 / `long fist`
 
-- Audit: `legacy_catalog_seeded`
+- Audit: `batch_c_implemented`
 - Family: `legacy-page:fist`
 - Legacy prerequisite: `從缺`
 - Legacy next: `lung shan`
@@ -165,7 +165,7 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - CanAsk / Teach / Valid / Enable: `Yes / Yes / Yes / Yes`
 - Class limits: `伶 人 >= 一級, max 馬馬虎虎﹗; 刺 客 >= 一級, max 一代宗師﹗; 平 民 >= 一級, max 馬馬虎虎﹗; 郎 中 >= 一級, max 馬馬虎虎﹗; 武 官 >= 一級, max 出類拔萃﹗; 將 軍 >= 一級, max 一代宗師﹗; 天 師 >= 一級, max 馬馬虎虎﹗; 文 官 >= 一級, max 馬馬虎虎﹗; 道 士 >= 一級, max 馬馬虎虎﹗; 鑄劍師 >= 一級, max 馬馬虎虎﹗; 盜 賊 >= 一級, max 出類拔萃﹗`
 - Restrictions: `-`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 135]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -173,7 +173,7 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 
 ### 瀧山拳法 / `lung shan`
 
-- Audit: `legacy_catalog_seeded`
+- Audit: `batch_c_implemented`
 - Family: `legacy-page:fist`
 - Legacy prerequisite: `泰山長拳(long fist)`
 - Legacy next: `tackle`
@@ -186,7 +186,7 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 一代宗師﹗; 武 官 >= 一級, max 出類拔萃﹗; 將 軍 >= 一級, max 登峰造極﹗; 盜 賊 >= 一級, max 神乎其技﹗`
 - Restrictions: `skills: 泰山長拳 >= 心神領會`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[100, 115, 130, 145, 160, 180, 205]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -257,7 +257,7 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 
 ### 小擒拿手 / `tackle`
 
-- Audit: `legacy_catalog_seeded`
+- Audit: `batch_c_implemented`
 - Family: `legacy-page:fist`
 - Legacy prerequisite: `瀧山拳法(lung shan)`
 - Legacy next: `-`
@@ -270,7 +270,7 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 一代宗師﹗; 將 軍 >= 一級, max 登峰造極﹗; 盜 賊 >= 一級, max 神乎其技﹗`
 - Restrictions: `skills: 瀧山拳法 >= 神乎其技`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[140, 160, 180, 200, 220, 240, 260, 290]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`

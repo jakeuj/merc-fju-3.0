@@ -418,6 +418,17 @@ def build_status(existing: dict[str, dict], name: str, player_facing: bool, npc_
     return status
 
 
+def dedupe_notes(notes: list[str]) -> list[str]:
+    seen: set[str] = set()
+    out: list[str] = []
+    for note in notes:
+        if not note or note in seen:
+            continue
+        seen.add(note)
+        out.append(note)
+    return out
+
+
 def build_registry() -> dict:
     existing = load_existing_registry()
     legacy_rows = read_json(LEGACY_SKILLS_JSON)
@@ -539,13 +550,16 @@ def build_registry() -> dict:
             "notes": [],
         }))
         if existing_combat.get("notes"):
-            combat["notes"] = list(existing_combat["notes"])
+            combat["notes"] = dedupe_notes(list(existing_combat["notes"]))
         if not runtime.get("exists"):
             combat.setdefault("prepared_for_adjustment", False)
         if legacy_requirements["restrictions"]["raw_lines"] and not combat.get("notes"):
             combat["notes"] = []
         if not runtime.get("exists"):
-            combat["notes"] = combat.get("notes", []) + ["No runtime skill file matched yet; legacy requirements still preserved from old-site HTML."]
+            combat["notes"] = dedupe_notes(
+                combat.get("notes", [])
+                + ["No runtime skill file matched yet; legacy requirements still preserved from old-site HTML."]
+            )
 
         item = {
             "english_name": name,

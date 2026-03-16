@@ -35,7 +35,7 @@ Help            ~
 Description
 $n使出瀧山絕學的起手式﹐一招$G『飛瀑入山』$Z﹐對準$N打出難以捉摸的一拳。~
 Chance          20
-Value           20
+Value           100
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -44,7 +44,7 @@ End
 Description
 $n猶如流水般隨$N的攻勢﹐使出一招$G『追瀑溯源』$Z便往$N反擊過去。~
 Chance          20
-Value           20
+Value           115
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -53,7 +53,7 @@ End
 Description
 $n大喝一聲﹐雙拳一提﹐一招$G『五嶽頂天』$Z往$N的五個弱點擊出。~
 Chance          20
-Value           20
+Value           130
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -62,7 +62,7 @@ End
 Description
 $n步履一沉﹐凝神聚氣﹐雙拳連下使出$G『千川百嶽』$Z擊向$N。~
 Chance          20
-Value           20
+Value           145
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -71,7 +71,7 @@ End
 Description
 縱身一躍﹐使出瀧山拳奧義$G『山泉群湧』$Z﹐拳如連珠般一連數十拳擊向$N。~
 Chance          20
-Value           20
+Value           160
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -80,7 +80,7 @@ End
 Description
 $n雙拳交錯﹐運足真氣﹐使出瀧山拳奧義$G『山窮水盡』$Z﹐萬鈞之力擊向$N﹗~
 Chance          20
-Value           20
+Value           180
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -90,7 +90,7 @@ Description
 $n拳散靈氣﹐霎時狂風四起﹐無窮真氣自$n身旁湧出﹐使出瀧山拳秘奧義$G『山河俱
 滅』$Z﹐$N將受可怕之力所毀滅。~
 Chance          20
-Value           20
+Value           205
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

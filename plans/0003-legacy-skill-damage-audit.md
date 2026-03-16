@@ -296,14 +296,14 @@
 
 目前狀態：
 
-- `status = batch_b_implemented`
-- `current_focus = dodge ladder`
-- `current_batch = Batch B`
+- `status = batch_c_implemented`
+- `current_focus = fist ladder`
+- `current_batch = Batch C`
 
 ## Immediate Next Steps
 
-1. 直接轉入 Batch C，先完成 `long fist / lung shan / tackle` 的多因子 pre-check
-2. 以已完成的城市 / 教學 / 服務 `long fist` sweep 為基線，區分哪些只是 generic fallback，哪些才需要跟著拳法梯階重建再重判
+1. 以已完成的 Batch C 為基線，重看 `long fist` 的城市 / 教學 / 服務樣本是否因模板回升而需要再分流
+2. 若拳法鏈 smoke / failenable 表現穩定，選下一條玩家向攻擊鏈進行同樣的多因子 pre-check
 3. 後續若再有 city / teacher 樣本仍掛 `gdragon steps`，以 `cloud steps` 是否更符合其自保定位為優先判準
 
 ## Batch A Result
@@ -552,3 +552,114 @@
 - `570` 詩人已根據 `detect evil` 舊站教學紀錄與 `shade steps` 的 scholar/bard-compatible 定位，從 civic suspect 轉成合理保留
 - 已完成城市 / 教學 / 服務 `long fist` sweep：`512` 歸入入門自保；`537`、`570`、`9003` 歸入合理保留；目前沒有新的 long-fist civic mismatch
 - 下一個關鍵 decision point 已轉為 Batch C 的 `long fist / lung shan / tackle`
+
+## Batch C Pre-Check
+
+### Reference Basis
+
+- `docs/3yWebsite/skill/fist.html`
+  - 明確給出 `long fist -> lung shan -> tackle`
+  - `long fist` 為可互教 root
+  - `lung shan` 需要 `long fist >= 心神領會`
+  - `tackle` 需要 `lung shan >= 神乎其技`
+- `docs/3yWebsite/newhand/newbies/index.html`
+  - `long fist` 屬新手最小攻擊技能組的一部分
+- `docs/3yWebsite/newhand/players/newplayer/9903151.html`
+  - 再次把 `long fist` 放在新手早期 learn baseline
+- `docs/3yWebsite/newhand/players/bravo/0104244.html`
+  - 把 `long fist -> lung shan -> tackle` 放在刺客拳法路線
+- `docs/3yWebsite/newhand/players/general/0104234.html`
+  - 把同一條鏈放在將軍拳法路線
+
+### Mandatory Pre-Check Snapshot
+
+`long fist`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `10 / COST_MOVE / 5`
+- weapon / check: `- / check_unrigid_attack`
+- chance set: `20`
+- parry set: `0`
+- damage entries: `18`
+- value set before rebuild: `20`
+
+`lung shan`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `10 / COST_MOVE / 5`
+- weapon / check: `- / check_unrigid_attack`
+- chance set: `20`
+- parry set: `0`
+- damage entries: `7`
+- value set before rebuild: `20`
+
+`tackle`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `10 / COST_MOVE / 5`
+- weapon / check: `- / check_unrigid_attack`
+- chance set: `20`
+- parry set: `0`
+- damage entries: `8`
+- value set before rebuild: `20`
+
+### Interpretation
+
+- 這條拳法鏈在 `Chance / Parry / Wait / Cost / CostType / Weapon / Check` 上幾乎完全同型
+- 目前最明顯被壓平的維度只有 `Value`
+- 因此 Batch C 第一輪先只重建 `Value`，保留「空手、耗體、同節奏」的交付型態
+
+## Batch C Result
+
+### Scope
+
+- `long fist`
+- `lung shan`
+- `tackle`
+
+### Runtime Changes
+
+`long fist`
+
+- before: `20 x 18`
+- after: `45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 135`
+- average: `87.78`
+
+`lung shan`
+
+- before: `20 x 7`
+- after: `100, 115, 130, 145, 160, 180, 205`
+- average: `147.86`
+
+`tackle`
+
+- before: `20 x 8`
+- after: `140, 160, 180, 200, 220, 240, 260, 290`
+- average: `211.25`
+
+### Design Notes
+
+- `long fist` 被重新定位為 starter baseline，不再與中高階拳法共用同模板
+- `lung shan` 成為明確高於 `long fist` 的中階拳法主力
+- `tackle` 成為這條 legacy 拳法鏈的高階端點
+- 本批刻意不動 `Chance / Parry / Wait / Cost / CostType / Weapon / Check`，避免在尚未證明有必要前改變這條鏈的基本手感
+
+### Validation
+
+- `make -C src -f Makefile.lin merc`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-c.log`
+  - `debug/failenable`
+  - `debug/failload`
+  - `debug/badobject`
+  - `debug/error`
+
+### Follow-up
+
+- Batch C 完成後，`long fist` 不再適合被當成「一路撐到高階」的 generic模板
+- 但先前已分類的城市 / 教學 / 服務樣本，仍應優先按角色定位而不是單看技能名重判
+- 下一步應以 smoke / failenable 結果決定是否需要回頭調整 `512`、`537`、`570`、`9003` 這些 long-fist baseline 樣本

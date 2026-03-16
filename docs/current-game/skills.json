@@ -1734,8 +1734,6 @@
         "check": null,
         "prepared_for_adjustment": false,
         "notes": [
-          "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML.",
-          "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML.",
           "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML."
         ]
       },
@@ -2832,8 +2830,6 @@
         "check": null,
         "prepared_for_adjustment": false,
         "notes": [
-          "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML.",
-          "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML.",
           "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML."
         ]
       },
@@ -4532,8 +4528,6 @@
         "check": null,
         "prepared_for_adjustment": false,
         "notes": [
-          "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML.",
-          "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML.",
           "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML."
         ]
       },
@@ -16422,8 +16416,6 @@
         "check": null,
         "prepared_for_adjustment": false,
         "notes": [
-          "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML.",
-          "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML.",
           "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML."
         ]
       },
@@ -25232,8 +25224,6 @@
         "check": null,
         "prepared_for_adjustment": false,
         "notes": [
-          "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML.",
-          "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML.",
           "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML."
         ]
       },
@@ -27277,24 +27267,24 @@
         "enable": true,
         "combat_dimensions": {
           "damage_values": [
-            20,
-            20,
-            20,
-            20,
-            20,
-            20,
-            20,
-            20,
-            20,
-            20,
-            20,
-            20,
-            20,
-            20,
-            20,
-            20,
-            20,
-            20
+            45,
+            50,
+            55,
+            60,
+            65,
+            70,
+            75,
+            80,
+            85,
+            90,
+            95,
+            100,
+            105,
+            110,
+            115,
+            120,
+            125,
+            135
           ],
           "chance_values": [
             20,
@@ -27367,24 +27357,24 @@
       },
       "combat_dimensions": {
         "damage_values": [
-          20,
-          20,
-          20,
-          20,
-          20,
-          20,
-          20,
-          20,
-          20,
-          20,
-          20,
-          20,
-          20,
-          20,
-          20,
-          20,
-          20,
-          20
+          45,
+          50,
+          55,
+          60,
+          65,
+          70,
+          75,
+          80,
+          85,
+          90,
+          95,
+          100,
+          105,
+          110,
+          115,
+          120,
+          125,
+          135
         ],
         "chance_values": [
           20,
@@ -27457,7 +27447,7 @@
       "status": {
         "player_facing": true,
         "npc_only": false,
-        "audit_state": "legacy_catalog_seeded"
+        "audit_state": "batch_c_implemented"
       }
     },
     {
@@ -27760,8 +27750,6 @@
         "check": null,
         "prepared_for_adjustment": false,
         "notes": [
-          "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML.",
-          "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML.",
           "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML."
         ]
       },
@@ -27966,13 +27954,13 @@
         "enable": true,
         "combat_dimensions": {
           "damage_values": [
-            20,
-            20,
-            20,
-            20,
-            20,
-            20,
-            20
+            100,
+            115,
+            130,
+            145,
+            160,
+            180,
+            205
           ],
           "chance_values": [
             20,
@@ -28012,13 +28000,13 @@
       },
       "combat_dimensions": {
         "damage_values": [
-          20,
-          20,
-          20,
-          20,
-          20,
-          20,
-          20
+          100,
+          115,
+          130,
+          145,
+          160,
+          180,
+          205
         ],
         "chance_values": [
           20,
@@ -28058,7 +28046,7 @@
       "status": {
         "player_facing": true,
         "npc_only": false,
-        "audit_state": "legacy_catalog_seeded"
+        "audit_state": "batch_c_implemented"
       }
     },
     {
@@ -32428,8 +32416,6 @@
         "check": null,
         "prepared_for_adjustment": false,
         "notes": [
-          "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML.",
-          "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML.",
           "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML."
         ]
       },
@@ -41844,14 +41830,14 @@
         "enable": true,
         "combat_dimensions": {
           "damage_values": [
-            20,
-            20,
-            20,
-            20,
-            20,
-            20,
-            20,
-            20
+            140,
+            160,
+            180,
+            200,
+            220,
+            240,
+            260,
+            290
           ],
           "chance_values": [
             20,
@@ -41894,14 +41880,14 @@
       },
       "combat_dimensions": {
         "damage_values": [
-          20,
-          20,
-          20,
-          20,
-          20,
-          20,
-          20,
-          20
+          140,
+          160,
+          180,
+          200,
+          220,
+          240,
+          260,
+          290
         ],
         "chance_values": [
           20,
@@ -41944,7 +41930,7 @@
       "status": {
         "player_facing": true,
         "npc_only": false,
-        "audit_state": "legacy_catalog_seeded"
+        "audit_state": "batch_c_implemented"
       }
     },
     {
@@ -46583,8 +46569,6 @@
         "check": null,
         "prepared_for_adjustment": false,
         "notes": [
-          "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML.",
-          "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML.",
           "No runtime skill file matched yet; legacy requirements still preserved from old-site HTML."
         ]
       },
