@@ -46,12 +46,102 @@
 - 這不是單一技能偶發，而是系統性清值
 - failenable 的大量「太差」警告，至少有一部分正是由這個清值造成
 
+## Important Limitation
+
+不能把 `#Damage -> Value` 直接當成技能完整強度。
+
+目前 runtime 已確認還有下列面向會共同影響體感：
+
+- `#Damage -> Chance`
+  - 決定各招式的出現機率與平均輸出分布
+- `#Damage -> Parry`
+  - 決定格擋對抗面
+- `#Damage -> Innate`
+  - 某些招式夾帶 innate 額外效果，不是單看 base damage
+- `Skill -> Wait`
+  - 決定施放節奏與攻擊頻率
+- `Skill -> Cost / CostType`
+  - 決定續戰效率
+- `Skill -> Weapon / Check`
+  - 決定武器門檻與實際攻擊型態
+- `fight.c` 內的實戰折算
+  - `hitroll`
+  - `damroll`
+  - `get_ac`
+  - `dodge`
+  - `sanctuary`
+  - `protection`
+
+因此：
+
+- failenable 適合拿來判定「模板是否弱到離譜」
+- 但不適合被當成唯一平衡指標
+- 後續修值必須保留技能差異性，不能只把所有同階技能拉成同一碗水
+
+## Combat Strength Model
+
+後續每條技能鏈至少同時看五個面向：
+
+1. `damage_profile`
+   - `Value` 平均、峰值、最低值
+2. `delivery_profile`
+   - `Chance`
+   - `Parry`
+   - `Situs`
+3. `tempo`
+   - `Wait`
+   - `Cost`
+   - `CostType`
+4. `weapon_identity`
+   - `Weapon`
+   - `Check`
+   - 空手 / 劍 / 刀 / 槍 / 步法等類型差異
+5. `runtime_amplifiers`
+   - `hitroll`
+   - `damroll`
+   - `dodge`
+   - `armor/ac`
+
+## Design Rule
+
+同鏈技能不追求單純的 `Value` 線性上升，而是追求：
+
+- 綜合強度階梯成立
+- 同時保留技能差異性
+
+例：
+
+- 輕靈劍法可接受較低單段 `Value`，但 `Wait` 較短
+- 重兵技能可接受較高 `Value`，但節奏較慢、成本較重
+- 步法不一定靠 `Value` 領先，而可能主要靠 dodge template 與節奏勝出
+
+## Mandatory Pre-Check
+
+每批 skill ladder 開工前，先列出該鏈所有 skill 的：
+
+- `Value`
+- `Chance`
+- `Parry`
+- `Wait`
+- `Cost`
+- `CostType`
+- `Weapon`
+- `Check`
+
+並先判斷：
+
+- 目前差異是不是已被清值清到幾乎消失
+- 還是原本就有刻意設計成「低 damage / 高頻率」或「高爆發 / 高消耗」
+
+只有確認該鏈真的被壓平，才直接上修 `Value`。
+
 ## Execution Rules
 
 1. 不要一次全域重寫所有 skill。
 2. 先以「玩家可學、舊站有清楚升階鏈、目前 runtime 又幾乎全是 `20`」的技能鏈優先。
 3. 每次只修 1 到 2 條鏈，並保留明確的 before/after 紀錄。
-4. 修 skill value 後，要回頭抽查：
+4. 每批開工前，先做 `Mandatory Pre-Check`。
+5. 修 skill value 後，要回頭抽查：
    - 對應玩家向技能體感是否仍合理
    - 對應 mob 是否不再被 failenable 判成「太差」
    - 是否造成低階玩家技能過度膨脹
@@ -175,6 +265,18 @@
 
 - 修值前後是否仍出現 `怪物編號 X 技能 Y 太差`
 
+## Code References
+
+- [src/handler.c](/H:/repos/merc-fju-3.0/src/handler.c)
+  - `get_adeptation()`
+- [src/load.c](/H:/repos/merc-fju-3.0/src/load.c)
+  - `Load_mobiles` failenable 判定
+- [src/fight.c](/H:/repos/merc-fju-3.0/src/fight.c)
+  - `striking()`
+  - `damage()`
+- [src/skill.c](/H:/repos/merc-fju-3.0/src/skill.c)
+  - 成本、wait、武器檢查、技能施放流程
+
 ## Resume State
 
 目前狀態：
@@ -258,6 +360,7 @@
 
 - 這一批主要修的是 skill template，因此目前不一定會立刻改變現行 explicit `Enable` mob 的 loader 警告
 - 但它已經建立後續 area / teacher / boss 設計可依賴的第一條玩家向 offensive 劍法梯度
+- 這一批尚未完整把 `Chance / Wait / Cost / Weapon` 納入同鏈對照，因此 Batch B 開始前必須先做 `Mandatory Pre-Check`
 
 ## Next Prompt
 

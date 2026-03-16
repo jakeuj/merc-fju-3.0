@@ -18,6 +18,33 @@
 - `Attack Value`、`Skill Value`、`Mob Practice` 不是直接戰鬥倍率來源；不要把它們當成第一優先修值點。
 - `military blade`、`military steps`、`imperial sword`、`imperial steps`、`night blade`、`shadowtrace steps`、`cavalry lance` 是刻意存在的 NPC-only 技能。
 - guard-family 試點已經證明：問題確實可能來自 mob 掛了錯位或過弱的 legacy 技能鏈，但目前證據更偏向「局部配置失真」，不是「整個技能系統全面被閹割」。
+- `get_adeptation()` / failenable 主要拿 `#Damage Value` 去估算熟練度是否太差；這個訊號對抓模板過弱有用，但不等於完整戰鬥強度。
+
+## 多維戰力判讀
+
+先把 `#Damage Value` 當成底層傷害模板，不要把它當成唯一平衡旋鈕。實際技能強度至少還會被這些欄位拉動：
+
+- `#Damage Chance`
+- `#Damage Parry`
+- `#Damage Innate`
+- `Wait`
+- `Cost`
+- `CostType`
+- `Weapon`
+- `Check`
+
+此外還要回看：
+
+- `src/fight.c`
+  - 命中、護甲、閃避、保護類效果如何進入最終傷害
+- `src/skill.c`
+  - 技能等待時間、資源消耗、武器限制與施放門檻
+
+判讀原則：
+
+- 高階技能不一定要比同階所有技能都有更高 `Value`
+- 若技能本來走高頻、輕兵、暴擊、反擊或特殊武器風格，允許 `Value` 低於同階重兵模板
+- 若只是把所有高階技能 `Value` 一碗端平，通常會破壞技能差異性並放大 failenable 以外的平衡問題
 
 ## 執行順序
 
@@ -39,6 +66,7 @@
  - `players.json` 看玩家攻略裡它實際屬於哪種職系或成長路線
 - 若舊技能在玩家攻略裡是入門技能或江湖路線，但現在掛在正式軍旅 / 皇城守衛身上，優先視為錯位。
 - 若 mob 本身是技師、老師父、招式投影怪、劇情型小怪或特殊 boss，保留舊技能的門檻較低，不要為了統一而亂改。
+- 若任務是重建玩家向技能鏈，先把同鏈技能依 `players.json` / `skills.json` 排出進階順序，再檢查上述多維欄位是否共同支撐那個階梯；不要只看到 `Value=20` 就整條直線上調。
 
 ## 高價值殘留點
 

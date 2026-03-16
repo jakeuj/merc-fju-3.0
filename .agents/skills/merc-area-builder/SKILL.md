@@ -139,6 +139,7 @@ source of truth 要分兩種：
 - 若任務有新增 `skill/*.ski`、替 NPC 換技能、或讓新的 mob `Enable` 指到新技能，先搜尋 repo 內是否已有同名 skill / 同 slot / 同 `skill.lst` key；新增 skill 只是 area data 的一部分，但驗證要求應比一般 `mob/obj` 更高
 - NPC 專用且不打算讓玩家學習的技能，預設明確寫 `Valid NO`、`CanAsk NO`、`Teach NO`；但名稱、slot 與 loader 登錄仍要完整，不能因為是 NPC-only 就省略
 - 若任務明確是在追「mob 技能偏弱 / 舊技能殘留 / 技能鏈重建」，再補讀 `references/skill-combat-chain-rebuild.md`；這類任務要先區分全域係數、legacy skill 合理保留、與真的需要 runtime 替換的錯位樣本
+- 若任務延伸到 `skill/*.ski` 的 `#Damage` 重建，不要只看 `Value` 就決定高低階；至少先一起盤 `Chance`、`Parry`、`Innate`、`Wait`、`Cost`、`CostType`、`Weapon`、`Check`，並回看 `src/fight.c` / `src/skill.c` 的命中、閃避、資源與節奏影響，避免把輕兵、高頻或高暴擊技能一律改成重傷模板
 
 ### 4. 同步系統設定
 - `merc.ini`、`variable.c`、`job.c`、`bus/ship/bounty` 與 docs 對照點，讀 `references/system-sync-checks.md`

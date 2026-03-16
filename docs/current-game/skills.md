@@ -42,6 +42,37 @@ title: Current Game Skills
 
 這份文件只做開發紀錄，不取代上述 runtime 資料。
 
+## Legacy Skill Damage 重建注意事項
+
+近期技能鏈重建已確認：大量 legacy `skill/*.ski` 的 `#Damage Value` 曾被壓成 `20`，這會直接扭曲 failenable 對高等 mob 的判讀，也會讓玩家向技能鏈失去原本應有的階梯。
+
+但這不代表之後所有修正都應該只看 `Value`。實作上至少還要同時檢查：
+
+- `#Damage Chance`
+- `#Damage Parry`
+- `#Damage Innate`
+- `Wait`
+- `Cost`
+- `CostType`
+- `Weapon`
+- `Check`
+
+另外還要連同 combat runtime 一起判讀：
+
+- `src/handler.c`
+  - `get_adeptation()` / failenable 比較接近「模板太弱或太強的靜態告警」
+- `src/fight.c`
+  - 會把命中、護甲、閃避、防護類效果帶進實戰結果
+- `src/skill.c`
+  - 會把等待時間、資源與武器限制帶進技能體感
+
+因此目前的維護原則是：
+
+- 先承認 `Value=20` 大量殘留本身是問題
+- 但不要把所有高階技能都修成同質高傷模板
+- 保留武器差異、節奏差異、職系差異與技能風格差異
+- 做玩家向技能鏈重建時，優先用 `docs/3yWebsite/docs/data/players.json` 與 `docs/3yWebsite/docs/data/skills.json` 還原「進階順序與定位」，再回頭調整 runtime skill template
+
 ## 2026-03 NPC 身份戰技補完
 
 | 技能 | 檔案 | 主要用途 | 主要對象 | 補充 |
@@ -73,6 +104,18 @@ title: Current Game Skills
 
 - 說明為什麼 `military blade` / `military steps` / `imperial sword` / `imperial steps` 這批 NPC-only 技能是合理替換，不只是任意重命名
 - 區分哪些舊技能屬於「可保留作 legacy 對照」，哪些則已經和現行 NPC 身份鏈錯位
+
+## 2026-03 Legacy Ladder Audit 批次基線
+
+目前已正式展開玩家向 legacy 技能梯階重建，第一批先處理刺客/新手共用的劍法鏈：
+
+| 技能 | 檔案 | 目前定位 | 本輪處置 |
+| --- | --- | --- | --- |
+| `hua sword` | `skill/h/hua_sword.ski` | 新手 / 入門劍法 | 拉回低階基線傷害模板，保留作升階起點。 |
+| `fonxan sword` | `skill/f/fonxansword.ski` | 中階刺客劍法 | 調整為明確高於 `hua sword` 的中階模板。 |
+| `dragon sleeve sword` | `skill/d/dragonsleeve.ski` | 高階刺客劍法 | 調整為高於 `fonxan sword` 的高階模板。 |
+
+這一批的目的不是宣告全體 legacy skill 都已平衡完成，而是先把「同一條玩家向技能鏈不應全部等傷」這個最低限度的 runtime 梯階補回來，並作為後續步法、拳法、刀法批次的對照基線。
 
 ## 維護規則
 
