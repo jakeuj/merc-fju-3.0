@@ -26,8 +26,8 @@ Gold            10
 Multipile       100
 Migrate         0
 Sex             SEX_MALE
-AutoEnable      'long fist'
-AutoEnable      'gdragon steps'
+Enable          100 'long fist'
+Enable          100 'gdragon steps'
 
 Process
 Type            speech_prog

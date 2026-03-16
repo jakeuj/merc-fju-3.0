@@ -29,5 +29,5 @@ DodgeRatio      100
 Migrate         0
 Sex             SEX_FEMALE
 Tractable       70
-AutoEnable      'gdragon steps'
+Enable          100 'gdragon steps'
 End

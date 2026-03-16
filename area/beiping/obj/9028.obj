@@ -1,0 +1,15 @@
+Vnum            9028
+Name            ronin blade~
+ShortDesc       浪人武士刀~
+Description
+刀鞘上還留著海風與鹽霜的痕跡，這柄武士刀(ronin blade)顯然陪著主人漂洋過海而來。~
+Unit            柄~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           20
+Value           0 -1 -1 4
+Weight          9
+Cost            180
+Exp             10
+End

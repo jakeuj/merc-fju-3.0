@@ -27,8 +27,8 @@ AttackRatio     150
 DodgeRatio      150
 Migrate         0
 Sex             SEX_MALE
-AutoEnable      'six fire'
-Enable          100 'mirage steps'
+Enable          88 'night blade'
+Enable          82 'shadowtrace steps'
 
 Process
 Type            fight_prog

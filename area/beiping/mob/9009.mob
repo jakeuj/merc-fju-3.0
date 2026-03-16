@@ -30,8 +30,8 @@ AttackRatio     100
 DodgeRatio      100
 Migrate         0
 Sex             SEX_MALE
-AutoEnable      'fonxan sword'
-AutoEnable      'gdragon steps'
+Enable          78 'imperial sword'
+Enable          76 'imperial steps'
 
 Process
 Type            greet_prog

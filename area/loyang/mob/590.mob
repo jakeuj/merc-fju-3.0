@@ -27,7 +27,7 @@ DodgeRatio      90
 Migrate         0
 Sex             SEX_MALE
 Enable          100 'mobile kill'
-AutoEnable      'mobile steps'
+Enable          100 'mobile steps'
 
 Process
 Type            fight_prog

@@ -28,8 +28,7 @@ Gold            100
 Multipile       100
 Migrate         0
 Sex             SEX_MALE
-AutoEnable      'long fist'
-AutoEnable      'gdragon step'
+Enable          55 'military steps'
 
 #Learn
 Adept           30

@@ -29,6 +29,6 @@ Gold            -1
 Multipile       100
 Migrate         0
 Sex             SEX_MALE
-AutoEnable      'dream blade'
-AutoEnable      'gdragon steps'
+Enable          75 'military blade'
+Enable          68 'military steps'
 End

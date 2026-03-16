@@ -31,8 +31,8 @@ AttackRatio     100
 DodgeRatio      100
 Migrate         0
 Sex             SEX_MALE
-AutoEnable      'hua sword'
-Enable          40 'gdragon steps'
+Enable          60 'military blade'
+Enable          60 'military steps'
 
 Process
 Type            fight_prog

@@ -32,8 +32,8 @@ AttackRatio     100
 DodgeRatio      100
 Migrate         0
 Sex             SEX_MALE
-AutoEnable      'mirage steps'
-AutoEnable      'gsword'
+Enable          70 'imperial sword'
+Enable          60 'imperial steps'
 
 Process
 Type            greet_prog

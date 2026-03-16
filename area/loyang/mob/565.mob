@@ -28,8 +28,8 @@ AttackRatio     100
 DodgeRatio      100
 Migrate         0
 Sex             SEX_MALE
-AutoEnable      'fonxan sword'
-AutoEnable      'sky steps'
+Enable          82 'imperial sword'
+Enable          78 'imperial steps'
 
 Process
 Type            fight_prog

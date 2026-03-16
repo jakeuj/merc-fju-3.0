@@ -26,8 +26,8 @@ Gold            -1
 Multipile       100
 Migrate         0
 Sex             SEX_MALE
-AutoEnable      'fonxan sword'
-AutoEnable      'sky steps'
+Enable          75 'imperial sword'
+Enable          70 'imperial steps'
 
 Process
 Type            fight_prog

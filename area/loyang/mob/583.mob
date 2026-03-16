@@ -46,8 +46,8 @@ Adept           50
 Name            'bystander fist'
 End
 
-AutoEnable      'color steps'
-AutoEnable      'universe'
+Enable          100 'color steps'
+Enable          100 'universe'
 
 Process
 Type            fight_prog

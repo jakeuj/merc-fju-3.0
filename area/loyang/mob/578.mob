@@ -26,8 +26,8 @@ Gold            -1
 Multipile       100
 Migrate         0
 Sex             SEX_MALE
-AutoEnable      'gsword'
-AutoEnable      'mirage steps'
+Enable          65 'imperial sword'
+Enable          60 'imperial steps'
 
 Process
 Type            fight_prog
