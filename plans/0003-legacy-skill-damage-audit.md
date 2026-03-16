@@ -331,17 +331,17 @@
 
 目前狀態：
 
-- `status = batch_e_implemented`
-- `current_focus = blade ladder`
-- `current_batch = Batch E`
+- `status = batch_e_fallout_checked`
+- `current_focus = next legacy attack ladder`
+- `current_batch = Batch E follow-up complete`
 
 ## Immediate Next Steps
 
-1. 以已完成的 Batch E 為基線，重看目前掛著 `tiger blade` 的代表樣本是否仍需要 fallout 調整
-2. 若刀法鏈 smoke / failenable 表現穩定，選下一條玩家向攻擊鏈進行同樣的多因子 pre-check
-3. 後續若再有 city / teacher 樣本仍掛 `gdragon steps`，以 `cloud steps` 是否更符合其自保定位為優先判準
+1. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
+2. 下一個高價值候選回到同為將軍線的 `dream blade -> sea flow blade -> fast blade`
+3. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
-5. 下一個高價值候選可回到同為將軍線的 `dream blade -> sea flow blade -> fast blade`
+5. 若後續再遇到 city / teacher 樣本掛著已重建 ladder，不先急著換技能名，先判斷是不是歷史 `Enable 100` 該回調
 
 ## Batch A Result
 
@@ -953,5 +953,28 @@
   - `log/smoke-batch-e.log`
   - `debug/failenable`
   - `debug/failload`
-  - `debug/badobject`
-  - `debug/error`
+
+## Batch E Fallout Recheck
+
+### Scope
+
+- `area/loyang/mob/604.mob`
+
+### Result
+
+- `604` `six demon king`
+  - 保留 `tiger blade 100`
+  - 保留 `mirage steps 100`
+  - 不做 runtime 變更
+
+### Why Keep
+
+- 這不是 civic / teacher / service 樣本，而是 loyang 地下水區的 named high-tier special
+- `tiger blade` 在 Batch E 後已恢復成符合舊站描述的高威力重刀模板
+- `mirage steps` 在同區還有 `598-601` 這批 high-tier 樣本共同使用，較像 cluster 設計，而非單點錯配
+- 因此這筆 fallout recheck 的結論是「收斂 audit 判定」，不是「回調 adept」
+
+### Validation
+
+- docs-only fallout decision
+- `docs/current-game/skill-combat-audit.json` JSON parse should remain clean

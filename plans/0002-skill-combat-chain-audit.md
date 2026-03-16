@@ -418,10 +418,13 @@
 
 下一輪若開始真正動 runtime data，建議順序固定為：
 
-1. `Batch C` fallout recheck
-   - 針對 `512`、`537`、`570`、`9003` 等 `long fist` 城市 / 教學 / 服務樣本，重看 restored ladder 後是否仍合理
-   - 這一步才決定哪些樣本要保留 generic fallback，哪些需要第二輪身份分流
-2. `skill_item` 子批次
+1. `Batch E` fallout recheck 後續
+   - `604` 已確認屬高階地下水區 special keep case，不需 civic-style 回調
+   - 若後續重建 `mirage steps`，再一併回看 `598-601 / 604` 這條地下水區 elite cluster 的整體手感
+2. 下一條 legacy offensive ladder
+   - 優先考慮同為將軍線的 `dream blade -> sea flow blade -> fast blade`
+   - 延續 `Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check` 多因子 pre-check 流程
+3. `skill_item` 子批次
    - `84.obj` 已確認屬 legacy 設計正例
    - 若後續還有其他 `RES_SKILL` 物件，再擴成全量 object gate 盤點；目前 limbo 內未看到第二個同型樣本
 
@@ -461,6 +464,28 @@
   - `long fist 100 -> 70`
 
 這也進一步確認：Batch C 之後真正需要補的，往往不是整條 civic chain 推倒重來，而是把「原本歷史上隨手填的 `Enable 100`」回調到和角色身份相符的等級。
+
+### 15. Batch E fallout recheck：`604` `six demon king`
+
+這輪補做了刀法梯階重建後最直接的 fallout 檢查，聚焦目前唯一直接掛著 `tiger blade` 的 runtime 樣本：
+
+- `604` `六天魔王`
+  - `Enable 100 'tiger blade'`
+  - `Enable 100 'mirage steps'`
+  - `Level 100`
+  - `AttackRatio / DodgeRatio = 200 / 200`
+  - `sanctuary`、`detect invis`、`detect hidden`
+
+結論是：維持現狀，列為 `reasonable_to_keep`，不做 runtime adept 回調。
+
+理由：
+
+- 它不是城市 / 教學 / 服務 NPC，而是 loyang 地下水區的 named high-tier special sample
+- `tiger blade` 在 Batch E 後已明確回到高威力、重成本、慢節奏的將軍高階刀法定位
+- `mirage steps` 雖尚未進入獨立 rebuild batch，但和同區 `598-601` 一起形成地下水區 elite cluster，並非單隻誤掛
+- 因此這個樣本更像是「高階 special 組合需要後續整批一起看」，而不是 civic fallout 那種因 ladder 恢復後變得過強的 generic `Enable 100`
+
+這個判定也代表下一輪若繼續動 runtime，優先順序應回到新的 legacy attack ladder，而不是先對 `604` 做單點止血。
 
 ## Pilot Batch
 
