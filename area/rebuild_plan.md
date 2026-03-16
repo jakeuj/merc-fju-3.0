@@ -30,6 +30,35 @@
 - 單區計畫：`plans/area/0002-loyang-outskirts.md`、`plans/area/0003-beiping-outskirts.md`、`plans/area/0004-jingxiang-road.md`
 - 世界圖參考：`area/world_map.md`
 - ref 索引：`ref/Readme.md`
+- 舊站 docs 參考：`docs/3yWebsite/docs/index.md`
+- 舊站玩家攻略資料：`docs/3yWebsite/docs/data/players.json`
+- 舊站技能資料：`docs/3yWebsite/docs/data/skills.json`
+
+## Docs Dataset Guidance
+
+- 當前 tracker 沒有 `in_progress`、也沒有 `todo` 時，若要盤點下一個 area candidate，先用 `docs/3yWebsite/docs/data/players.json` 與 `docs/3yWebsite/docs/data/skills.json` 補玩法耦合脈絡，再決定候選區。
+- `skills.json` 目前基線是 `31` 筆，分類應為：
+  - 武器技能 `11`
+  - 法術技能 `10`
+  - 職業技能 `7`
+  - 其他技能 `3`
+- `players.json` 目前基線是 `26` 筆，分類應為：
+  - `bard` `2`
+  - `bravo` `8`
+  - `general` `7`
+  - `mage` `2`
+  - `newplayer` `7`
+- `players.json` 內有 `1` 筆 `.htm` 舊檔（`newhand/players/newplayer/9907151.htm`）；盤點來源時不要漏掉。
+- 使用方式：
+  - 先從 `players.json` 找出玩家攻略高頻提到的 teacher、轉職點、巴士/船站、醫補與練功 loop。
+  - 再從 `skills.json` 核對這些節點承接哪些技能鏈、資源消耗與職業服務。
+  - 最後才把候選 area 放進 `candidate queue` 或 `todo`。
+- 若這輪是因為 docs dataset 才決定某個新候選區、world link 或服務節點配置，記得在單區 plan / tracker 補上：
+  - `ref_inputs_used`
+  - `ref_inputs_deferred`
+  - `theme_basis`
+  - `compliance_check`
+- `docs/3yWebsite` 仍視為 reference-only 舊站鏡像；若未來真的改動現行 runtime 的 area / skill registry，要另同步 `docs/current-game/*`。
 
 ## Fixed Prompt
 
@@ -109,6 +138,12 @@
 
 目前 `sec_rift_deeps` 已完成第一輪 implementation 與 smoke test；若要繼續使用固定 prompt，下一步需要先決定新的 candidate area，或規劃裂界禁底的下一段單區 plan。
 
+在沒有現成 `todo` 的前提下，下一輪建議先做一個很短的 docs-assisted candidate pass：
+
+1. 從 `docs/3yWebsite/docs/data/players.json` 抽出高頻出現的教學 / 補給 / 轉職 / 練功節點。
+2. 從 `docs/3yWebsite/docs/data/skills.json` 核對這些節點對應的技能鏈與 teacher 服務。
+3. 再決定下一個 area 應該優先補哪條路段、城郊、訓練區或職業耦合節點，而不是只看世界圖空白處。
+
 語意提醒：
 
 - 目前已沒有 `in_progress` 項目，因此若再次使用固定 prompt，需先補出新的 candidate area / todo 項目
@@ -120,4 +155,4 @@
 
 建議可直接使用的 prompt：
 
-`盤點下一個可接續的 area candidate，或為裂界禁底的下一段 world link 建立新的單區 plan。`
+`先參考 docs/3yWebsite/docs/data/players.json 與 skills.json，盤點下一個可接續的 area candidate，或為裂界禁底的下一段 world link 建立新的單區 plan。`

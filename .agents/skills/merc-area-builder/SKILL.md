@@ -1,6 +1,6 @@
 ---
 name: merc-area-builder
-description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域資料時使用：依 document/README、src/load.c、src/act_move.c 與 area/ 現況處理 limbo、loyang、beiping、new、newfight、pk_area、free_fight 的 index/mob/obj/res/roo/shp 與區域地圖檔結構，將地圖視為包含 north/east/south/west 與 up/down/enter/out 的立體拓樸，並把 #Exit/#Keyword/#Job/#Enquire 視為 room spec 的正式部分；新增 AREA 時先以 map.md 當規格來源，必要時再用 Python scaffold 產生初版 .roo，也支援以 plans/ 與 area/rebuild_plan.md 維護長期 area 重建流程，更新 area/directory.lst、同步檢查 merc.ini 與固定房號/傳送/提示文字，並在需要世界觀、技能、國家或交通背景時搭配 docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md 取用 docs 與 JSON 資料。
+description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域資料時使用：依 document/README、src/load.c、src/act_move.c 與 area/ 現況處理 limbo、loyang、beiping、new、newfight、pk_area、free_fight 的 index/mob/obj/res/roo/shp 與區域地圖檔結構，將地圖視為包含 north/east/south/west 與 up/down/enter/out 的立體拓樸，並把 #Exit/#Keyword/#Job/#Enquire 視為 room spec 的正式部分；新增 AREA 時先以 map.md 當規格來源，必要時再用 Python scaffold 產生初版 .roo，也支援以 plans/ 與 area/rebuild_plan.md 維護長期 area 重建流程，更新 area/directory.lst、同步檢查 merc.ini 與固定房號/傳送/提示文字，並在需要世界觀、技能、國家、玩家攻略或交通背景時搭配 docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md，特別利用 docs/3yWebsite/docs/data/players.json 與 skills.json 做 teacher/service loop、技能來源與新手導流決策。
 ---
 
 # Merc Area Builder
@@ -30,6 +30,10 @@ source of truth 要分兩種：
 3. 以 `document/README`、`document/mob.txt`、`document/obj.txt`、`document/room.txt`、`document/reset.txt`、`document/shop.txt` 為主要格式依據；若要確認原始 Merc parser / vnum 習慣，再補看 `doc/area-file-format.txt`、`doc/vnum-assignments.txt`、`doc/merc-release-notes.txt`。
  目前專案使用的是拆目錄資料結構，不是原始單檔 `.are`；若回看 `doc/area-file-format.txt` 裡的 `#AREA/#HELPS/#MOBILES/#OBJECTS/#ROOMS/#RESETS/#SHOPS/#SPECIALS`，要把它當概念對照，不要逐段照抄成 3.0 目錄格式。
 4. 需要世界觀、技能、國家系統、交通、公告脈絡時，連同 `docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md` 一起使用，從 `docs/3yWebsite/docs/*.md` 與 `docs/3yWebsite/docs/data/*.json` 取資料。
+4.1 若任務是在規劃新 area、補 teacher NPC、重排 world link、補新手導流或設計職業服務節點，優先抽查兩份舊站資料：
+ - `docs/3yWebsite/docs/data/players.json`：看玩家攻略實際反覆提到哪些 NPC、升級 loop、轉職與補給動線。
+ - `docs/3yWebsite/docs/data/skills.json`：看技能鏈、技能分類、資源消耗、可否教導與舊版命名。
+4.2 使用這兩份 JSON 時，預設把它們當「舊站 reference baseline」，不是現行 runtime registry；若本輪真的改了現行可載入資料，另同步 `docs/current-game/*`。
 4.1 若這輪會新增、移除、重排或大幅重寫目前實際可載入的 area，除了 runtime / spec 檔，也同步檢查 `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 是否要更新；若只是引用舊站地圖或世界觀，仍不要把 `docs/3yWebsite/` 當現行 area 台帳。
 5. 若是新增 AREA，先決定是手寫 `.roo`，還是用 `references/map-spec-template.md` + `scripts/generate_roo_from_map_md.py` 走「spec -> scaffold」流程。
 6. 若任務需要參考 repo 內的 `ref/` 世界藍圖、spec-first scaffold、world builder 或題材分布資料，先讀 `ref/Readme.md` 當索引，再挑需要的檔案或子資料夾深入。
@@ -68,6 +72,27 @@ source of truth 要分兩種：
 - area / plans / ref / scripts / 舊版對照的 repo 現況，讀 `references/current-repo-state.md`
 - 若任務主要是新增 area 或重建既有 area，這份檔案是最值得先補讀的 context reference
 
+## 舊站技能與玩家攻略基線
+
+- `docs/3yWebsite/docs/data/skills.json` 目前基線是 `31` 筆：
+ - 武器技能 `11`
+ - 法術技能 `10`
+ - 職業技能 `7`
+ - 其他技能 `3`
+- `skill/learnlv.html` 對應的「技能熟練度」頁算在 `skills.json` 內，但不是一般技能明細；不要把它當抽取失敗。
+- `docs/3yWebsite/docs/data/players.json` 目前基線是 `26` 筆：
+ - `bard` `2`
+ - `bravo` `8`
+ - `general` `7`
+ - `mage` `2`
+ - `newplayer` `7`
+- `players.json` 目前只有 `1` 筆 `.htm` 舊檔：`newhand/players/newplayer/9907151.htm`；規劃或驗證時不要因為副檔名不同就漏看。
+- `doctor`、`other`、`smith`、`thief` 目前在舊站只有分類首頁、沒有文章明細；`players.json` 沒有這幾類是正常現象，不代表這些職業不重要。
+- 真正要從這兩份 JSON 抽的是「區域耦合訊號」，不是單純做資料展示：
+ - `players.json` 用來找出玩家攻略反覆提到的 teacher、補給 NPC、轉職點、巴士/船站、練功斷點與關鍵服務 loop。
+ - `skills.json` 用來找出技能鏈、技能名詞、資源消耗、可否教導、職業限制與適合轉成 room/NPC/enquire 的關鍵詞。
+- 若打算搬動或刪除攻略裡高頻出現的服務 NPC，例如 `refresh`、`flee`、`mount`、步法/武器教學師父，先確認是否要保留原服務語意、提供替代 NPC，並同步在 plan / tracker 記錄理由。
+
 ## 工作流程
 
 ### 1. 盤點目標與耦合
@@ -83,6 +108,7 @@ source of truth 要分兩種：
 - `blocked`：先處理 blocker
 - 對應的決策完整計畫再回到 `plans/` 內的全局或單區 plan
 - 先查 `area/directory.lst` 的順序與註解，避免把物件或房間引用到尚未載入的區域
+- 若目前沒有 `in_progress` 或 `todo`，而任務是在盤點下一個 area 候選，先用 `players.json` 找「攻略裡最常被當作中繼/訓練/補給節點的城市與路段」，再用 `skills.json` 找出該節點承載的技能/職業服務鏈，避免只按世界地圖外觀選區而忽略玩法耦合
 - 先看 `src/act_move.c` 裡目前可用的方向與反向配對；現行實作至少有 `north/east/south/west/up/down/enter/out`，不要假設出口只會是平面四向
 - 先看 `src/load.c`，確認 `.roo` 的正式 schema：頂層區塊至少有 `#Exit`、`#Keyword`、`#Job`、`#Enquire`
 - 把 `mapmd-json` 當作 canonical machine-readable graph schema 來想，不要把 `.roo` 反過來當設計源頭
@@ -118,6 +144,7 @@ source of truth 要分兩種：
 - 若任務碰到交通、新手導流、技能來源、國家系統或官方敘事，這份檔是必要 reference
 - 若這輪新增的是目前 repo 真正會載入的技能，而不只是一次性測試檔，優先同步 `docs/current-game/skills.md` / `docs/current-game/skills.json` 或其他 repo 自有紀錄；`docs/3yWebsite/` 預設只拿來參考世界觀、命名與舊技能脈絡，不直接當現行技能台帳
 - 若這輪新增或重排的是目前 repo 真正會載入的 area，優先同步 `docs/current-game/areas.md` / `docs/current-game/areas.json`；`docs/3yWebsite/` 的地圖與舊站頁面預設只當背景參考，不直接當現行 area registry
+- 若這輪的 area 決策高度依賴舊站技能或玩家攻略，收尾時至少在 plan / tracker 補一句說明：是哪些攻略或技能鏈在支撐這個 world link、teacher 配置或服務節點設計
 
 ### 5. 需要世界觀/參考資料時串接 sango-docs-service
 - 何時一起用 `sango-docs-service`、優先 docs / JSON 清單與回報要求，讀 `references/docs-service-integration.md`
