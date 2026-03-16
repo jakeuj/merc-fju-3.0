@@ -65,6 +65,7 @@
 
 1. 舊版可運作體感資料
    - `docs/3yWebsite/docs/data/skills.json`
+   - `docs/3yWebsite/docs/data/players.json`
    - `docs/3yWebsite/docs/skills.md`
    - 必要時再回查 2.0 舊 repo
 2. 目前 repo 的 runtime 現況
@@ -101,6 +102,25 @@
 - `cloud steps -> gdragon steps` 這條步法鏈的 legacy 對照
 - `hua sword` 與宮廷 / 守軍新技能鏈之間的替換合理性說明
 - `pry` 在現行 repo 中作為 NPC 教學或工具技能時，和舊站玩家向技能定位的差異標註
+
+### 舊站 `players.json` 已確認可直接提供的玩家養成定位
+
+第二輪補讀 `docs/3yWebsite/docs/data/players.json` 後，已確認它適合拿來補強 `skills.json` 不會直接講出的「玩家職系定位」：
+
+- `刺客精練-步法`
+  - `cloud steps` 是舊站玩家向步法之一
+  - 內容直接接到 `青玄身法(gdragon steps)`，可和 `skills.json` 的升階欄位互證
+- `將軍精練-步法`
+  - 再次確認 `cloud steps -> gdragon steps` 並非單篇偶然提及，而是武官向共通知識
+- `新手上路`
+  - 把 `cloud steps`、`hua sword`、`long fist` 放在新手早期 learn 清單，說明它們屬舊版常見入門技能線
+- `刺客精練-前言與說明` / `弱弱的刺客之道 Part 2`
+  - `雙十` 被放在刺客高階劍法討論脈絡，而不是守軍制式技能脈絡
+
+這份玩家資料目前最有價值的用途有兩個：
+
+- 把 `skills.json` 的技能欄位訊號轉成「這個技能在舊站是給誰走的」語境
+- 用來區分 `legacy but role-consistent` 和 `legacy but role-misaligned` 兩種 outlier
 
 ## First-Pass Findings
 
@@ -145,7 +165,37 @@
   - `559`
     - 仍使用 `gdragon steps 26` + `two sword 1`
     - 相對於同 guard family 的軍旅技能梯階，應列入 `restore_candidate`
-    - 舊站 `skills.json` 已確認 `cloud steps -> gdragon steps` 是既有步法升階鏈，因此 `gdragon steps` 可保留作 legacy 對照，但 `two sword 1` 仍明顯脫離目前守軍軍旅技能定位
+    - 舊站 `skills.json` 已確認 `cloud steps -> gdragon steps` 是既有步法升階鏈；`players.json` 也確認這條鏈屬新手 / 武官常見步法脈絡，因此 `gdragon steps` 可保留作 legacy 對照
+    - `players.json` 另把 `雙十` 放在刺客高階劍法脈絡，進一步說明 `two sword 1` 不只是數值偏低，而是角色身份鏈本身錯位
+
+### 4. `RES_SKILL 'noname'` 目前不能再直接標成 placeholder 壞資料
+
+第二輪交叉比對後，`area/limbo/obj/84.obj` 的 `RES_SKILL 'noname'` 已確認：
+
+- runtime 有真實技能檔：`skill/n/noname.ski`
+- `skill/skill.lst`、`src/merc.h`、`data/symbol.def` 也都有正式登錄 `SLOT_NONAME`
+- loader 對 `RES_SKILL` 的檢查只要求技能名稱可成功 resolve 成 slot
+
+因此 `noname` 目前不是「不存在的技能名」，而是：
+
+- 一條已存在的 legacy 技能門檻
+- 是否仍符合 limbo 物件設計意圖，屬於後續 `skill_item` 子批次再判讀的問題
+
+也就是說，`84.obj` 不再是目前最明確的 loader-risk 修正點；它應從「立即修值目標」降級為「已 resolve 名稱存在性、待補設計意圖驗證」。
+
+## Next Execution Queue
+
+下一輪若開始真正動 runtime data，建議順序固定為：
+
+1. `area/loyang/mob/559.mob`
+   - 先處理最明確的 `restore_candidate`
+   - 目標是把 offensive / dodge 都拉回 `city_guard_mid` 的軍旅身份鏈
+2. `loyang / beiping` 同 archetype guard-family 掃描
+   - 確認是否還有和 `559` 同類的低熟練舊技殘留
+   - 特別找 `legacy skill still present but role-misaligned` 樣本
+3. `skill_item` 子批次
+   - 重查 `area/limbo/obj/84.obj` 及其他 `RES_SKILL` 物件
+   - 這一批的問題不再是「技能不存在」，而是「legacy 技能門檻是否仍符合現行掉落 / 裝備意圖」
 
 ## Pilot Batch
 
@@ -229,4 +279,4 @@
 - `theme_basis`
   - 這輪以 loyang / beiping 現有守軍、皇城、夜行 NPC 的舊版體感與現行 runtime 身份戰技補完為主，不以新世界藍圖重寫強度體系
 - `compliance_check`
-  - 本輪只建立全域計畫與機器可讀審計台帳，未修改 runtime data；未動用 area tracker，也未改動 area load order
+  - 本輪只擴充全域計畫與機器可讀審計台帳的 legacy reference 判讀，未修改 runtime data；未動用 area tracker，也未改動 area load order

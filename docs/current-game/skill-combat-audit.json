@@ -14,6 +14,7 @@
   ],
   "reference_priority": [
     "docs/3yWebsite/docs/data/skills.json",
+    "docs/3yWebsite/docs/data/players.json",
     "docs/3yWebsite/docs/skills.md",
     "Current runtime files under skill/, area/, src/, data/",
     "ref/ inputs for theme and naming only"
@@ -102,6 +103,60 @@
         "category": "吟唱系"
       },
       "notes": "Used as a legacy player-facing classification signal only. Current repo may still expose pry through NPC teach routes."
+    },
+    {
+      "source_file": "docs/3yWebsite/docs/data/players.json",
+      "runtime_key": "legacy:player-route:cloud-gdragon",
+      "legacy_fields": {
+        "articles": [
+          "刺客精練-步法",
+          "將軍精練-步法"
+        ],
+        "player_facing_route": "cloud steps -> gdragon steps",
+        "role_signal": "common bravo/general dodge progression"
+      },
+      "notes": "Used to confirm that the cloud-steps to gdragon-steps chain is not just a skills.json field but an actual player-route pattern in old guides."
+    },
+    {
+      "source_file": "docs/3yWebsite/docs/data/players.json",
+      "runtime_key": "legacy:player-route:starter-baseline",
+      "legacy_fields": {
+        "article": "新手上路",
+        "starter_skills": [
+          "cloud steps",
+          "hua sword",
+          "long fist",
+          "flee"
+        ]
+      },
+      "notes": "Used as a baseline for identifying which old skills belonged to common starter progression rather than elite guard-only ladders."
+    },
+    {
+      "source_file": "docs/3yWebsite/docs/data/players.json",
+      "runtime_key": "legacy:player-route:two-sword",
+      "legacy_fields": {
+        "articles": [
+          "刺客精練-前言與說明",
+          "弱弱的刺客之道 Part 2"
+        ],
+        "player_facing_label": "雙十 / two sword",
+        "role_signal": "advanced bravo sword discussion"
+      },
+      "notes": "Used to show that two sword belongs to an advanced player sword route, which makes mob 559's two sword adept 1 line a role mismatch rather than merely a low number."
+    }
+  ],
+  "next_execution_queue": [
+    {
+      "target": "area/loyang/mob/559.mob",
+      "reason": "Highest-confidence restore candidate after combining skills.json lineage with players.json role context."
+    },
+    {
+      "target": "loyang/beiping guard-family sweep",
+      "reason": "Look for additional legacy-but-role-misaligned enables adjacent to mob 559."
+    },
+    {
+      "target": "skill_item follow-up batch",
+      "reason": "Reclassify RES_SKILL references by design intent now that noname is confirmed to be a real registered runtime skill."
     }
   ],
   "pilot_batches": [
@@ -725,7 +780,7 @@
         "plans/failenable-npc-skill-audit.md"
       ],
       "status": "restore_candidate",
-      "notes": "This guard-family sample is a clear outlier against the current military ladder. The legacy docs confirm cloud steps -> gdragon steps as an old progression chain, so the dodge side still has a plausible lineage; the two sword adept 1 line remains the real mismatch against the current military identity ladder.",
+      "notes": "This guard-family sample is a clear outlier against the current military ladder. The legacy docs confirm cloud steps -> gdragon steps as an old progression chain, and players.json shows that route as a common player-facing dodge lineage, so the dodge side still has a plausible lineage. The two sword adept 1 line remains the real mismatch because old player guides place two sword in an advanced bravo sword route rather than a city-guard identity ladder.",
       "pilot_batch": "pilot-loyang-beiping-guard-lineage"
     },
     {
@@ -784,14 +839,18 @@
         "vicevalue": 92
       },
       "reference_value": {
-        "expected_behavior": "RES_SKILL should point to a real runtime skill name"
+        "expected_behavior": "RES_SKILL should point to a real runtime skill name",
+        "resolved_runtime_skill": "noname"
       },
       "reference_source": [
         "area/limbo/obj/84.obj",
-        "skill/*.ski"
+        "skill/n/noname.ski",
+        "skill/skill.lst",
+        "src/merc.h",
+        "data/symbol.def"
       ],
-      "status": "suspect",
-      "notes": "The item uses a placeholder-like skill reference. This is outside the current pilot but is a good cross-domain example of a skill acquisition path that needs follow-up.",
+      "status": "intentional_divergence",
+      "notes": "The referenced skill name is real and fully registered in runtime, so this is no longer a missing-skill suspect. It remains outside the current pilot and should be revisited later as a design-intent question for legacy skill-gated equipment rather than a loader-risk placeholder.",
       "pilot_batch": "global-baseline"
     }
   ]
