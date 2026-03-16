@@ -1,0 +1,39 @@
+Vnum            9805
+Name            界鳴內庭~
+Description
+內庭中央立著一座已開裂的圓形石盤，盤面上的紋圈會在低鳴傳來時緩慢浮亮。周圍空氣沉得像水，連呼吸都像被迫順著某種古老節律進行，讓人不自覺想知道更深處到底鎮著什麼。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        9803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        9806
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         石盤~
+Description
+石盤邊緣刻著層層收束的界紋，像是用來聆聽並校正整座封印的回應。
+~
+End
+
+#Enquire
+Keyword         封印~
+End
+
+#Enquire
+Keyword         鎮界~
+End
+
+End
