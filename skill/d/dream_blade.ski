@@ -42,7 +42,7 @@ Description
 $S$n右手執$O﹐形如流水﹐使出$Y『悠美如夢』$Z$S﹐刀光淡淡﹐如遠山的望眉﹐夕
 照的依稀﹐刀光閃在$N的眸裡﹐$N冷不防地受到猛烈的攻擊﹗$Z~
 Chance          20
-Value           20
+Value           95
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -52,7 +52,7 @@ Description
 $S$n右手反轉﹐$O自鞘中翻覆而握﹐使出$Y『輕盈若詩』$Z$S﹐刀光像一首動人的詩﹐
 輕的像一陣微風﹐柔的像一抹月色﹐$N招架不及﹐著了一道嚴重的刀傷﹗$Z~
 Chance          20
-Value           20
+Value           115
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -62,7 +62,7 @@ Description
 $S$n隨嘆息而出刀﹐使出$Y『夢裡花落』$Z$S﹐悠遠的刀光去勢之疾﹐快逾電光﹐閃電
 般斬向$N的腹中﹐$N臉上的表情﹐正如心肺被撕裂的痛楚﹗$Z~
 Chance          20
-Value           20
+Value           135
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -72,7 +72,7 @@ Description
 $S$n想也不想﹐亮出了手上的$O﹐使出$Y『細雨黃昏』$Z$S﹐刀光驚豔般的亮起﹐如
 流星自長空劃過﹐$N感到無可抗拒的震怖﹐跌入嗜血的刀網中﹗$Z~
 Chance          20
-Value           20
+Value           155
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -82,7 +82,7 @@ Description
 $S$n突然衝了出去﹐刀光綽約﹐像一抹夕暉﹐一場細雨﹐驚豔一撇$Y『飛花逐月』$Z$S
 ﹐$N看見了如彩色一般的夢﹐刀過處﹐黑裡濺出厲紅﹐帶出了殘酷的現實﹗$Z~
 Chance          20
-Value           20
+Value           175
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -92,7 +92,7 @@ Description
 $S$n輕彈刀鋒﹐震起彷似一種相見時喜悅的輕顫$Y『秋風趕塵』$Z$S﹐一刀揮出﹐像一
 道歲月的夢痕﹐刀落時還帶著些許美麗的風華﹐$N沒有退路﹐無法閃躲﹐不能招架﹗$Z~
 Chance          20
-Value           20
+Value           195
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -102,7 +102,7 @@ Description
 $S$n拔刀作龍吟﹐比琴鳴箏響還動聽﹐ 帶著微微的香氣和呻吟﹐$Y『相思若夢』$Z$S
 刀光紛飛﹐似千道銀雨﹐森寒的刀勁猶如一張天羅地網﹐$N的去路已被封鎖、切斷﹗$Z~
 Chance          20
-Value           20
+Value           215
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -112,7 +112,7 @@ Description
 $S$n使出$Y『慾斷魂飛』$Z$S﹐$O陡然而起﹐瞬然而止﹐刀光漾起一種淒美的顏色﹐在
 晨曦的長空中﹐化作一道璨耀精虹﹐一縷急風﹐並透了刀氣與刀風﹐急取$N﹗$Z~
 Chance          20
-Value           20
+Value           240
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -136,7 +136,7 @@ $W天雷忽起﹐大地浮沉﹐刀光摒出一道道的強光﹐裂蒼天而出
 生而鳴﹐狂飆忽起﹐彷彿潛伏地底的怒龍﹐裂夢而起﹐上七重天﹐
 昇九萬里﹐勢所無匹。$Z~
 Chance          20
-Value           20
+Value           270
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

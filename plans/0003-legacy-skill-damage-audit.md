@@ -331,17 +331,17 @@
 
 目前狀態：
 
-- `status = batch_e_implemented`
-- `current_focus = blade ladder`
-- `current_batch = Batch E`
+- `status = batch_e_fallout_checked`
+- `current_focus = next legacy attack ladder`
+- `current_batch = Batch F implemented`
 
 ## Immediate Next Steps
 
-1. 以已完成的 Batch E 為基線，重看目前掛著 `tiger blade` 的代表樣本是否仍需要 fallout 調整
-2. 若刀法鏈 smoke / failenable 表現穩定，選下一條玩家向攻擊鏈進行同樣的多因子 pre-check
-3. 後續若再有 city / teacher 樣本仍掛 `gdragon steps`，以 `cloud steps` 是否更符合其自保定位為優先判準
+1. 下一個高價值候選可回到同頁將軍線 `sun blade -> ice blade -> gold blade`
+2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
+3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
-5. 下一個高價值候選可回到同為將軍線的 `dream blade -> sea flow blade -> fast blade`
+5. 若後續再遇到 city / teacher 樣本掛著已重建 ladder，不先急著換技能名，先判斷是不是歷史 `Enable 100` 該回調
 
 ## Batch A Result
 
@@ -951,6 +951,137 @@
   - 改用 `IPC KEY 4585`
 - 檢查：
   - `log/smoke-batch-e.log`
+  - `debug/failenable`
+  - `debug/failload`
+
+## Batch E Fallout Recheck
+
+### Scope
+
+- `area/loyang/mob/604.mob`
+
+### Result
+
+- `604` `six demon king`
+  - 保留 `tiger blade 100`
+  - 保留 `mirage steps 100`
+  - 不做 runtime 變更
+
+### Why Keep
+
+- 這不是 civic / teacher / service 樣本，而是 loyang 地下水區的 named high-tier special
+- `tiger blade` 在 Batch E 後已恢復成符合舊站描述的高威力重刀模板
+- `mirage steps` 在同區還有 `598-601` 這批 high-tier 樣本共同使用，較像 cluster 設計，而非單點錯配
+- 因此這筆 fallout recheck 的結論是「收斂 audit 判定」，不是「回調 adept」
+
+### Validation
+
+- docs-only fallout decision
+- `docs/current-game/skill-combat-audit.json` JSON parse should remain clean
+
+## Batch F Pre-Check
+
+### Scope
+
+- `dream blade`
+- `sea flow blade`
+- `fast blade`
+
+### Reference Basis
+
+- `docs/3yWebsite/skill/blade.html`
+  - 明確給出 `dream blade -> sea flow blade -> fast blade`
+  - 保留完整職業 / 屬性 / 前置熟練度限制
+- `docs/3yWebsite/newhand/players/general/0104232.html`
+  - 將軍文把這條鏈列成另一條主力刀法線
+  - `dream blade`
+    - 建議等級 `LV30`
+  - `sea flow blade`
+    - 建議等級 `LV50`
+  - `fast blade`
+    - 建議等級 `LV80`
+    - 特性：可連擊、威力強大
+
+### Mandatory Pre-Check Snapshot
+
+`dream blade`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `25 / COST_MOVE / 15`
+- weapon / check: `WEAPON_BLADE / check_blade_attack`
+- chance set: `20`
+- parry set: `0`
+- damage entries: `9`
+- value set before rebuild: `20`
+
+`sea flow blade`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `25 / COST_MOVE / 12`
+- weapon / check: `WEAPON_BLADE / check_blade_attack`
+- chance set: `20`
+- parry set: `0`
+- damage entries: `8`
+- value set before rebuild: `20`
+
+`fast blade`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `30 / COST_MOVE / 11`
+- weapon / check: `WEAPON_BLADE / check_blade_attack`
+- chance set: `20`
+- parry set: `0`
+- damage entries: `22`
+- value set before rebuild: `20`
+
+### Pre-Check Conclusion
+
+- 三者共通的 distortion 仍是 `Value` 被系統性壓成 `20`
+- 但節奏並沒有同質：
+  - `dream blade` 最慢，應保留成華麗中階 root
+  - `sea flow blade` 較快，作為中高階銜接段
+  - `fast blade` 最多段、最快之一，而且舊站直接寫它可連擊、威力強大
+- 所以本批仍以「只重建 `Value`」為主，不動 `Chance / Parry / Wait / Cost / CostType / Weapon / Check`
+
+## Batch F Result
+
+### Runtime Changes
+
+`dream blade`
+
+- before: `20 x 9`
+- after: `95, 115, 135, 155, 175, 195, 215, 240, 270`
+- average: `176.67`
+
+`sea flow blade`
+
+- before: `20 x 8`
+- after: `140, 165, 190, 215, 240, 265, 290, 325`
+- average: `228.75`
+
+`fast blade`
+
+- before: `20 x 22`
+- after: `190, 205, 220, 235, 250, 265, 280, 295, 310, 325, 340, 355, 370, 385, 400, 420, 440, 460, 480, 500, 520, 550`
+- average: `355.0`
+
+### Design Notes
+
+- 本批只調 `Value`，保留原本的華麗快刀節奏差異：
+  - `dream blade` 仍偏慢，維持高等 root 的鋪陳感
+  - `sea flow blade` 以較短 `Wait` 承接中高階主力
+  - `fast blade` 用最多 damage entries 和更高 `Value` 承接「可連擊、威力強大」定位
+- 這樣也避免把 `fast blade` 修成和 `tiger blade` 一樣的重刀手感
+
+### Validation
+
+- `make -C src -f Makefile.lin merc`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-f.log`
   - `debug/failenable`
   - `debug/failload`
   - `debug/badobject`
