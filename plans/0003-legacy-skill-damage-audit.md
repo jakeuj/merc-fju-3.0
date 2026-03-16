@@ -302,9 +302,9 @@
 
 ## Immediate Next Steps
 
-1. 依 Batch B 實作結果回看對應 mob / teacher 樣本
-2. 抽查目前大量掛著 `gdragon steps` 的城市 / 教學 / 服務 NPC
-3. 決定是先做 Batch B follow-up，還是轉入 Batch C 的拳法鏈
+1. 視 Batch B follow-up 結果，決定先處理 `570` 詩人的 civic suspect，或直接轉入 Batch C
+2. 若轉入 Batch C，先完成 `long fist / lung shan / tackle` 的多因子 pre-check
+3. 後續若再有 city / teacher 樣本仍掛 `gdragon steps`，以 `cloud steps` 是否更符合其自保定位為優先判準
 
 ## Batch A Result
 
@@ -546,5 +546,7 @@
 
 ### Follow-up
 
-- 先抽查目前掛著 `gdragon steps` 的城市 / 教學 NPC，確認這批 dodge ladder 對 runtime 表現的實際影響
-- 若本批不再需要補 city/teacher follow-up，可轉進 Batch C 的 `long fist / lung shan / tackle`
+- 已完成城市 / 教學 / 服務 NPC 的 Batch B follow-up 抽查
+- `512` 地政官吏與 `572` 郎中已從 `gdragon steps` 回調到 `cloud steps`
+- `537`、`538`、`539`、`9003` 目前先保留，因為其主要定位仍是教學 / 店務 / 法術服務
+- 下一個關鍵 decision point 是：先追 `570` 詩人的 civic suspect，或直接轉進 Batch C 的 `long fist / lung shan / tackle`

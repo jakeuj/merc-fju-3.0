@@ -1,6 +1,6 @@
 {
   "scope": "Skill combat chain audit ledger for merc-fju-3.0. This ledger tracks pilot findings before wider runtime rebalance.",
-  "last_updated": "2026-03-16",
+  "last_updated": "2026-03-17",
   "runtime_source_of_truth": [
     "skill/*.ski",
     "skill/skill.lst",
@@ -476,10 +476,112 @@
       }
     ]
   },
+  "legacy_area_sweep_2026_03_17_batch_b_followup": {
+    "scope": [
+      "area/loyang/mob/512.mob",
+      "area/loyang/mob/572.mob",
+      "area/loyang/mob/537.mob",
+      "area/loyang/mob/538.mob",
+      "area/loyang/mob/539.mob",
+      "area/beiping/mob/9003.mob"
+    ],
+    "reference_basis": [
+      "plans/0003-legacy-skill-damage-audit.md Batch B",
+      "docs/3yWebsite/docs/data/players.json",
+      "docs/3yWebsite/newhand/newbies/index.html",
+      "docs/3yWebsite/docs/data/skills.json"
+    ],
+    "interpretation": [
+      "Batch B re-established cloud steps as the starter dodge baseline and gdragon steps as its advanced follow-up.",
+      "This made killable civic/service NPCs easier to classify: cloud steps now fits baseline self-defense, while gdragon steps reads as a higher-tier player/bravo/general dodge line."
+    ],
+    "reasonable_to_keep": [
+      {
+        "vnum": 537,
+        "area": "loyang",
+        "role": "訓練師",
+        "legacy_chain": [
+          "long fist",
+          "gdragon steps"
+        ],
+        "reason": "NoKill trainer with explicit newbie-facing service loop. Legacy self-defense remains acceptable and does not currently distort runtime combat pressure."
+      },
+      {
+        "vnum": 538,
+        "area": "loyang",
+        "role": "醫生",
+        "legacy_chain": [
+          "gdragon steps"
+        ],
+        "reason": "NoKill healer with sanctuary and a doctor special. Still better treated as a service NPC than as a combat rebalance target."
+      },
+      {
+        "vnum": 539,
+        "area": "loyang",
+        "role": "術士",
+        "legacy_chain": [
+          "gdragon steps",
+          "burning hands",
+          "nine steps"
+        ],
+        "reason": "Magic-led rebirth/train NPC. Its current identity is driven by spells and teaching rather than by dodge ladder fidelity alone."
+      },
+      {
+        "vnum": 9003,
+        "area": "beiping",
+        "role": "藥鋪伙計",
+        "legacy_chain": [
+          "long fist",
+          "gdragon steps"
+        ],
+        "reason": "NoKill shop service sample. Kept unchanged in this pass because runtime combat exposure remains low."
+      }
+    ],
+    "directly_fixed": [
+      {
+        "vnum": 512,
+        "area": "loyang",
+        "role": "地政官吏",
+        "before": [
+          "long fist 100",
+          "gdragon steps 100"
+        ],
+        "after": [
+          "long fist 100",
+          "cloud steps 70"
+        ],
+        "reason": "Civil-office NPC at the palace approach reads as baseline self-defense rather than as an advanced dodge practitioner. After Batch B, cloud steps became the clearer fit for this identity."
+      },
+      {
+        "vnum": 572,
+        "area": "loyang",
+        "role": "郎中",
+        "before": [
+          "gdragon steps 100"
+        ],
+        "after": [
+          "cloud steps 70"
+        ],
+        "reason": "Killable city doctor already fights through a burning hands prog. Downgrading its dodge line to cloud steps preserves self-protection without leaving a healer on the rebuilt advanced dodge ladder."
+      }
+    ],
+    "suspect": [
+      {
+        "vnum": 570,
+        "area": "loyang",
+        "role": "詩人",
+        "legacy_chain": [
+          "long fist",
+          "shade steps"
+        ],
+        "reason": "Still needs a separate civic-flavor pass. The scholar/poet role remains unusual, but Batch B did not add enough evidence to rewrite its shade steps pairing."
+      }
+    ]
+  },
   "next_execution_queue": [
     {
       "target": "civic legacy suspect sweep",
-      "reason": "Follow up on mob 512 and mob 570 after the current city/court round. They are the clearest remaining civic samples whose legacy combat lines may still be role-misaligned."
+      "reason": "Follow up on mob 570 after the Batch B civic step follow-up. It is now the clearest remaining city sample whose legacy combat line may still be role-misaligned."
     },
     {
       "target": "future object gate sweep",

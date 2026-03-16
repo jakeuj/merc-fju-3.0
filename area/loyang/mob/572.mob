@@ -28,7 +28,7 @@ AttackRatio     100
 DodgeRatio      100
 Migrate         0
 Sex             SEX_MALE
-Enable          100 'gdragon steps'
+Enable          70 'cloud steps'
 
 Process
 Type            fight_prog

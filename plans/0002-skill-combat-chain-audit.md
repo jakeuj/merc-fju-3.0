@@ -319,13 +319,48 @@
 - 這個樣本實際上穿全套裝備、持 `紫微軟劍`，並駐在京城軍糧節點，不是單純無戰鬥力的背景僕役
 - 先補成低階宮廷 / 京城侍從可用的劍步組，並刻意壓在 `9018` 這種正式小隊長之下
 
+### 11. Batch B follow-up：`512` / `572` 回調到 `cloud steps`
+
+在 `plans/0003-legacy-skill-damage-audit.md` 完成 Batch B 後，`cloud steps` 與 `gdragon steps` 的身份界線變得更清楚：
+
+- `cloud steps`
+  - 舊站與新手導流都支持它是入門步法 / 基線自保
+- `gdragon steps`
+  - 現在已重新站穩為 `cloud steps` 的升階步法
+
+因此這輪回看城市服務 NPC 時，`512` 與 `572` 的判讀不再需要停在 suspect：
+
+- `512` `地政官吏`
+  - 位在洛陽宮城入口南側的文職服務節點
+  - 保留 `long fist 100`
+  - 將 `gdragon steps 100` 改為 `cloud steps 70`
+- `572` `郎中`
+  - 城內可被攻擊的醫療服務 NPC
+  - 本來就主要靠 `fight_prog` 施放 `burning hands`
+  - 將 `gdragon steps 100` 改為 `cloud steps 70`
+
+這兩筆修正的共同原則是：
+
+- 不把可被玩家打到的城市服務 NPC 留在已重建的進階步法鏈上
+- 但也不把它們改成完全沒有自保
+- 讓 `cloud steps` 回到「入門自保 / 城市平民級身法」的 runtime 位置
+
+相對地，這輪仍先保留：
+
+- `537` 訓練師
+- `538` 醫生
+- `539` 小道士
+- `9003` 藥鋪伙計
+
+原因是它們不是 `NoKill` 就是明顯以教學 / 法術 / 店務為主，目前沒有足夠收益支持再動。
+
 ## Next Execution Queue
 
 下一輪若開始真正動 runtime data，建議順序固定為：
 
 1. `civic legacy suspect` 子批次
-   - 先追 `512` 地政官吏與 `570` 詩人的身份戰技是否仍錯位
-   - 這兩筆是目前 loyang / beiping 城市樣本裡最值得繼續判讀、但證據還不夠直接改的 suspect
+   - 先追 `570` 詩人的身份戰技是否仍錯位
+   - 在 `512` / `572` 已回調後，`570` 成為目前 loyang / beiping 城市樣本裡最值得繼續判讀的 civic suspect
 2. `skill_item` 子批次
    - `84.obj` 已確認屬 legacy 設計正例
    - 若後續還有其他 `RES_SKILL` 物件，再擴成全量 object gate 盤點；目前 limbo 內未看到第二個同型樣本
