@@ -20,6 +20,25 @@
 - guard-family 試點已經證明：問題確實可能來自 mob 掛了錯位或過弱的 legacy 技能鏈，但目前證據更偏向「局部配置失真」，不是「整個技能系統全面被閹割」。
 - `get_adeptation()` / failenable 主要拿 `#Damage Value` 去估算熟練度是否太差；這個訊號對抓模板過弱有用，但不等於完整戰鬥強度。
 
+## Mob.txt 補充語義
+
+`document/mob.txt` 對技能鏈重建有三個實用提醒：
+
+- `Enable <adept> '<skill>'`
+  - 這是固定熟練度，不經 `AutoEnable` 反推
+- `AutoEnable '<skill>'`
+  - 這是 loader-side 自動熟練度，不能和固定 `Enable` 混讀
+- `AttackRatio / DodgeRatio`
+  - 這兩個欄位會和 mob `Level` 一起影響 `get_adeptation()` 的目標強度
+- `#Learn`
+  - `Adept / Cost / Inventory / Name` 雖然不是 combat template，但仍是 mob 端 skill-facing data
+
+所以後續看到「同一技能名」時，至少先區分：
+
+- skill 檔模板本身是否失真
+- mob 是固定 `Enable` 還是 `AutoEnable`
+- 問題是戰鬥鏈錯位，還是 teacher / service loop 的 `#Learn` 設定矛盾
+
 ## 多維戰力判讀
 
 先把 `#Damage Value` 當成底層傷害模板，不要把它當成唯一平衡旋鈕。實際技能強度至少還會被這些欄位拉動：
@@ -57,6 +76,10 @@
 4. 若證據足夠，直接修改 runtime data，不要只停在分析
 5. 修改後同步更新 `docs/current-game/skill-combat-audit.json`
 6. 若判讀規則或範圍有變，再補 `plans/0002-skill-combat-chain-audit.md`
+7. 若開始動玩家向 skill ladder，也同步把 `document/mob.txt` 的 mob-side wiring 納入 pre-check：
+ - 代表樣本是否用固定 `Enable`
+ - 還是靠 `AutoEnable + AttackRatio / DodgeRatio`
+ - 是否同時承擔 `#Learn` 教學職能
 
 ## 舊技能判讀原則
 

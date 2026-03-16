@@ -61,6 +61,37 @@ title: Current Game Skills
 
 這份文件與 `docs/current-game/skills.json` 都只做開發紀錄，不取代上述 runtime 資料。
 
+## Mob 端技能掛法
+
+參照 `document/mob.txt`，目前 mob 端和技能直接相關的欄位至少有：
+
+- `Enable <數值> '<技能名>'`
+  - 代表固定熟練度的技能掛法
+  - 比較適合已知身份鏈、需要穩定 runtime 行為的 NPC
+- `AutoEnable '<技能名>'`
+  - 代表交給 loader 依怪物條件自動反推熟練度
+  - 不應和固定 `Enable` 視為同一種資料
+- `AttackRatio`
+  - 會影響 offensive skill 經 `get_adeptation()` 反推時的目標強度
+- `DodgeRatio`
+  - 會影響 dodge skill 經 `get_adeptation()` 反推時的目標強度
+- `#Learn`
+  - `Adept / Cost / Inventory / Name`
+  - 這是 mob 的教學能力，不是 combat template，但仍屬 skill-facing runtime data
+
+這代表 skill audit 不能只看 `skill/*.ski`：
+
+- 同一個 skill template 若掛在 `Enable 45` 與 `AutoEnable` 的 NPC 上，風險不同
+- `AutoEnable` 的 failenable 告警，必須連同 mob 的 `Level / AttackRatio / DodgeRatio` 一起解讀
+- `#Learn` 若和 `Teach / CanAsk / Valid` 或 NPC 身份衝突，也應視為技能系統的一部分
+
+目前 registry 雖然還沒有把每個 skill 的 mob usage 全量展開，但後續若某條鏈需要重判，至少要補看：
+
+- `area/*/mob/*.mob` 的 `Enable`
+- `area/*/mob/*.mob` 的 `AutoEnable`
+- `area/*/mob/*.mob` 的 `AttackRatio / DodgeRatio`
+- `area/*/mob/*.mob` 的 `#Learn`
+
 ## Current Registry Schema
 
 `docs/current-game/skills.json` 現在不再只記 supplemental additions，而是改成整合型 registry。每筆 skill 目前可包含：
@@ -137,6 +168,7 @@ title: Current Game Skills
 - 但不要把所有高階技能都修成同質高傷模板
 - 保留武器差異、節奏差異、職系差異與技能風格差異
 - 做玩家向技能鏈重建時，優先用 `docs/3yWebsite/docs/data/players.json` 與 `docs/3yWebsite/docs/data/skills.json` 還原「進階順序與定位」，再回頭調整 runtime skill template
+- 若某個 skill 主要是經 `AutoEnable` 供 mob 使用，還要把 `AttackRatio / DodgeRatio / Level` 一起列進判讀，避免把 mob 端反推熟練度問題誤判成 skill 檔本身唯一失真
 
 ## 2026-03 NPC 身份戰技補完
 

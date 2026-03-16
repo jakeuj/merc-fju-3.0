@@ -43,6 +43,7 @@
 - `src/load.c`
 - `src/handler.c`
 - `src/fight.c`
+- `document/mob.txt`
 
 技能鏈與玩家體感基線以舊站資料為準：
 
@@ -89,6 +90,19 @@
 - failenable 適合拿來判定「模板是否弱到離譜」
 - 但不適合被當成唯一平衡指標
 - 後續修值必須保留技能差異性，不能只把所有同階技能拉成同一碗水
+
+另外，`document/mob.txt` 也提醒這裡至少還有一層 mob-side wiring：
+
+- `Enable <adept> '<skill>'`
+  - 固定熟練度
+- `AutoEnable '<skill>'`
+  - 由 loader 依 mob 條件反推熟練度
+- `AttackRatio / DodgeRatio`
+  - 直接影響 `get_adeptation()` 的目標強度
+- `#Learn`
+  - `Adept / Cost / Inventory / Name` 屬教學側 skill-facing data
+
+因此就算某條 skill ladder 已重建，也不能直接假設所有掛這條 skill 的 mob 都會自動合理；還要看 mob 端是固定 `Enable`，還是經 `AutoEnable` 進 loader 公式。
 
 ## Combat Strength Model
 
@@ -147,6 +161,14 @@
 
 只有確認該鏈真的被壓平，才直接上修 `Value`。
 
+若這條鏈目前明顯被 mob 大量使用，或前一輪已發現 failenable / 身份錯位樣本，再額外列：
+
+- 代表 mob 的 `Enable / AutoEnable`
+- 代表 mob 的 `AttackRatio / DodgeRatio`
+- 該 skill 是否常出現在 `#Learn`
+
+目的不是把每批都變成全域 mob sweep，而是避免把「mob 端掛法」誤當成「skill 檔單點問題」。
+
 ## Execution Rules
 
 1. 不要一次全域重寫所有 skill。
@@ -157,6 +179,7 @@
    - 對應玩家向技能體感是否仍合理
    - 對應 mob 是否不再被 failenable 判成「太差」
    - 是否造成低階玩家技能過度膨脹
+6. 若該鏈同時牽涉已知 `AutoEnable` 樣本，再補查代表 mob 的 `AttackRatio / DodgeRatio` 是否仍和新模板相容。
 
 ## Phase 1 Scope
 
