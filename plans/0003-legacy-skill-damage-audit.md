@@ -1215,6 +1215,138 @@
   - `debug/error`
     - 無新增內容
 
+## Batch O Pre-Check
+
+### Scope
+
+- `universe`
+- `six fire`
+- `fire dragon`
+
+### Reference Basis
+
+- `/Users/jakeuj/auggie/3yWebsite/skill/energy.html`
+  - 明確給出 `universe -> six fire -> fire dragon`
+  - `six fire` 以 `universe` 為 prerequisite
+  - `fire dragon` 以 `six fire` 為 prerequisite
+- `docs/current-game/skills/force.md`
+  - current-game 已把這條鏈整理成 `legacy-page:energy`
+  - runtime 目前顯示三者 damage values 皆為全 `20`
+- runtime `skill/*.ski`
+  - `universe.ski`
+    - `Associate SLOT_SIXFIRE`
+    - `CanAsk YES / Valid YES / Enable YES`
+  - `sixfire.ski`
+    - `Associate SLOT_FIRE_DRAGON`
+    - `CanAsk YES / Valid YES / Enable YES`
+  - `fire_dragon.ski`
+    - `Associate -1`
+    - `CanAsk YES / Valid YES / Enable YES`
+
+### Mandatory Pre-Check Snapshot
+
+`universe`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 5`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `7`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`six fire`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `25 / COST_MOVE / 5`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `6`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`fire dragon`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `30 / COST_MOVE / 7`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `9`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Representative Runtime Consumers
+
+- `area/loyang/mob/583.mob`
+  - `Enable 100 'universe'`
+- `area/loyang/mob/558.mob`
+  - `Enable 75 'fire dragon'`
+- 目前未看到 `six fire` 的現成 mob enable / `#Learn` 樣本
+
+### Interpretation
+
+- 這條氣功鏈是很典型的玩家向空手 progression，舊站與 current-game/runtime 都能直接互證。
+- 三招在 `Chance / Parry / Check` 上幾乎完全同型，節奏則從 `Wait 5` 漸進到 `Wait 7`，最明顯被壓平的維度就是 `Value`。
+- `universe` 仍要成立為可用的 root，不應因為是前置功法就被壓成假模板；`six fire` 與 `fire dragon` 則要在更高 cost 與 prerequisite 下站穩中高階與終點差距。
+- 由於 loyang 現成 mob 已掛用 `universe` 與 `fire dragon`，本批會在驗證時特別留意 debug，但仍先只修 skill template，不在這輪直接改 mob runtime data。
+
+## Batch O Result
+
+### Scope
+
+- `universe`
+- `six fire`
+- `fire dragon`
+
+### Runtime Changes
+
+`universe`
+
+- before: `20 x 7`
+- after: `70, 85, 100, 115, 130, 150, 170`
+- average: `117.14`
+
+`six fire`
+
+- before: `20 x 6`
+- after: `140, 160, 180, 205, 230, 260`
+- average: `195.83`
+
+`fire dragon`
+
+- before: `20 x 9`
+- after: `220, 250, 280, 310, 340, 375, 415, 460, 520`
+- average: `352.22`
+
+### Design Notes
+
+- 本批只調 `Value`，保留空手氣功鏈原本的 `Wait / Cost / Check` 身分。
+- `universe` 不再是全 `20` 的前置殼，而是能成立的高階 root。
+- `six fire` 以更重的輸出階段承接 `universe`，`fire dragon` 則拉開明顯的終點爆發，對齊舊站的高階氣功定位。
+
+### Validation
+
+- `make -C src -f Makefile.lin merc`
+- `make -C src merc`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-o.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/badobject`
+    - 無新增內容
+  - `debug/error`
+    - 無新增內容
+
 ## Batch N Pre-Check
 
 ### Scope

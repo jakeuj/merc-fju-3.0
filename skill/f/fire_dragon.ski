@@ -35,7 +35,7 @@ $y             崩$Z$A$A
 登時$n的身後出現一條很大的火龍﹐然後出現了無數的火球﹐$n大喝一聲
 「去」﹐一時無數的火球向$N飛去﹐$N閃避不及﹐被火球打的體無完膚。~
 Chance          20
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -48,7 +48,7 @@ $S             碎$Z$A$A
 登時出現一隻如刀的火龍附在$n的右手手臂上﹐成為$R火炎之刀$Z﹐$n衝過連
 砍九九八十一刀﹐將$N斬成肉醬。~
 Chance          20
-Value           20
+Value           250
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -61,7 +61,7 @@ $R             焰$Z$A$A
 登時$n手上出現一條火龍如鞭子一般的纏在手上﹐用力向前一甩﹐$R火鞭$Z
 如鬼魅般的將$N困住﹐發出如殺豬的慘叫﹐被活活的燒死。~
 Chance          20
-Value           20
+Value           280
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -75,7 +75,7 @@ $P             丹$Z$A$A
 連起來形成一個結界﹐$N無法逃脫﹐結界愈縮愈小﹐最後不見﹐$N已到異
 次元去旅遊了。~
 Chance          20
-Value           20
+Value           310
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -88,7 +88,7 @@ $S             剎$Z$A$A
 登時空中出現一條巨大的$R單眼火龍$Z﹐$N覺的很古怪向火龍的眼睛看了一眼
 忽然全身開始起火﹐$N滾在地上哀號漸漸的已叫不出來了。~
 Chance          20
-Value           20
+Value           340
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -102,7 +102,7 @@ $N忽然覺的$n由一變二﹐由二變三﹐漸漸的變出十幾個$n﹐登�
 $n一起向$N衝去﹐最後全部一起自爆﹐發出轟天巨響﹐$N也從此消失在人
 間。~
 Chance          20
-Value           20
+Value           375
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -115,7 +115,7 @@ $B             虛$Z$A$A
 空中忽然出現一隻巨人無比的巨龍﹐口中含著一顆火球﹐$R火龍$Z將口中的火球
 噴出﹐登時看見一條$R火炎$Z向$N噴去﹐$N被噴個正著﹐登時化成飛灰。~
 Chance          20
-Value           20
+Value           415
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -129,7 +129,7 @@ $n全身被$R火炎$Z所包圍﹐形成一條$R大火龍$Z﹐向$N衝去﹐$N被
 十公尺的高空又被拋了下來﹐火龍也俯衝而下﹐向$N撞去﹐登時強光一
 閃令人無法正視﹐只見眼前出現一個大洞﹐$N已不見人影。~
 Chance          20
-Value           20
+Value           460
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -142,7 +142,7 @@ $y           崩$Z•$S碎$Z•$R焰$Z•$P丹$Z•$S剎$Z•$y壘$Z•$B虛$Z�
 登時八龍齊出﹐$n也化為一條火龍向$N攻去﹐$N被九龍給擊中如球般的被
 頂上空中﹐最後九龍分站九個方位﹐齊放火焰﹐$N被這強大的高溫給溶化。~
 Chance          20
-Value           20
+Value           520
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

@@ -34,7 +34,7 @@ Help            ~
 Description
 $n使出$P乾坤第一絕$Y『乾坤無定無量』$Z﹐氣凝於掌﹐緩緩推出﹐擊向$N。~
 Chance          20
-Value           20
+Value           70
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -43,7 +43,7 @@ End
 Description
 $n大喝一聲﹐使出$P乾坤第二絕$Y『震驚百里』$Z﹐無形聲波化為實勁﹐擊向$N。~
 Chance          20
-Value           20
+Value           85
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -53,7 +53,7 @@ Description
 $n氣貫雙臂﹐氣度恢宏﹐使出$P乾坤第三絕$Y『天火燎原』$Z﹐排山倒海的掌勁﹐擊向
 $N。~
 Chance          20
-Value           20
+Value           100
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -63,7 +63,7 @@ Description
 $n氣凝於淵﹐使出$P乾坤第四絕$Y『天道循環』$Z﹐$N真氣向四方暴射﹐雙掌推出﹐擊
 向$N。~
 Chance          20
-Value           20
+Value           115
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -72,7 +72,7 @@ End
 Description
 $n使出$P乾坤第五絕$Y『雷動九天』$Z﹐雙掌上提﹐一股強大氣勁襲向$N。~
 Chance          20
-Value           20
+Value           130
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -81,7 +81,7 @@ End
 Description
 $n使出$P乾坤第六絕$Y『逆轉乾坤』$Z﹐一聲長嘯﹐強大的真氣襲$N。~
 Chance          20
-Value           20
+Value           150
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -90,7 +90,7 @@ End
 Description
 $W$n縱身一躍﹐使出先天乾坤功之奧義﹐拳頭如千軍萬馬般地擊向$N$Z。~
 Chance          20
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
