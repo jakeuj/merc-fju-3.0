@@ -41,7 +41,7 @@ Help            ~
 Description
 $n大喊$P「呂洞賓：醉酒提壺力千鈞」$Z﹐$n手成提酒狀﹐兩手往$N的雙肩一捉。~
 Chance          10
-Value           20
+Value           95
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -50,7 +50,7 @@ End
 Description
 $n大喊$Y「韓湘子：擒腕擊胸醉吹蕭」$Z﹐$n捉住$N的手﹐往他的胸部猛撞。~
 Chance          10
-Value           20
+Value           110
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -59,7 +59,7 @@ End
 Description
 $n大喊$G「張果老：醉酒拋杯醉連環」$Z﹐$n成醉步狀﹐搖搖擺擺往$N踢去。~
 Chance          10
-Value           20
+Value           125
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -68,7 +68,7 @@ End
 Description
 $n大喊$P「籃采和：單提敬酒攔腰破」$Z﹐$n成半躺狀﹐手往$N的腰步一扣。~
 Chance          10
-Value           20
+Value           145
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -77,7 +77,7 @@ End
 Description
 $n大喊$Y「鐵拐李：旋肘膝撞醉還真」$Z﹐$n收起一腳﹐搖搖擺擺一手卻將$n夾住。~
 Chance          10
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -86,7 +86,7 @@ End
 Description
 $n大喊$G「曹國舅：仙人敬酒鎖喉扣」$Z﹐$n手成持杯狀﹐往$N的脖子一捉。~
 Chance          10
-Value           20
+Value           200
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -95,7 +95,7 @@ End
 Description
 $n大喊$S「漢鍾離：醉步抱罈窩心頂」$Z﹐$n頭一伸﹐往$N一撞。~
 Chance          10
-Value           20
+Value           235
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -104,7 +104,7 @@ End
 Description
 $n大喊$S「何仙姑：彈腰敬酒醉盪步」$Z﹐$n腰一彎﹐突然雙手往$N的臉部一彈。~
 Chance          10
-Value           20
+Value           275
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

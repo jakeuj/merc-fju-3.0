@@ -41,7 +41,7 @@ Help            ~
 Description
 $n使出一招$Y『飛燕翱翔』$Z﹐雙腿呈燕尾狀以優美的姿態向著$N疾飛而至。~
 Chance          10
-Value           20
+Value           130
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -50,7 +50,7 @@ End
 Description
 $n身形倏然萬變﹐使出一招$Y『雲霧飄緲』$Z﹐趁著$N驚愕之際﹐雙掌向$N拍去。~
 Chance          10
-Value           20
+Value           155
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -60,7 +60,7 @@ Description
 $n身體向上飄起﹐兩腿如落葉飛花般﹐向著$N當頭罩落﹐正是夜夢天舞中的$Y『落英繽
 紛』$Z。~
 Chance          10
-Value           20
+Value           185
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -69,7 +69,7 @@ End
 Description
 $n雙腿向前蹬出﹐身體化為一道美麗的虹彩﹐使出一招$Y『飛花逐月』$Z擊向$N。~
 Chance          10
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -78,7 +78,7 @@ End
 Description
 $n雙手如鳥翼般向上平舉﹐使出一招$Y『白鶴掠翼』$Z﹐擊向$N。~
 Chance          10
-Value           20
+Value           260
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -88,7 +88,7 @@ Description
 $n柔指舒張﹐姿態優美﹐忽然對著$N全身大穴疾點﹐令$N難以招架﹐正是夜夢天舞中的
 $Y『天女散花』$Z。~
 Chance          10
-Value           20
+Value           305
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -98,7 +98,7 @@ Description
 $n身體開始旋轉﹐由緩而急﹐美妙的身形如鳳凰般向空飛起﹐身體四周形成一股強勁的
 氣流擊向$N﹐正是夜夢天舞最終絕學$Y『鳳舞九天』$Z。~
 Chance          10
-Value           20
+Value           360
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

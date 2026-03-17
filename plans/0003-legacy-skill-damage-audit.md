@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_ap_implemented`
+- `status = batch_as_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch AP implemented`
+- `current_batch = Batch AS implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `citizen / shoutsky` 之後的其餘孤立 high-tier attack skill
+1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `cry ghost / dream dance / drunk` 之後的其餘孤立 high-tier attack skill
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -3544,6 +3544,231 @@
   - 改用 `IPC KEY 5585`
 - 檢查：
   - `log/smoke-batch-aa.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AQ Pre-Check
+
+### Scope
+
+- `cry ghost`
+
+### Reference Basis
+
+- runtime `skill/c/cry_ghost.ski`
+  - 單段 `Value 20`
+  - `Cost 20 / Wait 1 / Weapon WEAPON_SPEAR / Check check_spear_attack`
+  - `Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `cry ghost`
+  - `family = legacy-page:cry ghost`
+  - combat 維度顯示單段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`cry ghost`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 1`
+- weapon / check: `WEAPON_SPEAR / check_spear_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `1`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這是單段但明確玩家向的槍系必殺招，不是一般低階雜技。
+- 既然只有一段，`Value 20` 幾乎沒有成立空間，因此適合直接做單點補值。
+- 本批只調單段 `Value`，保留其高速 spear finisher identity。
+
+## Batch AQ Result
+
+### Scope
+
+- `cry ghost`
+
+### Runtime Changes
+
+`cry ghost`
+
+- before: `20`
+- after: `260`
+
+### Design Notes
+
+- 本批把 `cry ghost` 拉回可成立的高速必殺招，而不擴成多段或改節奏。
+- 這樣能先修掉清值模板問題，同時保留它作為單段槍系大招的辨識度。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-as.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AR Pre-Check
+
+### Scope
+
+- `dream dance`
+
+### Reference Basis
+
+- runtime `skill/d/dreamdance.ski`
+  - `Value` 全 `20`
+  - `Cost 20 / Wait 12 / Check check_unrigid_attack`
+  - `Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `dream dance`
+  - `family = legacy-page:dream dance`
+- `area/limbo/obj/255.obj`
+  - book slot 對應 `SLOT_DREAMDANCE`
+
+### Mandatory Pre-Check Snapshot
+
+`dream dance`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 12`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `7`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這是偏重節奏的舞系攻擊技，`Wait 12` 表示單段威力應高於快節奏小招。
+- 多段描述完整但全 `20`，顯示其模板被壓平。
+- 本批只回填 `Value` 階梯，保留舞系技的出手節奏。
+
+## Batch AR Result
+
+### Scope
+
+- `dream dance`
+
+### Runtime Changes
+
+`dream dance`
+
+- before: `20 x 7`
+- after: `130, 155, 185, 220, 260, 305, 360`
+- average: `230.71`
+
+### Design Notes
+
+- 本批讓 `dream dance` 保持重節奏、姿態型的單點技能定位。
+- 這樣能和 `Wait 1` 的快節奏技維持差異，同時讓後段有明顯高階感。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-as.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AS Pre-Check
+
+### Scope
+
+- `drunk`
+
+### Reference Basis
+
+- runtime `skill/d/drunk.ski`
+  - `Value` 全 `20`
+  - `Cost 20 / Wait 1 / Check check_unrigid_attack`
+  - `Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `drunk`
+  - `family = legacy-page:drunk`
+- `area/limbo/obj/256.obj`
+  - 仍存在 `drunk book`
+- `area/loyang/mob/564.mob`
+  - 現存 `drunk man` 樣本，說明這套模板仍在世界中被保留
+
+### Mandatory Pre-Check Snapshot
+
+`drunk`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 1`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `8`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這是快節奏醉拳模板，雖然帶有 flavor，但 current-game 與 area 樣本都證明它仍是活的 runtime skill。
+- 因為 `Wait 1`，均值不應拉到慢節奏重技那麼高，但全 `20` 仍然失真。
+- 本批只回填 `Value` 階梯，保留其高速、花式的醉拳 identity。
+
+## Batch AS Result
+
+### Scope
+
+- `drunk`
+
+### Runtime Changes
+
+`drunk`
+
+- before: `20 x 8`
+- after: `95, 110, 125, 145, 170, 200, 235, 275`
+- average: `169.38`
+
+### Design Notes
+
+- 本批讓 `drunk` 維持快節奏、偏中低單段但持續成長的風格。
+- 這樣既不會壓成清值模板，也不會和重節奏高階拳技混成同一種體感。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-as.log`
     - 出現 `三國歪傳之降龍伏虎開始正常運作`
   - `debug/failenable`
     - 無新增內容
