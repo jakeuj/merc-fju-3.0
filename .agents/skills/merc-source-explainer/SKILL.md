@@ -15,7 +15,7 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
    - `docs/current-game/skill-loader-reference.md`
    - `docs/current-game/skill-constants.md`
    - `docs/current-game/skill-pry-crosswalk.md`
-4. 需要講程式邏輯時，直接開對應的 `src/*.c`、`include/*.h`、`src/merc.sample.ini` / `src/merc.ini`、`document/*.txt`，不要只憑記憶回答。
+4. 需要講程式邏輯時，直接開對應的 `src/*.c`、`include/*.h`、`src/merc.sample.ini` / `src/merc.ini`、`document/*.txt`，不要只憑記憶回答；若只是先找 legacy 文件入口，可先看 `docs/current-game/legacy-documentation.md`。
 5. 如果文件與程式不一致，以 `src/*.c`、`src/merc.h`、runtime data 檔為準，並明確指出哪個說明頁需要回補。
 6. 回答時優先把「入口檔案」「呼叫鏈」「對應資料檔」一起講清楚，讓使用者知道下一步該去哪裡改。
 7. 如果問題其實是區域建置或管理員指令，改用更專門的技能，例如 `merc-area-builder` 或 `mud-command-handbook`。
@@ -25,7 +25,7 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 - 目前 repo 根目錄沒有 `start-merc.sh`、`start-merc.ps1`、`start-merc.cmd`、`scripts/bootstrap.sh` 這類 wrapper；講啟動流程時應以 `README.md` 與 `src/startup` 為準
 - `src/startup` 是 legacy `csh` launcher，`src/startup.bash` 則是目前給 bash 環境使用的入口；若使用者貼的是 `/bin/zsh .../startup.bash` 或 `BASH_SOURCE[0]: parameter not set`，要先指出是 shell 不相容，不要誤判成 MUD 載入失敗
 - `docs/` 目前主要是 `docs/3yWebsite/` 文件站，不要引用不存在的 `docs/DATA_LAYOUT.md` 或 `docs/RUNTIME_RESET.md`
-- `docs/current-game/` 現在已有 hand-maintained 的 `.ski` / `pry` 文件頁，可當作技能資料格式與玩家文案對照的第一層入口，但涉及 runtime 爭議時仍要回頭查 `src/load.c`、`src/act_info.c`、`src/merc.h`
+- `docs/current-game/` 現在已有 hand-maintained 的 `.ski` / `pry` 文件頁，也開始承接 `document/` 的 Pages 化入口；可當作技能資料格式、玩家文案對照與 legacy 手冊導覽的第一層入口，但涉及 runtime 爭議時仍要回頭查 `src/load.c`、`src/act_info.c`、`src/merc.h`
 - `scripts/` 目前可見腳本只有 `scripts/convert_big5_to_utf8.py`
 - `etc/` 目前存在多個 runtime / 半動態檔案，但工作樹裡沒有 `etc/merc.ini`；設定解說應先看 `src/merc.sample.ini` 與本機生成的 `src/merc.ini`，再說明部署時可能會複製到 `etc/`
 
@@ -47,6 +47,8 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 
 ### 3. 遇到資料格式問題時回到文件
 - 房間、NPC、物件、reset、商店格式優先看：
+- `docs/current-game/legacy-documentation.md`
+- `docs/current-game/object-file-format.md`（物品格式時優先）
 - `document/room.txt`
 - `document/mob.txt`
 - `document/obj.txt`
@@ -143,6 +145,8 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 - `docs/current-game/skill-loader-reference.md`
 - `docs/current-game/skill-constants.md`
 - `docs/current-game/skill-pry-crosswalk.md`
+- `docs/current-game/legacy-documentation.md`
+- `docs/current-game/object-file-format.md`
 - `document/mob.txt`
 - `document/obj.txt`
 - `document/room.txt`

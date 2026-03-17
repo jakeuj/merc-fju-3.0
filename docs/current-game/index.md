@@ -10,6 +10,15 @@ title: Current Game Docs
 ## 目前已有內容
 
 - [技能補充說明](./skills.html)
+- [Legacy `document/` 參考手冊入口](./legacy-documentation.html)
+- [`document/README` 導讀](./legacy-readme.html)
+- [`.mob` 怪物檔格式說明](./mobile-file-format.html)
+- [`.obj` 物品檔格式說明](./object-file-format.html)
+- [`.roo` 房間檔格式說明](./room-file-format.html)
+- [`.res` 重置檔格式說明](./reset-file-format.html)
+- [`.shp` 商店檔格式說明](./shop-file-format.html)
+- [`index` 區域標題檔格式說明](./title-file-format.html)
+- [Legacy 版權宣告](./copyright-notice.html)
 - [`.ski` 技能檔格式說明](./skill-file-format.html)
 - [`.ski` 進階 Loader Reference](./skill-loader-reference.html)
 - [`.ski` 常數查表](./skill-constants.html)
@@ -29,3 +38,4 @@ title: Current Game Docs
 - area 世界規劃、重建追蹤與單區 spec 仍以 repo 內的 `area/world_map.md`、`area/rebuild_plan.md`、`plans/area/*.md` 為主；這裡只放 Pages 版補充索引。
 - 若未來新增更多現行版本文件，優先放在 `docs/current-game/`，不要直接混寫到舊站鏡像。
 - 可讀型技能頁目前由 `scripts/generate_current_game_skills_pages.py` 從 `skills.json` 生成；目前已覆蓋舊站各葉節點分類，後續新增技能資料時優先沿用同一條生成流程。
+- `document/*.txt` 這類 legacy authoring reference 若要補進 Pages，優先整理成 `docs/current-game/` 的可讀頁面，再從這裡掛入口。

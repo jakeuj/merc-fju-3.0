@@ -27,7 +27,7 @@ source of truth 要分兩種：
 ## 快速開始
 1. 先確認任務是要修改既有區域、搬修舊版內容，還是新增區域。
 2. 先讀 `area/directory.lst` 與目標區域目錄，理解實際載入順序與檔案結構。
-3. 以 `document/README`、`document/mob.txt`、`document/obj.txt`、`document/room.txt`、`document/reset.txt`、`document/shop.txt` 為主要格式依據；若要確認原始 Merc parser / vnum 習慣，再補看 `doc/area-file-format.txt`、`doc/vnum-assignments.txt`、`doc/merc-release-notes.txt`。
+3. 以 `document/README`、`document/mob.txt`、`document/obj.txt`、`document/room.txt`、`document/reset.txt`、`document/shop.txt` 為主要格式依據；若希望直接在 GitHub Pages / `docs/` 路徑閱讀，先看 `docs/current-game/legacy-documentation.md`，其中 `.obj` 物品格式已有整理頁 `docs/current-game/object-file-format.md`；若要確認原始 Merc parser / vnum 習慣，再補看 `doc/area-file-format.txt`、`doc/vnum-assignments.txt`、`doc/merc-release-notes.txt`。
  目前專案使用的是拆目錄資料結構，不是原始單檔 `.are`；若回看 `doc/area-file-format.txt` 裡的 `#AREA/#HELPS/#MOBILES/#OBJECTS/#ROOMS/#RESETS/#SHOPS/#SPECIALS`，要把它當概念對照，不要逐段照抄成 3.0 目錄格式。
 4. 需要世界觀、技能、國家系統、交通、公告脈絡時，連同 `docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md` 一起使用，從 `docs/3yWebsite/docs/*.md` 與 `docs/3yWebsite/docs/data/*.json` 取資料。
 4.1 若任務是在規劃新 area、補 teacher NPC、重排 world link、補新手導流或設計職業服務節點，優先抽查兩份舊站資料：
@@ -145,7 +145,7 @@ source of truth 要分兩種：
 ### 3. 處理資料檔
 - `index/mob/obj/roo/res/shp/map`、`#Keyword/#Job/#Enquire`、`external: true` 與 scaffold generator 的細則，讀 `references/file-handling-rules.md`
 - 若任務重點是修出口、整合新 area、補 `#Enquire`、比對地圖檔或確認 `.roo` schema，這份檔要補讀
-- 若任務有新增或修改 `mob/*.mob` / `obj/*.obj`，尤其是 mob `Class` 或特殊 `ItemType`，也要補讀這份檔；不要只照文件猜常數或 `Value*` 欄位，先比對 repo 內已成功載入的同類範例
+- 若任務有新增或修改 `mob/*.mob` / `obj/*.obj`，尤其是 mob `Class` 或特殊 `ItemType`，也要補讀這份檔；其中 `.obj` 可以先從 `docs/current-game/object-file-format.md` 快速定位欄位，再回頭核對 `document/obj.txt` 與 repo 內已成功載入的同類範例，不要只照單一文件猜常數或 `Value*` 欄位
 - 若任務有新增 `skill/*.ski`、替 NPC 換技能、或讓新的 mob `Enable` 指到新技能，先搜尋 repo 內是否已有同名 skill / 同 slot / 同 `skill.lst` key；新增 skill 只是 area data 的一部分，但驗證要求應比一般 `mob/obj` 更高
 - NPC 專用且不打算讓玩家學習的技能，預設明確寫 `Valid NO`、`CanAsk NO`、`Teach NO`；但名稱、slot 與 loader 登錄仍要完整，不能因為是 NPC-only 就省略
 - 若任務明確是在追「mob 技能偏弱 / 舊技能殘留 / 技能鏈重建」，再補讀 `references/skill-combat-chain-rebuild.md`；這類任務要先區分全域係數、legacy skill 合理保留、與真的需要 runtime 替換的錯位樣本
@@ -176,6 +176,13 @@ source of truth 要分兩種：
 6. 若環境允許，做實際載入或 smoke test，並確認成功訊號與 `debug/` / `log/` 沒有新增 area 錯誤；必要時用 `python3 tools/log_parse_summary.py` 與 `python3 tools/area_acceptance_gate.py <area_slug>` 取摘要與 gate 建議
 7. 完整驗證清單讀 `references/validation-checklist.md`
 
+## 文件使用建議
+
+- 需要快速導覽 legacy area 手冊時，先看 `docs/current-game/legacy-documentation.md`
+- 需要 `.obj` 欄位與區塊摘要時，先看 `docs/current-game/object-file-format.md`
+- 需要完整舊文細節、常數表或少見欄位，再回頭看 `document/obj.txt`
+- 若 Pages 整理頁與 runtime / loader 行為不一致，以 `src/load.c`、`src/merc.h`、`data/symbol.def` 與已成功載入範例為準，並回補 docs
+
 ## 參考資料
 - `document/README`
 - `document/mob.txt`
@@ -183,6 +190,8 @@ source of truth 要分兩種：
 - `document/room.txt`
 - `document/reset.txt`
 - `document/shop.txt`
+- `../../docs/current-game/legacy-documentation.md`
+- `../../docs/current-game/object-file-format.md`
 - `doc/area-file-format.txt`
 - `doc/vnum-assignments.txt`
 - `doc/merc-release-notes.txt`
