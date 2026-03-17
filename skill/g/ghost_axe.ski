@@ -52,7 +52,7 @@ $P$n將手中盤斧高舉過頂﹐腳步一沉﹐向上一躍﹐盤斧如流星�
 『神盤鬼斧六絕式』$P之起首式$Y『二神垂眉』$P如驚鴻一撇般令$N毫無警訊﹐不
 瞬間盤斧已來至$N的面前$Z。~
 Chance          20
-Value           20
+Value           95
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -63,7 +63,7 @@ $P$n身形一轉﹐手中盾盤如陀螺般旋轉不停﹐使出$W『神盤鬼�
 『神轉天盤』$P牽動著周遭的氣流如漩渦般將你罩住﹐就在$N錯愕之際﹐渦流中心﹐
 猛然劈出七七四十九斧$Z。~
 Chance          20
-Value           20
+Value           115
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -74,7 +74,7 @@ $P$n身形一矮﹐使出$W『神盤鬼斧六絕式』$P第三招$S『神行飄�
 揮出十三次﹐攻向$N的下盤﹐右手利斧向右橫劈﹐伸手穿梭三十七次﹐招招攻向$N的
 致命之處$Z。~
 Chance          20
-Value           20
+Value           135
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -85,7 +85,7 @@ $P$n豎地向右橫移數步﹐左肩微沉﹐使出$W『神盤鬼斧六絕式�
 工』$P右手鬼斧彷彿如地獄幽靈般﹐突然從$N的背後劈至﹐一股寒氣從$n的斧中透出﹐
 $N倉皇回身之際﹐已被利斧劈成兩半$Z。~
 Chance          20
-Value           20
+Value           155
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -96,7 +96,7 @@ $P$n腳蹋七星步﹐豎進乍退﹐穿梭遊移不定﹐突然身體一弓﹐$
 第五式$G『鬼決天河』$P盤斧齊出﹐從$N的兩惻疾劈而至﹐一波波強烈的勁氣﹐括的地
 面如枯木般崩裂﹐遙遙罩向$N周身七十二大穴$Z。~
 Chance          20
-Value           20
+Value           180
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -107,7 +107,7 @@ $P$n手中盤斧疾揮﹐不斷在雙掌間交換﹐突然間彷彿空間被掏�
 正是$W『神盤鬼斧六絕式』$P最後一式$R『鬼哭神嚎』$P$n弓身抬腿﹐右斧從左脅下閃
 電劈出七十二下﹐左盤乍伸疾轉﹐從$N頭上狂擊而下$Z。~
 Chance          20
-Value           20
+Value           210
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

@@ -1215,6 +1215,107 @@
   - `debug/error`
     - 無新增內容
 
+## Batch K Pre-Check
+
+### Scope
+
+- `ghost axe`
+- `tiger axe`
+
+### Reference Basis
+
+- `/Users/jakeuj/auggie/3yWebsite/skill/axe.html`
+  - 明確給出 `ghost axe -> tiger axe`
+  - `tiger axe` 以 `ghost axe` 為 prerequisite
+- `docs/current-game/skills/axe.md`
+  - current-game 已把這條鏈整理成 `legacy-page:axe`
+  - runtime 仍顯示兩者 damage values 幾乎全 `20`
+- runtime `skill/*.ski`
+  - `ghost_axe.ski`
+    - `Associate SLOT_TIGER_AXE`
+    - `CanAsk YES / Teach YES / Valid YES`
+  - `tiger_axe.ski`
+    - `Associate -1`
+    - `CanAsk YES / Teach NO / Valid YES`
+
+### Mandatory Pre-Check Snapshot
+
+`ghost axe`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `30 / COST_MOVE / 15`
+- weapon / check: `WEAPON_AXE / check_axe_attack`
+- canask / teach / valid: `YES / YES / YES`
+- damage entries: `6`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`tiger axe`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `35 / COST_MOVE / 18`
+- weapon / check: `WEAPON_AXE / check_axe_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `13`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這條 axe 鏈和最近幾批最大的不同，是它目前仍屬真正可 ask / teach 的玩家向 runtime 技能，不是封存鏈。
+- 兩者在 `Chance`、`Weapon`、`Check` 上同型，但 `tiger axe` 本來就更重、更慢、段數也更多，因此本批最合理的修法仍是只重建 `Value`，保留既有重兵節奏。
+- `ghost axe` 站穩高成本 root，`tiger axe` 則承接高階重斧終點。
+- area `*.mob` 目前未看到這兩招的現成 `Enable` 樣本，因此本批先不做 mob fallout。
+
+## Batch K Result
+
+### Scope
+
+- `ghost axe`
+- `tiger axe`
+
+### Runtime Changes
+
+`ghost axe`
+
+- before: `20 x 6`
+- after: `95, 115, 135, 155, 180, 210`
+- average: `148.33`
+
+`tiger axe`
+
+- before: `20 x 13`
+- after: `180, 205, 230, 255, 280, 305, 335, 365, 400, 440, 485, 540, 600`
+- average: `355.38`
+
+### Design Notes
+
+- 本批只調 `Value`，刻意保留 axe 鏈既有的高成本、慢節奏與重兵器手感。
+- `ghost axe` 不再是全 `20` 的假 root，而是能成立為高成本玩家向入門斧法。
+- `tiger axe` 以更多段數與更高平均值承接真正的高階重斧端點，不必再靠額外調整 `Wait / Cost` 來硬做差距。
+
+### Validation
+
+- `make -C src -f Makefile.lin merc`
+- `make -C src merc`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-k.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/badobject`
+    - 無新增內容
+  - `debug/error`
+    - 無新增內容
+
 ## Batch J Pre-Check
 
 ### Scope

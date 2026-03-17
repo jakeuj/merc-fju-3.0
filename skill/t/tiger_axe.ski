@@ -36,7 +36,7 @@ $n縱身而上﹐忽地身形一轉﹐使出$Y『霸虎戰訣』第一式「參�
 $N橫劈過去﹐$N身在半空﹐無法避讓﹐只要身子再沉尺許﹐立時雙足齊斷﹐若是沉下
 三尺﹐則齊腰被$O斬為兩截﹗﹗﹗~
 Chance          20
-Value           20
+Value           180
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -48,7 +48,7 @@ $n運起十層功力﹐將真力貫注$O﹐霎時手中之$O因真氣的貫入�
 攻﹐使出$Y『霸虎戰訣』第二式「倒行沌波」$Z﹐手中的$O若猛虎出閘﹐一連四砍﹐
 直劈$N的下盤﹗﹗~
 Chance          20
-Value           20
+Value           205
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -60,7 +60,7 @@ $n手中$O連劃﹐對$N劃出兩道血紅的十字氣勁﹐祭出$Y『霸虎戰
 鴻」$Z﹐只見氣勁忽然埋入地底﹐再從$N的四周地面挺出向$N亂劈﹐$N頓時不知所措
 連續被砍中三斧﹐在傷口之上留下十字的血痕﹗﹗﹗~
 Chance          20
-Value           20
+Value           230
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -72,7 +72,7 @@ $n將體內真氣運轉全身﹐周身瞬時凝出一股強大的氣流﹐殺招
 「逆風倒旋」$Z﹐$n的四周氣流逐漸形成強烈的狂風﹐$n將$O舞成一片強大的攻擊網
 ﹐將$N完完全全鎖入攻擊網之內﹗﹗﹗~
 Chance          20
-Value           20
+Value           255
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -84,7 +84,7 @@ $n身形飄然而上﹐$n揮動手中$O由空向$N疾衝而去﹐使出$Y『霸�
 天飛鴻」$Z﹐只見$n手中的$O像一道閃電﹐轟隆向$N直劈而下﹐$N面臨這突然的一式
 竟閃無可閃﹐被這斧貫穿而過﹗﹗﹗~
 Chance          20
-Value           20
+Value           280
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -95,7 +95,7 @@ Description
 $n的斧招環環相扣﹐連出$Y「參天金鱗」、「倒行沌波」、「地心洩鴻」$Z﹐一招接
 著一招﹐攻的$N措手不及﹐只好將殺招全數接下﹗﹗﹗~
 Chance          20
-Value           20
+Value           305
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -107,7 +107,7 @@ $n鼓動全身真氣﹐內勁流轉﹐一連使出$Y「參天金鱗」、「地�
 」、「四鏈金龍」、「橫掃千軍」$Z﹐一連五式似有無數迅雷疾風互衝激盪向$N而去
 ﹗﹗﹗~
 Chance          20
-Value           20
+Value           335
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -119,7 +119,7 @@ $n腳踏$S剪雲步之【璧海情空】$Z﹐喝然使出$Y『霸虎戰訣』第
 ﹐只見由$n所揮出之強烈氣勁﹐逐漸形成四條張牙舞爪的金龍﹐如疾電怒雷般向$N衝
 去﹐四條金龍圍繞著$N用其鋒利之爪將$N撕的體無完膚 ﹗﹗﹗~
 Chance          20
-Value           20
+Value           365
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -131,7 +131,7 @@ $n將$O橫置於胸﹐大喝一聲﹐使出$Y『霸虎戰訣』第七式「橫�
 山河﹐一陣狂暴如暴虎的氣勁向$N直衝而去﹐不知是發生何事$N居然被此情景所嚇﹐
 當回過神要抵擋之時﹐發覺為時已晚﹗﹗﹗~
 Chance          20
-Value           20
+Value           400
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -144,7 +144,7 @@ $Z$n的天靈穴冒出一股股的真氣﹐而真氣帶動四周之氣流﹐氣�
 全身﹐形成一股強大的護身鬥氣﹐手中之$O﹐氣勢磅礡﹐直直向$N的全身劃出三道焦
 黑的傷口﹗﹗﹗~
 Chance          20
-Value           20
+Value           440
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -156,7 +156,7 @@ $n突然陷入瘋狂﹐口中大喊：$Y【 三殘元液﹗﹗銀血渡體﹗﹗
 ﹗﹗】$Z只見$n的左邊身形化為一頭黑翼狂龍﹐而右化為白額霸虎﹐左施空中狂龍驚天
 之式﹐右出地上霸虎裂地之招﹐兩式相佐相成﹐霸氣十足﹐$N連連被劈中數招﹗﹗﹗~
 Chance          20
-Value           20
+Value           485
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -169,7 +169,7 @@ Description
 虹】$Z$A$n將所凝之冰聚集於手中﹐手中巨斧順勢凝出萬道之冰鋒﹐便朝$N狂斬而去﹗
 ﹗﹗~
 Chance          20
-Value           20
+Value           540
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -181,7 +181,7 @@ $n使出霸虎戰訣之霸虎絕式$Y『天∼宇∼凝∼殺∼機•一∼氣�
 手中$O的氣勁劃破大地﹐迅速的劈向$N﹗﹗只見$N的身體已被$O的形成之強烈氣爆撕的
 粉身碎骨﹗﹗﹗~
 Chance          20
-Value           20
+Value           600
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
