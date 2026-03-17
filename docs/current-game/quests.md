@@ -14,6 +14,7 @@ title: Current Game Quests
 - `docs/current-game/quests.md`：現行 repo 的 quest / question 補充說明。
 - `docs/current-game/quests.json`：目前 runtime 的 quest / question 機器可讀台帳。
 - `area/rebuild_plan.md`、`plans/area/*.md`：仍然是 area rebuild 專用追蹤，不取代 quest registry。
+- 預設 area rebuild 不要求補 `data/quest`；只有單區 runtime flow 明確依賴 quest mark 時，才把 quest data 視為該區附帶交付物。
 
 ## Runtime Source Of Truth
 
@@ -100,7 +101,8 @@ area 內容本身不直接提供 quest registry，但 area 的 mobprog 仍可能
 
 - `0` 個 quest entries 不是 area loader 壞掉，而是 `data/quest` 目前尚未填入正式 `#Quest` 條目。
 - `30` 個 question entries 代表防呆 / 問答題庫仍有正常內容。
-- 若未來要把某段解謎正式掛進 area 設計，建議：
+- 目前 area rebuild 的正式主軸仍是 world graph、single-area spec、`.roo` 投影、boundary links 與 runtime 驗證，不是全面回補 legacy quest system。
+- 若未來要把某段解謎正式掛進 area 設計，建議只在該單區真的依賴 quest mark 時才升級處理：
   - 在單區 plan 記錄 quest mark 依賴
   - 在 `data/quest` 補正式條目
   - 再同步更新 `docs/current-game/quests.json`

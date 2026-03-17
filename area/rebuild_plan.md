@@ -24,6 +24,18 @@
 - 之後也要補看本輪 log 是否有 area 相關 warning / error
 - 只有在上述檢查都完成後，才可把 `delivery_gate` 推進到 `implementation_ready_for_commit` 或 `validated_ready_to_advance`
 
+## Quest Boundary
+
+- `data/quest` / `data/question` 預設不屬於 area rebuild 的核心交付物。
+- 啟動時若看到 `系統載入 0 個解謎資料。`，在沒有單區 quest 依賴證據前，不視為 tracker blocker。
+- 只有當當前 area 的 runtime flow 明確使用 `mpsetquest`、`mpremquest`、`isquest`，或某段 puzzle / branch 必須依賴 quest flag 才能成立時，才把 quest data 納入該區 scope。
+- 一旦納入，單區 plan / tracker 至少要補：
+  - quest keyword 清單
+  - 觸發來源
+  - `data/quest` 需新增或修改的條目
+  - quest-dependent 驗證路徑
+- 若當前 area 沒有 quest mark 依賴，應優先維持 spec-first area workflow，不要為了補 legacy quest system 而擴張本輪 scope。
+
 ## References
 
 - 全局計畫：`plans/0001-world-map-area-rebuild.md`

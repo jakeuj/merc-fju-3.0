@@ -48,6 +48,30 @@
 - 若需要 `.roo` scaffold，使用 `.agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py`
 - 題材與沉浸式設計使用 `.agents/skills/merc-area-builder/references/theme-design-patterns.md`
 
+## Scope Boundary: Quest Data
+
+`data/quest` 與 `data/question` 屬於 current-game runtime content，但預設不屬於 area rebuild 的核心交付物。
+
+預設規則：
+
+- area rebuild 的主軸仍是 world graph、單區 plan、`map.md`、`.roo` 投影、boundary links、`index / mob / obj / res / shp / directory.lst` 與必要驗證。
+- 只因為啟動時出現 `系統載入 0 個解謎資料。`，不構成 area rebuild blocker。
+- 不得把「補齊 legacy quest system」當成每個新 area 的隱含交付要求，避免整體計畫被舊設計綁回去。
+
+只有在單區 implementation 明確依賴 quest mark 狀態時，才把 `data/quest` 視為該區的附帶交付物。典型條件包括：
+
+- area 的 mobprog 或事件流程有使用 `mpsetquest`、`mpremquest`、`isquest`
+- 房間、互動物件或劇情分支必須靠 quest flag 才能開啟、阻擋、轉向或判定完成
+- 若不補 `data/quest`，該區 runtime flow 會出現未知 keyword、條件永遠不成立、或 puzzle 無法完成
+
+一旦符合上述條件，單區 plan 與工作回報至少要補：
+
+- quest 依賴是否存在
+- 使用到的 quest keyword 清單
+- 哪個 mob / room / object / command 會設定、移除或檢查這些 keyword
+- 本輪需新增或修改哪些 `data/quest` 條目
+- 驗證時如何覆蓋 quest-dependent 路徑
+
 ## Recommendation Alignment
 
 本計畫已吸收 `ref/mud-new-area-full-recommendations.md` 的方向，但採「依 repo 現況收斂」的落地方式，而不是直接把建議清單視為已存在的制度。
@@ -118,6 +142,8 @@ AREA rebuild 的預設工作單位是「一輪任務只處理一個 area milesto
 - `planned_vnum_range` 代表首段保留區，不等於目前已落地的最後一號
 - `delivery_gate` 雖然由 tracker 驅動，但單區 plan 也應保留當前語意與變更理由，方便回讀設計脈絡
 - 若這輪只是先做 spec、尚未動 runtime data，也要先把 external links 與 boundary assumptions 寫清楚
+- 若單區沒有 quest mark 依賴，不必因為 `data/quest` 目前為空而補 quest 欄位
+- 只有當單區 runtime flow 明確依賴 `mpsetquest`、`mpremquest`、`isquest` 時，才需要在單區 plan 額外記錄 quest keyword、觸發來源與驗證方式
 
 ## Ref Usage Policy
 
