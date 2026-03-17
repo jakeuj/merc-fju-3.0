@@ -39,7 +39,7 @@
 ## References
 
 - 全局計畫：`plans/0001-world-map-area-rebuild.md`
-- 單區計畫：`plans/area/0002-loyang-outskirts.md`、`plans/area/0003-beiping-outskirts.md`、`plans/area/0004-jingxiang-road.md`、`plans/area/0019-sec-rift-core-below-deeps.md`
+- 單區計畫：`plans/area/0002-loyang-outskirts.md`、`plans/area/0003-beiping-outskirts.md`、`plans/area/0004-jingxiang-road.md`、`plans/area/0019-sec-rift-core-below-deeps.md`、`plans/area/0020-sec-rift-core-vein-abyss.md`
 - 世界圖參考：`area/world_map.md`
 - ref 索引：`ref/Readme.md`
 - 舊站 docs 參考：`docs/3yWebsite/docs/index.md`
@@ -103,7 +103,10 @@
 
 ## Candidate Queue
 
-(目前無新的 candidate area；待下一輪決定。)
+- `sec_rift_core_vein_abyss`
+  - reserved_room_block: `10501-10520`
+  - theme: `仙俠`
+  - subtheme: `裂核脈淵 / 渦核深腹`
 
 ## Todo
 
@@ -111,7 +114,33 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `sec_rift_core_vein_abyss`
+  - plan: `plans/area/0020-sec-rift-core-vein-abyss.md`
+  - spec: `area/sec_rift_core_vein_abyss/map.md`
+  - reserved_room_block: `10501-10520`
+  - theme: `仙俠`
+  - subtheme: `裂核脈淵 / 渦核深腹`
+  - ref_inputs_used:
+    - `ref/Readme.md`
+    - `area/sec_rift_core_below_deeps/map.md`
+    - `ref/world-graph.md`
+    - `ref/三國-MUD-題材分布表.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/docs/data/players.json`（repo 目前不存在，僅保留追蹤需求）
+    - `docs/3yWebsite/docs/data/skills.json`（repo 目前不存在，僅保留追蹤需求）
+    - `ref/sanguo-area-scaffold/`
+    - `mud-world-builder/`
+    - `mud-ai-map-generator/`
+    - `mudlet-map-generator/`
+    - `mud-world-map-editor/`
+    - `mud-world-map-editor-pro/`
+    - 各類經濟/勢力/歷史事件模擬系統
+  - theme_basis:
+    - `area/sec_rift_core_below_deeps/map.md`
+    - `ref/world-graph.md`
+    - `ref/三國-MUD-題材分布表.md`
+  - compliance_check: `compliant；依既有地下鏈向下 world link 完成單區 implementation 里程碑，並維持 ref/Readme.md 容許的 spec-first 與 runtime 落地範圍`
+  - delivery_gate: `implementation_ready_for_commit`
 
 
 ## Done
@@ -162,27 +191,26 @@
 
 ## Current Recommended Next Step
 
-目前 `sec_rift_core_below_deeps` 已完成第一輪 implementation；若要繼續使用固定 prompt，下一步建議規劃其下方更深層裂核渦核區（暫名 `sec_rift_core_vein_abyss`）的單區 plan。
+目前 `sec_rift_core_vein_abyss` 已完成第一輪 implementation，包含 `index / roo / mob / obj / res / shp`、邊界出口、`directory.lst` 掛載與 current-game 台帳同步；本輪已通過 WSL Linux build 與 smoke test，現在最合適的下一步是先提交這個 implementation milestone。
 
-在沒有現成 `todo` 的前提下，下一輪建議可走兩條路：
+下一輪建議動作：
 
-1. 延續地下鏈，為 `sec_rift_core_below_deeps` 之下的更深裂核渦核區建立新的單區 plan。
-2. 或先做一個很短的 docs-assisted candidate pass：
-3. 從 `docs/3yWebsite/docs/data/players.json` 抽出高頻出現的教學 / 補給 / 轉職 / 練功節點。
-4. 從 `docs/3yWebsite/docs/data/skills.json` 核對這些節點對應的技能鏈與 teacher 服務。
-5. 再決定下一個 area 應該優先補哪條路段、城郊、訓練區或職業耦合節點，而不是只看世界圖空白處。
+1. 先提交 `sec_rift_core_vein_abyss` 的 implementation milestone
+2. 提交後再決定是否把此區標成 `done` / `validated_ready_to_advance`
+3. 若要繼續地下鏈，下一區可從更深的禁底封脈區單區 plan 開始
+4. 若不繼續地下鏈，也可回到 candidate pass 重新盤點其他路線
 
 （註：目前 repo 無 `docs/3yWebsite/docs/data/players.json` 與 `skills.json`，下一輪若要做 docs-assisted pass，需先補回 dataset 或改用現存資料來源。）
 
 語意提醒：
 
-- 目前已沒有 `in_progress` 項目，因此若再次使用固定 prompt，需先補出新的 candidate area / todo 項目
+- 目前已有 `in_progress` 項目 `sec_rift_core_vein_abyss`，再次使用固定 prompt 時應優先續做此區，不得跳到其他候選
 - `sec_rift_core_below` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0018-sec-rift-core-below.md` 回查
 - `sec_rift_core_below_deeps` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0019-sec-rift-core-below-deeps.md` 回查
-- 依新 room reservation policy，`sec_rift_below` 已使用 `9501-9520`，`sec_rift_core` 已使用 `9601-9620`，`sec_rift_deeps` 已完成 `9701-9712` 第一版落地，`sec_rift_prison_core` 已完成 `10001-10012` 第一版落地，`sec_rift_underseal_dais` 已完成 `10101-10112` 第一版落地，`sec_rift_true_core` 已完成 `10201-10212` 第一版落地，`sec_rift_core_below` 已完成 `10301-10312` 第一版落地，`sec_rift_core_below_deeps` 已完成 `10401-10412` 第一版落地
+- 依新 room reservation policy，`sec_rift_below` 已使用 `9501-9520`，`sec_rift_core` 已使用 `9601-9620`，`sec_rift_deeps` 已完成 `9701-9712` 第一版落地，`sec_rift_prison_core` 已完成 `10001-10012` 第一版落地，`sec_rift_underseal_dais` 已完成 `10101-10112` 第一版落地，`sec_rift_true_core` 已完成 `10201-10212` 第一版落地，`sec_rift_core_below` 已完成 `10301-10312` 第一版落地，`sec_rift_core_below_deeps` 已完成 `10401-10412` 第一版落地，`sec_rift_core_vein_abyss` 已保留 `10501-10520` 作為下一段首版 block
 - 既有地下鏈 `9451/9461/9481/9491` 保留原狀，不在這一輪 retroactive 重編
 
 
 建議可直接使用的 prompt：
 
-`先盤點下一個可接續的 area candidate，或為 sec_rift_core_below_deeps 之下的更深裂核渦核區建立新的單區 plan。`
+`sec_rift_core_vein_abyss 已可提交 implementation milestone；提交後再決定下一個 area。`

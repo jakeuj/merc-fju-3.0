@@ -1,0 +1,24 @@
+Vnum            10512
+Name            脈淵沉檻~
+Description
+沉檻下方已看不見實體地面，只見整片黑紅脈潮沿裂縫向更深處旋落，像要把所有聲息都吞進禁底封脈。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        10511
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         深口~
+End
+
+#Enquire
+Keyword         封脈~
+End
+
+End

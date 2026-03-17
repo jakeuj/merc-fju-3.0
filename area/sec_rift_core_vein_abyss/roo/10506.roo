@@ -1,0 +1,16 @@
+Vnum            10506
+Name            脈裂聽臺~
+Description
+聽臺邊緣裝著殘缺的聽脈銅盤，盤面會隨下層共鳴微微顫鳴，像在替更深處的巨大心跳數拍。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

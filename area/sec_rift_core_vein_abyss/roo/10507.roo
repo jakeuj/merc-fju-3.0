@@ -1,0 +1,24 @@
+Vnum            10507
+Name            裂庭斷階~
+Description
+斷階一路沒入半淹的側庭，地上殘留大片焦黑拖痕，像有沉重器具曾被匆忙拖往更深處。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

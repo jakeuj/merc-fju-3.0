@@ -1,0 +1,32 @@
+Vnum            10504
+Name            倒灌觀井~
+Description
+觀井旁的鎮桿已被脈潮磨成傾斜姿態，下方潮流卻仍不時反捲而上，像在試探整條承脈路徑的裂口。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         倒灌~
+End
+
+#Enquire
+Keyword         鎮桿~
+End
+
+End

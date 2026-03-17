@@ -1,0 +1,24 @@
+Vnum            10502
+Name            環脈踏梁~
+Description
+踏梁沿著深腹外圈延展，石面滿是被脈潮反覆沖刷後留下的光滑凹槽，踩上去像踏在溫熱獸骨上。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10501
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

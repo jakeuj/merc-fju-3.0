@@ -1,0 +1,32 @@
+Vnum            11503
+Name            sunken threshold keeper~
+ShortDesc       沉界守檻者~
+Description
+一名沉界守檻者靜立在井緣斷鏈旁，目光像穿過你直望更深的黑紅脈潮，
+彷彿整個人都被下層封脈意志所牽制。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       110
+Level           66
+Hitroll         4
+Protect         0
+Damroll         4
+Str             16
+Int             15
+Wis             16
+Dex             14
+Con             16
+Hp              9000
+Mana            640
+Move            300
+Class           0
+Gold            760
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

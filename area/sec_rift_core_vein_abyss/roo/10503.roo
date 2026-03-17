@@ -1,0 +1,32 @@
+Vnum            10503
+Name            淵環前帶~
+Description
+前帶半包圍著一處巨大脈坑，坑底有無數紅黑細線來回交錯，彷彿整個空間都在緩慢搏動。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

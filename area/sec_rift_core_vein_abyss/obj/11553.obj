@@ -1,0 +1,14 @@
+Vnum            11553
+Name            沉紋封板 封板~
+ShortDesc       一塊沉紋封板~
+Description
+一塊沉紋封板斜靠在牆邊，板縫裡仍滲出微弱光絲。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           10
+Value           0 0 0 0 0
+Weight          4
+Cost            180
+End

@@ -1,0 +1,32 @@
+Vnum            11501
+Name            abyss vein ring warden~
+ShortDesc       環脈巡鎮~
+Description
+一名披著裂潮鎮甲的環脈巡鎮守在節環旁，手中鎮杖不時擊地，像在
+校正整圈深腹環脈的震幅。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       90
+Level           62
+Hitroll         3
+Protect         0
+Damroll         3
+Str             16
+Int             14
+Wis             15
+Dex             13
+Con             15
+Hp              7600
+Mana            520
+Move            260
+Class           0
+Gold            620
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

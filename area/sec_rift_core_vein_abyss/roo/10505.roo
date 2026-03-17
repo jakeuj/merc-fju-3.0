@@ -1,0 +1,39 @@
+Vnum            10505
+Name            渦腹節環~
+Description
+數層節環套在主脈外圈，環面裂紋此起彼伏，偶爾會有赤光沿裂痕疾走，把整圈照成森冷血色。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10506
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10509
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         節環~
+Description
+節環內側刻著多代修補者留下的警示，最近一層刻痕已經被脈液熔成模糊碎線。
+~
+End
+
+End

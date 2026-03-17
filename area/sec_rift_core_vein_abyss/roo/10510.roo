@@ -1,0 +1,24 @@
+Vnum            10510
+Name            裂痕封橋~
+Description
+封橋跨在一道巨大裂痕上方，下方黑潮翻動時會把橋面照出忽明忽暗的赤色紋路。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10509
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10511
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

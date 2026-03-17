@@ -1,0 +1,32 @@
+Vnum            10501
+Name            落檻承脈臺~
+Description
+承脈臺懸在翻湧脈淵邊緣，頭頂僅剩一道遙遠紅痕，提醒來處已升成幾乎不可回望的高臺。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        10412
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         脈淵~
+End
+
+End

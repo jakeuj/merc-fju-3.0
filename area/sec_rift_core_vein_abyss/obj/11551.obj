@@ -1,0 +1,14 @@
+Vnum            11551
+Name            鎮杖節片 節片~
+ShortDesc       一枚鎮杖節片~
+Description
+一枚鎮杖節片落在地上，表面還殘留細碎赤光。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           9
+Value           0 0 0 0 0
+Weight          2
+Cost            180
+End

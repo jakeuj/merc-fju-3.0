@@ -1,0 +1,32 @@
+Vnum            10511
+Name            沉界井緣~
+Description
+井緣外只剩半圈護欄，護欄末端垂著斷裂鎮鏈，鏈上殘存的封印片正隨氣流輕輕碰撞。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10510
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        10512
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         鎮鏈~
+End
+
+#Enquire
+Keyword         井口~
+End
+
+End

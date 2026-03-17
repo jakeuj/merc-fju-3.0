@@ -1,0 +1,14 @@
+Vnum            11554
+Name            斷裂鎮鏈 鎮鏈~
+ShortDesc       一截斷裂鎮鏈~
+Description
+一截斷裂鎮鏈盤在地面，上頭還黏著碎裂封印片。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           11
+Value           0 0 0 0 0
+Weight          5
+Cost            180
+End

@@ -1,0 +1,32 @@
+Vnum            10508
+Name            逆潮沉庭~
+Description
+沉庭中央的脈槽持續逆流，把碎石與鎮紋殘片一層層捲回高處，再任其無力墜落。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10509
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         逆潮~
+End
+
+#Enquire
+Keyword         殘片~
+End
+
+End

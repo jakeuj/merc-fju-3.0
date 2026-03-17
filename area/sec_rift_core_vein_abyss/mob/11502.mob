@@ -1,0 +1,32 @@
+Vnum            11502
+Name            backflow abyss surveyor~
+ShortDesc       逆潮監測者~
+Description
+一名逆潮監測者半蹲在裂庭邊，手持量測盤與銅針，正死盯著脈槽中
+忽上忽下的逆流光痕。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       70
+Level           64
+Hitroll         3
+Protect         0
+Damroll         4
+Str             15
+Int             16
+Wis             16
+Dex             14
+Con             14
+Hp              8100
+Mana            580
+Move            280
+Class           0
+Gold            680
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

@@ -1,0 +1,32 @@
+Vnum            10509
+Name            沉紋旁廊~
+Description
+旁廊牆面鑲著沉陷的封紋板，板縫仍有細碎光絲流竄，顯示這裡的鎮壓系統只是勉強維持。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        10508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10510
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

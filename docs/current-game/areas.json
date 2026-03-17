@@ -424,6 +424,63 @@
         "plans/area/0017-sec-rift-true-core.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_core_below",
+      "title": "裂核下層",
+      "room_range": "10301-10312",
+      "load_order": 24,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_true_core",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂核下層 / 深井脈道",
+      "summary": "由裂界本核最深縱井下探到落井接臺、深井裂道與封橋前帶的裂核過渡層。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_core_below/index",
+        "area/sec_rift_core_below/map.md",
+        "plans/area/0018-sec-rift-core-below.md",
+        "area/rebuild_plan.md"
+      ]
+    },
+    {
+      "name": "sec_rift_core_below_deeps",
+      "title": "裂核深層",
+      "room_range": "10401-10412",
+      "load_order": 25,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_core_below",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂核深層 / 底脈渦腹",
+      "summary": "由裂核下層再下探到渦腹主脈、鎮紋旁廊與底潮封口的深層承接區。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_core_below_deeps/index",
+        "area/sec_rift_core_below_deeps/map.md",
+        "plans/area/0019-sec-rift-core-below-deeps.md",
+        "area/rebuild_plan.md"
+      ]
+    },
+    {
+      "name": "sec_rift_core_vein_abyss",
+      "title": "裂核脈淵",
+      "room_range": "10501-10512",
+      "load_order": 26,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_core_below_deeps",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂核脈淵 / 渦核深腹",
+      "summary": "承接裂核深層封檻臺，下探到深腹環脈、倒灌裂庭與沉界井緣的高壓前帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_core_vein_abyss/index",
+        "area/sec_rift_core_vein_abyss/map.md",
+        "plans/area/0020-sec-rift-core-vein-abyss.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

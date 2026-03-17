@@ -1,0 +1,14 @@
+Vnum            11552
+Name            倒灌量測盤 量測盤~
+ShortDesc       一具倒灌量測盤~
+Description
+一具倒灌量測盤架在石座上，盤面刻線已被脈潮熔得發黑。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           10
+Value           0 0 0 0 0
+Weight          3
+Cost            180
+End
