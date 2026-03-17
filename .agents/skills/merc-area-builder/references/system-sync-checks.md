@@ -31,6 +31,7 @@
 
 - 若區域涉及技能教師、秘笈掉落、訓練場、職業試煉、法器或技能型獎勵，先補看 `docs/3yWebsite/docs/skills.md`
 - `docs/3yWebsite/docs/skills.md` 提供的是舊版「可教導 / 僅領悟 / 秘笈 study / 任務獎勵」脈絡；若你移動技能來源，除了 `mob/obj/res/shp`，也要同步檢查 help、任務提示、掉落敘述與相關主城服務 NPC。若本輪新增了目前 repo 的新技能，再另外補 `docs/current-game/skills.md` / `docs/current-game/skills.json`
+- 若本輪改的是既有 runtime skill 模板，而不是純新增條目，也把 `docs/current-game/skills.json` 視為 generated registry：先跑 `python -X utf8 scripts/build_current_game_skill_registry.py`，再跑 `python -X utf8 scripts/generate_current_game_skills_pages.py`，避免 `skills.json` 和可讀分類頁停留在舊 damage ladder
 
 ## 國家系統
 

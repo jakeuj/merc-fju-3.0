@@ -30,6 +30,13 @@ title: Current Game Skills
 這些頁面由 `scripts/generate_current_game_skills_pages.py` 生成，後續若 `skills.json` 更新，應重新執行該 script。
 只有 `skill-file-format.md` 這類 schema / loader 說明頁是手寫維護，不走生成流程。
 
+目前推薦的同步順序是：
+
+1. `python -X utf8 scripts/build_current_game_skill_registry.py`
+2. `python -X utf8 scripts/generate_current_game_skills_pages.py`
+
+第一步會從 `skill/*.ski`、`skill/skill.lst`、舊站技能資料與既有 audit metadata 重建 `docs/current-game/skills.json`；第二步才把更新後的 registry 投影成 `skills-index.md` 與 `docs/current-game/skills/*.md`。
+
 ## 邊界
 
 - `docs/3yWebsite/`：reference-only，主要提供舊版世界觀、命名語彙、公告與技能體系脈絡。

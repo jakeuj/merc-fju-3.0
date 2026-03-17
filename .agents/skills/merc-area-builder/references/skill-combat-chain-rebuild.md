@@ -75,8 +75,11 @@
 3. 優先處理會直接影響城市守衛、宮廷守衛、城內戰鬥 NPC、常駐教學/服務 NPC 的樣本
 4. 若證據足夠，直接修改 runtime data，不要只停在分析
 5. 修改後同步更新 `docs/current-game/skill-combat-audit.json`
-6. 若判讀規則或範圍有變，再補 `plans/0002-skill-combat-chain-audit.md`
-7. 若開始動玩家向 skill ladder，也同步把 `document/mob.txt` 的 mob-side wiring 納入 pre-check：
+6. 若這輪改到 runtime `skill/*.ski`，同步重建 `docs/current-game/skills.json` 與可讀分類頁：
+ - `python -X utf8 scripts/build_current_game_skill_registry.py`
+ - `python -X utf8 scripts/generate_current_game_skills_pages.py`
+7. 若判讀規則或範圍有變，再補 `plans/0002-skill-combat-chain-audit.md`
+8. 若開始動玩家向 skill ladder，也同步把 `document/mob.txt` 的 mob-side wiring 納入 pre-check：
  - 代表樣本是否用固定 `Enable`
  - 還是靠 `AutoEnable + AttackRatio / DodgeRatio`
  - 是否同時承擔 `#Learn` 教學職能

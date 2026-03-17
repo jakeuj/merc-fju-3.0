@@ -164,6 +164,7 @@ source of truth 要分兩種：
 - `merc.ini`、`variable.c`、`job.c`、`bus/ship/bounty` 與 docs 對照點，讀 `references/system-sync-checks.md`
 - 若任務碰到交通、新手導流、技能來源、國家系統或官方敘事，這份檔是必要 reference
 - 若這輪新增的是目前 repo 真正會載入的技能，而不只是一次性測試檔，優先同步 `docs/current-game/skills.md` / `docs/current-game/skills.json` 或其他 repo 自有紀錄；`docs/3yWebsite/` 預設只拿來參考世界觀、命名與舊技能脈絡，不直接當現行技能台帳
+- 若這輪有改到既有 `skill/*.ski` 的 runtime 內容，尤其是 `#Damage`、`Cost`、`Wait`、`Teach`、`CanAsk`、`Valid`、`Enable` 這類會進 current-game registry 的欄位，不要只手改 `docs/current-game/skills.json`；先跑 `python -X utf8 scripts/build_current_game_skill_registry.py` 重建 registry，再跑 `python -X utf8 scripts/generate_current_game_skills_pages.py` 同步分類頁
 - 若這輪新增或重排的是目前 repo 真正會載入的 area，優先同步 `docs/current-game/areas.md` / `docs/current-game/areas.json`；`docs/3yWebsite/` 的地圖與舊站頁面預設只當背景參考，不直接當現行 area registry
 - 若這輪的 area 決策高度依賴舊站技能或玩家攻略，收尾時至少在 plan / tracker 補一句說明：是哪些攻略或技能鏈在支撐這個 world link、teacher 配置或服務節點設計
 
