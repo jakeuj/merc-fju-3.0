@@ -36,7 +36,7 @@ $n手上的$O開始不停的嗡嗡作響﹐只見$n的頭髮逐漸化為血紅�
 『極∼道∼魔∼劍』起手劍「千千魔劍動」$Z﹐$n手中之$O化成千道血光﹐以強猛凌
 厲的攻勢﹐直直刺向$N的心口﹗﹗﹗~
 Chance          10
-Value           20
+Value           160
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -48,7 +48,7 @@ $n的魔意暴漲三成﹐$n手上的$O漸漸泛成血紅色﹐正是$Y『極∼
 「魔劍無定」$Z﹐$n手中之$O﹐大開大闔﹐勁勢強猛無比﹐以強猛凌厲的攻勢﹐向$N
 直發一八八劍﹐$N的全身頓時佈滿傷口﹗﹗﹗~
 Chance          10
-Value           20
+Value           185
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -60,7 +60,7 @@ $n四周之地突然寒氣冒湧﹐$n藉寒冷之氣息以迅速的身法將自�
 使出$Y『極∼道∼魔∼劍』第三劍「群魔亂舞」$Z﹐$n所化成多道身形令$N眼花繚亂﹐
 $n趁勢如狂風刺出千劍﹐劍芒所到之處﹐景物皆非﹐$N的全身頓時佈滿傷口﹗﹗﹗~
 Chance          10
-Value           20
+Value           215
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -72,7 +72,7 @@ $n的頭上冒出陣陣寒氣﹐$N見此狀立即出招搶攻﹐只見$n縱身�
 ∼劍』第四劍「魔隨空而動」$Z﹐$n頓時消失在$N的眼前﹐隨後發出魔劍二二八式﹐
 $N被這突然的一式嚇倒﹐頓時$N被$n的劍勢貫穿而過﹗﹗﹗~
 Chance          10
-Value           20
+Value           250
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -84,7 +84,7 @@ $n縱上一躍消失半空中﹐$N見此狀立即運起護身氣勁﹐$n忽出�
 『極∼道∼魔∼劍』第五劍「魔隨空而發」$Z﹐$n綜合魔劍一一八及二二八刺出千萬
 劍﹐劍勢融為一點﹐以強猛凌厲的攻勢向$N直刺﹐$N哀號一聲腰間已被$O所刺穿﹗﹗﹗~
 Chance          10
-Value           20
+Value           295
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -96,7 +96,7 @@ $n四周忽地烈燄冒湧﹐$n手上的$O也冒出熊熊的火燄﹐$R『極道
 轉生－化魔成龍」$Z﹐$n所化成的魔龍﹐以強猛凌厲的攻勢﹐向$N直衝而去﹐只見$N
 瞬間被魔龍所吞噬﹗﹗﹗~
 Chance          10
-Value           20
+Value           350
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -108,7 +108,7 @@ $n人劍合一﹐手中之$O化為狂龍﹐$R『極∼道∼魔∼劍』第七�
 $Z﹐$O所化成之九天狂龍往$N襲捲而去﹐只見$N被$O所形成的強大龍氣撕的皮開肉綻﹗﹗
 ﹗~
 Chance          10
-Value           20
+Value           415
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -120,7 +120,7 @@ $n的魔性又再暴漲三成﹐$n手上的$O化出千道魔光﹐$R『極∼道
 龍轉生－魔劍無窮」$Z見勢而出﹐$O所化成千萬劍芒﹐化成無數狂龍﹐無孔不進﹐以強
 猛凌厲的攻勢將$N撕成粉身碎骨﹗﹗﹗~
 Chance          10
-Value           20
+Value           495
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -132,7 +132,7 @@ $n配合魔劍一八八及二八八式﹐朝$N揮出一道兇猛的劍氣﹐隨�
 道∼魔∼劍』第九劍「魔龍轉生－魔劍無量」$Z﹐$n的劍氣狂飆四散﹐在半空之中又合
 而為一﹐凝出一把曠世魔劍﹐迅速朝$N直墜﹗﹗﹗~
 Chance          10
-Value           20
+Value           590
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -144,7 +144,7 @@ $n魔性大發全身泛出血紅的護身氣勁﹐$n的劍勢配合護身氣勁�
 $R『極∼道∼魔∼劍』之究極殺劍「魔龍轉生－魔劍無限」$Z﹐$n順勢化成千萬身形﹐
 如狂風暴雨﹐怒雷疾電﹐以強猛至極的究極殺招﹐將$N刺的體無完膚﹗﹗﹗~
 Chance          10
-Value           20
+Value           700
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

@@ -331,9 +331,9 @@
 
 目前狀態：
 
-- `status = batch_bl_implemented`
+- `status = batch_bn_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch BL implemented`
+- `current_batch = Batch BN implemented`
 
 ## Immediate Next Steps
 
@@ -6250,6 +6250,147 @@
 
 - 本批把 `magic blast` 定位成高階、慢節奏、重弓爆發模板，整體高於一般中段攻擊技。
 - 這樣比較符合它作為可學 bow 技能的身份，也和更快節奏的短段技能拉開距離。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 與 Batch BN 共用同一輪 smoke 驗證
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BM Pre-Check
+
+### Scope
+
+- `modo slash`
+
+### Reference Basis
+
+- runtime `skill/m/modo_slash.ski`
+  - `Value` 全 `20`
+  - `Cost 50 / Wait 20 / Weapon WEAPON_SWORD / Check check_sword_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `modo slash`
+  - `family = legacy-page:modo slash`
+  - combat 維度顯示 `10` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`modo slash`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `50 / COST_MOVE / 20`
+- weapon / check: `WEAPON_SWORD / check_sword_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `10`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `modo slash` 是 current-game 仍存在的高階劍技 family，而 `Cost 50 / Wait 20` 幾乎已經是重砲級節奏。
+- 十段完整招式卻全停在 `20`，顯然與其高成本、高風格定位不符。
+- 本批先只回填 `Value` 梯度，保留原本的劍系武器需求與超重節奏。
+
+## Batch BM Result
+
+### Scope
+
+- `modo slash`
+
+### Runtime Changes
+
+`modo slash`
+
+- before: `20 x 10`
+- after: `160, 185, 215, 250, 295, 350, 415, 495, 590, 700`
+- average: `365.5`
+
+### Design Notes
+
+- 本批把 `modo slash` 定位成超高成本、慢節奏、重爆發的十段魔劍模板。
+- 曲線中後段拉得更陡，讓後幾劍真正配得上它的究極殺劍定位。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 測試 ports:
+    - `15846`
+    - `16242`
+    - `16896`
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BN Pre-Check
+
+### Scope
+
+- `hell evil`
+
+### Reference Basis
+
+- runtime `skill/h/hell_evil.ski`
+  - `Value` 全 `20`
+  - `Cost 20 / Wait 1 / Check check_unrigid_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `hell evil`
+  - `family = legacy-page:hell evil`
+  - combat 維度顯示 `11` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`hell evil`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 1`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `11`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `hell evil` 是 current-game 還存在的十一段邪系攻擊模板，但 `Wait 1` 說明它本質上是高速壓制技，而不是重砲單擊。
+- 全 `20` 讓這種長段高速模板完全失去後段威脅感。
+- 本批先只回填 `Value` 階梯，保留原本的高速、多段、邪系爪掌身份。
+
+## Batch BN Result
+
+### Scope
+
+- `hell evil`
+
+### Runtime Changes
+
+`hell evil`
+
+- before: `20 x 11`
+- after: `95, 110, 130, 155, 185, 220, 260, 310, 370, 445, 535`
+- average: `255.0`
+
+### Design Notes
+
+- 本批把 `hell evil` 定位成高速、十一段、後段威脅逐步累積的邪系連段模板。
+- 這樣能保留它的壓制與花式變招感，同時避免一開始就灌成過重單擊。
 
 ### Validation
 
