@@ -1,4 +1,4 @@
 interface:
   display_name: "Merc Area Builder"
-  short_description: "Maintain Merc-FJU 3.0 areas with spec-first map.md, rebuild-plan workflow, and docs-guided skill/player route checks"
-  default_prompt: "Use $merc-area-builder to maintain or extend the current Merc-FJU 3.0 areas. Follow SKILL.md to inspect src/load.c and src/act_move.c first, treat map.md as the authoring spec and embedded mapmd-json as the canonical graph, obey plans/ and area/rebuild_plan.md continuation rules, and use docs/3yWebsite players.json plus skills.json when teacher loops, service nodes, or area routing decisions depend on old-site guidance."
+  short_description: "Spec-first Merc-FJU area rebuild with docs and validation tools"
+  default_prompt: "Use $merc-area-builder to plan, validate, or implement a Merc-FJU 3.0 area with the spec-first handbook, templates, schemas, and area workflow tools."

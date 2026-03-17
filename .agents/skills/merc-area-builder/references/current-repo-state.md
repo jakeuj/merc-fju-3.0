@@ -43,6 +43,14 @@
 - 若使用固定 prompt `繼續實作下一個待建 area`，先讀 `area/rebuild_plan.md` 再決定下一個目標
 - 長期重建流程還應使用 `delivery_gate` 與 `next_prompt` 來判斷：現在該先 commit、續做當前 area，還是已可前進下一區
 
+## docs / templates / schemas 現況
+
+- `docs/area-development-handbook.md` 是目前 area rebuild workflow 的正式人類可讀入口
+- `docs/area-delivery-gates.md`、`docs/area-vnum-policy.md`、`docs/area-external-exit-policy.md`、`docs/area-acceptance-checklist.md`、`docs/codex-area-workflow.md` 已建立，分別承接 gate、房號、外部接線、驗收與 agent 操作節奏
+- `templates/area-plan.template.md`、`templates/map.md.template`、`templates/area-readme.template.md`、`templates/new-area-checklist.template.md` 已建立，適合新 area 起手時直接套
+- `schemas/mapmd-json.schema.json` 與 `schemas/area-plan.schema.json` 已建立，但目前定位是給 workflow/tooling 用的保守 schema；Markdown 與 generator 仍是實際工作介面
+- `docs/index.md` 已把上述 area workflow 文件加入 Pages 入口
+
 ## ref/ 現況
 
 - `ref/Readme.md` 是 `ref/` 的入口索引，先用它判斷該讀世界藍圖、template、spec-first scaffold、生成器，還是模擬系統
@@ -74,6 +82,18 @@
 - 若任務涉及大量舊資料匯入、回填或外部檔案導入，可用 `convert_big5_to_utf8.py` 協助確認 UTF-8 轉碼
 - `world_consistency_checker.py` 目前可做 runtime-aware 靜態檢查：`duplicate vnum`、broken exit target、reverse exit mismatch、orphan/disconnected rooms、unreachable area、以及 `area/directory.lst` 與實際 area/index/roo 結構不一致
 - reachability 檢查只看 room exit graph，不會自動理解 `#Job`、recall、bus/ship 或其他傳送邏輯；看到 `unreachable-area` 時，要先判斷它是不是設計上的 teleport-only 區域，再決定是修資料還是把它列入 allowlist/root set
+
+## tools/ 現況
+
+- `tools/mapmd_validate.py`
+  - 目前第一版已可直接驗 `map.md`，會復用 generator parser/validator 並補 `reserved_room_block`、theme、cluster、world link 相關摘要檢查
+- `tools/area_vnum_allocator.py`
+  - 目前第一版已可掃描 runtime room files 與已記錄保留段，建議下一個 `reserved_room_block`
+- `tools/log_parse_summary.py`
+  - 目前第一版已可讀最新或指定 log，抓成功訊號與常見 loader 關鍵字，並列出 `debug/*` 非空檔案
+- `tools/area_acceptance_gate.py`
+  - 目前第一版已可綜合 spec、runtime shape、log/debug 證據，給保守的 gate 建議
+- 這些工具都屬於 workflow 輔助，不取代人工判讀與既有 authoritative docs
 
 ## 舊版資料比對來源
 

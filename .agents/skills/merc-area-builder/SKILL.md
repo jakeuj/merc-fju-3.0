@@ -1,6 +1,6 @@
 ---
 name: merc-area-builder
-description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域資料時使用：依 document/README、src/load.c、src/act_move.c 與 area/ 現況處理 limbo、loyang、beiping、new、newfight、pk_area、free_fight 的 index/mob/obj/res/roo/shp 與區域地圖檔結構，將地圖視為包含 north/east/south/west 與 up/down/enter/out 的立體拓樸，並把 #Exit/#Keyword/#Job/#Enquire 視為 room spec 的正式部分；新增 AREA 時先以 map.md 當規格來源，必要時再用 Python scaffold 產生初版 .roo，也支援以 plans/ 與 area/rebuild_plan.md 維護長期 area 重建流程，更新 area/directory.lst、同步檢查 merc.ini 與固定房號/傳送/提示文字，並在需要世界觀、技能、國家、玩家攻略或交通背景時搭配 docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md，特別利用 docs/3yWebsite/docs/data/players.json 與 skills.json 做 teacher/service loop、技能來源與新手導流決策。
+description: 維護、擴充或搬修 merc-fju-3.0 目前實際存在的區域資料時使用：依 document/README、src/load.c、src/act_move.c 與 area/ 現況處理 limbo、loyang、beiping、new、newfight、pk_area、free_fight 的 index/mob/obj/res/roo/shp 與區域地圖檔結構，將地圖視為包含 north/east/south/west 與 up/down/enter/out 的立體拓樸，並把 #Exit/#Keyword/#Job/#Enquire 視為 room spec 的正式部分；新增 AREA 時先以 map.md 當規格來源，必要時搭配 docs/area-development-handbook.md、templates/、schemas/ 與 tools/mapmd_validate.py、tools/area_vnum_allocator.py、tools/log_parse_summary.py、tools/area_acceptance_gate.py 走 spec-first workflow，也支援以 plans/ 與 area/rebuild_plan.md 維護長期 area 重建流程，更新 area/directory.lst、同步檢查 merc.ini 與固定房號/傳送/提示文字，並在需要世界觀、技能、國家、玩家攻略或交通背景時搭配 docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md，特別利用 docs/3yWebsite/docs/data/players.json 與 skills.json 做 teacher/service loop、技能來源與新手導流決策。
 ---
 
 # Merc Area Builder
@@ -39,13 +39,22 @@ source of truth 要分兩種：
 6. 若任務需要參考 repo 內的 `ref/` 世界藍圖、spec-first scaffold、world builder 或題材分布資料，先讀 `ref/Readme.md` 當索引，再挑需要的檔案或子資料夾深入。
 7. 若任務屬於長期 area 重建，先讀 `plans/` 與 `area/rebuild_plan.md`；詳細規則見 `references/rebuild-workflow.md`。
 7.1 若這輪工作有用 `ref/Readme.md` 來做選讀決策，回寫單區 plan 或追蹤看板時，補上 `ref_inputs_used`、`ref_inputs_deferred`、`theme_basis`、`compliance_check`。
-8. 修改完成後，至少做靜態搜尋、編碼檢查與必要的啟動/載入驗證，再回報受影響檔案與風險。
-9. 若要做 area 載入 smoke test，先清空 `debug/*` 內容並建立本輪 `log/*` 觀察基線，再執行測試；若使用 `timeout`，優先給 `45` 到 `60` 秒；測試後用成功訊號、這輪 log 與新產生的 debug 訊息一起判讀。
-10. 若這輪有新增 `mob/*.mob` 或 `obj/*.obj`，不要只靠文件猜 parser 會接受什麼：先比對 repo 內已成功載入的同類範例，特別是 `Class` 常數與 `ITEM_FOOD` / `ITEM_DRINK_CON` 的 `Value*` 欄位，測試成功後仍要檢查 `debug/badobject`。若同時新增怪物會 `Enable` 的技能，還要把它視為 loader-risk data change，而不只是 area 純資料。
-11. 新增 `skill/*.ski` 時，至少同步檢查四個登錄點：`src/merc.h` 的 `SLOT_*`、`skill/skill.lst`、`data/symbol.def`、實際的 `skill/<letter>/<name>.ski`。`skill.lst` key、技能 `Name` 與檔名路徑都必須和 repo 內既有技能全域唯一，避免覆蓋舊技能或造成 `Load_skill` 重覆載入。
-12. area 設計與純資料實作預設先走快速本機驗證；只有碰到 `src/`、`Makefile*`、`startup*`、`merc.sample.ini`、疑似平台差異，或要替大里程碑做 pre-merge gate 時，才升級到 Ubuntu / Docker 雙平台驗證。若這輪有新增 skill、改 mob `Enable` 鏈，或碰到 loader 相關警告，至少要補實際載入 smoke test，不可只停在靜態比對。
-13. 若固定 prompt 要從 `todo` 開始一個新的 area milestone，而目前分支是 `develop` 或 `main`，預設先建立 `codex/<area>-implementation` 分支再開始 spec / implementation；除非使用者明講要直接在主分支上做，或這輪只是 merge 後的極小 docs / tracker 收尾。
-14. 每輪 area 工作收尾時，主動做一次「經驗回寫判斷」：單區特殊決策回寫到該 area plan / tracker；可重複踩到的 parser、loader、驗證規則回寫到 `skills/references`；屬於全局 workflow 缺口的，再回寫到全局 plan 或 `rebuild-workflow.md`。
+8. 若任務是在建立新區 workflow 或新 area 起手，優先讀 `docs/area-development-handbook.md`，並視需要使用：
+- `templates/area-plan.template.md`
+- `templates/map.md.template`
+- `templates/area-readme.template.md`
+- `templates/new-area-checklist.template.md`
+- `schemas/mapmd-json.schema.json`
+- `schemas/area-plan.schema.json`
+9. 修改完成後，至少做靜態搜尋、編碼檢查與必要的啟動/載入驗證，再回報受影響檔案與風險。
+10. 若這輪是 spec / plan / tracker work，先用 `tools/mapmd_validate.py` 驗 `map.md`；若是新 area 規劃房號，優先用 `tools/area_vnum_allocator.py` 估下一段 `reserved_room_block`。
+11. 若已做 runtime smoke test，除了人工看 `log/*` 與 `debug/*`，也可用 `tools/log_parse_summary.py` 做摘要；若要快速判讀目前較像 `implementation_ready_for_commit` 還是 `validated_ready_to_advance`，可先用 `tools/area_acceptance_gate.py` 取保守建議。
+12. 若要做 area 載入 smoke test，先清空 `debug/*` 內容並建立本輪 `log/*` 觀察基線，再執行測試；若使用 `timeout`，優先給 `45` 到 `60` 秒；測試後用成功訊號、這輪 log 與新產生的 debug 訊息一起判讀。
+13. 若這輪有新增 `mob/*.mob` 或 `obj/*.obj`，不要只靠文件猜 parser 會接受什麼：先比對 repo 內已成功載入的同類範例，特別是 `Class` 常數與 `ITEM_FOOD` / `ITEM_DRINK_CON` 的 `Value*` 欄位，測試成功後仍要檢查 `debug/badobject`。若同時新增怪物會 `Enable` 的技能，還要把它視為 loader-risk data change，而不只是 area 純資料。
+14. 新增 `skill/*.ski` 時，至少同步檢查四個登錄點：`src/merc.h` 的 `SLOT_*`、`skill/skill.lst`、`data/symbol.def`、實際的 `skill/<letter>/<name>.ski`。`skill.lst` key、技能 `Name` 與檔名路徑都必須和 repo 內既有技能全域唯一，避免覆蓋舊技能或造成 `Load_skill` 重覆載入。
+15. area 設計與純資料實作預設先走快速本機驗證；只有碰到 `src/`、`Makefile*`、`startup*`、`merc.sample.ini`、疑似平台差異，或要替大里程碑做 pre-merge gate 時，才升級到 Ubuntu / Docker 雙平台驗證。若這輪有新增 skill、改 mob `Enable` 鏈，或碰到 loader 相關警告，至少要補實際載入 smoke test，不可只停在靜態比對。
+16. 若固定 prompt 要從 `todo` 開始一個新的 area milestone，而目前分支是 `develop` 或 `main`，預設先建立 `codex/<area>-implementation` 分支再開始 spec / implementation；除非使用者明講要直接在主分支上做，或這輪只是 merge 後的極小 docs / tracker 收尾。
+17. 每輪 area 工作收尾時，主動做一次「經驗回寫判斷」：單區特殊決策回寫到該 area plan / tracker；可重複踩到的 parser、loader、驗證規則回寫到 `skills/references`；屬於全局 workflow 缺口的，再回寫到全局 plan 或 `rebuild-workflow.md`。
 
 ## 主題靈感與沉浸式設計
 
@@ -71,6 +80,7 @@ source of truth 要分兩種：
 
 - area / plans / ref / scripts / 舊版對照的 repo 現況，讀 `references/current-repo-state.md`
 - 若任務主要是新增 area 或重建既有 area，這份檔案是最值得先補讀的 context reference
+- 若任務主要是沿既有 handbook / templates / tools 走 workflow，先從 `docs/area-development-handbook.md` 看總覽，再回來這個 skill 補 repo-specific 細節
 
 ## 舊站技能與玩家攻略基線
 
@@ -159,9 +169,11 @@ source of truth 要分兩種：
 1. 至少檢查 VNUM / 房號引用、`index/res/shp/roo` 對應與地圖出口一致性
 2. 若用了 scaffold script，先跑 `--validate-only`
 3. 若是 `spec / plan / tracker` 類工作，通常做到 `--validate-only` 即可，不必為了沒有 runtime 變更的任務硬跑雙平台 build
+3.1 若想把 `--validate-only` 前置成更清楚的摘要，先跑 `python3 tools/mapmd_validate.py area/<area>/map.md`
 4. 若是純 area data work，預設先做本機 build + smoke test；只有在碰到 `src/`、跨平台風險、或 merge 前信心 gate 時再補 Ubuntu / Docker
+4.1 若需要替新 area 規劃下一段房號，先跑 `python3 tools/area_vnum_allocator.py --estimated-rooms <N> --headroom <M>`
 5. 若牽涉交通、新手、技能、國家或世界觀，對照對應 docs / JSON
-6. 若環境允許，做實際載入或 smoke test，並確認成功訊號與 `debug/` / `log/` 沒有新增 area 錯誤
+6. 若環境允許，做實際載入或 smoke test，並確認成功訊號與 `debug/` / `log/` 沒有新增 area 錯誤；必要時用 `python3 tools/log_parse_summary.py` 與 `python3 tools/area_acceptance_gate.py <area_slug>` 取摘要與 gate 建議
 7. 完整驗證清單讀 `references/validation-checklist.md`
 
 ## 參考資料
@@ -193,6 +205,22 @@ source of truth 要分兩種：
 - `references/validation-checklist.md`
 - `references/rebuild-workflow.md`
 - `references/map-spec-template.md`
+- `../../docs/area-development-handbook.md`
+- `../../docs/area-delivery-gates.md`
+- `../../docs/area-vnum-policy.md`
+- `../../docs/area-external-exit-policy.md`
+- `../../docs/area-acceptance-checklist.md`
+- `../../docs/codex-area-workflow.md`
+- `../../templates/area-plan.template.md`
+- `../../templates/map.md.template`
+- `../../templates/area-readme.template.md`
+- `../../templates/new-area-checklist.template.md`
+- `../../schemas/mapmd-json.schema.json`
+- `../../schemas/area-plan.schema.json`
+- `../../tools/mapmd_validate.py`
+- `../../tools/area_vnum_allocator.py`
+- `../../tools/log_parse_summary.py`
+- `../../tools/area_acceptance_gate.py`
 - `../ref/Readme.md`
 - `scripts/generate_roo_from_map_md.py`
 - `docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md`

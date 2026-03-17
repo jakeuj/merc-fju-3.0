@@ -10,6 +10,9 @@
 
 ## File Roles
 
+- `docs/area-development-handbook.md`
+  - workflow 的正式人類可讀入口
+  - 先整理 source-of-truth、七層 pipeline、驗證層級與 companion docs
 - `plans/NNNN-topic-slug.md`
   - 全局計畫
   - 保存長期策略、候選排序、總體規則
@@ -22,6 +25,26 @@
 - `area/world_map.md`
   - 世界層規劃依據
   - 幫助決定新 area 應該接在哪個母城或世界節點
+
+## Workflow Docs And Tooling
+
+- 若任務是在建立新 area workflow、起草新 plan、或幫別人接手這套流程，先讀 `docs/area-development-handbook.md`
+- 需要更細的流程切片時，再按需讀：
+  - `docs/area-delivery-gates.md`
+  - `docs/area-vnum-policy.md`
+  - `docs/area-external-exit-policy.md`
+  - `docs/area-acceptance-checklist.md`
+  - `docs/codex-area-workflow.md`
+- 新 area 起手時，可直接用：
+  - `templates/area-plan.template.md`
+  - `templates/map.md.template`
+  - `templates/area-readme.template.md`
+  - `templates/new-area-checklist.template.md`
+- 現有 workflow 輔助工具：
+  - `tools/mapmd_validate.py`
+  - `tools/area_vnum_allocator.py`
+  - `tools/log_parse_summary.py`
+  - `tools/area_acceptance_gate.py`
 
 ## Naming Rules
 
@@ -126,19 +149,22 @@
 
 1. 完成 `plans/area/NNNN-*.md`
 2. 完成 `area/<new_area>/map.md`
-3. 用 generator `--validate-only`
-4. 產生第一批 `.roo`
-5. 補 `index`
-6. 補最小 `mob / obj / res / shp`
-7. 若要接到既有主城或既有房號，先在 `mapmd-json` 標示 external exit
-8. 再把邊界出口同步改到既有 area 的 `.roo`
-9. 掛入 `area/directory.lst`
-10. 先清空 `debug/*` 內容
-11. 先建立本輪 `log/*` 觀察基線，例如記下最新 log 檔名，或清空這輪要看的單一 log
-12. 做本機 smoke test；若使用 `timeout`，優先給 `45` 到 `60` 秒
-13. 確認啟動輸出或本輪 log 中有像 `三國歪傳之降龍伏虎開始正常運作` 這類成功訊號
-14. 再回頭檢查 `debug/*` 是否留下和本次新增 area 相關的新錯誤或警告，並補看本輪 log 是否有 area warning / error
-15. smoke test 成功後，把 `delivery_gate` 推到 `implementation_ready_for_commit`
+3. 先跑 `tools/mapmd_validate.py` 做摘要驗證
+4. 再用 generator `--validate-only`
+5. 產生第一批 `.roo`
+6. 補 `index`
+7. 補最小 `mob / obj / res / shp`
+8. 若要接到既有主城或既有房號，先在 `mapmd-json` 標示 external exit
+9. 再把邊界出口同步改到既有 area 的 `.roo`
+10. 掛入 `area/directory.lst`
+11. 先清空 `debug/*` 內容
+12. 先建立本輪 `log/*` 觀察基線，例如記下最新 log 檔名，或清空這輪要看的單一 log
+13. 做本機 smoke test；若使用 `timeout`，優先給 `45` 到 `60` 秒
+14. 用 `tools/log_parse_summary.py` 摘要成功訊號與 `debug/*`
+15. 視需要用 `tools/area_acceptance_gate.py` 取保守 gate 建議
+16. 確認啟動輸出或本輪 log 中有像 `三國歪傳之降龍伏虎開始正常運作` 這類成功訊號
+17. 再回頭檢查 `debug/*` 是否留下和本次新增 area 相關的新錯誤或警告，並補看本輪 log 是否有 area warning / error
+18. smoke test 成功後，把 `delivery_gate` 推到 `implementation_ready_for_commit` 或更高狀態
 
 ## Notes From The First Real Case
 

@@ -446,6 +446,7 @@ Agent loop 可視為：
 - 全局流程已明確區分 `world graph / queue / area plan / area spec / runtime validation / delivery gate`
 - `ref/mud-new-area-full-recommendations.md` 的建議已被收斂成 capability matrix，而不是散落的願望清單
 - 缺的文件 / template / schema / tool / prompt 已被整理成 staged roadmap，且不會被誤認為既有硬性 gate
+- workflow 文件、template、schema 或 validator 若升級，相關 skill 與 `agents/openai.yaml` 也有明確同步責任，不再讓人機入口漂開
 - 後續若導入 PR、graph diff 或 CI，不需要推翻現有 area rebuild 工作方式
 
 ## Proven By First Case
@@ -508,6 +509,12 @@ Agent loop 可視為：
   - 把固定 prompt、branch policy、commit/review unit 與 tracker update 規則整理給 agent 使用
 
 Stage 1 的目標不是取代 `AGENTS.md` 或 skill，而是讓 repo 內有一份對人類協作者也容易回讀的正式入口。
+
+同步要求：
+
+- Stage 1 文件若新增 authoritative rule，需同步檢查 `.agents/skills/merc-area-builder/SKILL.md`
+- 若 skill 的使用入口、工作流摘要或預設提示因此改變，需同步更新 `.agents/skills/merc-area-builder/agents/openai.yaml`
+- skill 與文件之間若有重複說明，skill 保留最小 workflow 與導覽，細節優先沉到 `references/` 或 repo docs，避免重複維護
 
 ### Stage 2: Templates And Schemas
 
