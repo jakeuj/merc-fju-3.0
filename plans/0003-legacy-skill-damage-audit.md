@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_af_implemented`
+- `status = batch_ag_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch AF implemented`
+- `current_batch = Batch AG implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `sky blade / dream soul / dream tear` 之後的其餘孤立 high-tier attack skill
+1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `wind leg` 之後的其餘孤立 high-tier attack skill
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -3544,6 +3544,82 @@
   - 改用 `IPC KEY 5585`
 - 檢查：
   - `log/smoke-batch-aa.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AG Pre-Check
+
+### Scope
+
+- `wind leg`
+
+### Reference Basis
+
+- runtime `skill/w/windleg.ski`
+  - `Value` 全 `20`
+  - `Cost 20 / Wait 12 / Check check_unrigid_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `wind leg`
+  - `family = legacy-page:wind leg`
+  - combat 維度顯示 `9` 段 `Value 20`
+- `area/limbo/obj/219.obj`
+  - 仍存在 `wind leg book`
+
+### Mandatory Pre-Check Snapshot
+
+`wind leg`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 12`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `9`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 雖然目前沒有抓到獨立舊站技能頁，但 runtime、current-game 與祕笈樣本已足以確認它是玩家向 legacy 腿法。
+- `Wait 12` 顯示它不是快節奏拳腳，而是偏重節奏、重份量的腿法單點技能。
+- 本批先只回填 `Value` 階梯，保留原本 `Chance / Wait / Cost / Check`。
+
+## Batch AG Result
+
+### Scope
+
+- `wind leg`
+
+### Runtime Changes
+
+`wind leg`
+
+- before: `20 x 9`
+- after: `135, 155, 180, 210, 245, 285, 330, 385, 450`
+- average: `263.89`
+
+### Design Notes
+
+- 本批把 `wind leg` 定位成偏重節奏、後段加速拉高的高階腿法。
+- 這樣可以保留它和較快的拳掌系單點技能的區別，同時脫離清值模板。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-ag.log`
     - 出現 `三國歪傳之降龍伏虎開始正常運作`
   - `debug/failenable`
     - 無新增內容
