@@ -42,7 +42,7 @@ Description
 $n施展$R「一恨才人無行」$Z﹐兩道虹光劃破天際﹐只見兩光剪﹐上下左右大剪﹐風切
 起﹐霧散﹐煙飛﹐向$N射去。~
 Chance          10
-Value           20
+Value           155
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -52,7 +52,7 @@ End
 Description
 $n施展$G「二恨紅顏薄命」$Z﹐仰天長嘆一聲﹐手中劍以幻化無數個劍網﹐將$N包圍。~
 Chance          10
-Value           20
+Value           175
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -63,7 +63,7 @@ Description
 $n施展$Y「三恨江浪不息」$Z﹐四周氣流開始凝結﹐腳踏七星﹐如幻隨影﹐攻其不備﹐
 突然劍如雨下﹐綿延不絕。~
 Chance          10
-Value           20
+Value           195
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -74,7 +74,7 @@ Description
 $n施展$B「四恨世態炎涼」$Z﹐閃電落雷齊下﹐全身通紅﹐立化為一巨大的英雄劍氣猛
 然發出﹐劍氣萬丈﹐劃破天際。~
 Chance          10
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -85,7 +85,7 @@ Description
 $n施展$P「五恨月台易漏」$Z﹐劍影如虹、劍招變幻﹐幻成了天際浮雲。一會兒陰霾密
 佈、一會兒萬里晴空﹐方才還是霞影片片﹐眨眼間已是雲海環繞。~
 Chance          10
-Value           20
+Value           245
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -96,7 +96,7 @@ Description
 $n施展$S「六恨蘭葉多焦」$Z﹐隨風搖曳﹐狂風落葉﹐劍氣由小穴道衝出整個軀體﹐如
 同洪水自堤壩的小缺口內缺堤而出﹐劍氣之強如山洪暴發﹐一發不可收捨﹗~
 Chance          10
-Value           20
+Value           275
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -107,7 +107,7 @@ Description
 $n施展$W「七恨河豚甚毒」$Z﹐一招進手﹐制敵機先﹐把劍刺向$N的死穴﹐招招奪命﹐
 以萬計的劍光為了凝聚這毀天滅地的雷霆﹗早已準備─—殺身成仁﹗~
 Chance          10
-Value           20
+Value           310
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -118,7 +118,7 @@ Description
 $n施展$R「八恨架花生刺」$Z﹐此招似霧鎖重愁﹐知到若是等霧已、濃煙已起則人將愁
 。手中劍急轉﹐宛如龍捲風﹐風捲雲殘的殺去。~
 Chance          10
-Value           20
+Value           350
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -129,7 +129,7 @@ Description
 $n施展$R「九恨夏夜有蚊」$Z﹐太極生兩儀﹐兩儀生四象﹐四象生八卦﹐天空一聲悶雷
 ﹐劍氣如驚蟄出土﹐破體而出﹐疾如閃電。剎那間電光火石﹐劍氣向外散射。~
 Chance          10
-Value           20
+Value           395
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -140,7 +140,7 @@ Description
 $n施展$Y「十恨薜蘿藏虺」$Z﹐登時天昏地暗﹐赫然有數以萬計的劍影遮天蔽地﹐儼如
 天地真的已給其劍殺絕﹐渾無任何空隙、生機、破綻地直朝$n迎頭殺去﹗~
 Chance          10
-Value           20
+Value           445
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -151,7 +151,7 @@ Description
 $n施展$P「十一恨未逢敵手」$Z﹐縱橫江湖﹐殺盡仇寇﹐敗盡英雄﹐天下更無抗手﹐無
 可奈何﹐生平求一敵手而不可得﹐誠寂寥難堪也。~
 Chance          10
-Value           20
+Value           500
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -162,7 +162,7 @@ Description
 $n施展$S「十二恨天下無敵」$Z﹐不滯於物﹐草木竹石均可為劍﹐漸進於無劍勝有劍之
 境。~
 Chance          10
-Value           20
+Value           560
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

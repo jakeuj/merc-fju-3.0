@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_z_implemented`
+- `status = batch_aa_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch Z implemented`
+- `current_batch = Batch AA implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可續盤剩餘 blade / fist 孤立高階技能，例如 `cloud fist`
+1. 下一個高價值候選可續盤剩餘單點技能，例如 `cloud fist`
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
