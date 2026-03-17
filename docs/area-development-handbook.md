@@ -318,6 +318,10 @@ make -C src -f Makefile.lin merc
   - 以現有 generator parser/validator 為核心，補上 `reserved_room_block`、theme、cluster 與 world link 的摘要檢查
 - `tools/area_vnum_allocator.py`
   - 掃描現有 room files 與已記錄的保留段，建議下一個 `reserved_room_block`
+- `tools/log_parse_summary.py`
+  - 解析最新或指定 log，並彙整 `debug/*` 非空檔案與常見 loader 關鍵字
+- `tools/area_acceptance_gate.py`
+  - 綜合 spec 驗證、runtime 形狀與 log/debug 證據，提供保守的 gate 建議
 - `.agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py`
   - 將 `mapmd-json` 投影成 `.roo` scaffold，並提供 `--validate-only`
 - `scripts/world_consistency_checker.py`

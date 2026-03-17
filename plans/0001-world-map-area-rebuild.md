@@ -555,6 +555,8 @@ Stage 1 的目標不是取代 `AGENTS.md` 或 skill，而是讓 repo 內有一�
 
 - `tools/mapmd_validate.py` 已有第一版，可復用現有 generator 驗證並補 metadata 檢查
 - `tools/area_vnum_allocator.py` 已有第一版，可掃描 runtime room files 與已記錄保留段後給出 block 建議
+- `tools/log_parse_summary.py` 已有第一版，可摘要成功訊號、常見 loader 關鍵字與 `debug/*` 非空檔案
+- `tools/area_acceptance_gate.py` 已有第一版，可根據 spec/runtime/log-debug 證據給出保守 gate 建議
 - 其餘 Stage 3 工具仍保留在 roadmap，不視為既有硬性 gate
 
 ### Stage 4: Prompt, Diff, And CI Packaging
