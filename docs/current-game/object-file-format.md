@@ -91,6 +91,15 @@ End
 
 其他像 `Unit`、`WearLoc`、`Weight`、`Cost`、`Level` 則有機會依類型或預設值省略，但建議不要只靠預設值撐所有資料。
 
+## 與 runtime/save 格式的差異
+
+area `obj/*.obj` 和角色存檔 / runtime object serialization 不是同一套欄位名。
+
+- area source 應使用：`Name`、`ShortDesc`、多行 `Description`、`Takeable`、`WearLoc`、`Value` / `Value1..Value15`
+- 不要直接寫：`Keywords`、`ExtraFlags`、`WearFlags`
+
+這幾個名字看起來很像，但目前 `src/load.c` 的 area object loader 不接受它們。若把 runtime/save 風格欄位帶進 area source，啟動時常會直接出現 `Load_object` 類 parser error。
+
 ## 範例
 
 ```text
@@ -180,6 +189,8 @@ End
 
 1. 額外旗標，例如 `Glow Yes`、`Magic Yes`、`NoDrop Yes`
 2. 穿戴旗標，目前文件明確列出的是 `Takeable Yes`
+
+要特別注意：這裡的「旗標」是把旗標名稱直接當欄位寫成 `Glow Yes`、`Hum Yes`、`Takeable Yes` 這種形式，不是另外寫一行 `ExtraFlags ...` 或 `WearFlags ...`。
 
 常見額外旗標包含：
 

@@ -34,7 +34,6 @@ E <obj_vnum> <mob_vnum> <wear_loc>     <comment>
 D <room_vnum> <exit>   <door_state>    <comment>
 R <room_vnum> <exit>                   <comment>
 A <mob_vnum>                            <comment>
-S
 ```
 
 ## 指令意義
@@ -49,7 +48,6 @@ S
 | `D` | 設定門/出口狀態 |
 | `R` | 隨機化出口方向 |
 | `A` | 讓怪物在 reset 時騎馬 |
-| `S` | reset 檔結束 |
 
 ## 執行模型
 
@@ -59,6 +57,14 @@ S
 - 目前 `src/load.c` 的 `load_resets()` 實作是一路讀到 EOF，沒有特判 `S`
 
 因此在目前 repo 實務上，`S` 不應當作必要 terminator；若真的放 literal `S`，反而可能被當成一般命令讀壞。
+
+## 目前 repo 應採用的寫法
+
+- 一行一個 reset 指令
+- 使用 `M / O / P / G / E / D / R / A`
+- 檔案直接以 EOF 結束
+- 不要混入 `#MOB / #OBJ / Room / MaxInArea / MaxInRoom` 這類 block-style 寫法
+- 不要再額外放 literal `S`
 
 文件說明 reset 會在：
 

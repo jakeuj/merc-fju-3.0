@@ -51,8 +51,10 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 - `docs/current-game/legacy-readme.md`
 - `docs/current-game/mobile-file-format.md`
 - `docs/current-game/object-file-format.md`（物品格式時優先）
+- 補充：若使用者拿的是 area `obj/*.obj`，要先提醒它和 `src/save.c` / runtime object serialization 不是同一套欄位；目前 loader 不接受 `Keywords / ExtraFlags / WearFlags`
 - `docs/current-game/room-file-format.md`
 - `docs/current-game/reset-file-format.md`
+- 補充：legacy 文件把 `S` 當 reset 結束行，但目前 `src/load.c` 的 `load_resets()` 是讀到 EOF；若 area `res/*.res` 放 literal `S`，要先視為 parser 風險
 - `docs/current-game/shop-file-format.md`
 - `docs/current-game/title-file-format.md`
 - `docs/current-game/copyright-notice.md`

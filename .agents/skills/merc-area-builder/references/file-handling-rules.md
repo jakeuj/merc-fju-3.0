@@ -14,6 +14,7 @@
 - 若任務目標是快速、穩定地消除 `debug/failenable`，預設優先把問題 `AutoEnable` 改成固定 `Enable`：這樣只會固定單一怪物、單一技能的結果，不必連動調整 `AttackRatio`、`DodgeRatio` 或全域技能資料，風險最低
 - 只有當你明確在做戰鬥平衡重調、確定該怪應保留「依等級 / 係數自動推導技能熟練度」的設計，或已確認原本是技能選錯而非熟練度推導失衡時，才優先保留 `AutoEnable` 去改技能或係數
 - `obj/*.obj`：參照 `document/obj.txt`；若物品要由商店或 reset 產生，確認與 `res`、`shp` 對上
+- area `obj/*.obj` 不要混用 runtime/save serialization 的欄位名；目前 loader 吃的是 `Name / ShortDesc / Description / ItemType / Takeable / WearLoc / Value*`，不是 `Keywords / ExtraFlags / WearFlags`
 - `obj/*.obj` 若屬於特殊 `ItemType`，不要只照文件猜 `Value` / `Value0..3` 的落點；先在 repo 內搜尋已成功載入的同類物件範例，再決定欄位配置
 - `ITEM_LIGHT` 類物件尤其要小心：至少比對是否需要 `WearLoc ITEM_WEAR_LIGHT` 與正確的燈光時間欄位；若只看到 `debug/badobject` 才回修，通常已經太晚
 - `ITEM_FOOD` 與 `ITEM_DRINK_CON` 也要先比對 working examples：除了 `ItemType` 本身，還要補齊 parser 需要的 `Value*` 欄位，不要假設留空或沿用通用預設就能過
@@ -55,6 +56,7 @@
 - 特別注意像 `area/newfight/roo/1211.roo` 這種房間：`#Keyword hole~` 的描述直接提示玩家用 `bore` 通過裂縫
 - 以目前 repo 狀態來看，`bore` 還不是現成可用指令：若需求是讓 `bore hole` 真的可用，就要決定是新增通用 `do_bore`，還是新增 room job 再在對應 `.roo` 裡加 `#Job`
 - 若遇到 parser 細節不確定，回看 `doc/area-file-format.txt`
+- `res/*.res` 若看到 `#MOB / #OBJ / Room / MaxInArea / MaxInRoom` 這類 block 風格，先視為格式錯；目前 area reset loader 期待的是單行 `M/O/P/G/E/D/R/A` 指令並讀到 EOF，不要額外放 literal `S`
 - 若物件 parser 行為和文件不完全一致，優先以 repo 內已成功載入的同類物件為準，再用 `debug/badobject` 驗證這次修改是否乾淨
 - 若是 `debug/failenable`，先沿著第一個 `怪物編號 + 技能` 定位到對應 `mob/*.mob`；若本輪只想消除 warning，通常比起重算 `AttackRatio` / `DodgeRatio`，把問題 `AutoEnable` 改成明確 `Enable <practice> '<skill>'` 更穩定
 - 這個偏好背後的理由要說清楚：`Enable` 是固定結果，`AutoEnable` 是推導規則；修 warning 時先固定結果，通常比改推導規則更可預測，也比較不會意外影響同一隻怪的其他技能表現

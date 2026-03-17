@@ -191,8 +191,10 @@ source of truth 要分兩種：
 - 需要釐清舊版安裝、目錄角色、`index/mob/obj/res/roo/shp` 是怎麼被介紹的，先看 `docs/current-game/legacy-readme.md`
 - 需要 `.mob` 欄位與 NPC/teacher/program 骨架時，先看 `docs/current-game/mobile-file-format.md`
 - 需要 `.obj` 欄位與區塊摘要時，先看 `docs/current-game/object-file-format.md`
+  注意：area object source 不要混進 runtime/save 風格欄位；目前 loader 吃的是 `Name / ShortDesc / Description / ItemType / Takeable / WearLoc / Value*`，不是 `Keywords / ExtraFlags / WearFlags`
 - 需要 `.roo` 欄位、`#Exit/#Keyword/#Job` 與房間旗標摘要時，先看 `docs/current-game/room-file-format.md`
 - 需要 `.res` 指令順序、`M/O/P/G/E/D/R/A` 作用時，先看 `docs/current-game/reset-file-format.md`
+  注意：現行 `load_resets()` 以 EOF 結束，不要照 legacy 說明額外放 literal `S` terminator
 - 需要 `.shp` 商店欄位與 `Keeper/Object/Sential` 關係時，先看 `docs/current-game/shop-file-format.md`
 - 需要 area `index` / `Serial` / `Capital` / `Flags` 概念時，先看 `docs/current-game/title-file-format.md`
 - 需要看 legacy 授權脈絡與配件限制時，先看 `docs/current-game/copyright-notice.md`

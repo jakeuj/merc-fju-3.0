@@ -71,8 +71,10 @@ cd src
 - `docs/current-game/legacy-readme.md`
 - `docs/current-game/mobile-file-format.md`
 - `docs/current-game/object-file-format.md`
+- Current object-loader pitfall: area `obj/*.obj` uses loader fields such as `Name / ShortDesc / Description / Takeable / WearLoc / Value*`; do not explain or scaffold them with runtime/save-style names like `Keywords / ExtraFlags / WearFlags`.
 - `docs/current-game/room-file-format.md`
 - `docs/current-game/reset-file-format.md`
+- Current reset-loader pitfall: legacy docs mention `S` as a terminator, but the checked-in `src/load.c` `load_resets()` reads until EOF; a literal `S` line can break parsing in this repo snapshot.
 - `docs/current-game/shop-file-format.md`
 - `docs/current-game/title-file-format.md`
 - `docs/current-game/copyright-notice.md`
