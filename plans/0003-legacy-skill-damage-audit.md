@@ -1215,6 +1215,134 @@
   - `debug/error`
     - 無新增內容
 
+## Batch J Pre-Check
+
+### Scope
+
+- `bad sword`
+- `wumin sword`
+- `noname`
+
+### Reference Basis
+
+- `/Users/jakeuj/auggie/3yWebsite/skill/sword.html`
+  - 明確給出 `bad sword -> wumin sword -> noname`
+  - `wumin sword` 以 `bad sword` 為 prerequisite
+  - `noname` 以 `wumin sword` 為 prerequisite
+- `docs/current-game/skills/sword.md`
+  - current-game 已把這條鏈整理在 `legacy-page:sword`
+  - 三者目前 damage values 仍是全 `20`
+- runtime `skill/*.ski`
+  - `badsword.ski`
+    - `Wait 1`
+    - `Valid NO / CanAsk NO`
+  - `wumin_sword.ski`
+    - `Wait 12`
+    - `Valid NO / CanAsk NO`
+  - `noname.ski`
+    - `Wait 10`
+    - `Valid NO / CanAsk NO`
+
+### Mandatory Pre-Check Snapshot
+
+`bad sword`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 1`
+- weapon / check: `WEAPON_SWORD / check_sword_attack`
+- canask / teach / valid: `NO / NO / NO`
+- damage entries: `8`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`wumin sword`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 12`
+- weapon / check: `WEAPON_SWORD / check_sword_attack`
+- canask / teach / valid: `NO / NO / NO`
+- damage entries: `9`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`noname`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 10`
+- weapon / check: `WEAPON_SWORD / check_sword_attack`
+- canask / teach / valid: `NO / NO / NO`
+- damage entries: `9`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這條鏈和 Batch I 類似，是 old-site 玩家鏈清楚、但 runtime 目前保留為封存/不可 ask 的 legacy 劍法組。
+- 本輪先做 combat template 重建，不在這批把 `Valid / CanAsk / Teach` 的 runtime 開放政策一起重寫。
+- 三者共通的 distortion 很明顯是 `Value` 被壓平；但節奏仍有差異：
+  - `bad sword` 是 `Wait 1` 的快劍 root
+  - `wumin sword` 最慢，較像重型中階主力
+  - `noname` 稍快於 `wumin`，但作為終點應保留更高單段強度
+- area `*.mob` 目前未看到這三招的現成 `Enable` 樣本，因此本批先不做 mob fallout。
+
+## Batch J Result
+
+### Scope
+
+- `bad sword`
+- `wumin sword`
+- `noname`
+
+### Runtime Changes
+
+`bad sword`
+
+- before: `20 x 8`
+- after: `60, 75, 90, 105, 120, 140, 160, 185`
+- average: `116.88`
+
+`wumin sword`
+
+- before: `20 x 9`
+- after: `115, 135, 155, 175, 195, 220, 245, 275, 310`
+- average: `202.78`
+
+`noname`
+
+- before: `20 x 9`
+- after: `155, 175, 195, 215, 235, 260, 290, 325, 360`
+- average: `245.56`
+
+### Design Notes
+
+- 本批仍只調 `Value`，把 runtime 封存狀態和舊站玩家鏈的 combat template 重建分開處理。
+- `bad sword` 保留 `Wait 1` 的快劍 root 身分，因此雖然輸出回升，仍刻意壓在後兩段之下。
+- `wumin sword` 用更高單段值配合 `Wait 12`，站穩中階 heavy sword 段位。
+- `noname` 以略短於 `wumin` 的節奏承接終點模板，但仍維持這條鏈最高的平均與峰值。
+
+### Validation
+
+- `make -C src -f Makefile.lin merc`
+- `make -C src merc`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-j.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/badobject`
+    - 無新增內容
+  - `debug/error`
+    - 無新增內容
+
 ## Batch H Pre-Check
 
 ### Scope

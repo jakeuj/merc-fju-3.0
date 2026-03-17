@@ -43,7 +43,7 @@ Help            ~
 Description
 $n面帶微笑﹐使出哈哈兒的$S『笑裡藏刀』$Z﹐背地裡暗運內勁﹐忽地攻向$N下盤。~
 Chance          10
-Value           20
+Value           60
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -53,7 +53,7 @@ End
 Description
 $n抽身一躍﹐滿天劍影砍向$N﹐迷惑敵人耳目﹐正是一招蕭咪咪的$P『惡女迷魂』$Z。~
 Chance          10
-Value           20
+Value           75
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -64,7 +64,7 @@ Description
 $n不顧自己面門大開﹐一招$B『損人害己』$Z氣運劍尖﹐撲身狂進﹐攻向$N周身大穴﹐
 正是白開心的絕招。~
 Chance          10
-Value           20
+Value           90
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -74,7 +74,7 @@ End
 Description
 $n手腕一轉﹐使出李大嘴的$G『蝕骨蝕肉』$Z﹐凌厲劍網直向$N全身削去。~
 Chance          10
-Value           20
+Value           105
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -85,7 +85,7 @@ Description
 $n氣運丹田﹐力貫劍峰﹐重心一沈朝$N當頭砍下﹐正是軒轅三光的$W『惡人擋路』$Z
 ﹐霸氣十足。~
 Chance          10
-Value           20
+Value           120
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -96,7 +96,7 @@ Description
 $n身形一轉使出陰老九的$R『惡鬼招魂』$Z﹐霎時風聲鶴唳﹐手中的$O從不可思議的方
 位竄出﹐直取$N首級。~
 Chance          10
-Value           20
+Value           140
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -107,7 +107,7 @@ Description
 $n狂嘯一聲﹐手中$O有如瘋狂般向$N狂砍而去﹐不留一線生機﹐正是鐵戰的$G『狂獅怒
 吼』$Z。~
 Chance          10
-Value           20
+Value           160
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -117,7 +117,7 @@ End
 Description
 $n臉色一沈﹐將全身殺氣貫注於$O之上﹐使出杜殺絕學$Y『血手無情』$Z。~
 Chance          10
-Value           20
+Value           185
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

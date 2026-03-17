@@ -37,7 +37,7 @@ Description
 $n氣定神閒﹐腳步穩踏四方﹐一招【$B名動一時$Z】使出頗有英雄之慨﹐$n腳下砂石被
 帶動$W§$P旋起$W§$Z平平穩穩的激射而出﹗﹗~
 Chance          10
-Value           20
+Value           155
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -48,7 +48,7 @@ Description
 $n劍勢由外放而內斂﹐一反霸道之氣﹐劍走平緩不曲﹐【$G隱姓埋名$Z】
 恰如其名﹐劍芒絕不外露﹐隱隱間卻有無限氣息內含﹐仿若生氣蓬然。~
 Chance          10
-Value           20
+Value           175
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -59,7 +59,7 @@ Description
 $n隨性捻起起手﹐一招【$G劍名莫問$Z】如興起之一式﹐劍不走華﹐
 四方劍芒直直平指一方﹐真氣帶動手中之劍﹐平凡中卻如千萬變招。~
 Chance          10
-Value           20
+Value           195
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -70,7 +70,7 @@ Description
 就在閃電之間﹐一股無名火直衝$n心頭驅使$n猛然使出莫名劍法之【$R劍火無名$Z】
 此招一出﹐無數劍氣突如其來從$n每吋肌膚中急射而出﹗~
 Chance          10
-Value           20
+Value           215
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -81,7 +81,7 @@ Description
 $n翻身有如遊龍﹐$n的攻勢頓時瓦解﹐反而被一股不知從何而生的力量帶動﹐身不由己
 的產生旋轉莫名劍法的虛招【$P莫名其妙$Z】令人摸不著頭腦。~
 Chance          10
-Value           20
+Value           235
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -93,7 +93,7 @@ $n的劍勢突然由外強轉而內斂﹐彷若無情﹐莫名劍法之【$Y悲�
 的悲痛蔓延撲散開來﹐宛如一大片劍網﹐濃濃稠稠的劍心盡是訴說人世間最悲最痛之處
 。~
 Chance          10
-Value           20
+Value           260
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -107,7 +107,7 @@ $P$n凝神傲立﹐$O$Z$P劍尖下指﹐渾身開始散發裊裊雲氣﹐
 就在有有無無虛幻之間﹐只見有形劍氣一抖﹐劃破虛空﹐
 劍勢已可虛空留痕﹗﹗$Z~
 Chance          10
-Value           20
+Value           290
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -120,7 +120,7 @@ $n劍勢一轉剛猛強橫﹐全身烏黑雲氣繚繞﹐蔓延至手中之劍﹐
 突然$O$$P暴長﹐挾帶一股剛柔之氣﹐劍已化鞭﹐鞭風矯如流水行雲﹐
 卻原來只是有形劍氣﹐延長所至﹐$n手腕一翻劍﹐立如水如雲般送出﹗﹗$Z~
 Chance          10
-Value           20
+Value           325
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -133,7 +133,7 @@ $W$n身勢一帶﹐飛身半空﹐就在$n雙手握劍的同時﹐天上突來�
 像是在呼應著$n將要使出的一劍﹐只見雷光一閃﹐赫見$n大劍一揮﹐
 如雲中劈下的一道奔雷﹐劍光耀如流星﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           360
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
