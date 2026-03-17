@@ -1,0 +1,32 @@
+Vnum            11202
+Name            pulse warden~
+ShortDesc       裂脈巡衛~
+Description
+裂脈巡衛提著細長槍刃，槍身上佈滿導脈凹槽，隨著每次核心脈動泛起暗紅光澤。
+它不時抬頭掃視井場邊緣，像在防備某種即將衝出的異象。
+~
+Sentinel        No
+StayArea        Yes
+NoKill          No
+Alignment       -120
+Level           58
+Hitroll         3
+Protect         0
+Damroll         3
+Str             16
+Int             12
+Wis             12
+Dex             15
+Con             15
+Hp              6800
+Mana            260
+Move            240
+Class           0
+Gold            560
+Multipile       100
+AttackRatio     105
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

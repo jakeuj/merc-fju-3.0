@@ -1,0 +1,16 @@
+Vnum            10209
+Name            封紋備修間~
+Description
+備修間堆著不同年代的補紋石版，有些版面只刻了一半就被高熱燒蝕。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10208
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

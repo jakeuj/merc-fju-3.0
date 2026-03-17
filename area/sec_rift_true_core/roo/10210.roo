@@ -1,0 +1,24 @@
+Vnum            10210
+Name            核心前橋~
+Description
+前橋跨過一道垂直裂隙，橋面傳來規律震顫，彷彿每一次脈動都在測試這座橋還能撐多久。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10211
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

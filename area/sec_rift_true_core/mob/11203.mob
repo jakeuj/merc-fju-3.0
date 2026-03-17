@@ -1,0 +1,32 @@
+Vnum            11203
+Name            core seal marshal~
+ShortDesc       核心鎮監~
+Description
+核心鎮監立在井臺中央，周身纏著幾乎凝固的黑紅氣流，像把整個區域的壓力都
+鎖進自己的呼吸節奏。它沉默無聲，卻讓人本能地不敢再靠近半步。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       -200
+Level           60
+Hitroll         4
+Protect         0
+Damroll         4
+Str             17
+Int             13
+Wis             13
+Dex             14
+Con             16
+Hp              7600
+Mana            320
+Move            230
+Class           0
+Gold            700
+Multipile       100
+AttackRatio     110
+DodgeRatio      95
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

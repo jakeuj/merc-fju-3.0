@@ -1,0 +1,14 @@
+Vnum            11253
+Name            sealed water skin~
+ShortDesc       導壓水囊~
+Description
+水囊內的液體帶著淡淡礦味，據說能緩和長期暴露在裂壓環境下的不適感。
+~
+Unit            袋~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           56
+Value           6 6 LIQ_WATER
+Weight          2
+Cost            220
+End

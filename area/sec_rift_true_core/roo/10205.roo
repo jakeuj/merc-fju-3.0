@@ -1,0 +1,31 @@
+Vnum            10205
+Name            外環鎮柱帶~
+Description
+鎮柱帶排列著高低不一的石柱，柱身符線持續明滅，像在彼此分攤同一道快要超限的壓力。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10210
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         鎮柱~
+Description
+石柱底部可見多層加固痕跡，顯示守印者曾反覆替同一批鎮柱續命。
+~
+End
+
+End

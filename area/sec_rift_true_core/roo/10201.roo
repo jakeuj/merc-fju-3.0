@@ -1,0 +1,32 @@
+Vnum            10201
+Name            本核落井~
+Description
+落井底部是一圈半熔化石臺，頭頂縱井仍有碎光垂落，腳下卻已能聽見更深處規律而沉重的裂核脈動。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        10112
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         井道~
+End
+
+End

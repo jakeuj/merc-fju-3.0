@@ -1,0 +1,14 @@
+Vnum            11252
+Name            dry ration bar~
+ShortDesc       鎮核乾糧~
+Description
+這份乾糧壓成硬條狀，入口粗糙卻能快速補充體力，顯然是長時間值守本核的制式配給。
+~
+Unit            份~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           56
+Value           20 30 4 0
+Weight          1
+Cost            280
+End

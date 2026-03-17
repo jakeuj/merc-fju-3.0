@@ -1,0 +1,32 @@
+Vnum            11201
+Name            truecore keeper~
+ShortDesc       本核監印者~
+Description
+一名披著碎印甲片的監印者正沿著環廊巡行，步伐在脈動間精準對齊。
+它的眼神空洞卻執拗，像只要封圈還沒完全崩壞，它就不會停下守望。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       75
+Level           56
+Hitroll         3
+Protect         0
+Damroll         2
+Str             15
+Int             14
+Wis             15
+Dex             14
+Con             14
+Hp              6100
+Mana            420
+Move            210
+Class           0
+Gold            520
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

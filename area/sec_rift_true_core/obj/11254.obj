@@ -1,0 +1,16 @@
+Vnum            11254
+Name            core split blade~
+ShortDesc       裂核槍刃~
+Description
+這柄槍刃前端分成雙鋒，鋒線間留有導流槽，專為在高壓井場穩住出招節奏而鍛造。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           58
+Value           0 -1 -1 WEAPON_SPEAR
+Weight          4
+Cost            780
+Exp             42
+End

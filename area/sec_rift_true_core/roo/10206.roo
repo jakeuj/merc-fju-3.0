@@ -1,0 +1,32 @@
+Vnum            10206
+Name            導脈轉廊~
+Description
+轉廊牆面刻滿導脈紋道，細光沿紋路高速流動，將多餘的裂壓導向本核旁廊。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         導脈~
+End
+
+#Enquire
+Keyword         封紋~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            10204
+Name            裂縫觀測臺~
+Description
+觀測臺外側是一整片翻湧黑紅霧幕，霧幕裡偶爾浮現巨大裂紋影像，像有什麼正在另一側反覆撞擊封界。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         裂紋~
+End
+
+#Enquire
+Keyword         觀測~
+End
+
+End

@@ -45,6 +45,8 @@ title: Current Game Areas
 | `sec_rift_abyss` | 裂界禁底 / 禁底封印帶 | `9801-9812` | `rebuild addition` | 由裂界深層下探到禁底落點、封印回廊與禁底界井。 |
 | `sec_rift_nadir` | 裂界禁牢 / 禁牢封印帶 | `9901-9912` | `rebuild addition` | 承接裂界禁底，轉入更高壓的禁牢封印與界井前帶。 |
 | `sec_rift_prison_core` | 封印核心 / 心獄鎮封帶 | `10001-10012` | `rebuild addition` | 由裂界禁牢再下探到鎮封主廊、護印支線與封印井心。 |
+| `sec_rift_underseal_dais` | 鎮封底座 / 反衝承壓層 | `10101-10112` | `rebuild addition` | 承接封印核心井心下方，落成鎮封主環與本核前緣過渡帶。 |
+| `sec_rift_true_core` | 裂界本核 / 失穩封圈 | `10201-10212` | `rebuild addition` | 由鎮封底座再下探到本核外環、導脈偏廊與核心井場。 |
 
 ## Recent Rebuild Areas
 
@@ -65,6 +67,8 @@ title: Current Game Areas
 - `sec_rift_abyss`：把裂界深層下方接成禁底落點、封印回廊與禁底界井，讓地下鏈正式轉入禁底封印段。
 - `sec_rift_nadir`：再由裂界禁底下探到禁牢前帶、鎮鎖側線與禁牢界井，形成更深一層的禁牢封印節點。
 - `sec_rift_prison_core`：由裂界禁牢再往下落成鎮封主廊、護印支線與封印井心，讓地下鏈抵達目前已知的封印核心前帶。
+- `sec_rift_underseal_dais`：承接封印井心下方的鎮封底座，補齊主環、承壓旁廊與本核前緣，形成進入本核前的最後緩衝層。
+- `sec_rift_true_core`：由鎮封底座最深縱井再下探到失穩封圈與核心井場，讓地下鏈正式進入裂界本核主區。
 
 ### 北方鏈
 
