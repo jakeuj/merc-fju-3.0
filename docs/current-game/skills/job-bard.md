@@ -35,7 +35,7 @@ Legacy chain: `judge / locate object / pry`
 - Runtime key: `judge`
 - Type: `TAR_STRING`
 - Cost / Wait: `22 / 20`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `No / Yes / No / No`
 - Class limits: `- >= -, max -; - >= -, max -; - >= -, max -`
 - Restrictions: `-`
@@ -56,7 +56,7 @@ Legacy chain: `judge / locate object / pry`
 - Runtime key: `locate_object`
 - Type: `TAR_STRING`
 - Cost / Wait: `25 / 20`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `- >= -, max -`
 - Restrictions: `-`
@@ -77,7 +77,7 @@ Legacy chain: `judge / locate object / pry`
 - Runtime key: `pry`
 - Type: `TAR_STRING`
 - Cost / Wait: `20 / 18`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `No / Yes / No / No`
 - Class limits: `- >= -, max -; - >= -, max -; - >= -, max -`
 - Restrictions: `-`

@@ -77,7 +77,7 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - Runtime key: `ghost_marial`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `20 / 7`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MOVE / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `伶 人 >= 一級, max 出類拔萃﹗; 刺 客 >= 一級, max 一代宗師﹗; 郎 中 >= 一級, max 出類拔萃﹗; 將 軍 >= 一級, max 登峰造極﹗; 天 師 >= 一級, max 出類拔萃﹗; 鑄劍師 >= 一級, max 出類拔萃﹗; 盜 賊 >= 一級, max 神乎其技﹗`
 - Restrictions: `attrs: 敏捷 >= 十五; skills: 玄陰掌 >= 出類拔萃`
@@ -140,7 +140,7 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - Runtime key: `king_fist`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `19 / 12`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MOVE / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `No / No / No / Yes`
 - Class limits: `伶 人 >= 一級, max 馬馬虎虎﹗; 刺 客 >= 一級, max 一代宗師﹗; 平 民 >= 一級, max 馬馬虎虎﹗; 郎 中 >= 一級, max 馬馬虎虎﹗; 武 官 >= 一級, max 出類拔萃﹗; 將 軍 >= 一級, max 登峰造極﹗; 天 師 >= 一級, max 馬馬虎虎﹗; 文 官 >= 一級, max 馬馬虎虎﹗; 道 士 >= 一級, max 馬馬虎虎﹗; 鑄劍師 >= 一級, max 馬馬虎虎﹗; 盜 賊 >= 一級, max 出類拔萃﹗`
 - Restrictions: `-`

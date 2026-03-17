@@ -35,7 +35,7 @@ Legacy chain: `universe -> six fire -> fire dragon`
 - Runtime key: `fire_dragon`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `30 / 7`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MOVE / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 一代宗師﹗`
 - Restrictions: `skills: 極火六陽 >= 登峰造極; classes: 刺 客`
@@ -56,7 +56,7 @@ Legacy chain: `universe -> six fire -> fire dragon`
 - Runtime key: `sixfire`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `25 / 5`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MOVE / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 一代宗師﹗; 將 軍 >= 一級, max 神乎其技﹗`
 - Restrictions: `attrs: 力量 >= 二十, 體格 >= 二十; skills: 先天乾坤功 >= 神乎其技; classes: 刺 客/將 軍`

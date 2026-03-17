@@ -35,7 +35,7 @@ Legacy chain: `cause light -> cause serious -> slow -> cause critical / ventrilo
 - Runtime key: `cause_critical`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `25 / 20`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `天 師 >= 五十級, max 一代宗師﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `skills: 遲滯術 >= 出類拔萃`
@@ -56,7 +56,7 @@ Legacy chain: `cause light -> cause serious -> slow -> cause critical / ventrilo
 - Runtime key: `cause_light`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `15 / 12`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 出類拔萃﹗; 郎 中 >= 五十級, max 出類拔萃﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 心神領會﹗; 道 士 >= 十級, max 神乎其技﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `-`
@@ -77,7 +77,7 @@ Legacy chain: `cause light -> cause serious -> slow -> cause critical / ventrilo
 - Runtime key: `cause_serious`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `20 / 15`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 出類拔萃﹗; 郎 中 >= 五十級, max 出類拔萃﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 心神領會﹗; 道 士 >= 十級, max 神乎其技﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `skills: 輕度傷害 >= 心神領會`
@@ -96,9 +96,9 @@ Legacy chain: `cause light -> cause serious -> slow -> cause critical / ventrilo
 - Runtime file: `skill/i/invis.ski`
 - Runtime slot: `SLOT_INVIS`
 - Runtime key: `invis`
-- Type: `TAR_CHAR_DEFENSIVE`
+- Type: `SLOT_INVIS`
 - Cost / Wait: `15 / 18`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 一代宗師﹗; 郎 中 >= 五十級, max 出神入化﹗; 文 官 >= 十五級, max 心神領會﹗`
 - Restrictions: `attrs: 智力 >= 十; skills: 腹語術 >= 心神領會`
@@ -119,7 +119,7 @@ Legacy chain: `cause light -> cause serious -> slow -> cause critical / ventrilo
 - Runtime key: `mass_invis`
 - Type: `TAR_IGNORE`
 - Cost / Wait: `20 / 24`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 一代宗師﹗; 郎 中 >= 五十級, max 出神入化﹗`
 - Restrictions: `attrs: 智力 >= 十五; skills: 隱形術 >= 出類拔萃`
@@ -140,7 +140,7 @@ Legacy chain: `cause light -> cause serious -> slow -> cause critical / ventrilo
 - Runtime key: `slow`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `25 / 20`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MANA / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 出類拔萃﹗; 郎 中 >= 五十級, max 出類拔萃﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 心神領會﹗; 道 士 >= 十級, max 神乎其技﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `skills: 中度傷害 >= 心神領會`
@@ -161,7 +161,7 @@ Legacy chain: `cause light -> cause serious -> slow -> cause critical / ventrilo
 - Runtime key: `ventriloquate`
 - Type: `TAR_STRING`
 - Cost / Wait: `5 / 12`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MANA / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 一代宗師﹗; 郎 中 >= 五十級, max 出神入化﹗; 將 軍 >= 五十級, max 心神領會﹗; 天 師 >= 五十級, max 心神領會﹗; 文 官 >= 十五級, max 出類拔萃﹗; 道 士 >= 十五級, max 心神領會﹗; 鑄劍師 >= 五十級, max 心神領會﹗`
 - Restrictions: `-`

@@ -54,9 +54,9 @@ Legacy chain: `bless -> giant strength -> protection -> heal -> sanctuary / dete
 - Runtime file: `skill/d/detect_evil.ski`
 - Runtime slot: `SLOT_DETECT_EVIL`
 - Runtime key: `detect_evil`
-- Type: `TAR_CHAR_SELF`
+- Type: `SLOT_DETECT_EVIL`
 - Cost / Wait: `5 / 12`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 一級, max 一代宗師﹗; 刺 客 >= 一級, max 馬馬虎虎﹗; 平 民 >= 一級, max 馬馬虎虎﹗; 郎 中 >= 一級, max 出神入化﹗; 武 官 >= 一級, max 馬馬虎虎﹗; 將 軍 >= 一級, max 馬馬虎虎﹗; 天 師 >= 一級, max 心神領會﹗; 文 官 >= 一級, max 出類拔萃﹗; 道 士 >= 一級, max 心神領會﹗; 鑄劍師 >= 一級, max 心神領會﹗; 盜 賊 >= 一級, max 馬馬虎虎﹗`
 - Restrictions: `-`
@@ -77,7 +77,7 @@ Legacy chain: `bless -> giant strength -> protection -> heal -> sanctuary / dete
 - Runtime key: `dispel_evil`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `15 / 12`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 一級, max 一代宗師﹗; 郎 中 >= 一級, max 出神入化﹗; 文 官 >= 一級, max 出類拔萃﹗`
 - Restrictions: `skills: 偵測邪惡 >= 心神領會`
@@ -98,7 +98,7 @@ Legacy chain: `bless -> giant strength -> protection -> heal -> sanctuary / dete
 - Runtime key: `giant_strength`
 - Type: `TAR_CHAR_DEFENSIVE`
 - Cost / Wait: `20 / 15`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 一級, max 一代宗師﹗; 郎 中 >= 一級, max 出神入化﹗; 文 官 >= 一級, max 心神領會﹗`
 - Restrictions: `skills: 群仙祝福 >= 心神領會`
@@ -119,7 +119,7 @@ Legacy chain: `bless -> giant strength -> protection -> heal -> sanctuary / dete
 - Runtime key: `harm`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `35 / 15`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 一級, max 一代宗師﹗; 郎 中 >= 一級, max 出神入化﹗`
 - Restrictions: `skills: 移除詛咒術 >= 神乎其技`
@@ -140,7 +140,7 @@ Legacy chain: `bless -> giant strength -> protection -> heal -> sanctuary / dete
 - Runtime key: `heal`
 - Type: `TAR_CHAR_DEFENSIVE`
 - Cost / Wait: `50 / 20`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 一級, max 出神入化﹗; 郎 中 >= 一級, max 一代宗師﹗`
 - Restrictions: `skills: 「靈神訣」 >= 出類拔萃`
@@ -161,7 +161,7 @@ Legacy chain: `bless -> giant strength -> protection -> heal -> sanctuary / dete
 - Runtime key: `power_word`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `50 / 25`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / No`
 - Class limits: `伶 人 >= 七十五級, max 一代宗師﹗`
 - Restrictions: `attrs: 學識 >= 二十; skills: 傷害術 >= 出類拔萃`
@@ -180,9 +180,9 @@ Legacy chain: `bless -> giant strength -> protection -> heal -> sanctuary / dete
 - Runtime file: `skill/p/protection.ski`
 - Runtime slot: `SLOT_PROTECTION`
 - Runtime key: `protection`
-- Type: `TAR_CHAR_SELF`
+- Type: `SLOT_PROTECTION`
 - Cost / Wait: `25 / 20`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 一級, max 一代宗師﹗; 郎 中 >= 一級, max 出神入化﹗`
 - Restrictions: `skills: 巨人之力 >= 出類拔萃`
@@ -203,7 +203,7 @@ Legacy chain: `bless -> giant strength -> protection -> heal -> sanctuary / dete
 - Runtime key: `remeday`
 - Type: `TAR_CHAR_DEFENSIVE`
 - Cost / Wait: `200 / 60`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 一級, max 出類拔萃﹗; 郎 中 >= 一級, max 一代宗師﹗`
 - Restrictions: `attrs: 學識 >= 二十五; skills: 治療藥物中毒 >= 神乎其技`
@@ -224,7 +224,7 @@ Legacy chain: `bless -> giant strength -> protection -> heal -> sanctuary / dete
 - Runtime key: `remove_curse`
 - Type: `TAR_CHAR_DEFENSIVE`
 - Cost / Wait: `20 / 15`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 一級, max 一代宗師﹗; 郎 中 >= 一級, max 出神入化﹗; 文 官 >= 一級, max 出類拔萃﹗`
 - Restrictions: `skills: 破除邪惡 >= 心神領會`
@@ -243,9 +243,9 @@ Legacy chain: `bless -> giant strength -> protection -> heal -> sanctuary / dete
 - Runtime file: `skill/s/sanctuary.ski`
 - Runtime slot: `SLOT_SANCTUARY`
 - Runtime key: `sanctuary`
-- Type: `TAR_CHAR_DEFENSIVE`
+- Type: `SLOT_SANCTUARY`
 - Cost / Wait: `75 / 30`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / No`
 - Class limits: `伶 人 >= 一級, max 一代宗師﹗; 郎 中 >= 一級, max 出神入化﹗`
 - Restrictions: `skills: 恢復術 >= 出神入化`

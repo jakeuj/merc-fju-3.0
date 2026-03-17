@@ -101,7 +101,7 @@ Legacy chain: `butterfly fan -> cloud fan -> flower fan / ink pen -> bamboo pen 
 - Runtime key: `eten`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `19 / 10`
-- CostType / Weapon / Check: `- / WEAPON_PEN / check_pen_attack`
+- CostType / Weapon / Check: `COST_MOVE / WEAPON_PEN / check_pen_attack`
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / Yes`
 - Class limits: `伶 人 >= 一級, max 登峰造極﹗; 郎 中 >= 一級, max 一代宗師﹗; 天 師 >= 一級, max 登峰造極﹗; 鑄劍師 >= 一級, max 登峰造極﹗`
 - Restrictions: `attrs: 體格 >= 十五, 學識 >= 三十, 智力 >= 二十; skills: 臨書點穴 >= 登峰造極; classes: 伶 人/郎 中/天 師/鑄劍師`
@@ -166,7 +166,7 @@ Legacy chain: `butterfly fan -> cloud fan -> flower fan / ink pen -> bamboo pen 
 - Runtime key: `know_pen`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `19 / 12`
-- CostType / Weapon / Check: `- / WEAPON_PEN / check_pen_attack`
+- CostType / Weapon / Check: `COST_MOVE / WEAPON_PEN / check_pen_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / Yes / Yes / Yes`
 - Class limits: `伶 人 >= 一級, max 登峰造極﹗; 郎 中 >= 一級, max 登峰造極﹗; 天 師 >= 一級, max 一代宗師﹗; 文 官 >= 一級, max 心神領會﹗; 道 士 >= 一級, max 馬馬虎虎﹗; 鑄劍師 >= 一級, max 登峰造極﹗; 盜 賊 >= 一級, max 馬馬虎虎﹗`
 - Restrictions: `-`
@@ -209,7 +209,7 @@ Legacy chain: `butterfly fan -> cloud fan -> flower fan / ink pen -> bamboo pen 
 - Runtime key: `write_pen`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `19 / 12`
-- CostType / Weapon / Check: `- / WEAPON_PEN / check_pen_attack`
+- CostType / Weapon / Check: `COST_MOVE / WEAPON_PEN / check_pen_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `伶 人 >= 一級, max 登峰造極﹗; 郎 中 >= 一級, max 登峰造極﹗; 天 師 >= 一級, max 一代宗師﹗; 鑄劍師 >= 一級, max 登峰造極﹗`
 - Restrictions: `attrs: 學識 >= 十五; skills: 筆之心 >= 出類拔萃`

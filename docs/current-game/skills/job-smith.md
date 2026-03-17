@@ -35,7 +35,7 @@ Legacy chain: `enchant weapon -> identify -> make sword / mint / repair -> devel
 - Runtime key: `develop`
 - Type: `TAR_OBJ_INV`
 - Cost / Wait: `50 / 25`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MOVE / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `鑄劍師 >= 一級, max 一代宗師﹗`
 - Restrictions: `attrs: 力量 >= 十五, 學識 >= 二十`
@@ -56,7 +56,7 @@ Legacy chain: `enchant weapon -> identify -> make sword / mint / repair -> devel
 - Runtime key: `enchant_weapon`
 - Type: `TAR_OBJ_INV`
 - Cost / Wait: `50 / 24`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `天 師 >= 一級, max 馬馬虎虎﹗; 道 士 >= 一級, max 初窺門徑﹗; 鑄劍師 >= 一級, max 一代宗師﹗`
 - Restrictions: `-`
@@ -77,7 +77,7 @@ Legacy chain: `enchant weapon -> identify -> make sword / mint / repair -> devel
 - Runtime key: `identify`
 - Type: `TAR_OBJ_INV`
 - Cost / Wait: `15 / 24`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `鑄劍師 >= 一級, max 一代宗師﹗`
 - Restrictions: `attrs: 智力 >= 十五; skills: 加強武器威力 >= 心神領會`
@@ -119,7 +119,7 @@ Legacy chain: `enchant weapon -> identify -> make sword / mint / repair -> devel
 - Runtime key: `mint`
 - Type: `TAR_OBJ_INV`
 - Cost / Wait: `30 / 24`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MOVE / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `鑄劍師 >= 一級, max 一代宗師﹗`
 - Restrictions: `attrs: 力量 >= 十, 學識 >= 八`
@@ -140,7 +140,7 @@ Legacy chain: `enchant weapon -> identify -> make sword / mint / repair -> devel
 - Runtime key: `repair`
 - Type: `TAR_OBJ_INV`
 - Cost / Wait: `30 / 24`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `鑄劍師 >= 一級, max 一代宗師﹗`
 - Restrictions: `attrs: 力量 >= 十, 學識 >= 十`

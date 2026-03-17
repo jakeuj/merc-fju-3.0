@@ -33,9 +33,9 @@ Legacy chain: `curse -> gate -> evil power -> charm person`
 - Runtime file: `skill/c/charm_person.ski`
 - Runtime slot: `SLOT_CHARM_PERSON`
 - Runtime key: `charm_person`
-- Type: `TAR_CHAR_DEFENSIVE`
+- Type: `SLOT_CHARM_PERSON`
 - Cost / Wait: `120 / 25`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `鑄劍師 >= 六十五級, max 登峰造極﹗`
 - Restrictions: `attrs: 學識 >= 二十五; skills: 邪惡魔力 >= 出類拔粹`
@@ -54,9 +54,9 @@ Legacy chain: `curse -> gate -> evil power -> charm person`
 - Runtime file: `skill/c/curse.ski`
 - Runtime slot: `SLOT_CURSE`
 - Runtime key: `curse`
-- Type: `TAR_CHAR_OFFENSIVE`
+- Type: `SLOT_CURSE`
 - Cost / Wait: `20 / 12`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 一代宗師﹗; 郎 中 >= 五十級, max 神乎其技﹗; 天 師 >= 五十級, max 神乎其技﹗; 文 官 >= 十級, max 心神領會﹗; 道 士 >= 十級, max 心神領會﹗; 鑄劍師 >= 五十級, max 出神入化﹗`
 - Restrictions: `-`
@@ -77,7 +77,7 @@ Legacy chain: `curse -> gate -> evil power -> charm person`
 - Runtime key: `evil_power`
 - Type: `TAR_CHAR_SELF`
 - Cost / Wait: `35 / 20`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `天 師 >= 五十級, max 一代宗師﹗; 道 士 >= 十級, max 出類拔萃﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `skills: 魔界之門 >= 心神領會`
@@ -98,7 +98,7 @@ Legacy chain: `curse -> gate -> evil power -> charm person`
 - Runtime key: `gate`
 - Type: `TAR_STRING`
 - Cost / Wait: `55 / 20`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `天 師 >= 五十級, max 神乎其技﹗; 道 士 >= 十級, max 出類拔萃﹗; 鑄劍師 >= 五十級, max 出神入化﹗`
 - Restrictions: `skills: 詛咒術 >= 心神領會`

@@ -308,7 +308,7 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - Runtime key: `twosword`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `20 / 12`
-- CostType / Weapon / Check: `- / WEAPON_SWORD / check_sword_attack`
+- CostType / Weapon / Check: `COST_MOVE / WEAPON_SWORD / check_sword_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `伶 人 >= 十級, max 心神領會﹗; 刺 客 >= 十級, max 一代宗師﹗; 平 民 >= 十級, max 初窺門徑﹗; 郎 中 >= 十級, max 心神領會﹗; 武 官 >= 十級, max 神乎其技﹗; 將 軍 >= 十級, max 一代宗師﹗; 天 師 >= 十級, max 出類拔萃﹗; 文 官 >= 十級, max 馬馬虎虎﹗; 道 士 >= 十級, max 馬馬虎虎﹗; 鑄劍師 >= 十級, max 出類拔萃﹗; 盜 賊 >= 十級, max 出類拔萃﹗`
 - Restrictions: `-`
@@ -329,7 +329,7 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - Runtime key: `wumin_sword`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `20 / 12`
-- CostType / Weapon / Check: `- / WEAPON_SWORD / check_sword_attack`
+- CostType / Weapon / Check: `COST_MOVE / WEAPON_SWORD / check_sword_attack`
 - CanAsk / Teach / Valid / Enable: `No / No / No / Yes`
 - Class limits: `刺 客 >= 一級, max 一代宗師﹗; 武 官 >= 一級, max 出神入化﹗; 將 軍 >= 一級, max 登峰造極﹗; 天 師 >= 一級, max 神乎其技﹗; 鑄劍師 >= 一級, max 神乎其技﹗; 盜 賊 >= 一級, max 出神入化﹗; 伶 人 >= -, max -; 平 民 >= -, max -; 郎 中 >= -, max -; 文 官 >= -, max -; 道 士 >= -, max -`
 - Restrictions: `skills: 無情劍法 >= 出類拔萃`

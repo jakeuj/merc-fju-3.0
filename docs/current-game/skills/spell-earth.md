@@ -35,7 +35,7 @@ Legacy chain: `create food -> detect hidden -> pass door -> fixity / flying ston
 - Runtime key: `create_food`
 - Type: `TAR_IGNORE`
 - Cost / Wait: `5 / 12`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MANA / - / -`
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / No`
 - Class limits: `伶 人 >= 一級, max 登峰造極﹗; 郎 中 >= 一級, max 登峰造極﹗; 文 官 >= 一級, max 心神領會﹗`
 - Restrictions: `-`
@@ -54,9 +54,9 @@ Legacy chain: `create food -> detect hidden -> pass door -> fixity / flying ston
 - Runtime file: `skill/d/detect_hidden.ski`
 - Runtime slot: `SLOT_DETECT_HIDDEN`
 - Runtime key: `detect_hidden`
-- Type: `TAR_CHAR_SELF`
+- Type: `SLOT_DETECT_HIDDEN`
 - Cost / Wait: `8 / 20`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / No`
 - Class limits: `伶 人 >= 一級, max 登峰造極﹗; 郎 中 >= 一級, max 登峰造極﹗; 文 官 >= 一級, max 心神領會﹗`
 - Restrictions: `skills: 製造食物 >= 心神領會`
@@ -77,7 +77,7 @@ Legacy chain: `create food -> detect hidden -> pass door -> fixity / flying ston
 - Runtime key: `earthquake`
 - Type: `TAR_IGNORE`
 - Cost / Wait: `20 / 15`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MANA / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 出類拔萃﹗; 刺 客 >= 五十級, max 出類拔萃﹗; 郎 中 >= 五十級, max 出類拔萃﹗; 武 官 >= 十級, max 馬馬虎虎﹗; 將 軍 >= 五十級, max 出類拔萃﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 心神領會﹗; 道 士 >= 十級, max 出類拔萃﹗; 鑄劍師 >= 五十級, max 登峰造極﹗; 盜 賊 >= 十級, max 馬馬虎虎﹗`
 - Restrictions: `-`
@@ -98,7 +98,7 @@ Legacy chain: `create food -> detect hidden -> pass door -> fixity / flying ston
 - Runtime key: `fixity`
 - Type: `TAR_CHAR_SELF`
 - Cost / Wait: `12 / 10`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MANA / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 一級, max 登峰造極﹗; 郎 中 >= 一級, max 登峰造極﹗`
 - Restrictions: `skills: 穿透術 >= 神乎其技`
@@ -119,7 +119,7 @@ Legacy chain: `create food -> detect hidden -> pass door -> fixity / flying ston
 - Runtime key: `flying_stone`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `15 / 12`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MANA / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 出類拔萃﹗; 刺 客 >= 五十級, max 出類拔萃﹗; 郎 中 >= 五十級, max 出類拔萃﹗; 武 官 >= 十級, max 馬馬虎虎﹗; 將 軍 >= 五十級, max 出類拔萃﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 心神領會﹗; 道 士 >= 十級, max 出類拔萃﹗; 鑄劍師 >= 五十級, max 登峰造極﹗; 盜 賊 >= 十級, max 馬馬虎虎﹗`
 - Restrictions: `-`
@@ -138,9 +138,9 @@ Legacy chain: `create food -> detect hidden -> pass door -> fixity / flying ston
 - Runtime file: `skill/p/pass_door.ski`
 - Runtime slot: `SLOT_PASS_DOOR`
 - Runtime key: `pass_door`
-- Type: `TAR_CHAR_SELF`
+- Type: `SLOT_PASS_DOOR`
 - Cost / Wait: `12 / 22`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MANA / - / -`
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / No`
 - Class limits: `伶 人 >= 一級, max 登峰造極﹗; 郎 中 >= 一級, max 登峰造極﹗; 文 官 >= 一級, max 心神領會﹗`
 - Restrictions: `skills: 偵測藏匿 >= 心神領會`

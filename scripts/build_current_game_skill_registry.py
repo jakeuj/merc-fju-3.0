@@ -81,11 +81,16 @@ def parse_runtime_skills(skill_lst: dict[str, str]) -> dict[str, dict]:
         if not runtime_name:
             continue
 
-        def get(prefix: str) -> str | None:
-            for line in lines:
-                if line.startswith(prefix):
-                    return line[len(prefix) :].strip().rstrip("~")
-            return None
+        scalar_fields: dict[str, str] = {}
+        for line in lines:
+            parts = line.strip().split(None, 1)
+            if len(parts) != 2:
+                continue
+            key, value = parts
+            scalar_fields[key.lower()] = value.strip().rstrip("~")
+
+        def get(key: str) -> str | None:
+            return scalar_fields.get(key.lower())
 
         damage_values: list[int] = []
         chance_values: list[int] = []
@@ -119,18 +124,18 @@ def parse_runtime_skills(skill_lst: dict[str, str]) -> dict[str, dict]:
             "exists": True,
             "skill_file": str(ski.relative_to(ROOT)).replace("\\", "/"),
             "skill_lst_key": stem if stem in skill_lst else None,
-            "slot_symbol": get("Slot            ") or skill_lst.get(stem),
-            "type": get("Type            "),
-            "cost": to_int(get("Cost            ")),
-            "cost_type": get("Costtype        "),
-            "wait": to_int(get("Wait            ")),
-            "weapon": get("Weapon          "),
-            "check": get("Check           "),
-            "associate": get("Associate       "),
-            "canask": {"YES": True, "NO": False}.get(get("CanAsk          ")),
-            "teach": {"YES": True, "NO": False}.get(get("Teach           ")),
-            "valid": {"YES": True, "NO": False}.get(get("Valid           ")),
-            "enable": {"YES": True, "NO": False}.get(get("Enable          ")),
+            "slot_symbol": get("Slot") or skill_lst.get(stem),
+            "type": get("Type"),
+            "cost": to_int(get("Cost")),
+            "cost_type": get("CostType"),
+            "wait": to_int(get("Wait")),
+            "weapon": get("Weapon"),
+            "check": get("Check"),
+            "associate": get("Associate"),
+            "canask": {"YES": True, "NO": False}.get(get("CanAsk")),
+            "teach": {"YES": True, "NO": False}.get(get("Teach")),
+            "valid": {"YES": True, "NO": False}.get(get("Valid")),
+            "enable": {"YES": True, "NO": False}.get(get("Enable")),
         }
         combat = {
             "damage_values": damage_values,

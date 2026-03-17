@@ -56,7 +56,7 @@ Legacy chain: `dragon phoenix / gold shield`
 - Runtime key: `gold_shield`
 - Type: `TAR_CHAR_DEFENSIVE`
 - Cost / Wait: `50 / 25`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_HIT / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `將 軍 >= 七十五級, max 一代宗師﹗`
 - Restrictions: `attrs: 體格 >= 二十五`

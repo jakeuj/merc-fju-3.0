@@ -56,7 +56,7 @@ Legacy chain: `armor -> faerie fog -> shield / magic missile -> wind blade -> va
 - Runtime key: `faerie_fog`
 - Type: `TAR_IGNORE`
 - Cost / Wait: `15 / 18`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / No`
 - Class limits: `伶 人 >= 一級, max 一代宗師﹗; 郎 中 >= 一級, max 出神入化﹗`
 - Restrictions: `skills: 天神守護 >= 心神領會`
@@ -75,9 +75,9 @@ Legacy chain: `armor -> faerie fog -> shield / magic missile -> wind blade -> va
 - Runtime file: `skill/f/fly.ski`
 - Runtime slot: `SLOT_FLY`
 - Runtime key: `fly`
-- Type: `TAR_CHAR_DEFENSIVE`
+- Type: `SLOT_FLY`
 - Cost / Wait: `15 / 20`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MANA / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 十五級, max 出神入化﹗; 郎 中 >= 十五級, max 一代宗師﹗; 文 官 >= 十五級, max 出類拔萃﹗`
 - Restrictions: `skills: 微風喚醒術 >= 心神領會`
@@ -98,7 +98,7 @@ Legacy chain: `armor -> faerie fog -> shield / magic missile -> wind blade -> va
 - Runtime key: `magic_missile`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `15 / 12`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 出類拔萃﹗; 刺 客 >= 五十級, max 出類拔萃﹗; 郎 中 >= 五十級, max 出類拔萃﹗; 武 官 >= 十級, max 馬馬虎虎﹗; 將 軍 >= 五十級, max 出類拔萃﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 心神領會﹗; 道 士 >= 十級, max 出類拔萃﹗; 鑄劍師 >= 五十級, max 登峰造極﹗; 盜 賊 >= 十級, max 馬馬虎虎﹗`
 - Restrictions: `attrs: 智力 >= 五`
@@ -119,7 +119,7 @@ Legacy chain: `armor -> faerie fog -> shield / magic missile -> wind blade -> va
 - Runtime key: `refresh`
 - Type: `TAR_CHAR_DEFENSIVE`
 - Cost / Wait: `12 / 18`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 十五級, max 出神入化﹗; 刺 客 >= 十五級, max 出類拔萃﹗; 郎 中 >= 十五級, max 一代宗師﹗; 武 官 >= 十五級, max 心神領會﹗; 將 軍 >= 十五級, max 出類拔萃﹗; 天 師 >= 十五級, max 神乎其技﹗; 文 官 >= 十五級, max 心神領會﹗; 道 士 >= 十五級, max 心神領會﹗; 鑄劍師 >= 十五級, max 神乎其技﹗; 盜 賊 >= 十五級, max 心神領會﹗`
 - Restrictions: `-`
@@ -140,7 +140,7 @@ Legacy chain: `armor -> faerie fog -> shield / magic missile -> wind blade -> va
 - Runtime key: `shield`
 - Type: `TAR_CHAR_DEFENSIVE`
 - Cost / Wait: `25 / 25`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 一級, max 一代宗師﹗; 郎 中 >= 一級, max 出神入化﹗`
 - Restrictions: `attrs: 智力 >= 二十; skills: 精靈之霧 >= 出類拔萃`
@@ -161,7 +161,7 @@ Legacy chain: `armor -> faerie fog -> shield / magic missile -> wind blade -> va
 - Runtime key: `super_refresh`
 - Type: `TAR_CHAR_DEFENSIVE`
 - Cost / Wait: `20 / 15`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `郎 中 >= 七十五級, max 一代宗師﹗`
 - Restrictions: `attrs: 智力 >= 二十五; skills: 飛翔術 >= 出神入化`
@@ -182,7 +182,7 @@ Legacy chain: `armor -> faerie fog -> shield / magic missile -> wind blade -> va
 - Runtime key: `vacuum_wind`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `30 / 15`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `天 師 >= 五十級, max 一代宗師﹗; 道 士 >= 十級, max 出類拔萃﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `attrs: 智力 >= 十五; skills: 風之刃 >= 心神領會`
@@ -224,7 +224,7 @@ Legacy chain: `armor -> faerie fog -> shield / magic missile -> wind blade -> va
 - Runtime key: `wind_blade`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `15 / 15`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 出類拔萃﹗; 郎 中 >= 五十級, max 出類拔萃﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 心神領會﹗; 道 士 >= 十級, max 出類拔萃﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `attrs: 智力 >= 十; skills: 魔法飛彈 >= 心神領會`

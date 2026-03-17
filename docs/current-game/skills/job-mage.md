@@ -35,7 +35,7 @@ Legacy chain: `abstract / dark hell -> seven key numen / meditation / restore st
 - Runtime key: `abstract`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `50 / 10`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MANA / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `天 師 >= 五十級, max 一代宗師﹗; 道 士 >= 三十級, max 心神領會﹗; 鑄劍師 >= 五十級, max 登峰造極﹗; - >= -, max -`
 - Restrictions: `attrs: 智力 >= 三十五`
@@ -56,7 +56,7 @@ Legacy chain: `abstract / dark hell -> seven key numen / meditation / restore st
 - Runtime key: `dark_hell`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `100 / 30`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `天 師 >= 六十級, max 一代宗師﹗`
 - Restrictions: `attrs: 學識 >= 二十五, 智力 >= 二十五; skills: 狂奔雷電 >= 登峰造極, 火之精靈 >= 出神入化`
@@ -77,7 +77,7 @@ Legacy chain: `abstract / dark hell -> seven key numen / meditation / restore st
 - Runtime key: `meditation`
 - Type: `TAR_MEDITATION`
 - Cost / Wait: `1 / 1`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MANA / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `天 師 >= 五十級, max 一代宗師﹗; 道 士 >= 十級, max 心神領會﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `attrs: 智力 >= 二十, 學識 >= 十五`
@@ -98,7 +98,7 @@ Legacy chain: `abstract / dark hell -> seven key numen / meditation / restore st
 - Runtime key: `restore_staff`
 - Type: `TAR_OBJ_INV`
 - Cost / Wait: `40 / 25`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MANA / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 一級, max 一代宗師﹗; 郎 中 >= 一級, max 出神入化﹗; 天 師 >= 一級, max 一代宗師﹗; 文 官 >= 一級, max 出類拔萃﹗; 道 士 >= 一級, max 出類拔萃﹗; 鑄劍師 >= 一級, max 出神入化﹗`
 - Restrictions: `-`
@@ -119,7 +119,7 @@ Legacy chain: `abstract / dark hell -> seven key numen / meditation / restore st
 - Runtime key: `seven_key_numen`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `300 / 45`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / No`
 - Class limits: `天 師 >= 九十級, max 一代宗師﹗`
 - Restrictions: `attrs: 智力 >= 四十; skills: 死黑核爆裂地獄 >= 神乎其技`
@@ -140,7 +140,7 @@ Legacy chain: `abstract / dark hell -> seven key numen / meditation / restore st
 - Runtime key: `six_god`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `130 / 20`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `天 師 >= 六十級, max 一代宗師﹗; 鑄劍師 >= 八十級, max 神乎其技﹗`
 - Restrictions: `attrs: 學識 >= 二十五`

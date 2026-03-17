@@ -35,7 +35,7 @@ Legacy chain: `acid blast -> blindness -> sleep -> poison / detect poison -> wea
 - Runtime key: `acid_blast`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `20 / 12`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MANA / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 出類拔萃﹗; 郎 中 >= 五十級, max 出類拔萃﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 三十級, max 馬馬虎虎﹗; 道 士 >= 三十級, max 心神領會﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `-`
@@ -54,9 +54,9 @@ Legacy chain: `acid blast -> blindness -> sleep -> poison / detect poison -> wea
 - Runtime file: `skill/b/blindness.ski`
 - Runtime slot: `SLOT_BLINDNESS`
 - Runtime key: `blindness`
-- Type: `TAR_CHAR_OFFENSIVE`
+- Type: `SLOT_BLINDNESS`
 - Cost / Wait: `25 / 12`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 神乎其技﹗; 郎 中 >= 五十級, max 神乎其技﹗; 天 師 >= 五十級, max 出神入化﹗; 鑄劍師 >= 五十級, max 一代宗師﹗`
 - Restrictions: `skills: 酸液術 >= 心神領會`
@@ -77,7 +77,7 @@ Legacy chain: `acid blast -> blindness -> sleep -> poison / detect poison -> wea
 - Runtime key: `detect_poison`
 - Type: `TAR_OBJ_INV`
 - Cost / Wait: `15 / 12`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 一代宗師﹗; 郎 中 >= 五十級, max 出神入化﹗; 文 官 >= 十級, max 出類拔萃﹗`
 - Restrictions: `-`
@@ -96,9 +96,9 @@ Legacy chain: `acid blast -> blindness -> sleep -> poison / detect poison -> wea
 - Runtime file: `skill/p/poison.ski`
 - Runtime slot: `SLOT_POISON`
 - Runtime key: `poison`
-- Type: `TAR_CHAR_OFFENSIVE`
+- Type: `SLOT_POISON`
 - Cost / Wait: `30 / 20`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `skills: 睡眠術 >= 出類拔萃`
@@ -117,9 +117,9 @@ Legacy chain: `acid blast -> blindness -> sleep -> poison / detect poison -> wea
 - Runtime file: `skill/s/sleep.ski`
 - Runtime slot: `SLOT_SLEEP`
 - Runtime key: `sleep`
-- Type: `TAR_CHAR_DEFENSIVE`
+- Type: `SLOT_SLEEP`
 - Cost / Wait: `25 / 12`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `天 師 >= 五十級, max 登峰造極﹗; 鑄劍師 >= 五十級, max 一代宗師﹗`
 - Restrictions: `skills: 眼盲術 >= 出類拔萃`
@@ -140,7 +140,7 @@ Legacy chain: `acid blast -> blindness -> sleep -> poison / detect poison -> wea
 - Runtime key: `weaken`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `20 / 15`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 一代宗師﹗; 郎 中 >= 五十級, max 出神入化﹗; 文 官 >= 十級, max 出類拔萃﹗`
 - Restrictions: `attrs: 敏捷 >= 十; skills: 偵測毒物 >= 心神領會`

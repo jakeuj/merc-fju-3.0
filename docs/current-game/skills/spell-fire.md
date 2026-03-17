@@ -35,7 +35,7 @@ Legacy chain: `burning hands -> flamestrike -> fireball -> cast fire -> fire elf
 - Runtime key: `burning_hands`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `15 / 8`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 馬馬虎虎﹗; 刺 客 >= 五十級, max 初窺門徑﹗; 平 民 >= 十級, max 初窺門徑﹗; 郎 中 >= 五十級, max 馬馬虎虎﹗; 武 官 >= 十級, max 初窺門徑﹗; 將 軍 >= 五十級, max 初窺門徑﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 馬馬虎虎﹗; 道 士 >= 十級, max 出類拔萃﹗; 鑄劍師 >= 五十級, max 登峰造極﹗; 盜 賊 >= 十五級, max 初窺門徑﹗`
 - Restrictions: `-`
@@ -75,9 +75,9 @@ Legacy chain: `burning hands -> flamestrike -> fireball -> cast fire -> fire elf
 - Runtime file: `skill/f/faerie_fire.ski`
 - Runtime slot: `SLOT_FAERIE_FIRE`
 - Runtime key: `faerie_fire`
-- Type: `TAR_CHAR_OFFENSIVE`
+- Type: `SLOT_FAERIE_FIRE`
 - Cost / Wait: `18 / 24`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 一代宗師﹗; 郎 中 >= 五十級, max 登峰造極﹗; 文 官 >= 十五級, max 心神領會﹗`
 - Restrictions: `skills: 皮膚石化術 >= 心神領會`
@@ -119,7 +119,7 @@ Legacy chain: `burning hands -> flamestrike -> fireball -> cast fire -> fire elf
 - Runtime key: `fireball`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `25 / 14`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 心神領會﹗; 郎 中 >= 五十級, max 心神領會﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 心神領會﹗; 道 士 >= 十級, max 神乎其技﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `attrs: 智力 >= 十五; skills: 烈焰術 >= 心神領會`
@@ -140,7 +140,7 @@ Legacy chain: `burning hands -> flamestrike -> fireball -> cast fire -> fire elf
 - Runtime key: `flamestrike`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `20 / 12`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 心神領會﹗; 郎 中 >= 五十級, max 心神領會﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 心神領會﹗; 道 士 >= 十級, max 神乎其技﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `attrs: 智力 >= 十; skills: 火焰之掌 >= 初窺門徑`
@@ -161,7 +161,7 @@ Legacy chain: `burning hands -> flamestrike -> fireball -> cast fire -> fire elf
 - Runtime key: `stone_skin`
 - Type: `TAR_CHAR_SELF`
 - Cost / Wait: `12 / 18`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 一代宗師﹗; 郎 中 >= 五十級, max 登峰造極﹗; 文 官 >= 十五級, max 心神領會﹗`
 - Restrictions: `-`

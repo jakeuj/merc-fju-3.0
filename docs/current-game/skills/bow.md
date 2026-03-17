@@ -35,7 +35,7 @@ Legacy chain: `shoot sun -> water cloud blast -> fun wu blast`
 - Runtime key: `fun_wu_blast`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `20 / 15`
-- CostType / Weapon / Check: `- / - / check_bow_attack`
+- CostType / Weapon / Check: `COST_MOVE / WEAPON_BOW / check_bow_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 神乎其技﹗; 將 軍 >= 一級, max 一代宗師﹗`
 - Restrictions: `attrs: 體格 >= 二十五, 敏捷 >= 三十五, 力量 >= 二十五; skills: 水雲箭法 >= 出神入化`
@@ -77,7 +77,7 @@ Legacy chain: `shoot sun -> water cloud blast -> fun wu blast`
 - Runtime key: `water_cloud_blast`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `20 / 15`
-- CostType / Weapon / Check: `- / - / check_bow_attack`
+- CostType / Weapon / Check: `COST_MOVE / WEAPON_BOW / check_bow_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 出神入化﹗; 武 官 >= 一級, max 出類拔萃﹗; 將 軍 >= 一級, max 一代宗師﹗; 鑄劍師 >= 一級, max 出類拔萃﹗; 盜 賊 >= 一級, max 神乎其技﹗`
 - Restrictions: `attrs: 敏捷 >= 二十五, 力量 >= 十五; skills: 射日箭法 >= 出類拔萃`

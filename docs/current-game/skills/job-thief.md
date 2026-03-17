@@ -35,7 +35,7 @@ Legacy chain: `cook / hide -> backstab / mask / venom -> pick -> sneak -> dorman
 - Runtime key: `backstab`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `20 / 12`
-- CostType / Weapon / Check: `- / - / check_dagger_attack`
+- CostType / Weapon / Check: `COST_MOVE / - / check_dagger_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `盜 賊 >= 六十五級, max 一代宗師﹗; 伶 人 >= -, max -; 刺 客 >= -, max -; 平 民 >= -, max -; 郎 中 >= -, max -; 武 官 >= -, max -; 將 軍 >= -, max -; 天 師 >= -, max -; 文 官 >= -, max -; 道 士 >= -, max -; 鑄劍師 >= -, max -`
 - Restrictions: `attrs: 敏捷 >= 三十; skills: 隱藏術 >= 出神入化`
@@ -56,7 +56,7 @@ Legacy chain: `cook / hide -> backstab / mask / venom -> pick -> sneak -> dorman
 - Runtime key: `cook`
 - Type: `TAR_OBJ_ROOM`
 - Cost / Wait: `12 / 24`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `- >= -, max -; - >= -, max -; 盜 賊 >= 十五級, max 一代宗師﹗; 伶 人 >= -, max -; 刺 客 >= -, max -; 郎 中 >= -, max -; 武 官 >= -, max -; 將 軍 >= -, max -; 天 師 >= -, max -; 文 官 >= -, max -; 道 士 >= -, max -; 鑄劍師 >= -, max -`
 - Restrictions: `attrs: 學識 >= 五`
@@ -77,7 +77,7 @@ Legacy chain: `cook / hide -> backstab / mask / venom -> pick -> sneak -> dorman
 - Runtime key: `dormancy`
 - Type: `TAR_MEDITATION`
 - Cost / Wait: `1 / 1`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MANA / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `盜  賊 >= 十級, max 一代宗師﹗; 伶  人 >= -, max -; 刺  客 >= -, max -; 平  民 >= -, max -; 郎  中 >= -, max -; 武  官 >= -, max -; 將  軍 >= -, max -; 天  師 >= -, max -; 文  官 >= -, max -; 道  士 >= -, max -; 鑄劍師 >= -, max -; - >= -, max -; - >= -, max -; - >= -, max -; - >= -, max -; - >= -, max -; - >= -, max -; - >= -, max -; - >= -, max -`
 - Restrictions: `-`
@@ -96,9 +96,9 @@ Legacy chain: `cook / hide -> backstab / mask / venom -> pick -> sneak -> dorman
 - Runtime file: `skill/h/hide.ski`
 - Runtime slot: `SLOT_HIDE`
 - Runtime key: `hide`
-- Type: `TAR_CHAR_SELF`
+- Type: `SLOT_HIDE`
 - Cost / Wait: `20 / 12`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MOVE / - / -`
 - CanAsk / Teach / Valid / Enable: `No / No / No / No`
 - Class limits: `盜 賊 >= 五十級, max 一代宗師﹗; 伶 人 >= -, max -; 刺 客 >= -, max -; 平 民 >= -, max -; 郎 中 >= -, max -; 武 官 >= -, max -; 將 軍 >= -, max -; 天 師 >= -, max -; 文 官 >= -, max -; 道 士 >= -, max -; 鑄劍師 >= -, max -`
 - Restrictions: `attrs: 敏捷 >= 二十五`
@@ -117,9 +117,9 @@ Legacy chain: `cook / hide -> backstab / mask / venom -> pick -> sneak -> dorman
 - Runtime file: `skill/m/mask.ski`
 - Runtime slot: `SLOT_MASK`
 - Runtime key: `mask`
-- Type: `TAR_CHAR_SELF`
+- Type: `SLOT_MASK`
 - Cost / Wait: `100 / 12`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MOVE / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `- >= -, max -; - >= -, max -; 伶 人 >= -, max -; 刺 客 >= -, max -; 平 民 >= -, max -; 郎 中 >= -, max -; 武 官 >= -, max -; 將 軍 >= -, max -; 天 師 >= -, max -; 文 官 >= -, max -; 道 士 >= -, max -; 鑄劍師 >= -, max -`
 - Restrictions: `-`
@@ -162,7 +162,7 @@ Legacy chain: `cook / hide -> backstab / mask / venom -> pick -> sneak -> dorman
 - Runtime key: `pick`
 - Type: `TAR_ARGUMENT`
 - Cost / Wait: `20 / 20`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MOVE / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `盜  賊 >= 一級, max 一代宗師﹗; 伶  人 >= -, max -; 刺  客 >= -, max -; 平  民 >= -, max -; 郎  中 >= -, max -; 武  官 >= -, max -; 將  軍 >= -, max -; 天  師 >= -, max -; 文  官 >= -, max -; 道  士 >= -, max -; 鑄劍師 >= -, max -; - >= -, max -; - >= -, max -; - >= -, max -; - >= -, max -; - >= -, max -`
 - Restrictions: `-`
@@ -181,9 +181,9 @@ Legacy chain: `cook / hide -> backstab / mask / venom -> pick -> sneak -> dorman
 - Runtime file: `skill/s/sneak.ski`
 - Runtime slot: `SLOT_SNEAK`
 - Runtime key: `sneak`
-- Type: `TAR_CHAR_SELF`
+- Type: `SLOT_SNEAK`
 - Cost / Wait: `20 / 12`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MOVE / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `盜  賊 >= 一級, max 一代宗師﹗; 伶  人 >= -, max -; 刺  客 >= -, max -; 平  民 >= -, max -; 郎  中 >= -, max -; 武  官 >= -, max -; 將  軍 >= -, max -; 天  師 >= -, max -; 文  官 >= -, max -; 道  士 >= -, max -; 鑄劍師 >= -, max -; - >= -, max -; - >= -, max -; - >= -, max -; - >= -, max -; - >= -, max -`
 - Restrictions: `-`
@@ -204,7 +204,7 @@ Legacy chain: `cook / hide -> backstab / mask / venom -> pick -> sneak -> dorman
 - Runtime key: `steal`
 - Type: `TAR_ARGUMENT`
 - Cost / Wait: `20 / 20`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MOVE / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `- >= -, max -; - >= -, max -; 伶 人 >= -, max -; 刺 客 >= -, max -; 平 民 >= -, max -; 郎 中 >= -, max -; 武 官 >= -, max -; 將 軍 >= -, max -; 天 師 >= -, max -; 文 官 >= -, max -; 道 士 >= -, max -; 鑄劍師 >= -, max -`
 - Restrictions: `attrs: 敏捷 >= 三十五; skills: 偷窺術 >= 登峰造極`
@@ -225,7 +225,7 @@ Legacy chain: `cook / hide -> backstab / mask / venom -> pick -> sneak -> dorman
 - Runtime key: `venom`
 - Type: `TAR_OBJ_INV`
 - Cost / Wait: `10 / 10`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MANA / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶  人 >= 一級, max 出神入化﹗; 刺  客 >= 一級, max 出神入化﹗; 郎  中 >= 一級, max 出神入化﹗; 武  官 >= 一級, max 出神入化﹗; 將  軍 >= 一級, max 出神入化﹗; 天  師 >= 一級, max 出神入化﹗; 文  官 >= 一級, max 出神入化﹗; 道  士 >= 一級, max 出神入化﹗; 鑄劍師 >= 一級, max 出神入化﹗; 盜  賊 >= 一級, max 一代宗師﹗; 平  民 >= -, max -; - >= -, max -; - >= -, max -; - >= -, max -; - >= -, max -`
 - Restrictions: `-`

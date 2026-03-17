@@ -35,7 +35,7 @@ Legacy chain: `control weather -> haste / shocking grasp -> lightning bolt -> ca
 - Runtime key: `call_lightning`
 - Type: `TAR_IGNORE`
 - Cost / Wait: `22 / 15`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `天 師 >= 三十五級, max 一代宗師﹗; 道 士 >= 三十五級, max 出類拔萃﹗; 鑄劍師 >= 三十五級, max 一代宗師﹗`
 - Restrictions: `attrs: 智力 >= 十五; skills: 小雷球 >= 心神領會`
@@ -77,7 +77,7 @@ Legacy chain: `control weather -> haste / shocking grasp -> lightning bolt -> ca
 - Runtime key: `control_weather`
 - Type: `TAR_STRING`
 - Cost / Wait: `25 / 12`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 一代宗師﹗; 郎 中 >= 五十級, max 出類拔萃﹗; 天 師 >= 五十級, max 出類拔萃﹗; 文 官 >= 十級, max 心神領會﹗; 道 士 >= 十級, max 心神領會﹗; 鑄劍師 >= 五十級, max 出類拔萃﹗`
 - Restrictions: `attrs: 智力 >= 五`
@@ -98,7 +98,7 @@ Legacy chain: `control weather -> haste / shocking grasp -> lightning bolt -> ca
 - Runtime key: `haste`
 - Type: `TAR_CHAR_DEFENSIVE`
 - Cost / Wait: `40 / 25`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 一級, max 一代宗師﹗; 郎 中 >= 一級, max 出神入化﹗`
 - Restrictions: `attrs: 學識 >= 二十; skills: 控制天氣術 >= 心神領會`
@@ -119,7 +119,7 @@ Legacy chain: `control weather -> haste / shocking grasp -> lightning bolt -> ca
 - Runtime key: `lightning_bolt`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `20 / 12`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MANA / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 馬馬虎虎﹗; 郎 中 >= 五十級, max 馬馬虎虎﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 馬馬虎虎﹗; 道 士 >= 十級, max 出類拔萃﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `attrs: 智力 >= 十; skills: 輕度電擊術 >= 馬馬虎虎`
@@ -140,7 +140,7 @@ Legacy chain: `control weather -> haste / shocking grasp -> lightning bolt -> ca
 - Runtime key: `shocking_grasp`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `15 / 8`
-- CostType / Weapon / Check: `- / - / -`
+- CostType / Weapon / Check: `COST_MANA / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 馬馬虎虎﹗; 刺 客 >= 五十級, max 初窺門徑﹗; 平 民 >= 十級, max 初窺門徑﹗; 郎 中 >= 五十級, max 馬馬虎虎﹗; 武 官 >= 十級, max 初窺門徑﹗; 將 軍 >= 五十級, max 初窺門徑﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 馬馬虎虎﹗; 道 士 >= 十級, max 出類拔萃﹗; 鑄劍師 >= 五十級, max 登峰造極﹗; 盜 賊 >= 十五級, max 初窺門徑﹗`
 - Restrictions: `attrs: 智力 >= 五`

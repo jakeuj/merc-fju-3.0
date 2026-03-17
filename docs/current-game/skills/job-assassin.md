@@ -35,7 +35,7 @@ Legacy chain: `bystander fist / hate sword / iron shield`
 - Runtime key: `bystander_fist`
 - Type: `TAR_STRING`
 - Cost / Wait: `25 / 30`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_MOVE / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `刺 客 >= 七十級, max 一代宗師﹗`
 - Restrictions: `attrs: 敏捷 >= 三十五`
@@ -77,7 +77,7 @@ Legacy chain: `bystander fist / hate sword / iron shield`
 - Runtime key: `iron_shield`
 - Type: `TAR_CHAR_DEFENSIVE`
 - Cost / Wait: `45 / 25`
-- CostType / Weapon / Check: `- / - / check_unrigid_attack`
+- CostType / Weapon / Check: `COST_HIT / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `刺 客 >= 七十五級, max 一代宗師﹗`
 - Restrictions: `attrs: 敏捷 >= 二十五`
