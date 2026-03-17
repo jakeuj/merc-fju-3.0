@@ -42,7 +42,7 @@ Help            ~
 Description
 $n使一招$B『拖泥帶水』$Z﹐手中$O平平刺向敵人$N的$l﹐去勢竟是極其緩慢。~
 Chance          10
-Value           20
+Value           55
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -51,7 +51,7 @@ End
 Description
 $n使出黯然銷魂劍中的$B『倒行逆施』$Z﹐手腕翻轉竟以劍首朝敵人$l刺去。~
 Chance          10
-Value           20
+Value           70
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -60,7 +60,7 @@ End
 Description
 $n一招$S『庸人自擾』$Z﹐身形陡向後滑出數尺﹐手中$O朝$N$l砍去。~
 Chance          10
-Value           20
+Value           85
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -69,7 +69,7 @@ End
 Description
 $n面若有思﹐一式$s『杞人憂天』$Z對準$N的$l刺出一劍。~
 Chance          10
-Value           20
+Value           100
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -78,7 +78,7 @@ End
 Description
 只見$n咬牙切齒﹐橫劍上前﹐驀地裡一招$P『飲恨吞聲』$Z朝$N的$l刺去。~
 Chance          10
-Value           20
+Value           115
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -87,7 +87,7 @@ End
 Description
 $n忽哭忽笑﹐神情詭異﹐陡然使出一招$p『想入非非』$Z刺向$N的$l。~
 Chance          10
-Value           20
+Value           130
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -96,7 +96,7 @@ End
 Description
 $n突然全身委頓餘地﹐使一招$y『力不從心』$Z反手對準$N$l一劍刺去。~
 Chance          10
-Value           20
+Value           145
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -106,7 +106,7 @@ Description
 $n突然殺意暴起﹐調息全身內力於劍尖﹐大喝一聲朝$N刺去﹐正是黯然銷魂劍中最強的
 $W『$Y窮$S途$G末$B路$W』$Z。~
 Chance          10
-Value           20
+Value           165
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

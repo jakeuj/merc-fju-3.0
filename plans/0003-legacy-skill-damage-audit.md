@@ -331,18 +331,17 @@
 
 目前狀態：
 
-- `status = batch_q_implemented`
+- `status = batch_r_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch Q implemented`
+- `current_batch = Batch R implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可回到劍系剩餘主鏈，優先考慮 `shan sword -> shadow kill sword -> six sword`
+1. 下一個高價值候選可進入 `two sword -> gsword -> tendo slash`，但要先把單筆 `Value 200` 與 `Innate 404 150` 當 hybrid case 做特判
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
-3. `two sword -> gsword -> tendo slash` 目前帶有單筆高值與 innate 特例；若進下一批，先判斷它屬完整 ladder 還是 hybrid keep case
-4. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
-5. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
-6. 若後續再遇到 city / teacher 樣本掛著已重建 ladder，不先急著換技能名，先判斷是不是歷史 `Enable 100` 該回調
+3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
+4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
+5. 若後續再遇到 city / teacher 樣本掛著已重建 ladder，不先急著換技能名，先判斷是不是歷史 `Enable 100` 該回調
 
 ## Batch A Result
 
@@ -2510,6 +2509,135 @@
   - 改用 `IPC KEY 4585`
 - 檢查：
   - `log/smoke-batch-q.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/badobject`
+    - 無新增內容
+  - `debug/error`
+    - 無新增內容
+
+## Batch R Pre-Check
+
+### Scope
+
+- `shan sword`
+- `shadow kill sword`
+- `six sword`
+
+### Reference Basis
+
+- `docs/3yWebsite/skill/sword.html`
+  - 明確給出 `shan sword -> shadow kill sword -> six sword`
+  - `shan sword` 是可教 root，且舊站直接列出多個老師樣本
+  - `shadow kill sword` 以 `shan sword` 為 prerequisite，舊站標示為高階、不可互教的延伸段
+  - `six sword` 以 `shadow kill sword` 為 prerequisite，且是整條鏈的終點技能
+- `docs/current-game/skills/sword.md`
+  - current-game 已把這條鏈整理在 `legacy-page:sword`
+  - runtime 顯示三者 `Value` 幾乎仍全 `20`
+- runtime `skill/*.ski`
+  - `shansword.ski`
+    - `Associate -1`
+    - `CanAsk NO / Teach NO / Valid NO`
+  - `shadow_kill.ski`
+    - `Associate -1`
+    - `CanAsk NO / Teach NO / Valid NO`
+  - `six_sword.ski`
+    - `Associate -1`
+    - `CanAsk NO / Teach NO / Valid NO`
+
+### Mandatory Pre-Check Snapshot
+
+`shan sword`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `10 / COST_MOVE / 1`
+- weapon / check: `WEAPON_SWORD / check_sword_attack`
+- canask / teach / valid: `NO / NO / NO`
+- damage entries: `8`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`shadow kill sword`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `10 / COST_MOVE / 1`
+- weapon / check: `WEAPON_SWORD / check_sword_attack`
+- canask / teach / valid: `NO / NO / NO`
+- damage entries: `17`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`six sword`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 1`
+- weapon / check: `WEAPON_SWORD / check_sword_attack`
+- canask / teach / valid: `NO / NO / NO`
+- damage entries: `7`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這條鏈和 `bad sword -> wumin sword -> noname` 類似，舊站 progression 很清楚，但 runtime 現況保留成封存式 legacy 技能。
+- 三者共同 distortion 很明顯：`Value` 被整串清成 `20`，但 `Wait 1` 與 `Chance 10` 的快劍特性仍被保留。
+- `shan sword` 應維持成快劍 root，雖然平均值要回升，但不能直接和終點技能拉到同一級。
+- `shadow kill sword` 同樣 `Cost 10 / Wait 1`，但有更高 prerequisite、更多段數，應被拉成清楚高於 `shan sword` 的中高階連段模板。
+- `six sword` 是整條鏈的終點，雖然 damage entries 較少，但有更重 `Cost 20` 與更嚴格的屬性／熟練限制，應以更高單段值站穩終點身分。
+- area `*.mob` 目前未看到這三招的現成 `Enable / AutoEnable / #Learn` 樣本，因此本批先不做 mob fallout。
+
+## Batch R Result
+
+### Scope
+
+- `shan sword`
+- `shadow kill sword`
+- `six sword`
+
+### Runtime Changes
+
+`shan sword`
+
+- before: `20 x 8`
+- after: `55, 70, 85, 100, 115, 130, 145, 165`
+- average: `108.13`
+
+`shadow kill sword`
+
+- before: `20 x 17`
+- after: `90, 105, 120, 135, 150, 165, 180, 195, 210, 225, 240, 255, 270, 290, 310, 335, 360`
+- average: `214.12`
+
+`six sword`
+
+- before: `20 x 7`
+- after: `170, 195, 220, 245, 275, 310, 350`
+- average: `252.14`
+
+### Design Notes
+
+- 本批仍只調 `Value`，保留這條鏈原本的 `Wait 1` 快劍性格與 `Chance 10` 的低出手機率分布。
+- `shan sword` 回到可成立的 root，不再是看起來像高級技能、實際卻和入門殘值一樣的假模板。
+- `shadow kill sword` 以更多段數與更高平均值承接中高階段，但仍避免直接壓過終點技能的單段定位。
+- `six sword` 用更高單段值與更重成本站穩終點模板，讓這條快劍鏈重新有清楚的三段式梯度。
+- 本批不處理 `Valid / CanAsk / Teach` 的 runtime policy，維持和前幾批相同的「先重建 combat template，再分開討論開放政策」策略。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-r.log`
     - 出現 `三國歪傳之降龍伏虎開始正常運作`
   - `debug/failenable`
     - 無新增內容

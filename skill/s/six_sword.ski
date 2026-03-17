@@ -39,7 +39,7 @@ Description
 $w$n手持$O使出$Y『六劍訣』$w之第一劍$B「秘劍．秋霜」$w﹐瞬時一道寒氣由劍尖直
 向$N腳下射去﹐寒冷劍氣尤如$B秋霜披地$w﹐令$N無法動彈。$Z~
 Chance          10
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -50,7 +50,7 @@ Description
 $w你手持$O向$N直奔而去﹐使出$Y『六劍訣』$w之第二劍$W「秘劍．飛雪」$w﹐只
 見無數劍芒尤如$W冬夜飄雪$w﹐令$N看的眼花撩亂不知所措。$Z~
 Chance          10
-Value           20
+Value           195
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -61,7 +61,7 @@ Description
 $w$n手持$O立地而轉﹐使出$Y『六劍訣』$w之第三劍$S「秘劍．幻風」$w﹐只見$N
 被一陣旋風圍繞﹐尤如$S秋風掃落葉$w﹐瞬時$N自空中墜下而神智不清。$Z~
 Chance          10
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -72,7 +72,7 @@ Description
 $w$n手持$O向空中一躍﹐使出$Y『六劍訣』$w之第四劍$G「秘劍．狂雷」$w﹐只見無數
 劍氣自天空落下﹐尤如$G狂雷急奔$w﹐直向$N天靈蓋襲去。$Z~
 Chance          10
-Value           20
+Value           245
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -83,7 +83,7 @@ Description
 $w$n手持$O旋身一刺﹐使出$Y『六劍訣』$w之第五劍$R「秘劍．烈炎」$w﹐頓時劍氣化
 為一道火焰直奔$N﹐尤如$R怒火燎原$w﹐令$N閃避不及而灼傷。$Z~
 Chance          10
-Value           20
+Value           275
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -94,7 +94,7 @@ Description
 $w$n手持$O往地面一劈﹐使出$Y『六劍訣』$w之第六劍$Y「秘劍．怒海」$w﹐瞬時無數
 劍氣自地面爆射而出﹐尤如$Y狂波怒濤$w﹐直向$N逼進﹐令$N無可躲藏。$Z~
 Chance          10
-Value           20
+Value           310
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -106,7 +106,7 @@ $W$n忽然領悟$S『無』$W的境界﹐將手中$O向$N疾射而去﹐使出$Y
 奧義$G「霸劍．無盡蒼穹」$W﹐只見$n將所有內力化為浩浩劍氣向四周擴散﹐令$N
 避無可避只能承受。$Z~
 Chance          10
-Value           20
+Value           350
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
