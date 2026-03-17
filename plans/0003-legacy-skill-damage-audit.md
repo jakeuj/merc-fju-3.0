@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_ab_implemented`
+- `status = batch_ac_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch AB implemented`
+- `current_batch = Batch AC implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `cloud fist` 之後的其餘孤立 high-tier attack skill
+1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `dragon fist` 之後的其餘孤立 high-tier attack skill
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -3610,6 +3610,70 @@
 
 - 本批把 `cloud fist` 定位成高於中階拳掌、但仍低於最頂階爆發單點的 high-tier palm template。
 - 這樣可以先恢復它作為玩家向祕笈技能的成立梯度，不去抹平其他拳法系既有個性。
+
+### Validation
+
+- 待本批 build / smoke test 完成後補入
+
+## Batch AC Pre-Check
+
+### Scope
+
+- `dragon fist`
+
+### Reference Basis
+
+- runtime `skill/d/dragonfist.ski`
+  - `Value` 全 `20`
+  - `Cost 50 / Wait 10 / Check check_unrigid_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `dragon fist`
+  - `family = legacy-page:dragon fist`
+  - combat 維度顯示 `18` 段 `Value 20`
+- `area/limbo/obj/252.obj`
+  - 仍存在 `dragon fist book`
+- `area/limbo/mob/6.mob`
+  - 仍有 `Enable 100 'dragon fist'` 與對應施放樣本
+
+### Mandatory Pre-Check Snapshot
+
+`dragon fist`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `50 / COST_MOVE / 10`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `18`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 雖然目前沒抓到獨立舊站頁面，但 runtime、current-game、祕笈與 limbo 樣本都足以確認這是玩家向高階掌法，而不是單純 NPC 殘檔。
+- `Cost 50` 加上 `18` 段完整招式，卻維持全 `20`，幾乎可以直接視為高階模板被清值。
+- 本批先只回填 `Value` 階梯，保留原本的 `Chance / Wait / Cost / Check`。
+
+## Batch AC Result
+
+### Scope
+
+- `dragon fist`
+
+### Runtime Changes
+
+`dragon fist`
+
+- before: `20 x 18`
+- after: `150, 170, 190, 210, 235, 260, 290, 325, 360, 400, 445, 495, 550, 610, 675, 745, 820, 900`
+- average: `435.56`
+
+### Design Notes
+
+- 本批把 `dragon fist` 定位成傳說級、超高成本、長段數掌法模板，整體高於目前已補的多數拳掌單點技能。
+- 這樣可以恢復 `降龍十八掌` 作為高階祕笈技能的存在感，同時不去改動它原本的出手節奏與命中分布。
 
 ### Validation
 
