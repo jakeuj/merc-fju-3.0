@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sango.jakeuj.com/schemas/area-plan.schema.json",
+  "title": "Merc-FJU Area Plan Metadata",
+  "description": "Minimal schema for structured metadata extracted from plans/area/*.md. The markdown file remains authoritative; this schema exists for future tooling and template validation.",
+  "type": "object",
+  "required": [
+    "area_slug",
+    "title",
+    "theme",
+    "subtheme",
+    "reserved_room_block",
+    "planned_vnum_range",
+    "delivery_gate",
+    "external_links",
+    "ref_inputs_used",
+    "ref_inputs_deferred",
+    "theme_basis",
+    "compliance_check"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "area_slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string"
+    },
+    "theme": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subtheme": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reserved_room_block": {
+      "type": "string",
+      "pattern": "^[0-9]+-[0-9]+$"
+    },
+    "planned_vnum_range": {
+      "type": "string",
+      "pattern": "^[0-9]+-[0-9]+$"
+    },
+    "parent_area": {
+      "type": "string"
+    },
+    "delivery_gate": {
+      "type": "string",
+      "enum": [
+        "spec_in_progress",
+        "spec_ready_for_commit",
+        "implementation_in_progress",
+        "implementation_ready_for_commit",
+        "validated_ready_to_advance",
+        "blocked"
+      ]
+    },
+    "external_links": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["direction", "target_area"],
+        "additionalProperties": true,
+        "properties": {
+          "direction": {
+            "type": "string",
+            "enum": ["north", "east", "south", "west", "up", "down", "enter", "out"]
+          },
+          "source_vnum": { "type": "integer" },
+          "target_area": { "type": "string", "minLength": 1 },
+          "target_room_vnum": { "type": "integer" },
+          "status": {
+            "type": "string",
+            "enum": ["planned", "runtime"]
+          },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "ref_inputs_used": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "ref_inputs_deferred": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "theme_basis": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "compliance_check": {
+      "type": "string",
+      "minLength": 1
+    },
+    "validation_targets": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "validation_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["command", "result"],
+        "additionalProperties": true,
+        "properties": {
+          "command": { "type": "string", "minLength": 1 },
+          "result": { "type": "string", "minLength": 1 },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "runtime_notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "risks_and_blockers": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next_step_prompt": {
+      "type": "string"
+    }
+  }
+}

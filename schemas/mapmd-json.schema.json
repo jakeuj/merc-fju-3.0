@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sango.jakeuj.com/schemas/mapmd-json.schema.json",
+  "title": "Merc-FJU mapmd-json",
+  "description": "Minimal schema for the machine-readable graph embedded in area/<area>/map.md. This schema is intentionally conservative and models the current spec-first contract rather than every possible future extension.",
+  "type": "object",
+  "required": ["area", "rooms"],
+  "additionalProperties": true,
+  "properties": {
+    "area": {
+      "type": "object",
+      "required": ["schema", "name", "title", "planned_vnum_range", "reserved_room_block", "theme"],
+      "additionalProperties": true,
+      "properties": {
+        "schema": {
+          "type": "string",
+          "const": "mapmd-json/v1"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "design_notes": {
+          "type": "string"
+        },
+        "parent_area": {
+          "type": "string"
+        },
+        "level_range": {
+          "type": "string"
+        },
+        "planned_vnum_range": {
+          "type": "string",
+          "pattern": "^[0-9]+-[0-9]+$"
+        },
+        "reserved_room_block": {
+          "type": "string",
+          "pattern": "^[0-9]+-[0-9]+$"
+        },
+        "room_vnum_policy": {
+          "type": "string"
+        },
+        "theme": {
+          "type": "object",
+          "required": ["primary", "secondary"],
+          "additionalProperties": true,
+          "properties": {
+            "primary": { "type": "string", "minLength": 1 },
+            "secondary": { "type": "string", "minLength": 1 }
+          }
+        },
+        "world_links": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/worldLink" }
+        },
+        "clusters": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/cluster" }
+        }
+      }
+    },
+    "rooms": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/room" }
+    },
+    "includes": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "$defs": {
+    "direction": {
+      "type": "string",
+      "enum": ["north", "east", "south", "west", "up", "down", "enter", "out"]
+    },
+    "cluster": {
+      "type": "object",
+      "required": ["id", "label"],
+      "additionalProperties": true,
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "label": { "type": "string", "minLength": 1 }
+      }
+    },
+    "worldLink": {
+      "type": "object",
+      "required": ["direction", "source_vnum", "target_area"],
+      "additionalProperties": true,
+      "properties": {
+        "direction": { "$ref": "#/$defs/direction" },
+        "source_vnum": { "type": "integer" },
+        "target_area": { "type": "string", "minLength": 1 },
+        "target_room_vnum": { "type": "integer" },
+        "label": { "type": "string" }
+      }
+    },
+    "exit": {
+      "type": "object",
+      "required": ["direction", "to"],
+      "additionalProperties": true,
+      "properties": {
+        "direction": { "$ref": "#/$defs/direction" },
+        "to": { "type": "integer" },
+        "external": { "type": "boolean" },
+        "one_way": { "type": "boolean" },
+        "description": { "type": "string" },
+        "keyword": { "type": "string" }
+      }
+    },
+    "keyword": {
+      "type": "object",
+      "required": ["keyword", "description"],
+      "additionalProperties": true,
+      "properties": {
+        "keyword": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 }
+      }
+    },
+    "job": {
+      "type": "object",
+      "required": ["name"],
+      "additionalProperties": true,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 }
+      }
+    },
+    "room": {
+      "type": "object",
+      "required": ["vnum", "name", "description", "sector_type", "exits"],
+      "additionalProperties": true,
+      "properties": {
+        "vnum": { "type": "integer" },
+        "name": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "sector_type": { "type": "string", "minLength": 1 },
+        "cluster": { "type": "string" },
+        "coord": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": { "type": "number" }
+        },
+        "labels": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "notes": { "type": "string" },
+        "flags": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "owner": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "type": "integer" }
+        },
+        "exits": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/exit" }
+        },
+        "keywords": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/keyword" }
+        },
+        "enquires": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "jobs": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/job" }
+        }
+      }
+    }
+  }
+}

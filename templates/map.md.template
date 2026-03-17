@@ -1,0 +1,120 @@
+# <Area Title> (`<area_slug>`)
+
+## Area Intent
+
+說明這個 area 在世界中的角色、玩家會從哪裡進來、第一版想固定什麼節奏與感受。
+
+第一版目標先固定：
+
+- `<goal 1>`
+- `<goal 2>`
+- `<goal 3>`
+
+## Theme Positioning
+
+- Theme: `<primary theme>`
+- Subtheme: `<secondary theme>`
+- LevelRange: `<min-max>`
+- Parent area: `<parent area>`
+- ReservedRoomBlock: `<xx01-xxNN>`
+- World gap filled: `<what this area adds to the world>`
+
+## Player Flow
+
+1. `<entry flow>`
+2. `<mainline flow>`
+3. `<side path or service flow>`
+4. `<boundary or future continuation>`
+
+## Cluster Notes
+
+### `<cluster-id>`
+
+- 房間重點：`<landmarks>`
+- 玩家感受：`<mood>`
+- 對外角色：`<world or gameplay role>`
+
+### `<cluster-id>`
+
+- 房間重點：`<landmarks>`
+- 玩家感受：`<mood>`
+- 對外角色：`<world or gameplay role>`
+
+## Planned World Links
+
+- `<direction>` from `<source_vnum>`: planned link to `<target area>` room `<target vnum or future node>`
+
+## Runtime Metadata Notes
+
+- `#Enquire` 第一版會落在 `<rooms or topics>`
+- `#Keyword` 第一版會落在 `<rooms or topics>`
+- `#Job` 第一版 `<none or plan>`
+
+## Suggested Layout
+
+```text
+<simple topology sketch>
+```
+
+## mapmd-json
+
+```mapmd-json
+{
+  "area": {
+    "schema": "mapmd-json/v1",
+    "name": "<area_slug>",
+    "title": "<Area Title>",
+    "design_notes": "第一版 spec-first 草案。",
+    "parent_area": "<parent area>",
+    "level_range": "<min-max>",
+    "planned_vnum_range": "<xx01-xxNN>",
+    "reserved_room_block": "<xx01-xxNN>",
+    "room_vnum_policy": "xx01_variable_block",
+    "theme": {
+      "primary": "<primary theme>",
+      "secondary": "<secondary theme>"
+    },
+    "world_links": [
+      {
+        "direction": "<direction>",
+        "source_vnum": <source_vnum>,
+        "target_area": "<target area>",
+        "target_room_vnum": <target_room_vnum>,
+        "label": "<label>"
+      },
+      {
+        "direction": "<direction>",
+        "source_vnum": <source_vnum>,
+        "target_area": "<future area or existing area>",
+        "label": "<label>"
+      }
+    ],
+    "clusters": [
+      { "id": "<cluster-id>", "label": "<cluster label>" },
+      { "id": "<cluster-id>", "label": "<cluster label>" }
+    ]
+  },
+  "rooms": [
+    {
+      "vnum": <room_vnum>,
+      "name": "<room name>",
+      "description": "<room description>",
+      "sector_type": "SECT_INSIDE",
+      "cluster": "<cluster-id>",
+      "coord": [0, 0, 0],
+      "labels": ["entry"],
+      "exits": [
+        { "direction": "<direction>", "to": <room_vnum> },
+        { "direction": "<direction>", "to": <existing_room_vnum>, "external": true }
+      ],
+      "keywords": [
+        {
+          "keyword": "<keyword>",
+          "description": "<keyword description>"
+        }
+      ],
+      "enquires": ["<topic>"]
+    }
+  ]
+}
+```
