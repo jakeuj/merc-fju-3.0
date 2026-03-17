@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_ax_implemented`
+- `status = batch_ay_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch AX implemented`
+- `current_batch = Batch AY implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `dubafist / rock slash` 之後的其餘孤立 high-tier attack skill
+1. 下一個高價值候選可續盤剩餘單點技能，優先可看其餘孤立 high-tier attack skill，並先排除 `tao spell` 這類 `TAR_DODGE` case
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -5248,7 +5248,19 @@
 
 ### Validation
 
-- 待本批 build / smoke test 完成後補入
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 測試 ports:
+    - `15838`
+    - `16234`
+    - `16888`
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
 
 ## Batch AC Pre-Check
 
@@ -5309,6 +5321,68 @@
 
 - 本批把 `dragon fist` 定位成傳說級、超高成本、長段數掌法模板，整體高於目前已補的多數拳掌單點技能。
 - 這樣可以恢復 `降龍十八掌` 作為高階祕笈技能的存在感，同時不去改動它原本的出手節奏與命中分布。
+
+### Validation
+
+- 待本批 build / smoke test 完成後補入
+
+## Batch AY Pre-Check
+
+### Scope
+
+- `six fingers`
+
+### Reference Basis
+
+- runtime `skill/s/six_fingers.ski`
+  - `Value` 全 `20`
+  - `Cost 19 / Wait 12 / Check check_unrigid_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `six fingers`
+  - `family = legacy-page:six fingers`
+  - combat 維度顯示 `17` 段 `Value 20`
+- `area/limbo/obj/300.obj`
+  - 仍存在 `six fingers book`
+
+### Mandatory Pre-Check Snapshot
+
+`six fingers`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `19 / COST_MOVE / 12`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `17`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `six fingers` 具備完整的高階祕笈招式敘述、current-game family 與 limbo 祕笈樣本，不是單純 NPC 殘檔。
+- `Wait 12` 顯示它節奏偏重、不是高速連打技，但 `17` 段完整招式卻全部停在 `20`，明顯屬於被清值的 offensive 模板。
+- 本批先只回填 `Value` 階梯，保留原本的 `Chance / Wait / Cost / Check` 與空手劍氣身份。
+
+## Batch AY Result
+
+### Scope
+
+- `six fingers`
+
+### Runtime Changes
+
+`six fingers`
+
+- before: `20 x 17`
+- after: `130, 150, 170, 190, 215, 240, 270, 300, 335, 375, 420, 470, 525, 585, 650, 720, 800`
+- average: `385.0`
+
+### Design Notes
+
+- 本批把 `six fingers` 定位成高階、慢節奏、長段數的無形劍氣模板，整體強度明顯高於一般拳掌單點。
+- 數值曲線前段保留起手空間，後段再快速拉升，讓完整悟通 `六脈神劍` 的尾段更有終盤壓迫感。
 
 ### Validation
 
