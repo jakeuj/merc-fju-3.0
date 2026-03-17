@@ -1,48 +1,78 @@
 # Command Patterns
 
-## Attribute and Stat Changes
+## Merc-FJU first
 
-Use one of these based on server implementation:
+When the workspace is this repo, answer from checked-in files before giving generic MUD syntax.
+
+Read in this order:
+
+1. `command/<initial>/<command>.ins`
+2. matching `do_<command>` implementation in `src/`
+3. verification/readback command output in source if the visible fields matter
+
+## Common Merc-FJU command families
+
+### Character edits
+
+- Primary write command: `mset <target> <field> <value>`
+- Primary readback command: `mstat <target>`
+- Typical fields to confirm in repo help/source:
+  - stats: `str`, `int`, `wis`, `dex`, `con`
+  - progression: `level`, `practice`, `align`
+  - money/state: `gold`, `bank`, `thirst`, `drunk`, `full`
+
+### Object edits
+
+- Primary write command: `oset <object> <field> <value>`
+- Primary readback command: `ostat <object>`
+
+### Money handling
+
+- On-hand money often uses `gold`
+- Bank deposit often uses `bank`
+- Player-facing banking may use `deposit`, `withdraw`, `check`
+- Always distinguish:
+  - set administrative value
+  - give/spend player transaction
+  - on-hand money vs banked money
+
+### Movement and admin relocation
+
+- Common admin movement families to verify in repo:
+  - `goto`
+  - `transfer`
+  - room lookup helpers such as `find_location`
+
+## Verification habits
+
+- After a write, prefer a direct readback command over inference.
+- If money or stats change, `mstat` is usually better than `score` because it exposes admin-visible fields.
+- If the help file shows a level gate, mention it when the answer depends on permissions.
+- If the implementation resolves targets with world lookup, say the target typically must be online or present in the world state.
+
+## Common answer notes
+
+Use short notes like these when supported by source:
+
+- "This sets the value directly; it does not add to the current amount."
+- "This only works on an online/in-world target."
+- "This requires GM level `L_DEI`."
+- "Use `bank` instead of `gold` if you want stored money rather than on-hand money."
+
+## Generic variants fallback
+
+Only use these when the repo does not establish one clear command:
+
 - `set <target> <stat> <value>`
 - `setattr <target> <stat> <value>`
 - `mset <target> <stat> <value>`
 - `@set <target>/<stat>=<value>`
 
-Common stat keys:
-- `str`, `dex`, `con`, `int`, `wis`, `cha`
+## Safety checklist
 
-Example:
-- `set jake con 100`
-
-Verification:
-- `stat jake`
-- `score jake`
-
-## GM/Admin Common Operations
-
-- Spawn item:
-  - `oload <vnum>`
-  - `spawn item <id> [count]`
-- Give item/currency:
-  - `give <target> <item>`
-  - `set <target> gold <amount>`
-- Teleport:
-  - `goto <room_id>`
-  - `transfer <target> <room_id>`
-- Character moderation:
-  - `silence <target> <duration>`
-  - `freeze <target> <duration>`
-  - `ban <target>`
-
-## Safety Checklist
-
-Before high-impact changes:
 1. Confirm permission level and target identity.
-2. Snapshot/backup data if persistent storage is involved.
-3. Execute on test target first when possible.
-4. Verify with readback command.
-5. Log action and actor for audit.
-
-Rollback patterns:
-- Reapply old value (preferred): `set <target> <stat> <old_value>`
-- Restore from backup snapshot.
+2. Confirm whether the command overwrites or increments.
+3. Confirm whether the target must be online.
+4. Execute the command.
+5. Verify with readback.
+6. Mention rollback by restoring the previous value when relevant.
