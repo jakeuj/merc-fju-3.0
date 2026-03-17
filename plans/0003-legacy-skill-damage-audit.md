@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_an_implemented`
+- `status = batch_ap_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch AN implemented`
+- `current_batch = Batch AP implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `sevencolor / tree touch` 之後的其餘孤立 high-tier attack skill
+1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `citizen / shoutsky` 之後的其餘孤立 high-tier attack skill
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -3544,6 +3544,160 @@
   - 改用 `IPC KEY 5585`
 - 檢查：
   - `log/smoke-batch-aa.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AO Pre-Check
+
+### Scope
+
+- `citizen`
+
+### Reference Basis
+
+- runtime `skill/c/citizen.ski`
+  - `Value` 全 `20`
+  - `Cost 5 / Wait 5`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `citizen`
+  - `family = legacy-page:citizen`
+  - combat 維度標記 `prepared_for_adjustment = true`
+- area samples
+  - `area/loyang/mob/505.mob`
+  - `area/loyang/mob/508.mob`
+  - `area/loyang/mob/557.mob`
+  - 這些都以 `citizen` 身分出現，符合低階/NPC-adjacent 用途
+
+### Mandatory Pre-Check Snapshot
+
+`citizen`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `5 / COST_MOVE / 5`
+- weapon / check: `- / -`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `3`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這不是高階玩家主戰技能，而是低階/NPC-adjacent 的街頭亂打模板。
+- 但 current-game 已標成可調整，且全 `20` 讓三段描述完全失去層次。
+- 本批只把它拉回最低限度可成立的低階梯度，不把它抬成正式高階 combat line。
+
+## Batch AO Result
+
+### Scope
+
+- `citizen`
+
+### Runtime Changes
+
+`citizen`
+
+- before: `20, 20, 20`
+- after: `40, 55, 75`
+- average: `56.67`
+
+### Design Notes
+
+- 本批刻意把 `citizen` 壓在低檔，只讓街頭亂打不再和清值模板完全相同。
+- 這樣能避免 NPC flavor skill 失真，同時不干擾玩家向高階技能層次。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-ap.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AP Pre-Check
+
+### Scope
+
+- `shoutsky`
+
+### Reference Basis
+
+- runtime `skill/s/shoutsky.ski`
+  - `Value` 全 `20`
+  - `Cost 20 / Wait 1 / Weapon WEAPON_BLADE / Check check_blade_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `shout sky`
+  - runtime combat 維度顯示 `4` 段 `Value 20`
+- `area/limbo/obj/230.obj`
+  - book slot 對應 `SLOT_SHOUTSKY`
+
+### Mandatory Pre-Check Snapshot
+
+`shoutsky`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 1`
+- weapon / check: `WEAPON_BLADE / check_blade_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `4`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這是快節奏 blade 單點技能，雖然段數不多，但作為血刀三式衍生特技不應維持全 `20`。
+- `Wait 1` 意味著不能套用重節奏刀法的數值尺度，但仍該有明顯高階成長。
+- 本批先只回填 `Value` 階梯，保留高速 blade identity。
+
+## Batch AP Result
+
+### Scope
+
+- `shoutsky`
+
+### Runtime Changes
+
+`shoutsky`
+
+- before: `20 x 4`
+- after: `120, 155, 200, 255`
+- average: `182.5`
+
+### Design Notes
+
+- 本批讓 `shoutsky` 保持快節奏 blade 特技定位，但不再是清值模板。
+- 這樣和慢節奏高階刀法仍有差異，同時後段也有可感知的成長。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-ap.log`
     - 出現 `三國歪傳之降龍伏虎開始正常運作`
   - `debug/failenable`
     - 無新增內容

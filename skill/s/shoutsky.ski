@@ -47,7 +47,7 @@ $R$n突然大聲狂笑﹐在自己的手臂之上劃出一道血痕﹐手上的$
 ﹐$n的刀勢挾帶著自己鮮血所形成之血霧﹐向$N怒襲而去﹐$N見情況不妙欲迅速退走﹐
 但為時已晚慘遭千萬刀芒所吞噬﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           120
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -59,7 +59,7 @@ $R$n忽然之間魔性大發﹐眼神射出一道強烈的血光﹐$n的身軀�
 血所形成之血霧﹐使的原本碧藍的天空變成血紅色﹐隨著魔性之狂從空中往$N之所在揮出
 一道強烈的刀勁﹐$N因閃避不及而遭劫難﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           155
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -71,7 +71,7 @@ $R$n如惡魔般的狂笑﹐$n手上的$O因主人的鮮血而再度泛出血紅
 $R﹐$n的刀勢挾帶著自己鮮血所形成之血霧﹐手中之$O激出千道之血紅刀芒﹐$n將千道刀
 芒逐漸合而為一﹐$N見此招準備運勁抵抗﹐不過血刀依然將$N劈的不成人形﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           200
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -84,7 +84,7 @@ $R$n露出強大之魔性﹐大喝一聲『$N接受死神對你的賞賜吧﹗�
 $A$A      『$P血∼染∼山∼河$Z』$A$A$R一連三式劈的$N面如死灰﹐猶如直接等待死
 神的迎接﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           255
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
