@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_al_implemented`
+- `status = batch_an_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch AL implemented`
+- `current_batch = Batch AN implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `yu needle / blood ten / dark word` 之後的其餘孤立 high-tier attack skill
+1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `sevencolor / tree touch` 之後的其餘孤立 high-tier attack skill
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -3544,6 +3544,156 @@
   - 改用 `IPC KEY 5585`
 - 檢查：
   - `log/smoke-batch-aa.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AM Pre-Check
+
+### Scope
+
+- `sevencolor`
+
+### Reference Basis
+
+- runtime `skill/s/sevencolor.ski`
+  - `Value` 全 `20`
+  - `Cost 10 / Wait 1 / Check check_unrigid_attack`
+  - `Enable NO`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `seven color`
+  - `family = legacy-page:seven color`
+  - 明確記錄 prerequisite 為 `碧血十二針(be needle)`
+- `area/limbo/obj/206.obj`
+  - 仍存在 `seven color book`
+- runtime comparison
+  - `be needle` 已具正常遞增梯度，證明 `sevencolor` 目前全 `20` 並非同系預期終態
+
+### Mandatory Pre-Check Snapshot
+
+`sevencolor`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `10 / COST_MOVE / 1`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `NO`
+- damage entries: `9`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 雖然 `Enable NO`，但它仍是明確玩家向 legacy 技能，且有祕笈樣本與 current-game prerequisite 記錄。
+- 作為 `be needle` 之後的高階特殊招式，維持全 `20` 明顯失真。
+- 本批先只回填 `Value` 階梯，保留其 `Wait 1` 的高速特殊技定位。
+
+## Batch AM Result
+
+### Scope
+
+- `sevencolor`
+
+### Runtime Changes
+
+`sevencolor`
+
+- before: `20 x 9`
+- after: `105, 125, 150, 180, 215, 255, 300, 355, 420`
+- average: `233.89`
+
+### Design Notes
+
+- 本批讓 `sevencolor` 站在 `be needle` 之後、但仍維持高速特殊技的定位。
+- 這樣既能保留連續技節奏，也不會把它抬成慢節奏重砲模板。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-an.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AN Pre-Check
+
+### Scope
+
+- `tree touch`
+
+### Reference Basis
+
+- runtime `skill/t/tree_touch.ski`
+  - 單段 `Value 20`
+  - `Cost 20 / Wait 1 / Check check_unrigid_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `tree touch`
+  - `family = legacy-page:tree touch`
+
+### Mandatory Pre-Check Snapshot
+
+`tree touch`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 1`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `1`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這是單段玩家向特殊技，雖然資訊量比多段技能少，但 current-game 已明確把它保留下來。
+- 單段 `Value 20` 幾乎沒有作為玩家攻擊技成立的空間，因此適合當輕量單點補值。
+- 本批先只調單段 `Value`，不改其快節奏與出手型態。
+
+## Batch AN Result
+
+### Scope
+
+- `tree touch`
+
+### Runtime Changes
+
+`tree touch`
+
+- before: `20`
+- after: `180`
+
+### Design Notes
+
+- 本批把 `tree touch` 拉回可成立的單點特殊技，但不把它擴寫成多段或改節奏。
+- 這樣可以先止住清值模板問題，之後若要再細分功能再另開批次。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-an.log`
     - 出現 `三國歪傳之降龍伏虎開始正常運作`
   - `debug/failenable`
     - 無新增內容

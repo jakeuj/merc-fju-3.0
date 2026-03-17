@@ -43,7 +43,7 @@ $n遭受$N許多激烈的攻擊﹐霎那間發覺$N的弱點﹐運起七色忍�
 $G      【 七∼色∼忍∼法∼之∼綠∼甲∼龍∼旋∼斬∼】$Z$n的身影漸漸化為一
 隻綠甲猛龍﹐$n利用身上的利甲朝$N狂斬而去。~
 Chance          10
-Value           20
+Value           105
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -54,7 +54,7 @@ $n遭受$N狂暴的猛烈攻擊﹐霎那間$N的霸氣突漲﹐運起七色忍�
 $G       【七∼色∼忍∼法∼之∼黑∼翼∼龍∼霸∼式∼ 】
 $n的身影漸漸化為一隻黑翼狂龍﹐$n將霸氣融合身影向$N狂擊而去。~
 Chance          10
-Value           20
+Value           125
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -65,7 +65,7 @@ $n看到$N攻擊心神開始散亂﹐$N把握此次好機會﹐運起七色忍�
 $W      【七∼色∼忍∼法∼之∼白∼魘∼龍∼幻∼殺∼ 】$Z
 $n的身影漸漸化為一隻白魘魔龍﹐$n慢慢將$N引入自殘的幻夢之中。~
 Chance          10
-Value           20
+Value           150
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -76,7 +76,7 @@ $n面對$N的猛烈攻擊之時﹐$N準備使出強烈攻擊﹐運起七色忍�
 $P        【七∼色∼忍∼法∼之∼紫∼王∼龍∼吹∼雪∼ 】$Z
 $n的身影漸漸化為一隻紫王雪龍﹐$n吹出無數的冰針向$N亂射而去。~
 Chance          10
-Value           20
+Value           180
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -87,7 +87,7 @@ $n突然看到$N在猛烈攻擊中露出了一個極大破綻﹐運起七色忍�
 $W       【七∼色∼忍∼法∼之∼銀∼戰∼龍∼破∼拳∼ 】$Z
 $n的身影漸漸化為一隻銀色戰龍﹐$n將真氣集於拳中向$N直攻而去。~
 Chance          10
-Value           20
+Value           215
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -98,7 +98,7 @@ $n面對$N連綿不斷的攻勢時﹐$n發覺一個小漏洞﹐運起七色忍�
 $R       【七∼色∼忍∼法∼之∼赤∼燄∼龍∼炎∼刺∼ 】$Z
 $n的身影漸漸化為一隻赤燄火龍﹐$n吐出如針般火燄朝$N漏洞刺去。~
 Chance          10
-Value           20
+Value           255
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -109,7 +109,7 @@ $n遭受到$N的攻擊之後﹐$N慢慢將真氣偷偷凝聚﹐運起七色忍�
 $Y       【七∼色∼忍∼法∼之∼金∼翅∼龍∼震∼破∼ 】$Z
 $n的身影漸漸化為一隻金翅霸龍﹐$n真氣轉化成一聲巨吼﹐吼向$N。~
 Chance          10
-Value           20
+Value           300
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -120,7 +120,7 @@ $n對於$N的攻擊漸漸發覺自己已經招架不了﹐立刻使出七色忍�
 $S     【$R臨∼兵∼鬥∼者∼皆∼陣∼列∼在∼前∼ $W】$Z
 $n所唸出的真言一直在$N腦中盤璇﹐讓$N瞬時不知所措。~
 Chance          10
-Value           20
+Value           355
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -131,7 +131,7 @@ $n對於$N漸漸發覺自己已經招架不了﹐立刻使出七色忍法中之�
 $W     【$G七∼色∼忍∼法∼之∼四∼絕∼式∼ $W】$Z
 $n將體內真氣凝聚至最高點﹐化為此式向$N直攻而去。~
 Chance          10
-Value           20
+Value           420
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
