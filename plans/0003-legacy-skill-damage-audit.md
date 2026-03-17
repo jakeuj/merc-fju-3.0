@@ -331,9 +331,9 @@
 
 目前狀態：
 
-- `status = batch_bf_implemented`
+- `status = batch_bh_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch BF implemented`
+- `current_batch = Batch BH implemented`
 
 ## Immediate Next Steps
 
@@ -5824,6 +5824,150 @@
 
 - 本批把 `fly blade` 定位成高速三段刀技，維持俐落出手但給足每式辨識度。
 - 前段不灌太高，讓第三式仍保有短段技能應有的終結感。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 與 Batch BH 共用同一輪 smoke 驗證
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BG Pre-Check
+
+### Scope
+
+- `flower hand`
+
+### Reference Basis
+
+- runtime `skill/f/flower.ski`
+  - `Value` 全 `20`
+  - `Cost 10 / Wait 1 / Check check_unrigid_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `flower hand`
+  - `family = legacy-page:flower hand`
+  - combat 維度顯示 `4` 段 `Value 20`
+- `area/limbo/obj/203.obj`
+  - 仍存在 `flower hand book`
+
+### Mandatory Pre-Check Snapshot
+
+`flower hand`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `10 / COST_MOVE / 1`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `4`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `flower hand` 有 current-game family 與 limbo 祕笈樣本，屬於玩家向短段空手技。
+- `Wait 1` 說明它是高速靈巧型招式，不適合走重掌爆發曲線。
+- 本批先只回填 `Value` 梯度，保留其輕靈快節奏身份。
+
+## Batch BG Result
+
+### Scope
+
+- `flower hand`
+
+### Runtime Changes
+
+`flower hand`
+
+- before: `20 x 4`
+- after: `80, 115, 160, 220`
+- average: `143.75`
+
+### Design Notes
+
+- 本批把 `flower hand` 定位成輕靈、快節奏、後段收束更重的四段手法。
+- 這樣能讓它和慢節奏指法或重掌模板清楚分開。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 測試 ports:
+    - `15843`
+    - `16239`
+    - `16893`
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BH Pre-Check
+
+### Scope
+
+- `mobile kill`
+
+### Reference Basis
+
+- runtime `skill/m/mobile_kill.ski`
+  - `Value` 全 `20`
+  - `Cost 5 / Wait 5`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+  - help 明記「這是猛獸用的招式」
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `mobile kill`
+  - `family = legacy-page:mobile kill`
+  - combat 維度顯示 `6` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`mobile kill`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `5 / COST_MOVE / 5`
+- weapon / check: `- / -`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `6`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `mobile kill` 雖然是猛獸專用招式，但目前仍是 runtime/current-game 都存在的 `#Damage` 模板，屬於這份 audit 的直接範圍。
+- `Cost 5 / Wait 5` 顯示它不走玩家高階祕笈路線，而是中速、低成本、供獸類/NPC 反覆施放的攻擊模板。
+- 本批先只回填 `Value` 梯度，保留其 beast-only 身份與既有出手節奏。
+
+## Batch BH Result
+
+### Scope
+
+- `mobile kill`
+
+### Runtime Changes
+
+`mobile kill`
+
+- before: `20 x 6`
+- after: `95, 120, 150, 185, 230, 285`
+- average: `177.5`
+
+### Design Notes
+
+- 本批把 `mobile kill` 定位成中速、持續壓制型的猛獸攻擊模板，而不是高階玩家祕笈。
+- 曲線保持穩定上升，避免獸類招式一開始就過爆，同時讓終式仍有威脅感。
 
 ### Validation
 

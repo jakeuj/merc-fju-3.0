@@ -41,7 +41,7 @@ Help            ~
 Description
 $n纖手一出﹐一招$S『花開堪折』$Z往$N身上抓去。~
 Chance          10
-Value           20
+Value           80
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -50,7 +50,7 @@ End
 Description
 $n一招$S『桃香難耐』$Z﹐一瞬間連出三手往$N的身體而去。~
 Chance          10
-Value           20
+Value           115
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -59,7 +59,7 @@ End
 Description
 $n一出手﹐一式$S『舊情難忘』$Z右手如靈蛇般攀爬﹐忽地一轉往$N折去。~
 Chance          10
-Value           20
+Value           160
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -68,7 +68,7 @@ End
 Description
 $n身形忽地散慢﹐一出手便是一招$S『難分難捨』$Z往$N咽喉一折。~
 Chance          10
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
