@@ -38,7 +38,7 @@ $B$n電擊般格掠向前﹐千百條絢燦明亮的$Y刀芒$B﹐
 這顯然並不單純是些光芒﹐光芒的後面﹐還隱鐵著一片魔鬼利會般的刃。
 還沒有來得及喘息的$P$N$B目光一眩﹐已覺得滿天體為金流佈滿。$Z~
 Chance          20
-Value           20
+Value           120
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -52,7 +52,7 @@ $W$n$B原地翻身﹐手腕一抓﹐$O$B已有如怒龍出困般﹐
 $O$P「嗡」$B的一顫﹐一把金刀頓時幻映出一個組成輪形的$W十三道光芒$B﹐
 閃射伸縮著暴迎而去﹗$Z~
 Chance          20
-Value           20
+Value           145
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -65,7 +65,7 @@ $W$n$B雙目中煞氣頓現﹐他在$O$B的強烈抖動中﹐上身驀地偏斜�
 $O$B在斜身之際揚衝而起﹐卻在刀首指天的剎那﹐猝然自左臂之下反穿而出﹐
 這出刀之勁﹐又快又狠﹐迅捷得似一下子追戮上千百年以前流去的時光﹗$Z~
 Chance          20
-Value           20
+Value           175
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -78,7 +78,7 @@ $B刀刃的飛戮隱映於不規則的$Y金色網芒$B裡﹐$O$B已組合成一�
 毫無空檔的包捲土來﹐有隱隱的風雷之鑿﹐空氣也在激蕩呼號﹗
 驀地$P$N$B尖號一聲打著轉子摔了出去﹐滿空的鮮血噴洒如雨﹗$Z~
 Chance          20
-Value           20
+Value           210
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -91,7 +91,7 @@ $W$n$O$B如電﹐捲起波波層層的芒彩力迎$P$N$Z$B﹐刀芒伸縮不定�
 空氣中頓時充滿了刃鋒割掠的銳嘯﹐$O$B所帶出的勁力也似是陡然變得沉重了﹐
 頂端的$O$B鋒刃卻那麼快捷的切向敵人頸項﹗$Z~
 Chance          20
-Value           20
+Value           250
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -104,7 +104,7 @@ $Z$O$B伸縮翻飛﹐快斬狠截﹐神鬼莫測的瞬息間變幻萬千﹐在�
 刀影飛閃﹐像$W銀河$B的$S群星崩落$B﹐$O$B密集而狂暴的自四面八方罩下﹗
 在旋奔之間﹐$W$N$B已如星轉般飛旋而去﹗$Z~
 Chance          20
-Value           20
+Value           300
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -117,7 +117,7 @@ $Z$O$B的芒彩奇幻的縱跳飛舞著﹐一剎東﹐一剎西﹐忽而右﹐�
 閃動得有如一個無形的﹐古怪的$Y精光$B﹐$n的出手攻拒卻又是那般惊人的準確﹐
 幾乎每在招展式現之時都已將$W$N$B的攻擊與防衛的部位拿捏死了﹗$Z~
 Chance          20
-Value           20
+Value           360
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -131,7 +131,7 @@ $B$n右臂倏翻猝揚﹐只見$O$B金芒溜溜﹐縱橫交織﹐卻又像極西
 寒光突閃﹐勁風中帶著$G「嗆郎郎」$B的環震之聲抖出三個圓弧﹐
 $n的$O$B己$P「削」$B聲尖嘯﹐在一片金芒中砍向$N左脅﹗$Z~
 Chance          20
-Value           20
+Value           435
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -146,7 +146,7 @@ $B只見天地之間$W金芒閃爍$B﹐有如千萬個$Y金球$B一起炸裂﹐
 $W這便是$S 【飛流九刀】$W法的精華所聚﹐
 一代武中之霸$P$n$W的終生心血所在亦大半在此$Z。~
 Chance          20
-Value           20
+Value           520
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

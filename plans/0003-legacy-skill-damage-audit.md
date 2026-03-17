@@ -331,9 +331,9 @@
 
 目前狀態：
 
-- `status = batch_bp_implemented`
+- `status = batch_br_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch BP implemented`
+- `current_batch = Batch BR implemented`
 
 ## Immediate Next Steps
 
@@ -6532,6 +6532,147 @@
 
 - 本批把 `fire ice` 定位成長段數、雙屬性、慢節奏掌法，曲線比 `king road` 更平滑但尾段更長。
 - 這樣能保留它冰火交替、逐段堆高壓力的特色，而不是簡化成單純重掌模板。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 與 Batch BR 共用同一輪 smoke 驗證
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BQ Pre-Check
+
+### Scope
+
+- `fire lance`
+
+### Reference Basis
+
+- runtime `skill/f/fire_lance.ski`
+  - `Value` 全 `20`
+  - `Cost 20 / Wait 15 / Weapon WEAPON_SPEAR / Check check_spear_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `fire lance`
+  - `family = legacy-page:fire lance`
+  - combat 維度顯示 `9` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`fire lance`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 15`
+- weapon / check: `WEAPON_SPEAR / check_spear_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `9`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `fire lance` 是 current-game 中仍存在的高階槍法模板，而 `Wait 15` 代表它節奏比多數武器技更重。
+- 九段完整招式與 `Chance 20` 都說明它本來應該很有存在感，全 `20` 顯然不合理。
+- 本批先只回填 `Value` 梯度，保留原本的槍系身份與重節奏。
+
+## Batch BQ Result
+
+### Scope
+
+- `fire lance`
+
+### Runtime Changes
+
+`fire lance`
+
+- before: `20 x 9`
+- after: `145, 170, 200, 240, 285, 340, 405, 485, 580`
+- average: `316.67`
+
+### Design Notes
+
+- 本批把 `fire lance` 定位成高階、重節奏、每式都偏有份量的槍法模板。
+- 曲線後段拉得更高，讓禁斷與終段的威壓感更成立。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 測試 ports:
+    - `15848`
+    - `16244`
+    - `16898`
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BR Pre-Check
+
+### Scope
+
+- `fly nine`
+
+### Reference Basis
+
+- runtime `skill/f/fly_nine.ski`
+  - `Value` 全 `20`
+  - `Cost 30 / Wait 5 / Weapon WEAPON_BLADE / Check check_blade_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `fly nine`
+  - `family = legacy-page:fly nine`
+  - combat 維度顯示 `9` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`fly nine`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `30 / COST_MOVE / 5`
+- weapon / check: `WEAPON_BLADE / check_blade_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `9`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `fly nine` 和 `fire lance` 同樣是九段武器技，但 `Wait 5` 說明它要走更快、更俐落的高成本刀法路線。
+- current-game family 與完整九式刀招都還在，全 `20` 只是把其特色壓平。
+- 本批先只回填 `Value` 梯度，保留原本的刀系需求與快節奏。
+
+## Batch BR Result
+
+### Scope
+
+- `fly nine`
+
+### Runtime Changes
+
+`fly nine`
+
+- before: `20 x 9`
+- after: `120, 145, 175, 210, 250, 300, 360, 435, 520`
+- average: `279.44`
+
+### Design Notes
+
+- 本批把 `fly nine` 定位成高成本、較快節奏、九段連環刀法。
+- 整體雖低於 `fire lance` 的重槍曲線，但中後段仍保有足夠的終結感。
 
 ### Validation
 
