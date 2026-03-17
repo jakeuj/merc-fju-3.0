@@ -331,9 +331,9 @@
 
 目前狀態：
 
-- `status = batch_bd_implemented`
+- `status = batch_bf_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch BD implemented`
+- `current_batch = Batch BF implemented`
 
 ## Immediate Next Steps
 
@@ -5681,6 +5681,149 @@
 
 - 本批把 `ice freeze strike` 定位成高於 `ice fist` 的進階冰系掌法，保持高速但整體輸出更重。
 - 這樣能讓 `寒冰綿掌` 兼具快速壓制與更明確的高階存在感。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 與 Batch BF 共用同一輪 smoke 驗證
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BE Pre-Check
+
+### Scope
+
+- `g finger`
+
+### Reference Basis
+
+- runtime `skill/g/g_finger.ski`
+  - `Value` 全 `20`
+  - `Cost 19 / Wait 12 / Check check_unrigid_attack`
+  - `Teach YES / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `g finger`
+  - `family = legacy-page:g finger`
+  - combat 維度顯示 `4` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`g finger`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `19 / COST_MOVE / 12`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / YES / NO`
+- enable: `YES`
+- damage entries: `4`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `g finger` 在 current-game 裡是獨立 family，還保留 `Teach YES`，代表它不是單純殘留模板。
+- `Wait 12` 加上只有四段招式，說明它應該走慢節奏、每段有份量的指法，而不是高速連擊。
+- 本批先只回填 `Value` 梯度，保留原本的 teaching 與出手節奏設定。
+
+## Batch BE Result
+
+### Scope
+
+- `g finger`
+
+### Runtime Changes
+
+`g finger`
+
+- before: `20 x 4`
+- after: `150, 210, 295, 410`
+- average: `266.25`
+
+### Design Notes
+
+- 本批把 `g finger` 定位成慢節奏、四段爆發型指法，後段跳幅明顯拉大。
+- 這樣能讓 `驚神指法` 的壓迫感回來，也和高速冰拳類模板清楚分開。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 測試 ports:
+    - `15842`
+    - `16238`
+    - `16892`
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BF Pre-Check
+
+### Scope
+
+- `fly blade`
+
+### Reference Basis
+
+- runtime `skill/f/fly_blade.ski`
+  - `Value` 全 `20`
+  - `Cost 20 / Wait 1 / Weapon WEAPON_BLADE / Check check_blade_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `fly blade`
+  - `family = legacy-page:fly blade`
+  - combat 維度顯示 `3` 段 `Value 20`
+- `area/limbo/obj/231.obj`
+  - 仍存在 `fly blade book`
+
+### Mandatory Pre-Check Snapshot
+
+`fly blade`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 1`
+- weapon / check: `WEAPON_BLADE / check_blade_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `3`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `fly blade` 具備 current-game family 與 limbo 祕笈樣本，屬於玩家向短段刀技。
+- `Wait 1` 明確說明它是極高速的刀系爆發模板，不適合直接套用慢重技的曲線。
+- 本批先只回填 `Value` 梯度，保留原本的武器需求與高速刀路身份。
+
+## Batch BF Result
+
+### Scope
+
+- `fly blade`
+
+### Runtime Changes
+
+`fly blade`
+
+- before: `20 x 3`
+- after: `130, 180, 250`
+- average: `186.67`
+
+### Design Notes
+
+- 本批把 `fly blade` 定位成高速三段刀技，維持俐落出手但給足每式辨識度。
+- 前段不灌太高，讓第三式仍保有短段技能應有的終結感。
 
 ### Validation
 
