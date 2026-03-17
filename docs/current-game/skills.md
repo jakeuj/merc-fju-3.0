@@ -135,6 +135,10 @@ title: Current Game Skills
   - `parry_values`
   - `innate_values`
   - `wait / cost / cost_type / weapon / check`
+  - `damage_source`
+  - `damage_gap_classification`
+  - `code_path`
+  - `code_damage_summary`
   - 以及後續調整批次要補的備註
 - `status`
   - 是否玩家向
@@ -149,6 +153,31 @@ title: Current Game Skills
 - 它是玩家技能還是 NPC-only
 - 它現在是否已納入某個 rebuild 批次
 - 它目前的 combat template 長什麼樣，之後要改哪些維度
+
+## Missing Damage Sections 分類
+
+目前 current-game registry 不再把所有空的 `damage_values` 都直接視為 skill data 壞掉，而是會先區分：
+
+- `data-driven`
+  - 傷害模型寫在 `.ski -> #Damage`
+- `code-driven`
+  - `.ski` 沒有 `#Damage`
+  - 但真正傷害寫在 `src/spell.c` 或 `src/ex_spell.c` 的 `cast_*()` / `spell_*()` 裡
+- `unresolved`
+  - 目前還看不出直接傷害路徑，需要另做 review
+
+這條分類主要是為了解決像 bow 主鏈這種情況：
+
+- `shoot sun`
+  - 是 `data-driven`
+- `water cloud blast`
+  - 是 `code-driven`
+  - 真正輸出在 `cast_water_cloud_blast()`
+- `fun wu blast`
+  - 是 `code-driven`
+  - 真正輸出在 `cast_fun_wu_blast()`
+
+因此 `Damage values: []` 不再自動等於「技能沒作用」；要先看 `damage_source` 與 `code_path`。
 
 ## Legacy Skill Damage 重建注意事項
 

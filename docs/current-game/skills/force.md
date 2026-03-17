@@ -39,6 +39,7 @@ Legacy chain: `universe -> six fire -> fire dragon`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 一代宗師﹗`
 - Restrictions: `skills: 極火六陽 >= 登峰造極; classes: 刺 客`
+- Damage model: `data-driven`
 - Damage values: `[220, 250, 280, 310, 340, 375, 415, 460, 520]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
@@ -60,6 +61,7 @@ Legacy chain: `universe -> six fire -> fire dragon`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 一代宗師﹗; 將 軍 >= 一級, max 神乎其技﹗`
 - Restrictions: `attrs: 力量 >= 二十, 體格 >= 二十; skills: 先天乾坤功 >= 神乎其技; classes: 刺 客/將 軍`
+- Damage model: `data-driven`
 - Damage values: `[140, 160, 180, 205, 230, 260]`
 - Chance values: `[20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
@@ -81,6 +83,7 @@ Legacy chain: `universe -> six fire -> fire dragon`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 一代宗師﹗; 武 官 >= 一級, max 出類拔萃﹗; 將 軍 >= 一級, max 登峰造極﹗`
 - Restrictions: `attrs: 體格 >= 十`
+- Damage model: `data-driven`
 - Damage values: `[70, 85, 100, 115, 130, 150, 170]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`

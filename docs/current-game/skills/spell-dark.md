@@ -39,11 +39,13 @@ Legacy chain: `cause light -> cause serious -> slow -> cause critical / ventrilo
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `天 師 >= 五十級, max 一代宗師﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `skills: 遲滯術 >= 出類拔萃`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:1194`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_INT, SPELL_CLASS_FOU); attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/dark.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:1194.
 
 ### 輕度傷害 / `cause light`
 
@@ -60,11 +62,13 @@ Legacy chain: `cause light -> cause serious -> slow -> cause critical / ventrilo
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 出類拔萃﹗; 郎 中 >= 五十級, max 出類拔萃﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 心神領會﹗; 道 士 >= 十級, max 神乎其技﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `-`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:1167`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_INT, SPELL_CLASS_ONE); attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/dark.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:1167.
 
 ### 中度傷害 / `cause serious`
 
@@ -81,11 +85,13 @@ Legacy chain: `cause light -> cause serious -> slow -> cause critical / ventrilo
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 出類拔萃﹗; 郎 中 >= 五十級, max 出類拔萃﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 心神領會﹗; 道 士 >= 十級, max 神乎其技﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `skills: 輕度傷害 >= 心神領會`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:1222`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_INT, SPELL_CLASS_TWO); attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/dark.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:1222.
 
 ### 隱形術 / `invis`
 
@@ -144,11 +150,15 @@ Legacy chain: `cause light -> cause serious -> slow -> cause critical / ventrilo
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 出類拔萃﹗; 郎 中 >= 五十級, max 出類拔萃﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 心神領會﹗; 道 士 >= 十級, max 神乎其技﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `skills: 中度傷害 >= 心神領會`
+- Damage model: `unresolved`
+- Damage audit classification: `needs review`
+- Code path: `src/spell.c:5140`
 - Damage values: `[]`
 - Chance values: `[]`
 - Parry values: `[]`
 - Innate values: `[]`
 - Legacy page source: `skill/dark.html`
+- Notes: Needs review: damage logic currently lives in src/spell.c:5140.
 
 ### 腹語術 / `ventriloquate`
 

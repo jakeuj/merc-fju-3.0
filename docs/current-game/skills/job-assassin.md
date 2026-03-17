@@ -60,6 +60,7 @@ Legacy chain: `bystander fist / hate sword / iron shield`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 八十級, max 一代宗師﹗; 將 軍 >= 八十級, max 登峰造極﹗`
 - Restrictions: `attrs: 學識 >= 三十, 敏捷 >= 三十, 力量 >= 三十; skills: 龍袖劍法 >= 粗通皮毛, 天道九劍 >= 馬馬虎虎; classes: 刺 客/將 軍`
+- Damage model: `data-driven`
 - Damage values: `[155, 175, 195, 220, 245, 275, 310, 350, 395, 445, 500, 560]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`

@@ -102,11 +102,13 @@ Legacy chain: `armor -> faerie fog -> shield / magic missile -> wind blade -> va
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 出類拔萃﹗; 刺 客 >= 五十級, max 出類拔萃﹗; 郎 中 >= 五十級, max 出類拔萃﹗; 武 官 >= 十級, max 馬馬虎虎﹗; 將 軍 >= 五十級, max 出類拔萃﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 心神領會﹗; 道 士 >= 十級, max 出類拔萃﹗; 鑄劍師 >= 五十級, max 登峰造極﹗; 盜 賊 >= 十級, max 馬馬虎虎﹗`
 - Restrictions: `attrs: 智力 >= 五`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:2982`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_INT, SPELL_CLASS_ONE); attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/wind.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:2982.
 
 ### 體力恢復術 / `refresh`
 
@@ -186,11 +188,13 @@ Legacy chain: `armor -> faerie fog -> shield / magic missile -> wind blade -> va
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `天 師 >= 五十級, max 一代宗師﹗; 道 士 >= 十級, max 出類拔萃﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `attrs: 智力 >= 十五; skills: 風之刃 >= 心神領會`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:3035`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_INT, SPELL_CLASS_THR); attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/wind.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:3035.
 
 ### 微風喚醒術 / `wakeup`
 
@@ -228,9 +232,11 @@ Legacy chain: `armor -> faerie fog -> shield / magic missile -> wind blade -> va
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 出類拔萃﹗; 郎 中 >= 五十級, max 出類拔萃﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 心神領會﹗; 道 士 >= 十級, max 出類拔萃﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `attrs: 智力 >= 十; skills: 魔法飛彈 >= 心神領會`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:3007`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_INT, SPELL_CLASS_TWO); attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/wind.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:3007.
 

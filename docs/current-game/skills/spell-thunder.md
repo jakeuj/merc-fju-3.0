@@ -60,11 +60,13 @@ Legacy chain: `control weather -> haste / shocking grasp -> lightning bolt -> ca
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `天 師 >= 五十級, max 一代宗師﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `attrs: 智力 >= 二十; skills: 呼叫天雷 >= 出類拔萃`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:531`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_INT, SPELL_CLASS_FOU)`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/thunder.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:531.
 
 ### 控制天氣術 / `control weather`
 
@@ -123,11 +125,13 @@ Legacy chain: `control weather -> haste / shocking grasp -> lightning bolt -> ca
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 馬馬虎虎﹗; 郎 中 >= 五十級, max 馬馬虎虎﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 馬馬虎虎﹗; 道 士 >= 十級, max 出類拔萃﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `attrs: 智力 >= 十; skills: 輕度電擊術 >= 馬馬虎虎`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:2959`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_INT, SPELL_CLASS_TWO); attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/thunder.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:2959.
 
 ### 輕度電擊術 / `shocking grasp`
 
@@ -144,9 +148,11 @@ Legacy chain: `control weather -> haste / shocking grasp -> lightning bolt -> ca
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 馬馬虎虎﹗; 刺 客 >= 五十級, max 初窺門徑﹗; 平 民 >= 十級, max 初窺門徑﹗; 郎 中 >= 五十級, max 馬馬虎虎﹗; 武 官 >= 十級, max 初窺門徑﹗; 將 軍 >= 五十級, max 初窺門徑﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 馬馬虎虎﹗; 道 士 >= 十級, max 出類拔萃﹗; 鑄劍師 >= 五十級, max 登峰造極﹗; 盜 賊 >= 十五級, max 初窺門徑﹗`
 - Restrictions: `attrs: 智力 >= 五`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:3503`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_INT, SPELL_CLASS_ONE); attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/thunder.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:3503.
 

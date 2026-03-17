@@ -39,11 +39,13 @@ Legacy chain: `shoot sun -> water cloud blast -> fun wu blast`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 神乎其技﹗; 將 軍 >= 一級, max 一代宗師﹗`
 - Restrictions: `attrs: 體格 >= 二十五, 敏捷 >= 三十五, 力量 >= 二十五; skills: 水雲箭法 >= 出神入化`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:5703`
+- Code damage summary: `base ladder: 450, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1400; repeat loop: for (tt = 0; tt <= level / 20; tt++); weapon multiplier: WEAPON_BOW value[1..2]; attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/bow.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:5703.
 
 ### 射日箭法 / `shoot sun`
 
@@ -60,6 +62,7 @@ Legacy chain: `shoot sun -> water cloud blast -> fun wu blast`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 登峰造極﹗; 武 官 >= 一級, max 出類拔萃﹗; 將 軍 >= 一級, max 一代宗師﹗; 鑄劍師 >= 一級, max 出類拔萃﹗; 盜 賊 >= 一級, max 神乎其技﹗`
 - Restrictions: `attrs: 敏捷 >= 十`
+- Damage model: `data-driven`
 - Damage values: `[80, 95, 110, 125, 140, 160, 180]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
@@ -81,9 +84,11 @@ Legacy chain: `shoot sun -> water cloud blast -> fun wu blast`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 出神入化﹗; 武 官 >= 一級, max 出類拔萃﹗; 將 軍 >= 一級, max 一代宗師﹗; 鑄劍師 >= 一級, max 出類拔萃﹗; 盜 賊 >= 一級, max 神乎其技﹗`
 - Restrictions: `attrs: 敏捷 >= 二十五, 力量 >= 十五; skills: 射日箭法 >= 出類拔萃`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:5571`
+- Code damage summary: `base ladder: 300, 350, 400, 450, 500, 600, 700, 800, 900, 1000; repeat loop: for (tt = 0; tt <= level / 33; tt++); weapon multiplier: WEAPON_BOW value[1..2]; attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/bow.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:5571.
 

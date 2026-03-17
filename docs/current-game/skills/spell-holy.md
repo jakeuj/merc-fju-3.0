@@ -81,11 +81,13 @@ Legacy chain: `bless -> giant strength -> protection -> heal -> sanctuary / dete
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 一級, max 一代宗師﹗; 郎 中 >= 一級, max 出神入化﹗; 文 官 >= 一級, max 出類拔萃﹗`
 - Restrictions: `skills: 偵測邪惡 >= 心神領會`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:2097`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_WIS, SPELL_CLASS_ONE); attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/holy.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:2097.
 
 ### 巨人之力 / `giant strength`
 
@@ -123,11 +125,13 @@ Legacy chain: `bless -> giant strength -> protection -> heal -> sanctuary / dete
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 一級, max 一代宗師﹗; 郎 中 >= 一級, max 出神入化﹗`
 - Restrictions: `skills: 移除詛咒術 >= 神乎其技`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:2576`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_WIS, SPELL_CLASS_FOU); attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/holy.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:2576.
 
 ### 恢復術 / `heal`
 
@@ -165,11 +169,13 @@ Legacy chain: `bless -> giant strength -> protection -> heal -> sanctuary / dete
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / No`
 - Class limits: `伶 人 >= 七十五級, max 一代宗師﹗`
 - Restrictions: `attrs: 學識 >= 二十; skills: 傷害術 >= 出類拔萃`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/ex_spell.c:199`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_WIS, SPELL_CLASS_FIV); repeat loop: for (tt = 0; tt <= ch->skill[sn] / 20; tt++); attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/holy.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/ex_spell.c:199.
 
 ### 「靈神訣」 / `protection`
 

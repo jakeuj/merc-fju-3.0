@@ -39,11 +39,13 @@ Legacy chain: `abstract / dark hell -> seven key numen / meditation / restore st
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `天 師 >= 五十級, max 一代宗師﹗; 道 士 >= 三十級, max 心神領會﹗; 鑄劍師 >= 五十級, max 登峰造極﹗; - >= -, max -`
 - Restrictions: `attrs: 智力 >= 三十五`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:5358`
+- Code damage summary: `Direct damage path confirmed in source, but no compact summary was extracted.`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/mage.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:5358.
 
 ### 死黑核爆裂地獄 / `dark hell`
 
@@ -60,11 +62,13 @@ Legacy chain: `abstract / dark hell -> seven key numen / meditation / restore st
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `天 師 >= 六十級, max 一代宗師﹗`
 - Restrictions: `attrs: 學識 >= 二十五, 智力 >= 二十五; skills: 狂奔雷電 >= 登峰造極, 火之精靈 >= 出神入化`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:5426`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_INT, SPELL_CLASS_MAG); attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/mage.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:5426.
 
 ### 打禪七 / `meditation`
 
@@ -123,11 +127,13 @@ Legacy chain: `abstract / dark hell -> seven key numen / meditation / restore st
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / No`
 - Class limits: `天 師 >= 九十級, max 一代宗師﹗`
 - Restrictions: `attrs: 智力 >= 四十; skills: 死黑核爆裂地獄 >= 神乎其技`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:4161`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_INT, SPELL_CLASS_MAG); attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/mage.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:4161.
 
 ### 六神訣 / `six god`
 
@@ -144,9 +150,11 @@ Legacy chain: `abstract / dark hell -> seven key numen / meditation / restore st
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `天 師 >= 六十級, max 一代宗師﹗; 鑄劍師 >= 八十級, max 神乎其技﹗`
 - Restrictions: `attrs: 學識 >= 二十五`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:5484`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_WIS, SPELL_CLASS_FIV); attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/mage.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:5484.
 

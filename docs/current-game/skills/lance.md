@@ -39,6 +39,7 @@ Legacy chain: `young gun -> eight gun`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 五十級, max 神乎其技﹗; 將 軍 >= 五十級, max 一代宗師﹗`
 - Restrictions: `attrs: 力量 >= 二十; skills: 楊家槍法 >= 神乎其技; classes: 刺 客/將 軍`
+- Damage model: `data-driven`
 - Damage values: `[170, 195, 220, 245, 270, 300, 335, 375, 420]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
@@ -60,6 +61,7 @@ Legacy chain: `young gun -> eight gun`
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / Yes`
 - Class limits: `刺 客 >= 二十級, max 神乎其技﹗; 武 官 >= 二十級, max 出類拔萃﹗; 將 軍 >= 二十級, max 一代宗師﹗`
 - Restrictions: `-`
+- Damage model: `data-driven`
 - Damage values: `[90, 110, 130, 150, 170, 195, 220]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`

@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 LEGACY_SKILLS_JSON = ROOT / "docs/3yWebsite/docs/data/skills.json"
 LEGACY_SKILL_DIR = ROOT / "docs/3yWebsite/skill"
 CURRENT_SKILLS_JSON = ROOT / "docs/current-game/skills.json"
+CODE_DAMAGE_SOURCE_FILES = [ROOT / "src/spell.c", ROOT / "src/ex_spell.c"]
 
 
 NPC_RUNTIME_SKILLS = {
@@ -125,6 +126,7 @@ def parse_runtime_skills(skill_lst: dict[str, str]) -> dict[str, dict]:
             "skill_file": str(ski.relative_to(ROOT)).replace("\\", "/"),
             "skill_lst_key": stem if stem in skill_lst else None,
             "slot_symbol": get("Slot") or skill_lst.get(stem),
+            "function": get("Function"),
             "type": get("Type"),
             "cost": to_int(get("Cost")),
             "cost_type": get("CostType"),
@@ -434,6 +436,92 @@ def dedupe_notes(notes: list[str]) -> list[str]:
     return out
 
 
+def extract_function_block(text: str, function_name: str) -> tuple[int, str] | None:
+    match = re.search(rf"(?:SKILL|SPELL)\(\s*{re.escape(function_name)}\s*\)", text)
+    if not match:
+        return None
+
+    block_start = text.find("{", match.end())
+    if block_start == -1:
+        return None
+
+    depth = 0
+    for index in range(block_start, len(text)):
+        char = text[index]
+        if char == "{":
+            depth += 1
+        elif char == "}":
+            depth -= 1
+            if depth == 0:
+                return match.start(), text[block_start : index + 1]
+    return None
+
+
+def analyze_code_damage(function_name: str | None) -> dict | None:
+    if not function_name or function_name == "-1":
+        return None
+
+    for path in CODE_DAMAGE_SOURCE_FILES:
+        if not path.exists():
+            continue
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        match = extract_function_block(text, function_name)
+        if not match:
+            continue
+
+        match_start, block = match
+        line_no = text.count("\n", 0, match_start) + 1
+        code_path = f"{path.relative_to(ROOT).as_posix()}:{line_no}"
+        has_damage_call = bool(
+            re.search(r"\bspell_damage\s*\(", block)
+            or re.search(r"\bdamage\s*\(", block)
+            or re.search(r"\braw_kill\s*\(", block)
+        )
+
+        if not has_damage_call:
+            return {
+                "damage_source": "unresolved",
+                "damage_gap_classification": "needs review",
+                "code_path": code_path,
+                "code_damage_summary": "Function exists but no direct damage call was detected in the current source block.",
+            }
+
+        summary_parts: list[str] = []
+        direct_ladder = [int(value) for value in re.findall(r"\bdam\s*=\s*(\d+)\s*;", block)]
+        if len(direct_ladder) > 1 and direct_ladder[0] == 0:
+            direct_ladder = direct_ladder[1:]
+        if direct_ladder:
+            summary_parts.append("base ladder: " + ", ".join(str(value) for value in direct_ladder))
+
+        spell_damage_call = re.search(r"\bspell_damage\s*\(([^;]+)\)", block)
+        if spell_damage_call:
+            summary_parts.append("formula: spell_damage(" + normalize_inline(spell_damage_call.group(1)) + ")")
+
+        repeat_loop = re.search(r"for\s*\(\s*tt\s*=\s*0\s*;\s*tt\s*<=\s*([^;]+);\s*tt\+\+\s*\)", block)
+        if repeat_loop:
+            summary_parts.append(f"repeat loop: for (tt = 0; tt <= {normalize_inline(repeat_loop.group(1))}; tt++)")
+
+        weapon_multiplier = re.search(r"pObj->value\[3\]\s*==\s*(WEAPON_\w+)", block)
+        if weapon_multiplier and "multi = number_range" in block:
+            summary_parts.append(f"weapon multiplier: {weapon_multiplier.group(1)} value[1..2]")
+
+        attack_mode = re.search(r"damage\s*\(\s*ch\s*,\s*victim\s*,[^,]+,\s*sn\s*,\s*(ATTACK_\w+)\s*\)", block)
+        if attack_mode:
+            summary_parts.append(f"attack mode: {attack_mode.group(1)}")
+
+        if not summary_parts:
+            summary_parts.append("Direct damage path confirmed in source, but no compact summary was extracted.")
+
+        return {
+            "damage_source": "code-driven",
+            "damage_gap_classification": "code-driven offensive exception",
+            "code_path": code_path,
+            "code_damage_summary": "; ".join(summary_parts),
+        }
+
+    return None
+
+
 def build_registry() -> dict:
     existing = load_existing_registry()
     legacy_rows = read_json(LEGACY_SKILLS_JSON)
@@ -566,6 +654,35 @@ def build_registry() -> dict:
                 + ["No runtime skill file matched yet; legacy requirements still preserved from old-site HTML."]
             )
 
+        code_damage = None
+        if (
+            player_facing
+            and runtime.get("exists")
+            and runtime.get("type") == "TAR_CHAR_OFFENSIVE"
+            and not combat.get("damage_values")
+        ):
+            code_damage = analyze_code_damage(runtime.get("function"))
+
+        combat["damage_source"] = "data-driven" if combat.get("damage_values") else None
+        combat["damage_gap_classification"] = None
+        combat["code_path"] = None
+        combat["code_damage_summary"] = None
+        if code_damage:
+            combat["damage_source"] = code_damage["damage_source"]
+            combat["damage_gap_classification"] = code_damage["damage_gap_classification"]
+            combat["code_path"] = code_damage["code_path"]
+            combat["code_damage_summary"] = code_damage["code_damage_summary"]
+            combat["prepared_for_adjustment"] = False
+            combat["notes"] = dedupe_notes(
+                combat.get("notes", [])
+                + [
+                    (
+                        f"{code_damage['damage_gap_classification'].capitalize()}: "
+                        f"damage logic currently lives in {code_damage['code_path']}."
+                    )
+                ]
+            )
+
         item = {
             "english_name": name,
             "chinese_name": chinese_name,
@@ -584,7 +701,7 @@ def build_registry() -> dict:
         skills.append(item)
 
     return {
-        "registry_version": 4,
+        "registry_version": 5,
         "scope": "Integrated current-game skill registry for merc-fju-3.0. It combines old-site catalog data, full old-site skill HTML extraction, runtime presence, and skill-combat audit fields without replacing runtime source files.",
         "coverage": {
             "seeded_families": [
@@ -607,11 +724,26 @@ def build_registry() -> dict:
         "legacy_site_navigation": legacy_site_navigation,
         "combat_dimension_schema": {
             "purpose": "Keep one audit-ready place for current skill templates, legacy requirements, and future tuning deltas.",
-            "fields": ["damage_values", "chance_values", "parry_values", "innate_values", "wait", "cost", "cost_type", "weapon", "check"],
+            "fields": [
+                "damage_values",
+                "chance_values",
+                "parry_values",
+                "innate_values",
+                "wait",
+                "cost",
+                "cost_type",
+                "weapon",
+                "check",
+                "damage_source",
+                "damage_gap_classification",
+                "code_path",
+                "code_damage_summary",
+            ],
             "usage_notes": [
                 "Do not tune by damage_values alone; read chance/parry/innate/wait/cost/weapon/check together.",
                 "Use legacy_requirements to preserve old-site class, attribute, and prerequisite constraints even before runtime reconciliation is complete.",
                 "When a batch changes a skill, append batch-specific notes rather than overwriting historical context.",
+                "When damage_values is empty, do not assume the skill is broken until you distinguish code-driven offensive exceptions from unresolved runtime gaps.",
             ],
         },
         "notes": [
@@ -619,6 +751,7 @@ def build_registry() -> dict:
             "Old-site HTML is the preferred source for descendant skills and requirement details when docs/3yWebsite/docs/data/skills.json flattens a page into one root row.",
             "docs/3yWebsite/newhand/newbies/index.html is used as a starter-play reference for early learnable skills, beginner enable expectations, and class progression context.",
             "combat_dimensions is intended to hold both current runtime values and future tuning metadata.",
+            "Player-facing offensive skills without .ski #Damage now distinguish code-driven offensive exceptions from unresolved gaps.",
         ],
         "skills": skills,
     }

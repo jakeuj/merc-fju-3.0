@@ -210,11 +210,49 @@ def skill_section(skill: dict) -> str:
         f"- CanAsk / Teach / Valid / Enable: `{bool_text(runtime.get('canask'))} / {bool_text(runtime.get('teach'))} / {bool_text(runtime.get('valid'))} / {bool_text(runtime.get('enable'))}`",
         f"- Class limits: `{class_limit_summary(legacy_requirements.get('class_limits') or [])}`",
         f"- Restrictions: `{restriction_summary(restrictions)}`",
-        f"- Damage values: `{combat.get('damage_values') or []}`",
-        f"- Chance values: `{combat.get('chance_values') or []}`",
-        f"- Parry values: `{combat.get('parry_values') or []}`",
-        f"- Innate values: `{combat.get('innate_values') or []}`",
     ]
+    damage_source = combat.get("damage_source")
+    if damage_source == "code-driven":
+        lines.extend(
+            [
+                "- Damage model: `code-driven`",
+                f"- Code path: `{combat.get('code_path') or '-'}`",
+                f"- Code damage summary: `{combat.get('code_damage_summary') or '-'}`",
+                "- Damage values: `(not stored in .ski #Damage)`",
+                "- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`",
+            ]
+        )
+    elif damage_source == "unresolved" and not combat.get("damage_values"):
+        lines.extend(
+            [
+                "- Damage model: `unresolved`",
+                f"- Damage audit classification: `{combat.get('damage_gap_classification') or 'needs review'}`",
+                f"- Code path: `{combat.get('code_path') or '-'}`",
+                f"- Damage values: `{combat.get('damage_values') or []}`",
+                f"- Chance values: `{combat.get('chance_values') or []}`",
+                f"- Parry values: `{combat.get('parry_values') or []}`",
+                f"- Innate values: `{combat.get('innate_values') or []}`",
+            ]
+        )
+    elif combat.get("damage_values"):
+        lines.extend(
+            [
+                "- Damage model: `data-driven`",
+                f"- Damage values: `{combat.get('damage_values') or []}`",
+                f"- Chance values: `{combat.get('chance_values') or []}`",
+                f"- Parry values: `{combat.get('parry_values') or []}`",
+                f"- Innate values: `{combat.get('innate_values') or []}`",
+            ]
+        )
+    else:
+        lines.extend(
+            [
+                f"- Damage values: `{combat.get('damage_values') or []}`",
+                f"- Chance values: `{combat.get('chance_values') or []}`",
+                f"- Parry values: `{combat.get('parry_values') or []}`",
+                f"- Innate values: `{combat.get('innate_values') or []}`",
+            ]
+        )
     if legacy_catalog:
         lines.append(f"- Legacy page source: `{legacy_catalog.get('path') or '-'}`")
     notes = combat.get("notes") or []

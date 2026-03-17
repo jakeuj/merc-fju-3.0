@@ -39,11 +39,13 @@ Legacy chain: `burning hands -> flamestrike -> fireball -> cast fire -> fire elf
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 馬馬虎虎﹗; 刺 客 >= 五十級, max 初窺門徑﹗; 平 民 >= 十級, max 初窺門徑﹗; 郎 中 >= 五十級, max 馬馬虎虎﹗; 武 官 >= 十級, max 初窺門徑﹗; 將 軍 >= 五十級, max 初窺門徑﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 馬馬虎虎﹗; 道 士 >= 十級, max 出類拔萃﹗; 鑄劍師 >= 五十級, max 登峰造極﹗; 盜 賊 >= 十五級, max 初窺門徑﹗`
 - Restrictions: `-`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:1079`
+- Code damage summary: `base ladder: 0; formula: spell_damage(ch, level, TYPE_INT, SPELL_CLASS_ONE); attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/fire.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:1079.
 
 ### 三昧真火 / `cast fire`
 
@@ -60,11 +62,13 @@ Legacy chain: `burning hands -> flamestrike -> fireball -> cast fire -> fire elf
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `天 師 >= 一級, max 一代宗師﹗; 道 士 >= 一級, max 心神領會﹗; 鑄劍師 >= 一級, max 登峰造極﹗`
 - Restrictions: `attrs: 智力 >= 二十; skills: 火球術 >= 出類拔萃`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:405`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_INT, SPELL_CLASS_FOU)`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/fire.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:405.
 
 ### 精靈之火 / `faerie fire`
 
@@ -102,11 +106,13 @@ Legacy chain: `burning hands -> flamestrike -> fireball -> cast fire -> fire elf
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / No`
 - Class limits: `天 師 >= 一級, max 一代宗師﹗`
 - Restrictions: `attrs: 智力 >= 二十五; skills: 三昧真火 >= 神乎其技`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/ex_spell.c:49`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_INT, SPELL_CLASS_FIV); attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/fire.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/ex_spell.c:49.
 
 ### 火球術 / `fireball`
 
@@ -123,11 +129,13 @@ Legacy chain: `burning hands -> flamestrike -> fireball -> cast fire -> fire elf
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 心神領會﹗; 郎 中 >= 五十級, max 心神領會﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 心神領會﹗; 道 士 >= 十級, max 神乎其技﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `attrs: 智力 >= 十五; skills: 烈焰術 >= 心神領會`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:2230`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_INT, SPELL_CLASS_THR); attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/fire.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:2230.
 
 ### 烈焰術 / `flamestrike`
 
@@ -144,11 +152,13 @@ Legacy chain: `burning hands -> flamestrike -> fireball -> cast fire -> fire elf
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 心神領會﹗; 郎 中 >= 五十級, max 心神領會﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 十級, max 心神領會﹗; 道 士 >= 十級, max 神乎其技﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `attrs: 智力 >= 十; skills: 火焰之掌 >= 初窺門徑`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:2299`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_INT, SPELL_CLASS_TWO); attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/fire.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:2299.
 
 ### 皮膚石化術 / `stone skin`
 

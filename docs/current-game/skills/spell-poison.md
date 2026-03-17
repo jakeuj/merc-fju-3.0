@@ -39,11 +39,13 @@ Legacy chain: `acid blast -> blindness -> sleep -> poison / detect poison -> wea
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 出類拔萃﹗; 郎 中 >= 五十級, max 出類拔萃﹗; 天 師 >= 五十級, max 一代宗師﹗; 文 官 >= 三十級, max 馬馬虎虎﹗; 道 士 >= 三十級, max 心神領會﹗; 鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `-`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/spell.c:993`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_INT, SPELL_CLASS_ONE); attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/poison.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/spell.c:993.
 
 ### 眼盲術 / `blindness`
 
@@ -144,9 +146,13 @@ Legacy chain: `acid blast -> blindness -> sleep -> poison / detect poison -> wea
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 一代宗師﹗; 郎 中 >= 五十級, max 出神入化﹗; 文 官 >= 十級, max 出類拔萃﹗`
 - Restrictions: `attrs: 敏捷 >= 十; skills: 偵測毒物 >= 心神領會`
+- Damage model: `unresolved`
+- Damage audit classification: `needs review`
+- Code path: `src/spell.c:3731`
 - Damage values: `[]`
 - Chance values: `[]`
 - Parry values: `[]`
 - Innate values: `[]`
 - Legacy page source: `skill/poison.html`
+- Notes: Needs review: damage logic currently lives in src/spell.c:3731.
 

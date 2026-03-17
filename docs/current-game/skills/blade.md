@@ -39,6 +39,7 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 出神入化﹗; 武 官 >= 一級, max 心神領會﹗; 將 軍 >= 一級, max 一代宗師﹗`
 - Restrictions: `attrs: 力量 >= 十五; skills: 猛龍刀法 >= 心神領會`
+- Damage model: `data-driven`
 - Damage values: `[140, 160, 180, 200, 220, 240, 260, 285, 315]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
@@ -60,6 +61,7 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 五十級, max 登峰造極﹗; 武 官 >= 三十級, max 出類拔萃﹗; 將 軍 >= 五十級, max 一代宗師﹗`
 - Restrictions: `-`
+- Damage model: `data-driven`
 - Damage values: `[95, 115, 135, 155, 175, 195, 215, 240, 270]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
@@ -81,6 +83,7 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 八十級, max 登峰造極﹗; 將 軍 >= 八十級, max 一代宗師﹗`
 - Restrictions: `attrs: 學識 >= 二十五, 體格 >= 三十, 敏捷 >= 三十; skills: 魔刀 >= 出神入化, 花語刀法 >= 登峰造極; classes: 刺 客/將 軍`
+- Damage model: `data-driven`
 - Damage values: `[190, 220, 255, 295, 340, 390, 450, 520]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
@@ -102,6 +105,7 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 神乎其技﹗; 將 軍 >= 一級, max 一代宗師﹗`
 - Restrictions: `attrs: 敏捷 >= 二十五, 力量 >= 二十; skills: 花語刀法 >= 登峰造極; classes: 刺 客/將 軍`
+- Damage model: `data-driven`
 - Damage values: `[190, 205, 220, 235, 250, 265, 280, 295, 310, 325, 340, 355, 370, 385, 400, 420, 440, 460, 480, 500, 520, 550]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
@@ -123,6 +127,7 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - CanAsk / Teach / Valid / Enable: `No / No / No / Yes`
 - Class limits: `將 軍 >= 一級, max 一代宗師﹗; 伶 人 >= -, max -; 刺 客 >= -, max -; 平 民 >= -, max -; 郎 中 >= -, max -; 武 官 >= -, max -; 天 師 >= -, max -; 文 官 >= -, max -; 道 士 >= -, max -; 鑄劍師 >= -, max -; 盜 賊 >= -, max -`
 - Restrictions: `attrs: 敏捷 >= 二十五, 力量 >= 三十; skills: 傲寒六訣 >= 登峰造極; classes: 將 軍`
+- Damage model: `data-driven`
 - Damage values: `[150, 170, 190, 210, 230, 255, 280, 305, 335, 370]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
@@ -144,6 +149,7 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 出神入化﹗; 武 官 >= 一級, max 心神領會﹗; 將 軍 >= 一級, max 一代宗師﹗`
 - Restrictions: `-`
+- Damage model: `data-driven`
 - Damage values: `[75, 90, 105, 120, 135, 150, 165, 185]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
@@ -165,6 +171,7 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - CanAsk / Teach / Valid / Enable: `No / No / No / Yes`
 - Class limits: `刺 客 >= 五十級, max 登峰造極﹗; 武 官 >= 十級, max 出類拔萃﹗; 將 軍 >= 五十級, max 一代宗師﹗; 伶 人 >= -, max -; 平 民 >= -, max -; 郎 中 >= -, max -; 天 師 >= -, max -; 文 官 >= -, max -; 道 士 >= -, max -; 鑄劍師 >= -, max -; 盜 賊 >= -, max -`
 - Restrictions: `attrs: 力量 >= 二十; skills: 皓日刀法 >= 心神領會`
+- Damage model: `data-driven`
 - Damage values: `[110, 130, 150, 170, 190, 210, 235, 260, 290]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
@@ -186,6 +193,7 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 登峰造極﹗; 武 官 >= 一級, max 心神領會﹗; 將 軍 >= 一級, max 一代宗師﹗`
 - Restrictions: `attrs: 敏捷 >= 十五, 力量 >= 十五; skills: 相思碎夢刀法 >= 出類拔萃`
+- Damage model: `data-driven`
 - Damage values: `[140, 165, 190, 215, 240, 265, 290, 325]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
@@ -207,6 +215,7 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - CanAsk / Teach / Valid / Enable: `No / No / No / Yes`
 - Class limits: `刺 客 >= 五十級, max 登峰造極﹗; 武 官 >= 十級, max 出類拔萃﹗; 將 軍 >= 五十級, max 一代宗師﹗; 伶 人 >= -, max -; 平 民 >= -, max -; 郎 中 >= -, max -; 天 師 >= -, max -; 文 官 >= -, max -; 道 士 >= -, max -; 鑄劍師 >= -, max -; 盜 賊 >= -, max -`
 - Restrictions: `-`
+- Damage model: `data-driven`
 - Damage values: `[55, 70, 85, 100, 115, 130]`
 - Chance values: `[10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
@@ -228,6 +237,7 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `將 軍 >= 一級, max 一代宗師﹗`
 - Restrictions: `attrs: 敏捷 >= 二十, 力量 >= 二十五; skills: 魔刀 >= 登峰造極; classes: 將 軍`
+- Damage model: `data-driven`
 - Damage values: `[240, 270, 300, 330, 360, 400, 440, 480, 520, 580]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`

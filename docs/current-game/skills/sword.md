@@ -39,6 +39,7 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - CanAsk / Teach / Valid / Enable: `No / No / No / Yes`
 - Class limits: `伶 人 >= 一級, max 馬馬虎虎﹗; 刺 客 >= 一級, max 一代宗師﹗; 平 民 >= 一級, max 馬馬虎虎﹗; 郎 中 >= 一級, max 馬馬虎虎﹗; 武 官 >= 一級, max 神乎其技﹗; 將 軍 >= 一級, max 登峰造極﹗; 天 師 >= 一級, max 出類拔萃﹗; 文 官 >= 一級, max 馬馬虎虎﹗; 道 士 >= 一級, max 馬馬虎虎﹗; 鑄劍師 >= 一級, max 出類拔萃﹗; 盜 賊 >= 一級, max 出類拔萃﹗`
 - Restrictions: `-`
+- Damage model: `data-driven`
 - Damage values: `[60, 75, 90, 105, 120, 140, 160, 185]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
@@ -60,6 +61,7 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 五十級, max 一代宗師﹗; 將 軍 >= 五十級, max 登峰造極﹗`
 - Restrictions: `attrs: 敏捷 >= 十五; skills: 封山劍法 >= 登峰造極; classes: 刺 客/將 軍`
+- Damage model: `data-driven`
 - Damage values: `[180, 210, 240, 270, 300, 330, 360, 420]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
@@ -81,6 +83,7 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - CanAsk / Teach / Valid / Enable: `No / No / No / Yes`
 - Class limits: `刺 客 >= 五十級, max 一代宗師﹗; 將 軍 >= 五十級, max 登峰造極﹗; 伶 人 >= -, max -; 平 民 >= -, max -; 郎 中 >= -, max -; 武 官 >= -, max -; 天 師 >= -, max -; 文 官 >= -, max -; 道 士 >= -, max -; 鑄劍師 >= -, max -; 盜 賊 >= -, max -`
 - Restrictions: `attrs: 體格 >= 二十五, 敏捷 >= 三十, 力量 >= 二十五; skills: 雙十旋龍斬 >= 登峰造極; classes: 刺 客/將 軍`
+- Damage model: `data-driven`
 - Damage values: `[200, 225, 250, 280, 315, 355, 400]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
@@ -102,6 +105,7 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 一代宗師﹗; 武 官 >= 一級, max 出類拔萃﹗; 將 軍 >= 一級, max 一代宗師﹗; 天 師 >= 一級, max 神乎其技﹗; 鑄劍師 >= 一級, max 神乎其技﹗; 盜 賊 >= 一級, max 出神入化﹗`
 - Restrictions: `skills: 華山劍法 >= 出類拔萃`
+- Damage model: `data-driven`
 - Damage values: `[110, 130, 150, 170, 190, 210, 230, 250]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
@@ -123,6 +127,7 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - CanAsk / Teach / Valid / Enable: `Yes / Yes / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 一代宗師﹗; 武 官 >= 一級, max 出類拔萃﹗; 將 軍 >= 一級, max 一代宗師﹗`
 - Restrictions: `attrs: 體格 >= 十, 力量 >= 十五`
+- Damage model: `data-driven`
 - Damage values: `[95, 115, 135, 155, 175, 200, 225, 250, 275, 305, 340]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
@@ -144,6 +149,7 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 一代宗師﹗; 武 官 >= 一級, max 神乎其技﹗; 將 軍 >= 一級, max 一代宗師﹗; 天 師 >= 一級, max 馬馬虎虎﹗; 鑄劍師 >= 一級, max 馬馬虎虎﹗; 盜 賊 >= 一級, max 出神入化﹗`
 - Restrictions: `attrs: 學識 >= 十五; skills: 兩儀劍法 >= 出類拔萃`
+- Damage model: `data-driven`
 - Damage values: `[110, 130, 150, 170, 190, 215, 240, 265, 295, 330, 370]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
@@ -165,6 +171,7 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - CanAsk / Teach / Valid / Enable: `Yes / Yes / Yes / Yes`
 - Class limits: `伶 人 >= 一級, max 馬馬虎虎﹗; 刺 客 >= 一級, max 一代宗師﹗; 平 民 >= 一級, max 馬馬虎虎﹗; 郎 中 >= 一級, max 馬馬虎虎﹗; 武 官 >= 一級, max 神乎其技﹗; 將 軍 >= 一級, max 一代宗師﹗; 天 師 >= 一級, max 出類拔萃﹗; 文 官 >= 一級, max 馬馬虎虎﹗; 道 士 >= 一級, max 馬馬虎虎﹗; 鑄劍師 >= 一級, max 出類拔萃﹗; 盜 賊 >= 一級, max 出類拔萃﹗`
 - Restrictions: `-`
+- Damage model: `data-driven`
 - Damage values: `[60, 75, 90, 105, 120, 135, 150]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[2, 0, 0, 0, 0, 0, 0]`
@@ -186,6 +193,7 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - CanAsk / Teach / Valid / Enable: `No / No / No / Yes`
 - Class limits: `刺 客 >= 五十級, max 一代宗師﹗; 將 軍 >= 五十級, max 出神入化﹗; 伶 人 >= -, max -; 平 民 >= -, max -; 郎 中 >= -, max -; 武 官 >= -, max -; 天 師 >= -, max -; 文 官 >= -, max -; 道 士 >= -, max -; 鑄劍師 >= -, max -; 盜 賊 >= -, max -`
 - Restrictions: `attrs: 敏捷 >= 三十五, 力量 >= 二十五; skills: 無名劍 >= 出神入化; classes: 刺 客/將 軍`
+- Damage model: `data-driven`
 - Damage values: `[155, 175, 195, 215, 235, 260, 290, 325, 360]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
@@ -207,6 +215,7 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - CanAsk / Teach / Valid / Enable: `No / No / No / Yes`
 - Class limits: `刺 客 >= 五十級, max 一代宗師﹗; 武 官 >= 十級, max 出神入化﹗; 將 軍 >= 五十級, max 登峰造極﹗; 天 師 >= 五十級, max 神乎其技﹗; 鑄劍師 >= 五十級, max 神乎其技﹗; 盜 賊 >= 十級, max 出神入化﹗; 伶 人 >= -, max -; 平 民 >= -, max -; 郎 中 >= -, max -; 文 官 >= -, max -; 道 士 >= -, max -`
 - Restrictions: `skills: 銷魂劍法 >= 出類拔萃`
+- Damage model: `data-driven`
 - Damage values: `[90, 105, 120, 135, 150, 165, 180, 195, 210, 225, 240, 255, 270, 290, 310, 335, 360]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
@@ -228,6 +237,7 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - CanAsk / Teach / Valid / Enable: `No / No / No / Yes`
 - Class limits: `伶 人 >= 五十級, max 馬馬虎虎﹗; 刺 客 >= 五十級, max 一代宗師﹗; 平 民 >= 一級, max 馬馬虎虎﹗; 郎 中 >= 五十級, max 馬馬虎虎﹗; 武 官 >= 十級, max 神乎其技﹗; 將 軍 >= 五十級, max 登峰造極﹗; 天 師 >= 五十級, max 出類拔萃﹗; 文 官 >= 十級, max 馬馬虎虎﹗; 道 士 >= 十級, max 馬馬虎虎﹗; 鑄劍師 >= 五十級, max 出類拔萃﹗; 盜 賊 >= 十級, max 出類拔萃﹗`
 - Restrictions: `-`
+- Damage model: `data-driven`
 - Damage values: `[55, 70, 85, 100, 115, 130, 145, 165]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
@@ -249,6 +259,7 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - CanAsk / Teach / Valid / Enable: `No / No / No / Yes`
 - Class limits: `刺 客 >= 一級, max 一代宗師﹗; 將 軍 >= 一級, max 登峰造極﹗; 伶 人 >= -, max -; 平 民 >= -, max -; 郎 中 >= -, max -; 武 官 >= -, max -; 天 師 >= -, max -; 文 官 >= -, max -; 道 士 >= -, max -; 鑄劍師 >= -, max -; 盜 賊 >= -, max -`
 - Restrictions: `attrs: 力量 >= 二十五, 敏捷 >= 三十; skills: 暗影劍法 >= 登峰造極; classes: 刺 客/將 軍`
+- Damage model: `data-driven`
 - Damage values: `[170, 195, 220, 245, 275, 310, 350]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
@@ -270,6 +281,7 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 一代宗師﹗; 將 軍 >= 一級, max 登峰造極﹗`
 - Restrictions: `attrs: 體格 >= 二十五, 敏捷 >= 二十五, 力量 >= 二十五; skills: 神龍劍法 >= 神乎其技; classes: 刺 客/將 軍`
+- Damage model: `data-driven`
 - Damage values: `[150, 180, 210, 240, 275, 315, 360, 410]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
@@ -291,6 +303,7 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 一代宗師﹗; 將 軍 >= 一級, max 登峰造極﹗`
 - Restrictions: `attrs: 敏捷 >= 二十, 學識 >= 二十五; skills: 無量神劍 >= 登峰造極; classes: 刺 客/將 軍`
+- Damage model: `data-driven`
 - Damage values: `[180, 205, 230, 255, 285, 320, 360, 405, 455]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
@@ -312,6 +325,7 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `伶 人 >= 十級, max 心神領會﹗; 刺 客 >= 十級, max 一代宗師﹗; 平 民 >= 十級, max 初窺門徑﹗; 郎 中 >= 十級, max 心神領會﹗; 武 官 >= 十級, max 神乎其技﹗; 將 軍 >= 十級, max 一代宗師﹗; 天 師 >= 十級, max 出類拔萃﹗; 文 官 >= 十級, max 馬馬虎虎﹗; 道 士 >= 十級, max 馬馬虎虎﹗; 鑄劍師 >= 十級, max 出類拔萃﹗; 盜 賊 >= 十級, max 出類拔萃﹗`
 - Restrictions: `-`
+- Damage model: `data-driven`
 - Damage values: `[70, 200, 85, 100, 115, 130, 145, 160, 175, 190, 205, 225]`
 - Chance values: `[20, 30, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
@@ -333,6 +347,7 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - CanAsk / Teach / Valid / Enable: `No / No / No / Yes`
 - Class limits: `刺 客 >= 一級, max 一代宗師﹗; 武 官 >= 一級, max 出神入化﹗; 將 軍 >= 一級, max 登峰造極﹗; 天 師 >= 一級, max 神乎其技﹗; 鑄劍師 >= 一級, max 神乎其技﹗; 盜 賊 >= 一級, max 出神入化﹗; 伶 人 >= -, max -; 平 民 >= -, max -; 郎 中 >= -, max -; 文 官 >= -, max -; 道 士 >= -, max -`
 - Restrictions: `skills: 無情劍法 >= 出類拔萃`
+- Damage model: `data-driven`
 - Damage values: `[115, 135, 155, 175, 195, 220, 245, 275, 310]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`

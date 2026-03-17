@@ -39,11 +39,13 @@ Legacy chain: `cook / hide -> backstab / mask / venom -> pick -> sneak -> dorman
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `盜 賊 >= 六十五級, max 一代宗師﹗; 伶 人 >= -, max -; 刺 客 >= -, max -; 平 民 >= -, max -; 郎 中 >= -, max -; 武 官 >= -, max -; 將 軍 >= -, max -; 天 師 >= -, max -; 文 官 >= -, max -; 道 士 >= -, max -; 鑄劍師 >= -, max -`
 - Restrictions: `attrs: 敏捷 >= 三十; skills: 隱藏術 >= 出神入化`
-- Damage values: `[]`
-- Chance values: `[]`
-- Parry values: `[]`
-- Innate values: `[]`
+- Damage model: `code-driven`
+- Code path: `src/ex_spell.c:331`
+- Code damage summary: `formula: spell_damage(ch, level, TYPE_DEX, SPELL_CLASS_MAG); attack mode: ATTACK_RANDOM`
+- Damage values: `(not stored in .ski #Damage)`
+- Chance / Parry / Innate: `(resolved in code path, not .ski arrays)`
 - Legacy page source: `skill/thief.html`
+- Notes: Code-driven offensive exception: damage logic currently lives in src/ex_spell.c:331.
 
 ### 料理術 / `cook`
 
