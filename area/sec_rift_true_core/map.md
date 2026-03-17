@@ -47,6 +47,7 @@
         "direction": "down",
         "source_vnum": 10212,
         "target_area": "sec_rift_core_below",
+        "target_room_vnum": 10301,
         "label": "裂核深井"
       }
     ],
@@ -69,7 +70,7 @@
     {"vnum":10209,"name":"封紋備修間","description":"備修間堆著不同年代的補紋石版，有些版面只刻了一半就被高熱燒蝕。","sector_type":"SECT_INSIDE","cluster":"pulse-annex","coord":[5,-1,-20],"labels":["supply","lore"],"exits":[{"direction":"west","to":10208}]},
     {"vnum":10210,"name":"核心前橋","description":"前橋跨過一道垂直裂隙，橋面傳來規律震顫，彷彿每一次脈動都在測試這座橋還能撐多久。","sector_type":"SECT_INSIDE","cluster":"heart-dais","coord":[4,-2,-20],"labels":["bridge","threshold"],"exits":[{"direction":"north","to":10205},{"direction":"south","to":10211}]},
     {"vnum":10211,"name":"核心井緣","description":"井緣石臺圍著一道深不見底的黑紅井口，井壁殘留大片玻化層與剝落鎮紋。","sector_type":"SECT_INSIDE","cluster":"heart-dais","coord":[4,-3,-20],"labels":["well"],"exits":[{"direction":"north","to":10210},{"direction":"down","to":10212}],"enquires":["本核","風險"]},
-    {"vnum":10212,"name":"裂界核心臺","description":"核心臺幾乎懸在空中，四周封圈只剩殘片。腳下傳來深井脈動，像還有更巨大的核心層在更下方等待被揭開。","sector_type":"SECT_INSIDE","cluster":"heart-dais","coord":[4,-3,-21],"labels":["world-link-down","boss-threshold"],"exits":[{"direction":"up","to":10211}],"enquires":["深層","核心"]}
+    {"vnum":10212,"name":"裂界核心臺","description":"核心臺幾乎懸在空中，四周封圈只剩殘片。腳下傳來深井脈動，沿井壁已可辨認出通往下層的承臺微光。","sector_type":"SECT_INSIDE","cluster":"heart-dais","coord":[4,-3,-21],"labels":["world-link-down","boss-threshold"],"exits":[{"direction":"up","to":10211},{"direction":"down","to":10301,"external":true}],"enquires":["深層","核心"]}
   ]
 }
 ```

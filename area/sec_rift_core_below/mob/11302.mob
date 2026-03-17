@@ -1,0 +1,32 @@
+Vnum            11302
+Name            core below inspector~
+ShortDesc       深井巡監~
+Description
+深井巡監沿著井壁刻線來回巡視，眼底映著不穩定的紅黑脈光，像在
+持續比對每一道壓差是否已超越可挽回的界線。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       0
+Level           58
+Hitroll         3
+Protect         0
+Damroll         2
+Str             15
+Int             15
+Wis             14
+Dex             14
+Con             14
+Hp              7000
+Mana            460
+Move            240
+Class           0
+Gold            560
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

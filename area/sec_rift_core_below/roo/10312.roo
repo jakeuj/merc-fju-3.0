@@ -1,0 +1,24 @@
+Vnum            10312
+Name            裂核底脈臺~
+Description
+底脈臺懸在深井最低可見處，腳下黑紅脈潮翻湧不息，彷彿還有更巨大的裂核層在更下方緩慢甦醒。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        10311
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         深層~
+End
+
+#Enquire
+Keyword         脈潮~
+End
+
+End

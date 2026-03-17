@@ -1,0 +1,32 @@
+Vnum            11301
+Name            core below caretaker~
+ShortDesc       裂核維壓者~
+Description
+一名披著碎紋鎮甲的維壓者殘影守在裂井邊緣，雙手仍維持著古老
+導脈手勢，彷彿只要稍一分神，整條深井裂道就會立刻崩解。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       80
+Level           56
+Hitroll         2
+Protect         0
+Damroll         2
+Str             15
+Int             14
+Wis             15
+Dex             13
+Con             14
+Hp              6200
+Mana            420
+Move            220
+Class           0
+Gold            520
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

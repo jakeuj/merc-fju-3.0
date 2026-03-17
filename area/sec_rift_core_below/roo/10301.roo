@@ -1,0 +1,32 @@
+Vnum            10301
+Name            落井承臺~
+Description
+承臺懸在黑紅井壁之間，背後仍看得到上層核心臺殘光，前方卻只剩向下延展的裂道與低沉脈鳴。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        10212
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         井壁~
+End
+
+End

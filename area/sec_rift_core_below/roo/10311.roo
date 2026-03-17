@@ -1,0 +1,32 @@
+Vnum            10311
+Name            封橋井緣~
+Description
+井緣立著半毀封柱，柱基仍持續輸出微弱光脈，勉強維持前往底脈的唯一落點。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10310
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        10312
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         封柱~
+End
+
+#Enquire
+Keyword         底脈~
+End
+
+End

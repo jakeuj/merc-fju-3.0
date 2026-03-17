@@ -1,0 +1,32 @@
+Vnum            10304
+Name            脈壓觀井臺~
+Description
+井臺外側是翻湧不定的脈霧，霧中偶爾浮現巨大暗紋，像有某種封印結構仍在底層運作。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         脈壓~
+End
+
+#Enquire
+Keyword         暗紋~
+End
+
+End

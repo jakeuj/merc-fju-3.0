@@ -1,0 +1,31 @@
+Vnum            10305
+Name            裂脈節點帶~
+Description
+節點帶排列著多組導脈石樁，石樁頂端反覆冒出細碎電芒，顯示此處壓差長期處於危險邊緣。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10310
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         石樁~
+Description
+每組石樁都刻著不同年代修補標記，可看出這條裂道曾多次被迫延命。
+~
+End
+
+End

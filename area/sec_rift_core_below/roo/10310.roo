@@ -1,0 +1,24 @@
+Vnum            10310
+Name            下層前橋~
+Description
+前橋橫跨一道更深裂縫，橋面每次震動都伴隨低鳴回響，像深處核心正以固定節奏呼吸。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10311
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End
