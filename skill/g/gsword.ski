@@ -44,7 +44,7 @@ Help
 Description
 $n體內靈氣與真氣鼓盪﹐一招$y『天道無量』$Z﹐手中$O如一條銀蛇般刺向$N的$l。~
 Chance          20
-Value           20
+Value           110
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -54,7 +54,7 @@ End
 Description
 $n使出無量神劍中的$S『無邊無量』$Z﹐手中$O運勁擊刺$N的$l。~
 Chance          20
-Value           20
+Value           130
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -64,7 +64,7 @@ End
 Description
 $n氣運丹田﹐使出一招$G『乾坤無極』$Z﹐身形陡然飛躍數尺﹐手中$O刺向$N的$l。~
 Chance          20
-Value           20
+Value           150
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -74,7 +74,7 @@ End
 Description
 $n手中$O中宮直進﹐一式$R『裡太極劍』$Z對準$N的$l陡然刺出。~
 Chance          20
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -84,7 +84,7 @@ End
 Description
 $n縱身一躍﹐手中$O一招$W『無邊蒼穹』$Z對準$N的$l直直劈下。~
 Chance          20
-Value           20
+Value           190
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -94,7 +94,7 @@ End
 Description
 $n震動手中的$O發出嚶嚶聲響﹐一招$B『天機莫測』$Z刺向$N的$l。~
 Chance          20
-Value           20
+Value           215
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -104,7 +104,7 @@ End
 Description
 $n手中$O向外一分﹐使一招$Y『龍雲天際』$Z反手對準$N$l刺去。~
 Chance          20
-Value           20
+Value           240
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -114,7 +114,7 @@ End
 Description
 $n腳踏七星步﹐身形一轉手中$O使一招$P『天道循環』$Z畫出一道光弧斬向$N的$l。~
 Chance          20
-Value           20
+Value           265
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -124,7 +124,7 @@ End
 Description
 $n一招$S天道擊$Z﹐內力暴射﹐$O疾點向$N的$l。~
 Chance          20
-Value           20
+Value           295
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -134,7 +134,7 @@ End
 Description
 $n突然長嘯一聲﹐一招$g『四路開泰』$Z﹐$O挾著一股巨力衝向$N的$l。~
 Chance          20
-Value           20
+Value           330
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -144,7 +144,7 @@ End
 Description
 $n使出一招$s『斗轉星移』$Z﹐左手持劍﹐右手將對方的招式如數奉還。~
 Chance          20
-Value           20
+Value           370
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

@@ -36,7 +36,7 @@ $n體內真氣流轉﹐使出$W『天道九劍』$Z第一劍$R「一劍東來」
 的向$N$l激射而去﹐頗有石破天驚﹐風雨大至之勢﹐令$N只能默默的承受這強烈的一
 擊﹗﹗﹗~
 Chance          20
-Value           20
+Value           180
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -48,7 +48,7 @@ $n腳踏五行﹐氣通雙臂﹐$W『天道九劍』$Z第二劍$R「鳳凰展翅
 多出一把$O﹐劍隨心轉﹐霎時劍花如煙爆射﹐分向四方飛擊﹐$N難攖其鋒﹐$N頓時多
 了數道傷口﹗﹗﹗~
 Chance          20
-Value           20
+Value           205
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -60,7 +60,7 @@ $n以迅雷不及掩耳的步伐衝向$N﹐喝道：$W『天道九劍』$Z第三
 ﹐$n的身法﹐有若魑魅魍魎般﹐令$N無法捉摸﹐只見$n驀然揮出一道兇猛的劍氣﹐凌
 厲的刺向$N﹗﹗﹗~
 Chance          20
-Value           20
+Value           230
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -72,7 +72,7 @@ $n緩緩以內力抽起四野亂石﹐亂石升空在$n的四周形成一道道�
 劍』$Z第四劍$G「龍騰險道」$Z這招雖破綻百出﹐但四周的防禦網令$N亦無法輕易的
 靠近$n﹐$n再以雄厚無比的劍氣﹐旋捲飛舞$N的全身﹐直直的刺向其首﹗﹗﹗~
 Chance          20
-Value           20
+Value           255
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -84,7 +84,7 @@ $n快速揮動手中的$O﹐$W『天道九劍』$Z第五劍$B「百鳥朝凰」$
 刺出百劍﹐百劍歸一﹐凝於一點﹐令單薄的劍刃變得強猛沉厚﹐便雷霆萬鈞得刺向$N
 ﹗﹗﹗~
 Chance          20
-Value           20
+Value           285
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -96,7 +96,7 @@ $n重聚心神﹐手中之$O舞動的速度愈來愈快﹐殺招$W『天道九�
 歪風」$Z呼之欲出﹐$n的劍氣交織成一個密不透風的劍網﹐劍網愈收愈緊﹐將$N罩在
 其中﹗﹗﹗~
 Chance          20
-Value           20
+Value           320
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -107,7 +107,7 @@ Description
 $n大喝一聲﹐鼓動全身真氣﹐內勁流轉﹐劍走險道﹐使出$W『天道九劍』$Z第七劍$Y
 「出生入死」$Z﹐似有無數迅雷疾風互衝激盪向$N狂刺千萬劍﹗﹗﹗~
 Chance          20
-Value           20
+Value           360
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -118,7 +118,7 @@ Description
 $n暗運內力﹐身周氣勁影然﹐雙目怖滿血絲﹐喝道：$W『天道九劍』$Z第八劍$Y『劍
 芒人亡』$Z﹐劍芒猶如排山倒海﹐一波波刺向$N的心口直刺﹗﹗﹗~
 Chance          20
-Value           20
+Value           405
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -130,7 +130,7 @@ Description
 樂劍芒」$Z﹐$n所化成極樂劍芒﹐如水銀瀉地﹐無孔不進﹐以強猛凌厲的攻勢﹐將$N
 直接貫穿﹗﹗﹗~
 Chance          20
-Value           20
+Value           455
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

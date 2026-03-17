@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_r_implemented`
+- `status = batch_s_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch R implemented`
+- `current_batch = Batch S implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可進入 `two sword -> gsword -> tendo slash`，但要先把單筆 `Value 200` 與 `Innate 404 150` 當 hybrid case 做特判
+1. 下一個高價值候選可回到剩餘未重建的 fist / blade 支鏈，優先盤 `cloud fist` 或 `evil fist -> evil king`
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -2638,6 +2638,141 @@
   - 改用 `IPC KEY 4585`
 - 檢查：
   - `log/smoke-batch-r.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/badobject`
+    - 無新增內容
+  - `debug/error`
+    - 無新增內容
+
+## Batch S Pre-Check
+
+### Scope
+
+- `two sword`
+- `gsword`
+- `tendo slash`
+
+### Reference Basis
+
+- `docs/3yWebsite/skill/sword.html`
+  - 明確給出 `two sword -> gsword -> tendo slash`
+  - `two sword` 是可教 root，且舊站列出多個 general/fighter 教師樣本
+  - `gsword` 以 `two sword` 為 prerequisite，屬更高階的中段
+  - `tendo slash` 以 `gsword` 為 prerequisite，且為終點技能
+- `docs/current-game/skills/sword.md`
+  - current-game 已把這條鏈整理在 `legacy-page:sword`
+  - runtime 顯示三者多數 `Value` 仍停在 `20`
+- runtime `skill/*.ski`
+  - `twosword.ski`
+    - `Associate SLOT_GSWORD`
+    - 大多數 `Value 20`，但保留一筆 `Value 200`、`Chance 30`、`Innate 404 150`
+  - `gsword.ski`
+    - `Associate SLOT_TENDO_SLASH`
+    - `Value` 全 `20`
+  - `tendo_slash.ski`
+    - `Associate -1`
+    - `Value` 全 `20`
+
+### Mandatory Pre-Check Snapshot
+
+`two sword`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 12`
+- weapon / check: `WEAPON_SWORD / check_sword_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `12`
+- chance set: `20` except one `30`
+- value set before rebuild: `20` except one `200`
+- parry set: `0`
+- special case:
+  - one entry keeps `Innate 404 150`
+
+`gsword`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `25 / COST_MOVE / 13`
+- weapon / check: `WEAPON_SWORD / check_sword_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `11`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`tendo slash`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `30 / COST_MOVE / 14`
+- weapon / check: `WEAPON_SWORD / check_sword_attack`
+- canask / teach / valid: `NO / NO / YES`
+- damage entries: `9`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這條鏈不是單純的「整串全被清成 20」；`two sword` 明顯保留了一筆高值與 innate 特例。
+- 因此本批不能把 `two sword` 誤當成普通扁平鏈全面重寫，而應視為 hybrid case：
+  - 保留那筆 `Value 200 / Chance 30 / Innate 404 150` 的特色招
+  - 補回其餘被清空的周邊招式
+- `two sword` 仍應是可教 root，故整體平均值需要回升，但不能直接壓過 `gsword`。
+- `gsword` 與 `tendo slash` 則屬更典型的被清值中高階段，可較直接以 `Value` 階梯重建。
+- area `*.mob` 目前未看到這三招的現成 `Enable / AutoEnable / #Learn` 樣本，因此本批仍先不做 mob fallout。
+
+## Batch S Result
+
+### Scope
+
+- `two sword`
+- `gsword`
+- `tendo slash`
+
+### Runtime Changes
+
+`two sword`
+
+- before: `20, 200, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20`
+- after: `70, 200, 85, 100, 115, 130, 145, 160, 175, 190, 205, 225`
+- average: `150.0`
+- keep case:
+  - 保留第二段的 `Value 200`
+  - 保留第二段的 `Chance 30`
+  - 保留第二段的 `Innate 404 150`
+
+`gsword`
+
+- before: `20 x 11`
+- after: `110, 130, 150, 170, 190, 215, 240, 265, 295, 330, 370`
+- average: `224.09`
+
+`tendo slash`
+
+- before: `20 x 9`
+- after: `180, 205, 230, 255, 285, 320, 360, 405, 455`
+- average: `299.44`
+
+### Design Notes
+
+- 本批採 hybrid rebuild，不把 `two sword` 那筆歷史特例抹平成普通招式。
+- `two sword` 的特殊高值／innate 仍保留成鏈中的亮點，其餘招式則補回可支撐 root 身分的梯度。
+- `gsword` 用更高成本、更高平均值承接中高階段。
+- `tendo slash` 以更高單段值與整體平均值站穩終點模板，讓這條鏈重新恢復 clear progression。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-s.log`
     - 出現 `三國歪傳之降龍伏虎開始正常運作`
   - `debug/failenable`
     - 無新增內容
