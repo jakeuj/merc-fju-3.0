@@ -40,7 +40,7 @@ Description
 $n展現『$R移形幻影$Z』似真似幻﹐似幻似真﹐讓$N捉摸不定﹐忽然一個轉身﹐就輕易
 閃開。~
 Chance          10
-Value           20
+Value           45
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -51,7 +51,7 @@ Description
 $n使出『$G鬼魅身法$Z』猶如一形十影﹐追風逐電﹐迅速移位﹐頃刻如鬼魅般飛到$N
 身旁。~
 Chance          10
-Value           20
+Value           55
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -61,8 +61,7 @@ End
 Description
 面對$N的攻擊﹐只要中任何一招﹐便會筋碎骨斷﹐於是$n利用『$Y金蟬脫殼$Z』閃開。~
 Chance          10
-Value           20
-Value           100
+Value           65
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -72,7 +71,7 @@ End
 Description
 $n凝神入定﹐口中唸唸有詞﹐瞬間伸手﹐一指發出『$R定身法$Z』嘗試把$N給定住不動﹗~
 Chance          10
-Value           20
+Value           80
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -83,7 +82,7 @@ Description
 $n施展『$Y九天靈影身法$Z』身法式『$G魚遊身法$Z』﹐身隨意行﹐四方遊走﹐避
 開$N攻擊。~
 Chance          10
-Value           20
+Value           95
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -94,7 +93,7 @@ Description
 $n展現『$Y九天靈影身法$Z』拆卸式『$W懷中抱月$Z』﹐見招拆招﹐見式破式﹐靜觀$N
 的弱點。~
 Chance          10
-Value           20
+Value           110
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -105,7 +104,7 @@ Description
 $n使出『$Y九天靈影身法$Z』攻擊式『$R八臂邪神$Z』﹐如狂風暴雨綿綿不斷攻擊$N
 永不停息。~
 Chance          10
-Value           20
+Value           125
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -116,7 +115,7 @@ Description
 $n打出『$Y九天靈影身法$Z』困住式『$g閻羅召喚$Z』﹐出現鬼魂﹐神出鬼沒撲到$N的
 身後。~
 Chance          10
-Value           20
+Value           145
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

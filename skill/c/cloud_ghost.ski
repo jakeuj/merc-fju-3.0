@@ -42,7 +42,7 @@ Description
 $n使出了$S「雲煙幻影」$Z右掌翻過﹐快似閃電﹐趁此空際逃出$N所發出的掌力籠罩之
 下﹐躲避了要害。~
 Chance          10
-Value           20
+Value           70
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -53,7 +53,7 @@ Description
 $n接了$N一招﹐$n瞬間手臂酸麻。$n連忙用出$S「雲彩飛舞」$Z輕飄飄的縱躍飛舞似乎
 絲毫不費力氣﹐逃出了$N的攻擊。~
 Chance          10
-Value           20
+Value           90
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -64,7 +64,7 @@ Description
 $N連續發招﹐招式已然到了$n面前。$n腦袋微微一側使出$S「雲霧暗流」$Z﹐$n的招式
 便從$N的面前滑落﹐在$N臉頰上擦了過去﹐真是風險。~
 Chance          10
-Value           20
+Value           110
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -75,7 +75,7 @@ Description
 $N刻間已向$n身上猛烈攻擊﹐$n身形微側﹐撲通一聲﹐展開$S「暗雲飄散」$Z從$N身側
 急滑而過。急忙側頭閃避$N的殺招。~
 Chance          10
-Value           20
+Value           130
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -86,7 +86,7 @@ Description
 $n使出$S「落影殘雲」$Z﹐一條綠幽幽的身影從$N面前橫掠而過。$n足下不停的移動走
 位﹐在$N身形飛舞﹐片刻之間$n長袖飄去。~
 Chance          10
-Value           20
+Value           150
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -97,7 +97,7 @@ Description
 $N突然間搶攻﹐$n使出$S「虛雲迷離」$Z移步迅捷﹐變化莫測﹐斜身而出身法頗為靈動
 ﹐當即側身﹐避過了正面的攻擊。~
 Chance          10
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

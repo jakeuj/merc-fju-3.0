@@ -33,7 +33,7 @@ Description
 $n揚身一起﹐即使出$S『明瓷藍﹐晴天藍﹐一種對浪漫的貪婪﹐感到韻愁合一。』
 $Z身影似愁萬千﹐揮灑中帶淡淡的哀傷﹐$N已陷入憂鬱的心情﹐久久無法出招。~
 Chance          10
-Value           20
+Value           80
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -44,7 +44,7 @@ Description
 $n凌空飛行﹐即施展$P『紫陰影﹐浪漫紫﹐最難解讀的羅曼史﹐令人多情憂鬱。』
 $Z身形如煙﹐神祕又多情﹐實在難以捉摸﹐$N的招式即陷入五里霧中﹐招招落空。~
 Chance          10
-Value           20
+Value           95
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -55,7 +55,7 @@ Description
 $n還身一轉﹐即陷入$W『棉花白﹐淡然銀﹐產生知覺感官的晶瑩﹐使人簡潔俐落。
 』$Z身法忽快忽慢﹐忽近忽遠﹐絲毫不拖泥帶水﹐$N的攻擊無法判斷而招招失敗。~
 Chance          10
-Value           20
+Value           110
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -66,7 +66,7 @@ Description
 $n身影乍現﹐揮灑出$G『詭異綠﹐湖水綠﹐歸回田野風光的心緒﹐讓人自然清爽。
 』$Z身軀幻化如蝴蝶﹐輕盈飛舞﹐來往穿梭﹐$N完全捉摸不著﹐心中懊悔不已。~
 Chance          10
-Value           20
+Value           125
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -77,7 +77,7 @@ Description
 $n幻影隨行﹐變化出$Y『24Ｋ金﹐豪情金﹐醞釀蓄勢待發的野心﹐充滿勇敢積極。
 』$Z身影虛無飄渺﹐意隨念轉﹐腳踏北斗七星﹐瀟灑的避過$N的每一擊。~
 Chance          10
-Value           20
+Value           140
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -88,7 +88,7 @@ Description
 $n喃喃自語﹐霎那間$R『酒廊紅﹐相思紅﹐甘願在情愛下的牢籠﹐意決敢愛敢恨。
 』$Z身軀一弓﹐在空中畫出一條絢麗的長虹﹐猶如美麗的夕陽﹐$N已如痴如醉。~
 Chance          10
-Value           20
+Value           160
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -100,7 +100,7 @@ $n絕世身法﹐即踏出七彩幻步﹐『$S青藍$Z、$P紫陰$Z、$W白銀$Z
 $Z、$R酒紅$Z』﹐氣隨運轉﹐一式七幻﹐$N一時七情八慾﹐隨心而生﹐已陷入迷惘中﹐
 無法掙脫。~
 Chance          10
-Value           20
+Value           180
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

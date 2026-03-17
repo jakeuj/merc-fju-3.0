@@ -37,7 +37,7 @@ Description
 $W$N只見$n輕張雙臂﹐使出$G『飛葉迷濛』$Z$W頓時風起葉飛﹐雪花蓋頂如詩意$Y【風
 動雲掩葉映霞 輕裟曼妙霧迷茫】$Z$W隨後便在落葉之中消逝身影。$Z~
 Chance          20
-Value           20
+Value           110
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -47,7 +47,7 @@ Description
 $W$n雙腳真氣一提身形忽變﹐使出$R『無影雙梭』$Z$W勢如風行草偃﹐向兩方向疾奔而
 去﹐如詩意$Y【掠光逝影雲出岫 來去自如一陣風】$Z$Y閃電般的無息躲過$N的攻擊。$Z~
 Chance          20
-Value           20
+Value           130
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -57,7 +57,7 @@ Description
 $W$n身形如碧月迴光般的迴旋﹐使出$R『凌渡天關』$Z$W﹐猶如詩意 $Y【穿越紅塵不
 擾關 迴旋天地去復還】$Z$W俐落的閃開攻擊。$Z~
 Chance          20
-Value           20
+Value           150
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -67,7 +67,7 @@ Description
 $W$n借風遁形﹐隨風起之勢而起﹐使出$G『風飄萍轉』$Z$W﹐宛如詩意$Y【海納千川雲
 逝影 滄海月明鏡含波】$Z$W漂浮不定的身法使$N的攻擊落空。$Z~
 Chance          20
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -78,7 +78,7 @@ $W$n身影虛幻縹緲﹐使出$P『凌虛御風』$Z$W﹐意境已達一形泣�
 意$Y【長歌吟松風 曲盡星河稀】$Z$W霎那間$N分不出虛實﹐一時之間不知該如何下手。
 $Z~
 Chance          20
-Value           20
+Value           190
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -89,7 +89,7 @@ $W$n藉著激起的勁風﹐瞬間移形換位﹐使出$B『風捲殘霞』$Z$W�
 速﹐宛如詩意$Y【俱懷逸興壯思飛 欲上青天覽日月】$Z$W輕飄迅捷的避開了$N的攻勢。
 $Z~
 Chance          20
-Value           20
+Value           215
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

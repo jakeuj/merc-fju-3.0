@@ -1214,3 +1214,166 @@
     - 無新增內容
   - `debug/error`
     - 無新增內容
+
+## Batch H Pre-Check
+
+### Scope
+
+- `nine steps`
+- `color steps`
+- `cloud ghost`
+- `wind color steps`
+
+### Reference Basis
+
+- `/Users/jakeuj/auggie/3yWebsite/skill/step.html`
+  - 明確給出 `nine steps -> color steps`
+  - 明確給出 `cloud ghost -> wind color steps`
+  - `wind color steps` 不是 `color steps` 的直升下一段，而是另一條文士/醫者/天師系 branch
+- `/Users/jakeuj/auggie/3yWebsite/newhand/players/bard/0106121.html`
+  - 明確列出 `cloud ghost` 與 `wind color steps`
+- `/Users/jakeuj/auggie/3yWebsite/newhand/players/newplayer/9904101.html`
+  - 直接寫出 `cloud ghost` 可領悟 `wind color steps`
+- runtime `skill/*.ski`
+  - `nine_step.ski`
+    - `Associate SLOT_COLOR_STEPS`
+  - `color_steps.ski`
+    - `Associate -1`
+  - `cloud_ghost.ski`
+    - `Associate SLOT_WINDCOLOR_STEPS`
+  - `windcolor_steps.ski`
+    - `Associate -1`
+
+### Mandatory Pre-Check Snapshot
+
+`nine steps`
+
+- type: `TAR_DODGE`
+- cost / costtype / wait: `5 / COST_MOVE / 1`
+- canask / teach: `YES / NO`
+- damage entries: `8`
+- chance set: `10`
+- runtime raw value lines before rebuild: `20, 20, 20, 100, 20, 20, 20, 20, 20`
+- parry set: `0`
+
+`color steps`
+
+- type: `TAR_DODGE`
+- cost / costtype / wait: `10 / COST_MOVE / 5`
+- canask / teach: `YES / NO`
+- damage entries: `7`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`cloud ghost`
+
+- type: `TAR_DODGE`
+- cost / costtype / wait: `15 / COST_MOVE / 10`
+- canask / teach: `YES / NO`
+- damage entries: `6`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`wind color steps`
+
+- type: `TAR_DODGE`
+- cost / costtype / wait: `15 / COST_MOVE / 10`
+- canask / teach: `NO / NO`
+- damage entries: `6`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這一批不是單一鏈，而是兩條平行玩家向步法鏈：
+  - `nine -> color`
+  - `cloud ghost -> wind color`
+- `nine steps` 的 raw file 內有一筆重複 `Value`，形成單筆 `100` 異常值；這看起來不像完整 ladder，而更像未完成的局部人工殘改。
+- 因此這批不能把 `nine steps` 誤判成「其實已經有設計好的高點」，而應把它視為：
+  - 大體仍被清值壓平
+  - 但帶著一筆需要被整理回一致梯度的噪音點
+- 兩條鏈在 `Cost / Wait / CostType` 上本來就保留差異：
+  - `nine steps` 是低成本、高頻 root
+  - `color steps` 是較慢、較貴的進階延伸
+  - `cloud ghost` 與 `wind color steps` 同為較重節奏的文士系 branch
+- mob / teacher 端目前只看到：
+  - `area/loyang/mob/539.mob` 有 `#Learn 'nine steps'`
+  - `area/loyang/mob/583.mob` 固定 `Enable 100 'color steps'`
+  - 目前未看到 `cloud ghost` 或 `wind color steps` 的現成 mob enable
+- 因此本批仍先修 skill template，不先動 mob runtime data。
+
+## Batch H Result
+
+### Scope
+
+- `nine steps`
+- `color steps`
+- `cloud ghost`
+- `wind color steps`
+
+### Runtime Changes
+
+`nine steps`
+
+- before: `20, 20, 100, 20, 20, 20, 20, 20` with one duplicated raw `Value 20` line in file
+- after: `45, 55, 65, 80, 95, 110, 125, 145`
+- average: `90.0`
+
+`color steps`
+
+- before: `20 x 7`
+- after: `80, 95, 110, 125, 140, 160, 180`
+- average: `127.14`
+
+`cloud ghost`
+
+- before: `20 x 6`
+- after: `70, 90, 110, 130, 150, 170`
+- average: `120.0`
+
+`wind color steps`
+
+- before: `20 x 6`
+- after: `110, 130, 150, 170, 190, 215`
+- average: `160.83`
+
+### Design Notes
+
+- `nine steps` 這輪不只是加值，也順手把單筆 `100` 異常整理回一條可讀的 root ladder。
+- `color steps` 以較高成本 / 較慢節奏承接 `nine steps` 的進階段，不需要靠額外改 `Wait` 來證明定位。
+- `cloud ghost -> wind color steps` 則維持文士系 branch 的重節奏特色，只用 `Value` 重建高階差距。
+- 這樣可以同時保留：
+  - `nine` 系的低成本高頻
+  - `cloud ghost` 系的較重詩意步法節奏
+  - 兩條 branch 不被錯誤地壓成同一種 dodge template
+
+### Validation
+
+- `make -C src -f Makefile.lin merc`
+- `make -C src merc`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-h.log`
+    - 未到 `三國歪傳之降龍伏虎開始正常運作`
+    - 啟動期被 `Load_object﹕命令 Keywords 不正確`
+    - 指向 `/area/sec_rift_core_below/obj/11353.obj`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/badobject`
+    - 無新增內容
+  - `debug/error`
+    - 無新增內容
+
+### Validation Status
+
+- skill data 與 build 本身目前看起來正常
+- smoke blocker 看起來是 repo 內既有 / 外部同步進來的 world-data 問題，不是本批步法 value 重建直接造成的 parser 錯誤
+- 若要拿 Batch H 做 higher-confidence gate，下一步應先處理 `sec_rift_core_below/obj/11353.obj` 的 `Keywords` 載入格式
