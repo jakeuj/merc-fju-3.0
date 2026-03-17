@@ -43,7 +43,7 @@ Help            ~
 Description
 $n手中的$O一劈﹐使出$S『廬山不動一劍痕』$Z只見手中的$O發出一股強大的劍氣﹐具有開山闢地的氣勢﹐直襲$N的身體。~
 Chance          10
-Value           20
+Value           120
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -53,7 +53,7 @@ End
 Description
 $n手中的$O一抖﹐使出$S『慾望之海』$Z漫天的劍影形成一個巨大的漩渦把$N困在漩渦的中央。~
 Chance          10
-Value           20
+Value           145
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -63,7 +63,7 @@ End
 Description
 $n手中$O一晃﹐劍隨心轉﹐使出$S『隨心所欲』$Z將$O揮出﹐以不可思議的刁鑽角度往$N的破綻刺去。~
 Chance          10
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -73,7 +73,7 @@ End
 Description
 $n將手裡的$O高高舉起﹐忽地手中$O急變招數﹐一招$S『忘棄紅塵』$Z連綿不絕的往$N急刺。~
 Chance          10
-Value           20
+Value           200
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -83,7 +83,7 @@ End
 Description
 $n雙手緊握$O﹐緊繃全身肌肉﹐一招$S『搏命』$Z不顧一切地往$N衝去﹐發狂似的狂砍$N的身體。~
 Chance          10
-Value           20
+Value           235
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -93,7 +93,7 @@ End
 Description
 $n手中$O一拋﹐一招$S『日月同天』$Z在半空的$O配合掌上所發出的氣功﹐往$N飛刺去。~
 Chance          10
-Value           20
+Value           275
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -103,7 +103,7 @@ End
 Description
 $n將手中$O入鞘﹐稟氣凝神﹐劍由心生﹐一招$S『心劍』$Z由內心發出一股強大的劍氣﹐往$N飛刺去。~
 Chance          10
-Value           20
+Value           325
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -113,7 +113,7 @@ End
 Description
 $n手中$O往上一拋﹐以氣御劍﹐一招$S『天堂之翼』$Z在上空的$O宛如一條青龍飛舞﹐往$N飛奔過去。~
 Chance          10
-Value           20
+Value           385
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -123,7 +123,7 @@ End
 Description
 $n手中$O一翻﹐一招$S『無怨無尤』$Z手裡的$O形成無數的劍花﹐讓$N宛如身處幻境﹐此時手中的$O已刺向$N的全身。~
 Chance          10
-Value           20
+Value           455
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -133,7 +133,7 @@ End
 Description
 $n手中$O一振﹐一招$S『秋末悲歌』$Z手裡的$O發出一陣陣的劍鳴迷惑$N的心智﹐同時手中的$O也往$N的頸部砍去。~
 Chance          10
-Value           20
+Value           535
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -143,7 +143,7 @@ End
 Description
 $n手中$O一翻﹐一招$S『瀝血肝膽』$Z手裡的$O發出數十道鮮紅色的劍芒﹐往$N刺去。~
 Chance          10
-Value           20
+Value           630
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

@@ -331,9 +331,9 @@
 
 目前狀態：
 
-- `status = batch_bn_implemented`
+- `status = batch_bp_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch BN implemented`
+- `current_batch = Batch BP implemented`
 
 ## Immediate Next Steps
 
@@ -6391,6 +6391,147 @@
 
 - 本批把 `hell evil` 定位成高速、十一段、後段威脅逐步累積的邪系連段模板。
 - 這樣能保留它的壓制與花式變招感，同時避免一開始就灌成過重單擊。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 與 Batch BP 共用同一輪 smoke 驗證
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BO Pre-Check
+
+### Scope
+
+- `king road`
+
+### Reference Basis
+
+- runtime `skill/k/king_road.ski`
+  - `Value` 全 `20`
+  - `Cost 19 / Wait 12 / Weapon WEAPON_SWORD / Check check_sword_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `king road`
+  - `family = legacy-page:king road`
+  - combat 維度顯示 `11` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`king road`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `19 / COST_MOVE / 12`
+- weapon / check: `WEAPON_SWORD / check_sword_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `11`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `king road` 是 current-game 還存在的高段數劍技 family，`Wait 12` 指向偏慢、每段更重的高階劍路。
+- 十一段招式全停在 `20`，完全不足以反映這種高段數劍技的層次。
+- 本批先只回填 `Value` 梯度，保留原本的劍系身份與重節奏。
+
+## Batch BO Result
+
+### Scope
+
+- `king road`
+
+### Runtime Changes
+
+`king road`
+
+- before: `20 x 11`
+- after: `120, 145, 170, 200, 235, 275, 325, 385, 455, 535, 630`
+- average: `316.82`
+
+### Design Notes
+
+- 本批把 `king road` 定位成高階、慢節奏、後段急速拉升的劍技模板。
+- 整體曲線讓前半維持鋪陳，後半才真正走向王道劍路的壓迫感。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 測試 ports:
+    - `15847`
+    - `16243`
+    - `16897`
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BP Pre-Check
+
+### Scope
+
+- `fire ice`
+
+### Reference Basis
+
+- runtime `skill/f/fire_ice.ski`
+  - `Value` 全 `20`
+  - `Cost 19 / Wait 12 / Check check_unrigid_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `fire ice`
+  - `family = legacy-page:fire ice`
+  - combat 維度顯示 `13` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`fire ice`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `19 / COST_MOVE / 12`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `13`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `fire ice` 是 current-game 還存在的十三段雙屬性掌法，`Wait 12` 讓它和一般高速掌法明顯不同。
+- 這類長段數、高概念掌法若仍全 `20`，模板差異幾乎等於被抹平。
+- 本批先只回填 `Value` 階梯，保留其冰火雙掌的長段數與重節奏。
+
+## Batch BP Result
+
+### Scope
+
+- `fire ice`
+
+### Runtime Changes
+
+`fire ice`
+
+- before: `20 x 13`
+- after: `110, 125, 145, 170, 200, 235, 275, 320, 375, 440, 515, 605, 710`
+- average: `325.0`
+
+### Design Notes
+
+- 本批把 `fire ice` 定位成長段數、雙屬性、慢節奏掌法，曲線比 `king road` 更平滑但尾段更長。
+- 這樣能保留它冰火交替、逐段堆高壓力的特色，而不是簡化成單純重掌模板。
 
 ### Validation
 
