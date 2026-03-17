@@ -1,0 +1,24 @@
+Vnum            10110
+Name            鎮封臨界橋~
+Description
+狹橋跨過一條垂直裂隙，橋下有明滅不定的紅黑脈流。橋面每隔數步都嵌著崩裂鎮釘，像只要少一枚就可能整段斷落。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10111
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

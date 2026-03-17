@@ -68,3 +68,6 @@ sec_rift_nadir
 
 * sec_rift_prison_core 房間 10001-10012 (封印核心)
 sec_rift_prison_core
+
+* sec_rift_underseal_dais 房間 10101-10112 (鎮封底座)
+sec_rift_underseal_dais

@@ -1,0 +1,31 @@
+Vnum            10108
+Name            鎖紋維護室~
+Description
+維護室裡排列著殘破石架與碎裂器具，牆上還留著不同年代補紋記號，顯示守印者曾在這裡接力修補。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10107
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10109
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         補紋~
+Description
+不同筆觸的補紋重疊在同一面牆上，像多代守印者都在同一處留下最後手記。
+~
+End
+
+End

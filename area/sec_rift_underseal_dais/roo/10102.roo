@@ -1,0 +1,24 @@
+Vnum            10102
+Name            鎮脈沉台~
+Description
+沉台中央嵌著一圈低鳴石環，每次共振都會讓地面細微起伏，像整個底座其實是一具仍在呼吸的巨大鎮封器官。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10101
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

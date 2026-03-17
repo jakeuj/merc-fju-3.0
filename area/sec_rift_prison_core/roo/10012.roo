@@ -13,6 +13,14 @@ ExitKeyword     ~
 ExitKey         0
 End
 
+#Exit
+Direction       DOWN
+ExitVnum        10101
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
 #Keyword
 Keyword         井心~
 Description

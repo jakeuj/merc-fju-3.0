@@ -1,0 +1,32 @@
+Vnum            10105
+Name            裂壓觀臺~
+Description
+觀臺外緣佈滿斷裂護欄，向下望去只有翻湧黑紅霧流。這裡原本像是監測點，如今只剩讀不全的刻度與警示。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10110
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         反衝~
+End
+
+#Enquire
+Keyword         下層~
+End
+
+End

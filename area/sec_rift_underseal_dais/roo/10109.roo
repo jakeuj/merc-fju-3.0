@@ -1,0 +1,16 @@
+Vnum            10109
+Name            裂鳴祭點~
+Description
+祭點中央的圓盤被燒出一圈圈深痕，周圍散落著無法辨識原形的器材殘片，空氣裡只剩刺耳鳴振。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10108
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End
