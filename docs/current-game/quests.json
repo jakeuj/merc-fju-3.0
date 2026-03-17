@@ -1,0 +1,245 @@
+{
+  "scope": "current runtime quest and question registry",
+  "last_updated": "2026-03-17",
+  "runtime_source_of_truth": [
+    "data/quest",
+    "data/question",
+    "src/db.c",
+    "src/load.c",
+    "src/quest.c",
+    "src/question.c",
+    "src/merc.sample.ini",
+    "src/merc.ini",
+    "area/*/mob/*.mob",
+    "area/*/roo/*.roo"
+  ],
+  "reference_priority": [
+    "Current runtime files under data/, src/, area/",
+    "doc/quest-system-with-mobprog.txt for historical implementation notes",
+    "docs/3yWebsite/ for historical flavor only"
+  ],
+  "boot_flow": {
+    "db_loader_order": [
+      "load_bus",
+      "load_ship",
+      "load_quest",
+      "load_question",
+      "load_immlist"
+    ],
+    "quest_file_config_key": "QUEST FILE",
+    "question_file_config_key": "QUESTION FILE"
+  },
+  "runtime_status": {
+    "quest_entries": 0,
+    "question_entries": 30,
+    "quest_load_message": "系統載入 0 個解謎資料。",
+    "question_load_message": "系統載入 30 個問題資料。"
+  },
+  "quest_format": {
+    "record_header": "#Quest",
+    "record_footer": "End",
+    "fields": [
+      "Keyword",
+      "Information",
+      "Show",
+      "Title",
+      "Help"
+    ],
+    "notes": [
+      "Keyword maps to QUEST_INFO.mark and must be globally unique.",
+      "Information maps to QUEST_INFO.info and is shown in qstat-style tooling.",
+      "Show controls whether the quest should appear in visible listings.",
+      "If Show is enabled, loader expects Help content to exist."
+    ]
+  },
+  "question_format": {
+    "record_header": "#Question",
+    "record_footer": "End",
+    "fields": [
+      "Title",
+      "Question"
+    ],
+    "notes": [
+      "Each Question line stores choice text plus YES/NO answer flag.",
+      "Loader requires more than one choice and at least one YES answer.",
+      "Current baseline uses 4 choices per question with exactly 1 correct answer."
+    ]
+  },
+  "command_surface": {
+    "player_facing": [
+      "question"
+    ],
+    "admin_or_builder": [
+      "qstat",
+      "qset",
+      "mpsetquest",
+      "mpremquest",
+      "isquest"
+    ],
+    "runtime_usage": [
+      "Quest marks are checked via quest_lookup/check_quest in mobprog and admin flows.",
+      "Question bank is consumed by question_update() and do_question."
+    ]
+  },
+  "area_integration_boundary": {
+    "direct_area_registry_dependency": false,
+    "notes": [
+      "Quest and question data are not loaded from area/directory.lst or area/<area>/index.",
+      "Area content may still depend on quest marks indirectly through mobprog commands such as mpsetquest, mpremquest, or isquest.",
+      "Pages should track this system as current-game runtime content, not as an area rebuild registry."
+    ]
+  },
+  "quests": [],
+  "questions": [
+    {
+      "title": "丘逢甲為台灣民族英雄之一﹐下列何者是台灣民族英雄﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "廖添丁為台灣抗日英雄之一﹐下列何者是台灣抗日英雄﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "以最簡單的思考模式來回答這個數學題目 1 + 1 = ?",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "請問本遊戲的名稱是什麼呢﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "請問英文第一個字母是哪一個呢﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "請問下列何者是會自己飛翔的鳥類﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "請問下列何者是動物﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "請問三(3)角形有幾個邊﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "請問下列何者為四隻腳的動物﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "請問本遊戲中﹐要往東走的指令是﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "請問地球地表空氣中﹐含量最多的氣體是哪一個﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "下列何者為近代物理之父﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "為了自身安全﹐騎乘機車時最好戴什麼東西﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "下列何者為中國的宗教之一﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "下列何者是造成搶購熱潮的寵物呢﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "下列何者為三國時代的著名人物﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "茶杯可以裝液體﹐下列何者是可以裝液體的容器﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "再見時我們常說 bye bye﹐英文中與人說再見的話語是下列哪一個呢﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "手錶為計時工具之一﹐下列哪一個物品﹐可以拿來計時用呢﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "下列哪一位是三國鼎立時﹐蜀國諸葛亮主人劉備的軍師﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "美國是台灣的貿易伙伴﹐下列哪一個國家是台灣的貿易對象國﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "吉他可以發出美妙的聲音﹐下列何者為樂器呢﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "車禍是指車子發生意外﹐那車子發生意外﹐我們習慣稱為什麼﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "棒球是台灣風行的運動之一﹐請問下列何者為運動名稱呢﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "麻將是中國固有國粹之一﹐請問下列何者為中國固有國粹之一呢﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "每天多看報紙可以增廣見聞﹐請問閱讀下列何者是增廣見聞的方法之一﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "麵包是一種人們常吃的食物﹐下列何者為食物之一呢﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "近視是一種文明病﹐下列何者台灣常見的文明病﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "烏龜是一種爬蟲類的動物﹐下列哪種是爬蟲類的動物呢﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    },
+    {
+      "title": "榕樹是一種常見的植物﹐下列何種為植物呢﹖",
+      "choice_count": 4,
+      "answer_count": 1
+    }
+  ]
+}

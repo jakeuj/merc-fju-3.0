@@ -28,6 +28,8 @@ title: Current Game Docs
 - [技能機器可讀台帳](./skills.json)
 - [技能戰鬥鏈審計說明](./skill-combat-audit.html)
 - [技能戰鬥鏈審計台帳](./skill-combat-audit.json)
+- [Quest / Question 補充說明](./quests.html)
+- [Quest / Question 機器可讀台帳](./quests.json)
 - [Area 補充說明](./areas.html)
 - [Area 機器可讀台帳](./areas.json)
 

@@ -34,6 +34,8 @@ title: Merc FJU 3.0 Docs
 - [技能分類子頁](./current-game/skills/step.html)
 - [技能機器可讀台帳](./current-game/skills.json)
 - [技能戰鬥鏈審計說明](./current-game/skill-combat-audit.html)
+- [Quest / Question 補充說明](./current-game/quests.html)
+- [Quest / Question 機器可讀台帳](./current-game/quests.json)
 - [Area 補充說明](./current-game/areas.html)
 - [Area 機器可讀台帳](./current-game/areas.json)
 
