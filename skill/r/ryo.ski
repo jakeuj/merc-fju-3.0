@@ -56,7 +56,7 @@ End
 Description
 $n手中帶著火燄﹐使出一招$R『鬼燒』$Z擊向$N。~
 Chance          20
-Value           20
+Value           135
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -66,7 +66,7 @@ End
 Description
 $n縱身跳起﹐使出一招$S『朧車』$Z﹐朝$N的身上踢了數下。~
 Chance          20
-Value           20
+Value           155
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -77,7 +77,7 @@ Description
 $n忽地一吼﹐一招$P『琴月陽』$Z以迅捷無比的速度把$N抓起來﹐轟!∼ 轟!!∼$N大叫
 著$R火$Z了﹗著$R火$Z了﹗~
 Chance          20
-Value           20
+Value           175
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -87,7 +87,7 @@ End
 Description
 $n忽然飛跳上前﹐使出一招$R『神懸』$Z﹐用帶火炎的拳頭朝$N的身上打過去。~
 Chance          20
-Value           20
+Value           195
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -97,7 +97,7 @@ End
 Description
 $n衝向前去﹐雙手握拳﹐使出$B『葵花』$Z﹐朝$N的頭部連打三下。~
 Chance          20
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -108,7 +108,7 @@ Description
 $n全身凝氣不動﹐右手抓著一團紅蓮之火全身$W燃燒$Z著$R火燄$Z使出大絕招$Y『大蛇
 雉』$Z﹐朝$N放出紅蓮之火。~
 Chance          20
-Value           20
+Value           250
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

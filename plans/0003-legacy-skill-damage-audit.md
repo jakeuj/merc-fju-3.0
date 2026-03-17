@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_u_implemented`
+- `status = batch_v_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch U implemented`
+- `current_batch = Batch V implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可續進拳法支鏈，優先考慮 `ryo -> hashin`
+1. 下一個高價值候選可回頭處理 `king fist -> sky dragon -> sky dragon force`
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -2978,6 +2978,129 @@
   - 改用 `IPC KEY 4585`
 - 檢查：
   - `log/smoke-batch-u.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/badobject`
+    - 無新增內容
+  - `debug/error`
+    - 無新增內容
+
+## Batch V Pre-Check
+
+### Scope
+
+- `ryo`
+- `hashin`
+
+### Reference Basis
+
+- `docs/3yWebsite/skill/fist.html`
+  - 明確給出 `ryo -> hashin`
+  - `ryo` 是可學 root
+  - `hashin` 以 `ryo` 為 prerequisite，為高階終點拳路
+- `docs/current-game/skills/fist.md`
+  - current-game 已把這條鏈整理在 `legacy-page:fist`
+  - runtime 顯示兩者多數 `Value` 仍停在 `20`
+- runtime `skill/*.ski`
+  - `ryo.ski`
+    - `Associate SLOT_HASHIN`
+    - 第一段保留 `Value 150`
+    - 其餘段落仍為 `20`
+  - `hashin.ski`
+    - `Associate -1`
+    - `Value` 全 `20`
+- area runtime samples
+  - `area/loyang/mob/593.mob`
+    - `Enable 100 'ryo'`
+  - `area/loyang/mob/594.mob`
+    - `Enable 100 'ryo'`
+  - `area/loyang/mob/595.mob`
+    - `Enable 100 'ryo'`
+  - `area/loyang/mob/596.mob`
+    - `Enable 100 'ryo'`
+  - `area/loyang/mob/597.mob`
+    - `Enable 100 'ryo'`
+
+### Mandatory Pre-Check Snapshot
+
+`ryo`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 5`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `7`
+- chance set: `20`
+- value set before rebuild: `150, 20, 20, 20, 20, 20, 20`
+- parry set: `0`
+- special case:
+  - 第一段已保留 `Value 150`
+
+`hashin`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `30 / COST_MOVE / 5`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `10`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這條鏈和 `two sword` 類似，是 hybrid root case：
+  - `ryo` 並不是完全清值
+  - 它保留了一招明顯較強的 root 特例
+- 因此本批不應把 `ryo` 全數重寫成等距 ladder，而是：
+  - 保留第一段 `Value 150`
+  - 補回其餘被清空的段落
+- `hashin` 則是標準高階終點清值案例，可直接用更高 `Value` 階梯重建。
+- 目前已有多個洛陽 mob 固定 `Enable 100 'ryo'`，因此這批至少要把代表樣本記錄在案；不過因為它們是 explicit `Enable`，本輪先不做 failenable fallout 處理。
+
+## Batch V Result
+
+### Scope
+
+- `ryo`
+- `hashin`
+
+### Runtime Changes
+
+`ryo`
+
+- before: `150, 20, 20, 20, 20, 20, 20`
+- after: `150, 135, 155, 175, 195, 220, 250`
+- average: `182.86`
+- keep case:
+  - 保留第一段的 `Value 150`
+
+`hashin`
+
+- before: `20 x 10`
+- after: `170, 195, 220, 245, 275, 310, 350, 395, 445, 500`
+- average: `310.5`
+
+### Design Notes
+
+- 本批採 hybrid rebuild，不把 `ryo` 唯一保留下來的高值特例抹掉。
+- `ryo` 其餘段落補回後，整體才真正像高階 root，而不是只靠單一特例硬撐。
+- `hashin` 以更高成本但相同 `Wait 5` 的節奏，承接真正的終點拳路定位。
+- 本批先記錄 `ryo` 的 explicit mob 使用樣本，不在這輪直接動 `area/*.mob`。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-v.log`
     - 出現 `三國歪傳之降龍伏虎開始正常運作`
   - `debug/failenable`
     - 無新增內容

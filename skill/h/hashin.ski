@@ -40,7 +40,7 @@ Description
 $N怒吼一聲以泰山壓頂之勢從空中對$n發動攻擊﹐$n不慌不忙使出了一招
 $Y「$P百式•$R鬼燒$Y」$Z﹐身形一起﹐全身發出$P淡紫火焰$Z﹐將$N逼退了幾步。~
 Chance          20
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -52,7 +52,7 @@ $N看穿$n的攻擊﹐正對$n施於反擊時﹐其動作已在$n意料之中﹐
 $n發出一聲不屑的冷笑﹐不慌不忙的使出$Y「$P外式•$G百合折$Y」$Z﹐
 當$N擊中$n的殘像時﹐$n已閃到$N身後﹐以腳突刺其背心﹗~
 Chance          20
-Value           20
+Value           195
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -64,7 +64,7 @@ $n右手一掠﹐氣勁將$N$l刮出絲絲血痕。$n兇性大起﹐雙手如電
 $Y「$P百貳拾七式•$G葵花$Y」$Z﹐雙手連劈帶刺將$N打的傷痕累累。
 $N閃躲不及﹐被$n以雙拳擊倒在地﹗~
 Chance          20
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -76,7 +76,7 @@ $n抬起手來虛晃幾個假勢﹐在避開$N的攻擊之後﹐突然跳到空�
 一個旋身﹐趁$N還在錯愕之際﹐抬起腳來使出
 $Y「$P外式轟斧•$B陰  $R死神$Y」$Z﹐重重的往$N身上劈下去。~
 Chance          20
-Value           20
+Value           245
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -88,7 +88,7 @@ $N眼見不敵﹐一個縱身往後跳起想要逃離戰場。$n將內力逼至�
 真氣充盈﹐右手一放﹐使出了$Y「$P百八式•$B闇擴$Y」$Z﹐
 一道$P紫炎$Z立刻捲住$N$l$A轉眼吞噬全身﹗~
 Chance          20
-Value           20
+Value           275
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -100,7 +100,7 @@ Description
 $Y「$P貳百拾貳式•$S琴月 陰$Y」$Z低身奔至跟前﹐
 左手抓住$N$l將之壓倒在地﹐陡然間將$P紫炎之氣$Z灌注$N體內將之爆破﹗~
 Chance          20
-Value           20
+Value           310
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -112,7 +112,7 @@ $n左手使了一招虛招﹐$N心神稍疏﹐$n突然沈身衝了過去﹐用�
 $n暴喝聲中雙手如電使出傳說神技$Y「$P禁千貳百拾壹式$Y•$P八稚女$Y」$Z猛擊$N﹐
 剎那間指尖勁氣四面八方攻向$N的$l要害﹗~
 Chance          20
-Value           20
+Value           350
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -124,7 +124,7 @@ $n斂氣凝神﹐把全身精力聚合在右手﹐使出失傳絕學$Y「$P裏�
 剎那間天地變色日月無光﹐爆雷一道道擊向四面八方﹐慘呼聲中$N被閃電猛擊$l
 失去行動能力﹗~
 Chance          20
-Value           20
+Value           395
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -136,7 +136,7 @@ $G$n一陣怨念衝上心頭﹐一股爆氣無處可發。突然雙手一聚﹐�
 $G都集中在手上﹐瘋狂的往$N衝過去﹐狂吼聲中雙手如刀使出必殺神技$Z
 $Y「$G八稚女$Y」$Z﹐將$N壓在地上猛刺﹐$N逃避不及血濺當場﹗~
 Chance          20
-Value           20
+Value           445
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -150,7 +150,7 @@ $P都集中在手上瘋狂的往$N衝過去﹐狂吼聲中雙手如刀使出$Z$A
 $W         ----  $G「 $R八 $P稚 $Y女 $G」  $W----$Z$A$A
 將$N壓在地上猛刺﹐$N逃避不及血濺當場﹗~
 Chance          20
-Value           20
+Value           500
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
