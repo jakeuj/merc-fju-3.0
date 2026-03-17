@@ -34,7 +34,7 @@ Description
 $n騰身半空﹐仿似龍影飛舞﹐勢道磅礡﹐腿勁如龍飛天﹐一招「$B飛龍在天$Z」呼之欲
 出。~
 Chance          10
-Value           20
+Value           145
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -44,7 +44,7 @@ Description
 $n的腿勢如萬馬奔騰﹐有如開天闢地般﹐「$B戰龍在野$Z」如一條狂龍般撲向$n﹐勢
 不可檔。~
 Chance          10
-Value           20
+Value           165
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -53,7 +53,7 @@ End
 Description
 $n如青龍盤據﹐運腿遊走四方﹐腿勁以強化綿﹐氣移八路﹐「$B潛龍勿用$Z」以弱藏招。~
 Chance          10
-Value           20
+Value           190
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -63,7 +63,7 @@ Description
 $n腿勢大開大闔﹐體內真氣不斷向外放射﹐腿招亦隨著真氣向$n攻去﹐「$B震驚百里
 $Z」如爆雷般驚人。~
 Chance          10
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -73,7 +73,7 @@ Description
 $n身形不斷晃動﹐彷彿有成千上萬個腿影﹐籠罩著$n全身﹐一招「$B或躍於淵$Z」靈
 動刁鑽異常。~
 Chance          10
-Value           20
+Value           255
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -83,7 +83,7 @@ Description
 $n有如失去控制的野獸般﹐不斷催起自身的殺意﹐一招「$B群龍無首$Z」如火龍群般
 狂怒強攻。~
 Chance          10
-Value           20
+Value           295
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -93,7 +93,7 @@ Description
 $n身形不斷晃動﹐步移$n六方﹐突然間﹐六方腿影同時狂襲而至﹐正是一招「$B時乘六
 龍$Z」。~
 Chance          10
-Value           20
+Value           340
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -103,7 +103,7 @@ Description
 $n雙腿同時飛起﹐運腿成招﹐一腿快比一腿﹐空氣產生漩渦﹐包圍著$n﹐$N從中衝出﹐
 正是「$B雙龍取珠$Z」。~
 Chance          10
-Value           20
+Value           395
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -113,7 +113,7 @@ Description
 $n腿影守住全身﹐並不搶攻﹐$n卻反被$N繁密的腿影所退﹐漫天的腿影﹐乃是其守招「
 $B密雲不雨$Z」。~
 Chance          10
-Value           20
+Value           460
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -123,7 +123,7 @@ Description
 $n在怨恨推動狂催下﹐不知不覺超越了本身的極致﹐真氣不斷向四周擴散﹐再不斷催谷
 自身功力下﹐腿勁直如山洪爆發﹐使出降龍腿法之最強殺招∼∼「$R殺龍求道$Z」﹗~
 Chance          10
-Value           20
+Value           535
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

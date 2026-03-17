@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_ag_implemented`
+- `status = batch_ai_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch AG implemented`
+- `current_batch = Batch AI implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `wind leg` 之後的其餘孤立 high-tier attack skill
+1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `dragon leg / thunder hammer` 之後的其餘孤立 high-tier attack skill
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -3544,6 +3544,156 @@
   - 改用 `IPC KEY 5585`
 - 檢查：
   - `log/smoke-batch-aa.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AH Pre-Check
+
+### Scope
+
+- `dragon leg`
+
+### Reference Basis
+
+- runtime `skill/d/dragonleg.ski`
+  - `Value` 全 `20`
+  - `Cost 20 / Wait 12 / Check check_unrigid_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `dragon leg`
+  - `family = legacy-page:dragon leg`
+  - combat 維度顯示 `10` 段 `Value 20`
+- `area/limbo/obj/245.obj`
+  - 仍存在 `dragon leg book`
+
+### Mandatory Pre-Check Snapshot
+
+`dragon leg`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 12`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `10`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這是玩家向高階腿法，和 `wind leg` 類似屬於偏重節奏、非快攻型的腿路。
+- 在 `10` 段完整描述下仍維持全 `20`，明顯屬於清值模板。
+- 本批先只回填 `Value` 階梯，保留原本節奏與腿法 identity。
+
+## Batch AH Result
+
+### Scope
+
+- `dragon leg`
+
+### Runtime Changes
+
+`dragon leg`
+
+- before: `20 x 10`
+- after: `145, 165, 190, 220, 255, 295, 340, 395, 460, 535`
+- average: `300.0`
+
+### Design Notes
+
+- 本批把 `dragon leg` 定位成高於一般腿法、後段爆發更重的高階長節奏腿技。
+- 這樣可以和已補過的 `wind leg` 保持同系但不同峰值的層次差異。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-ai.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AI Pre-Check
+
+### Scope
+
+- `thunder hammer`
+
+### Reference Basis
+
+- runtime `skill/t/thunder_hammer.ski`
+  - `Value` 全 `20`
+  - `Cost 20 / Wait 1 / Weapon WEAPON_HAMMER`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `thunder hammer`
+  - `family = legacy-page:thunder hammer`
+  - combat 維度顯示 `8` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`thunder hammer`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 1`
+- weapon / check: `WEAPON_HAMMER / -`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `8`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這是玩家向特殊槌法，`Wait 1` 顯示它節奏極快，因此不能用重節奏刀腿技的梯度直接套上去。
+- 雖然平均應低於慢節奏高階單點，但 `8` 段全 `20` 仍然明顯失真。
+- 本批先只回填 `Value` 階梯，保留其極快節奏與槌類 identity。
+
+## Batch AI Result
+
+### Scope
+
+- `thunder hammer`
+
+### Runtime Changes
+
+`thunder hammer`
+
+- before: `20 x 8`
+- after: `130, 155, 185, 220, 260, 310, 370, 440`
+- average: `258.75`
+
+### Design Notes
+
+- 本批刻意讓 `thunder hammer` 的平均值低於同級慢節奏重技，但後段仍保留明顯成長。
+- 這樣比較符合 `Wait 1` 的高速輸出型定位，不會把它拉成過重的大錘模板。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-ai.log`
     - 出現 `三國歪傳之降龍伏虎開始正常運作`
   - `debug/failenable`
     - 無新增內容
