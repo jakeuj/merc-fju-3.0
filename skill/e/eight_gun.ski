@@ -41,7 +41,7 @@ Description
 $n單手提槍﹐呼地槍交左手﹐左右變幻﹐正是$S八極槍法$G起手式$Y「$S蒼$Y」$Z$A
 槍尖左右突刺﹐令$N眼花撩亂﹐$Y「$S刷$Y」$Z的一聲﹐$n手中的$O刺向$N$l。~
 Chance          10
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -52,7 +52,7 @@ Description
 $n運槍成圓﹐倏地橕槍而起﹐從空中往下攻擊$N﹐使出$S八極槍法$G第二式$Y「$R陽$Y」$Z﹐
 只見$N左支右絀﹐忙於招架。~
 Chance          10
-Value           20
+Value           195
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -63,7 +63,7 @@ Description
 $n逆運真氣﹐只見$O槍尖上透出絲絲$B寒光$Z﹐此乃$S八極槍法$G第三式$Y「$B寒$Y」$Z﹐
 冷冷$S寒意$Z讓$N不禁打了冷顫。~
 Chance          10
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -74,7 +74,7 @@ Description
 $n將真氣灌於$O上﹐$O陡然變成燒鐵﹐$n施展$S八極槍法$G第四式$Y「$R暑$Y」$Z
 從$O槍尖激射出$R火焰$Z﹐燒向$N$l。~
 Chance          10
-Value           20
+Value           245
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -85,7 +85,7 @@ Description
 $n一咬牙﹐轉身施展$S八極槍法$R封印$Z的$G第五式$Y「$B幽都$Y」$Z
 $N覺得開始出現幻影﹐$n手中的$O似乎附有了生命﹐招招直取$N的要害。~
 Chance          10
-Value           20
+Value           270
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -96,7 +96,7 @@ Description
 $n招式一變﹐槍法大開大合﹐全身充滿王者氣度﹐使出$S八極槍法$G第六式$Z
 $Y「$W開明$Y」$Z﹐招招沉穩老練﹐令$N倍感吃力。~
 Chance          10
-Value           20
+Value           300
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -108,7 +108,7 @@ $n收攝心神﹐決心使出$S八極槍法$P奧義$Z$Y「$Z白$Y」$Z﹐$N只�
 眼光模糊﹐$Y突然間﹐千頭萬槍從四面八方向$N$Y攻來﹐$N$Y招架不及﹐$Z
 $Y當場被刺成重傷。$Z~
 Chance          10
-Value           20
+Value           335
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -119,7 +119,7 @@ Description
 $n覺得$N是號人物﹐決定破除封印﹐使出$S八極槍法$R禁斷$P奧義$Z$Y「$Z閶闔$Y」$Z﹐
 $G將$N$G打入神人共憤﹐萬劫不復的阿鼻地獄。$Z~
 Chance          10
-Value           20
+Value           375
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -133,11 +133,10 @@ $W             $P紫宮 $Y軒轅 $B咸池 $S天阿 $W四神宮的神力$A
 $W         $S神 $B次 $P戎 $R歙 $Y冀 $W台 $G秭 $P薄 $R陽 九土的力量$Z$A$A
 $G將$N$G打入神人共憤﹐萬劫不復的阿鼻地獄。$Z~
 Chance          10
-Value           20
+Value           420
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
 End
 
 End
-

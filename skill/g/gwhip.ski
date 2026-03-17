@@ -51,7 +51,7 @@ Help
 Description
 $n用一招「$Y峰迴路轉$Z」﹐手中$O如一條銀蛇般刺向$N。~
 Chance          20
-Value           20
+Value           85
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -60,7 +60,7 @@ End
 Description
 $n使出紫龍鞭法中的「$G龍尾甩$Z」﹐手中$O疾劈$N。~
 Chance          20
-Value           20
+Value           100
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -69,7 +69,7 @@ End
 Description
 $n奮力使出一招「$P御風而行$Z」﹐身形陡然滑出數尺﹐手中$O拂向$N。~
 Chance          20
-Value           20
+Value           115
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -78,7 +78,7 @@ End
 Description
 $n手中$O中宮直進﹐一式「$G旭日東昇$Z」對準$N刺出。~
 Chance          20
-Value           20
+Value           130
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -87,7 +87,7 @@ End
 Description
 $n縱身一躍﹐手中$O一招「$Y巨龍蓋頂$Z」對準$N直直劈下。~
 Chance          20
-Value           20
+Value           145
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -96,7 +96,7 @@ End
 Description
 $n的$O螺旋甩出﹐一招$g毒龍鑽$Z刺向$N。~
 Chance          20
-Value           20
+Value           160
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -105,7 +105,7 @@ End
 Description
 $n手中$O向外一分﹐使一招「$P柳暗花明$Z」反手對準$N刺去。~
 Chance          20
-Value           20
+Value           180
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -114,7 +114,7 @@ End
 Description
 $n腳踏七星步﹐身形一轉手中$O使一招「$B空谷秋虹$Z」畫出一道光弧斬向$N。~
 Chance          20
-Value           20
+Value           200
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -123,7 +123,7 @@ End
 Description
 $n一招$s天道擊$Z﹐內力暴射﹐$O疾點向$N。~
 Chance          20
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -132,7 +132,7 @@ End
 Description
 $n突然暴喝一聲﹐一招$R雷厲風行$Z﹐$O挾著一股巨力衝向$N。~
 Chance          20
-Value           20
+Value           245
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -141,7 +141,7 @@ End
 Description
 $n使出一招$y龍尾刺$Z﹐手中$O如針般刺向$N。~
 Chance          20
-Value           20
+Value           270
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

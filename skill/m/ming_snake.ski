@@ -36,7 +36,7 @@ Help            ~
 Description
 $n手中$O一揮﹐使出一招$Y『金蛇出洞』$Z﹐氣勢驚人﹐直撲$N而去。~
 Chance          10
-Value           20
+Value           120
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -46,7 +46,7 @@ End
 Description
 $n使出一招$S『靈蛇八方』$Z﹐$O似靈蛇般由四面八方打向$N。~
 Chance          10
-Value           20
+Value           140
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -56,7 +56,7 @@ End
 Description
 $n使出一招$P『靈蛇乍現』$Z﹐$O忽隱忽現﹐忽東忽西﹐令$N無法捉摸$n的鞭路。~
 Chance          10
-Value           20
+Value           160
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -66,7 +66,7 @@ End
 Description
 $n蓄勢一揮﹐使出一招$R『赤龍翻江』$Z﹐呼的一聲﹐手中$O向$N橫掃而去。~
 Chance          10
-Value           20
+Value           180
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -76,7 +76,7 @@ End
 Description
 $n揮動$O﹐使出一招$Y『金蛇萬道』$Z﹐如有千百條金蛇同時打出﹐直撲$N各大穴。~
 Chance          10
-Value           20
+Value           205
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -86,7 +86,7 @@ End
 Description
 $n手中$O一抖﹐圈起一圈圈鞭花﹐一招$W『金蛇纏身』$Z﹐向$N捲去。~
 Chance          10
-Value           20
+Value           230
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -96,7 +96,7 @@ End
 Description
 $n身形一斜﹐使出一招$b『萬蠱蝕心』$Z﹐頓時滿天鞭影﹐鞭勢挾帶一股腥風向$N撲至。~
 Chance          10
-Value           20
+Value           260
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -107,7 +107,7 @@ Description
 $n$O微揮﹐使出一招$B『幽冥幻化』$Z﹐使鞭之快不見鞭影﹐只聞呼呼聲響﹐邪風陰
 煞﹐圍繞$N四周。~
 Chance          10
-Value           20
+Value           295
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

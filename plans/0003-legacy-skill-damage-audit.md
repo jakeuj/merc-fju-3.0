@@ -1215,6 +1215,142 @@
   - `debug/error`
     - 無新增內容
 
+## Batch L Pre-Check
+
+### Scope
+
+- `young gun`
+- `eight gun`
+- `gwhip`
+- `ming snake`
+
+### Reference Basis
+
+- `/Users/jakeuj/auggie/3yWebsite/skill/lance.html`
+  - 明確給出 `young gun -> eight gun`
+- `/Users/jakeuj/auggie/3yWebsite/skill/whip.html`
+  - 明確給出 `gwhip -> ming snake`
+- `docs/current-game/skills/lance.md`
+  - current-game 已把 `young gun -> eight gun` 整理成 `legacy-page:lance`
+- `docs/current-game/skills/whip.md`
+  - current-game 已把 `gwhip -> ming snake` 整理成 `legacy-page:whip`
+
+### Mandatory Pre-Check Snapshot
+
+`young gun`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 14`
+- weapon / check: `WEAPON_SPEAR / check_spear_attack`
+- canask / teach / valid: `NO / NO / YES`
+- damage entries: `7`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`eight gun`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `30 / COST_MOVE / 17`
+- weapon / check: `WEAPON_SPEAR / check_spear_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `9`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`gwhip`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `15 / COST_MOVE / 10`
+- weapon / check: `WEAPON_WHIP / check_whip_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `11`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`ming snake`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `15 / COST_MOVE / 10`
+- weapon / check: `WEAPON_WHIP / check_whip_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `8`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這批收的是兩條短鏈，且四招都仍屬現行可用的玩家向 runtime 技能，不是封存鏈。
+- `young gun -> eight gun` 保留明顯的重槍遞進：
+  - `young gun` 已經不算快，但仍是可承接的 root
+  - `eight gun` 更慢、更重、也應有更明顯的高階單段輸出
+- `gwhip -> ming snake` 則同為 `Cost 15 / Wait 10`，但 `ming snake` 有更嚴格的 prerequisite，應在相同節奏下靠更高 `Value` 站穩高階定位。
+- area `*.mob` 目前未看到這四招的現成 `Enable` 樣本，因此本批先不做 mob fallout。
+
+## Batch L Result
+
+### Scope
+
+- `young gun`
+- `eight gun`
+- `gwhip`
+- `ming snake`
+
+### Runtime Changes
+
+`young gun`
+
+- before: `20 x 7`
+- after: `90, 110, 130, 150, 170, 195, 220`
+- average: `152.14`
+
+`eight gun`
+
+- before: `20 x 9`
+- after: `170, 195, 220, 245, 270, 300, 335, 375, 420`
+- average: `281.11`
+
+`gwhip`
+
+- before: `20 x 11`
+- after: `85, 100, 115, 130, 145, 160, 180, 200, 220, 245, 270`
+- average: `168.18`
+
+`ming snake`
+
+- before: `20 x 8`
+- after: `120, 140, 160, 180, 205, 230, 260, 295`
+- average: `198.75`
+
+### Design Notes
+
+- 本批仍只調 `Value`，保留槍與鞭兩條鏈既有的武器 identity 與節奏。
+- `young gun -> eight gun` 用更高成本、更慢節奏與更高單段值站穩高階槍法差距。
+- `gwhip -> ming snake` 則在同節奏前提下，透過 `Value` 階梯重建高階鞭法的進化感。
+
+### Validation
+
+- `make -C src -f Makefile.lin merc`
+- `make -C src merc`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-l.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/badobject`
+    - 無新增內容
+  - `debug/error`
+    - 無新增內容
+
 ## Batch K Pre-Check
 
 ### Scope

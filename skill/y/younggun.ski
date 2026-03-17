@@ -44,7 +44,7 @@ Description
 $G$n手中$O$G起起伏伏﹐忽上忽下﹐正是$P「鳳點頭」$G﹐槍鋒泛起一片寒光﹐攻向$N
 $Z。~
 Chance          20
-Value           20
+Value           90
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -55,7 +55,7 @@ Description
 $G$n身形一緩﹐聚氣凝神﹐使出一招$P「如箭在弦」$G身形緊繃如弓﹐以$O$G為箭﹐趁
 $N一個破綻﹐如電射向$N$Z。~
 Chance          20
-Value           20
+Value           110
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -66,7 +66,7 @@ Description
 $G$n賣個破綻﹐卻於$N疏乎之際﹐使出一招$P「無形鎚」$G﹐倒過槍柄忽如其來的敲向
 $N心口$Z。~
 Chance          20
-Value           20
+Value           130
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -77,7 +77,7 @@ Description
 $G$n真力灌注$O﹐簡簡單單的橫劃出去﹐一招平凡的$P「橫掃千軍」$G﹐在你手中竟有
 如斯強橫$Z。~
 Chance          20
-Value           20
+Value           150
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -87,7 +87,7 @@ End
 Description
 $G$n槍勢一變﹐使出一式$P「絆馬槍」$G偷偷往$N下盤擊去﹐想封鎖$N的行動$Z。~
 Chance          20
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -98,7 +98,7 @@ Description
 $G$n手中$O一晃﹐轉身就走﹐$N起身便追﹐你一記$P「回馬槍」$G由腋下刺出﹐$N發現
 時﹐槍尖已到眼前$Z。~
 Chance          20
-Value           20
+Value           195
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -109,7 +109,7 @@ Description
 $G$n鬥到酣處﹐手中$O運轉成圓﹐使出一記$P「太極轉」$G以力生力﹐一擊接一擊掃向
 $N$Z。~
 Chance          20
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
