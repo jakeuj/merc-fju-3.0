@@ -45,7 +45,7 @@ Help
 Description
 $n手中$O一翻﹐一招$S『行雲流水』$Z手裡的$O如一條長龍流轉﹐往$N刺去。~
 Chance          10
-Value           20
+Value           75
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -55,7 +55,7 @@ End
 Description
 $n身形流轉﹐連踩七步﹐手中$O一招$S『七步成詩』$Z往$N點去。~
 Chance          10
-Value           20
+Value           90
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -65,7 +65,7 @@ End
 Description
 $n手中$O搖晃﹐步法微頓﹐倏地一招$S『把酒問天』$Z將$O揮出﹐連出三下往$N點去。~
 Chance          10
-Value           20
+Value           105
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -76,7 +76,7 @@ Description
 $n將手裡的$O高高舉起﹐忽地手中$O急變招數﹐一招$S『菊園盡興』$Z連綿不絕的往
 $N急點。~
 Chance          10
-Value           20
+Value           125
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

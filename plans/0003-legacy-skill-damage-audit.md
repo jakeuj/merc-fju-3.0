@@ -1215,6 +1215,138 @@
   - `debug/error`
     - 無新增內容
 
+## Batch P Pre-Check
+
+### Scope
+
+- `know pen`
+- `write pen`
+- `eten dragon`
+
+### Reference Basis
+
+- `/Users/jakeuj/auggie/3yWebsite/skill/fan.html`
+  - 明確給出 `know pen -> write pen -> eten dragon`
+  - `write pen` 以 `know pen` 為 prerequisite
+  - `eten dragon` 以 `write pen` 為 prerequisite
+- `docs/current-game/skills/fan.md`
+  - current-game 已把這條鏈整理成 `legacy-page:fan` 內目前唯一有完整 runtime 對應的筆扇主線
+  - 三者目前 damage values 皆為全 `20`
+- runtime `skill/*.ski`
+  - `know_pen.ski`
+    - `Associate SLOT_WRITE_PEN`
+    - `CanAsk YES / Teach YES / Valid YES / Enable YES`
+  - `write_pen.ski`
+    - `Associate SLOT_ETEN`
+    - `CanAsk YES / Valid YES / Enable YES`
+  - `eten.ski`
+    - `Associate -1`
+    - `CanAsk NO / Valid YES / Enable YES`
+
+### Mandatory Pre-Check Snapshot
+
+`know pen`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `19 / COST_MOVE / 12`
+- weapon / check: `WEAPON_PEN / check_pen_attack`
+- canask / teach / valid: `YES / YES / YES`
+- damage entries: `4`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`write pen`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `19 / COST_MOVE / 12`
+- weapon / check: `WEAPON_PEN / check_pen_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `13`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`eten dragon`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `19 / COST_MOVE / 10`
+- weapon / check: `WEAPON_PEN / check_pen_attack`
+- canask / teach / valid: `NO / NO / YES`
+- damage entries: `6`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Representative Runtime Consumers
+
+- 目前未看到 `know pen`、`write pen`、`eten dragon` 的現成 `Enable` / `AutoEnable` / `#Learn` 樣本
+- `area/limbo/obj/238.obj`
+  - `know pen book`
+- `area/limbo/obj/393.obj`
+  - `write pen book`
+
+### Interpretation
+
+- 這條筆扇鏈是舊站與 current-game/runtime 都能直接對照的玩家向主鏈。
+- `know pen` 與 `write pen` 同為 `Cost 19 / Wait 12`，最明顯被壓平的仍是 `Value`；`write pen` 靠更多段數與 prerequisite 承接中高階。
+- `eten dragon` 雖然目前 `CanAsk NO`，但 runtime 仍為 `Valid YES / Enable YES`，因此本批先處理 combat template，不混入開放政策。
+- 因為這批目前沒看到 mob-side wiring，驗證重點會放在 build / smoke 是否乾淨，以及避免把文人系筆扇鏈硬拉成失去節奏差異的純重兵模板。
+
+## Batch P Result
+
+### Scope
+
+- `know pen`
+- `write pen`
+- `eten dragon`
+
+### Runtime Changes
+
+`know pen`
+
+- before: `20 x 4`
+- after: `75, 90, 105, 125`
+- average: `98.75`
+
+`write pen`
+
+- before: `20 x 13`
+- after: `95, 105, 115, 125, 135, 145, 155, 165, 180, 195, 210, 230, 255`
+- average: `162.69`
+
+`eten dragon`
+
+- before: `20 x 6`
+- after: `170, 200, 230, 265, 305, 350`
+- average: `253.33`
+
+### Design Notes
+
+- 本批只調 `Value`，保留筆扇鏈既有的文人系節奏、武器 identity 與 prerequisite 結構。
+- `know pen` 回到可成立的 root，不再只是全 `20` 的教學殼。
+- `write pen` 以大量段數與穩定 `Chance 20` 站穩中階主體；`eten dragon` 再以更高單段值與較短 `Wait 10` 站穩 endpoint。
+
+### Validation
+
+- `make -C src -f Makefile.lin merc`
+- `make -C src merc`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-p.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/badobject`
+    - 無新增內容
+  - `debug/error`
+    - 無新增內容
+
 ## Batch O Pre-Check
 
 ### Scope

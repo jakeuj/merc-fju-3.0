@@ -38,7 +38,7 @@ Description
 $n左手一揮一掠﹐使出新學的「$G倚天屠龍功$Z」第一式『$R武林至尊$Z』﹐
 $n手握$O掃中$N的腰肋﹐碰的一聲﹗將$N摔出丈餘﹐勁道凌厲之極。~
 Chance          10
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -50,7 +50,7 @@ $N見$n身手如此矯健﹐一驚之下向前急衝﹐$n轉身吐氣﹐左拳�
 卻是「$G倚天屠龍功$Z」第二式『$S寶刀屠龍$Z』﹐啪﹗的一聲﹐已擊中$N的後心﹐
 $N身子一晃﹐雙膝一軟坐倒在地。~
 Chance          10
-Value           20
+Value           200
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -63,7 +63,7 @@ $n聽得風聲颯然﹐急斜身躍開。一個左柪步搶到了西首﹐右手
 $N突然間喉頭一甜﹐腳下一個踉蹌﹐一口真氣無以為繼﹐正要回氣時﹐只覺胸口又有
 熱血湧上。~
 Chance          10
-Value           20
+Value           230
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -76,7 +76,7 @@ Description
 輕輕巧巧的閃避躍至空中﹐化解此招之餘﹐左手一拉﹐右手一拖!在$N身上留下了一
 道深可見骨的創傷﹗~
 Chance          10
-Value           20
+Value           265
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -90,7 +90,7 @@ $n越戰越是神定氣足﹐揮洒自如﹐驀地裏右手倏出﹐使出了「
 借力打力﹐但聽得噹的一下巨響﹐$N悴不及防﹐震的耳中嗡嗡翁作響﹐鮮血由
 而中滲了出來﹐難以定位﹐保持平衡﹐且虎口亦被震的出血。~
 Chance          10
-Value           20
+Value           305
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -105,7 +105,7 @@ $R           側 $b勒 $G努 $y逖 $r策 $B掠 $g啄 $Y磔$Z$A$A
 森然相同﹐$N在$n的極限殺招之下難以遁逃防禦﹐將$n揮出的七七四十九擊天羅地
 網照單全收﹐$N鮮血噴﹐創傷濺血不支到地﹐已奄奄一息矣。~
 Chance          10
-Value           20
+Value           350
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
