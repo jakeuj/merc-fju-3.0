@@ -45,7 +45,7 @@ $W$n繞地急旋﹐身形飄逸﹐突然一個矮身﹐貼地使出十三迴旋�
 ∼落∼葉$Z」$W﹐$n所造成的旋勢驚人﹐$N因$n的攻勢猛烈﹐被$n手中的$O劃出數道傷
 口﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           95
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -57,7 +57,7 @@ $W$n倏地一個轉身﹐以向後逃走之勢﹐使出十三迴旋刀法中的�
 $W﹐$n手中的$O從意想不到的位置往後$N襲來﹐$N被$n這突來的一刀直接砍中要害﹐頓
 時哀嚎一聲﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           115
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -68,7 +68,7 @@ Description
 $W$n猛地一個低頭﹐使出十三迴旋刀法中的「$B連∼環∼三∼叩∼首$Z」$W﹐$N的攻勢
 霎時被$n的旋勁所破。$Z~
 Chance          10
-Value           20
+Value           140
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -79,7 +79,7 @@ Description
 $W$n順勢將手中之$O連續從背後三個方向往$N狂劈﹐$n連續強烈的三刀已在$N的頸、
 胸、腹劃出三道深可見骨的傷口﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -91,7 +91,7 @@ $W$n將手中之刀運勁拋出﹐一刀化二刀﹐一招十三迴旋刀法中�
 $W$n手中之$O所形成的刀光以旋風之勢攻向$N﹐$N面臨$n這招兇猛且迅速的刀招﹐竟然不
 知如何抵擋﹐只見$n的$O已經在$N的身上劃出多道傷口﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           205
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -103,7 +103,7 @@ $B$n身形飄然而上﹐配合腳下之剪雲步使出十三迴旋刀法的「$
 $n的刀勢猛烈如昭陽初昇般﹐往$N隴罩而去﹐$N因$n手中$O所散發的刀氣驚人﹐頓時被眼
 睛被刀氣所刺而無法睜開﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           245
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -115,7 +115,7 @@ $B$n身法越轉越快﹐腳踏迷蹤﹐人影逐漸模糊﹐一招十三迴旋�
 $B﹐$N因$n所化之多道身形而不知$n將從何處痛下殺招﹐$n見$N不知所措﹐頓時劈出千道
 刀氣﹐$O所形成之刀氣從$N看不清的方位往$N的四周斬去﹐令$N避無可避﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           295
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -127,7 +127,7 @@ $B$n運勁揮動手中$O﹐刀勢如波浪般捲向$N﹐十三刀法中的連續
 $Z」$B順勢使出﹐使$N守勢混亂不堪﹐潰不成軍﹐$n見$N守勢被破﹐再發一式「$R大∼日
 ∼東∼來$Z」$B頓時$N的慘叫之聲傳之天際﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           355
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -139,7 +139,7 @@ $B$n戰意一提﹐刀勢猛烈如雷﹐迅捷如電﹐一招強猛的「$P紫�
 手忽然之間又多出一把$O﹐$n的雙刀挾帶天空之雷電﹐強烈無比﹐刀勢攻得$N無法招架﹐
 頓時潰散而逃﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           425
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -152,7 +152,7 @@ $S﹐只見$n手反握刀﹐以整個手臂的力量﹐加上身驅的旋力往$
 趕緊以攻為守向$n狂攻﹐只見$n將$N所發之殺招以自己的刀勢所產生的旋力擋掉﹐只見$N
 被$n所捲出的旋力帶到空中直墜而下﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           505
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -164,7 +164,7 @@ $B$n的戰意猛地提昇﹐伴隨著一聲驚天動地的狂吼﹐舞出十三�
 ∼羅∼地∼網$Z」$B$n手中的$O所形成的刀勢由上而下又由右至左將$N的前後左右退路硬
 生生的封住﹐將$N劈的面無人色﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           595
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -177,7 +177,7 @@ $g$n忽地充滿自信地得意一笑﹐大喝一聲：$Z$A$A「$W　十 七 歲
 氣逐漸幻化成龍形﹐$n雙手一揮﹐刀氣豁然欲出﹐$n大喝「$P怒∼旋∼龍∼破$Z」$B只見
 一條九天狂龍往$N襲捲而去﹐$N被$O所形成的刀氣撕的皮開肉綻﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           700
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -189,7 +189,7 @@ $B$n臉上露出一股剛毅的決心﹐突然兩手持刀﹐狀若瘋虎﹐一�
 去﹐正是霸刀斬的超級殺招「$R出∼生∼入∼死$Z」$B﹐嚇的$N呆若木雞﹐當場被$n重中
 貫穿而過﹐$N因受此招之重創﹐瞬間血流成河﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           820
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -202,7 +202,7 @@ $P$n陷入瘋狂之中﹐雖然身上血跡般般﹐但憑著無邊戰意仍然�
 式硬拼到底﹐$n雖身中$N數招﹐但依然朝$N狂殺而去﹐只見一道血光從兩人之中噴灑而出
 ﹐$n的右肩霎時血流如注﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           960
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

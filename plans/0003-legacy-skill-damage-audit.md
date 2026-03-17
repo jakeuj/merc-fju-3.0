@@ -331,9 +331,9 @@
 
 目前狀態：
 
-- `status = batch_br_implemented`
+- `status = batch_bt_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch BR implemented`
+- `current_batch = Batch BT implemented`
 
 ## Immediate Next Steps
 
@@ -6673,6 +6673,147 @@
 
 - 本批把 `fly nine` 定位成高成本、較快節奏、九段連環刀法。
 - 整體雖低於 `fire lance` 的重槍曲線，但中後段仍保有足夠的終結感。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 與 Batch BT 共用同一輪 smoke 驗證
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BS Pre-Check
+
+### Scope
+
+- `b_a_1`
+
+### Reference Basis
+
+- runtime `skill/b/b_a_1.ski`
+  - `Value` 全 `20`
+  - `Cost 20 / Wait 1 / Check check_unrigid_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `b_a_1`
+  - `family = legacy-page:b_a_1`
+  - combat 維度顯示 `14` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`b_a_1`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 1`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `14`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `b_a_1` 是 current-game 仍存在的十四段召喚型 offensive template，不屬於 dodge 或 code-driven 特例。
+- `Wait 1` 加上十四段完整招式，說明它本質上是高速長段數壓制模板，而不是重節奏單擊。
+- 本批先只回填 `Value` 階梯，保留其高速召喚攻擊身份與既有出手設定。
+
+## Batch BS Result
+
+### Scope
+
+- `b_a_1`
+
+### Runtime Changes
+
+`b_a_1`
+
+- before: `20 x 14`
+- after: `85, 100, 120, 145, 175, 210, 250, 300, 360, 430, 510, 600, 705, 830`
+- average: `344.29`
+
+### Design Notes
+
+- 本批把 `b_a_1` 定位成高速、長段數、後段逐步爆發的召喚系攻擊模板。
+- 曲線前段保留多段壓制感，後段再拉出終極招喚應有的威脅。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 測試 ports:
+    - `15849`
+    - `16245`
+    - `16899`
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BT Pre-Check
+
+### Scope
+
+- `ba blade`
+
+### Reference Basis
+
+- runtime `skill/b/ba_blade.ski`
+  - `Value` 全 `20`
+  - `Cost 20 / Wait 1 / Weapon WEAPON_BLADE / Check check_blade_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `ba blade`
+  - `family = legacy-page:ba blade`
+  - combat 維度顯示 `14` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`ba blade`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 1`
+- weapon / check: `WEAPON_BLADE / check_blade_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `14`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `ba blade` 同樣是 current-game 還存在的十四段模板，但它是刀系武器技，不應與 `b_a_1` 共用同值平移。
+- `Wait 1` 顯示它要走高速、多式迴旋刀路，而非慢重型霸刀。
+- 本批先只回填 `Value` 階梯，保留其刀系身份與高速節奏。
+
+## Batch BT Result
+
+### Scope
+
+- `ba blade`
+
+### Runtime Changes
+
+`ba blade`
+
+- before: `20 x 14`
+- after: `95, 115, 140, 170, 205, 245, 295, 355, 425, 505, 595, 700, 820, 960`
+- average: `401.79`
+
+### Design Notes
+
+- 本批把 `ba blade` 定位成高速、十四段、後段斬殺力持續堆高的刀系模板。
+- 整體曲線高於 `b_a_1`，讓霸刀路線在長段數模板裡有更鮮明的刀氣重量。
 
 ### Validation
 
