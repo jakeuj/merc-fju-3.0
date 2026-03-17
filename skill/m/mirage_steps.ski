@@ -39,7 +39,7 @@ Description
 $n雙袖一揚﹐.......一陣青煙從地底冒出........﹐一招$S『煙霧瀰三江』$Z﹐$n已
 不知去向﹐似忽陷入迷境﹐不知如何出招。~
 Chance          10
-Value           20
+Value           115
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -50,7 +50,7 @@ Description
 只見$n身影一晃﹐騰空而起﹐使出$S『星垂暗影落』$Z﹐身驅有如星拋丸擲﹐畫出一條曼
 妙的圓弧﹐$N的招式早以落空。~
 Chance          10
-Value           20
+Value           135
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -61,7 +61,7 @@ Description
 $n使出離影迷蹤步之$S『凌風無形跡』$Z﹐身形如燕﹐身影隨風幻化方位﹐$N的招式始終
 差了三寸﹐瀟灑的避過每一招。~
 Chance          10
-Value           20
+Value           155
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -71,7 +71,7 @@ End
 Description
 $n隨意使出一招$S『翠影映波瀾』$Z﹐左足一點﹐身形一閃﹐早以繞到$N身後。~
 Chance          10
-Value           20
+Value           175
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -82,7 +82,7 @@ Description
 $n身影微動﹐腳踏醉仙望月步﹐正是一招$S『舞影醉人痴』$Z﹐身形飄緲虛幻﹐穿梭在
 $N的攻勢之下﹐$n竟仍留於原地。~
 Chance          10
-Value           20
+Value           195
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -93,7 +93,7 @@ Description
 $n凌空飛起﹐使出一招$S『縈迴盪秋波』$Z﹐擰身一折﹐忽左忽右的飄開﹐$N招式未到﹐
 $n早以飄落三尺開外之處。~
 Chance          10
-Value           20
+Value           215
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -104,7 +104,7 @@ Description
 $n頓時心無雜念﹐意隨念轉﹐眼看$N攻勢逼進﹐口中喃喃自語﹐霎那間﹐$S一靈三化$Z﹐
 $N顯然以分不出虛實﹐招招向殘影擊去。~
 Chance          10
-Value           20
+Value           240
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

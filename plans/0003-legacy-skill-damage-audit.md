@@ -1086,3 +1086,131 @@
   - `debug/failload`
   - `debug/badobject`
   - `debug/error`
+
+## Batch G Pre-Check
+
+### Scope
+
+- `shade steps`
+- `wind steps`
+- `mirage steps`
+
+### Reference Basis
+
+- `/Users/jakeuj/auggie/3yWebsite/skill/step.html`
+  - 明確給出 `shade steps -> wind steps`
+  - 明確給出 `gdragon steps -> mirage steps`
+  - `wind steps` 是 thief-only 的高階步法
+  - `mirage steps` 是 `gdragon` 的高階延伸，不是獨立 root
+- `/Users/jakeuj/auggie/3yWebsite/newhand/players/bravo/0104243.html`
+  - 把 `cloud steps`、`gdragon steps`、`mirage steps` 放在同一套步法路線中
+- `/Users/jakeuj/auggie/3yWebsite/newhand/players/general/0104233.html`
+  - 將軍文也保留 `mirage steps`，支撐它不是單一職業外掛技能
+- runtime `skill/*.ski`
+  - `shade_steps.ski`
+    - `Associate SLOT_WIND_STEPS`
+  - `wind_steps.ski`
+    - `Associate -1`
+  - `gdragon_steps.ski`
+    - Batch B 已重建
+  - `mirage_steps.ski`
+    - `Associate -1`
+
+### Mandatory Pre-Check Snapshot
+
+`shade steps`
+
+- type: `TAR_DODGE`
+- cost / costtype / wait: `15 / COST_MOVE / 10`
+- canask / teach: `YES / NO`
+- damage entries: `7`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`wind steps`
+
+- type: `TAR_DODGE`
+- cost / costtype / wait: `15 / COST_MOVE / 10`
+- canask / teach: `NO / NO`
+- damage entries: `8`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`mirage steps`
+
+- type: `TAR_DODGE`
+- cost / costtype / wait: `15 / COST_MOVE / 10`
+- canask / teach: `YES / NO`
+- damage entries: `7`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `shade -> wind` 與 `gdragon -> mirage` 都是舊站與 runtime 可交叉確認的玩家向步法鏈。
+- 這三個 skill 的 `Cost / Wait / CostType` 幾乎完全同型，表示本輪最明顯的 distortion 仍是 `Value` 被系統性壓平成 `20`。
+- `mirage steps` 是 Batch B 已完成 `gdragon` 主鏈的自然延伸；若不補上，`gdragon` 的高階端點仍會停在清值殘留模板。
+- `shade -> wind` 則補齊另一條 thief-oriented 閃躲分支，避免目前 repo 只修到 `cloud/gdragon` 與 `sleev/sky`，卻留下同樣全 `20` 的另一條玩家向步法鏈。
+- mob 端目前只看到：
+  - `mirage steps` 被 loyang 高階 named 樣本 `598 / 599 / 600 / 601 / 604` 掛用
+  - `shade steps` 僅 `570` 詩人固定啟用
+  - `wind steps` 目前沒有現成 mob enable
+- 因此本批仍先只修 skill template，不先動 mob runtime data。
+
+## Batch G Result
+
+### Scope
+
+- `shade steps`
+- `wind steps`
+- `mirage steps`
+
+### Runtime Changes
+
+`shade steps`
+
+- before: `20 x 7`
+- after: `60, 75, 90, 105, 120, 135, 150`
+- average: `105.0`
+
+`wind steps`
+
+- before: `20 x 8`
+- after: `90, 110, 130, 150, 170, 190, 210, 235`
+- average: `160.62`
+
+`mirage steps`
+
+- before: `20 x 7`
+- after: `115, 135, 155, 175, 195, 215, 240`
+- average: `175.71`
+
+### Design Notes
+
+- 本批只調 `Value`，刻意保留 `Chance / Wait / Cost / CostType` 不變，讓這輪仍屬純 dodge template 重建。
+- `shade steps` 被重新定位為另一條玩家向 root-step baseline，不再是和高階分支共用全 `20` 模板。
+- `wind steps` 以 thief-only 高階步法定位，明確高於 `shade steps`，但不靠額外減 cost 或縮 wait 來改手感。
+- `mirage steps` 承接 Batch B 已重建的 `gdragon` 高階端，站穩高階 dodge branch，而不是讓已修復的前置技能接到清值終點。
+
+### Validation
+
+- `make -C src -f Makefile.lin merc`
+- `make -C src merc`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-g.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/badobject`
+    - 無新增內容
+  - `debug/error`
+    - 無新增內容
