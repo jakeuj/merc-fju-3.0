@@ -35,7 +35,7 @@ Help            ~
 Description
 $n手中$O騰出﹐使出一式『$W浩氣萬千$Z』﹐刀勢充滿浩瀚正氣往$N$l劈去。~
 Chance          10
-Value           20
+Value           55
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -45,7 +45,7 @@ End
 Description
 $n一招『$S諸葛星宿$Z』﹐只見$N神威大展﹐手中$O如猛虎般往$N$l砍去。~
 Chance          10
-Value           20
+Value           70
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -54,7 +54,7 @@ End
 Description
 $n高舉手中$O﹐一招『$R虎威尊龍$Z』﹐刀勢夾著勁風﹐雷霆萬鈞地往$N$l劈去。~
 Chance          10
-Value           20
+Value           85
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -64,7 +64,7 @@ End
 Description
 $n將手中$O一撩﹐一招『$B戰意無窮$Z』往$N$l斬去。~
 Chance          10
-Value           20
+Value           100
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -74,7 +74,7 @@ End
 Description
 $n刀式一旋﹐左右連環兩刀﹐一招『$G左擁右抱$Z』刀勢由兩邊把$N圍住﹗~
 Chance          10
-Value           20
+Value           115
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -84,7 +84,7 @@ End
 Description
 $n將$O由上往下直劈﹐一招『$Y不落皇旗$Z』狠狠往$N劈去﹗~
 Chance          10
-Value           20
+Value           130
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

@@ -34,7 +34,7 @@ Help            ~
 Description
 $W$n側身橫鋤﹐一招$S「橫雲斷峰」$W﹐手持$O向$N$l橫劈過去$Z。~
 Chance          10
-Value           20
+Value           150
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -43,7 +43,7 @@ End
 Description
 $W$n翻身迴力﹐手中$O斜引﹐一招$R「歸雁嘯長空」$W﹐刀鋒從半空中直瀉而下$Z。~
 Chance          10
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -52,7 +52,7 @@ End
 Description
 $W$n背轉身子﹐一招$B「夜戰八方」$W﹐手中$O迅無倫比的砍向$N$l$Z。~
 Chance          10
-Value           20
+Value           190
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -62,7 +62,7 @@ Description
 $W$n使出$P「春雲乍展」$W﹐手中$O悄無聲的劃向$N$l﹐看似輕如柳絮﹐卻是式中套式
 ﹐招裡藏招$Z。~
 Chance          10
-Value           20
+Value           210
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -72,7 +72,7 @@ Description
 $W$n腳尖一點﹐翩如飛鳥般的躍起一丈多高﹐使一招$G「天神倒掛」$W﹐由上而下劈往
 $N的$l$Z。~
 Chance          10
-Value           20
+Value           230
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -81,7 +81,7 @@ End
 Description
 $W$n微一吐勁﹐力貫刀鋒﹐一招$Y「劈石開山」$W往$N$l直劈而下$Z。~
 Chance          10
-Value           20
+Value           255
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -90,7 +90,7 @@ End
 Description
 $W$n刀隨身轉﹐寒光閃處﹐一招$S「倒灑金錢」$W﹐攻往$N$l$Z。~
 Chance          10
-Value           20
+Value           280
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -100,7 +100,7 @@ Description
 $W$n氣沉丹田﹐一招$G「氣撼九重天」$W﹐刀勢籠罩八方﹐$N頓感氣息翻湧﹐胸口不暢
 $Z。~
 Chance          10
-Value           20
+Value           305
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -109,7 +109,7 @@ End
 Description
 $W$n手中$O一晃﹐一招$R「雪擁籃關」$W﹐往$N$l直刺而去$Z。~
 Chance          10
-Value           20
+Value           335
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -118,7 +118,7 @@ End
 Description
 $W$n移步測身﹐使出一招$B「游龍繞步」$W﹐身行變化莫測﹐攻向$N$l$Z。~
 Chance          10
-Value           20
+Value           370
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

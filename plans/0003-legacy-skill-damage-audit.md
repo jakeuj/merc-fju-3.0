@@ -1374,6 +1374,137 @@
 
 ### Validation Status
 
-- skill data 與 build 本身目前看起來正常
-- smoke blocker 看起來是 repo 內既有 / 外部同步進來的 world-data 問題，不是本批步法 value 重建直接造成的 parser 錯誤
-- 若要拿 Batch H 做 higher-confidence gate，下一步應先處理 `sec_rift_core_below/obj/11353.obj` 的 `Keywords` 載入格式
+- 後續 recheck 已通過
+- 最新 smoke recheck:
+  - `log/smoke-recheck.log`
+  - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - 無 `Load_object` / `Keywords 不正確`
+  - `debug/failenable`、`debug/failload`、`debug/badobject`、`debug/error` 無新增內容
+
+## Batch I Pre-Check
+
+### Scope
+
+- `sun blade`
+- `ice blade`
+- `gold blade`
+
+### Reference Basis
+
+- `/Users/jakeuj/auggie/3yWebsite/skill/blade.html`
+  - 明確給出 `sun blade -> ice blade -> gold blade`
+  - `sun blade` 是可互教 root
+  - `ice blade` 與 `gold blade` 都是其後續高階延伸
+- `docs/current-game/skills/blade.md`
+  - current-game 已把這條鏈整理成 `legacy-page:blade` 的第三條主線
+  - runtime 目前仍顯示 `sun / ice / gold` 的 damage values 幾乎全 `20`
+- runtime `skill/*.ski`
+  - `sun_blade.ski`
+    - `Associate -1`
+    - `Valid NO / CanAsk NO`
+  - `iceblade.ski`
+    - `Associate -1`
+    - `Valid NO / CanAsk NO`
+  - `gold_blade.ski`
+    - `Associate -1`
+    - `Valid NO / CanAsk NO`
+
+### Mandatory Pre-Check Snapshot
+
+`sun blade`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `10 / COST_MOVE / 1`
+- weapon / check: `WEAPON_BLADE / check_blade_attack`
+- canask / teach / valid: `NO / NO / NO`
+- damage entries: `6`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`ice blade`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `15 / COST_MOVE / 10`
+- weapon / check: `WEAPON_BLADE / check_blade_attack`
+- canask / teach / valid: `NO / NO / NO`
+- damage entries: `9`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`gold blade`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `15 / COST_MOVE / 10`
+- weapon / check: `WEAPON_BLADE / check_blade_attack`
+- canask / teach / valid: `NO / NO / NO`
+- damage entries: `10`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這條鏈的舊站玩家向 progression 很清楚，但 runtime 目前保留的是「可 enable、不可 ask/teach/valid」的遺留狀態。
+- 本輪先處理的是 combat template，不是技能開放政策；因此只修 `Value`，不在這批直接改 `Valid / CanAsk / Teach`。
+- 三者在 `Chance / Parry / Weapon / Check` 上幾乎同型，且 `sun blade` 的 `Wait 1` 明顯保留了入門快刀特色；因此梯度主軸應是：
+  - `sun blade` 維持低成本高頻 root
+  - `ice blade` 站穩中高階主力
+  - `gold blade` 成為這條 legacy 刀法鏈的終點
+- area `*.mob` 目前未看到這三招的現成 `Enable` 樣本，因此本批優先以玩家向 ladder 重建為主，不做 mob fallout。
+
+## Batch I Result
+
+### Scope
+
+- `sun blade`
+- `ice blade`
+- `gold blade`
+
+### Runtime Changes
+
+`sun blade`
+
+- before: `20 x 6`
+- after: `55, 70, 85, 100, 115, 130`
+- average: `92.5`
+
+`ice blade`
+
+- before: `20 x 9`
+- after: `110, 130, 150, 170, 190, 210, 235, 260, 290`
+- average: `193.89`
+
+`gold blade`
+
+- before: `20 x 10`
+- after: `150, 170, 190, 210, 230, 255, 280, 305, 335, 370`
+- average: `249.5`
+
+### Design Notes
+
+- 本批仍只調 `Value`，不把 runtime 目前的 `Valid NO` 遺留狀態和 combat ladder 重建混在同一輪處理。
+- `sun blade` 保留 `Wait 1` 的快刀 root 身分，因此雖然平均值回升，仍刻意壓在同頁其他重刀高階模板之下。
+- `ice blade` 與 `gold blade` 同為 `Cost 15 / Wait 10`，但以更高的 `Value` 階段承接明顯的中高階與終點差距。
+- 這樣可以先把 old-site clear chain 的 combat template 拉回可用，再決定是否另開一輪處理 `Valid / CanAsk / Teach` 的 runtime policy。
+
+### Validation
+
+- `make -C src -f Makefile.lin merc`
+- `make -C src merc`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-i.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/badobject`
+    - 無新增內容
+  - `debug/error`
+    - 無新增內容

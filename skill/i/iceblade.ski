@@ -45,7 +45,7 @@ $S$n使出$W傲寒六訣第一訣∼「驚寒一瞥」$S﹐寒絕、霸絕﹐直
 刀﹐狠狠朝$N劈下﹐$N赫然發現$n身形一化為二﹐驚愕當場﹐原來是$p自己被砍成兩半
 ﹗$Z~
 Chance          10
-Value           20
+Value           110
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -57,7 +57,7 @@ $S$n手握$O$S﹐旋空揮舞﹐忽地刀勁一送﹐立即冰寒四溢﹐隨即
 ∼「冰封三尺」$S﹐刀勁凝冰﹐直可厚逾三尺﹐至寒刀勁瞬間凝冰﹐把$N困於其中﹐$N
 只感到渾身血液一滯﹐所謂困人亦可自困﹐易守易攻﹗$Z~
 Chance          10
-Value           20
+Value           130
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -69,7 +69,7 @@ $S$n仰天長嘆﹐輕拂$O$S﹐前招「雪中紅杏」﹐刀招綿綿似有無
 如恨天、如忌地﹐恨情斷﹐嘆情長﹐刀恨意更恨﹐一招$W傲寒六訣第三式∼「紅杏出
 牆」$S﹐猛烈劈出﹐彷彿要斬盡世間負心情義般無情﹗$Z~
 Chance          10
-Value           20
+Value           150
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -81,7 +81,7 @@ $S$n身形一轉﹐手中刀招大開大闔﹐卻由剛轉柔﹐腳踏輕風﹐$
 行雲﹐如流水﹐刀仍為刀﹐刀意卻已不為刀意﹐仿若桃花盛開般綻放枝朵﹐正是$W傲
 寒六訣第四式∼「桃枝夭夭」$S﹐刀招柔弱冷雪桃枝﹐看似無刀﹐實則剛烈無匹﹗﹗$Z~
 Chance          10
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -93,7 +93,7 @@ $S$n飛身縱躍﹐$O$S亦同時隨人飛起﹐$n空中展開飛速身法﹐運�
 ﹐漸漸加大﹐$n亦消失這猛烈刀圈之中﹐突然$n御刀狂掃而出﹐盡使$W傲寒六訣第五
 式∼「踏雪尋梅」$S﹐以腿御刀﹐刀腿並用﹐迥異難測。$Z~
 Chance          10
-Value           20
+Value           190
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -105,7 +105,7 @@ $S$n收斂心神﹐手中$O$S亦迅然收鞘﹐一招毫無前奏的招式﹐卻
 自喘息之際﹐$n身上猛然散發無數寒氣﹐使出至寒至猛殺招$W傲寒六訣第六式∼「冷刃
 冰心」$S﹐由內力引發強猛寒氣瞬間$O$S從刀鞘中爆發出驚人刀氣﹐見血方休﹗﹗$Z~
 Chance          10
-Value           20
+Value           210
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -118,7 +118,7 @@ $R$n環顧四周﹐赫見自己竟突然站在一柱擎天絕崖上﹐周遭只�
 絕崖、巨浪﹐頃刻將$N逼至一個退無可退、無可選擇的死位上﹐$n已運$O$R如飛﹐刀勢
 有如怒濤般向$N排山倒海捲去﹐正是魔刀第一魔訣∼『$B魔氣縱橫$Z$R』﹗﹗$Z~
 Chance          10
-Value           20
+Value           235
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -131,7 +131,7 @@ $R$n毫不乘勢喘息﹐回身著地同時﹐手中$O赫然脫手飛出﹐緊�
 迴旋疾削﹐$N立即低身險險避過﹐但未及定神刀光又起﹐$n猛地回踏﹐$O閃電向其咽喉
 橫劈而至﹐刀風虎虎﹐正是魔刀第二魔訣∼『$B魔道橫行$Z$R』﹗﹗$Z~
 Chance          10
-Value           20
+Value           260
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -142,7 +142,7 @@ Description
 $R$n的刀勢已催至頂峰﹐已有充分力量使出魔刀中最厲害的一式∼『$B魔極屠情$Z$R』
 只是簡單的一劈﹐但這一劈的力量﹐已是刀所能劈出的極限﹐已是最極限之刀﹗﹗$Z~
 Chance          10
-Value           20
+Value           290
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
