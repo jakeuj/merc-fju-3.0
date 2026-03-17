@@ -7,6 +7,7 @@ Description
 ItemType        ITEM_TRASH
 Takeable        Yes
 WearLoc         ITEM_HOLD
+Level           10
 Value           0 0 0 0 0
 Weight          3
 Cost            200
