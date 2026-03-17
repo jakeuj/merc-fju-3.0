@@ -70,6 +70,8 @@
   - reached success signal `三國歪傳之降龍伏虎開始正常運作.` in `log/1004.log`
   - `debug/badobject`、`debug/bugs`、`debug/failenable`、`debug/failload` remained empty after the run
   - `debug/error` only recorded the expected timeout-driven shutdown trace after the forced stop
+- `git commit -m "Add sec_rift_core_vein_abyss area"`
+  - committed as `f4fe735`
 
 ## Runtime Notes
 
@@ -81,4 +83,4 @@
 
 ## Next Step Prompt
 
-`sec_rift_core_vein_abyss 已達 implementation_ready_for_commit；先提交這個 implementation milestone，再決定是否規劃下一個更深禁底封脈區。`
+`sec_rift_core_vein_abyss` 已完成第一輪 implementation 並提交；下一步可為更深的 `sec_rift_underseal_basin` 建立單區 plan 與 `map.md` spec。`
