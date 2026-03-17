@@ -43,7 +43,7 @@ Help            ~
 Description
 $n將手中$O用力一鄭﹐一招$B『點星雨』$Z﹐只見一道白光往$N射去。~
 Chance          10
-Value           20
+Value           135
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -53,7 +53,7 @@ End
 Description
 $n手中散出一道白光﹐一招$B『散雷風』$Z$O飄浮不定的往$N而去。~
 Chance          20
-Value           20
+Value           155
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -63,7 +63,7 @@ End
 Description
 $n一招$B『星燈萬雨』$Z﹐射出的$O散出無數殘影往$N而去。~
 Chance          20
-Value           20
+Value           175
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -73,7 +73,7 @@ End
 Description
 $n一招$B『歿神搶親』$Z﹐射出的$O有如俇鷹雄飛﹐往$N直奔而去。~
 Chance          10
-Value           20
+Value           195
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -83,7 +83,7 @@ End
 Description
 $n一招$B『風起雲湧』$Z﹐射出的$O以極端的速度飛往$N去。~
 Chance          10
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -94,7 +94,7 @@ Description
 $n再抓起一把暗器對準$N﹐以密集快速的手法射去﹐$N躲避不及﹐全部的暗器打在
 身上。~
 Chance          10
-Value           20
+Value           250
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

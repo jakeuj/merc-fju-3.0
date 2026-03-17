@@ -1215,6 +1215,153 @@
   - `debug/error`
     - 無新增內容
 
+## Batch N Pre-Check
+
+### Scope
+
+- `be needle`
+- `seven dagger`
+- `dragon dagger`
+- `rain throwing`
+
+### Reference Basis
+
+- `/Users/jakeuj/auggie/3yWebsite/skill/dagger.html`
+  - 明確給出 `be needle -> seven dagger`
+  - 明確給出 `dragon dagger -> rain throwing`
+  - `seven dagger` 與 `rain throwing` 都是各自 root 的 prerequisite 後續段
+- `docs/current-game/skills/short.md`
+  - current-game 已把這兩條鏈整理成 `legacy-page:dagger`
+  - 四招目前 damage values 皆為全 `20`
+- runtime `skill/*.ski`
+  - `be_needle.ski`
+    - `Associate SLOT_SEVEN_DAGGER`
+    - `CanAsk YES / Valid YES / Enable YES`
+  - `seven_dagger.ski`
+    - `Associate -1`
+    - `CanAsk YES / Valid YES / Enable YES`
+  - `dragon_dagger.ski`
+    - `Associate -1`
+    - `Valid NO / CanAsk NO / Enable YES`
+  - `rain_throwing.ski`
+    - `Associate -1`
+    - `Valid NO / CanAsk NO / Enable YES`
+
+### Mandatory Pre-Check Snapshot
+
+`be needle`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 2`
+- weapon / check: `WEAPON_DAGGER / check_dagger_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `12`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`seven dagger`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 3`
+- weapon / check: `WEAPON_DAGGER / check_dagger_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `13`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`dragon dagger`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `15 / COST_MOVE / 10`
+- weapon / check: `WEAPON_DAGGER / check_dagger_attack`
+- canask / teach / valid: `NO / NO / NO`
+- damage entries: `5`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`rain throwing`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `10 / COST_MOVE / 1`
+- weapon / check: `WEAPON_DAGGER / check_dagger_attack`
+- canask / teach / valid: `NO / NO / NO`
+- damage entries: `6`
+- chance set: `10, 20, 20, 10, 10, 10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這一批不是單一鏈，而是短兵頁上兩條清楚的玩家向 legacy chain。
+- `be needle -> seven dagger` 兩者都仍屬現行可 ask 的玩家技能，且 `Wait 2 / 3`、`Cost 20` 很接近，最明顯被壓平的就是 `Value`。
+- `dragon dagger -> rain throwing` 則屬目前 runtime 保留為 `Enable YES`、但 `Valid/CanAsk NO` 的封存鏈；本批仍只修 combat template，不混入開放政策。
+- `rain throwing` 雖然 `Wait 1`、`Cost 10`，仍是 prerequisite 後的 endpoint；因此應保留高速投擲 identity，但不能再和 `dragon dagger` 同樣維持全 `20`。
+- area `*.mob` 與 `#Learn` 目前未看到這四招的現成 runtime enable 樣本，因此本批仍先修 skill template，不先動 mob fallout。
+
+## Batch N Result
+
+### Scope
+
+- `be needle`
+- `seven dagger`
+- `dragon dagger`
+- `rain throwing`
+
+### Runtime Changes
+
+`be needle`
+
+- before: `20 x 12`
+- after: `55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 110, 120`
+- average: `83.75`
+
+`seven dagger`
+
+- before: `20 x 13`
+- after: `90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 195, 210, 230`
+- average: `152.69`
+
+`dragon dagger`
+
+- before: `20 x 5`
+- after: `105, 125, 145, 165, 190`
+- average: `146.0`
+
+`rain throwing`
+
+- before: `20 x 6`
+- after: `135, 155, 175, 195, 220, 250`
+- average: `188.33`
+
+### Design Notes
+
+- 本批仍只調 `Value`，保留短兵頁原有的高頻、輕兵與投擲感。
+- `be needle -> seven dagger` 重新建立快節奏短兵從高頻 root 到高階針訣的階梯，而不是只剩段數不同的全 `20` 模板。
+- `dragon dagger -> rain throwing` 則維持封存鏈的高速匕法 / 暗器 identity，只用更高 `Value` 拉開 endpoint 差距。
+
+### Validation
+
+- `make -C src -f Makefile.lin merc`
+- `make -C src merc`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-n.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/badobject`
+    - 無新增內容
+  - `debug/error`
+    - 無新增內容
+
 ## Batch M Pre-Check
 
 ### Scope

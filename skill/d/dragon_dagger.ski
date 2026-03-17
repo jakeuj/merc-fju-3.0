@@ -42,7 +42,7 @@ Help            ~
 Description
 $n一招$W「盤龍出谷」$Z﹐手中$O往外劃出﹐向$N直衝而來。~
 Chance          10
-Value           20
+Value           105
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -51,7 +51,7 @@ End
 Description
 $n手中$O一挺出﹐一招$W「龍奔四海」$Z如狂龍般往$N刺去。~
 Chance          10
-Value           20
+Value           125
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -60,7 +60,7 @@ End
 Description
 $n一招$W「強龍併肩」$Z將手中$O往$N鄭去﹐隨即飛身踢去﹐並接回$O。~
 Chance          10
-Value           20
+Value           145
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -69,7 +69,7 @@ End
 Description
 $n使出$W 盤龍匕法$Z之$Y『 困 』$Z字訣﹐以守帶攻的向$N襲去。~
 Chance          10
-Value           20
+Value           165
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -78,7 +78,7 @@ End
 Description
 $n使出$W 盤龍匕法$Z之$G『 生 』$Z字訣﹐以守帶攻的向$N襲去。~
 Chance          10
-Value           20
+Value           190
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
