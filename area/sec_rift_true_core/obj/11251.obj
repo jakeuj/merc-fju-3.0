@@ -1,0 +1,15 @@
+Vnum            11251
+Name            pulse lantern~
+ShortDesc       脈壓燈筒~
+Description
+這具燈筒外殼刻有細密導脈紋，內芯隨周圍脈動明滅，能在極暗井場維持穩定照明。
+~
+Unit            具~
+ItemType        ITEM_LIGHT
+WearLoc         ITEM_WEAR_LIGHT
+Takeable        Yes
+Level           56
+Value3          30
+Weight          1
+Cost            430
+End

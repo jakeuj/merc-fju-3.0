@@ -1,0 +1,24 @@
+Vnum            10212
+Name            裂界核心臺~
+Description
+核心臺幾乎懸在空中，四周封圈只剩殘片。腳下傳來深井脈動，像還有更巨大的核心層在更下方等待被揭開。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        10211
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         深層~
+End
+
+#Enquire
+Keyword         核心~
+End
+
+End

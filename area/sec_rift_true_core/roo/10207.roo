@@ -1,0 +1,24 @@
+Vnum            10207
+Name            偏廊監點~
+Description
+監點留下大量測壓刻線與手寫註記，部分數值已高到超出刻板原先量程。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10208
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

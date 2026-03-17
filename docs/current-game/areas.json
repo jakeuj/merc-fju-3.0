@@ -386,6 +386,44 @@
         "plans/area/0015-sec-rift-prison-core.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_underseal_dais",
+      "title": "鎮封底座",
+      "room_range": "10101-10112",
+      "load_order": 22,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_prison_core",
+      "theme_primary": "仙俠",
+      "theme_secondary": "鎮封底座 / 反衝承壓層",
+      "summary": "承接封印核心井心下方，落成鎮封主環、承壓旁廊與本核前緣過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_underseal_dais/index",
+        "area/sec_rift_underseal_dais/map.md",
+        "plans/area/0016-sec-rift-underseal-dais.md",
+        "area/rebuild_plan.md"
+      ]
+    },
+    {
+      "name": "sec_rift_true_core",
+      "title": "裂界本核",
+      "room_range": "10201-10212",
+      "load_order": 23,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_underseal_dais",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂界本核 / 失穩封圈",
+      "summary": "由鎮封底座最深縱井下探到本核外環、導脈偏廊與核心井場。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_true_core/index",
+        "area/sec_rift_true_core/map.md",
+        "plans/area/0017-sec-rift-true-core.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

@@ -1,0 +1,24 @@
+Vnum            10202
+Name            鎮裂前臺~
+Description
+前臺的鎮紋圈早已出現大片斷痕，仍勉強把外洩脈流導向四周石槽，讓本核沒有立刻崩塌。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10201
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            10211
+Name            核心井緣~
+Description
+井緣石臺圍著一道深不見底的黑紅井口，井壁殘留大片玻化層與剝落鎮紋。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10210
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        10212
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         本核~
+End
+
+#Enquire
+Keyword         風險~
+End
+
+End

@@ -1,0 +1,24 @@
+Vnum            10208
+Name            餘壓匯室~
+Description
+匯室中央槽池不斷翻出紅黑氣泡，牆邊放著碎裂的鎮印器具，顯示此處已多次超載。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10209
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

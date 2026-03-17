@@ -1,0 +1,32 @@
+Vnum            10203
+Name            失穩環廊~
+Description
+環廊沿著巨大空腔邊緣展開，地面每隔幾步就能看到補封失敗後留下的焦黑方印。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End
