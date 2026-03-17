@@ -331,9 +331,9 @@
 
 目前狀態：
 
-- `status = batch_bj_implemented`
+- `status = batch_bl_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch BJ implemented`
+- `current_batch = Batch BL implemented`
 
 ## Immediate Next Steps
 
@@ -6109,6 +6109,147 @@
 
 - 本批把 `fouen` 定位成高速、連段感更強的八式掌法，整體低於 `fole ken` 的重掌曲線。
 - 這樣能保留兩條名字相近模板在實戰節奏上的差異，而不是只做同值平移。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 與 Batch BL 共用同一輪 smoke 驗證
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BK Pre-Check
+
+### Scope
+
+- `god eagle claw`
+
+### Reference Basis
+
+- runtime `skill/g/godeagle_claw.ski`
+  - `Value` 全 `20`
+  - `Cost 15 / Wait 10 / Check check_unrigid_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `god eagle claw`
+  - `family = legacy-page:god eagle claw`
+  - combat 維度顯示 `9` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`god eagle claw`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `15 / COST_MOVE / 10`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `9`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `god eagle claw` 是 current-game 仍存在的獨立爪法 family，且 `Wait 10` 顯示它走的是偏慢、每式更重的重爪路線。
+- 九段完整招式全停在 `20`，很明顯是典型清值模板。
+- 本批先只回填 `Value` 梯度，保留原本的爪法節奏與空手身份。
+
+## Batch BK Result
+
+### Scope
+
+- `god eagle claw`
+
+### Runtime Changes
+
+`god eagle claw`
+
+- before: `20 x 9`
+- after: `115, 140, 170, 205, 245, 290, 345, 410, 490`
+- average: `268.89`
+
+### Design Notes
+
+- 本批把 `god eagle claw` 定位成中高階、慢節奏、後段重壓的九段爪法。
+- 曲線讓前段有鋪陳空間，後半再逐步堆出天鷹爪的威壓感。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 測試 ports:
+    - `15845`
+    - `16241`
+    - `16895`
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BL Pre-Check
+
+### Scope
+
+- `magic blast`
+
+### Reference Basis
+
+- runtime `skill/m/magic_blast.ski`
+  - `Value` 全 `20`
+  - `Cost 20 / Wait 10 / Weapon WEAPON_BOW / Check check_bow_attack`
+  - `CanAsk YES / Teach NO / Valid YES / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `magic blast`
+  - `family = legacy-page:magic blast`
+  - combat 維度顯示 `9` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`magic blast`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 10`
+- weapon / check: `WEAPON_BOW / check_bow_attack`
+- canask / teach / valid: `YES / NO / YES`
+- enable: `YES`
+- damage entries: `9`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `magic blast` 是玩家可學、可 ask、可 valid 的 bow 高階技能，不能當成單純 NPC 殘檔處理。
+- `Wait 10` 和完整九式箭招都說明它應該是高階重弓路線；全 `20` 顯然壓平了它的玩家向價值。
+- 本批先只回填 `Value` 梯度，保留原本的 bow 身份、成本與有效性設定。
+
+## Batch BL Result
+
+### Scope
+
+- `magic blast`
+
+### Runtime Changes
+
+`magic blast`
+
+- before: `20 x 9`
+- after: `140, 165, 195, 230, 270, 320, 380, 455, 540`
+- average: `299.44`
+
+### Design Notes
+
+- 本批把 `magic blast` 定位成高階、慢節奏、重弓爆發模板，整體高於一般中段攻擊技。
+- 這樣比較符合它作為可學 bow 技能的身份，也和更快節奏的短段技能拉開距離。
 
 ### Validation
 
