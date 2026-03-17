@@ -39,7 +39,7 @@ Legacy chain: `gwhip -> ming snake`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `伶 人 >= 一級, max 馬馬虎虎﹗; 刺 客 >= 一級, max 一代宗師﹗; 平 民 >= 一級, max 初窺門徑﹗; 郎 中 >= 一級, max 馬馬虎虎﹗; 武 官 >= 一級, max 出類拔萃﹗; 將 軍 >= 一級, max 登峰造極﹗; 天 師 >= 一級, max 心神領會﹗; 文 官 >= 一級, max 初窺門徑﹗; 道 士 >= 一級, max 馬馬虎虎﹗; 鑄劍師 >= 一級, max 心神領會﹗; 盜 賊 >= 一級, max 出神入化﹗`
 - Restrictions: `-`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[85, 100, 115, 130, 145, 160, 180, 200, 220, 245, 270]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -60,7 +60,7 @@ Legacy chain: `gwhip -> ming snake`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 登峰造極﹗; 武 官 >= 一級, max 馬馬虎虎﹗; 將 軍 >= 一級, max 登峰造極﹗; 盜 賊 >= 一級, max 神乎其技﹗`
 - Restrictions: `skills: 紫龍鞭法 >= 出類拔萃`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[120, 140, 160, 180, 205, 230, 260, 295]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`

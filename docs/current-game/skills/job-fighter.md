@@ -39,7 +39,7 @@ Legacy chain: `dragon phoenix / gold shield`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 八十級, max 出神入化﹗; 將 軍 >= 八十級, max 一代宗師﹗`
 - Restrictions: `attrs: 敏捷 >= 二十五, 力量 >= 三十; skills: 幔羅千葉刀法 >= 粗通皮毛, 魔刀 >= 出神入化; classes: 刺 客/將 軍`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[180, 210, 240, 270, 305, 345, 390, 440, 500]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`

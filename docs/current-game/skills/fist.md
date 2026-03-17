@@ -39,7 +39,7 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 一代宗師﹗; 武 官 >= 一級, max 出類拔萃﹗; 將 軍 >= 一級, max 一代宗師﹗; 盜 賊 >= 一級, max 出類拔萃﹗`
 - Restrictions: `-`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[70, 85, 100, 115, 130, 155, 190]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -60,7 +60,7 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 一代宗師﹗; 武 官 >= 一級, max 出類拔萃﹗; 將 軍 >= 一級, max 一代宗師﹗; 盜 賊 >= 一級, max 出類拔萃﹗`
 - Restrictions: `attrs: 力量 >= 十五; skills: 惡霸掌 >= 出類拔萃`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[125, 145, 165, 185, 205, 230, 260, 300]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -81,7 +81,7 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `伶 人 >= 一級, max 出類拔萃﹗; 刺 客 >= 一級, max 一代宗師﹗; 郎 中 >= 一級, max 出類拔萃﹗; 將 軍 >= 一級, max 登峰造極﹗; 天 師 >= 一級, max 出類拔萃﹗; 鑄劍師 >= 一級, max 出類拔萃﹗; 盜 賊 >= 一級, max 神乎其技﹗`
 - Restrictions: `attrs: 敏捷 >= 十五; skills: 玄陰掌 >= 出類拔萃`
-- Damage values: `[20, 20, 20, 20, 20, 20]`
+- Damage values: `[135, 160, 185, 210, 240, 275]`
 - Chance values: `[20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -102,7 +102,7 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - CanAsk / Teach / Valid / Enable: `Yes / Yes / Yes / Yes`
 - Class limits: `伶 人 >= 一級, max 出類拔萃﹗; 刺 客 >= 一級, max 一代宗師﹗; 郎 中 >= 一級, max 出類拔萃﹗; 武 官 >= 一級, max 馬馬虎虎﹗; 將 軍 >= 一級, max 登峰造極﹗; 天 師 >= 一級, max 出類拔萃﹗; 文 官 >= 一級, max 馬馬虎虎﹗; 道 士 >= 一級, max 馬馬虎虎﹗; 鑄劍師 >= 一級, max 出類拔萃﹗; 盜 賊 >= 一級, max 登峰造極﹗`
 - Restrictions: `-`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[75, 95, 115, 135, 155, 180, 210]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -123,7 +123,7 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 五十級, max 一代宗師﹗; 將 軍 >= 五十級, max 一代宗師﹗`
 - Restrictions: `attrs: 力量 >= 二十五; skills: 草薙拳法 >= 出類拔萃; classes: 刺 客/將 軍`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[170, 195, 220, 245, 275, 310, 350, 395, 445, 500]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -144,7 +144,7 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - CanAsk / Teach / Valid / Enable: `No / No / No / Yes`
 - Class limits: `伶 人 >= 一級, max 馬馬虎虎﹗; 刺 客 >= 一級, max 一代宗師﹗; 平 民 >= 一級, max 馬馬虎虎﹗; 郎 中 >= 一級, max 馬馬虎虎﹗; 武 官 >= 一級, max 出類拔萃﹗; 將 軍 >= 一級, max 登峰造極﹗; 天 師 >= 一級, max 馬馬虎虎﹗; 文 官 >= 一級, max 馬馬虎虎﹗; 道 士 >= 一級, max 馬馬虎虎﹗; 鑄劍師 >= 一級, max 馬馬虎虎﹗; 盜 賊 >= 一級, max 出類拔萃﹗`
 - Restrictions: `-`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[95, 115, 135, 155, 175, 200, 230]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -207,7 +207,7 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 一代宗師﹗; 將 軍 >= 一級, max 一代宗師﹗`
 - Restrictions: `-`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[120, 145, 170, 195, 220, 250, 285, 325, 370]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -228,7 +228,7 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `伶 人 >= 一級, max 馬馬虎虎﹗; 刺 客 >= 一級, max 一代宗師﹗; 郎 中 >= 一級, max 馬馬虎虎﹗; 武 官 >= 一級, max 心神領會﹗; 將 軍 >= 一級, max 一代宗師﹗; 天 師 >= 一級, max 馬馬虎虎﹗; 文 官 >= 一級, max 粗通皮毛﹗; 道 士 >= 一級, max 粗通皮毛﹗; 鑄劍師 >= 一級, max 馬馬虎虎﹗; 盜 賊 >= 一級, max 馬馬虎虎﹗`
 - Restrictions: `-`
-- Damage values: `[150, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[150, 135, 155, 175, 195, 220, 250]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -249,7 +249,7 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - CanAsk / Teach / Valid / Enable: `No / No / No / Yes`
 - Class limits: `刺 客 >= 一級, max 一代宗師﹗; 將 軍 >= 一級, max 登峰造極﹗; 盜 賊 >= 一級, max 神乎其技﹗; 伶 人 >= -, max -; 平 民 >= -, max -; 郎 中 >= -, max -; 武 官 >= -, max -; 天 師 >= -, max -; 文 官 >= -, max -; 道 士 >= -, max -; 鑄劍師 >= -, max -`
 - Restrictions: `skills: 天龍訣 >= 神乎其技`
-- Damage values: `[20, 20, 20]`
+- Damage values: `[220, 270, 330]`
 - Chance values: `[10, 10, 10]`
 - Parry values: `[0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0']`

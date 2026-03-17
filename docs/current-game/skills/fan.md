@@ -105,7 +105,7 @@ Legacy chain: `butterfly fan -> cloud fan -> flower fan / ink pen -> bamboo pen 
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / Yes`
 - Class limits: `伶 人 >= 一級, max 登峰造極﹗; 郎 中 >= 一級, max 一代宗師﹗; 天 師 >= 一級, max 登峰造極﹗; 鑄劍師 >= 一級, max 登峰造極﹗`
 - Restrictions: `attrs: 體格 >= 十五, 學識 >= 三十, 智力 >= 二十; skills: 臨書點穴 >= 登峰造極; classes: 伶 人/郎 中/天 師/鑄劍師`
-- Damage values: `[20, 20, 20, 20, 20, 20]`
+- Damage values: `[170, 200, 230, 265, 305, 350]`
 - Chance values: `[10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -170,7 +170,7 @@ Legacy chain: `butterfly fan -> cloud fan -> flower fan / ink pen -> bamboo pen 
 - CanAsk / Teach / Valid / Enable: `Yes / Yes / Yes / Yes`
 - Class limits: `伶 人 >= 一級, max 登峰造極﹗; 郎 中 >= 一級, max 登峰造極﹗; 天 師 >= 一級, max 一代宗師﹗; 文 官 >= 一級, max 心神領會﹗; 道 士 >= 一級, max 馬馬虎虎﹗; 鑄劍師 >= 一級, max 登峰造極﹗; 盜 賊 >= 一級, max 馬馬虎虎﹗`
 - Restrictions: `-`
-- Damage values: `[20, 20, 20, 20]`
+- Damage values: `[75, 90, 105, 125]`
 - Chance values: `[10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0']`
@@ -213,7 +213,7 @@ Legacy chain: `butterfly fan -> cloud fan -> flower fan / ink pen -> bamboo pen 
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `伶 人 >= 一級, max 登峰造極﹗; 郎 中 >= 一級, max 登峰造極﹗; 天 師 >= 一級, max 一代宗師﹗; 鑄劍師 >= 一級, max 登峰造極﹗`
 - Restrictions: `attrs: 學識 >= 十五; skills: 筆之心 >= 出類拔萃`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[95, 105, 115, 125, 135, 145, 155, 165, 180, 195, 210, 230, 255]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`

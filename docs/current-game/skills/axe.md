@@ -39,7 +39,7 @@ Legacy chain: `ghost axe -> tiger axe`
 - CanAsk / Teach / Valid / Enable: `Yes / Yes / Yes / Yes`
 - Class limits: `伶 人 >= 一級, max 馬馬虎虎﹗; 刺 客 >= 一級, max 神乎其技﹗; 平 民 >= 一級, max 馬馬虎虎﹗; 郎 中 >= 一級, max 馬馬虎虎﹗; 武 官 >= 一級, max 出類拔萃﹗; 將 軍 >= 一級, max 一代宗師﹗; 天 師 >= 一級, max 馬馬虎虎﹗; 文 官 >= 一級, max 馬馬虎虎﹗; 道 士 >= 一級, max 馬馬虎虎﹗; 鑄劍師 >= 一級, max 馬馬虎虎﹗; 盜 賊 >= 一級, max 馬馬虎虎﹗`
 - Restrictions: `-`
-- Damage values: `[20, 20, 20, 20, 20, 20]`
+- Damage values: `[95, 115, 135, 155, 180, 210]`
 - Chance values: `[20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -60,7 +60,7 @@ Legacy chain: `ghost axe -> tiger axe`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 一級, max 神乎其技﹗; 將 軍 >= 一級, max 一代宗師﹗`
 - Restrictions: `attrs: 力量 >= 三十; skills: 神盤鬼斧六絕式 >= 神乎其技; classes: 刺 客/將 軍`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[180, 205, 230, 255, 280, 305, 335, 365, 400, 440, 485, 540, 600]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`

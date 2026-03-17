@@ -86,7 +86,7 @@ Legacy chain: `cloud steps -> gdragon steps -> mirage steps`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `刺 客 >= 五十級, max 一代宗師﹗; 將 軍 >= 五十級, max 登峰造極﹗`
 - Restrictions: `attrs: 敏捷 >= 十五; skills: 青玄身法 >= 登峰造極; classes: 刺 客/將 軍`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[115, 135, 155, 175, 195, 215, 240]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -111,7 +111,7 @@ Legacy chain: `cloud ghost -> wind color steps`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `伶 人 >= 一級, max 一代宗師﹗; 郎 中 >= 一級, max 一代宗師﹗; 天 師 >= 一級, max 一代宗師﹗; 文 官 >= 一級, max 出類拔萃﹗; 道 士 >= 一級, max 出類拔萃﹗; 鑄劍師 >= 一級, max 一代宗師﹗`
 - Restrictions: `-`
-- Damage values: `[20, 20, 20, 20, 20, 20]`
+- Damage values: `[70, 90, 110, 130, 150, 170]`
 - Chance values: `[10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -132,7 +132,7 @@ Legacy chain: `cloud ghost -> wind color steps`
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / Yes`
 - Class limits: `伶 人 >= 一級, max 登峰造極﹗; 郎 中 >= 一級, max 登峰造極﹗; 天 師 >= 一級, max 登峰造極﹗; 文 官 >= 一級, max 出類拔萃﹗; 道 士 >= 一級, max 出類拔萃﹗; 鑄劍師 >= 一級, max 一代宗師﹗`
 - Restrictions: `attrs: 學識 >= 二十; skills: 雲蹤魅影 >= 出類拔萃`
-- Damage values: `[20, 20, 20, 20, 20, 20]`
+- Damage values: `[110, 130, 150, 170, 190, 215]`
 - Chance values: `[20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -157,7 +157,7 @@ Legacy chain: `nine steps -> color steps`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `天 師 >= 一級, max 登峰造極﹗; 鑄劍師 >= 一級, max 登峰造極﹗`
 - Restrictions: `attrs: 敏捷 >= 十五; skills: 九天靈影步 >= 出類拔萃; classes: 天 師/鑄劍師`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[80, 95, 110, 125, 140, 160, 180]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -178,7 +178,7 @@ Legacy chain: `nine steps -> color steps`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `天 師 >= 一級, max 出神入化﹗; 道 士 >= 一級, max 心神領會﹗; 鑄劍師 >= 一級, max 登峰造極﹗`
 - Restrictions: `-`
-- Damage values: `[20, 20, 20, 100, 20, 20, 20, 20, 20]`
+- Damage values: `[45, 55, 65, 80, 95, 110, 125, 145]`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -203,7 +203,7 @@ Legacy chain: `shade steps -> wind steps`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / Yes`
 - Class limits: `伶 人 >= 一級, max 心神領會﹗; 刺 客 >= 一級, max 心神領會﹗; 郎 中 >= 一級, max 心神領會﹗; 武 官 >= 一級, max 馬馬虎虎﹗; 將 軍 >= 一級, max 心神領會﹗; 天 師 >= 一級, max 心神領會﹗; 文 官 >= 一級, max 馬馬虎虎﹗; 道 士 >= 一級, max 馬馬虎虎﹗; 鑄劍師 >= 一級, max 心神領會﹗; 盜 賊 >= 一級, max 登峰造極﹗`
 - Restrictions: `-`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[60, 75, 90, 105, 120, 135, 150]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
@@ -224,7 +224,7 @@ Legacy chain: `shade steps -> wind steps`
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / Yes`
 - Class limits: `盜 賊 >= 一級, max 一代宗師﹗`
 - Restrictions: `attrs: 敏捷 >= 二十; skills: 換星步 >= 出類拔萃; classes: 盜 賊`
-- Damage values: `[20, 20, 20, 20, 20, 20, 20, 20]`
+- Damage values: `[90, 110, 130, 150, 170, 190, 210, 235]`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
