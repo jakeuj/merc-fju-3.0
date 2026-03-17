@@ -331,9 +331,9 @@
 
 目前狀態：
 
-- `status = batch_bt_implemented`
+- `status = batch_bu_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch BT implemented`
+- `current_batch = Batch BU implemented`
 
 ## Immediate Next Steps
 
@@ -6814,6 +6814,79 @@
 
 - 本批把 `ba blade` 定位成高速、十四段、後段斬殺力持續堆高的刀系模板。
 - 整體曲線高於 `b_a_1`，讓霸刀路線在長段數模板裡有更鮮明的刀氣重量。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 測試 ports:
+    - `15850`
+    - `16246`
+    - `16900`
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BU Pre-Check
+
+### Scope
+
+- `lubu revenge`
+
+### Reference Basis
+
+- runtime `skill/l/luburevenge.ski`
+  - 單段 `Value 20`
+  - `Cost 20 / Wait 1 / Check check_unrigid_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `lubu revenge`
+  - `family = legacy-page:lubu revenge`
+  - combat 維度顯示單段 `Value 20`
+- `area/limbo/obj/382.obj`
+  - 仍存在 `lubu revenge book`
+
+### Mandatory Pre-Check Snapshot
+
+`lubu revenge`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 1`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `1`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `lubu revenge` 雖然只有單段，但 current-game 與 limbo 祕笈都說明它是玩家向 legacy 攻擊技，不是單純殘檔。
+- 單段高概念招式維持 `Value 20` 幾乎沒有任何存在感，明顯仍屬清值模板。
+- 本批先只回填單段 `Value`，保留原本的高速、高 chance 單點爆發身份。
+
+## Batch BU Result
+
+### Scope
+
+- `lubu revenge`
+
+### Runtime Changes
+
+`lubu revenge`
+
+- before: `20`
+- after: `620`
+
+### Design Notes
+
+- 本批把 `lubu revenge` 定位成高爆發、單段、極端終結型的 legacy 技能。
+- 這樣比較符合它單式奧義招的形式，也避免單段模板繼續停在清值狀態。
 
 ### Validation
 
