@@ -1,11 +1,12 @@
 Vnum            11351
-Keywords        裂紋導盤 導盤~
-Name            裂紋導盤~
+Name            裂紋導盤 導盤~
 ShortDesc       一枚裂紋導盤~
-Description     一枚裂紋導盤被擺在石臺上，盤面仍殘留微弱脈光。~
+Description
+一枚裂紋導盤被擺在石臺上，盤面仍殘留微弱脈光。
+~
 ItemType        ITEM_TRASH
-ExtraFlags      ITEM_TAKE
-WearFlags       ITEM_HOLD
+Takeable        Yes
+WearLoc         ITEM_HOLD
 Value           0 0 0 0 0
 Weight          2
 Cost            150

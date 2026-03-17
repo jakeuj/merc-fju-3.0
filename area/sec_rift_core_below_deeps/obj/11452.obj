@@ -1,11 +1,12 @@
 Vnum            11452
-Keywords        測壓針 量測針~
-Name            測壓針~
+Name            測壓針 量測針~
 ShortDesc       一支測壓針~
-Description     一支測壓針釘在裂紋石板上，針尾仍顫著細微震鳴。~
+Description
+一支測壓針釘在裂紋石板上，針尾仍顫著細微震鳴。
+~
 ItemType        ITEM_TRASH
-ExtraFlags      ITEM_TAKE
-WearFlags       ITEM_HOLD
+Takeable        Yes
+WearLoc         ITEM_HOLD
 Value           0 0 0 0 0
 Weight          1
 Cost            120

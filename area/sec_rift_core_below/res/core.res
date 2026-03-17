@@ -1,44 +1,7 @@
-#MOB
-Vnum            11301
-Room            10302
-MaxInArea       2
-MaxInRoom       1
-End
-
-#MOB
-Vnum            11302
-Room            10307
-MaxInArea       2
-MaxInRoom       1
-End
-
-#MOB
-Vnum            11303
-Room            10311
-MaxInArea       1
-MaxInRoom       1
-End
-
-#OBJ
-Vnum            11351
-Room            10304
-MaxInArea       1
-End
-
-#OBJ
-Vnum            11352
-Room            10310
-MaxInArea       1
-End
-
-#OBJ
-Vnum            11353
-Room            10309
-MaxInArea       1
-End
-
-#OBJ
-Vnum            11354
-Room            10312
-MaxInArea       1
-End
+M 11301 2 10302 井側巡補者
+M 11302 2 10307 測壓記錄員
+M 11303 1 10311 封橋鎮守
+O 11351 1 10304 裂紋導盤
+O 11352 1 10310 封橋石片
+O 11353 1 10309 補紋墨條
+O 11354 1 10312 底脈鎮符

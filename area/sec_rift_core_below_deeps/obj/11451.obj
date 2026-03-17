@@ -1,11 +1,12 @@
 Vnum            11451
-Keywords        渦紋導盤 導盤~
-Name            渦紋導盤~
+Name            渦紋導盤 導盤~
 ShortDesc       一枚渦紋導盤~
-Description     一枚渦紋導盤被安放在石座上，盤面有細碎脈光流轉。~
+Description
+一枚渦紋導盤被安放在石座上，盤面有細碎脈光流轉。
+~
 ItemType        ITEM_TRASH
-ExtraFlags      ITEM_TAKE
-WearFlags       ITEM_HOLD
+Takeable        Yes
+WearLoc         ITEM_HOLD
 Value           0 0 0 0 0
 Weight          2
 Cost            160

@@ -1,11 +1,12 @@
 Vnum            11352
-Keywords        封橋石片 石片~
-Name            封橋石片~
+Name            封橋石片 石片~
 ShortDesc       一塊封橋石片~
-Description     一塊封橋石片邊緣被高熱熔蝕，符紋已看不完整。~
+Description
+一塊封橋石片邊緣被高熱熔蝕，符紋已看不完整。
+~
 ItemType        ITEM_TRASH
-ExtraFlags      ITEM_TAKE
-WearFlags       ITEM_HOLD
+Takeable        Yes
+WearLoc         ITEM_HOLD
 Value           0 0 0 0 0
 Weight          3
 Cost            120

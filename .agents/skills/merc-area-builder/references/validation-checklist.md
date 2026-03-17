@@ -18,6 +18,8 @@
 14. 若牽涉世界觀敘事、官方公告、元老/神族 NPC 或公開版提示，再對照 `docs/3yWebsite/docs/system.md`、`docs/3yWebsite/docs/data/news.json`、`docs/3yWebsite/docs/data/immortals.json`
 15. 若這輪有新增或修改 `mob/*.mob`，先比對 `Class` 是否來自 repo 內已成功載入的常數；不要把文件或直覺猜到的 class name 直接拿去賭 parser 會接受
 16. 若這輪有新增或修改 `obj/*.obj` 的 `ITEM_FOOD` / `ITEM_DRINK_CON`，在啟動前先對照 working examples，確認 `Value*` 欄位已補齊且語意合理
+16.1 若這輪有新增或修改 `obj/*.obj`，先做一輪欄位名靜態檢查：area object loader 預期的是 `Name / ShortDesc / Description / ItemType / Takeable / WearLoc / Value*` 這一系欄位；若看到 `Keywords / ExtraFlags / WearFlags` 這類更像 runtime/save serialization 的欄位名，先回修，不要等到 smoke test 才發現
+16.2 若這輪有新增或修改 `res/*.res`，先做一輪格式檢查：現行 area reset loader 預期的是單行 `M/O/P/G/E/D/R/A` 指令並以 EOF 結束；若看到 `#MOB / #OBJ / Room / MaxInArea / MaxInRoom` 這類 block 風格，或照舊文件額外放了 literal `S` terminator，先回修，不要等到啟動期才被 `Fread_number` 擋下來
 17. 若環境允許，實際啟動遊戲或執行區域 reload；優先讀第一個錯誤，而不是一次猜全部
 18. 若有做 smoke test，先清空 `debug/*` 內容，再開始測試，避免把舊 bug 誤當成這次新增 area 的結果
 19. 成功與否不能只看 process 是否暫時存活；至少要確認 log 或啟動輸出中出現明確成功訊號

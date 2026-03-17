@@ -1,11 +1,12 @@
 Vnum            11353
-Keywords        補紋墨條 墨條~
-Name            補紋墨條~
+Name            補紋墨條 墨條~
 ShortDesc       一束補紋墨條~
-Description     一束補紋墨條綁得很緊，像是隨時準備進行緊急修補。~
+Description
+一束補紋墨條綁得很緊，像是隨時準備進行緊急修補。
+~
 ItemType        ITEM_TRASH
-ExtraFlags      ITEM_TAKE
-WearFlags       ITEM_HOLD
+Takeable        Yes
+WearLoc         ITEM_HOLD
 Value           0 0 0 0 0
 Weight          1
 Cost            90

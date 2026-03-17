@@ -53,6 +53,13 @@ S
 
 ## 執行模型
 
+文件與目前 loader 在「結束符號」上有一個重要差異：
+
+- legacy 文件把 `S` 視為 reset 結束行
+- 目前 `src/load.c` 的 `load_resets()` 實作是一路讀到 EOF，沒有特判 `S`
+
+因此在目前 repo 實務上，`S` 不應當作必要 terminator；若真的放 literal `S`，反而可能被當成一般命令讀壞。
+
 文件說明 reset 會在：
 
 - 系統啟動時先完整跑一輪

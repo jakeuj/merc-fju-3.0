@@ -1,11 +1,12 @@
 Vnum            11354
-Keywords        底脈鎮符 鎮符~
-Name            底脈鎮符~
+Name            底脈鎮符 鎮符~
 ShortDesc       一枚底脈鎮符~
-Description     一枚底脈鎮符表面浮現細微裂光，散發不安定的熱度。~
+Description
+一枚底脈鎮符表面浮現細微裂光，散發不安定的熱度。
+~
 ItemType        ITEM_TRASH
-ExtraFlags      ITEM_TAKE
-WearFlags       ITEM_HOLD
+Takeable        Yes
+WearLoc         ITEM_HOLD
 Value           0 0 0 0 0
 Weight          1
 Cost            220

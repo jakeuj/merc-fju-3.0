@@ -69,6 +69,11 @@
 
 - `area/directory.lst` 已加入 `sec_rift_core_below`
 - `area/sec_rift_true_core/roo/10212.roo` 已補上 down 出口到 `10301`
+- postmortem:
+  - 第一版 implementation 只驗到 `map.md` / `roo` 與 compile，未把 `obj/*.obj` 實際 loader schema 納入 gate
+  - `obj/11351-11354.obj` 一度誤用 `Keywords / ExtraFlags / WearFlags` 這種不屬於 area object loader 的欄位名，啟動期會在 `Load_object` 報 `命令 Keywords 不正確`
+  - `res/core.res` 也曾誤用 `#MOB / #OBJ / Room / MaxInArea` 這類 block 風格，與現行 area reset loader 不相容
+  - 後續已改回 area loader 接受的 `Name / Takeable / WearLoc / Description` 與 `M/O/.../S` 格式，並把這個教訓回寫到驗證規則
 
 ## Next Step Prompt
 

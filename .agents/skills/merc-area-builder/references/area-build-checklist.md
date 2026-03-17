@@ -21,10 +21,14 @@
 1. `index`：確認 `Name`、`Serial`、`Capital`、Description 與實際區域用途一致。
 2. `mob/*.mob`：欄位順序遵循 `document/mob.txt`，並核對 `Level`、旗標、`Process`。
 3. `obj/*.obj`：依 `document/obj.txt` 填寫，若會由 reset 或商店使用，確保後續 `res` / `shp` 對得上。
+補充：
+不要把 runtime/save 用的欄位名誤帶進 area object source；`obj/*.obj` 預期用 `Name / ShortDesc / Description / ItemType / Takeable / WearLoc / Value*`，不是 `Keywords / ExtraFlags / WearFlags`。
 4. `roo/*.roo`：依 `document/room.txt` 填寫，每個出口都確認 `ExitVnum` 指向存在房間，且盡量成對。
 5. 若 `roo` 內有 `#Keyword`，確認它不只是靜態描述，而是和玩家實際互動對得上；像 `hole` 這種關鍵字若提示玩家 `bore hole`，就要把該動詞、路徑與提示一起視為正式玩法。
 6. 若互動不是內建方向/通用指令，再確認它的實作層級：只寫 `#Keyword` 不夠，還需要現成 `do_*` 指令或 `.roo` 內 `#Job` 綁到 `src/job.c` 已註冊的 function。
 7. `res/*.res`：依 `document/reset.txt` 重新核對所有 `M/E/G/O/D` 關聯。
+補充：
+不要把 block-style reset source 誤帶進 area `res/*.res`；現行 loader 要的是單行 `M/O/P/G/E/D/R/A/S` 指令，不是 `#MOB / #OBJ / Room / MaxInArea / MaxInRoom`。
 8. `shp/*.shp`：依 `document/shop.txt` 設定 `Keeper`、販售類型與價格。
 9. `map`：若該區已有 `map`，沿用原格式，不要自行發明新格式。
 10. 若 parser 細節不確定，回看 `doc/area-file-format.txt`：字串 `~` 結尾、數值 `|` 組合、空白與多行字串解析都以它為準。

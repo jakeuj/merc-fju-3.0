@@ -1,11 +1,12 @@
 Vnum            11453
-Keywords        鎮印片 補紋片~
-Name            鎮印片~
+Name            鎮印片 補紋片~
 ShortDesc       一片半融鎮印片~
-Description     一片半融鎮印片邊緣焦黑，刻紋只剩斷續可辨。~
+Description
+一片半融鎮印片邊緣焦黑，刻紋只剩斷續可辨。
+~
 ItemType        ITEM_TRASH
-ExtraFlags      ITEM_TAKE
-WearFlags       ITEM_HOLD
+Takeable        Yes
+WearLoc         ITEM_HOLD
 Value           0 0 0 0 0
 Weight          1
 Cost            110

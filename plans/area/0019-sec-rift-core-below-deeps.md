@@ -69,6 +69,11 @@
 
 - `area/directory.lst` 已加入 `sec_rift_core_below_deeps`
 - `area/sec_rift_core_below/roo/10312.roo` 已補上 down 出口到 `10401`
+- postmortem:
+  - 本區 `obj/11451-11454.obj` 原先延續上一區錯模板，誤用了 `Keywords / ExtraFlags / WearFlags`
+  - `res/core.res` 也延續了 `#MOB / #OBJ / Room / MaxInArea` block 風格，不是 area reset loader 會接受的 schema
+  - 這批欄位名較接近另一套 runtime/save serialization，不是 area object / reset loader 會接受的 schema
+  - 後續已統一改回 area `obj/*.obj` 與 `.res` 正式格式，避免同型 parser 錯誤繼續往地下鏈複製
 
 ## Next Step Prompt
 

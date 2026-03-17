@@ -1,44 +1,7 @@
-#MOB
-Vnum            11401
-Room            10402
-MaxInArea       2
-MaxInRoom       1
-End
-
-#MOB
-Vnum            11402
-Room            10407
-MaxInArea       2
-MaxInRoom       1
-End
-
-#MOB
-Vnum            11403
-Room            10411
-MaxInArea       1
-MaxInRoom       1
-End
-
-#OBJ
-Vnum            11451
-Room            10404
-MaxInArea       1
-End
-
-#OBJ
-Vnum            11452
-Room            10410
-MaxInArea       1
-End
-
-#OBJ
-Vnum            11453
-Room            10409
-MaxInArea       1
-End
-
-#OBJ
-Vnum            11454
-Room            10412
-MaxInArea       1
-End
+M 11401 2 10402 入脈守望者
+M 11402 2 10407 渦腹測紋員
+M 11403 1 10411 底潮封脈守
+O 11451 1 10404 渦紋導盤
+O 11452 1 10410 測壓針
+O 11453 1 10409 鎮印片
+O 11454 1 10412 封檻斷紋石
