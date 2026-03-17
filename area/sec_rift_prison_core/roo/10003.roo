@@ -1,0 +1,40 @@
+Vnum            10003
+Name            心獄前廊~
+Description
+前廊兩側排列著殘缺的界柱，柱面刻紋彼此相扣，把整條通道壓成一種近乎無聲的狀態。站在此處，能感覺到呼吸與心跳都被迫順著深處傳來的脈律慢慢對齊，像這裡本來就不容任何雜音存在。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         封印~
+End
+
+#Enquire
+Keyword         前路~
+End
+
+End

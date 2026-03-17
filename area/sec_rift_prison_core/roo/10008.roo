@@ -1,0 +1,39 @@
+Vnum            10008
+Name            灰燼裂壇~
+Description
+裂壇像被一股無法承受的衝擊從中央炸開，壇面與地面堆滿暗灰碎屑。碎屑下仍可辨認出繁複鎮印輪廓，彷彿這裡原本是最後一道監封程序的施作點，只是某次再也沒有撐住。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10009
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         裂壇~
+Description
+壇面裂口深得不像自然崩壞，更像有某種來自下方的力量直接穿透了鎮印。
+~
+End
+
+#Enquire
+Keyword         裂壇~
+End
+
+#Enquire
+Keyword         鎮印~
+End
+
+End

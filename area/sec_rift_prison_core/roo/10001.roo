@@ -1,0 +1,32 @@
+Vnum            10001
+Name            灰黯井臺~
+Description
+落點是一圈被黯灰石塊勉強托住的井臺，腳下每一道裂縫都滲出極淡紅光，像地底有心脈正透過石層緩慢搏動。抬頭只能看見上方界井留下的一線黑影，四周卻早已被更深層的靜壓包住。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        9912
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         封印~
+End
+
+End

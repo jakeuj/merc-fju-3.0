@@ -1,0 +1,31 @@
+Vnum            10012
+Name            封印井心~
+Description
+井心是一片像被整座深界硬壓出來的圓形空場，中央懸著一團近乎靜止的暗紅光核，周圍則環繞著數十道忽明忽滅的斷裂鎮印。它不像單純的封印節點，更像某種巨大存在被迫縮束後留下的表面，任何注視都會讓人誤以為那團光核也正在回望。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        10011
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         井心~
+Description
+井心並不平靜，那種近乎停止的脈動反而更像被極端力量強行按住後留下的餘波。
+~
+End
+
+#Enquire
+Keyword         封印~
+End
+
+#Enquire
+Keyword         下層~
+End
+
+End

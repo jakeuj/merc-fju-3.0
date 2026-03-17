@@ -1,0 +1,30 @@
+Vnum            11003
+Name            core prison gaoler~
+ShortDesc       封印典獄者~
+Description
+典獄者像一道被重重鎮印束進甲形輪廓的高大黑影，胸前懸著一團始終
+不肯熄去的暗紅核心。每當井心深處傳來微弱震動，它周身鎮紋便會依
+序浮亮，像整個存在就是為了承擔封印主體最直接的反衝。
+~
+StayArea        Yes
+Alignment       -560
+Level           58
+Hitroll         15
+Protect         -15
+Damroll         16
+Str             19
+Int             12
+Wis             13
+Dex             13
+Con             18
+Hp              10800
+Mana            430
+Move            172
+Class           CLASS_FIGHTER
+Gold            840
+Multipile       100
+AttackRatio     134
+DodgeRatio      120
+Migrate         0
+Sex             SEX_NEUTRAL
+End

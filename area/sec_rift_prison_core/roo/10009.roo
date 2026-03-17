@@ -1,0 +1,32 @@
+Vnum            10009
+Name            觀獄側座~
+Description
+側座嵌在石壁內側，前方保留著幾道能俯看井心前帶的狹長視口。坐在這裡時，可以同時看到鎮壁血紋的明滅與深處井階的微動，像這裡原本就是專門觀測封印是否即將失守的地方。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        10011
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         觀獄~
+End
+
+#Enquire
+Keyword         井心~
+End
+
+End

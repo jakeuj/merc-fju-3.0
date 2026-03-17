@@ -329,6 +329,63 @@
         "plans/area/0004-jingxiang-road.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_abyss",
+      "title": "裂界禁底",
+      "room_range": "9801-9812",
+      "load_order": 19,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_deeps",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂界 / 禁底封印",
+      "summary": "由裂界深層下探到禁底落點、封印回廊與禁底界井的禁底封印段。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_abyss/index",
+        "area/sec_rift_abyss/map.md",
+        "plans/area/0013-sec-rift-abyss.md",
+        "area/rebuild_plan.md"
+      ]
+    },
+    {
+      "name": "sec_rift_nadir",
+      "title": "裂界禁牢",
+      "room_range": "9901-9912",
+      "load_order": 20,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_abyss",
+      "theme_primary": "仙俠",
+      "theme_secondary": "禁底 / 裂界禁牢",
+      "summary": "承接裂界禁底，轉入禁牢前帶、鎮鎖側線與禁牢界井的高壓封印區。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_nadir/index",
+        "area/sec_rift_nadir/map.md",
+        "plans/area/0014-sec-rift-nadir.md",
+        "area/rebuild_plan.md"
+      ]
+    },
+    {
+      "name": "sec_rift_prison_core",
+      "title": "封印核心",
+      "room_range": "10001-10012",
+      "load_order": 21,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_nadir",
+      "theme_primary": "仙俠",
+      "theme_secondary": "禁牢 / 封印核心",
+      "summary": "由裂界禁牢再下探到鎮封主廊、護印支線與封印井心的心獄鎮封帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_prison_core/index",
+        "area/sec_rift_prison_core/map.md",
+        "plans/area/0015-sec-rift-prison-core.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

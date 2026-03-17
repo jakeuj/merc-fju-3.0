@@ -1,0 +1,39 @@
+Vnum            10006
+Name            護印旁室~
+Description
+旁室靠牆留著整齊的石櫃與空缺支架，還能看見補給與器物曾被仔細分類的痕跡。牆上的灰痕一層壓一層，像有人在漫長歲月裡反覆回到這裡休整，再獨自走回更深的井心。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         石櫃~
+Description
+石櫃邊角佈滿被重物長期拖放的磨痕，顯示這裡原本就是守印者的補給與整備處。
+~
+End
+
+#Enquire
+Keyword         補給~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

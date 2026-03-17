@@ -1,0 +1,31 @@
+Vnum            11002
+Name            bloodsigil prison shade~
+ShortDesc       血紋幽衛~
+Description
+幽衛像由乾硬血紋與黑影縫成的人形殘痕，行動時總會拖出極細的暗紅
+光絲。它在直橋與鎮壁之間巡行時，像整個存在只是為了確認這層封印
+是否還有任何一寸鬆動。
+~
+StayArea        Yes
+AlignEvil       Yes
+Alignment       -460
+Level           53
+Hitroll         13
+Protect         -11
+Damroll         14
+Str             18
+Int             11
+Wis             11
+Dex             14
+Con             17
+Hp              8600
+Mana            360
+Move            164
+Class           CLASS_THIEF
+Gold            620
+Multipile       100
+AttackRatio     130
+DodgeRatio      120
+Migrate         0
+Sex             SEX_NEUTRAL
+End

@@ -1,0 +1,31 @@
+Vnum            10002
+Name            鎮鏈斜道~
+Description
+斜道沿著井壁緩緩往前延展，兩側嵌著粗重鎮鏈與斷裂鐵環，像原本是用來承受更劇烈震動的固定結構。每當腳步落下，整條斜道都會回傳一陣沉悶震顫，像某種更深的力量正隔著石壁回應。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10001
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         鎮鏈~
+Description
+鎮鏈表面佈滿深刻磨痕，顯示它們長年在承受超出常理的拉扯。
+~
+End
+
+End

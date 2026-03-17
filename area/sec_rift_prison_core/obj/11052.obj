@@ -1,0 +1,14 @@
+Vnum            11052
+Name            ward ration~
+ShortDesc       鎮印乾糧~
+Description
+一份以粗布和細鍊束起的乾糧被穩穩收在石櫃邊。
+~
+Unit            份~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           48
+Value           22 34 5 0
+Weight          1
+Cost            170
+End

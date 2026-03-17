@@ -1,0 +1,32 @@
+Vnum            10004
+Name            鎮脈直橋~
+Description
+直橋橫跨一道看不見底的黑縫，橋面每隔數步就嵌著仍在微亮的鎮脈石釘。它們不像普通橋梁構件，更像整條橋本身就是某個巨大鎮封陣的一節筋骨，正在勉強維持下方不被撕開。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10010
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         鎮脈~
+End
+
+#Enquire
+Keyword         下層~
+End
+
+End

@@ -1,0 +1,16 @@
+Vnum            11054
+Name            prison cleaver~
+ShortDesc       封獄裂鋒~
+Description
+一柄刃身覆著交錯血紋與鎮印刻痕的重鋒斜倚在井階旁。
+~
+Unit            柄~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           52
+Value           0 -1 -1 WEAPON_SWORD
+Weight          5
+Cost            480
+Exp             36
+End

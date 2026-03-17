@@ -1,0 +1,39 @@
+Vnum            10005
+Name            界鎖圓庭~
+Description
+圓庭中央是一座層層下陷的石盤，盤面刻滿對稱界紋，四周則留著許多曾被替換過器具的痕跡。那些痕跡凌亂卻不慌亂，像過去的守印者在這裡反覆校正封印，直到再也沒有餘力回來。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10006
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         界鎖~
+Description
+盤面中央的界鎖紋彼此牽連，顯示這裡不是普通祭壇，而是鎮封主體的一個調律節點。
+~
+End
+
+#Enquire
+Keyword         封印~
+End
+
+#Enquire
+Keyword         心獄~
+End
+
+End

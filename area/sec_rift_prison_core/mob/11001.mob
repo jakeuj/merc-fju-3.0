@@ -1,0 +1,33 @@
+Vnum            11001
+Name            seal guide remnant~
+ShortDesc       鎮印引路者~
+Description
+這道殘影像由灰白鎮印與微弱紅光拼接而成，始終靜立在旁室邊緣。
+它注視深處時幾乎沒有任何動作，卻又讓人莫名確信這裡曾有誰把最
+後的秩序留在它身上，只為替後來者指出一條仍能退回的路。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           48
+Hitroll         1
+Protect         0
+Damroll         0
+Str             12
+Int             16
+Wis             16
+Dex             12
+Con             12
+Hp              4200
+Mana            320
+Move            155
+Class           0
+Gold            360
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

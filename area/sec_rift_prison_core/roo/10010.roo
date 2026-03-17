@@ -1,0 +1,32 @@
+Vnum            10010
+Name            崩印觀臺~
+Description
+觀臺原本應是監看主橋與井心的高點，如今邊緣卻被撕裂出大片缺口，只剩斷裂欄座與傾斜石板。站在此處，能清楚感覺整片地面都在隨著下方某種巨大存在的起伏而極緩地顫動。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10011
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         井心~
+End
+
+#Enquire
+Keyword         下層~
+End
+
+End

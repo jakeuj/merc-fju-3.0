@@ -1,0 +1,39 @@
+Vnum            10007
+Name            血紋鎮壁~
+Description
+高壁被一層層深紅紋痕覆住，像有人曾以自身精血硬把禁紋補上。那些痕跡如今早已乾硬發黑，卻仍能在深處震動傳來時泛起微光，讓人不寒而慄地意識到封印能維持至今代價極大。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10006
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         血紋~
+Description
+血紋早已凝成石色的一部分，顯示當年的補封不是短暫權宜，而是拿命換來的延續。
+~
+End
+
+#Enquire
+Keyword         血紋~
+End
+
+#Enquire
+Keyword         封印~
+End
+
+End

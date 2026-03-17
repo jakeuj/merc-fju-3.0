@@ -42,6 +42,9 @@ title: Current Game Areas
 | `sec_rift_deeps` | 裂界深層 / 深層封印帶 | `9701-9712` | `rebuild addition` | 裂谷核心之下的第二層核心區，保留更深裂界禁底的後續延伸。 |
 | `beiping_outskirts` | 北平郊區 / 北境外郊過渡帶 | `9101-9108` | `rebuild addition` | 由 `beiping` 往易京與白狼山方向展開的第一段外郊。 |
 | `jingxiang_road` | 荊襄大道 / 荊州走廊幹道 | `9301-9310` | `rebuild addition` | 目前以 world-link stub 方式保留襄陽、新野、江夏的後續母城掛接。 |
+| `sec_rift_abyss` | 裂界禁底 / 禁底封印帶 | `9801-9812` | `rebuild addition` | 由裂界深層下探到禁底落點、封印回廊與禁底界井。 |
+| `sec_rift_nadir` | 裂界禁牢 / 禁牢封印帶 | `9901-9912` | `rebuild addition` | 承接裂界禁底，轉入更高壓的禁牢封印與界井前帶。 |
+| `sec_rift_prison_core` | 封印核心 / 心獄鎮封帶 | `10001-10012` | `rebuild addition` | 由裂界禁牢再下探到鎮封主廊、護印支線與封印井心。 |
 
 ## Recent Rebuild Areas
 
@@ -59,6 +62,9 @@ title: Current Game Areas
 - `sec_rift_below`：承接忘川地穴最深處，落成裂谷著階、風脊與祕境沉門前帶，讓地下鏈進入更深的異象裂谷區。
 - `sec_rift_core`：把異象裂谷下方接成心核主廊、晶脈支線與底層封界，形成真正的地下高風險核心節點。
 - `sec_rift_deeps`：再由裂谷心核下探到封印回廊、禁制支線與禁底界井前帶，為未來裂界禁底保留延伸空間。
+- `sec_rift_abyss`：把裂界深層下方接成禁底落點、封印回廊與禁底界井，讓地下鏈正式轉入禁底封印段。
+- `sec_rift_nadir`：再由裂界禁底下探到禁牢前帶、鎮鎖側線與禁牢界井，形成更深一層的禁牢封印節點。
+- `sec_rift_prison_core`：由裂界禁牢再往下落成鎮封主廊、護印支線與封印井心，讓地下鏈抵達目前已知的封印核心前帶。
 
 ### 北方鏈
 

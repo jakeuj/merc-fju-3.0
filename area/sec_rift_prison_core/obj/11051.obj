@@ -1,0 +1,15 @@
+Vnum            11051
+Name            core lantern~
+ShortDesc       心獄殘燈~
+Description
+一盞被安置在護印石櫃旁的殘燈仍透著幾乎不肯熄滅的淡紅微光。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+WearLoc         ITEM_WEAR_LIGHT
+Takeable        Yes
+Level           48
+Value3          30
+Weight          1
+Cost            280
+End

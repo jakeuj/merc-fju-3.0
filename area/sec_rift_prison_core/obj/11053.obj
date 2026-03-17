@@ -1,0 +1,14 @@
+Vnum            11053
+Name            deepwell flask~
+ShortDesc       沉泉石瓶~
+Description
+一只瓶口繫著鎮符碎片的石瓶被安放在暗格之中。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           48
+Value           10 10 LIQ_WATER
+Weight          2
+Cost            160
+End

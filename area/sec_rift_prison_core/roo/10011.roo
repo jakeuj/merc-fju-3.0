@@ -1,0 +1,40 @@
+Vnum            10011
+Name            沉鎖井階~
+Description
+井階沿著井壁盤旋下沉，每一階都壓著粗重鎖環與失色符片，腳下像踩在某種仍勉強有效的鎮壓程序上。越往下走，周圍空氣越像被看不見的力量向內壓縮，讓人連呼吸都得放得極慢。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10010
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        10009
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        10012
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         井心~
+End
+
+End
