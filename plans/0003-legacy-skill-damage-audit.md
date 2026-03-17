@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_t_implemented`
+- `status = batch_u_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch T implemented`
+- `current_batch = Batch U implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可續進拳法支鏈，優先考慮 `ghost strike -> ghost marial`
+1. 下一個高價值候選可續進拳法支鏈，優先考慮 `ryo -> hashin`
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -2875,6 +2875,109 @@
   - 改用 `IPC KEY 4585`
 - 檢查：
   - `log/smoke-batch-t.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/badobject`
+    - 無新增內容
+  - `debug/error`
+    - 無新增內容
+
+## Batch U Pre-Check
+
+### Scope
+
+- `ghost strike`
+- `ghost marial`
+
+### Reference Basis
+
+- `docs/3yWebsite/skill/fist.html`
+  - 明確給出 `ghost strike -> ghost marial`
+  - `ghost strike` 是可教 root
+  - `ghost marial` 以 `ghost strike` 為 prerequisite，為該支鏈終點
+- `docs/current-game/skills/fist.md`
+  - current-game 已把這條鏈整理在 `legacy-page:fist`
+  - runtime 顯示兩者 `Value` 仍全 `20`
+- runtime `skill/*.ski`
+  - `ghoststrike.ski`
+    - `Associate SLOT_GHOST_MARIAL`
+    - `CanAsk YES / Teach YES / Valid YES`
+  - `ghost_marial.ski`
+    - `Associate -1`
+    - `CanAsk YES / Teach NO / Valid YES`
+
+### Mandatory Pre-Check Snapshot
+
+`ghost strike`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 10`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `YES / YES / YES`
+- damage entries: `7`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`ghost marial`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 7`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `6`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這條支鏈同樣是標準清值案例，沒有看到單筆高值或 innate keep case。
+- `ghost strike` 與 `ghost marial` 和 `evil fist` 系最大的不同，是它們本來就維持 `Chance 20`，因此體感上應更偏穩定輸出而不是低頻爆發。
+- `ghost strike` 作為 root，回補後仍要保留中階掌法身分。
+- `ghost marial` 有更短 `Wait` 與更高 prerequisite，應用更高 `Value` 清楚承接終點定位。
+- area `*.mob` 目前未看到這兩招的現成 `Enable / AutoEnable / #Learn` 樣本，因此本批先不做 mob fallout。
+
+## Batch U Result
+
+### Scope
+
+- `ghost strike`
+- `ghost marial`
+
+### Runtime Changes
+
+`ghost strike`
+
+- before: `20 x 7`
+- after: `75, 95, 115, 135, 155, 180, 210`
+- average: `137.86`
+
+`ghost marial`
+
+- before: `20 x 6`
+- after: `135, 160, 185, 210, 240, 275`
+- average: `200.83`
+
+### Design Notes
+
+- 本批只調 `Value`，保留這條拳法支鏈原本 `Chance 20` 的穩定輸出風格。
+- `ghost strike` 回到可成立的 root，不再是全 `20` 的殘缺模板。
+- `ghost marial` 以更短 `Wait` 和更高單段值承接終點身分，和 `ghost strike` 拉開清楚距離。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-u.log`
     - 出現 `三國歪傳之降龍伏虎開始正常運作`
   - `debug/failenable`
     - 無新增內容

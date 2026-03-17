@@ -48,7 +48,7 @@ Help
 Description
 $n邪念一動使出$Y『惡鬼攔路』$Z從天而降﹐擊出七掌十三腿﹐招招攻向$N的最弱處。~
 Chance          20
-Value           20
+Value           75
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -59,7 +59,7 @@ Description
 $n身形忽變﹐觀之在前﹐忽焉在後﹐使出一招$y『鬼影幢幢』$Z煞時拳風勁氣﹐如波濤
 般由四方向$N湧來。~
 Chance          20
-Value           20
+Value           95
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -70,7 +70,7 @@ Description
 $P$n雙掌一合﹐剎時陰風四起﹐奇冷的寒勁從雙掌尖不斷透出﹐突然聽見一聲$S『倒陽
 取陰』$P$n雙掌一分﹐$N如置身冰窖中﹐無法動彈$Z。~
 Chance          20
-Value           20
+Value           115
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -81,7 +81,7 @@ Description
 $G$n雙掌貼地﹐臉上布滿青紫之色﹐使出氤氳功中的$B『吸魂大法』$G只見無數的陰魂
 從地底竄出﹐湧進$n的雙掌中﹐$N的精氣仿彿也如魂魄一樣﹐被吸入雙掌之中$Z。~
 Chance          20
-Value           20
+Value           135
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -92,7 +92,7 @@ Description
 $W$n身形一變﹐腳踏七星﹐體成魁星踢斗式﹐使出$Y『鬼哭神嚎』$W如死神般攻$N的
 $l$Z。~
 Chance          20
-Value           20
+Value           155
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -103,7 +103,7 @@ Description
 $Y$n大喝一聲﹐$R『火龍金魔體』$Y只見$n全身被烈火所包圍﹐如火球般向$N席捲而
 來$Z。~
 Chance          20
-Value           20
+Value           180
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -114,7 +114,7 @@ Description
 $S$n猛然一躍﹐將$B氤氳功$R運至極致﹐使出玄陰掌終極奧義$R『引歸殺象』$S強大
 的勁氣從$n的雙掌踴出﹐如網狀般像你籠罩而來$Z。~
 Chance          20
-Value           20
+Value           210
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
