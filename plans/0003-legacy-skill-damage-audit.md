@@ -331,9 +331,9 @@
 
 目前狀態：
 
-- `status = batch_bh_implemented`
+- `status = batch_bj_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch BH implemented`
+- `current_batch = Batch BJ implemented`
 
 ## Immediate Next Steps
 
@@ -5968,6 +5968,147 @@
 
 - 本批把 `mobile kill` 定位成中速、持續壓制型的猛獸攻擊模板，而不是高階玩家祕笈。
 - 曲線保持穩定上升，避免獸類招式一開始就過爆，同時讓終式仍有威脅感。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 與 Batch BJ 共用同一輪 smoke 驗證
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BI Pre-Check
+
+### Scope
+
+- `fole ken`
+
+### Reference Basis
+
+- runtime `skill/f/fole_ken.ski`
+  - `Value` 全 `20`
+  - `Cost 19 / Wait 12 / Check check_unrigid_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `fole ken`
+  - `family = legacy-page:fole ken`
+  - combat 維度顯示 `8` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`fole ken`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `19 / COST_MOVE / 12`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `8`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `fole ken` 是 current-game 已收錄的獨立掌法 family，且 `Wait 12` 清楚指向慢節奏、高份量路線。
+- 八段完整招式都停在 `20`，明顯是被清值後未重建的模板。
+- 本批先只回填 `Value` 梯度，保留它的重節奏與空手身份。
+
+## Batch BI Result
+
+### Scope
+
+- `fole ken`
+
+### Runtime Changes
+
+`fole ken`
+
+- before: `20 x 8`
+- after: `125, 150, 180, 215, 255, 305, 365, 440`
+- average: `254.38`
+
+### Design Notes
+
+- 本批把 `fole ken` 定位成慢節奏、八段漸進拉高的重掌模板。
+- 前中段保留鋪陳感，後段再把風雷掌勁拉出清楚的壓迫曲線。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 測試 ports:
+    - `15844`
+    - `16240`
+    - `16894`
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BJ Pre-Check
+
+### Scope
+
+- `fouen`
+
+### Reference Basis
+
+- runtime `skill/f/fouen.ski`
+  - `Value` 全 `20`
+  - `Cost 10 / Wait 1 / Check check_unrigid_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `fouen eight`
+  - `family = legacy-page:fouen eight`
+  - combat 維度顯示 `8` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`fouen`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `10 / COST_MOVE / 1`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `8`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `fouen` 和 `fole ken` 雖然同是八段風系掌法，但 `Wait 1` 表示它應該走高速連段路線，而不是共用重掌曲線。
+- current-game 也把它收成獨立 family，足以確認這不是單純重名殘檔。
+- 本批先只回填 `Value` 階梯，保留它的高速出手與低成本特性。
+
+## Batch BJ Result
+
+### Scope
+
+- `fouen`
+
+### Runtime Changes
+
+`fouen`
+
+- before: `20 x 8`
+- after: `95, 115, 140, 170, 205, 245, 295, 360`
+- average: `203.13`
+
+### Design Notes
+
+- 本批把 `fouen` 定位成高速、連段感更強的八式掌法，整體低於 `fole ken` 的重掌曲線。
+- 這樣能保留兩條名字相近模板在實戰節奏上的差異，而不是只做同值平移。
 
 ### Validation
 

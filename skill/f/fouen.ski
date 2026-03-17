@@ -42,7 +42,7 @@ Description
 $n狂吼一聲﹐上空平身挪後三寸﹐左手拍地﹐右手股動內勁﹐一招$Y『氣臨山河動』$Z
 ﹐破天而出﹐掌勁如山﹐激起無濤的氣勁﹐夾著雷霆萬駒之勢朝$N而來。~
 Chance          10
-Value           20
+Value           95
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -53,7 +53,7 @@ $N使出一招$R『雷鼓震山川』$Z﹐力與神會﹐勁由意生﹐一鼓�
 順勁推出﹐連暴聲聲巨響﹐完全發揮$P『一川碎石大如斗』$Z之精義﹐$N勁風拂面﹐已
 處萬劫險境﹐虎虎的勁風擊向$N胸口。~
 Chance          10
-Value           20
+Value           115
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -63,7 +63,7 @@ Description
 $N使出風雷八式$Y『水精勢絕倫』$Z﹐雙掌猛揚﹐一片青色的勁氣﹐尤如萬丈飛瀑﹐夾
 著一股排山倒海的掌風﹐衝向$N身前﹐怒海洪濤般的擊向$N。~
 Chance          10
-Value           20
+Value           140
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -74,7 +74,7 @@ $n左足橫移﹐挫腰沈身﹐單袖一揚使出$G『風沙暗夜吼』$Z﹐�
 ﹐乃武訣之$Y『平沙莽莽黃入天﹐隨風滿地石亂走』$Z﹐$n趁飛沙走石之際﹐朝$N的天
 靈蓋連續拍出數掌。~
 Chance          10
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -84,7 +84,7 @@ Description
 $n運起陽剛真氣﹐天靈聚起一片炙火﹐身形一旋﹐雙掌內攏﹐使出$G『火光燎天戈』$Z
 ﹐一圈﹐一吐﹐催起一股凌厲的氣焰﹐掃向$N。~
 Chance          10
-Value           20
+Value           205
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -94,7 +94,7 @@ Description
 $n雙掌飄飄﹐連遞數十掌﹐領悟武訣中之$Y『長風吹林雨墜瓦』$Z﹐此乃風雷八式之$R
 『雨凝破山石』$Z﹐掌影瀰漫﹐看似狂風暴雨﹐掌氣有如細雨般同時灑向$N全身要穴。~
 Chance          10
-Value           20
+Value           245
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -105,7 +105,7 @@ $n揉身而上﹐飄然滑行﹐順勢使出$Y『電花照天河』$Z﹐ 雙掌�
 泛起一片光芒﹐有如電光之勢﹐$N頓時眼前罩上一片炙光﹐一陣昏眩﹐光刀迅速的朝$N
 各部位砍去。~
 Chance          10
-Value           20
+Value           295
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -116,7 +116,7 @@ $n運起寒冰真氣﹐不覺體泛冰氣﹐瞬間寒風大作﹐捲起一陣寒
 一招$W『冰寒囓人心』$Z﹐煞時寒氣從掌心飄出﹐$N已被寒氣逼的步法錯亂﹐刺骨冰寒
 的掌氣﹐不斷的往$N各處拍去。~
 Chance          10
-Value           20
+Value           360
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
