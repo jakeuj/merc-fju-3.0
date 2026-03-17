@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_ai_implemented`
+- `status = batch_al_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch AI implemented`
+- `current_batch = Batch AL implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `dragon leg / thunder hammer` 之後的其餘孤立 high-tier attack skill
+1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `yu needle / blood ten / dark word` 之後的其餘孤立 high-tier attack skill
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -3544,6 +3544,236 @@
   - 改用 `IPC KEY 5585`
 - 檢查：
   - `log/smoke-batch-aa.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AJ Pre-Check
+
+### Scope
+
+- `yu needle`
+
+### Reference Basis
+
+- `docs/3yWebsite/docs/data/skills.json`
+  - 收錄 `yu needle`
+- runtime `skill/y/yu_needle.ski`
+  - `Value` 全 `20`
+  - `Cost 20 / Wait 1 / Weapon WEAPON_PEN / Check check_pen_attack`
+  - `Valid YES / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `yu needle`
+  - `family = legacy-page:yu needle`
+  - combat 維度顯示 `15` 段 `Value 20`
+- `area/limbo/obj/288.obj`
+  - 仍存在 `yu needle book`
+
+### Mandatory Pre-Check Snapshot
+
+`yu needle`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 1`
+- weapon / check: `WEAPON_PEN / check_pen_attack`
+- canask / teach / valid: `NO / NO / YES`
+- enable: `YES`
+- damage entries: `15`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這是玩家向高段數針系攻擊技，且 `Wait 1` 明顯屬於快節奏連擊模板。
+- 因為頻率高、段數多，所以平均值不應用重節奏大招的尺度，但全 `20` 仍明顯失真。
+- 本批先只回填 `Value` 階梯，保留其快節奏與針系 identity。
+
+## Batch AJ Result
+
+### Scope
+
+- `yu needle`
+
+### Runtime Changes
+
+`yu needle`
+
+- before: `20 x 15`
+- after: `95, 110, 125, 140, 160, 180, 205, 230, 255, 285, 315, 350, 390, 440, 500`
+- average: `252.0`
+
+### Design Notes
+
+- 本批讓 `yu needle` 保持高速連擊模板，但後段仍有清楚的高階成長。
+- 這樣不會把針系快技拉成慢節奏重砲，同時也不再是清值模板。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-al.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AK Pre-Check
+
+### Scope
+
+- `blood ten`
+
+### Reference Basis
+
+- runtime `skill/b/blood_ten.ski`
+  - `Value` 全 `20`
+  - `Cost 20 / Wait 1 / Weapon WEAPON_BLADE / Check check_blade_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `blood ten`
+  - `family = legacy-page:blood ten`
+  - combat 維度顯示 `10` 段 `Value 20`
+- `area/limbo/obj/390.obj`
+  - 仍存在 `blood ten book`
+
+### Mandatory Pre-Check Snapshot
+
+`blood ten`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 1`
+- weapon / check: `WEAPON_BLADE / check_blade_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `10`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這是玩家向快節奏刀技，雖然 weapon identity 明確，但目前仍被壓成全 `20`。
+- 由於 `Wait 1`，它的均值應壓低於同級慢節奏 blade 重技，但後段仍該有明顯提升。
+- 本批先只回填 `Value` 階梯，保留高速刀技節奏。
+
+## Batch AK Result
+
+### Scope
+
+- `blood ten`
+
+### Runtime Changes
+
+`blood ten`
+
+- before: `20 x 10`
+- after: `120, 140, 165, 190, 220, 255, 295, 340, 395, 460`
+- average: `258.0`
+
+### Design Notes
+
+- 本批把 `blood ten` 定位成高速但仍帶中後段爆發的 blade 單點技能。
+- 這樣能與慢節奏重刀技能保持差異，同時避免它和其他 `Wait 1` 技能完全同模板。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-al.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AL Pre-Check
+
+### Scope
+
+- `dark word`
+
+### Reference Basis
+
+- runtime `skill/d/dark_word.ski`
+  - `Value` 全 `20`
+  - `Cost 19 / Wait 12 / Check check_unrigid_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `dark word`
+  - `family = legacy-page:dark word`
+  - combat 維度顯示 `8` 段 `Value 20`
+- `area/limbo/obj/246.obj`
+  - 仍存在 `dark word book`
+
+### Mandatory Pre-Check Snapshot
+
+`dark word`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `19 / COST_MOVE / 12`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `8`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這是玩家向重節奏拳掌特技，與 `Wait 1` 的 `yu needle / blood ten` 節奏完全不同。
+- 因為出手慢、段數較少，所以單段威力應明顯高於快節奏連擊技。
+- 本批先只回填 `Value` 階梯，保留其重節奏與無兵器拳掌 identity。
+
+## Batch AL Result
+
+### Scope
+
+- `dark word`
+
+### Runtime Changes
+
+`dark word`
+
+- before: `20 x 8`
+- after: `140, 165, 195, 230, 270, 320, 380, 450`
+- average: `268.75`
+
+### Design Notes
+
+- 本批讓 `dark word` 的單段威力高於快節奏針/刀技，但總體仍保留漸進的高階成長。
+- 這樣比較符合 `Wait 12` 的重節奏模板，不會和 `Wait 1` 類型混在一起。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-al.log`
     - 出現 `三國歪傳之降龍伏虎開始正常運作`
   - `debug/failenable`
     - 無新增內容

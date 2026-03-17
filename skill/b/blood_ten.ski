@@ -44,7 +44,7 @@ Description
 $n腳步一跨﹐使出$R血戰十式•第一式$Z之$G「兩軍對壘」$Z﹐擬起強大的氣勢﹐緊鎖著$A
 對方﹐瞬間劈出十幾刀﹐攻向$N。~
 Chance          10
-Value           20
+Value           120
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -55,7 +55,7 @@ Description
 $n大喝一聲﹐雙手持著$O﹐舞出一陣陣刀光﹐使出$R血戰十式•第二式$Z
 之$Y「鋒芒畢露」$Z﹐將自己包圍在這陣陣刀光所形成之光球中﹐攻向$N。~
 Chance          10
-Value           20
+Value           140
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -66,7 +66,7 @@ Description
 $n略提真氣﹐雙目緊盯著$N﹐使出$R血戰十式•第三式$Z之$B「輕騎突出」$Z﹐猶如
 疾電般的越過彼此之間的距離﹐迅速的奔至$N面前﹐集中全力一刀突破其防守﹐直取其眉心。~
 Chance          10
-Value           20
+Value           165
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -78,7 +78,7 @@ $n與$N招來招往打的不亦樂乎之時﹐忽然刀交左手﹐一拳轟向$
 ﹐趁其不慎中招時﹐使出$R血戰十式•第四式$Z之$P「探囊取物」$Z﹐腳步一踏﹐
 身形一轉﹐繞至$N的後方砍劈其背部。~
 Chance          10
-Value           20
+Value           190
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -91,7 +91,7 @@ $S「一戰功成」$Z﹐暗地由左手慢慢施放出如誅絲般的細絲﹐�
 層層的氣網﹐再慢慢向他收攏﹐在他注意到時已經動彈不得﹐
 只能眼睜睜看$n一刀砍下他的人頭。~
 Chance          10
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -103,7 +103,7 @@ Description
 $G「批亢搗虛」$Z﹐劈向空處﹐$N一見大吃一驚﹐在他忙於變招之際﹐$n刀勢一轉﹐
 就像是$N自願一般﹐跑向刀劈之處﹐被$n所創。~
 Chance          10
-Value           20
+Value           255
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -115,7 +115,7 @@ $n拿著刀的手不住的晃動﹐使出$R血戰十式•第七式$Z之$Y「兵
 $N腹部﹐又似要由左劈向$N的胸部﹐更似要砍下$N的頭一般﹐刀勢不住
 的變化﹐使$N不知該如何抵擋﹐在慌張失措之下被$n一刀劈中。~
 Chance          10
-Value           20
+Value           295
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -129,7 +129,7 @@ Description
 $W                      $S受死吧﹗﹗﹗$Z$A
 剎時$n人刀合一貫穿$N的身體。~
 Chance          10
-Value           20
+Value           340
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -141,7 +141,7 @@ Description
 之$P「強而避之」$Z﹐運用借御的方法﹐在抵擋$N的攻擊時﹐順勢借走其內力﹐
 趁$N舊力已去新力未生之際﹐反手往其空門斬去。~
 Chance          10
-Value           20
+Value           395
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -155,7 +155,7 @@ $G「批亢搗虛」$Z、$Y「兵無常勢」$Z、$B「死生存亡」$Z、$P「
 ﹐最後九道身影於天空合而為一﹐$n大喝$Y「$G君$Z∼$B臨$Z∼$P天$Z∼$S下$Y」$Z﹐正是$R血戰十式•第十
 式$Z﹐只見$n夾著萬丈光芒﹐風雷並發﹐威猛無倫的往$N投去﹐一刀將之劈成兩半。~
 Chance          10
-Value           20
+Value           460
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

@@ -45,7 +45,7 @@ $S            【 破∼世∼陰∼字∼之∼破∼字∼訣∼】  $Z$A$A
 $P$n以霸道的拳勁反擊而去﹐拳勁之狂﹐猶如風雨大至之勢﹐
 $N只好力接這訣。$Z~
 Chance          10
-Value           20
+Value           140
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -58,7 +58,7 @@ $P             【 破∼世∼陰∼字∼之∼兇∼字∼訣∼】  $Z$A$A
 $P$n頓時轟出數拳﹐分向四方飛擊﹐讓$N不知殺招從何而來﹐
 頓時多了數道傷口。$Z~
 Chance          10
-Value           20
+Value           165
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -71,7 +71,7 @@ $G             【 破∼世∼陰∼字∼之∼殘∼字∼訣∼】  $Z$A$A
 $P$n有若兇神惡剎般﹐向$N襲去﹐拳勁之猛﹐凌厲的轟向$N﹐
 令$N震退數步。$Z~
 Chance          10
-Value           20
+Value           195
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -84,7 +84,7 @@ $Y             【 破∼世∼陰∼字∼之∼極∼字∼訣∼】  $Z$A$A
 $P猛烈的拳勁﹐挾帶著雄厚無比的內力﹐直直的轟去﹐只見
 $N被震的狂吐血。$Z~
 Chance          10
-Value           20
+Value           230
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -97,7 +97,7 @@ $R             【 破∼世∼陰∼字∼之∼滅∼字∼訣∼】  $Z$A$A
 $P$n如電轟出百拳﹐百拳歸一﹐凝於一點﹐令拳勢霎時強猛沉厚﹐
 便狂暴的轟向$N。$Z~
 Chance          10
-Value           20
+Value           270
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -110,7 +110,7 @@ $W             【 破∼世∼陰∼字∼之∼哭∼字∼訣∼】  $Z$A$A
 $P$n的鐵拳交織成一個拳網﹐將$N完全罩在拳網之中﹐
 令$N毫無立足之地。$Z~
 Chance          10
-Value           20
+Value           320
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -123,7 +123,7 @@ $B             【 破∼世∼陰∼字∼之∼喪∼字∼訣∼】  $Z$A$A
 $P只聽見$N的一聲慘痛的哀嚎﹐只見四周似有無數冤魂惡鬼互衝
 激盪怒擊向$N。$Z~
 Chance          10
-Value           20
+Value           380
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -137,7 +137,7 @@ $R滅$W∼哭∼$B喪$W∼七∼訣∼合∼一∼】$Z$A$A
 $P$n頓悟破世陰字的奧義﹐一式接著一式﹐環環相扣﹐
 綿延不絕的向$N狂擊而去。$Z~
 Chance          10
-Value           20
+Value           450
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
