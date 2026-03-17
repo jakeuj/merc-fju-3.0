@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_s_implemented`
+- `status = batch_t_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch S implemented`
+- `current_batch = Batch T implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可回到剩餘未重建的 fist / blade 支鏈，優先盤 `cloud fist` 或 `evil fist -> evil king`
+1. 下一個高價值候選可續進拳法支鏈，優先考慮 `ghost strike -> ghost marial`
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -2773,6 +2773,108 @@
   - 改用 `IPC KEY 4585`
 - 檢查：
   - `log/smoke-batch-s.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/badobject`
+    - 無新增內容
+  - `debug/error`
+    - 無新增內容
+
+## Batch T Pre-Check
+
+### Scope
+
+- `evil fist`
+- `evil king`
+
+### Reference Basis
+
+- `docs/3yWebsite/skill/fist.html`
+  - 明確給出 `evil fist -> evil king`
+  - `evil fist` 是可學 root
+  - `evil king` 以 `evil fist` 為 prerequisite，且是該支鏈的終點
+- `docs/current-game/skills/fist.md`
+  - current-game 已把這條鏈整理在 `legacy-page:fist`
+  - runtime 顯示兩者 `Value` 仍全 `20`
+- runtime `skill/*.ski`
+  - `evilfist.ski`
+    - `Associate SLOT_EVIL_KING`
+    - `CanAsk YES / Teach NO / Valid YES`
+  - `evil_king.ski`
+    - `Associate -1`
+    - `CanAsk YES / Teach NO / Valid YES`
+
+### Mandatory Pre-Check Snapshot
+
+`evil fist`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 10`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `7`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`evil king`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 8`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `8`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這條拳法支鏈屬標準清值案例：兩端都被壓成全 `20`，沒有明顯 hybrid / innate keep case。
+- `evil fist` 仍應站穩 root，但它本來就不算輕量快拳，因此回補後應高於 `long fist` 那類新手模板。
+- `evil king` 和 `evil fist` 同為 `Chance 10`，但 `Wait` 更短、prerequisite 更高，應在不改節奏參數的前提下，用更高 `Value` 站穩終點拳路。
+- area `*.mob` 目前未看到這兩招的現成 `Enable / AutoEnable / #Learn` 樣本，因此本批先不做 mob fallout。
+
+## Batch T Result
+
+### Scope
+
+- `evil fist`
+- `evil king`
+
+### Runtime Changes
+
+`evil fist`
+
+- before: `20 x 7`
+- after: `70, 85, 100, 115, 130, 155, 190`
+- average: `120.71`
+
+`evil king`
+
+- before: `20 x 8`
+- after: `125, 145, 165, 185, 205, 230, 260, 300`
+- average: `201.88`
+
+### Design Notes
+
+- 本批只調 `Value`，保留這條拳法支鏈既有的 `Chance 10` 與出招節奏。
+- `evil fist` 回到可成立的中階 root，不再和被清值後的殘缺模板混成一團。
+- `evil king` 以更短 `Wait` 和更高單段值承接終點定位，恢復 clear progression。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-t.log`
     - 出現 `三國歪傳之降龍伏虎開始正常運作`
   - `debug/failenable`
     - 無新增內容

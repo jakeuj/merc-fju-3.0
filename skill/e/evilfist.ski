@@ -42,7 +42,7 @@ Help
 Description
 $n邪念一動使出$S『惡向膽邊生』$Z﹐化解$N的層層防守﹐攻向$N的最弱處。~
 Chance          10
-Value           20
+Value           70
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -52,7 +52,7 @@ End
 Description
 $n使出一招$B『厄運當頭』$Z﹐擊向$N的天庭蓋。~
 Chance          10
-Value           20
+Value           85
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -62,7 +62,7 @@ End
 Description
 $n使出一招$P『惡意中傷』$Z﹐無情的往$N的身體狂攻而去。~
 Chance          10
-Value           20
+Value           100
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -72,7 +72,7 @@ End
 Description
 $n使出$W『餓虎撲食』$Z﹐身形如餓虎般欺至$N身前﹐噬向$N。~
 Chance          10
-Value           20
+Value           115
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -82,7 +82,7 @@ End
 Description
 $n身形一變﹐使出$Y『扼殺訣』$Z﹐如死神般攻向$N。~
 Chance          10
-Value           20
+Value           130
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -92,7 +92,7 @@ End
 Description
 $n大喝一聲﹐捲起一股$R『惡勢力』$Z擊向$N﹐要$N屈服於其下。~
 Chance          10
-Value           20
+Value           155
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -103,7 +103,7 @@ Description
 $n吐氣揚聲﹐真氣運至最高境界﹐$W終極奧義$S『鬼哭神嚎』$Z呼之欲出﹐無情地想
 將$N化為灰燼。~
 Chance          10
-Value           20
+Value           190
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
