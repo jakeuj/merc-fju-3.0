@@ -1,0 +1,24 @@
+Vnum            10307
+Name            監測窄廳~
+Description
+窄廳牆面留有密集測壓刻線，最新幾道記錄已超過原始量尺，旁邊還插著斷裂筆桿。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10306
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10308
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

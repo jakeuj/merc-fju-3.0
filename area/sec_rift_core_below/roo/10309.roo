@@ -1,0 +1,16 @@
+Vnum            10309
+Name            補紋工間~
+Description
+工間堆滿不同規格補紋石版，多數只完成一半就因壓流逆灌而報廢。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10308
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

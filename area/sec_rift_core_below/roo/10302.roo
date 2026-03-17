@@ -1,0 +1,24 @@
+Vnum            10302
+Name            裂井橫踏~
+Description
+橫踏以粗石樑跨越井側縫隙，石面佈滿被高熱反覆燒蝕後留下的玻化紋。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10301
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

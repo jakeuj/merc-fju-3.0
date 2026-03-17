@@ -1,0 +1,24 @@
+Vnum            10308
+Name            餘壓洩放室~
+Description
+洩放室中央槽池翻著紅黑泡沫，邊緣散落半融的鎮印片，空氣裡充滿刺鼻焦鐵味。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10309
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

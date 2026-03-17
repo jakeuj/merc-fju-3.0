@@ -1,0 +1,32 @@
+Vnum            10306
+Name            導脈側轉廊~
+Description
+側轉廊刻滿細密導脈線，微光沿線奔流，把主裂道溢出的壓流分送至下方封橋區。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         導脈~
+End
+
+#Enquire
+Keyword         補封~
+End
+
+End
