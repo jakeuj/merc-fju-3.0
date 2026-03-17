@@ -331,9 +331,9 @@
 
 目前狀態：
 
-- `status = batch_ay_implemented`
+- `status = batch_az_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch AY implemented`
+- `current_batch = Batch AZ implemented`
 
 ## Immediate Next Steps
 
@@ -5321,6 +5321,78 @@
 
 - 本批把 `dragon fist` 定位成傳說級、超高成本、長段數掌法模板，整體高於目前已補的多數拳掌單點技能。
 - 這樣可以恢復 `降龍十八掌` 作為高階祕笈技能的存在感，同時不去改動它原本的出手節奏與命中分布。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 測試 ports:
+    - `15839`
+    - `16235`
+    - `16889`
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch AZ Pre-Check
+
+### Scope
+
+- `holy fist`
+
+### Reference Basis
+
+- runtime `skill/h/holy_fist.ski`
+  - `Value` 全 `20`
+  - `Cost 30 / Wait 5 / Check check_unrigid_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `holy fist`
+  - `family = legacy-page:holy fist`
+  - combat 維度顯示 `10` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`holy fist`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `30 / COST_MOVE / 5`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `10`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `holy fist` 由 current-game family 與完整十式招式敘述可確認是高階玩家向拳技，而不是單純怪物殘檔。
+- 它的 `Wait 5` 明顯快於 `six fingers` 這類重節奏技能，因此不適合直接套用慢重砲曲線，但全 `20` 同樣顯示模板被壓平。
+- 本批先只回填 `Value` 階梯，保留原本的 `Chance / Wait / Cost / Check`，讓它維持高成本、快節奏、多段拳技的身份。
+
+## Batch AZ Result
+
+### Scope
+
+- `holy fist`
+
+### Runtime Changes
+
+`holy fist`
+
+- before: `20 x 10`
+- after: `145, 165, 190, 220, 255, 295, 340, 390, 450, 520`
+- average: `297.0`
+
+### Design Notes
+
+- 本批把 `holy fist` 定位成高階、高成本、快節奏的連段拳技，不走 `six fingers` 那種慢節奏長尾爆發。
+- 這樣既能保留 `聖心拳` 的連續壓制感，也能和其他重掌型模板維持清楚差異。
 
 ### Validation
 

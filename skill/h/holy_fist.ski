@@ -35,7 +35,7 @@ $G$n拳掌幻化為舞﹐交之而錯﹐如同千手觀音﹐使出聖心拳第�
 $N彷彿墮入了異次元世界﹐生非生﹐死非死﹐一望無際的絕對空間。
 $N對$n出拳如同對自己出拳。$Z~
 Chance          10
-Value           20
+Value           145
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -49,7 +49,7 @@ $G                  天空出現個無數的$B精靈$G....$A
 $G                  地上出現個無數的$R積屍$G&....$A$A
 帶領著$N進入阿鼻地獄﹐$N動彈不得的被打入黃泉比良坡。$Z~
 Chance          10
-Value           20
+Value           165
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -61,7 +61,7 @@ $G$n凝心一定﹐身形彷彿為不動明尊﹐使出聖心拳第三式---「$
 $N因帶著無數的罪孽﹐而分別被剝削了$R嗅$G﹐$Y視$G﹐$g味$G﹐$B聽$G﹐$P觸$G五感.......
 而成行尸走肉般的等待天誅。$Z~
 Chance          10
-Value           20
+Value           190
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -73,7 +73,7 @@ $G$n為了能使對手能夠看清自己﹐使出聖心拳第四式---「$b六�
 $N手腳有如被蛇纏住﹐彷彿墮入了此界﹐只見無數劍海刀山等待﹐
 身體承受莫大痛楚,永世不得超生。$Z~
 Chance          10
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -85,7 +85,7 @@ $G$n為了能使對手能夠看清自己﹐使出聖心拳第四式---「$b六�
 $N手腳有如被蛇纏住﹐彷彿墮入了此界﹐只覺身體瘦如枯骨﹐腹部隆起﹐
 每天所食皆為屍體腐肉﹐痛苦異常。$Z~
 Chance          10
-Value           20
+Value           255
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -97,7 +97,7 @@ $G$n為了能使對手能夠看清自己﹐使出聖心拳第四式---「$b六�
 $N手腳有如被蛇纏住﹐彷彿墮入了此界﹐只覺每天不是殺了對方要不
 就是為對方所食﹐終日循迴不已。$Z~
 Chance          10
-Value           20
+Value           295
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -108,7 +108,7 @@ Description
 $G$n為了能使對手能夠看清自己﹐使出聖心拳第四式---「$b六道輪迴$B修羅界$G」﹐
 $N手腳有如被蛇纏住﹐彷彿墮入了此界﹐只覺自己嗜血如命﹐終日廝殺博命。$Z~
 Chance          10
-Value           20
+Value           340
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -120,7 +120,7 @@ $G$n為了能使對手能夠看清自己﹐使出聖心拳第四式---「$b六�
 $N手腳有如被蛇纏住﹐彷彿墮入了此界﹐只覺自己嚐盡喜怒哀樂﹐
 為感情所支配﹐喜怒無常的怨恨自己。$Z~
 Chance          10
-Value           20
+Value           390
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -132,7 +132,7 @@ $G$n為了能使對手能夠看清自己﹐使出聖心拳第四式---「$b六�
 $N手腳有如被蛇纏住﹐彷彿墮入了此界﹐隨時都會有來自於五界
 的不速之客﹐殺殺戮戮﹐不得安寧。$Z~
 Chance          10
-Value           20
+Value           450
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -148,7 +148,7 @@ $G        $Y恆河沙             $P阿僧祇              $S那由他$G$A$A
 $N只覺得「$W天作孽猶可救,自作孽不可活。$G」便以自己最強烈的力量
 擊殺自己﹐以求解脫。$Z~
 Chance          10
-Value           20
+Value           520
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
