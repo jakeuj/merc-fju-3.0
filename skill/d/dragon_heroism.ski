@@ -37,7 +37,7 @@ $Y皇龍豪刀第一斬$Z。「$S徐來如風$Z」。$n舞動$O﹐不急不徐�
 南風般輕拂著$N﹐令$N身陷刀網而不自覺﹐驀然﹐才發現全身數十道傷
 口﹐正汩汩地流出鮮血。~
 Chance          20
-Value           20
+Value           130
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -50,7 +50,7 @@ $Y皇龍豪刀第二斬$Z。「$G靜瑟如林$Z」。$n刀尖垂地﹐看似不�
 力道﹐震得$N渾身發麻﹐動彈不得。$n一見破綻﹐順勢往$N的胸口劈下
 ﹐破甲入肉﹐血流如柱。~
 Chance          10
-Value           20
+Value           155
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -61,7 +61,7 @@ Description
 $Y皇龍豪刀第三斬$Z。「$R急疾如火$Z」。$n箭步飛奔﹐衝向$N。掄起$O﹐先發制
 人。突刺．兜割．橫劈．逆斬﹐四勢齊發﹐一氣呵成﹐狀似把火燒天﹐招招致命。~
 Chance          10
-Value           20
+Value           180
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -73,7 +73,7 @@ $Y皇龍豪刀第四斬$Z。「$g不動如山$Z」。$n彎腰低頭﹐四平八�
 泛起陣陣罡氣。一見$N攻來﹐不待其出招﹐旋即以五嶽壓頂之勢﹐以刀背衝撞
 $N﹐震碎其全身經脈﹐只能眼睜睜地任$n宰割﹐毫無招架餘力。~
 Chance          10
-Value           20
+Value           210
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -85,7 +85,7 @@ $Y皇龍豪刀第五斬$Z。「$B翻江倒海$Z」。$n縱身飛馳﹐螺旋前�
 天．地．正．反﹐衝天海嘯般的攻勢﹐殺得$N血肉模糊﹐氣勢之驚人﹐有如九
 重巨浪。~
 Chance          10
-Value           20
+Value           245
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -97,7 +97,7 @@ $Y皇龍豪刀第六斬$Z。「$P天雷地動$Z」。$n一躍三尺﹐高舉$O�
 下﹐劍氣四散﹐飛砂走石﹐日月無光﹐天搖地動﹐劍氣旋風令$N無從走避。要
 害俱中﹐先血狂噴。~
 Chance          10
-Value           20
+Value           285
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -109,7 +109,7 @@ $Y皇龍豪刀第七斬$Z。「$W神龍再現$Z」。$n以刀劈地﹐震飛砂�
 有如身陷五里迷霧中﹐不知身在何方。忽地﹐$n震耳欲聾的大喝﹐飛越迷幕﹐急急
 砍向$N﹐勢必將其碎屍萬段。~
 Chance          10
-Value           20
+Value           335
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          44 160
@@ -122,7 +122,7 @@ $Y皇龍豪刀第八斬$Z。「$y皇龍大地塹$Z」。$n凝聚全身真氣﹐�
 光閃閃﹐刀氣逼人﹐看似皇龍飛竄﹐上天下地。氣．力．勁．神之強大﹐有如盤古開
 天﹐大地崩裂。~
 Chance          10
-Value           20
+Value           395
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

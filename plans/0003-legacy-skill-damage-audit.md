@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_y_implemented`
+- `status = batch_z_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch Y implemented`
+- `current_batch = Batch Z implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可續盤剩餘 blade / fist 孤立高階技能，例如 `dragon heroism blade` 或 `cloud fist`
+1. 下一個高價值候選可續盤剩餘 blade / fist 孤立高階技能，例如 `cloud fist`
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -3386,6 +3386,90 @@
   - 改用 `IPC KEY 4585`
 - 檢查：
   - `log/smoke-batch-y.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/badobject`
+    - 無新增內容
+  - `debug/error`
+    - 無新增內容
+
+## Batch Z Pre-Check
+
+### Scope
+
+- `dragon heroism blade`
+
+### Reference Basis
+
+- runtime `skill/d/dragon_heroism.ski`
+  - `CanAsk NO / Teach NO / Valid NO`
+  - `Value` 全 `20`
+  - 第七段保留 `Innate 44 160`
+- `docs/current-game/skills/blade.md`
+  - current-game 已收錄 `dragon heroism blade`
+  - runtime 顯示其 `Value` 仍全 `20`
+- source note
+  - 目前未在舊站 `skill/*.html` 找到獨立條目，但 runtime `.ski` 與 current-game 已足以確認它是現行可 enable 的高階刀法模板
+
+### Mandatory Pre-Check Snapshot
+
+`dragon heroism blade`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `15 / COST_MOVE / 14`
+- weapon / check: `WEAPON_BLADE / check_blade_attack`
+- canask / teach / valid: `NO / NO / NO`
+- damage entries: `8`
+- chance set:
+  - first entry `20`
+  - remaining entries `10`
+- value set before rebuild: `20`
+- parry set: `0`
+- special case:
+  - seventh entry keeps `Innate 44 160`
+
+### Interpretation
+
+- 這是單點高階刀法，且不是完全同質模板：
+  - 第一段 `Chance 20`
+  - 第七段帶 `Innate 44 160`
+- 因此本批不應動 `Chance` 或 innate 特例，只重建 `Value` 階梯。
+- area `*.mob` 目前未看到 `dragon heroism blade` 的現成 `Enable / AutoEnable / #Learn` 樣本，因此本批先不做 mob fallout。
+
+## Batch Z Result
+
+### Scope
+
+- `dragon heroism blade`
+
+### Runtime Changes
+
+`dragon heroism blade`
+
+- before: `20 x 8`
+- after: `130, 155, 180, 210, 245, 285, 335, 395`
+- average: `241.88`
+- keep case:
+  - 保留第七段 `Innate 44 160`
+
+### Design Notes
+
+- 本批只調 `Value`，保留原本的 `Chance` 分布與 innate 特例。
+- 這樣可以在不抹平技能個性的前提下，把高階刀法模板從清值狀態拉回成立。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-z.log`
     - 出現 `三國歪傳之降龍伏虎開始正常運作`
   - `debug/failenable`
     - 無新增內容
