@@ -36,7 +36,7 @@ $n手持$O﹐使出$G「龍吟劍法」$Z第壹式$y「曲龍盤壁」$Z﹐只�
 $O使得靈動無比﹐$N心中大駭﹐想不到$n的劍法神妙至斯﹐連閃都
 不及閃。~
 Chance          20
-Value           20
+Value           145
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -47,7 +47,7 @@ Description
 $n忽然縱身高躍﹐使出$G「龍吟劍法」$Z第貳式$S「蛟龍入雲」$Z﹐只見$n從半空
 中疾撲下來﹐手中$O的中宮直進﹐直刺$N的要害。~
 Chance          20
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -59,7 +59,7 @@ $n一邊將手中的$O舞動的密不通風﹐腳下越奔越快﹐身形若隱�
 $N瞧的眼花撩亂﹐驀然$n一聲大喝：$W神龍莫測$Z﹐霎時到處都是$n的
 人影﹐等到$n身形停下來﹐$N已經倒在一片血泊之中了。~
 Chance          20
-Value           20
+Value           200
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -71,7 +71,7 @@ $n見久戰不下﹐將$G「龍吟劍法」$Z第肆式$B「猛龍出海」$Z的�
 只見$n將手中的$O斜斜指向天空﹐忽然用魑魅魍魎似的身法欺近
 $N﹐拿著$O猛斬猛劈﹐霎時$N的身體已被無聲無息的卸成了好幾塊!!~
 Chance          20
-Value           20
+Value           235
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -83,7 +83,7 @@ $n將手中的$O挽起數個劍花﹐正是$G「龍吟劍法」$Z第伍式$b「�
 起手勢﹐驀地$n喝聲$S「叱」$Z﹐只見$n將手中的$O如閃電般的向$N
 掠去﹐ $N連看都沒看清楚﹐登時被斬為兩段。~
 Chance          20
-Value           20
+Value           275
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -95,7 +95,7 @@ $n將$O拋向天空中﹐躍了起來﹐反手將$O接在手中﹐向驚愕的$N
 空下擊﹐有如一條巨龍﹐ $N抵擋這$G「龍吟劍法」$Z第陸式$R巨龍翱翔$Z﹐只覺得
 力不從心﹐只能默默接受這一擊。~
 Chance          20
-Value           20
+Value           320
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -108,7 +108,7 @@ $n手持$O﹐將$G「龍吟劍法」$Z從第壹式到第陸式不斷的舞著﹐
 快極﹐隱隱聞到龍吟之聲﹐忽聞$n一聲清嘯﹐「嗤」「嗤」「嗤」聲過處﹐
 $N已經倒在血泊之中﹐看來是活不了了.~
 Chance          20
-Value           20
+Value           380
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

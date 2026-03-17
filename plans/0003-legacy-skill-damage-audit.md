@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_ac_implemented`
+- `status = batch_ae_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch AC implemented`
+- `current_batch = Batch AE implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `dragon fist` 之後的其餘孤立 high-tier attack skill
+1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `taichi fist / dragon shout` 之後的其餘孤立 high-tier attack skill
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -3610,6 +3610,154 @@
 
 - 本批把 `cloud fist` 定位成高於中階拳掌、但仍低於最頂階爆發單點的 high-tier palm template。
 - 這樣可以先恢復它作為玩家向祕笈技能的成立梯度，不去抹平其他拳法系既有個性。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-ae.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AD Pre-Check
+
+### Scope
+
+- `taichi fist`
+
+### Reference Basis
+
+- runtime `skill/t/taichi_fist.ski`
+  - `Value` 全 `20`
+  - `Cost 20 / Wait 5 / Check check_unrigid_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `taichi fist`
+  - `family = legacy-page:taichi fist`
+  - combat 維度顯示 `8` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`taichi fist`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 5`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `8`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這是玩家向單點拳法，且 `Wait 5` 屬偏快節奏的高階拳掌模板。
+- 在完整 `8` 段傷害描述下仍維持全 `20`，顯示它被壓平成清值模板。
+- 本批先只回填 `Value` 階梯，保留原本的節奏與太極拳風格。
+
+## Batch AD Result
+
+### Scope
+
+- `taichi fist`
+
+### Runtime Changes
+
+`taichi fist`
+
+- before: `20 x 8`
+- after: `125, 145, 170, 195, 225, 260, 305, 360`
+- average: `223.13`
+
+### Design Notes
+
+- 本批把 `taichi fist` 定位成節奏較快、輸出中高階、偏技巧型的單點拳法。
+- 這樣能保留它和重爆發掌法的差異，不把所有高階空手技拉成同一個模板。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-ae.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AE Pre-Check
+
+### Scope
+
+- `dragon shout`
+
+### Reference Basis
+
+- runtime `skill/d/dragon_shout.ski`
+  - `Value` 全 `20`
+  - `Cost 15 / Wait 11 / Weapon WEAPON_SWORD / Check check_sword_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `dragon shout`
+  - `family = legacy-page:dragon shout`
+  - combat 維度顯示 `7` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`dragon shout`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `15 / COST_MOVE / 11`
+- weapon / check: `WEAPON_SWORD / check_sword_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `7`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這是玩家向高階單點劍法，`Wait 11` 顯示其節奏比一般中階劍技更重、更慢。
+- 以目前完整招式描述與 current-game family 來看，全 `20` 明顯不是合理的終態。
+- 本批先只回填 `Value` 階梯，保留原本劍系身份與重節奏。
+
+## Batch AE Result
+
+### Scope
+
+- `dragon shout`
+
+### Runtime Changes
+
+`dragon shout`
+
+- before: `20 x 7`
+- after: `145, 170, 200, 235, 275, 320, 380`
+- average: `246.43`
+
+### Design Notes
+
+- 本批把 `dragon shout` 定位成偏重節奏、每段更有份量的高階劍法。
+- 這樣可以和較快或段數較多的劍系單點技能維持辨識度。
 
 ### Validation
 

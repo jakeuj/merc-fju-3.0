@@ -37,7 +37,7 @@ $n使出$S太極拳$Z中一招$Y『攬雀尾』$Z，右腳實，左腳虛，運�
 一擠，自己這一招中千百斤的力氣猶似打入了汪洋大海，無影無蹤，無聲無息，身子卻
 被自己的拳力帶得斜跌兩步。~
 Chance		20
-Value           20
+Value           125
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -48,7 +48,7 @@ Description
 $n回身雲合運起$R『黏』$Z字訣，將$N的進招收入胸前，$N被順勢一帶，$n隨即進身，
 左掌翻出，一招$Y『單鞭』$Z配合$P『擠』$Z字訣，正中$N胸口，打得$N氣血翻湧。~
 Chance          20
-Value           20
+Value           145
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -61,7 +61,7 @@ $n轉身回步，一招$G『提手上勢』$Z將$N的殺招消弭無形，再一
 瀟洒無比。運起$R『黏』$Z字訣，將$N的殺招轉化，接著$S『白鶴亮翅』$Z加上$P『擠
 』$Z字訣，將所積蓄的力量全數發在$N身上。~
 Chance          20
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -73,7 +73,7 @@ $n變掌為拳，進身上步，一招$B『貼身捶』$Z直打得$N眼冒金星
 隨即掐捧直上，抓住$N右手，右拳再一招$R『搬攔捶』$Z，直打$N胸口，直把$N打退五
 六步。~
 Chance          20
-Value           20
+Value           195
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -83,7 +83,7 @@ End
 Description
 $n轉過身來，右手圓轉向前，朝$N面門揮去，正是$S太極拳$Z中一招$P『高探馬』$Z。~
 Chance          20
-Value           20
+Value           225
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -96,7 +96,7 @@ $n$R『雙風貫耳』$Z，連消帶打，雙手成圓形擊出，這一下變�
 、平圈、立圈、正圈、斜圈，一個個太極圓圈發出，登時便套得$N跌跌撞撞，身
 不由主的立足不穩，猶如中酒昏迷。 ~
 Chance          20
-Value           20
+Value           260
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -108,7 +108,7 @@ $n使出一招$S『雲手』$Z，左手高，右手低，一個圓圈已將$N$l�
 喀喇一聲，$N的$l上下骨齊斷，$S『雲手』$Z使出時聯綿不斷，有如白云行空，
 一個圓圈未完，第二個圓圈已生。~
 Chance          20
-Value           20
+Value           305
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -123,7 +123,7 @@ $Y『玉女穿梭』$Z直打脅下，待$N發覺時，又虛發一招$S『白蛇
 的回擊，接著$B『上步七星』$Z又是雙拳直打胸口，看著$N已是強弩之末，$R『如封似閉
 』$Z最後一擊將勁力全數灌入$N體內。~
 Chance          20
-Value           20
+Value           360
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
