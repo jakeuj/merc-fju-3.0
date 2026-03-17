@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_w_implemented`
+- `status = batch_x_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch W implemented`
+- `current_batch = Batch X implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可回頭盤 `rulai` 或剩餘 blade / fist 孤立高階技能
+1. 下一個高價值候選可回到剩餘 blade / fist 孤立高階技能，或進一步盤點是否還有 `Value 20` 的 player-facing legacy 攻擊技
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -3229,6 +3229,87 @@
   - 改用 `IPC KEY 4585`
 - 檢查：
   - `log/smoke-batch-w.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/badobject`
+    - 無新增內容
+  - `debug/error`
+    - 無新增內容
+
+## Batch X Pre-Check
+
+### Scope
+
+- `rulai`
+
+### Reference Basis
+
+- `docs/3yWebsite/skill/fist.html`
+  - `rulai` 以單獨技能列在拳法頁，無 prerequisite、無 next
+  - 舊站明確標成玩家可學的高階空手技能
+- `docs/current-game/skills/fist.md`
+  - current-game 已把 `rulai` 列為 `legacy-page:fist` 的單點技能
+  - runtime 顯示其 `Value` 仍全 `20`
+- runtime `skill/r/rulai.ski`
+  - `CanAsk NO / Teach NO / Valid YES`
+  - `Value` 全 `20`
+- area runtime samples
+  - `area/loyang/mob/591.mob`
+    - `Enable 100 'rulai'`
+  - `area/loyang/mob/602.mob`
+    - `Enable 100 'rulai'`
+
+### Mandatory Pre-Check Snapshot
+
+`rulai`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 10`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / YES`
+- damage entries: `9`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `rulai` 雖不是多段 prerequisite ladder，但仍是明確的 player-facing legacy 高階掌法。
+- 現況全 `20` 很難成立其高階定位，因此適合獨立做單點 rebuild。
+- 目前已有兩個洛陽樣本固定 `Enable 100 'rulai'`，代表這不是純文件孤兒技能；不過它們屬 explicit `Enable`，本輪先不動 mob data。
+
+## Batch X Result
+
+### Scope
+
+- `rulai`
+
+### Runtime Changes
+
+`rulai`
+
+- before: `20 x 9`
+- after: `120, 145, 170, 195, 220, 250, 285, 325, 370`
+- average: `231.11`
+
+### Design Notes
+
+- 本批只調 `Value`，保留 `rulai` 原本 `Chance 20 / Wait 10` 的穩定高階掌法節奏。
+- 這樣可以先把單點高階模板從清值狀態救回來，再視需要另開一輪處理 teacher / validity policy 或 mob wiring。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-x.log`
     - 出現 `三國歪傳之降龍伏虎開始正常運作`
   - `debug/failenable`
     - 無新增內容

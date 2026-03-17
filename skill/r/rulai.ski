@@ -33,7 +33,7 @@ Help            ~
 Description
 $n使出一招$Y『佛光初現』$Z﹐氣凝於掌﹐緩緩推出﹐擊向$N。~
 Chance          20
-Value           20
+Value           120
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -43,7 +43,7 @@ End
 Description
 $n使出一招$Y『金頂佛燈』$Z﹐$n雙掌突然化為無數掌影﹐籠罩住$N。~
 Chance          20
-Value           20
+Value           145
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -53,7 +53,7 @@ End
 Description
 $n使出$Y『迎佛西來』$Z﹐雙掌上提﹐一股強大氣勁襲向$N。~
 Chance          20
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -63,7 +63,7 @@ End
 Description
 $n大喝一聲﹐使出$Y『佛問迦邏』$Z﹐無形聲波化為實勁﹐擊向$N。~
 Chance          20
-Value           20
+Value           195
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -73,7 +73,7 @@ End
 Description
 $n氣凝於淵﹐使出$Y『佛光普照』$Z﹐$n真氣向四方暴射﹐雙掌推出﹐擊向$N。~
 Chance          20
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -83,7 +83,7 @@ End
 Description
 $n使出$Y『佛光萬丈』$Z﹐一聲長嘯﹐強大的真氣襲向四周。~
 Chance          20
-Value           20
+Value           250
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -93,7 +93,7 @@ End
 Description
 $n氣貫雙臂﹐氣度恢宏﹐使出$Y『佛動山河』$Z﹐排山倒海的掌勁﹐擊向$N。~
 Chance          20
-Value           20
+Value           285
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -104,7 +104,7 @@ Description
 $n席地而坐﹐雙眼微閉雙掌朝天高舉﹐使出$Y『萬佛朝宗』$Z﹐一股莫名氣勁如萬馬
 奔騰般襲向$N。~
 Chance          20
-Value           20
+Value           325
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -115,7 +115,7 @@ Description
 霎時風雲變色﹐飛砂走石!$n使出如來神掌第九式$Y『佛法無邊』$Z﹐$n幻化出無數個
 身影﹐挾著毀天滅地的氣勢﹐方圓十里之內生靈盡為之塗炭。~
 Chance          20
-Value           20
+Value           370
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
