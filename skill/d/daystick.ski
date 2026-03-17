@@ -35,7 +35,7 @@ Help            ~
 Description
 $n把$O往地上一撐﹐一招$S『狠踢北蛟』$Z﹐化解$N的層層防守﹐攻向$N的$l。~
 Chance          20
-Value           20
+Value           125
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -44,7 +44,7 @@ End
 Description
 $n棍勢向天﹐一招$P『醍醐灌頂』$Z﹐帶著呼呼的嘯聲猛力打向$N的天庭蓋。~
 Chance          20
-Value           20
+Value           145
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -53,7 +53,7 @@ End
 Description
 $n使出一招$S『打蛇隨棍上』$Z﹐運起內力將$w化為繞指柔般的往$N的$l襲去。~
 Chance          20
-Value           20
+Value           165
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -62,7 +62,7 @@ End
 Description
 $n以棍使槍﹐一式$P『鳳點頭』$Z﹐棍勢恍恍忽忽﹐有如點點星光難以捉摸。~
 Chance          20
-Value           20
+Value           185
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -71,7 +71,7 @@ End
 Description
 $n大喝一聲﹐一招$Y『橫掃千軍』$Z由左而右用力急向$N的$l﹐棍未到﹐勁先至。~
 Chance          20
-Value           20
+Value           210
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

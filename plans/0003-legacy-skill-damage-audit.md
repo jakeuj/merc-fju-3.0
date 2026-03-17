@@ -1215,6 +1215,107 @@
   - `debug/error`
     - 無新增內容
 
+## Batch M Pre-Check
+
+### Scope
+
+- `monkey stick`
+- `day stick`
+
+### Reference Basis
+
+- `/Users/jakeuj/auggie/3yWebsite/skill/stick.html`
+  - 明確給出 `monkey stick -> day stick`
+  - `day stick` 以 `monkey stick` 為 prerequisite
+- `docs/current-game/skills/staff.md`
+  - current-game 已把這條鏈整理成 `legacy-page:stick`
+  - runtime 目前顯示兩者 damage values 皆為全 `20`
+- runtime `skill/*.ski`
+  - `monkey_stick.ski`
+    - `Associate SLOT_DAYSTICK`
+    - `CanAsk YES / Valid YES / Enable YES`
+  - `daystick.ski`
+    - `Associate -1`
+    - `CanAsk YES / Valid YES / Enable YES`
+
+### Mandatory Pre-Check Snapshot
+
+`monkey stick`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `30 / COST_MOVE / 17`
+- weapon / check: `WEAPON_CLUB / check_club_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `5`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`day stick`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `30 / COST_MOVE / 14`
+- weapon / check: `WEAPON_CLUB / check_club_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `5`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這條棍系短鏈是典型的玩家向 legacy ladder，舊站鏈路與 current-game/runtime 都能互相對上。
+- 兩招同為高體力消耗棍法，但 `day stick` 既有 prerequisite、可學職業更少、且 `Chance` 更高，不能和 `monkey stick` 一樣維持全 `20`。
+- `monkey stick` 雖是 root，help 文案仍明講「殺傷力不小」；因此本批不會把它壓成純新手刮痧模板，而是重建成可成立的入門重棍。
+- area `*.mob` 與 `#Learn` 目前未看到 `monkey stick` / `day stick` 的現成 runtime enable 樣本，因此本批仍先修 skill template，不先動 mob fallout。
+
+## Batch M Result
+
+### Scope
+
+- `monkey stick`
+- `day stick`
+
+### Runtime Changes
+
+`monkey stick`
+
+- before: `20 x 5`
+- after: `80, 95, 110, 130, 150`
+- average: `113.0`
+
+`day stick`
+
+- before: `20 x 5`
+- after: `125, 145, 165, 185, 210`
+- average: `166.0`
+
+### Design Notes
+
+- 本批只調 `Value`，保留棍系既有的高成本與重兵器節奏。
+- `monkey stick` 站穩高成本 root，不再是和高階棍法幾乎無差別的清值模板。
+- `day stick` 以更高的單段值承接 prerequisite 後的進階段，讓這條短鏈重新有明顯的玩家向升階感。
+
+### Validation
+
+- `make -C src -f Makefile.lin merc`
+- `make -C src merc`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-m.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/badobject`
+    - 無新增內容
+  - `debug/error`
+    - 無新增內容
+
 ## Batch L Pre-Check
 
 ### Scope

@@ -49,7 +49,7 @@ Help
 Description
 $n使一招$y『潑猴隨棍上』$Z﹐手中$O一縮一伸﹐突擊$N的丹田。~
 Chance          10
-Value           20
+Value           80
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -59,7 +59,7 @@ End
 Description
 $n一招$y『頑猴怯拋棍』$Z﹐$n假意的將手中$O拋給$N。~
 Chance          10
-Value           20
+Value           95
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -69,7 +69,7 @@ End
 Description
 $n一招$y『靈猴翻天印』$Z﹐$n翻身將$O往$N頭部重鎚。~
 Chance          10
-Value           20
+Value           110
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -79,7 +79,7 @@ End
 Description
 $n一招$Y『怒猴狂搜姿』$Z﹐$n將$O夾在頭部旋轉﹐直衝$N。~
 Chance          10
-Value           20
+Value           130
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -89,7 +89,7 @@ End
 Description
 $n一招$Y『仙猴偷蹯桃』$Z﹐$n一彎身﹐將$O由下往上直撞$N的下巴。~
 Chance          10
-Value           20
+Value           150
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
