@@ -1,0 +1,32 @@
+Vnum            11401
+Name            vortex deeps warden~
+ShortDesc       渦腹鎮衛~
+Description
+一名披著裂痕鎮甲的渦腹鎮衛立在脈渦邊緣，手中符杖持續描摹著
+封紋軌跡，像在與看不見的深層潮壓角力。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       80
+Level           58
+Hitroll         2
+Protect         0
+Damroll         2
+Str             15
+Int             14
+Wis             15
+Dex             13
+Con             14
+Hp              6600
+Mana            460
+Move            230
+Class           0
+Gold            560
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

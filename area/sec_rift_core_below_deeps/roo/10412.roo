@@ -1,0 +1,24 @@
+Vnum            10412
+Name            渦核封檻臺~
+Description
+封檻臺懸在可見最深處，腳下渦潮沿巨大脈縫盤旋而下，像在引向更深不可測的裂核渦核。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        10411
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         渦核~
+End
+
+#Enquire
+Keyword         脈縫~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            11402
+Name            pressure deeps surveyor~
+ShortDesc       測壓巡修~
+Description
+這名巡修背著沉重量測匣，在刻線與導槽之間來回比對數值，眉間
+始終緊鎖，彷彿下一次逆流就會把所有記錄抹去。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       50
+Level           57
+Hitroll         2
+Protect         0
+Damroll         2
+Str             14
+Int             15
+Wis             15
+Dex             13
+Con             14
+Hp              6400
+Mana            520
+Move            240
+Class           0
+Gold            540
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

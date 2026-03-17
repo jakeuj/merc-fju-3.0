@@ -27,7 +27,7 @@
 ## References
 
 - 全局計畫：`plans/0001-world-map-area-rebuild.md`
-- 單區計畫：`plans/area/0002-loyang-outskirts.md`、`plans/area/0003-beiping-outskirts.md`、`plans/area/0004-jingxiang-road.md`
+- 單區計畫：`plans/area/0002-loyang-outskirts.md`、`plans/area/0003-beiping-outskirts.md`、`plans/area/0004-jingxiang-road.md`、`plans/area/0019-sec-rift-core-below-deeps.md`
 - 世界圖參考：`area/world_map.md`
 - ref 索引：`ref/Readme.md`
 - 舊站 docs 參考：`docs/3yWebsite/docs/index.md`
@@ -142,17 +142,19 @@
 - `sec_rift_true_core` 已完成第一輪 implementation，完成本機 Linux build，並達成可前進下一區狀態
 - `plans/area/0018-sec-rift-core-below.md` 已建立
 - `sec_rift_core_below` 已完成第一輪 implementation，完成本機 Linux build，並達成可前進下一區狀態
+- `plans/area/0019-sec-rift-core-below-deeps.md` 已建立
+- `sec_rift_core_below_deeps` 已完成第一輪 implementation，完成本機 Linux build，並達成可前進下一區狀態
 ## Blocked
 
 - none
 
 ## Current Recommended Next Step
 
-目前 `sec_rift_core_below` 已完成第一輪 implementation；若要繼續使用固定 prompt，下一步建議規劃其下方更深層裂核底脈延伸區（暫名 `sec_rift_core_below_deeps`）的單區 plan。
+目前 `sec_rift_core_below_deeps` 已完成第一輪 implementation；若要繼續使用固定 prompt，下一步建議規劃其下方更深層裂核渦核區（暫名 `sec_rift_core_vein_abyss`）的單區 plan。
 
 在沒有現成 `todo` 的前提下，下一輪建議可走兩條路：
 
-1. 延續地下鏈，為 `sec_rift_core_below` 之下的更深裂核底脈建立新的單區 plan。
+1. 延續地下鏈，為 `sec_rift_core_below_deeps` 之下的更深裂核渦核區建立新的單區 plan。
 2. 或先做一個很短的 docs-assisted candidate pass：
 3. 從 `docs/3yWebsite/docs/data/players.json` 抽出高頻出現的教學 / 補給 / 轉職 / 練功節點。
 4. 從 `docs/3yWebsite/docs/data/skills.json` 核對這些節點對應的技能鏈與 teacher 服務。
@@ -163,12 +165,12 @@
 語意提醒：
 
 - 目前已沒有 `in_progress` 項目，因此若再次使用固定 prompt，需先補出新的 candidate area / todo 項目
-- `sec_catacomb_depths` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0009-sec-catacomb-depths.md` 回查
-- `sec_rift_below` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0010-sec-rift-below.md` 回查
-- `sec_rift_core` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0011-sec-rift-core.md` 回查
-- 依新 room reservation policy，`sec_rift_below` 已使用 `9501-9520`，`sec_rift_core` 已使用 `9601-9620`，`sec_rift_deeps` 已完成 `9701-9712` 第一版落地，`sec_rift_prison_core` 已完成 `10001-10012` 第一版落地，`sec_rift_underseal_dais` 已完成 `10101-10112` 第一版落地，`sec_rift_true_core` 已完成 `10201-10212` 第一版落地，`sec_rift_core_below` 已完成 `10301-10312` 第一版落地
+- `sec_rift_core_below` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0018-sec-rift-core-below.md` 回查
+- `sec_rift_core_below_deeps` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0019-sec-rift-core-below-deeps.md` 回查
+- 依新 room reservation policy，`sec_rift_below` 已使用 `9501-9520`，`sec_rift_core` 已使用 `9601-9620`，`sec_rift_deeps` 已完成 `9701-9712` 第一版落地，`sec_rift_prison_core` 已完成 `10001-10012` 第一版落地，`sec_rift_underseal_dais` 已完成 `10101-10112` 第一版落地，`sec_rift_true_core` 已完成 `10201-10212` 第一版落地，`sec_rift_core_below` 已完成 `10301-10312` 第一版落地，`sec_rift_core_below_deeps` 已完成 `10401-10412` 第一版落地
 - 既有地下鏈 `9451/9461/9481/9491` 保留原狀，不在這一輪 retroactive 重編
+
 
 建議可直接使用的 prompt：
 
-`先盤點下一個可接續的 area candidate，或為 sec_rift_core_below 之下的更深裂核底脈建立新的單區 plan。`
+`先盤點下一個可接續的 area candidate，或為 sec_rift_core_below_deeps 之下的更深裂核渦核區建立新的單區 plan。`

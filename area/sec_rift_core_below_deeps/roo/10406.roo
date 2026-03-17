@@ -1,0 +1,32 @@
+Vnum            10406
+Name            鎮紋側廊~
+Description
+側廊地面佈滿導紋槽，微弱光流沿槽道奔行，把主脈溢散的壓流分送至封口區。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10407
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         鎮紋~
+End
+
+#Enquire
+Keyword         導流~
+End
+
+End

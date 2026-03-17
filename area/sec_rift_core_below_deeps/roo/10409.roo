@@ -1,0 +1,16 @@
+Vnum            10409
+Name            補紋備料間~
+Description
+備料間層架上排著未完成的補紋石板，多數邊角已被逆灌脈潮腐蝕得斑駁脆裂。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

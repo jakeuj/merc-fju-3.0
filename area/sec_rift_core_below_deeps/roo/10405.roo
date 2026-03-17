@@ -1,0 +1,31 @@
+Vnum            10405
+Name            渦壓節脈臺~
+Description
+節脈臺周圍立著數圈鎮壓石環，石環邊緣被磨出大量新裂紋，仍勉強維持壓差平衡。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10410
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         石環~
+Description
+石環內圈刻有不同年代修補署記，最新一圈的刻痕已明顯顫裂。
+~
+End
+
+End

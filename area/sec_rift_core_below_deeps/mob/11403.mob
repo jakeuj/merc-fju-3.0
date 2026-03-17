@@ -1,0 +1,32 @@
+Vnum            11403
+Name            seal-throat deeps watcher~
+ShortDesc       封口守望者~
+Description
+守望者佇立在封檻臺前，腳邊散落著失效鎮印，眼神卻仍死盯著下方
+脈縫深處，像在警戒某種即將上湧的異變。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       -50
+Level           60
+Hitroll         2
+Protect         0
+Damroll         3
+Str             16
+Int             14
+Wis             14
+Dex             13
+Con             15
+Hp              7000
+Mana            380
+Move            220
+Class           0
+Gold            620
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

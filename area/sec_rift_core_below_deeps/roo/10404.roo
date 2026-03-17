@@ -1,0 +1,32 @@
+Vnum            10404
+Name            逆流觀測臺~
+Description
+觀測臺正對渦腹中心，黑紅潮流時而逆卷向上，像有巨物在下層緩慢翻身。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10405
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         逆流~
+End
+
+#Enquire
+Keyword         巨影~
+End
+
+End

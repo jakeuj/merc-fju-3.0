@@ -77,3 +77,6 @@ sec_rift_true_core
 
 * sec_rift_core_below 房間 10301-10312 (裂核下層)
 sec_rift_core_below
+
+* sec_rift_core_below_deeps 房間 10401-10412 (裂核深層)
+sec_rift_core_below_deeps

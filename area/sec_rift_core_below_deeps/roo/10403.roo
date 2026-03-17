@@ -1,0 +1,32 @@
+Vnum            10403
+Name            渦腹前脈~
+Description
+前脈走廊沿著井壁繞行，牆面殘留多層封紋覆寫痕跡，顯示這裡曾被反覆加固。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10406
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

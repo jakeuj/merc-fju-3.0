@@ -1,0 +1,24 @@
+Vnum            10408
+Name            餘潮卸放室~
+Description
+卸放室中央槽池翻湧著黏稠脈潮，牆邊堆滿半融鎮印片，空氣中混著灼鐵與藥灰味。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10407
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10409
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

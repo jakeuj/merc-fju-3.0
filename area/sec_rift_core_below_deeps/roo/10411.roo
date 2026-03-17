@@ -1,0 +1,32 @@
+Vnum            10411
+Name            封口井緣~
+Description
+井緣立著半毀封柱，柱芯仍有細弱光脈流轉，勉力維持通往更深層的單一路徑。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10410
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        10412
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         封柱~
+End
+
+#Enquire
+Keyword         深口~
+End
+
+End
