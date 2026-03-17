@@ -9,6 +9,12 @@ title: Merc FJU 3.0 Docs
 
 ## Current Game
 
+- [AREA 開發手冊](./area-development-handbook.html)
+- [AREA Delivery Gates](./area-delivery-gates.html)
+- [AREA VNUM Policy](./area-vnum-policy.html)
+- [AREA External Exit Policy](./area-external-exit-policy.html)
+- [AREA Acceptance Checklist](./area-acceptance-checklist.html)
+- [Codex AREA Workflow](./codex-area-workflow.html)
 - [Current Game 首頁](./current-game/)
 - [技能補充說明](./current-game/skills.html)
 - [`.ski` 技能檔格式說明](./current-game/skill-file-format.html)

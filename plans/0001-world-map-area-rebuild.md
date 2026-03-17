@@ -48,6 +48,30 @@
 - 若需要 `.roo` scaffold，使用 `.agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py`
 - 題材與沉浸式設計使用 `.agents/skills/merc-area-builder/references/theme-design-patterns.md`
 
+## Recommendation Alignment
+
+本計畫已吸收 `ref/mud-new-area-full-recommendations.md` 的方向，但採「依 repo 現況收斂」的落地方式，而不是直接把建議清單視為已存在的制度。
+
+對齊原則：
+
+- 參考文件提出的六層模型 `世界規劃 / 單區 spec / 生成器 / 驗證器 / smoke test / Git workflow`，在這個 repo 內直接對應到既有 pipeline
+- 已經存在的能力，優先明文化成正式 contract，而不是另起一份平行文件重講一次
+- 尚未存在的 `templates/`、`schemas/`、`tools/`、`prompts/`，先列入 roadmap；未落地前不得假裝它們已是硬性 gate
+- 新增文件或工具時，應優先補現有流程的缺口，避免把 skill reference、`plans/`、`area/rebuild_plan.md` 與新文件做成三套彼此競爭的規則來源
+
+## Capability Matrix
+
+把 `ref/mud-new-area-full-recommendations.md` 映射到目前 repo，能力分層如下：
+
+| Layer | 現行主入口 | 目前狀態 | 下一步缺口 |
+| --- | --- | --- | --- |
+| 世界規劃層 | `area/world_map.md`、`ref/Readme.md` | 已上線 | 補 world diff 與更明確的題材稽核 |
+| 單區 spec 層 | `plans/area/*.md`、`area/<area>/map.md` | 已上線 | 補更固定的 template 與欄位檢查 |
+| 生成器層 | `.agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py` | 已上線 | 仍以 `.roo` 投影為主，尚未包辦整區 bootstrap |
+| 驗證器層 | `--validate-only`、`scripts/world_consistency_checker.py` | 部分上線 | 尚缺 plan/schema 驗證、log 摘要與 gate 建議器 |
+| 啟動 / smoke test 層 | `make` / `startup.bash` / `log` / `debug` 檢查 | 已上線但偏人工 | 可補 runner 與摘要工具，但不能取代人工判讀成功訊號 |
+| Git / PR / Codex workflow 層 | `delivery_gate`、固定 prompt、branch policy | 已上線 | 尚缺 PR template、prompt 套件與半自動 tracker 更新 |
+
 ## World Graph Governance
 
 `area/world_map.md` 與其對應的世界拓樸決策屬於 world graph layer。預設規則：
@@ -261,6 +285,30 @@ AREA rebuild 的預設工作單位是「一輪任務只處理一個 area milesto
 - 若只是 generator 成功但 boundary room、`area/directory.lst` 或 loader 仍未驗證，不可直接視為 `validated_ready_to_advance`
 - 驗證失敗時，先留在當前 area 修正，不要改去做下一區
 
+## Milestone Output Contract
+
+`ref/mud-new-area-full-recommendations.md` 強調「固定產出清單」。在本 repo 內，固定產出不必一次做滿所有文件，但每個 milestone 至少要交付下列內容。
+
+spec milestone 最小產出：
+
+- 單區 plan 已建立或更新，且補齊 `ref_inputs_used / ref_inputs_deferred / theme_basis / compliance_check`
+- `area/<area>/map.md` 已形成可讀 spec，並含可驗證的 `mapmd-json`
+- `reserved_room_block`、`planned_vnum_range`、`external_links` 已固定到可被後續 implementation 承接
+- 至少有一筆可追溯的驗證證據，例如 `--validate-only` 結果或人工檢查紀錄
+
+implementation milestone 最小產出：
+
+- `index / roo / mob / obj / res / shp` 已達到最小可載入集合，或明確註記本輪尚未落地的部分
+- `area/directory.lst` 與既有 boundary room 的連動修改已一併納入同一里程碑
+- build、smoke test、`log/*`、`debug/*` 的驗證結論可被回讀
+- `area/rebuild_plan.md` 與單區 plan 的 `delivery_gate` 已同步到本輪結果
+
+global workflow milestone 最小產出：
+
+- 若這輪調整的是全局流程，而非單一 area，需明講它改進了哪一層 pipeline
+- 若這輪吸收 `ref/` 新建議，需判定它是「立即生效的 contract」還是「延後落地的 roadmap item」
+- 若新增規則會影響既有 skill reference、tracker 或單區 template，需同時記錄誰是新的 authoritative source
+
 ## Commit And Review Unit
 
 全局上以「單一 area milestone」作為 commit 與 review 的最小單位。
@@ -396,6 +444,8 @@ Agent loop 可視為：
 - 代理能只靠固定主 prompt + `area/rebuild_plan.md` 找到下一步
 - `loyang_outskirts` 能作為第一個完整驗證 spec-first 流程的範例
 - 全局流程已明確區分 `world graph / queue / area plan / area spec / runtime validation / delivery gate`
+- `ref/mud-new-area-full-recommendations.md` 的建議已被收斂成 capability matrix，而不是散落的願望清單
+- 缺的文件 / template / schema / tool / prompt 已被整理成 staged roadmap，且不會被誤認為既有硬性 gate
 - 後續若導入 PR、graph diff 或 CI，不需要推翻現有 area rebuild 工作方式
 
 ## Proven By First Case
@@ -430,24 +480,106 @@ Agent loop 可視為：
 6. 若 smoke test 需要用 `timeout` 控制，時間必須高於正常開機時間；預設優先給 `45` 到 `60` 秒，並在成功後回看本輪 log，避免把測試工具造成的提早中止誤判成 area 載入失敗
 7. 建立下一個新 AREA 前，先為它選定從 `xx01` 起跳的 `reserved_room_block`，並確認該 block 尚未與現有 `area/`、`src/`、`data/` 中的 room vnum 使用情況衝突
 
-## Tooling Roadmap
+## Systemization Roadmap
 
-GPT pipeline 提到的幾個方向適合納入長期 roadmap，但目前仍屬「建議中的工具化」，不應假裝已是既有 gate：
+`ref/mud-new-area-full-recommendations.md` 的核心價值不是叫 repo 一次長出三十幾個檔，而是提醒我們把 area rebuild 流程逐步系統化。這個 roadmap 把那些建議收斂成「何者先補、何者延後」。
 
-1. `world-check.py` 或同級工具
-   - 目標：檢查 duplicate vnum、orphan exits、broken reverse links、unreachable rooms
-   - 現況：已先以 `scripts/world_consistency_checker.py` / `scripts/world-consistency-checker.py` 落地第一版，覆蓋 duplicate vnum、broken exits、orphan/disconnected rooms、unreachable area、`directory.lst` 一致性；仍未取代 smoke test，也尚未理解 `#Job` / 傳送型 travel graph
-2. world graph diff
-   - 目標：在每次 area milestone 後明確顯示 world link 前後差異
-   - 現況：先在單區 plan / commit 訊息中人工記錄外部連線變更
-3. CI pipeline
-   - 目標：自動化 `build -> load -> smoke test -> world consistency check`
-   - 現況：先以本機或 cloud 驗證為主，等規則穩定後再固化成 CI
+總原則：
 
-原則：
+- 新文件或工具要補目前 workflow 的實際缺口，不是為了湊齊建議清單
+- 既有腳本可延伸時，優先延伸既有腳本，不先複製出功能重疊的新檔名
+- 只有當文件或工具已穩定、被反覆使用，才把它升格成正式 gate 或 authoritative source
 
-- 新工具應服務既有 workflow，不應反過來逼流程遷就半成品工具
-- 只有當工具能穩定降低誤判與人工成本時，才提升為正式 gate
+### Stage 1: Governance And Contracts
+
+先補最直接影響固定 prompt 與單區續跑安全性的文件契約：
+
+- `docs/area-development-handbook.md`
+  - 把本計畫、skill reference 與 tracker 共同遵守的 area 開發骨架整理成單一入口
+- `docs/area-delivery-gates.md`
+  - 把 `spec_in_progress -> validated_ready_to_advance` 的語意獨立寫清楚
+- `docs/area-vnum-policy.md`
+  - 把 `reserved_room_block`、`planned_vnum_range`、extension block 規則抽成可引用文件
+- `docs/area-external-exit-policy.md`
+  - 把 external exit、boundary room patch、spec/runtime 同步責任說清楚
+- `docs/area-acceptance-checklist.md`
+  - 把 implementation ready 與 validated ready 所需證據列成最小 checklist
+- `docs/codex-area-workflow.md`
+  - 把固定 prompt、branch policy、commit/review unit 與 tracker update 規則整理給 agent 使用
+
+Stage 1 的目標不是取代 `AGENTS.md` 或 skill，而是讓 repo 內有一份對人類協作者也容易回讀的正式入口。
+
+### Stage 2: Templates And Schemas
+
+當 Stage 1 規則穩定後，再補模板與 schema，降低單區 plan / spec 格式漂移：
+
+- `templates/area-plan.template.md`
+- `templates/map.md.template`
+- `templates/area-readme.template.md`
+- `templates/new-area-checklist.template.md`
+- `schemas/mapmd-json.schema.json`
+- `schemas/area-plan.schema.json`
+
+落地原則：
+
+- template 應反映本計畫已固定的欄位，不得自創另一套命名
+- `mapmd-json` schema 要對齊 generator 現況，特別是 direction、`external: true`、cluster 與 metadata 欄位
+- `area-plan` schema 只驗欄位完整度與基本型別，不應把設計判斷硬編成機械規則
+
+### Stage 3: Validation And Bootstrap Tools
+
+等格式穩定後，再擴充工具層，優先順序如下：
+
+1. 補強既有 validator
+   - 優先延伸 `scripts/world_consistency_checker.py`
+   - 目標：逐步補強 VNUM、exit、boundary、`directory.lst` 與 area reachability 診斷
+2. 補 `mapmd` 專用 validator
+   - 可考慮新增 `tools/mapmd_validate.py`
+   - 目標：在 generator 前先做更明確的 spec 錯誤摘要
+3. 補 vnum allocator
+   - 可考慮新增 `tools/area_vnum_allocator.py`
+   - 目標：用 repo 現況掃描建議下一段 `reserved_room_block`
+4. 補 smoke runner 與 log 摘要
+   - 可考慮新增 `tools/area_smoke_test_runner.py`、`tools/log_parse_summary.py`
+   - 目標：標準化 `debug/*` 基線、timeout、最新 log 解析與成功訊號回報
+5. 補 acceptance / tracker helper
+   - 可考慮新增 `tools/area_acceptance_gate.py`、`tools/update_rebuild_tracker.py`
+   - 目標：產出 gate 建議，但最後是否前進仍由人工判讀
+6. 補 bootstrap / patch 建議器
+   - 可考慮新增 `tools/area_scaffold_generator.py`、`tools/area_patch_existing_world.py`
+   - 目標：降低新 area 起手與接回既有世界時的人工作業量
+
+這一階段的重點是「輔助」而不是「取代」：新工具應輸出可 review 的建議或摘要，而不是默默寫一堆不可追溯的 area 資料。
+
+### Stage 4: Prompt, Diff, And CI Packaging
+
+最後才處理比較適合在流程成熟後補齊的包裝層：
+
+- `prompts/new-area-master-prompt.md`
+- `prompts/new-area-spec-prompt.md`
+- `prompts/new-area-implementation-prompt.md`
+- `prompts/new-area-validation-prompt.md`
+- `prompts/fix-area-load-error-prompt.md`
+- `docs/pr-template-new-area.md`
+- `tools/world_graph_diff.py`
+- `scripts/validate_area.sh`
+- `scripts/validate_world.sh`
+- `scripts/ci_validate_new_area.sh`
+
+這些項目適合作為後期標準化產物，但前提是：
+
+- 單區 plan contract 已穩定
+- validator 與 smoke test 已有足夠低誤判率
+- 團隊真的需要跨多人 / PR / CI 重複使用這些包裝層
+
+## Tooling Promotion Rules
+
+為了避免 roadmap 一邊寫、一邊把半成品誤升成硬規則，新增下列提升條件：
+
+- 文件提升為 authoritative source 前，需先確認不會和 `AGENTS.md`、skill reference、現有 `plans/` 規則衝突
+- 工具提升為正式 gate 前，至少要經過多個 area milestone 驗證，且誤判成本低於人工檢查
+- 若某個功能已可合理併入現有腳本，例如 `generate_roo_from_map_md.py` 或 `world_consistency_checker.py`，優先擴充原檔，不優先創造同義工具
+- world graph diff、CI 與 PR 模板屬於流程成熟後的加速器，不是第一輪 area rebuild 成敗的前置條件
 
 ## Assumptions
 
