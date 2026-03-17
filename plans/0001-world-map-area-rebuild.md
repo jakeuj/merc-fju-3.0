@@ -551,6 +551,12 @@ Stage 1 的目標不是取代 `AGENTS.md` 或 skill，而是讓 repo 內有一�
 
 這一階段的重點是「輔助」而不是「取代」：新工具應輸出可 review 的建議或摘要，而不是默默寫一堆不可追溯的 area 資料。
 
+目前進度補充：
+
+- `tools/mapmd_validate.py` 已有第一版，可復用現有 generator 驗證並補 metadata 檢查
+- `tools/area_vnum_allocator.py` 已有第一版，可掃描 runtime room files 與已記錄保留段後給出 block 建議
+- 其餘 Stage 3 工具仍保留在 roadmap，不視為既有硬性 gate
+
 ### Stage 4: Prompt, Diff, And CI Packaging
 
 最後才處理比較適合在流程成熟後補齊的包裝層：

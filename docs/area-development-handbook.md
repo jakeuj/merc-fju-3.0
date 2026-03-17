@@ -212,6 +212,12 @@ AREA 開發 pipeline 固定拆成七層：
 最低驗證：
 
 ```bash
+python3 tools/mapmd_validate.py area/<area>/map.md
+```
+
+或直接使用 generator：
+
+```bash
 python .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/<area>/map.md --validate-only
 ```
 
@@ -303,3 +309,16 @@ make -C src -f Makefile.lin merc
 - `docs/codex-area-workflow.md`
 
 若 companion docs 和全局流程看起來有差異，仍以 `AGENTS.md`、`plans/0001-world-map-area-rebuild.md` 與 `area/rebuild_plan.md` 為準，再回頭修 docs。
+
+## Current Tooling
+
+目前 repo 內已可直接使用的 area workflow tooling 包含：
+
+- `tools/mapmd_validate.py`
+  - 以現有 generator parser/validator 為核心，補上 `reserved_room_block`、theme、cluster 與 world link 的摘要檢查
+- `tools/area_vnum_allocator.py`
+  - 掃描現有 room files 與已記錄的保留段，建議下一個 `reserved_room_block`
+- `.agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py`
+  - 將 `mapmd-json` 投影成 `.roo` scaffold，並提供 `--validate-only`
+- `scripts/world_consistency_checker.py`
+  - 做 runtime-aware 世界一致性檢查
