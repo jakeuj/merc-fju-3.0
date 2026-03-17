@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_x_implemented`
+- `status = batch_y_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch X implemented`
+- `current_batch = Batch Y implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可回到剩餘 blade / fist 孤立高階技能，或進一步盤點是否還有 `Value 20` 的 player-facing legacy 攻擊技
+1. 下一個高價值候選可續盤剩餘 blade / fist 孤立高階技能，例如 `dragon heroism blade` 或 `cloud fist`
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -3310,6 +3310,82 @@
   - 改用 `IPC KEY 4585`
 - 檢查：
   - `log/smoke-batch-x.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/badobject`
+    - 無新增內容
+  - `debug/error`
+    - 無新增內容
+
+## Batch Y Pre-Check
+
+### Scope
+
+- `dragon phoenix`
+
+### Reference Basis
+
+- `docs/3yWebsite/skill/general.html`
+  - `dragon phoenix` 以單獨技能列在格鬥系頁
+  - 舊站明確給出職業限制、屬性限制與 prerequisite
+- `docs/current-game/skills/job-fighter.md`
+  - current-game 已把 `dragon phoenix` 列為 `legacy-page:general`
+  - runtime 顯示其 `Value` 仍全 `20`
+- runtime `skill/d/dragon_phoe.ski`
+  - `CanAsk YES / Teach NO / Valid YES`
+  - `Value` 全 `20`
+
+### Mandatory Pre-Check Snapshot
+
+`dragon phoenix`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `40 / COST_MOVE / 10`
+- weapon / check: `WEAPON_BLADE / check_blade_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `9`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這是單點高階刀法，不屬於多段 prerequisite ladder，但仍是明確的 player-facing legacy 高階技能。
+- `Cost 40` 已明顯高於一般刀法，因此只要 `Value` 維持全 `20`，模板就會嚴重失真。
+- area `*.mob` 目前未看到 `dragon phoenix` 的現成 `Enable / AutoEnable / #Learn` 樣本，因此本批先不做 mob fallout。
+
+## Batch Y Result
+
+### Scope
+
+- `dragon phoenix`
+
+### Runtime Changes
+
+`dragon phoenix`
+
+- before: `20 x 9`
+- after: `180, 210, 240, 270, 305, 345, 390, 440, 500`
+- average: `320.0`
+
+### Design Notes
+
+- 本批只調 `Value`，保留 `dragon phoenix` 原本高成本、大刀、高階刀法的節奏與武器 identity。
+- 這樣可以先把單點高階模板從清值狀態拉回來，再視需要另開一輪處理更細的教學／職業政策。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-y.log`
     - 出現 `三國歪傳之降龍伏虎開始正常運作`
   - `debug/failenable`
     - 無新增內容
