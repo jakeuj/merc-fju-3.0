@@ -331,9 +331,9 @@
 
 目前狀態：
 
-- `status = batch_bb_implemented`
+- `status = batch_bd_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch BB implemented`
+- `current_batch = Batch BD implemented`
 
 ## Immediate Next Steps
 
@@ -5534,6 +5534,153 @@
 
 - 本批把 `hanzo blade` 定位成偏慢節奏、每式份量漸重的高階刀系特技。
 - 曲線前段不直接拉太高，讓後半段的忍術混刀與終式雷擊更有層次。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 與 Batch BD 共用同一輪 smoke 驗證
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BC Pre-Check
+
+### Scope
+
+- `ice fist`
+
+### Reference Basis
+
+- runtime `skill/i/icefist.ski`
+  - `Value` 全 `20`
+  - `Cost 10 / Wait 1 / Check check_unrigid_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `ice fist`
+  - `family = legacy-page:ice fist`
+  - combat 維度顯示 `8` 段 `Value 20`
+- `area/limbo/obj/286.obj`
+  - 仍存在 `ice fist book`
+
+### Mandatory Pre-Check Snapshot
+
+`ice fist`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `10 / COST_MOVE / 1`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `8`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `ice fist` 是典型快節奏冰系拳法模板，`Wait 1` 與完整八式招式都說明它不是慢重掌型技能。
+- current-game family 與 limbo 祕笈樣本都在，足以確認它是玩家向 skill。
+- 本批先只回填 `Value`，保留原本的高速出手與低成本定位。
+
+## Batch BC Result
+
+### Scope
+
+- `ice fist`
+
+### Runtime Changes
+
+`ice fist`
+
+- before: `20 x 8`
+- after: `85, 105, 130, 160, 195, 235, 285, 350`
+- average: `193.13`
+
+### Design Notes
+
+- 本批把 `ice fist` 定位成快節奏、低成本、後段漸強的冰系拳法。
+- 這樣能保留它作為高速拳路的身份，也讓終式有足夠收束力。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 測試 ports:
+    - `15841`
+    - `16237`
+    - `16891`
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BD Pre-Check
+
+### Scope
+
+- `ice freeze strike`
+
+### Reference Basis
+
+- runtime `skill/i/icefreeze_strike.ski`
+  - `Value` 全 `20`
+  - `Cost 20 / Wait 1 / Check check_unrigid_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `ice freeze strike`
+  - `family = legacy-page:ice freeze strike`
+  - combat 維度顯示 `8` 段 `Value 20`
+- `area/limbo/obj/290.obj`
+  - 仍存在 `ice freeze strike book`
+- `area/limbo/mob/6.mob`
+  - 仍有 `Enable 100 'ice freeze strike'` 與施放樣本
+
+### Mandatory Pre-Check Snapshot
+
+`ice freeze strike`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 1`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `8`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `ice freeze strike` 與 `ice fist` 同為高速冰系掌法，但成本更高、chance 更高，且已有 limbo 施放樣本，理應站在更高的實戰層級。
+- 全 `20` 明顯不足以支撐它在祕笈與樣本中的位置。
+- 本批先只回填 `Value` 階梯，保留原本的出手速度、situs 分布與 mob wiring。
+
+## Batch BD Result
+
+### Scope
+
+- `ice freeze strike`
+
+### Runtime Changes
+
+`ice freeze strike`
+
+- before: `20 x 8`
+- after: `120, 145, 175, 210, 250, 300, 360, 430`
+- average: `248.75`
+
+### Design Notes
+
+- 本批把 `ice freeze strike` 定位成高於 `ice fist` 的進階冰系掌法，保持高速但整體輸出更重。
+- 這樣能讓 `寒冰綿掌` 兼具快速壓制與更明確的高階存在感。
 
 ### Validation
 

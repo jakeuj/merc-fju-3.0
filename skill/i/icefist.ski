@@ -41,7 +41,7 @@ Help            ~
 Description
 $n雙臂驟分﹐使出『$W霜雪紛飛$Z』﹐拳帶扭勁﹐力透人身﹐$N臂骨立斷。~
 Chance          10
-Value           20
+Value           85
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -52,7 +52,7 @@ Description
 $n運出雙拳﹐使出『$Y霜痕累累$Z』﹐淩厲無匹﹐拳勁到處﹐$N衣衫意片片剝落﹐胸前
 被擊中。~
 Chance          10
-Value           20
+Value           105
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -63,7 +63,7 @@ Description
 $n攻勢如排出倒海﹐乃是『$S霜雪漫天$Z』的起手勢﹐使$N變得動作遲純﹐全身感到一
 陣寒意。~
 Chance          10
-Value           20
+Value           130
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -73,7 +73,7 @@ End
 Description
 只見$n使出『$W霜影縱橫$Z』密如雨點﹐盡擊在$N上。~
 Chance          10
-Value           20
+Value           160
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -84,7 +84,7 @@ Description
 $n提起內力﹐臉上登時閃現忽青忽藍之色﹐一拳擊下乃是『$G霜臨$B天地$Z』﹐$N受傷
 沉重。~
 Chance          10
-Value           20
+Value           195
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -94,7 +94,7 @@ End
 Description
 $n立聚勁雙手﹐緊扣$N的雙臂﹐使出『$S寒霜飛雪$Z』﹐使$N無法動彈。~
 Chance          10
-Value           20
+Value           235
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -105,7 +105,7 @@ Description
 數聲沉雷碰響﹐爆出驚天動地的氣勁﹐正是$n使『$R霜爆山河$Z』拳影頓時如密如
 雨下﹗~
 Chance          10
-Value           20
+Value           285
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -118,7 +118,7 @@ $n運氣﹐雙臂發出爆烈的聲音﹐乃是天霜拳究極殺招『$S霜凝�
 『$W霜  雪$S』≡≡$Z$A$S≡≡『$W狂  爆$S』≡≡$Z$A$S≡≡『$W崩  山$S』≡≡
 $Z$A$S≡≡『$W河  潰$S』≡≡$Z~
 Chance          10
-Value           20
+Value           350
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
