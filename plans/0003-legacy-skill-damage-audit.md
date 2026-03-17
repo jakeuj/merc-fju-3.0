@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_av_implemented`
+- `status = batch_ax_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch AV implemented`
+- `current_batch = Batch AX implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `fan hammer / slash light / snow martial force` 之後的其餘孤立 high-tier attack skill
+1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `dubafist / rock slash` 之後的其餘孤立 high-tier attack skill
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -3544,6 +3544,158 @@
   - 改用 `IPC KEY 5585`
 - 檢查：
   - `log/smoke-batch-aa.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AW Pre-Check
+
+### Scope
+
+- `dubafist`
+
+### Reference Basis
+
+- runtime `skill/d/dubafist.ski`
+  - 除名字與招式描述外，`Value` 全 `20`
+  - `Cost 20 / Wait 1 / Check check_unrigid_attack`
+  - `Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `dubafist`
+  - runtime 維度明確指到 `skill/d/dubafist.ski`
+- `area/limbo/obj/258.obj`
+  - book slot 對應 `SLOT_DUBAFIST`
+
+### Mandatory Pre-Check Snapshot
+
+`dubafist`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 1`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `11`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這是高速高段數拳技，模板特徵很接近先前補過的 `yu needle`、`blood ten` 一類快節奏連續技。
+- 在 `11` 段完整描述下仍維持全 `20`，屬典型清值模板。
+- 本批只回填 `Value` 階梯，保留其高速連擊拳技 identity。
+
+## Batch AW Result
+
+### Scope
+
+- `dubafist`
+
+### Runtime Changes
+
+`dubafist`
+
+- before: `20 x 11`
+- after: `125, 145, 170, 200, 235, 275, 320, 370, 425, 490, 565`
+- average: `301.82`
+
+### Design Notes
+
+- 本批讓 `dubafist` 走高速長段數拳技的後段拉升曲線，不改節奏也不抹掉其拳路個性。
+- 這樣既能擺脫清值模板，也能和慢節奏重拳技保持差異。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-ax.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AX Pre-Check
+
+### Scope
+
+- `rock slash`
+
+### Reference Basis
+
+- runtime `skill/r/rock_slash.ski`
+  - 第一段已保留 `Value 1200`
+  - 第二、三段仍為 `20`
+  - `Cost 15 / Wait 1 / Weapon WEAPON_SWORD / Check check_sword_attack`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `rock slash`
+  - `family = legacy-page:rock slash`
+  - 目前 runtime 顯示 mixed/hybrid damage profile
+
+### Mandatory Pre-Check Snapshot
+
+`rock slash`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `15 / COST_MOVE / 1`
+- weapon / check: `WEAPON_SWORD / check_sword_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `3`
+- chance set: `10`
+- current values before rebuild: `1200, 20, 20`
+- parry set: `0`
+- special case:
+  - 第一段 `Value 1200` 已是既有高特例
+
+### Interpretation
+
+- 這不是單純全清值模板，而是 hybrid keep case：第一段高值特例已存在，只有後兩段被壓成 `20`。
+- 因此本批不碰第一段，僅補回其餘兩段的成立梯度。
+- 這樣能保留 `穿角` 的極端必殺個性，不把整招系統重新洗平。
+
+## Batch AX Result
+
+### Scope
+
+- `rock slash`
+
+### Runtime Changes
+
+`rock slash`
+
+- before: `1200, 20, 20`
+- after: `1200, 360, 460`
+- keep case:
+  - 保留第一段 `Value 1200`
+
+### Design Notes
+
+- 本批把 `rock slash` 視為明確 hybrid special case，而不是一般梯度模板。
+- 這樣可以維持第一式的標誌性爆發，同時避免後續兩式仍停在清值狀態。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-ax.log`
     - 出現 `三國歪傳之降龍伏虎開始正常運作`
   - `debug/failenable`
     - 無新增內容

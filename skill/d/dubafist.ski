@@ -36,7 +36,7 @@ $n雙拳打出漫天拳影﹐每一拳都帶著驚人力量﹐正是一招$B七�
 狂濤」$Z拳勁往$N全身上下襲去﹐$N面對這一波波強大的攻勢運起全身之護身氣勁來
 抵擋﹐但$n的拳勁超出$N所想像之強烈﹐身中數十拳﹗﹗﹗~
 Chance          10
-Value           20
+Value           125
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -47,7 +47,7 @@ $n運勁使出$B七海獨霸拳$Z中的殺招$R「血海潛龍」$Z﹐拳勢到�
 翻起驚天血浪﹐將$N牢牢困在其中﹐$N被$n霸道的拳勁團團圍住不知如何是好﹐$n忽
 然的轟出強烈的一拳﹐將$N轟的狂吐鮮血﹗﹗﹗~
 Chance          10
-Value           20
+Value           145
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -58,7 +58,7 @@ $n的身驅忽然冒出熊熊的烈火﹐四周水氣頓時蒸發﹐$n順勢使�
 「火海焚天」$Z﹐全身力量灌進一拳之中﹐無情的往$N的全身上下怒擊而去﹐只見$N被
 $n所擊中的地方冒出一股股黑火﹗﹗﹗~
 Chance          10
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -69,7 +69,7 @@ $n將勁力沉於丹田之中﹐使出$B七海獨霸拳$Z中最霸一式$S「極
 注了$n對大海的感情與生命﹐兩者相生相長﹐竟把$N攻勢完全化為無形﹐更扯得$N身形
 盡失﹐被這驚天動地的一式轟的不成人形﹗﹗﹗~
 Chance          10
-Value           20
+Value           200
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -80,7 +80,7 @@ $n身形一變﹐使出$B七海獨霸拳$Z中的$W「惡浪轟天」$Z﹐$n拳�
 對手﹐而是使對手身處半空﹐無從卸勁$N被$n的拳勁捲入半空中忽然感到全身無力﹐只見
 $n的殺招又來﹐$N當場被$n從空轟入地底之下﹗﹗﹗~
 Chance          10
-Value           20
+Value           235
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -91,7 +91,7 @@ $n在對手越強時攻得越急越狠﹐改以短程吐勁﹐$B七海獨霸拳$
 $Z$N的拳力於最短時間內暴發﹐要$N卸無可卸﹐$n見$N處於弱勢再朝$N狂轟數拳﹐只見$N
 的身形幾乎被$n的拳勁撕成兩半﹗﹗﹗~
 Chance          10
-Value           20
+Value           275
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -102,7 +102,7 @@ $S$n吐氣揚聲﹐真氣運至最高境界﹐終極奧義$B七海獨霸拳$Z之
 不但灌滿勁力﹐更如怒濤般擊向$N﹐$n將其獨霸七海所領悟的終極殺招將$N轟上九天之上
 ﹐再躍起將$N再轟回地底下﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           320
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -113,7 +113,7 @@ $S$n將全身之真氣運至手掌上﹐此時$n的手掌發出絲絲的熱氣�
 真氣越來越高﹐二隻手掌發出耀眼的光芒﹐低吼一聲$B『葵水神雷』$Z之$Y「狂雷驟降
 」$Z$S$n所聚之狂雷化成數十道炙熱真氣如輻射般狂射$N﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           370
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -124,7 +124,7 @@ $S$n吐氣揚聲﹐真氣運至最高境界﹐終極奧義$B『葵水神雷』$Z
 雙拳不但灌滿勁力﹐更如怒濤般擊向$N﹐$n所形成的拳勁由上而下又由右至左將$N的前
 後左右退路硬生生的封住﹐將$N轟的面無人色﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           425
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -138,7 +138,7 @@ $n手中光球向$N的周圍狂轟而去﹗﹗﹗﹐只見$n的眼神放出一�
 ﹐向$N的四周直墜﹗﹗只見$N的身體已被千道拳勁所形成之強烈氣爆撕的粉身碎骨﹗﹗﹗
 ﹐只見$n隱沒於暴風狂雷所形成的護身勁中﹐與天空中之狂雷合為一體$Z。~
 Chance          10
-Value           20
+Value           490
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -150,7 +150,7 @@ $S只見一道強大的拳勁由空而降﹐只見$N的身體已被這道拳勁�
 『葵水神雷』$Z之$Y「雷霆縱橫」$Z$S﹐突然$n以迅雷不及掩耳的身法穿過$N$S的防禦網
 ﹐只見$N$S的身體已被$n所聚之電光雷擊所形成之強烈氣爆撕的粉身碎骨﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           565
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

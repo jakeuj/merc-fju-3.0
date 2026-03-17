@@ -56,7 +56,7 @@ $P$n將$O在$N上盤處舞得水瀉不通﹐突然間劍交左手﹐將$N下盤�
 $B        「必殺技．天跋」$P$A$A
 只見無數劍影從$N頭上罩下﹐腳下也盡是$n後繼的殺著。~
 Chance          10
-Value           20
+Value           360
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -70,7 +70,7 @@ $S        「必殺技．鋒斷」$P$A$A
 只見$n手中的$O以樸實不華的招式從中宮挺進﹐$N正想抵禦之際﹐突然發覺這招式中蘊含
 的氣勢正排山倒海地向自己撲來。~
 Chance          10
-Value           20
+Value           460
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
