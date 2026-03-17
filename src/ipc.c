@@ -43,10 +43,10 @@ void init_share_memory( int key, int key2 )
   size = sizeof( MEMORY_DATA ) * ipc_block;
 
   /* 測試是否之前的區塊沒有被刪除, 有的話嘗試刪除看看 */
-  if ( ( shmid = shmget( key , 0 , PERM ) != -1 ) )
+  if ( ( shmid = shmget( key, 0, PERM ) ) != -1 )
   {
     mudlog( LOG_INFO, "shmget: IPC KEY %d 存在, 嘗試刪除.", key );
-    delete_share_memory( shmget( key, 0, IPC_CREAT ) );
+    delete_share_memory( shmid );
   }
 
   /* 建立共享記憶體區塊 */
@@ -86,15 +86,19 @@ void init_share_memory( int key, int key2 )
 /* 刪除共享記憶體 */
 void delete_share_memory( int aShmid )
 {
-  if ( share_memory_enabled == FALSE || shm_ptr == ( char * ) 0 )
+  if ( aShmid < 0 )
     return;
 
-  /* 先卸下共享記憶體區塊 */
-  if ( shmdt( shm_ptr ) == 0 )
-    mudlog( LOG_INFO, "shmdt: 成功卸下共享計憶體." );
-  else
-    mudlog( LOG_INFO, "shmdt: 卸下共享記憶體失敗." );
+  /* 已掛上的區塊才需要卸下，啟動前殘留的舊區塊可直接刪除。 */
+  if ( shm_ptr != ( char * ) 0 && aShmid == shmid )
+  {
+    if ( shmdt( shm_ptr ) == 0 )
+      mudlog( LOG_INFO, "shmdt: 成功卸下共享計憶體." );
+    else
+      mudlog( LOG_INFO, "shmdt: 卸下共享記憶體失敗." );
 
+    shm_ptr = ( char * ) 0;
+  }
 
   /* 刪除共享記憶體 */
   if ( shmctl( aShmid, IPC_RMID, 0 ) == -1 )
@@ -108,9 +112,12 @@ void delete_share_memory( int aShmid )
   }
 
   /* 標記已經清除, 卸下 */
-  shm_ptr = ( char * ) 0;
-  share_memory_enabled = FALSE;
-  shmid = -1;
+  if ( aShmid == shmid )
+  {
+    share_memory_enabled = FALSE;
+    shmid = -1;
+  }
+
   return;
 }
 
