@@ -1,0 +1,32 @@
+Vnum            10401
+Name            落脈承臺~
+Description
+承臺懸在翻騰脈霧上方，抬頭仍可見上層底脈臺若隱若現，腳下則是無法看透的黑紅渦潮。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        10312
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         渦潮~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

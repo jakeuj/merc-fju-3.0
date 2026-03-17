@@ -1,0 +1,24 @@
+Vnum            10410
+Name            底潮前橋~
+Description
+前橋跨在兩股脈潮交會處，每次潮流撞擊橋基都會傳來深沉共鳴，震得胸口發緊。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10405
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10411
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

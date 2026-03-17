@@ -1,0 +1,24 @@
+Vnum            10402
+Name            脈渦踏道~
+Description
+踏道以層層斷石拼補而成，石縫間滲出高熱脈液，踩上去時能感到整段結構在低頻震動。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10401
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

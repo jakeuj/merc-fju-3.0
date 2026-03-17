@@ -1,0 +1,12 @@
+Vnum            11454
+Keywords        封檻石 斷紋石~
+Name            封檻斷紋石~
+ShortDesc       一塊封檻斷紋石~
+Description     一塊封檻斷紋石安靜發熱，石芯隱約傳來低沉脈鳴。~
+ItemType        ITEM_TRASH
+ExtraFlags      ITEM_TAKE
+WearFlags       ITEM_HOLD
+Value           0 0 0 0 0
+Weight          3
+Cost            200
+End

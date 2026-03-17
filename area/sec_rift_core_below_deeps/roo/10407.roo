@@ -1,0 +1,24 @@
+Vnum            10407
+Name            測壓窄廊~
+Description
+窄廊牆上密布刻線，最新記錄已超出原始刻度上限，旁邊散著折斷的量測針。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10406
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End
