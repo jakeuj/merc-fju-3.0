@@ -41,7 +41,7 @@ Description
 正有一刀可斷長城之威，$n大喝一聲、手中$O如$S雷$Z劈下，招未到、勢先至
 無匹$W氣勁$Z直壓$N，只見$B強風$Z撲面，刀招已直取面門。~
 Chance          20
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -53,7 +53,7 @@ Description
 刀招$S綿延不盡$Z，將$N的攻勢一一彈開，$N驚魂未定間，$O已幻化做萬千百道$W白光銳氣$Z
 向$N進逼而來，$N只見$W白光$Z一閃，$O已迫近$R眉睫$Z。~
 Chance          20
-Value           20
+Value           195
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -65,7 +65,7 @@ $n刀勢一起，手中$O剎時矯如$P靈蛇$Z，有如數道$W銀光$Z脫手�
 $N一驚、刀招已有如$B撲天蓋地$Z般的席捲而來，正是天刀之$R『骨肉分離』$Z
 只見$S刀光$Z牢牢困住$N，一瞬間、已在$N身上劈出數道$R傷口$Z。~
 Chance          20
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -77,7 +77,7 @@ Description
 大有$R毀天滅地之威$Z，正是天刀第四式$R『天地不容』$Z
 $N一驚，$R赫然$Z發現四周都以被刀氣所纏，$S森冷刀光$Z迎面而來，$N避無可避，只能坐以待斃。~
 Chance          20
-Value           20
+Value           250
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -88,7 +88,7 @@ Description
 兵兇戰危間，$n急忙變招，以捨命之心推動天刀第五式$R『若有所失』$Z，直導$N招勢核心，豁盡$R生命$Z的一刀，果然爆發出難以想像的威力，$N攻勢剎時潰不成軍
 只覺$B腥風$Z撲面，$O有如$P索命閻羅$Z，逼近$N胸口。~
 Chance          20
-Value           20
+Value           285
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -101,7 +101,7 @@ $n失望以極，刀勢一起，終於劈出他最不想劈的一刀，只見刀
 $n疾衝而上，雙手緊握$O高舉、$S電光$Z一閃，$O已劈出
 愁苦中帶著$R無奈$Z與$W不忿$Z，$N心神被刀意牽動，不自覺的陷入$R刀網$Z之中。~
 Chance          20
-Value           20
+Value           325
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -113,7 +113,7 @@ Description
 身形躍離地面十三尺，以無盡$R恨意$Z來推動天刀第七式$R『橫刀奪愛』$Z，刀招中充滿$P駭人恨意$Z，只見$N周圍地面承受不住、相繼爆裂，$W白光$Z一起，刀勢以$S雷霆萬鈞$Z之勢劈下，
 $N毫無招架之力，只能眼看$O有如$Y猛虎$Z般將自身斬為兩截。~
 Chance          20
-Value           20
+Value           370
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -124,7 +124,7 @@ Description
 $n$S狂舞手中$Z$O，$S森森$W白光$Z$S帶滿無比$R烈勁$Z，$S沙石皆被刀氣帶起，只見$n口中喝道$Y『狂風沙、怒海潮、大漠風沙掩黃田』$Z
 $W白光$Z$S一閃、$O疾劈而出，刀氣有如潮水般湧出，帶動周圍$Y沙石$Z，$S其勢可摧$Y山域$Z，$N$W悍然一拼$Z，$S卻慘被刀氣分屍$Z。~
 Chance          20
-Value           20
+Value           420
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -135,7 +135,7 @@ Description
 $S只見$n拔身一起，躍離地面十六尺，渾身冒湧$W裊裊白氣$Z，$n$S輕舞$O，牽動$W白氣$Z$S隨刀走，姿態輕柔飄逸，正有刀意$B『雲上舞、烈日灑，山川河泊變千秋』$Z
 $S但只見$n突然暴喝一聲$R『剎』$Z、$S手中$O、如化萬千$W銀龍$Z，$S以雷霆萬鈞之勢，朝$N$W狂噬$Z$S而來$S。~
 Chance          20
-Value           20
+Value           475
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -148,7 +148,7 @@ $N$S攻勢如狂，$n逐漸顯露出不敵之像，但只見$n手中$O勉力劈�
 $B『噹』$Z$S的一聲，震開了$N兵刃，正是天刀刀意中的$R『強中自有強中手、弱者亦能移山海』$Z
 $O$S中貫滿了$W氣勁$Z，$S但卻又有如$P繞指輕柔$Z$S般的，直取$N首級，$N只覺頸中一痛、頭頸已分家$Z。~
 Chance          20
-Value           20
+Value           535
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -162,7 +162,7 @@ $G『隨心隨意隨六感、刀心刀意刀入神』$Z
 $n$S彷彿與刀同體，抽刀旋身飛出，直取$N
 $N大駭，眼見避無可避，只好閉目就死。~
 Chance          20
-Value           20
+Value           600
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -174,7 +174,7 @@ $n$S渾身無匹$R霸氣$Z$S湧現，正是猛招的前兆，只見$n仰天狂�
 $S大喝道$W『橫眉睥睨霸江湖、刀中強者不二神』$Z
 $S手中$O貫滿了無可匹敵的$R霸氣$Z$S與$R烈勁$Z，$S轉眼間、已向$N劈出$W驚天裂地$Z$S的一刀，$N豁盡全力與之一拼，熟知連兵刃交也不交，只聞一聲慘呼，$N已橫屍當場$Z。~
 Chance          20
-Value           20
+Value           670
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

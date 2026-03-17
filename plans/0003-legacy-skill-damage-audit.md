@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_ae_implemented`
+- `status = batch_af_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch AE implemented`
+- `current_batch = Batch AF implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `taichi fist / dragon shout` 之後的其餘孤立 high-tier attack skill
+1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `sky blade / dream soul / dream tear` 之後的其餘孤立 high-tier attack skill
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -3544,6 +3544,130 @@
   - 改用 `IPC KEY 5585`
 - 檢查：
   - `log/smoke-batch-aa.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AF Pre-Check
+
+### Scope
+
+- `sky blade`
+- `dream soul`
+- `dream tear`
+
+### Reference Basis
+
+- `docs/3yWebsite/skill/blade.html`
+  - 舊站明確收錄 `dream soul`
+  - 顯示其為高階女性向特殊刀法，且帶職業/屬性/前置限制
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `sky blade / dream soul / dream tear`
+  - 三者皆為獨立 `legacy-page:*` family
+  - runtime combat 維度仍顯示 `Value` 全 `20`
+- runtime
+  - `skill/s/sky_blade.ski`
+  - `skill/d/dream_soul.ski`
+  - `skill/d/dream_tear.ski`
+- area samples
+  - `area/loyang/mob/598.mob` -> `Enable 100 'sky blade'`
+  - `area/loyang/mob/599.mob` -> `Enable 100 'dream soul'`
+  - `area/loyang/mob/601.mob` -> `Enable 100 'dream tear'`
+
+### Mandatory Pre-Check Snapshot
+
+`sky blade`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `40 / COST_MOVE / 10`
+- weapon / check: `WEAPON_BLADE / check_blade_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `12`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`dream soul`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `30 / COST_MOVE / 16`
+- weapon / check: `WEAPON_BLADE / check_blade_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `8`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+- special role note:
+  - 舊站明確標為高階女性 special blade
+
+`dream tear`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `25 / COST_MOVE / 5`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `9`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這三個技能都不是一般新手鏈，而是高階特殊單點技能。
+- `598 / 599 / 601` 已確認是高階 special sample，因此本批只重建 skill 模板，不回頭調 mob 端 explicit `Enable 100`。
+- 三者的 `Wait / Cost / Weapon / Check` 差異明顯，因此只回填 `Value`，保留各自 identity：
+  - `sky blade`：高成本、長段數、大刀
+  - `dream soul`：更重節奏、女性 special blade
+  - `dream tear`：節奏較快、無兵器拳掌式終技
+
+## Batch AF Result
+
+### Scope
+
+- `sky blade`
+- `dream soul`
+- `dream tear`
+
+### Runtime Changes
+
+`sky blade`
+
+- before: `20 x 12`
+- after: `170, 195, 220, 250, 285, 325, 370, 420, 475, 535, 600, 670`
+- average: `376.25`
+
+`dream soul`
+
+- before: `20 x 8`
+- after: `190, 220, 255, 295, 340, 390, 450, 520`
+- average: `332.5`
+
+`dream tear`
+
+- before: `20 x 9`
+- after: `145, 170, 195, 225, 260, 300, 345, 395, 455`
+- average: `276.67`
+
+### Design Notes
+
+- `sky blade` 被定位成高階大刀單點技能，整體高於一般中高階 blade，但仍低於極端傳說級模板。
+- `dream soul` 保留其重節奏、高限制、情緒型特殊刀法的定位，讓單段威力高於一般 skill。
+- `dream tear` 則維持較快節奏與較輕成本，因此平均 `Value` 低於前兩者，但已不再是清值模板。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-af.log`
     - 出現 `三國歪傳之降龍伏虎開始正常運作`
   - `debug/failenable`
     - 無新增內容

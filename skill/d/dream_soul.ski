@@ -43,7 +43,7 @@ $n雙眉緊蹙﹐閃出一抹$P哀傷$Z﹐橫刀胸前﹐正是夢魂七絕$R《
 傷微風輕柔 銀髮憂思 控訴千古風流』$Z﹐刀光剎那間暴長﹐$N只覺的$r心$Z頭一痛
 ﹐胸口早被狠狠的劈中了一刀。~
 Chance          20
-Value           20
+Value           190
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -56,7 +56,7 @@ Description
 $n縱身而上﹐狂催$W夢魂七絕$G《情郎今何在》$Z﹐無匹刀光直撲$N﹐
 將$N退路盡封﹐面對如此駭人恨意﹐$N只能坐以待斃。~
 Chance          20
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -68,7 +68,7 @@ Description
 ﹐反手持刀﹐將$O舞的$s密不透風$Z﹐正有夢魂刀意中的$y『坐困愁城 冷面冰心
 難辨昨日是非』$Y《恐難辨是非》$Z應聲而出﹐$N只覺的雙目一痛﹐血淚已奪眶而出。~
 Chance          20
-Value           20
+Value           255
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -81,7 +81,7 @@ $N一招劈來﹐$n側身閃避﹐順勢劈出一刀﹐隨即施展夢魂七絕$
 ﹐黑暗中突然透出數道$S銀光$Z﹐不及細看﹐$O已從四面八方$R怒劈$Z而來﹐
 $N如墮$y地獄$Z﹐早已傷痕累累。~
 Chance          20
-Value           20
+Value           295
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -93,7 +93,7 @@ $n狂攻數招﹐突然躍升半空﹐雙手持刀﹐$O受到感應﹐刀身暴�
 只見$n口中低吟$P『顧影自憐 悽悽苦苦 淚洗三千銀絲』$Z一語畢﹐$n雙目暴睜
 ﹐喝道$y『哀哉』$Z﹐$O瞬間化做$S萬千銀龍$Z﹐朝著$N狂噬而下。~
 Chance          20
-Value           20
+Value           340
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -107,7 +107,7 @@ $n口中輕頌$S『輓聲慢慢 黃菊片片 化做白煙嬝嬝』$Z﹐
 $n手捏劍訣﹐氣勁暴發﹐數百道$b藍光$Z形成巨刀﹐如$R怒滔$Z般撲向$N﹐
 $N只能看著驚天刀勢﹐將自己頭身分家。~
 Chance          20
-Value           20
+Value           390
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -122,7 +122,7 @@ $W『伊人雲影渺』$Z的起手式﹐$N眼見不對﹐急忙聚集全身氣�
 斷魂--葬--花--幽--谷』$Z谷字甫畢﹐$n疾衝向$N﹐一瞬間﹐劈出$R九九八十一刀$Z
 ﹐一陣煙塵過後﹐已不見$N蹤影。~
 Chance          20
-Value           20
+Value           450
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -150,7 +150,7 @@ $A
 剎那間﹐$N彷彿遭受$R七情的浩劫$Z﹐痛不欲生﹐一陣$r血$Z光乍現﹐
 $N只覺得一切終於解脫了﹐往後倒下。~
 Chance          20
-Value           20
+Value           520
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
