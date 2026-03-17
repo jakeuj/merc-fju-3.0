@@ -43,7 +43,7 @@ Description
 $n使出排雲掌起手式『$b行雲流水$Z』﹐渾厚連綿﹐掌劈擊出﹐便如狂風暴雨﹐令$N絕
 無反擊之力!~
 Chance          10
-Value           20
+Value           130
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -54,7 +54,7 @@ Description
 $n身形詭譎﹐一閃眼間﹐攻勢已由右轉左﹐已灌勁力於斗蓬﹐『$B排山倒海$Z』﹐斗蓬
 中的潛勁一吐﹐直攻$N。~
 Chance          10
-Value           20
+Value           150
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -65,7 +65,7 @@ Description
 $n掌影翻飛﹐看似清柔﹐勁卻帶剛﹐一招『$g翻雲覆雨$Z』拍向$N﹐掌勢未了﹐勁力
 再催﹐一股強大的旋勁﹐猛將$N震退!~
 Chance          10
-Value           20
+Value           170
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -76,7 +76,7 @@ Description
 $n掌形一變﹐化氣為雲﹐有如一大蓬的雲霧﹐『$s烏雲閉日$Z』籠罩$N全身動脈﹐
 無法動彈﹐隨即雙掌一推﹐$N吐血震飛!!~
 Chance          10
-Value           20
+Value           195
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -88,7 +88,7 @@ $n使出『$y雲中現龍$Z』﹐$N感覺有壓頂的巨掌從空中降臨﹐黑
 突然間雲分四散﹐$n從雲霧中疾射而出﹐宛如狂龍現身﹐簡單一印﹐$N已如斷線風箏
 般飛出!!!~
 Chance          10
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -99,7 +99,7 @@ Description
 $n不迭使出守招『$y重雲深鎖$Z』﹐掌勢突變﹐運長遊走於全身﹐彷彿鐵桶般的籠罩週
 身大穴﹐令$N不知從何出手。~
 Chance          10
-Value           20
+Value           250
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -110,7 +110,7 @@ Description
 $n使出排雲掌重招『$W撕天排雲$Z』﹐斂神守中﹐雙手合十﹐翻掌推出﹐勢如破天分雲
 般猛擊$N﹐掌勁如潮湧壓至﹐直透$N﹐體內血液頓時一滯﹗~
 Chance          10
-Value           20
+Value           285
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -122,7 +122,7 @@ $Y$N心神稍分﹐$n乘此空隙﹐身隱於濤天掌影之中﹐$P『雲海波
 如澎湃波濤﹐從四面八方湧來﹐一波接著一波﹐詭譎多端﹐漸漸向$N進逼﹐避無可避﹗
 $Z~
 Chance          10
-Value           20
+Value           325
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -134,7 +134,7 @@ $Y$n巧使黏勁﹐運掌牽制$N行動﹐掌勢一引﹐自生出一股黏勁�
 倒旋﹐破綻一露﹐$n剛猛掌勁猝然爆發﹐陰陽飄渺﹐兩極無定﹐乃是排雲掌猛招$S『燮
 雲無定』$Y﹐狂拍$N﹐力可撕心﹐五內翻湧﹗﹗﹗$Z~
 Chance          10
-Value           20
+Value           370
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -146,7 +146,7 @@ $Y$n倏地掩至﹐猛力一拔﹐斗蓬旋動罩下﹐正是排雲掌罕逢一�
 斗蓬挾著無儔氣勁居高壓下﹐將$N的周邊去路緊緊封鎖﹐身形一變﹐掌勢由勁轉巧﹐以
 柔醞剛從奇詭的角度攻的$N措手不及﹗﹗$Z~
 Chance          10
-Value           20
+Value           420
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -164,7 +164,7 @@ $N全身劇震﹐如遭雷殛﹐身體髮膚更不斷變為焦黑﹗$Z$A$A$B三�
 火如風﹐風如火!風火無邊乍出﹐$n身上所散發的熊熊黑火突然如風捲出﹐閃電將$N團團
 圍住﹐風火下$N縱有通天本領﹐霎時間亦無從脫身﹗$Z~
 Chance          10
-Value           20
+Value           480
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_aa_implemented`
+- `status = batch_ab_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch AA implemented`
+- `current_batch = Batch AB implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可續盤剩餘單點技能，例如 `cloud fist`
+1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `cloud fist` 之後的其餘孤立 high-tier attack skill
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -3477,5 +3477,140 @@
     - 無新增內容
   - `debug/badobject`
     - 無新增內容
-  - `debug/error`
+- `debug/error`
     - 無新增內容
+
+## Batch AA Pre-Check
+
+### Scope
+
+- `hate sword`
+
+### Reference Basis
+
+- `docs/3yWebsite/skill/bravo.html`
+  - 舊站仍列出 `hate sword`
+  - 確認它屬於 bravo 路線玩家向高階劍技
+- runtime `skill/h/hate_sword.ski`
+  - `Value` 全 `20`
+  - `Chance` 固定 `10`
+  - `Weapon WEAPON_SWORD / Check check_sword_attack`
+
+### Mandatory Pre-Check Snapshot
+
+`hate sword`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `40 / COST_MOVE / 9`
+- weapon / check: `WEAPON_SWORD / check_sword_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `12`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這是玩家向高成本、高階 bravo 劍技，不屬於新手鏈或多段 prerequisite ladder。
+- `Cost 40` 與 `12` 段傷害描述都顯示它不該維持全 `20` 的清值模板。
+- 本批先只回填 `Value` 階梯，保留原本的成本、節奏與劍系 identity。
+
+## Batch AA Result
+
+### Scope
+
+- `hate sword`
+
+### Runtime Changes
+
+`hate sword`
+
+- before: `20 x 12`
+- after: `155, 175, 195, 220, 245, 275, 310, 350, 395, 445, 500, 560`
+- average: `318.75`
+
+### Design Notes
+
+- 本批只調 `Value`，保留 `Chance / Wait / Cost / Weapon / Check` 原樣。
+- 這樣可以先把 high-tier bravo 劍技從清值模板拉回成立，再視需要另外處理教學或職業政策。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-aa.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AB Pre-Check
+
+### Scope
+
+- `cloud fist`
+
+### Reference Basis
+
+- runtime `skill/c/cloud_fist.ski`
+  - `Value` 全 `20`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+  - `Check check_unrigid_attack`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `cloud fist`
+  - `family = legacy-page:cloud fist`
+  - runtime combat 維度顯示 `11` 段 `Value 20`
+- `area/limbo/obj/263.obj`
+  - 仍存在 `cloud fist book`
+  - 證明它不是純 NPC-only 或廢棄殘檔
+
+### Mandatory Pre-Check Snapshot
+
+`cloud fist`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 10`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `11`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 雖然目前沒抓到獨立舊站技能頁，但 runtime、current-game 與祕笈樣本足以確認這是玩家向 legacy 高階掌法。
+- 它有 `11` 段獨立傷害描述，且整條仍被壓成 `20`，明顯屬於清值模板。
+- 本批先只回填 `Value` 階梯，保留原本的 `Chance / Wait / Cost / Check`。
+
+## Batch AB Result
+
+### Scope
+
+- `cloud fist`
+
+### Runtime Changes
+
+`cloud fist`
+
+- before: `20 x 11`
+- after: `130, 150, 170, 195, 220, 250, 285, 325, 370, 420, 480`
+- average: `272.27`
+
+### Design Notes
+
+- 本批把 `cloud fist` 定位成高於中階拳掌、但仍低於最頂階爆發單點的 high-tier palm template。
+- 這樣可以先恢復它作為玩家向祕笈技能的成立梯度，不去抹平其他拳法系既有個性。
+
+### Validation
+
+- 待本批 build / smoke test 完成後補入
