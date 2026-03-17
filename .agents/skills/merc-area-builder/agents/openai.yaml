@@ -1,4 +1,4 @@
 interface:
   display_name: "Merc Area Builder"
-  short_description: "Spec-first Merc-FJU area rebuild with docs and validation tools"
-  default_prompt: "Use $merc-area-builder to plan, validate, or implement a Merc-FJU 3.0 area with the spec-first handbook, templates, schemas, and area workflow tools."
+  short_description: "Spec-first Merc-FJU area rebuild with current-game docs and validation tools"
+  default_prompt: "Use $merc-area-builder to plan, validate, or implement a Merc-FJU 3.0 area with the spec-first handbook, current-game Pages docs for legacy area formats, templates, schemas, and area workflow tools."

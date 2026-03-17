@@ -15,7 +15,7 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
    - `docs/current-game/skill-loader-reference.md`
    - `docs/current-game/skill-constants.md`
    - `docs/current-game/skill-pry-crosswalk.md`
-4. 需要講程式邏輯時，直接開對應的 `src/*.c`、`include/*.h`、`src/merc.sample.ini` / `src/merc.ini`、`document/*.txt`，不要只憑記憶回答；若只是先找 legacy 文件入口，可先看 `docs/current-game/legacy-documentation.md`。
+4. 需要講程式邏輯時，直接開對應的 `src/*.c`、`include/*.h`、`src/merc.sample.ini` / `src/merc.ini`、`document/*.txt`，不要只憑記憶回答；若只是先找 legacy 文件入口，可先看 `docs/current-game/legacy-documentation.md`，再依檔種跳到對應的 Pages 整理頁。
 5. 如果文件與程式不一致，以 `src/*.c`、`src/merc.h`、runtime data 檔為準，並明確指出哪個說明頁需要回補。
 6. 回答時優先把「入口檔案」「呼叫鏈」「對應資料檔」一起講清楚，讓使用者知道下一步該去哪裡改。
 7. 如果問題其實是區域建置或管理員指令，改用更專門的技能，例如 `merc-area-builder` 或 `mud-command-handbook`。
@@ -48,7 +48,14 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 ### 3. 遇到資料格式問題時回到文件
 - 房間、NPC、物件、reset、商店格式優先看：
 - `docs/current-game/legacy-documentation.md`
+- `docs/current-game/legacy-readme.md`
+- `docs/current-game/mobile-file-format.md`
 - `docs/current-game/object-file-format.md`（物品格式時優先）
+- `docs/current-game/room-file-format.md`
+- `docs/current-game/reset-file-format.md`
+- `docs/current-game/shop-file-format.md`
+- `docs/current-game/title-file-format.md`
+- `docs/current-game/copyright-notice.md`
 - `document/room.txt`
 - `document/mob.txt`
 - `document/obj.txt`
@@ -146,9 +153,18 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 - `docs/current-game/skill-constants.md`
 - `docs/current-game/skill-pry-crosswalk.md`
 - `docs/current-game/legacy-documentation.md`
+- `docs/current-game/legacy-readme.md`
+- `docs/current-game/mobile-file-format.md`
 - `docs/current-game/object-file-format.md`
+- `docs/current-game/room-file-format.md`
+- `docs/current-game/reset-file-format.md`
+- `docs/current-game/shop-file-format.md`
+- `docs/current-game/title-file-format.md`
+- `docs/current-game/copyright-notice.md`
 - `document/mob.txt`
 - `document/obj.txt`
 - `document/room.txt`
 - `document/reset.txt`
 - `document/shop.txt`
+- `document/title.txt`
+- `document/COPYRIGHT`

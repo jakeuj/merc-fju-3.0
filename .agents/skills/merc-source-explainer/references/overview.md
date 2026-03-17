@@ -5,7 +5,7 @@
 - Use `README.md` as the first source for build and startup expectations.
 - Do not assume helper wrappers such as `start-merc.sh`, `start-merc.ps1`, `start-merc.cmd`, or `scripts/bootstrap.sh`; they are not present in this repo snapshot.
 - Do not cite `docs/DATA_LAYOUT.md` or `docs/RUNTIME_RESET.md`; `docs/` currently contains the `3yWebsite` docs site instead.
-- `docs/current-game/` now also contains hand-maintained runtime docs for `.ski` and `pry` behavior; use those as the first documentation layer for skill-format questions, then verify against `src/load.c`, `src/act_info.c`, `src/bit.c`, `src/class.c`, and `src/merc.h`.
+- `docs/current-game/` now also contains hand-maintained runtime docs for `.ski` / `pry` behavior and Pages versions of the legacy `document/` manuals; use those as the first documentation layer for skill-format questions, then verify against `src/load.c`, `src/act_info.c`, `src/bit.c`, `src/class.c`, and `src/merc.h`.
 
 ## Core Paths
 | Path | Purpose |
@@ -67,6 +67,15 @@ cd src
 - Current repo example: `area/newfight/roo/1211.roo` hints at `bore hole`, but there is no `do_bore` in the checked-in source, and `job.c` currently exposes only a small set of job functions. So text can imply an interaction that is not currently implemented.
 
 ## Data Format References
+- `docs/current-game/legacy-documentation.md`
+- `docs/current-game/legacy-readme.md`
+- `docs/current-game/mobile-file-format.md`
+- `docs/current-game/object-file-format.md`
+- `docs/current-game/room-file-format.md`
+- `docs/current-game/reset-file-format.md`
+- `docs/current-game/shop-file-format.md`
+- `docs/current-game/title-file-format.md`
+- `docs/current-game/copyright-notice.md`
 - `document/mob.txt`
 - `document/obj.txt`
 - `document/room.txt`

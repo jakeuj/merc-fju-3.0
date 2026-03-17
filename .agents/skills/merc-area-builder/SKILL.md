@@ -27,7 +27,16 @@ source of truth 要分兩種：
 ## 快速開始
 1. 先確認任務是要修改既有區域、搬修舊版內容，還是新增區域。
 2. 先讀 `area/directory.lst` 與目標區域目錄，理解實際載入順序與檔案結構。
-3. 以 `document/README`、`document/mob.txt`、`document/obj.txt`、`document/room.txt`、`document/reset.txt`、`document/shop.txt` 為主要格式依據；若希望直接在 GitHub Pages / `docs/` 路徑閱讀，先看 `docs/current-game/legacy-documentation.md`，其中 `.obj` 物品格式已有整理頁 `docs/current-game/object-file-format.md`；若要確認原始 Merc parser / vnum 習慣，再補看 `doc/area-file-format.txt`、`doc/vnum-assignments.txt`、`doc/merc-release-notes.txt`。
+3. 以 `document/README`、`document/mob.txt`、`document/obj.txt`、`document/room.txt`、`document/reset.txt`、`document/shop.txt`、`document/title.txt` 為主要格式依據；若希望直接在 GitHub Pages / `docs/` 路徑閱讀，先看 `docs/current-game/legacy-documentation.md`，再依檔種跳到：
+ - `document/README` → `docs/current-game/legacy-readme.md`
+ - `document/mob.txt` → `docs/current-game/mobile-file-format.md`
+ - `document/obj.txt` → `docs/current-game/object-file-format.md`
+ - `document/room.txt` → `docs/current-game/room-file-format.md`
+ - `document/reset.txt` → `docs/current-game/reset-file-format.md`
+ - `document/shop.txt` → `docs/current-game/shop-file-format.md`
+ - `document/title.txt` → `docs/current-game/title-file-format.md`
+ - `document/COPYRIGHT` → `docs/current-game/copyright-notice.md`
+ 若要確認原始 Merc parser / vnum 習慣，再補看 `doc/area-file-format.txt`、`doc/vnum-assignments.txt`、`doc/merc-release-notes.txt`。
  目前專案使用的是拆目錄資料結構，不是原始單檔 `.are`；若回看 `doc/area-file-format.txt` 裡的 `#AREA/#HELPS/#MOBILES/#OBJECTS/#ROOMS/#RESETS/#SHOPS/#SPECIALS`，要把它當概念對照，不要逐段照抄成 3.0 目錄格式。
 4. 需要世界觀、技能、國家系統、交通、公告脈絡時，連同 `docs/3yWebsite/.agents/skills/sango-docs-service/SKILL.md` 一起使用，從 `docs/3yWebsite/docs/*.md` 與 `docs/3yWebsite/docs/data/*.json` 取資料。
 4.1 若任務是在規劃新 area、補 teacher NPC、重排 world link、補新手導流或設計職業服務節點，優先抽查兩份舊站資料：
@@ -179,8 +188,15 @@ source of truth 要分兩種：
 ## 文件使用建議
 
 - 需要快速導覽 legacy area 手冊時，先看 `docs/current-game/legacy-documentation.md`
+- 需要釐清舊版安裝、目錄角色、`index/mob/obj/res/roo/shp` 是怎麼被介紹的，先看 `docs/current-game/legacy-readme.md`
+- 需要 `.mob` 欄位與 NPC/teacher/program 骨架時，先看 `docs/current-game/mobile-file-format.md`
 - 需要 `.obj` 欄位與區塊摘要時，先看 `docs/current-game/object-file-format.md`
-- 需要完整舊文細節、常數表或少見欄位，再回頭看 `document/obj.txt`
+- 需要 `.roo` 欄位、`#Exit/#Keyword/#Job` 與房間旗標摘要時，先看 `docs/current-game/room-file-format.md`
+- 需要 `.res` 指令順序、`M/O/P/G/E/D/R/A` 作用時，先看 `docs/current-game/reset-file-format.md`
+- 需要 `.shp` 商店欄位與 `Keeper/Object/Sential` 關係時，先看 `docs/current-game/shop-file-format.md`
+- 需要 area `index` / `Serial` / `Capital` / `Flags` 概念時，先看 `docs/current-game/title-file-format.md`
+- 需要看 legacy 授權脈絡與配件限制時，先看 `docs/current-game/copyright-notice.md`
+- 需要完整舊文細節、常數表或少見欄位，再回頭看對應的 `document/*.txt`
 - 若 Pages 整理頁與 runtime / loader 行為不一致，以 `src/load.c`、`src/merc.h`、`data/symbol.def` 與已成功載入範例為準，並回補 docs
 
 ## 參考資料
@@ -190,8 +206,17 @@ source of truth 要分兩種：
 - `document/room.txt`
 - `document/reset.txt`
 - `document/shop.txt`
+- `document/title.txt`
+- `document/COPYRIGHT`
 - `../../docs/current-game/legacy-documentation.md`
+- `../../docs/current-game/legacy-readme.md`
+- `../../docs/current-game/mobile-file-format.md`
 - `../../docs/current-game/object-file-format.md`
+- `../../docs/current-game/room-file-format.md`
+- `../../docs/current-game/reset-file-format.md`
+- `../../docs/current-game/shop-file-format.md`
+- `../../docs/current-game/title-file-format.md`
+- `../../docs/current-game/copyright-notice.md`
 - `doc/area-file-format.txt`
 - `doc/vnum-assignments.txt`
 - `doc/merc-release-notes.txt`
