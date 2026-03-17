@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_v_implemented`
+- `status = batch_w_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch V implemented`
+- `current_batch = Batch W implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可回頭處理 `king fist -> sky dragon -> sky dragon force`
+1. 下一個高價值候選可回頭盤 `rulai` 或剩餘 blade / fist 孤立高階技能
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -3101,6 +3101,134 @@
   - 改用 `IPC KEY 4585`
 - 檢查：
   - `log/smoke-batch-v.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/badobject`
+    - 無新增內容
+  - `debug/error`
+    - 無新增內容
+
+## Batch W Pre-Check
+
+### Scope
+
+- `king fist`
+- `sky dragon`
+- `sky dragon force`
+
+### Reference Basis
+
+- `docs/3yWebsite/skill/fist.html`
+  - 明確給出 `king fist -> sky dragon -> sky dragon force`
+  - `king fist` 是 root
+  - `sky dragon` 以 `king fist` 為中段延伸
+  - `sky dragon force` 以 `sky dragon` 為終點延伸
+- `docs/current-game/skills/fist.md`
+  - current-game 已把這條鏈整理在 `legacy-page:fist`
+  - runtime 顯示三者 `Value` 幾乎全 `20`
+- runtime `skill/*.ski`
+  - `king_fist.ski`
+    - `CanAsk NO / Valid NO`
+    - `Value` 全 `20`
+  - `skydragon.ski`
+    - `CanAsk NO / Valid NO`
+    - `Value` 全 `20`
+  - `skydragon_force.ski`
+    - `CanAsk NO / Valid NO`
+    - `Value` 全 `20`
+
+### Mandatory Pre-Check Snapshot
+
+`king fist`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `19 / COST_MOVE / 12`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- damage entries: `7`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`sky dragon`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `10 / COST_MOVE / 1`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- damage entries: `13`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`sky dragon force`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `10 / COST_MOVE / 1`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- damage entries: `3`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這條鏈屬標準直線清值案例，沒有 hybrid keep case。
+- 雖然 `sky dragon` / `sky dragon force` 的 `Wait` 反而更短，但它們同時是封存式高階技能，且 damage entries 與舊站鏈位都明顯更高階，因此適合單純以 `Value` 重建梯度。
+- `king fist` 應站穩較慢、較厚重的 root。
+- `sky dragon` 應被拉成真正的高階快拳主力。
+- `sky dragon force` 雖然只有 3 段，但可用更高單段值站成這條鏈的終點祕招。
+- area `*.mob` 目前未看到這三招的現成 `Enable / AutoEnable / #Learn` 樣本，因此本批先不做 mob fallout。
+
+## Batch W Result
+
+### Scope
+
+- `king fist`
+- `sky dragon`
+- `sky dragon force`
+
+### Runtime Changes
+
+`king fist`
+
+- before: `20 x 7`
+- after: `95, 115, 135, 155, 175, 200, 230`
+- average: `157.86`
+
+`sky dragon`
+
+- before: `20 x 13`
+- after: `135, 155, 175, 195, 215, 235, 260, 285, 315, 350, 390, 435, 485`
+- average: `279.62`
+
+`sky dragon force`
+
+- before: `20 x 3`
+- after: `220, 270, 330`
+- average: `273.33`
+
+### Design Notes
+
+- 本批只調 `Value`，維持這條鏈原本 `Chance 10` 與快拳／祕招節奏。
+- `king fist` 回到可成立的厚重 root。
+- `sky dragon` 以更多段數與更高平均值承接高階快拳主力。
+- `sky dragon force` 雖然段數少，但以高單段值站穩終點祕招定位。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-w.log`
     - 出現 `三國歪傳之降龍伏虎開始正常運作`
   - `debug/failenable`
     - 無新增內容

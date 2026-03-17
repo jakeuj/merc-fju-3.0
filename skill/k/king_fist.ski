@@ -41,7 +41,7 @@ Help            ~
 Description
 $n左拳陽﹐右掌陰﹐一招$R『天地和合』$Z﹐陰陽合一對準$N擊出一拳。~
 Chance          10
-Value           20
+Value           95
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -51,7 +51,7 @@ End
 Description
 $n撮拳為錐﹐弓步盤身﹐$R『春雷乍響』$Z化為閃電以雷霆萬鈞之勢往$N擊去。~
 Chance          10
-Value           20
+Value           115
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -61,7 +61,7 @@ End
 Description
 $n運起護身氣勁$R『金剛不滅之身』$Z﹐不閃不避一拳往$N搗去。~
 Chance          10
-Value           20
+Value           135
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -71,7 +71,7 @@ End
 Description
 $n招式一變﹐由大開大閤化成隨風柳絮﹐順著$N的空隙出掌印向$N。~
 Chance          10
-Value           20
+Value           155
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -81,7 +81,7 @@ End
 Description
 $n腳馭五行﹐屏氣凝神﹐全心全意使出$S『天道不滅』$Z﹐繞著$N旋轉出招。~
 Chance          10
-Value           20
+Value           175
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -91,7 +91,7 @@ End
 Description
 $n右肘微沉﹐左腳實﹐右腳虛﹐左捺右收﹐一擠一黏﹐$N有如大海孤舟﹐無所抵禦。~
 Chance          10
-Value           20
+Value           200
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -101,7 +101,7 @@ End
 Description
 $n將全身真氣逼至喉頭﹐大喝一聲$G『滅﹗』$Z﹐音波化成實物射往$N。~
 Chance          10
-Value           20
+Value           230
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
