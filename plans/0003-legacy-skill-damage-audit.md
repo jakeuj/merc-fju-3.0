@@ -331,17 +331,18 @@
 
 目前狀態：
 
-- `status = batch_e_fallout_checked`
+- `status = batch_q_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch F implemented`
+- `current_batch = Batch Q implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可回到同頁將軍線 `sun blade -> ice blade -> gold blade`
+1. 下一個高價值候選可回到劍系剩餘主鏈，優先考慮 `shan sword -> shadow kill sword -> six sword`
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
-3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
-4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
-5. 若後續再遇到 city / teacher 樣本掛著已重建 ladder，不先急著換技能名，先判斷是不是歷史 `Enable 100` 該回調
+3. `two sword -> gsword -> tendo slash` 目前帶有單筆高值與 innate 特例；若進下一批，先判斷它屬完整 ladder 還是 hybrid keep case
+4. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
+5. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
+6. 若後續再遇到 city / teacher 樣本掛著已重建 ladder，不先急著換技能名，先判斷是不是歷史 `Enable 100` 該回調
 
 ## Batch A Result
 
@@ -2376,6 +2377,139 @@
   - 改用 `IPC KEY 4585`
 - 檢查：
   - `log/smoke-batch-i.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+- `debug/failload`
+  - 無新增內容
+- `debug/badobject`
+  - 無新增內容
+- `debug/error`
+  - 無新增內容
+
+## Batch Q Pre-Check
+
+### Scope
+
+- `fu sword`
+- `sky dragon sword`
+- `duansun sword`
+
+### Reference Basis
+
+- `docs/3yWebsite/skill/sword.html`
+  - 明確給出 `fu sword -> sky dragon sword -> duansun sword`
+  - `fu sword` 可互教，且是整條鏈的 root
+  - `sky dragon sword` 以 `fu sword` 為 prerequisite，且舊站標成「領悟機率極低」的高階延伸
+  - `duansun sword` 以 `sky dragon sword` 為 prerequisite，且是 50 級後的終點劍法
+- `docs/current-game/skills/sword.md`
+  - current-game 已把這條鏈整理在 `legacy-page:sword`
+  - runtime 顯示三者 damage values 仍幾乎全 `20`
+- runtime `skill/*.ski`
+  - `fuswords.ski`
+    - `Associate SLOT_SKYDRAGON_SWORD`
+    - `CanAsk YES / Teach YES / Valid YES`
+  - `skydragon_sword.ski`
+    - `Associate -1`
+    - `CanAsk YES / Teach NO / Valid YES`
+  - `duansun_sword.ski`
+    - `Associate -1`
+    - `CanAsk NO / Teach NO / Valid NO`
+
+### Mandatory Pre-Check Snapshot
+
+`fu sword`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 13`
+- weapon / check: `WEAPON_SWORD / check_sword_attack`
+- canask / teach / valid: `YES / YES / YES`
+- damage entries: `11`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`sky dragon sword`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `30 / COST_MOVE / 14`
+- weapon / check: `WEAPON_SWORD / check_sword_attack`
+- canask / teach / valid: `YES / NO / YES`
+- damage entries: `8`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+`duansun sword`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `15 / COST_MOVE / 10`
+- weapon / check: `WEAPON_SWORD / check_sword_attack`
+- canask / teach / valid: `NO / NO / NO`
+- damage entries: `7`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這條鏈的舊站 progression 很清楚，而且 runtime `Associate` 也和舊站順序一致。
+- 三者目前共同 distortion 很明顯：`Value` 幾乎整串被清成 `20`，但 `Cost / Wait / Chance` 並沒有被抹平。
+- `fu sword` 不是新手快劍 root，而是較慢、較重、但仍可 teach 的中階起點；因此回補後平均值應高於 `hua sword` 這類入門根技能。
+- `sky dragon sword` 成本更高、限制更重，且舊站直接把它放成「極低機率領悟」的進階段，應站穩高於 `fu sword` 的重型中高階段。
+- `duansun sword` 雖然 `Cost / Wait` 反而略低，但它同時具備：
+  - 更高 prerequisite
+  - 更晚的等級門檻
+  - 較低的 `Chance 10`
+- 因此本批最合理的修法仍是只重建 `Value`，把 `duansun sword` 做成較高單段、較低出手機率的終點模板，而不在這輪改 `Valid / CanAsk / Teach` 的 runtime policy。
+- area `*.mob` 目前未看到這三招的現成 `Enable / AutoEnable` 樣本，因此本批先不做 mob fallout。
+
+## Batch Q Result
+
+### Scope
+
+- `fu sword`
+- `sky dragon sword`
+- `duansun sword`
+
+### Runtime Changes
+
+`fu sword`
+
+- before: `20 x 11`
+- after: `95, 115, 135, 155, 175, 200, 225, 250, 275, 305, 340`
+- average: `206.36`
+
+`sky dragon sword`
+
+- before: `20 x 8`
+- after: `150, 180, 210, 240, 275, 315, 360, 410`
+- average: `267.5`
+
+`duansun sword`
+
+- before: `20 x 7`
+- after: `200, 225, 250, 280, 315, 355, 400`
+- average: `289.29`
+
+### Design Notes
+
+- 本批仍只調 `Value`，刻意保留這條劍鏈既有的慢節奏、體力消耗與武器 identity。
+- `fu sword` 回到可成立的中階 root，不再是 11 段全 `20` 的殘缺模板。
+- `sky dragon sword` 用更高成本、更高單段值承接真正的高階銜接段，呼應舊站「極低領悟機率」與重限制定位。
+- `duansun sword` 雖保留 `Chance 10`，但以更高單段值站穩終點模板，避免它因清值而和前段幾乎沒有本質差距。
+- 本批不處理 `Valid / CanAsk / Teach` 的遺留政策，將 combat ladder 重建與技能開放政策分開處理。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 4838 / 2234 / 9888`
+  - 改用 `IPC KEY 4585`
+- 檢查：
+  - `log/smoke-batch-q.log`
     - 出現 `三國歪傳之降龍伏虎開始正常運作`
   - `debug/failenable`
     - 無新增內容

@@ -45,7 +45,7 @@ $W      $n的內勁一提﹐使出天龍氣劍指中之$Z$A$A
 $S                －『 一 劍 起 藝 』－$Z$A$A
 $W一道劍氣朝$N過來﹐其力道非常剛烈﹐將$N刺傷。$Z~
 Chance          20
-Value           20
+Value           150
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -58,7 +58,7 @@ $W      $n將內勁往指上凝聚﹐使出天龍氣劍指之$Z$A$A
 $S                －『 二 劍 穿 腸 紅 』－$Z$A$A
 $W指上勁力瞬時提升數倍﹐澎湃的二道指勁向$N襲捲而去。$Z~
 Chance          20
-Value           20
+Value           180
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -71,7 +71,7 @@ $W      $n的內元一提﹐使出天龍氣劍指中之$Z$A$A
 $S                －『 四 劍 八 達 』－$Z$A$A
 $W氣勢將$N籠罩﹐周圍充滿劍影﹐將$N團團圍住。$Z~
 Chance          20
-Value           20
+Value           210
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -84,7 +84,7 @@ $W      $n將內勁往指上凝聚﹐使出天龍氣劍指之$Z$A$A
 $S                －『 五 劍 克 人 』－$Z$A$A
 $W手指勁力瞬時提升數倍﹐五道劍氣向$N襲捲而去。$Z~
 Chance          20
-Value           20
+Value           240
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -97,7 +97,7 @@ $W      $n的天龍真氣一提﹐使出天龍氣劍指中之$Z$A$A
 $S                －『 十 劍 制 聖 』－$Z$A$A
 $W十道劍氣朝$N射去﹐周圍瞬間劍氣凝聚﹐將$N包圍。$Z~
 Chance          20
-Value           20
+Value           275
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -110,7 +110,7 @@ $W      $n氣運全身﹐使出天龍氣劍指之$Z$A$A
 $S                －『 十 二 半 圓 』－$Z$A$A
 $W全身勁力瞬時提升數倍﹐十二道劍氣形成半圓狀向$N襲捲而去。$Z~
 Chance          20
-Value           20
+Value           315
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -123,7 +123,7 @@ $W      $n使出全身功力﹐使出天龍氣劍指中之$Z$A$A
 $S                －『 十 五 飛 虎 』－$Z$A$A
 $W瞬間十五道劍氣將$N籠罩﹐有如猛虎般兇猛﹐使$N無力招架。$Z~
 Chance          20
-Value           20
+Value           360
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -137,7 +137,7 @@ $S                －『 雙 十 旋 龍 斬 』－$Z$A$A
 $G      從$n手指中衝出十道劍氣﹐以一化二$Z$A
 $W突然二十道劍氣﹐有如神龍般向$N襲捲而去。$Z~
 Chance          20
-Value           20
+Value           410
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

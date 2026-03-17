@@ -45,7 +45,7 @@ $P當$N招勢已盡﹐$n突然變招﹐$O暴長﹐使出$R斷家蝕日
 $W                      白         陽         破         磽  $Z$A$A
 $P$O迸出昡目光華﹐刺眼如末乃﹐劍劫如狂反撲﹐使得$N瞬間無法睜開雙眼。$Z~
 Chance          10
-Value           20
+Value           200
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -58,7 +58,7 @@ $W                       長         空         破         日$Z$A$A
 $P刷刷數聲﹐都往$N胸後背刺下去﹐每一劍都是就人死命的狠辣招數﹐忽然怒喝﹐疾向
 $N身上七處刺去﹐$N一不留神被$O招招刺中。$Z~
 Chance          10
-Value           20
+Value           225
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -71,7 +71,7 @@ $W                     日         月         無         光  $Z$A$A
 $P只聽得玎玎玎三聲連響﹐分點向$N臉上『迎香』﹐『泣』﹐『人中』三個穴道﹐出
 手之快﹐認位之準。$N大驚之下﹐身子後仰﹐還是躲不開$N的攻擊﹐連連中招。$Z~
 Chance          10
-Value           20
+Value           250
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -84,7 +84,7 @@ $W                      日         麗         中         天$Z$A$A
 $P人劍雀躍如狂﹐凌空一劃﹐耀如烈日﹐勢如火球吐燄﹐鋪天蓋地而下﹐猛招一使﹐
 但見$N雙目盡赤﹐神情半瘋﹐$N被火麟劍刺中。$Z~
 Chance          10
-Value           20
+Value           280
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -97,7 +97,7 @@ $W                       日         坐         愁        城$Z$A$A
 $P下盤劃個半孤﹐扭身借勁﹐劍光暴綻﹐紅光顫動﹐碰擊聲如珠響絕﹐$n劍動如金湯之
 固﹐$N氣勁雖強﹐亦難免不了中招。$Z~
 Chance          10
-Value           20
+Value           315
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -110,7 +110,7 @@ $W                      日         薄        赤         山 $Z$A$A
 $P$O擺動﹐劍法精奇無比﹐每招每式都出乎$N意料﹐招招都是直指$N要害﹐逼得$N手忙
 腳亂﹐被$O狠狠刺中要害。$Z~
 Chance          10
-Value           20
+Value           355
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -123,7 +123,7 @@ $W                       浮         雲         蔽        日 $Z$A$A
 $P劍氣捲過﹐劍氣快可怕﹐快得駭人﹐倏急已到﹐劍氣激越而頻﹐鏗鏘鳴高﹐劍穗疾揮
 ﹐$N亦防不勝防﹐右頰立時被$O一刺而中。$Z~
 Chance          10
-Value           20
+Value           400
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
