@@ -331,13 +331,13 @@
 
 目前狀態：
 
-- `status = batch_as_implemented`
+- `status = batch_av_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch AS implemented`
+- `current_batch = Batch AV implemented`
 
 ## Immediate Next Steps
 
-1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `cry ghost / dream dance / drunk` 之後的其餘孤立 high-tier attack skill
+1. 下一個高價值候選可續盤剩餘單點技能，優先可看 `fan hammer / slash light / snow martial force` 之後的其餘孤立 high-tier attack skill
 2. 維持多因子 pre-check：`Value / Chance / Parry / Wait / Cost / CostType / Weapon / Check`
 3. `604` 的 `tiger blade + mirage steps` 已確認屬 high-tier special keep case；若未來進入 `mirage steps` rebuild，再一起重看 `598-601 / 604`
 4. Batch D 已確認 bow ladder 為 hybrid case；後續 offensive ladder 盤點前，先檢查該鏈是否為 `#Damage` 驅動還是 `spell.c` code-driven
@@ -3544,6 +3544,232 @@
   - 改用 `IPC KEY 5585`
 - 檢查：
   - `log/smoke-batch-aa.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AT Pre-Check
+
+### Scope
+
+- `fan hammer`
+
+### Reference Basis
+
+- runtime `skill/f/fan_hammer.ski`
+  - `Value` 全 `20`
+  - `Cost 20 / Wait 1 / Weapon WEAPON_HAMMER`
+  - `Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `fan hammer`
+  - `family = legacy-page:fan hammer`
+  - combat 維度顯示 `8` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`fan hammer`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 1`
+- weapon / check: `WEAPON_HAMMER / -`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `8`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這是高速 hammer 技，但多段完整且明顯不該維持全 `20`。
+- 因為 `Wait 1`，其平均值應低於重節奏大錘，但仍要有高階成長。
+- 本批只回填 `Value` 階梯，保留 hammer identity。
+
+## Batch AT Result
+
+### Scope
+
+- `fan hammer`
+
+### Runtime Changes
+
+`fan hammer`
+
+- before: `20 x 8`
+- after: `115, 135, 160, 190, 225, 265, 315, 375`
+- average: `222.5`
+
+### Design Notes
+
+- 本批讓 `fan hammer` 保持高速連擊模板，但後段有足夠重量感。
+- 這樣既符合 hammer 風格，又不會因 `Wait 1` 被拉成過重模板。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-av.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AU Pre-Check
+
+### Scope
+
+- `slash light`
+
+### Reference Basis
+
+- runtime `skill/s/slash_light.ski`
+  - `Value` 全 `20`
+  - `Cost 20 / Wait 1 / Weapon WEAPON_SWORD / Check check_sword_attack`
+  - `Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `slash light`
+  - `family = legacy-page:slash light`
+  - combat 維度顯示 `6` 段 `Value 20`
+- `area/limbo/obj/388.obj`
+  - 仍存在 `slash light book`
+
+### Mandatory Pre-Check Snapshot
+
+`slash light`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 1`
+- weapon / check: `WEAPON_SWORD / check_sword_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `6`
+- chance set: `20`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這是高速 sword 單點技能，段數不多但每段應比一般快攻更有份量。
+- `Chance 20` 代表出招率高，故平均值不能直接套用慢節奏重劍模板。
+- 本批只回填 `Value` 階梯，保留其高速劍芒 identity。
+
+## Batch AU Result
+
+### Scope
+
+- `slash light`
+
+### Runtime Changes
+
+`slash light`
+
+- before: `20 x 6`
+- after: `125, 155, 190, 235, 290, 355`
+- average: `225.0`
+
+### Design Notes
+
+- 本批讓 `slash light` 保持高頻劍芒特技的定位，但後段仍有明顯斬殺感。
+- 這樣能和慢節奏劍法、以及同為 `Wait 1` 的其他武器快技保持差異。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-av.log`
+    - 出現 `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/failenable`
+    - 無新增內容
+  - `debug/failload`
+    - 無新增內容
+  - `debug/error`
+    - 只有 smoke timeout 收尾時的關機 noise
+
+## Batch AV Pre-Check
+
+### Scope
+
+- `snow martial force`
+
+### Reference Basis
+
+- runtime `skill/s/snow_martial.ski`
+  - `Value` 全 `20`
+  - `Cost 10 / Wait 1 / Check check_unrigid_attack`
+  - `Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `snow martial force`
+  - `family = legacy-page:snow martial force`
+  - combat 維度顯示 `5` 段 `Value 20`
+- `area/limbo/obj/299.obj`
+  - 仍存在 `snow martial force book`
+
+### Mandatory Pre-Check Snapshot
+
+`snow martial force`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `10 / COST_MOVE / 1`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `5`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- 這是高速空手綜合技，結合腿、掌、擒拿、摔技的表現，但目前仍被清成全 `20`。
+- 因為成本更低、節奏更快，所以均值應壓在中等，但仍該有明顯階梯。
+- 本批只回填 `Value` 階梯，保留其快節奏無兵器 identity。
+
+## Batch AV Result
+
+### Scope
+
+- `snow martial force`
+
+### Runtime Changes
+
+`snow martial force`
+
+- before: `20 x 5`
+- after: `105, 125, 150, 180, 220`
+- average: `156.0`
+
+### Design Notes
+
+- 本批把 `snow martial force` 放在高速綜合近戰模板的位置，不走重砲路線。
+- 這樣比較符合它低成本、快節奏、混合型招式的表現。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - 改用 `MUD PORT 5838 / 6234 / 6888`
+  - 改用 `IPC KEY 5585`
+- 檢查：
+  - `log/smoke-batch-av.log`
     - 出現 `三國歪傳之降龍伏虎開始正常運作`
   - `debug/failenable`
     - 無新增內容

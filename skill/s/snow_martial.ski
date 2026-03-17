@@ -41,7 +41,7 @@ Help            ~
 Description
 $n使出雪蒼派的鬼影腳﹐一招$B『陰府求魂』$Z往$N連踢數腳。~
 Chance          10
-Value           20
+Value           105
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -50,7 +50,7 @@ End
 Description
 $n使出鬼影腳中的$G『冥刺銀梭』$Z右腳如利劍般往$N踢去。~
 Chance          10
-Value           20
+Value           125
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -59,7 +59,7 @@ End
 Description
 $n使出雪蒼武學中的$B『蕩風勢』$Z如排山倒海般往$N發出一掌。~
 Chance          10
-Value           20
+Value           150
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -68,7 +68,7 @@ End
 Description
 $n狂喝一聲﹐一招$S『十六路擒拿手』$Z順勢就往$N抓去。~
 Chance          10
-Value           20
+Value           180
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -78,7 +78,7 @@ Description
 $n趁勢轉到$N的身後﹐反手抓住$N的手腕﹐使出雪蒼武學中的摔技$Y『捲龍．$W雪』
 $Z﹐嘗試將$N遠遠的摔向遠方。~
 Chance          10
-Value           20
+Value           220
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
