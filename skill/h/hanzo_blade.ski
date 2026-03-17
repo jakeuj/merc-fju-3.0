@@ -43,7 +43,7 @@ Help            ~
 Description
 $n向前衝了過去﹐在到達$N寸分然向上躍起﹐手中的$O忽然化成一道白光向$N$l射去。~
 Chance          10
-Value           20
+Value           120
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -54,7 +54,7 @@ Description
 $n喝到：「小心了」﹐$n忽然一個燕子翻身﹐身子一飛沖天﹐從袖中摸出了三把$S手裡
 劍$Z﹐咻咻咻的就朝著$N$l射去。~
 Chance          10
-Value           20
+Value           145
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -64,7 +64,7 @@ End
 Description
 $n眼中面露青光﹐手中的$O忽然幻化成千百隻$G青蛇$Z﹐朝著$N飛了過去。~
 Chance          10
-Value           20
+Value           175
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -75,7 +75,7 @@ Description
 $n大喝：$R「火龍曲舞」$Z﹐一刀往空中劈了開來﹐發出的火花化成一隻火龍﹐朝著$N
 飛了過去。~
 Chance          10
-Value           20
+Value           210
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -85,7 +85,7 @@ End
 Description
 $n身子拔起一丈﹐身子在半空中一個倒掛﹐在半空中揮動$O攻向$N$l。~
 Chance          10
-Value           20
+Value           250
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -96,7 +96,7 @@ Description
 $n含起捲軸念起某種咒語﹐忽然從地下冒出了一隻巨大的賴蛤蟆﹐口中噴出陣陣的$B硫
 酸$Z射向$N。~
 Chance          10
-Value           20
+Value           295
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -107,7 +107,7 @@ Description
 $n喝到：$y「土之道」$Z－$n將手中的$O往地上一插﹐忽然間﹐地面上所有的岩石發出
 怪聲﹐往$N飛了過去。~
 Chance          10
-Value           20
+Value           350
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -119,7 +119,7 @@ $n步法怪異莫名﹐手中的$O發出嚶嚶怪響﹐攻向$N的七大要點�
 $Z﹐$n手中的$O發出陣陣的電光﹐射向天空﹐忽然空中出現一道落雷﹐往$N頭上打了下
 去。~
 Chance          10
-Value           20
+Value           420
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0

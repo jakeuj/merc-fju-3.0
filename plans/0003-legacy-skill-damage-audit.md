@@ -331,9 +331,9 @@
 
 目前狀態：
 
-- `status = batch_az_implemented`
+- `status = batch_bb_implemented`
 - `current_focus = next legacy attack ladder`
-- `current_batch = Batch AZ implemented`
+- `current_batch = Batch BB implemented`
 
 ## Immediate Next Steps
 
@@ -5393,6 +5393,147 @@
 
 - 本批把 `holy fist` 定位成高階、高成本、快節奏的連段拳技，不走 `six fingers` 那種慢節奏長尾爆發。
 - 這樣既能保留 `聖心拳` 的連續壓制感，也能和其他重掌型模板維持清楚差異。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 與 Batch BB 共用同一輪 smoke 驗證
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BA Pre-Check
+
+### Scope
+
+- `jade eight`
+
+### Reference Basis
+
+- runtime `skill/j/jade_eight.ski`
+  - `Value` 全 `20`
+  - `Cost 20 / Wait 5 / Check check_unrigid_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `jade eight`
+  - `family = legacy-page:jade eight`
+  - combat 維度顯示 `8` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`jade eight`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `20 / COST_MOVE / 5`
+- weapon / check: `- / check_unrigid_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `8`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `jade eight` 在 current-game 中已被收錄為獨立 family，且八式完整招式敘述都還存在，屬於玩家向高階掌技。
+- `Wait 5` 代表它應該走快節奏、多段壓制，而不是慢重砲單擊；但全 `20` 同樣顯示模板被壓平。
+- 本批先只回填 `Value` 階梯，保留原本的節奏、成本與空手身份。
+
+## Batch BA Result
+
+### Scope
+
+- `jade eight`
+
+### Runtime Changes
+
+`jade eight`
+
+- before: `20 x 8`
+- after: `140, 165, 195, 230, 270, 315, 365, 430`
+- average: `263.75`
+
+### Design Notes
+
+- 本批把 `jade eight` 定位成高階、偏快節奏的八段掌法，前中段持續抬升，末式再拉出明顯終結感。
+- 這樣能保留 `破玉八擊` 的連續掌勢，同時和慢節奏高階掌技分開。
+
+### Validation
+
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src merc"`
+- `wsl.exe bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+- smoke test:
+  - 使用臨時 `merc.test.ini`
+  - `HOME DIRECTORY = /mnt/h/repos/merc-fju-3.0`
+  - 測試 ports:
+    - `15840`
+    - `16236`
+    - `16890`
+  - success signal:
+    - `三國歪傳之降龍伏虎開始正常運作`
+- `debug/failenable`、`debug/failload` 無新增內容
+- `debug/error` 只有 timeout 收尾時的 `game_loop / main` 關機 noise
+
+## Batch BB Pre-Check
+
+### Scope
+
+- `hanzo blade`
+
+### Reference Basis
+
+- runtime `skill/h/hanzo_blade.ski`
+  - `Value` 全 `20`
+  - `Cost 15 / Wait 10 / Weapon WEAPON_BLADE / Check check_blade_attack`
+  - `CanAsk NO / Teach NO / Valid NO / Enable YES`
+- `docs/current-game/skills.json`
+  - current-game 已收錄 `hanzo blade`
+  - `family = legacy-page:hanzo blade`
+  - combat 維度顯示 `8` 段 `Value 20`
+
+### Mandatory Pre-Check Snapshot
+
+`hanzo blade`
+
+- type: `TAR_CHAR_OFFENSIVE`
+- cost / costtype / wait: `15 / COST_MOVE / 10`
+- weapon / check: `WEAPON_BLADE / check_blade_attack`
+- canask / teach / valid: `NO / NO / NO`
+- enable: `YES`
+- damage entries: `8`
+- chance set: `10`
+- value set before rebuild: `20`
+- parry set: `0`
+
+### Interpretation
+
+- `hanzo blade` 有完整 current-game family 與八段刀招，顯示這是玩家向刀系特技，而不是單純忍者 NPC 專用殘檔。
+- `Wait 10` 讓它更接近偏慢、招招有份量的特技刀路，不適合走超高速小段數值。
+- 本批先只回填 `Value` 階梯，保留原本的刀系武器需求與節奏。
+
+## Batch BB Result
+
+### Scope
+
+- `hanzo blade`
+
+### Runtime Changes
+
+`hanzo blade`
+
+- before: `20 x 8`
+- after: `120, 145, 175, 210, 250, 295, 350, 420`
+- average: `245.63`
+
+### Design Notes
+
+- 本批把 `hanzo blade` 定位成偏慢節奏、每式份量漸重的高階刀系特技。
+- 曲線前段不直接拉太高，讓後半段的忍術混刀與終式雷擊更有層次。
 
 ### Validation
 

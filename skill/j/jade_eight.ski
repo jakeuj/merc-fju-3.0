@@ -43,7 +43,7 @@ $n左腳一踏穩住身形﹐不慌不忙地面對$N的攻擊﹐使出$b「破�
 手式$g『初開天地』$Z右掌變幻、連消帶打﹐左掌則暗運內力倏地擊出﹐銳
 氣破空、掌氣四射﹐直往$N胸腹擊落。~
 Chance          10
-Value           20
+Value           140
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -56,7 +56,7 @@ $n一看$N的招式往$n門面招乎﹐忽然腳踏八掛方位﹐一招$b「破
 六十四掌﹐一時掌影縱橫密如雨點﹐夾帶著幾許乎乎的破空之聲往$N周身
 擊去﹗~
 Chance          10
-Value           20
+Value           165
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -68,7 +68,7 @@ $n看清$N來勢後﹐使出$b「破玉八擊」$Z中的第參式$W『飛砂走�
 往地下一擊﹐一時只見碎石遍地、泥砂紛飛﹐$n左掌趁機畫一半圓﹐蓄滿真力
 後往前一拍﹐強勁的掌風夾雜著滿天石屑朝$N周身要害極速飛去﹗~
 Chance          10
-Value           20
+Value           195
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -82,7 +82,7 @@ $n身形忽然暴漲﹐瞬間雙掌翻飛﹐掌影交織而成一片白光﹐就
 定﹐瞬間雙掌運力以雷霆萬鈞之勢擊向$N心窩﹐正是$b「破玉八擊」$Z中的第
 肆式$P『雷動風嘯』$Z﹗~
 Chance          10
-Value           20
+Value           230
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -94,7 +94,7 @@ Description
 處﹐倏地一聲清嘯﹐如蒼鷹博兔、電射而下﹐雙掌挾帶著無窮罡氣往$N天
 靈擊落﹐這豈不是$b「破玉八擊」$Z中的第伍式$G『摧山崩嶽』$Z﹖~
 Chance          10
-Value           20
+Value           270
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -107,7 +107,7 @@ $N的攻擊如狼似虎﹐使$n幾乎無法承受﹐突然$n產生一種本能�
 中的第陸式$y『殘陽暴射』$Z連連揮出數十道猛勁掌力﹐威力不僅劇增數倍﹐
 自身更彷彿一道旋風﹐席捲鋪天砂石﹐直導$N要害。~
 Chance          10
-Value           20
+Value           315
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -120,7 +120,7 @@ $n對一而再、再而三的攻擊已心生厭煩﹐而$N的死纏爛打又惹�
 而$N在看不清來勢又分不清真假的情況已在被$n在身上連續印下十數道掌
 印。~
 Chance          10
-Value           20
+Value           365
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
@@ -134,7 +134,7 @@ $n全身散發陣陣殺氣﹐不停的殺戮已使$n喪失心性﹐卻也令$n�
 霹靂地擊破$N的防守﹐直取$N的門面﹐而其氣勁早已將方圓五尺內的一切化為烏有﹗﹗
 ~
 Chance          10
-Value           20
+Value           430
 Parry           0
 Situs           ATTACK_RANDOM
 Innate          0 0
