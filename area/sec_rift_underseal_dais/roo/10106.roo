@@ -1,0 +1,32 @@
+Vnum            10106
+Name            卸壓側庭~
+Description
+側庭牆面開了數個導流槽，槽口仍有細光竄動，顯示此處長年承擔把過量反衝暫時導離主環的工作。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10107
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         卸壓~
+End
+
+#Enquire
+Keyword         封印~
+End
+
+End

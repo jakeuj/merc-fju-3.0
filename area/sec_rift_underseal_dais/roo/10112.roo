@@ -1,0 +1,24 @@
+Vnum            10112
+Name            鎮封縱井~
+Description
+縱井是底座最深的立足點，腳下只剩一圈勉強穩住的石台，中央黑紅光柱沿井軸直墜，像真正的裂界本核就在幾步之遙。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        10111
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         下層~
+End
+
+#Enquire
+Keyword         本核~
+End
+
+End

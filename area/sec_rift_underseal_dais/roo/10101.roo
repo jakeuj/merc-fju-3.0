@@ -1,0 +1,32 @@
+Vnum            10101
+Name            井心落階~
+Description
+長階貼著井壁向下貼地，石面上覆著近乎金屬化的暗紅薄膜，像千百次反衝把整段落階硬生生燒成同一種質地。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        10012
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         井心~
+End
+
+End

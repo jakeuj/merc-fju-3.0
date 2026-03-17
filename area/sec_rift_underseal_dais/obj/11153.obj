@@ -1,0 +1,14 @@
+Vnum            11153
+Name            seal flask~
+ShortDesc       鎮封水囊~
+Description
+這只厚皮水囊外層覆有導紋，可避免液體在強振環境中快速劣化。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           50
+Value           12 12 LIQ_WATER
+Weight          2
+Cost            210
+End

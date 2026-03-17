@@ -1,0 +1,33 @@
+Vnum            11101
+Name            underseal caretaker~
+ShortDesc       鎮壓維護者~
+Description
+一名身披裂痕鎮甲的維護者殘影正巡看導流石廊，動作精準而克制。
+即使它早已不屬於活人，仍像被某道最後命令束住，持續守著底座的
+每一次微小異動。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       80
+Level           52
+Hitroll         2
+Protect         0
+Damroll         1
+Str             14
+Int             14
+Wis             15
+Dex             13
+Con             13
+Hp              5200
+Mana            360
+Move            180
+Class           0
+Gold            420
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

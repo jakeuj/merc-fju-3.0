@@ -1,0 +1,16 @@
+Vnum            11154
+Name            pressure spear~
+ShortDesc       裂壓槍刃~
+Description
+一柄長刃槍桿覆著層層補紋，刃口在光下帶著不自然的紅黑冷色。
+~
+Unit            柄~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           56
+Value           0 -1 -1 WEAPON_SPEAR
+Weight          6
+Cost            980
+Exp             40
+End

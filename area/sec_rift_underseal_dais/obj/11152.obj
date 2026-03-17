@@ -1,0 +1,14 @@
+Vnum            11152
+Name            ring ration~
+ShortDesc       主環乾糧~
+Description
+一包被厚蠟封存的乾糧，包裝上還能辨識早年補封班次的標記。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           50
+Value           18 26 4 0
+Weight          1
+Cost            190
+End

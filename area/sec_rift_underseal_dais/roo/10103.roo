@@ -1,0 +1,32 @@
+Vnum            10103
+Name            承壓前廊~
+Description
+前廊兩側立著歪斜鎮柱，柱面刻痕被反衝磨到近乎發亮，僅剩少量符線還能辨識原先的封界序列。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10106
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -1,0 +1,33 @@
+Vnum            11103
+Name            underseal jailor~
+ShortDesc       底座典監~
+Description
+這名典監立在鎮封縱井前，面甲下只有一片暗紅空洞。
+它的存在本身就像一條警告：再往下已不是巡檢與維護，而是
+真正與裂界本核正面對峙的領域。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       -300
+Level           58
+Hitroll         5
+Protect         0
+Damroll         4
+Str             17
+Int             12
+Wis             13
+Dex             14
+Con             16
+Hp              7600
+Mana            280
+Move            210
+Class           0
+Gold            680
+Multipile       100
+AttackRatio     108
+DodgeRatio      92
+Migrate         0
+Speak           NO
+Sex             SEX_NEUTRAL
+End

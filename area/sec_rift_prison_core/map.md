@@ -113,7 +113,7 @@
       {
         "direction": "down",
         "source_vnum": 10012,
-        "target_area": "future_rift_underseal",
+        "target_area": "sec_rift_underseal_dais",
         "label": "封印井心"
       }
     ],

@@ -1,0 +1,33 @@
+Vnum            11102
+Name            pressure warden~
+ShortDesc       裂壓巡衛~
+Description
+巡衛沿著鎮封主環來回踏步，靴底每次落下都和地底脈振同步。
+它手中的裂壓槍刃泛著不穩紅光，像隨時準備把任何越界者重新
+釘回這座承壓底座。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       -120
+Level           55
+Hitroll         3
+Protect         0
+Damroll         3
+Str             16
+Int             11
+Wis             12
+Dex             14
+Con             15
+Hp              6400
+Mana            220
+Move            190
+Class           0
+Gold            500
+Multipile       100
+AttackRatio     105
+DodgeRatio      95
+Migrate         0
+Speak           NO
+Sex             SEX_MALE
+End

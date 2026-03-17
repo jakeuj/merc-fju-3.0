@@ -1,0 +1,24 @@
+Vnum            10107
+Name            導流石廊~
+Description
+石廊地面刻著密集導紋，紋路交錯後全都朝更深處匯去，像是在把不該留在這層的躁動推向另一個容器。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10106
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10108
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            10111
+Name            本核前井~
+Description
+前井呈喇叭狀向下收束，井壁滿是被高熱反覆沖刷過的玻化層，深處不時傳來像心搏又像低吼的長脈振。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10110
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        10112
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         本核~
+End
+
+#Enquire
+Keyword         風險~
+End
+
+End

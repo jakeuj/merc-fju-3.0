@@ -1,0 +1,31 @@
+Vnum            10104
+Name            底座主環~
+Description
+主環沿著巨大空腔邊緣鋪展，腳下每一步都伴隨低頻震盪，像下方正有某種重量無法被完全鎮住。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         主環~
+Description
+主環石槽內殘留灰白粉屑，是歷代補封材料在高壓下被反覆碾碎後留下的痕跡。
+~
+End
+
+End

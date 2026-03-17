@@ -1,0 +1,15 @@
+Vnum            11151
+Name            stress beacon~
+ShortDesc       承壓燈標~
+Description
+這枚燈標以沉鐵包覆，中央芯體在黑暗中持續發出低頻紅光。
+~
+Unit            枚~
+ItemType        ITEM_LIGHT
+WearLoc         ITEM_WEAR_LIGHT
+Takeable        Yes
+Level           52
+Value3          28
+Weight          1
+Cost            360
+End
