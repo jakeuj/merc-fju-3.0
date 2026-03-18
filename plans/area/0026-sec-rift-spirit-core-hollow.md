@@ -62,6 +62,8 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_rift_spirit_core_hollow/map.md --validate-only`
   - passed
+- `git commit -m "Add sec_rift_spirit_core_hollow spec"`
+  - committed as `766d1b7`
 
 ## Next Step Prompt
 

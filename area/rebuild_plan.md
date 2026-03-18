@@ -103,10 +103,10 @@
 
 ## Candidate Queue
 
-- `sec_rift_core_spirit_abyss`
-  - reserved_room_block: `11001-11020`
+- `sec_rift_spirit_core_hollow`
+  - reserved_room_block: `11101-11120`
   - theme: `仙俠`
-  - subtheme: `魄淵深井 / 暗層沉降`
+  - subtheme: `魄核空井 / 空腹暗層`
 
 ## Todo
 
@@ -114,15 +114,15 @@
 
 ## In Progress
 
-- `sec_rift_core_spirit_abyss`
-  - plan: `plans/area/0025-sec-rift-core-spirit-abyss.md`
-  - spec: `area/sec_rift_core_spirit_abyss/map.md`
-  - reserved_room_block: `11001-11020`
+- `sec_rift_spirit_core_hollow`
+  - plan: `plans/area/0026-sec-rift-spirit-core-hollow.md`
+  - spec: `area/sec_rift_spirit_core_hollow/map.md`
+  - reserved_room_block: `11101-11120`
   - theme: `仙俠`
-  - subtheme: `魄淵深井 / 暗層沉降`
+  - subtheme: `魄核空井 / 空腹暗層`
   - ref_inputs_used:
     - `ref/Readme.md`
-    - `area/sec_rift_core_spirit_nadir/map.md`
+    - `area/sec_rift_core_spirit_abyss/map.md`
     - `ref/world-graph.md`
     - `ref/三國-MUD-題材分布表.md`
   - ref_inputs_deferred:
@@ -136,10 +136,10 @@
     - `mud-world-map-editor-pro/`
     - 各類經濟/勢力/歷史事件模擬系統
   - theme_basis:
-    - `area/sec_rift_core_spirit_nadir/map.md`
+    - `area/sec_rift_core_spirit_abyss/map.md`
     - `ref/world-graph.md`
     - `ref/三國-MUD-題材分布表.md`
-  - compliance_check: `compliant；依 sec_rift_core_spirit_nadir 的向下 world link 建立下一段 spec-first milestone，維持 ref/Readme.md 容許的 area rebuild 範圍`
+  - compliance_check: `compliant；依 sec_rift_core_spirit_abyss 的向下 world link 建立下一段 spec-first milestone，維持 ref/Readme.md 容許的 area rebuild 範圍`
   - delivery_gate: `implementation_in_progress`
 
 
@@ -195,32 +195,34 @@
 - `sec_rift_sealed_core_heart` 已完成第一輪 implementation、commit `da76474`，完成本機 Linux build 與 smoke test，並達成可前進下一區狀態
 - `plans/area/0024-sec-rift-core-spirit-nadir.md` 已建立
 - `sec_rift_core_spirit_nadir` 已完成第一輪 implementation、commit `1c77c8b`，完成本機 Linux build 與 smoke test，並達成可前進下一區狀態
+- `plans/area/0025-sec-rift-core-spirit-abyss.md` 已建立
+- `sec_rift_core_spirit_abyss` 已完成第一輪 implementation、commit `677db5b`，完成本機 Linux build 與 smoke test，並達成可前進下一區狀態
 ## Blocked
 
 - none
 
 ## Current Recommended Next Step
 
-目前 `sec_rift_core_spirit_abyss` 已完成 spec 建立與 validate-only 驗證，tracker 已切到 `implementation_in_progress`；本輪最合適的下一步是落地第一輪 runtime implementation，補齊最小可載入資料與 `10912 <-> 11001` 邊界出口。
+目前 `sec_rift_spirit_core_hollow` 已完成 spec 建立與 validate-only 驗證，tracker 已切到 `implementation_in_progress`；本輪最合適的下一步是落地第一輪 runtime implementation，補齊最小可載入資料與 `11012 <-> 11101` 邊界出口。
 
 下一輪建議動作：
 
-1. 依 `area/sec_rift_core_spirit_abyss/map.md` 生成 `roo/11001-11012`
+1. 依 `area/sec_rift_spirit_core_hollow/map.md` 生成 `roo/11101-11112`
 2. 補齊 `index / mob / obj / res / shp`
-3. 更新 `area/directory.lst` 與 `area/sec_rift_core_spirit_nadir/roo/10912.roo` 的雙向邊界
+3. 更新 `area/directory.lst` 與 `area/sec_rift_core_spirit_abyss/roo/11012.roo` 的雙向邊界
 4. 跑本機 area validation、Linux build 與 smoke test，再判讀是否可進 `implementation_ready_for_commit`
 
 （註：目前 repo 無 `docs/3yWebsite/docs/data/players.json` 與 `skills.json`，下一輪若要做 docs-assisted pass，需先補回 dataset 或改用現存資料來源。）
 
 語意提醒：
 
-- 目前已有 `in_progress` 項目 `sec_rift_core_spirit_abyss`，再次使用固定 prompt 時應優先續做此區，不得跳到其他候選
+- 目前已有 `in_progress` 項目 `sec_rift_spirit_core_hollow`，再次使用固定 prompt 時應優先續做此區，不得跳到其他候選
 - `sec_rift_core_below` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0018-sec-rift-core-below.md` 回查
 - `sec_rift_core_below_deeps` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0019-sec-rift-core-below-deeps.md` 回查
-- 依新 room reservation policy，`sec_rift_below` 已使用 `9501-9520`，`sec_rift_core` 已使用 `9601-9620`，`sec_rift_deeps` 已完成 `9701-9712` 第一版落地，`sec_rift_prison_core` 已完成 `10001-10012` 第一版落地，`sec_rift_underseal_dais` 已完成 `10101-10112` 第一版落地，`sec_rift_true_core` 已完成 `10201-10212` 第一版落地，`sec_rift_core_below` 已完成 `10301-10312` 第一版落地，`sec_rift_core_below_deeps` 已完成 `10401-10412` 第一版落地，`sec_rift_core_vein_abyss` 已完成 `10501-10512` 第一版落地，`sec_rift_underseal_basin` 已完成 `10601-10612` 第一版落地，`sec_rift_sealed_core_basin` 已完成 `10701-10712` 第一版落地，`sec_rift_sealed_core_heart` 已完成 `10801-10812` 第一版落地，`sec_rift_core_spirit_nadir` 已完成 `10901-10912` 第一版落地，並保留各自首段 block
+- 依新 room reservation policy，`sec_rift_below` 已使用 `9501-9520`，`sec_rift_core` 已使用 `9601-9620`，`sec_rift_deeps` 已完成 `9701-9712` 第一版落地，`sec_rift_prison_core` 已完成 `10001-10012` 第一版落地，`sec_rift_underseal_dais` 已完成 `10101-10112` 第一版落地，`sec_rift_true_core` 已完成 `10201-10212` 第一版落地，`sec_rift_core_below` 已完成 `10301-10312` 第一版落地，`sec_rift_core_below_deeps` 已完成 `10401-10412` 第一版落地，`sec_rift_core_vein_abyss` 已完成 `10501-10512` 第一版落地，`sec_rift_underseal_basin` 已完成 `10601-10612` 第一版落地，`sec_rift_sealed_core_basin` 已完成 `10701-10712` 第一版落地，`sec_rift_sealed_core_heart` 已完成 `10801-10812` 第一版落地，`sec_rift_core_spirit_nadir` 已完成 `10901-10912` 第一版落地，`sec_rift_core_spirit_abyss` 已完成 `11001-11012` 第一版落地，並保留各自首段 block
 - 既有地下鏈 `9451/9461/9481/9491` 保留原狀，不在這一輪 retroactive 重編
 
 
 建議可直接使用的 prompt：
 
-續做 `sec_rift_core_spirit_abyss`：依 spec 落地第一輪 runtime implementation，補齊最小 area data 與 `10912 <-> 11001` 邊界。
+續做 `sec_rift_spirit_core_hollow`：依 spec 落地第一輪 runtime implementation，補齊最小 area data 與 `11012 <-> 11101` 邊界。

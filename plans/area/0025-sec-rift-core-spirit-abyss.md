@@ -75,6 +75,8 @@
   - reported startup success signal for `log/1039.log` and `0` non-empty debug files
 - `python -X utf8 tools/area_acceptance_gate.py sec_rift_core_spirit_abyss`
   - recommended `implementation_ready_for_commit`
+- `git commit -m "Add sec_rift_core_spirit_abyss area"`
+  - committed as `677db5b`
 
 ## Runtime Notes
 
@@ -86,4 +88,4 @@
 
 ## Next Step Prompt
 
-`sec_rift_core_spirit_abyss` 已完成第一輪 implementation；下一步先提交這個 implementation milestone，再決定是否前進到下一個待建 area。
+`sec_rift_core_spirit_abyss` implementation milestone 已提交；下一步續做 `sec_rift_spirit_core_hollow` 的第一輪 runtime implementation。
