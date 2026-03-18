@@ -1,0 +1,32 @@
+Vnum            11311
+Name            真空井緣~
+Description
+井緣圍著數座向內傾斜的封魄柱臺，柱臺上的白痕正一條條慢慢淡去，彷彿這裡是最後仍能辨認形體的邊界。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11310
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        11312
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         井緣~
+End
+
+#Enquire
+Keyword         柱臺~
+End
+
+End

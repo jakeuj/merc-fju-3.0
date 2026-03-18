@@ -64,7 +64,27 @@
   - passed
 - `git commit -m "Add sec_rift_spirit_core_vacuum spec"`
   - committed as `7fbc471`
+- `python -X utf8 scripts/world_consistency_checker.py`
+  - passed with `0 error(s)`; only existing legacy / disconnected-area warnings remained
+- `wsl.exe bash -lc 'cd /mnt/h/repos/merc-fju-3.0/src && make -f Makefile.lin merc'`
+  - passed (`merc` already up to date)
+- `wsl.exe bash -lc 'cd /mnt/h/repos/merc-fju-3.0 && truncate -s 0 debug/badobject debug/bugs debug/error debug/failenable debug/failload && cd src && rm -f merc.ini shutdown.txt && timeout 50 ./startup.bash'`
+  - reached success signal `三國歪傳之降龍伏虎開始正常運作.` in `log/1006.log`
+  - `debug/failload`、`debug/badobject`、`debug/failenable`、`debug/bugs` remained empty after the run
+  - `debug/error` only recorded the timeout-triggered shutdown path, not a new area loader / object / enable issue
+- `python -X utf8 tools/log_parse_summary.py`
+  - reported startup success for `log/1006.log`; non-empty `debug/error` and `debug/world-consistency-report.json` required manual review
+- `$env:PYTHONUTF8='1'; python -X utf8 tools/area_acceptance_gate.py sec_rift_spirit_core_vacuum`
+  - recommended `implementation_ready_for_commit`; in this Windows wrapper run it did not ingest log/debug evidence automatically
+
+## Runtime Notes
+
+- 已建立 `index / roo / mob / obj / res / shp` 最小可載入集合
+- `area/directory.lst` 已加入 `sec_rift_spirit_core_vacuum`
+- `area/sec_rift_spirit_core_void/roo/11212.roo` 已補上 `down -> 11301` 邊界出口
+- `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步新的 runtime area 台帳
+- 本輪 smoke test 未觀察到新的 area loader / object / enable 警告；`debug/error` 只留下 timeout 結束流程的關機紀錄
 
 ## Next Step Prompt
 
-`sec_rift_spirit_core_vacuum` 已完成 spec；下一步續做第一輪 runtime implementation，補齊最小 area data、`area/directory.lst` 與 `11212 <-> 11301` 邊界。
+`sec_rift_spirit_core_vacuum` 已完成第一輪 runtime implementation 並達到 `implementation_ready_for_commit`；下一步先提交這個 implementation milestone，再推進下一個待建 area。

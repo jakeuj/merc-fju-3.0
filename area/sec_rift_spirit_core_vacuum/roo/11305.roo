@@ -1,0 +1,39 @@
+Vnum            11305
+Name            真空引流槽~
+Description
+引流槽裡沒有水聲、沒有風聲，只有一道極細的白亮裂痕一路向下延伸，像所有餘波都被導向更深處那個看不見的歸零核心。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11306
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11309
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         引流~
+Description
+槽壁封紋比上層更簡短而冷硬，顯示這裡已不再試圖調節壓力，只剩單向下送的殘酷功能。
+~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            11308
+Name            滅響偏廊~
+Description
+偏廊兩側嵌著一排排斷裂導響片，片面只餘極淡白影，像舊日所有聲響都在此被削成無法回收的碎屑。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11309
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         滅響~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End

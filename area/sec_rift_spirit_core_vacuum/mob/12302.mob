@@ -1,0 +1,32 @@
+Vnum            12302
+Name            null hush observer~
+ShortDesc       滅響測守~
+Description
+一名滅響測守伏在偏廊邊緣，手持滅響殘片與測流針架，像正等待下一波微痕
+坍落，好即刻補住真空逆廊上那道細長白縫。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       110
+Level           92
+Hitroll         7
+Protect         0
+Damroll         7
+Str             16
+Int             18
+Wis             19
+Dex             14
+Con             16
+Hp              20100
+Mana            1300
+Move            510
+Class           0
+Gold            1500
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

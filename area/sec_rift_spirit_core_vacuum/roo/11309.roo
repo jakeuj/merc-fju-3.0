@@ -1,0 +1,32 @@
+Vnum            11309
+Name            真空逆廊~
+Description
+逆廊中央裂著一道纖長白縫，縫底沒有任何翻湧，只維持一種近乎靜止的下墜感，像整段深腹正朝著歸零邊界緩慢墜落。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        11308
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11310
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

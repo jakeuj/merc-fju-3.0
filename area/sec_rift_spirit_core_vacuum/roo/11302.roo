@@ -1,0 +1,24 @@
+Vnum            11302
+Name            真空下階~
+Description
+下階表面失去了先前井層那種明顯的抽蝕聲，只剩石面裡側偶爾漫出的鈍白冷痕，讓每一步都像踏進無聲深水。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11301
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

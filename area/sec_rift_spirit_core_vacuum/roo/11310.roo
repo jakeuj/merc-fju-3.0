@@ -1,0 +1,24 @@
+Vnum            11310
+Name            歸零前橋~
+Description
+前橋橫跨在一段連黑暗都顯得過度稀薄的空腔上方，橋面每次受力後都只剩一圈極淡白痕，像所有振動都被即刻抹平。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11309
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11311
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

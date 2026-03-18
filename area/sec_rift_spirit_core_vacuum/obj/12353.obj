@@ -1,0 +1,14 @@
+Vnum            12353
+Name            滅響殘片 殘片~
+ShortDesc       一片滅響殘片~
+Description
+一片滅響殘片擱在偏廊邊，碎面像連最後一絲回音都已被慢慢磨空。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           19
+Value           0 0 0 0 0
+Weight          2
+Cost            240
+End

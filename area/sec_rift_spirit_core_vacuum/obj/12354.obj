@@ -1,0 +1,14 @@
+Vnum            12354
+Name            歸零柱臺 柱臺~
+ShortDesc       一塊歸零柱臺~
+Description
+一塊歸零柱臺散落在真空井緣旁，邊角還殘留剛被深腹壓流磨平的灰白痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           19
+Value           0 0 0 0 0
+Weight          5
+Cost            240
+End

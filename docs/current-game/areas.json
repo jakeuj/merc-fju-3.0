@@ -614,6 +614,25 @@
         "plans/area/0027-sec-rift-spirit-core-void.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_spirit_core_vacuum",
+      "title": "裂魄真空",
+      "room_range": "11301-11312",
+      "load_order": 34,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_void",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄真空 / 真空深腹",
+      "summary": "承接裂魄空心虛座，下探到真空環脈、滅響偏廊與歸零前座的真空深腹過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_vacuum/index",
+        "area/sec_rift_spirit_core_vacuum/map.md",
+        "plans/area/0028-sec-rift-spirit-core-vacuum.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

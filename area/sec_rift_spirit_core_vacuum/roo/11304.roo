@@ -1,0 +1,32 @@
+Vnum            11304
+Name            觀滅鎮魄座~
+Description
+鎮魄座旁的觀滅碑已幾乎失去碑形，只留下幾道內縮白痕，像連封印本身也在這裡開始被真空慢慢磨成空白。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         觀滅~
+End
+
+#Enquire
+Keyword         鎮魄~
+End
+
+End

@@ -1,0 +1,16 @@
+Vnum            11306
+Name            聽滅沉座~
+Description
+沉座中央懸著一枚灰白長晶，晶體沒有震鳴，也沒有回音，卻讓整片真空環脈像被某種無形重壓穩穩按住。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            12303
+Name            zero threshold sentinel~
+ShortDesc       歸零鎮衛~
+Description
+一名歸零鎮衛守在真空井緣旁，整個人像被更深處的歸零層牢牢牽住，只要井底
+再傳來一絲白暗下墜感，他就會立刻踏前鎮住橋口與井緣。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       144
+Level           94
+Hitroll         7
+Protect         0
+Damroll         8
+Str             18
+Int             16
+Wis             19
+Dex             14
+Con             18
+Hp              21400
+Mana            1390
+Move            530
+Class           0
+Gold            1580
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

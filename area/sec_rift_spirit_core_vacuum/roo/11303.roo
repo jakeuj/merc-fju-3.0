@@ -1,0 +1,32 @@
+Vnum            11303
+Name            真空環脈前緣~
+Description
+前緣俯瞰整圈向內塌落的真空環脈，環壁上的暗環一層疊著一層向中心收縮，像深腹最深處正以絕對寂靜吸納所有殘流。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -1,0 +1,24 @@
+Vnum            11307
+Name            滅響側階~
+Description
+側階斜切進偏廊時連腳步都像被吞掉，只剩靴底與石面擦過的一絲微澀觸感提醒你自己仍在移動。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11308
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

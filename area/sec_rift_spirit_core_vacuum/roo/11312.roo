@@ -1,0 +1,24 @@
+Vnum            11312
+Name            裂魄真空座~
+Description
+真空座像整段真空深腹最後一塊仍勉強存在的石影，腳下只剩一圈幾乎靜止的白暗空環，所有殘痕都在這裡被拖往更深的裂魄歸零。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        11311
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         真空座~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

@@ -1,0 +1,14 @@
+Vnum            12352
+Name            觀滅碑 滅碑~
+ShortDesc       一面觀滅碑~
+Description
+一面觀滅碑半傾在鎮魄座旁，碑面只剩幾道向內縮去的白痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           18
+Value           0 0 0 0 0
+Weight          4
+Cost            240
+End

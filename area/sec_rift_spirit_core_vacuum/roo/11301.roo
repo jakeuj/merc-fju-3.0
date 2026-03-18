@@ -1,0 +1,32 @@
+Vnum            11301
+Name            真空落臺~
+Description
+落臺像嵌在黑空內壁的一截石臺，邊緣殘留的暗紋不再震動，只以極慢的速度往下滑落，像整個深腹正被更深處的歸零層悄悄拖走。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        11212
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         真空~
+End
+
+End

@@ -1,0 +1,14 @@
+Vnum            12351
+Name            鎮真短杖 短杖~
+ShortDesc       一支鎮真短杖~
+Description
+一支鎮真短杖倚在真空環脈邊，杖尖還殘留一圈幾乎看不見的冷白痕影。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           18
+Value           0 0 0 0 0
+Weight          3
+Cost            240
+End
