@@ -1,0 +1,24 @@
+Vnum            11507
+Name            無痕側階~
+Description
+側階斜切進偏廊時，連腳下擦出的存在感都像被抽成極淡的一線，彷彿只要再往前一步，連你剛才踩過這裡的事也會一起被削掉。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

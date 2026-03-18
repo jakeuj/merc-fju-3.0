@@ -1,0 +1,32 @@
+Vnum            11504
+Name            觀界鎮魄臺~
+Description
+鎮魄臺旁的觀界碑已失去幾乎所有可辨認輪廓，只剩幾道朝中心內縮的淡痕，像連拿來分界的概念也在這裡被慢慢抽空。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         觀界~
+End
+
+#Enquire
+Keyword         鎮魄~
+End
+
+End

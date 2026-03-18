@@ -1,0 +1,14 @@
+Vnum            12552
+Name            觀界碑 石碑~
+ShortDesc       一座觀界碑~
+Description
+一座觀界碑立在零界內庭前緣，碑面只剩幾道淡痕仍在緩慢收束。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           20
+Value           0 0 0 0 0
+Weight          4
+Cost            280
+End

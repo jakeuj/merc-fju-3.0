@@ -1,0 +1,14 @@
+Vnum            12553
+Name            無痕殘片 殘片~
+ShortDesc       一枚無痕殘片~
+Description
+一枚無痕殘片停在偏廊邊緣，殘片表面連凹痕都在淡去。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           20
+Value           0 0 0 0 0
+Weight          2
+Cost            240
+End

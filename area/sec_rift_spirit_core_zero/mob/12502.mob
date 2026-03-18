@@ -1,0 +1,32 @@
+Vnum            12502
+Name            blank hush observer~
+ShortDesc       無痕測守~
+Description
+一名無痕測守伏在偏廊邊緣，手持無痕殘片與測流針架，像正等待下一波淡縫
+坍落，好即刻補住零界逆廊上那道快被抹平的裂線。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       128
+Level           100
+Hitroll         8
+Protect         0
+Damroll         9
+Str             17
+Int             19
+Wis             21
+Dex             14
+Con             18
+Hp              25800
+Mana            1700
+Move            600
+Class           0
+Gold            1880
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

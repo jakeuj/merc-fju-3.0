@@ -1,0 +1,32 @@
+Vnum            12503
+Name            blank verge sentinel~
+ShortDesc       空白鎮衛~
+Description
+一名空白鎮衛守在零界井緣旁，整個人像被更深的空白層牢牢牽住，只要井底
+再傳來一絲界面鬆動，他就會立刻踏前鎮住橋口與井緣。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       160
+Level           102
+Hitroll         9
+Protect         0
+Damroll         9
+Str             19
+Int             17
+Wis             21
+Dex             14
+Con             20
+Hp              27200
+Mana            1800
+Move            620
+Class           0
+Gold            1960
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

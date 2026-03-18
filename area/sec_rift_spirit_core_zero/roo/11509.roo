@@ -1,0 +1,32 @@
+Vnum            11509
+Name            零界逆廊~
+Description
+逆廊中央只剩一道淡得快要消失的灰縫，縫底沒有深度、沒有重量，只有一種把所有尺度一併抹平的靜默下墜，讓人幾乎抓不到方向。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        11508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11510
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

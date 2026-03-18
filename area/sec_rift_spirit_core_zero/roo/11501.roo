@@ -1,0 +1,32 @@
+Vnum            11501
+Name            零界落座~
+Description
+落座像嵌在零界邊緣的一截淡白石影，腳下殘留的環紋已薄到近乎看不出先後，像整段歸零深庭之下連最後幾筆痕跡都開始失去順序。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        11412
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         零界~
+End
+
+End

@@ -103,10 +103,7 @@
 
 ## Candidate Queue
 
-- `sec_rift_spirit_core_zero`
-  - reserved_room_block: `11501-11520`
-  - theme: `仙俠`
-  - subtheme: `裂魄零界 / 零界深井`
+(目前無候選項目。)
 
 ## Todo
 
@@ -120,27 +117,7 @@
   - reserved_room_block: `11501-11520`
   - theme: `仙俠`
   - subtheme: `裂魄零界 / 零界深井`
-  - ref_inputs_used:
-    - `ref/Readme.md`
-    - `area/sec_rift_spirit_core_null/map.md`
-    - `ref/world-graph.md`
-    - `ref/三國-MUD-題材分布表.md`
-  - ref_inputs_deferred:
-    - `docs/3yWebsite/docs/data/players.json`（本輪尚未納入決策）
-    - `docs/3yWebsite/docs/data/skills.json`（本輪尚未納入決策）
-    - `ref/sanguo-area-scaffold/`
-    - `mud-world-builder/`
-    - `mud-ai-map-generator/`
-    - `mudlet-map-generator/`
-    - `mud-world-map-editor/`
-    - `mud-world-map-editor-pro/`
-    - 各類經濟/勢力/歷史事件模擬系統
-  - theme_basis:
-    - `area/sec_rift_spirit_core_null/map.md`
-    - `ref/world-graph.md`
-    - `ref/三國-MUD-題材分布表.md`
-  - compliance_check: `compliant；依 sec_rift_spirit_core_null 的向下 world link 建立下一段 spec-first milestone，維持 ref/Readme.md 容許的 area rebuild 範圍`
-  - delivery_gate: `implementation_in_progress`
+  - delivery_gate: `implementation_ready_for_commit`
 
 
 ## Done
@@ -206,32 +183,12 @@
 - `sec_rift_spirit_core_vacuum` 已完成第一輪 implementation、commit `9e670ee`，完成 WSL Linux build 與 smoke test，並達成可前進下一區狀態
 - `plans/area/0029-sec-rift-spirit-core-null.md` 已建立
 - `sec_rift_spirit_core_null` 已完成第一輪 implementation、commit `fb42780`，完成 WSL Linux build 與 smoke test，並達成可前進下一區狀態
+- `plans/area/0030-sec-rift-spirit-core-zero.md` 已建立
+- `sec_rift_spirit_core_zero` 已完成 spec 建立與 validate-only 驗證，並進入下一段 implementation milestone 準備
 ## Blocked
 
 - none
 
 ## Current Recommended Next Step
 
-目前 `sec_rift_spirit_core_null` 已完成 implementation milestone 並提交；tracker 已切到新的 `in_progress` 項目 `sec_rift_spirit_core_zero`。本輪最合適的下一步是依 spec 落地第一輪 runtime implementation，補齊最小可載入資料與 `11412 <-> 11501` 邊界出口。
-
-下一輪建議動作：
-
-1. 依 `area/sec_rift_spirit_core_zero/map.md` 生成 `roo/11501-11512`
-2. 補齊 `index / mob / obj / res / shp`
-3. 更新 `area/directory.lst` 與 `area/sec_rift_spirit_core_null/roo/11412.roo` 的雙向邊界
-4. 跑本機 area validation、Linux build 與 smoke test，再判讀是否可進 `implementation_ready_for_commit`
-
-（註：`sec_rift_spirit_core_zero` 已完成 spec 建立與 validate-only 驗證；`sec_rift_spirit_core_null` 的 implementation commit 為 `fb42780`。）
-
-語意提醒：
-
-- 目前已有 `in_progress` 項目 `sec_rift_spirit_core_zero`；再次使用固定 prompt 時應優先續做此區，不得跳到其他候選
-- `sec_rift_core_below` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0018-sec-rift-core-below.md` 回查
-- `sec_rift_core_below_deeps` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0019-sec-rift-core-below-deeps.md` 回查
-- 依新 room reservation policy，`sec_rift_below` 已使用 `9501-9520`，`sec_rift_core` 已使用 `9601-9620`，`sec_rift_deeps` 已完成 `9701-9712` 第一版落地，`sec_rift_prison_core` 已完成 `10001-10012` 第一版落地，`sec_rift_underseal_dais` 已完成 `10101-10112` 第一版落地，`sec_rift_true_core` 已完成 `10201-10212` 第一版落地，`sec_rift_core_below` 已完成 `10301-10312` 第一版落地，`sec_rift_core_below_deeps` 已完成 `10401-10412` 第一版落地，`sec_rift_core_vein_abyss` 已完成 `10501-10512` 第一版落地，`sec_rift_underseal_basin` 已完成 `10601-10612` 第一版落地，`sec_rift_sealed_core_basin` 已完成 `10701-10712` 第一版落地，`sec_rift_sealed_core_heart` 已完成 `10801-10812` 第一版落地，`sec_rift_core_spirit_nadir` 已完成 `10901-10912` 第一版落地，`sec_rift_core_spirit_abyss` 已完成 `11001-11012` 第一版落地，`sec_rift_spirit_core_hollow` 已完成 `11101-11112` 第一版落地，`sec_rift_spirit_core_void` 已完成 `11201-11212` 第一版落地，並保留各自首段 block
-- 既有地下鏈 `9451/9461/9481/9491` 保留原狀，不在這一輪 retroactive 重編
-
-
-建議可直接使用的 prompt：
-
-續做 `sec_rift_spirit_core_zero`：依 spec 落地第一輪 runtime implementation，補齊最小 area data 與 `11412 <-> 11501` 邊界。
+`sec_rift_spirit_core_zero` 已完成 runtime implementation 與驗證，現在應先 commit 這個 milestone，再決定是否進入下一個 actionable area。

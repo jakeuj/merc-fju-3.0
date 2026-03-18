@@ -1,0 +1,32 @@
+Vnum            11503
+Name            零界內庭前緣~
+Description
+前緣俯瞰整座向內沉陷的零界內庭，庭底沒有波紋、沒有白面，只剩一片讓目光無法久留的淡空，像更深處正把連空白都重新削成更薄的東西。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -652,6 +652,25 @@
         "plans/area/0029-sec-rift-spirit-core-null.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_spirit_core_zero",
+      "title": "裂魄零界",
+      "room_range": "11501-11512",
+      "load_order": 36,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_null",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄零界 / 零界深井",
+      "summary": "承接裂魄歸零座，下探到零界內庭、無痕偏廊與空白前座的零界深井過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_zero/index",
+        "area/sec_rift_spirit_core_zero/map.md",
+        "plans/area/0030-sec-rift-spirit-core-zero.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

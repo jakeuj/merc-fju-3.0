@@ -1,0 +1,39 @@
+Vnum            11505
+Name            零界斷脈槽~
+Description
+斷脈槽裡看不見任何流向，只剩一道近乎沒有厚度的淡灰裂線筆直向下，像所有被抹平的殘脈都在這裡被送往更深的空白井腹。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11506
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11509
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         斷脈~
+Description
+槽壁封紋比歸零層更少也更冷，像這裡已不再處理殘流，只剩把一切界線直接送往空白深處的單向斷送。
+~
+End
+
+End

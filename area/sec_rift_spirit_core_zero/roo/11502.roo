@@ -1,0 +1,24 @@
+Vnum            11502
+Name            零界下階~
+Description
+下階表面不再只是失去色澤，而像連材質本身都變得難以判定，讓每一步都像踩在一片剛剛才從空白裡被勉強拉出的薄殼上。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11501
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -25,6 +25,24 @@
 - 將 `sec_rift_spirit_core_zero` 掛入 `area/directory.lst`
 - 讓 `sec_rift_spirit_core_null/11412` 與 `sec_rift_spirit_core_zero/11501` 形成正式雙向邊界
 
+## Implementation Results
+
+- `area/sec_rift_spirit_core_zero/index`
+- `area/sec_rift_spirit_core_zero/mob/12501.mob`
+- `area/sec_rift_spirit_core_zero/mob/12502.mob`
+- `area/sec_rift_spirit_core_zero/mob/12503.mob`
+- `area/sec_rift_spirit_core_zero/obj/12551.obj`
+- `area/sec_rift_spirit_core_zero/obj/12552.obj`
+- `area/sec_rift_spirit_core_zero/obj/12553.obj`
+- `area/sec_rift_spirit_core_zero/obj/12554.obj`
+- `area/sec_rift_spirit_core_zero/res/core.res`
+- `area/sec_rift_spirit_core_zero/shp/guide.shp`
+- `area/sec_rift_spirit_core_zero/roo/11501.roo` to `area/sec_rift_spirit_core_zero/roo/11512.roo`
+- `area/sec_rift_spirit_core_null/roo/11412.roo`
+- `area/directory.lst`
+- `docs/current-game/areas.md`
+- `docs/current-game/areas.json`
+
 ## World Links (Spec Intent)
 
 - `up`: 通往 `sec_rift_spirit_core_null` room `11412`
@@ -62,7 +80,15 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_rift_spirit_core_zero/map.md --validate-only`
   - passed
+- `python -X utf8 scripts/world_consistency_checker.py`
+  - passed with `0 error(s)` and unrelated legacy warnings outside this area
+- `wsl.exe bash -lc 'cd /mnt/h/repos/merc-fju-3.0/src && make -f Makefile.lin merc'`
+  - `make: 'merc' is up to date.`
+- `wsl.exe bash -lc 'cd /mnt/h/repos/merc-fju-3.0 && mkdir -p log player mail debug vote && rm -f debug/* && timeout 60 ./src/startup.bash'`
+  - `三國歪傳之降龍伏虎開始正常運作.` appeared in `log/1008.log`
+  - the launcher was then terminated by `timeout`, which produced the expected shutdown footer
+  - `debug/badobject` remained empty; `debug/error` only recorded the timeout shutdown
 
 ## Next Step Prompt
 
-`sec_rift_spirit_core_zero` 已完成 spec；下一步續做第一輪 runtime implementation，補齊最小 area data、`area/directory.lst` 與 `11412 <-> 11501` 邊界。
+`sec_rift_spirit_core_zero` 已完成 runtime implementation；下一步應先 commit 這個 milestone，再回到 fixed prompt 選下一個 actionable area。

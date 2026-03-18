@@ -1,0 +1,24 @@
+Vnum            11510
+Name            空白前橋~
+Description
+前橋橫跨在一段連空腔都難以成立的淡灰裂腹上方，橋面每次受力後都像什麼也沒發生，只剩一種被重新歸成空白的踏步感。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11509
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11511
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

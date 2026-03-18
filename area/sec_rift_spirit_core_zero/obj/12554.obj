@@ -1,0 +1,14 @@
+Vnum            12554
+Name            空白柱座 柱座~
+ShortDesc       一座空白柱座~
+Description
+一座空白柱座佇立在零界井緣旁，柱面只剩輪廓邊緣還勉強可辨。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           20
+Value           0 0 0 0 0
+Weight          4
+Cost            300
+End
