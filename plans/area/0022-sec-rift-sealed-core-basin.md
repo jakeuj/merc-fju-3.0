@@ -75,6 +75,8 @@
   - reported startup success signal for `log/1036.log` and `0` non-empty debug files
 - `python -X utf8 tools/area_acceptance_gate.py sec_rift_sealed_core_basin`
   - recommended `implementation_ready_for_commit`
+- `git commit -m "Add sec_rift_sealed_core_basin area"`
+  - committed as `2fb0a07`
 
 ## Runtime Notes
 
@@ -86,4 +88,4 @@
 
 ## Next Step Prompt
 
-`sec_rift_sealed_core_basin` 已完成第一輪 implementation；下一步先提交這個 implementation milestone，再決定是否前進到下一個待建 area。`
+`sec_rift_sealed_core_basin` 已完成第一輪 implementation 並提交；下一步可為更深的 `sec_rift_sealed_core_heart` 建立單區 plan 與 map.md spec。`
