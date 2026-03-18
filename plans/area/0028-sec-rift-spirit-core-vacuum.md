@@ -59,9 +59,11 @@
 - `python -X utf8 tools/area_vnum_allocator.py --estimated-rooms 12 --headroom 8`
   - suggested `11301-11320`
 - `python -X utf8 tools/mapmd_validate.py area/sec_rift_spirit_core_vacuum/map.md`
-  - pending
+  - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_rift_spirit_core_vacuum/map.md --validate-only`
-  - pending
+  - passed
+- `git commit -m "Add sec_rift_spirit_core_vacuum spec"`
+  - committed as `7fbc471`
 
 ## Next Step Prompt
 
