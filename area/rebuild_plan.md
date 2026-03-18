@@ -140,7 +140,7 @@
     - `ref/world-graph.md`
     - `ref/三國-MUD-題材分布表.md`
   - compliance_check: `compliant；本輪沿 sec_rift_spirit_core_zero 的既有向下 world link 建立下一段 spec-first 里程碑，維持 ref/Readme.md 容許的 area rebuild 範圍`
-  - delivery_gate: `implementation_in_progress`
+  - delivery_gate: `implementation_ready_for_commit`
 
 
 ## Done
@@ -215,4 +215,4 @@
 
 ## Current Recommended Next Step
 
-目前已依 `sec_rift_spirit_core_zero` 的向下 world link 建立 `sec_rift_spirit_core_blank` 的 spec 並完成 validate-only 驗證。下一輪最合適的動作是直接續做它的第一輪 runtime implementation。
+目前 `sec_rift_spirit_core_blank` 已完成第一輪 runtime implementation 與驗證。這一輪最合適的下一步是先提交 `blank` 的 implementation milestone，再推進下一個待建 area。

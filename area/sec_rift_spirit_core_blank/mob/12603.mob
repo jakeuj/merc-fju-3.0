@@ -1,0 +1,32 @@
+Vnum            12603
+Name            white verge sentinel~
+ShortDesc       白界鎮衛~
+Description
+一名白界鎮衛守在空白井緣旁，整個人像被更深的白界層牢牢牽住，只要井底
+再傳來一絲界面鬆動，他就會立刻踏前鎮住橋口與井緣。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       166
+Level           104
+Hitroll         9
+Protect         0
+Damroll         10
+Str             19
+Int             17
+Wis             22
+Dex             14
+Con             20
+Hp              28800
+Mana            1900
+Move            640
+Class           0
+Gold            2050
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

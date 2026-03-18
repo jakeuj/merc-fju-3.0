@@ -1,0 +1,32 @@
+Vnum            11603
+Name            空白內庭前緣~
+Description
+前緣俯瞰整座向內沉落的空白內庭，庭底沒有光影、沒有灰面，只剩一片令視線無法長留的淡失序，像更深處正把連空白都重新磨回無可稱述的原點。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11607
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

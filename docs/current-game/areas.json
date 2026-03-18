@@ -671,6 +671,25 @@
         "plans/area/0030-sec-rift-spirit-core-zero.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_spirit_core_blank",
+      "title": "裂魄空白",
+      "room_range": "11601-11612",
+      "load_order": 37,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_zero",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄空白 / 空白深井",
+      "summary": "承接裂魄零界座，下探到空白內庭、失序偏廊與白界前座的空白深井過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_blank/index",
+        "area/sec_rift_spirit_core_blank/map.md",
+        "plans/area/0031-sec-rift-spirit-core-blank.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

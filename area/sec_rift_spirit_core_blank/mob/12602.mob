@@ -1,0 +1,32 @@
+Vnum            12602
+Name            pale hush observer~
+ShortDesc       失序測守~
+Description
+一名失序測守伏在偏廊邊緣，手持失序殘片與測流針架，像正等待下一波淡縫
+坍落，好即刻補住空白逆廊上那道快被抹平的裂線。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       134
+Level           102
+Hitroll         9
+Protect         0
+Damroll         9
+Str             17
+Int             19
+Wis             22
+Dex             14
+Con             18
+Hp              27200
+Mana            1800
+Move            620
+Class           0
+Gold            1960
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

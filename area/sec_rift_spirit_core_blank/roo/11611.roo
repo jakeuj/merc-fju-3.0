@@ -1,0 +1,32 @@
+Vnum            11611
+Name            空白井緣~
+Description
+井緣圍著幾座向內傾斜的封魄柱座，柱面殘線已淡到只剩輪廓邊緣，像這裡就是所有界面最後還能勉強被稱為界面的地方。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11610
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        11612
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         井緣~
+End
+
+#Enquire
+Keyword         柱座~
+End
+
+End

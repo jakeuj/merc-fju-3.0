@@ -25,6 +25,24 @@
 - 將 `sec_rift_spirit_core_blank` 掛入 `area/directory.lst`
 - 讓 `sec_rift_spirit_core_zero/11512` 與 `sec_rift_spirit_core_blank/11601` 形成正式雙向邊界
 
+## Implementation Results
+
+- `area/sec_rift_spirit_core_blank/index`
+- `area/sec_rift_spirit_core_blank/mob/12601.mob`
+- `area/sec_rift_spirit_core_blank/mob/12602.mob`
+- `area/sec_rift_spirit_core_blank/mob/12603.mob`
+- `area/sec_rift_spirit_core_blank/obj/12651.obj`
+- `area/sec_rift_spirit_core_blank/obj/12652.obj`
+- `area/sec_rift_spirit_core_blank/obj/12653.obj`
+- `area/sec_rift_spirit_core_blank/obj/12654.obj`
+- `area/sec_rift_spirit_core_blank/res/core.res`
+- `area/sec_rift_spirit_core_blank/shp/guide.shp`
+- `area/sec_rift_spirit_core_blank/roo/11601.roo` to `area/sec_rift_spirit_core_blank/roo/11612.roo`
+- `area/sec_rift_spirit_core_zero/roo/11512.roo`
+- `area/directory.lst`
+- `docs/current-game/areas.md`
+- `docs/current-game/areas.json`
+
 ## World Links (Spec Intent)
 
 - `up`: 通往 `sec_rift_spirit_core_zero` room `11512`
@@ -62,7 +80,15 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_rift_spirit_core_blank/map.md --validate-only`
   - passed
+- `python -X utf8 scripts/world_consistency_checker.py`
+  - passed with `0 error(s)` and unrelated legacy warnings outside this area
+- `wsl.exe bash -lc 'cd /mnt/h/repos/merc-fju-3.0/src && make -f Makefile.lin merc'`
+  - `make: 'merc' is up to date.`
+- `wsl.exe bash -lc 'cd /mnt/h/repos/merc-fju-3.0 && mkdir -p log player mail debug vote && rm -f debug/* && timeout 60 ./src/startup.bash'`
+  - `三國歪傳之降龍伏虎開始正常運作.` appeared in `log/1009.log`
+  - the launcher was then terminated by `timeout`, which produced the expected shutdown footer
+  - `debug/badobject` remained empty; `debug/error` only recorded the timeout shutdown
 
 ## Next Step Prompt
 
-`sec_rift_spirit_core_blank` 已完成 spec；下一步續做第一輪 runtime implementation，補齊最小 area data、`area/directory.lst` 與 `11512 <-> 11601` 邊界。
+`sec_rift_spirit_core_blank` 已完成第一輪 runtime implementation 並達到 `implementation_ready_for_commit`；下一步先提交這個 implementation milestone，再推進下一個待建 area。

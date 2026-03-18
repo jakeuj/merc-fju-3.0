@@ -1,0 +1,32 @@
+Vnum            11601
+Name            空白落座~
+Description
+落座像嵌在空白邊緣的一截淡灰石影，腳下殘留的環界已薄到幾乎無法辨認先後，像整段零界深井之下連最後幾筆可稱為界面的痕跡都開始失去依據。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        11512
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         空白~
+End
+
+End

@@ -1,0 +1,16 @@
+Vnum            11606
+Name            聽白沉座~
+Description
+沉座中央懸著一枚幾乎無法分出邊界的灰白長晶，晶體不再止於寂靜，而像把所有可能留下輪廓的事物一併磨去，只剩一種薄得駭人的鎮壓感。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

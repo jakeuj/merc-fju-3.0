@@ -1,0 +1,14 @@
+Vnum            12652
+Name            觀白碑 石碑~
+ShortDesc       一座觀白碑~
+Description
+一座觀白碑立在空白內庭前緣，碑面只剩幾道淡痕仍在緩慢收束。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           21
+Value           0 0 0 0 0
+Weight          4
+Cost            290
+End

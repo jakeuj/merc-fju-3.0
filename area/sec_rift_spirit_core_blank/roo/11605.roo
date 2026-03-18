@@ -1,0 +1,39 @@
+Vnum            11605
+Name            空白斷界槽~
+Description
+斷界槽裡看不見任何流動，只剩一道淡得幾乎無厚度的灰白裂線筆直向下，像所有殘留界面都在這裡被送往更深的白界井腹。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11606
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11609
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         斷界~
+Description
+槽壁封紋比零界層更少也更淡，像這裡已不再整理殘痕，只剩把一切界面直接送往更深空白的單向斷送。
+~
+End
+
+End

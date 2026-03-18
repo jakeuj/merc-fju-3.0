@@ -1,0 +1,24 @@
+Vnum            11612
+Name            裂魄空白座~
+Description
+空白座像整段空白深井最後一塊仍勉強還沒被磨成素白的石影，腳下只剩一圈薄得近乎不存在的灰白環界，所有殘痕都在這裡被拖往更深的裂魄白界。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        11611
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         空白座~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

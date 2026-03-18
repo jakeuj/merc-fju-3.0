@@ -1,0 +1,14 @@
+Vnum            12651
+Name            鎮白短杖 短杖~
+ShortDesc       一支鎮白短杖~
+Description
+一支鎮白短杖倚在空白內庭邊，杖尖還殘留一圈幾乎消失的灰白痕影。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           21
+Value           0 0 0 0 0
+Weight          3
+Cost            270
+End

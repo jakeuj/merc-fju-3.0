@@ -1,0 +1,14 @@
+Vnum            12654
+Name            白界柱座 柱座~
+ShortDesc       一座白界柱座~
+Description
+一座白界柱座斜立在井緣旁，柱面殘線已淡到只剩薄薄的灰白邊影。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           22
+Value           0 0 0 0 0
+Weight          5
+Cost            330
+End

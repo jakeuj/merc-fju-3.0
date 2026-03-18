@@ -1,0 +1,32 @@
+Vnum            11604
+Name            觀白鎮魄臺~
+Description
+鎮魄臺旁的觀白碑只剩幾道朝中心慢慢收束的淡痕，像連用來辨識失序與留白的概念都在這裡被一層層磨成更薄的空殼。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         觀白~
+End
+
+#Enquire
+Keyword         鎮魄~
+End
+
+End

@@ -1,0 +1,14 @@
+Vnum            12653
+Name            失序殘片 殘片~
+ShortDesc       一枚失序殘片~
+Description
+一枚失序殘片躺在偏廊角落，片面連細微凹痕都在慢慢失去輪廓。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           22
+Value           0 0 0 0 0
+Weight          2
+Cost            310
+End

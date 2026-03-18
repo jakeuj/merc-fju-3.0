@@ -1,0 +1,32 @@
+Vnum            11608
+Name            失序偏廊~
+Description
+偏廊兩側嵌著成排近乎透明的導響殼片，殼面連凹痕都在淡去，只剩一種讓人分不清自己是否仍站在走廊裡的失序錯覺。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11607
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11609
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         失序~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End

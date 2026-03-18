@@ -1,0 +1,32 @@
+Vnum            11609
+Name            空白逆廊~
+Description
+逆廊中央只剩一道淡得快要消失的灰白細縫，縫底沒有深度、沒有重量，只剩一種把所有尺度一併抹平的靜默下墜，讓人幾乎抓不到仍可依附的方向。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        11608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11610
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End
