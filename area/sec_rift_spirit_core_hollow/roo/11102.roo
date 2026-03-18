@@ -1,0 +1,24 @@
+Vnum            11102
+Name            空腹下階~
+Description
+下階表面像被反覆剝離過，石面泛著異常平滑的幽灰光澤，每走一步都彷彿踩進被抽空後留下的餘響陰影。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11101
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

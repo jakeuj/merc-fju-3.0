@@ -64,7 +64,26 @@
   - passed
 - `git commit -m "Add sec_rift_spirit_core_hollow spec"`
   - committed as `766d1b7`
+- `python -X utf8 scripts/world_consistency_checker.py`
+  - passed with `0 error(s)`; only existing legacy / disconnected-area warnings remained
+- `make -C src -f Makefile.lin merc`
+  - passed
+- `timeout 50 ./startup.bash`
+  - reached success signal `三國歪傳之降龍伏虎開始正常運作.` in `log/1040.log`
+  - `debug/*` remained empty after the run, including `badobject`、`bugs`、`failenable`、`failload`
+- `python -X utf8 tools/log_parse_summary.py`
+  - reported startup success signal for `log/1040.log` and `0` non-empty debug files
+- `python -X utf8 tools/area_acceptance_gate.py sec_rift_spirit_core_hollow`
+  - recommended `implementation_ready_for_commit`
+
+## Runtime Notes
+
+- 已建立 `index / roo / mob / obj / res / shp` 最小可載入集合
+- `area/directory.lst` 已加入 `sec_rift_spirit_core_hollow`
+- `area/sec_rift_core_spirit_abyss/roo/11012.roo` 已補上 `down -> 11101` 邊界出口
+- `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步新的 runtime area 台帳
+- 本輪 smoke test 未觀察到新的 area loader / object / enable 警告
 
 ## Next Step Prompt
 
-`sec_rift_spirit_core_hollow` spec 建立後，下一步進入第一輪 runtime implementation，落地 `index / roo / mob / obj / res / shp` 與 `11012 <-> 11101` 邊界出口。
+`sec_rift_spirit_core_hollow` 已完成第一輪 implementation；下一步先提交這個 implementation milestone，再決定是否前進到下一個待建 area。

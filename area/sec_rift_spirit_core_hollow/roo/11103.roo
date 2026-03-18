@@ -1,0 +1,32 @@
+Vnum            11103
+Name            空腹環脈前緣~
+Description
+前緣俯視整圈空腹環脈，環壁紋路像被向內牽扯般一圈圈收束，彷彿更深處正持續把外層留下的魄流拉向井腹中心。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11107
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

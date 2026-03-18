@@ -1,0 +1,32 @@
+Vnum            11101
+Name            空井落臺~
+Description
+落臺嵌在空井內壁的一截石脣上，腳下石層正被某種無形吸力緩慢往下拖曳，像整座空腹井層都在默默吞走最後殘留的魄壓。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        11012
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         空井~
+End
+
+End

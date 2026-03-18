@@ -1,0 +1,14 @@
+Vnum            12152
+Name            觀空碑 空碑~
+ShortDesc       一面觀空碑~
+Description
+一面觀空碑半傾在鎮魄座旁，碑面只映得出一層層向內凹陷的暗紅影紋。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           16
+Value           0 0 0 0 0
+Weight          4
+Cost            220
+End

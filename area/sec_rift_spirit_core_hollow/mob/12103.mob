@@ -1,0 +1,32 @@
+Vnum            12103
+Name            spirit void threshold sentinel~
+ShortDesc       裂魄鎮衛~
+Description
+一名裂魄鎮衛守在前橋後方，整個人像被更深空井的靜默牽住，只要井底
+再傳來一次暗震，他就會立刻踏前鎮住整條橋口。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       134
+Level           90
+Hitroll         7
+Protect         0
+Damroll         7
+Str             17
+Int             15
+Wis             18
+Dex             14
+Con             17
+Hp              19100
+Mana            1240
+Move            490
+Class           0
+Gold            1430
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

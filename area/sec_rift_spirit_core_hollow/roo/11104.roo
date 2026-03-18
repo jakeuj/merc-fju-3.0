@@ -1,0 +1,32 @@
+Vnum            11104
+Name            觀空鎮魄座~
+Description
+鎮魄座周圍豎著幾面向井腹微傾的觀空碑，碑面只映得出一層層往內凹陷的暗紅影紋，像所有光都在這裡先被折走。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         觀空~
+End
+
+#Enquire
+Keyword         鎮魄~
+End
+
+End

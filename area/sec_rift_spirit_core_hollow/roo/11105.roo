@@ -1,0 +1,39 @@
+Vnum            11105
+Name            空腹引魄槽~
+Description
+引魄槽沿著井腹邊緣慢慢把殘餘魄流送往更深處，槽底偶爾浮起一道無聲白痕，像深井深處正以看不見的方式回應這裡。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11106
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11109
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         引魄~
+Description
+引魄槽內壁佈滿向內彎折的封紋，顯然此地設計的目的並非排壓，而是把所有殘流都拖向更深的空腹中心。
+~
+End
+
+End

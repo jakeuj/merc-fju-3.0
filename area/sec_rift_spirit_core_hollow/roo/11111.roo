@@ -1,0 +1,32 @@
+Vnum            11111
+Name            空腹井緣~
+Description
+井緣外圍著一圈向內坍陷的封魄柱座，柱座殘光在井腹邊緣慢慢滑落，像在標示最後一段仍屬於外層空腹區的邊界。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11110
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        11112
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         井緣~
+End
+
+#Enquire
+Keyword         柱座~
+End
+
+End

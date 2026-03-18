@@ -1,0 +1,32 @@
+Vnum            11108
+Name            絕響偏廊~
+Description
+偏廊兩側嵌著幾排失去光澤的導響片，片面雖已黯淡，卻仍在陰影裡留下一道道晚到的暗紅殘紋。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11107
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11109
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         絕響~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            11109
+Name            裂響逆廊~
+Description
+逆廊中央張開一道內縮的裂縫，縫底沒有聲音，只有一股帶著灼意的暗流不時往外翻湧，像更深處正在把什麼撕成真空。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        11108
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11110
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

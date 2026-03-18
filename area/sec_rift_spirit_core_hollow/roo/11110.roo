@@ -1,0 +1,24 @@
+Vnum            11110
+Name            裂魄前橋~
+Description
+前橋跨在一道近乎看不見底的空井上方，橋面每次震動後都會留下一段異常漫長的靜默，像橋下有某種更重的存在正在逼近。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11109
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11111
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

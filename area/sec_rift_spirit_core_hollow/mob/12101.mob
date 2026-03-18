@@ -1,0 +1,32 @@
+Vnum            12101
+Name            hollow vein patrol~
+ShortDesc       空腹巡守~
+Description
+一名空腹巡守沿著空腹環脈來回巡視，手中的鎮空短杖不時在石面點出一
+圈又一圈近乎無聲的暗紅波痕。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       114
+Level           86
+Hitroll         6
+Protect         0
+Damroll         6
+Str             16
+Int             15
+Wis             17
+Dex             14
+Con             16
+Hp              16800
+Mana            1060
+Move            450
+Class           0
+Gold            1270
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

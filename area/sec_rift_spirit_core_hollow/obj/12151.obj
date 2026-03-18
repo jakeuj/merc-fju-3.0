@@ -1,0 +1,14 @@
+Vnum            12151
+Name            鎮空短杖 短杖~
+ShortDesc       一支鎮空短杖~
+Description
+一支鎮空短杖倚在空腹環脈邊，杖尖還殘留細微的無聲波痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           16
+Value           0 0 0 0 0
+Weight          3
+Cost            220
+End

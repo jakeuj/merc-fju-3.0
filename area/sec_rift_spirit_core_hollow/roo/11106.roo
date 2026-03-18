@@ -1,0 +1,16 @@
+Vnum            11106
+Name            聽空沉座~
+Description
+沉座中央懸著一枚細長黑魄晶，晶體並不發聲，卻讓整座空腹環脈在每次震動後都留下更長更空的回盪。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -1,0 +1,24 @@
+Vnum            11107
+Name            失響側階~
+Description
+側階通往偏廊時幾乎沒有任何腳步回聲，只剩一陣微弱寒意沿石縫倒流，像這裡連聲音都已經被抽空。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11108
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

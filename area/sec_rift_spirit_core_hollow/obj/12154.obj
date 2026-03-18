@@ -1,0 +1,14 @@
+Vnum            12154
+Name            封魄柱座 柱座~
+ShortDesc       一塊封魄柱座~
+Description
+一塊封魄柱座散落在空腹井緣旁，邊緣還殘留剛被空井壓流磨裂的灼痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           17
+Value           0 0 0 0 0
+Weight          5
+Cost            220
+End

@@ -1,0 +1,32 @@
+Vnum            12102
+Name            silence guidance observer~
+ShortDesc       絕響測守~
+Description
+一名絕響測守伏在偏廊邊緣，手持絕響殘片與測壓針架，像正等待下一波
+失響回震好立刻補住空腹裂縫。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       100
+Level           88
+Hitroll         6
+Protect         0
+Damroll         7
+Str             15
+Int             17
+Wis             18
+Dex             14
+Con             15
+Hp              17900
+Mana            1150
+Move            470
+Class           0
+Gold            1350
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

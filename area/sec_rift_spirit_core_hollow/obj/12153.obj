@@ -1,0 +1,14 @@
+Vnum            12153
+Name            絕響殘片 殘片~
+ShortDesc       一片絕響殘片~
+Description
+一片絕響殘片擱在偏廊邊，碎面仍隱隱留著晚到的暗紅殘紋。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           17
+Value           0 0 0 0 0
+Weight          2
+Cost            220
+End

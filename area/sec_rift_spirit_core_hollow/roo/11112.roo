@@ -1,0 +1,24 @@
+Vnum            11112
+Name            裂魄沉井座~
+Description
+沉井座像整段空腹井層最後一塊仍能站穩的陰影邊界，腳下只剩一圈持續向下抽離的暗紅空環，所有殘音都在這裡被拖往更深的裂魄空心。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        11111
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         裂魄~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End
