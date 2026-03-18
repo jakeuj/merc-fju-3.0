@@ -7,7 +7,9 @@
 - `index`：保留既有欄位順序與字串格式；起始房、區域名稱、描述與 `Capital` 要互相對應
 - 新增 AREA 時，`Capital` 預設設為 `0`；只有當這個 area 被明確設計成可作出生地、真正首都、或系統級回城 / 國家核心節點時，才應填非零 `Capital`
 - 若把 `Capital` 設成非零，先確認它真的應該出現在出生地 / 首都 / home 選單，並且已具備對應服務鏈，不要讓單純的外郊或過渡區誤進出生地清單
-- `mob/*.mob`：參照 `document/mob.txt`；確認 `Level`、`Alignment`、旗標、`Process` 是否符合該區用途
+- `mob/*.mob`：參照 `document/mob.txt`；確認 `Name`、`Level`、`Alignment`、旗標、`Process` 是否符合該區用途
+- `mob/*.mob` 的 `Name` 是必填欄位，也是 parser / 指令比對時使用的最短關鍵名字；預設維持英文或至少 ASCII-friendly token，中文顯示留在 `ShortDesc` / `Description`，不要把 `Name` 寫成純中文或只剩敘事句
+- `mob/*.mob` 的 `Level` 要同時分清兩層規則：legacy `document/mob.txt` 仍把 `100` 視為平衡上的傳統上限，但目前 `src/load.c` 的 `load_mobiles()` 實際會擋掉 `<= 0` 或 `> 120`；因此 area rebuild 預設以 `1..100` 當一般 progression range，`101..120` 只在明確規劃的 late-game / endgame 鏈上使用，且要在單區 plan、tracker 或 area `index` 留下理由
 - `mob/*.mob` 的 `Class` 不要臆測新常數；先在 repo 內搜尋已成功載入的 mob 範例，沿用 parser 目前真的接受的值，再進 smoke test
 - 若 `mob/*.mob` 使用 `AutoEnable`，要記得它不是單純的 shorthand：`src/load.c` 會在載入時呼叫 `get_adeptation()` 依怪物 `Level`、`AttackRatio` / `DodgeRatio`、技能傷害表與技能型態推算熟練度；推到極端值時會寫 `debug/failenable`
 - `debug/failenable` 的 `太差` / `太高` 屬於怪物技能配置失衡訊號，不是玩家 `enable` 指令告警；回修時優先檢查對應 mob 的 `AutoEnable` 是否應改成固定 `Enable`，或是否該換技能 / 調整攻閃係數
@@ -60,6 +62,7 @@
 - 若物件 parser 行為和文件不完全一致，優先以 repo 內已成功載入的同類物件為準，再用 `debug/badobject` 驗證這次修改是否乾淨
 - 若是 `debug/failenable`，先沿著第一個 `怪物編號 + 技能` 定位到對應 `mob/*.mob`；若本輪只想消除 warning，通常比起重算 `AttackRatio` / `DodgeRatio`，把問題 `AutoEnable` 改成明確 `Enable <practice> '<skill>'` 更穩定
 - 這個偏好背後的理由要說清楚：`Enable` 是固定結果，`AutoEnable` 是推導規則；修 warning 時先固定結果，通常比改推導規則更可預測，也比較不會意外影響同一隻怪的其他技能表現
+- 若 log / `debug/failload` 出現 `Load_mobiles﹕怪物 %d 沒有名字。` 或 `Load_mobiles﹕怪物 %d 等級 %d 不合理。`，先回到 `Name` / `Level` 這兩個主欄位檢查，不要急著把問題誤判成編碼或技能鏈錯誤
 - 即使啟動 log 已出現成功訊號，只要這輪有改 `obj/*.obj`，仍要回頭檢查 `debug/badobject`；把它當成新 area 物件是否真的過關的正式 gate，不是可有可無的附帶檢查
 - 若物件涉及卷軸、藥水、法杖、法器或其他 spell 型效果，補看 `doc/skills-and-spells-guide.txt`
 - 進階 NPC 行為或 trigger 語法若不確定，可補看 `doc/mobprogram-guide.txt`

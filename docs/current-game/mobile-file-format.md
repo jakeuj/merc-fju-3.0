@@ -89,18 +89,37 @@ End
 | 欄位 | 用途 |
 | --- | --- |
 | `Vnum` | 怪物虛擬號碼 |
-| `Name` | 英文關鍵名 |
+| `Name` | 必填；最短 command-facing 英文關鍵名 |
 | `ShortDesc` | 中文短描述 |
 | `Description` | `look` 時看到的怪物描述 |
 | `Deadmsg` | 死亡訊息 |
 | `Alignment` | 陣營值 |
-| `Level` | 怪物等級 |
+| `Level` | 怪物等級；legacy 文件建議 `<=100`，current loader 接受 `1..120` |
 | `Class` | 職業常數 |
 | `Sex` | 性別常數 |
 | `Hp` / `Mana` / `Move` | 基礎資源 |
 | `Hitroll` / `Damroll` / `Protect` | 命中、傷害、防護 |
 | `Enable` / `AutoEnable` | 戰鬥技能與自動技能 |
 | `Special` | 對應 `spec_*` 特殊函式 |
+
+## `Name` 與 `Level` 的現行寫法
+
+### `Name`
+
+- `document/mob.txt` 明講 `Name` 不能省略；目前 `src/load.c` 的 `load_mobiles()` 也會在缺欄位時報 `Load_mobiles﹕怪物 %d 沒有名字。`
+- 這個欄位不是單純的展示文字，而是程式與玩家指令拿來比對的最短關鍵名字
+- 實務上請維持英文或至少 ASCII-friendly token，例如 `guard`、`rift watcher` 這類可被玩家穩定輸入的名字
+- 中文顯示名請放在 `ShortDesc` / `Description`；不要把 `Name` 寫成純中文，否則雖然未必立刻 load fail，但會讓玩家操作與除錯都變差
+
+### `Level`
+
+- legacy `document/mob.txt` 把 `100` 視為傳統平衡上限，重點是避免升級曲線某一段突然斷層
+- 目前 repo 的 `src/load.c` 會把 `<= 0` 或 `> 120` 的怪物等級判成不合理，因此 runtime hard gate 是 `1..120`
+- 這代表目前要分成兩層理解：
+  - 一般設計 / 平衡基線：優先維持在 `1..100`
+  - loader 可接受的例外上限：`101..120`
+- 本 repo 現有後段高階裂魄鏈已經刻意使用 `101..120` 區間，所以不要把 `>100` 一律視為錯誤；但也不要因為 loader 接受 `120`，就把每個新 area 都往上推到三位數
+- 最安全的寫法是：若某區需要 `101..120`，在單區 plan、tracker 或 area `index` 明講它是 late-game / endgame 例外，並配合 smoke test 證明沒有踩到 loader 上限
 
 ## 怪物旗標
 
@@ -173,7 +192,9 @@ Enable        100 'long fist'
 
 ## 目前最值得注意的實務點
 
+- `Name` 是必填、command-facing 的最短關鍵字；對玩家與 loader 來說都不是可有可無的展示欄位。
 - 不要只照 `document/mob.txt` 猜 `Class`、`Effect` 或技能名稱，先比對 repo 內已成功載入的怪物範例。
+- `Level > 120` 會直接變成 loader blocker；`101..120` 雖可載入，但應視為經過規劃的高階例外帶，而不是預設值。
 - 若 `.mob` 內用了 `Enable` / `AutoEnable` 指到技能，驗證要求要比一般資料檔更高。
 - 若新增可教學 NPC，要同步檢查技能是否真的存在、能否 `Teach`、是否有對應文件。
 

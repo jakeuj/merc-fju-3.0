@@ -77,6 +77,20 @@ title: Area Development Handbook
 - `skill/*.ski`、`skill/skill.lst`、`area/*/{mob,obj,res,shp}` 仍是 loader 實際吃的 runtime artifact
 - `docs/current-game/*.json` 預設是 generated read model，不是手編 authoring source
 
+## Mob Authoring Guardrails
+
+只要 area 工作有碰到 `mob/*.mob`，請同時記得 legacy 文件與 current loader 的雙層規則：
+
+- `Name`
+  - 依 `document/mob.txt` 與 `src/load.c`，這是必填欄位
+  - 它是玩家指令與 parser 會拿來比對的最短關鍵名字，不只是展示文字
+  - 實務上預設維持英文或至少 ASCII-friendly token；中文呈現放在 `ShortDesc` / `Description`
+- `Level`
+  - legacy `document/mob.txt` 仍把 `100` 視為平衡上的傳統上限
+  - current loader 會把 `<= 0` 或 `> 120` 視為錯誤，因此 runtime hard gate 是 `1..120`
+  - handbook 的預設判讀是：`1..100` 為一般 progression range，`101..120` 只留給明確規劃的 late-game / endgame area
+- 若單區真的使用 `101..120`，請在單區 plan、`area/rebuild_plan.md` 或 area `index` 補上理由，避免後續協作者分不清這是刻意的 endgame 例外，還是 accidentally drift
+
 ## Workflow Layers
 
 AREA 開發 pipeline 固定拆成七層：
@@ -275,6 +289,7 @@ python -X utf8 scripts/generate_current_game_skills_pages.py
 
 - VNUM 與 boundary links
 - `index / mob / obj / res / shp / roo` 一致性
+- `mob/*.mob` 的 `Name` / `Level` 是否符合 current loader 與既有設計帶
 - `area/directory.lst` 順序
 - loader / smoke test 結果
 

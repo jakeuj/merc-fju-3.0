@@ -311,6 +311,28 @@ AREA rebuild 的預設工作單位是「一輪任務只處理一個 area milesto
 - 若只是 generator 成功但 boundary room、`area/directory.lst` 或 loader 仍未驗證，不可直接視為 `validated_ready_to_advance`
 - 驗證失敗時，先留在當前 area 修正，不要改去做下一區
 
+## Mob Authoring Guardrails
+
+重建流程若碰到 `mob/*.mob`，除了一般的 VNUM / reset / skill 檢查，還要固定遵守兩個 loader-sensitive 欄位：
+
+- `Name`
+  - 依 `document/mob.txt`，這是怪物的最短名字，也是程式判斷時比對的名字
+  - area rebuild 內把它視為 command-facing keyword，而不是純展示欄位
+  - 預設應維持英文或至少 ASCII-friendly token；中文顯示名留在 `ShortDesc` / `Description`
+- `Level`
+  - legacy `document/mob.txt` 仍把 `100` 視為平衡上的傳統上限
+  - current `src/load.c` loader 會把 `<= 0` 或 `> 120` 判成不合理，所以 runtime hard gate 是 `1..120`
+  - 本計畫的預設治理方式是：
+    - `1..100`：一般 progression / balance band
+    - `101..120`：只有明確規劃的 late-game / endgame area 才能使用
+    - `>120`：直接視為 loader blocker
+
+配套要求：
+
+- 若單區使用 `101..120`，要在單區 plan、tracker 或 area `index` 補上理由，不得只因為 loader 接受就默默往上推
+- 若 smoke test 出現 `Load_mobiles﹕怪物 %d 沒有名字。` 或 `Load_mobiles﹕怪物 %d 等級 %d 不合理。`，先留在當前 area 修正，不得切去下一區繞過
+- 若延伸的是既有 late-game 鏈，也不要因為看到 legacy `100` 就自動把所有 `101..120` 怪物視為錯誤；先確認它是不是本來就被規劃成 endgame 例外帶
+
 ## Milestone Output Contract
 
 `ref/mud-new-area-full-recommendations.md` 強調「固定產出清單」。在本 repo 內，固定產出不必一次做滿所有文件，但每個 milestone 至少要交付下列內容。

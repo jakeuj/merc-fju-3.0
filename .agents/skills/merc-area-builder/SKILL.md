@@ -82,10 +82,12 @@ source of truth 要分兩種：
 11. 若已做 runtime smoke test，除了人工看 `log/*` 與 `debug/*`，也可用 `tools/log_parse_summary.py` 做摘要；若要快速判讀目前較像 `implementation_ready_for_commit` 還是 `validated_ready_to_advance`，可先用 `tools/area_acceptance_gate.py` 取保守建議。
 12. 若要做 area 載入 smoke test，先清空 `debug/*` 內容並建立本輪 `log/*` 觀察基線，再執行測試；若使用 `timeout`，優先給 `45` 到 `60` 秒；測試後用成功訊號、這輪 log 與新產生的 debug 訊息一起判讀。
 13. 若這輪有新增 `mob/*.mob` 或 `obj/*.obj`，不要只靠文件猜 parser 會接受什麼：先比對 repo 內已成功載入的同類範例，特別是 `Class` 常數與 `ITEM_FOOD` / `ITEM_DRINK_CON` 的 `Value*` 欄位，測試成功後仍要檢查 `debug/badobject`。若同時新增怪物會 `Enable` 的技能，還要把它視為 loader-risk data change，而不只是 area 純資料。
+13.1 新增或修改 `mob/*.mob` 時，先回看 `document/mob.txt` 的 `Name` / `Level` 契約：`Name` 是必填、最短、供指令比對的關鍵名字，預設應維持英文或至少 ASCII-friendly token；中文呈現放在 `ShortDesc` / `Description`，不要把 `Name` 寫成純中文。`Level` 的 legacy 文件仍以 `100` 為平衡上限，但目前 `src/load.c` 的 loader 會擋掉 `<= 0` 或 `> 120`；因此 area rebuild 預設把 `1..100` 視為一般設計帶，`101..120` 只留給明確規劃過的 late-game / endgame 區，且要在單區 plan、tracker 或 area `index` 說明理由。
 14. 新增 `skill/*.ski` 時，至少同步檢查四個登錄點：`src/merc.h` 的 `SLOT_*`、`skill/skill.lst`、`data/symbol.def`、實際的 `skill/<letter>/<name>.ski`。`skill.lst` key、技能 `Name` 與檔名路徑都必須和 repo 內既有技能全域唯一，避免覆蓋舊技能或造成 `Load_skill` 重覆載入。
 14.1 若這輪是在調整目前 repo 真正會載入的 skill runtime data，預設先改 `data/structured/skills/skills.json`，再跑 `python -X utf8 scripts/export_structured_skills.py --check`；需要落地時再用 `--write` 回寫 `skill/skill.lst` 與 `skill/*.ski`，不要把 `docs/current-game/skills.json` 當手編來源。
 14.2 若這輪是在調整既有 area 的 `mob / obj / res / shp`，而該區已建立 `content.json`，預設先改 `area/<area>/content.json`，再跑 `python -X utf8 scripts/export_area_content.py <area_slug> --check`；目前 v1 pilot 只保證 `area/loyang_outskirts/content.json`。
 15. area 設計與純資料實作預設先走快速本機驗證；只有碰到 `src/`、`Makefile*`、`startup*`、`merc.sample.ini`、疑似平台差異，或要替大里程碑做 pre-merge gate 時，才升級到 Ubuntu / Docker 雙平台驗證。若這輪有新增 skill、改 mob `Enable` 鏈，或碰到 loader 相關警告，至少要補實際載入 smoke test，不可只停在靜態比對。
+15.1 若這輪有改 `mob/*.mob`，smoke test / log 判讀時主動搜尋 `Load_mobiles﹕怪物 %d 沒有名字。` 與 `Load_mobiles﹕怪物 %d 等級 %d 不合理。` 這兩類訊息；前者通常代表 `Name` 缺失或格式錯，後者代表 `Level` 超出 loader 可接受的 `1..120` 範圍。
 16. 若固定 prompt 要從 `todo` 開始一個新的 area milestone，而目前分支是 `develop` 或 `main`，預設先建立 `codex/<area>-implementation` 分支再開始 spec / implementation；除非使用者明講要直接在主分支上做，或這輪只是 merge 後的極小 docs / tracker 收尾。
 17. 每輪 area 工作收尾時，主動做一次「經驗回寫判斷」：單區特殊決策回寫到該 area plan / tracker；可重複踩到的 parser、loader、驗證規則回寫到 `skills/references`；屬於全局 workflow 缺口的，再回寫到全局 plan 或 `rebuild-workflow.md`。
 
