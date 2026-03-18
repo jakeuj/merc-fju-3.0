@@ -1,0 +1,24 @@
+Vnum            10612
+Name            禁底沉門~
+Description
+沉門下方只剩一片向內收斂的黑紅深井，所有回音與光線都被更深處的封脈核心吸走，彷彿此地只是最後一道前庭。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        10611
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         沉門~
+End
+
+#Enquire
+Keyword         核心~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            10611
+Name            沉門井緣~
+Description
+井緣外圍著一圈半沉封柱，柱頂細光沿著殘缺刻紋流動，勉強把更深處的壓流束成一條窄路。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10610
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        10612
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         封柱~
+End
+
+#Enquire
+Keyword         井緣~
+End
+
+End

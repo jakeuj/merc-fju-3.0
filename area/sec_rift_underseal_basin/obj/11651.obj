@@ -1,0 +1,14 @@
+Vnum            11651
+Name            鎮盆長桿 長桿~
+ShortDesc       一支鎮盆長桿~
+Description
+一支鎮盆長桿倚在石檻旁，桿身上滿是細密壓紋。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           11
+Value           0 0 0 0 0
+Weight          3
+Cost            180
+End

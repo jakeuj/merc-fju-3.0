@@ -1,0 +1,32 @@
+Vnum            10601
+Name            沉檻落盆臺~
+Description
+落盆臺卡在巨大盆地上緣，頭頂的脈淵已像一抹遠紅，四周則只剩沉厚得幾乎聽不見回音的封脈壓流。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        10512
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         盆地~
+End
+
+End

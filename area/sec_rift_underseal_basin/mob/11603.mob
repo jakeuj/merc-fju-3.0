@@ -1,0 +1,32 @@
+Vnum            11603
+Name            sunken gate warder~
+ShortDesc       沉門鎮衛~
+Description
+一名沉門鎮衛守在井緣最深處，視線始終盯著下方黑紅深井，像只要封柱
+再鬆動一步，他就會被迫獨自撐住整道沉門。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       115
+Level           72
+Hitroll         5
+Protect         0
+Damroll         5
+Str             17
+Int             15
+Wis             16
+Dex             14
+Con             17
+Hp              11200
+Mana            760
+Move            360
+Class           0
+Gold            960
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

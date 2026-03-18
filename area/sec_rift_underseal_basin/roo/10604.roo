@@ -1,0 +1,32 @@
+Vnum            10604
+Name            封池觀座~
+Description
+觀座旁殘留多座沉沒石碑，碑面記著歷代封池修補時的壓流紀錄，多數最後都停在同一段模糊缺口。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         石碑~
+End
+
+#Enquire
+Keyword         缺口~
+End
+
+End

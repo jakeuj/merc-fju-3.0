@@ -1,0 +1,24 @@
+Vnum            10610
+Name            底盆封橋~
+Description
+封橋橫跨盆地最深的沉壓裂帶，橋下脈液撞擊石基時發出的悶響，像遠處有門扉正被反覆敲擊。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10609
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10611
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

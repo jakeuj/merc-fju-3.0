@@ -481,6 +481,25 @@
         "plans/area/0020-sec-rift-core-vein-abyss.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_underseal_basin",
+      "title": "禁底封脈盆",
+      "room_range": "10601-10612",
+      "load_order": 27,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_core_vein_abyss",
+      "theme_primary": "仙俠",
+      "theme_secondary": "禁底封脈 / 沉壓盆地",
+      "summary": "承接裂核脈淵沉檻，下探到封脈環池、壓紋支廊與底盆沉門的沉壓承接層。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_underseal_basin/index",
+        "area/sec_rift_underseal_basin/map.md",
+        "plans/area/0021-sec-rift-underseal-basin.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

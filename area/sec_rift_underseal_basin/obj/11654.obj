@@ -1,0 +1,14 @@
+Vnum            11654
+Name            沉門封柱片 封柱片~
+ShortDesc       一片沉門封柱片~
+Description
+一片沉門封柱片落在井緣旁，裂口邊還能看見被強壓扯出的暗紅紋路。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           12
+Value           0 0 0 0 0
+Weight          5
+Cost            180
+End

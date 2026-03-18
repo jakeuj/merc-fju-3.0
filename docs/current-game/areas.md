@@ -50,6 +50,7 @@ title: Current Game Areas
 | `sec_rift_core_below` | 裂核下層 / 深井脈道過渡層 | `10301-10312` | `rebuild addition` | 承接裂界本核最深縱井，轉入更危險的裂核下層通道。 |
 | `sec_rift_core_below_deeps` | 裂核深層 / 底脈渦腹承接區 | `10401-10412` | `rebuild addition` | 由裂核下層再下探到渦腹主脈與底潮封口的深層承接區。 |
 | `sec_rift_core_vein_abyss` | 裂核脈淵 / 渦核深腹高壓前帶 | `10501-10512` | `rebuild addition` | 承接裂核深層封檻臺，下探到脈淵環脈、倒灌裂庭與沉界井緣。 |
+| `sec_rift_underseal_basin` | 禁底封脈盆 / 沉壓承接層 | `10601-10612` | `rebuild addition` | 承接裂核脈淵沉檻，下探到封脈環池、壓紋支廊與底盆沉門。 |
 
 ## Recent Rebuild Areas
 
@@ -75,6 +76,7 @@ title: Current Game Areas
 - `sec_rift_core_below`：把裂界本核下方接成落井接臺、深井裂道與封橋前帶，讓地下鏈轉入裂核層。
 - `sec_rift_core_below_deeps`：再由裂核下層下探到渦腹主脈、鎮紋旁廊與底潮封口，形成更深渦腹承接區。
 - `sec_rift_core_vein_abyss`：承接裂核深層最底端，下探到深腹環脈、倒灌裂庭與沉界井緣，作為更深禁底封脈區前的高壓前帶。
+- `sec_rift_underseal_basin`：承接裂核脈淵沉檻，下探到封脈環池、壓紋支廊與底盆沉門，作為更深禁底核心區前的沉壓承接層。
 
 ### 北方鏈
 

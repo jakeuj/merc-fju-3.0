@@ -1,0 +1,14 @@
+Vnum            11652
+Name            封脈石碑 石碑~
+ShortDesc       一座封脈石碑~
+Description
+一座封脈石碑半沉在觀座旁，碑面殘字仍透著淡淡赤光。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           11
+Value           0 0 0 0 0
+Weight          4
+Cost            180
+End

@@ -1,0 +1,14 @@
+Vnum            11653
+Name            聽脈銅梭 銅梭~
+ShortDesc       一枚聽脈銅梭~
+Description
+一枚聽脈銅梭放在裂廊邊，尖端仍殘留剛測過壓流的熱痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           12
+Value           0 0 0 0 0
+Weight          2
+Cost            180
+End

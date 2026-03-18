@@ -1,0 +1,32 @@
+Vnum            10608
+Name            沉紋維壓廊~
+Description
+維壓廊兩側嵌滿失效壓紋片，片面時而浮現微弱赤光，又很快被沉重陰影吞沒。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10607
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10609
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         壓紋~
+End
+
+#Enquire
+Keyword         維壓~
+End
+
+End

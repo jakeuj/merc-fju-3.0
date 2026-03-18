@@ -1,0 +1,24 @@
+Vnum            10607
+Name            壓紋側階~
+Description
+側階通往支廊的石級多半已沉陷，牆面壓紋被脈液浸得發黑，只剩零散亮線仍勉強串接。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

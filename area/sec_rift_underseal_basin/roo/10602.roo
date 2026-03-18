@@ -1,0 +1,24 @@
+Vnum            10602
+Name            封盆踏脊~
+Description
+踏脊沿盆地內壁蜿蜒，石面被長年壓流磨得發亮，每一步都能感到腳下有悶重脈震傳來。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10601
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

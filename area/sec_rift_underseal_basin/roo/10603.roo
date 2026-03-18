@@ -1,0 +1,32 @@
+Vnum            10603
+Name            環池前緣~
+Description
+前緣俯瞰整座封脈環池，池中黑紅脈液呈環狀緩慢旋流，像在把更深處的壓力分批導開。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10607
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -52,7 +52,7 @@
   - `ref/world-graph.md`
   - `ref/三國-MUD-題材分布表.md`
 - `compliance_check`
-  - compliant；本輪沿 `sec_rift_core_vein_abyss` 的既有向下 world link 延伸，先固定下一段 spec-first 里程碑與保留房號
+  - compliant；本輪沿 `sec_rift_core_vein_abyss` 的既有向下 world link 完成第一輪 runtime implementation，維持 ref/Readme.md 容許的 area rebuild 範圍
 
 ## Validation Results
 
@@ -62,12 +62,26 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_rift_underseal_basin/map.md --validate-only`
   - passed
+- `python -X utf8 scripts/world_consistency_checker.py`
+  - passed with `0 error(s)`; only existing legacy / disconnected-area warnings remained
+- `make -C src -f Makefile.lin merc`
+  - passed
+- `timeout 50 ./startup.bash`
+  - reached success signal `三國歪傳之降龍伏虎開始正常運作.` in `log/1035.log`
+  - `debug/*` remained empty after the run, including `badobject`、`bugs`、`failenable`、`failload`
+- `python -X utf8 tools/log_parse_summary.py`
+  - reported startup success signal for `log/1035.log` and `0` non-empty debug files
+- `python -X utf8 tools/area_acceptance_gate.py sec_rift_underseal_basin`
+  - recommended `implementation_ready_for_commit`
 
 ## Runtime Notes
 
-- 本輪只建立 spec milestone，尚未新增 `index / roo / mob / obj / res / shp`
-- `area/directory.lst` 與 `area/sec_rift_core_vein_abyss/roo/10512.roo` 仍待 implementation milestone 一併修改
+- 已建立 `index / roo / mob / obj / res / shp` 最小可載入集合
+- `area/directory.lst` 已加入 `sec_rift_underseal_basin`
+- `area/sec_rift_core_vein_abyss/roo/10512.roo` 已補上 `down -> 10601` 邊界出口
+- `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步新的 runtime area 台帳
+- 本輪 smoke test 未觀察到新的 area loader / object / enable 警告
 
 ## Next Step Prompt
 
-`繼續為 sec_rift_underseal_basin 完成 validate-only，並視需要進入第一輪 runtime implementation。`
+`sec_rift_underseal_basin` 已完成第一輪 implementation；下一步先提交這個 implementation milestone，再決定是否前進到下一個待建 area。`

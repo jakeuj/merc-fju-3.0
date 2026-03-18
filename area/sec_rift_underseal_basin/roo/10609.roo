@@ -1,0 +1,32 @@
+Vnum            10609
+Name            回湧裂廊~
+Description
+裂廊地面裂開長長一道黑縫，縫中不時噴出短促熱浪，把四周石壁照得像在呼吸。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        10608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10610
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

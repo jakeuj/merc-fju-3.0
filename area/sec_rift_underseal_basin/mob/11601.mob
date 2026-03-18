@@ -1,0 +1,32 @@
+Vnum            11601
+Name            basin seal patrol~
+ShortDesc       封盆巡守~
+Description
+一名封盆巡守沿著環池邊緩步巡查，手中鎮盆長桿不時點地，像在確認
+沉壓脈流是否還維持在可控範圍。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       95
+Level           68
+Hitroll         4
+Protect         0
+Damroll         4
+Str             16
+Int             14
+Wis             15
+Dex             14
+Con             16
+Hp              9800
+Mana            620
+Move            320
+Class           0
+Gold            820
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

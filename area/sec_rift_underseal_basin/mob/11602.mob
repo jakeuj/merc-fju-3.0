@@ -1,0 +1,32 @@
+Vnum            11602
+Name            pressure glyph tender~
+ShortDesc       維壓測守~
+Description
+一名維壓測守半跪在裂紋旁，手持聽脈梭與壓紋盤，像隨時準備記下下一
+波從底盆深處湧上的異常回震。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       80
+Level           70
+Hitroll         4
+Protect         0
+Damroll         5
+Str             15
+Int             16
+Wis             16
+Dex             14
+Con             15
+Hp              10400
+Mana            700
+Move            340
+Class           0
+Gold            880
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

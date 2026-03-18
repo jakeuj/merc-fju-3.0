@@ -1,0 +1,39 @@
+Vnum            10605
+Name            沉壓節池~
+Description
+節池以數圈低矮石檻切分不同流域，黑紅脈液在檻邊翻捲時會發出如低鳴般的震顫。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10606
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10609
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         石檻~
+Description
+石檻表面滿是長年沖刷出的細紋，內側還能看到後補封泥被再次扯裂的痕跡。
+~
+End
+
+End

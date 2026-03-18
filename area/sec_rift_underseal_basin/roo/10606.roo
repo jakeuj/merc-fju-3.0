@@ -1,0 +1,16 @@
+Vnum            10606
+Name            回壓聽池~
+Description
+聽池中央立著半折聽脈柱，柱內偶爾傳出悶雷般的回震，像整座盆地正在替更深處承受壓差。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End
