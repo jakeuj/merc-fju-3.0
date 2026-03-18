@@ -1,0 +1,32 @@
+Vnum            11903
+Name            abyss threshold sentinel~
+ShortDesc       魄淵鎮衛~
+Description
+一名魄淵鎮衛守在深井前橋後方，整個人像被更深處的魄鳴牽住，只要井
+底再傳來一次重震，他就會立刻踏前鎮住整條沉井。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       130
+Level           86
+Hitroll         7
+Protect         0
+Damroll         7
+Str             17
+Int             15
+Wis             18
+Dex             14
+Con             17
+Hp              17500
+Mana            1160
+Move            470
+Class           0
+Gold            1370
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

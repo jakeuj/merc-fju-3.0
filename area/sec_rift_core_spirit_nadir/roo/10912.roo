@@ -1,0 +1,24 @@
+Vnum            10912
+Name            核心魄淵座~
+Description
+魄淵座像整個核心外層最後的立足邊界，腳下只剩持續向下抽離的幽赤暗潮，任何聲音落下去都像被更深層存在慢慢吞沒。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        10911
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         魄淵~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

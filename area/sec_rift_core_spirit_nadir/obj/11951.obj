@@ -1,0 +1,14 @@
+Vnum            11951
+Name            鎮魄短杖 短杖~
+ShortDesc       一支鎮魄短杖~
+Description
+一支鎮魄短杖倚在沉環邊，杖尖還殘留細微魄壓震紋。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           14
+Value           0 0 0 0 0
+Weight          3
+Cost            200
+End

@@ -1,0 +1,32 @@
+Vnum            10901
+Name            魄座落井臺~
+Description
+落井臺嵌在深座底下的弧形石唇上，四周不再傳來完整心跳，只剩像殘魂低鳴般的暗震沿壁面往下滲流。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        10812
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         深井~
+End
+
+End

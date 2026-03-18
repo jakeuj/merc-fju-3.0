@@ -1,0 +1,14 @@
+Vnum            11954
+Name            封魄柱片 柱片~
+ShortDesc       一片封魄柱片~
+Description
+一片封魄柱片散落在沉魄井緣旁，邊緣還殘留剛被魄壓扯裂的灼痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           15
+Value           0 0 0 0 0
+Weight          5
+Cost            200
+End

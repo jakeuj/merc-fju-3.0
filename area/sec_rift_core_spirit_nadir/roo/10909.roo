@@ -1,0 +1,32 @@
+Vnum            10909
+Name            逆魄裂廊~
+Description
+裂廊中央張開一道細長暗縫，縫底不見光，只偶爾向外噴出一股帶著嗚咽聲的熱流，把整條通道燙得微微顫抖。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        10908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10910
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

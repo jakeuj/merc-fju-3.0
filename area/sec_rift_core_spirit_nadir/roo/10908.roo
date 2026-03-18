@@ -1,0 +1,32 @@
+Vnum            10908
+Name            離魄偏廊~
+Description
+偏廊兩壁嵌著一列早已失穩的維魄片，碎片仍在陰影裡忽明忽滅，像在記錄每一次未能被封住的魄壓外洩。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10909
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         維魄~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End

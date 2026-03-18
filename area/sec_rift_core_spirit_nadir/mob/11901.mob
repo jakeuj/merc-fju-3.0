@@ -1,0 +1,32 @@
+Vnum            11901
+Name            spirit pressure patrol~
+ShortDesc       魄壓巡守~
+Description
+一名魄壓巡守沿著沉環邊緣來回巡視，手中的鎮魄短杖不時在石面敲出一
+圈又一圈幽赤微光。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       110
+Level           82
+Hitroll         6
+Protect         0
+Damroll         6
+Str             16
+Int             15
+Wis             17
+Dex             14
+Con             16
+Hp              15200
+Mana            980
+Move            430
+Class           0
+Gold            1210
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

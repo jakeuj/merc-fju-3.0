@@ -1,0 +1,24 @@
+Vnum            10910
+Name            魄淵前橋~
+Description
+前橋跨在一道近乎垂直下墜的暗井上方，橋面每次震動都帶著延遲極長的回響，像深淵底部仍有更慢卻更重的鼓動。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10909
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10911
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

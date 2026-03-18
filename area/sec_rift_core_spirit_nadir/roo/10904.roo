@@ -1,0 +1,32 @@
+Vnum            10904
+Name            觀魄鎮座~
+Description
+鎮座周圍豎著數面殘缺觀魄碑，碑面偶爾映出不屬於此地的模糊輪廓，隨即又被沉環赤光撕碎吞沒。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         觀魄~
+End
+
+#Enquire
+Keyword         鎮座~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            10911
+Name            沉魄井緣~
+Description
+井緣外圍著數根向內扭折的封魄柱，柱身殘光一路向深井腹地墜去，像在替來者標示最後一段仍可回頭的高度。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10910
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        10912
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         井緣~
+End
+
+#Enquire
+Keyword         封魄柱~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            10903
+Name            核心沉環前緣~
+Description
+前緣俯看整圈沉環，環壁上的幽赤紋理像被無形力量強行拉成環流，勉強把四散的魄壓收束在這一層。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

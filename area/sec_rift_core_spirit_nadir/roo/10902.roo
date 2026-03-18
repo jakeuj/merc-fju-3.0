@@ -1,0 +1,24 @@
+Vnum            10902
+Name            沉魄下階~
+Description
+下階表面覆著一層暗紅薄霜，每踩一步都會有極輕的魄鳴從石隙裡滲出，像整段階道正替更深處分擔震幅。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10901
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

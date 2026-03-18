@@ -1,0 +1,16 @@
+Vnum            10906
+Name            聽魄沉座~
+Description
+沉座中央懸著一枚裂痕密布的玄黑石核，石核每隔片刻便發出短促低鳴，像真正的魄源正在更深處回應。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

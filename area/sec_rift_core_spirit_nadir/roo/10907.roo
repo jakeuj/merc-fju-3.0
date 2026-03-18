@@ -1,0 +1,24 @@
+Vnum            10907
+Name            失魄側階~
+Description
+側階向偏廊傾斜下切，石面殘留的灰白碎屑一踩即散，像曾經附著其上的魂屑早被下方氣流反覆剝離。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

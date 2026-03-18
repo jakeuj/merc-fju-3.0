@@ -1,0 +1,39 @@
+Vnum            10905
+Name            伏魄引槽~
+Description
+引槽把各股魄壓導向更深主井，槽底不時有亮白裂絲一閃即滅，像核心正試圖掙開這裡最後一道收束。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10906
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10909
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         引槽~
+Description
+引槽內壁刻滿逆向封紋，顯然不是為了鎮住表面波動，而是為了延遲更深層魄壓衝上來的速度。
+~
+End
+
+End

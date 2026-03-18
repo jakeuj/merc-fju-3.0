@@ -1,0 +1,14 @@
+Vnum            11952
+Name            觀魄殘碑 殘碑~
+ShortDesc       一面觀魄殘碑~
+Description
+一面觀魄殘碑半傾在沉環前座旁，碑面只映得出斷續扭曲的幽赤殘影。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           14
+Value           0 0 0 0 0
+Weight          4
+Cost            200
+End

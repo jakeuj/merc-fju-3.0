@@ -1,0 +1,14 @@
+Vnum            11953
+Name            維魄殘片 殘片~
+ShortDesc       一片維魄殘片~
+Description
+一片維魄殘片擱在偏廊邊，碎面仍隨著魄鳴節奏忽明忽滅。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           15
+Value           0 0 0 0 0
+Weight          2
+Cost            200
+End

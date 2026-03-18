@@ -538,6 +538,25 @@
         "plans/area/0023-sec-rift-sealed-core-heart.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_core_spirit_nadir",
+      "title": "核心魄淵",
+      "room_range": "10901-10912",
+      "load_order": 30,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_sealed_core_heart",
+      "theme_primary": "仙俠",
+      "theme_secondary": "核心魄淵 / 心魄沉座",
+      "summary": "承接封心核心深座，下探到核心沉環、失魄偏廊與魄淵前座的心魄沉降帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_core_spirit_nadir/index",
+        "area/sec_rift_core_spirit_nadir/map.md",
+        "plans/area/0024-sec-rift-core-spirit-nadir.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

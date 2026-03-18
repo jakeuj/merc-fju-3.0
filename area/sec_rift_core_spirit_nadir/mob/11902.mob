@@ -1,0 +1,32 @@
+Vnum            11902
+Name            spirit maintenance observer~
+ShortDesc       維魄測守~
+Description
+一名維魄測守伏在偏廊邊緣，手持維魄殘片與測壓針架，像正等待下一波
+魄鳴回震好立刻補住外洩裂縫。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       95
+Level           84
+Hitroll         6
+Protect         0
+Damroll         7
+Str             15
+Int             17
+Wis             18
+Dex             14
+Con             15
+Hp              16300
+Mana            1080
+Move            450
+Class           0
+Gold            1290
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End
