@@ -1,0 +1,32 @@
+Vnum            11801
+Name            素界落座~
+Description
+落座像嵌在素界邊緣的一截淡素石影，腳下殘留的環界已薄到幾乎與四周同化，只剩一種勉強還能承住意識的底色，像連白意都在此被慢慢澹去。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        11712
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         素界~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

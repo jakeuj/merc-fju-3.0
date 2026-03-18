@@ -1,0 +1,24 @@
+Vnum            11812
+Name            裂魄素界座~
+Description
+素界座像整段素界深井最後一塊仍勉強留住輪廓的淡素石影，腳下只剩一圈薄得與周圍幾乎無從區分的環界，所有殘痕都在這裡被拖往更深的裂魄澹界。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        11811
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         素界座~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

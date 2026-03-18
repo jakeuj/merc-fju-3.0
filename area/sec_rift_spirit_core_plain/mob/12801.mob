@@ -1,0 +1,32 @@
+Vnum            12801
+Name            plain court patrol~
+ShortDesc       素界巡守~
+Description
+一名素界巡守沿著素界內庭緩步巡視，手中的觀澹短杖偶爾在石面點出一圈極淡
+痕影，像在確認這片深井還剩多少層理尚未被洗成近乎無色的底面。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       156
+Level           104
+Hitroll         9
+Protect         0
+Damroll         10
+Str             18
+Int             17
+Wis             22
+Dex             15
+Con             19
+Hp              27400
+Mana            1820
+Move            640
+Class           0
+Gold            2040
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

@@ -184,6 +184,8 @@
 - `sec_rift_spirit_core_blank` 已完成 runtime implementation、commit `ae1f268`，並完成 WSL build 與 smoke test 驗證
 - `plans/area/0032-sec-rift-spirit-core-white.md` 已建立
 - `sec_rift_spirit_core_white` 已完成 runtime implementation，完成 WSL build 與 smoke test 驗證
+- `plans/area/0033-sec-rift-spirit-core-plain.md` 已建立
+- `sec_rift_spirit_core_plain` 已完成 runtime implementation，完成 WSL build 與 smoke test 驗證
 ## Blocked
 
 - none

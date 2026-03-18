@@ -1,0 +1,24 @@
+Vnum            11807
+Name            澹痕側階~
+Description
+側階斜切進偏廊時，連腳下殘留的踏步感都像被磨成極輕的澹痕，回頭再看，幾乎已無法確定自己剛才究竟走過了哪一格。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

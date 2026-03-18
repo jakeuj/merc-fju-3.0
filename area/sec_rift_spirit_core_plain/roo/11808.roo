@@ -1,0 +1,32 @@
+Vnum            11808
+Name            澹痕偏廊~
+Description
+偏廊兩側嵌著一排排近乎無色的導響殼片，殼面既不反光也不留影，只剩一種會把人的自述慢慢褪成空白前音的淡冷錯覺。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11807
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11809
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         澹痕~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End

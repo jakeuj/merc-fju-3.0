@@ -1,0 +1,32 @@
+Vnum            11809
+Name            素界逆廊~
+Description
+逆廊中央只剩一道淡得近乎不可見的素縫，縫底既無深度也無陰影，卻像能把所有殘留的名稱與重量慢慢拖向更深的澹界井腹。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        11808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11810
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

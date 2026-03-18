@@ -1,0 +1,32 @@
+Vnum            12802
+Name            faint corridor watcher~
+ShortDesc       澹痕測守~
+Description
+這名澹痕測守伏在偏廊邊，素淡面甲下只剩一道極輕卻不容忽視的目光，像正默
+默衡量每個經過此地的人還留有多少能被辨識的痕跡。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       -132
+Level           112
+Hitroll         10
+Protect         0
+Damroll         12
+Str             19
+Int             18
+Wis             21
+Dex             16
+Con             20
+Hp              31200
+Mana            1960
+Move            660
+Class           0
+Gold            2230
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

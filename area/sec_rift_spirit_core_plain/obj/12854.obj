@@ -1,0 +1,14 @@
+Vnum            12854
+Name            澹界柱座 柱座~
+ShortDesc       一座澹界柱座~
+Description
+一座澹界柱座斜立在井緣，柱面只剩幾道浮在淡底上的細線。
+~
+ItemType        ITEM_TRASH
+Takeable        No
+WearLoc         ITEM_TAKE
+Level           31
+Value           0 0 0 0 0
+Weight          0
+Cost            0
+End

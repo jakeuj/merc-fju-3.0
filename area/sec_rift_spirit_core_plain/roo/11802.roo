@@ -1,0 +1,24 @@
+Vnum            11802
+Name            澹素下階~
+Description
+下階表面沒有紋理，也幾乎不再保留顏色，只剩一層比霧更薄的素意沿著石面貼伏，讓每一步都像踩在剛被允許停留片刻的淡影上。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11801
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

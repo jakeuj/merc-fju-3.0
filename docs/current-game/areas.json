@@ -709,6 +709,25 @@
         "plans/area/0032-sec-rift-spirit-core-white.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_spirit_core_plain",
+      "title": "裂魄素界",
+      "room_range": "11801-11812",
+      "load_order": 39,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_white",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄素界 / 素界深井",
+      "summary": "承接裂魄白界座，下探到素界內庭、澹痕偏廊與澹界前座的素界深井過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_plain/index",
+        "area/sec_rift_spirit_core_plain/map.md",
+        "plans/area/0033-sec-rift-spirit-core-plain.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

@@ -1,0 +1,16 @@
+Vnum            11806
+Name            聽澹沉座~
+Description
+沉座中央懸著一枚像被洗去所有邊界的淡素長晶，晶體沒有光，也沒有影，只把周圍殘留的一切輪廓慢慢壓成更薄、更靜的底色。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

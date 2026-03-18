@@ -1,0 +1,14 @@
+Vnum            12851
+Name            觀澹短杖 短杖~
+ShortDesc       一支觀澹短杖~
+Description
+一支觀澹短杖倚在素界內庭邊，杖尖還殘留一圈快被澹成底色的淡素痕影。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           23
+Value           0 0 0 0 0
+Weight          3
+Cost            310
+End

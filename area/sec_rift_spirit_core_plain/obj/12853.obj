@@ -1,0 +1,14 @@
+Vnum            12853
+Name            澹痕殘片 淡片~
+ShortDesc       一片澹痕殘片~
+Description
+一片澹痕殘片落在逆廊角落，片面淡得幾乎無法再被歸入任何顏色。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           29
+Value           0 0 0 0 0
+Weight          1
+Cost            350
+End

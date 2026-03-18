@@ -1,0 +1,39 @@
+Vnum            11805
+Name            素界澹層槽~
+Description
+澹層槽裡沒有流動可循，只剩一道細到近乎無法追索的淡線朝更深處緩慢下沉，像整段深井正在把所有最後的界層都洗回更無名的澹底。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11806
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11809
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         澹層~
+Description
+槽壁上殘留的封紋已幾乎不成圖樣，只剩一種把所有顏色與層次一併褪成淡底的冷靜意志。
+~
+End
+
+End

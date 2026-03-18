@@ -1,0 +1,32 @@
+Vnum            11804
+Name            觀澹鎮魄臺~
+Description
+鎮魄臺旁的觀澹碑幾乎看不出碑與空氣的分界，只剩幾道內收的淡痕在提醒人這裡曾經存在過可被辨識的層次。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         觀澹~
+End
+
+#Enquire
+Keyword         鎮魄~
+End
+
+End

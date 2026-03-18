@@ -1,0 +1,32 @@
+Vnum            12803
+Name            faint threshold guard~
+ShortDesc       澹界鎮衛~
+Description
+一名澹界鎮衛立在井緣前，雙手扶著長槍般的封魄澹樁，身形穩得像已與周圍淡
+素井壁融成同一塊幾乎無色的冷石。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       192
+Level           120
+Hitroll         12
+Protect         0
+Damroll         14
+Str             21
+Int             18
+Wis             22
+Dex             15
+Con             21
+Hp              35600
+Mana            2180
+Move            700
+Class           0
+Gold            2520
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

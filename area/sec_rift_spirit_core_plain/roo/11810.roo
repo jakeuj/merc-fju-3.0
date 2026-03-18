@@ -1,0 +1,24 @@
+Vnum            11810
+Name            澹界前橋~
+Description
+前橋橫跨在一段近乎已無色相可稱的淡腹上方，橋面每次受力後都只留下極短的靜冷餘響，下一瞬便像連那點餘響也被一起帶走。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11809
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11811
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

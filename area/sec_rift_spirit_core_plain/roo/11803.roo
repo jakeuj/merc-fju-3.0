@@ -1,0 +1,32 @@
+Vnum            11803
+Name            素界內庭前緣~
+Description
+前緣俯瞰整座向內沉落的素界內庭，庭底像一潭連白與灰都已不再重要的淡素空井，視線只要久停片刻，就會連觀察這件事本身都逐漸失去依據。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11807
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End
