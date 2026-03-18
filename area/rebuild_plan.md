@@ -103,10 +103,7 @@
 
 ## Candidate Queue
 
-- `sec_rift_underseal_basin`
-  - reserved_room_block: `10601-10620`
-  - theme: `仙俠`
-  - subtheme: `禁底封脈 / 沉壓盆地`
+(目前尚未建立新的 candidate 項目。)
 
 ## Todo
 
@@ -114,33 +111,7 @@
 
 ## In Progress
 
-- `sec_rift_underseal_basin`
-  - plan: `plans/area/0021-sec-rift-underseal-basin.md`
-  - spec: `area/sec_rift_underseal_basin/map.md`
-  - reserved_room_block: `10601-10620`
-  - theme: `仙俠`
-  - subtheme: `禁底封脈 / 沉壓盆地`
-  - ref_inputs_used:
-    - `ref/Readme.md`
-    - `area/sec_rift_core_vein_abyss/map.md`
-    - `ref/world-graph.md`
-    - `ref/三國-MUD-題材分布表.md`
-  - ref_inputs_deferred:
-    - `docs/3yWebsite/docs/data/players.json`（repo 目前不存在，僅保留追蹤需求）
-    - `docs/3yWebsite/docs/data/skills.json`（repo 目前不存在，僅保留追蹤需求）
-    - `ref/sanguo-area-scaffold/`
-    - `mud-world-builder/`
-    - `mud-ai-map-generator/`
-    - `mudlet-map-generator/`
-    - `mud-world-map-editor/`
-    - `mud-world-map-editor-pro/`
-    - 各類經濟/勢力/歷史事件模擬系統
-  - theme_basis:
-    - `area/sec_rift_core_vein_abyss/map.md`
-    - `ref/world-graph.md`
-    - `ref/三國-MUD-題材分布表.md`
-  - compliance_check: `compliant；依既有地下鏈向下 world link 完成第一輪 runtime implementation，維持 ref/Readme.md 容許的 area rebuild 範圍`
-  - delivery_gate: `implementation_ready_for_commit`
+(目前無 `in_progress` 項目。)
 
 
 ## Done
@@ -187,26 +158,28 @@
 - `sec_rift_core_below_deeps` 已完成第一輪 implementation，完成本機 Linux build，並達成可前進下一區狀態
 - `plans/area/0020-sec-rift-core-vein-abyss.md` 已建立
 - `sec_rift_core_vein_abyss` 已完成第一輪 implementation、commit `f4fe735`，完成 WSL Linux build 與 smoke test，並達成可前進下一區狀態
+- `plans/area/0021-sec-rift-underseal-basin.md` 已建立
+- `sec_rift_underseal_basin` 已完成第一輪 implementation、commit `344459d`，完成本機 Linux build 與 smoke test，並達成可前進下一區狀態
 ## Blocked
 
 - none
 
 ## Current Recommended Next Step
 
-目前 `sec_rift_underseal_basin` 已完成第一輪 implementation 與 smoke test 驗證，交付門檻已來到 `implementation_ready_for_commit`；本輪最合適的下一步是先提交這個 implementation milestone，再決定是否推進到下一個待建 area。
+目前 `sec_rift_underseal_basin` 已完成第一輪 implementation 並提交，tracker 也已清回可前進狀態；下一步應先盤點新的 next actionable area，再建立對應單區 plan 與 `map.md` spec。
 
 下一輪建議動作：
 
-1. 先提交 `sec_rift_underseal_basin` 的 implementation milestone
-2. 提交後把本區轉成 `validated_ready_to_advance` 或 `done`
-3. 再依 queue 選定下一個待建 area
-4. 若進下一區，先建立該區單區 plan 與 `map.md` spec
+1. 先依 world graph / ref 規劃補下一個 candidate area
+2. 將新 candidate 寫入 `candidate queue` 或 `todo`
+3. 為該區建立單區 plan 與 `map.md` spec
+4. 再依 `spec_ready_for_commit -> implementation` 流程往下推進
 
 （註：目前 repo 無 `docs/3yWebsite/docs/data/players.json` 與 `skills.json`，下一輪若要做 docs-assisted pass，需先補回 dataset 或改用現存資料來源。）
 
 語意提醒：
 
-- 目前已有 `in_progress` 項目 `sec_rift_underseal_basin`，再次使用固定 prompt 時應優先續做此區，不得跳到其他候選
+- 目前 tracker 沒有 `in_progress` 或 `todo` 項目；若要繼續下一區，需先補新的 candidate / todo
 - `sec_rift_core_below` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0018-sec-rift-core-below.md` 回查
 - `sec_rift_core_below_deeps` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0019-sec-rift-core-below-deeps.md` 回查
 - 依新 room reservation policy，`sec_rift_below` 已使用 `9501-9520`，`sec_rift_core` 已使用 `9601-9620`，`sec_rift_deeps` 已完成 `9701-9712` 第一版落地，`sec_rift_prison_core` 已完成 `10001-10012` 第一版落地，`sec_rift_underseal_dais` 已完成 `10101-10112` 第一版落地，`sec_rift_true_core` 已完成 `10201-10212` 第一版落地，`sec_rift_core_below` 已完成 `10301-10312` 第一版落地，`sec_rift_core_below_deeps` 已完成 `10401-10412` 第一版落地，`sec_rift_core_vein_abyss` 已完成 `10501-10512` 第一版落地，`sec_rift_underseal_basin` 已完成 `10601-10612` 第一版落地，並保留 `10601-10620` 作為首段 block
@@ -215,4 +188,4 @@
 
 建議可直接使用的 prompt：
 
-`續做 sec_rift_underseal_basin：先提交目前的 implementation milestone，再決定是否前進到下一個待建 area。`
+`盤點並建立下一個待建 area：先更新 candidate queue，再建立單區 plan 與 map.md spec。`
