@@ -111,13 +111,7 @@
 
 ## In Progress
 
-- `sec_rift_spirit_core_zero`
-  - plan: `plans/area/0030-sec-rift-spirit-core-zero.md`
-  - spec: `area/sec_rift_spirit_core_zero/map.md`
-  - reserved_room_block: `11501-11520`
-  - theme: `仙俠`
-  - subtheme: `裂魄零界 / 零界深井`
-  - delivery_gate: `implementation_ready_for_commit`
+(目前無進行中項目。)
 
 
 ## Done
@@ -185,10 +179,11 @@
 - `sec_rift_spirit_core_null` 已完成第一輪 implementation、commit `fb42780`，完成 WSL Linux build 與 smoke test，並達成可前進下一區狀態
 - `plans/area/0030-sec-rift-spirit-core-zero.md` 已建立
 - `sec_rift_spirit_core_zero` 已完成 spec 建立與 validate-only 驗證，並進入下一段 implementation milestone 準備
+- `sec_rift_spirit_core_zero` 已完成 runtime implementation、commit `cc9bd99`，並完成 WSL build 與 smoke test 驗證
 ## Blocked
 
 - none
 
 ## Current Recommended Next Step
 
-`sec_rift_spirit_core_zero` 已完成 runtime implementation 與驗證，現在應先 commit 這個 milestone，再決定是否進入下一個 actionable area。
+`sec_rift_spirit_core_zero` 已完成 runtime implementation 與驗證，下一個 actionable area 尚未 staged；若要繼續，請先依固定 prompt 選出新的候選區。

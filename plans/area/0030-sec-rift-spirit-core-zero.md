@@ -91,4 +91,4 @@
 
 ## Next Step Prompt
 
-`sec_rift_spirit_core_zero` 已完成 runtime implementation；下一步應先 commit 這個 milestone，再回到 fixed prompt 選下一個 actionable area。
+`sec_rift_spirit_core_zero` 已完成 runtime implementation 並提交；下一步若要延續流程，請回到 fixed prompt 選下一個 actionable area。
