@@ -103,7 +103,10 @@
 
 ## Candidate Queue
 
-(目前無候選項目。)
+- `sec_rift_spirit_core_blank`
+  - reserved_room_block: `11601-11620`
+  - theme: `仙俠`
+  - subtheme: `裂魄空白 / 空白深井`
 
 ## Todo
 
@@ -111,7 +114,33 @@
 
 ## In Progress
 
-(目前無進行中項目。)
+- `sec_rift_spirit_core_blank`
+  - plan: `plans/area/0031-sec-rift-spirit-core-blank.md`
+  - spec: `area/sec_rift_spirit_core_blank/map.md`
+  - reserved_room_block: `11601-11620`
+  - theme: `仙俠`
+  - subtheme: `裂魄空白 / 空白深井`
+  - ref_inputs_used:
+    - `ref/Readme.md`
+    - `area/sec_rift_spirit_core_zero/map.md`
+    - `ref/world-graph.md`
+    - `ref/三國-MUD-題材分布表.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/docs/data/players.json`（本輪僅確認無更高優先的城鎮服務鏈候選，未直接參與地下鏈題材決策）
+    - `docs/3yWebsite/docs/data/skills.json`（本輪僅確認無更高優先的技能服務鏈候選，未直接參與地下鏈題材決策）
+    - `ref/sanguo-area-scaffold/`
+    - `mud-world-builder/`
+    - `mud-ai-map-generator/`
+    - `mudlet-map-generator/`
+    - `mud-world-map-editor/`
+    - `mud-world-map-editor-pro/`
+    - 各類經濟/勢力/歷史事件模擬系統
+  - theme_basis:
+    - `area/sec_rift_spirit_core_zero/map.md`
+    - `ref/world-graph.md`
+    - `ref/三國-MUD-題材分布表.md`
+  - compliance_check: `compliant；本輪沿 sec_rift_spirit_core_zero 的既有向下 world link 建立下一段 spec-first 里程碑，維持 ref/Readme.md 容許的 area rebuild 範圍`
+  - delivery_gate: `implementation_in_progress`
 
 
 ## Done
@@ -186,4 +215,4 @@
 
 ## Current Recommended Next Step
 
-`sec_rift_spirit_core_zero` 已完成 runtime implementation 與驗證，下一個 actionable area 尚未 staged；若要繼續，請先依固定 prompt 選出新的候選區。
+目前已依 `sec_rift_spirit_core_zero` 的向下 world link 建立 `sec_rift_spirit_core_blank` 的 spec 並完成 validate-only 驗證。下一輪最合適的動作是直接續做它的第一輪 runtime implementation。
