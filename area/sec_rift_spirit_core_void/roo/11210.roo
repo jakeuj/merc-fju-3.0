@@ -1,0 +1,24 @@
+Vnum            11210
+Name            真空前橋~
+Description
+前橋跨在一道近乎看不見底的黑井空腔上方，橋面每次震動後都留下一段異常漫長的靜止，像橋下有更重的存在正慢慢逼近。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11209
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11211
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

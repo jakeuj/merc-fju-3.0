@@ -1,0 +1,14 @@
+Vnum            12253
+Name            寂響殘片 殘片~
+ShortDesc       一片寂響殘片~
+Description
+一片寂響殘片擱在偏廊邊，碎面仍隱隱留著一絲晚到的暗紅痕影。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           18
+Value           0 0 0 0 0
+Weight          2
+Cost            230
+End

@@ -1,0 +1,14 @@
+Vnum            12252
+Name            觀虛碑 虛碑~
+ShortDesc       一面觀虛碑~
+Description
+一面觀虛碑半傾在鎮魄座旁，碑面只映得出一層層向內塌陷的暗紋。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           17
+Value           0 0 0 0 0
+Weight          4
+Cost            230
+End

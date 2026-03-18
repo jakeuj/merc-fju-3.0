@@ -1,0 +1,32 @@
+Vnum            11201
+Name            虛井落臺~
+Description
+落臺嵌在虛井內壁的一截石脣上，腳下石層像被長久抽離過般發出沉悶空震，彷彿整座井腹正默默把最後殘存的魄流拖向更深黑空。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        11112
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         虛井~
+End
+
+End

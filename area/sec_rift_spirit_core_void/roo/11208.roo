@@ -1,0 +1,32 @@
+Vnum            11208
+Name            寂響偏廊~
+Description
+偏廊兩側嵌著幾排失去色澤的導響片，片面雖然黯淡，卻仍殘留一絲晚到的暗紅痕影。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11209
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         寂響~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End

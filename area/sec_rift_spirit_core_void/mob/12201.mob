@@ -1,0 +1,32 @@
+Vnum            12201
+Name            void belly patrol~
+ShortDesc       虛腹巡守~
+Description
+一名虛腹巡守沿著裂腹環脈來回巡視，手中的鎮虛短杖不時在石面點出一
+圈又一圈近乎消散的暗紅波痕。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       116
+Level           88
+Hitroll         6
+Protect         0
+Damroll         6
+Str             16
+Int             15
+Wis             17
+Dex             14
+Con             16
+Hp              17600
+Mana            1100
+Move            460
+Class           0
+Gold            1300
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

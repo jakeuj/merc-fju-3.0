@@ -1,0 +1,14 @@
+Vnum            12254
+Name            封魄柱臺 柱臺~
+ShortDesc       一塊封魄柱臺~
+Description
+一塊封魄柱臺散落在虛腹井緣旁，邊緣還殘留剛被真空暗流磨裂的灼痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           18
+Value           0 0 0 0 0
+Weight          5
+Cost            230
+End

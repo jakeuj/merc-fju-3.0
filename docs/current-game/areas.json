@@ -595,6 +595,25 @@
         "plans/area/0026-sec-rift-spirit-core-hollow.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_spirit_core_void",
+      "title": "裂魄空心",
+      "room_range": "11201-11212",
+      "load_order": 33,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_hollow",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄空心 / 虛腹暗層",
+      "summary": "承接魄核空井沉井座，下探到裂腹環脈、寂響偏廊與真空前座的虛腹暗層帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_void/index",
+        "area/sec_rift_spirit_core_void/map.md",
+        "plans/area/0027-sec-rift-spirit-core-void.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

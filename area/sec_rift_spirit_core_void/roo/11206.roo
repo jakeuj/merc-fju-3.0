@@ -1,0 +1,16 @@
+Vnum            11206
+Name            聽虛沉座~
+Description
+沉座中央懸著一枚細長黑晶，晶體幾乎沒有回應，卻讓整座裂腹環脈在每次震動後留下更久更深的空白。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

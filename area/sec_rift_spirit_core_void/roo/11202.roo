@@ -1,0 +1,24 @@
+Vnum            11202
+Name            虛腹下階~
+Description
+下階表面佈滿被抽蝕過的細密痕紋，每走一步都像踩進被掏空後留下的殘響薄膜，連腳步都變得遲鈍。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11201
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

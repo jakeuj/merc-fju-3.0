@@ -1,0 +1,24 @@
+Vnum            11212
+Name            裂魄虛座~
+Description
+虛座像整段虛腹井層最後一塊仍能立足的陰影邊界，腳下只剩一圈持續向下抽離的暗紅空環，所有殘痕都在這裡被拖往更深的裂魄真空。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        11211
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         虛座~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

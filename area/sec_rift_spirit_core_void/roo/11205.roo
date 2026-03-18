@@ -1,0 +1,39 @@
+Vnum            11205
+Name            虛腹引流槽~
+Description
+引流槽沿著井腹邊緣慢慢把殘餘魄流拖往更深處，槽底偶爾浮起一道幾乎看不見的白痕，像深井深處正以無聲方式回應。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11209
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         引流~
+Description
+引流槽內壁刻滿向內折返的封紋，顯然此地不是為了散壓，而是為了把一切殘流繼續拖向更深的虛腹中心。
+~
+End
+
+End

@@ -1,0 +1,24 @@
+Vnum            11207
+Name            寂響側階~
+Description
+側階往偏廊斜切時幾乎沒有任何回聲，只剩一陣微弱寒意從石縫中倒流，像這裡連餘響都已經被深處抽走。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11208
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

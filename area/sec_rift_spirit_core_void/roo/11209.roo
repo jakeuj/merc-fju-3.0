@@ -1,0 +1,32 @@
+Vnum            11209
+Name            虛裂逆廊~
+Description
+逆廊中央裂開一道內縮暗縫，縫底無聲無光，只偶爾往外翻出一股帶著灼意的暗流，像深處正在把一切擠向真空。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        11208
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11210
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            11204
+Name            觀虛鎮魄座~
+Description
+鎮魄座旁立著數面觀虛碑，碑面並不反光，只留下層層向內內陷的暗紋，像連光影都被深處悄悄折盡。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         觀虛~
+End
+
+#Enquire
+Keyword         鎮魄~
+End
+
+End

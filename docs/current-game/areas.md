@@ -56,6 +56,7 @@ title: Current Game Areas
 | `sec_rift_core_spirit_nadir` | 核心魄淵 / 心魄沉座 | `10901-10912` | `rebuild addition` | 承接封心核心深座，下探到核心沉環、失魄偏廊與魄淵前座。 |
 | `sec_rift_core_spirit_abyss` | 魄淵深井 / 暗層沉降 | `11001-11012` | `rebuild addition` | 承接核心魄淵座，下探到深井環脈、空響偏廊與魄核前座。 |
 | `sec_rift_spirit_core_hollow` | 魄核空井 / 空腹暗層 | `11101-11112` | `rebuild addition` | 承接魄淵深井沉座，下探到空腹環脈、失響偏廊與裂魄前座。 |
+| `sec_rift_spirit_core_void` | 裂魄空心 / 虛腹暗層 | `11201-11212` | `rebuild addition` | 承接魄核空井沉井座，下探到裂腹環脈、寂響偏廊與真空前座。 |
 
 ## Recent Rebuild Areas
 
@@ -87,6 +88,7 @@ title: Current Game Areas
 - `sec_rift_core_spirit_nadir`：承接封心核心深座，下探到核心沉環、失魄偏廊與魄淵前座，作為更深核心魄淵暗層前的心魄沉降帶。
 - `sec_rift_core_spirit_abyss`：承接核心魄淵座，下探到深井環脈、空響偏廊與魄核前座，作為更深魄核空井區前的暗層沉降帶。
 - `sec_rift_spirit_core_hollow`：承接魄淵深井沉座，下探到空腹環脈、失響偏廊與裂魄前座，作為更深裂魄空心區前的空腹暗層帶。
+- `sec_rift_spirit_core_void`：承接魄核空井沉井座，下探到裂腹環脈、寂響偏廊與真空前座，作為更深裂魄真空區前的虛腹暗層帶。
 
 ### 北方鏈
 

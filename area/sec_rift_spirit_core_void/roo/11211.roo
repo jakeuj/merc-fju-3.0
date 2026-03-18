@@ -1,0 +1,32 @@
+Vnum            11211
+Name            虛腹井緣~
+Description
+井緣外圍著一圈向內坍陷的封魄柱臺，柱臺殘光在井腹邊緣慢慢滑落，像在標示最後一段仍屬於裂腹外層的界線。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11210
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        11212
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         井緣~
+End
+
+#Enquire
+Keyword         柱臺~
+End
+
+End

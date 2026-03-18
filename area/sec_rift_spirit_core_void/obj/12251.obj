@@ -1,0 +1,14 @@
+Vnum            12251
+Name            鎮虛短杖 短杖~
+ShortDesc       一支鎮虛短杖~
+Description
+一支鎮虛短杖倚在裂腹環脈邊，杖尖還殘留細微的虛震痕跡。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           17
+Value           0 0 0 0 0
+Weight          3
+Cost            230
+End

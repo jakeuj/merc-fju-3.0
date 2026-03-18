@@ -1,0 +1,32 @@
+Vnum            11203
+Name            裂腹環脈前緣~
+Description
+前緣俯視整圈裂腹環脈，環壁上的暗紅紋路正向內一層層塌陷，像深處仍有某個空心核心在持續拉扯一切殘流。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End
