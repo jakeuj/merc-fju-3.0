@@ -1,0 +1,32 @@
+Vnum            10709
+Name            逆湧裂渠~
+Description
+裂渠中段裂開一道深黑縫口，偶爾會有灼熱霧氣自縫底反衝上來，把整條通道照成忽明忽暗的赤影。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        10708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10710
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

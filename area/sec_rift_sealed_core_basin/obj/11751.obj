@@ -1,0 +1,14 @@
+Vnum            11751
+Name            封盆長杖 長杖~
+ShortDesc       一支封盆長杖~
+Description
+一支封盆長杖靠在盆壁旁，杖身封紋仍在微微發熱。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           12
+Value           0 0 0 0 0
+Weight          3
+Cost            180
+End

@@ -1,0 +1,24 @@
+Vnum            10707
+Name            回壓渠階~
+Description
+渠階往下銜進一條狹長側渠，石階表面被濃稠脈液拋磨得近乎鏡亮，映出扭曲而不穩的赤光。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

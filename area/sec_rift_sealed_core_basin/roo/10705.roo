@@ -1,0 +1,39 @@
+Vnum            10705
+Name            回壓分盆~
+Description
+分盆以環狀溝槽切出數層內外圈，濃重脈液順著溝底繞行，偶爾在交會處湧起沉悶的震鳴。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10706
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10709
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         溝槽~
+Description
+溝槽內側佈滿細密補封痕，看得出這裡曾被反覆加厚，卻仍壓不住回湧的內脈。
+~
+End
+
+End

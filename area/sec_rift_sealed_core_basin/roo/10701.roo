@@ -1,0 +1,32 @@
+Vnum            10701
+Name            沉門落盆臺~
+Description
+落盆臺像被整片沉門壓進盆底，四周石面覆著濕冷暗膜，連腳步聲都像被封進地層裡慢半拍才傳回。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        10612
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10702
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         沉門~
+End
+
+End

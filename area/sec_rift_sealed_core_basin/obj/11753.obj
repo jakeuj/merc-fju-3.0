@@ -1,0 +1,14 @@
+Vnum            11753
+Name            裂壓盤 壓盤~
+ShortDesc       一具裂壓盤~
+Description
+一具裂壓盤架在裂渠邊，盤面細針仍在不規則地顫抖。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           13
+Value           0 0 0 0 0
+Weight          2
+Cost            180
+End

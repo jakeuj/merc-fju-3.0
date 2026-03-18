@@ -1,0 +1,14 @@
+Vnum            11754
+Name            封心柱片 柱片~
+ShortDesc       一片封心柱片~
+Description
+一片封心柱片掉在井緣旁，邊角還帶著被回壓撕裂的暗紅光痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           13
+Value           0 0 0 0 0
+Weight          5
+Cost            180
+End

@@ -1,0 +1,16 @@
+Vnum            10706
+Name            封核聽盆~
+Description
+聽盆中央豎著一支封核聽柱，柱體每隔片刻就傳來低沉回響，像更深處有心跳正順著石層向上叩擊。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

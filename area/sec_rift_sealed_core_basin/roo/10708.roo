@@ -1,0 +1,32 @@
+Vnum            10708
+Name            維封側渠~
+Description
+側渠兩旁嵌著大批失效封片，部分碎片仍會在黑暗裡自行亮起，像最後一點維封餘勁還在苦撐。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10707
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10709
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         側渠~
+End
+
+#Enquire
+Keyword         維封~
+End
+
+End

@@ -1,0 +1,24 @@
+Vnum            10710
+Name            封心前橋~
+Description
+前橋橫跨沉盆最深的一道封壓裂帶，橋下不斷傳來石基被反覆震擊的悶響，像某道更深的門正試著向上推開。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10709
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10711
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

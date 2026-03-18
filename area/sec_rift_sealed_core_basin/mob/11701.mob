@@ -1,0 +1,32 @@
+Vnum            11701
+Name            sealed basin patrol~
+ShortDesc       封核巡守~
+Description
+一名封核巡守沿著環盆邊緣來回巡查，手中的封盆長杖不時敲擊石面，像
+在量測內盆回壓是否仍受控制。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       100
+Level           74
+Hitroll         5
+Protect         0
+Damroll         5
+Str             16
+Int             15
+Wis             16
+Dex             14
+Con             16
+Hp              11800
+Mana            760
+Move            360
+Class           0
+Gold            980
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

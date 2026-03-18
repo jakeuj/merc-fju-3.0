@@ -1,0 +1,32 @@
+Vnum            10711
+Name            封心井緣~
+Description
+井緣周圍圍著一圈幾乎沉沒的封心柱，柱身殘光沿著裂紋緩慢滑動，勉強把井底傳來的壓流束成一條可行窄路。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10710
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        10712
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         封心~
+End
+
+#Enquire
+Keyword         井緣~
+End
+
+End

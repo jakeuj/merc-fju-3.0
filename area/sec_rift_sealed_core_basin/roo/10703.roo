@@ -1,0 +1,32 @@
+Vnum            10703
+Name            封核環盆前緣~
+Description
+前緣正對著整座封核環盆，盆心有一圈圈回壓波紋向外推展，像整片內盆都在替中央某物分攤脈衝。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10702
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10707
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

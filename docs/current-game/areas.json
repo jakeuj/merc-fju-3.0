@@ -500,6 +500,25 @@
         "plans/area/0021-sec-rift-underseal-basin.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_sealed_core_basin",
+      "title": "封核沉盆",
+      "room_range": "10701-10712",
+      "load_order": 28,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_underseal_basin",
+      "theme_primary": "仙俠",
+      "theme_secondary": "封核沉盆 / 內壓核心",
+      "summary": "承接禁底封脈盆沉門，下探到封核環盆、回壓渠廊與封心前庭的核心承壓內盆。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_sealed_core_basin/index",
+        "area/sec_rift_sealed_core_basin/map.md",
+        "plans/area/0022-sec-rift-sealed-core-basin.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

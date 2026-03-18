@@ -1,0 +1,32 @@
+Vnum            11702
+Name            seal sluice observer~
+ShortDesc       維封測守~
+Description
+一名維封測守蹲在側渠邊，手持裂壓盤與封片夾，像隨時準備把失控回湧
+重新導回環盆裡。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       85
+Level           76
+Hitroll         5
+Protect         0
+Damroll         6
+Str             15
+Int             17
+Wis             17
+Dex             14
+Con             15
+Hp              12600
+Mana            820
+Move            380
+Class           0
+Gold            1040
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

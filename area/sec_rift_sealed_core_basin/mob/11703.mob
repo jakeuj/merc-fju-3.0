@@ -1,0 +1,32 @@
+Vnum            11703
+Name            heart threshold guard~
+ShortDesc       封心鎮衛~
+Description
+一名封心鎮衛守在井緣最深處，視線像釘死在深井中央，彷彿只要更深處
+的脈衝再強一分，他就得立刻扛住整座前庭。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       120
+Level           78
+Hitroll         6
+Protect         0
+Damroll         6
+Str             17
+Int             15
+Wis             17
+Dex             14
+Con             17
+Hp              13600
+Mana            900
+Move            400
+Class           0
+Gold            1120
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

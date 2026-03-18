@@ -1,0 +1,14 @@
+Vnum            11752
+Name            封紋碑片 碑片~
+ShortDesc       一塊封紋碑片~
+Description
+一塊封紋碑片半埋在觀盆座旁，裂口處還殘留模糊鎮壓紋。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           12
+Value           0 0 0 0 0
+Weight          4
+Cost            180
+End

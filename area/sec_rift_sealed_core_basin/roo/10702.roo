@@ -1,0 +1,24 @@
+Vnum            10702
+Name            內盆踏稜~
+Description
+踏稜沿盆壁向內微微下斜，石脊間布滿像血脈般的暗紅細線，隨著腳步節奏一明一滅。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10701
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

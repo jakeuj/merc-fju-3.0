@@ -1,0 +1,24 @@
+Vnum            10712
+Name            封核深井~
+Description
+深井內只剩一片向下收束的黑紅光潮，所有回音都在幾步之外被拖進更深處，像這裡只是封心主體前最後一個可站立的邊界。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        10711
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         深井~
+End
+
+#Enquire
+Keyword         核心~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            10704
+Name            封紋觀盆座~
+Description
+觀盆座旁立著數截半沉封紋碑柱，柱身刻痕不斷重複同一段鎮壓式樣，卻在末端出現明顯崩裂。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         封紋~
+End
+
+#Enquire
+Keyword         碑柱~
+End
+
+End
