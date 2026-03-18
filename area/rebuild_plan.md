@@ -103,10 +103,10 @@
 
 ## Candidate Queue
 
-- `sec_rift_sealed_core_heart`
-  - reserved_room_block: `10801-10820`
+- `sec_rift_core_spirit_nadir`
+  - reserved_room_block: `10901-10920`
   - theme: `仙俠`
-  - subtheme: `封心核心 / 心脈主井`
+  - subtheme: `核心魄淵 / 心魄沉座`
 
 ## Todo
 
@@ -114,15 +114,15 @@
 
 ## In Progress
 
-- `sec_rift_sealed_core_heart`
-  - plan: `plans/area/0023-sec-rift-sealed-core-heart.md`
-  - spec: `area/sec_rift_sealed_core_heart/map.md`
-  - reserved_room_block: `10801-10820`
+- `sec_rift_core_spirit_nadir`
+  - plan: `plans/area/0024-sec-rift-core-spirit-nadir.md`
+  - spec: `area/sec_rift_core_spirit_nadir/map.md`
+  - reserved_room_block: `10901-10920`
   - theme: `仙俠`
-  - subtheme: `封心核心 / 心脈主井`
+  - subtheme: `核心魄淵 / 心魄沉座`
   - ref_inputs_used:
     - `ref/Readme.md`
-    - `area/sec_rift_sealed_core_basin/map.md`
+    - `area/sec_rift_sealed_core_heart/map.md`
     - `ref/world-graph.md`
     - `ref/三國-MUD-題材分布表.md`
   - ref_inputs_deferred:
@@ -136,11 +136,11 @@
     - `mud-world-map-editor-pro/`
     - 各類經濟/勢力/歷史事件模擬系統
   - theme_basis:
-    - `area/sec_rift_sealed_core_basin/map.md`
+    - `area/sec_rift_sealed_core_heart/map.md`
     - `ref/world-graph.md`
     - `ref/三國-MUD-題材分布表.md`
-  - compliance_check: `compliant；依既有地下鏈向下 world link 完成第一輪 runtime implementation，維持 ref/Readme.md 容許的 area rebuild 範圍`
-  - delivery_gate: `implementation_ready_for_commit`
+  - compliance_check: `compliant；依 sec_rift_sealed_core_heart 的向下 world link 建立下一段 spec-first milestone，維持 ref/Readme.md 容許的 area rebuild 範圍`
+  - delivery_gate: `implementation_in_progress`
 
 
 ## Done
@@ -191,32 +191,34 @@
 - `sec_rift_underseal_basin` 已完成第一輪 implementation、commit `344459d`，完成本機 Linux build 與 smoke test，並達成可前進下一區狀態
 - `plans/area/0022-sec-rift-sealed-core-basin.md` 已建立
 - `sec_rift_sealed_core_basin` 已完成第一輪 implementation、commit `2fb0a07`，完成本機 Linux build 與 smoke test，並達成可前進下一區狀態
+- `plans/area/0023-sec-rift-sealed-core-heart.md` 已建立
+- `sec_rift_sealed_core_heart` 已完成第一輪 implementation、commit `da76474`，完成本機 Linux build 與 smoke test，並達成可前進下一區狀態
 ## Blocked
 
 - none
 
 ## Current Recommended Next Step
 
-目前 `sec_rift_sealed_core_heart` 已完成第一輪 implementation 與 smoke test 驗證，交付門檻已來到 `implementation_ready_for_commit`；本輪最合適的下一步是先提交這個 implementation milestone，再決定是否推進到下一個待建 area。
+目前 `sec_rift_core_spirit_nadir` 已完成 spec 建立與 validate-only 驗證，tracker 已切到 `implementation_in_progress`；本輪最合適的下一步是落地第一輪 runtime implementation，補齊最小可載入資料與 `10812 <-> 10901` 邊界出口。
 
 下一輪建議動作：
 
-1. 先提交 `sec_rift_sealed_core_heart` 的 implementation milestone
-2. 提交後把本區轉成 `validated_ready_to_advance` 或 `done`
-3. 再依 queue 選定下一個待建 area
-4. 若進下一區，先建立該區單區 plan 與 `map.md` spec
+1. 依 `area/sec_rift_core_spirit_nadir/map.md` 生成 `roo/10901-10912`
+2. 補齊 `index / mob / obj / res / shp`
+3. 更新 `area/directory.lst` 與 `area/sec_rift_sealed_core_heart/roo/10812.roo` 的雙向邊界
+4. 跑本機 area validation、Linux build 與 smoke test，再判讀是否可進 `implementation_ready_for_commit`
 
 （註：目前 repo 無 `docs/3yWebsite/docs/data/players.json` 與 `skills.json`，下一輪若要做 docs-assisted pass，需先補回 dataset 或改用現存資料來源。）
 
 語意提醒：
 
-- 目前已有 `in_progress` 項目 `sec_rift_sealed_core_heart`，再次使用固定 prompt 時應優先續做此區，不得跳到其他候選
+- 目前已有 `in_progress` 項目 `sec_rift_core_spirit_nadir`，再次使用固定 prompt 時應優先續做此區，不得跳到其他候選
 - `sec_rift_core_below` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0018-sec-rift-core-below.md` 回查
 - `sec_rift_core_below_deeps` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0019-sec-rift-core-below-deeps.md` 回查
-- 依新 room reservation policy，`sec_rift_below` 已使用 `9501-9520`，`sec_rift_core` 已使用 `9601-9620`，`sec_rift_deeps` 已完成 `9701-9712` 第一版落地，`sec_rift_prison_core` 已完成 `10001-10012` 第一版落地，`sec_rift_underseal_dais` 已完成 `10101-10112` 第一版落地，`sec_rift_true_core` 已完成 `10201-10212` 第一版落地，`sec_rift_core_below` 已完成 `10301-10312` 第一版落地，`sec_rift_core_below_deeps` 已完成 `10401-10412` 第一版落地，`sec_rift_core_vein_abyss` 已完成 `10501-10512` 第一版落地，`sec_rift_underseal_basin` 已完成 `10601-10612` 第一版落地，並保留 `10601-10620` 作為首段 block
+- 依新 room reservation policy，`sec_rift_below` 已使用 `9501-9520`，`sec_rift_core` 已使用 `9601-9620`，`sec_rift_deeps` 已完成 `9701-9712` 第一版落地，`sec_rift_prison_core` 已完成 `10001-10012` 第一版落地，`sec_rift_underseal_dais` 已完成 `10101-10112` 第一版落地，`sec_rift_true_core` 已完成 `10201-10212` 第一版落地，`sec_rift_core_below` 已完成 `10301-10312` 第一版落地，`sec_rift_core_below_deeps` 已完成 `10401-10412` 第一版落地，`sec_rift_core_vein_abyss` 已完成 `10501-10512` 第一版落地，`sec_rift_underseal_basin` 已完成 `10601-10612` 第一版落地，`sec_rift_sealed_core_basin` 已完成 `10701-10712` 第一版落地，`sec_rift_sealed_core_heart` 已完成 `10801-10812` 第一版落地，並保留各自首段 block
 - 既有地下鏈 `9451/9461/9481/9491` 保留原狀，不在這一輪 retroactive 重編
 
 
 建議可直接使用的 prompt：
 
-`續做 sec_rift_sealed_core_heart：先提交目前的 implementation milestone，再決定是否前進到下一個待建 area。`
+續做 `sec_rift_core_spirit_nadir`：依 spec 落地第一輪 runtime implementation，補齊最小 area data 與 `10812 <-> 10901` 邊界。
