@@ -79,17 +79,21 @@ Legacy chain: `burning hands -> flamestrike -> fireball -> cast fire -> fire elf
 - Runtime file: `skill/f/faerie_fire.ski`
 - Runtime slot: `SLOT_FAERIE_FIRE`
 - Runtime key: `faerie_fire`
-- Type: `SLOT_FAERIE_FIRE`
+- Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `18 / 24`
 - CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 一代宗師﹗; 郎 中 >= 五十級, max 登峰造極﹗; 文 官 >= 十五級, max 心神領會﹗`
 - Restrictions: `skills: 皮膚石化術 >= 心神領會`
+- Damage model: `unresolved`
+- Damage audit classification: `needs review`
+- Code path: `src/spell.c:2367`
 - Damage values: `[]`
 - Chance values: `[]`
 - Parry values: `[]`
 - Innate values: `[]`
 - Legacy page source: `skill/fire.html`
+- Notes: Needs review: damage logic currently lives in src/spell.c:2367.
 
 ### 火之精靈 / `fire elf`
 

@@ -56,17 +56,21 @@ Legacy chain: `acid blast -> blindness -> sleep -> poison / detect poison -> wea
 - Runtime file: `skill/b/blindness.ski`
 - Runtime slot: `SLOT_BLINDNESS`
 - Runtime key: `blindness`
-- Type: `SLOT_BLINDNESS`
+- Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `25 / 12`
 - CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 神乎其技﹗; 郎 中 >= 五十級, max 神乎其技﹗; 天 師 >= 五十級, max 出神入化﹗; 鑄劍師 >= 五十級, max 一代宗師﹗`
 - Restrictions: `skills: 酸液術 >= 心神領會`
+- Damage model: `unresolved`
+- Damage audit classification: `needs review`
+- Code path: `src/spell.c:1024`
 - Damage values: `[]`
 - Chance values: `[]`
 - Parry values: `[]`
 - Innate values: `[]`
 - Legacy page source: `skill/poison.html`
+- Notes: Needs review: damage logic currently lives in src/spell.c:1024.
 
 ### 偵測毒物 / `detect poison`
 
@@ -98,17 +102,21 @@ Legacy chain: `acid blast -> blindness -> sleep -> poison / detect poison -> wea
 - Runtime file: `skill/p/poison.ski`
 - Runtime slot: `SLOT_POISON`
 - Runtime key: `poison`
-- Type: `SLOT_POISON`
+- Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `30 / 20`
 - CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `鑄劍師 >= 五十級, max 登峰造極﹗`
 - Restrictions: `skills: 睡眠術 >= 出類拔萃`
+- Damage model: `unresolved`
+- Damage audit classification: `needs review`
+- Code path: `src/spell.c:3195`
 - Damage values: `[]`
 - Chance values: `[]`
 - Parry values: `[]`
 - Innate values: `[]`
 - Legacy page source: `skill/poison.html`
+- Notes: Needs review: damage logic currently lives in src/spell.c:3195.
 
 ### 睡眠術 / `sleep`
 
@@ -119,7 +127,7 @@ Legacy chain: `acid blast -> blindness -> sleep -> poison / detect poison -> wea
 - Runtime file: `skill/s/sleep.ski`
 - Runtime slot: `SLOT_SLEEP`
 - Runtime key: `sleep`
-- Type: `SLOT_SLEEP`
+- Type: `TAR_CHAR_DEFENSIVE`
 - Cost / Wait: `25 / 12`
 - CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`

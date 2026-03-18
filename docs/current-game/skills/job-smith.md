@@ -115,7 +115,7 @@ Legacy chain: `enchant weapon -> identify -> make sword / mint / repair -> devel
 - Legacy prerequisite: `從缺`
 - Legacy next: `-`
 - Runtime file: `skill/m/mint.ski`
-- Runtime slot: `SLOT_MINT`
+- Runtime slot: `SLOT_MINE`
 - Runtime key: `mint`
 - Type: `TAR_OBJ_INV`
 - Cost / Wait: `30 / 24`

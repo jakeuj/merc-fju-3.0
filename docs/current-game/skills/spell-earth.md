@@ -54,7 +54,7 @@ Legacy chain: `create food -> detect hidden -> pass door -> fixity / flying ston
 - Runtime file: `skill/d/detect_hidden.ski`
 - Runtime slot: `SLOT_DETECT_HIDDEN`
 - Runtime key: `detect_hidden`
-- Type: `SLOT_DETECT_HIDDEN`
+- Type: `TAR_CHAR_SELF`
 - Cost / Wait: `8 / 20`
 - CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / No`
@@ -140,7 +140,7 @@ Legacy chain: `create food -> detect hidden -> pass door -> fixity / flying ston
 - Runtime file: `skill/p/pass_door.ski`
 - Runtime slot: `SLOT_PASS_DOOR`
 - Runtime key: `pass_door`
-- Type: `SLOT_PASS_DOOR`
+- Type: `TAR_CHAR_SELF`
 - Cost / Wait: `12 / 22`
 - CostType / Weapon / Check: `COST_MANA / - / -`
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / No`

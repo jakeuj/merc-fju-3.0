@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://merc-fju-3-0.local/schemas/area-content.schema.json",
+  "title": "Structured Area Content",
+  "type": "object",
+  "required": [
+    "version",
+    "area_slug",
+    "balance_metadata",
+    "mob_files",
+    "obj_files",
+    "res_files",
+    "shp_files"
+  ],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "area_slug": {
+      "type": "string"
+    },
+    "balance_metadata": {
+      "type": "object",
+      "properties": {
+        "planned_level_range": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "mob_files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "relative_path",
+          "document"
+        ],
+        "properties": {
+          "relative_path": {
+            "type": "string",
+            "pattern": "^area/.+/mob/.+\\.mob$"
+          },
+          "document": {
+            "type": "array"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "obj_files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "relative_path",
+          "document"
+        ],
+        "properties": {
+          "relative_path": {
+            "type": "string",
+            "pattern": "^area/.+/obj/.+\\.obj$"
+          },
+          "document": {
+            "type": "array"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "res_files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "relative_path",
+          "nodes"
+        ],
+        "properties": {
+          "relative_path": {
+            "type": "string",
+            "pattern": "^area/.+/res/.+\\.res$"
+          },
+          "nodes": {
+            "type": "array"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "shp_files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "relative_path",
+          "document"
+        ],
+        "properties": {
+          "relative_path": {
+            "type": "string",
+            "pattern": "^area/.+/shp/.+\\.shp$"
+          },
+          "document": {
+            "type": "array"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

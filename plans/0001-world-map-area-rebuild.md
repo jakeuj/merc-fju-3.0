@@ -511,6 +511,8 @@ Agent loop 可視為：
 
 `ref/mud-new-area-full-recommendations.md` 的核心價值不是叫 repo 一次長出三十幾個檔，而是提醒我們把 area rebuild 流程逐步系統化。這個 roadmap 把那些建議收斂成「何者先補、何者延後」。
 
+目前這條 roadmap 已由 `plans/0005-area-skill-data-systemization.md` 承接下一步實作，特別把 skill canonical source、per-area content pilot 與 generated read model / runtime audit 分工明確化；本段保留全局脈絡與提升規則，細部落地以 `0005` 為準。
+
 總原則：
 
 - 新文件或工具要補目前 workflow 的實際缺口，不是為了湊齊建議清單

@@ -76,7 +76,7 @@ Legacy chain: `shoot sun -> water cloud blast -> fun wu blast`
 - Legacy prerequisite: `射日箭法(shoot sun)`
 - Legacy next: `fun wu blast`
 - Runtime file: `skill/w/water_cloud_blast.ski`
-- Runtime slot: `SLOT_WATER_CLOUD_blast`
+- Runtime slot: `SLOT_WATER_CLOUD_BLAST`
 - Runtime key: `water_cloud_blast`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `20 / 15`

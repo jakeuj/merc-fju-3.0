@@ -56,7 +56,7 @@ Legacy chain: `colour spray / detect mask / make light -> infravision -> telepor
 - Runtime file: `skill/d/detect_invis.ski`
 - Runtime slot: `SLOT_DETECT_INVIS`
 - Runtime key: `detect_invis`
-- Type: `SLOT_DETECT_INVIS`
+- Type: `TAR_CHAR_SELF`
 - Cost / Wait: `40 / 22`
 - CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / No`
@@ -77,7 +77,7 @@ Legacy chain: `colour spray / detect mask / make light -> infravision -> telepor
 - Runtime file: `skill/d/detect_mask.ski`
 - Runtime slot: `SLOT_DETECT_MASK`
 - Runtime key: `detect_mask`
-- Type: `SLOT_DETECT_MASK`
+- Type: `TAR_CHAR_SELF`
 - Cost / Wait: `40 / 22`
 - CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / No`
@@ -98,7 +98,7 @@ Legacy chain: `colour spray / detect mask / make light -> infravision -> telepor
 - Runtime file: `skill/i/infravision.ski`
 - Runtime slot: `SLOT_INFRAVISION`
 - Runtime key: `infravision`
-- Type: `SLOT_INFRAVISION`
+- Type: `TAR_CHAR_DEFENSIVE`
 - Cost / Wait: `20 / 18`
 - CostType / Weapon / Check: `COST_MANA / - / -`
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / No`

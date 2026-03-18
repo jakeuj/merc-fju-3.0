@@ -98,7 +98,7 @@ Legacy chain: `cook / hide -> backstab / mask / venom -> pick -> sneak -> dorman
 - Runtime file: `skill/h/hide.ski`
 - Runtime slot: `SLOT_HIDE`
 - Runtime key: `hide`
-- Type: `SLOT_HIDE`
+- Type: `TAR_CHAR_SELF`
 - Cost / Wait: `20 / 12`
 - CostType / Weapon / Check: `COST_MOVE / - / -`
 - CanAsk / Teach / Valid / Enable: `No / No / No / No`
@@ -119,7 +119,7 @@ Legacy chain: `cook / hide -> backstab / mask / venom -> pick -> sneak -> dorman
 - Runtime file: `skill/m/mask.ski`
 - Runtime slot: `SLOT_MASK`
 - Runtime key: `mask`
-- Type: `SLOT_MASK`
+- Type: `TAR_CHAR_SELF`
 - Cost / Wait: `100 / 12`
 - CostType / Weapon / Check: `COST_MOVE / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
@@ -183,7 +183,7 @@ Legacy chain: `cook / hide -> backstab / mask / venom -> pick -> sneak -> dorman
 - Runtime file: `skill/s/sneak.ski`
 - Runtime slot: `SLOT_SNEAK`
 - Runtime key: `sneak`
-- Type: `SLOT_SNEAK`
+- Type: `TAR_CHAR_SELF`
 - Cost / Wait: `20 / 12`
 - CostType / Weapon / Check: `COST_MOVE / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`

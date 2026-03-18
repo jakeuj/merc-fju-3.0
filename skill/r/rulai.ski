@@ -26,7 +26,7 @@ Ply             -1
 Qutoient        1
 Adeptation      0
 Limit           CLASS_GENERAL    1  95
-Limit		CLASS_BRAVO      1  95
+Limit           CLASS_BRAVO      1  95
 Help            ~
 
 #Damage

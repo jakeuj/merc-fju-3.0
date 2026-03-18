@@ -54,7 +54,7 @@ Legacy chain: `bless -> giant strength -> protection -> heal -> sanctuary / dete
 - Runtime file: `skill/d/detect_evil.ski`
 - Runtime slot: `SLOT_DETECT_EVIL`
 - Runtime key: `detect_evil`
-- Type: `SLOT_DETECT_EVIL`
+- Type: `TAR_CHAR_SELF`
 - Cost / Wait: `5 / 12`
 - CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
@@ -186,7 +186,7 @@ Legacy chain: `bless -> giant strength -> protection -> heal -> sanctuary / dete
 - Runtime file: `skill/p/protection.ski`
 - Runtime slot: `SLOT_PROTECTION`
 - Runtime key: `protection`
-- Type: `SLOT_PROTECTION`
+- Type: `TAR_CHAR_SELF`
 - Cost / Wait: `25 / 20`
 - CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
@@ -249,7 +249,7 @@ Legacy chain: `bless -> giant strength -> protection -> heal -> sanctuary / dete
 - Runtime file: `skill/s/sanctuary.ski`
 - Runtime slot: `SLOT_SANCTUARY`
 - Runtime key: `sanctuary`
-- Type: `SLOT_SANCTUARY`
+- Type: `TAR_CHAR_DEFENSIVE`
 - Cost / Wait: `75 / 30`
 - CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `No / No / Yes / No`

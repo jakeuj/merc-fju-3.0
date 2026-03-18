@@ -21,7 +21,7 @@ Concentration   NO
 Teach           NO
 Enable          YES
 SaySpell        NO
-Weapon		WEAPON_BOW
+Weapon          WEAPON_BOW
 Rating          RATING_SKILL
 Innate          NO
 Ply             20

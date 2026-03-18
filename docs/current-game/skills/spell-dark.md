@@ -102,7 +102,7 @@ Legacy chain: `cause light -> cause serious -> slow -> cause critical / ventrilo
 - Runtime file: `skill/i/invis.ski`
 - Runtime slot: `SLOT_INVIS`
 - Runtime key: `invis`
-- Type: `SLOT_INVIS`
+- Type: `TAR_CHAR_DEFENSIVE`
 - Cost / Wait: `15 / 18`
 - CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`

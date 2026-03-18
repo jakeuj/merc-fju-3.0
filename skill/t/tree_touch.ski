@@ -31,7 +31,7 @@ Help
 #Damage
 Description
 $n對著$N使出「妖樹之觸」，將$N緊緊抓住。~
-Chance		20
+Chance          20
 Value           180
 Parry           0
 Situs           ATTACK_RANDOM

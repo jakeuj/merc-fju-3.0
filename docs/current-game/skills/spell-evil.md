@@ -33,7 +33,7 @@ Legacy chain: `curse -> gate -> evil power -> charm person`
 - Runtime file: `skill/c/charm_person.ski`
 - Runtime slot: `SLOT_CHARM_PERSON`
 - Runtime key: `charm_person`
-- Type: `SLOT_CHARM_PERSON`
+- Type: `TAR_CHAR_DEFENSIVE`
 - Cost / Wait: `120 / 25`
 - CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
@@ -54,17 +54,21 @@ Legacy chain: `curse -> gate -> evil power -> charm person`
 - Runtime file: `skill/c/curse.ski`
 - Runtime slot: `SLOT_CURSE`
 - Runtime key: `curse`
-- Type: `SLOT_CURSE`
+- Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `20 / 12`
 - CostType / Weapon / Check: `COST_MANA / - / check_unrigid_attack`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
 - Class limits: `伶 人 >= 五十級, max 一代宗師﹗; 郎 中 >= 五十級, max 神乎其技﹗; 天 師 >= 五十級, max 神乎其技﹗; 文 官 >= 十級, max 心神領會﹗; 道 士 >= 十級, max 心神領會﹗; 鑄劍師 >= 五十級, max 出神入化﹗`
 - Restrictions: `-`
+- Damage model: `unresolved`
+- Damage audit classification: `needs review`
+- Code path: `src/spell.c:1825`
 - Damage values: `[]`
 - Chance values: `[]`
 - Parry values: `[]`
 - Innate values: `[]`
 - Legacy page source: `skill/evil.html`
+- Notes: Needs review: damage logic currently lives in src/spell.c:1825.
 
 ### 邪惡魔力 / `evil power`
 

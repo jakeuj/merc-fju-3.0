@@ -1,0 +1,865 @@
+{
+  "version": 1,
+  "area_slug": "loyang_outskirts",
+  "balance_metadata": {
+    "planned_level_range": [
+      1,
+      12
+    ],
+    "notes": [
+      "Pilot structured content layer seeded from existing runtime files.",
+      "Topology remains owned by map.md + mapmd-json."
+    ]
+  },
+  "mob_files": [
+    {
+      "relative_path": "area/loyang_outskirts/mob/7601.mob",
+      "document": [
+        {
+          "kind": "field",
+          "key": "Vnum",
+          "value": "7601"
+        },
+        {
+          "kind": "field",
+          "key": "Name",
+          "value": "roadside tea seller~"
+        },
+        {
+          "kind": "field",
+          "key": "ShortDesc",
+          "value": "路亭茶販~"
+        },
+        {
+          "kind": "block_field",
+          "key": "Description",
+          "lines": [
+            "一名在東郊路亭做小買賣的茶販守著他的木桶與陶杯﹐不時伸長脖子",
+            "往西看看橋頭和來路﹐像是在確認今天是否還會有更多旅人經過。"
+          ],
+          "terminator_style": "line"
+        },
+        {
+          "kind": "field",
+          "key": "Sentinel",
+          "value": "Yes"
+        },
+        {
+          "kind": "field",
+          "key": "StayArea",
+          "value": "Yes"
+        },
+        {
+          "kind": "field",
+          "key": "NoKill",
+          "value": "Yes"
+        },
+        {
+          "kind": "field",
+          "key": "Alignment",
+          "value": "50"
+        },
+        {
+          "kind": "field",
+          "key": "Level",
+          "value": "8"
+        },
+        {
+          "kind": "field",
+          "key": "Hitroll",
+          "value": "0"
+        },
+        {
+          "kind": "field",
+          "key": "Protect",
+          "value": "0"
+        },
+        {
+          "kind": "field",
+          "key": "Damroll",
+          "value": "0"
+        },
+        {
+          "kind": "field",
+          "key": "Str",
+          "value": "10"
+        },
+        {
+          "kind": "field",
+          "key": "Int",
+          "value": "12"
+        },
+        {
+          "kind": "field",
+          "key": "Wis",
+          "value": "12"
+        },
+        {
+          "kind": "field",
+          "key": "Dex",
+          "value": "10"
+        },
+        {
+          "kind": "field",
+          "key": "Con",
+          "value": "10"
+        },
+        {
+          "kind": "field",
+          "key": "Hp",
+          "value": "800"
+        },
+        {
+          "kind": "field",
+          "key": "Mana",
+          "value": "100"
+        },
+        {
+          "kind": "field",
+          "key": "Move",
+          "value": "100"
+        },
+        {
+          "kind": "field",
+          "key": "Class",
+          "value": "0"
+        },
+        {
+          "kind": "field",
+          "key": "Gold",
+          "value": "50"
+        },
+        {
+          "kind": "field",
+          "key": "Multipile",
+          "value": "100"
+        },
+        {
+          "kind": "field",
+          "key": "AttackRatio",
+          "value": "100"
+        },
+        {
+          "kind": "field",
+          "key": "DodgeRatio",
+          "value": "100"
+        },
+        {
+          "kind": "field",
+          "key": "Migrate",
+          "value": "0"
+        },
+        {
+          "kind": "field",
+          "key": "Speak",
+          "value": "YES"
+        },
+        {
+          "kind": "field",
+          "key": "Sex",
+          "value": "SEX_MALE"
+        }
+      ]
+    },
+    {
+      "relative_path": "area/loyang_outskirts/mob/7602.mob",
+      "document": [
+        {
+          "kind": "field",
+          "key": "Vnum",
+          "value": "7602"
+        },
+        {
+          "kind": "field",
+          "key": "Name",
+          "value": "east gate patrol soldier~"
+        },
+        {
+          "kind": "field",
+          "key": "ShortDesc",
+          "value": "東郊巡檢兵~"
+        },
+        {
+          "kind": "block_field",
+          "key": "Description",
+          "lines": [
+            "一名披著半舊皮甲的巡檢兵站得筆直﹐手總是不自覺按在腰間刀柄附",
+            "近。看得出他已在東郊路上來回巡了很久﹐對每一個停在告示牌前太",
+            "久的人都多看兩眼。"
+          ],
+          "terminator_style": "line"
+        },
+        {
+          "kind": "field",
+          "key": "Sentinel",
+          "value": "Yes"
+        },
+        {
+          "kind": "field",
+          "key": "StayArea",
+          "value": "Yes"
+        },
+        {
+          "kind": "field",
+          "key": "Alignment",
+          "value": "150"
+        },
+        {
+          "kind": "field",
+          "key": "Level",
+          "value": "10"
+        },
+        {
+          "kind": "field",
+          "key": "Hitroll",
+          "value": "3"
+        },
+        {
+          "kind": "field",
+          "key": "Protect",
+          "value": "-2"
+        },
+        {
+          "kind": "field",
+          "key": "Damroll",
+          "value": "2"
+        },
+        {
+          "kind": "field",
+          "key": "Str",
+          "value": "12"
+        },
+        {
+          "kind": "field",
+          "key": "Int",
+          "value": "10"
+        },
+        {
+          "kind": "field",
+          "key": "Wis",
+          "value": "10"
+        },
+        {
+          "kind": "field",
+          "key": "Dex",
+          "value": "11"
+        },
+        {
+          "kind": "field",
+          "key": "Con",
+          "value": "11"
+        },
+        {
+          "kind": "field",
+          "key": "Hp",
+          "value": "1200"
+        },
+        {
+          "kind": "field",
+          "key": "Mana",
+          "value": "100"
+        },
+        {
+          "kind": "field",
+          "key": "Move",
+          "value": "100"
+        },
+        {
+          "kind": "field",
+          "key": "Class",
+          "value": "CLASS_THIEF"
+        },
+        {
+          "kind": "field",
+          "key": "Gold",
+          "value": "80"
+        },
+        {
+          "kind": "field",
+          "key": "Multipile",
+          "value": "100"
+        },
+        {
+          "kind": "field",
+          "key": "AttackRatio",
+          "value": "100"
+        },
+        {
+          "kind": "field",
+          "key": "DodgeRatio",
+          "value": "100"
+        },
+        {
+          "kind": "field",
+          "key": "Migrate",
+          "value": "0"
+        },
+        {
+          "kind": "field",
+          "key": "Speak",
+          "value": "YES"
+        },
+        {
+          "kind": "field",
+          "key": "Sex",
+          "value": "SEX_MALE"
+        }
+      ]
+    },
+    {
+      "relative_path": "area/loyang_outskirts/mob/7603.mob",
+      "document": [
+        {
+          "kind": "field",
+          "key": "Vnum",
+          "value": "7603"
+        },
+        {
+          "kind": "field",
+          "key": "Name",
+          "value": "canal skulker looter~"
+        },
+        {
+          "kind": "field",
+          "key": "ShortDesc",
+          "value": "渠邊流寇~"
+        },
+        {
+          "kind": "block_field",
+          "key": "Description",
+          "lines": [
+            "這名流寇縮著肩膀蹲在陰影邊緣﹐眼神不時在田埂、農舍和暗井口之",
+            "間游移。他顯然熟悉這附近巡檢變少的時段﹐手上的短刀也已磨得發",
+            "亮。"
+          ],
+          "terminator_style": "line"
+        },
+        {
+          "kind": "field",
+          "key": "StayArea",
+          "value": "Yes"
+        },
+        {
+          "kind": "field",
+          "key": "Wimpy",
+          "value": "Yes"
+        },
+        {
+          "kind": "field",
+          "key": "AlignEvil",
+          "value": "Yes"
+        },
+        {
+          "kind": "field",
+          "key": "Alignment",
+          "value": "-200"
+        },
+        {
+          "kind": "field",
+          "key": "Level",
+          "value": "11"
+        },
+        {
+          "kind": "field",
+          "key": "Hitroll",
+          "value": "4"
+        },
+        {
+          "kind": "field",
+          "key": "Protect",
+          "value": "-1"
+        },
+        {
+          "kind": "field",
+          "key": "Damroll",
+          "value": "3"
+        },
+        {
+          "kind": "field",
+          "key": "Str",
+          "value": "12"
+        },
+        {
+          "kind": "field",
+          "key": "Int",
+          "value": "9"
+        },
+        {
+          "kind": "field",
+          "key": "Wis",
+          "value": "8"
+        },
+        {
+          "kind": "field",
+          "key": "Dex",
+          "value": "12"
+        },
+        {
+          "kind": "field",
+          "key": "Con",
+          "value": "11"
+        },
+        {
+          "kind": "field",
+          "key": "Hp",
+          "value": "1400"
+        },
+        {
+          "kind": "field",
+          "key": "Mana",
+          "value": "60"
+        },
+        {
+          "kind": "field",
+          "key": "Move",
+          "value": "120"
+        },
+        {
+          "kind": "field",
+          "key": "Class",
+          "value": "CLASS_THIEF"
+        },
+        {
+          "kind": "field",
+          "key": "Gold",
+          "value": "120"
+        },
+        {
+          "kind": "field",
+          "key": "Multipile",
+          "value": "100"
+        },
+        {
+          "kind": "field",
+          "key": "AttackRatio",
+          "value": "105"
+        },
+        {
+          "kind": "field",
+          "key": "DodgeRatio",
+          "value": "105"
+        },
+        {
+          "kind": "field",
+          "key": "Migrate",
+          "value": "0"
+        },
+        {
+          "kind": "field",
+          "key": "Sex",
+          "value": "SEX_MALE"
+        }
+      ]
+    }
+  ],
+  "obj_files": [
+    {
+      "relative_path": "area/loyang_outskirts/obj/7651.obj",
+      "document": [
+        {
+          "kind": "field",
+          "key": "Vnum",
+          "value": "7651"
+        },
+        {
+          "kind": "field",
+          "key": "Name",
+          "value": "travel ration cake~"
+        },
+        {
+          "kind": "field",
+          "key": "ShortDesc",
+          "value": "東郊行糧餅(ration cake)~"
+        },
+        {
+          "kind": "block_field",
+          "key": "Description",
+          "lines": [
+            "一塊包著油紙的東郊行糧餅(ration cake)被放在這裡。"
+          ],
+          "terminator_style": "line"
+        },
+        {
+          "kind": "field",
+          "key": "Unit",
+          "value": "塊~"
+        },
+        {
+          "kind": "field",
+          "key": "ItemType",
+          "value": "ITEM_FOOD"
+        },
+        {
+          "kind": "field",
+          "key": "Takeable",
+          "value": "Yes"
+        },
+        {
+          "kind": "field",
+          "key": "Level",
+          "value": "3"
+        },
+        {
+          "kind": "field",
+          "key": "Value",
+          "value": "12 20 4 0"
+        },
+        {
+          "kind": "field",
+          "key": "Weight",
+          "value": "1"
+        },
+        {
+          "kind": "field",
+          "key": "Cost",
+          "value": "25"
+        }
+      ]
+    },
+    {
+      "relative_path": "area/loyang_outskirts/obj/7652.obj",
+      "document": [
+        {
+          "kind": "field",
+          "key": "Vnum",
+          "value": "7652"
+        },
+        {
+          "kind": "field",
+          "key": "Name",
+          "value": "tea flask~"
+        },
+        {
+          "kind": "field",
+          "key": "ShortDesc",
+          "value": "粗陶茶壺(tea flask)~"
+        },
+        {
+          "kind": "block_field",
+          "key": "Description",
+          "lines": [
+            "一只裝著溫茶的粗陶茶壺(tea flask)被擱在地上。"
+          ],
+          "terminator_style": "line"
+        },
+        {
+          "kind": "field",
+          "key": "Unit",
+          "value": "壺~"
+        },
+        {
+          "kind": "field",
+          "key": "ItemType",
+          "value": "ITEM_DRINK_CON"
+        },
+        {
+          "kind": "field",
+          "key": "Takeable",
+          "value": "Yes"
+        },
+        {
+          "kind": "field",
+          "key": "Level",
+          "value": "3"
+        },
+        {
+          "kind": "field",
+          "key": "Value",
+          "value": "8 8 LIQ_WATER"
+        },
+        {
+          "kind": "field",
+          "key": "Weight",
+          "value": "2"
+        },
+        {
+          "kind": "field",
+          "key": "Cost",
+          "value": "35"
+        }
+      ]
+    },
+    {
+      "relative_path": "area/loyang_outskirts/obj/7653.obj",
+      "document": [
+        {
+          "kind": "field",
+          "key": "Vnum",
+          "value": "7653"
+        },
+        {
+          "kind": "field",
+          "key": "Name",
+          "value": "patrol torch~"
+        },
+        {
+          "kind": "field",
+          "key": "ShortDesc",
+          "value": "巡路火把(torch)~"
+        },
+        {
+          "kind": "block_field",
+          "key": "Description",
+          "lines": [
+            "一支裹著油布的巡路火把(torch)靠在牆邊。"
+          ],
+          "terminator_style": "line"
+        },
+        {
+          "kind": "field",
+          "key": "Unit",
+          "value": "支~"
+        },
+        {
+          "kind": "field",
+          "key": "ItemType",
+          "value": "ITEM_LIGHT"
+        },
+        {
+          "kind": "field",
+          "key": "WearLoc",
+          "value": "ITEM_WEAR_LIGHT"
+        },
+        {
+          "kind": "field",
+          "key": "Takeable",
+          "value": "Yes"
+        },
+        {
+          "kind": "field",
+          "key": "Level",
+          "value": "4"
+        },
+        {
+          "kind": "field",
+          "key": "Value3",
+          "value": "12"
+        },
+        {
+          "kind": "field",
+          "key": "Weight",
+          "value": "1"
+        },
+        {
+          "kind": "field",
+          "key": "Cost",
+          "value": "20"
+        }
+      ]
+    },
+    {
+      "relative_path": "area/loyang_outskirts/obj/7654.obj",
+      "document": [
+        {
+          "kind": "field",
+          "key": "Vnum",
+          "value": "7654"
+        },
+        {
+          "kind": "field",
+          "key": "Name",
+          "value": "canal knife~"
+        },
+        {
+          "kind": "field",
+          "key": "ShortDesc",
+          "value": "渠邊短刀(canal knife)~"
+        },
+        {
+          "kind": "block_field",
+          "key": "Description",
+          "lines": [
+            "一把刀刃磨得發白的渠邊短刀(canal knife)落在這裡。"
+          ],
+          "terminator_style": "line"
+        },
+        {
+          "kind": "field",
+          "key": "Unit",
+          "value": "把~"
+        },
+        {
+          "kind": "field",
+          "key": "ItemType",
+          "value": "ITEM_WEAPON"
+        },
+        {
+          "kind": "field",
+          "key": "WearLoc",
+          "value": "ITEM_WIELD"
+        },
+        {
+          "kind": "field",
+          "key": "Takeable",
+          "value": "Yes"
+        },
+        {
+          "kind": "field",
+          "key": "Level",
+          "value": "6"
+        },
+        {
+          "kind": "field",
+          "key": "Value",
+          "value": "0 -1 -1 10"
+        },
+        {
+          "kind": "field",
+          "key": "Weight",
+          "value": "8"
+        },
+        {
+          "kind": "field",
+          "key": "Cost",
+          "value": "60"
+        },
+        {
+          "kind": "field",
+          "key": "Exp",
+          "value": "10"
+        }
+      ]
+    }
+  ],
+  "res_files": [
+    {
+      "relative_path": "area/loyang_outskirts/res/outskirts.res",
+      "nodes": [
+        {
+          "kind": "reset",
+          "opcode": "M",
+          "arguments": [
+            "7601",
+            "1",
+            "7503"
+          ],
+          "comment": "路亭茶販"
+        },
+        {
+          "kind": "reset",
+          "opcode": "G",
+          "arguments": [
+            "7651",
+            "7601"
+          ],
+          "comment": "東郊行糧餅"
+        },
+        {
+          "kind": "reset",
+          "opcode": "G",
+          "arguments": [
+            "7652",
+            "7601"
+          ],
+          "comment": "粗陶茶壺"
+        },
+        {
+          "kind": "reset",
+          "opcode": "G",
+          "arguments": [
+            "7653",
+            "7601"
+          ],
+          "comment": "巡路火把"
+        },
+        {
+          "kind": "reset",
+          "opcode": "M",
+          "arguments": [
+            "7602",
+            "1",
+            "7504"
+          ],
+          "comment": "東郊巡檢兵"
+        },
+        {
+          "kind": "reset",
+          "opcode": "M",
+          "arguments": [
+            "7603",
+            "1",
+            "7509"
+          ],
+          "comment": "渠邊流寇"
+        },
+        {
+          "kind": "reset",
+          "opcode": "E",
+          "arguments": [
+            "7654",
+            "7603",
+            "WEAR_WIELD"
+          ],
+          "comment": "裝備短刀"
+        },
+        {
+          "kind": "reset",
+          "opcode": "M",
+          "arguments": [
+            "7603",
+            "1",
+            "7511"
+          ],
+          "comment": "渠邊流寇"
+        },
+        {
+          "kind": "reset",
+          "opcode": "E",
+          "arguments": [
+            "7654",
+            "7603",
+            "WEAR_WIELD"
+          ],
+          "comment": "裝備短刀"
+        }
+      ]
+    }
+  ],
+  "shp_files": [
+    {
+      "relative_path": "area/loyang_outskirts/shp/supplies.shp",
+      "document": [
+        {
+          "kind": "field",
+          "key": "Type",
+          "value": "SHOP_STORE"
+        },
+        {
+          "kind": "field",
+          "key": "Keeper",
+          "value": "7601"
+        },
+        {
+          "kind": "field",
+          "key": "Object",
+          "value": "ITEM_FOOD ITEM_DRINK_CON ITEM_LIGHT"
+        },
+        {
+          "kind": "field",
+          "key": "OpenHour",
+          "value": "4"
+        },
+        {
+          "kind": "field",
+          "key": "CloseHour",
+          "value": "22"
+        },
+        {
+          "kind": "field",
+          "key": "SellProfit",
+          "value": "80"
+        },
+        {
+          "kind": "field",
+          "key": "BuyProfit",
+          "value": "120"
+        },
+        {
+          "kind": "field",
+          "key": "Sential",
+          "value": "7503"
+        }
+      ]
+    }
+  ]
+}

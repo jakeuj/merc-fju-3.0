@@ -21,7 +21,7 @@ Teach           NO
 SaySpell        NO
 Enable          YES
 Rating          RATING_SKILL
-Weapon		WEAPON_BLADE
+Weapon          WEAPON_BLADE
 Innate          NO
 Ply             -1
 Qutoient        1

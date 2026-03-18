@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 LEGACY_SKILLS_JSON = ROOT / "docs/3yWebsite/docs/data/skills.json"
 LEGACY_SKILL_DIR = ROOT / "docs/3yWebsite/skill"
 CURRENT_SKILLS_JSON = ROOT / "docs/current-game/skills.json"
+STRUCTURED_SKILLS_JSON = ROOT / "data/structured/skills/skills.json"
 CODE_DAMAGE_SOURCE_FILES = [ROOT / "src/spell.c", ROOT / "src/ex_spell.c"]
 
 
@@ -61,6 +62,13 @@ def load_existing_registry() -> dict[str, dict]:
     if not CURRENT_SKILLS_JSON.exists():
         return {}
     data = read_json(CURRENT_SKILLS_JSON)
+    return {item["english_name"]: item for item in data.get("skills", []) if item.get("english_name")}
+
+
+def load_structured_skill_source() -> dict[str, dict]:
+    if not STRUCTURED_SKILLS_JSON.exists():
+        return {}
+    data = read_json(STRUCTURED_SKILLS_JSON)
     return {item["english_name"]: item for item in data.get("skills", []) if item.get("english_name")}
 
 
@@ -155,6 +163,79 @@ def parse_runtime_skills(skill_lst: dict[str, str]) -> dict[str, dict]:
         runtime["combat_dimensions"] = combat
         runtime_by_name[runtime_name] = runtime
     return runtime_by_name
+
+
+def merge_structured_runtime(structured_skill: dict | None, runtime_readback: dict) -> tuple[dict, dict | None]:
+    if not structured_skill:
+        return runtime_readback, None
+
+    contract = structured_skill.get("runtime_contract") or {}
+    merged = {
+        "exists": bool(contract.get("skill_file")) or runtime_readback.get("exists", False),
+        "skill_file": contract.get("skill_file") or runtime_readback.get("skill_file"),
+        "skill_lst_key": contract.get("skill_lst_key") or runtime_readback.get("skill_lst_key"),
+        "slot_symbol": contract.get("slot_symbol") or runtime_readback.get("slot_symbol"),
+        "function": contract.get("function") or runtime_readback.get("function"),
+        "type": contract.get("type") or runtime_readback.get("type"),
+        "cost": contract.get("cost") if contract.get("cost") is not None else runtime_readback.get("cost"),
+        "cost_type": contract.get("cost_type") or runtime_readback.get("cost_type"),
+        "wait": contract.get("wait") if contract.get("wait") is not None else runtime_readback.get("wait"),
+        "weapon": contract.get("weapon") if contract.get("weapon") is not None else runtime_readback.get("weapon"),
+        "check": contract.get("check") if contract.get("check") is not None else runtime_readback.get("check"),
+        "associate": runtime_readback.get("associate"),
+        "canask": contract.get("canask") if contract.get("canask") is not None else runtime_readback.get("canask"),
+        "teach": contract.get("teach") if contract.get("teach") is not None else runtime_readback.get("teach"),
+        "valid": contract.get("valid") if contract.get("valid") is not None else runtime_readback.get("valid"),
+        "enable": contract.get("enable") if contract.get("enable") is not None else runtime_readback.get("enable"),
+        "combat_dimensions": runtime_readback.get(
+            "combat_dimensions",
+            {
+                "damage_values": [],
+                "chance_values": [],
+                "parry_values": [],
+                "innate_values": [],
+                "wait": contract.get("wait"),
+                "cost": contract.get("cost"),
+                "cost_type": contract.get("cost_type"),
+                "weapon": contract.get("weapon"),
+                "check": contract.get("check"),
+                "prepared_for_adjustment": bool(contract.get("skill_file")),
+                "notes": [],
+            },
+        ),
+    }
+
+    differences = []
+    for field in (
+        "skill_file",
+        "skill_lst_key",
+        "slot_symbol",
+        "function",
+        "type",
+        "cost",
+        "cost_type",
+        "wait",
+        "weapon",
+        "check",
+        "canask",
+        "teach",
+        "valid",
+        "enable",
+    ):
+        structured_value = merged.get(field)
+        runtime_value = runtime_readback.get(field)
+        if runtime_value is None:
+            continue
+        if structured_value != runtime_value:
+            differences.append({"field": field, "structured": structured_value, "runtime": runtime_value})
+
+    audit = {
+        "structured_source": str(STRUCTURED_SKILLS_JSON.relative_to(ROOT)).replace("\\", "/"),
+        "runtime_readback_file": runtime_readback.get("skill_file"),
+        "matches_runtime": not differences,
+        "differences": differences,
+    }
+    return merged, audit
 
 
 def html_to_text(fragment: str) -> str:
@@ -524,6 +605,7 @@ def analyze_code_damage(function_name: str | None) -> dict | None:
 
 def build_registry() -> dict:
     existing = load_existing_registry()
+    structured_by_name = load_structured_skill_source()
     legacy_rows = read_json(LEGACY_SKILLS_JSON)
     legacy_by_name = {row.get("英文名稱") or row.get("display_name"): row for row in legacy_rows}
     skill_lst = load_skill_lst()
@@ -557,14 +639,16 @@ def build_registry() -> dict:
         ],
     }
 
-    all_names = set(legacy_by_name) | set(html_entries) | set(NPC_RUNTIME_SKILLS) | set(runtime_by_name)
+    all_names = set(legacy_by_name) | set(html_entries) | set(NPC_RUNTIME_SKILLS) | set(runtime_by_name) | set(structured_by_name)
     skills = []
     for name in sorted(all_names):
         if name is None:
             continue
         legacy_row = legacy_by_name.get(name)
         html_entry = html_entries.get(name)
-        runtime = runtime_by_name.get(name, {"exists": False})
+        runtime_readback = runtime_by_name.get(name, {"exists": False})
+        structured_skill = structured_by_name.get(name)
+        runtime, runtime_audit = merge_structured_runtime(structured_skill, runtime_readback)
         custom = NPC_RUNTIME_SKILLS.get(name)
 
         legacy_catalog = None
@@ -696,13 +780,23 @@ def build_registry() -> dict:
             "combat_dimensions": combat,
             "status": build_status(existing, name, player_facing, npc_only),
         }
+        if structured_skill:
+            item["structured_source"] = {
+                "path": str(STRUCTURED_SKILLS_JSON.relative_to(ROOT)).replace("\\", "/"),
+                "skill_file": (structured_skill.get("runtime_contract") or {}).get("skill_file"),
+                "skill_lst_key": (structured_skill.get("runtime_contract") or {}).get("skill_lst_key"),
+                "slot_number": (structured_skill.get("runtime_contract") or {}).get("slot_number"),
+                "slot_symbol": (structured_skill.get("runtime_contract") or {}).get("slot_symbol"),
+            }
+        if runtime_audit:
+            item["runtime_audit"] = runtime_audit
         if custom:
             item["intended_roles"] = custom["intended_roles"]
         skills.append(item)
 
     return {
         "registry_version": 5,
-        "scope": "Integrated current-game skill registry for merc-fju-3.0. It combines old-site catalog data, full old-site skill HTML extraction, runtime presence, and skill-combat audit fields without replacing runtime source files.",
+        "scope": "Integrated current-game skill registry for merc-fju-3.0. It combines old-site catalog data, structured skill source, runtime readback audit, and skill-combat fields without changing the legacy loader contract.",
         "coverage": {
             "seeded_families": [
                 "all entries from docs/3yWebsite/docs/data/skills.json",
@@ -716,6 +810,7 @@ def build_registry() -> dict:
             ],
         },
         "source_layers": {
+            "structured_json": ["data/structured/skills/skills.json"],
             "legacy_html": ["docs/3yWebsite/skill/*.html"],
             "legacy_json": ["docs/3yWebsite/docs/data/skills.json", "docs/3yWebsite/docs/data/players.json"],
             "legacy_guides": ["docs/3yWebsite/newhand/newbies/index.html"],
@@ -747,10 +842,11 @@ def build_registry() -> dict:
             ],
         },
         "notes": [
-            "This file is an integrated working registry, not the runtime source of truth.",
+            "This file is a generated read model; canonical editable runtime fields now live in data/structured/skills/skills.json.",
             "Old-site HTML is the preferred source for descendant skills and requirement details when docs/3yWebsite/docs/data/skills.json flattens a page into one root row.",
             "docs/3yWebsite/newhand/newbies/index.html is used as a starter-play reference for early learnable skills, beginner enable expectations, and class progression context.",
             "combat_dimensions is intended to hold both current runtime values and future tuning metadata.",
+            "Runtime files are still parsed so the registry can surface structured-vs-runtime drift as audit metadata.",
             "Player-facing offensive skills without .ski #Damage now distinguish code-driven offensive exceptions from unresolved gaps.",
         ],
         "skills": skills,

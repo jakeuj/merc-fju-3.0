@@ -1,0 +1,274 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://merc-fju-3-0.local/schemas/skill-registry.schema.json",
+  "title": "Structured Skill Registry",
+  "type": "object",
+  "required": [
+    "version",
+    "skill_lst",
+    "skills"
+  ],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "scope": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "skill_lst": {
+      "type": "object",
+      "required": [
+        "relative_path",
+        "nodes"
+      ],
+      "properties": {
+        "relative_path": {
+          "type": "string",
+          "const": "skill/skill.lst"
+        },
+        "nodes": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "object",
+                "required": [
+                  "kind"
+                ],
+                "properties": {
+                  "kind": {
+                    "const": "blank"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "required": [
+                  "kind",
+                  "text"
+                ],
+                "properties": {
+                  "kind": {
+                    "const": "raw"
+                  },
+                  "text": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "required": [
+                  "kind",
+                  "key",
+                  "number",
+                  "slot_symbol",
+                  "format"
+                ],
+                "properties": {
+                  "kind": {
+                    "const": "entry"
+                  },
+                  "key": {
+                    "type": "string"
+                  },
+                  "number": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "slot_symbol": {
+                    "type": "string",
+                    "pattern": "^SLOT_[A-Z0-9_]+$"
+                  },
+                  "format": {
+                    "type": "object",
+                    "required": [
+                      "between_key_and_star",
+                      "between_star_and_label",
+                      "label",
+                      "between_label_and_number",
+                      "between_number_and_slot",
+                      "trailing"
+                    ],
+                    "properties": {
+                      "between_key_and_star": {
+                        "type": "string"
+                      },
+                      "between_star_and_label": {
+                        "type": "string"
+                      },
+                      "label": {
+                        "type": "string"
+                      },
+                      "between_label_and_number": {
+                        "type": "string"
+                      },
+                      "between_number_and_slot": {
+                        "type": "string"
+                      },
+                      "trailing": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "english_name",
+          "chinese_name",
+          "runtime_contract",
+          "provenance",
+          "document"
+        ],
+        "properties": {
+          "english_name": {
+            "type": "string"
+          },
+          "chinese_name": {
+            "type": "string"
+          },
+          "runtime_contract": {
+            "type": "object",
+            "required": [
+              "skill_lst_key",
+              "slot_number",
+              "slot_symbol",
+              "skill_file"
+            ],
+            "properties": {
+              "skill_lst_key": {
+                "type": "string"
+              },
+              "slot_number": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "slot_symbol": {
+                "type": "string",
+                "pattern": "^SLOT_[A-Z0-9_]+$"
+              },
+              "skill_file": {
+                "type": "string",
+                "pattern": "^skill/.+\\.ski$"
+              },
+              "function": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "cost_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "cost": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "wait": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "weapon": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "check": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "canask": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "teach": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "valid": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "enable": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "provenance": {
+            "type": "object",
+            "required": [
+              "seeded_from"
+            ],
+            "properties": {
+              "seeded_from": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "notes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "additionalProperties": false
+          },
+          "document": {
+            "type": "array"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

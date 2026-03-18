@@ -75,7 +75,7 @@ Legacy chain: `armor -> faerie fog -> shield / magic missile -> wind blade -> va
 - Runtime file: `skill/f/fly.ski`
 - Runtime slot: `SLOT_FLY`
 - Runtime key: `fly`
-- Type: `SLOT_FLY`
+- Type: `TAR_CHAR_DEFENSIVE`
 - Cost / Wait: `15 / 20`
 - CostType / Weapon / Check: `COST_MANA / - / -`
 - CanAsk / Teach / Valid / Enable: `Yes / No / Yes / No`
@@ -180,7 +180,7 @@ Legacy chain: `armor -> faerie fog -> shield / magic missile -> wind blade -> va
 - Legacy prerequisite: `風之刃(wind blade)`
 - Legacy next: `-`
 - Runtime file: `skill/v/vacuum_wind.ski`
-- Runtime slot: `SLOT_VACUUM_WIND`
+- Runtime slot: `SLOT_VACUUM_BLADE`
 - Runtime key: `vacuum_wind`
 - Type: `TAR_CHAR_OFFENSIVE`
 - Cost / Wait: `30 / 15`

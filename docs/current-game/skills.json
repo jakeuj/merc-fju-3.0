@@ -1,6 +1,6 @@
 {
   "registry_version": 5,
-  "scope": "Integrated current-game skill registry for merc-fju-3.0. It combines old-site catalog data, full old-site skill HTML extraction, runtime presence, and skill-combat audit fields without replacing runtime source files.",
+  "scope": "Integrated current-game skill registry for merc-fju-3.0. It combines old-site catalog data, structured skill source, runtime readback audit, and skill-combat fields without changing the legacy loader contract.",
   "coverage": {
     "seeded_families": [
       "all entries from docs/3yWebsite/docs/data/skills.json",
@@ -14,6 +14,9 @@
     ]
   },
   "source_layers": {
+    "structured_json": [
+      "data/structured/skills/skills.json"
+    ],
     "legacy_html": [
       "docs/3yWebsite/skill/*.html"
     ],
@@ -105,10 +108,11 @@
     ]
   },
   "notes": [
-    "This file is an integrated working registry, not the runtime source of truth.",
+    "This file is a generated read model; canonical editable runtime fields now live in data/structured/skills/skills.json.",
     "Old-site HTML is the preferred source for descendant skills and requirement details when docs/3yWebsite/docs/data/skills.json flattens a page into one root row.",
     "docs/3yWebsite/newhand/newbies/index.html is used as a starter-play reference for early learnable skills, beginner enable expectations, and class progression context.",
     "combat_dimensions is intended to hold both current runtime values and future tuning metadata.",
+    "Runtime files are still parsed so the registry can surface structured-vs-runtime drift as audit metadata.",
     "Player-facing offensive skills without .ski #Damage now distinguish code-driven offensive exceptions from unresolved gaps."
   ],
   "skills": [
@@ -257,6 +261,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/a/abstract.ski",
+        "skill_lst_key": "abstract",
+        "slot_number": 250,
+        "slot_symbol": "SLOT_ABSTRACT"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/a/abstract.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -416,6 +433,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/a/acid_blast.ski",
+        "skill_lst_key": "acid_blast",
+        "slot_number": 113,
+        "slot_symbol": "SLOT_ACID_BLAST"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/a/acid_blast.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -499,6 +529,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/a/acid_breath.ski",
+        "skill_lst_key": "acid_breath",
+        "slot_number": 114,
+        "slot_symbol": "SLOT_ACID_BREATH"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/a/acid_breath.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -649,6 +692,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/a/anti_physique.ski",
+        "skill_lst_key": "anti_physique",
+        "slot_number": 199,
+        "slot_symbol": "SLOT_ANTI_PHYSIQUE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/a/anti_physique.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -805,6 +861,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/cast_armor.ski",
+        "skill_lst_key": "cast_armor",
+        "slot_number": 105,
+        "slot_symbol": "SLOT_CAST_ARMOR"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/cast_armor.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -1006,6 +1075,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/b/b_a_1.ski",
+        "skill_lst_key": "b_a_1",
+        "slot_number": 27,
+        "slot_symbol": "SLOT_B_A_1"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/b/b_a_1.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -1207,6 +1289,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/b/ba_blade.ski",
+        "skill_lst_key": "ba_blade",
+        "slot_number": 29,
+        "slot_symbol": "SLOT_BA_BLADE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/b/ba_blade.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -1387,6 +1482,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/b/backstab.ski",
+        "skill_lst_key": "backstab",
+        "slot_number": 255,
+        "slot_symbol": "SLOT_BACKSTAB"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/b/backstab.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -1651,6 +1759,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/b/badsword.ski",
+        "skill_lst_key": "badsword",
+        "slot_number": 32,
+        "slot_symbol": "SLOT_BADSWORD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/b/badsword.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -2103,6 +2224,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/b/be_needle.ski",
+        "skill_lst_key": "be_needle",
+        "slot_number": 33,
+        "slot_symbol": "SLOT_BE_NEEDLE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/b/be_needle.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -2203,6 +2337,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/cast_bless.ski",
+        "skill_lst_key": "cast_bless",
+        "slot_number": 106,
+        "slot_symbol": "SLOT_CAST_BLESS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/cast_bless.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -2296,7 +2443,7 @@
         "skill_lst_key": "blindness",
         "slot_symbol": "SLOT_BLINDNESS",
         "function": "cast_blindness",
-        "type": "SLOT_BLINDNESS",
+        "type": "TAR_CHAR_OFFENSIVE",
         "cost": 25,
         "cost_type": "COST_MANA",
         "wait": 12,
@@ -2331,17 +2478,38 @@
         "cost_type": "COST_MANA",
         "weapon": null,
         "check": "check_unrigid_attack",
-        "prepared_for_adjustment": true,
-        "notes": [],
-        "damage_source": null,
-        "damage_gap_classification": null,
-        "code_path": null,
-        "code_damage_summary": null
+        "prepared_for_adjustment": false,
+        "notes": [
+          "Needs review: damage logic currently lives in src/spell.c:1024."
+        ],
+        "damage_source": "unresolved",
+        "damage_gap_classification": "needs review",
+        "code_path": "src/spell.c:1024",
+        "code_damage_summary": "Function exists but no direct damage call was detected in the current source block."
       },
       "status": {
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/b/blindness.ski",
+        "skill_lst_key": "blindness",
+        "slot_number": 115,
+        "slot_symbol": "SLOT_BLINDNESS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/b/blindness.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "type",
+            "structured": "TAR_CHAR_OFFENSIVE",
+            "runtime": "SLOT_BLINDNESS"
+          }
+        ]
       }
     },
     {
@@ -2511,6 +2679,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/b/blood_ten.ski",
+        "skill_lst_key": "blood_ten",
+        "slot_number": 190,
+        "slot_symbol": "SLOT_BLOOD_TEN"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/b/blood_ten.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -2765,6 +2946,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/b/burning_hands.ski",
+        "skill_lst_key": "burning_hands",
+        "slot_number": 116,
+        "slot_symbol": "SLOT_BURNING_HANDS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/b/burning_hands.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -3056,6 +3250,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/b/bystander_fist.ski",
+        "skill_lst_key": "bystander_fist",
+        "slot_number": 212,
+        "slot_symbol": "SLOT_BYSTANDER_FIST"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/b/bystander_fist.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -3195,6 +3402,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/call_lightning.ski",
+        "skill_lst_key": "call_lightning",
+        "slot_number": 117,
+        "slot_symbol": "SLOT_CALL_LIGHTNING"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/call_lightning.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -3278,6 +3498,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/cannibal.ski",
+        "skill_lst_key": "cannibal",
+        "slot_number": 208,
+        "slot_symbol": "SLOT_CANNIBAL"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/cannibal.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -3419,6 +3652,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/cast_fire.ski",
+        "skill_lst_key": "cast_fire",
+        "slot_number": 107,
+        "slot_symbol": "SLOT_CAST_FIRE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/cast_fire.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -3551,6 +3797,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/cast_lightning.ski",
+        "skill_lst_key": "cast_lightning",
+        "slot_number": 108,
+        "slot_symbol": "SLOT_CAST_LIGHTNING"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/cast_lightning.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -3676,6 +3935,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/cause_critical.ski",
+        "skill_lst_key": "cause_critical",
+        "slot_number": 118,
+        "slot_symbol": "SLOT_CAUSE_CRITICAL"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/cause_critical.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -3824,6 +4096,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/cause_light.ski",
+        "skill_lst_key": "cause_light",
+        "slot_number": 119,
+        "slot_symbol": "SLOT_CAUSE_LIGHT"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/cause_light.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -3979,6 +4264,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/cause_serious.ski",
+        "skill_lst_key": "cause_serious",
+        "slot_number": 120,
+        "slot_symbol": "SLOT_CAUSE_SERIOUS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/cause_serious.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -4109,6 +4407,19 @@
         "npc_only": true,
         "audit_state": "runtime_active"
       },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/cavalry_lance.ski",
+        "skill_lst_key": "cavalry_lance",
+        "slot_number": 272,
+        "slot_symbol": "SLOT_CAVALRY_LANCE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/cavalry_lance.ski",
+        "matches_runtime": true,
+        "differences": []
+      },
       "intended_roles": [
         "騎兵",
         "持槍軍職 NPC"
@@ -4193,6 +4504,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/change_sex.ski",
+        "skill_lst_key": "change_sex",
+        "slot_number": 121,
+        "slot_symbol": "SLOT_CHANGE_SEX"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/change_sex.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -4270,7 +4594,7 @@
         "skill_lst_key": "charm_person",
         "slot_symbol": "SLOT_CHARM_PERSON",
         "function": "cast_charm_person",
-        "type": "SLOT_CHARM_PERSON",
+        "type": "TAR_CHAR_DEFENSIVE",
         "cost": 120,
         "cost_type": "COST_MANA",
         "wait": 25,
@@ -4316,6 +4640,25 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/charm_person.ski",
+        "skill_lst_key": "charm_person",
+        "slot_number": 122,
+        "slot_symbol": "SLOT_CHARM_PERSON"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/charm_person.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "type",
+            "structured": "TAR_CHAR_DEFENSIVE",
+            "runtime": "SLOT_CHARM_PERSON"
+          }
+        ]
       }
     },
     {
@@ -4446,6 +4789,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/chill_touch.ski",
+        "skill_lst_key": "chill_touch",
+        "slot_number": 123,
+        "slot_symbol": "SLOT_CHILL_TOUCH"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/chill_touch.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -4478,7 +4834,7 @@
       "runtime": {
         "exists": true,
         "skill_file": "skill/c/citizen.ski",
-        "skill_lst_key": null,
+        "skill_lst_key": "citizen",
         "slot_symbol": "SLOT_CITIZEN",
         "function": null,
         "type": "TAR_CHAR_OFFENSIVE",
@@ -4559,6 +4915,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/citizen.ski",
+        "skill_lst_key": "citizen",
+        "slot_number": 219,
+        "slot_symbol": "SLOT_CITIZEN"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/citizen.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -4889,6 +5258,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/cloud_fist.ski",
+        "skill_lst_key": "cloud_fist",
+        "slot_number": 63,
+        "slot_symbol": "SLOT_CLOUD_FIST"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/cloud_fist.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -5122,6 +5504,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_unreviewed"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/cloud_ghost.ski",
+        "skill_lst_key": "cloud_ghost",
+        "slot_number": 28,
+        "slot_symbol": "SLOT_CLOUD_GHOST"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/cloud_ghost.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -5508,6 +5903,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "batch_b_prechecked"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/cloud_steps.ski",
+        "skill_lst_key": "cloud_steps",
+        "slot_number": 17,
+        "slot_symbol": "SLOT_CLOUD_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/cloud_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -5711,6 +6119,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_unreviewed"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/color_steps.ski",
+        "skill_lst_key": "color_steps",
+        "slot_number": 36,
+        "slot_symbol": "SLOT_COLOR_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/color_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -5896,6 +6317,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/colour_spray.ski",
+        "skill_lst_key": "colour_spray",
+        "slot_number": 124,
+        "slot_symbol": "SLOT_COLOUR_SPRAY"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/colour_spray.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -6068,6 +6502,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/control_weather.ski",
+        "skill_lst_key": "control_weather",
+        "slot_number": 109,
+        "slot_symbol": "SLOT_CONTROL_WEATHER"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/control_weather.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -6244,6 +6691,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/cook.ski",
+        "skill_lst_key": "cook",
+        "slot_number": 204,
+        "slot_symbol": "SLOT_COOK"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/cook.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -6327,6 +6787,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/crash_weapon.ski",
+        "skill_lst_key": "crash_weapon",
+        "slot_number": 211,
+        "slot_symbol": "SLOT_CRASH_WEAPON"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/crash_weapon.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -6523,6 +6996,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/create_food.ski",
+        "skill_lst_key": "create_food",
+        "slot_number": 125,
+        "slot_symbol": "SLOT_CREATE_FOOD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/create_food.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -6729,6 +7215,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/create_water.ski",
+        "skill_lst_key": "create_water",
+        "slot_number": 126,
+        "slot_symbol": "SLOT_CREATE_WATER"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/create_water.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -6826,6 +7325,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/cry_ghost.ski",
+        "skill_lst_key": "cry_ghost",
+        "slot_number": 223,
+        "slot_symbol": "SLOT_CRY_GHOST"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/cry_ghost.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -6963,6 +7475,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/cure_blindness.ski",
+        "skill_lst_key": "cure_blindness",
+        "slot_number": 127,
+        "slot_symbol": "SLOT_CURE_BLINDNESS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/cure_blindness.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -7086,6 +7611,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/cure_critical.ski",
+        "skill_lst_key": "cure_critical",
+        "slot_number": 128,
+        "slot_symbol": "SLOT_CURE_CRITICAL"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/cure_critical.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -7273,6 +7811,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/cure_light.ski",
+        "skill_lst_key": "cure_light",
+        "slot_number": 129,
+        "slot_symbol": "SLOT_CURE_LIGHT"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/cure_light.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -7494,6 +8045,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/cure_overdose.ski",
+        "skill_lst_key": "cure_overdose",
+        "slot_number": 234,
+        "slot_symbol": "SLOT_CURE_OVERDOSE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/cure_overdose.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -7633,6 +8197,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/cure_poison.ski",
+        "skill_lst_key": "cure_poison",
+        "slot_number": 130,
+        "slot_symbol": "SLOT_CURE_POISON"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/cure_poison.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -7772,6 +8349,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/cure_serious.ski",
+        "skill_lst_key": "cure_serious",
+        "slot_number": 131,
+        "slot_symbol": "SLOT_CURE_SERIOUS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/cure_serious.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -7893,7 +8483,7 @@
         "skill_lst_key": "curse",
         "slot_symbol": "SLOT_CURSE",
         "function": "cast_curse",
-        "type": "SLOT_CURSE",
+        "type": "TAR_CHAR_OFFENSIVE",
         "cost": 20,
         "cost_type": "COST_MANA",
         "wait": 12,
@@ -7928,17 +8518,38 @@
         "cost_type": "COST_MANA",
         "weapon": null,
         "check": "check_unrigid_attack",
-        "prepared_for_adjustment": true,
-        "notes": [],
-        "damage_source": null,
-        "damage_gap_classification": null,
-        "code_path": null,
-        "code_damage_summary": null
+        "prepared_for_adjustment": false,
+        "notes": [
+          "Needs review: damage logic currently lives in src/spell.c:1825."
+        ],
+        "damage_source": "unresolved",
+        "damage_gap_classification": "needs review",
+        "code_path": "src/spell.c:1825",
+        "code_damage_summary": "Function exists but no direct damage call was detected in the current source block."
       },
       "status": {
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/c/curse.ski",
+        "skill_lst_key": "curse",
+        "slot_number": 132,
+        "slot_symbol": "SLOT_CURSE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/c/curse.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "type",
+            "structured": "TAR_CHAR_OFFENSIVE",
+            "runtime": "SLOT_CURSE"
+          }
+        ]
       }
     },
     {
@@ -8097,6 +8708,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/dark_hell.ski",
+        "skill_lst_key": "dark_hell",
+        "slot_number": 253,
+        "slot_symbol": "SLOT_DARK_HELL"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/dark_hell.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -8250,6 +8874,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/dark_word.ski",
+        "skill_lst_key": "dark_word",
+        "slot_number": 46,
+        "slot_symbol": "SLOT_DARK_WORD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/dark_word.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -8435,6 +9072,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/daystick.ski",
+        "skill_lst_key": "daystick",
+        "slot_number": 47,
+        "slot_symbol": "SLOT_DAYSTICK"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/daystick.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -8518,6 +9168,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/defloration.ski",
+        "skill_lst_key": "defloration",
+        "slot_number": 207,
+        "slot_symbol": "SLOT_DEFLORATION"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/defloration.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -8674,7 +9337,7 @@
         "skill_lst_key": "detect_evil",
         "slot_symbol": "SLOT_DETECT_EVIL",
         "function": "cast_detect_evil",
-        "type": "SLOT_DETECT_EVIL",
+        "type": "TAR_CHAR_SELF",
         "cost": 5,
         "cost_type": "COST_MANA",
         "wait": 12,
@@ -8720,6 +9383,25 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/detect_evil.ski",
+        "skill_lst_key": "detect_evil",
+        "slot_number": 133,
+        "slot_symbol": "SLOT_DETECT_EVIL"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/detect_evil.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "type",
+            "structured": "TAR_CHAR_SELF",
+            "runtime": "SLOT_DETECT_EVIL"
+          }
+        ]
       }
     },
     {
@@ -8806,7 +9488,7 @@
         "skill_lst_key": "detect_hidden",
         "slot_symbol": "SLOT_DETECT_HIDDEN",
         "function": "cast_detect_hidden",
-        "type": "SLOT_DETECT_HIDDEN",
+        "type": "TAR_CHAR_SELF",
         "cost": 8,
         "cost_type": "COST_MANA",
         "wait": 20,
@@ -8852,6 +9534,25 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/detect_hidden.ski",
+        "skill_lst_key": "detect_hidden",
+        "slot_number": 134,
+        "slot_symbol": "SLOT_DETECT_HIDDEN"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/detect_hidden.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "type",
+            "structured": "TAR_CHAR_SELF",
+            "runtime": "SLOT_DETECT_HIDDEN"
+          }
+        ]
       }
     },
     {
@@ -8938,7 +9639,7 @@
         "skill_lst_key": "detect_invis",
         "slot_symbol": "SLOT_DETECT_INVIS",
         "function": "cast_detect_invis",
-        "type": "SLOT_DETECT_INVIS",
+        "type": "TAR_CHAR_SELF",
         "cost": 40,
         "cost_type": "COST_MANA",
         "wait": 22,
@@ -8984,6 +9685,25 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/detect_invis.ski",
+        "skill_lst_key": "detect_invis",
+        "slot_number": 135,
+        "slot_symbol": "SLOT_DETECT_INVIS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/detect_invis.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "type",
+            "structured": "TAR_CHAR_SELF",
+            "runtime": "SLOT_DETECT_INVIS"
+          }
+        ]
       }
     },
     {
@@ -9019,7 +9739,7 @@
         "skill_lst_key": "detect_magic",
         "slot_symbol": "SLOT_DETECT_MAGIC",
         "function": "cast_detect_magic",
-        "type": "SLOT_DETECT_MAGIC",
+        "type": "TAR_CHAR_SELF",
         "cost": 5,
         "cost_type": "COST_MANA",
         "wait": 12,
@@ -9065,6 +9785,25 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/detect_magic.ski",
+        "skill_lst_key": "detect_magic",
+        "slot_number": 136,
+        "slot_symbol": "SLOT_DETECT_MAGIC"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/detect_magic.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "type",
+            "structured": "TAR_CHAR_SELF",
+            "runtime": "SLOT_DETECT_MAGIC"
+          }
+        ]
       }
     },
     {
@@ -9158,7 +9897,7 @@
         "skill_lst_key": "detect_mask",
         "slot_symbol": "SLOT_DETECT_MASK",
         "function": "cast_detect_mask",
-        "type": "SLOT_DETECT_MASK",
+        "type": "TAR_CHAR_SELF",
         "cost": 40,
         "cost_type": "COST_MANA",
         "wait": 22,
@@ -9204,6 +9943,25 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/detect_mask.ski",
+        "skill_lst_key": "detect_mask",
+        "slot_number": 243,
+        "slot_symbol": "SLOT_DETECT_MASK"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/detect_mask.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "type",
+            "structured": "TAR_CHAR_SELF",
+            "runtime": "SLOT_DETECT_MASK"
+          }
+        ]
       }
     },
     {
@@ -9340,6 +10098,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/detect_poison.ski",
+        "skill_lst_key": "detect_poison",
+        "slot_number": 137,
+        "slot_symbol": "SLOT_DETECT_POISON"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/detect_poison.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -9515,6 +10286,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/deva_shield.ski",
+        "skill_lst_key": "deva_shield",
+        "slot_number": 237,
+        "slot_symbol": "SLOT_DEVA_SHIELD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/deva_shield.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -9637,6 +10421,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/develop.ski",
+        "skill_lst_key": "develop",
+        "slot_number": 202,
+        "slot_symbol": "SLOT_DEVELOP"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/develop.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -9771,6 +10568,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/dispel_evil.ski",
+        "skill_lst_key": "dispel_evil",
+        "slot_number": 138,
+        "slot_symbol": "SLOT_DISPEL_EVIL"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/dispel_evil.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -9852,6 +10662,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/dispel_magic.ski",
+        "skill_lst_key": "dispel_magic",
+        "slot_number": 139,
+        "slot_symbol": "SLOT_DISPEL_MAGIC"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/dispel_magic.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -10036,6 +10859,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/dormancy.ski",
+        "skill_lst_key": "dormancy",
+        "slot_number": 196,
+        "slot_symbol": "SLOT_DORMANCY"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/dormancy.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -10255,6 +11091,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/dragon_blade.ski",
+        "skill_lst_key": "dragon_blade",
+        "slot_number": 5,
+        "slot_symbol": "SLOT_DRAGON_BLADE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/dragon_blade.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -10481,6 +11330,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/dragon_dagger.ski",
+        "skill_lst_key": "dragon_dagger",
+        "slot_number": 48,
+        "slot_symbol": "SLOT_DRAGON_DAGGER"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/dragon_dagger.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -10714,6 +11576,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/dragonfist.ski",
+        "skill_lst_key": "dragonfist",
+        "slot_number": 52,
+        "slot_symbol": "SLOT_DRAGONFIST"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/dragonfist.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -10867,6 +11742,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/dragon_heroism.ski",
+        "skill_lst_key": "dragon_heroism",
+        "slot_number": 230,
+        "slot_symbol": "SLOT_DRAGON_HEROISM"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/dragon_heroism.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -11036,6 +11924,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/dragonleg.ski",
+        "skill_lst_key": "dragonleg",
+        "slot_number": 45,
+        "slot_symbol": "SLOT_DRAGONLEG"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/dragonleg.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -11269,6 +12170,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/dragon_phoe.ski",
+        "skill_lst_key": "dragon_phoe",
+        "slot_number": 229,
+        "slot_symbol": "SLOT_DRAGON_PHOE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/dragon_phoe.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -11414,6 +12328,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/dragon_shout.ski",
+        "skill_lst_key": "dragon_shout",
+        "slot_number": 225,
+        "slot_symbol": "SLOT_DRAGON_SHOUT"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/dragon_shout.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -11625,6 +12552,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/dragonsleeve.ski",
+        "skill_lst_key": "dragonsleeve",
+        "slot_number": 53,
+        "slot_symbol": "SLOT_DRAGONSLEEVE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/dragonsleeve.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -11881,6 +12821,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/dream_blade.ski",
+        "skill_lst_key": "dream_blade",
+        "slot_number": 54,
+        "slot_symbol": "SLOT_DREAM_BLADE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/dream_blade.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -12026,6 +12979,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/dreamdance.ski",
+        "skill_lst_key": "dreamdance",
+        "slot_number": 55,
+        "slot_symbol": "SLOT_DREAMDANCE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/dreamdance.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -12258,6 +13224,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/dream_soul.ski",
+        "skill_lst_key": "dream_soul",
+        "slot_number": 249,
+        "slot_symbol": "SLOT_DREAM_SOUL"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/dream_soul.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -12419,6 +13398,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/dream_tear.ski",
+        "skill_lst_key": "dream_tear",
+        "slot_number": 260,
+        "slot_symbol": "SLOT_DREAM_TEAR"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/dream_tear.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -12572,6 +13564,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/drunk.ski",
+        "skill_lst_key": "drunk",
+        "slot_number": 56,
+        "slot_symbol": "SLOT_DRUNK"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/drunk.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -12837,6 +13842,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/duansun_sword.ski",
+        "skill_lst_key": "duansun_sword",
+        "slot_number": 57,
+        "slot_symbol": "SLOT_DUANSUN_SWORD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/duansun_sword.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -13014,6 +14032,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/d/dubafist.ski",
+        "skill_lst_key": "dubafist",
+        "slot_number": 58,
+        "slot_symbol": "SLOT_DUBAFIST"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/d/dubafist.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -13188,6 +14219,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/e/earthquake.ski",
+        "skill_lst_key": "earthquake",
+        "slot_number": 140,
+        "slot_symbol": "SLOT_EARTHQUAKE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/e/earthquake.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -13407,6 +14451,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/e/eight_gun.ski",
+        "skill_lst_key": "eight_gun",
+        "slot_number": 186,
+        "slot_symbol": "SLOT_EIGHT_GUN"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/e/eight_gun.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -13677,6 +14734,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_unreviewed"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/e/eight_steps.ski",
+        "skill_lst_key": "eight_steps",
+        "slot_number": 23,
+        "slot_symbol": "SLOT_EIGHT_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/e/eight_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -13823,6 +14893,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/e/enchant_weapon.ski",
+        "skill_lst_key": "enchant_weapon",
+        "slot_number": 141,
+        "slot_symbol": "SLOT_ENCHANT_WEAPON"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/e/enchant_weapon.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -13906,6 +14989,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/e/energy_drain.ski",
+        "skill_lst_key": "energy_drain",
+        "slot_number": 142,
+        "slot_symbol": "SLOT_ENERGY_DRAIN"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/e/energy_drain.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -14129,6 +15225,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/e/eten.ski",
+        "skill_lst_key": "eten",
+        "slot_number": 231,
+        "slot_symbol": "SLOT_ETEN"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/e/eten.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -14396,6 +15505,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/e/evilfist.ski",
+        "skill_lst_key": "evilfist",
+        "slot_number": 2,
+        "slot_symbol": "SLOT_EVILFIST"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/e/evilfist.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -14612,6 +15734,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/e/evil_king.ski",
+        "skill_lst_key": "evil_king",
+        "slot_number": 191,
+        "slot_symbol": "SLOT_EVIL_KING"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/e/evil_king.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -14744,6 +15879,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/e/evil_power.ski",
+        "skill_lst_key": "evil_power",
+        "slot_number": 210,
+        "slot_symbol": "SLOT_EVIL_POWER"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/e/evil_power.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -14828,7 +15976,7 @@
         "skill_lst_key": "faerie_fire",
         "slot_symbol": "SLOT_FAERIE_FIRE",
         "function": "cast_faerie_fire",
-        "type": "SLOT_FAERIE_FIRE",
+        "type": "TAR_CHAR_OFFENSIVE",
         "cost": 18,
         "cost_type": "COST_MANA",
         "wait": 24,
@@ -14863,17 +16011,38 @@
         "cost_type": "COST_MANA",
         "weapon": null,
         "check": "check_unrigid_attack",
-        "prepared_for_adjustment": true,
-        "notes": [],
-        "damage_source": null,
-        "damage_gap_classification": null,
-        "code_path": null,
-        "code_damage_summary": null
+        "prepared_for_adjustment": false,
+        "notes": [
+          "Needs review: damage logic currently lives in src/spell.c:2367."
+        ],
+        "damage_source": "unresolved",
+        "damage_gap_classification": "needs review",
+        "code_path": "src/spell.c:2367",
+        "code_damage_summary": "Function exists but no direct damage call was detected in the current source block."
       },
       "status": {
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/faerie_fire.ski",
+        "skill_lst_key": "faerie_fire",
+        "slot_number": 143,
+        "slot_symbol": "SLOT_FAERIE_FIRE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/faerie_fire.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "type",
+            "structured": "TAR_CHAR_OFFENSIVE",
+            "runtime": "SLOT_FAERIE_FIRE"
+          }
+        ]
       }
     },
     {
@@ -14999,6 +16168,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/faerie_fog.ski",
+        "skill_lst_key": "faerie_fog",
+        "slot_number": 144,
+        "slot_symbol": "SLOT_FAERIE_FOG"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/faerie_fog.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -15152,6 +16334,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/fan_hammer.ski",
+        "skill_lst_key": "fan_hammer",
+        "slot_number": 220,
+        "slot_symbol": "SLOT_FAN_HAMMER"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/fan_hammer.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -15481,6 +16676,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/fast_blade.ski",
+        "skill_lst_key": "fast_blade",
+        "slot_number": 60,
+        "slot_symbol": "SLOT_FAST_BLADE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/fast_blade.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -15564,6 +16772,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/fire_breath.ski",
+        "skill_lst_key": "fire_breath",
+        "slot_number": 145,
+        "slot_symbol": "SLOT_FIRE_BREATH"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/fire_breath.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -15768,6 +16989,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/fire_dragon.ski",
+        "skill_lst_key": "fire_dragon",
+        "slot_number": 222,
+        "slot_symbol": "SLOT_FIRE_DRAGON"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/fire_dragon.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -15893,6 +17127,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/fire_elf.ski",
+        "skill_lst_key": "fire_elf",
+        "slot_number": 195,
+        "slot_symbol": "SLOT_FIRE_ELF"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/fire_elf.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -16086,6 +17333,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/fire_ice.ski",
+        "skill_lst_key": "fire_ice",
+        "slot_number": 62,
+        "slot_symbol": "SLOT_FIRE_ICE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/fire_ice.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -16247,6 +17507,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/fire_lance.ski",
+        "skill_lst_key": "fire_lance",
+        "slot_number": 61,
+        "slot_symbol": "SLOT_FIRE_LANCE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/fire_lance.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -16409,6 +17682,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/fireball.ski",
+        "skill_lst_key": "fireball",
+        "slot_number": 146,
+        "slot_symbol": "SLOT_FIREBALL"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/fireball.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -16532,6 +17818,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/fixity.ski",
+        "skill_lst_key": "fixity",
+        "slot_number": 200,
+        "slot_symbol": "SLOT_FIXITY"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/fixity.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -16694,6 +17993,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/flamestrike.ski",
+        "skill_lst_key": "flamestrike",
+        "slot_number": 147,
+        "slot_symbol": "SLOT_FLAMESTRIKE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/flamestrike.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -16799,6 +18111,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/flee.ski",
+        "skill_lst_key": "flee",
+        "slot_number": 178,
+        "slot_symbol": "SLOT_FLEE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/flee.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -17095,6 +18420,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/flower.ski",
+        "skill_lst_key": "flower",
+        "slot_number": 3,
+        "slot_symbol": "SLOT_FLOWER"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/flower.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -17208,6 +18546,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/fly_blade.ski",
+        "skill_lst_key": "fly_blade",
+        "slot_number": 31,
+        "slot_symbol": "SLOT_FLY_BLADE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/fly_blade.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -17294,7 +18645,7 @@
         "skill_lst_key": "fly",
         "slot_symbol": "SLOT_FLY",
         "function": "cast_fly",
-        "type": "SLOT_FLY",
+        "type": "TAR_CHAR_DEFENSIVE",
         "cost": 15,
         "cost_type": "COST_MANA",
         "wait": 20,
@@ -17340,6 +18691,25 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/fly.ski",
+        "skill_lst_key": "fly",
+        "slot_number": 148,
+        "slot_symbol": "SLOT_FLY"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/fly.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "type",
+            "structured": "TAR_CHAR_DEFENSIVE",
+            "runtime": "SLOT_FLY"
+          }
+        ]
       }
     },
     {
@@ -17501,6 +18871,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/fly_nine.ski",
+        "skill_lst_key": "fly_nine",
+        "slot_number": 194,
+        "slot_symbol": "SLOT_FLY_NINE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/fly_nine.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -17622,6 +19005,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/fly_steps.ski",
+        "skill_lst_key": "fly_steps",
+        "slot_number": 65,
+        "slot_symbol": "SLOT_FLY_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/fly_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -17809,6 +19205,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/flying_stone.ski",
+        "skill_lst_key": "flying_stone",
+        "slot_number": 213,
+        "slot_symbol": "SLOT_FLYING_STONE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/flying_stone.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -17962,6 +19371,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/fole_ken.ski",
+        "skill_lst_key": "fole_ken",
+        "slot_number": 66,
+        "slot_symbol": "SLOT_FOLE_KEN"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/fole_ken.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -18187,6 +19609,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/fonxansword.ski",
+        "skill_lst_key": "fonxansword",
+        "slot_number": 67,
+        "slot_symbol": "SLOT_FONXANSWORD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/fonxansword.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -18340,6 +19775,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/fouen.ski",
+        "skill_lst_key": "fouen",
+        "slot_number": 4,
+        "slot_symbol": "SLOT_FOUEN"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/fouen.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -18562,6 +20010,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_unreviewed"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/free_steps.ski",
+        "skill_lst_key": "free_steps",
+        "slot_number": 261,
+        "slot_symbol": "SLOT_FREE_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/free_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -18645,6 +20106,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/frost_breath.ski",
+        "skill_lst_key": "frost_breath",
+        "slot_number": 149,
+        "slot_symbol": "SLOT_FROST_BREATH"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/frost_breath.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -18766,6 +20240,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/frost_steps.ski",
+        "skill_lst_key": "frost_steps",
+        "slot_number": 68,
+        "slot_symbol": "SLOT_FROST_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/frost_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -19019,6 +20506,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/fuswords.ski",
+        "skill_lst_key": "fuswords",
+        "slot_number": 69,
+        "slot_symbol": "SLOT_FUSWORDS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/fuswords.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -19163,6 +20663,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/f/fun_wu_blast.ski",
+        "skill_lst_key": "fun_wu_blast",
+        "slot_number": 257,
+        "slot_symbol": "SLOT_FUN_WU_BLAST"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/f/fun_wu_blast.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -19284,6 +20797,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/g/g_finger.ski",
+        "skill_lst_key": "g_finger",
+        "slot_number": 70,
+        "slot_symbol": "SLOT_G_FINGER"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/g/g_finger.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -19405,6 +20931,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/g/g_steps.ski",
+        "skill_lst_key": "g_steps",
+        "slot_number": 12,
+        "slot_symbol": "SLOT_G_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/g/g_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -19486,6 +21025,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/g/gas_breath.ski",
+        "skill_lst_key": "gas_breath",
+        "slot_number": 150,
+        "slot_symbol": "SLOT_GAS_BREATH"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/g/gas_breath.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -19618,6 +21170,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/g/gate.ski",
+        "skill_lst_key": "gate",
+        "slot_number": 151,
+        "slot_symbol": "SLOT_GATE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/g/gate.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -19835,6 +21400,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "batch_b_prechecked"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/g/gdragon_steps.ski",
+        "skill_lst_key": "gdragon_steps",
+        "slot_number": 13,
+        "slot_symbol": "SLOT_GDRAGON_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/g/gdragon_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -19918,6 +21496,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/g/general_purpose.ski",
+        "skill_lst_key": "general_purpose",
+        "slot_number": 152,
+        "slot_symbol": "SLOT_GENERAL_PURPOSE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/g/general_purpose.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -20202,6 +21793,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/g/ghost_axe.ski",
+        "skill_lst_key": "ghost_axe",
+        "slot_number": 71,
+        "slot_symbol": "SLOT_GHOST_AXE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/g/ghost_axe.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -20423,6 +22027,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/g/ghost_marial.ski",
+        "skill_lst_key": "ghost_marial",
+        "slot_number": 72,
+        "slot_symbol": "SLOT_GHOST_MARIAL"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/g/ghost_marial.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -20544,6 +22161,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/g/ghost_steps.ski",
+        "skill_lst_key": "ghost_steps",
+        "slot_number": 73,
+        "slot_symbol": "SLOT_GHOST_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/g/ghost_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -20813,6 +22443,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/g/ghoststrike.ski",
+        "skill_lst_key": "ghoststrike",
+        "slot_number": 74,
+        "slot_symbol": "SLOT_GHOSTSTRIKE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/g/ghoststrike.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -20976,6 +22619,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/g/giant_strength.ski",
+        "skill_lst_key": "giant_strength",
+        "slot_number": 153,
+        "slot_symbol": "SLOT_GIANT_STRENGTH"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/g/giant_strength.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -21137,6 +22793,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/g/godeagle_claw.ski",
+        "skill_lst_key": "godeagle_claw",
+        "slot_number": 75,
+        "slot_symbol": "SLOT_GODEAGLE_CLAW"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/g/godeagle_claw.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -21417,6 +23086,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/g/gold_blade.ski",
+        "skill_lst_key": "gold_blade",
+        "slot_number": 76,
+        "slot_symbol": "SLOT_GOLD_BLADE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/g/gold_blade.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -21601,6 +23283,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/g/gold_shield.ski",
+        "skill_lst_key": "gold_shield",
+        "slot_number": 235,
+        "slot_symbol": "SLOT_GOLD_SHIELD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/g/gold_shield.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -21857,6 +23552,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/g/gsword.ski",
+        "skill_lst_key": "gsword",
+        "slot_number": 77,
+        "slot_symbol": "SLOT_GSWORD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/g/gsword.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -22145,6 +23853,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/g/gwhip.ski",
+        "skill_lst_key": "gwhip",
+        "slot_number": 11,
+        "slot_symbol": "SLOT_GWHIP"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/g/gwhip.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -22298,6 +24019,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/h/hanzo_blade.ski",
+        "skill_lst_key": "hanzo_blade",
+        "slot_number": 78,
+        "slot_symbol": "SLOT_HANZO_BLADE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/h/hanzo_blade.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -22425,6 +24159,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/h/harm.ski",
+        "skill_lst_key": "harm",
+        "slot_number": 154,
+        "slot_symbol": "SLOT_HARM"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/h/harm.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -22652,6 +24399,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/h/hashin.ski",
+        "skill_lst_key": "hashin",
+        "slot_number": 185,
+        "slot_symbol": "SLOT_HASHIN"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/h/hashin.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -22782,6 +24542,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/h/haste.ski",
+        "skill_lst_key": "haste",
+        "slot_number": 251,
+        "slot_symbol": "SLOT_HASTE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/h/haste.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -23045,6 +24818,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/h/hate_sword.ski",
+        "skill_lst_key": "hate_sword",
+        "slot_number": 79,
+        "slot_symbol": "SLOT_HATE_SWORD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/h/hate_sword.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -23170,6 +24956,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/h/heal.ski",
+        "skill_lst_key": "heal",
+        "slot_number": 155,
+        "slot_symbol": "SLOT_HEAL"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/h/heal.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -23347,6 +25146,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/h/hell_evil.ski",
+        "skill_lst_key": "hell_evil",
+        "slot_number": 80,
+        "slot_symbol": "SLOT_HELL_EVIL"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/h/hell_evil.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -23476,6 +25288,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/h/henma_steps.ski",
+        "skill_lst_key": "henma_steps",
+        "slot_number": 81,
+        "slot_symbol": "SLOT_HENMA_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/h/henma_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -23694,6 +25519,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/h/her_blade.ski",
+        "skill_lst_key": "her_blade",
+        "slot_number": 82,
+        "slot_symbol": "SLOT_HER_BLADE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/h/her_blade.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -23845,7 +25683,7 @@
         "skill_lst_key": "hide",
         "slot_symbol": "SLOT_HIDE",
         "function": "skill_hide",
-        "type": "SLOT_HIDE",
+        "type": "TAR_CHAR_SELF",
         "cost": 20,
         "cost_type": "COST_MOVE",
         "wait": 12,
@@ -23891,6 +25729,25 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/h/hide.ski",
+        "skill_lst_key": "hide",
+        "slot_number": 180,
+        "slot_symbol": "SLOT_HIDE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/h/hide.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "type",
+            "structured": "TAR_CHAR_SELF",
+            "runtime": "SLOT_HIDE"
+          }
+        ]
       }
     },
     {
@@ -23974,6 +25831,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/h/high_explosive.ski",
+        "skill_lst_key": "high_explosive",
+        "slot_number": 156,
+        "slot_symbol": "SLOT_HIGH_EXPLOSIVE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/h/high_explosive.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -24143,6 +26013,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/h/holy_fist.ski",
+        "skill_lst_key": "holy_fist",
+        "slot_number": 221,
+        "slot_symbol": "SLOT_HOLY_FIST"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/h/holy_fist.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -24502,6 +26385,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/h/hua_sword.ski",
+        "skill_lst_key": "hua_sword",
+        "slot_number": 83,
+        "slot_symbol": "SLOT_HUA_SWORD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/h/hua_sword.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -24773,6 +26669,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_unreviewed"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/h/hundred_steps.ski",
+        "skill_lst_key": "hundred_steps",
+        "slot_number": 84,
+        "slot_symbol": "SLOT_HUNDRED_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/h/hundred_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -25037,6 +26946,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/i/iceblade.ski",
+        "skill_lst_key": "iceblade",
+        "slot_number": 85,
+        "slot_symbol": "SLOT_ICEBLADE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/i/iceblade.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -25190,6 +27112,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/i/icefist.ski",
+        "skill_lst_key": "icefist",
+        "slot_number": 86,
+        "slot_symbol": "SLOT_ICEFIST"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/i/icefist.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -25343,6 +27278,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/i/icefreeze_strike.ski",
+        "skill_lst_key": "icefreeze_strike",
+        "slot_number": 90,
+        "slot_symbol": "SLOT_ICEFREEZE_STRIKE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/i/icefreeze_strike.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -25468,6 +27416,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/i/identify.ski",
+        "skill_lst_key": "identify",
+        "slot_number": 157,
+        "slot_symbol": "SLOT_IDENTIFY"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/i/identify.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -25597,6 +27558,19 @@
         "player_facing": false,
         "npc_only": true,
         "audit_state": "runtime_active"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/i/imperial_steps.ski",
+        "skill_lst_key": "imperial_steps",
+        "slot_number": 269,
+        "slot_symbol": "SLOT_IMPERIAL_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/i/imperial_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       },
       "intended_roles": [
         "殿前護衛",
@@ -25731,6 +27705,19 @@
         "npc_only": true,
         "audit_state": "runtime_active"
       },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/i/imperial_sword.ski",
+        "skill_lst_key": "imperial_sword",
+        "slot_number": 268,
+        "slot_symbol": "SLOT_IMPERIAL_SWORD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/i/imperial_sword.ski",
+        "matches_runtime": true,
+        "differences": []
+      },
       "intended_roles": [
         "殿前護衛",
         "御前護衛",
@@ -25821,7 +27808,7 @@
         "skill_lst_key": "infravision",
         "slot_symbol": "SLOT_INFRAVISION",
         "function": "cast_infravision",
-        "type": "SLOT_INFRAVISION",
+        "type": "TAR_CHAR_DEFENSIVE",
         "cost": 20,
         "cost_type": "COST_MANA",
         "wait": 18,
@@ -25867,6 +27854,25 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/i/infravision.ski",
+        "skill_lst_key": "infravision",
+        "slot_number": 158,
+        "slot_symbol": "SLOT_INFRAVISION"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/i/infravision.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "type",
+            "structured": "TAR_CHAR_DEFENSIVE",
+            "runtime": "SLOT_INFRAVISION"
+          }
+        ]
       }
     },
     {
@@ -26146,7 +28152,7 @@
         "skill_lst_key": "invis",
         "slot_symbol": "SLOT_INVIS",
         "function": "cast_invis",
-        "type": "SLOT_INVIS",
+        "type": "TAR_CHAR_DEFENSIVE",
         "cost": 15,
         "cost_type": "COST_MANA",
         "wait": 18,
@@ -26192,6 +28198,25 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/i/invis.ski",
+        "skill_lst_key": "invis",
+        "slot_number": 159,
+        "slot_symbol": "SLOT_INVIS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/i/invis.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "type",
+            "structured": "TAR_CHAR_DEFENSIVE",
+            "runtime": "SLOT_INVIS"
+          }
+        ]
       }
     },
     {
@@ -26340,6 +28365,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/i/iron_shield.ski",
+        "skill_lst_key": "iron_shield",
+        "slot_number": 236,
+        "slot_symbol": "SLOT_IRON_SHIELD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/i/iron_shield.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -26493,6 +28531,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/j/jade_eight.ski",
+        "skill_lst_key": "jade_eight",
+        "slot_number": 228,
+        "slot_symbol": "SLOT_JADE_EIGHT"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/j/jade_eight.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -26604,6 +28655,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/j/judge.ski",
+        "skill_lst_key": "judge",
+        "slot_number": 184,
+        "slot_symbol": "SLOT_JUDGE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/j/judge.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -26863,6 +28927,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/k/king_fist.ski",
+        "skill_lst_key": "king_fist",
+        "slot_number": 37,
+        "slot_symbol": "SLOT_KING_FIST"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/k/king_fist.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -27040,6 +29117,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/k/king_road.ski",
+        "skill_lst_key": "king_road",
+        "slot_number": 181,
+        "slot_symbol": "SLOT_KING_ROAD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/k/king_road.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -27123,6 +29213,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/k/know_alignment.ski",
+        "skill_lst_key": "know_alignment",
+        "slot_number": 160,
+        "slot_symbol": "SLOT_KNOW_ALIGNMENT"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/k/know_alignment.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -27387,6 +29490,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/k/know_pen.ski",
+        "skill_lst_key": "know_pen",
+        "slot_number": 38,
+        "slot_symbol": "SLOT_KNOW_PEN"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/k/know_pen.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -27549,6 +29665,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/l/lightning_bolt.ski",
+        "skill_lst_key": "lightning_bolt",
+        "slot_number": 161,
+        "slot_symbol": "SLOT_LIGHTNING_BOLT"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/l/lightning_bolt.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -27632,6 +29761,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/l/lightning_breath.ski",
+        "skill_lst_key": "lightning_breath",
+        "slot_number": 162,
+        "slot_symbol": "SLOT_LIGHTNING_BREATH"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/l/lightning_breath.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -27769,6 +29911,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/l/linpo_steps.ski",
+        "skill_lst_key": "linpo_steps",
+        "slot_number": 10,
+        "slot_symbol": "SLOT_LINPO_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/l/linpo_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -27874,6 +30029,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/l/locate_object.ski",
+        "skill_lst_key": "locate_object",
+        "slot_number": 110,
+        "slot_symbol": "SLOT_LOCATE_OBJECT"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/l/locate_object.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -28341,6 +30509,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "batch_c_implemented"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/l/longfist.ski",
+        "skill_lst_key": "longfist",
+        "slot_number": 18,
+        "slot_symbol": "SLOT_LONGFIST"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/l/longfist.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -28478,6 +30659,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/l/lost_steps.ski",
+        "skill_lst_key": "lost_steps",
+        "slot_number": 22,
+        "slot_symbol": "SLOT_LOST_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/l/lost_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -28756,6 +30950,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/l/luburevenge.ski",
+        "skill_lst_key": "luburevenge",
+        "slot_number": 182,
+        "slot_symbol": "SLOT_LUBUREVENGE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/l/luburevenge.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -28959,6 +31166,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "batch_c_implemented"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/l/lungshan.ski",
+        "skill_lst_key": "lungshan",
+        "slot_number": 8,
+        "slot_symbol": "SLOT_LUNGSHAN"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/l/lungshan.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -29120,6 +31340,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/m/magic_blast.ski",
+        "skill_lst_key": "magic_blast",
+        "slot_number": 258,
+        "slot_symbol": "SLOT_MAGIC_BLAST"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/m/magic_blast.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -29312,6 +31545,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/m/magic_missile.ski",
+        "skill_lst_key": "magic_missile",
+        "slot_number": 163,
+        "slot_symbol": "SLOT_MAGIC_MISSILE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/m/magic_missile.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -29395,6 +31641,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/m/magic_power.ski",
+        "skill_lst_key": "magic_power",
+        "slot_number": 239,
+        "slot_symbol": "SLOT_MAGIC_POWER"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/m/magic_power.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -29591,6 +31850,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/m/make_light.ski",
+        "skill_lst_key": "make_light",
+        "slot_number": 104,
+        "slot_symbol": "SLOT_MAKE_LIGHT"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/m/make_light.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -29726,6 +31998,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/m/make_spring.ski",
+        "skill_lst_key": "make_spring",
+        "slot_number": 103,
+        "slot_symbol": "SLOT_MAKE_SPRING"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/m/make_spring.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -29849,6 +32134,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/m/make_sword.ski",
+        "skill_lst_key": "make_sword",
+        "slot_number": 264,
+        "slot_symbol": "SLOT_MAKE_SWORD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/m/make_sword.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -29992,7 +32290,7 @@
         "skill_lst_key": "mask",
         "slot_symbol": "SLOT_MASK",
         "function": "skill_mask",
-        "type": "SLOT_MASK",
+        "type": "TAR_CHAR_SELF",
         "cost": 100,
         "cost_type": "COST_MOVE",
         "wait": 12,
@@ -30038,6 +32336,25 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/m/mask.ski",
+        "skill_lst_key": "mask",
+        "slot_number": 242,
+        "slot_symbol": "SLOT_MASK"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/m/mask.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "type",
+            "structured": "TAR_CHAR_SELF",
+            "runtime": "SLOT_MASK"
+          }
+        ]
       }
     },
     {
@@ -30168,6 +32485,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/m/mass_invis.ski",
+        "skill_lst_key": "mass_invis",
+        "slot_number": 164,
+        "slot_symbol": "SLOT_MASS_INVIS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/m/mass_invis.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -30323,6 +32653,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/m/meditation.ski",
+        "skill_lst_key": "meditation",
+        "slot_number": 198,
+        "slot_symbol": "SLOT_MEDITATION"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/m/meditation.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -30452,6 +32795,19 @@
         "player_facing": false,
         "npc_only": true,
         "audit_state": "runtime_active"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/m/military_blade.ski",
+        "skill_lst_key": "military_blade",
+        "slot_number": 266,
+        "slot_symbol": "SLOT_MILITARY_BLADE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/m/military_blade.ski",
+        "matches_runtime": true,
+        "differences": []
       },
       "intended_roles": [
         "城市守衛",
@@ -30586,6 +32942,19 @@
         "player_facing": false,
         "npc_only": true,
         "audit_state": "runtime_active"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/m/military_steps.ski",
+        "skill_lst_key": "military_steps",
+        "slot_number": 267,
+        "slot_symbol": "SLOT_MILITARY_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/m/military_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       },
       "intended_roles": [
         "城市守軍",
@@ -30800,6 +33169,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/m/ming_snake.ski",
+        "skill_lst_key": "ming_snake",
+        "slot_number": 44,
+        "slot_symbol": "SLOT_MING_SNAKE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/m/ming_snake.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -30953,7 +33335,7 @@
         "exists": true,
         "skill_file": "skill/m/mint.ski",
         "skill_lst_key": "mint",
-        "slot_symbol": "SLOT_MINT",
+        "slot_symbol": "SLOT_MINE",
         "function": "cast_mint",
         "type": "TAR_OBJ_INV",
         "cost": 30,
@@ -31001,6 +33383,25 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/m/mint.ski",
+        "skill_lst_key": "mint",
+        "slot_number": 217,
+        "slot_symbol": "SLOT_MINE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/m/mint.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "slot_symbol",
+            "structured": "SLOT_MINE",
+            "runtime": "SLOT_MINT"
+          }
+        ]
       }
     },
     {
@@ -31204,6 +33605,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_unreviewed"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/m/mirage_steps.ski",
+        "skill_lst_key": "mirage_steps",
+        "slot_number": 21,
+        "slot_symbol": "SLOT_MIRAGE_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/m/mirage_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -31236,7 +33650,7 @@
       "runtime": {
         "exists": true,
         "skill_file": "skill/m/mobile_kill.ski",
-        "skill_lst_key": null,
+        "skill_lst_key": "mobile_kill",
         "slot_symbol": "SLOT_MOBILE_KILL",
         "function": null,
         "type": "TAR_CHAR_OFFENSIVE",
@@ -31341,6 +33755,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/m/mobile_kill.ski",
+        "skill_lst_key": "mobile_kill",
+        "slot_number": 216,
+        "slot_symbol": "SLOT_MOBILE_KILL"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/m/mobile_kill.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -31373,7 +33800,7 @@
       "runtime": {
         "exists": true,
         "skill_file": "skill/m/mobile_steps.ski",
-        "skill_lst_key": null,
+        "skill_lst_key": "mobile_steps",
         "slot_symbol": "SLOT_MOBILE_STEPS",
         "function": null,
         "type": "TAR_DODGE",
@@ -31470,6 +33897,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/m/mobile_steps.ski",
+        "skill_lst_key": "mobile_steps",
+        "slot_number": 218,
+        "slot_symbol": "SLOT_MOBILE_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/m/mobile_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -31639,6 +34079,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/m/modo_slash.ski",
+        "skill_lst_key": "modo_slash",
+        "slot_number": 187,
+        "slot_symbol": "SLOT_MODO_SLASH"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/m/modo_slash.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -31899,6 +34352,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/m/monkey_stick.ski",
+        "skill_lst_key": "monkey_stick",
+        "slot_number": 43,
+        "slot_symbol": "SLOT_MONKEY_STICK"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/m/monkey_stick.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -32044,6 +34510,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/m/moon_step.ski",
+        "skill_lst_key": "moon_step",
+        "slot_number": 9,
+        "slot_symbol": "SLOT_MOON_STEP"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/m/moon_step.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -32306,6 +34785,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/m/mount.ski",
+        "skill_lst_key": "mount",
+        "slot_number": 215,
+        "slot_symbol": "SLOT_MOUNT"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/m/mount.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -32435,6 +34927,19 @@
         "player_facing": false,
         "npc_only": true,
         "audit_state": "runtime_active"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/n/night_blade.ski",
+        "skill_lst_key": "night_blade",
+        "slot_number": 270,
+        "slot_symbol": "SLOT_NIGHT_BLADE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/n/night_blade.ski",
+        "matches_runtime": true,
+        "differences": []
       },
       "intended_roles": [
         "盜賊",
@@ -32659,6 +35164,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_unreviewed"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/n/night_steps.ski",
+        "skill_lst_key": "night_steps",
+        "slot_number": 25,
+        "slot_symbol": "SLOT_NIGHT_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/n/night_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -32907,6 +35425,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_unreviewed"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/n/nine_step.ski",
+        "skill_lst_key": "nine_step",
+        "slot_number": 7,
+        "slot_symbol": "SLOT_NINE_STEP"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/n/nine_step.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -33182,6 +35713,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/n/noname.ski",
+        "skill_lst_key": "noname",
+        "slot_number": 15,
+        "slot_symbol": "SLOT_NONAME"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/n/noname.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -33268,7 +35812,7 @@
         "skill_lst_key": "pass_door",
         "slot_symbol": "SLOT_PASS_DOOR",
         "function": "cast_pass_door",
-        "type": "SLOT_PASS_DOOR",
+        "type": "TAR_CHAR_SELF",
         "cost": 12,
         "cost_type": "COST_MANA",
         "wait": 22,
@@ -33314,6 +35858,25 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/p/pass_door.ski",
+        "skill_lst_key": "pass_door",
+        "slot_number": 165,
+        "slot_symbol": "SLOT_PASS_DOOR"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/p/pass_door.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "type",
+            "structured": "TAR_CHAR_SELF",
+            "runtime": "SLOT_PASS_DOOR"
+          }
+        ]
       }
     },
     {
@@ -33647,6 +36210,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/p/physique.ski",
+        "skill_lst_key": "physique",
+        "slot_number": 197,
+        "slot_symbol": "SLOT_PHYSIQUE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/p/physique.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -33822,6 +36398,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/p/pick.ski",
+        "skill_lst_key": "pick",
+        "slot_number": 206,
+        "slot_symbol": "SLOT_PICK"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/p/pick.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -33892,7 +36481,7 @@
         "skill_lst_key": "poison",
         "slot_symbol": "SLOT_POISON",
         "function": "cast_poison",
-        "type": "SLOT_POISON",
+        "type": "TAR_CHAR_OFFENSIVE",
         "cost": 30,
         "cost_type": "COST_MANA",
         "wait": 20,
@@ -33927,17 +36516,38 @@
         "cost_type": "COST_MANA",
         "weapon": null,
         "check": "check_unrigid_attack",
-        "prepared_for_adjustment": true,
-        "notes": [],
-        "damage_source": null,
-        "damage_gap_classification": null,
-        "code_path": null,
-        "code_damage_summary": null
+        "prepared_for_adjustment": false,
+        "notes": [
+          "Needs review: damage logic currently lives in src/spell.c:3195."
+        ],
+        "damage_source": "unresolved",
+        "damage_gap_classification": "needs review",
+        "code_path": "src/spell.c:3195",
+        "code_damage_summary": "Function exists but no direct damage call was detected in the current source block."
       },
       "status": {
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/p/poison.ski",
+        "skill_lst_key": "poison",
+        "slot_number": 166,
+        "slot_symbol": "SLOT_POISON"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/p/poison.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "type",
+            "structured": "TAR_CHAR_OFFENSIVE",
+            "runtime": "SLOT_POISON"
+          }
+        ]
       }
     },
     {
@@ -34063,6 +36673,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/p/power_word.ski",
+        "skill_lst_key": "power_word",
+        "slot_number": 232,
+        "slot_symbol": "SLOT_POWER_WORD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/p/power_word.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -34144,6 +36767,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/p/preserve.ski",
+        "skill_lst_key": "preserve",
+        "slot_number": 233,
+        "slot_symbol": "SLOT_PRESERVE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/p/preserve.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -34223,7 +36859,7 @@
         "skill_lst_key": "protection",
         "slot_symbol": "SLOT_PROTECTION",
         "function": "cast_protection",
-        "type": "SLOT_PROTECTION",
+        "type": "TAR_CHAR_SELF",
         "cost": 25,
         "cost_type": "COST_MANA",
         "wait": 20,
@@ -34269,6 +36905,25 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/p/protection.ski",
+        "skill_lst_key": "protection",
+        "slot_number": 167,
+        "slot_symbol": "SLOT_PROTECTION"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/p/protection.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "type",
+            "structured": "TAR_CHAR_SELF",
+            "runtime": "SLOT_PROTECTION"
+          }
+        ]
       }
     },
     {
@@ -34380,6 +37035,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/p/pry.ski",
+        "skill_lst_key": "pry",
+        "slot_number": 183,
+        "slot_symbol": "SLOT_PRY"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/p/pry.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -34509,6 +37177,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/p/purple.ski",
+        "skill_lst_key": "purple",
+        "slot_number": 26,
+        "slot_symbol": "SLOT_PURPLE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/p/purple.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -34747,6 +37428,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/r/rain_throwing.ski",
+        "skill_lst_key": "rain_throwing",
+        "slot_number": 93,
+        "slot_symbol": "SLOT_RAIN_THROWING"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/r/rain_throwing.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -34932,6 +37626,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/r/refresh.ski",
+        "skill_lst_key": "refresh",
+        "slot_number": 168,
+        "slot_symbol": "SLOT_REFRESH"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/r/refresh.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -35067,6 +37774,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/r/remeday.ski",
+        "skill_lst_key": "remeday",
+        "slot_number": 238,
+        "slot_symbol": "SLOT_REMEDAY"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/r/remeday.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -35199,6 +37919,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/r/remove_curse.ski",
+        "skill_lst_key": "remove_curse",
+        "slot_number": 169,
+        "slot_symbol": "SLOT_REMOVE_CURSE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/r/remove_curse.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -35462,6 +38195,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/r/repair.ski",
+        "skill_lst_key": "repair",
+        "slot_number": 203,
+        "slot_symbol": "SLOT_REPAIR"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/r/repair.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -35617,6 +38363,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/r/restore_staff.ski",
+        "skill_lst_key": "restore_staff",
+        "slot_number": 241,
+        "slot_symbol": "SLOT_RESTORE_STAFF"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/r/restore_staff.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -35730,6 +38489,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/r/rock_slash.ski",
+        "skill_lst_key": "rock_slash",
+        "slot_number": 224,
+        "slot_symbol": "SLOT_ROCK_SLASH"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/r/rock_slash.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -35931,6 +38703,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/r/rulai.ski",
+        "skill_lst_key": "rulai",
+        "slot_number": 24,
+        "slot_symbol": "SLOT_RULAI"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/r/rulai.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -36190,6 +38975,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/r/ryo.ski",
+        "skill_lst_key": "ryo",
+        "slot_number": 14,
+        "slot_symbol": "SLOT_RYO"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/r/ryo.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -36267,7 +39065,7 @@
         "skill_lst_key": "sanctuary",
         "slot_symbol": "SLOT_SANCTUARY",
         "function": "cast_sanctuary",
-        "type": "SLOT_SANCTUARY",
+        "type": "TAR_CHAR_DEFENSIVE",
         "cost": 75,
         "cost_type": "COST_MANA",
         "wait": 30,
@@ -36313,6 +39111,25 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/sanctuary.ski",
+        "skill_lst_key": "sanctuary",
+        "slot_number": 170,
+        "slot_symbol": "SLOT_SANCTUARY"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/sanctuary.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "type",
+            "structured": "TAR_CHAR_DEFENSIVE",
+            "runtime": "SLOT_SANCTUARY"
+          }
+        ]
       }
     },
     {
@@ -36530,6 +39347,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/seaflow_blade.ski",
+        "skill_lst_key": "seaflow_blade",
+        "slot_number": 92,
+        "slot_symbol": "SLOT_SEAFLOW_BLADE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/seaflow_blade.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -36611,6 +39441,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/search.ski",
+        "skill_lst_key": "search",
+        "slot_number": 245,
+        "slot_symbol": "SLOT_SEARCH"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/search.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -36772,6 +39615,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/sevencolor.ski",
+        "skill_lst_key": "sevencolor",
+        "slot_number": 6,
+        "slot_symbol": "SLOT_SEVENCOLOR"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/sevencolor.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -37035,6 +39891,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/seven_dagger.ski",
+        "skill_lst_key": "seven_dagger",
+        "slot_number": 64,
+        "slot_symbol": "SLOT_SEVEN_DAGGER"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/seven_dagger.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -37160,6 +40029,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/seven_key_numen.ski",
+        "skill_lst_key": "seven_key_numen",
+        "slot_number": 189,
+        "slot_symbol": "SLOT_SEVEN_KEY_NUMEN"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/seven_key_numen.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -37305,6 +40187,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/seven_mind.ski",
+        "skill_lst_key": "seven_mind",
+        "slot_number": 89,
+        "slot_symbol": "SLOT_SEVEN_MIND"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/seven_mind.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -37450,6 +40345,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/seven_star.ski",
+        "skill_lst_key": "seven_star",
+        "slot_number": 262,
+        "slot_symbol": "SLOT_SEVEN_STAR"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/seven_star.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -37587,6 +40495,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/sha_steps.ski",
+        "skill_lst_key": "sha_steps",
+        "slot_number": 94,
+        "slot_symbol": "SLOT_SHA_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/sha_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -37849,6 +40770,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_unreviewed"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/shade_steps.ski",
+        "skill_lst_key": "shade_steps",
+        "slot_number": 96,
+        "slot_symbol": "SLOT_SHADE_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/shade_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -38176,6 +41110,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/shadow_kill.ski",
+        "skill_lst_key": "shadow_kill",
+        "slot_number": 95,
+        "slot_symbol": "SLOT_SHADOW_KILL"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/shadow_kill.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -38305,6 +41252,19 @@
         "player_facing": false,
         "npc_only": true,
         "audit_state": "runtime_active"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/shadowtrace_steps.ski",
+        "skill_lst_key": "shadowtrace_steps",
+        "slot_number": 271,
+        "slot_symbol": "SLOT_SHADOW_NIGHT_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/shadowtrace_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       },
       "intended_roles": [
         "盜賊",
@@ -38594,6 +41554,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/shansword.ski",
+        "skill_lst_key": "shansword",
+        "slot_number": 102,
+        "slot_symbol": "SLOT_SHANSWORD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/shansword.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -38724,6 +41697,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/shield.ski",
+        "skill_lst_key": "shield",
+        "slot_number": 171,
+        "slot_symbol": "SLOT_SHIELD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/shield.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -38933,6 +41919,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/shocking_grasp.ski",
+        "skill_lst_key": "shocking_grasp",
+        "slot_number": 172,
+        "slot_symbol": "SLOT_SHOCKING_GRASP"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/shocking_grasp.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -39162,6 +42161,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/shoot_sun.ski",
+        "skill_lst_key": "shoot_sun",
+        "slot_number": 192,
+        "slot_symbol": "SLOT_SHOOT_SUN"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/shoot_sun.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -39283,6 +42295,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/shoutsky.ski",
+        "skill_lst_key": "shoutsky",
+        "slot_number": 30,
+        "slot_symbol": "SLOT_SHOUTSKY"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/shoutsky.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -39508,6 +42533,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/six_fingers.ski",
+        "skill_lst_key": "six_fingers",
+        "slot_number": 100,
+        "slot_symbol": "SLOT_SIX_FINGERS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/six_fingers.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -39711,6 +42749,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/sixfire.ski",
+        "skill_lst_key": "sixfire",
+        "slot_number": 59,
+        "slot_symbol": "SLOT_SIXFIRE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/sixfire.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -39845,6 +42896,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/six_god.ski",
+        "skill_lst_key": "six_god",
+        "slot_number": 254,
+        "slot_symbol": "SLOT_SIX_GOD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/six_god.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -40104,6 +43168,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/six_sword.ski",
+        "skill_lst_key": "six_sword",
+        "slot_number": 226,
+        "slot_symbol": "SLOT_SIX_SWORD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/six_sword.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -40289,6 +43366,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/sky_blade.ski",
+        "skill_lst_key": "sky_blade",
+        "slot_number": 259,
+        "slot_symbol": "SLOT_SKY_BLADE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/sky_blade.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -40482,6 +43572,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/skydragon.ski",
+        "skill_lst_key": "skydragon",
+        "slot_number": 49,
+        "slot_symbol": "SLOT_SKYDRAGON"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/skydragon.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -40689,6 +43792,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/skydragon_force.ski",
+        "skill_lst_key": "skydragon_force",
+        "slot_number": 50,
+        "slot_symbol": "SLOT_SKYDRAGON_FORCE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/skydragon_force.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -40914,6 +44030,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/skydragon_sword.ski",
+        "skill_lst_key": "skydragon_sword",
+        "slot_number": 51,
+        "slot_symbol": "SLOT_SKYDRAGON_SWORD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/skydragon_sword.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -41115,6 +44244,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "batch_b_prechecked"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/sky_steps.ski",
+        "skill_lst_key": "sky_steps",
+        "slot_number": 97,
+        "slot_symbol": "SLOT_SKY_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/sky_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -41252,6 +44394,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/slash_light.ski",
+        "skill_lst_key": "slash_light",
+        "slot_number": 188,
+        "slot_symbol": "SLOT_SLASH_LIGHT"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/slash_light.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -41331,7 +44486,7 @@
         "skill_lst_key": "sleep",
         "slot_symbol": "SLOT_SLEEP",
         "function": "cast_sleep",
-        "type": "SLOT_SLEEP",
+        "type": "TAR_CHAR_DEFENSIVE",
         "cost": 25,
         "cost_type": "COST_MANA",
         "wait": 12,
@@ -41377,6 +44532,25 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/sleep.ski",
+        "skill_lst_key": "sleep",
+        "slot_number": 173,
+        "slot_symbol": "SLOT_SLEEP"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/sleep.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "type",
+            "structured": "TAR_CHAR_DEFENSIVE",
+            "runtime": "SLOT_SLEEP"
+          }
+        ]
       }
     },
     {
@@ -41625,6 +44799,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "batch_b_prechecked"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/sleev_steps.ski",
+        "skill_lst_key": "sleev_steps",
+        "slot_number": 101,
+        "slot_symbol": "SLOT_SLEEV_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/sleev_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -41780,6 +44967,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/slow.ski",
+        "skill_lst_key": "slow",
+        "slot_number": 214,
+        "slot_symbol": "SLOT_SLOW"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/slow.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -41909,7 +45109,7 @@
         "skill_lst_key": "sneak",
         "slot_symbol": "SLOT_SNEAK",
         "function": "skill_sneak",
-        "type": "SLOT_SNEAK",
+        "type": "TAR_CHAR_SELF",
         "cost": 20,
         "cost_type": "COST_MOVE",
         "wait": 12,
@@ -41955,6 +45155,25 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/sneak.ski",
+        "skill_lst_key": "sneak",
+        "slot_number": 179,
+        "slot_symbol": "SLOT_SNEAK"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/sneak.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "type",
+            "structured": "TAR_CHAR_SELF",
+            "runtime": "SLOT_SNEAK"
+          }
+        ]
       }
     },
     {
@@ -42084,6 +45303,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/snow_martial.ski",
+        "skill_lst_key": "snow_martial",
+        "slot_number": 99,
+        "slot_symbol": "SLOT_SNOW_MARTIAL"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/snow_martial.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -42165,6 +45397,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/sparkler.ski",
+        "skill_lst_key": "sparkler",
+        "slot_number": 244,
+        "slot_symbol": "SLOT_SPARKLER"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/sparkler.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -42342,6 +45587,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/steal.ski",
+        "skill_lst_key": "steal",
+        "slot_number": 205,
+        "slot_symbol": "SLOT_STEAL"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/steal.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -42488,6 +45746,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/stone_skin.ski",
+        "skill_lst_key": "stone_skin",
+        "slot_number": 174,
+        "slot_symbol": "SLOT_STONE_SKIN"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/stone_skin.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -42611,6 +45882,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/summon.ski",
+        "skill_lst_key": "summon",
+        "slot_number": 111,
+        "slot_symbol": "SLOT_SUMMON"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/summon.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -42863,6 +46147,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/sun_blade.ski",
+        "skill_lst_key": "sun_blade",
+        "slot_number": 98,
+        "slot_symbol": "SLOT_SUN_BLADE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/sun_blade.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -42986,6 +46283,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/super_refresh.ski",
+        "skill_lst_key": "super_refresh",
+        "slot_number": 252,
+        "slot_symbol": "SLOT_SUPER_REFRESH"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/super_refresh.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -43067,6 +46377,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/s/swim.ski",
+        "skill_lst_key": "swim",
+        "slot_number": 246,
+        "slot_symbol": "SLOT_SWIM"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/s/swim.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -43269,6 +46592,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "batch_c_implemented"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/t/tackle.ski",
+        "skill_lst_key": "tackle",
+        "slot_number": 265,
+        "slot_symbol": "SLOT_TACKLE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/t/tackle.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -43422,6 +46758,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/t/taichi_fist.ski",
+        "skill_lst_key": "taichi_fist",
+        "slot_number": 240,
+        "slot_symbol": "SLOT_TAICHI_FIST"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/t/taichi_fist.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -43543,6 +46892,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/t/tao_spell.ski",
+        "skill_lst_key": "tao_spell",
+        "slot_number": 42,
+        "slot_symbol": "SLOT_TAO_SPELL"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/t/tao_spell.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -43675,6 +47037,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/t/teleport.ski",
+        "skill_lst_key": "teleport",
+        "slot_number": 175,
+        "slot_symbol": "SLOT_TELEPORT"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/t/teleport.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -43900,6 +47275,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/t/tendo_slash.ski",
+        "skill_lst_key": "tendo_slash",
+        "slot_number": 41,
+        "slot_symbol": "SLOT_TENDO_SLASH"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/t/tendo_slash.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -44053,6 +47441,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/t/thunder_hammer.ski",
+        "skill_lst_key": "thunder_hammer",
+        "slot_number": 227,
+        "slot_symbol": "SLOT_THUNDER_HAMMER"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/t/thunder_hammer.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -44304,6 +47705,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/t/tiger_axe.ski",
+        "skill_lst_key": "tiger_axe",
+        "slot_number": 40,
+        "slot_symbol": "SLOT_TIGER_AXE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/t/tiger_axe.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -44529,6 +47943,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/t/tigerblade.ski",
+        "skill_lst_key": "tigerblade",
+        "slot_number": 20,
+        "slot_symbol": "SLOT_TIGERBLADE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/t/tigerblade.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -44626,6 +48053,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/t/tree_touch.ski",
+        "skill_lst_key": "tree_touch",
+        "slot_number": 263,
+        "slot_symbol": "SLOT_TREE_TOUCH"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/t/tree_touch.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -44972,6 +48412,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/t/twosword.ski",
+        "skill_lst_key": "twosword",
+        "slot_number": 1,
+        "slot_symbol": "SLOT_TWOSWORD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/t/twosword.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -45187,6 +48640,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/u/universe.ski",
+        "skill_lst_key": "universe",
+        "slot_number": 39,
+        "slot_symbol": "SLOT_UNIVERSE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/u/universe.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -45276,7 +48742,7 @@
         "exists": true,
         "skill_file": "skill/v/vacuum_wind.ski",
         "skill_lst_key": "vacuum_wind",
-        "slot_symbol": "SLOT_VACUUM_WIND",
+        "slot_symbol": "SLOT_VACUUM_BLADE",
         "function": "cast_vacuum_wind",
         "type": "TAR_CHAR_OFFENSIVE",
         "cost": 30,
@@ -45326,6 +48792,25 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/v/vacuum_wind.ski",
+        "skill_lst_key": "vacuum_wind",
+        "slot_number": 248,
+        "slot_symbol": "SLOT_VACUUM_BLADE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/v/vacuum_wind.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "slot_symbol",
+            "structured": "SLOT_VACUUM_BLADE",
+            "runtime": "SLOT_VACUUM_WIND"
+          }
+        ]
       }
     },
     {
@@ -45517,6 +49002,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/v/venom.ski",
+        "skill_lst_key": "venom",
+        "slot_number": 201,
+        "slot_symbol": "SLOT_VENOM"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/v/venom.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -45681,6 +49179,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/v/ventriloquate.ski",
+        "skill_lst_key": "ventriloquate",
+        "slot_number": 112,
+        "slot_symbol": "SLOT_VENTRILOQUATE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/v/ventriloquate.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -45813,6 +49324,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/w/wakeup.ski",
+        "skill_lst_key": "wakeup",
+        "slot_number": 209,
+        "slot_symbol": "SLOT_WAKEUP"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/w/wakeup.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -45924,7 +49448,7 @@
         "exists": true,
         "skill_file": "skill/w/water_cloud_blast.ski",
         "skill_lst_key": "water_cloud_blast",
-        "slot_symbol": "SLOT_WATER_CLOUD_blast",
+        "slot_symbol": "SLOT_WATER_CLOUD_BLAST",
         "function": "cast_water_cloud_blast",
         "type": "TAR_CHAR_OFFENSIVE",
         "cost": 20,
@@ -45974,6 +49498,25 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/w/water_cloud_blast.ski",
+        "skill_lst_key": "water_cloud_blast",
+        "slot_number": 256,
+        "slot_symbol": "SLOT_WATER_CLOUD_BLAST"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/w/water_cloud_blast.ski",
+        "matches_runtime": false,
+        "differences": [
+          {
+            "field": "slot_symbol",
+            "structured": "SLOT_WATER_CLOUD_BLAST",
+            "runtime": "SLOT_WATER_CLOUD_blast"
+          }
+        ]
       }
     },
     {
@@ -46113,6 +49656,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/w/weaken.ski",
+        "skill_lst_key": "weaken",
+        "slot_number": 176,
+        "slot_symbol": "SLOT_WEAKEN"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/w/weaken.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -46275,6 +49831,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/w/wind_blade.ski",
+        "skill_lst_key": "wind_blade",
+        "slot_number": 247,
+        "slot_symbol": "SLOT_WIND_BLADE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/w/wind_blade.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -46489,6 +50058,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_unreviewed"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/w/windcolor_steps.ski",
+        "skill_lst_key": "windcolor_steps",
+        "slot_number": 35,
+        "slot_symbol": "SLOT_WINDCOLOR_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/w/windcolor_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -46650,6 +50232,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/w/windleg.ski",
+        "skill_lst_key": "windleg",
+        "slot_number": 19,
+        "slot_symbol": "SLOT_WINDLEG"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/w/windleg.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -46853,6 +50448,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_unreviewed"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/w/wind_steps.ski",
+        "skill_lst_key": "wind_steps",
+        "slot_number": 34,
+        "slot_symbol": "SLOT_WIND_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/w/wind_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -46934,6 +50542,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/w/word_of_recall.ski",
+        "skill_lst_key": "word_of_recall",
+        "slot_number": 177,
+        "slot_symbol": "SLOT_WORD_OF_RECALL"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/w/word_of_recall.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -47192,6 +50813,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/w/write_pen.ski",
+        "skill_lst_key": "write_pen",
+        "slot_number": 193,
+        "slot_symbol": "SLOT_WRITE_PEN"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/w/write_pen.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -47455,6 +51089,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/w/wumin_sword.ski",
+        "skill_lst_key": "wumin_sword",
+        "slot_number": 91,
+        "slot_symbol": "SLOT_WUMIN_SWORD"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/w/wumin_sword.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -47655,6 +51302,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/y/younggun.ski",
+        "skill_lst_key": "younggun",
+        "slot_number": 16,
+        "slot_symbol": "SLOT_YOUNGGUN"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/y/younggun.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -47864,6 +51524,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/y/yu_needle.ski",
+        "skill_lst_key": "yu_needle",
+        "slot_number": 88,
+        "slot_symbol": "SLOT_YU_NEEDLE"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/y/yu_needle.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
@@ -47993,6 +51666,19 @@
         "player_facing": true,
         "npc_only": false,
         "audit_state": "legacy_catalog_seeded"
+      },
+      "structured_source": {
+        "path": "data/structured/skills/skills.json",
+        "skill_file": "skill/y/yu_steps.ski",
+        "skill_lst_key": "yu_steps",
+        "slot_number": 87,
+        "slot_symbol": "SLOT_YU_STEPS"
+      },
+      "runtime_audit": {
+        "structured_source": "data/structured/skills/skills.json",
+        "runtime_readback_file": "skill/y/yu_steps.ski",
+        "matches_runtime": true,
+        "differences": []
       }
     },
     {
