@@ -1,0 +1,32 @@
+Vnum            10809
+Name            裂脈逆廊~
+Description
+逆廊中央裂開一道細長脈縫，縫裡不時往外噴出灼亮氣流，把整條走道照得像一截正在發燒的血管。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        10808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10810
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

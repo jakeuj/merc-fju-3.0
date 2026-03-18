@@ -519,6 +519,25 @@
         "plans/area/0022-sec-rift-sealed-core-basin.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_sealed_core_heart",
+      "title": "封心核心",
+      "room_range": "10801-10812",
+      "load_order": 29,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_sealed_core_basin",
+      "theme_primary": "仙俠",
+      "theme_secondary": "封心核心 / 心脈主井",
+      "summary": "承接封核沉盆深井，下探到封心環脈、心壓偏廊與裂核前座的主心脈節點。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_sealed_core_heart/index",
+        "area/sec_rift_sealed_core_heart/map.md",
+        "plans/area/0023-sec-rift-sealed-core-heart.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

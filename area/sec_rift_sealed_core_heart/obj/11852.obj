@@ -1,0 +1,14 @@
+Vnum            11852
+Name            鎮脈鏡碑 鏡碑~
+ShortDesc       一面鎮脈鏡碑~
+Description
+一面鎮脈鏡碑半傾在觀心座旁，碑面只映得出深處赤黑脈影。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           13
+Value           0 0 0 0 0
+Weight          4
+Cost            180
+End

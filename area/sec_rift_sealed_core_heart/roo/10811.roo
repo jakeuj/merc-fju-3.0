@@ -1,0 +1,32 @@
+Vnum            10811
+Name            心座井緣~
+Description
+井緣外圍著一圈向內傾倒的心座封柱，柱面殘光一路往井下滑落，像在替更深處指示最後的下降路徑。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10810
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        10812
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         心座~
+End
+
+#Enquire
+Keyword         井緣~
+End
+
+End

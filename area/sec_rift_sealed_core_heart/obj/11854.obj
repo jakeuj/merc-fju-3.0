@@ -1,0 +1,14 @@
+Vnum            11854
+Name            心座封柱片 柱片~
+ShortDesc       一片心座封柱片~
+Description
+一片心座封柱片散落在深座旁，邊緣還殘留剛被心壓撕開的灼痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           14
+Value           0 0 0 0 0
+Weight          5
+Cost            180
+End

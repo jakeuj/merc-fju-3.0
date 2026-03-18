@@ -1,0 +1,24 @@
+Vnum            10802
+Name            心壁踏脈~
+Description
+踏脈沿著內壁向前延伸，牆面暗紅細脈不斷起伏，像有無形血流正從更深處往外一圈圈送壓。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10801
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

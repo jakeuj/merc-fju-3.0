@@ -1,0 +1,32 @@
+Vnum            11802
+Name            heart pressure observer~
+ShortDesc       維心測守~
+Description
+一名維心測守伏在偏廊邊，手持心壓盤與封泥鉗，像正等待下一波心脈回
+震好立刻補封失衡裂口。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       90
+Level           82
+Hitroll         6
+Protect         0
+Damroll         7
+Str             15
+Int             17
+Wis             18
+Dex             14
+Con             15
+Hp              15400
+Mana            1040
+Move            440
+Class           0
+Gold            1260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

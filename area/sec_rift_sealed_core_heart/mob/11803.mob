@@ -1,0 +1,32 @@
+Vnum            11803
+Name            core threshold sentinel~
+ShortDesc       裂核鎮衛~
+Description
+一名裂核鎮衛守在深座前方，整個人像被更深處的脈搏牽動，只要地層再
+震一下，他就會立刻踏前鎮住整條主井。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       125
+Level           84
+Hitroll         7
+Protect         0
+Damroll         7
+Str             17
+Int             15
+Wis             18
+Dex             14
+Con             17
+Hp              16600
+Mana            1120
+Move            460
+Class           0
+Gold            1340
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

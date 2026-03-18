@@ -1,0 +1,32 @@
+Vnum            10803
+Name            封心環脈前緣~
+Description
+前緣俯視整圈封心環脈，環壁上流動的赤光忽聚忽散，像整座核心正在用最後秩序維持脈衝平衡。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10807
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

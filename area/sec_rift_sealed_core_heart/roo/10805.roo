@@ -1,0 +1,39 @@
+Vnum            10805
+Name            心壓分脈池~
+Description
+分脈池將整道心壓分流成幾股緩慢旋轉的暗潮，表面看似平穩，底下卻不時傳來短促而尖銳的爆裂聲。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10806
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10809
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         分脈~
+Description
+分脈池內壁佈滿層層補封刻痕，深淺不一，像歷代鎮封者都只來得及補住最急的一次脈衝。
+~
+End
+
+End

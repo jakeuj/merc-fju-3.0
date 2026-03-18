@@ -1,0 +1,14 @@
+Vnum            11851
+Name            鎮脈長杖 長杖~
+ShortDesc       一支鎮脈長杖~
+Description
+一支鎮脈長杖倚在環脈旁，杖尖還殘留細微心壓震紋。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           13
+Value           0 0 0 0 0
+Weight          3
+Cost            180
+End

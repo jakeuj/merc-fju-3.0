@@ -1,0 +1,24 @@
+Vnum            10807
+Name            心壓側階~
+Description
+側階通向偏廊時逐漸下沉，石階邊緣沾滿濃黑封泥，踩上去會留下像被心脈吞吐過的濕冷光印。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        10803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

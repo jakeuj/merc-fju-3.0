@@ -1,0 +1,16 @@
+Vnum            10806
+Name            封心聽脈座~
+Description
+聽脈座中央豎著一支細長心柱，柱體每隔片刻就發出低沉重震，像更深處有真正的核心正以極慢節奏搏動。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

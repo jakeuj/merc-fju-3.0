@@ -1,0 +1,14 @@
+Vnum            11853
+Name            心壓盤 壓盤~
+ShortDesc       一具心壓盤~
+Description
+一具心壓盤擱在偏廊邊，盤心細針正隨著心脈節奏微微顫動。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           14
+Value           0 0 0 0 0
+Weight          2
+Cost            180
+End

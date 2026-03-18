@@ -1,0 +1,24 @@
+Vnum            10812
+Name            封心深座~
+Description
+深座像整條主井最後一塊立足的邊界，腳下只剩向內捲縮的黑紅光環，所有聲息都在這裡被拖往更深的心魄暗層。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        10811
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         深座~
+End
+
+#Enquire
+Keyword         核心~
+End
+
+End

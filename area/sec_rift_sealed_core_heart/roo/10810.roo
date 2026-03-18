@@ -1,0 +1,24 @@
+Vnum            10810
+Name            裂核前橋~
+Description
+前橋橫跨心脈最深的一道裂壓溝，橋下傳來規律而沉重的轟鳴，像更深的某個核心正反覆撞擊封底。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10809
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        10811
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

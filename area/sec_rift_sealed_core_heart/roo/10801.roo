@@ -1,0 +1,32 @@
+Vnum            10801
+Name            深井落心臺~
+Description
+落心臺貼著深井最底的弧壁延展，腳下石面正隨著某種遙遠心跳微微顫動，彷彿整座封印主體就在壁後呼吸。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        10712
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         深井~
+End
+
+End

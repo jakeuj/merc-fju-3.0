@@ -1,0 +1,32 @@
+Vnum            10808
+Name            維心偏廊~
+Description
+偏廊兩側嵌滿失效維心片，碎片仍在陰影中緩慢起亮，像最後一層人工秩序正試圖把心壓留在可控範圍。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10807
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10809
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         維心~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            10804
+Name            鎮脈觀心座~
+Description
+觀心座旁立著數面向內傾斜的鎮脈鏡碑，碑面映不出人影，只映得出一陣陣來自心核深處的赤黑波紋。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        10803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        10805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         鎮脈~
+End
+
+#Enquire
+Keyword         鏡碑~
+End
+
+End

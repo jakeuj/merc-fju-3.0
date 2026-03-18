@@ -52,6 +52,7 @@ title: Current Game Areas
 | `sec_rift_core_vein_abyss` | 裂核脈淵 / 渦核深腹高壓前帶 | `10501-10512` | `rebuild addition` | 承接裂核深層封檻臺，下探到脈淵環脈、倒灌裂庭與沉界井緣。 |
 | `sec_rift_underseal_basin` | 禁底封脈盆 / 沉壓承接層 | `10601-10612` | `rebuild addition` | 承接裂核脈淵沉檻，下探到封脈環池、壓紋支廊與底盆沉門。 |
 | `sec_rift_sealed_core_basin` | 封核沉盆 / 內壓核心 | `10701-10712` | `rebuild addition` | 承接禁底封脈盆沉門，下探到封核環盆、回壓渠廊與封心前庭。 |
+| `sec_rift_sealed_core_heart` | 封心核心 / 心脈主井 | `10801-10812` | `rebuild addition` | 承接封核沉盆深井，下探到封心環脈、心壓偏廊與裂核前座。 |
 
 ## Recent Rebuild Areas
 
@@ -79,6 +80,7 @@ title: Current Game Areas
 - `sec_rift_core_vein_abyss`：承接裂核深層最底端，下探到深腹環脈、倒灌裂庭與沉界井緣，作為更深禁底封脈區前的高壓前帶。
 - `sec_rift_underseal_basin`：承接裂核脈淵沉檻，下探到封脈環池、壓紋支廊與底盆沉門，作為更深禁底核心區前的沉壓承接層。
 - `sec_rift_sealed_core_basin`：承接禁底封脈盆沉門，下探到封核環盆、回壓渠廊與封心前庭，作為更深裂核封心區前的核心承壓內盆。
+- `sec_rift_sealed_core_heart`：承接封核沉盆深井，下探到封心環脈、心壓偏廊與裂核前座，作為更深裂核心魄區前的主心脈節點。
 
 ### 北方鏈
 

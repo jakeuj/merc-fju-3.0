@@ -1,0 +1,32 @@
+Vnum            11801
+Name            heart ward patrol~
+ShortDesc       護心巡守~
+Description
+一名護心巡守沿著環脈邊緣無聲巡行，手中鎮脈長杖不時在石面點出一圈
+又一圈赤黑微光。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       105
+Level           80
+Hitroll         6
+Protect         0
+Damroll         6
+Str             16
+Int             15
+Wis             17
+Dex             14
+Con             16
+Hp              14400
+Mana            960
+Move            420
+Class           0
+Gold            1180
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End
