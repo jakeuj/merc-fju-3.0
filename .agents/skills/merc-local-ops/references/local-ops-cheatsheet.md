@@ -6,6 +6,57 @@
 - Primary checked-in config template: `src/merc.sample.ini`
 - Primary startup entry: `src/startup`
 
+## Legacy `document/README` Crosswalk
+- Treat `document/README` as release-era background, not the final source of truth for today local ops.
+- Keep only its still-useful concepts, then map them onto the current repo.
+
+### Legacy build/startup commands
+Legacy README examples like:
+
+```bash
+cd ~/mud/src
+make clean; make
+startup &
+```
+
+map today to:
+
+- build expectations: `README.md`, `src/Makefile`, `src/Makefile.lin`
+- preferred modern launcher: `src/startup.bash`
+- shell-specific fallback: `src/startup` only when `csh` / `tcsh` is actually present
+- environment-specific execution path:
+  - `Windows + WSL (Ubuntu)` -> run build and startup inside WSL
+  - `macOS + Docker (Ubuntu)` -> run Linux build and smoke test inside Ubuntu containers
+
+### Legacy `merc.ini` guidance
+The old README is still directionally right that these fields matter first:
+
+- `NAME`
+- `MUD PORT`
+- `HOME DIRECTORY`
+
+But today the authoritative files are:
+
+- `src/merc.sample.ini`
+- locally generated `src/merc.ini`
+
+Do not treat the legacy README wording as the current checked-in config schema.
+
+### Legacy log/debug triage
+Old docs point you toward runtime outputs; today that still maps cleanly to:
+
+- `log/` for run logs
+- `debug/` for loader / runtime diagnostics
+
+For actual workflow, prefer the repo rules in this skill:
+
+- baseline or clear `debug/*` before smoke tests
+- identify which `log/*.log` belongs to this run
+- do not call startup successful until you see a clear success signal such as `三國歪傳之降龍伏虎開始正常運作`
+
+### What does not belong here
+If the question is really about area package structure such as `index / mob / obj / res / roo / shp`, that belongs to `merc-area-builder`, not `merc-local-ops`.
+
 ## Build
 Preferred environments:
 - `Windows + WSL (Ubuntu)`: build and run inside WSL

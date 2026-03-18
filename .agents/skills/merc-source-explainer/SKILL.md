@@ -15,10 +15,11 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
    - `docs/current-game/skill-loader-reference.md`
    - `docs/current-game/skill-constants.md`
    - `docs/current-game/skill-pry-crosswalk.md`
-4. 需要講程式邏輯時，直接開對應的 `src/*.c`、`include/*.h`、`src/merc.sample.ini` / `src/merc.ini`、`document/*.txt`，不要只憑記憶回答；若只是先找 legacy 文件入口，可先看 `docs/current-game/legacy-documentation.md`，再依檔種跳到對應的 Pages 整理頁。
-5. 如果文件與程式不一致，以 `src/*.c`、`src/merc.h`、runtime data 檔為準，並明確指出哪個說明頁需要回補。
-6. 回答時優先把「入口檔案」「呼叫鏈」「對應資料檔」一起講清楚，讓使用者知道下一步該去哪裡改。
-7. 如果問題其實是區域建置或管理員指令，改用更專門的技能，例如 `merc-area-builder` 或 `mud-command-handbook`。
+4. 若題目直接引用 `document/README` 的 package tree 或舊資料樹說明，先看 `references/overview.md` 的 `Legacy document/README Tree Crosswalk`，把它映回今天 repo 再追細節。
+5. 需要講程式邏輯時，直接開對應的 `src/*.c`、`include/*.h`、`src/merc.sample.ini` / `src/merc.ini`、`document/*.txt`，不要只憑記憶回答；若只是先找 legacy 文件入口，可先看 `docs/current-game/legacy-documentation.md`，再依檔種跳到對應的 Pages 整理頁。
+6. 如果文件與程式不一致，以 `src/*.c`、`src/merc.h`、runtime data 檔為準，並明確指出哪個說明頁需要回補。
+7. 回答時優先把「入口檔案」「呼叫鏈」「對應資料檔」一起講清楚，讓使用者知道下一步該去哪裡改。
+8. 如果問題其實是區域建置或管理員指令，改用更專門的技能，例如 `merc-area-builder` 或 `mud-command-handbook`。
 
 ## 先看目前 repo 現況
 - 核心程式碼在 `src/`，包含 `merc.ini`、`startup`、`Makefile` 與大量 `*.c`
@@ -63,6 +64,7 @@ description: 解說目前工作區內 merc-fju-3.0 的 Merc MUD 原始碼、設�
 - `document/obj.txt`
 - `document/reset.txt`
 - `document/shop.txt`
+- 若問題開始變成 area authoring / rebuild 決策，例如該怎麼拆 `index/mob/obj/res/roo/shp`、怎麼接 world link、或該讀哪份 split reference，交回 `merc-area-builder`；這裡只負責把 loader / code path / legacy 文件入口講清楚
 - 技能檔 / `pry` 對照優先看：
 - `docs/current-game/skill-file-format.md`
 - `docs/current-game/skill-loader-reference.md`

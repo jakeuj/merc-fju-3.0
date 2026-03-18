@@ -22,6 +22,23 @@
 | `doc/` | Upstream Merc/Diku license and reference docs |
 | `scripts/convert_big5_to_utf8.py` | Encoding conversion / UTF-8 verification helper |
 
+## Legacy `document/README` Tree Crosswalk
+- `document/README` describes an older release-package view of the project.
+- That view is still useful for orientation, but it should be translated into the current repo before you explain load flow or editing entry points.
+
+### Legacy package tree -> today repo
+- legacy `src/` -> today `src/`, still the code, build files, and startup scripts
+- legacy `area/` -> today `area/`, still world-data storage, but modern area work also layers `map.md`, plans, and tracker files on top
+- legacy `data/` -> today `data/`, still semi-static game/system data
+- legacy `document/` -> today `document/`, still the original format manuals; fast reading entry points now also exist under `docs/current-game/`
+- legacy runtime dirs like `player/`, `mail/`, `log/`, `debug/` -> still runtime-changing directories in the current repo
+
+### Area package note
+The legacy README's explanation of `index / mob / obj / res / roo / shp` is still directionally correct, but detailed area authoring belongs to `merc-area-builder`, not this explainer skill.
+
+### Ops note
+The legacy README's `make clean; make`, `startup &`, and `merc.ini` guidance should be mapped to `README.md`, `src/startup.bash`, `src/merc.sample.ini`, and `merc-local-ops`, not repeated as if they were today-only truths.
+
 ## Build and Startup
 ```bash
 cd src

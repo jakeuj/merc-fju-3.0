@@ -17,6 +17,7 @@ description: 操作目前工作區內 merc-fju-3.0 的本機建置、設定、Do
 3. 若目標是啟動，先確認 `src/merc` 已編好、`src/merc.sample.ini` / 本機生成的 `src/merc.ini` 路徑正確、runtime 目錄可寫，再決定要直接跑 `startup.bash` 還是先做 Ubuntu smoke test。
 4. 若啟動失敗，先判斷是 toolchain / shell / 容器問題、設定路徑問題、目錄不可寫、`shutdown.txt` 殘留，還是遊戲資料載入錯誤。
 5. 需要指令與排錯順序時，再讀 `references/local-ops-cheatsheet.md`。
+6. 若題目引用的是 legacy `document/README` 裡的安裝、`startup &`、`merc.ini` 或 `log/debug` 說明，先讀 `references/local-ops-cheatsheet.md` 的 `Legacy document/README Crosswalk`，不要把 release-era 釋出包流程直接當成 today repo 的本機操作流程。
 
 ## 先看目前 repo 現況
 - 目前 repo 根目錄沒有 `start-merc.sh`、`start-merc.ps1`、`start-merc.cmd`
