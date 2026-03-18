@@ -15,6 +15,7 @@ title: Merc FJU 3.0 Docs
 - [AREA External Exit Policy](./area-external-exit-policy.html)
 - [AREA Acceptance Checklist](./area-acceptance-checklist.html)
 - [Codex AREA Workflow](./codex-area-workflow.html)
+- [AREA / Skill 資料系統化評估](./area-data-systemization-assessment.html)
 - [Current Game 首頁](./current-game/)
 - [技能補充說明](./current-game/skills.html)
 - [Legacy `document/` 參考手冊入口](./current-game/legacy-documentation.html)

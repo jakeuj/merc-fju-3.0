@@ -5,3 +5,4 @@
 - `document/` 這類 legacy authoring reference 若要進 GitHub Pages，優先整理成 `docs/current-game/` 下的 Markdown 頁面，而不是直接混進 `docs/3yWebsite/`。
 - GitHub Pages 入口預設放在 `docs/index.md`，`docs/current-game/` 是現行版本內容區；目前 custom domain 為 `https://sango.jakeuj.com/`。
 - 舊版站點則連到外部的 `https://3y.jakeuj.com/`。
+- `docs/area-data-systemization-assessment.md` 用來記錄 area rebuild 完成度與 area / skill 資料結構化、資料庫化評估結論。
