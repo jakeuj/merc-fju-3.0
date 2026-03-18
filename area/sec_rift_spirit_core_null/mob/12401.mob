@@ -1,0 +1,32 @@
+Vnum            12401
+Name            null court patrol~
+ShortDesc       歸零巡守~
+Description
+一名歸零巡守沿著歸零沉庭來回巡視，手中的鎮零短杖偶爾在石面點出一圈幾乎
+立刻淡去的白痕，像在確認這片深庭還剩多少東西尚未被抹平。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       132
+Level           92
+Hitroll         7
+Protect         0
+Damroll         7
+Str             18
+Int             16
+Wis             19
+Dex             14
+Con             18
+Hp              20500
+Mana            1320
+Move            520
+Class           0
+Gold            1540
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

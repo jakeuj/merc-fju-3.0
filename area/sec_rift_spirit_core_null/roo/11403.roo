@@ -1,0 +1,32 @@
+Vnum            11403
+Name            歸零沉庭前緣~
+Description
+前緣俯瞰整座向內凹陷的歸零沉庭，庭底沒有波紋、沒有暗環，只剩一片近乎純白的靜默面，像更深處正把一切殘存定義緩慢抽空。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11407
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

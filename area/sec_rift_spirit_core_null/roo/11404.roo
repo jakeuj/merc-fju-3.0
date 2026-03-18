@@ -1,0 +1,32 @@
+Vnum            11404
+Name            觀零鎮魄臺~
+Description
+鎮魄臺旁的觀零碑已失去多數稜角，只剩幾道朝中心收束的白痕，彷彿連封印用來命名異象的文字也在此被歸零。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11405
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         觀零~
+End
+
+#Enquire
+Keyword         鎮魄~
+End
+
+End

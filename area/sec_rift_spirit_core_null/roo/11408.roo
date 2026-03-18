@@ -1,0 +1,32 @@
+Vnum            11408
+Name            空滅偏廊~
+Description
+偏廊兩側嵌著成排導響片殘殼，殼面連白影都快要褪盡，只剩細微凹痕提醒這裡曾經也是能夠回收聲響的地方。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11407
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11409
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         空滅~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End

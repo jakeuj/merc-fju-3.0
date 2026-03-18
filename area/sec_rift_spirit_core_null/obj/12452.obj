@@ -1,0 +1,14 @@
+Vnum            12452
+Name            觀零碑 零碑~
+ShortDesc       一面觀零碑~
+Description
+一面觀零碑半傾在鎮魄臺旁，碑面只剩幾道向中心收束的淡白痕線。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           19
+Value           0 0 0 0 0
+Weight          4
+Cost            250
+End

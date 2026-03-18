@@ -1,0 +1,24 @@
+Vnum            11407
+Name            空滅側階~
+Description
+側階斜切進偏廊時，連腳下摩擦出的存在感都像被削薄，只剩一絲極淡的觸感提示你尚未與深庭一同被抹成空白。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

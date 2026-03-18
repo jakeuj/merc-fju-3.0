@@ -1,0 +1,32 @@
+Vnum            12403
+Name            zero verge sentinel~
+ShortDesc       零界鎮衛~
+Description
+一名零界鎮衛守在歸零井緣旁，整個人像被更深的零界層牢牢牽住，只要井底
+再傳來一絲界面鬆動，他就會立刻踏前鎮住橋口與井緣。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       152
+Level           96
+Hitroll         8
+Protect         0
+Damroll         8
+Str             19
+Int             17
+Wis             20
+Dex             14
+Con             19
+Hp              23200
+Mana            1510
+Move            560
+Class           0
+Gold            1700
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

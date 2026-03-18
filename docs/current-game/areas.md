@@ -58,6 +58,7 @@ title: Current Game Areas
 | `sec_rift_spirit_core_hollow` | 魄核空井 / 空腹暗層 | `11101-11112` | `rebuild addition` | 承接魄淵深井沉座，下探到空腹環脈、失響偏廊與裂魄前座。 |
 | `sec_rift_spirit_core_void` | 裂魄空心 / 虛腹暗層 | `11201-11212` | `rebuild addition` | 承接魄核空井沉井座，下探到裂腹環脈、寂響偏廊與真空前座。 |
 | `sec_rift_spirit_core_vacuum` | 裂魄真空 / 真空深腹 | `11301-11312` | `rebuild addition` | 承接裂魄空心虛座，下探到真空環脈、滅響偏廊與歸零前座。 |
+| `sec_rift_spirit_core_null` | 裂魄歸零 / 歸零深庭 | `11401-11412` | `rebuild addition` | 承接裂魄真空座，下探到歸零沉庭、空滅偏廊與零界前座。 |
 
 ## Recent Rebuild Areas
 
@@ -91,6 +92,7 @@ title: Current Game Areas
 - `sec_rift_spirit_core_hollow`：承接魄淵深井沉座，下探到空腹環脈、失響偏廊與裂魄前座，作為更深裂魄空心區前的空腹暗層帶。
 - `sec_rift_spirit_core_void`：承接魄核空井沉井座，下探到裂腹環脈、寂響偏廊與真空前座，作為更深裂魄真空區前的虛腹暗層帶。
 - `sec_rift_spirit_core_vacuum`：承接裂魄空心虛座，下探到真空環脈、滅響偏廊與歸零前座，作為更深裂魄歸零區前的真空深腹過渡帶。
+- `sec_rift_spirit_core_null`：承接裂魄真空座，下探到歸零沉庭、空滅偏廊與零界前座，作為更深裂魄零界區前的歸零深庭過渡帶。
 
 ### 北方鏈
 

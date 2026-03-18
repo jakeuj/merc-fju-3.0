@@ -1,0 +1,39 @@
+Vnum            11405
+Name            歸零滅脈槽~
+Description
+滅脈槽裡沒有流動、沒有顫動，只剩一道幾乎看不出厚度的淡白裂線筆直向下，像所有被抽離的餘波都在這裡改以沉默的形式繼續墜落。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11406
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11409
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         滅脈~
+Description
+槽壁封紋比真空層更短更冷，像這裡已不再處理壓力，只剩把一切殘脈直接送往歸零深庭的單向斷流。
+~
+End
+
+End

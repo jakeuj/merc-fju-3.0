@@ -140,7 +140,7 @@
     - `ref/world-graph.md`
     - `ref/三國-MUD-題材分布表.md`
   - compliance_check: `compliant；依 sec_rift_spirit_core_vacuum 的向下 world link 建立下一段 spec-first milestone，維持 ref/Readme.md 容許的 area rebuild 範圍`
-  - delivery_gate: `implementation_in_progress`
+  - delivery_gate: `implementation_ready_for_commit`
 
 
 ## Done
@@ -210,20 +210,19 @@
 
 ## Current Recommended Next Step
 
-目前 `sec_rift_spirit_core_vacuum` 已完成 implementation milestone 並提交；tracker 已切到新的 `in_progress` 項目 `sec_rift_spirit_core_null`。本輪最合適的下一步是依 spec 落地第一輪 runtime implementation，補齊最小可載入資料與 `11312 <-> 11401` 邊界出口。
+目前 `sec_rift_spirit_core_null` 已完成第一輪 runtime implementation，補齊最小可載入資料、`11312 <-> 11401` 邊界出口、`area/directory.lst` 與 current-game area 台帳，並完成 WSL Linux build 與 smoke test；依 gate 規則，下一步應先提交這個 milestone。
 
 下一輪建議動作：
 
-1. 依 `area/sec_rift_spirit_core_null/map.md` 生成 `roo/11401-11412`
-2. 補齊 `index / mob / obj / res / shp`
-3. 更新 `area/directory.lst` 與 `area/sec_rift_spirit_core_vacuum/roo/11312.roo` 的雙向邊界
-4. 跑本機 area validation、Linux build 與 smoke test，再判讀是否可進 `implementation_ready_for_commit`
+1. 檢查並提交 `sec_rift_spirit_core_null` 的 implementation milestone
+2. commit 後將本區推進到 `validated_ready_to_advance` / `done`
+3. 再回到 fixed prompt 選下一個 actionable area
 
-（註：`sec_rift_spirit_core_null` 已完成 spec 建立與 validate-only 驗證；`sec_rift_spirit_core_vacuum` 的 implementation commit 為 `9e670ee`。）
+（註：本輪 smoke test 的 `log/1007.log` 已出現成功訊號；`debug/failload`、`debug/badobject`、`debug/failenable`、`debug/bugs` 皆為空，`debug/error` 僅記錄 timeout 收尾造成的關機流程。）
 
 語意提醒：
 
-- 目前已有 `in_progress` 項目 `sec_rift_spirit_core_null`；再次使用固定 prompt 時應優先續做此區，不得跳到其他候選
+- 目前已有 `in_progress` 項目 `sec_rift_spirit_core_null`，且 gate 是 `implementation_ready_for_commit`；再次使用固定 prompt 時應先提交這個 milestone，不得跳到其他候選
 - `sec_rift_core_below` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0018-sec-rift-core-below.md` 回查
 - `sec_rift_core_below_deeps` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0019-sec-rift-core-below-deeps.md` 回查
 - 依新 room reservation policy，`sec_rift_below` 已使用 `9501-9520`，`sec_rift_core` 已使用 `9601-9620`，`sec_rift_deeps` 已完成 `9701-9712` 第一版落地，`sec_rift_prison_core` 已完成 `10001-10012` 第一版落地，`sec_rift_underseal_dais` 已完成 `10101-10112` 第一版落地，`sec_rift_true_core` 已完成 `10201-10212` 第一版落地，`sec_rift_core_below` 已完成 `10301-10312` 第一版落地，`sec_rift_core_below_deeps` 已完成 `10401-10412` 第一版落地，`sec_rift_core_vein_abyss` 已完成 `10501-10512` 第一版落地，`sec_rift_underseal_basin` 已完成 `10601-10612` 第一版落地，`sec_rift_sealed_core_basin` 已完成 `10701-10712` 第一版落地，`sec_rift_sealed_core_heart` 已完成 `10801-10812` 第一版落地，`sec_rift_core_spirit_nadir` 已完成 `10901-10912` 第一版落地，`sec_rift_core_spirit_abyss` 已完成 `11001-11012` 第一版落地，`sec_rift_spirit_core_hollow` 已完成 `11101-11112` 第一版落地，`sec_rift_spirit_core_void` 已完成 `11201-11212` 第一版落地，並保留各自首段 block
@@ -232,4 +231,4 @@
 
 建議可直接使用的 prompt：
 
-續做 `sec_rift_spirit_core_null`：依 spec 落地第一輪 runtime implementation，補齊最小 area data 與 `11312 <-> 11401` 邊界。
+提交 `sec_rift_spirit_core_null` implementation milestone：確認 runtime area data、WSL build 與 smoke test 證據後 commit，再推進下一個待建 area。

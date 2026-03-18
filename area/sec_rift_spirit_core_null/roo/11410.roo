@@ -1,0 +1,24 @@
+Vnum            11410
+Name            零界前橋~
+Description
+前橋橫跨在一段連空洞都難以描述的淡白裂腔上方，橋面每次受力後都不再留下白痕，只像剛剛那次踏步從未真正發生過。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11409
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11411
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

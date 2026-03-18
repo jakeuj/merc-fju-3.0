@@ -1,0 +1,32 @@
+Vnum            11401
+Name            歸零落座~
+Description
+落座像嵌在深庭邊緣的一截灰白石影，腳下原本還能辨認的環紋正一圈圈淡去，像整段真空之下只剩最後幾筆尚未完全抹平的痕跡。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        11312
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         歸零~
+End
+
+End

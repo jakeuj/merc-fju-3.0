@@ -1,0 +1,32 @@
+Vnum            12402
+Name            hush null observer~
+ShortDesc       空滅測守~
+Description
+一名空滅測守伏在偏廊邊緣，手持空滅殘片與測流針架，像正等待下一波白縫
+坍落，好即刻補住歸零逆廊上那道快被抹平的裂線。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       118
+Level           94
+Hitroll         7
+Protect         0
+Damroll         8
+Str             17
+Int             19
+Wis             20
+Dex             14
+Con             17
+Hp              21800
+Mana            1420
+Move            540
+Class           0
+Gold            1620
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

@@ -1,0 +1,16 @@
+Vnum            11406
+Name            聽空沉座~
+Description
+沉座中央懸著一枚近乎透明的灰白長晶，晶體不再止於無聲，而像把所有可能形成回音的東西一併磨去，只留下徹底空白的鎮壓感。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11405
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

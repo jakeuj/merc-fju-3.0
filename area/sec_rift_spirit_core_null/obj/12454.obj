@@ -1,0 +1,14 @@
+Vnum            12454
+Name            零界柱座 柱座~
+ShortDesc       一塊零界柱座~
+Description
+一塊零界柱座散落在歸零井緣旁，邊角還殘留剛被深庭白流磨薄的淡灰痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           20
+Value           0 0 0 0 0
+Weight          5
+Cost            250
+End

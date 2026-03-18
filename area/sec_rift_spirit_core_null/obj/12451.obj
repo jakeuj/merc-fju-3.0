@@ -1,0 +1,14 @@
+Vnum            12451
+Name            鎮零短杖 短杖~
+ShortDesc       一支鎮零短杖~
+Description
+一支鎮零短杖倚在歸零沉庭邊，杖尖還殘留一圈幾乎消失的冷白痕影。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           19
+Value           0 0 0 0 0
+Weight          3
+Cost            250
+End

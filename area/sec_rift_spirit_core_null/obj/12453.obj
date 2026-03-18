@@ -1,0 +1,14 @@
+Vnum            12453
+Name            空滅殘片 殘片~
+ShortDesc       一片空滅殘片~
+Description
+一片空滅殘片擱在偏廊邊，碎面幾乎再看不出曾經能夠回收任何聲響的痕跡。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           20
+Value           0 0 0 0 0
+Weight          2
+Cost            250
+End

@@ -1,0 +1,32 @@
+Vnum            11409
+Name            歸零逆廊~
+Description
+逆廊中央留著一條纖細得近乎斷掉的白縫，縫底沒有深淵感，只有某種把深與淺一併抹平的靜止下墜，讓人幾乎失去方向判斷。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11405
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        11408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11410
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

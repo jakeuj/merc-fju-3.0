@@ -1,0 +1,24 @@
+Vnum            11402
+Name            歸零下階~
+Description
+下階表面不再反射任何冷痕，只剩一種近乎被掏空的灰白質地，讓每一步都像踩在一層即將失去名字的薄殼上。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11401
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End
