@@ -83,6 +83,11 @@ source of truth 要分兩種：
 12. 若要做 area 載入 smoke test，先清空 `debug/*` 內容並建立本輪 `log/*` 觀察基線，再執行測試；若使用 `timeout`，優先給 `45` 到 `60` 秒；測試後用成功訊號、這輪 log 與新產生的 debug 訊息一起判讀。
 13. 若這輪有新增 `mob/*.mob` 或 `obj/*.obj`，不要只靠文件猜 parser 會接受什麼：先比對 repo 內已成功載入的同類範例，特別是 `Class` 常數與 `ITEM_FOOD` / `ITEM_DRINK_CON` 的 `Value*` 欄位，測試成功後仍要檢查 `debug/badobject`。若同時新增怪物會 `Enable` 的技能，還要把它視為 loader-risk data change，而不只是 area 純資料。
 13.1 新增或修改 `mob/*.mob` 時，先回看 `document/mob.txt` 的 `Name` / `Level` 契約：`Name` 是必填、最短、供指令比對的關鍵名字，預設應維持英文或至少 ASCII-friendly token；中文呈現放在 `ShortDesc` / `Description`，不要把 `Name` 寫成純中文。`Level` 的 legacy 文件仍以 `100` 為平衡上限，但目前 `src/load.c` 的 loader 會擋掉 `<= 0` 或 `> 120`；因此 area rebuild 預設把 `1..100` 視為一般設計帶，`101..120` 只留給明確規劃過的 late-game / endgame 區，且要在單區 plan、tracker 或 area `index` 說明理由。
+13.2 若這輪主要是在消化 `document/mob.txt` 或大量搬修 `mob/*.mob`，不要每次整份 legacy 文件重讀到底；按需求分流：
+- 基本檔案骨架、區塊順序與 `End/~` 結構，讀 `references/mob-file-layout.md`
+- `Vnum/Name/ShortDesc/Level/Enable/AutoEnable/Special` 等主欄位，讀 `references/mob-core-fields.md`
+- `#Learn/#Job/Program/Process`，讀 `references/mob-teaching-and-programs.md`
+- Act / Effect / Sex / Class / Position 常數，讀 `references/mob-flags-and-constants.md`
 14. 新增 `skill/*.ski` 時，至少同步檢查四個登錄點：`src/merc.h` 的 `SLOT_*`、`skill/skill.lst`、`data/symbol.def`、實際的 `skill/<letter>/<name>.ski`。`skill.lst` key、技能 `Name` 與檔名路徑都必須和 repo 內既有技能全域唯一，避免覆蓋舊技能或造成 `Load_skill` 重覆載入。
 14.1 若這輪是在調整目前 repo 真正會載入的 skill runtime data，預設先改 `data/structured/skills/skills.json`，再跑 `python -X utf8 scripts/export_structured_skills.py --check`；需要落地時再用 `--write` 回寫 `skill/skill.lst` 與 `skill/*.ski`，不要把 `docs/current-game/skills.json` 當手編來源。
 14.2 若這輪是在調整既有 area 的 `mob / obj / res / shp`，而該區已建立 `content.json`，預設先改 `area/<area>/content.json`，再跑 `python -X utf8 scripts/export_area_content.py <area_slug> --check`；目前 v1 pilot 只保證 `area/loyang_outskirts/content.json`。
@@ -181,6 +186,11 @@ source of truth 要分兩種：
 - `index/mob/obj/roo/res/shp/map`、`#Keyword/#Job/#Enquire`、`external: true` 與 scaffold generator 的細則，讀 `references/file-handling-rules.md`
 - 若任務重點是修出口、整合新 area、補 `#Enquire`、比對地圖檔或確認 `.roo` schema，這份檔要補讀
 - 若任務有新增或修改 `mob/*.mob` / `obj/*.obj`，尤其是 mob `Class` 或特殊 `ItemType`，也要補讀這份檔；其中 `.obj` 可以先從 `docs/current-game/object-file-format.md` 快速定位欄位，再回頭核對 `document/obj.txt` 與 repo 內已成功載入的同類範例，不要只照單一文件猜常數或 `Value*` 欄位
+- 若任務核心是 `.mob` 本身的格式搬修，依需求補讀：
+  - `references/mob-file-layout.md`
+  - `references/mob-core-fields.md`
+  - `references/mob-teaching-and-programs.md`
+  - `references/mob-flags-and-constants.md`
 - 若任務有新增 `skill/*.ski`、替 NPC 換技能、或讓新的 mob `Enable` 指到新技能，先搜尋 repo 內是否已有同名 skill / 同 slot / 同 `skill.lst` key；新增 skill 只是 area data 的一部分，但驗證要求應比一般 `mob/obj` 更高
 - NPC 專用且不打算讓玩家學習的技能，預設明確寫 `Valid NO`、`CanAsk NO`、`Teach NO`；但名稱、slot 與 loader 登錄仍要完整，不能因為是 NPC-only 就省略
 - 若任務明確是在追「mob 技能偏弱 / 舊技能殘留 / 技能鏈重建」，再補讀 `references/skill-combat-chain-rebuild.md`；這類任務要先區分全域係數、legacy skill 合理保留、與真的需要 runtime 替換的錯位樣本
@@ -218,6 +228,11 @@ source of truth 要分兩種：
 - 需要快速導覽 legacy area 手冊時，先看 `docs/current-game/legacy-documentation.md`
 - 需要釐清舊版安裝、目錄角色、`index/mob/obj/res/roo/shp` 是怎麼被介紹的，先看 `docs/current-game/legacy-readme.md`
 - 需要 `.mob` 欄位與 NPC/teacher/program 骨架時，先看 `docs/current-game/mobile-file-format.md`
+- 若要查 skill 內拆分後的 `.mob` 細節，按需求讀：
+  - `references/mob-file-layout.md`
+  - `references/mob-core-fields.md`
+  - `references/mob-teaching-and-programs.md`
+  - `references/mob-flags-and-constants.md`
 - 需要 `.obj` 欄位與區塊摘要時，先看 `docs/current-game/object-file-format.md`
   注意：area object source 不要混進 runtime/save 風格欄位；目前 loader 吃的是 `Name / ShortDesc / Description / ItemType / Takeable / WearLoc / Value*`，不是 `Keywords / ExtraFlags / WearFlags`
 - 需要 `.roo` 欄位、`#Exit/#Keyword/#Job` 與房間旗標摘要時，先看 `docs/current-game/room-file-format.md`
@@ -262,6 +277,10 @@ source of truth 要分兩種：
 - `references/theme-patterns-folklore-ruins.md`
 - `references/current-repo-state.md`
 - `references/file-handling-rules.md`
+- `references/mob-file-layout.md`
+- `references/mob-core-fields.md`
+- `references/mob-teaching-and-programs.md`
+- `references/mob-flags-and-constants.md`
 - `references/skill-combat-chain-rebuild.md`
 - `references/system-sync-checks.md`
 - `references/docs-service-integration.md`
