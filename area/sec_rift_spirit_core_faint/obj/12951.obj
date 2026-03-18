@@ -1,0 +1,14 @@
+Vnum            12951
+Name            觀微短杖 短杖~
+ShortDesc       一支觀微短杖~
+Description
+一支觀微短杖倚在澹界內庭邊，杖尖還殘留一圈快要從視線裡退去的微淡痕影。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           24
+Value           0 0 0 0 0
+Weight          3
+Cost            330
+End

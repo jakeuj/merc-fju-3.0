@@ -1,0 +1,16 @@
+Vnum            11906
+Name            聽微沉座~
+Description
+沉座中央懸著一枚像隨時會從目光裡退場的微淡長晶，晶體沒有亮度，也沒有陰影，只把周圍最後還能辨識的層次慢慢壓回更輕的餘意。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

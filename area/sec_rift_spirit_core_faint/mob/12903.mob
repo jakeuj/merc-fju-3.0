@@ -1,0 +1,32 @@
+Vnum            12903
+Name            trace threshold guard~
+ShortDesc       微界鎮衛~
+Description
+一名微界鎮衛立在井緣前，雙手扶著長槍般的封魄微樁，身形穩得像已與周圍淡
+退井壁融成同一塊將要從感知裡退去的冷石。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       196
+Level           120
+Hitroll         13
+Protect         0
+Damroll         14
+Str             21
+Int             18
+Wis             22
+Dex             15
+Con             21
+Hp              36800
+Mana            2240
+Move            720
+Class           0
+Gold            2610
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

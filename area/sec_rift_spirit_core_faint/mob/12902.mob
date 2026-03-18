@@ -1,0 +1,32 @@
+Vnum            12902
+Name            trace corridor watcher~
+ShortDesc       微痕測守~
+Description
+這名微痕測守伏在偏廊邊，淡薄面甲下只剩一道若有若無的視線，像正靜靜衡量
+每個經過此地的人還留有多少不會立刻退盡的痕影。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       -136
+Level           114
+Hitroll         11
+Protect         0
+Damroll         12
+Str             19
+Int             18
+Wis             21
+Dex             16
+Con             20
+Hp              32300
+Mana            2020
+Move            680
+Class           0
+Gold            2310
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

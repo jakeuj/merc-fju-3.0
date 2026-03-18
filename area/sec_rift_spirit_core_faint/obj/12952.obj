@@ -1,0 +1,14 @@
+Vnum            12952
+Name            觀微碑 石碑~
+ShortDesc       一座觀微碑~
+Description
+一座觀微碑立在鎮魄臺旁，碑面微痕淡得像隨時會被空氣帶走。
+~
+ItemType        ITEM_TRASH
+Takeable        No
+WearLoc         ITEM_TAKE
+Level           28
+Value           0 0 0 0 0
+Weight          0
+Cost            0
+End

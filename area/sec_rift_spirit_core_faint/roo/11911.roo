@@ -1,0 +1,32 @@
+Vnum            11911
+Name            澹界井緣~
+Description
+井緣圍著幾座向內傾斜的封魄柱座，柱面殘紋已退到只剩幾道微不可察的浮線，像這裡就是所有界面最後還能勉強被稱為痕影的地方。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11910
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        11912
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         井緣~
+End
+
+#Enquire
+Keyword         柱座~
+End
+
+End

@@ -63,6 +63,7 @@ title: Current Game Areas
 | `sec_rift_spirit_core_blank` | 裂魄空白 / 空白深井 | `11601-11612` | `rebuild addition` | 承接裂魄零界座，下探到空白內庭、失序偏廊與白界前座。 |
 | `sec_rift_spirit_core_white` | 裂魄白界 / 白界深井 | `11701-11712` | `rebuild addition` | 承接裂魄空白座，下探到白界內庭、失名偏廊與素界前座。 |
 | `sec_rift_spirit_core_plain` | 裂魄素界 / 素界深井 | `11801-11812` | `rebuild addition` | 承接裂魄白界座，下探到素界內庭、澹痕偏廊與澹界前座。 |
+| `sec_rift_spirit_core_faint` | 裂魄澹界 / 澹界深井 | `11901-11912` | `rebuild addition` | 承接裂魄素界座，下探到澹界內庭、微痕偏廊與微界前座。 |
 
 ## Recent Rebuild Areas
 
@@ -101,6 +102,7 @@ title: Current Game Areas
 - `sec_rift_spirit_core_blank`：承接裂魄零界座，下探到空白內庭、失序偏廊與白界前座，作為更深裂魄白界區前的空白深井過渡帶。
 - `sec_rift_spirit_core_white`：承接裂魄空白座，下探到白界內庭、失名偏廊與素界前座，作為更深裂魄素界區前的白界深井過渡帶。
 - `sec_rift_spirit_core_plain`：承接裂魄白界座，下探到素界內庭、澹痕偏廊與澹界前座，作為更深裂魄澹界區前的素界深井過渡帶。
+- `sec_rift_spirit_core_faint`：承接裂魄素界座，下探到澹界內庭、微痕偏廊與微界前座，作為更深裂魄微界區前的澹界深井過渡帶。
 
 ### 北方鏈
 

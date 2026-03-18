@@ -1,0 +1,24 @@
+Vnum            11912
+Name            裂魄澹界座~
+Description
+澹界座像整段澹界深井最後一塊仍勉強留有餘形的淡影石座，腳下只剩一圈薄得近乎被感知漏過的環界，所有殘痕都在這裡被拖往更深的裂魄微界。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        11911
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         澹界座~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

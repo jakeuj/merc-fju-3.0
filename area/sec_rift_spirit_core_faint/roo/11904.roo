@@ -1,0 +1,32 @@
+Vnum            11904
+Name            觀微鎮魄臺~
+Description
+鎮魄臺旁的觀微碑幾乎只剩幾道難以捕捉的微痕在空氣裡浮現，像提醒來者這裡曾經還能說得清什麼是碑、什麼是界。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         觀微~
+End
+
+#Enquire
+Keyword         鎮魄~
+End
+
+End

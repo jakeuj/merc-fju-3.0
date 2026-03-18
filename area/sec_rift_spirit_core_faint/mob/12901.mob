@@ -1,0 +1,32 @@
+Vnum            12901
+Name            faint court patrol~
+ShortDesc       澹界巡守~
+Description
+一名澹界巡守沿著澹界內庭緩步巡視，手中的觀微短杖偶爾在石面點出一圈幾乎
+立刻退去的微淡痕影，像在確認這片深井還剩多少餘層尚未退盡。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       160
+Level           106
+Hitroll         9
+Protect         0
+Damroll         10
+Str             18
+Int             18
+Wis             22
+Dex             15
+Con             20
+Hp              28200
+Mana            1880
+Move            660
+Class           0
+Gold            2120
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

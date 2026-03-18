@@ -1,0 +1,39 @@
+Vnum            11905
+Name            澹界退層槽~
+Description
+退層槽裡沒有流聲，也沒有下墜感，只剩一道隨時像要從視野裡抽離的微淡細線向更深處退去，像整段深井正在把所有殘餘界層一層層放回無名。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11906
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11909
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         退層~
+Description
+槽壁封紋已幾乎只剩不穩的微線，留下的是一種把所有界層繼續退成更淡餘意的沉靜力道。
+~
+End
+
+End

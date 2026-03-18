@@ -728,6 +728,25 @@
         "plans/area/0033-sec-rift-spirit-core-plain.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_spirit_core_faint",
+      "title": "裂魄澹界",
+      "room_range": "11901-11912",
+      "load_order": 40,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_plain",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄澹界 / 澹界深井",
+      "summary": "承接裂魄素界座，下探到澹界內庭、微痕偏廊與微界前座的澹界深井過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_faint/index",
+        "area/sec_rift_spirit_core_faint/map.md",
+        "plans/area/0034-sec-rift-spirit-core-faint.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

@@ -1,0 +1,24 @@
+Vnum            11910
+Name            微界前橋~
+Description
+前橋橫跨在一段近乎已退成純粹餘意的淡腹上方，橋面每次受力後都只留下幾乎抓不住的靜冷回聲，下一瞬便又從感知裡退去。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11909
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11911
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

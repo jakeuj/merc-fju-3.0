@@ -1,0 +1,14 @@
+Vnum            12953
+Name            微痕殘片 微片~
+ShortDesc       一片微痕殘片~
+Description
+一片微痕殘片落在逆廊角落，片面淡得像只剩一點仍未完全退去的餘意。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           30
+Value           0 0 0 0 0
+Weight          1
+Cost            370
+End

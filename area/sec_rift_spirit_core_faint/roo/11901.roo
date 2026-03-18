@@ -1,0 +1,32 @@
+Vnum            11901
+Name            澹界落座~
+Description
+落座像嵌在澹界邊緣的一截餘淡石影，腳下環界已不再明確分出內外，只剩一種勉強還能承住意識餘波的微淡底意，像連最後那點素色都在此繼續退遠。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        11812
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         澹界~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

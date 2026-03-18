@@ -1,0 +1,32 @@
+Vnum            11908
+Name            微痕偏廊~
+Description
+偏廊兩側嵌著一排排幾乎與空氣無異的導響殼片，殼面不再回應光與影，只剩一種會把人的念頭也慢慢淡成餘音的冷靜錯覺。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11909
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         微痕~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            11903
+Name            澹界內庭前緣~
+Description
+前緣俯瞰整座向內沉落的澹界內庭，庭底像一潭連淡與空都快分不出的餘井，視線停得久了，連自己為何在看都會慢慢變得不再重要。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            11909
+Name            澹界逆廊~
+Description
+逆廊中央只剩一道時隱時現的微淡素縫，縫底既無深度也無重量，卻像能把最後仍可被感知的餘痕慢慢拖向更深的微界井腹。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        11908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11910
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

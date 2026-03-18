@@ -1,0 +1,24 @@
+Vnum            11902
+Name            餘淡下階~
+Description
+下階表面不再保留可稱為色澤的東西，只剩一層極薄的淡意貼著石面向前延展，讓每一步都像踩在一段剛要從記憶裡退去的痕上。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11901
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

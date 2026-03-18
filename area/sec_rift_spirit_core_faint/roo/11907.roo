@@ -1,0 +1,24 @@
+Vnum            11907
+Name            微痕側階~
+Description
+側階斜切進偏廊時，連腳下的踏步感都像只剩一縷快要消失的微痕，回頭看去，那些剛剛還在的痕跡已經淡到像從未真正落在此處。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

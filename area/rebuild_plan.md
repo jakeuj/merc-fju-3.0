@@ -186,6 +186,8 @@
 - `sec_rift_spirit_core_white` 已完成 runtime implementation，完成 WSL build 與 smoke test 驗證
 - `plans/area/0033-sec-rift-spirit-core-plain.md` 已建立
 - `sec_rift_spirit_core_plain` 已完成 runtime implementation，完成 WSL build 與 smoke test 驗證
+- `plans/area/0034-sec-rift-spirit-core-faint.md` 已建立
+- `sec_rift_spirit_core_faint` 已完成 runtime implementation，完成 WSL build 與 smoke test 驗證
 ## Blocked
 
 - none

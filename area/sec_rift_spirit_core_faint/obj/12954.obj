@@ -1,0 +1,14 @@
+Vnum            12954
+Name            微界柱座 柱座~
+ShortDesc       一座微界柱座~
+Description
+一座微界柱座斜立在井緣，柱面只剩幾道幾乎要從感知裡退盡的浮線。
+~
+ItemType        ITEM_TRASH
+Takeable        No
+WearLoc         ITEM_TAKE
+Level           32
+Value           0 0 0 0 0
+Weight          0
+Cost            0
+End
