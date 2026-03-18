@@ -1,0 +1,32 @@
+Vnum            12003
+Name            hollow threshold sentinel~
+ShortDesc       魄核鎮衛~
+Description
+一名魄核鎮衛守在前橋後方，整個人像被更深井腹的回響牽住，只要井底
+再傳來一次重震，他就會立刻踏前鎮住整條橋口。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       132
+Level           88
+Hitroll         7
+Protect         0
+Damroll         7
+Str             17
+Int             15
+Wis             18
+Dex             14
+Con             17
+Hp              18300
+Mana            1200
+Move            480
+Class           0
+Gold            1400
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

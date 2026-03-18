@@ -1,0 +1,24 @@
+Vnum            11007
+Name            空響側階~
+Description
+側階往偏廊斜切時幾乎聽不見腳步，只剩石面裡傳出的遲滯回聲，像所有聲息都被更深處先吞進去再慢慢吐回。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

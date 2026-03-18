@@ -1,0 +1,32 @@
+Vnum            12002
+Name            resonance guidance observer~
+ShortDesc       導響測守~
+Description
+一名導響測守伏在偏廊邊緣，手持導響殘片與測井針架，像正等待下一波
+空響回震好立刻補住外洩裂縫。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       98
+Level           86
+Hitroll         6
+Protect         0
+Damroll         7
+Str             15
+Int             17
+Wis             18
+Dex             14
+Con             15
+Hp              17100
+Mana            1110
+Move            460
+Class           0
+Gold            1320
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

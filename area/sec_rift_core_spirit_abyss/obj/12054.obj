@@ -1,0 +1,14 @@
+Vnum            12054
+Name            封魄柱基 柱基~
+ShortDesc       一塊封魄柱基~
+Description
+一塊封魄柱基散落在空井井緣旁，邊緣還殘留剛被深井震壓扯裂的灼痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           16
+Value           0 0 0 0 0
+Weight          5
+Cost            210
+End

@@ -1,0 +1,32 @@
+Vnum            11011
+Name            空井井緣~
+Description
+井緣外圍著一圈向內扭折的封魄柱基，柱基殘光一路往井腹深處滑落，像在標示最後一段仍屬於外層封印的邊界。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11010
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        11012
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         空井~
+End
+
+#Enquire
+Keyword         井緣~
+End
+
+End

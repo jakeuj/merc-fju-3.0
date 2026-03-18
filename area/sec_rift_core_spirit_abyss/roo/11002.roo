@@ -1,0 +1,24 @@
+Vnum            11002
+Name            沉響下階~
+Description
+下階滿佈細密裂紋，裂縫裡不時滲出像餘音般的幽亮氣絲，彷彿每一步都在踩著尚未散盡的魄鳴回聲。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11001
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

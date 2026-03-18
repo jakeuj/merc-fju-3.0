@@ -1,0 +1,32 @@
+Vnum            11001
+Name            魄井落層臺~
+Description
+落層臺貼著深井內壁伸出，腳下石層微微顫動，像更深空井正以某種無聲節奏把魄壓一圈圈抽離下去。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        10912
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         深井~
+End
+
+End

@@ -1,0 +1,39 @@
+Vnum            11005
+Name            魄潮引脈槽~
+Description
+引脈槽把幾股魄潮慢慢導向更深井腹，槽底偶爾會跳起一道蒼白裂光，像有什麼更大的存在正在井底反覆試探外層。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11006
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11009
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         引脈~
+Description
+引脈槽內壁刻滿反覆補寫的鎮壓紋，顯然這裡承接的魄潮從來沒有真正穩定過。
+~
+End
+
+End

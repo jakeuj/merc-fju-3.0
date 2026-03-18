@@ -1,0 +1,16 @@
+Vnum            11006
+Name            聽響沉井座~
+Description
+沉井座中央垂著一枚細長黑晶，晶體每隔片刻便傳出一記低沉空響，像深井底部有更深魄核正在緩慢回應。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            11003
+Name            深井環脈前緣~
+Description
+前緣俯視整圈深井環脈，環壁上的幽赤紋路時聚時散，像在替更深層空井收束那些尚未完全離體的魄壓。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

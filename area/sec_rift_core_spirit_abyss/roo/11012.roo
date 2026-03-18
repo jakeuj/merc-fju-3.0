@@ -1,0 +1,24 @@
+Vnum            11012
+Name            魄核沉座~
+Description
+沉座像整條深井最後一塊能立足的陰影，腳下只剩持續向下凹陷的幽赤暗環，所有聲音都在這裡被拖往更深的魄核空井。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        11011
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         魄核~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

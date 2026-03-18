@@ -1,0 +1,32 @@
+Vnum            11004
+Name            鎮響觀魄座~
+Description
+觀魄座周圍立著幾面向內傾斜的鎮響碑，碑面並不映人，只映得出更深處一道道延遲極長的暗紅回光。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         鎮響~
+End
+
+#Enquire
+Keyword         觀魄~
+End
+
+End

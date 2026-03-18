@@ -1,0 +1,14 @@
+Vnum            12051
+Name            鎮響短杖 短杖~
+ShortDesc       一支鎮響短杖~
+Description
+一支鎮響短杖倚在深井環脈邊，杖尖還殘留細微的空響震紋。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           15
+Value           0 0 0 0 0
+Weight          3
+Cost            210
+End

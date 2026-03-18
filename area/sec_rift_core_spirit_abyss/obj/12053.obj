@@ -1,0 +1,14 @@
+Vnum            12053
+Name            導響殘片 殘片~
+ShortDesc       一片導響殘片~
+Description
+一片導響殘片擱在偏廊邊，碎面仍隨著空響節奏忽明忽滅。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           16
+Value           0 0 0 0 0
+Weight          2
+Cost            210
+End

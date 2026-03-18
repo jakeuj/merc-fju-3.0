@@ -1,0 +1,32 @@
+Vnum            11009
+Name            逆響裂廊~
+Description
+裂廊中央張開一道深不見底的暗縫，偶爾會向外吐出帶著長尾回音的熱流，把整條走道烘得像在顫抖。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        11008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11010
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

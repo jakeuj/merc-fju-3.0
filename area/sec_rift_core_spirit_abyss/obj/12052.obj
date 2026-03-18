@@ -1,0 +1,14 @@
+Vnum            12052
+Name            鎮響碑 碑~
+ShortDesc       一面鎮響碑~
+Description
+一面鎮響碑半傾在觀魄座旁，碑面只映得出深處拖曳不散的暗紅回光。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           15
+Value           0 0 0 0 0
+Weight          4
+Cost            210
+End

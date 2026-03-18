@@ -1,0 +1,24 @@
+Vnum            11010
+Name            魄核前橋~
+Description
+前橋橫跨在更深井腹上方，橋面每一次震動都伴著極慢回響，像橋下有某個更重更遠的存在正在持續向上撞擊。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11009
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11011
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

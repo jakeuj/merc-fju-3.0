@@ -1,0 +1,32 @@
+Vnum            11008
+Name            離響偏廊~
+Description
+偏廊兩側嵌著一排碎裂導響片，碎片仍在陰影裡斷續亮起，像在替每一次魄壓外洩留下難以抹平的空響痕跡。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11009
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         導響~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End

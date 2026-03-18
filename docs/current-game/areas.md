@@ -54,6 +54,7 @@ title: Current Game Areas
 | `sec_rift_sealed_core_basin` | 封核沉盆 / 內壓核心 | `10701-10712` | `rebuild addition` | 承接禁底封脈盆沉門，下探到封核環盆、回壓渠廊與封心前庭。 |
 | `sec_rift_sealed_core_heart` | 封心核心 / 心脈主井 | `10801-10812` | `rebuild addition` | 承接封核沉盆深井，下探到封心環脈、心壓偏廊與裂核前座。 |
 | `sec_rift_core_spirit_nadir` | 核心魄淵 / 心魄沉座 | `10901-10912` | `rebuild addition` | 承接封心核心深座，下探到核心沉環、失魄偏廊與魄淵前座。 |
+| `sec_rift_core_spirit_abyss` | 魄淵深井 / 暗層沉降 | `11001-11012` | `rebuild addition` | 承接核心魄淵座，下探到深井環脈、空響偏廊與魄核前座。 |
 
 ## Recent Rebuild Areas
 
@@ -83,6 +84,7 @@ title: Current Game Areas
 - `sec_rift_sealed_core_basin`：承接禁底封脈盆沉門，下探到封核環盆、回壓渠廊與封心前庭，作為更深裂核封心區前的核心承壓內盆。
 - `sec_rift_sealed_core_heart`：承接封核沉盆深井，下探到封心環脈、心壓偏廊與裂核前座，作為更深裂核心魄區前的主心脈節點。
 - `sec_rift_core_spirit_nadir`：承接封心核心深座，下探到核心沉環、失魄偏廊與魄淵前座，作為更深核心魄淵暗層前的心魄沉降帶。
+- `sec_rift_core_spirit_abyss`：承接核心魄淵座，下探到深井環脈、空響偏廊與魄核前座，作為更深魄核空井區前的暗層沉降帶。
 
 ### 北方鏈
 

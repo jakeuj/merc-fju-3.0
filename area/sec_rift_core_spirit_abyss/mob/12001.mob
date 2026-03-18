@@ -1,0 +1,32 @@
+Vnum            12001
+Name            well vein patrol~
+ShortDesc       井脈巡守~
+Description
+一名井脈巡守沿著深井環脈來回巡視，手中的鎮響短杖不時在石面敲出一
+圈又一圈遲滯的幽紅回光。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       112
+Level           84
+Hitroll         6
+Protect         0
+Damroll         6
+Str             16
+Int             15
+Wis             17
+Dex             14
+Con             16
+Hp              16000
+Mana            1020
+Move            440
+Class           0
+Gold            1240
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End
