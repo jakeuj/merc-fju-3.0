@@ -126,8 +126,8 @@
     - `ref/world-graph.md`
     - `ref/三國-MUD-題材分布表.md`
   - ref_inputs_deferred:
-    - `docs/3yWebsite/docs/data/players.json`（repo 目前不存在，僅保留追蹤需求）
-    - `docs/3yWebsite/docs/data/skills.json`（repo 目前不存在，僅保留追蹤需求）
+    - `docs/3yWebsite/docs/data/players.json`（本輪尚未納入決策）
+    - `docs/3yWebsite/docs/data/skills.json`（本輪尚未納入決策）
     - `ref/sanguo-area-scaffold/`
     - `mud-world-builder/`
     - `mud-ai-map-generator/`
@@ -147,6 +147,7 @@
 
 - `area/world_map.md` 已建立，並整合 `help/map.hlp`、`docs/3yWebsite/docs/maps.md`、`docs/3yWebsite/docs/data/maps.json`、`docs/3yWebsite/map/*.html`
 - `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已建立，整理目前 loadable runtime area registry 與重建鏈摘要
+- `plans/0005-area-skill-data-systemization.md` 已完成 v1，建立 structured skill source、`loyang_outskirts` area content pilot 與 exporter-based runtime round-trip 流程
 - `docs/CNAME` 已設定 `sango.jakeuj.com`，讓 current-game GitHub Pages 可掛上專用網域
 - `plans/0001-world-map-area-rebuild.md` 已建立
 - `plans/area/0002-loyang-outskirts.md` 已建立
@@ -216,7 +217,7 @@
 3. 更新 `area/directory.lst` 與 `area/sec_rift_spirit_core_void/roo/11212.roo` 的雙向邊界
 4. 跑本機 area validation、Linux build 與 smoke test，再判讀是否可進 `implementation_ready_for_commit`
 
-（註：目前 repo 無 `docs/3yWebsite/docs/data/players.json` 與 `skills.json`，下一輪若要做 docs-assisted pass，需先補回 dataset 或改用現存資料來源。）
+（註：`plans/0005-area-skill-data-systemization.md` 的 v1 已完成；若下一輪要補 docs-assisted design pass，可直接使用現存的 `docs/3yWebsite/docs/data/players.json` 與 `docs/3yWebsite/docs/data/skills.json`。）
 
 語意提醒：
 

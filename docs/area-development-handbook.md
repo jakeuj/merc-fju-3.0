@@ -16,6 +16,7 @@ title: Area Development Handbook
 - 新 AREA 規劃與重建
 - `plans/area/*.md` 單區計畫
 - `area/<area>/map.md` spec-first 設計
+- `structured source -> exporter -> legacy runtime files` 的 area / skill authoring layer
 - `.roo` scaffold 與 runtime area data 落地
 - world links、external exits、boundary room 同步
 - area rebuild tracker 與固定 prompt 接續
@@ -60,6 +61,22 @@ title: Area Development Handbook
 - 若 `docs/current-game/areas.md` 與 runtime 不一致，仍以 runtime 與 planning 檔案為準，再回寫 docs
 - 若新規則尚未寫進 repo 的 authoritative docs，就不能只靠口頭習慣當成硬規則
 
+## Structured Source Layer
+
+在既有 spec-first area workflow 上，repo 現在另外補了一層 `structured source -> exporter -> legacy runtime files`：
+
+- skill authoring source：`data/structured/skills/skills.json`
+- skill exporter：`scripts/export_structured_skills.py`
+- per-area content source：`area/<area>/content.json`
+- area content exporter：`scripts/export_area_content.py`
+
+判讀規則：
+
+- `area/<area>/map.md + mapmd-json` 仍是 area 拓樸與 world links 的 canonical design source
+- `area/<area>/content.json` 在 v1 只涵蓋 `mob / obj / res / shp / area-level balance metadata`
+- `skill/*.ski`、`skill/skill.lst`、`area/*/{mob,obj,res,shp}` 仍是 loader 實際吃的 runtime artifact
+- `docs/current-game/*.json` 預設是 generated read model，不是手編 authoring source
+
 ## Workflow Layers
 
 AREA 開發 pipeline 固定拆成七層：
@@ -91,10 +108,18 @@ AREA 開發 pipeline 固定拆成七層：
   - 日常追蹤看板，保存 `todo / in_progress / done / blocked / next_action / next_prompt / delivery_gate`
 - `area/<area>/map.md`
   - 單區 spec，兼具人類可讀敘事與 machine-readable `mapmd-json`
+- `area/<area>/content.json`
+  - per-area runtime content 的 structured authoring source；v1 只覆蓋 `mob / obj / res / shp`
+- `data/structured/skills/skills.json`
+  - 現行 skill runtime data 的 canonical structured source
+- `scripts/export_structured_skills.py` / `scripts/export_area_content.py`
+  - 把 structured source 投影回 legacy runtime files 的 exporter / diff gate
 - `area/directory.lst`
   - area 載入順序與 loadable runtime registry
 - `docs/current-game/areas.md` / `docs/current-game/areas.json`
   - 現行 runtime area registry 的補充說明，只有在 runtime area 真正新增、移除、重排時才同步更新
+- `docs/current-game/skills.md` / `docs/current-game/skills.json`
+  - 現行 skill registry 的補充說明與 generated read model，不取代 runtime boot input
 
 ## Fixed Prompt And Queue Discipline
 
@@ -222,6 +247,27 @@ python .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area
 ```
 
 通常不需要為了純 spec / planning 變更硬跑 build。
+
+### Structured Source / Exporter Work
+
+若這輪是在調整 structured authoring source，最低驗證應包含對應 exporter 的 `--check`：
+
+```bash
+python -X utf8 scripts/export_structured_skills.py --check
+```
+
+```bash
+python -X utf8 scripts/export_area_content.py <area_slug> --check
+```
+
+若同時有更新 current-game skill registry，追加：
+
+```bash
+python -X utf8 scripts/build_current_game_skill_registry.py
+python -X utf8 scripts/generate_current_game_skills_pages.py
+```
+
+原則上先通過 diff / check gate，再決定是否用 `--write` 回寫 runtime artifact。
 
 ### Loadable Runtime Area Work
 

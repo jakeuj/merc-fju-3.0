@@ -513,6 +513,12 @@ Agent loop 可視為：
 
 目前這條 roadmap 已由 `plans/0005-area-skill-data-systemization.md` 承接下一步實作，特別把 skill canonical source、per-area content pilot 與 generated read model / runtime audit 分工明確化；本段保留全局脈絡與提升規則，細部落地以 `0005` 為準。
 
+進度註記：
+
+- `0005` 的 v1 已完成，現況已有 `data/structured/skills/skills.json`、`area/loyang_outskirts/content.json`、`scripts/export_structured_skills.py`、`scripts/export_area_content.py`
+- 這代表 systemization 基礎層已補齊第一階段，但 area rebuild 主線並沒有改 queue；下一步仍應回到 `area/rebuild_plan.md` 的當前 `in_progress` area
+- 後續 roadmap 只保留尚未擴到更多 area content layer、prompt packaging、diff / CI 包裝與其他 promotion gate 的項目
+
 總原則：
 
 - 新文件或工具要補目前 workflow 的實際缺口，不是為了湊齊建議清單
@@ -554,6 +560,11 @@ Stage 1 的目標不是取代 `AGENTS.md` 或 skill，而是讓 repo 內有一�
 - `templates/new-area-checklist.template.md`
 - `schemas/mapmd-json.schema.json`
 - `schemas/area-plan.schema.json`
+
+進度補充：
+
+- `schemas/skill-registry.schema.json` 與 `schemas/area-content.schema.json` 已由 `0005` 落地
+- 這個 stage 現在主要保留 `map.md` / area plan 本身的 template 與 schema 收斂，不再把 skill / area content schema 視為待辦
 
 落地原則：
 

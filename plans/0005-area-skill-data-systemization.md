@@ -4,6 +4,12 @@
 
 把 `docs/area-data-systemization-assessment.md` 的結論正式落成 repo roadmap，採 `structured JSON source -> exporter -> legacy runtime files` 的三層模型，先處理 skill canonical source，再做 per-area content pilot，最後補 validation、diff 與 docs packaging。
 
+## Current Status
+
+- v1 已落地：skill canonical source、skill exporter、`loyang_outskirts` area content pilot、current-game skill read model / runtime audit pipeline 都已實作
+- runtime loader contract 維持不變；驗證已覆蓋 exporter round-trip、current-game docs reproducibility、WSL Linux build 與 startup smoke test
+- 後續若要延伸，優先把更多 area 納入 `content.json`，而不是回退到 DB-first 設計
+
 ## Non-Goals
 
 - 不改 `src/load.c` / `src/file.c` 的 runtime loader contract

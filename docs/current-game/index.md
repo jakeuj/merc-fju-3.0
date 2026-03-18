@@ -40,4 +40,6 @@ title: Current Game Docs
 - area 世界規劃、重建追蹤與單區 spec 仍以 repo 內的 `area/world_map.md`、`area/rebuild_plan.md`、`plans/area/*.md` 為主；這裡只放 Pages 版補充索引。
 - 若未來新增更多現行版本文件，優先放在 `docs/current-game/`，不要直接混寫到舊站鏡像。
 - 可讀型技能頁目前由 `scripts/generate_current_game_skills_pages.py` 從 `skills.json` 生成；目前已覆蓋舊站各葉節點分類，後續新增技能資料時優先沿用同一條生成流程。
+- 若這輪是在修改目前會載入的技能模板，優先先改 `data/structured/skills/skills.json`，再用 `scripts/export_structured_skills.py` 與 current-game docs pipeline 回寫 runtime 與 read model。
+- 若這輪是在修改已建立 structured content layer 的 area 內容，優先先改 `area/<area>/content.json`，再用 `scripts/export_area_content.py` 回寫 `mob / obj / res / shp`。
 - `document/*.txt` 這類 legacy authoring reference 若要補進 Pages，優先整理成 `docs/current-game/` 的可讀頁面，再從這裡掛入口。

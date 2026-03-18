@@ -13,7 +13,7 @@ title: Current Game Skills
 
 放在同一個可追蹤的地方，而不再只記「repo 額外補上的技能」。
 
-對應的機器可讀整合台帳在 `docs/current-game/skills.json`。
+對應的機器可讀整合台帳在 `docs/current-game/skills.json`，但它現在是 generated read model，不再是 editable source。
 
 目前 GitHub Pages 可讀頁入口：
 
@@ -32,16 +32,20 @@ title: Current Game Skills
 
 目前推薦的同步順序是：
 
-1. `python -X utf8 scripts/build_current_game_skill_registry.py`
-2. `python -X utf8 scripts/generate_current_game_skills_pages.py`
+1. 修改 `data/structured/skills/skills.json`
+2. `python -X utf8 scripts/export_structured_skills.py --check`
+3. 需要落地時：`python -X utf8 scripts/export_structured_skills.py --write`
+4. `python -X utf8 scripts/build_current_game_skill_registry.py`
+5. `python -X utf8 scripts/generate_current_game_skills_pages.py`
 
-第一步會從 `skill/*.ski`、`skill/skill.lst`、舊站技能資料與既有 audit metadata 重建 `docs/current-game/skills.json`；第二步才把更新後的 registry 投影成 `skills-index.md` 與 `docs/current-game/skills/*.md`。
+前 3 步負責把 canonical structured source 對齊到 runtime artifact；後 2 步才把更新後的 runtime / audit 狀態投影成 `docs/current-game/skills.json`、`skills-index.md` 與 `docs/current-game/skills/*.md`。
 
 ## 邊界
 
 - `docs/3yWebsite/`：reference-only，主要提供舊版世界觀、命名語彙、公告與技能體系脈絡。
 - `docs/current-game/skills.md`：現行 repo 的整合技能台帳說明。
-- `docs/current-game/skills.json`：整合型技能總表；同時保留 legacy chain、runtime presence、NPC-only 設計與 audit 狀態。
+- `data/structured/skills/skills.json`：skill runtime artifact 的 canonical structured source。
+- `docs/current-game/skills.json`：整合型技能總表；保留 legacy chain、structured source、runtime audit、NPC-only 設計與 audit 狀態。
 
 ## 舊站參考基線
 
@@ -62,7 +66,14 @@ title: Current Game Skills
 
 ## Runtime Source Of Truth
 
-真正決定目前遊戲技能是否存在、可否載入、NPC 會不會使用的來源仍然是：
+目前的 authoring / runtime 分工如下：
+
+- authoring source：`data/structured/skills/skills.json`
+- runtime artifact：`skill/*.ski`、`skill/skill.lst`
+- loader contract：`src/merc.h`、`data/symbol.def`
+- generated read model：`docs/current-game/skills.json`
+
+真正決定目前遊戲技能是否存在、可否載入、NPC 會不會使用的 boot input 仍然是：
 
 - `skill/*.ski`
 - `skill/skill.lst`
@@ -71,7 +82,7 @@ title: Current Game Skills
 - 對應 `mob/*.mob` 的 `Enable` / `AutoEnable`
 - 必要時的 `obj/*.obj` 與 `res/*.res`
 
-這份文件與 `docs/current-game/skills.json` 都只做開發紀錄，不取代上述 runtime 資料。
+這份文件只做開發紀錄；`docs/current-game/skills.json` 也只做 read model，不取代上述 runtime boot input。
 
 ## Mob 端技能掛法
 

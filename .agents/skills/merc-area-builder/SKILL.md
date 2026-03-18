@@ -24,6 +24,23 @@ source of truth 要分兩種：
 
 因此若 prose 和 `mapmd-json` 衝突，generator 一律以 `mapmd-json` 為準，並要求回頭修正 spec，不要讓兩套敘述長期分裂。
 
+## 資料系統化 v1
+
+目前 repo 另外補上一條 `structured source -> exporter -> legacy runtime files` 的 authoring layer，但它是補強既有 flat-file runtime，不是改 loader：
+
+- skill canonical source：`data/structured/skills/skills.json`
+- skill exporter：`scripts/export_structured_skills.py`
+- current-game skill read model：`docs/current-game/skills.json`
+- per-area content pilot：`area/<area>/content.json`
+- area content exporter：`scripts/export_area_content.py`
+
+判讀規則：
+
+- area 拓樸與 world links 仍以 `area/<area>/map.md + mapmd-json` 為主
+- `content.json` 在 v1 只負責 `mob / obj / res / shp / area-level balance metadata`
+- `skill/*.ski`、`skill/skill.lst`、`area/*/{mob,obj,res,shp}` 仍是 runtime artifact，不是新的設計起點
+- `docs/current-game/*.json` 與可讀頁預設當 generated read model，不當 editable source of truth
+
 ## 快速開始
 1. 先確認任務是要修改既有區域、搬修舊版內容，還是新增區域。
 2. 先讀 `area/directory.lst` 與目標區域目錄，理解實際載入順序與檔案結構。
@@ -55,12 +72,19 @@ source of truth 要分兩種：
 - `templates/new-area-checklist.template.md`
 - `schemas/mapmd-json.schema.json`
 - `schemas/area-plan.schema.json`
+- `schemas/skill-registry.schema.json`
+- `schemas/area-content.schema.json`
+- `data/structured/skills/skills.json`
+- `scripts/export_structured_skills.py`
+- `scripts/export_area_content.py`
 9. 修改完成後，至少做靜態搜尋、編碼檢查與必要的啟動/載入驗證，再回報受影響檔案與風險。
 10. 若這輪是 spec / plan / tracker work，先用 `tools/mapmd_validate.py` 驗 `map.md`；若是新 area 規劃房號，優先用 `tools/area_vnum_allocator.py` 估下一段 `reserved_room_block`。
 11. 若已做 runtime smoke test，除了人工看 `log/*` 與 `debug/*`，也可用 `tools/log_parse_summary.py` 做摘要；若要快速判讀目前較像 `implementation_ready_for_commit` 還是 `validated_ready_to_advance`，可先用 `tools/area_acceptance_gate.py` 取保守建議。
 12. 若要做 area 載入 smoke test，先清空 `debug/*` 內容並建立本輪 `log/*` 觀察基線，再執行測試；若使用 `timeout`，優先給 `45` 到 `60` 秒；測試後用成功訊號、這輪 log 與新產生的 debug 訊息一起判讀。
 13. 若這輪有新增 `mob/*.mob` 或 `obj/*.obj`，不要只靠文件猜 parser 會接受什麼：先比對 repo 內已成功載入的同類範例，特別是 `Class` 常數與 `ITEM_FOOD` / `ITEM_DRINK_CON` 的 `Value*` 欄位，測試成功後仍要檢查 `debug/badobject`。若同時新增怪物會 `Enable` 的技能，還要把它視為 loader-risk data change，而不只是 area 純資料。
 14. 新增 `skill/*.ski` 時，至少同步檢查四個登錄點：`src/merc.h` 的 `SLOT_*`、`skill/skill.lst`、`data/symbol.def`、實際的 `skill/<letter>/<name>.ski`。`skill.lst` key、技能 `Name` 與檔名路徑都必須和 repo 內既有技能全域唯一，避免覆蓋舊技能或造成 `Load_skill` 重覆載入。
+14.1 若這輪是在調整目前 repo 真正會載入的 skill runtime data，預設先改 `data/structured/skills/skills.json`，再跑 `python -X utf8 scripts/export_structured_skills.py --check`；需要落地時再用 `--write` 回寫 `skill/skill.lst` 與 `skill/*.ski`，不要把 `docs/current-game/skills.json` 當手編來源。
+14.2 若這輪是在調整既有 area 的 `mob / obj / res / shp`，而該區已建立 `content.json`，預設先改 `area/<area>/content.json`，再跑 `python -X utf8 scripts/export_area_content.py <area_slug> --check`；目前 v1 pilot 只保證 `area/loyang_outskirts/content.json`。
 15. area 設計與純資料實作預設先走快速本機驗證；只有碰到 `src/`、`Makefile*`、`startup*`、`merc.sample.ini`、疑似平台差異，或要替大里程碑做 pre-merge gate 時，才升級到 Ubuntu / Docker 雙平台驗證。若這輪有新增 skill、改 mob `Enable` 鏈，或碰到 loader 相關警告，至少要補實際載入 smoke test，不可只停在靜態比對。
 16. 若固定 prompt 要從 `todo` 開始一個新的 area milestone，而目前分支是 `develop` 或 `main`，預設先建立 `codex/<area>-implementation` 分支再開始 spec / implementation；除非使用者明講要直接在主分支上做，或這輪只是 merge 後的極小 docs / tracker 收尾。
 17. 每輪 area 工作收尾時，主動做一次「經驗回寫判斷」：單區特殊決策回寫到該 area plan / tracker；可重複踩到的 parser、loader、驗證規則回寫到 `skills/references`；屬於全局 workflow 缺口的，再回寫到全局 plan 或 `rebuild-workflow.md`。
@@ -164,7 +188,8 @@ source of truth 要分兩種：
 - `merc.ini`、`variable.c`、`job.c`、`bus/ship/bounty` 與 docs 對照點，讀 `references/system-sync-checks.md`
 - 若任務碰到交通、新手導流、技能來源、國家系統或官方敘事，這份檔是必要 reference
 - 若這輪新增的是目前 repo 真正會載入的技能，而不只是一次性測試檔，優先同步 `docs/current-game/skills.md` / `docs/current-game/skills.json` 或其他 repo 自有紀錄；`docs/3yWebsite/` 預設只拿來參考世界觀、命名與舊技能脈絡，不直接當現行技能台帳
-- 若這輪有改到既有 `skill/*.ski` 的 runtime 內容，尤其是 `#Damage`、`Cost`、`Wait`、`Teach`、`CanAsk`、`Valid`、`Enable` 這類會進 current-game registry 的欄位，不要只手改 `docs/current-game/skills.json`；先跑 `python -X utf8 scripts/build_current_game_skill_registry.py` 重建 registry，再跑 `python -X utf8 scripts/generate_current_game_skills_pages.py` 同步分類頁
+- 若這輪有改到既有 skill runtime 內容，尤其是 `#Damage`、`Cost`、`Wait`、`Teach`、`CanAsk`、`Valid`、`Enable` 這類會進 current-game registry 的欄位，不要只手改 `docs/current-game/skills.json`；先更新 `data/structured/skills/skills.json`、跑 `python -X utf8 scripts/export_structured_skills.py --check` / `--write`，再跑 `python -X utf8 scripts/build_current_game_skill_registry.py` 重建 registry，最後用 `python -X utf8 scripts/generate_current_game_skills_pages.py` 同步分類頁
+- 若這輪有改到已建立 `content.json` 的 area runtime content，優先同步 `area/<area>/content.json` 與對應 exporter；若區域還沒有 `content.json`，才維持直接改 `mob / obj / res / shp` 的舊流程
 - 若這輪新增或重排的是目前 repo 真正會載入的 area，優先同步 `docs/current-game/areas.md` / `docs/current-game/areas.json`；`docs/3yWebsite/` 的地圖與舊站頁面預設只當背景參考，不直接當現行 area registry
 - 若這輪的 area 決策高度依賴舊站技能或玩家攻略，收尾時至少在 plan / tracker 補一句說明：是哪些攻略或技能鏈在支撐這個 world link、teacher 配置或服務節點設計
 
