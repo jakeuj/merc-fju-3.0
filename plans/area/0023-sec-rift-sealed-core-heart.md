@@ -62,6 +62,8 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_rift_sealed_core_heart/map.md --validate-only`
   - passed
+- `git commit -m "Add sec_rift_sealed_core_heart spec"`
+  - committed as `cb6e188`
 
 ## Runtime Notes
 
@@ -70,4 +72,4 @@
 
 ## Next Step Prompt
 
-`sec_rift_sealed_core_heart` 已完成 spec 驗證；下一步先提交 spec milestone，再決定是否進入第一輪 runtime implementation。`
+`sec_rift_sealed_core_heart` 已完成 spec milestone 並提交；下一步進入第一輪 runtime implementation。`
