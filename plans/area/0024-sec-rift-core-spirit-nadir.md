@@ -1,0 +1,68 @@
+# Sec Rift Core Spirit Nadir Initial Area Plan
+
+## Summary
+
+建立下一個待建新 AREA：`sec_rift_core_spirit_nadir`。此區承接 `sec_rift_sealed_core_heart` 最深的封心深座，讓地下鏈進一步沉入核心心魄分離後的下墜區，作為更深魄淵秘層前的過渡主段。
+
+## Theme Positioning
+
+- theme: `仙俠`
+- subtheme: `核心魄淵 / 心魄沉座`
+- 世界缺口角色：補上 `sec_rift_sealed_core_heart` 既有 `down` 延伸意圖，讓封心核心正式過渡到裂核心魄層
+- reserved_room_block: `10901-10920`
+
+## Scope (Milestone 1: Spec)
+
+- 建立 `plans/area/0024-sec-rift-core-spirit-nadir.md` 與 `area/sec_rift_core_spirit_nadir/map.md` 第一版
+- 以 `mapmd-json` 定義魄座落井、核心沉環、失魄偏廊與魄淵前座
+- 明確標示與 `sec_rift_sealed_core_heart/10812` 的 `up` 邊界
+- 保留更深層 `down` world link 為後續區域規劃
+
+## Scope (Milestone 2: Implementation)
+
+- 以 `map.md` 生成 `roo/10901-10912` 第一版並補齊最小 runtime 資產
+- 建立 `index / mob / obj / res / shp`
+- 將 `sec_rift_core_spirit_nadir` 掛入 `area/directory.lst`
+- 讓 `sec_rift_sealed_core_heart/10812` 與 `sec_rift_core_spirit_nadir/10901` 形成正式雙向邊界
+
+## World Links (Spec Intent)
+
+- `up`: 通往 `sec_rift_sealed_core_heart` room `10812`
+- `down`: 通往未來更深層核心魄淵區
+
+## Ref Compliance Check
+
+- `ref_inputs_used`
+  - `ref/Readme.md`
+  - `area/sec_rift_sealed_core_heart/map.md`
+  - `ref/world-graph.md`
+  - `ref/三國-MUD-題材分布表.md`
+- `ref_inputs_deferred`
+  - `docs/3yWebsite/docs/data/players.json`（repo 目前不存在，僅保留追蹤需求）
+  - `docs/3yWebsite/docs/data/skills.json`（repo 目前不存在，僅保留追蹤需求）
+  - `ref/sanguo-area-scaffold/`
+  - `mud-world-builder/`
+  - `mud-ai-map-generator/`
+  - `mudlet-map-generator/`
+  - `mud-world-map-editor/`
+  - `mud-world-map-editor-pro/`
+  - 各類經濟/勢力/歷史事件模擬系統
+- `theme_basis`
+  - `area/sec_rift_sealed_core_heart/map.md`
+  - `ref/world-graph.md`
+  - `ref/三國-MUD-題材分布表.md`
+- `compliance_check`
+  - compliant；本輪沿 `sec_rift_sealed_core_heart` 的既有向下 world link 建立下一段 spec-first 里程碑，維持 ref/Readme.md 容許的規劃範圍
+
+## Validation Results
+
+- `python -X utf8 tools/area_vnum_allocator.py --estimated-rooms 12 --headroom 8`
+  - suggested `10901-10920`
+- `python -X utf8 tools/mapmd_validate.py area/sec_rift_core_spirit_nadir/map.md`
+  - passed with `0 error(s), 0 warning(s)`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_rift_core_spirit_nadir/map.md --validate-only`
+  - passed
+
+## Next Step Prompt
+
+`sec_rift_core_spirit_nadir` spec 建立後，下一步進入第一輪 runtime implementation，落地 `index / roo / mob / obj / res / shp` 與 `10812 <-> 10901` 邊界出口。`
