@@ -1,0 +1,14 @@
+Vnum            12754
+Name            素界柱座 柱座~
+ShortDesc       一座素界柱座~
+Description
+一座素界柱座斜立在井緣，柱面只剩幾道幾乎融成同色的白線。
+~
+ItemType        ITEM_TRASH
+Takeable        No
+WearLoc         ITEM_TAKE
+Level           30
+Value           0 0 0 0 0
+Weight          0
+Cost            0
+End

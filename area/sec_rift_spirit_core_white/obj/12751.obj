@@ -1,0 +1,14 @@
+Vnum            12751
+Name            觀素短杖 短杖~
+ShortDesc       一支觀素短杖~
+Description
+一支觀素短杖倚在白界內庭邊，杖尖還殘留一圈快被洗成同色的冷白痕影。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           22
+Value           0 0 0 0 0
+Weight          3
+Cost            290
+End

@@ -1,0 +1,16 @@
+Vnum            11706
+Name            聽素沉座~
+Description
+沉座中央懸著一枚邊界幾乎完全融掉的素白長晶，晶體沒有發光，卻把周圍所有可供辨識的層次一點點磨成同色薄白，只留下空得發冷的鎮壓感。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

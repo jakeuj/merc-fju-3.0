@@ -1,0 +1,32 @@
+Vnum            11704
+Name            觀素鎮魄臺~
+Description
+鎮魄臺旁立著一座幾乎與周圍融成一體的觀素碑，碑面只剩少數往中心內收的白痕，像所有曾能辨識層次的記號都在這裡被洗成同一種素白。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         觀素~
+End
+
+#Enquire
+Keyword         鎮魄~
+End
+
+End

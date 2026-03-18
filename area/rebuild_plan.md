@@ -103,10 +103,7 @@
 
 ## Candidate Queue
 
-- `sec_rift_spirit_core_blank`
-  - reserved_room_block: `11601-11620`
-  - theme: `仙俠`
-  - subtheme: `裂魄空白 / 空白深井`
+(目前無 `candidate queue` 項目。)
 
 ## Todo
 
@@ -114,33 +111,7 @@
 
 ## In Progress
 
-- `sec_rift_spirit_core_blank`
-  - plan: `plans/area/0031-sec-rift-spirit-core-blank.md`
-  - spec: `area/sec_rift_spirit_core_blank/map.md`
-  - reserved_room_block: `11601-11620`
-  - theme: `仙俠`
-  - subtheme: `裂魄空白 / 空白深井`
-  - ref_inputs_used:
-    - `ref/Readme.md`
-    - `area/sec_rift_spirit_core_zero/map.md`
-    - `ref/world-graph.md`
-    - `ref/三國-MUD-題材分布表.md`
-  - ref_inputs_deferred:
-    - `docs/3yWebsite/docs/data/players.json`（本輪僅確認無更高優先的城鎮服務鏈候選，未直接參與地下鏈題材決策）
-    - `docs/3yWebsite/docs/data/skills.json`（本輪僅確認無更高優先的技能服務鏈候選，未直接參與地下鏈題材決策）
-    - `ref/sanguo-area-scaffold/`
-    - `mud-world-builder/`
-    - `mud-ai-map-generator/`
-    - `mudlet-map-generator/`
-    - `mud-world-map-editor/`
-    - `mud-world-map-editor-pro/`
-    - 各類經濟/勢力/歷史事件模擬系統
-  - theme_basis:
-    - `area/sec_rift_spirit_core_zero/map.md`
-    - `ref/world-graph.md`
-    - `ref/三國-MUD-題材分布表.md`
-  - compliance_check: `compliant；本輪沿 sec_rift_spirit_core_zero 的既有向下 world link 建立下一段 spec-first 里程碑，維持 ref/Readme.md 容許的 area rebuild 範圍`
-  - delivery_gate: `implementation_ready_for_commit`
+(目前無 `in_progress` 項目。)
 
 
 ## Done
@@ -209,10 +180,14 @@
 - `plans/area/0030-sec-rift-spirit-core-zero.md` 已建立
 - `sec_rift_spirit_core_zero` 已完成 spec 建立與 validate-only 驗證，並進入下一段 implementation milestone 準備
 - `sec_rift_spirit_core_zero` 已完成 runtime implementation、commit `cc9bd99`，並完成 WSL build 與 smoke test 驗證
+- `plans/area/0031-sec-rift-spirit-core-blank.md` 已建立
+- `sec_rift_spirit_core_blank` 已完成 runtime implementation、commit `ae1f268`，並完成 WSL build 與 smoke test 驗證
+- `plans/area/0032-sec-rift-spirit-core-white.md` 已建立
+- `sec_rift_spirit_core_white` 已完成 runtime implementation，完成 WSL build 與 smoke test 驗證
 ## Blocked
 
 - none
 
 ## Current Recommended Next Step
 
-目前 `sec_rift_spirit_core_blank` 已完成第一輪 runtime implementation 與驗證。這一輪最合適的下一步是先提交 `blank` 的 implementation milestone，再推進下一個待建 area。
+目前沒有 `in_progress` 或 `todo` 項目。這一輪最合適的下一步是依固定流程盤點下一個 actionable area，必要時先用 `players.json` 與 `skills.json` 補玩法耦合，再建立新區 spec。

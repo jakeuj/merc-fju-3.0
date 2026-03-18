@@ -690,6 +690,25 @@
         "plans/area/0031-sec-rift-spirit-core-blank.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_spirit_core_white",
+      "title": "裂魄白界",
+      "room_range": "11701-11712",
+      "load_order": 38,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_blank",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄白界 / 白界深井",
+      "summary": "承接裂魄空白座，下探到白界內庭、失名偏廊與素界前座的白界深井過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_white/index",
+        "area/sec_rift_spirit_core_white/map.md",
+        "plans/area/0032-sec-rift-spirit-core-white.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

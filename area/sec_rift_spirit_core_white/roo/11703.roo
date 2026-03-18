@@ -1,0 +1,32 @@
+Vnum            11703
+Name            白界內庭前緣~
+Description
+前緣俯瞰整座向內沉落的白界內庭，庭底像一潭被洗去名字的素白空井，沒有光影可供對照，只剩視線一靠近就會被慢慢磨平的靜冷。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11702
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11707
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

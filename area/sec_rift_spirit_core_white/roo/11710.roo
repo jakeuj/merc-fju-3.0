@@ -1,0 +1,24 @@
+Vnum            11710
+Name            素界前橋~
+Description
+前橋橫跨在一段像被漂洗到無從命名的白腹上方，橋面每次受力後都只留下極短暫的冷白回音，下一瞬便像連那次踏步也不曾存在。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11709
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11711
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

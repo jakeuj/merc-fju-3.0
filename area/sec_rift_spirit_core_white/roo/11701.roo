@@ -1,0 +1,32 @@
+Vnum            11701
+Name            白界落座~
+Description
+落座像嵌在白界邊緣的一截素白石影，腳下殘留的環界已被洗到幾乎不再像界面，只剩一種比空白更薄、更冷的存在感，像連最後那點灰意都在此被拂盡。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        11612
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11702
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         白界~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

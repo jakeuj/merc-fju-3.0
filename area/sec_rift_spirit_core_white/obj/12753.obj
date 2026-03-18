@@ -1,0 +1,14 @@
+Vnum            12753
+Name            失名殘片 白片~
+ShortDesc       一片失名殘片~
+Description
+一片失名殘片落在逆廊角落，片面幾乎沒有紋理，只剩一抹不知該如何稱呼的冷白。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           28
+Value           0 0 0 0 0
+Weight          1
+Cost            330
+End

@@ -1,0 +1,24 @@
+Vnum            11702
+Name            素白下階~
+Description
+下階表面平整得沒有半點紋理可循，連白色也像被拉得過度稀薄，只剩一層勉強承住腳步的冷白薄殼，讓人不確定自己是否真站在階上。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11701
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

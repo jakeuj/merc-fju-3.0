@@ -1,0 +1,24 @@
+Vnum            11707
+Name            失名側階~
+Description
+側階斜切進偏廊時，連腳下踏過的感覺都像被擦去，只剩一道道素白殘痕在你身後迅速淡掉，讓人懷疑自己的名字是否也正被白界一併洗薄。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

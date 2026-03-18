@@ -1,0 +1,39 @@
+Vnum            11705
+Name            白界斷層槽~
+Description
+斷層槽裡沒有水聲、沒有風聲，只有一道極淡的白線筆直朝更深處下沉，像整段深井正在把所有殘留層理直接洗成更無名的素白底色。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11706
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        11709
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         斷層~
+Description
+槽壁封紋比空白層更少，留下的只是一種把一切紋理直接漂洗掉的白冷意志。
+~
+End
+
+End

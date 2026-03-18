@@ -1,0 +1,24 @@
+Vnum            11712
+Name            裂魄白界座~
+Description
+白界座像整段白界深井最後一塊仍勉強保有輪廓的素白石影，腳下只剩一圈幾乎與周圍融成同色的環界，所有殘痕都在這裡被拖往更深的裂魄素界。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        11711
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         白界座~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

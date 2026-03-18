@@ -1,0 +1,32 @@
+Vnum            11709
+Name            白界逆廊~
+Description
+逆廊中央只剩一道細到近乎無法分辨的白縫，縫底沒有陰影，卻像能把所有尺度與名字一併拖進更深的素界井腹，讓人越看越抓不住仍屬於自己的部分。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        11705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        11708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11710
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

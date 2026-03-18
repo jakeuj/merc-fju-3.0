@@ -1,0 +1,32 @@
+Vnum            11708
+Name            失名偏廊~
+Description
+偏廊兩側嵌著成排幾乎看不出接縫的導響殼片，殼面既無凹痕也無反光，只剩一種讓人一旦久留就會連自我稱述都慢慢失焦的素白錯覺。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        11707
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        11709
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         失名~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End
