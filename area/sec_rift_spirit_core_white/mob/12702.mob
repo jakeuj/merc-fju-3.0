@@ -9,7 +9,7 @@ Sentinel        Yes
 StayArea        Yes
 NoKill          No
 Alignment       -128
-Level           110
+Level           100
 Hitroll         10
 Protect         0
 Damroll         11

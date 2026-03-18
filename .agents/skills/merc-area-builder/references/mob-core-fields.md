@@ -184,7 +184,7 @@
   - 現在要分兩層理解：
     - legacy 平衡基線：`<= 100`
     - current loader hard gate：`1..120`
-  - `101..120` 不是一般 baseline，只適合明確規劃過的 late-game / endgame 區。
+  - 對 world-map-area-rebuild 與新建 area 來說，實際 authoring cap 仍應維持 `<= 100`。
   - `>120` 會直接踩 loader blocker。
 - `AUTOSET_VALUE`
   - 這是讓系統依等級自動回填部分數值的旗標。

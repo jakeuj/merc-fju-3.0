@@ -90,7 +90,7 @@ source of truth 要分兩種：
 11. 若已做 runtime smoke test，除了人工看 `log/*` 與 `debug/*`，也可用 `tools/log_parse_summary.py` 做摘要；若要快速判讀目前較像 `implementation_ready_for_commit` 還是 `validated_ready_to_advance`，可先用 `tools/area_acceptance_gate.py` 取保守建議。
 12. 若要做 area 載入 smoke test，先清空 `debug/*` 內容並建立本輪 `log/*` 觀察基線，再執行測試；若使用 `timeout`，優先給 `45` 到 `60` 秒；測試後用成功訊號、這輪 log 與新產生的 debug 訊息一起判讀。
 13. 若這輪有新增 `mob/*.mob` 或 `obj/*.obj`，不要只靠文件猜 parser 會接受什麼：先比對 repo 內已成功載入的同類範例，特別是 `Class` 常數與 `ITEM_FOOD` / `ITEM_DRINK_CON` 的 `Value*` 欄位，測試成功後仍要檢查 `debug/badobject`。若同時新增怪物會 `Enable` 的技能，還要把它視為 loader-risk data change，而不只是 area 純資料。
-13.1 新增或修改 `mob/*.mob` 時，先回看 `document/mob.txt` 的 `Name` / `Level` 契約：`Name` 是必填、最短、供指令比對的關鍵名字，預設應維持英文或至少 ASCII-friendly token；中文呈現放在 `ShortDesc` / `Description`，不要把 `Name` 寫成純中文。`Level` 的 legacy 文件仍以 `100` 為平衡上限，但目前 `src/load.c` 的 loader 會擋掉 `<= 0` 或 `> 120`；因此 area rebuild 預設把 `1..100` 視為一般設計帶，`101..120` 只留給明確規劃過的 late-game / endgame 區，且要在單區 plan、tracker 或 area `index` 說明理由。
+13.1 新增或修改 `mob/*.mob` 時，先回看 `document/mob.txt` 的 `Name` / `Level` 契約：`Name` 是必填、最短、供指令比對的關鍵名字，預設應維持英文或至少 ASCII-friendly token；中文呈現放在 `ShortDesc` / `Description`，不要把 `Name` 寫成純中文。`Level` 的 legacy 文件仍以 `100` 為平衡上限；雖然目前 `src/load.c` 的 loader 只會擋掉 `<= 0` 或 `> 120`，但 world-map-area-rebuild 與新建 area authoring 一律以 `1..100` 為交付上限，不要把 `101..120` 當成可延續的通用例外帶。若 repo 內看到 `>100` 樣本，預設視為待整理 drift 或 legacy 例外，需先明確說明再決定是否保留。
 13.2 若這輪主要是在消化 `document/mob.txt` 或大量搬修 `mob/*.mob`，不要每次整份 legacy 文件重讀到底；按需求分流：
 - 基本檔案骨架、區塊順序與 `End/~` 結構，讀 `references/mob-file-layout.md`
 - `Vnum/Name/ShortDesc/Level/Enable/AutoEnable/Special` 等主欄位，讀 `references/mob-core-fields.md`

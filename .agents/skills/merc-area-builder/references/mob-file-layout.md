@@ -107,4 +107,4 @@ End
 
 - `Name` 缺失會直接對應到 `Load_mobiles﹕怪物 %d 沒有名字。`
 - `Level <= 0` 或 `Level > 120` 會直接對應到 `Load_mobiles﹕怪物 %d 等級 %d 不合理。`
-- `document/mob.txt` 把 `100` 視為平衡上的傳統上限，但目前 repo 已有刻意使用 `101..120` 的 endgame 鏈；不要把這兩層語意混在一起
+- `document/mob.txt` 把 `100` 視為平衡上的傳統上限；即使 loader 可接受到 `120`，world-map-area-rebuild 的新 area 仍應把 `100` 當交付上限

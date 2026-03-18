@@ -10,7 +10,7 @@
 - subtheme: `裂魄澹界 / 澹界深井`
 - 世界缺口角色：補上 `sec_rift_spirit_core_plain` 既有 `down` 延伸意圖，讓素界深井正式過渡到更深的澹界層
 - reserved_room_block: `11901-11920`
-- level_range: `106-120`
+- level_range: `100-100`
 
 ## Scope (Milestone 1: Spec)
 
@@ -86,10 +86,10 @@
 - `wsl.exe bash -lc 'cd /mnt/h/repos/merc-fju-3.0/src && make -f Makefile.lin merc'`
   - `make: 'merc' is up to date.`
 - `wsl.exe bash -lc 'cd /mnt/h/repos/merc-fju-3.0 && mkdir -p log player mail debug vote && rm -f debug/* && timeout 60 ./src/startup.bash'`
-  - first smoke run exposed loader blocker `Load_mobiles: 怪物 12903 等級 122 不合理`
-  - after lowering the area top-end and `12903` to level `120`, `三國歪傳之降龍伏虎開始正常運作.` appeared in `log/1013.log`
+  - 2026-03-19 balance correction normalized the recent spirit-core late-chain mob levels back to `<=100` to align with `document/mob.txt`
+  - `三國歪傳之降龍伏虎開始正常運作.` appeared in `log/1014.log`
   - the launcher was then terminated by `timeout`, which produced the expected shutdown footer
-  - `debug/badobject` remained empty; `debug/error` only recorded the timeout shutdown
+  - `debug/badobject` remained empty; `debug/failload` / `debug/failenable` / `debug/bugs` did not report new area issues; `debug/error` only recorded the timeout shutdown
 
 ## Next Step Prompt
 

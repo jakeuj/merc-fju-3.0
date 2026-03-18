@@ -28,7 +28,7 @@ title: Area Acceptance Checklist
 - `index` 已存在且核心欄位正確
 - 最小 `mob / obj / res / shp` 已落地，或明確標示本輪刻意 deferred 的部分
 - 若有 `mob/*.mob`，`Name` 已維持必填、command-facing 的英文或 ASCII-friendly 關鍵字，而不是純中文顯示名
-- 若有 `mob/*.mob`，`Level` 已落在 loader 可接受的 `1..120`；若有 `>100`，也已在 plan / tracker / `index` 補上 late-game / endgame 例外理由
+- 若有 `mob/*.mob`，`Level` 已同時符合 loader hard gate `1..120` 與新建 area authoring cap `<=100`；若有 `>100`，預設仍視為未完成修正
 - 若有 external exit，既有 boundary room 已同步 patch
 - 若 area 已可載入，`area/directory.lst` 已同步
 - 新 area 預設 `Capital 0` 的判斷沒有被誤改

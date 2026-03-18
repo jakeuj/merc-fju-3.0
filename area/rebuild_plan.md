@@ -30,8 +30,8 @@
 - `mob/*.mob` 的 `Level` 要分清楚兩層規則：
   - legacy `document/mob.txt`：把 `100` 視為平衡上的傳統上限
   - current loader：接受 `1..120`，會把 `<= 0` 或 `> 120` 視為 `Load_mobiles` blocker
-- tracker 預設把 `1..100` 視為一般 progression band；`101..120` 只留給明確規劃的 late-game / endgame 區，且要在單區 plan、tracker 註記或 area `index` 補上理由
-- 目前 repo 內後段裂魄鏈已經實際使用 `101..120` 區間；後續若延伸同條 endgame 鏈，應視為 deliberate exception，而不是 generic baseline
+- tracker 的 area rebuild authoring policy 一律把 `1..100` 當交付上限；不要因為 loader 接受 `120`，就把 `101..120` 延續成新建 area 的通用做法
+- 若在新建或最近重建的 area 內看到 `>100`，預設視為 drift，先修回 `<=100` 再前進 milestone
 - 若本輪 smoke test 出現 `Load_mobiles﹕怪物 %d 沒有名字。` 或 `Load_mobiles﹕怪物 %d 等級 %d 不合理。`，先留在當前 area 修正 `Name` / `Level`，不要跳下一區
 
 ## Quest Boundary

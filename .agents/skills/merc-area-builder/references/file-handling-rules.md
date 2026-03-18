@@ -9,7 +9,7 @@
 - 若把 `Capital` 設成非零，先確認它真的應該出現在出生地 / 首都 / home 選單，並且已具備對應服務鏈，不要讓單純的外郊或過渡區誤進出生地清單
 - `mob/*.mob`：參照 `document/mob.txt`；確認 `Name`、`Level`、`Alignment`、旗標、`Process` 是否符合該區用途
 - `mob/*.mob` 的 `Name` 是必填欄位，也是 parser / 指令比對時使用的最短關鍵名字；預設維持英文或至少 ASCII-friendly token，中文顯示留在 `ShortDesc` / `Description`，不要把 `Name` 寫成純中文或只剩敘事句
-- `mob/*.mob` 的 `Level` 要同時分清兩層規則：legacy `document/mob.txt` 仍把 `100` 視為平衡上的傳統上限，但目前 `src/load.c` 的 `load_mobiles()` 實際會擋掉 `<= 0` 或 `> 120`；因此 area rebuild 預設以 `1..100` 當一般 progression range，`101..120` 只在明確規劃的 late-game / endgame 鏈上使用，且要在單區 plan、tracker 或 area `index` 留下理由
+- `mob/*.mob` 的 `Level` 要同時分清兩層規則：legacy `document/mob.txt` 把 `100` 視為平衡上的傳統上限，而目前 `src/load.c` 的 `load_mobiles()` 實際會擋掉 `<= 0` 或 `> 120`；對 world-map-area-rebuild 與新建 area 來說，authoring policy 仍是一律維持在 `1..100`，不要把 loader 可接受的 `101..120` 誤當成新的通用設計帶
 - `mob/*.mob` 的 `Class` 不要臆測新常數；先在 repo 內搜尋已成功載入的 mob 範例，沿用 parser 目前真的接受的值，再進 smoke test
 - 若 `mob/*.mob` 使用 `AutoEnable`，要記得它不是單純的 shorthand：`src/load.c` 會在載入時呼叫 `get_adeptation()` 依怪物 `Level`、`AttackRatio` / `DodgeRatio`、技能傷害表與技能型態推算熟練度；推到極端值時會寫 `debug/failenable`
 - `debug/failenable` 的 `太差` / `太高` 屬於怪物技能配置失衡訊號，不是玩家 `enable` 指令告警；回修時優先檢查對應 mob 的 `AutoEnable` 是否應改成固定 `Enable`，或是否該換技能 / 調整攻閃係數

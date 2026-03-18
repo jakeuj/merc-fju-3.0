@@ -116,10 +116,10 @@ End
 - legacy `document/mob.txt` 把 `100` 視為傳統平衡上限，重點是避免升級曲線某一段突然斷層
 - 目前 repo 的 `src/load.c` 會把 `<= 0` 或 `> 120` 的怪物等級判成不合理，因此 runtime hard gate 是 `1..120`
 - 這代表目前要分成兩層理解：
-  - 一般設計 / 平衡基線：優先維持在 `1..100`
-  - loader 可接受的例外上限：`101..120`
-- 本 repo 現有後段高階裂魄鏈已經刻意使用 `101..120` 區間，所以不要把 `>100` 一律視為錯誤；但也不要因為 loader 接受 `120`，就把每個新 area 都往上推到三位數
-- 最安全的寫法是：若某區需要 `101..120`，在單區 plan、tracker 或 area `index` 明講它是 late-game / endgame 例外，並配合 smoke test 證明沒有踩到 loader 上限
+  - authoring / 平衡基線：優先維持在 `1..100`
+  - loader hard gate：`1..120`
+- 對 world-map-area-rebuild 與新建 area authoring 來說，`100` 仍應視為交付上限；不要因為 loader 接受 `120`，就把每個新 area 往上推到三位數
+- 若 repo 內看到 `101..120` 樣本，先確認那是 legacy 殘留、刻意保留，或待回修 drift，不要直接把它當成新 area baseline
 
 ## 怪物旗標
 
@@ -194,7 +194,7 @@ Enable        100 'long fist'
 
 - `Name` 是必填、command-facing 的最短關鍵字；對玩家與 loader 來說都不是可有可無的展示欄位。
 - 不要只照 `document/mob.txt` 猜 `Class`、`Effect` 或技能名稱，先比對 repo 內已成功載入的怪物範例。
-- `Level > 120` 會直接變成 loader blocker；`101..120` 雖可載入，但應視為經過規劃的高階例外帶，而不是預設值。
+- `Level > 120` 會直接變成 loader blocker；即使 `101..120` 仍可載入，對新建 area authoring 也應優先視為需要回修的超標值，而不是預設值。
 - 若 `.mob` 內用了 `Enable` / `AutoEnable` 指到技能，驗證要求要比一般資料檔更高。
 - 若新增可教學 NPC，要同步檢查技能是否真的存在、能否 `Teach`、是否有對應文件。
 

@@ -323,15 +323,15 @@ AREA rebuild 的預設工作單位是「一輪任務只處理一個 area milesto
   - legacy `document/mob.txt` 仍把 `100` 視為平衡上的傳統上限
   - current `src/load.c` loader 會把 `<= 0` 或 `> 120` 判成不合理，所以 runtime hard gate 是 `1..120`
   - 本計畫的預設治理方式是：
-    - `1..100`：一般 progression / balance band
-    - `101..120`：只有明確規劃的 late-game / endgame area 才能使用
+    - `1..100`：一般 progression / balance band，也是 world-map-area-rebuild 新建 area 的交付上限
+    - `101..120`：只代表 loader 仍可接受，不代表應在新建 area 繼續使用
     - `>120`：直接視為 loader blocker
 
 配套要求：
 
-- 若單區使用 `101..120`，要在單區 plan、tracker 或 area `index` 補上理由，不得只因為 loader 接受就默默往上推
+- 若新建或最近重建的 area 出現 `>100`，預設先修回 `<=100`，不要把它當成可以直接帶過的高階例外
 - 若 smoke test 出現 `Load_mobiles﹕怪物 %d 沒有名字。` 或 `Load_mobiles﹕怪物 %d 等級 %d 不合理。`，先留在當前 area 修正，不得切去下一區繞過
-- 若延伸的是既有 late-game 鏈，也不要因為看到 legacy `100` 就自動把所有 `101..120` 怪物視為錯誤；先確認它是不是本來就被規劃成 endgame 例外帶
+- 若 repo 內仍留有 `>100` 樣本，應明確判定它是 legacy 殘留、刻意保留，或需要回修的 drift；不要直接把它當成新 area baseline
 
 ## Milestone Output Contract
 

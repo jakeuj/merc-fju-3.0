@@ -88,8 +88,8 @@ title: Area Development Handbook
 - `Level`
   - legacy `document/mob.txt` 仍把 `100` 視為平衡上的傳統上限
   - current loader 會把 `<= 0` 或 `> 120` 視為錯誤，因此 runtime hard gate 是 `1..120`
-  - handbook 的預設判讀是：`1..100` 為一般 progression range，`101..120` 只留給明確規劃的 late-game / endgame area
-- 若單區真的使用 `101..120`，請在單區 plan、`area/rebuild_plan.md` 或 area `index` 補上理由，避免後續協作者分不清這是刻意的 endgame 例外，還是 accidentally drift
+  - handbook 的預設判讀是：`1..100` 為一般 progression range，也是 world-map-area-rebuild 新建 area 的交付上限
+- 若新建或最近重建的 area 出現 `>100`，請直接視為需要回修的 drift；只有在處理既有 legacy 樣本且已明講保留理由時，才討論是否暫時保留
 
 ## Workflow Layers
 

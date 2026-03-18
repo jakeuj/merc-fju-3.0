@@ -18,7 +18,7 @@
 14. 若牽涉世界觀敘事、官方公告、元老/神族 NPC 或公開版提示，再對照 `docs/3yWebsite/docs/system.md`、`docs/3yWebsite/docs/data/news.json`、`docs/3yWebsite/docs/data/immortals.json`
 15. 若這輪有新增或修改 `mob/*.mob`，先比對 `Class` 是否來自 repo 內已成功載入的常數；不要把文件或直覺猜到的 class name 直接拿去賭 parser 會接受
 15.1 若這輪有新增或修改 `mob/*.mob`，確認 `Name` 存在且仍是玩家 / loader 會拿來比對的最短關鍵字；預設使用英文或至少 ASCII-friendly token，不要把 `ShortDesc` 的中文顯示名直接塞進 `Name`
-15.2 若這輪有新增或修改 `mob/*.mob`，確認 `Level` 落在 current loader 允許的 `1..120`；若超過 legacy `document/mob.txt` 提醒的 `100`，要再檢查它是否屬於明確規劃的 late-game / endgame 例外，並已在單區 plan、tracker 或 area `index` 補上理由，而不是無意識飄高
+15.2 若這輪有新增或修改 `mob/*.mob`，確認 `Level` 同時符合兩層條件：loader hard gate 仍是 `1..120`，但 world-map-area-rebuild 與新建 area 的 authoring cap 一律是 `1..100`；只要看到 `>100`，預設先回修，不要把它當成可直接帶過的 endgame 例外
 16. 若這輪有新增或修改 `obj/*.obj` 的 `ITEM_FOOD` / `ITEM_DRINK_CON`，在啟動前先對照 working examples，確認 `Value*` 欄位已補齊且語意合理
 16.1 若這輪有新增或修改 `obj/*.obj`，先做一輪欄位名靜態檢查：area object loader 預期的是 `Name / ShortDesc / Description / ItemType / Takeable / WearLoc / Value*` 這一系欄位；若看到 `Keywords / ExtraFlags / WearFlags` 這類更像 runtime/save serialization 的欄位名，先回修，不要等到 smoke test 才發現
 16.2 若這輪有新增或修改 `res/*.res`，先做一輪格式檢查：現行 area reset loader 預期的是單行 `M/O/P/G/E/D/R/A` 指令並以 EOF 結束；若看到 `#MOB / #OBJ / Room / MaxInArea / MaxInRoom` 這類 block 風格，或照舊文件額外放了 literal `S` terminator，先回修，不要等到啟動期才被 `Fread_number` 擋下來
