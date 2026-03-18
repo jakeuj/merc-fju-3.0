@@ -140,7 +140,7 @@
     - `ref/world-graph.md`
     - `ref/三國-MUD-題材分布表.md`
   - compliance_check: `compliant；依既有地下鏈向下 world link 先建立下一段 spec-first 里程碑，維持 ref/Readme.md 容許的規劃範圍`
-  - delivery_gate: `spec_ready_for_commit`
+  - delivery_gate: `implementation_in_progress`
 
 
 ## Done
@@ -195,14 +195,14 @@
 
 ## Current Recommended Next Step
 
-目前新的 next actionable area 已切到 `sec_rift_sealed_core_basin`；這個新 area 的 spec 驗證已完成，本輪最合適的下一步是先提交 spec milestone，再決定是否進入第一輪 runtime implementation。
+目前新的 next actionable area 仍是 `sec_rift_sealed_core_basin`；spec milestone 已提交，本輪最合適的下一步是開始第一輪 runtime implementation。
 
 下一輪建議動作：
 
-1. 先提交 `sec_rift_sealed_core_basin` 的 spec milestone
-2. 提交後續做同一區的第一輪 runtime implementation
-3. 實作時一併補 `index / roo / mob / obj / res / shp`
-4. 再更新 `delivery_gate` 為 `implementation_in_progress` 或後續對應狀態
+1. 以 `map.md` 生成 `roo/10701-10712` 第一版並補最小 runtime 資產
+2. 一併修改 `area/sec_rift_underseal_basin/roo/10612.roo` 與 `area/directory.lst`
+3. 跑 build、smoke test、`log/*` 與 `debug/*` 驗證
+4. 再將 `delivery_gate` 推到 `implementation_ready_for_commit` 或更高狀態
 
 （註：目前 repo 無 `docs/3yWebsite/docs/data/players.json` 與 `skills.json`，下一輪若要做 docs-assisted pass，需先補回 dataset 或改用現存資料來源。）
 
@@ -217,4 +217,4 @@
 
 建議可直接使用的 prompt：
 
-`續做 sec_rift_sealed_core_basin：先提交目前的 spec milestone，再決定是否進入第一輪 runtime implementation。`
+`續做 sec_rift_sealed_core_basin：開始第一輪 runtime implementation，完成後再做 smoke test。`
