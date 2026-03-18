@@ -103,7 +103,10 @@
 
 ## Candidate Queue
 
-(目前尚未建立新的 candidate 項目。)
+- `sec_rift_sealed_core_basin`
+  - reserved_room_block: `10701-10720`
+  - theme: `仙俠`
+  - subtheme: `封核沉盆 / 內壓核心`
 
 ## Todo
 
@@ -111,7 +114,33 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `sec_rift_sealed_core_basin`
+  - plan: `plans/area/0022-sec-rift-sealed-core-basin.md`
+  - spec: `area/sec_rift_sealed_core_basin/map.md`
+  - reserved_room_block: `10701-10720`
+  - theme: `仙俠`
+  - subtheme: `封核沉盆 / 內壓核心`
+  - ref_inputs_used:
+    - `ref/Readme.md`
+    - `area/sec_rift_underseal_basin/map.md`
+    - `ref/world-graph.md`
+    - `ref/三國-MUD-題材分布表.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/docs/data/players.json`（repo 目前不存在，僅保留追蹤需求）
+    - `docs/3yWebsite/docs/data/skills.json`（repo 目前不存在，僅保留追蹤需求）
+    - `ref/sanguo-area-scaffold/`
+    - `mud-world-builder/`
+    - `mud-ai-map-generator/`
+    - `mudlet-map-generator/`
+    - `mud-world-map-editor/`
+    - `mud-world-map-editor-pro/`
+    - 各類經濟/勢力/歷史事件模擬系統
+  - theme_basis:
+    - `area/sec_rift_underseal_basin/map.md`
+    - `ref/world-graph.md`
+    - `ref/三國-MUD-題材分布表.md`
+  - compliance_check: `compliant；依既有地下鏈向下 world link 先建立下一段 spec-first 里程碑，維持 ref/Readme.md 容許的規劃範圍`
+  - delivery_gate: `spec_ready_for_commit`
 
 
 ## Done
@@ -166,20 +195,20 @@
 
 ## Current Recommended Next Step
 
-目前 `sec_rift_underseal_basin` 已完成第一輪 implementation 並提交，tracker 也已清回可前進狀態；下一步應先盤點新的 next actionable area，再建立對應單區 plan 與 `map.md` spec。
+目前新的 next actionable area 已切到 `sec_rift_sealed_core_basin`；這個新 area 的 spec 驗證已完成，本輪最合適的下一步是先提交 spec milestone，再決定是否進入第一輪 runtime implementation。
 
 下一輪建議動作：
 
-1. 先依 world graph / ref 規劃補下一個 candidate area
-2. 將新 candidate 寫入 `candidate queue` 或 `todo`
-3. 為該區建立單區 plan 與 `map.md` spec
-4. 再依 `spec_ready_for_commit -> implementation` 流程往下推進
+1. 先提交 `sec_rift_sealed_core_basin` 的 spec milestone
+2. 提交後續做同一區的第一輪 runtime implementation
+3. 實作時一併補 `index / roo / mob / obj / res / shp`
+4. 再更新 `delivery_gate` 為 `implementation_in_progress` 或後續對應狀態
 
 （註：目前 repo 無 `docs/3yWebsite/docs/data/players.json` 與 `skills.json`，下一輪若要做 docs-assisted pass，需先補回 dataset 或改用現存資料來源。）
 
 語意提醒：
 
-- 目前 tracker 沒有 `in_progress` 或 `todo` 項目；若要繼續下一區，需先補新的 candidate / todo
+- 目前已有 `in_progress` 項目 `sec_rift_sealed_core_basin`，再次使用固定 prompt 時應優先續做此區，不得跳到其他候選
 - `sec_rift_core_below` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0018-sec-rift-core-below.md` 回查
 - `sec_rift_core_below_deeps` 已完成第一輪 implementation 並提交，可由 `Done` 與 `plans/area/0019-sec-rift-core-below-deeps.md` 回查
 - 依新 room reservation policy，`sec_rift_below` 已使用 `9501-9520`，`sec_rift_core` 已使用 `9601-9620`，`sec_rift_deeps` 已完成 `9701-9712` 第一版落地，`sec_rift_prison_core` 已完成 `10001-10012` 第一版落地，`sec_rift_underseal_dais` 已完成 `10101-10112` 第一版落地，`sec_rift_true_core` 已完成 `10201-10212` 第一版落地，`sec_rift_core_below` 已完成 `10301-10312` 第一版落地，`sec_rift_core_below_deeps` 已完成 `10401-10412` 第一版落地，`sec_rift_core_vein_abyss` 已完成 `10501-10512` 第一版落地，`sec_rift_underseal_basin` 已完成 `10601-10612` 第一版落地，並保留 `10601-10620` 作為首段 block
@@ -188,4 +217,4 @@
 
 建議可直接使用的 prompt：
 
-`盤點並建立下一個待建 area：先更新 candidate queue，再建立單區 plan 與 map.md spec。`
+`續做 sec_rift_sealed_core_basin：先提交目前的 spec milestone，再決定是否進入第一輪 runtime implementation。`
