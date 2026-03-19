@@ -1,0 +1,32 @@
+Vnum            13303
+Name            幽玄內庭前緣~
+Description
+前緣俯瞰整座向內沉落的幽玄內庭，庭底像一潭由無數幽紋暫時聚住的靜井，視線一旦停得稍久，就會連自己原本勉強還能抓住的重量也被一併拖向更深的幽寂。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        13307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

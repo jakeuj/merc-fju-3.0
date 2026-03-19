@@ -1,0 +1,32 @@
+Vnum            13304
+Name            聽幽鎮魄臺~
+Description
+鎮魄臺旁的聽幽碑只剩幾道像由幽紋勉強排成的浮痕，碑與界之間的差別在此只靠一種還沒完全墜盡的秩序苦撐，像再深一步就會整片改寫成純粹玄幽。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         聽幽~
+End
+
+#Enquire
+Keyword         鎮魄~
+End
+
+End

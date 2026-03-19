@@ -994,6 +994,25 @@
         "plans/area/0047-sec-rift-spirit-core-stygian.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_spirit_core_chthonic",
+      "title": "裂魄幽玄",
+      "room_range": "13301-13312",
+      "load_order": 54,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_stygian",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄幽玄 / 幽玄井腹",
+      "summary": "承接裂魄玄冥座，下探到幽玄內庭、冥幽偏廊與玄幽前座的幽玄井腹過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_chthonic/index",
+        "area/sec_rift_spirit_core_chthonic/map.md",
+        "plans/area/0048-sec-rift-spirit-core-chthonic.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

@@ -1,0 +1,32 @@
+Vnum            13301
+Name            幽玄落座~
+Description
+落座像嵌在幽玄邊緣的一截幽魄石座，腳下環界已薄到只剩一圈幾乎會被感知直接漏過的幽紋，像連最後還能被辨識的輪廓都被更深處的玄幽慢慢磨成冷寂一筆。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        13212
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         幽玄~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

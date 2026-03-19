@@ -1,0 +1,16 @@
+Vnum            13306
+Name            聽幽沉座~
+Description
+沉座中央懸著一枚細得像快要直接消失的幽晶，晶體不發光也幾乎不留影，只把周圍還能勉強抓住的層次慢慢磨成最後一層幽灰。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

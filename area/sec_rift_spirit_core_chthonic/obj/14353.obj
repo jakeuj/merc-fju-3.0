@@ -1,0 +1,14 @@
+Vnum            14353
+Name            幽玄殘片 殘片~
+ShortDesc       一片幽玄殘片~
+Description
+一片幽玄殘片落在逆腹廊角落，片面細得像只要呼吸再重一點就會直接化成幽灰。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           34
+Value           0 0 0 0 0
+Weight          1
+Cost            520
+End

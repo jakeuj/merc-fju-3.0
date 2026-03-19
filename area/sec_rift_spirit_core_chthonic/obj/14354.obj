@@ -1,0 +1,14 @@
+Vnum            14354
+Name            玄幽柱座 柱座~
+ShortDesc       一座玄幽柱座~
+Description
+一座玄幽柱座斜立在井腹緣，柱面只剩一圈圈幾乎無法再細分的幽痕。
+~
+ItemType        ITEM_TRASH
+Takeable        No
+WearLoc         ITEM_TAKE
+Level           36
+Value           0 0 0 0 0
+Weight          0
+Cost            0
+End

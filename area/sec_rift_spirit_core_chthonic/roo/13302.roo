@@ -1,0 +1,24 @@
+Vnum            13302
+Name            幽紋沉階~
+Description
+沉階表面已分不出任何原本的石理，只剩一層層近乎無名的幽紋貼著階面往前滑移，讓每一步都像踩在最後一次沉寂之前仍勉強保持形體的界面上。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13301
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

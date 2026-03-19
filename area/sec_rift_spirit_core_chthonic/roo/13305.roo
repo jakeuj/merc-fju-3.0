@@ -1,0 +1,39 @@
+Vnum            13305
+Name            幽玄沉黯槽~
+Description
+沉黯槽裡沒有流勢可循，只剩一道由幽紋反覆聚起又散去的窄痕朝更深處緩慢收束，像整段井腹正在把最後殘留的名字磨成再也不可分的幽灰。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13306
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        13309
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         沉黯~
+Description
+槽壁封紋已散成難以再分的幽點，只留下把界面持續磨向更深幽寂的沉靜壓力。
+~
+End
+
+End

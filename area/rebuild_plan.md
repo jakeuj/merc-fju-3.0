@@ -232,6 +232,8 @@
 - `sec_rift_spirit_core_nether` 已完成 runtime implementation，完成本機 build 與 smoke test 驗證，並達成可前進下一區狀態
 - `plans/area/0047-sec-rift-spirit-core-stygian.md` 已建立
 - `sec_rift_spirit_core_stygian` 已完成 runtime implementation，完成本機 build 與 smoke test 驗證，並達成可前進下一區狀態
+- `plans/area/0048-sec-rift-spirit-core-chthonic.md` 已建立
+- `sec_rift_spirit_core_chthonic` 已完成 runtime implementation，完成本機 build 與 smoke test 驗證，並達成可前進下一區狀態
 ## Blocked
 
 - none
