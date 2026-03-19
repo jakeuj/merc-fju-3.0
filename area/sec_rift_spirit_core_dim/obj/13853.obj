@@ -1,0 +1,14 @@
+Vnum            13853
+Name            寥界殘片 殘片~
+ShortDesc       一片寥界殘片~
+Description
+一片寥界殘片落在逆腹廊角落，片面細得像只要呼吸再重一點就會直接化成黯灰。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           34
+Value           0 0 0 0 0
+Weight          1
+Cost            500
+End

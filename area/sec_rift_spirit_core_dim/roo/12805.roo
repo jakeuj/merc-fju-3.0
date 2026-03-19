@@ -1,0 +1,39 @@
+Vnum            12805
+Name            寥界薄黯槽~
+Description
+薄黯槽裡沒有流勢可循，只剩一道由寥紋反覆聚起又散去的窄痕朝更深處緩慢收束，像整段井腹正在把最後殘留的名字磨成再也不可分的黯灰。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12806
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        12809
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         薄黯~
+Description
+槽壁封紋已散成難以再分的寥點，只留下把界面持續磨向最終薄黯的沉靜壓力。
+~
+End
+
+End

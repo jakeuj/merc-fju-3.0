@@ -1,0 +1,32 @@
+Vnum            13802
+Name            gloam corridor watcher~
+ShortDesc       微寥測守~
+Description
+這名微寥測守伏在偏廊邊，面甲下只剩一層幾乎快要徹底散掉的薄寥視線，像正
+靜靜衡量每個經過此地的人還留有多少不會立刻黯滅的重量。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       -216
+Level           100
+Hitroll         14
+Protect         0
+Damroll         15
+Str             22
+Int             18
+Wis             21
+Dex             16
+Con             21
+Hp              42800
+Mana            2620
+Move            820
+Class           0
+Gold            3320
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

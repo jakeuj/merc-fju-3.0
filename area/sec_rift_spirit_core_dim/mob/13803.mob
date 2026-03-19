@@ -1,0 +1,32 @@
+Vnum            13803
+Name            gloam heart guard~
+ShortDesc       微寥鎮衛~
+Description
+一名微寥鎮衛立在井腹緣前，雙手扶著長槍般的封魄終樁，身形穩得像早已與周圍
+寥界井壁凝成同一層正要往更深微寥沉落的冷硬輪廓。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       268
+Level           100
+Hitroll         15
+Protect         0
+Damroll         16
+Str             22
+Int             18
+Wis             22
+Dex             15
+Con             22
+Hp              44000
+Mana            2720
+Move            840
+Class           0
+Gold            3500
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

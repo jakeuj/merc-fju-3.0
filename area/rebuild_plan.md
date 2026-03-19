@@ -222,6 +222,8 @@
 - `sec_rift_spirit_core_extinct` 已完成 runtime implementation，完成本機 build 與 smoke test 驗證，並達成可前進下一區狀態
 - `plans/area/0042-sec-rift-spirit-core-silent.md` 已建立
 - `sec_rift_spirit_core_silent` 已完成 runtime implementation，完成本機 build 與 smoke test 驗證，並達成可前進下一區狀態
+- `plans/area/0043-sec-rift-spirit-core-dim.md` 已建立
+- `sec_rift_spirit_core_dim` 已完成 runtime implementation，完成本機 build 與 smoke test 驗證，並達成可前進下一區狀態
 ## Blocked
 
 - none

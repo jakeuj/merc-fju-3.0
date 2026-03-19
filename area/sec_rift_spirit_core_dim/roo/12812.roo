@@ -1,0 +1,24 @@
+Vnum            12812
+Name            裂魄寥界座~
+Description
+寥界座像整段寥界井腹最後一塊仍勉強聚得住輪廓的寥魄石座，腳下環界只剩一圈隨時會再淡盡一層的細薄紋，所有殘痕都在這裡被拖往更深的裂魄微寥。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        12811
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         寥界座~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

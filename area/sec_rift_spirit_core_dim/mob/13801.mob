@@ -1,0 +1,32 @@
+Vnum            13801
+Name            dim court patrol~
+ShortDesc       寥界巡守~
+Description
+一名寥界巡守沿著寥界內庭緩步巡視，手中的聽寥短杖偶爾在石面點出一束極細
+寥痕，像在確認這片井腹還剩多少界面尚未被磨向薄黯。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       228
+Level           100
+Hitroll         13
+Protect         0
+Damroll         14
+Str             21
+Int             18
+Wis             22
+Dex             16
+Con             21
+Hp              41200
+Mana            2500
+Move            790
+Class           0
+Gold            3120
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

@@ -1,0 +1,14 @@
+Vnum            13852
+Name            聽寥碑 石碑~
+ShortDesc       一座聽寥碑~
+Description
+一座聽寥碑立在鎮魄臺旁，碑面只剩幾道像快要直接淡盡的寥界細痕。
+~
+ItemType        ITEM_TRASH
+Takeable        No
+WearLoc         ITEM_TAKE
+Level           32
+Value           0 0 0 0 0
+Weight          0
+Cost            0
+End

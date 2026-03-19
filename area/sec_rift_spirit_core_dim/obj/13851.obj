@@ -1,0 +1,14 @@
+Vnum            13851
+Name            聽寥短杖 短杖~
+ShortDesc       一支聽寥短杖~
+Description
+一支聽寥短杖倚在寥界內庭邊，杖尖還殘留一束細得快要直接薄黯的寥痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           28
+Value           0 0 0 0 0
+Weight          3
+Cost            460
+End

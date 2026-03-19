@@ -899,6 +899,25 @@
         "plans/area/0042-sec-rift-spirit-core-silent.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_spirit_core_dim",
+      "title": "裂魄寥界",
+      "room_range": "12801-12812",
+      "load_order": 49,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_silent",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄寥界 / 寥界井腹",
+      "summary": "承接裂魄寂界座，下探到寥界內庭、微寥偏廊與微寥前座的寥界井腹過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_dim/index",
+        "area/sec_rift_spirit_core_dim/map.md",
+        "plans/area/0043-sec-rift-spirit-core-dim.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }
