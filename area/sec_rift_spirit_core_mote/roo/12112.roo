@@ -13,6 +13,14 @@ ExitKeyword     ~
 ExitKey         0
 End
 
+#Exit
+Direction       DOWN
+ExitVnum        12201
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
 #Enquire
 Keyword         塵界座~
 End

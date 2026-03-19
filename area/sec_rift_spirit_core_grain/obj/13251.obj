@@ -1,0 +1,14 @@
+Vnum            13251
+Name            觀粒短杖 短杖~
+ShortDesc       一支觀粒短杖~
+Description
+一支觀粒短杖倚在粒界內庭邊，杖尖還殘留一束細得快要自行散掉的粒痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           27
+Value           0 0 0 0 0
+Weight          3
+Cost            390
+End

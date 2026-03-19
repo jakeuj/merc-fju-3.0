@@ -1,0 +1,16 @@
+Vnum            12206
+Name            聽粒沉座~
+Description
+沉座中央懸著一枚細得像快要自行裂散的粒晶，晶體不發光也幾乎不留影，只把周圍還能抓住的層次慢慢磨成更末細的粒點。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            12208
+Name            末粒偏廊~
+Description
+偏廊兩側嵌著一列列幾乎比末塵還輕的導響殼片，殼面已不再回應完整聲響，只會把人的念頭磨成一層層更末細的粒灰。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12209
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         末粒~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            13203
+Name            last threshold guard~
+ShortDesc       末界鎮衛~
+Description
+一名末界鎮衛立在井緣前，雙手扶著長槍般的封魄末樁，身形穩得像早已與周圍
+聚粒井壁凝成同一層正要往更深末界沉落的冷硬輪廓。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       220
+Level           100
+Hitroll         14
+Protect         0
+Damroll         15
+Str             22
+Int             18
+Wis             22
+Dex             15
+Con             21
+Hp              40200
+Mana            2400
+Move            770
+Class           0
+Gold            2960
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

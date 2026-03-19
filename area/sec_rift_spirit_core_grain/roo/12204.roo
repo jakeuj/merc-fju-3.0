@@ -1,0 +1,32 @@
+Vnum            12204
+Name            觀粒鎮魄臺~
+Description
+鎮魄臺旁的觀粒碑只剩幾道像由細粒勉強排成的浮痕，碑與界之間的差別在此只靠一種仍未完全粉碎的秩序苦撐。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         觀粒~
+End
+
+#Enquire
+Keyword         鎮魄~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            12201
+Name            粒界落座~
+Description
+落座像嵌在粒界邊緣的一截聚粒石影，腳下環界已碎成一圈幾乎要被感知漏掉的末粒薄紋，像連最後殘存的形跡都只剩微末粒點還勉強貼在一起。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        12112
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         粒界~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

@@ -785,6 +785,25 @@
         "plans/area/0036-sec-rift-spirit-core-mote.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_spirit_core_grain",
+      "title": "裂魄粒界",
+      "room_range": "12201-12212",
+      "load_order": 43,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_mote",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄粒界 / 粒界深井",
+      "summary": "承接裂魄塵界座，下探到粒界內庭、末粒偏廊與末界前座的粒界深井過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_grain/index",
+        "area/sec_rift_spirit_core_grain/map.md",
+        "plans/area/0037-sec-rift-spirit-core-grain.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

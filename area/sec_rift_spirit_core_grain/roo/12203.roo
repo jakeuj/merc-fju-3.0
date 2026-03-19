@@ -1,0 +1,32 @@
+Vnum            12203
+Name            粒界內庭前緣~
+Description
+前緣俯瞰整座向內沉落的粒界內庭，庭底像一潭由無數細粒暫時聚住的靜井，視線一旦停得稍久，就會連自己原本還能握住的重量都被一起磨成更細的末點。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        12207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

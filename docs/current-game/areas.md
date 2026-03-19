@@ -66,6 +66,7 @@ title: Current Game Areas
 | `sec_rift_spirit_core_faint` | 裂魄澹界 / 澹界深井 | `11901-11912` | `rebuild addition` | 承接裂魄素界座，下探到澹界內庭、微痕偏廊與微界前座。 |
 | `sec_rift_spirit_core_trace` | 裂魄微界 / 微界深井 | `12001-12012` | `rebuild addition` | 承接裂魄澹界座，下探到微界內庭、細痕偏廊與塵界前座。 |
 | `sec_rift_spirit_core_mote` | 裂魄塵界 / 塵界深井 | `12101-12112` | `rebuild addition` | 承接裂魄微界座，下探到塵界內庭、塵粒偏廊與粒界前座。 |
+| `sec_rift_spirit_core_grain` | 裂魄粒界 / 粒界深井 | `12201-12212` | `rebuild addition` | 承接裂魄塵界座，下探到粒界內庭、末粒偏廊與末界前座。 |
 
 ## Recent Rebuild Areas
 
@@ -107,6 +108,7 @@ title: Current Game Areas
 - `sec_rift_spirit_core_faint`：承接裂魄素界座，下探到澹界內庭、微痕偏廊與微界前座，作為更深裂魄微界區前的澹界深井過渡帶。
 - `sec_rift_spirit_core_trace`：承接裂魄澹界座，下探到微界內庭、細痕偏廊與塵界前座，作為更深裂魄塵界區前的微界深井 plateau 過渡帶。
 - `sec_rift_spirit_core_mote`：承接裂魄微界座，下探到塵界內庭、塵粒偏廊與粒界前座，作為更深裂魄粒界區前的塵界深井 plateau 過渡帶。
+- `sec_rift_spirit_core_grain`：承接裂魄塵界座，下探到粒界內庭、末粒偏廊與末界前座，作為更深裂魄末界區前的粒界深井 plateau 過渡帶。
 
 ### 北方鏈
 

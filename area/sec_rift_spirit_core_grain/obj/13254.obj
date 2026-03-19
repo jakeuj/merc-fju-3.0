@@ -1,0 +1,14 @@
+Vnum            13254
+Name            末界柱座 柱座~
+ShortDesc       一座末界柱座~
+Description
+一座末界柱座斜立在井緣，柱面只剩一圈圈幾乎無法再細分的末粒細痕。
+~
+ItemType        ITEM_TRASH
+Takeable        No
+WearLoc         ITEM_TAKE
+Level           35
+Value           0 0 0 0 0
+Weight          0
+Cost            0
+End

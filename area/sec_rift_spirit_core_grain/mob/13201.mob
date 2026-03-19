@@ -1,0 +1,32 @@
+Vnum            13201
+Name            grain court patrol~
+ShortDesc       粒界巡守~
+Description
+一名粒界巡守沿著粒界內庭緩步巡視，手中的觀粒短杖偶爾在石面點出一束極細
+的粒痕，像在確認這片深井還剩多少界面尚未被磨成末粒。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       182
+Level           99
+Hitroll         12
+Protect         0
+Damroll         13
+Str             20
+Int             18
+Wis             22
+Dex             16
+Con             20
+Hp              34400
+Mana            2140
+Move            710
+Class           0
+Gold            2520
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

@@ -1,0 +1,14 @@
+Vnum            13253
+Name            末粒殘片 末片~
+ShortDesc       一片末粒殘片~
+Description
+一片末粒殘片落在逆廊角落，片面細得像只要氣息再重一點就會碎成更淡的末灰。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           33
+Value           0 0 0 0 0
+Weight          1
+Cost            430
+End

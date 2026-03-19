@@ -1,0 +1,24 @@
+Vnum            12202
+Name            聚粒下階~
+Description
+下階表面已分不出完整石紋，只剩一層層快要自行散掉的細粒貼著階面向前游移，讓每一步都像踩在即將碎到更細一層的界面上。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12201
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

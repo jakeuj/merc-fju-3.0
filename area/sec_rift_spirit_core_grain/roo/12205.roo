@@ -1,0 +1,39 @@
+Vnum            12205
+Name            粒界聚粒槽~
+Description
+聚粒槽裡沒有流勢可循，只剩一道由細粒反覆聚起又散去的窄痕朝更深處緩慢收束，像整段深井正在把最後殘留的名字磨成更末的一層粒霧。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        12209
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         聚粒~
+Description
+槽壁封紋已散成難以細分的粒點，只留下把界面持續磨落成更末細粒的沉靜壓力。
+~
+End
+
+End

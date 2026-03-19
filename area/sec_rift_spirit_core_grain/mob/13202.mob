@@ -1,0 +1,32 @@
+Vnum            13202
+Name            grain corridor watcher~
+ShortDesc       末粒測守~
+Description
+這名末粒測守伏在偏廊邊，面甲下只剩一層幾乎快要徹底散掉的末細視線，像正
+靜靜衡量每個經過此地的人還留有多少不會立刻崩散的重量。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       -168
+Level           100
+Hitroll         13
+Protect         0
+Damroll         14
+Str             21
+Int             18
+Wis             21
+Dex             16
+Con             21
+Hp              38800
+Mana            2280
+Move            740
+Class           0
+Gold            2780
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End
