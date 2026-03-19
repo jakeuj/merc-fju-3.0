@@ -1,0 +1,32 @@
+Vnum            13403
+Name            terminal heart guard~
+ShortDesc       終核鎮衛~
+Description
+一名終核鎮衛立在井心緣前，雙手扶著長槍般的封魄終樁，身形穩得像早已與周圍
+終界井壁凝成同一層正要往更深絕界沉落的冷硬輪廓。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       236
+Level           100
+Hitroll         15
+Protect         0
+Damroll         16
+Str             22
+Int             18
+Wis             22
+Dex             15
+Con             22
+Hp              42400
+Mana            2560
+Move            800
+Class           0
+Gold            3260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

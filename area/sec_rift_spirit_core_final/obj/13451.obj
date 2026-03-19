@@ -1,0 +1,14 @@
+Vnum            13451
+Name            聽終短杖 短杖~
+ShortDesc       一支聽終短杖~
+Description
+一支聽終短杖倚在終界內庭邊，杖尖還殘留一束細得快要直接歸盡的終痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           28
+Value           0 0 0 0 0
+Weight          3
+Cost            420
+End
