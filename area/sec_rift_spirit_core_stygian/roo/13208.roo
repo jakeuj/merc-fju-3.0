@@ -1,0 +1,32 @@
+Vnum            13208
+Name            玄幽偏廊~
+Description
+偏廊兩側嵌著一列列幾乎比冥塵還輕的導響殼片，殼面已不再回應完整聲響，只會把人的念頭磨成一層層更沉的陰灰。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13209
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         玄幽~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End

@@ -1,0 +1,24 @@
+Vnum            13212
+Name            裂魄玄冥座~
+Description
+玄冥座像整段玄冥井腹最後一塊仍勉強聚得住輪廓的玄魄石座，腳下環界只剩一圈隨時會再淡盡一層的細薄玄紋，所有殘痕都在這裡被拖往更深的裂魄幽玄。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        13211
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         玄冥座~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

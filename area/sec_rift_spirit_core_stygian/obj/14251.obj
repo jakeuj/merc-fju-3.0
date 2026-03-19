@@ -1,0 +1,14 @@
+Vnum            14251
+Name            聽冥短杖 短杖~
+ShortDesc       一支聽冥短杖~
+Description
+一支聽冥短杖倚在玄冥內庭邊，杖尖還殘留一束細得快要直接沉盡的冥痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           28
+Value           0 0 0 0 0
+Weight          3
+Cost            480
+End

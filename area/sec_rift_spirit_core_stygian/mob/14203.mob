@@ -1,0 +1,32 @@
+Vnum            14203
+Name            stygian heart guard~
+ShortDesc       玄冥鎮衛~
+Description
+一名玄冥鎮衛立在井腹緣前，雙手扶著長槍般的封魄終樁，身形穩得像早已與周圍
+玄冥井壁凝成同一層正要往更深玄冥沉落的冷硬輪廓。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       284
+Level           100
+Hitroll         15
+Protect         0
+Damroll         16
+Str             22
+Int             18
+Wis             22
+Dex             15
+Con             22
+Hp              44800
+Mana            2800
+Move            860
+Class           0
+Gold            3620
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

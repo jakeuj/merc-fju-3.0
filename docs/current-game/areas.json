@@ -975,6 +975,25 @@
         "plans/area/0046-sec-rift-spirit-core-nether.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_spirit_core_stygian",
+      "title": "裂魄玄冥",
+      "room_range": "13201-13212",
+      "load_order": 53,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_nether",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄玄冥 / 玄冥井腹",
+      "summary": "承接裂魄冥界座，下探到玄冥內庭、玄幽偏廊與玄冥前座的玄冥井腹過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_stygian/index",
+        "area/sec_rift_spirit_core_stygian/map.md",
+        "plans/area/0047-sec-rift-spirit-core-stygian.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }
