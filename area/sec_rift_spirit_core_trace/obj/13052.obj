@@ -1,0 +1,14 @@
+Vnum            13052
+Name            觀痕碑 石碑~
+ShortDesc       一座觀痕碑~
+Description
+一座觀痕碑立在鎮魄臺旁，碑面只剩幾道像要被空氣直接磨散的細線。
+~
+ItemType        ITEM_TRASH
+Takeable        No
+WearLoc         ITEM_TAKE
+Level           29
+Value           0 0 0 0 0
+Weight          0
+Cost            0
+End

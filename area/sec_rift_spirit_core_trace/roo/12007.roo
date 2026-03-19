@@ -1,0 +1,24 @@
+Vnum            12007
+Name            細痕側階~
+Description
+側階斜切進偏廊時，腳下的踏步感像被拆成一段段更細的碎線，回頭再看，剛才走過的每一道痕都已淡到只剩勉強能被記住的輪廓。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        12003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

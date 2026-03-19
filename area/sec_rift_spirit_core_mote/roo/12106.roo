@@ -1,0 +1,16 @@
+Vnum            12106
+Name            聽塵沉座~
+Description
+沉座中央懸著一枚細得像快要自行崩散的塵晶，晶體不發光也幾乎不留影，只把周圍還能抓得住的層次慢慢磨成更細的灰點。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

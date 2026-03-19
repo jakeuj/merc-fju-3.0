@@ -1,0 +1,24 @@
+Vnum            12002
+Name            細痕下階~
+Description
+下階表面已看不出完整石紋，只剩一道道幾乎會在視線剛碰到時就散開的細痕貼著階面延伸，讓每一步都像踩在快要被抹去的界線上。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12001
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

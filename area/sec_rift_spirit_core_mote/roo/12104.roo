@@ -1,0 +1,32 @@
+Vnum            12104
+Name            觀塵鎮魄臺~
+Description
+鎮魄臺旁的觀塵碑只剩幾道像由細灰塵點勉強排出的浮痕，碑與界之間的差別在此只靠一種仍未完全鬆散的秩序苦撐。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         觀塵~
+End
+
+#Enquire
+Keyword         鎮魄~
+End
+
+End

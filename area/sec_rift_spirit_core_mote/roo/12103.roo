@@ -1,0 +1,32 @@
+Vnum            12103
+Name            塵界內庭前緣~
+Description
+前緣俯瞰整座向內沉落的塵界內庭，庭底像一潭由無數灰細塵點暫時聚住的靜井，視線一旦停得稍久，就會連自己原本還能辨認的重量都被一起削輕。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        12107
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

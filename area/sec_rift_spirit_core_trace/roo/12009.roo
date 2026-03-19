@@ -1,0 +1,32 @@
+Vnum            12009
+Name            微界逆廊~
+Description
+逆廊中央橫著一道近乎只有在側目時才看得見的細裂縫，縫底既沒有深度也沒有重量，卻像能把最後還留得住的形跡慢慢拖往更深的塵界井腹。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        12005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        12008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12010
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -1,0 +1,14 @@
+Vnum            13151
+Name            觀塵短杖 短杖~
+ShortDesc       一支觀塵短杖~
+Description
+一支觀塵短杖倚在塵界內庭邊，杖尖還殘留一圈細得快要自行散掉的灰痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           26
+Value           0 0 0 0 0
+Weight          3
+Cost            370
+End

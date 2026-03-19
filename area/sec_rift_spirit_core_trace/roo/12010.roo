@@ -1,0 +1,24 @@
+Vnum            12010
+Name            塵界前橋~
+Description
+前橋橫跨在一段已被磨成近乎無形塵霧的井腹上方，橋面每次受力後都只留下極短的一縷冷痕，下一瞬便像被更深的細塵一併吞沒。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12009
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        12011
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

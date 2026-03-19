@@ -1,0 +1,32 @@
+Vnum            12011
+Name            微界井緣~
+Description
+井緣圍著幾座向內傾斜的封魄柱座，柱面殘紋已磨成一圈圈若有若無的細點，像這裡就是所有界層最後還能勉強被數出痕粒的地方。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        12010
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        12012
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         井緣~
+End
+
+#Enquire
+Keyword         柱座~
+End
+
+End

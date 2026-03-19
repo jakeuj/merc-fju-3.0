@@ -1,0 +1,14 @@
+Vnum            13053
+Name            細塵殘片 塵片~
+ShortDesc       一片細塵殘片~
+Description
+一片細塵殘片落在逆廊角落，片面細得像只要一眨眼就會從視野裡再薄一層。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           31
+Value           0 0 0 0 0
+Weight          1
+Cost            390
+End

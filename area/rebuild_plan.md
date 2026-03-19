@@ -206,6 +206,10 @@
 - `sec_rift_spirit_core_plain` 已完成 runtime implementation，完成 WSL build 與 smoke test 驗證
 - `plans/area/0034-sec-rift-spirit-core-faint.md` 已建立
 - `sec_rift_spirit_core_faint` 已完成 runtime implementation，完成 WSL build 與 smoke test 驗證
+- `plans/area/0035-sec-rift-spirit-core-trace.md` 已建立
+- `sec_rift_spirit_core_trace` 已完成 runtime implementation，完成本機 build 與 smoke test 驗證，並達成可前進下一區狀態
+- `plans/area/0036-sec-rift-spirit-core-mote.md` 已建立
+- `sec_rift_spirit_core_mote` 已完成 runtime implementation，完成本機 build 與 smoke test 驗證，並達成可前進下一區狀態
 ## Blocked
 
 - none

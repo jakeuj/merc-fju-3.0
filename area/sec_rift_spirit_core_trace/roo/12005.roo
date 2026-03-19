@@ -1,0 +1,39 @@
+Vnum            12005
+Name            微界碎痕槽~
+Description
+碎痕槽裡沒有流勢，也沒有明確下沉的邊界，只剩一道由極細裂痕聚起又散去的窄線朝更深處收束，像整段深井正在把最後殘留的形名磨成微粒。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12006
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        12009
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         碎痕~
+Description
+槽壁封紋已碎成近乎不可辨識的細痕，只留下把界面持續磨薄、磨細的沉靜壓力。
+~
+End
+
+End

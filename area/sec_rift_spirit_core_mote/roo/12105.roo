@@ -1,0 +1,39 @@
+Vnum            12105
+Name            塵界聚塵槽~
+Description
+聚塵槽裡沒有流勢可循，只剩一道由細塵反覆聚起又散去的窄痕朝更深處緩慢收束，像整段深井正在把最後殘留的名字磨成一層更細的灰。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12106
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        12109
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         聚塵~
+Description
+槽壁封紋已散成難以計數的灰點，只留下把界面持續磨落成更細塵粒的沉靜壓力。
+~
+End
+
+End

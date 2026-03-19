@@ -1,0 +1,14 @@
+Vnum            13054
+Name            塵界柱座 柱座~
+ShortDesc       一座塵界柱座~
+Description
+一座塵界柱座斜立在井緣，柱面只剩一圈圈幾乎數不清的微細塵痕。
+~
+ItemType        ITEM_TRASH
+Takeable        No
+WearLoc         ITEM_TAKE
+Level           33
+Value           0 0 0 0 0
+Weight          0
+Cost            0
+End

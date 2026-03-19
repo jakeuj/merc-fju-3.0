@@ -1,0 +1,32 @@
+Vnum            12012
+Name            裂魄微界座~
+Description
+微界座像整段微界深井最後一塊仍勉強聚得住形的細痕石座，腳下環界只剩一圈幾乎會被漏看的微粒薄紋，所有殘痕都在這裡被拖往更深的裂魄塵界。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        12011
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        12101
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         微界座~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

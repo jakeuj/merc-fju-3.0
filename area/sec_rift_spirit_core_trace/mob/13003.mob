@@ -1,0 +1,32 @@
+Vnum            13003
+Name            mote threshold guard~
+ShortDesc       塵界鎮衛~
+Description
+一名塵界鎮衛立在井緣前，雙手扶著長槍般的封魄塵樁，身形穩得像早已與周圍
+細痕石壁凝成同一層即將往更深處磨落的冷硬輪廓。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       208
+Level           100
+Hitroll         13
+Protect         0
+Damroll         14
+Str             21
+Int             18
+Wis             22
+Dex             15
+Con             21
+Hp              38200
+Mana            2280
+Move            740
+Class           0
+Gold            2730
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

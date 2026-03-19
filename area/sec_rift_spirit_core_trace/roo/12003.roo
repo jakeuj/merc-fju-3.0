@@ -1,0 +1,32 @@
+Vnum            12003
+Name            微界內庭前緣~
+Description
+前緣俯瞰整座向內沉落的微界內庭，庭底像一潭由無數極細痕粒暫時聚住的靜井，視線只要停得稍久，連自己原本握住的輪廓都像會被一起削薄。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        12007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

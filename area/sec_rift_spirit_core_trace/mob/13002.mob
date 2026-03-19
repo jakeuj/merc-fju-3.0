@@ -1,0 +1,32 @@
+Vnum            13002
+Name            trace corridor watcher~
+ShortDesc       細痕測守~
+Description
+這名細痕測守伏在偏廊邊，面甲下只剩一道極細的視線，像正靜靜衡量每個經過
+此地的人還留有多少不會立刻散成塵點的形跡。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       -148
+Level           99
+Hitroll         11
+Protect         0
+Damroll         12
+Str             20
+Int             18
+Wis             21
+Dex             16
+Con             20
+Hp              33600
+Mana            2080
+Move            700
+Class           0
+Gold            2440
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

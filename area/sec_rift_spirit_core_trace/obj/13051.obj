@@ -1,0 +1,14 @@
+Vnum            13051
+Name            觀痕短杖 短杖~
+ShortDesc       一支觀痕短杖~
+Description
+一支觀痕短杖倚在微界內庭邊，杖尖還殘留幾束細得像要立刻散去的裂痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           25
+Value           0 0 0 0 0
+Weight          3
+Cost            350
+End

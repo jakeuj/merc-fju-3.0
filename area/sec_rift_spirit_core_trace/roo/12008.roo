@@ -1,0 +1,32 @@
+Vnum            12008
+Name            細痕偏廊~
+Description
+偏廊兩側嵌著一列列幾乎比呼吸還輕的導響殼片，殼面已不再回應完整的聲音，只會把人的念頭刮成一束束極薄的痕線。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12009
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         細痕~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End

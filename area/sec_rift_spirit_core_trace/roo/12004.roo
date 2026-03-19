@@ -1,0 +1,32 @@
+Vnum            12004
+Name            觀痕鎮魄臺~
+Description
+鎮魄臺旁的觀痕碑只剩幾道細到像從空氣裡縫出來的浮痕，碑與界之間的差別在此已不再靠形體，而只靠一種還沒完全崩散的秩序。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         觀痕~
+End
+
+#Enquire
+Keyword         鎮魄~
+End
+
+End

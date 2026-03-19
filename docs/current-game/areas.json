@@ -747,6 +747,44 @@
         "plans/area/0034-sec-rift-spirit-core-faint.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_spirit_core_trace",
+      "title": "裂魄微界",
+      "room_range": "12001-12012",
+      "load_order": 41,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_faint",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄微界 / 微界深井",
+      "summary": "承接裂魄澹界座，下探到微界內庭、細痕偏廊與塵界前座的微界深井過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_trace/index",
+        "area/sec_rift_spirit_core_trace/map.md",
+        "plans/area/0035-sec-rift-spirit-core-trace.md",
+        "area/rebuild_plan.md"
+      ]
+    },
+    {
+      "name": "sec_rift_spirit_core_mote",
+      "title": "裂魄塵界",
+      "room_range": "12101-12112",
+      "load_order": 42,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_trace",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄塵界 / 塵界深井",
+      "summary": "承接裂魄微界座，下探到塵界內庭、塵粒偏廊與粒界前座的塵界深井過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_mote/index",
+        "area/sec_rift_spirit_core_mote/map.md",
+        "plans/area/0036-sec-rift-spirit-core-mote.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

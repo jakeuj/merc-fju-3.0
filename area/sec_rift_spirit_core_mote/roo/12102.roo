@@ -1,0 +1,24 @@
+Vnum            12102
+Name            聚塵下階~
+Description
+下階表面已分不出原本的石紋，只剩一層層快要自動散開的聚塵貼著階面向前滑移，讓每一步都像踩在即將重新崩散的界面上。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12101
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

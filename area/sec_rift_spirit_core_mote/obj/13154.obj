@@ -1,0 +1,14 @@
+Vnum            13154
+Name            粒界柱座 柱座~
+ShortDesc       一座粒界柱座~
+Description
+一座粒界柱座斜立在井緣，柱面只剩一圈圈幾乎無法再細分的灰細粒痕。
+~
+ItemType        ITEM_TRASH
+Takeable        No
+WearLoc         ITEM_TAKE
+Level           34
+Value           0 0 0 0 0
+Weight          0
+Cost            0
+End

@@ -1,0 +1,32 @@
+Vnum            12001
+Name            微界落座~
+Description
+落座像嵌在微界邊緣的一截細痕石影，腳下環界已收縮到只剩一圈幾乎要漏過感知的薄紋，像連最後那點餘意都在此被磨成極細的粒痕。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        11912
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         微界~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

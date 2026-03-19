@@ -1,0 +1,32 @@
+Vnum            12101
+Name            塵界落座~
+Description
+落座像嵌在塵界邊緣的一截聚塵石影，腳下環界已碎成一圈幾乎要被風感吹散的微細塵紋，像連最後殘存的形跡都只剩塵粒還勉強黏在一起。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        12012
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         塵界~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

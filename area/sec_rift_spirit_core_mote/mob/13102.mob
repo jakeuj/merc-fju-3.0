@@ -1,0 +1,32 @@
+Vnum            13102
+Name            mote corridor watcher~
+ShortDesc       塵粒測守~
+Description
+這名塵粒測守伏在偏廊邊，面甲下只剩一層幾乎快要散掉的灰視線，像正靜靜衡
+量每個經過此地的人還留有多少不會立刻崩散的重量。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       -160
+Level           100
+Hitroll         13
+Protect         0
+Damroll         14
+Str             21
+Int             18
+Wis             21
+Dex             16
+Con             21
+Hp              37900
+Mana            2240
+Move            730
+Class           0
+Gold            2680
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

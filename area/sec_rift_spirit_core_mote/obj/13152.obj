@@ -1,0 +1,14 @@
+Vnum            13152
+Name            觀塵碑 石碑~
+ShortDesc       一座觀塵碑~
+Description
+一座觀塵碑立在鎮魄臺旁，碑面只剩幾道像快要再次崩成灰點的細痕。
+~
+ItemType        ITEM_TRASH
+Takeable        No
+WearLoc         ITEM_TAKE
+Level           30
+Value           0 0 0 0 0
+Weight          0
+Cost            0
+End

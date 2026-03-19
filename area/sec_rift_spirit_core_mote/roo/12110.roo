@@ -1,0 +1,24 @@
+Vnum            12110
+Name            粒界前橋~
+Description
+前橋橫跨在一段已被磨成近乎只剩灰粒浮層的井腹上方，橋面每次受力後都只留下短得幾乎數不清的細點冷痕，下一瞬便像被更深的粒界一併吞沒。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12109
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        12111
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -1,0 +1,16 @@
+Vnum            12006
+Name            聽痕沉座~
+Description
+沉座中央懸著一枚比髮絲還細的痕晶，晶體不發光也幾乎不投影，只把周圍殘留的層次慢慢拉成更細、更冷的直線。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

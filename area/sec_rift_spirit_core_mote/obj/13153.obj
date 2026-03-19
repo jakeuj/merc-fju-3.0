@@ -1,0 +1,14 @@
+Vnum            13153
+Name            塵粒殘片 粒片~
+ShortDesc       一片塵粒殘片~
+Description
+一片塵粒殘片落在逆廊角落，片面細得像只要氣息稍重一點就會再碎成更淡灰層。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           32
+Value           0 0 0 0 0
+Weight          1
+Cost            410
+End
