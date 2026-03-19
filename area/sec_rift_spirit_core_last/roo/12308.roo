@@ -1,0 +1,32 @@
+Vnum            12308
+Name            終塵偏廊~
+Description
+偏廊兩側嵌著一列列幾乎比末塵還輕的導響殼片，殼面已不再回應完整聲響，只會把人的念頭磨成一層層最後殘存的灰點。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12309
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         終塵~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End

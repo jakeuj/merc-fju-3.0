@@ -1,0 +1,32 @@
+Vnum            12304
+Name            觀末鎮魄臺~
+Description
+鎮魄臺旁的觀末碑只剩幾道像由末點勉強排成的浮痕，碑與界之間的差別在此只靠一種還沒完全湮滅的秩序苦撐。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         觀末~
+End
+
+#Enquire
+Keyword         鎮魄~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            12301
+Name            末界落座~
+Description
+落座像嵌在末界邊緣的一截末影石座，腳下環界已薄到只剩一圈幾乎要被感知直接漏過的終末細紋，像連最後殘存的形跡都只剩最末的灰點還勉強黏在一起。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        12212
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         末界~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

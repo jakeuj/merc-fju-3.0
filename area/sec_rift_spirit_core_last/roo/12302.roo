@@ -1,0 +1,24 @@
+Vnum            12302
+Name            末影下階~
+Description
+下階表面已分不出原本的石紋，只剩一層層快要自行散滅的末影貼著階面向前挪移，讓每一步都像踩在即將被徹底磨盡的界面上。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12301
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

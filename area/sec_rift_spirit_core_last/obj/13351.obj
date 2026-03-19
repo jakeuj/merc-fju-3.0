@@ -1,0 +1,14 @@
+Vnum            13351
+Name            觀末短杖 短杖~
+ShortDesc       一支觀末短杖~
+Description
+一支觀末短杖倚在末界內庭邊，杖尖還殘留一束細得快要直接消盡的末痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           28
+Value           0 0 0 0 0
+Weight          3
+Cost            410
+End

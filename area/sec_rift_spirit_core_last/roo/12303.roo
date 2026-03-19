@@ -1,0 +1,32 @@
+Vnum            12303
+Name            末界內庭前緣~
+Description
+前緣俯瞰整座向內沉落的末界內庭，庭底像一潭由無數終末灰點暫時聚住的靜井，視線一旦停得稍久，就會連自己原本還能辨認的重量也被一起拖向最後的寂薄。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        12307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

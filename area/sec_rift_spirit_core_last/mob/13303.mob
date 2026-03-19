@@ -1,0 +1,32 @@
+Vnum            13303
+Name            final threshold guard~
+ShortDesc       終界鎮衛~
+Description
+一名終界鎮衛立在井緣前，雙手扶著長槍般的封魄終樁，身形穩得像早已與周圍
+末影井壁凝成同一層正要往更深終界沉落的冷硬輪廓。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       228
+Level           100
+Hitroll         15
+Protect         0
+Damroll         16
+Str             22
+Int             18
+Wis             22
+Dex             15
+Con             22
+Hp              42000
+Mana            2520
+Move            790
+Class           0
+Gold            3200
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

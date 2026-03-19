@@ -1,0 +1,32 @@
+Vnum            13301
+Name            last court patrol~
+ShortDesc       末界巡守~
+Description
+一名末界巡守沿著末界內庭緩步巡視，手中的觀末短杖偶爾在石面點出一束極細
+末痕，像在確認這片深井還剩多少界面尚未被磨向終盡。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       188
+Level           100
+Hitroll         13
+Protect         0
+Damroll         14
+Str             21
+Int             18
+Wis             22
+Dex             16
+Con             21
+Hp              39200
+Mana            2300
+Move            740
+Class           0
+Gold            2820
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End
