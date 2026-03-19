@@ -1,0 +1,24 @@
+Vnum            13112
+Name            裂魄冥界座~
+Description
+冥界座像整段冥界井腹最後一塊仍勉強聚得住輪廓的陰魄石座，腳下環界只剩一圈隨時會再淡盡一層的細薄冥紋，所有殘痕都在這裡被拖往更深的裂魄玄冥。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        13111
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         冥界座~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

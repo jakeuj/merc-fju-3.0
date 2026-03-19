@@ -956,6 +956,25 @@
         "plans/area/0045-sec-rift-spirit-core-umbral.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_spirit_core_nether",
+      "title": "裂魄冥界",
+      "room_range": "13101-13112",
+      "load_order": 52,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_umbral",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄冥界 / 冥界井腹",
+      "summary": "承接裂魄晦界座，下探到冥界內庭、幽冥偏廊與玄冥前座的冥界井腹過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_nether/index",
+        "area/sec_rift_spirit_core_nether/map.md",
+        "plans/area/0046-sec-rift-spirit-core-nether.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

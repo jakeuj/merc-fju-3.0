@@ -1,0 +1,14 @@
+Vnum            14153
+Name            冥界殘片 殘片~
+ShortDesc       一片冥界殘片~
+Description
+一片冥界殘片落在逆腹廊角落，片面細得像只要呼吸再重一點就會直接化成冥灰。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           34
+Value           0 0 0 0 0
+Weight          1
+Cost            520
+End

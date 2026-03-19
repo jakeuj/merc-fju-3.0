@@ -1,0 +1,32 @@
+Vnum            13101
+Name            冥界落座~
+Description
+落座像嵌在冥界邊緣的一截陰魄石座，腳下環界已薄到只剩一圈幾乎會被感知直接漏過的冥紋，像連最後還能被辨識的輪廓都被更深處的玄冥慢慢磨成冷薄一筆。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        13012
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         冥界~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

@@ -228,6 +228,8 @@
 - `sec_rift_spirit_core_gloam` 已完成 runtime implementation，完成本機 build 與 smoke test 驗證，並達成可前進下一區狀態
 - `plans/area/0045-sec-rift-spirit-core-umbral.md` 已建立
 - `sec_rift_spirit_core_umbral` 已完成 runtime implementation，完成本機 build 與 smoke test 驗證，並達成可前進下一區狀態
+- `plans/area/0046-sec-rift-spirit-core-nether.md` 已建立
+- `sec_rift_spirit_core_nether` 已完成 runtime implementation，完成本機 build 與 smoke test 驗證，並達成可前進下一區狀態
 ## Blocked
 
 - none
