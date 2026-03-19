@@ -1,0 +1,32 @@
+Vnum            13603
+Name            silent heart guard~
+ShortDesc       寂核鎮衛~
+Description
+一名寂核鎮衛立在井腹緣前，雙手扶著長槍般的封魄終樁，身形穩得像早已與周圍
+滅界井壁凝成同一層正要往更深寂界沉落的冷硬輪廓。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       252
+Level           100
+Hitroll         15
+Protect         0
+Damroll         16
+Str             22
+Int             18
+Wis             22
+Dex             15
+Con             22
+Hp              43200
+Mana            2640
+Move            820
+Class           0
+Gold            3380
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

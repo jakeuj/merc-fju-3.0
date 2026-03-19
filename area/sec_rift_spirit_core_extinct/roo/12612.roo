@@ -1,0 +1,24 @@
+Vnum            12612
+Name            裂魄滅界座~
+Description
+滅界座像整段滅界井腹最後一塊仍勉強聚得住輪廓的滅魄石座，腳下環界只剩一圈隨時會再淡盡一層的細薄紋，所有殘痕都在這裡被拖往更深的裂魄寂界。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        12611
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         滅界座~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

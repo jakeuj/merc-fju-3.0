@@ -1,0 +1,39 @@
+Vnum            12605
+Name            滅界寂盡槽~
+Description
+寂盡槽裡沒有流勢可循，只剩一道由滅紋反覆聚起又散去的窄痕朝更深處緩慢收束，像整段井腹正在把最後殘留的名字磨成再也不可分的寂灰。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12606
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        12609
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         寂盡~
+Description
+槽壁封紋已散成難以再分的滅點，只留下把界面持續磨向最終寂盡的沉靜壓力。
+~
+End
+
+End

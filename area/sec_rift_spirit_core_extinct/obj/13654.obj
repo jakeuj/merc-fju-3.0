@@ -1,0 +1,14 @@
+Vnum            13654
+Name            寂核柱座 柱座~
+ShortDesc       一座寂核柱座~
+Description
+一座寂核柱座斜立在井腹緣，柱面只剩一圈圈幾乎無法再細分的滅痕。
+~
+ItemType        ITEM_TRASH
+Takeable        No
+WearLoc         ITEM_TAKE
+Level           36
+Value           0 0 0 0 0
+Weight          0
+Cost            0
+End

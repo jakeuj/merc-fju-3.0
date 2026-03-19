@@ -1,0 +1,32 @@
+Vnum            12609
+Name            滅界逆腹廊~
+Description
+逆腹廊中央橫著一道只在側目時才勉強能被分出的滅界裂痕，縫底既沒有重量也沒有回聲，卻像能把最後還留得住的形名慢慢拖往更深的寂界井腹。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        12605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        12608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12610
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

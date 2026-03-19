@@ -1,0 +1,16 @@
+Vnum            12606
+Name            聽滅沉座~
+Description
+沉座中央懸著一枚細得像快要直接消失的滅晶，晶體不發光也幾乎不留影，只把周圍還能勉強抓住的層次慢慢磨成最後一層寂灰。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End
