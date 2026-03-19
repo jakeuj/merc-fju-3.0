@@ -1,0 +1,24 @@
+Vnum            12907
+Name            晦微側階~
+Description
+側階斜切進偏廊時，腳下的踏步感像被拆成一點點微寥細屑，回頭再看，剛才走過的每一道痕都已淡到只剩幾乎無法再辨識的最後薄點。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        12903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

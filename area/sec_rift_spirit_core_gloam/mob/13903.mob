@@ -1,0 +1,32 @@
+Vnum            13903
+Name            umbral heart guard~
+ShortDesc       晦核鎮衛~
+Description
+一名晦核鎮衛立在井腹緣前，雙手扶著長槍般的封魄終樁，身形穩得像早已與周圍
+微寥井壁凝成同一層正要往更深晦界沉落的冷硬輪廓。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       276
+Level           100
+Hitroll         15
+Protect         0
+Damroll         16
+Str             22
+Int             18
+Wis             22
+Dex             15
+Con             22
+Hp              44400
+Mana            2760
+Move            850
+Class           0
+Gold            3560
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

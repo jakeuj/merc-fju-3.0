@@ -918,6 +918,25 @@
         "plans/area/0043-sec-rift-spirit-core-dim.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_spirit_core_gloam",
+      "title": "裂魄微寥",
+      "room_range": "12901-12912",
+      "load_order": 50,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_dim",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄微寥 / 微寥井腹",
+      "summary": "承接裂魄寥界座，下探到微寥內庭、晦微偏廊與晦核前座的微寥井腹過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_gloam/index",
+        "area/sec_rift_spirit_core_gloam/map.md",
+        "plans/area/0044-sec-rift-spirit-core-gloam.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

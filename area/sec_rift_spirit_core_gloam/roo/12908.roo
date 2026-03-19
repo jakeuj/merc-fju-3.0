@@ -1,0 +1,32 @@
+Vnum            12908
+Name            晦微偏廊~
+Description
+偏廊兩側嵌著一列列幾乎比微塵還輕的導響殼片，殼面已不再回應完整聲響，只會把人的念頭磨成一層層更薄晦的灰點。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12909
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         晦微~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End

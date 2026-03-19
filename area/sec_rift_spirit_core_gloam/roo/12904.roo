@@ -1,0 +1,32 @@
+Vnum            12904
+Name            聽微鎮魄臺~
+Description
+鎮魄臺旁的聽微碑只剩幾道像由微紋勉強排成的浮痕，碑與界之間的差別在此只靠一種還沒完全崩盡的秩序苦撐。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         聽微~
+End
+
+#Enquire
+Keyword         鎮魄~
+End
+
+End

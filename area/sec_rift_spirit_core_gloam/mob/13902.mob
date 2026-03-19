@@ -1,0 +1,32 @@
+Vnum            13902
+Name            umbral corridor watcher~
+ShortDesc       晦微測守~
+Description
+這名晦微測守伏在偏廊邊，面甲下只剩一層幾乎快要徹底散掉的薄晦視線，像正
+靜靜衡量每個經過此地的人還留有多少不會立刻晦滅的重量。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       -224
+Level           100
+Hitroll         14
+Protect         0
+Damroll         15
+Str             22
+Int             18
+Wis             21
+Dex             16
+Con             21
+Hp              43200
+Mana            2660
+Move            830
+Class           0
+Gold            3380
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

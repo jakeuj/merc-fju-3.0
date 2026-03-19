@@ -73,6 +73,7 @@ title: Current Game Areas
 | `sec_rift_spirit_core_extinct` | 裂魄滅界 / 滅界井腹 | `12601-12612` | `rebuild addition` | 承接裂魄絕界座，下探到滅界內庭、寂滅偏廊與寂核前座。 |
 | `sec_rift_spirit_core_silent` | 裂魄寂界 / 寂界井腹 | `12701-12712` | `rebuild addition` | 承接裂魄滅界座，下探到寂界內庭、寥寂偏廊與寥核前座。 |
 | `sec_rift_spirit_core_dim` | 裂魄寥界 / 寥界井腹 | `12801-12812` | `rebuild addition` | 承接裂魄寂界座，下探到寥界內庭、微寥偏廊與微寥前座。 |
+| `sec_rift_spirit_core_gloam` | 裂魄微寥 / 微寥井腹 | `12901-12912` | `rebuild addition` | 承接裂魄寥界座，下探到微寥內庭、晦微偏廊與晦核前座。 |
 
 ## Recent Rebuild Areas
 
@@ -121,6 +122,7 @@ title: Current Game Areas
 - `sec_rift_spirit_core_extinct`：承接裂魄絕界座，下探到滅界內庭、寂滅偏廊與寂核前座，作為更深裂魄寂界區前的滅界井腹 plateau 過渡帶。
 - `sec_rift_spirit_core_silent`：承接裂魄滅界座，下探到寂界內庭、寥寂偏廊與寥核前座，作為更深裂魄寥界區前的寂界井腹 plateau 過渡帶。
 - `sec_rift_spirit_core_dim`：承接裂魄寂界座，下探到寥界內庭、微寥偏廊與微寥前座，作為更深裂魄微寥區前的寥界井腹 plateau 過渡帶。
+- `sec_rift_spirit_core_gloam`：承接裂魄寥界座，下探到微寥內庭、晦微偏廊與晦核前座，作為更深裂魄晦界區前的微寥井腹 plateau 過渡帶。
 
 ### 北方鏈
 

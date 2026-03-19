@@ -1,0 +1,14 @@
+Vnum            13951
+Name            聽微短杖 短杖~
+ShortDesc       一支聽微短杖~
+Description
+一支聽微短杖倚在微寥內庭邊，杖尖還殘留一束細得快要直接薄晦的微痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           28
+Value           0 0 0 0 0
+Weight          3
+Cost            470
+End

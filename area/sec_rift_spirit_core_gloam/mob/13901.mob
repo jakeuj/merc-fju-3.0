@@ -1,0 +1,32 @@
+Vnum            13901
+Name            gloam court patrol~
+ShortDesc       微寥巡守~
+Description
+一名微寥巡守沿著微寥內庭緩步巡視，手中的聽微短杖偶爾在石面點出一束極細
+微痕，像在確認這片井腹還剩多少界面尚未被磨向薄晦。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       236
+Level           100
+Hitroll         13
+Protect         0
+Damroll         14
+Str             21
+Int             18
+Wis             22
+Dex             16
+Con             21
+Hp              41600
+Mana            2540
+Move            800
+Class           0
+Gold            3180
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

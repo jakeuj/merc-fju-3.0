@@ -1,0 +1,32 @@
+Vnum            12903
+Name            微寥內庭前緣~
+Description
+前緣俯瞰整座向內沉落的微寥內庭，庭底像一潭由無數微紋暫時聚住的靜井，視線一旦停得稍久，就會連自己原本勉強還能抓住的重量也被一起拖向最後的薄晦。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        12907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

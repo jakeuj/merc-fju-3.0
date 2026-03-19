@@ -1,0 +1,14 @@
+Vnum            13952
+Name            聽微碑 石碑~
+ShortDesc       一座聽微碑~
+Description
+一座聽微碑立在鎮魄臺旁，碑面只剩幾道像快要直接淡盡的微寥細痕。
+~
+ItemType        ITEM_TRASH
+Takeable        No
+WearLoc         ITEM_TAKE
+Level           32
+Value           0 0 0 0 0
+Weight          0
+Cost            0
+End

@@ -1,0 +1,14 @@
+Vnum            13954
+Name            晦核柱座 柱座~
+ShortDesc       一座晦核柱座~
+Description
+一座晦核柱座斜立在井腹緣，柱面只剩一圈圈幾乎無法再細分的微痕。
+~
+ItemType        ITEM_TRASH
+Takeable        No
+WearLoc         ITEM_TAKE
+Level           36
+Value           0 0 0 0 0
+Weight          0
+Cost            0
+End

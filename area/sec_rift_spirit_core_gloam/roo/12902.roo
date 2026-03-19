@@ -1,0 +1,24 @@
+Vnum            12902
+Name            微紋沉階~
+Description
+沉階表面已分不出任何原本的石紋，只剩一層層近乎無名的微紋貼著階面往前滑移，讓每一步都像踩在最後一次黯淡之前的界面上。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12901
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End
