@@ -1,0 +1,14 @@
+Vnum            13751
+Name            聽寂短杖 短杖~
+ShortDesc       一支聽寂短杖~
+Description
+一支聽寂短杖倚在寂界內庭邊，杖尖還殘留一束細得快要直接無聲的寂痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           28
+Value           0 0 0 0 0
+Weight          3
+Cost            450
+End

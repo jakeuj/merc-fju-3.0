@@ -1,0 +1,32 @@
+Vnum            13701
+Name            silent court patrol~
+ShortDesc       寂界巡守~
+Description
+一名寂界巡守沿著寂界內庭緩步巡視，手中的聽寂短杖偶爾在石面點出一束極細
+寂痕，像在確認這片井腹還剩多少界面尚未被磨向無聲。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       220
+Level           100
+Hitroll         13
+Protect         0
+Damroll         14
+Str             21
+Int             18
+Wis             22
+Dex             16
+Con             21
+Hp              40800
+Mana            2460
+Move            780
+Class           0
+Gold            3060
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

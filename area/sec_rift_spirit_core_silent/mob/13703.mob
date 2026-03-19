@@ -1,0 +1,32 @@
+Vnum            13703
+Name            dim heart guard~
+ShortDesc       寥核鎮衛~
+Description
+一名寥核鎮衛立在井腹緣前，雙手扶著長槍般的封魄終樁，身形穩得像早已與周圍
+寂界井壁凝成同一層正要往更深寥界沉落的冷硬輪廓。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       260
+Level           100
+Hitroll         15
+Protect         0
+Damroll         16
+Str             22
+Int             18
+Wis             22
+Dex             15
+Con             22
+Hp              43600
+Mana            2680
+Move            830
+Class           0
+Gold            3440
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

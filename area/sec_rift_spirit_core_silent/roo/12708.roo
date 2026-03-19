@@ -1,0 +1,32 @@
+Vnum            12708
+Name            寥寂偏廊~
+Description
+偏廊兩側嵌著一列列幾乎比寂塵還輕的導響殼片，殼面已不再回應完整聲響，只會把人的念頭磨成一層層更寂靜的灰點。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12707
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12709
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         寥寂~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End

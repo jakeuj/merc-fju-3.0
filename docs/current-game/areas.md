@@ -71,6 +71,7 @@ title: Current Game Areas
 | `sec_rift_spirit_core_final` | 裂魄終界 / 終界井腹 | `12401-12412` | `rebuild addition` | 承接裂魄末界座，下探到終界內庭、極終偏廊與終核前座。 |
 | `sec_rift_spirit_core_terminal` | 裂魄絕界 / 絕界井核 | `12501-12512` | `rebuild addition` | 承接裂魄終界座，下探到絕界內庭、滅終偏廊與滅核前座。 |
 | `sec_rift_spirit_core_extinct` | 裂魄滅界 / 滅界井腹 | `12601-12612` | `rebuild addition` | 承接裂魄絕界座，下探到滅界內庭、寂滅偏廊與寂核前座。 |
+| `sec_rift_spirit_core_silent` | 裂魄寂界 / 寂界井腹 | `12701-12712` | `rebuild addition` | 承接裂魄滅界座，下探到寂界內庭、寥寂偏廊與寥核前座。 |
 
 ## Recent Rebuild Areas
 
@@ -117,6 +118,7 @@ title: Current Game Areas
 - `sec_rift_spirit_core_final`：承接裂魄末界座，下探到終界內庭、極終偏廊與終核前座，作為更深裂魄絕界區前的終界井腹 plateau 過渡帶。
 - `sec_rift_spirit_core_terminal`：承接裂魄終界座，下探到絕界內庭、滅終偏廊與滅核前座，作為更深裂魄滅界區前的絕界井核 plateau 過渡帶。
 - `sec_rift_spirit_core_extinct`：承接裂魄絕界座，下探到滅界內庭、寂滅偏廊與寂核前座，作為更深裂魄寂界區前的滅界井腹 plateau 過渡帶。
+- `sec_rift_spirit_core_silent`：承接裂魄滅界座，下探到寂界內庭、寥寂偏廊與寥核前座，作為更深裂魄寥界區前的寂界井腹 plateau 過渡帶。
 
 ### 北方鏈
 
