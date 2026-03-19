@@ -104,6 +104,7 @@
     "parent_area": "loyang",
     "level_range": "1-12",
     "planned_vnum_range": "7501-7512",
+    "reserved_room_block": "7501-7520",
     "theme": {
       "primary": "歷史城市風",
       "secondary": "軍旅風"
