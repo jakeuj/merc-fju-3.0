@@ -1,0 +1,39 @@
+Vnum            13005
+Name            晦界沉黯槽~
+Description
+沉黯槽裡沒有流勢可循，只剩一道由晦紋反覆聚起又散去的窄痕朝更深處緩慢收束，像整段井腹正在把最後殘留的名字磨成再也不可分的冥灰。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13006
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        13009
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         沉黯~
+Description
+槽壁封紋已散成難以再分的晦點，只留下把界面持續磨向最終沉黯的沉靜壓力。
+~
+End
+
+End

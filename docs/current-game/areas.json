@@ -937,6 +937,25 @@
         "plans/area/0044-sec-rift-spirit-core-gloam.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_spirit_core_umbral",
+      "title": "裂魄晦界",
+      "room_range": "13001-13012",
+      "load_order": 51,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_gloam",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄晦界 / 晦界井腹",
+      "summary": "承接裂魄微寥座，下探到晦界內庭、冥晦偏廊與冥核前座的晦界井腹過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_umbral/index",
+        "area/sec_rift_spirit_core_umbral/map.md",
+        "plans/area/0045-sec-rift-spirit-core-umbral.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

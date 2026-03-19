@@ -1,0 +1,32 @@
+Vnum            13003
+Name            晦界內庭前緣~
+Description
+前緣俯瞰整座向內沉落的晦界內庭，庭底像一潭由無數晦紋暫時聚住的靜井，視線一旦停得稍久，就會連自己原本勉強還能抓住的重量也被一起拖向最後的沉晦。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        13007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

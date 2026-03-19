@@ -1,0 +1,32 @@
+Vnum            13004
+Name            聽晦鎮魄臺~
+Description
+鎮魄臺旁的聽晦碑只剩幾道像由晦紋勉強排成的浮痕，碑與界之間的差別在此只靠一種還沒完全崩盡的秩序苦撐。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         聽晦~
+End
+
+#Enquire
+Keyword         鎮魄~
+End
+
+End

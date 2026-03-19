@@ -1,0 +1,24 @@
+Vnum            13012
+Name            裂魄晦界座~
+Description
+晦界座像整段晦界井腹最後一塊仍勉強聚得住輪廓的晦魄石座，腳下環界只剩一圈隨時會再淡盡一層的細薄紋，所有殘痕都在這裡被拖往更深的裂魄冥界。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        13011
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         晦界座~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End
