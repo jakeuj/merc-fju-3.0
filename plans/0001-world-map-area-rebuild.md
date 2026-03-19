@@ -127,6 +127,7 @@ AREA rebuild 的預設工作單位是「一輪任務只處理一個 area milesto
 
 - `theme`
 - `subtheme`
+- `level_range`
 - `reserved_room_block`
 - `planned_vnum_range`
 - `external_links`
@@ -138,6 +139,8 @@ AREA rebuild 的預設工作單位是「一輪任務只處理一個 area milesto
 
 補充規則：
 
+- `level_range` 是單區強度帶的正式 contract，需與 `area/<area>/map.md` 的 `LevelRange` 和 `mapmd-json.area.level_range` 保持一致
+- 若該區已建立 `content.json`，`balance_metadata.planned_level_range` 也應與同一組數值對齊
 - `external_links` 要明講此區會接到哪些既有 area / room，避免 generator 與 runtime boundary room 各自講各話
 - `planned_vnum_range` 代表首段保留區，不等於目前已落地的最後一號
 - `delivery_gate` 雖然由 tracker 驅動，但單區 plan 也應保留當前語意與變更理由，方便回讀設計脈絡
@@ -187,6 +190,7 @@ AREA rebuild 的預設工作單位是「一輪任務只處理一個 area milesto
 `area/rebuild_plan.md` 應固定包含：
 
 - candidate area 清單
+- `level_range`
 - `reserved_room_block`
 - `theme`
 - `subtheme`
@@ -209,6 +213,17 @@ AREA rebuild 的預設工作單位是「一輪任務只處理一個 area milesto
 - 生成了哪些檔案或人工補了哪些 runtime data
 - 驗證看了哪個 build / log / debug 結果
 - 為何目前可停在這個 `delivery_gate`
+
+## Level Band Governance
+
+晚期 area 的強度治理採固定上限與 plateau 設計，而不是讓深層 area 持續往 `Level >100` 疊高。
+
+規則：
+
+- `1..100` 仍是 world-map-area-rebuild 的正式 authoring / balance cap
+- `101..120` 只代表 current loader 容忍範圍，不是未來新建 area 的設計空間
+- `95..100` 視為 plateau endgame band；若未來還要往更深層擴寫，危險度應靠 encounter 結構、密度、資源壓力、路線壓迫、抗性與特殊機制增加，而不是再把怪物等級推過 `100`
+- 晚期單區若因重壓縮而共享相近等級帶，必須在 spec / plan 文案中明講它們的玩法差異，不得只靠數字虛增深度
 
 ## Room VNUM Reservation Policy
 

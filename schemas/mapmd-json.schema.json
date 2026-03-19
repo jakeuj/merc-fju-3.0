@@ -9,7 +9,7 @@
   "properties": {
     "area": {
       "type": "object",
-      "required": ["schema", "name", "title", "planned_vnum_range", "reserved_room_block", "theme"],
+      "required": ["schema", "name", "title", "level_range", "planned_vnum_range", "reserved_room_block", "theme"],
       "additionalProperties": true,
       "properties": {
         "schema": {
@@ -31,7 +31,8 @@
           "type": "string"
         },
         "level_range": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^[0-9]+-[0-9]+$"
         },
         "planned_vnum_range": {
           "type": "string",

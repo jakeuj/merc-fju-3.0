@@ -10,6 +10,7 @@
 - subtheme: `裂魄素界 / 素界深井`
 - 世界缺口角色：補上 `sec_rift_spirit_core_white` 既有 `down` 延伸意圖，讓白界深井正式過渡到更深的素界層
 - reserved_room_block: `11801-11820`
+- level_range: `96-99`
 
 ## Scope (Milestone 1: Spec)
 

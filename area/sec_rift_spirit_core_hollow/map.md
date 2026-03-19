@@ -8,7 +8,7 @@
 
 - Theme: `仙俠`
 - Subtheme: `魄核空井 / 空腹暗層`
-- LevelRange: `90-106`
+- LevelRange: `86-90`
 - Parent area: `sec_rift_core_spirit_abyss`
 - ReservedRoomBlock: `11101-11120`
 
@@ -27,7 +27,7 @@
     "title": "魄核空井",
     "design_notes": "魄淵深井之下的空腹井層，作為更深裂魄空心區前的過渡主段。",
     "parent_area": "sec_rift_core_spirit_abyss",
-    "level_range": "90-106",
+    "level_range": "86-90",
     "planned_vnum_range": "11101-11120",
     "reserved_room_block": "11101-11120",
     "room_vnum_policy": "xx01_variable_block",

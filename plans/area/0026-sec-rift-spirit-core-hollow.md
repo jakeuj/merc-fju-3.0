@@ -10,6 +10,7 @@
 - subtheme: `魄核空井 / 空腹暗層`
 - 世界缺口角色：補上 `sec_rift_core_spirit_abyss` 既有 `down` 延伸意圖，讓深井暗層正式過渡到魄核空腹區
 - reserved_room_block: `11101-11120`
+- level_range: `86-90`
 
 ## Scope (Milestone 1: Spec)
 

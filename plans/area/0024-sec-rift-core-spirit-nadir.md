@@ -10,6 +10,7 @@
 - subtheme: `核心魄淵 / 心魄沉座`
 - 世界缺口角色：補上 `sec_rift_sealed_core_heart` 既有 `down` 延伸意圖，讓封心核心正式過渡到裂核心魄層
 - reserved_room_block: `10901-10920`
+- level_range: `82-86`
 
 ## Scope (Milestone 1: Spec)
 

@@ -26,6 +26,10 @@
 - 可借鏡三國史傳、演義、武俠群像、奇幻三國等題材來增加帶入感，但要先抽取題材母型再落成 repo 內可維護的原生設計
 - 若同時在規劃多個 area，主動檢查六大題材分布是否失衡；優先補足缺少的題材類型，而不是讓每個新區都落到同一種風格
 - 規劃單一 area 時，也要說清楚它在世界層的 `Theme` / `Subtheme` 與缺口角色
+- `level_range` 是單區強度帶的正式 contract；單區 plan、`map.md` 的 `LevelRange`、`mapmd-json.area.level_range` 必須一致
+- 若 area 已建立 `content.json`，`balance_metadata.planned_level_range` 也應和上述三者一致
+- `1..100` 是 area rebuild 的正式平衡上限；`101..120` 只代表 loader 容忍範圍，不是新建 area 的可用設計空間
+- `95..100` 視為 plateau endgame band；更深層 area 的危險度應靠 encounter 結構、資源壓力、路線壓迫、抗性與特殊機制增加，而不是單純把怪物等級推高
 - 從 2.0 舊 repo 搬資料時，不要整包照抄；先比對目前 3.0 已存在的 area/data/help/src 耦合，再決定哪些欄位保留、哪些要改寫
 - 若匯入的是更接近原始 Merc 的 reset 寫法，記得 `R` 也是合法 reset 類型，用於亂數出口
 - 新手區或主城服務鏈改動時，優先維持 `newbie.md` 中玩家預期仍找得到的核心流程

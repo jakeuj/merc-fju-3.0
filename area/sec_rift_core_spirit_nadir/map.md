@@ -8,7 +8,7 @@
 
 - Theme: `仙俠`
 - Subtheme: `核心魄淵 / 心魄沉座`
-- LevelRange: `86-102`
+- LevelRange: `82-86`
 - Parent area: `sec_rift_sealed_core_heart`
 - ReservedRoomBlock: `10901-10920`
 
@@ -27,7 +27,7 @@
     "title": "核心魄淵",
     "design_notes": "封心核心之下的魄壓暗層，作為更深核心魄淵區前的過渡主段。",
     "parent_area": "sec_rift_sealed_core_heart",
-    "level_range": "86-102",
+    "level_range": "82-86",
     "planned_vnum_range": "10901-10920",
     "reserved_room_block": "10901-10920",
     "room_vnum_policy": "xx01_variable_block",

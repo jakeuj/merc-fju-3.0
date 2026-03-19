@@ -14,7 +14,7 @@
 
 - Theme: `<primary theme>`
 - Subtheme: `<secondary theme>`
-- LevelRange: `<min-max>`
+- LevelRange: `<min-max within 1-100>`
 - Parent area: `<parent area>`
 - ReservedRoomBlock: `<xx01-xxNN>`
 - World gap filled: `<what this area adds to the world>`
@@ -43,6 +43,7 @@
 ## Planned World Links
 
 - `<direction>` from `<source_vnum>`: planned link to `<target area>` room `<target vnum or future node>`
+- 若為 endgame 深層延伸，請明講它是同級 plateau 持續加壓，而不是靠 `Level >100`
 
 ## Runtime Metadata Notes
 

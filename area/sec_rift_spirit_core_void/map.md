@@ -8,7 +8,7 @@
 
 - Theme: `仙俠`
 - Subtheme: `裂魄空心 / 虛腹暗層`
-- LevelRange: `92-108`
+- LevelRange: `88-92`
 - Parent area: `sec_rift_spirit_core_hollow`
 - ReservedRoomBlock: `11201-11220`
 
@@ -27,7 +27,7 @@
     "title": "裂魄空心",
     "design_notes": "魄核空井之下的虛腹井層，作為更深裂魄真空區前的過渡主段。",
     "parent_area": "sec_rift_spirit_core_hollow",
-    "level_range": "92-108",
+    "level_range": "88-92",
     "planned_vnum_range": "11201-11220",
     "reserved_room_block": "11201-11220",
     "room_vnum_policy": "xx01_variable_block",

@@ -10,6 +10,7 @@
 - subtheme: `裂魄真空 / 真空深腹`
 - 世界缺口角色：補上 `sec_rift_spirit_core_void` 既有 `down` 延伸意圖，讓虛腹暗層正式過渡到更深的真空層
 - reserved_room_block: `11301-11320`
+- level_range: `90-94`
 
 ## Scope (Milestone 1: Spec)
 

@@ -10,6 +10,7 @@
 - subtheme: `魄淵深井 / 暗層沉降`
 - 世界缺口角色：補上 `sec_rift_core_spirit_nadir` 既有 `down` 延伸意圖，讓核心魄層正式過渡到更深魄井暗層
 - reserved_room_block: `11001-11020`
+- level_range: `84-88`
 
 ## Scope (Milestone 1: Spec)
 

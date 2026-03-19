@@ -13,6 +13,7 @@
 ## Area Metadata
 
 - area_slug: `<area_slug>`
+- level_range: `<min-max within 1-100>`
 - reserved_room_block: `<xx01-xxNN>`
 - planned_vnum_range: `<xx01-xxNN>`
 - parent_area: `<parent area or none>`
@@ -62,6 +63,7 @@
 
 ## Validation Targets
 
+- `plans/area/*.md` 的 `level_range`、`map.md` 的 `LevelRange` 與 `mapmd-json.area.level_range` 一致
 - `map.md` 內含有效 `mapmd-json`
 - `--validate-only` 可通過
 - 方向只使用 `north/south/east/west/up/down/enter/out`

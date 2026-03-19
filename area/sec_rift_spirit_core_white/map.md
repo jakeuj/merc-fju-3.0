@@ -8,7 +8,7 @@
 
 - Theme: `仙俠`
 - Subtheme: `裂魄白界 / 白界深井`
-- LevelRange: `102-118`
+- LevelRange: `95-98`
 - Parent area: `sec_rift_spirit_core_blank`
 - ReservedRoomBlock: `11701-11720`
 
@@ -27,7 +27,7 @@
     "title": "裂魄白界",
     "design_notes": "裂魄空白之下的白界深井，作為更深素界層區前的過渡主段。",
     "parent_area": "sec_rift_spirit_core_blank",
-    "level_range": "102-118",
+    "level_range": "95-98",
     "planned_vnum_range": "11701-11720",
     "reserved_room_block": "11701-11720",
     "room_vnum_policy": "xx01_variable_block",

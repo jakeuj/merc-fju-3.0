@@ -8,7 +8,7 @@
 
 - Theme: `仙俠`
 - Subtheme: `裂魄素界 / 素界深井`
-- LevelRange: `104-120`
+- LevelRange: `96-99`
 - Parent area: `sec_rift_spirit_core_white`
 - ReservedRoomBlock: `11801-11820`
 
@@ -27,7 +27,7 @@
     "title": "裂魄素界",
     "design_notes": "裂魄白界之下的素界深井，作為更深澹界層區前的過渡主段。",
     "parent_area": "sec_rift_spirit_core_white",
-    "level_range": "104-120",
+    "level_range": "96-99",
     "planned_vnum_range": "11801-11820",
     "reserved_room_block": "11801-11820",
     "room_vnum_policy": "xx01_variable_block",

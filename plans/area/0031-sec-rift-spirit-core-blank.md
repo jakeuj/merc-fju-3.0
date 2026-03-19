@@ -10,6 +10,7 @@
 - subtheme: `裂魄空白 / 空白深井`
 - 世界缺口角色：補上 `sec_rift_spirit_core_zero` 既有 `down` 延伸意圖，讓零界深井正式過渡到更深的空白層
 - reserved_room_block: `11601-11620`
+- level_range: `94-97`
 
 ## Scope (Milestone 1: Spec)
 

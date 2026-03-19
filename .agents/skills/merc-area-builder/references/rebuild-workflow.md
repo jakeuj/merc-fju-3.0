@@ -93,6 +93,13 @@
 3. 若 gate 是任何 `*_in_progress`，就續做當前 area
 4. 若 gate 是 `blocked`，先解 blocker
 
+## Level Band Governance
+
+- area rebuild 的正式平衡上限是 `1..100`；不要把 loader 的 `1..120` 容忍範圍誤當成新建 area 的 authoring 空間
+- `95..100` 視為 plateau endgame band；若未來還要向下延伸新的 endgame layer，應靠 encounter 結構、資源壓力、抗性與路線壓迫加強，而不是讓怪物等級超過 `100`
+- 單區 plan 的 `level_range`、`map.md` 的 `LevelRange`、`mapmd-json.area.level_range` 必須一致
+- 若 area 已有 runtime `mob/*.mob` 或 `content.json`，應再和實際怪物等級、`balance_metadata.planned_level_range` 對齊
+
 ## Branch Gate Rules
 
 固定 prompt 除了要看 `delivery_gate`，也要看目前所在 branch 是否適合承接新的 area milestone。
@@ -150,6 +157,7 @@
 1. 完成 `plans/area/NNNN-*.md`
 2. 完成 `area/<new_area>/map.md`
 3. 先跑 `tools/mapmd_validate.py` 做摘要驗證
+   - 這一步除了房號 / world link / cluster，也應確認 `LevelRange`、`mapmd-json.area.level_range`、runtime mob level 與 `content.json` 的 `planned_level_range` 沒有 drift
 4. 再用 generator `--validate-only`
 5. 產生第一批 `.roo`
 6. 補 `index`

@@ -8,7 +8,7 @@
 
 - Theme: `仙俠`
 - Subtheme: `裂魄空白 / 空白深井`
-- LevelRange: `100-116`
+- LevelRange: `94-97`
 - Parent area: `sec_rift_spirit_core_zero`
 - ReservedRoomBlock: `11601-11620`
 
@@ -27,7 +27,7 @@
     "title": "裂魄空白",
     "design_notes": "裂魄零界之下的空白深井，作為更深白界層區前的過渡主段。",
     "parent_area": "sec_rift_spirit_core_zero",
-    "level_range": "100-116",
+    "level_range": "94-97",
     "planned_vnum_range": "11601-11620",
     "reserved_room_block": "11601-11620",
     "room_vnum_policy": "xx01_variable_block",

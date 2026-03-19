@@ -33,6 +33,13 @@
 - tracker 的 area rebuild authoring policy 一律把 `1..100` 當交付上限；不要因為 loader 接受 `120`，就把 `101..120` 延續成新建 area 的通用做法
 - 若在新建或最近重建的 area 內看到 `>100`，預設視為 drift，先修回 `<=100` 再前進 milestone
 - 若本輪 smoke test 出現 `Load_mobiles﹕怪物 %d 沒有名字。` 或 `Load_mobiles﹕怪物 %d 等級 %d 不合理。`，先留在當前 area 修正 `Name` / `Level`，不要跳下一區
+- `95..100` 是晚期 plateau endgame band；未來若還要往更深層擴寫，預設應靠 encounter 結構、資源壓力、抗性或路線壓迫加強，而不是把怪物等級推到 `101+`
+
+## Level Range Alignment
+
+- 單區 plan 的 `level_range`、`area/<area>/map.md` 的 `LevelRange` 與 `mapmd-json.area.level_range` 必須一致
+- 若 area 已建立 `content.json`，`balance_metadata.planned_level_range` 也應與同一組數值對齊
+- 若 runtime `mob/*.mob` 已存在，實際怪物等級至少要落在宣告的 `level_range` 內；若不一致，先修 spec 或 runtime 再前進 milestone
 
 ## Quest Boundary
 
@@ -126,6 +133,7 @@
 
 ## Done
 
+- `2026-03-19` 已完成晚期 `sec_rift_*` 鏈的 `82-100` plateau 重壓縮，對齊 `plans/area/*`、`map.md`、`mapmd-json` 與 runtime `mob/*.mob`，並補上 `tools/mapmd_validate.py` 的 `level_range` / runtime / `content.json` guardrail
 - `area/world_map.md` 已建立，並整合 `help/map.hlp`、`docs/3yWebsite/docs/maps.md`、`docs/3yWebsite/docs/data/maps.json`、`docs/3yWebsite/map/*.html`
 - `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已建立，整理目前 loadable runtime area registry 與重建鏈摘要
 - `plans/0005-area-skill-data-systemization.md` 已完成 v1，建立 structured skill source、`loyang_outskirts` area content pilot 與 exporter-based runtime round-trip 流程

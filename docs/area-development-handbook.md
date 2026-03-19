@@ -89,6 +89,7 @@ title: Area Development Handbook
   - legacy `document/mob.txt` 仍把 `100` 視為平衡上的傳統上限
   - current loader 會把 `<= 0` 或 `> 120` 視為錯誤，因此 runtime hard gate 是 `1..120`
   - handbook 的預設判讀是：`1..100` 為一般 progression range，也是 world-map-area-rebuild 新建 area 的交付上限
+  - `95..100` 視為 plateau endgame band；若後續還要往更深層擴寫，優先用 encounter 結構、資源壓力、路線壓迫、抗性與特殊機制加強危險度，而不是改成 `Level >100`
 - 若新建或最近重建的 area 出現 `>100`，請直接視為需要回修的 drift；只有在處理既有 legacy 樣本且已明講保留理由時，才討論是否暫時保留
 
 ## Workflow Layers
@@ -172,6 +173,7 @@ AREA 開發 pipeline 固定拆成七層：
 
 - `theme`
 - `subtheme`
+- `level_range`
 - `reserved_room_block`
 - `planned_vnum_range`
 - `external_links`
@@ -183,6 +185,8 @@ AREA 開發 pipeline 固定拆成七層：
 
 設計上的最低要求：
 
+- `level_range` 必須和 `area/<area>/map.md` 的 `LevelRange`、`mapmd-json.area.level_range` 對齊
+- 若該區有 `content.json`，`balance_metadata.planned_level_range` 也要同步對齊
 - `external_links` 要明講會接到哪個既有 area / room
 - `planned_vnum_range` 要寫整段保留區，不只寫當前最後一號
 - 若這輪只做 spec，也要先把 boundary assumptions 寫清楚
@@ -194,6 +198,7 @@ AREA 開發 pipeline 固定拆成七層：
 
 - 區域用途與玩家流向
 - 題材與 subtheme
+- `LevelRange`
 - cluster 設計
 - room intent / scene intent
 - external exits / planned world links
@@ -206,6 +211,7 @@ AREA 開發 pipeline 固定拆成七層：
 - room 視為 node，exit 視為 edge
 - 可包含 `cluster`、`labels`、`coord` 等 metadata
 - 可用 `external: true` 表示合法的既有世界外部連線
+- 其中 `area.level_range` 應和 markdown `LevelRange` 使用同一組數值
 
 ## VNUM And Boundary Rules
 
@@ -289,6 +295,7 @@ python -X utf8 scripts/generate_current_game_skills_pages.py
 
 - VNUM 與 boundary links
 - `index / mob / obj / res / shp / roo` 一致性
+- `LevelRange` / `mapmd-json.area.level_range` 與 runtime `mob/*.mob` 是否一致
 - `mob/*.mob` 的 `Name` / `Level` 是否符合 current loader 與既有設計帶
 - `area/directory.lst` 順序
 - loader / smoke test 結果

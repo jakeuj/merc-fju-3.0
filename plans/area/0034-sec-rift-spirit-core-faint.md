@@ -2,7 +2,7 @@
 
 ## Summary
 
-建立下一個待建新 AREA：`sec_rift_spirit_core_faint`。此區承接 `sec_rift_spirit_core_plain` 最深的裂魄素界座，讓地下鏈再往下沉入裂魄澹界與澹界深井，作為更深「微界」層區前的過渡主段。
+建立下一個待建新 AREA：`sec_rift_spirit_core_faint`。此區承接 `sec_rift_spirit_core_plain` 最深的裂魄素界座，讓地下鏈再往下沉入裂魄澹界與澹界深井，作為後續同級更硬「微界」層區前的過渡主段。
 
 ## Theme Positioning
 
@@ -10,14 +10,14 @@
 - subtheme: `裂魄澹界 / 澹界深井`
 - 世界缺口角色：補上 `sec_rift_spirit_core_plain` 既有 `down` 延伸意圖，讓素界深井正式過渡到更深的澹界層
 - reserved_room_block: `11901-11920`
-- level_range: `100-100`
+- level_range: `97-100`
 
 ## Scope (Milestone 1: Spec)
 
 - 建立 `plans/area/0034-sec-rift-spirit-core-faint.md` 與 `area/sec_rift_spirit_core_faint/map.md` 第一版
 - 以 `mapmd-json` 定義澹界落座、澹界內庭、微痕偏廊與微界前座
 - 明確標示與 `sec_rift_spirit_core_plain/11812` 的 `up` 邊界
-- 保留更深層 `down` world link 為後續區域規劃
+- 保留更深層 `down` world link 為後續同級更硬的 endgame 微界區規劃
 
 ## Scope (Milestone 2: Implementation)
 
@@ -47,7 +47,7 @@
 ## World Links (Spec Intent)
 
 - `up`: 通往 `sec_rift_spirit_core_plain` room `11812`
-- `down`: 通往未來更深層裂魄微界區
+- `down`: 通往未來同級 plateau 的裂魄微界區
 
 ## Ref Compliance Check
 

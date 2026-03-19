@@ -2,20 +2,20 @@
 
 ## Area Intent
 
-`sec_rift_spirit_core_faint` 承接裂魄素界最深的裂魄素界座，再往下沉入裂魄澹界與澹界深井。此區定位為「澹界深井」：讓玩家從澹界落座、澹界內庭與微痕偏廊之間，感受到魄壓已從淡素進一步褪成近乎只剩餘意的層次，並為更深裂魄微界區預留正式連線。
+`sec_rift_spirit_core_faint` 承接裂魄素界最深的裂魄素界座，再往下沉入裂魄澹界與澹界深井。此區定位為「澹界深井」：讓玩家從澹界落座、澹界內庭與微痕偏廊之間，感受到魄壓已從淡素進一步褪成近乎只剩餘意的層次，並為後續同級更硬的裂魄微界層預留正式連線。
 
 ## Theme Positioning
 
 - Theme: `仙俠`
 - Subtheme: `裂魄澹界 / 澹界深井`
-- LevelRange: `106-120`
+- LevelRange: `97-100`
 - Parent area: `sec_rift_spirit_core_plain`
 - ReservedRoomBlock: `11901-11920`
 
 ## Planned World Links
 
 - `up` from `11901`: `sec_rift_spirit_core_plain` room `11812`
-- `down` from `11912`: future deeper spirit-core extension
+- `down` from `11912`: future same-cap plateau spirit-core extension
 
 ## mapmd-json
 
@@ -25,9 +25,9 @@
     "schema": "mapmd-json/v1",
     "name": "sec_rift_spirit_core_faint",
     "title": "裂魄澹界",
-    "design_notes": "裂魄素界之下的澹界深井，作為更深微界層區前的過渡主段。",
+    "design_notes": "裂魄素界之下的澹界深井，作為後續同級 plateau 微界層區前的過渡主段。",
     "parent_area": "sec_rift_spirit_core_plain",
-    "level_range": "106-120",
+    "level_range": "97-100",
     "planned_vnum_range": "11901-11920",
     "reserved_room_block": "11901-11920",
     "room_vnum_policy": "xx01_variable_block",

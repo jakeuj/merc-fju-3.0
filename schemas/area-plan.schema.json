@@ -9,6 +9,7 @@
     "title",
     "theme",
     "subtheme",
+    "level_range",
     "reserved_room_block",
     "planned_vnum_range",
     "delivery_gate",
@@ -38,6 +39,10 @@
     "subtheme": {
       "type": "string",
       "minLength": 1
+    },
+    "level_range": {
+      "type": "string",
+      "pattern": "^[0-9]+-[0-9]+$"
     },
     "reserved_room_block": {
       "type": "string",

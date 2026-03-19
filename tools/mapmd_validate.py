@@ -2,8 +2,8 @@
 """Validate Merc-FJU map.md specs and summarize mapmd-json state.
 
 This tool reuses the existing scaffold generator's parser/validator so it stays
-aligned with the current repo contract, then adds a small amount of stricter
-metadata checking around reserved room blocks and cluster references.
+aligned with the current repo contract, then adds stricter metadata checking
+around reservation ranges, level-range governance, and runtime/content drift.
 """
 
 from __future__ import annotations
@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import importlib.util
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -21,6 +22,8 @@ GENERATOR_PATH = (
     REPO_ROOT / ".agents" / "skills" / "merc-area-builder" / "scripts" / "generate_roo_from_map_md.py"
 )
 VALID_DIRECTIONS = {"north", "east", "south", "west", "up", "down", "enter", "out"}
+MARKDOWN_LEVEL_RANGE_RE = re.compile(r"(?m)^- LevelRange:\s*`?([0-9]+-[0-9]+)`?\s*$")
+MOB_LEVEL_RE = re.compile(r"(?m)^Level\s+(\d+)\b")
 
 
 def load_generator_module():
@@ -50,11 +53,81 @@ def add_issue(state: Any, level: str, message: str, source: str = "metadata") ->
     state.add_issue(level, message, source)
 
 
-def validate_metadata_contract(state: Any) -> None:
+def parse_markdown_level_range(map_md: Path) -> tuple[int, int] | None:
+    match = MARKDOWN_LEVEL_RANGE_RE.search(map_md.read_text(encoding="utf-8"))
+    if not match:
+        return None
+    return parse_range(match.group(1))
+
+
+def parse_content_level_range(content_path: Path) -> tuple[int, int] | None:
+    payload = json.loads(content_path.read_text(encoding="utf-8"))
+    balance = payload.get("balance_metadata")
+    if not isinstance(balance, dict):
+        return None
+
+    value = balance.get("planned_level_range")
+    if not isinstance(value, list) or len(value) != 2 or not all(isinstance(item, int) for item in value):
+        return None
+
+    start, end = value
+    if start < 1 or end < start:
+        return None
+    return start, end
+
+
+def collect_runtime_mob_levels(area_dir: Path) -> list[tuple[str, int]]:
+    mob_dir = area_dir / "mob"
+    if not mob_dir.is_dir():
+        return []
+
+    levels: list[tuple[str, int]] = []
+    for mob_path in sorted(mob_dir.glob("*.mob")):
+        text = mob_path.read_text(encoding="utf-8", errors="ignore")
+        for raw_level in MOB_LEVEL_RE.findall(text):
+            levels.append((mob_path.name, int(raw_level)))
+    return levels
+
+
+def validate_metadata_contract(state: Any, map_md: Path) -> None:
     area = state.area or {}
     if not area:
         add_issue(state, "error", "Missing `area` metadata object.", "area")
         return
+
+    level_range = parse_range(area.get("level_range"))
+    if level_range is None:
+        add_issue(
+            state,
+            "error",
+            "Area `level_range` is missing or invalid; expected `NN-NN` within the rebuild cap.",
+            "area",
+        )
+    else:
+        level_start, level_end = level_range
+        if level_start < 1 or level_end > 100:
+            add_issue(
+                state,
+                "error",
+                f"Area `level_range` {level_start}-{level_end} exceeds the rebuild authoring cap 1-100.",
+                "area",
+            )
+
+    markdown_level_range = parse_markdown_level_range(map_md)
+    if markdown_level_range is None:
+        add_issue(
+            state,
+            "error",
+            "Markdown `LevelRange` is missing or invalid; expected `- LevelRange: `min-max``.",
+            "metadata",
+        )
+    elif level_range is not None and markdown_level_range != level_range:
+        add_issue(
+            state,
+            "error",
+            "Markdown `LevelRange` does not match `mapmd-json.area.level_range`.",
+            "metadata",
+        )
 
     planned_range = parse_range(area.get("planned_vnum_range"))
     if planned_range is None:
@@ -146,6 +219,62 @@ def validate_metadata_contract(state: Any) -> None:
                     f"room {vnum}",
                 )
 
+    area_dir = map_md.parent
+    runtime_levels = collect_runtime_mob_levels(area_dir)
+    if runtime_levels and level_range is not None:
+        level_start, level_end = level_range
+        runtime_min = min(level for _, level in runtime_levels)
+        runtime_max = max(level for _, level in runtime_levels)
+        if runtime_min < level_start or runtime_max > level_end:
+            add_issue(
+                state,
+                "warning",
+                f"Runtime mob levels span {runtime_min}-{runtime_max}, outside declared level_range {level_start}-{level_end}.",
+                "runtime",
+            )
+        for mob_name, mob_level in runtime_levels:
+            if mob_level < level_start or mob_level > level_end:
+                add_issue(
+                    state,
+                    "warning",
+                    f"Runtime mob `{mob_name}` has Level {mob_level}, outside declared level_range {level_start}-{level_end}.",
+                    mob_name,
+                )
+            if mob_level < 1 or mob_level > 100:
+                add_issue(
+                    state,
+                    "warning",
+                    f"Runtime mob `{mob_name}` has Level {mob_level}, outside rebuild cap 1-100.",
+                    mob_name,
+                )
+
+    content_path = area_dir / "content.json"
+    if content_path.is_file():
+        try:
+            content_level_range = parse_content_level_range(content_path)
+        except (OSError, UnicodeDecodeError, json.JSONDecodeError) as exc:
+            add_issue(
+                state,
+                "warning",
+                f"Unable to read {content_path.name}: {exc}",
+                content_path.name,
+            )
+        else:
+            if content_level_range is None:
+                add_issue(
+                    state,
+                    "warning",
+                    f"{content_path.name} has missing or invalid balance_metadata.planned_level_range.",
+                    content_path.name,
+                )
+            elif level_range is not None and content_level_range != level_range:
+                add_issue(
+                    state,
+                    "warning",
+                    f"{content_path.name} planned_level_range {content_level_range[0]}-{content_level_range[1]} does not match spec level_range {level_range[0]}-{level_range[1]}.",
+                    content_path.name,
+                )
+
 
 def summarize(state: Any) -> dict[str, Any]:
     errors = [issue for issue in state.issues if issue.level == "error"]
@@ -193,7 +322,7 @@ def main() -> int:
     known_jobs = module.load_known_jobs(repo_root)
     module.validate_area_metadata(state)
     module.validate_spec(state, known_jobs)
-    validate_metadata_contract(state)
+    validate_metadata_contract(state, map_md)
 
     summary = summarize(state)
 

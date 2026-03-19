@@ -10,6 +10,7 @@
 - subtheme: `裂魄白界 / 白界深井`
 - 世界缺口角色：補上 `sec_rift_spirit_core_blank` 既有 `down` 延伸意圖，讓空白深井正式過渡到更深的白界層
 - reserved_room_block: `11701-11720`
+- level_range: `95-98`
 
 ## Scope (Milestone 1: Spec)
 

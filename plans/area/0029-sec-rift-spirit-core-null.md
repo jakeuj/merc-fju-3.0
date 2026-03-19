@@ -10,6 +10,7 @@
 - subtheme: `裂魄歸零 / 歸零深庭`
 - 世界缺口角色：補上 `sec_rift_spirit_core_vacuum` 既有 `down` 延伸意圖，讓真空深腹正式過渡到更深的歸零層
 - reserved_room_block: `11401-11420`
+- level_range: `92-96`
 
 ## Scope (Milestone 1: Spec)
 

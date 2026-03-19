@@ -8,7 +8,7 @@
 
 - Theme: `仙俠`
 - Subtheme: `裂魄歸零 / 歸零深庭`
-- LevelRange: `96-112`
+- LevelRange: `92-96`
 - Parent area: `sec_rift_spirit_core_vacuum`
 - ReservedRoomBlock: `11401-11420`
 
@@ -27,7 +27,7 @@
     "title": "裂魄歸零",
     "design_notes": "裂魄真空之下的歸零深庭，作為更深零界層區前的過渡主段。",
     "parent_area": "sec_rift_spirit_core_vacuum",
-    "level_range": "96-112",
+    "level_range": "92-96",
     "planned_vnum_range": "11401-11420",
     "reserved_room_block": "11401-11420",
     "room_vnum_policy": "xx01_variable_block",

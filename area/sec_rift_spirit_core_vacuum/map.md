@@ -8,7 +8,7 @@
 
 - Theme: `仙俠`
 - Subtheme: `裂魄真空 / 真空深腹`
-- LevelRange: `94-110`
+- LevelRange: `90-94`
 - Parent area: `sec_rift_spirit_core_void`
 - ReservedRoomBlock: `11301-11320`
 
@@ -27,7 +27,7 @@
     "title": "裂魄真空",
     "design_notes": "裂魄空心之下的真空深腹，作為更深歸零層區前的過渡主段。",
     "parent_area": "sec_rift_spirit_core_void",
-    "level_range": "94-110",
+    "level_range": "90-94",
     "planned_vnum_range": "11301-11320",
     "reserved_room_block": "11301-11320",
     "room_vnum_policy": "xx01_variable_block",

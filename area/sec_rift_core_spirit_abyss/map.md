@@ -8,7 +8,7 @@
 
 - Theme: `仙俠`
 - Subtheme: `魄淵深井 / 暗層沉降`
-- LevelRange: `88-104`
+- LevelRange: `84-88`
 - Parent area: `sec_rift_core_spirit_nadir`
 - ReservedRoomBlock: `11001-11020`
 
@@ -27,7 +27,7 @@
     "title": "魄淵深井",
     "design_notes": "核心魄淵之下的魄井暗層，作為更深魄核空井區前的過渡主段。",
     "parent_area": "sec_rift_core_spirit_nadir",
-    "level_range": "88-104",
+    "level_range": "84-88",
     "planned_vnum_range": "11001-11020",
     "reserved_room_block": "11001-11020",
     "room_vnum_policy": "xx01_variable_block",
