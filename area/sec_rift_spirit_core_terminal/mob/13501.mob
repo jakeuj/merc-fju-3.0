@@ -1,0 +1,32 @@
+Vnum            13501
+Name            terminal court patrol~
+ShortDesc       絕界巡守~
+Description
+一名絕界巡守沿著絕界內庭緩步巡視，手中的聽絕短杖偶爾在石面點出一束極細
+絕痕，像在確認這片井核還剩多少界面尚未被磨向滅盡。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       204
+Level           100
+Hitroll         13
+Protect         0
+Damroll         14
+Str             21
+Int             18
+Wis             22
+Dex             16
+Con             21
+Hp              40000
+Mana            2380
+Move            760
+Class           0
+Gold            2940
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

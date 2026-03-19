@@ -1,0 +1,32 @@
+Vnum            12508
+Name            滅終偏廊~
+Description
+偏廊兩側嵌著一列列幾乎比絕塵還輕的導響殼片，殼面已不再回應完整聲響，只會把人的念頭磨成一層層更終絕的灰點。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12509
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         滅終~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End

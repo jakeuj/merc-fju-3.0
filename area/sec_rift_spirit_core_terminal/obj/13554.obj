@@ -1,0 +1,14 @@
+Vnum            13554
+Name            滅核柱座 柱座~
+ShortDesc       一座滅核柱座~
+Description
+一座滅核柱座斜立在井核緣，柱面只剩一圈圈幾乎無法再細分的絕痕。
+~
+ItemType        ITEM_TRASH
+Takeable        No
+WearLoc         ITEM_TAKE
+Level           36
+Value           0 0 0 0 0
+Weight          0
+Cost            0
+End

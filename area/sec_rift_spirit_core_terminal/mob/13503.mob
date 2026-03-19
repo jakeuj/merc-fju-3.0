@@ -1,0 +1,32 @@
+Vnum            13503
+Name            extinction heart guard~
+ShortDesc       滅核鎮衛~
+Description
+一名滅核鎮衛立在井核緣前，雙手扶著長槍般的封魄終樁，身形穩得像早已與周圍
+絕界井壁凝成同一層正要往更深滅界沉落的冷硬輪廓。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       244
+Level           100
+Hitroll         15
+Protect         0
+Damroll         16
+Str             22
+Int             18
+Wis             22
+Dex             15
+Con             22
+Hp              42800
+Mana            2600
+Move            810
+Class           0
+Gold            3320
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

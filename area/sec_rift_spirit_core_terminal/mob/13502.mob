@@ -1,0 +1,32 @@
+Vnum            13502
+Name            extinction corridor watcher~
+ShortDesc       滅終測守~
+Description
+這名滅終測守伏在偏廊邊，面甲下只剩一層幾乎快要徹底散掉的終滅視線，像正
+靜靜衡量每個經過此地的人還留有多少不會立刻滅盡的重量。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       -192
+Level           100
+Hitroll         14
+Protect         0
+Damroll         15
+Str             22
+Int             18
+Wis             21
+Dex             16
+Con             21
+Hp              41600
+Mana            2500
+Move            790
+Class           0
+Gold            3140
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

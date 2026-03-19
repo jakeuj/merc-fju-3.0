@@ -1,0 +1,24 @@
+Vnum            12512
+Name            裂魄絕界座~
+Description
+絕界座像整段絕界井核最後一塊仍勉強聚得住輪廓的絕魄石座，腳下環界只剩一圈隨時會再淡盡一層的細薄紋，所有殘痕都在這裡被拖往更深的裂魄滅界。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        12511
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         絕界座~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

@@ -1,0 +1,24 @@
+Vnum            12502
+Name            絕紋沉階~
+Description
+沉階表面已分不出任何原本的石紋，只剩一層層近乎無名的絕紋貼著階面往前滑移，讓每一步都像踩在最後一次成形之前的界面上。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12501
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -216,6 +216,8 @@
 - `sec_rift_spirit_core_last` 已完成 runtime implementation，完成本機 build 與 smoke test 驗證，並達成可前進下一區狀態
 - `plans/area/0039-sec-rift-spirit-core-final.md` 已建立
 - `sec_rift_spirit_core_final` 已完成 runtime implementation，完成本機 build 與 smoke test 驗證，並達成可前進下一區狀態
+- `plans/area/0040-sec-rift-spirit-core-terminal.md` 已建立
+- `sec_rift_spirit_core_terminal` 已完成 runtime implementation，完成本機 build 與 smoke test 驗證，並達成可前進下一區狀態
 ## Blocked
 
 - none

@@ -1,0 +1,24 @@
+Vnum            12510
+Name            滅核前橋~
+Description
+前橋橫跨在一段已被磨成近乎只剩絕紋浮層的井核上方，橋面每次受力後都只留下短得幾乎數不清的冷痕，下一瞬便像被更深的滅界一併吞沒。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        12509
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        12511
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            12501
+Name            絕界落座~
+Description
+落座像嵌在絕界邊緣的一截絕魄石座，腳下環界已薄到只剩一圈幾乎會被感知直接漏過的絕紋，像連最後還能被辨識的輪廓都只剩最終一筆尚未完全抹去。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        12412
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        12502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         絕界~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

@@ -1,0 +1,14 @@
+Vnum            13553
+Name            絕界殘片 殘片~
+ShortDesc       一片絕界殘片~
+Description
+一片絕界殘片落在逆核廊角落，片面細得像只要呼吸再重一點就會直接化成滅灰。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           34
+Value           0 0 0 0 0
+Weight          1
+Cost            470
+End

@@ -842,6 +842,25 @@
         "plans/area/0039-sec-rift-spirit-core-final.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_spirit_core_terminal",
+      "title": "裂魄絕界",
+      "room_range": "12501-12512",
+      "load_order": 46,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_final",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄絕界 / 絕界井核",
+      "summary": "承接裂魄終界座，下探到絕界內庭、滅終偏廊與滅核前座的絕界井核過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_terminal/index",
+        "area/sec_rift_spirit_core_terminal/map.md",
+        "plans/area/0040-sec-rift-spirit-core-terminal.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }
