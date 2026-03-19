@@ -1013,6 +1013,25 @@
         "plans/area/0048-sec-rift-spirit-core-chthonic.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_spirit_core_abysmal",
+      "title": "裂魄玄幽",
+      "room_range": "13401-13412",
+      "load_order": 55,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_chthonic",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄玄幽 / 玄幽井腹",
+      "summary": "承接裂魄幽玄座，下探到玄幽內庭、幽冥偏廊與玄幽前座的玄幽井腹過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_abysmal/index",
+        "area/sec_rift_spirit_core_abysmal/map.md",
+        "plans/area/0049-sec-rift-spirit-core-abysmal.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

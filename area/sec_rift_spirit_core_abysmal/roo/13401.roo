@@ -1,0 +1,32 @@
+Vnum            13401
+Name            玄幽落座~
+Description
+落座像嵌在玄幽邊緣的一截玄魄石座，腳下環界已薄到只剩一圈幾乎會被感知直接漏過的玄紋，像連最後還能被辨識的輪廓都被更深處的冥淵慢慢磨成冷寂一筆。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        13312
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         玄幽~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

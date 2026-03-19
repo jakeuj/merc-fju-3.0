@@ -1,0 +1,24 @@
+Vnum            13412
+Name            裂魄玄幽座~
+Description
+玄幽座像整段玄幽井腹最後一塊仍勉強聚得住輪廓的玄魄石座，腳下環界只剩一圈隨時會再淡盡一層的細薄玄紋，所有殘痕都在這裡被拖往更深的裂魄冥淵。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        13411
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         玄幽座~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

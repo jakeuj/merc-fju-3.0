@@ -1,0 +1,24 @@
+Vnum            13410
+Name            玄幽前橋~
+Description
+前橋橫跨在一段已被磨成近乎只剩幽紋浮層的井腹上方，橋面每次受力後都只留下短得幾乎數不清的冷痕，下一瞬便像被更深的玄幽一併吞沒。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13409
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        13411
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -131,6 +131,7 @@ title: Current Game Areas
 - `sec_rift_spirit_core_nether`：承接裂魄晦界座，下探到冥界內庭、幽冥偏廊與玄冥前座，作為更深裂魄玄冥區前的冥界井腹 plateau 過渡帶。
 - `sec_rift_spirit_core_stygian`：承接裂魄冥界座，下探到玄冥內庭、玄幽偏廊與玄冥前座，作為更深裂魄幽玄區前的玄冥井腹 plateau 過渡帶。
 - `sec_rift_spirit_core_chthonic`：承接裂魄玄冥座，下探到幽玄內庭、冥幽偏廊與玄幽前座，作為更深裂魄玄幽區前的幽玄井腹 plateau 過渡帶。
+- `sec_rift_spirit_core_abysmal`：承接裂魄幽玄座，下探到玄幽內庭、幽冥偏廊與玄幽前座，作為更深裂魄冥淵區前的玄幽井腹 plateau 過渡帶。
 
 ### 北方鏈
 

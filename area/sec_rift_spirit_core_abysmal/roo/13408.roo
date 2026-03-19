@@ -1,0 +1,32 @@
+Vnum            13408
+Name            幽冥偏廊~
+Description
+偏廊兩側嵌著一列列幾乎比幽塵還輕的導響殼片，殼面已不再回應完整聲響，只會把人的念頭磨成一層層更沉的幽灰。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13407
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13409
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         幽冥~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End
