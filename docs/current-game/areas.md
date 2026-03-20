@@ -189,6 +189,7 @@ title: Current Game Areas
 - `wild_south_sea_route`：把南海臨海南口正式接進近海外航前帶，透過近海棧道、潮石灣、退潮礁坪與外航前帶把節奏切進海路 wild。
 - `dng_boat_graveyard`：把南航分水下方的渦潮裂口正式接進沉舟墓場，透過破桅前廊、漏艙窄道、錨鏈井口與墓場深艙把節奏切進海上 wreck dungeon。
 - `wild_pirate_islands`：把沉舟墓場外海破舷正式接進海盜群島，透過礁灣主徑、海寇舊寨、風旗高脊與外礁深灘把節奏重新打開成高風險外海 wild。
+- `fort_naval_base`：把海盜群島東向暗棧正式接進水軍大營，透過棧門柵關、補給棚區、望樓高位與內港水門把節奏收束成軍事海防 fort。
 
 ## 維護規則
 

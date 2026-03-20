@@ -1,0 +1,24 @@
+Vnum            15902
+Name            巡纜側道~
+Description
+一道沿著纜樁與外牆延伸的側道讓巡兵能快速查看外棧和繩索狀況，路不寬，卻處處是為了效率而留下的乾脆痕跡。這裡不像給人閒晃的地方，而像連停步都得有理由。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15901
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         巡邏~
+End
+
+#Enquire
+Keyword         纜繩~
+End
+
+End

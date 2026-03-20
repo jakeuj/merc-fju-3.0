@@ -1,0 +1,36 @@
+Vnum            15910
+Name            內港水門~
+Description
+內港水門後方的水道比外海平穩得多，但那平穩不是天生，而是被整座軍營硬生生管出來的。這裡既像回到文明，也像更深入權力真正駐紮的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15912
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         建業~
+End
+
+#Enquire
+Keyword         水門~
+End
+
+#Enquire
+Keyword         北邊~
+End
+
+End

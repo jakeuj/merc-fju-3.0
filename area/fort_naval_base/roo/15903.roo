@@ -1,0 +1,32 @@
+Vnum            15903
+Name            棧門柵關~
+Description
+幾層粗木與鐵條構成的柵關把海上的隨意感徹底截住，只留下受控通行的一條正道。站在這裡時，你會很明白這座水軍營不是為了歡迎人，而是為了篩掉不該靠近的人。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        15901
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         柵門~
+End
+
+#Enquire
+Keyword         通行~
+End
+
+End

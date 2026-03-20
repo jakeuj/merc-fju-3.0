@@ -1,0 +1,32 @@
+Vnum            17431
+Name            pier guard~
+ShortDesc       前棧關卒~
+Description
+這名守在外棧關口的關卒連站姿都帶著海風磨出來的硬度，像任何靠近大營的
+腳步在真正進門前，都得先經過他這一層目光和軍令的篩選。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       40
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             14
+Int             11
+Wis             12
+Dex             12
+Con             14
+Hp              7100
+Mana            100
+Move            160
+Class           0
+Gold            620
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1,0 +1,32 @@
+Vnum            15906
+Name            望樓梯口~
+Description
+梯口邊的木牌與鐵鉤都在提醒人這裡不是隨便能上的地方，但也正因如此，更能看出這座營寨對視野與預警有多重視。只要往上走，整條海路與群島都會被重新解讀成軍事情勢。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        15904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        15911
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         望樓~
+End
+
+#Enquire
+Keyword         上面~
+End
+
+End

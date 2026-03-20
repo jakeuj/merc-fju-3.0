@@ -1,0 +1,32 @@
+Vnum            17434
+Name            patrol captain~
+ShortDesc       南巡校尉~
+Description
+這名站在南巡碼頭邊的校尉全身都像被值勤節奏繃得很緊，連看向外海的方式
+都像下一刻就會把整片水面重新劃分成巡線、威脅和必須回報的異狀。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       80
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             15
+Int             12
+Wis             13
+Dex             12
+Con             14
+Hp              7300
+Mana            100
+Move            160
+Class           0
+Gold            700
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

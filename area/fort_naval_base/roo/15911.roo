@@ -1,0 +1,28 @@
+Vnum            15911
+Name            外海望樓~
+Description
+站上望樓後，群島、沉舟帶與更遠的外海都被納進一種軍事視角裡，連原本看似自由的航線也只剩下可守、可巡或可疑三種判讀。這種高度讓人不是更放鬆，而是更清楚自己正處在誰的視線裡。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       DOWN
+ExitVnum        15906
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         外海~
+End
+
+#Enquire
+Keyword         望樓~
+End
+
+#Enquire
+Keyword         旗號~
+End
+
+End

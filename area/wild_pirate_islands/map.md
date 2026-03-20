@@ -206,7 +206,8 @@
       "coord": [2, -1, 0],
       "labels": ["east-link", "hidden-pier"],
       "exits": [
-        { "direction": "south", "to": 15807 }
+        { "direction": "south", "to": 15807 },
+        { "direction": "east", "to": 15901, "external": true }
       ],
       "enquires": ["東邊", "前哨", "棧橋"]
     }

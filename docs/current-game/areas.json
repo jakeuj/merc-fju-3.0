@@ -1488,6 +1488,25 @@
         "plans/area/0073-wild-pirate-islands.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "fort_naval_base",
+      "title": "水軍大營",
+      "room_range": "15901-15930",
+      "load_order": 80,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "wild_pirate_islands",
+      "theme_primary": "軍旅",
+      "theme_secondary": "東吳水軍",
+      "summary": "承接海盜群島東向暗棧，落成棧門柵關、補給棚區、望樓高位與內港水門骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/fort_naval_base/index",
+        "area/fort_naval_base/map.md",
+        "plans/area/0074-fort-naval-base.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

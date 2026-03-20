@@ -1,0 +1,15 @@
+Vnum            17453
+Name            patrol saber~
+ShortDesc       巡防戰刀(patrol saber)~
+Description
+一把刀身保養得相當仔細、明顯仍屬於正式軍伍裝備的巡防戰刀(patrol saber)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           100
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            430
+End

@@ -1,0 +1,28 @@
+Vnum            15912
+Name            南巡碼頭~
+Description
+碼頭南側繫著幾艘隨時能放出的巡防快船，木板被軍靴與海水磨得發亮，像這裡每一天都在準備下一次出巡。和群島那種半野的漂流感比起來，這裡連海浪都像被納進了值勤表。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15910
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         巡防~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+#Enquire
+Keyword         碼頭~
+End
+
+End

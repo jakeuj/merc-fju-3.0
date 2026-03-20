@@ -1,0 +1,44 @@
+Vnum            15901
+Name            外棧關口~
+Description
+暗棧盡頭的木板忽然被加厚、釘鐵與柵柱接手，像群島那頭還講求膽量與眼色，到了這裡則完全改由誰能發令來決定。光是站在關口前，你就能感覺到海風都像被軍規收緊了幾分。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        15812
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         關口~
+End
+
+#Enquire
+Keyword         西邊~
+End
+
+#Enquire
+Keyword         水軍~
+End
+
+End

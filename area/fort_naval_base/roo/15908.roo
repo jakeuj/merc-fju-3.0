@@ -1,0 +1,36 @@
+Vnum            15908
+Name            內營號台~
+Description
+號台立在前營與內港之間，既能讓軍令往前推，也能讓戰報往裡收，像整座水軍大營真正的心跳都在這種不容拖延的傳遞裡。你站在這裡時，很難不被那股被命令驅動的節奏一起帶快。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        15904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15910
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         號台~
+End
+
+#Enquire
+Keyword         軍令~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+End

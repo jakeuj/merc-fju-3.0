@@ -1,0 +1,32 @@
+Vnum            17433
+Name            banner sentry~
+ShortDesc       望樓守旗兵~
+Description
+這名守旗兵總讓自己和旗桿一起立得筆直，像只要他還站在望樓上，整片外海
+就還沒有真正逃出大營的視線範圍。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       70
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             12
+Wis             14
+Dex             12
+Con             13
+Hp              7000
+Mana            120
+Move            160
+Class           0
+Gold            640
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

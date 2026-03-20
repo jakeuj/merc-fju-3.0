@@ -1,0 +1,32 @@
+Vnum            17432
+Name            quartermaster~
+ShortDesc       補給軍需官~
+Description
+這名軍需官看人的眼神像在數貨，不只會先估量你能帶走多少，也會先判斷你
+有沒有資格在這座大營裡浪費任何一點補給與時間。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       60
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             14
+Wis             14
+Dex             11
+Con             12
+Hp              6800
+Mana            140
+Move            160
+Class           0
+Gold            580
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

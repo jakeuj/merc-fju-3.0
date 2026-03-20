@@ -1,0 +1,14 @@
+Vnum            17452
+Name            field flask~
+ShortDesc       行軍水壺(field flask)~
+Description
+一只掛著布帶、方便在棧門與望樓之間快速取用的行軍水壺(field flask)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           100
+Value           14 14 LIQ_WATER 0
+Weight          2
+Cost            280
+End

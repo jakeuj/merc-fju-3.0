@@ -1,0 +1,48 @@
+Vnum            15904
+Name            前營通道~
+Description
+通道兩旁插著軍旗與告示板，步距、轉角和視線都像被事先算過，讓人走在其中時很難不跟著營內節奏一起變得更拘束。這裡沒有任何多餘的東西，因為多餘本身就是問題。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        15903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        15906
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         軍旗~
+End
+
+#Enquire
+Keyword         內營~
+End
+
+End

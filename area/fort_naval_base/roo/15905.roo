@@ -1,0 +1,24 @@
+Vnum            15905
+Name            補給棚前~
+Description
+幾座臨海棚架把乾糧、淡水、燈具與繩索分門別類收得整整齊齊，像這座大營真正的力量不只在兵刃，也在它有能力讓整個海防節奏一直轉下去。這裡比群島上的任何藏貨點都更讓人明白什麼叫後勤。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         補給~
+End
+
+#Enquire
+Keyword         乾糧~
+End
+
+End

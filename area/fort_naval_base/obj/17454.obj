@@ -1,0 +1,14 @@
+Vnum            17454
+Name            signal lantern~
+ShortDesc       號令提燈(signal lantern)~
+Description
+一盞用來在海風和夜色裡維持號令節奏的號令提燈(signal lantern)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           100
+Value           0 0 45 0
+Weight          2
+Cost            310
+End
