@@ -1,0 +1,14 @@
+Vnum            16554
+Name            resin torch~
+ShortDesc       樹脂火炬(resin torch)~
+Description
+一支在濕林霧氣裡仍勉強能守住亮光的樹脂火炬(resin torch)被放在這裡。
+~
+Unit            支~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           95
+Value           0 0 45 0
+Weight          2
+Cost            255
+End

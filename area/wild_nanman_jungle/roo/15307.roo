@@ -1,0 +1,40 @@
+Vnum            15307
+Name            祭柱空地~
+Description
+林間難得空出一小塊地，幾根矮柱與燒黑土圈讓人看得出這裡曾反覆被拿來做某種儀式。它沒有真正的火光與人聲，卻比許多熱鬧地方更讓人不敢輕舉妄動。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       EAST
+ExitVnum        15304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15308
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        15311
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         祭柱~
+End
+
+#Enquire
+Keyword         空地~
+End
+
+End

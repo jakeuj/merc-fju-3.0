@@ -1,0 +1,33 @@
+Vnum            16532
+Name            tribal trail hunter~
+ShortDesc       部族巡獵者~
+Description
+這名在圖騰林口與祭柱空地間巡路的部族巡獵者步伐很輕，手裡的短刀則總
+是保持著能隨時劈開藤結與逼退入侵者的角度。對他而言，密林不是危險，
+真正危險的是陌生人不懂這裡的規矩。
+~
+Sentinel        No
+StayArea        Yes
+NoKill          No
+Alignment       20
+Level           96
+Hitroll         6
+Protect         0
+Damroll         6
+Str             14
+Int             11
+Wis             12
+Dex             15
+Con             14
+Hp              7000
+Mana            120
+Move            170
+Class           0
+Gold            360
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

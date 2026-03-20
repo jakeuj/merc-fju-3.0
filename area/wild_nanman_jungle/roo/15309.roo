@@ -1,0 +1,24 @@
+Vnum            15309
+Name            樹冠望根~
+Description
+沿著側枝與盤根爬上來後，視野終於能越過底下那層濕重樹影，勉強看出桂陽方向的光色還留在哪一邊。這裡讓人暫時找回判斷，卻也更清楚地看見自己其實已經離城很遠。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       DOWN
+ExitVnum        15304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         桂陽~
+End
+
+#Enquire
+Keyword         樹上~
+End
+
+End

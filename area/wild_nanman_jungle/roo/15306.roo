@@ -1,0 +1,32 @@
+Vnum            15306
+Name            伏藤窄口~
+Description
+幾道粗藤貼著地面和樹幹交錯，逼得人只能側身從窄口穿過。風很難吹進來，四周安靜得只剩水珠滴落與林葉摩擦的聲音，像整片林子都在等你決定要不要再往深處送一步。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       EAST
+ExitVnum        15305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15308
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         藤路~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

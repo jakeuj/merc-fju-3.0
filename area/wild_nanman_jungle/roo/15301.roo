@@ -1,0 +1,40 @@
+Vnum            15301
+Name            藤門外徑~
+Description
+從桂陽西岔再往外走不久，木路牌與城鎮氣味就被藤結與濕熱樹影吞掉大半。這條外徑還算能辨認，卻已經很明白地提醒你，從這裡開始，方向感將不再由官道替你保證。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       EAST
+ExitVnum        15212
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        15302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         桂陽~
+End
+
+#Enquire
+Keyword         入口~
+End
+
+End

@@ -1,0 +1,33 @@
+Vnum            16531
+Name            jungle path guide~
+ShortDesc       林口引路客~
+Description
+這名熟悉桂陽外徑與南蠻林口界線的林口引路客總站在濕根主路附近，像只
+要看一眼來人的鞋印與枝葉折向，就知道他是剛離開城鎮，還是已在密林裡
+繞得失了方向。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       70
+Level           94
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             16
+Dex             12
+Con             12
+Hp              5200
+Mana            160
+Move            170
+Class           0
+Gold            420
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1,0 +1,15 @@
+Vnum            16553
+Name            jungle parang~
+ShortDesc       密林短彎刀(jungle parang)~
+Description
+一柄用來劈開藤結與濕林雜枝的密林短彎刀(jungle parang)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           96
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            340
+End

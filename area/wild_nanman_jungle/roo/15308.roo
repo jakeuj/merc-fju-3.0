@@ -1,0 +1,52 @@
+Vnum            15308
+Name            根台高徑~
+Description
+幾層盤結巨根把地面抬成一段較高的徑道，站上去後能短暫看見周圍林帶的高低與霧氣流向。這種高度不是為了風景，而是讓人終於能把剛才一路的混亂重新拼回一點方向感。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       NORTH
+ExitVnum        15307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15306
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15310
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        15312
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         高處~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+#Enquire
+Keyword         密林~
+End
+
+End

@@ -1,0 +1,33 @@
+Vnum            16533
+Name            totem watcher~
+ShortDesc       圖騰守望人~
+Description
+這名守在祭柱與圖騰柱附近的圖騰守望人像比一般山民更懂這片密林的禁忌，
+站著不動時幾乎像也成了木柱與樹影的一部分。你不確定他是在看守山路，
+還是在防人驚擾更深處尚未露面的東西。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       110
+Level           98
+Hitroll         7
+Protect         0
+Damroll         7
+Str             13
+Int             12
+Wis             15
+Dex             14
+Con             15
+Hp              7600
+Mana            160
+Move            165
+Class           0
+Gold            380
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

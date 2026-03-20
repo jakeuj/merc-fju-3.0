@@ -1374,6 +1374,25 @@
         "plans/area/0067-city-guiyang.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "wild_nanman_jungle",
+      "title": "南蠻密林",
+      "room_range": "15301-15330",
+      "load_order": 74,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_guiyang",
+      "theme_primary": "探險",
+      "theme_secondary": "南蠻密林 / 部族邊徑",
+      "summary": "承接桂陽西岔，落成濕根主路、圖騰林口、祭柱空地與根台高徑骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/wild_nanman_jungle/index",
+        "area/wild_nanman_jungle/map.md",
+        "plans/area/0068-wild-nanman-jungle.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

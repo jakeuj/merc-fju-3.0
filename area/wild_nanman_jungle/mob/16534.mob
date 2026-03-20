@@ -1,0 +1,33 @@
+Vnum            16534
+Name            marsh spoor scavenger~
+ShortDesc       泥窪拾跡者~
+Description
+這名總在泥窪低帶與伏藤窄口附近翻找殘痕的泥窪拾跡者動作安靜得近乎古
+怪，像連自己也怕驚動霧泥底下不該被喚起的東西。只看一眼，就知道他很
+熟這段密林最容易把人拖慢與拖散的地方。
+~
+Sentinel        No
+StayArea        Yes
+NoKill          No
+Alignment       -30
+Level           100
+Hitroll         8
+Protect         0
+Damroll         8
+Str             13
+Int             12
+Wis             11
+Dex             15
+Con             15
+Hp              8200
+Mana            110
+Move            175
+Class           0
+Gold            410
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

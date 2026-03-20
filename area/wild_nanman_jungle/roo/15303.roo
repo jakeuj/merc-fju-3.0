@@ -1,0 +1,40 @@
+Vnum            15303
+Name            濕根主路~
+Description
+粗大的樹根從泥地裡抬出一條勉強能行的主路，腳踩上去時總會伴著潮水與落葉被擠碎的聲音。它像是密林願意留給外來者的最基本善意，但那份善意隨時可能在下一個轉角收回。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       EAST
+ExitVnum        15301
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         密林~
+End
+
+#Enquire
+Keyword         出口~
+End
+
+End

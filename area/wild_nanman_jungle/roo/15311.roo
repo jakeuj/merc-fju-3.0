@@ -1,0 +1,24 @@
+Vnum            15311
+Name            林下祠痕~
+Description
+一段被根鬚包住的石階往更低處沉去，石面上還殘留著香灰與細小刻紋，像某座被林子半吞沒的古祠仍在底下維持著不完全熄滅的存在。站在這裡時，會很自然想到下面不會只是普通林地。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       SOUTH
+ExitVnum        15307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         古祠~
+End
+
+#Enquire
+Keyword         下方~
+End
+
+End

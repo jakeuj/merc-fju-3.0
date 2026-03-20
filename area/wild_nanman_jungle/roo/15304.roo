@@ -1,0 +1,47 @@
+Vnum            15304
+Name            圖騰林口~
+Description
+幾根被煙燻過的木柱半藏在藤影之間，柱面刻痕不像官府文字，卻有一種被人長久重複觸碰後留下的莊重感。這裡讓密林突然多出一點人的氣息，但那並不是能讓外人放鬆的氣息。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       EAST
+ExitVnum        15303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        15309
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         圖騰~
+Description
+木柱上的刻痕像部族用來辨界、祭告或警示的記號，雖然你看不懂全部意思，卻能感覺到它不是隨意立在這裡的。
+~
+End
+
+#Enquire
+Keyword         圖騰~
+End
+
+#Enquire
+Keyword         部族~
+End
+
+End

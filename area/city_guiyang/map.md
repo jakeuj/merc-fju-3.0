@@ -237,7 +237,8 @@
       "coord": [2, -2, 0],
       "labels": ["marker", "west-link"],
       "exits": [
-        { "direction": "north", "to": 15208 }
+        { "direction": "north", "to": 15208 },
+        { "direction": "west", "to": 15301, "external": true }
       ],
       "enquires": ["南蠻", "西邊", "去路"]
     }

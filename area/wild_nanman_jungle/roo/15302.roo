@@ -1,0 +1,24 @@
+Vnum            15302
+Name            獵骨歇點~
+Description
+幾截曬白的獸骨和被削平的木樁散在樹下，像有人長期把這裡當作短暫歇腳與辨位的地方。它沒有真正的安全感，卻能讓人意識到這片密林裡還是存在一些只屬於熟路人的秩序。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       SOUTH
+ExitVnum        15301
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+#Enquire
+Keyword         獵戶~
+End
+
+End

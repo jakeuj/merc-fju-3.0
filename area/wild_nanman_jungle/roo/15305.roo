@@ -1,0 +1,32 @@
+Vnum            15305
+Name            泥窪低帶~
+Description
+路面突然陷進一片長滿薄草與積水的低帶，鞋底很容易被泥水拖住半拍。這裡不是明顯的陷阱，但每一步都會提醒你，南蠻密林真正消耗人的方式，是慢慢把節奏與判斷一起磨鈍。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       NORTH
+ExitVnum        15303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15306
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         泥地~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

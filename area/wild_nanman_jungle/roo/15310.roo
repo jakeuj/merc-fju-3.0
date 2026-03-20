@@ -1,0 +1,24 @@
+Vnum            15310
+Name            深林西線~
+Description
+再往西去，地面痕跡開始被更厚的落葉與獸徑分裂成許多互不相讓的小路。這裡不像真正的終點，反而像密林在你面前把更深、更不講理的世界微微掀開一角。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       EAST
+ExitVnum        15308
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         西邊~
+End
+
+#Enquire
+Keyword         深林~
+End
+
+End
