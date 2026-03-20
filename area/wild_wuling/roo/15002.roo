@@ -1,0 +1,24 @@
+Vnum            15002
+Name            獵戶棚邊~
+Description
+幾根老木搭成的歇腳棚靠在坡邊，棚角還掛著乾藤與舊繩，像常有熟門熟路的人在這裡短暫停腳。比起主城的驛站，這裡更像山路自己的規矩，只供真正懂山的人使用。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        15001
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         獵戶~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+End

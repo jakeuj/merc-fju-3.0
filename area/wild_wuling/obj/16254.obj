@@ -1,0 +1,14 @@
+Vnum            16254
+Name            mist lamp~
+ShortDesc       霧谷油燈(mist lamp)~
+Description
+一盞在山霧與谷風裡仍勉強守住火芯的霧谷油燈(mist lamp)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           79
+Value           0 0 40 0
+Weight          2
+Cost            190
+End

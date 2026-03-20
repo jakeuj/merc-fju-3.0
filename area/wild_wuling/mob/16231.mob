@@ -1,0 +1,32 @@
+Vnum            16231
+Name            mountain guide~
+ShortDesc       山口引路客~
+Description
+這名熟悉武陵山岔口與回城路勢的山口引路客站在石碑附近，像只要看一眼
+鞋底泥痕與枝葉折向，就知道來人是剛出長沙，還是已在山裡繞了很久。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       80
+Level           78
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             15
+Dex             12
+Con             12
+Hp              2600
+Mana            120
+Move            140
+Class           0
+Gold            320
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1,0 +1,15 @@
+Vnum            16253
+Name            ridge machete~
+ShortDesc       山徑短刀(ridge machete)~
+Description
+一柄用來劈開山藤與雜枝的山徑短刀(ridge machete)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           80
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            240
+End

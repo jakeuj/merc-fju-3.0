@@ -1,0 +1,24 @@
+Vnum            15009
+Name            高坡望石~
+Description
+一塊突出的望石卡在坡頂邊，從這裡能看見來時山路如何一段段縮回長沙方向。這樣的高度讓人暫時恢復方向感，卻也更明白再往西走，就會慢慢離開所有還算熟悉的邊界。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       DOWN
+ExitVnum        15004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         望石~
+End
+
+#Enquire
+Keyword         長沙~
+End
+
+End

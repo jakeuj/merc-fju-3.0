@@ -1,0 +1,40 @@
+Vnum            15001
+Name            山腳岔口~
+Description
+離開長沙西牌後，官道很快就被山腳碎石與樹影吃去一半，眼前這個岔口像在提醒旅人，從這裡開始已不再是主城的節奏。風裡帶著潮潤山氣，也帶著一點讓人想停下來重新辨位的警覺。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        14912
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        15002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         長沙~
+End
+
+#Enquire
+Keyword         山路~
+End
+
+End

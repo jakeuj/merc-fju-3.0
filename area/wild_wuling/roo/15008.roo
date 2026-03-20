@@ -1,0 +1,52 @@
+Vnum            15008
+Name            山腹高徑~
+Description
+高徑沿著山腹橫出去，左側是林坡，右側則能隱約望見霧帶低谷。站在這裡時，前後左右都不像完全封死，卻也沒有哪一條路會讓人真的放鬆，這正是深山路最磨人的地方。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        15007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15006
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15010
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        15012
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         山腹~
+End
+
+#Enquire
+Keyword         岔路~
+End
+
+#Enquire
+Keyword         出口~
+End
+
+End

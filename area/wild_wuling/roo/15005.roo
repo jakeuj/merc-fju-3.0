@@ -1,0 +1,32 @@
+Vnum            15005
+Name            谷口碎徑~
+Description
+碎徑往下斜切進一段較低的谷口，兩旁濕苔與散岩把路壓得狹而長。你不一定會立刻覺得危險，但會很清楚地明白，這裡一旦走錯，回頭就不會像在主街轉個身那麼簡單。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        15003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15006
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         谷地~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

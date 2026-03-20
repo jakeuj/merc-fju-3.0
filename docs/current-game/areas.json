@@ -1317,6 +1317,25 @@
         "plans/area/0064-city-changsha.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "wild_wuling",
+      "title": "武陵山",
+      "room_range": "15001-15030",
+      "load_order": 71,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_changsha",
+      "theme_primary": "仙俠",
+      "theme_secondary": "山路野外 / 靈木深山",
+      "summary": "承接長沙西牌山路，落成石碑山路、靈木坡面、山腹高徑與霧帶谷口骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/wild_wuling/index",
+        "area/wild_wuling/map.md",
+        "plans/area/0065-wild-wuling.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

@@ -1,0 +1,47 @@
+Vnum            15007
+Name            靈木坡面~
+Description
+坡面上幾株老樹枝幹扭曲，樹皮裂紋裡卻透著異樣乾淨的木色，像整片山氣都在這裡停得比較久。這不是誇張得像秘境的景象，卻足夠讓人意識到武陵山和普通獵場終究不是一回事。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        15004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        15011
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         靈木~
+Description
+老樹的裂痕與紋理都比尋常山林更醒目，像樹本身也記得這片山長久積下的氣息。
+~
+End
+
+#Enquire
+Keyword         武陵~
+End
+
+#Enquire
+Keyword         古樹~
+End
+
+End

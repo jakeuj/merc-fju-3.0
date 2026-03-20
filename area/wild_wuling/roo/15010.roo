@@ -1,0 +1,24 @@
+Vnum            15010
+Name            隱谷西徑~
+Description
+再往西去，山路開始被更深的樹影與谷風分成幾股不太好辨的細線，像任何一步都可能讓人正式踏進另一片更不熟的山域。這裡不像終點，更像武陵山真正打開深處的門縫。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        15008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         隱谷~
+End
+
+#Enquire
+Keyword         西邊~
+End
+
+End

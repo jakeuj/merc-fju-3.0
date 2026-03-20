@@ -1,0 +1,32 @@
+Vnum            15006
+Name            霧帶窄口~
+Description
+一層薄霧總在這段窄口盤著不散，讓視線永遠像被留了一點餘地。風從谷裡吹上來時，會帶著草木與濕土混雜的味道，像在暗示前面還有更深、更難辨位的山腹區域。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        15005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         霧~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

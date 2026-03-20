@@ -1,0 +1,14 @@
+Vnum            16252
+Name            mountain flask~
+ShortDesc       山路水囊(mountain flask)~
+Description
+一只專給武陵山行腳客帶在身邊的山路水囊(mountain flask)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           78
+Value           12 12 LIQ_WATER 0
+Weight          2
+Cost            165
+End

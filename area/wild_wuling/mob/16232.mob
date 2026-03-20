@@ -1,0 +1,33 @@
+Vnum            16232
+Name            wuling hunter~
+ShortDesc       武陵獵戶~
+Description
+這名習慣在坡道與谷口之間追獸跡的武陵獵戶步伐很輕，眼神卻總保持著向
+深林更裡側搜尋的警覺。對他來說，山裡真正可怕的往往不是野獸，而是失
+去方向。
+~
+Sentinel        No
+StayArea        Yes
+NoKill          No
+Alignment       60
+Level           80
+Hitroll         5
+Protect         0
+Damroll         5
+Str             13
+Int             11
+Wis             12
+Dex             14
+Con             13
+Hp              3600
+Mana            100
+Move            140
+Class           0
+Gold            260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -23,7 +23,7 @@
   - `west`: `wild_hidden_valley` / 隱谷獵徑預留
   - `north`: `city_jiangling` / 北山關路預留
   - `east`: `wild_spirit_forest` / 東岔靈林預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Fun / Variety Check
 
@@ -114,7 +114,29 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_wuling/map.md --validate-only`
   - passed for `12` room(s)
+- `python -X utf8 tools/mapmd_validate.py area/city_changsha/map.md`
+  - passed with `0 error(s), 0 warning(s)` after aligning the `14912 <-> 15001` boundary
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_changsha/map.md`
+  - rewrote `roo/14901-14912` to include the west boundary into `15001`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_wuling/map.md`
+  - wrote `roo/15001-15012`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed; Linux build path reports `merc` up to date
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - startup log `log/1031.log` reached `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/badobject` remained empty
+  - `debug/error` only records the forced shutdown path caused by timeout, not a loader failure
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `wild_wuling`
+- `area/wild_wuling/index` 採首版武陵山前帶 scaffold，房號段 `15001-15030`、序號 `154`
+- `mob/16231-16234` 與 `obj/16251-16254` 提供山口引路客、武陵獵戶、靈木守望者、霧谷拾跡客與野外補給骨架
+- `res/wild.res` 與 `shp/supplies.shp` 已建立，keeper 為 `16231`
+- `area/city_changsha/map.md` 與 `area/wild_wuling/map.md` 已同步把 `14912 <-> 15001` 落成正式 runtime boundary
+- `area/city_changsha/roo/14912.roo` 與 `area/wild_wuling/roo/15001.roo` 現在雙向一致
+- `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已加入 `wild_wuling` loadable registry
 
 ## Next Step Prompt
 
-`先 commit 目前 wild_wuling 的 spec milestone；commit 後直接做 implementation milestone。`
+`先 commit 目前 wild_wuling 的 implementation milestone；commit 後把它標記為 done，再盤點下一個待建 area。`

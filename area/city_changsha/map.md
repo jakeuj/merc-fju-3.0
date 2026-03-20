@@ -237,7 +237,8 @@
       "coord": [2, -2, 0],
       "labels": ["west-link", "marker"],
       "exits": [
-        { "direction": "north", "to": 14908 }
+        { "direction": "north", "to": 14908 },
+        { "direction": "west", "to": 15001, "external": true }
       ],
       "enquires": ["武陵", "山路", "去路"]
     }

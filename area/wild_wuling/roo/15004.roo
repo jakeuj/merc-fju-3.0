@@ -1,0 +1,40 @@
+Vnum            15004
+Name            古藤坡道~
+Description
+坡道沿著老樹根與垂藤往上拉開，路不算難走，卻總讓人覺得四周正在慢慢把聲音吞掉。這裡像是武陵山真正開始有自己脾氣的地方，走得越深，越不容易再用主城的習慣去判斷它。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        15003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        15009
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         靈木~
+End
+
+#Enquire
+Keyword         坡道~
+End
+
+End

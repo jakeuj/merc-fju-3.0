@@ -1,0 +1,14 @@
+Vnum            16251
+Name            mountain ration cake~
+ShortDesc       山行乾糧餅(mountain ration cake)~
+Description
+一塊最適合在山路間邊走邊補上一口氣的山行乾糧餅(mountain ration cake)被放在這裡。
+~
+Unit            塊~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           78
+Value           28 44 4 0
+Weight          1
+Cost            180
+End

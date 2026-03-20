@@ -94,6 +94,7 @@ title: Current Game Areas
 | `city_chaisang` | 柴桑 / 江岸東口城市 | `14701-14730` | `rebuild addition` | 承接江夏東向幹道，落成西向江門、江岸主街、市集補給與南向轉場區骨架。 |
 | `sec_chibi_battlefield` | 赤壁古戰場 / 江岸古戰場祕區 | `14801-14830` | `rebuild addition` | 承接柴桑南緣路標，落成灰燼坡帶、殘艦灘口、火痕主陣與祭火高地骨架。 |
 | `city_changsha` | 長沙 / 荊南主城 | `14901-14930` | `rebuild addition` | 承接柴桑南向官道，落成北門、主街、市集補給、官署前街與南門官道骨架。 |
+| `wild_wuling` | 武陵山 / 深山野外前帶 | `15001-15030` | `rebuild addition` | 承接長沙西牌山路，落成石碑山路、靈木坡面、山腹高徑與霧帶谷口骨架。 |
 
 ## Recent Rebuild Areas
 
@@ -177,6 +178,7 @@ title: Current Game Areas
 - `city_chaisang`：把江夏東向幹道正式接進柴桑，透過西向江門、江岸主街、水行市集與城務前院把主線重新收束成江岸東進的城市 hub。
 - `sec_chibi_battlefield`：把柴桑南向赤壁路標正式接進江岸古戰場祕區，透過灰坡、殘艦灘、火痕主陣與祭火高地把節奏切進帶戰痕回聲的 secret battlefield。
 - `city_changsha`：把柴桑南向官道正式接進長沙，透過北門、主街、市集補給、官署前街與南門官道把主線重新收束成荊南主城 hub。
+- `wild_wuling`：把長沙西牌正式接進武陵山前帶，透過石碑山路、靈木坡面、山腹高徑與霧帶谷口把節奏切進深山 wild。
 
 ## 維護規則
 

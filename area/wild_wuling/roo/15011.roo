@@ -1,0 +1,24 @@
+Vnum            15011
+Name            北山關痕~
+Description
+一段較舊的山道往北側斜出去，地上仍能看見久遠車轍與修路痕跡，像它曾經不只是獵人走的小道，而是更大範圍交通的一部分。這種痕跡讓武陵山顯得更厚，也更像真正接在世界骨架上的山區。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        15007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         北路~
+End
+
+#Enquire
+Keyword         舊道~
+End
+
+End

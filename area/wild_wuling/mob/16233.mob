@@ -1,0 +1,33 @@
+Vnum            16233
+Name            spiritwood watcher~
+ShortDesc       靈木守望者~
+Description
+這名守在靈木坡面的守望者像比普通山民更懂這片林木的脾氣，站著不動時
+幾乎像也成了古樹的一部分。你不確定他是在看守山路，還是在防人驚擾更
+深處的東西。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       120
+Level           82
+Hitroll         5
+Protect         0
+Damroll         5
+Str             12
+Int             12
+Wis             14
+Dex             13
+Con             14
+Hp              3900
+Mana            120
+Move            130
+Class           0
+Gold            280
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

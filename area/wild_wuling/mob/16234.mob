@@ -1,0 +1,33 @@
+Vnum            16234
+Name            mist trail scavenger~
+ShortDesc       霧谷拾跡客~
+Description
+這名總在霧帶窄口與谷地邊翻找殘痕的拾跡客動作安靜得近乎古怪，像連自
+己也怕驚動霧裡某些不該被喊出名字的東西。只看一眼，就知道他很熟這段
+山路最容易讓人失步的地方。
+~
+Sentinel        No
+StayArea        Yes
+NoKill          No
+Alignment       -40
+Level           84
+Hitroll         6
+Protect         0
+Damroll         6
+Str             12
+Int             12
+Wis             11
+Dex             14
+Con             14
+Hp              4200
+Mana            90
+Move            135
+Class           0
+Gold            300
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

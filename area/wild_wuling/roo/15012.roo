@@ -1,0 +1,28 @@
+Vnum            15012
+Name            東岔靈林~
+Description
+一道往東偏去的林間岔路藏在山腹下方，樹影比來路更密，連地上的痕跡也細得幾乎只剩熟人能看懂。它像在提醒你，武陵山這一帶真正的複雜，往往不是眼前主路，而是那些看似安靜的小分叉。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       UP
+ExitVnum        15008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         靈林~
+End
+
+#Enquire
+Keyword         岔路~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

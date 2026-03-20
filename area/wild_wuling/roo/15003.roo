@@ -1,0 +1,40 @@
+Vnum            15003
+Name            石碑山路~
+Description
+山路邊立著半斜的舊石碑，碑面被風雨磨得發白，卻仍能看出曾有人試著替來路與去路留下秩序。踩在石礫路面上時，會明顯感覺到這條路既是通道，也是把人一點點送離主城保護的邊線。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        15001
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         石碑~
+End
+
+#Enquire
+Keyword         出口~
+End
+
+End
