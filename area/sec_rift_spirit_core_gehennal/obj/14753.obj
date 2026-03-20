@@ -1,0 +1,14 @@
+Vnum            14753
+Name            業獄殘片 殘片~
+ShortDesc       一片業獄殘片~
+Description
+一片業獄殘片落在逆腹廊角落，片面薄得像只要業壓再沉一點就會直接碾成黑灰。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           34
+Value           0 0 0 0 0
+Weight          1
+Cost            520
+End

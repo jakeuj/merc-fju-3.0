@@ -1,0 +1,24 @@
+Vnum            13710
+Name            寒獄前橋~
+Description
+前橋橫跨在一段已被業壓磨成冷黑鏡面的井腹上方，橋面每次受力都只留下極短的一道寒痕，下一瞬便像被更深處的寒獄整片吞沒，不准任何重量停留太久。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13709
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        13711
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

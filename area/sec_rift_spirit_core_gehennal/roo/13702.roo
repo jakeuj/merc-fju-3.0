@@ -1,0 +1,24 @@
+Vnum            13702
+Name            罪紋沉階~
+Description
+沉階表面覆著一層層向內收束的罪紋，每踏下一階，都像踩進一塊帶著舊業回響的黑沉鐵面，連原本該散去的腳步聲也會被壓成更鈍的低鳴。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13701
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

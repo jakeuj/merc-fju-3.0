@@ -1,0 +1,32 @@
+Vnum            13701
+Name            業獄落座~
+Description
+落座像嵌在業獄外緣的一截罪魄黑石，腳下環界已被壓得像一張隨時會裂卻又始終不斷的薄板，只剩幾道細窄罪痕貼在座沿，像把最後能回望冥獄的餘光也逐層封死。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        13612
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13702
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         業獄~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

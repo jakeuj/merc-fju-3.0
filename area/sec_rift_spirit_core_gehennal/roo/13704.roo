@@ -1,0 +1,32 @@
+Vnum            13704
+Name            照業鎮魄臺~
+Description
+鎮魄臺旁的照業碑只剩幾道被長年獄壓磨亮的罪槽，碑與界在此幾乎只靠最後一層鎮束法意硬撐，像再往下沉一步，就會整片崩入更深的寒獄。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         照業~
+End
+
+#Enquire
+Keyword         鎮魄~
+End
+
+End

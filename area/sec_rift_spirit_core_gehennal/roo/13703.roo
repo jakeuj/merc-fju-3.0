@@ -1,0 +1,32 @@
+Vnum            13703
+Name            業獄內庭前緣~
+Description
+前緣俯瞰整座向內下沉的業獄內庭，庭心像一口專門磨蝕罪痕的無火重井，視線停久了，連腦中剛冒出的念頭都像會被壓成一枚枚再也分不清來處的黑印。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13702
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        13707
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

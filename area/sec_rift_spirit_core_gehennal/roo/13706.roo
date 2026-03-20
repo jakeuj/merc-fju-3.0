@@ -1,0 +1,16 @@
+Vnum            13706
+Name            照業沉座~
+Description
+沉座中央懸著一枚像被整口業獄反覆碾薄的黯晶，晶體不發光，只默默把周圍還能分層的輪廓磨成更平、更冷的重暗面。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

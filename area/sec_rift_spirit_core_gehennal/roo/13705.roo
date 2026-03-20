@@ -1,0 +1,39 @@
+Vnum            13705
+Name            業獄沉黯槽~
+Description
+沉黯槽裡看不見任何流勢，只剩一道被業壓反覆擠窄的黑線沿槽底朝更深處收束，像整段井腹正在把所有還帶因果的殘痕一筆筆磨回冷黑底色。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13706
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        13709
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         沉黯~
+Description
+槽壁罪紋已被業壓磨成難再分辨的黑層，只留下把界面持續逼向更深寒獄的靜重壓力。
+~
+End
+
+End

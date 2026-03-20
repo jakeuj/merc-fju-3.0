@@ -1,0 +1,24 @@
+Vnum            13707
+Name            業冥側階~
+Description
+側階斜切進偏廊時，腳下每一級都像被更深層業壓提前鎖死，回頭再看，剛踩過的紋路已收成一束束發黑細線，像不願再為來人留下任何折返餘地。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        13703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            13708
+Name            業冥偏廊~
+Description
+偏廊兩側嵌著一列列被壓平到幾乎失去弧度的導響殼片，殼面不再回應完整聲響，只會把人的念頭敲成短促、沉重的暗鳴，最後全數壓回井腹底層。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13707
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13709
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         業冥~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End

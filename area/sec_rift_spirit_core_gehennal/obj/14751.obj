@@ -1,0 +1,14 @@
+Vnum            14751
+Name            照業短杖 短杖~
+ShortDesc       一支照業短杖~
+Description
+一支照業短杖倚在業獄內庭邊，杖尖還殘留一束細得快要直接碾盡的罪痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           28
+Value           0 0 0 0 0
+Weight          3
+Cost            480
+End

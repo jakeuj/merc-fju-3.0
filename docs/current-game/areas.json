@@ -1070,6 +1070,25 @@
         "plans/area/0051-sec-rift-spirit-core-infernal.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_spirit_core_gehennal",
+      "title": "裂魄業獄",
+      "room_range": "13701-13712",
+      "load_order": 58,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_infernal",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄業獄 / 業獄井腹",
+      "summary": "承接裂魄冥獄座，下探到業獄內庭、業冥偏廊與寒獄前座的業獄井腹過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_gehennal/index",
+        "area/sec_rift_spirit_core_gehennal/map.md",
+        "plans/area/0052-sec-rift-spirit-core-gehennal.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }
