@@ -372,6 +372,33 @@
     - `players.json / skills.json` 沒有強烈要求此時轉往另一條完全不同的內陸城市線，因此先收束江岸主線更穩
   - compliance_check:
     - compliant；在 `Dungeon` 之後切回 `City`，而且選的是現有 world-link 已預留的江岸城市，不是臨時跳到無銜接的新主線
+- `sec_chibi_battlefield`
+  - area_family: `Secret`
+  - reserved_room_block: `14801-14830`
+  - level_range: `68-78`
+  - theme: `軍旅`
+  - subtheme: `江岸古戰場 / 戰痕幻境`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/sec_chibi_battlefield/map.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `plans/area/0062-city-chaisang.md`
+  - ref_inputs_deferred:
+    - `ref/sanguo-area-specfirst/area/city_changsha/map.md`
+    - `ref/sanguo-area-specfirst/area/city_jianye/map.md`
+    - `docs/3yWebsite/map/shanyan.html`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `city_chaisang` 已預留南向 `sec_chibi_battlefield` world-link，補這條戰場祕區支線比立刻跳去下一座城市更自然
+    - `題材分布表` 的 `古戰場遺址` 與 `軍旅 / 探險` 混合題材，能在江岸城市之後提供鮮明轉折
+    - `players.json / skills.json` 沒有要求此刻一定先回到另一座師父密集城市，因此先做高辨識度支線可維持 queue 多樣性
+    - `ref/sanguo-area-specfirst` 已提供可改寫 scaffold，可直接轉成目前主線所需的赤壁版本
+  - compliance_check:
+    - compliant；在 `City` 之後切一個 `Secret` 戰場支線，world-link 已預留，也避免連續第三個 `City`
 
 ## Todo
 
@@ -379,23 +406,23 @@
 
 ## In Progress
 
-- `city_chaisang`
-  - plan: `plans/area/0062-city-chaisang.md`
-  - delivery_gate: `implementation_ready_for_commit`
+- `sec_chibi_battlefield`
+  - plan: `plans/area/0063-sec-chibi-battlefield.md`
+  - delivery_gate: `spec_ready_for_commit`
   - current_status:
-    - 已建立最小 loadable runtime scaffold：`index / mob / obj / res / shp / roo`
-    - 已將 `14412 <-> 14701` 落成 `city_jiangxia` 與 `city_chaisang` 的雙向 runtime boundary
-    - `tools/mapmd_validate.py`、generator `--validate-only`、generator write 均已通過
-    - WSL Linux build 與 startup smoke test 已通過；成功 log 為 `log/1028.log`
-    - `debug/badobject` 為空，`debug/error` 只有 timeout 強制關機紀錄
+    - 已建立 `plans/area/0063-sec-chibi-battlefield.md`
+    - 已建立 `area/sec_chibi_battlefield/map.md` 第一版 spec
+    - 已選定房號段 `14801-14830`
+    - `tools/mapmd_validate.py` 已通過
+    - generator `--validate-only` 已通過
   - next_action:
-    - commit `city_chaisang` 的 implementation milestone
-    - commit 後把 `city_chaisang` 移到 done
-    - 盤點下一個主世界候選區
+    - commit `sec_chibi_battlefield` 的 spec milestone
+    - commit 後直接進 implementation milestone
 
 
 ## Done
 
+- `2026-03-21` `city_chaisang` 已完成第一輪 runtime implementation、commit `d4abd20`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `dng_sunken_temple` 已完成第一輪 runtime implementation、commit `3f1b489`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `wild_yunmeng` 已完成第一輪 runtime implementation、commit `e36be11`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `city_jiangxia` 已完成第一輪 runtime implementation、commit `3ae44fc`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
@@ -522,23 +549,19 @@
 
 ## Current Recommended Next Step
 
-`city_chaisang` 已完成第一輪 runtime implementation。下一步應先 commit 目前的 implementation milestone；commit 後把它移到 done，再盤點下一個主世界候選區。
+`sec_chibi_battlefield` 已完成第一版 spec 與 validate-only 驗證。下一步應先 commit spec milestone，接著直接進入 implementation milestone。
 
 ## Next Action
 
-- 完成 `city_jiangxia`：
-  - 已提交 implementation milestone
-- 完成 `wild_yunmeng`：
-  - 已提交 implementation milestone
-- 完成 `dng_sunken_temple`：
-  - 已提交 implementation milestone
 - 完成 `city_chaisang`：
-  - 已建立最小 loadable runtime scaffold
-  - 已完成 build / smoke 驗證
-  - commit implementation milestone
-  - commit 後把它移到 done
-  - 盤點下一個主世界候選區
+  - 已提交 implementation milestone
+- 完成 `sec_chibi_battlefield`：
+  - 已建立 spec 與單區 plan
+  - 已完成 validate `map.md`
+  - 已完成 generator `--validate-only`
+  - commit spec milestone
+  - commit 後直接進 implementation milestone
 
 ## Next Prompt
 
-`先 commit 目前 city_chaisang 的 implementation milestone；commit 後把它標記為 done，再盤點下一個待建 area。`
+`先 commit 目前 sec_chibi_battlefield 的 spec milestone；commit 後直接做 implementation milestone。`
