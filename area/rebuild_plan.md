@@ -586,33 +586,33 @@
     - `ref/sanguo-area-specfirst` 已提供可改寫 scaffold，可直接轉成目前南境最南端港城所需版本
   - compliance_check:
     - compliant；在 `Dungeon` 之後切回 `City`，延續 `city_guiyang` 預留南向主線，也恢復主線母城節奏
-- `wild_pirate_islands`
-  - area_family: `Wild`
-  - reserved_room_block: `15801-15830`
+- `fort_naval_base`
+  - area_family: `Fort`
+  - reserved_room_block: `15901-15930`
   - level_range: `100-100`
-  - theme: `江湖`
-  - subtheme: `群島 / 海寇`
+  - theme: `軍旅`
+  - subtheme: `東吳水軍`
   - ref_inputs_used:
     - `area/world_map.md`
     - `ref/Readme.md`
     - `ref/sanguo-progression-map.md`
     - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/wild_pirate_islands/map.md`
+    - `ref/sanguo-area-specfirst/area/fort_naval_base/map.md`
     - `ref/world-graph.md`
     - `docs/3yWebsite/docs/data/players.json`
     - `docs/3yWebsite/docs/data/skills.json`
-    - `plans/area/0072-dng-boat-graveyard.md`
+    - `plans/area/0073-wild-pirate-islands.md`
   - ref_inputs_deferred:
-    - `ref/sanguo-area-specfirst/area/fort_naval_base/map.md`
     - `ref/sanguo-area-specfirst/area/sec_water_ruins/map.md`
+    - `ref/sanguo-area-specfirst/area/city_jianye/map.md`
     - 各類原型工具與模擬系統
   - theme_basis:
-    - `dng_boat_graveyard` 已把海路節奏壓進 wreck dungeon，適合在下一區重新打開視野，形成 `Wild -> Dungeon -> Wild` 的回彈
-    - `ref` scaffold 已提供 `wild_pirate_islands` 類型，能直接支撐碎島、海寇、暗灣與外海棧橋語彙
-    - `world-graph` 支持群島之後再往更深水域或 ruins 推進，因此此區適合作為高風險但仍可辨位的外海落腳點
-    - `players.json / skills.json` 沒有提供必須優先回到城市 hub 的服務鏈證據，因此先做群島 wild 更符合目前海路主線節奏
+    - `wild_pirate_islands` 已把海路節奏重新打開成碎島 wild，適合在下一區收束成軍事 choke point，形成 `Wild -> Fort` 的節奏轉折
+    - `fort_naval_base` scaffold 能直接支撐海門、軍旗、柵門與望樓語彙，讓海上主線不只剩海寇與遺跡，也開始出現正式政權力量
+    - `world-graph` 把水軍大營放在江東水域鏈的軍事節點，適合作為之後銜接 `city_jianye` 的前哨
+    - `players.json / skills.json` 沒有提供此時必須先切回秘境或另一個自由探索 wild 的強證據，因此先收成 `Fort` 更符合 queue variety
   - compliance_check:
-    - compliant；在 `Dungeon` 之後切回 `Wild`，讓海路鏈維持 family 多樣性，也避免連續下探造成題材過度壓縮
+    - compliant；在 `Wild` 之後切入 `Fort`，讓海路鏈維持 family 多樣性，也避免連續疊 `Wild` / `Secret`
 
 ## Todo
 
@@ -620,25 +620,22 @@
 
 ## In Progress
 
-- `wild_pirate_islands`
-  - plan: `plans/area/0073-wild-pirate-islands.md`
-  - delivery_gate: `implementation_ready_for_commit`
+- `fort_naval_base`
+  - plan: `plans/area/0074-fort-naval-base.md`
+  - delivery_gate: `spec_ready_for_commit`
   - current_status:
-    - 已建立最小可載入 runtime scaffold：`index / mob / obj / res / shp / roo`
-    - 已完成 `dng_boat_graveyard/15712 <-> wild_pirate_islands/15801` 正式 boundary 掛接
-    - `tools/mapmd_validate.py` 已通過 `wild_pirate_islands` 與更新後的 `dng_boat_graveyard`
-    - generator `--validate-only` 已通過，generator write 已寫出 `wild_pirate_islands` 與更新後的 `dng_boat_graveyard` `roo`
-    - WSL Linux build 已通過
-    - startup smoke test 已通過；成功訊號見 `log/1039.log`
-    - `debug/badobject` 為空，`debug/error` 僅有 timeout 強制關機路徑
+    - 已建立第一版 spec 與 `mapmd-json`
+    - 題材定位為海盜群島之後收束海路節奏的水軍關卡
+    - 預留 `west -> wild_pirate_islands`、`north -> city_jianye` 與 `south -> sea_naval_patrol`
+    - `tools/mapmd_validate.py` 已通過
+    - generator `--validate-only` 已通過
   - next_action:
-    - commit `wild_pirate_islands` 的 implementation milestone
-    - commit 後將 `wild_pirate_islands` 移入 `done`
-    - 盤點並建立下一個主世界候選 area 的 spec milestone
+    - commit `fort_naval_base` 的 spec milestone
 
 
 ## Done
 
+- `2026-03-21` `wild_pirate_islands` 已完成第一輪 runtime implementation、commit `cf572b7`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `dng_boat_graveyard` 已完成第一輪 runtime implementation、commit `3ff44ab`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `wild_south_sea_route` 已完成第一輪 runtime implementation、commit `3776070`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `city_nanhai` 已完成第一輪 runtime implementation、commit `4662263`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
@@ -776,7 +773,7 @@
 
 ## Current Recommended Next Step
 
-`wild_pirate_islands` 已完成第一輪 runtime scaffold、boundary 掛接、WSL build 與 startup smoke test。下一步應先提交 implementation milestone，接著直接盤點並建立下一個待建 area 的 spec milestone。
+`wild_pirate_islands` 已完成第一輪 runtime implementation 並提交。下一步應先驗證並提交 `fort_naval_base` 的 spec milestone，接著直接做 implementation milestone。
 
 ## Next Action
 
@@ -803,12 +800,14 @@
 - 完成 `dng_boat_graveyard`：
   - 已提交 implementation milestone
 - 完成 `wild_pirate_islands`：
-  - 已建立可載入 runtime scaffold
-  - 已完成 `15712 <-> 15801` boundary 掛接
-  - 已完成 `map.md` validate、generator write、WSL build 與 startup smoke test
-  - commit implementation milestone
-  - commit 後直接盤點下一個待建 area 並建立 spec
+  - 已提交 implementation milestone
+- 完成 `fort_naval_base`：
+  - 建立第一版 spec 與 `mapmd-json`
+  - 執行 `map.md` validate
+  - 執行 generator `--validate-only`
+  - commit spec milestone
+  - commit 後直接做 implementation milestone
 
 ## Next Prompt
 
-`先 commit 目前 wild_pirate_islands 的 implementation milestone；commit 後直接盤點並建立下一個待建 area 的 spec milestone。`
+`先驗證並 commit 目前 fort_naval_base 的 spec milestone；commit 後直接做 implementation milestone，補 boundary、roo、index/mob/obj/res/shp，並跑 WSL build 與 startup smoke test。`
