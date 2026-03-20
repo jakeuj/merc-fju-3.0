@@ -1,0 +1,28 @@
+Vnum            14212
+Name            東碼頭~
+Description
+木棧沿水邊一段段伸出去，船纜、木桶與潮濕的木板氣味把這裡與城心完全區分開來。站在東碼頭時，襄陽不再只是一座城，而像整個荊州水陸往來暫時停靠的一個節點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14211
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         碼頭~
+End
+
+#Enquire
+Keyword         江夏~
+End
+
+#Enquire
+Keyword         船路~
+End
+
+End

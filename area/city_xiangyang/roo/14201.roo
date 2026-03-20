@@ -1,0 +1,32 @@
+Vnum            14201
+Name            南城門~
+Description
+襄陽南城門高而厚，門洞裡始終有兵卒與行旅擦肩而過。門外是大道風塵，門內卻已能嗅到城中炊煙與藥材味，讓人一踏進來便知道自己重新回到了有人情也有規矩的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        9301
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        14202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         城門~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

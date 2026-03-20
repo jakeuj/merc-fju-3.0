@@ -1,0 +1,31 @@
+Vnum            14202
+Name            盤查棚前~
+Description
+門內立著臨時盤查棚，桌案、封泥與木牌排得整齊，顯示襄陽對往來消息並不鬆懈。城門守備不像虎牢關那般壓迫，卻仍讓人明白荊州門戶並不會任人隨意來去。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        14201
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        14203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         告示~
+Description
+木板上貼著最近的稅糧、巡查與道路告示，看得出襄陽城內外的消息流得很快。
+~
+End
+
+End

@@ -1,0 +1,15 @@
+Vnum            15453
+Name            xiangyang escort saber~
+ShortDesc       襄陽護行短刀(escort saber)~
+Description
+一柄為護行與巡檢都常用的襄陽護行短刀(escort saber)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           38
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            175
+End

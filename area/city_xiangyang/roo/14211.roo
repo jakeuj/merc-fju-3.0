@@ -1,0 +1,32 @@
+Vnum            14211
+Name            東江路口~
+Description
+越往東走，風裡的水氣就越明顯，連街面聲音都變得更空更亮。這裡像一條把城市重心慢慢推出城牆、推出陸路，再送到江面上的過渡帶。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14210
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14212
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         江路~
+End
+
+#Enquire
+Keyword         東邊~
+End
+
+End

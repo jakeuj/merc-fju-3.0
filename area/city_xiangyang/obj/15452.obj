@@ -1,0 +1,14 @@
+Vnum            15452
+Name            glazed travel flask~
+ShortDesc       青釉行旅水壺(travel flask)~
+Description
+一只便於行旅攜帶的青釉行旅水壺(travel flask)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           35
+Value           12 12 LIQ_WATER 0
+Weight          2
+Cost            110
+End

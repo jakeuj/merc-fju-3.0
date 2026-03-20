@@ -1,0 +1,52 @@
+Vnum            14204
+Name            城心十字~
+Description
+襄陽城心的十字大路把人流自然分開，西側是市集與客棧，東側是官署與江路，往北則可再通往更靠近軍務與外城的大道。站在這裡，整座城的用途幾乎一眼就能看明白。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        14203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        14208
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        14205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14209
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         去路~
+End
+
+#Enquire
+Keyword         襄陽~
+End
+
+#Enquire
+Keyword         碼頭~
+End
+
+End

@@ -1,0 +1,31 @@
+Vnum            15433
+Name            yamen runner chief~
+ShortDesc       官署差役頭目~
+Description
+這名腳步俐落的官署差役頭目抱著一卷文書，神情比街上任何人都更急，
+像是襄陽最近每一條真正要緊的消息，最後都得經過他手上。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       100
+Level           40
+Hitroll         3
+Protect         0
+Damroll         3
+Str             13
+Int             13
+Wis             13
+Dex             15
+Con             13
+Hp              2100
+Mana            110
+Move            130
+Class           0
+Gold            160
+Multipile       100
+AttackRatio     110
+DodgeRatio      110
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

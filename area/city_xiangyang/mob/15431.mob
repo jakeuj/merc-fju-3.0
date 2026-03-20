@@ -1,0 +1,32 @@
+Vnum            15431
+Name            riverside innkeeper~
+ShortDesc       漢江客棧掌櫃~
+Description
+這名笑容穩練的漢江客棧掌櫃站在街邊，像是只要多看旅人一眼，就能判
+斷對方究竟需要熱湯、床位，還是城裡哪條消息。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       90
+Level           36
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             14
+Wis             14
+Dex             11
+Con             12
+Hp              1200
+Mana            110
+Move            110
+Class           0
+Gold            220
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

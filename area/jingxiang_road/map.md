@@ -111,6 +111,7 @@
       "coord": [0, 0, 0],
       "labels": ["north-edge", "world-link-north"],
       "exits": [
+        { "direction": "north", "to": 14201, "external": true },
         { "direction": "south", "to": 9302 }
       ],
       "enquires": ["襄陽", "北路"]

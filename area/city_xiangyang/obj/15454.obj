@@ -1,0 +1,14 @@
+Vnum            15454
+Name            dock lantern~
+ShortDesc       碼頭提燈(dock lantern)~
+Description
+一盞在潮風裡仍能穩穩亮著的碼頭提燈(dock lantern)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           36
+Value           0 0 40 0
+Weight          2
+Cost            125
+End

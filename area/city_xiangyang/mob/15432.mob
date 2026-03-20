@@ -1,0 +1,31 @@
+Vnum            15432
+Name            xiangyang gate constable~
+ShortDesc       襄陽巡檢兵~
+Description
+一名襄陽巡檢兵立在城門內側，手按刀柄，目光卻不停在告示、門洞與過
+路行人之間來回，比誰都清楚這座城的秩序靠的是什麼。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       110
+Level           38
+Hitroll         2
+Protect         0
+Damroll         3
+Str             14
+Int             11
+Wis             12
+Dex             13
+Con             13
+Hp              1850
+Mana            100
+Move            120
+Class           0
+Gold            140
+Multipile       100
+AttackRatio     105
+DodgeRatio      105
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

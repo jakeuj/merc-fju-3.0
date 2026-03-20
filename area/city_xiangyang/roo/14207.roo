@@ -1,0 +1,32 @@
+Vnum            14207
+Name            商旅街~
+Description
+更西一點的街面堆著行李、木箱與待裝車貨，像把整座襄陽城的外來與外送都壓縮在這一帶。若要看出這座城究竟連著多少地方，站在這裡往人和貨的方向看就夠了。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        14206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       OUT
+ExitVnum        14206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         商旅~
+End
+
+#Enquire
+Keyword         貨路~
+End
+
+End

@@ -1,0 +1,28 @@
+Vnum            14208
+Name            北向大道~
+Description
+往北的大道顯得比城中其他街道更寬，也更利於隊列通行，讓人一看就知道這裡承接著更偏軍務與外城的方向。即使不立刻出城，光看道路本身也能想像樊城與新野那邊的緊張氣息。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        14204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         北路~
+End
+
+#Enquire
+Keyword         樊城~
+End
+
+#Enquire
+Keyword         新野~
+End
+
+End

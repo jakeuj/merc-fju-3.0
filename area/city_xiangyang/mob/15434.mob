@@ -1,0 +1,31 @@
+Vnum            15434
+Name            wharf escort captain~
+ShortDesc       東碼頭護行頭~
+Description
+這名守在東碼頭的護行頭肩寬背厚，站姿卻不粗魯，像是很習慣在商旅、
+水手與城中差役之間周旋，也很清楚哪種麻煩該在碼頭就先攔下來。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       95
+Level           42
+Hitroll         4
+Protect         0
+Damroll         4
+Str             15
+Int             12
+Wis             12
+Dex             14
+Con             14
+Hp              2350
+Mana            100
+Move            135
+Class           0
+Gold            180
+Multipile       100
+AttackRatio     110
+DodgeRatio      108
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

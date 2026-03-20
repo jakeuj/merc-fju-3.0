@@ -1,0 +1,14 @@
+Vnum            15451
+Name            riverport hot stew~
+ShortDesc       江港熱羹(hot stew)~
+Description
+一碗熱氣未散的江港熱羹(hot stew)被放在這裡。
+~
+Unit            碗~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           35
+Value           18 30 4 0
+Weight          1
+Cost            85
+End

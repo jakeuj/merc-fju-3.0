@@ -6,6 +6,14 @@ Description
 SectorType      SECT_FIELD
 
 #Exit
+Direction       NORTH
+ExitVnum        14201
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
 Direction       SOUTH
 ExitVnum        9302
 ExitDesc        ~

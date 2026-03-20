@@ -23,7 +23,7 @@
   - `south`: `jingxiang_road` / 荊襄大道
   - `east`: `wild_jiangxia_river` / 江夏水道
   - `west`: 荊州內陸與軍道
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Fun / Variety Check
 
@@ -71,6 +71,19 @@
 - 將 `告示 / 招牌 / 路牌 / 城門 / 旗幟` 視為正式 `#Keyword` 候選
 - 至少保留一組 `enter/out` 室內或碼頭轉場
 - 本 milestone 不建立 `index / mob / obj / res / shp` runtime data
+
+## Scope (Milestone 2: Runtime Scaffold)
+
+- 依 `area/city_xiangyang/map.md` 生成 `roo/14201-14212`
+- 建立最小 loadable runtime 結構：
+  - `index`
+  - `mob/`
+  - `obj/`
+  - `res/`
+  - `shp/`
+- 將 area 登錄到 `area/directory.lst`
+- 正式把 `jingxiang_road/9301` 與 `city_xiangyang/14201` 做成雙向 runtime boundary
+- 同步更新 `docs/current-game/areas.md` 與 `docs/current-game/areas.json`
 
 ## Birthplace Policy
 
@@ -148,7 +161,28 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_xiangyang/map.md --validate-only`
   - passed for `12` room(s)
+- `python -X utf8 tools/mapmd_validate.py area/jingxiang_road/map.md`
+  - passed with `0 error(s), 1 warning(s)`; remaining warning is the pre-existing `reserved_room_block` metadata gap, not a runtime blocker
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/jingxiang_road/map.md`
+  - rewrote `roo/9301-9310` to include the north boundary into `14201`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_xiangyang/map.md`
+  - wrote `roo/14201-14212`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed; Linux build path reports `merc` up to date
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - startup log `log/1022.log` reached `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/badobject` remained empty
+  - `debug/error` only records the forced shutdown path caused by timeout, not a loader failure
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `city_xiangyang`
+- `area/city_xiangyang/index` 採首版城市 scaffold，房號段 `14201-14230`、序號 `146`
+- `mob/15431-15434` 與 `obj/15451-15454` 提供客棧掌櫃、巡檢兵、差役頭目、碼頭護行與城市補給骨架
+- `res/city.res` 與 `shp/supplies.shp` 已建立，keeper 為 `15431`
+- `area/jingxiang_road/map.md` 與 `area/city_xiangyang/map.md` 已同步把 `9301 <-> 14201` 落成正式 runtime boundary
+- `area/jingxiang_road/roo/9301.roo` 與 `area/city_xiangyang/roo/14201.roo` 現在雙向一致
 
 ## Next Step Prompt
 
-`先 commit 目前 city_xiangyang 的 spec milestone；commit 後開始 Milestone 2，依 area/city_xiangyang/map.md 生成 roo 草案並建立最小 runtime index/mob/obj/res/shp。`
+`先 commit 目前 city_xiangyang 的 implementation milestone；commit 後把此區標記為 done，再開始 wild_jiangxia_river 的 spec milestone。`

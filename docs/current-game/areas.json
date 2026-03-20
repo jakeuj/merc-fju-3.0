@@ -1165,6 +1165,25 @@
         "plans/area/0056-fort-hulao.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "city_xiangyang",
+      "title": "襄陽城",
+      "room_range": "14201-14230",
+      "load_order": 63,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "jingxiang_road",
+      "theme_primary": "歷史城市",
+      "theme_secondary": "荊州門戶 / 軍旅樞紐",
+      "summary": "承接荊襄大道北界，落成南城門、主街十字、西市補給線與東碼頭構成的城市 hub。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/city_xiangyang/index",
+        "area/city_xiangyang/map.md",
+        "plans/area/0057-city-xiangyang.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

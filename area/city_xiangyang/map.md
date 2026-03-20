@@ -152,6 +152,7 @@
       "coord": [0, 0, 0],
       "labels": ["entry", "world-link-south"],
       "exits": [
+        { "direction": "south", "to": 9301, "external": true },
         { "direction": "north", "to": 14202 }
       ],
       "enquires": ["城門", "去路"]

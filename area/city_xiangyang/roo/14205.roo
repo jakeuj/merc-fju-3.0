@@ -1,0 +1,39 @@
+Vnum            14205
+Name            西市口~
+Description
+西市口比主街更熱，也更擠，叫賣聲、討價聲與車輪聲交疊成一種只有大城才有的厚重雜音。人群一多，消息往往也流得更快，補給與傳聞在這裡常是同一回事。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        14204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        14206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         招牌~
+Description
+木招牌一塊挨著一塊，高低不齊地伸出簷下，讓整條市口看起來既混亂又生氣勃勃。
+~
+End
+
+#Enquire
+Keyword         市集~
+End
+
+#Enquire
+Keyword         買賣~
+End
+
+End

@@ -1,0 +1,36 @@
+Vnum            14203
+Name            入城主街~
+Description
+主街一路往城心伸去，兩側店招與旗影在風裡互相搶著顏色。這裡不像戰地那樣每一步都要猜危險，而是要在紛雜聲響裡迅速讀懂哪裡能補給、哪裡能問路、哪裡能打探消息。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        14202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        14204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         市集~
+End
+
+#Enquire
+Keyword         客棧~
+End
+
+#Enquire
+Keyword         官府~
+End
+
+End

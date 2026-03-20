@@ -1,0 +1,44 @@
+Vnum            14206
+Name            客棧前街~
+Description
+這條街上的客棧、食鋪與行腳攤子靠得很近，走不了幾步就能聞到熱湯、酒氣與曬乾藥草混在一起的味道。對長途旅人來說，這種混雜本身就是一種安心訊號。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        14205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        14207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       ENTER
+ExitVnum        14207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         客棧~
+End
+
+#Enquire
+Keyword         食鋪~
+End
+
+#Enquire
+Keyword         休息~
+End
+
+End

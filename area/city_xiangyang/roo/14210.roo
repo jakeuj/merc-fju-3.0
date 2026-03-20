@@ -1,0 +1,43 @@
+Vnum            14210
+Name            榜文長廊~
+Description
+一排長廊專門張貼城務、稅糧、巡防與失物榜文，紙頁新舊交錯，顯示消息在這座城裡從不真正停下。若懂得看榜，就能比單純問路更快知道城裡最近在忙些什麼。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14209
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14211
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         路牌~
+Description
+路牌除了標示碼頭與南北大道，還特別寫著幾處渡口與外驛，可見襄陽對交通秩序極為看重。
+~
+End
+
+#Enquire
+Keyword         榜文~
+End
+
+#Enquire
+Keyword         路牌~
+End
+
+#Enquire
+Keyword         碼頭~
+End
+
+End
