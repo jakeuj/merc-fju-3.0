@@ -1,0 +1,32 @@
+Vnum            13608
+Name            獄冥偏廊~
+Description
+偏廊兩側嵌著一列列被壓得近乎貼平的導響殼片，殼面不再回應完整聲響，只會把人的念頭敲成更短、更重的幾段暗鳴，最後全數沉回井腹。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13607
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13609
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         獄冥~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End

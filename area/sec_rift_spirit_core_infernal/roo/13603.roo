@@ -1,0 +1,32 @@
+Vnum            13603
+Name            冥獄內庭前緣~
+Description
+前緣俯瞰整座向內下壓的冥獄內庭，庭心像一口沒有火焰卻仍持續燒蝕魄殼的重井，視線一旦停久，連原本勉強還保得住的念頭輪廓都會被磨成更沉的暗印。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        13607
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

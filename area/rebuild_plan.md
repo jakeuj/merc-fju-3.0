@@ -238,6 +238,8 @@
 - `sec_rift_spirit_core_abysmal` 已完成 runtime implementation，完成本機 build 與 smoke test 驗證，並達成可前進下一區狀態
 - `plans/area/0050-sec-rift-spirit-core-tartarean.md` 已建立
 - `sec_rift_spirit_core_tartarean` 已完成 runtime implementation，完成本機 build 與 smoke test 驗證，並達成可前進下一區狀態
+- `plans/area/0051-sec-rift-spirit-core-infernal.md` 已建立
+- `sec_rift_spirit_core_infernal` 已完成 runtime implementation，完成本機 build 與 smoke test 驗證，並達成可前進下一區狀態
 ## Blocked
 
 - none

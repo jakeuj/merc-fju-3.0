@@ -1,0 +1,32 @@
+Vnum            13609
+Name            冥獄逆腹廊~
+Description
+逆腹廊中央橫著一道只有側目時才看得出層差的獄裂，裂底既沒有火光也沒有回聲，卻像能把最後還保得住形名的碎片慢慢拖往更深的業獄井腹。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        13605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        13608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13610
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

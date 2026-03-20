@@ -1,0 +1,24 @@
+Vnum            13607
+Name            獄冥側階~
+Description
+側階斜切進偏廊時，腳下每一級都像被更深層獄壓提前鎖死，回頭再看，剛才踩過的紋路已收成幾道發黑的細線，像不願再把任何退回的餘地留給來人。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        13603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

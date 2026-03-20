@@ -1,0 +1,16 @@
+Vnum            13606
+Name            聽獄沉座~
+Description
+沉座中央懸著一枚像被整口冥獄硬生生壓薄的黑晶，晶體不發光，只持續把周圍還能分層的輪廓磨成一片更平整、更沉重的暗面。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

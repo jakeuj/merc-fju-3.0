@@ -1051,6 +1051,25 @@
         "plans/area/0050-sec-rift-spirit-core-tartarean.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_spirit_core_infernal",
+      "title": "裂魄冥獄",
+      "room_range": "13601-13612",
+      "load_order": 57,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_tartarean",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄冥獄 / 冥獄井腹",
+      "summary": "承接裂魄冥淵座，下探到冥獄內庭、獄冥偏廊與業獄前座的冥獄井腹過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_infernal/index",
+        "area/sec_rift_spirit_core_infernal/map.md",
+        "plans/area/0051-sec-rift-spirit-core-infernal.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

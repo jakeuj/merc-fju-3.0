@@ -1,0 +1,24 @@
+Vnum            13610
+Name            業獄前橋~
+Description
+前橋橫跨在一段已被獄壓磨成冷黑鐵面的井腹上方，橋面每次受力都只留下一道極短的黯痕，下一瞬便像被更深處的業獄整片吞掉，不准任何重量停留太久。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13609
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        13611
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

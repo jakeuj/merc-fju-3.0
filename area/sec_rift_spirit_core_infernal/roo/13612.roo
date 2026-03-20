@@ -1,0 +1,24 @@
+Vnum            13612
+Name            裂魄冥獄座~
+Description
+冥獄座像整段冥獄井腹最後一塊仍勉強聚得住輪廓的黑沉魄座，腳下環界只剩一圈隨時會再被壓薄一層的細窄獄紋，所有殘痕都在這裡被拖往更深的裂魄業獄。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        13611
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         冥獄座~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

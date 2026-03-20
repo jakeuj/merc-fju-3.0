@@ -1,0 +1,24 @@
+Vnum            13602
+Name            獄紋沉階~
+Description
+沉階表面覆著一層層向內扣合的獄紋，每踏下一階，都像踩進一塊還沒完全冷透的重獄鐵板，連鞋底殘留的聲音都會被壓成聽不見的黑點。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13601
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

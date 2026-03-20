@@ -1,0 +1,32 @@
+Vnum            13611
+Name            冥獄井腹緣~
+Description
+井腹緣圍著幾座朝內傾壓的封魄柱座，柱面殘紋已被磨成一圈圈近乎同心的黑痕，像這裡就是所有界層最後還能被壓出輪廓的地帶。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        13610
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        13612
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         井腹~
+End
+
+#Enquire
+Keyword         柱座~
+End
+
+End

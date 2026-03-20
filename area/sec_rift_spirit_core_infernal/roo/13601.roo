@@ -1,0 +1,32 @@
+Vnum            13601
+Name            冥獄落座~
+Description
+落座像嵌在冥獄外緣的一截黑沉魄石，腳下環界已硬到幾乎不再回應任何細微震盪，只剩一圈冷得近乎發脆的獄紋貼在石座邊沿，像把最後還能退回冥淵的路硬生生封成一道狹線。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        13512
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         冥獄~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

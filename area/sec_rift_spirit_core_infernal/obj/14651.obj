@@ -1,0 +1,14 @@
+Vnum            14651
+Name            聽獄短杖 短杖~
+ShortDesc       一支聽獄短杖~
+Description
+一支聽獄短杖倚在冥獄內庭邊，杖尖還殘留一束細得快要直接壓盡的獄痕。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           28
+Value           0 0 0 0 0
+Weight          3
+Cost            480
+End

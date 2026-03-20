@@ -1,0 +1,32 @@
+Vnum            14602
+Name            infernal corridor watcher~
+ShortDesc       獄冥監守~
+Description
+這名獄冥監守伏在偏廊邊，面甲下只剩一道被獄壓拉細的黑沉視線，像正靜靜
+衡量每個經過此地的人還留有多少不會立刻沉入業獄的重量。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       -232
+Level           100
+Hitroll         14
+Protect         0
+Damroll         15
+Str             22
+Int             18
+Wis             21
+Dex             16
+Con             21
+Hp              43600
+Mana            2700
+Move            840
+Class           0
+Gold            3440
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

@@ -1,0 +1,14 @@
+Vnum            14653
+Name            冥獄殘片 殘片~
+ShortDesc       一片冥獄殘片~
+Description
+一片冥獄殘片落在逆腹廊角落，片面薄得像只要獄壓再沉一點就會直接壓成黑灰。
+~
+ItemType        ITEM_TRASH
+Takeable        Yes
+WearLoc         ITEM_HOLD
+Level           34
+Value           0 0 0 0 0
+Weight          1
+Cost            520
+End

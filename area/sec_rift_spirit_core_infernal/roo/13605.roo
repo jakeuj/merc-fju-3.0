@@ -1,0 +1,39 @@
+Vnum            13605
+Name            冥獄沉黯槽~
+Description
+沉黯槽裡看不見流勢，只剩一道被獄壓反覆擠窄的黑線沿槽底朝更深處緩慢收束，像整段井腹正在把最後仍帶名字的殘痕一筆筆壓成純粹的重暗。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13606
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        13609
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         沉黯~
+Description
+槽壁封紋已被獄壓壓成難再分辨的暗層，只留下把界面持續逼向更深業獄的冷硬靜力。
+~
+End
+
+End

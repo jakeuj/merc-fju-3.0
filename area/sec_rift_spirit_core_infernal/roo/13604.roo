@@ -1,0 +1,32 @@
+Vnum            13604
+Name            聽獄鎮魄臺~
+Description
+鎮魄臺旁的聽獄碑只剩幾道被高壓獄紋硬刻出來的細槽，碑與界在此幾乎只靠最後一層鎮束秩序分開，彷彿再往下壓一步，就會整片傾成沒有回頭餘地的業獄。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         聽獄~
+End
+
+#Enquire
+Keyword         鎮魄~
+End
+
+End
