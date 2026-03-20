@@ -1,0 +1,24 @@
+Vnum            14107
+Name            換哨營盤~
+Description
+木床、甲架與水桶排在營盤內側，牆角還掛著記錄值更次序的木牌。這裡沒有大聲喧嘩，只有一種每一輪換哨都會準時發生的沉著秩序，讓人知道守關從不是靠一時血勇。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        14106
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         守兵~
+End
+
+#Enquire
+Keyword         換哨~
+End
+
+End

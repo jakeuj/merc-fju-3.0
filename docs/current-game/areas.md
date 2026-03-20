@@ -85,6 +85,7 @@ title: Current Game Areas
 | `city_chenliu` | 陳留 / 中原樞紐城 | `13801-13830` | `rebuild addition` | queue reset 後的第一個主世界城市 hub，先落地主街、服務區、軍旅區與南驛轉接骨架。 |
 | `wild_puyang_forest` | 濮陽林野 / 官渡前帶野外 | `13901-13930` | `rebuild addition` | 承接陳留北路的林野探索帶，整合林間主徑、濕窪側線與舊哨土塍。 |
 | `dng_guandu_battlefield` | 官渡古戰場 / 鏖兵戰地 dungeon | `14001-14030` | `rebuild addition` | 承接濮陽林野北向荒路，落成壕溝、焚糧車與殘旗高地交錯的古戰場前段。 |
+| `fort_hulao` | 虎牢關 / 東都門戶關隘 | `14101-14120` | `rebuild addition` | 承接官渡古戰場北界，落成關前坡道、甕城、軍營與關樓高差構成的軍事 choke point。 |
 
 ## Recent Rebuild Areas
 
@@ -159,6 +160,7 @@ title: Current Game Areas
 
 - `wild_puyang_forest`：把陳留北路外的林野前帶先落成可載入 area，透過林蔭主徑、濕窪獵徑與舊哨高地把玩家節奏從城市補給推到官渡戰前外圍。
 - `dng_guandu_battlefield`：把濮陽林野北向荒路正式接進官渡古戰場，透過壕溝、焚糧車列、殘旗坡與死地前帶把節奏推進到真正的戰地 dungeon。
+- `fort_hulao`：把官渡古戰場北界正式接進虎牢關，透過關門、甕城、軍需棚與關樓望樓把節奏轉成重兵把守的戰略門戶。
 
 ## 維護規則
 

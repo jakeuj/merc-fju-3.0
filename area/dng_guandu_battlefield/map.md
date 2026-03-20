@@ -323,7 +323,7 @@
       "labels": ["ridge-exit", "military-control"],
       "exits": [
         { "direction": "west", "to": 14010 },
-        { "direction": "south", "to": 14012 }
+        { "direction": "east", "to": 14012 }
       ],
       "enquires": ["瞭望", "塹口", "北線"]
     },
@@ -337,7 +337,8 @@
       "labels": ["north-edge", "future-depth"],
       "exits": [
         { "direction": "south", "to": 14005 },
-        { "direction": "north", "to": 14011 }
+        { "direction": "north", "to": 14105, "external": true },
+        { "direction": "west", "to": 14011 }
       ],
       "enquires": ["前線", "死地", "去路"]
     }

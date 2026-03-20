@@ -1,0 +1,15 @@
+Vnum            15354
+Name            hulao spear~
+ShortDesc       虎牢長槍(long spear)~
+Description
+一柄為守關兵制式打造的虎牢長槍(long spear)被放在這裡。
+~
+Unit            柄~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           31
+Value           0 -1 -1 WEAPON_SPEAR
+Weight          5
+Cost            210
+End

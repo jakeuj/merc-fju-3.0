@@ -1,0 +1,14 @@
+Vnum            15353
+Name            watch torch~
+ShortDesc       望樓火炬(torch)~
+Description
+一枝適合夜間巡樓使用的望樓火炬(torch)被放在這裡。
+~
+Unit            枝~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           29
+Value           0 0 36 0
+Weight          2
+Cost            120
+End

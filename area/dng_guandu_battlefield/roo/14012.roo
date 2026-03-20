@@ -15,6 +15,14 @@ End
 
 #Exit
 Direction       NORTH
+ExitVnum        14105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
 ExitVnum        14011
 ExitDesc        ~
 ExitKeyword     ~

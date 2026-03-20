@@ -1,0 +1,31 @@
+Vnum            15332
+Name            gate guard~
+ShortDesc       虎牢守關兵~
+Description
+一名全副披掛的虎牢守關兵穩穩站著，長槍垂在手邊，視線卻始終停在每
+個靠近關口的人身上。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       80
+Level           30
+Hitroll         2
+Protect         0
+Damroll         3
+Str             14
+Int             10
+Wis             10
+Dex             12
+Con             13
+Hp              1500
+Mana            100
+Move            120
+Class           0
+Gold            95
+Multipile       100
+AttackRatio     105
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

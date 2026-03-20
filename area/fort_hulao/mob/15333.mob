@@ -1,0 +1,31 @@
+Vnum            15333
+Name            tower sentry~
+ShortDesc       關樓哨卒~
+Description
+這名關樓哨卒站在高處的風口上，眼神銳利得像能把來路與去路都同時釘
+住，讓人很難忽視頭頂其實一直有人看著。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       70
+Level           32
+Hitroll         3
+Protect         0
+Damroll         4
+Str             13
+Int             11
+Wis             11
+Dex             14
+Con             13
+Hp              1650
+Mana            100
+Move            130
+Class           0
+Gold            110
+Multipile       100
+AttackRatio     110
+DodgeRatio      110
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

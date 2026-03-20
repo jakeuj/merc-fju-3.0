@@ -1,0 +1,28 @@
+Vnum            14112
+Name            北望高角~
+Description
+高角伸向更北側的軍道與山線，遠遠能看見道路被地勢切成一段又一段。這裡像整座虎牢關最安靜的一角，卻也最能讓人理解，為何一座關足以替整片中原決定來往與生死。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        14111
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         北邊~
+End
+
+#Enquire
+Keyword         軍道~
+End
+
+#Enquire
+Keyword         守關~
+End
+
+End

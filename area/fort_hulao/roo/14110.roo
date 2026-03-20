@@ -1,0 +1,31 @@
+Vnum            14110
+Name            關樓高台~
+Description
+高台橫跨厚門上方，能直接俯瞰外拒馬線與甕城石地。站在這裡時，人才真正理解虎牢關最可怕的地方不只是門厚，而是每一道門、每一段牆都被安排在能互相照看的位置。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       DOWN
+ExitVnum        14109
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14111
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         關樓~
+Description
+樓台邊緣磨得平亮，顯然常有值守者在此久站、巡望與傳遞手勢。
+~
+End
+
+End

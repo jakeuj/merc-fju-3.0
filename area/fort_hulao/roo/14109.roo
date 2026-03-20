@@ -1,0 +1,24 @@
+Vnum            14109
+Name            關樓石階~
+Description
+石階貼著內牆往上盤去，腳步聲在牆間來回撞響，連呼吸都像被放大。每往上一層，地面的人聲便更遠一分，而守備與視野則更近一分。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       DOWN
+ExitVnum        14105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        14110
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

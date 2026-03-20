@@ -1,0 +1,24 @@
+Vnum            14101
+Name            關前坡道~
+Description
+西來官道在這裡抬升成一道長坡，坡頂隱約可見旗影與門樓輪廓。道路尚未完全被堵死，但拒馬與旗槍已讓人清楚知道，再往前就不是任人來去的普通路段。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       EAST
+ExitVnum        14102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         虎牢關~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

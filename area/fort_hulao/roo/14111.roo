@@ -1,0 +1,31 @@
+Vnum            14111
+Name            望樓巡道~
+Description
+巡道沿著牆脊往北延去，欄木與旗杆把風切成斷續低鳴。從這裡往西看是來路，往東看是去路，而向下望去，整座關隘像一只專門收緊人流的鐵手。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14110
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        14112
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         望樓~
+Description
+望樓屋角下掛著風鐸與小旗，風吹時聲音不大，卻足夠提醒所有人這裡始終有人看著。
+~
+End
+
+End

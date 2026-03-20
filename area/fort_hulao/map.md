@@ -224,6 +224,7 @@
       "exits": [
         { "direction": "west", "to": 14104 },
         { "direction": "east", "to": 14108 },
+        { "direction": "south", "to": 14012, "external": true },
         { "direction": "down", "to": 14106 },
         { "direction": "up", "to": 14109 }
       ],

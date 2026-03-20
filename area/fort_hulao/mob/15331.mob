@@ -1,0 +1,32 @@
+Vnum            15331
+Name            gate quartermaster~
+ShortDesc       關門軍需官~
+Description
+這名負責清點箭囊、乾糧與行軍水袋的關門軍需官站在這裡，說話不快，
+卻總能在混亂裡維持一種不容質疑的整齊。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       50
+Level           29
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             13
+Dex             11
+Con             12
+Hp              1250
+Mana            120
+Move            110
+Class           0
+Gold            180
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

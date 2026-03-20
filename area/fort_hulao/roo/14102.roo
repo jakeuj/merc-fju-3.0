@@ -1,0 +1,31 @@
+Vnum            14102
+Name            外拒馬線~
+Description
+厚重木樁交錯架成第一道外拒馬線，木上包著鐵條與舊繩，顯然不是臨時擺放的阻礙，而是長久維持的防線。兩側坡石被踩得發亮，顯見守兵在這裡反覆巡走。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        14101
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         拒馬~
+Description
+木樁間距刻意留得很窄，足夠放慢車馬，也足夠讓守兵看清每個想靠近的人。
+~
+End
+
+End

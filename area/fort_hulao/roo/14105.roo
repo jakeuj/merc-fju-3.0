@@ -1,0 +1,60 @@
+Vnum            14105
+Name            甕城石地~
+Description
+穿過關門後，眼前並不是開闊大路，而是一片被高牆包起來的甕城石地。牆上旗影交錯，地上磨痕縱橫，像在提醒每個走到這裡的人，真正的關卡其實才剛開始。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14108
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14012
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        14106
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        14109
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         虎牢關~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+#Enquire
+Keyword         軍令~
+End
+
+End

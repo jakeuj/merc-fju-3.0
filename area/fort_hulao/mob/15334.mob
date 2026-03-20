@@ -1,0 +1,31 @@
+Vnum            15334
+Name            gate commandant~
+ShortDesc       虎牢校尉~
+Description
+這名披著舊戰袍的虎牢校尉站在牆影與旗影之間，說話不高，卻自有一股
+讓整段巡道都安靜下來的威勢。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       120
+Level           35
+Hitroll         4
+Protect         0
+Damroll         5
+Str             15
+Int             12
+Wis             12
+Dex             13
+Con             14
+Hp              1900
+Mana            120
+Move            135
+Class           0
+Gold            150
+Multipile       100
+AttackRatio     115
+DodgeRatio      110
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

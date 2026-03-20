@@ -1146,6 +1146,25 @@
         "plans/area/0055-dng-guandu-battlefield.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "fort_hulao",
+      "title": "虎牢關",
+      "room_range": "14101-14120",
+      "load_order": 62,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "dng_guandu_battlefield",
+      "theme_primary": "軍旅",
+      "theme_secondary": "東都門戶 / 虎牢雄關",
+      "summary": "承接官渡古戰場北界，落成關前坡道、甕城、軍營與關樓高差構成的軍事 choke point。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/fort_hulao/index",
+        "area/fort_hulao/map.md",
+        "plans/area/0056-fort-hulao.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

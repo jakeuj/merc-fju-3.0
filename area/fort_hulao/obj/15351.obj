@@ -1,0 +1,14 @@
+Vnum            15351
+Name            guard ration~
+ShortDesc       守關乾糧(ration)~
+Description
+一份包得緊實的守關乾糧(ration)被放在這裡。
+~
+Unit            份~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           28
+Value           18 30 4 0
+Weight          1
+Cost            95
+End

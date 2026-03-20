@@ -1,0 +1,31 @@
+Vnum            14106
+Name            軍需棚~
+Description
+甕城側下方搭著一列軍需棚，木箱、箭囊、麻繩和未分發的乾糧被歸得極整。比起戰地殘跡，這裡更讓人理解一座關隘要長久守得住，靠的不只是一扇門，而是一整套不斷補上的後勤。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        14105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14107
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         軍旗~
+Description
+幾面摺好的軍旗整齊靠在木架邊，尚未展開也能感覺出其中那股不容懈怠的壓力。
+~
+End
+
+End

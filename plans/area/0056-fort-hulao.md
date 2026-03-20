@@ -23,7 +23,7 @@
   - `east`: `city_loyang` / 洛陽門戶
   - `south`: `dng_guandu_battlefield` / 官渡戰場餘線
   - `north`: 更北的軍道與巡哨帶
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Fun / Variety Check
 
@@ -68,6 +68,19 @@
 - 將 `軍旗 / 柵門 / 拒馬 / 關樓 / 望樓` 視為正式 `#Keyword` 候選
 - 至少保留一組 `up/down` 關樓 / 望樓 / 甕城高差位移
 - 本 milestone 不建立 `index / mob / obj / res / shp` runtime data
+
+## Scope (Milestone 2: Runtime Scaffold)
+
+- 依 `area/fort_hulao/map.md` 生成 `roo/14101-14112`
+- 建立最小 loadable runtime 結構：
+  - `index`
+  - `mob/`
+  - `obj/`
+  - `res/`
+  - `shp/`
+- 將 area 登錄到 `area/directory.lst`
+- 正式把 `dng_guandu_battlefield/14012` 與 `fort_hulao/14105` 做成雙向 runtime boundary
+- 同步更新 `docs/current-game/areas.md` 與 `docs/current-game/areas.json`
 
 ## Birthplace Policy
 
@@ -145,7 +158,28 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/fort_hulao/map.md --validate-only`
   - passed for `12` room(s)
+- `python -X utf8 tools/mapmd_validate.py area/dng_guandu_battlefield/map.md`
+  - passed with `0 error(s), 0 warning(s)` after aligning the `14012 <-> 14105` boundary and fixing the `14011/14012` reverse-link drift
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/dng_guandu_battlefield/map.md`
+  - rewrote `roo/14001-14012` to include the north boundary into `14105`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/fort_hulao/map.md`
+  - wrote `roo/14101-14112`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed; Linux build path reports `merc` up to date
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - startup log `log/1021.log` reached `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/badobject` remained empty
+  - `debug/error` only records the forced shutdown path caused by timeout, not a loader failure
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `fort_hulao`
+- `area/fort_hulao/index` 採首版關隘 scaffold，房號段 `14101-14120`、序號 `145`
+- `mob/15331-15334` 與 `obj/15351-15354` 提供軍需官、守關兵、關樓哨卒與虎牢長槍骨架
+- `res/garrison.res` 與 `shp/supplies.shp` 已建立，keeper 為 `15331`
+- `area/dng_guandu_battlefield/map.md` 與 `area/fort_hulao/map.md` 已同步把 `14012 <-> 14105` 落成正式 runtime boundary
+- `area/dng_guandu_battlefield/roo/14012.roo` 與 `area/fort_hulao/roo/14105.roo` 現在雙向一致
 
 ## Next Step Prompt
 
-`先 commit 目前 fort_hulao 的 spec milestone；commit 後開始 Milestone 2，依 area/fort_hulao/map.md 生成 roo 草案並建立最小 runtime index/mob/obj/res/shp。`
+`先 commit 目前 fort_hulao 的 implementation milestone；commit 後把此區標記為 done，再開始 city_xiangyang 的 spec milestone。`

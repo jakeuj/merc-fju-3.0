@@ -1,0 +1,36 @@
+Vnum            14103
+Name            盤查棚前~
+Description
+一座厚帆盤查棚立在門前外側，棚下桌案、木牌與封泥箱擺得井井有條。這裡的空氣沒有戰場那種失控感，反而像每一口呼吸都被軍紀整齊切分。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         守兵~
+End
+
+#Enquire
+Keyword         軍令~
+End
+
+#Enquire
+Keyword         通行~
+End
+
+End

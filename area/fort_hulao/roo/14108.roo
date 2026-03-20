@@ -1,0 +1,24 @@
+Vnum            14108
+Name            內關東道~
+Description
+穿出甕城後，東向道路重新展開，但高牆與樓影仍把視線牢牢夾住。這條路不再像自由通向遠方的官道，而像一條被虎牢關暫時借給行旅使用的通行線。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         洛陽~
+End
+
+#Enquire
+Keyword         東路~
+End
+
+End

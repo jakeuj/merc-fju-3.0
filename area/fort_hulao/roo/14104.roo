@@ -1,0 +1,39 @@
+Vnum            14104
+Name            厚門關口~
+Description
+兩扇包鐵厚門嵌在石牆之間，門上的鉚釘與補鐵痕跡一層壓一層，像多年來無數次被修補、加固、再修補。站在門下時，任何人的腳步都顯得比平地時更小聲。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         柵門~
+Description
+厚門後方還能看見可落下的柵門槽痕，顯示這道關口設計時就沒打算給人輕易硬闖。
+~
+End
+
+#Enquire
+Keyword         關門~
+End
+
+#Enquire
+Keyword         盤查~
+End
+
+End
