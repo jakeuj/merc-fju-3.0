@@ -282,24 +282,22 @@
 
 ## In Progress
 
-- `city_xiangyang`
-  - plan: `plans/area/0057-city-xiangyang.md`
-  - delivery_gate: `implementation_ready_for_commit`
+- `wild_jiangxia_river`
+  - plan: `plans/area/0058-wild-jiangxia-river.md`
+  - delivery_gate: `spec_ready_for_commit`
   - current_status:
-    - 已建立最小 loadable runtime scaffold：`index / mob / obj / res / shp / roo`
-    - 已將 `9301 <-> 14201` 落成 `jingxiang_road` 與 `city_xiangyang` 的雙向 runtime boundary
-    - `tools/mapmd_validate.py`、generator `--validate-only`、generator write 均已通過
-    - WSL Linux build 與 startup smoke test 已通過；成功 log 為 `log/1022.log`
-    - `debug/badobject` 為空，`debug/error` 只有 timeout 強制關機紀錄
+    - 已建立 `plans/area/0058-wild-jiangxia-river.md`
+    - 已建立 `area/wild_jiangxia_river/map.md` 第一版
+    - 已定義 `west-wharf-edge / riverbank-trail / reed-marsh / waterfort-remains / east-ferry-front`
+    - `tools/mapmd_validate.py` 與 generator `--validate-only` 已通過
   - next_action:
-    - commit `city_xiangyang` 的 implementation milestone
-    - commit 後把 `city_xiangyang` 移到 done
-    - 接著開始 `wild_jiangxia_river` 的 spec milestone
+    - commit `wild_jiangxia_river` 的 spec milestone
+    - commit 後開始 `wild_jiangxia_river` runtime scaffold
 
 
 ## Done
 
-- `2026-03-21` `city_xiangyang` 已完成第一輪 runtime implementation 待 commit，已完成 WSL Linux build 與 startup smoke test，下一步是提交 implementation milestone 後前進 `wild_jiangxia_river`
+- `2026-03-21` `city_xiangyang` 已完成第一輪 runtime implementation、commit `df3aa5e`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-20` `fort_hulao` 已完成第一輪 runtime implementation、commit `9457877`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-20` `dng_guandu_battlefield` 已完成第一輪 runtime implementation、commit `c224c9b`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-20` `wild_puyang_forest` 已完成第一輪 runtime implementation、commit `a9c7398`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
@@ -421,16 +419,16 @@
 
 ## Current Recommended Next Step
 
-`city_xiangyang` 已進入 `implementation_ready_for_commit`。下一步應先 commit 目前的 runtime milestone；commit 後把它移到 done，並開始 `wild_jiangxia_river` 的 spec milestone。
+`wild_jiangxia_river` 已成為新的 actionable area，且 spec 草案已建立。下一步應先完成 `map.md` 驗證並提交 spec milestone，之後再開始 runtime scaffold。
 
 ## Next Action
 
-- commit `city_xiangyang` 的 implementation milestone
-- commit 後開始 `wild_jiangxia_river`：
-  - 建立單區 plan
-  - 建立 `area/wild_jiangxia_river/map.md`
-  - 跑 `tools/mapmd_validate.py` 與 generator `--validate-only`
+- 驗證 `area/wild_jiangxia_river/map.md`
+- commit `wild_jiangxia_river` 的 spec milestone
+- commit 後開始 `wild_jiangxia_river` runtime scaffold：
+  - 生成 `roo/14301-*`
+  - 建立最小 `index / mob / obj / res / shp`
 
 ## Next Prompt
 
-`先 commit 目前 city_xiangyang 的 implementation milestone；commit 後把它標記為 done，再開始 wild_jiangxia_river 的 spec milestone。`
+`先驗證並 commit 目前 wild_jiangxia_river 的 spec milestone；commit 後再依 area/wild_jiangxia_river/map.md 開始 Milestone 2，生成 roo 草案並建立最小 runtime index/mob/obj/res/shp。`
