@@ -1,0 +1,48 @@
+Vnum            15408
+Name            封紋內殿~
+Description
+內殿比前面的房間更高，石面上層層重疊的蛇紋與封紋像還在彼此爭奪主導權。站在這裡時，會明顯感覺到上面的密林只是門面，真正不肯輕易示人的東西一直都沉在這更下方。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        15404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15410
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15411
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        15409
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         封印~
+End
+
+#Enquire
+Keyword         內殿~
+End
+
+End

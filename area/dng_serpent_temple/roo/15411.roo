@@ -1,0 +1,32 @@
+Vnum            15411
+Name            深井入口~
+Description
+內殿更下方裂開一道被石欄半圈住的井口，冷氣與水聲從底下不斷往上翻。這裡不像單純的地洞，更像整座蛇神殿真正把秘密收起來的喉口。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        15408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15412
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         下方~
+End
+
+#Enquire
+Keyword         井口~
+End
+
+End

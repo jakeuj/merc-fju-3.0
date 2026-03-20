@@ -1,0 +1,40 @@
+Vnum            15401
+Name            潮濕前廳~
+Description
+沿著林下石階往下，最先抵達的是一座潮氣沉重得近乎貼在皮膚上的前廳。外頭密林的雜聲在這裡像被石壁整片壓住，只剩滴水與空殿回音提醒你，上面的世界還沒有完全消失。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        15311
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         密林~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

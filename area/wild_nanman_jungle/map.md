@@ -222,7 +222,8 @@
       "coord": [-3, 1, 0],
       "labels": ["down-link", "temple-threshold"],
       "exits": [
-        { "direction": "south", "to": 15307 }
+        { "direction": "south", "to": 15307 },
+        { "direction": "down", "to": 15401, "external": true }
       ],
       "enquires": ["古祠", "下方"]
     },

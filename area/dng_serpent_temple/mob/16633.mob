@@ -1,0 +1,33 @@
+Vnum            16633
+Name            seal rite keeper~
+ShortDesc       封紋守祭者~
+Description
+這名守在封紋內殿附近的守祭者像比普通殿衛更懂這座蛇神殿的禁忌，站
+著不動時幾乎像和牆上的蛇紋一起屏住呼吸。你不確定他是在看守封印，
+還是在防人驚動更深處尚未熄滅的祭祀。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       40
+Level           100
+Hitroll         7
+Protect         0
+Damroll         7
+Str             14
+Int             12
+Wis             15
+Dex             13
+Con             15
+Hp              8400
+Mana            180
+Move            150
+Class           0
+Gold            390
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

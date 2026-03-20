@@ -1393,6 +1393,25 @@
         "plans/area/0068-wild-nanman-jungle.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "dng_serpent_temple",
+      "title": "蛇神殿",
+      "room_range": "15401-15430",
+      "load_order": 75,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "wild_nanman_jungle",
+      "theme_primary": "詭異民俗",
+      "theme_secondary": "蛇殿 / 血祭",
+      "summary": "承接南蠻密林林下祠痕，落成潮濕前廳、蛇紋甬道、滴血祭槽與封紋內殿骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/dng_serpent_temple/index",
+        "area/dng_serpent_temple/map.md",
+        "plans/area/0069-dng-serpent-temple.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

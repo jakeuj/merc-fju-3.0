@@ -1,0 +1,24 @@
+Vnum            15402
+Name            側壁殘龕~
+Description
+牆邊幾座半毀石龕只剩模糊輪廓，像裡頭曾放過什麼被人刻意挖走或砸碎的祭物。即使不懂這座蛇殿過去的規矩，也看得出這裡曾有一段不容旁人插手的秩序。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        15401
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         石龕~
+End
+
+#Enquire
+Keyword         前廳~
+End
+
+End

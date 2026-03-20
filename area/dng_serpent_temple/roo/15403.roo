@@ -1,0 +1,40 @@
+Vnum            15403
+Name            蛇紋甬道~
+Description
+甬道兩側的石壁刻滿彼此纏繞的蛇紋，燭火若亮起時，大概會讓那些線條看起來像正在牆上滑動。走在這裡時，方向感不像在密林裡那樣會散掉，反而會被逼著一直往更深處集中。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        15401
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15405
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         蛇殿~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

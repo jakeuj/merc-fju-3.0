@@ -1,0 +1,32 @@
+Vnum            16631
+Name            hall bone scavenger~
+ShortDesc       前廳拾骨客~
+Description
+這名在潮濕前廳附近徘徊的拾骨客總低頭看著石縫與水痕，像比起深處的
+黑暗，他更相信神殿邊角偶爾會吐出一點仍能換命的殘骨與祭器。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       -30
+Level           98
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             14
+Dex             11
+Con             12
+Hp              5600
+Mana            150
+Move            150
+Class           0
+Gold            430
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

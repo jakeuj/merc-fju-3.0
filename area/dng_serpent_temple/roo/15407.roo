@@ -1,0 +1,24 @@
+Vnum            15407
+Name            符燼偏室~
+Description
+偏室角落仍積著一些燒完後發灰的符紙與細沙，像有人曾試圖用另一套規則對抗這座蛇殿原本的力量。可惜從眼前剩下的結果看來，那場對抗沒有真正把它封死。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        15404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         符文~
+End
+
+#Enquire
+Keyword         偏室~
+End
+
+End

@@ -22,7 +22,7 @@
   - `up`: `wild_nanman_jungle` / 林下祠痕
   - `down`: `sec_jungle_ruins` / 深封地宮預留
   - `enter`: `dng_serpent_sanctum` / 內祭殿預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Fun / Variety Check
 
@@ -112,7 +112,33 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/dng_serpent_temple/map.md --validate-only`
   - passed for `12` room(s)
+- `python -X utf8 tools/mapmd_validate.py area/wild_nanman_jungle/map.md`
+  - passed with `0 error(s), 0 warning(s)` after aligning `15311 <-> 15401`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_nanman_jungle/map.md`
+  - rewrote `roo/15301-15312` to include the `15311 down -> 15401 external` boundary
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/dng_serpent_temple/map.md`
+  - wrote `roo/15401-15412`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed; Linux build path reported `merc` up to date
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - startup smoke test passed; success signal found in `log/1035.log`
+- `debug/badobject`
+  - empty after smoke test
+- `debug/error`
+  - only contains the expected timeout-forced shutdown path after the successful run
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `dng_serpent_temple`，保留房號段 `15401-15430`
+- `area/dng_serpent_temple/index` 已建立，`Serial 158`
+- 第一輪 runtime scaffold 已加入：
+  - `mob/16631-16634`
+  - `obj/16651-16654`
+  - `res/temple.res`
+  - `shp/supplies.shp`
+- `wild_nanman_jungle/15311 <-> dng_serpent_temple/15401` 已成為正式 runtime boundary
+- `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步登錄 `dng_serpent_temple`
 
 ## Next Step Prompt
 
-`先 commit 目前 dng_serpent_temple 的 spec milestone；commit 後直接做 implementation milestone。`
+`先 commit 目前 dng_serpent_temple 的 implementation milestone；commit 後直接盤點並建立下一個待建 area 的 spec milestone。`

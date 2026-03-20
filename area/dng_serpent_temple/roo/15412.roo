@@ -1,0 +1,24 @@
+Vnum            15412
+Name            井邊退台~
+Description
+井口側邊有一塊較平的退台，像是讓人暫時檢查繩索、火把或膽量的最後位置。站在這裡時，會很自然地重新確認一次自己是否真的準備好把退路留在身後。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        15411
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         準備~
+End
+
+End

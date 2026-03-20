@@ -1,0 +1,33 @@
+Vnum            16634
+Name            pit chain guard~
+ShortDesc       井口鎖衛~
+Description
+這名守在深井入口附近的鎖衛身上還掛著舊鍊與鐵鉤的痕跡，像多年來只
+重複著同一件事：確保任何掉進更深處的東西都不會輕易返回。只看他一
+眼，就知道這裡不是普通的退路節點。
+~
+Sentinel        No
+StayArea        Yes
+NoKill          No
+Alignment       -80
+Level           100
+Hitroll         8
+Protect         0
+Damroll         8
+Str             15
+Int             11
+Wis             12
+Dex             14
+Con             15
+Hp              8800
+Mana            120
+Move            150
+Class           0
+Gold            410
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1,0 +1,33 @@
+Vnum            16632
+Name            serpent corridor shade~
+ShortDesc       甬道殘影~
+Description
+這道在蛇紋甬道間往返的殘影像被滴水聲一點點喚醒，形體模糊卻總沿著
+同一段石壁滑行。你幾乎分不清它是在守路，還是在找某條早就回不去的
+退路。
+~
+Sentinel        No
+StayArea        Yes
+NoKill          No
+Alignment       -220
+Level           99
+Hitroll         6
+Protect         0
+Damroll         6
+Str             12
+Int             13
+Wis             14
+Dex             14
+Con             14
+Hp              7600
+Mana            190
+Move            145
+Class           0
+Gold            260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

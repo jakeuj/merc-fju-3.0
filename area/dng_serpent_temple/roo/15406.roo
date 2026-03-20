@@ -1,0 +1,24 @@
+Vnum            15406
+Name            封鍊轉角~
+Description
+幾條仍釘在牆裡的粗鍊沿著轉角往更裡側拖去，彷彿曾有什麼龐大又不甘被困的東西在這裡掙扎過。你不確定它現在還在不在，但光是痕跡就足以讓人下意識放輕腳步。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       SOUTH
+ExitVnum        15410
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         鎖鍊~
+End
+
+#Enquire
+Keyword         轉角~
+End
+
+End

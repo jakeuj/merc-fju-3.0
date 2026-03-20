@@ -1,0 +1,47 @@
+Vnum            15404
+Name            滴血祭槽~
+Description
+地面中央凹下一道長槽，邊緣堆著暗沉發黑的痕跡，讓人很難不往血祭方向聯想。這裡沒有聲音，也沒有主持儀式的人，卻比任何熱鬧場面更能讓人理解這座殿真正信奉的是什麼。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        15403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15407
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         血槽~
+Description
+石槽邊緣的暗痕一層壓著一層，像這裡曾長久重複某種把生命送入深處的儀式。
+~
+End
+
+#Enquire
+Keyword         祭槽~
+End
+
+#Enquire
+Keyword         血祭~
+End
+
+End

@@ -1,0 +1,14 @@
+Vnum            16651
+Name            sealed ration brick~
+ShortDesc       密封乾糧磚(ration brick)~
+Description
+一塊適合在潮濕神殿裡久撐一段時間的密封乾糧磚(ration brick)被放在這裡。
+~
+Unit            塊~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           98
+Value           28 46 4 0
+Weight          1
+Cost            260
+End

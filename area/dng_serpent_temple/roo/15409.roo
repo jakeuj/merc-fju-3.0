@@ -1,0 +1,24 @@
+Vnum            15409
+Name            裂頂窺臺~
+Description
+沿著殿側崩裂的石階上到這裡後，可以從頂部裂隙看見一點極遠的綠光，像密林世界還隔著許多層岩壁對你留了一絲證明。這樣的高度並不帶來安全，只會讓人更清楚自己陷得多深。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       DOWN
+ExitVnum        15408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         上面~
+End
+
+#Enquire
+Keyword         裂隙~
+End
+
+End

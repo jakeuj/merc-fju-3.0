@@ -1,0 +1,14 @@
+Vnum            16654
+Name            temple oil lamp~
+ShortDesc       神殿油燈(temple oil lamp)~
+Description
+一盞在潮濕石殿裡仍勉強守住火芯的神殿油燈(temple oil lamp)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           99
+Value           0 0 45 0
+Weight          2
+Cost            270
+End

@@ -1,0 +1,14 @@
+Vnum            16652
+Name            wax flask~
+ShortDesc       蠟封水囊(wax flask)~
+Description
+一只專給在神殿深處久留的人備著的蠟封水囊(wax flask)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           98
+Value           14 14 LIQ_WATER 0
+Weight          2
+Cost            240
+End

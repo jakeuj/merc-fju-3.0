@@ -1,0 +1,32 @@
+Vnum            15410
+Name            內祭石門~
+Description
+一道厚重石門卡在內殿西側，門縫裡透出的不是風，而是一種像被壓住太久的悶熱與腥味。你幾乎不用打開它，就知道門後不會只是普通祭室。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        15406
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         石門~
+End
+
+#Enquire
+Keyword         內祭殿~
+End
+
+End

@@ -1,0 +1,24 @@
+Vnum            15405
+Name            殘骨儲室~
+Description
+側室裡散著不知來自獸類還是人的舊骨，牆邊還殘留幾個被鐵鍊拖磨過的固定孔。比起恐怖，這裡更讓人感受到一種被制度化保存下來的殘酷。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       EAST
+ExitVnum        15403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         殘骨~
+End
+
+#Enquire
+Keyword         側室~
+End
+
+End
