@@ -275,6 +275,29 @@
     - 以河道、水軍與交通風險提供主線後段變化
   - compliance_check:
     - compliant；以水域野外收束第一輪重排 queue，不延續 spirit-core 尾鏈
+- `city_jiangxia`
+  - area_family: `City`
+  - reserved_room_block: `14401-14430`
+  - level_range: `45-55`
+  - theme: `歷史城市`
+  - subtheme: `江港水軍 / 荊州東岸重鎮`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/city_jiangxia/map.md`
+    - `plans/area/0058-wild-jiangxia-river.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/map/shanyan.html`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `world_map` 主骨架明確把 `襄陽 -> 江夏 -> 柴桑` 放在同一條荊州東進水陸主線
+    - `city_jiangxia` 參考 spec 明確指出此區應是水軍重鎮與江港 hub，而不是另一個純市場城市
+    - `wild_jiangxia_river` 已先把主線從襄陽推進到水岸前帶，現在適合回到一座提供補給、問路與港務秩序的主城
+  - compliance_check:
+    - compliant；延續 `City -> Wild -> City` 的交通節奏，但主題已從內陸城門轉成江港與水軍，不是重複上一座陸城
 
 ## Todo
 
@@ -282,24 +305,21 @@
 
 ## In Progress
 
-- `wild_jiangxia_river`
-  - plan: `plans/area/0058-wild-jiangxia-river.md`
-  - delivery_gate: `implementation_ready_for_commit`
+- `city_jiangxia`
+  - plan: `plans/area/0059-city-jiangxia.md`
+  - delivery_gate: `spec_ready_for_commit`
   - current_status:
-    - 已建立最小 loadable runtime scaffold：`index / mob / obj / res / shp / roo`
-    - 已將 `14212 <-> 14301` 落成 `city_xiangyang` 與 `wild_jiangxia_river` 的雙向 runtime boundary
-    - `tools/mapmd_validate.py`、generator `--validate-only`、generator write 均已通過
-    - WSL Linux build 與 startup smoke test 已通過；成功 log 為 `log/1024.log`
-    - `debug/badobject` 為空，`debug/error` 只有 timeout 強制關機紀錄
+    - 已建立單區 plan 與 `area/city_jiangxia/map.md` 第一版 spec
+    - 已固定房號段 `14401-14430` 與 `wild_jiangxia_river/14312 -> city_jiangxia/14401` 的東向水路邊界意圖
+    - `tools/mapmd_validate.py` 與 generator `--validate-only` 均已通過
   - next_action:
-    - commit `wild_jiangxia_river` 的 implementation milestone
-    - commit 後把 `wild_jiangxia_river` 移到 done
-    - 接著開始 `city_jiangxia` 的 spec milestone
+    - commit `city_jiangxia` 的 spec milestone
+    - commit 後開始 `city_jiangxia` 的 implementation milestone
 
 
 ## Done
 
-- `2026-03-21` `wild_jiangxia_river` 已完成第一輪 runtime implementation 待 commit，已完成 WSL Linux build 與 startup smoke test，下一步是提交 implementation milestone 後前進 `city_jiangxia`
+- `2026-03-21` `wild_jiangxia_river` 已完成第一輪 runtime implementation、commit `91a57d6`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `city_xiangyang` 已完成第一輪 runtime implementation、commit `df3aa5e`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-20` `fort_hulao` 已完成第一輪 runtime implementation、commit `9457877`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-20` `dng_guandu_battlefield` 已完成第一輪 runtime implementation、commit `c224c9b`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
@@ -422,16 +442,17 @@
 
 ## Current Recommended Next Step
 
-`wild_jiangxia_river` 已進入 `implementation_ready_for_commit`。下一步應先 commit 目前的 runtime milestone；commit 後把它移到 done，並開始 `city_jiangxia` 的 spec milestone。
+`city_jiangxia` 已完成 spec 並通過 validate-only。下一步應先 commit spec milestone，再進入 implementation milestone。
 
 ## Next Action
 
-- commit `wild_jiangxia_river` 的 implementation milestone
-- commit 後開始 `city_jiangxia`：
+- 完成 `city_jiangxia`：
   - 建立單區 plan
   - 建立 `area/city_jiangxia/map.md`
   - 跑 `tools/mapmd_validate.py` 與 generator `--validate-only`
+  - commit spec milestone
+  - commit 後開始 implementation milestone
 
 ## Next Prompt
 
-`先 commit 目前 wild_jiangxia_river 的 implementation milestone；commit 後把它標記為 done，再開始 city_jiangxia 的 spec milestone。`
+`先 commit 目前 city_jiangxia 的 spec milestone；commit 後直接開始 implementation milestone。`
