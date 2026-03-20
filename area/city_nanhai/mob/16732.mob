@@ -1,0 +1,32 @@
+Vnum            16732
+Name            nanhai gate patrol~
+ShortDesc       港門巡役~
+Description
+這名南海港門巡役腳步穩健，目光總在來人、路牌與貨包間來回。對他來說，
+海門最重要的就是別讓真正有問題的人帶著東西混進城或直接混上船。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       160
+Level           98
+Hitroll         6
+Protect         0
+Damroll         6
+Str             13
+Int             11
+Wis             12
+Dex             12
+Con             13
+Hp              4800
+Mana            130
+Move            140
+Class           0
+Gold            320
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

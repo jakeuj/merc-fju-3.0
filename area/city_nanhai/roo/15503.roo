@@ -1,0 +1,40 @@
+Vnum            15503
+Name            南海港街~
+Description
+港街把城門、市集與臨海路穩穩串成一條主線，行人與貨車不算喧鬧，卻始終帶著一種港城獨有的流動感。站在這裡時，很容易感覺到南海不只是終點，也是另一段遠行的起點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15501
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15506
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         南海~
+End
+
+#Enquire
+Keyword         市集~
+End
+
+End

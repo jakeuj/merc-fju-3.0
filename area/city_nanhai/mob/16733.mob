@@ -1,0 +1,33 @@
+Vnum            16733
+Name            port clerk~
+ShortDesc       港務書吏~
+Description
+這名港務書吏手邊總壓著幾卷船期、貨單與通行文牘，神情比一般差役更像
+是在和時間賽跑。對他來說，港城真正的秩序不是喊得多大聲，而是該進該
+出的東西都不能錯時。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       120
+Level           99
+Hitroll         6
+Protect         0
+Damroll         6
+Str             11
+Int             15
+Wis             15
+Dex             12
+Con             12
+Hp              5000
+Mana            180
+Move            140
+Class           0
+Gold            340
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

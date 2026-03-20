@@ -1,0 +1,32 @@
+Vnum            15506
+Name            南貨市口~
+Description
+市口裡擺滿乾貨、藥材、繩索與海行必需的小器具，像所有長途遠行最後都會在這裡補齊一輪。比起內陸城市，這裡更有一種『該備的東西一樣都不能少』的港城務實氣味。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         市集~
+End
+
+#Enquire
+Keyword         補給~
+End
+
+End

@@ -1,0 +1,14 @@
+Vnum            16754
+Name            harbor lamp~
+ShortDesc       港燈(harbor lamp)~
+Description
+一盞專給臨海望臺與夜間港街照路的港燈(harbor lamp)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           97
+Value           0 0 45 0
+Weight          2
+Cost            220
+End

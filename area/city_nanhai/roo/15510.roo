@@ -1,0 +1,24 @@
+Vnum            15510
+Name            臨海南口~
+Description
+南口外的道路很快就被更開闊的風與水氣接手，地面上留著長年貨車、鹽包與船夫腳步壓出的痕跡。站在這裡時，你會清楚地知道，這一帶真正往前走的方式已不只靠雙腳。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         外海~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+End

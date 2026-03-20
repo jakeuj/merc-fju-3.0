@@ -1,0 +1,40 @@
+Vnum            15507
+Name            藥舖街角~
+Description
+幾家藥舖與行商把街角擠得滿是草藥、桐油與海鹽味，來往行旅在這裡總會不自覺多停一會。這種節奏讓南海顯得既不張揚，卻又明顯是所有遠航前該來的一站。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15506
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15510
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         藥舖~
+End
+
+#Enquire
+Keyword         南口~
+End
+
+End

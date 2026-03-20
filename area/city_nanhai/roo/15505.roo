@@ -1,0 +1,24 @@
+Vnum            15505
+Name            北巷貨棚~
+Description
+這條北巷比港街安靜，牆邊卻堆著從南北兩路送來的貨簍與繩具。它不像主街那麼醒目，卻讓整座南海顯得更像真正有人長住、也有人準備一出海就很久不回的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        15501
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         貨棚~
+End
+
+#Enquire
+Keyword         城門~
+End
+
+End

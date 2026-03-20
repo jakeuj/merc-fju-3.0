@@ -1,0 +1,32 @@
+Vnum            15502
+Name            北牌港坡~
+Description
+坡口邊掛著幾面指往桂陽、港埠與外海棧橋的木牌，邊角都被潮風吹得發亮。來往商旅與水手總會在這裡稍微停一下，像在心裡重新盤算自己接下來走的是陸路、港路還是海路。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        15501
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         路牌~
+End
+
+#Enquire
+Keyword         港埠~
+End
+
+End

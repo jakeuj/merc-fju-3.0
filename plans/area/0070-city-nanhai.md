@@ -22,7 +22,7 @@
   - `north`: `city_guiyang` / 桂陽南路
   - `south`: `sea_south_route` / 外海南航預留
   - `east`: `district_nanhai_port` / 港埠棧橋預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Fun / Variety Check
 
@@ -107,7 +107,33 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_nanhai/map.md --validate-only`
   - passed for `12` room(s)
+- `python -X utf8 tools/mapmd_validate.py area/city_guiyang/map.md`
+  - passed with `0 error(s), 0 warning(s)` after aligning `15210 <-> 15501`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_guiyang/map.md`
+  - rewrote `roo/15201-15212` to include the `15210 south -> 15501 external` boundary
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_nanhai/map.md`
+  - wrote `roo/15501-15512`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed; Linux build path reported `merc` up to date
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - startup smoke test passed; success signal found in `log/1036.log`
+- `debug/badobject`
+  - empty after smoke test
+- `debug/error`
+  - only contains the expected timeout-forced shutdown path after the successful run
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `city_nanhai`，保留房號段 `15501-15530`
+- `area/city_nanhai/index` 已建立，`Serial 159`
+- 第一輪 runtime scaffold 已加入：
+  - `mob/16731-16734`
+  - `obj/16751-16754`
+  - `res/city.res`
+  - `shp/supplies.shp`
+- `city_guiyang/15210 <-> city_nanhai/15501` 已成為正式 runtime boundary
+- `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步登錄 `city_nanhai`
 
 ## Next Step Prompt
 
-`先 commit 目前 city_nanhai 的 spec milestone；commit 後直接做 implementation milestone。`
+`先 commit 目前 city_nanhai 的 implementation milestone；commit 後直接盤點並建立下一個待建 area 的 spec milestone。`

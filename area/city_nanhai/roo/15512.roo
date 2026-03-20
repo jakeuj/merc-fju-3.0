@@ -1,0 +1,28 @@
+Vnum            15512
+Name            東棧路牌~
+Description
+一面路牌立在港務前街側緣，明白指著東向棧橋與更細的港埠分區。它替南海添上一層不只守著陸路終點，也能把人送進真正水路網的港城氣味。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         棧橋~
+End
+
+#Enquire
+Keyword         東邊~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

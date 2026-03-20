@@ -1412,6 +1412,25 @@
         "plans/area/0069-dng-serpent-temple.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "city_nanhai",
+      "title": "南海",
+      "room_range": "15501-15530",
+      "load_order": 76,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_guiyang",
+      "theme_primary": "探險",
+      "theme_secondary": "海港 / 遠航",
+      "summary": "承接桂陽南路，落成港街、市集補給、港務前街與臨海南口骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/city_nanhai/index",
+        "area/city_nanhai/map.md",
+        "plans/area/0070-city-nanhai.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

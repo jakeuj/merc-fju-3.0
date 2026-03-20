@@ -1,0 +1,24 @@
+Vnum            15509
+Name            港務偏院~
+Description
+偏院不大，卻收拾得頗有秩序，像地方主事者把文牘、貨單與船期消息暫時收進來整理的角落。比起熱鬧市口，這裡更像南海真正穩住節奏的後場。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        15508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         偏院~
+End
+
+#Enquire
+Keyword         消息~
+End
+
+End

@@ -1,0 +1,24 @@
+Vnum            15511
+Name            臨海望臺~
+Description
+走上望臺後，能把北門、港街與更遠的海面收進眼底。從這裡看南海，會更明白它雖是主線南端城市，卻也是把玩家送往更遠世界的門面。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       DOWN
+ExitVnum        15504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         望臺~
+End
+
+#Enquire
+Keyword         海面~
+End
+
+End

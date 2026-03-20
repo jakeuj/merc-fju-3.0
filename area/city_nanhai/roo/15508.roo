@@ -1,0 +1,47 @@
+Vnum            15508
+Name            港務前街~
+Description
+港務前街雖然整齊，卻不像帝都衙門那樣板正，反而有一種港城辦事講效率也講水路時刻的風格。榜示貼得清楚，來往的人也總會下意識瞄上一眼，像這裡是整座南海的節奏器。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15509
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15512
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         告示~
+Description
+榜示上既有港務消息，也有船期、潮汐與外海南航提醒，讓人一看就知道這裡已是南境海門。
+~
+End
+
+#Enquire
+Keyword         港務~
+End
+
+#Enquire
+Keyword         榜示~
+End
+
+End

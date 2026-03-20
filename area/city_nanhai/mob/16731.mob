@@ -1,0 +1,33 @@
+Vnum            16731
+Name            harbor quartermaster~
+ShortDesc       港市掌櫃~
+Description
+這名熟悉港城貨流與遠航補給節奏的港市掌櫃站在市口邊，像只要看一眼旅
+人的鞋塵、繩具與鹽痕，就知道對方是剛從桂陽趕來，還是準備往海上更遠
+的地方去。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           96
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             15
+Wis             15
+Dex             11
+Con             12
+Hp              3600
+Mana            180
+Move            150
+Class           0
+Gold            520
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

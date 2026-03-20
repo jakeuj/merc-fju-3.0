@@ -1,0 +1,15 @@
+Vnum            16753
+Name            nanhai patrol saber~
+ShortDesc       南海巡港刀(nanhai patrol saber)~
+Description
+一柄常見於南海港門巡役與港務差役腰間的南海巡港刀(nanhai patrol saber)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           98
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            300
+End

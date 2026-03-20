@@ -1,0 +1,48 @@
+Vnum            15501
+Name            北向城門~
+Description
+自桂陽再往南行到此，城門外的風裡已明顯帶著鹹潮與遠水氣味。這裡仍保有城市秩序，卻也讓人一踏進來就知道，接下來的方向不再只是官道，而是更大的水路與海路。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15210
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         桂陽~
+End
+
+#Enquire
+Keyword         進城~
+End
+
+End

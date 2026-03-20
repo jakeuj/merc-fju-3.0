@@ -211,7 +211,8 @@
       "coord": [1, -3, 0],
       "labels": ["south-edge", "road"],
       "exits": [
-        { "direction": "north", "to": 15207 }
+        { "direction": "north", "to": 15207 },
+        { "direction": "south", "to": 15501, "external": true }
       ],
       "enquires": ["南海", "南邊"]
     },

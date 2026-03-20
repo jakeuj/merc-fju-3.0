@@ -1,0 +1,60 @@
+Vnum            15504
+Name            港街十字~
+Description
+南貨招牌、港務榜示與遠行叫賣聲在這裡交會，讓南海作為最南港城的節奏一眼可辨。站在十字口時，你會自然明白哪裡能補給、哪裡能問海路、哪裡則會把你送向棧橋與外海。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        15511
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         官府~
+End
+
+#Enquire
+Keyword         海路~
+End
+
+#Enquire
+Keyword         碼頭~
+End
+
+End

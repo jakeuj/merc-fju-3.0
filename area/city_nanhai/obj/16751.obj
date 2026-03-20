@@ -1,0 +1,14 @@
+Vnum            16751
+Name            harbor ration~
+ShortDesc       港市乾糧包(harbor ration)~
+Description
+一包專給準備走港路或海路的人攜帶的港市乾糧包(harbor ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           96
+Value           32 50 4 0
+Weight          1
+Cost            230
+End

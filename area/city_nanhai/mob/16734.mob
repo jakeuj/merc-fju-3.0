@@ -1,0 +1,33 @@
+Vnum            16734
+Name            lookout boatswain~
+ShortDesc       望臺哨官~
+Description
+這名守在臨海望臺上的哨官比城門巡役更習慣看風向、潮色與遠處帆影，像
+只要海面有一點不對，他就會比整座南海更早察覺。站在他身邊時，會很自
+然地明白這裡已經不只是陸路終點。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       170
+Level           100
+Hitroll         7
+Protect         0
+Damroll         7
+Str             13
+Int             12
+Wis             14
+Dex             13
+Con             13
+Hp              5400
+Mana            150
+Move            145
+Class           0
+Gold            360
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
