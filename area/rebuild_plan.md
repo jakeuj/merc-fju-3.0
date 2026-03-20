@@ -62,6 +62,8 @@
 - 舊站 docs 參考：`docs/3yWebsite/docs/index.md`
 - 舊站玩家攻略資料：`docs/3yWebsite/docs/data/players.json`
 - 舊站技能資料：`docs/3yWebsite/docs/data/skills.json`
+- 歷史重建補充：`https://3yrebuildnote.blogspot.com/2013/04/blog-post.html`
+- 玩家 leveling baseline：`https://disp.cc/b/mud_3y/2mUG`
 
 ## Docs Dataset Guidance
 
@@ -82,6 +84,8 @@
   - 先從 `players.json` 找出玩家攻略高頻提到的 teacher、轉職點、巴士/船站、醫補與練功 loop。
   - 再從 `skills.json` 核對這些節點承接哪些技能鏈、資源消耗與職業服務。
   - 最後才把候選 area 放進 `candidate queue` 或 `todo`。
+- 若 `players.json / skills.json` 仍無法說明 historical rebuild-era 的 level band、城市規模或區域優先序，可補讀 `https://3yrebuildnote.blogspot.com/2013/04/blog-post.html`，但只能當補充脈絡，不得覆蓋 `world_map`、`ref/` 與 current repo state。
+- 若要校對玩家實際感知的練功帶，可補讀 `https://disp.cc/b/mud_3y/2mUG`；這類社群資料只用來做 `level_range` sanity check，不直接決定 queue。
 - 若這輪是因為 docs dataset 才決定某個新候選區、world link 或服務節點配置，記得在單區 plan / tracker 補上：
   - `ref_inputs_used`
   - `ref_inputs_deferred`
@@ -148,6 +152,8 @@
     - `docs/3yWebsite/map/chenliu.html`
     - `docs/3yWebsite/docs/data/players.json`
     - `docs/3yWebsite/docs/data/skills.json`
+    - `https://3yrebuildnote.blogspot.com/2013/04/blog-post.html`
+    - `https://disp.cc/b/mud_3y/2mUG`
     - `ref/mud-area-templates/city_loyang.md`
     - `ref/sanguo-area-specfirst/area/city_chenliu/map.md`
   - ref_inputs_deferred:
@@ -163,6 +169,8 @@
     - `題材分布表` 的歷史城市主節點
     - 陳留舊站地圖的服務節點密度
     - `players.json / skills.json` 提供的師父、補給與旅行 loop
+    - 歷史重建筆記顯示陳留曾先以大型 `roo` 與基本設施 NPC 為重建起點，支持本區先做 service backbone、後續再擴房
+    - 玩家 leveling 文把陳留列在 `Lv15-21`，支持本區作為 midgame 低段主線城市的強度帶
   - compliance_check:
     - compliant；本區是主世界 queue reset 的第一個正式 `todo`，明確從晚期 spirit-core 深井鏈切回三國城市節奏
 - `wild_puyang_forest`

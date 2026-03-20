@@ -67,12 +67,15 @@ source of truth 要分兩種：
 4.1 若任務是在規劃新 area、補 teacher NPC、重排 world link、補新手導流或設計職業服務節點，優先抽查兩份舊站資料：
  - `docs/3yWebsite/docs/data/players.json`：看玩家攻略實際反覆提到哪些 NPC、升級 loop、轉職與補給動線。
  - `docs/3yWebsite/docs/data/skills.json`：看技能鏈、技能分類、資源消耗、可否教導與舊版命名。
+4.1.1 若 `players.json` / `skills.json` 仍無法解釋 rebuild-era 的區域優先序、歷史等級帶、城市規模或技能調整節奏，再補讀 `references/rebuildnote-2011-progress.md`；它整理 `https://3yrebuildnote.blogspot.com/2013/04/blog-post.html` 的可操作訊號，但只能當 historical supplement，不是 source of truth。
+4.1.2 若要校對玩家實際體感的練功帶與城鎮順序，再補讀 `references/community-leveling-baseline.md`；它整理 `https://disp.cc/b/mud_3y/2mUG` 的玩家向 leveling baseline，可拿來做 `level_range` sanity check，但不能直接改寫世界主線。
 4.2 使用這兩份 JSON 時，預設把它們當「舊站 reference baseline」，不是現行 runtime registry；若本輪真的改了現行可載入資料，另同步 `docs/current-game/*`。
 4.1 若這輪會新增、移除、重排或大幅重寫目前實際可載入的 area，除了 runtime / spec 檔，也同步檢查 `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 是否要更新；若只是引用舊站地圖或世界觀，仍不要把 `docs/3yWebsite/` 當現行 area 台帳。
 5. 若是新增 AREA，先決定是手寫 `.roo`，還是用 `references/map-spec-template.md` + `scripts/generate_roo_from_map_md.py` 走「spec -> scaffold」流程。
 6. 若任務需要參考 repo 內的 `ref/` 世界藍圖、spec-first scaffold、world builder 或題材分布資料，先讀 `ref/Readme.md` 當索引，再挑需要的檔案或子資料夾深入。
 7. 若任務屬於長期 area 重建，先讀 `plans/` 與 `area/rebuild_plan.md`；詳細規則見 `references/rebuild-workflow.md`。
 7.1 若這輪工作有用 `ref/Readme.md` 來做選讀決策，回寫單區 plan 或追蹤看板時，補上 `ref_inputs_used`、`ref_inputs_deferred`、`theme_basis`、`compliance_check`。
+7.2 若這輪另外用了外部歷史重建筆記，例如 `3yrebuildnote`，也把精確 URL、日期與實際採用的歷史訊號一併寫進 `ref_inputs_used` 或 `ref_inputs_deferred`，避免下一輪只看到結論、看不出來源強度。
 8. 若任務是在建立新區 workflow 或新 area 起手，優先讀 `docs/area-development-handbook.md`，並視需要使用：
 - `templates/area-plan.template.md`
 - `templates/map.md.template`
@@ -149,6 +152,8 @@ source of truth 要分兩種：
 - 真正要從這兩份 JSON 抽的是「區域耦合訊號」，不是單純做資料展示：
  - `players.json` 用來找出玩家攻略反覆提到的 teacher、補給 NPC、轉職點、巴士/船站、練功斷點與關鍵服務 loop。
  - `skills.json` 用來找出技能鏈、技能名詞、資源消耗、可否教導、職業限制與適合轉成 room/NPC/enquire 的關鍵詞。
+- `3yrebuildnote` 類外部歷史重建筆記則是另一種補充證據：它更適合回答「當年非官方重建實際先做了哪些區、大城做到多大、何時開始用 generator、技能平衡是否採迭代式重設」；若要用，先讀 `references/rebuildnote-2011-progress.md`
+- `disp` / 社群討論串則更適合回答「玩家當年實際把哪些城或野外當成哪個等級帶」；若要用，先讀 `references/community-leveling-baseline.md`
 - 若打算搬動或刪除攻略裡高頻出現的服務 NPC，例如 `refresh`、`flee`、`mount`、步法/武器教學師父，先確認是否要保留原服務語意、提供替代 NPC，並同步在 plan / tracker 記錄理由。
 
 ## 工作流程

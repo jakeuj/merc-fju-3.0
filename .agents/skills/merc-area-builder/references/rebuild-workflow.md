@@ -132,6 +132,25 @@
 - 明確標示哪些 generator / editor prototype 或模擬系統是刻意 deferred
 - 確保下一輪接手時，不會把超出本輪範圍的 `ref/` 原型誤當成正式依據
 
+## Historical External References
+
+若 `world_map`、`ref/`、`players.json`、`skills.json` 仍不足以回答歷史 rebuild-era 的 area 優先序、等級帶、城市規模或技能重設節奏，可以補充使用外部歷史資料，例如：
+
+- `references/rebuildnote-2011-progress.md`
+- `references/community-leveling-baseline.md`
+
+使用規則：
+
+1. 這類資料只當 supplemental historical evidence，不得覆蓋 repo 內既有 source of truth
+2. 若真的採用，單區 plan / tracker 的 `ref_inputs_used` 要記精確 URL 與日期
+3. 若有查但刻意不採用，也可寫進 `ref_inputs_deferred` 或 `compliance_check`
+4. 特別適合拿來回答：
+   - 這個城市 historically 可能做到多大
+   - 這個 level band 是否曾有 rebuild-era 先例
+   - 是否值得先投資 generator / scaffold 再擴寫大城
+   - 技能數值調整應該一次定版，還是分批實測
+5. 若外部來源是玩家社群的 leveling 文，而不是 admin / rebuild note，預設只把它當 `level_range` 與玩家體感順序的 sanity check，不當成世界主線權威
+
 ## Update Rules
 
 每次完成一輪 area 工作後，都要同步回寫 `area/rebuild_plan.md`：

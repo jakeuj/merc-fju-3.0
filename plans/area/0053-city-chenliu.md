@@ -133,6 +133,8 @@
   - `docs/3yWebsite/map/chenliu.html`
   - `docs/3yWebsite/docs/data/players.json`
   - `docs/3yWebsite/docs/data/skills.json`
+  - `https://3yrebuildnote.blogspot.com/2013/04/blog-post.html`
+  - `https://disp.cc/b/mud_3y/2mUG`
   - `ref/mud-area-templates/city_loyang.md`
   - `ref/sanguo-area-specfirst/area/city_chenliu/map.md`
 - `ref_inputs_deferred`
@@ -144,11 +146,14 @@
   - 各類經濟/勢力/歷史事件模擬系統
   - `sec_rift_*`
   - `sec_rift_spirit_core_*`
+  - 完整 `213` 房歷史等比還原
 - `theme_basis`
   - progression map 的 Lv15 主線城市槽位
   - 題材分布表的中原歷史城市節點
   - 陳留舊站地圖提供的服務節點與城內分區
   - `players.json / skills.json` 提供的師父、技能來源與服務 loop
+  - 歷史重建筆記指出陳留曾先完成大型 `roo` 與基本設施 NPC，支持本 milestone 先做城市服務骨架、再分階段擴房
+  - 玩家 leveling baseline 將陳留列為 `Lv15-21` 練功城，支持目前 `15-26` 的 service-hub + midgame band 設定
 - `compliance_check`
   - compliant；本輪刻意把 queue 從 spirit-core 尾鏈轉回三國主世界城市 / 補給 / 交通 gameplay，而不是延續垂直深井
 

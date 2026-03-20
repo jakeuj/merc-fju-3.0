@@ -43,6 +43,8 @@
 
 - 世界層參考使用 `area/world_map.md`
 - 歷史 / 外部世界規劃索引使用 `ref/Readme.md`
+- 歷史 rebuild-era 補充脈絡可參考 `https://3yrebuildnote.blogspot.com/2013/04/blog-post.html`，但只能當 supplemental evidence
+- 玩家社群 leveling baseline 可參考 `https://disp.cc/b/mud_3y/2mUG`，但只能當 community sanity check
 - 日常追蹤看板使用 `area/rebuild_plan.md`
 - spec-first 區域設計使用 `area/<new_area>/map.md`
 - 若需要 `.roo` scaffold，使用 `.agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py`
@@ -134,6 +136,8 @@ AREA rebuild 的預設工作單位是「一輪任務只處理一個 area milesto
   - `ref/三國-MUD-題材分布表.md`
   - `docs/3yWebsite/docs/data/players.json`
   - `docs/3yWebsite/docs/data/skills.json`
+- 若上述來源仍不足以回答歷史 rebuild-era 的 level band、城市規模或區域優先序，可補 `3yrebuildnote` 的更新進度整理表，但只能當 tie-breaker，不得反客為主
+- 若要校對玩家實際體感的練功帶，可補 `disp` 的 leveling 文章，但只能當 community-side sanity check，不得反過來改寫 queue
 - active queue 預設要交錯配置 `City / Wild / Dungeon / Fort` 等不同 family，不得連續安排三個同 family area
 - 若新候選區只是「更深、更暗、更滿級」而沒有新的玩家 loop、交通價值或題材轉換，不得進 `todo`
 - `sec_rift_spirit_core_*` 晚期鏈自 `sec_rift_spirit_core_gehennal` 起停止自動續寫；未來若要恢復，必須先建立獨立的 endgame world-design 任務
@@ -207,6 +211,27 @@ AREA rebuild 的預設工作單位是「一輪任務只處理一個 area milesto
 
 - 只有當 area rebuild 明確進入工具化、經濟、勢力或歷史事件模擬階段，才把上述原型納入本輪實作依據
 - 在那之前，這些資料夾只保留為未來延伸方向
+
+## External Historical Rebuild Notes
+
+本輪允許補充使用的外部歷史重建筆記：
+
+- `https://3yrebuildnote.blogspot.com/2013/04/blog-post.html`
+- `https://disp.cc/b/mud_3y/2mUG`
+
+用途：
+
+- 補歷史 rebuild-era 的 area queue、等級帶與城市規模感
+- 補玩家社群實際感知的 leveling 帶與城市練功順序
+- 補 generator / room builder 投資是否必要的歷史依據
+- 補技能數值重建應採分批實測而非一次性定版的脈絡
+
+限制：
+
+- 不是 primary source of truth
+- 不得覆蓋 `area/world_map.md`、`ref/Readme.md`、`players.json / skills.json` 與 current repo 現況
+- `disp` 類玩家文預設只當 community sanity check，不當設計規格
+- 若有採用，單區 plan / tracker 的 `ref_inputs_used` 要寫精確 URL、日期與採用理由
 
 ## Template Selection Policy
 
