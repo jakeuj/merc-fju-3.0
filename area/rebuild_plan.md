@@ -399,6 +399,34 @@
     - `ref/sanguo-area-specfirst` 已提供可改寫 scaffold，可直接轉成目前主線所需的赤壁版本
   - compliance_check:
     - compliant；在 `City` 之後切一個 `Secret` 戰場支線，world-link 已預留，也避免連續第三個 `City`
+- `city_changsha`
+  - area_family: `City`
+  - reserved_room_block: `14901-14930`
+  - level_range: `72-82`
+  - theme: `歷史城市`
+  - subtheme: `荊南主城 / 南境轉運 hub`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/city_changsha/map.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `plans/area/0062-city-chaisang.md`
+    - `plans/area/0063-sec-chibi-battlefield.md`
+  - ref_inputs_deferred:
+    - `ref/sanguo-area-specfirst/area/city_jianye/map.md`
+    - `ref/sanguo-area-specfirst/area/city_lingling/map.md`
+    - `docs/3yWebsite/map/shanyan.html`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `world_map` 明確把 `柴桑 -> 長沙` 放在同一條南向主線上，且 `city_chaisang` 已預留此 world-link
+    - `題材分布表` 把長沙定位成荊南核心城市，適合在戰場支線後把節奏重新拉回主城 hub
+    - `players.json / skills.json` 沒有要求此刻跳去另一條未銜接主線，因此先把荊南主城補穩最合理
+    - `ref/sanguo-area-specfirst` 已提供城市 scaffold，可直接改寫成符合目前南線的版本
+  - compliance_check:
+    - compliant；在 `Secret` 之後切回 `City`，延續柴桑預留主線，也維持 queue 多樣性
 
 ## Todo
 
@@ -406,23 +434,23 @@
 
 ## In Progress
 
-- `sec_chibi_battlefield`
-  - plan: `plans/area/0063-sec-chibi-battlefield.md`
-  - delivery_gate: `implementation_ready_for_commit`
+- `city_changsha`
+  - plan: `plans/area/0064-city-changsha.md`
+  - delivery_gate: `spec_ready_for_commit`
   - current_status:
-    - 已建立最小 loadable runtime scaffold：`index / mob / obj / res / shp / roo`
-    - 已將 `14712 <-> 14801` 落成 `city_chaisang` 與 `sec_chibi_battlefield` 的雙向 runtime boundary
-    - `tools/mapmd_validate.py`、generator `--validate-only`、generator write 均已通過
-    - WSL Linux build 與 startup smoke test 已通過；成功 log 為 `log/1029.log`
-    - `debug/badobject` 為空，`debug/error` 只有 timeout 強制關機紀錄
+    - 已建立 `plans/area/0064-city-changsha.md`
+    - 已建立 `area/city_changsha/map.md` 第一版 spec
+    - 已選定房號段 `14901-14930`
+    - `tools/mapmd_validate.py` 已通過
+    - generator `--validate-only` 已通過
   - next_action:
-    - commit `sec_chibi_battlefield` 的 implementation milestone
-    - commit 後把 `sec_chibi_battlefield` 移到 done
-    - 盤點下一個主世界候選區
+    - commit `city_changsha` 的 spec milestone
+    - commit 後直接進 implementation milestone
 
 
 ## Done
 
+- `2026-03-21` `sec_chibi_battlefield` 已完成第一輪 runtime implementation、commit `d3d7a41`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `city_chaisang` 已完成第一輪 runtime implementation、commit `d4abd20`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `dng_sunken_temple` 已完成第一輪 runtime implementation、commit `3f1b489`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `wild_yunmeng` 已完成第一輪 runtime implementation、commit `e36be11`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
@@ -550,19 +578,21 @@
 
 ## Current Recommended Next Step
 
-`sec_chibi_battlefield` 已完成第一輪 runtime implementation。下一步應先 commit 目前的 implementation milestone；commit 後把它移到 done，再盤點下一個主世界候選區。
+`city_changsha` 已建立第一版 spec 並完成 validate-only 驗證。下一步應先 commit spec milestone，接著直接進入 implementation milestone。
 
 ## Next Action
 
 - 完成 `city_chaisang`：
   - 已提交 implementation milestone
 - 完成 `sec_chibi_battlefield`：
-  - 已建立最小 loadable runtime scaffold
-  - 已完成 build / smoke 驗證
-  - commit implementation milestone
-  - commit 後把它移到 done
-  - 盤點下一個主世界候選區
+  - 已提交 implementation milestone
+- 完成 `city_changsha`：
+  - 已建立 spec 與單區 plan
+  - 已完成 validate `map.md`
+  - 已完成 generator `--validate-only`
+  - commit spec milestone
+  - commit 後直接進 implementation milestone
 
 ## Next Prompt
 
-`先 commit 目前 sec_chibi_battlefield 的 implementation milestone；commit 後把它標記為 done，再盤點下一個待建 area。`
+`先 commit 目前 city_changsha 的 spec milestone；commit 後直接做 implementation milestone。`
