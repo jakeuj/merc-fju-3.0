@@ -1,0 +1,31 @@
+Vnum            15234
+Name            remnant banner brutalist~
+ShortDesc       殘旗狠卒~
+Description
+這名守在高地殘旗旁的狠卒握著兵刃站得筆直，像連敗陣與荒廢都沒能
+把他從原本的位置上挪開半步。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       -80
+Level           32
+Hitroll         5
+Protect         0
+Damroll         4
+Str             16
+Int             10
+Wis             10
+Dex             15
+Con             15
+Hp              3200
+Mana            120
+Move            130
+Class           CLASS_THIEF
+Gold            220
+Multipile       100
+AttackRatio     110
+DodgeRatio      106
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

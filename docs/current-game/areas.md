@@ -84,6 +84,7 @@ title: Current Game Areas
 | `sec_rift_spirit_core_gehennal` | 裂魄業獄 / 業獄井腹 | `13701-13712` | `rebuild addition` | 承接裂魄冥獄座，下探到業獄內庭、業冥偏廊與寒獄前座。 |
 | `city_chenliu` | 陳留 / 中原樞紐城 | `13801-13830` | `rebuild addition` | queue reset 後的第一個主世界城市 hub，先落地主街、服務區、軍旅區與南驛轉接骨架。 |
 | `wild_puyang_forest` | 濮陽林野 / 官渡前帶野外 | `13901-13930` | `rebuild addition` | 承接陳留北路的林野探索帶，整合林間主徑、濕窪側線與舊哨土塍。 |
+| `dng_guandu_battlefield` | 官渡古戰場 / 鏖兵戰地 dungeon | `14001-14030` | `rebuild addition` | 承接濮陽林野北向荒路，落成壕溝、焚糧車與殘旗高地交錯的古戰場前段。 |
 
 ## Recent Rebuild Areas
 
@@ -157,6 +158,7 @@ title: Current Game Areas
 ### 官渡前帶鏈
 
 - `wild_puyang_forest`：把陳留北路外的林野前帶先落成可載入 area，透過林蔭主徑、濕窪獵徑與舊哨高地把玩家節奏從城市補給推到官渡戰前外圍。
+- `dng_guandu_battlefield`：把濮陽林野北向荒路正式接進官渡古戰場，透過壕溝、焚糧車列、殘旗坡與死地前帶把節奏推進到真正的戰地 dungeon。
 
 ## 維護規則
 

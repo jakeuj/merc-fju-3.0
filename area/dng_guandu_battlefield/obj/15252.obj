@@ -1,0 +1,14 @@
+Vnum            15252
+Name            battlefield flask~
+ShortDesc       戰地水囊(flask)~
+Description
+一只外皮被火烤皺的戰地水囊(flask)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           24
+Value           10 10 LIQ_WATER 0
+Weight          1
+Cost            75
+End

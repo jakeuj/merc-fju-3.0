@@ -1,0 +1,51 @@
+Vnum            14005
+Name            土塹彎線~
+Description
+壕線在此向東外拐，內側是勉強立住的土塹，外側則散著碎甲與破盾。若說前面只是讓人知道這裡打過仗，那麼這裡便開始讓人意識到每一段地勢都曾是人命交換的位置。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       SOUTH
+ExitVnum        14004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        14012
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14006
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         土塹~
+Description
+土塹內側有明顯反覆踩踏留下的凹痕，顯示這裡曾被當成持久拉鋸的位置。
+~
+End
+
+#Enquire
+Keyword         鼓旗~
+End
+
+#Enquire
+Keyword         糧車~
+End
+
+#Enquire
+Keyword         北邊~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            14009
+Name            鼓旗坡~
+Description
+坡面上還能看見鼓架拖行時留下的深槽，坡頂則插著幾根斷桿。從這裡往下看，壕線、焦坑與殘車像一張被撕裂卻仍看得出布局的戰場圖。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       DOWN
+ExitVnum        14008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14010
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         鼓旗~
+End
+
+#Enquire
+Keyword         高處~
+End
+
+End

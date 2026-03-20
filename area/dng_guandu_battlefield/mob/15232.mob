@@ -1,0 +1,31 @@
+Vnum            15232
+Name            trench straggler~
+ShortDesc       壕線散兵~
+Description
+這名披著殘破甲片的散兵伏低身子沿壕邊移動，像是直到現在都還沒真
+正從那場鏖戰裡退下來。
+~
+Sentinel        Yes
+StayArea        No
+Alignment       -40
+Level           27
+Hitroll         3
+Protect         0
+Damroll         2
+Str             14
+Int             10
+Wis             10
+Dex             13
+Con             13
+Hp              2200
+Mana            100
+Move            120
+Class           CLASS_THIEF
+Gold            120
+Multipile       100
+AttackRatio     104
+DodgeRatio      103
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

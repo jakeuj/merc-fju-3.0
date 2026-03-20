@@ -1,0 +1,39 @@
+Vnum            14010
+Name            殘旗高地~
+Description
+高地邊緣插著幾面只剩布條的殘旗，旗面顏色幾乎辨不清，卻仍固執地在風裡拍打。站得越高，就越能感覺到這片戰場並未真正安靜，只是把聲音都埋進了土裡。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        14009
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14011
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         殘旗~
+Description
+殘旗邊緣磨成鬚狀，卻還勉強保住原來的結法，像某種不肯退場的軍令。
+~
+End
+
+#Enquire
+Keyword         殘旗~
+End
+
+#Enquire
+Keyword         戰況~
+End
+
+End

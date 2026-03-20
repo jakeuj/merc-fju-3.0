@@ -1,0 +1,15 @@
+Vnum            15254
+Name            guandu short spear~
+ShortDesc       官渡短矛(short spear)~
+Description
+一柄刃口已有缺損的官渡短矛(short spear)被丟在這裡。
+~
+Unit            柄~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           28
+Value           0 -1 -1 WEAPON_SPEAR
+Weight          4
+Cost            165
+End

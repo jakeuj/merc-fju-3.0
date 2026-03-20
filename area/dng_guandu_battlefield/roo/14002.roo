@@ -1,0 +1,31 @@
+Vnum            14002
+Name            破木拒馬帶~
+Description
+折斷的拒馬和燒黑的柵木橫在泥地上，逼得人只能在狹窄缺口間穿行。這裡不像仍有軍紀維持的營地，而像一場廝殺過後誰也沒空清理的邊角死帶。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        14001
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        14003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         拒馬~
+Description
+拒馬木樁上還留著焦痕與刀斧裂口，顯然不是自然腐壞，而是被人硬生生打開缺口。
+~
+End
+
+End

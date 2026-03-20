@@ -331,7 +331,8 @@
       "coord": [5, 0, 0],
       "labels": ["north-edge", "world-link-north"],
       "exits": [
-        { "direction": "south", "to": 13905 }
+        { "direction": "south", "to": 13905 },
+        { "direction": "north", "to": 14001, "external": true }
       ],
       "enquires": ["官渡", "前線", "去路"]
     }

@@ -23,7 +23,7 @@
   - `north`: 官渡主陣更深處 / 焚糧核心帶
   - `east`: 曹軍糧道殘線
   - `west`: 袁軍舊壘斷帶
-- delivery_gate: `spec_in_progress`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Fun / Variety Check
 
@@ -69,6 +69,19 @@
 - 將 `殘旗 / 斷戟 / 糧車 / 焦木 / 土塹` 視為正式 `#Keyword` 候選
 - 至少保留一組 `up/down` 土壘 / 壕溝高差移動
 - 本 milestone 不建立 `index / mob / obj / res / shp` runtime data
+
+## Scope (Milestone 2: Runtime Scaffold)
+
+- 依 `area/dng_guandu_battlefield/map.md` 生成 `roo/14001-14017`
+- 建立最小 loadable runtime 結構：
+  - `index`
+  - `mob/`
+  - `obj/`
+  - `res/`
+  - `shp/`
+- 正式把 `wild_puyang_forest/13912` 與 `dng_guandu_battlefield/14001` 做成雙向 runtime boundary
+- 將 area 登錄到 `area/directory.lst`
+- 同步更新 `docs/current-game/areas.md` 與 `docs/current-game/areas.json`
 
 ## Birthplace Policy
 
@@ -138,6 +151,32 @@
 - 方向只使用 `north / east / south / west / up / down / enter / out`
 - `dng_guandu_battlefield` 不得退化成單一路直通 connector；必須保留壕溝高差、支線與古戰場辨識度
 
+## Validation Results
+
+- `python -X utf8 tools/mapmd_validate.py area/dng_guandu_battlefield/map.md`
+  - passed with `0 error(s), 0 warning(s)`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/dng_guandu_battlefield/map.md --validate-only`
+  - passed for `17` room(s)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_puyang_forest/map.md`
+  - rewrote `roo/13901-13912` to include the north boundary into `14001`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/dng_guandu_battlefield/map.md`
+  - wrote `roo/14001-14017`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed; Linux build path reports `merc` up to date
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - startup log `log/1020.log` reached `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/badobject` remained empty
+  - `debug/error` only records the forced shutdown path caused by timeout, not a loader failure
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `dng_guandu_battlefield`
+- `area/dng_guandu_battlefield/index` 採首版 dungeon scaffold，房號段 `14001-14030`、序號 `144`
+- `mob/15231-15234` 與 `obj/15251-15254` 提供戰地補給、散兵與古戰場掉落骨架
+- `res/battlefield.res` 與 `shp/supplies.shp` 已建立，keeper 為 `15231`
+- `area/wild_puyang_forest/map.md` 與 `area/dng_guandu_battlefield/map.md` 已同步把 `13912 <-> 14001` 落成正式 runtime boundary
+- `area/wild_puyang_forest/roo/13912.roo` 與 `area/dng_guandu_battlefield/roo/14001.roo` 現在雙向一致
+
 ## Next Step Prompt
 
-`先 commit 目前 dng_guandu_battlefield 的 spec milestone；commit 後開始 Milestone 2，依 area/dng_guandu_battlefield/map.md 生成 roo 草案並建立最小 runtime index/mob/obj/res/shp。`
+`先 commit 目前 dng_guandu_battlefield 的 implementation milestone；commit 後把此區標記為 done，再開始 fort_hulao 的 spec milestone。`

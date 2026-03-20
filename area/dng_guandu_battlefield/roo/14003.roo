@@ -1,0 +1,32 @@
+Vnum            14003
+Name            南入壕口~
+Description
+地面在這裡突然向內下凹，壕口兩側堆著不完整的沙包與泥牆殘角。往前走若不先看清高低差，很容易一腳踏進比預想更滑的泥底。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        14002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        14004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         壕溝~
+End
+
+#Enquire
+Keyword         前面~
+End
+
+End

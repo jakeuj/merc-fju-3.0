@@ -147,6 +147,7 @@
       "coord": [0, 0, 0],
       "labels": ["entry", "world-link-south"],
       "exits": [
+        { "direction": "south", "to": 13912, "external": true },
         { "direction": "north", "to": 14002 }
       ],
       "enquires": ["官渡", "去路"]

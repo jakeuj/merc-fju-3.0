@@ -1,0 +1,31 @@
+Vnum            15233
+Name            ashpit looter~
+ShortDesc       焦坑流寇~
+Description
+這名滿身灰塵的流寇在焦坑邊翻掏燒不乾淨的殘物，聽見動靜時會先抬
+刀，再決定是逃還是撲上來。
+~
+Sentinel        Yes
+StayArea        No
+Alignment       -120
+Level           29
+Hitroll         4
+Protect         0
+Damroll         3
+Str             15
+Int             10
+Wis             9
+Dex             14
+Con             14
+Hp              2700
+Mana            100
+Move            120
+Class           CLASS_THIEF
+Gold            170
+Multipile       100
+AttackRatio     107
+DodgeRatio      104
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

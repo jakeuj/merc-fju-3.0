@@ -1,0 +1,14 @@
+Vnum            15253
+Name            trench handtorch~
+ShortDesc       壕線提炬(handtorch)~
+Description
+一支便於在壕線夜間移動的壕線提炬(handtorch)被插在這裡。
+~
+Unit            支~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           24
+Value           0 0 18 0
+Weight          1
+Cost            65
+End

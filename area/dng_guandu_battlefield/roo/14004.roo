@@ -1,0 +1,39 @@
+Vnum            14004
+Name            斷戟泥地~
+Description
+泥地裡斜插著數截斷戟與折矛，雨水和血泥早已混成同一種暗色。每走一步都像踩在別人來不及帶走的失敗上，讓人很難把這裡只當普通道路經過。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        14003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        14005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         斷戟~
+Description
+幾截戟刃缺口方向一致，像是同一輪近身衝撞裡被硬生生折斷。
+~
+End
+
+#Enquire
+Keyword         戰場~
+End
+
+#Enquire
+Keyword         死傷~
+End
+
+End

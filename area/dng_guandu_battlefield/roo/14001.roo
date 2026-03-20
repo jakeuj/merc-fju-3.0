@@ -1,0 +1,32 @@
+Vnum            14001
+Name            戰場前塹~
+Description
+泥土在這裡被臨時掘成一道不深卻足以讓人放慢腳步的前塹，塹邊滿是朽木、破繩與被踩碎的箭桿。往南仍像從林野走來，向北卻已能清楚嗅到焦土與鐵鏽混在一起的戰場氣味。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        13912
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        14002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         官渡~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

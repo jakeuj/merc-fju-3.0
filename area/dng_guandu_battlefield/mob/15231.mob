@@ -1,0 +1,32 @@
+Vnum            15231
+Name            battle ration broker~
+ShortDesc       戰地掮糧兵~
+Description
+這名在焦黑糧車邊翻找剩餘補給的掮糧兵動作很快，眼神比手更快，像
+是早已學會只在最有價值的戰場碎片上停留。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       20
+Level           25
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             12
+Wis             11
+Dex             13
+Con             12
+Hp              1100
+Mana            100
+Move            110
+Class           0
+Gold            130
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

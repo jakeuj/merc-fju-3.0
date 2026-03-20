@@ -1127,6 +1127,25 @@
         "plans/area/0054-wild-puyang-forest.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "dng_guandu_battlefield",
+      "title": "官渡古戰場",
+      "room_range": "14001-14030",
+      "load_order": 61,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "wild_puyang_forest",
+      "theme_primary": "軍旅",
+      "theme_secondary": "古戰場 / 官渡鏖兵",
+      "summary": "承接濮陽林野北向荒路，落成壕溝、焚糧車與殘旗高地交錯的古戰場前段。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/dng_guandu_battlefield/index",
+        "area/dng_guandu_battlefield/map.md",
+        "plans/area/0055-dng-guandu-battlefield.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

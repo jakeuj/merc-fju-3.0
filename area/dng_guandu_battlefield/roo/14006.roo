@@ -1,0 +1,43 @@
+Vnum            14006
+Name            焚糧車列~
+Description
+數輛早被燒穿的糧車歪倒在一旁，木框和鐵箍扭成焦黑形狀，連地面都被烤出一條長長黑痕。站在這裡時，官渡的名字不再只是地圖上的標記，而像一種仍在發熱的歷史傷口。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        14005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         糧車~
+Description
+糧車殘框內仍卡著幾片燒硬的穀殼與焦炭，像把火攻那一刻永遠留在了木頭裡。
+~
+End
+
+#Enquire
+Keyword         糧車~
+End
+
+#Enquire
+Keyword         火攻~
+End
+
+#Enquire
+Keyword         官渡~
+End
+
+End

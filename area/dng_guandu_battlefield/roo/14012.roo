@@ -1,0 +1,36 @@
+Vnum            14012
+Name            北向死地前帶~
+Description
+再往北，地勢變得更空更硬，風裡不再有林氣與灰燼，而是純粹乾冷的塵土味。這裡像是一條把人送進真正主陣死地的門檻，讓你明白眼前看到的還只是官渡留下來的外圈傷痕。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        14005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        14011
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         前線~
+End
+
+#Enquire
+Keyword         死地~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

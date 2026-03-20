@@ -1,0 +1,39 @@
+Vnum            14007
+Name            焦木坑~
+Description
+地面在此向內塌成一圈灰黑色坑地，焦木、碎輪與半熔的鐵件堆在一起。風一吹，灰燼還會像活著似的飄起來，讓人很難分清哪一部分只是殘骸，哪一部分還在無聲燃燒。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        14006
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         焦木~
+Description
+焦木表面一碰就掉灰，裡層卻仍硬得像不肯承認自己早已燒盡。
+~
+End
+
+#Enquire
+Keyword         灰燼~
+End
+
+#Enquire
+Keyword         東路~
+End
+
+End

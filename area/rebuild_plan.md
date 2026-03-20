@@ -284,20 +284,22 @@
 
 - `dng_guandu_battlefield`
   - plan: `plans/area/0055-dng-guandu-battlefield.md`
-  - delivery_gate: `spec_ready_for_commit`
+  - delivery_gate: `implementation_ready_for_commit`
   - current_status:
-    - 已建立 `plans/area/0055-dng-guandu-battlefield.md`
-    - 已建立 `area/dng_guandu_battlefield/map.md` 第一版
-    - 已定義 `south-approach / trench-line / burned-wagons / banner-ridge / north-deadground`
-    - `tools/mapmd_validate.py` 與 generator `--validate-only` 已通過
-    - 目前仍維持 spec-level world links，不提早掛載 runtime boundary
+    - 已建立最小 loadable runtime scaffold：`index / mob / obj / res / shp / roo`
+    - 已將 `13912 <-> 14001` 落成 `wild_puyang_forest` 與 `dng_guandu_battlefield` 的雙向 runtime boundary
+    - `tools/mapmd_validate.py`、generator `--validate-only`、generator write 均已通過
+    - WSL Linux build 與 startup smoke test 已通過；成功 log 為 `log/1020.log`
+    - `debug/badobject` 為空，`debug/error` 只有 timeout 強制關機紀錄
   - next_action:
-    - 先 commit `dng_guandu_battlefield` 的 spec milestone
-    - commit 後開始 Milestone 2，依 `map.md` 生成 `roo` 草案並建立最小 runtime 資產
+    - 先 commit `dng_guandu_battlefield` 的 implementation milestone
+    - commit 後把 `dng_guandu_battlefield` 移到 done
+    - 接著開始 `fort_hulao` 的 spec milestone
 
 
 ## Done
 
+- `2026-03-20` `dng_guandu_battlefield` 已完成第一輪 runtime implementation 待 commit，已完成 WSL Linux build 與 startup smoke test，下一步是提交 implementation milestone 後前進 `fort_hulao`
 - `2026-03-20` `wild_puyang_forest` 已完成第一輪 runtime implementation、commit `a9c7398`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-20` `city_chenliu` 已完成第一輪 runtime implementation、commit `e6756ff`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 
@@ -417,16 +419,16 @@
 
 ## Current Recommended Next Step
 
-`dng_guandu_battlefield` 已進入 `spec_ready_for_commit`。下一步應先 commit 目前的 spec milestone；commit 後開始 Milestone 2，依 `area/dng_guandu_battlefield/map.md` 生成 `roo` 並建立最小 `index / mob / obj / res / shp`。
+`dng_guandu_battlefield` 已進入 `implementation_ready_for_commit`。下一步應先 commit 目前的 runtime milestone；commit 後把它移到 done，並開始 `fort_hulao` 的 spec milestone。
 
 ## Next Action
 
-- commit `dng_guandu_battlefield` 的 spec milestone
-- commit 後開始 Milestone 2：
-  - 依 `map.md` 生成 `roo/14001-*`
-  - 建立最小 `index / mob / obj / res / shp`
-  - 暫時只保留 spec-level world link，不提早製造假 boundary room
+- commit `dng_guandu_battlefield` 的 implementation milestone
+- commit 後開始 `fort_hulao`：
+  - 建立單區 plan
+  - 建立 `area/fort_hulao/map.md`
+  - 跑 `tools/mapmd_validate.py` 與 generator `--validate-only`
 
 ## Next Prompt
 
-`先 commit 目前 dng_guandu_battlefield 的 spec milestone；commit 後再依 area/dng_guandu_battlefield/map.md 開始 Milestone 2，生成 roo 草案並建立最小 runtime index/mob/obj/res/shp。`
+`先 commit 目前 dng_guandu_battlefield 的 implementation milestone；commit 後把它標記為 done，再開始 fort_hulao 的 spec milestone。`

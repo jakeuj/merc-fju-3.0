@@ -1,0 +1,24 @@
+Vnum            14008
+Name            灰燼側帶~
+Description
+這條偏路覆著不自然厚的灰層，腳步聲會被吞掉大半，只剩甲片互撞的細響更清楚。若有人想在戰場上悄悄靠近別人，這大概是比正面壕線舒服得多的辦法。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        14007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        14009
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

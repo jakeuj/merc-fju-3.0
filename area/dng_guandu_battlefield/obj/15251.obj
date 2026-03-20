@@ -1,0 +1,14 @@
+Vnum            15251
+Name            scorched ration tin~
+ShortDesc       焦黑軍糧盒(ration tin)~
+Description
+一只仍帶著煙焦味的焦黑軍糧盒(ration tin)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           24
+Value           16 28 4 0
+Weight          1
+Cost            80
+End

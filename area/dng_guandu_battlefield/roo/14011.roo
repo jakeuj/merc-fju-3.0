@@ -1,0 +1,36 @@
+Vnum            14011
+Name            瞭望塹口~
+Description
+高地下方另有一道向北開的塹口，位置既能俯視主線，又能迅速切回地面。這種設計不為好看，只為在最短時間裡把命令或埋伏送到最該出現的地方。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        14010
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14012
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         瞭望~
+End
+
+#Enquire
+Keyword         塹口~
+End
+
+#Enquire
+Keyword         北線~
+End
+
+End
