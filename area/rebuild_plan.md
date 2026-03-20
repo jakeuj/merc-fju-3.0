@@ -586,33 +586,33 @@
     - `ref/sanguo-area-specfirst` 已提供可改寫 scaffold，可直接轉成目前南境最南端港城所需版本
   - compliance_check:
     - compliant；在 `Dungeon` 之後切回 `City`，延續 `city_guiyang` 預留南向主線，也恢復主線母城節奏
-- `wild_south_sea_route`
-  - area_family: `Wild`
-  - reserved_room_block: `15601-15630`
-  - level_range: `98-100`
-  - theme: `探險`
-  - subtheme: `外海南航 / 礁岸水道`
+- `dng_boat_graveyard`
+  - area_family: `Dungeon`
+  - reserved_room_block: `15701-15730`
+  - level_range: `99-100`
+  - theme: `探險遺跡`
+  - subtheme: `沉舟 / 水鬼`
   - ref_inputs_used:
     - `area/world_map.md`
     - `ref/Readme.md`
     - `ref/sanguo-progression-map.md`
     - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/city_nanhai/map.md`
-    - `ref/sanguo-area-specfirst/area/district_jianye_port/map.md`
+    - `ref/sanguo-area-specfirst/area/dng_boat_graveyard/map.md`
+    - `ref/world-graph.md`
     - `docs/3yWebsite/docs/data/players.json`
     - `docs/3yWebsite/docs/data/skills.json`
-    - `plans/area/0070-city-nanhai.md`
+    - `plans/area/0071-wild-south-sea-route.md`
   - ref_inputs_deferred:
-    - `ref/sanguo-area-specfirst/area/wild_nanman_jungle/map.md`
-    - `docs/3yWebsite/map/shanyan.html`
+    - `ref/sanguo-area-specfirst/area/wild_pirate_islands/map.md`
+    - `ref/sanguo-area-specfirst/area/fort_naval_base/map.md`
     - 各類原型工具與模擬系統
   - theme_basis:
-    - `city_nanhai` 已在 spec 與 runtime 內明確預留南向外海南航，適合把主線從港城正式推到海路 wild
-    - `progression-map` 的高等帶強調遠征探索，支持在南海之後轉入更開闊的海上前帶而不是再次折回內陸城市
-    - `district_jianye_port` ref scaffold 提供了港埠與棧橋語彙，可借來支撐南海後的水路辨位與港外分流設計
-    - `players.json / skills.json` 沒有提供南海後穩定城市服務鏈證據，因此先做 `Wild` 更符合 queue variety 與港城後節奏
+    - `wild_south_sea_route` 已把南境節奏從港城推進到外海前帶，適合在 `Wild` 之後切進一個更封閉的海上遺跡 dungeon
+    - `ref` scaffold 已提供 `dng_boat_graveyard` 類型，能直接支撐沉舟、殘艙與水鬼壓迫感的題材連續性
+    - `world-graph` 與題材分布表都支持在水域鏈上安排 wreck / ruins 類節點，讓海上主線不只是一段更遠的平面水道
+    - `players.json / skills.json` 沒有提供南海後必須立即回到另一座城市服務鏈的明確證據，因此在 `Wild` 後切入 `Dungeon` 更符合 queue variety
   - compliance_check:
-    - compliant；在 `City` 之後切回 `Wild`，延續 `city_nanhai` 預留南向主線，也維持 family 多樣性
+    - compliant；在 `Wild` 之後切入 `Dungeon`，延續海路高風險節奏，也避免 queue 在港口 / 海路題材上連續堆疊過多同 family wild
 
 ## Todo
 
@@ -620,25 +620,22 @@
 
 ## In Progress
 
-- `wild_south_sea_route`
-  - plan: `plans/area/0071-wild-south-sea-route.md`
-  - delivery_gate: `implementation_ready_for_commit`
+- `dng_boat_graveyard`
+  - plan: `plans/area/0072-dng-boat-graveyard.md`
+  - delivery_gate: `spec_ready_for_commit`
   - current_status:
-    - 已建立最小可載入 runtime scaffold：`index / mob / obj / res / shp / roo`
-    - 已完成 `city_nanhai/15510 <-> wild_south_sea_route/15601` 正式 boundary 掛接
-    - `tools/mapmd_validate.py` 已通過 `wild_south_sea_route` 與更新後的 `city_nanhai`
-    - generator `--validate-only` 已通過，generator write 已寫出 `wild_south_sea_route` 與更新後的 `city_nanhai` `roo`
-    - WSL Linux build 已通過
-    - startup smoke test 已通過；成功訊號見 `log/1037.log`
-    - `debug/badobject` 為空，`debug/error` 僅有 timeout 強制關機路徑
+    - 已建立第一版 spec 與 `mapmd-json`
+    - 題材定位為南海外航道之後的沉舟 wreck dungeon
+    - 預留 `up -> wild_south_sea_route`、`down -> sec_water_ruins` 與 `south -> sea_outer_isles`
+    - `tools/mapmd_validate.py` 已通過
+    - generator `--validate-only` 已通過
   - next_action:
-    - commit `wild_south_sea_route` 的 implementation milestone
-    - commit 後將 `wild_south_sea_route` 移入 `done`
-    - 盤點並建立下一個主世界候選 area 的 spec milestone
+    - commit `dng_boat_graveyard` 的 spec milestone
 
 
 ## Done
 
+- `2026-03-21` `wild_south_sea_route` 已完成第一輪 runtime implementation、commit `3776070`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `city_nanhai` 已完成第一輪 runtime implementation、commit `4662263`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `dng_serpent_temple` 已完成第一輪 runtime implementation、commit `528e4a2`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `wild_nanman_jungle` 已完成第一輪 runtime implementation、commit `61cb0c6`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
@@ -774,7 +771,7 @@
 
 ## Current Recommended Next Step
 
-`wild_south_sea_route` 已完成第一輪 runtime scaffold、boundary 掛接、WSL build 與 startup smoke test。下一步應先提交 implementation milestone，接著直接盤點並建立下一個待建 area 的 spec milestone。
+`wild_south_sea_route` 已完成第一輪 runtime implementation 並提交。下一步應先驗證並提交 `dng_boat_graveyard` 的 spec milestone，接著直接做 implementation milestone，補 boundary、roo、index/mob/obj/res/shp 與 smoke test。
 
 ## Next Action
 
@@ -797,12 +794,14 @@
 - 完成 `city_nanhai`：
   - 已提交 implementation milestone
 - 完成 `wild_south_sea_route`：
-  - 已建立可載入 runtime scaffold
-  - 已完成 `15510 <-> 15601` boundary 掛接
-  - 已完成 `map.md` validate、generator write、WSL build 與 startup smoke test
-  - commit implementation milestone
-  - commit 後直接盤點下一個待建 area 並建立 spec
+  - 已提交 implementation milestone
+- 完成 `dng_boat_graveyard`：
+  - 建立第一版 spec 與 `mapmd-json`
+  - 執行 `map.md` validate
+  - 執行 generator `--validate-only`
+  - commit spec milestone
+  - commit 後直接做 implementation milestone
 
 ## Next Prompt
 
-`先 commit 目前 wild_south_sea_route 的 implementation milestone；commit 後直接盤點並建立下一個待建 area 的 spec milestone。`
+`先驗證並 commit 目前 dng_boat_graveyard 的 spec milestone；commit 後直接做 implementation milestone，補 boundary、roo、index/mob/obj/res/shp，並跑 WSL build 與 startup smoke test。`
