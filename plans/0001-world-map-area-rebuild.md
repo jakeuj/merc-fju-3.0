@@ -121,6 +121,23 @@ AREA rebuild 的預設工作單位是「一輪任務只處理一個 area milesto
 - 讓 commit、review、smoke test 與問題回溯都能對準單一 area
 - 讓 `area/rebuild_plan.md` 真正能當 queue，而不是鬆散記事本
 
+## Queue Variety Governance
+
+主世界 rebuild 的 queue 治理不能只看哪個 area 最容易沿既有 `world link` 往下接，而必須同時維持三國世界的節奏、玩法 loop 與題材分布。
+
+規則：
+
+- 當 `candidate queue`、`todo`、`in_progress` 全為空時，不得把「最新完成 area 的預留 `world link`」直接視為 next actionable area
+- 重新盤點候選區時，至少同時檢查：
+  - `area/world_map.md`
+  - `ref/sanguo-progression-map.md`
+  - `ref/三國-MUD-題材分布表.md`
+  - `docs/3yWebsite/docs/data/players.json`
+  - `docs/3yWebsite/docs/data/skills.json`
+- active queue 預設要交錯配置 `City / Wild / Dungeon / Fort` 等不同 family，不得連續安排三個同 family area
+- 若新候選區只是「更深、更暗、更滿級」而沒有新的玩家 loop、交通價值或題材轉換，不得進 `todo`
+- `sec_rift_spirit_core_*` 晚期鏈自 `sec_rift_spirit_core_gehennal` 起停止自動續寫；未來若要恢復，必須先建立獨立的 endgame world-design 任務
+
 ## Area Plan Contract
 
 每個 `plans/area/NNNN-area-slug.md` 至少應固定回答以下欄位，避免單區設計漂離世界層約束：
@@ -132,6 +149,9 @@ AREA rebuild 的預設工作單位是「一輪任務只處理一個 area milesto
 - `planned_vnum_range`
 - `external_links`
 - `delivery_gate`
+- `experience_type`
+- `player_loop_focus`
+- `contrast_with_previous_two`
 - `ref_inputs_used`
 - `ref_inputs_deferred`
 - `theme_basis`
@@ -144,6 +164,9 @@ AREA rebuild 的預設工作單位是「一輪任務只處理一個 area milesto
 - `external_links` 要明講此區會接到哪些既有 area / room，避免 generator 與 runtime boundary room 各自講各話
 - `planned_vnum_range` 代表首段保留區，不等於目前已落地的最後一號
 - `delivery_gate` 雖然由 tracker 驅動，但單區 plan 也應保留當前語意與變更理由，方便回讀設計脈絡
+- `experience_type` 要明講這區提供的是城市、官道、山野、戰場、關隘、古墓、秘境等哪種三國體驗
+- `player_loop_focus` 要明講此區承接的是補給、轉職、學技、旅行、練功、掉寶、陣營或任務中的哪幾種玩家 loop
+- `contrast_with_previous_two` 要明講它和前兩個已完成 area 的玩法 / 題材差異，避免 queue 再次滑回連續同質區
 - 若這輪只是先做 spec、尚未動 runtime data，也要先把 external links 與 boundary assumptions 寫清楚
 - 若單區沒有 quest mark 依賴，不必因為 `data/quest` 目前為空而補 quest 欄位
 - 只有當單區 runtime flow 明確依賴 `mpsetquest`、`mpremquest`、`isquest` 時，才需要在單區 plan 額外記錄 quest keyword、觸發來源與驗證方式
@@ -185,6 +208,27 @@ AREA rebuild 的預設工作單位是「一輪任務只處理一個 area milesto
 - 只有當 area rebuild 明確進入工具化、經濟、勢力或歷史事件模擬階段，才把上述原型納入本輪實作依據
 - 在那之前，這些資料夾只保留為未來延伸方向
 
+## Template Selection Policy
+
+重排後的主世界 queue 預設要優先套用符合當前 area family 的模板，而不是沿最近完成的秘境 / 深井區直接複製。
+
+規則：
+
+- `City` 類 area，優先參考：
+  - `ref/mud-area-templates/city_loyang.md`
+  - `ref/sanguo-area-specfirst/area/city_*/map.md`
+- `Fort` 類 area，優先參考：
+  - `ref/mud-area-templates/fort_hulao.md`
+  - `ref/sanguo-area-specfirst/area/fort_*/map.md`
+- `Dungeon` 類 area，優先參考：
+  - `ref/mud-area-templates/dng_royal_tomb.md`
+  - `ref/sanguo-area-specfirst/area/dng_*/map.md`
+- `Wild / Outskirts / Road` 類 area，優先參考：
+  - `ref/area-template-wild_loyang_east.md`
+  - `ref/sanguo-area-specfirst/area/wild_*/map.md`
+  - `ref/sanguo-area-specfirst/area/road_*/map.md`
+- 若任務不是明確延續 `sec_rift_*` 或 `sec_rift_spirit_core_*` 鏈，不得把這些晚期秘境區當作主世界 queue 的預設模板
+
 ## Tracking Model
 
 `area/rebuild_plan.md` 應固定包含：
@@ -224,6 +268,22 @@ AREA rebuild 的預設工作單位是「一輪任務只處理一個 area milesto
 - `101..120` 只代表 current loader 容忍範圍，不是未來新建 area 的設計空間
 - `95..100` 視為 plateau endgame band；若未來還要往更深層擴寫，危險度應靠 encounter 結構、密度、資源壓力、路線壓迫、抗性與特殊機制增加，而不是再把怪物等級推過 `100`
 - 晚期單區若因重壓縮而共享相近等級帶，必須在 spec / plan 文案中明講它們的玩法差異，不得只靠數字虛增深度
+
+## Endgame Positioning Reset
+
+`sec_rift_spirit_core_*` 晚期鏈保留為可載入、可回讀的 endgame 祕境線，但不再作為主世界 rebuild 的預設主幹。
+
+規則：
+
+- 既有已完成的 spirit-core 區全部保留，不回滾、不重構
+- 主世界 rebuild 的 active queue 回到三國地表與交通骨架，例如 `洛陽 -> 陳留 -> 濮陽 / 官渡 -> 虎牢 -> 襄陽 / 江夏 -> 建業`
+- `sec_rift_spirit_core_gehennal` 之後的預留 `down` link 不再自動推進下一區
+- 若未來要新增 endgame 內容，預設應優先考慮：
+  - `三國戰場` event
+  - `古神遺跡` raid
+  - `魔界裂隙` secret / dungeon
+  - `天界入口` secret
+- 晚期內容必須靠玩法型態、壓力結構與世界角色分化，而不是再做一個名稱不同但體驗相近的深井區
 
 ## Room VNUM Reservation Policy
 
@@ -394,21 +454,37 @@ global workflow milestone 最小產出：
 
 - 若 `area/rebuild_plan.md` 有 `in_progress`，優先續做該區
 - 否則選第一個 `todo` 且無 blocker 的 area
+- 若 `in_progress` 與 `todo` 都為空，先重建 `candidate queue` 與 `todo`，再決定 next actionable area
 - 這裡的 `next area` 一律解讀為 next actionable area，而不是 candidate queue 的下一個新候選
 - 因此只要 `in_progress` 仍存在，就不得切到下一個 `todo`；除非目前區域已轉成 `done`、`blocked` 或 `abandoned`
+- 當 queue 為空時，不得把最新完成 area 的預留 `down` / `world link` 直接視為下一區；必須先回到 `world_map + progression + players/skills` 的盤點流程
 
 Agent loop 可視為：
 
 1. 讀 `area/rebuild_plan.md`
 2. 取 `in_progress`，否則取第一個可做的 `todo`
-3. 讀對應單區 plan
-4. 更新或驗證 `map.md`
-5. 投影 `.roo` 並補 runtime data
-6. 做對應 validation
-7. 依結果更新 `delivery_gate`
-8. 只有在 gate 允許時才結束當前區或移往下一區
+3. 若兩者皆空，先根據 `world_map + progression + 題材分布 + players/skills` 重建 queue
+4. 讀對應單區 plan
+5. 更新或驗證 `map.md`
+6. 投影 `.roo` 並補 runtime data
+7. 做對應 validation
+8. 依結果更新 `delivery_gate`
+9. 只有在 gate 允許時才結束當前區或移往下一區
 
-## Candidate Order
+## Active Candidate Order (2026-03-20 Reset)
+
+當前 active queue 以三國主線節奏與玩法差異為優先，固定採 `City -> Wild -> Dungeon -> Fort -> City -> Wild` 交錯：
+
+1. `city_chenliu`
+2. `wild_puyang_forest`
+3. `dng_guandu_battlefield`
+4. `fort_hulao`
+5. `city_xiangyang`
+6. `wild_jiangxia_river`
+
+這一輪的預設第一個正式 `todo` 是 `city_chenliu`，因為它能把 queue 從 late spirit-core plateau 拉回中原主線城市 hub，並承接後續 `濮陽 / 官渡 / 虎牢 / 襄陽` 的地表節奏。
+
+## Historical Initial Candidate Order
 
 依 `area/world_map.md` 目前排序，第一批新 AREA 候選為：
 
@@ -426,7 +502,7 @@ Agent loop 可視為：
 12. `sec_rift_abyss`
 13. `sec_rift_nadir`
 
-## Theme Allocation
+## Historical Initial Theme Allocation
 
 依 `theme-design-patterns.md`，世界級規劃不能只看拓樸，也要看題材分布。第一批候選先固定題材定位：
 

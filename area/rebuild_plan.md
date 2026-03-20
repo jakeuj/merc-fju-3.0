@@ -89,6 +89,19 @@
   - `compliance_check`
 - `docs/3yWebsite` 仍視為 reference-only 舊站鏡像；若未來真的改動現行 runtime 的 area / skill registry，要另同步 `docs/current-game/*`。
 
+## Queue Variety Gate
+
+- 當 `candidate queue`、`todo`、`in_progress` 全為空時，禁止把「最新完成 area 的預留 `world link`」直接視為 next actionable area
+- 新的 next actionable area 必須先一起盤點：
+  - `area/world_map.md`
+  - `ref/sanguo-progression-map.md`
+  - `ref/三國-MUD-題材分布表.md`
+  - `docs/3yWebsite/docs/data/players.json`
+  - `docs/3yWebsite/docs/data/skills.json`
+- active queue 預設要交錯配置 `City / Wild / Dungeon / Fort` 等不同 family，不得連續安排三個同 family area
+- 若新候選區只能回答「更深、更暗、更滿級」，但補不出新的玩家 loop、交通價值或題材差異，不得放進 `todo`
+- `sec_rift_spirit_core_*` 晚期鏈在 `sec_rift_spirit_core_gehennal` 暫停；未來若要恢復，必須先建立獨立的 endgame world-design 任務
+
 ## Fixed Prompt
 
 日後延續工作使用固定主 prompt：
@@ -99,11 +112,13 @@
 
 - 若 `in_progress` 區塊有項目，優先續做該區
 - 否則從 `todo` 區塊選第一個沒有 blocker 的 area
+- 若 `candidate queue`、`todo`、`in_progress` 全為空，先重建 queue 與 `todo`
 - 若當前區塊完成，更新本檔後再移動到下一區
 - 這套流程中的 `next area` 指的是 next actionable area，不是 candidate queue 的下一個新名字
 - 因此只要仍存在 `in_progress` 項目，就不得跳去下一個 `todo`；除非目前區域已明確標成 `done`、`blocked` 或 `abandoned`
 - 若使用者只說「繼續下一個 area / next area」，預設語意仍是「續做目前可執行的 area」，不是直接切換到候選序列的下一個新區
 - 每次從 `todo` 推進到 `in_progress`，或完成一輪單區實作後，都要同步檢查對應單區 plan 是否已補上 `ref_inputs_used / ref_inputs_deferred / theme_basis / compliance_check`
+- 若 queue 為空，不得把最新完成 area 的 `down` / 預留 world link 直接當成下一區；必須先回到 `world_map + progression + players/skills` 盤點
 
 ## Room Block Rules
 
@@ -120,11 +135,148 @@
 
 ## Candidate Queue
 
-(目前無 `candidate queue` 項目。)
+- `city_chenliu`
+  - area_family: `City`
+  - reserved_room_block: `13801-13830`
+  - level_range: `15-26`
+  - theme: `歷史城市`
+  - subtheme: `中原樞紐城 / 軍旅與江湖中繼`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `docs/3yWebsite/map/chenliu.html`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `ref/mud-area-templates/city_loyang.md`
+    - `ref/sanguo-area-specfirst/area/city_chenliu/map.md`
+  - ref_inputs_deferred:
+    - `mud-world-builder/`
+    - `mud-ai-map-generator/`
+    - `mudlet-map-generator/`
+    - `mud-world-map-editor/`
+    - `mud-world-map-editor-pro/`
+    - 各類經濟/勢力/歷史事件模擬系統
+    - `sec_rift_spirit_core_*` 晚期鏈模板
+  - theme_basis:
+    - `sanguo-progression-map` 的 Lv15 主線城市槽位
+    - `題材分布表` 的歷史城市主節點
+    - 陳留舊站地圖的服務節點密度
+    - `players.json / skills.json` 提供的師父、補給與旅行 loop
+  - compliance_check:
+    - compliant；本區是主世界 queue reset 的第一個正式 `todo`，明確從晚期 spirit-core 深井鏈切回三國城市節奏
+- `wild_puyang_forest`
+  - area_family: `Wild`
+  - reserved_room_block: `13901-13930`
+  - level_range: `20-30`
+  - theme: `探險`
+  - subtheme: `中原林野 / 官渡前哨外圍`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/road_puyang/map.md`
+    - `ref/sanguo-area-specfirst/area/city_puyang/map.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `city_chenliu` 之後的野外承接帶
+    - 濮陽與官渡之間需要戰前探索型練功區
+  - compliance_check:
+    - compliant；與前一個 `City` 形成題材切換，不沿用深井鏈
+- `dng_guandu_battlefield`
+  - area_family: `Dungeon`
+  - reserved_room_block: `14001-14030`
+  - level_range: `24-34`
+  - theme: `軍旅`
+  - subtheme: `古戰場 / 官渡鏖兵`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/mud-area-templates/dng_royal_tomb.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - progression 主線的官渡戰場位置
+    - 題材從林野轉向戰地 dungeon
+  - compliance_check:
+    - compliant；提供戰場型 dungeon，而不是再做一個地下深井
+- `fort_hulao`
+  - area_family: `Fort`
+  - reserved_room_block: `14101-14120`
+  - level_range: `28-36`
+  - theme: `軍旅`
+  - subtheme: `東都門戶 / 虎牢雄關`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/mud-area-templates/fort_hulao.md`
+    - `ref/sanguo-area-specfirst/area/fort_hulao/map.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `world_map` 的戰略 choke point
+    - 模板成熟度高，適合作為 queue reset 後的高辨識度軍事關卡
+  - compliance_check:
+    - compliant；屬於明確三國關隘，不是抽象 endgame 秘境
+- `city_xiangyang`
+  - area_family: `City`
+  - reserved_room_block: `14201-14230`
+  - level_range: `35-45`
+  - theme: `歷史城市`
+  - subtheme: `荊州門戶 / 軍旅樞紐`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/city_xiangyang/map.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/map/shanyan.html`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - 主線往荊州推進的城市樞紐
+    - 與 `fort_hulao` 形成軍事關卡後的城市回補節奏
+  - compliance_check:
+    - compliant；維持 `City -> Wild/Dungeon/Fort -> City` 節奏
+- `wild_jiangxia_river`
+  - area_family: `Wild`
+  - reserved_room_block: `14301-14330`
+  - level_range: `40-50`
+  - theme: `探險`
+  - subtheme: `江夏水道 / 水軍河岸`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/city_jiangxia/map.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - 由襄陽往江夏延伸的水路野外
+    - 以河道、水軍與交通風險提供主線後段變化
+  - compliance_check:
+    - compliant；以水域野外收束第一輪重排 queue，不延續 spirit-core 尾鏈
 
 ## Todo
 
-(目前無 `todo` 項目。)
+- `city_chenliu`
+  - plan: `plans/area/0053-city-chenliu.md`
+  - delivery_gate: `spec_in_progress`
+  - next_action:
+    - 建立 `city_chenliu` 單區 spec-first plan
+    - 依陳留舊站地圖與玩家攻略補齊服務 loop
+    - 下一輪建立 `area/city_chenliu/map.md` 第一版 spec 草案
 
 ## In Progress
 
@@ -133,6 +285,7 @@
 
 ## Done
 
+- `2026-03-20` 已正式凍結 `sec_rift_spirit_core_*` 晚期尾鏈的自動續寫流程，active queue 改回 `City / Wild / Dungeon / Fort` 交錯的三國主線節奏，並把 `city_chenliu` 設為下一個正式 `todo`
 - `2026-03-19` 已完成晚期 `sec_rift_*` 鏈的 `82-100` plateau 重壓縮，對齊 `plans/area/*`、`map.md`、`mapmd-json` 與 runtime `mob/*.mob`，並補上 `tools/mapmd_validate.py` 的 `level_range` / runtime / `content.json` guardrail
 - `area/world_map.md` 已建立，並整合 `help/map.hlp`、`docs/3yWebsite/docs/maps.md`、`docs/3yWebsite/docs/data/maps.json`、`docs/3yWebsite/map/*.html`
 - `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已建立，整理目前 loadable runtime area registry 與重建鏈摘要
@@ -248,4 +401,19 @@
 
 ## Current Recommended Next Step
 
-目前沒有 `in_progress` 或 `todo` 項目。這一輪最合適的下一步是依固定流程盤點下一個 actionable area，必要時先用 `players.json` 與 `skills.json` 補玩法耦合，再建立新區 spec。
+將 `city_chenliu` 視為目前第一個正式 actionable area：先依 `plans/area/0053-city-chenliu.md`、`area/world_map.md`、`ref/mud-area-templates/city_loyang.md`、`ref/sanguo-area-specfirst/area/city_chenliu/map.md` 與 `docs/3yWebsite/map/chenliu.html` 建立 `area/city_chenliu/map.md` 第一版 spec，優先落地城市服務 loop、交通節點與師父 / 補給配置，而不是先做 runtime data。
+
+## Next Action
+
+- 把 `city_chenliu` 從 queue reset 的第一個 `todo` 推進成實際 spec work
+- 先建立 `area/city_chenliu/map.md` 第一版，明確包含：
+  - `west-gate`
+  - `main-street`
+  - `service-quarter`
+  - `militia-quarter`
+  - `south-station`
+- 把 `食堂 / 錢莊 / 武器店 / 防具店 / 打鐵舖 / 馬廄 / 太守衙門 / 虎豹騎招募處 / 義勇軍 / 拳館 / 驛站` 放進節點或 `#Enquire`
+
+## Next Prompt
+
+`根據 plans/area/0053-city-chenliu.md、area/world_map.md、ref/mud-area-templates/city_loyang.md、ref/sanguo-area-specfirst/area/city_chenliu/map.md 與 docs/3yWebsite/map/chenliu.html，建立 area/city_chenliu/map.md 的第一版 spec 草案。`
