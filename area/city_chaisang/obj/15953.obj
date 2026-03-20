@@ -1,0 +1,15 @@
+Vnum            15953
+Name            chaisang side saber~
+ShortDesc       柴桑側刀(side saber)~
+Description
+一柄常見於城門巡檢與江岸護行手中的柴桑側刀(side saber)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           65
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            240
+End

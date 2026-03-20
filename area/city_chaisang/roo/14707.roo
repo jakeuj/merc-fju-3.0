@@ -1,0 +1,36 @@
+Vnum            14707
+Name            南轉巷口~
+Description
+巷子在這裡向南敞開，牆邊路牌把長沙與赤壁方向分得一清二楚。這不像一條多麼威風的大道，卻是柴桑真正作為轉場城市最重要的證明之一。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14706
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14710
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         長沙~
+End
+
+#Enquire
+Keyword         赤壁~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

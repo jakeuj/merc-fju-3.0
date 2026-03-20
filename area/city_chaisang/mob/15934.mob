@@ -1,0 +1,33 @@
+Vnum            15934
+Name            tower watch captain~
+ShortDesc       望臺哨官~
+Description
+這名立在江樓望臺上的哨官站姿極穩，像只要人還在這裡，整條江岸與外
+側來路都還在掌握中。他不常開口，但每次視線掃過街面，都讓人知道這
+座城並不是只有買賣與轉運而已。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       200
+Level           68
+Hitroll         4
+Protect         0
+Damroll         4
+Str             14
+Int             12
+Wis             13
+Dex             13
+Con             14
+Hp              3200
+Mana            100
+Move            130
+Class           0
+Gold            240
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

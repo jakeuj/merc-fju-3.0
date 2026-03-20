@@ -1,0 +1,40 @@
+Vnum            14701
+Name            西向江門~
+Description
+江岸城門迎著來自江夏方向的風聲與腳步，門下地面因長年潮氣而顯得微黑，卻仍維持著城市該有的整齊與秩序。剛從濕地與古廟回來的人，多半會在這裡第一次真正鬆下肩膀。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14412
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14702
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         江夏~
+End
+
+#Enquire
+Keyword         進城~
+End
+
+End

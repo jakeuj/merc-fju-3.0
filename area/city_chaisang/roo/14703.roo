@@ -1,0 +1,40 @@
+Vnum            14703
+Name            江岸主街~
+Description
+主街沿著江岸往城內拉開，路邊既有做水路生意的鋪面，也有專門招呼行旅與搬貨客的棚攤。這裡的熱鬧不像大都城那樣擁擠，而是一種總和渡運、補給與消息綁在一起的實用秩序。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14701
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         主街~
+End
+
+#Enquire
+Keyword         碼頭~
+End
+
+End

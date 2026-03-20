@@ -1,0 +1,33 @@
+Vnum            15933
+Name            civic clerk~
+ShortDesc       城務書吏~
+Description
+這名抱著文冊與榜紙的城務書吏看起來不像武人，卻對每條去路和每份告
+示都記得極清楚。只要你肯多問兩句，他大概連哪條道上最近最忙都能說
+得頭頭是道。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       180
+Level           66
+Hitroll         2
+Protect         0
+Damroll         2
+Str             11
+Int             16
+Wis             15
+Dex             11
+Con             12
+Hp              2500
+Mana            150
+Move            120
+Class           0
+Gold            200
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

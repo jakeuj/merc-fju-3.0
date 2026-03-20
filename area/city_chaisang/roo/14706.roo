@@ -1,0 +1,32 @@
+Vnum            14706
+Name            藥材棚下~
+Description
+棚下掛滿乾燥藥材與驅濕香包，空氣裡混著草藥、桐油與潮氣，聞起來既像藥鋪，也像渡岸工人常來補命的一角。和江夏相比，這裡更像一座習慣把長途水路當日常的城市。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14707
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         藥鋪~
+End
+
+#Enquire
+Keyword         水路~
+End
+
+End

@@ -1,0 +1,52 @@
+Vnum            14704
+Name            主街十字~
+Description
+幾條街巷在這裡交會，榜牌、店招與城務告示把柴桑作為轉場城市的角色寫得清清楚楚。站在十字口時，你會很自然地明白哪裡能補給、哪裡能問路、哪裡則會把你再送回更危險的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14709
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        14711
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         柴桑~
+End
+
+#Enquire
+Keyword         官府~
+End
+
+#Enquire
+Keyword         長沙~
+End
+
+End

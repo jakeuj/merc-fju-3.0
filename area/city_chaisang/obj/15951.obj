@@ -1,0 +1,14 @@
+Vnum            15951
+Name            river trail ration~
+ShortDesc       江路乾糧包(trail ration)~
+Description
+一包適合在江岸長途轉場時攜帶的江路乾糧包(trail ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           62
+Value           24 38 4 0
+Weight          1
+Cost            120
+End

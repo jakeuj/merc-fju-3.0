@@ -1,0 +1,14 @@
+Vnum            15952
+Name            dockside flask~
+ShortDesc       江岸水囊(dockside flask)~
+Description
+一只給長途江路旅人帶在身邊最順手的江岸水囊(dockside flask)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           62
+Value           12 12 LIQ_WATER 0
+Weight          2
+Cost            140
+End

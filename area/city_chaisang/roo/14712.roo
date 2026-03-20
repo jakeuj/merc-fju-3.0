@@ -1,0 +1,28 @@
+Vnum            14712
+Name            赤壁路標~
+Description
+路標比別處更舊，木面上卻仍能清楚看見指往赤壁戰場舊地的方向。它不像一般城中告示那樣只講日常，反而替柴桑多添了一層離歷史戰痕很近的氣味。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        14708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         赤壁~
+End
+
+#Enquire
+Keyword         戰場~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

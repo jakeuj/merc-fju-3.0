@@ -1,0 +1,32 @@
+Vnum            14705
+Name            水行市集~
+Description
+這一帶的市集把乾糧、油布、水囊、粗繩與臨時替換的小器具都擺得很近，像是專為剛從遠路回來、又或即將再度出發的人準備。即使只是經過，也很難不被其中某樣實用物什拖住腳步。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        14703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14706
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         市集~
+End
+
+#Enquire
+Keyword         補給~
+End
+
+End

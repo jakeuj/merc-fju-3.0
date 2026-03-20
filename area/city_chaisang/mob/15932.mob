@@ -1,0 +1,32 @@
+Vnum            15932
+Name            jiang gate inspector~
+ShortDesc       江門巡檢~
+Description
+這名守在江門附近的巡檢步伐沉穩，目光總在行旅的包裹、腳步與神色間
+來回，比起直接盤問，他更像擅長用看人的方式先判斷來者靠不靠譜。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       150
+Level           64
+Hitroll         3
+Protect         0
+Damroll         3
+Str             13
+Int             11
+Wis             12
+Dex             12
+Con             13
+Hp              2600
+Mana            90
+Move            120
+Class           0
+Gold            180
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

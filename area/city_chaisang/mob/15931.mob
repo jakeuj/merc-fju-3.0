@@ -1,0 +1,32 @@
+Vnum            15931
+Name            riverside quartermaster~
+ShortDesc       柴桑水行掌櫃~
+Description
+這名熟悉江岸來路與貨路的柴桑水行掌櫃站在市集邊，一眼就能看出旅人
+是剛從江夏趕來，還是準備往南邊再走更遠的一段。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           62
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             15
+Wis             15
+Dex             11
+Con             12
+Hp              2000
+Mana            130
+Move            130
+Class           0
+Gold            320
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

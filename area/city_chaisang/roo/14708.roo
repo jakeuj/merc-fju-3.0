@@ -1,0 +1,39 @@
+Vnum            14708
+Name            榜牌前街~
+Description
+一面大榜牌立在街側，貼滿近期船路、糧價與城務盤查的告示。行人經過時都會下意識掃上一眼，彷彿這面榜牌就是柴桑這座城保持順暢運作的節奏器。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14712
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         告示~
+Description
+榜牌上的字跡密密麻麻，卻整理得極有條理，讓人一眼就能看出這座城對人流與船路的重視。
+~
+End
+
+#Enquire
+Keyword         官府~
+End
+
+#Enquire
+Keyword         榜牌~
+End
+
+End

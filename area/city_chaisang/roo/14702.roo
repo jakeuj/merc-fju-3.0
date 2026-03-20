@@ -1,0 +1,24 @@
+Vnum            14702
+Name            蘆洲外牌~
+Description
+城門外側另一角立著一面指往蘆洲與外帶渡岸的舊木牌，牌面雖被風吹得發白，字跡卻仍能讓常走江岸的人一眼辨出方向。這裡像在提醒旅人，柴桑雖是城，卻仍和外側水路綁得很緊。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        14701
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         蘆洲~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

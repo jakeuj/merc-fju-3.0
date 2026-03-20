@@ -23,7 +23,7 @@
   - `west`: `wild_reed_bank` / 江岸蘆洲外帶
   - `south`: `city_changsha` / 荊南主城
   - `south`: `sec_chibi_battlefield` / 戰場祕區
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Reference Entry Points
 
@@ -66,7 +66,29 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_chaisang/map.md --validate-only`
   - passed for `12` room(s)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_jiangxia/map.md`
+  - rewrote `roo/14401-14412` to include the east boundary into `14701`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_chaisang/map.md`
+  - wrote `roo/14701-14712`
+- `python -X utf8 tools/mapmd_validate.py area/city_jiangxia/map.md`
+  - passed with `0 error(s), 0 warning(s)` after aligning the `14412 <-> 14701` boundary
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed; Linux build path reports `merc` up to date
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - startup log `log/1028.log` reached `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/badobject` remained empty
+  - `debug/error` only records the forced shutdown path caused by timeout, not a loader failure
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `city_chaisang`
+- `area/city_chaisang/index` 採首版江岸城市 scaffold，房號段 `14701-14730`、序號 `151`
+- `mob/15931-15934` 與 `obj/15951-15954` 提供水行掌櫃、江門巡檢、城務書吏、望臺哨官與江岸補給骨架
+- `res/city.res` 與 `shp/supplies.shp` 已建立，keeper 為 `15931`
+- `area/city_jiangxia/map.md` 與 `area/city_chaisang/map.md` 已同步把 `14412 <-> 14701` 落成正式 runtime boundary
+- `area/city_jiangxia/roo/14412.roo` 與 `area/city_chaisang/roo/14701.roo` 現在雙向一致
+- `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已加入 `city_chaisang` loadable registry
 
 ## Next Step Prompt
 
-`先 commit 目前 city_chaisang 的 spec milestone；commit 後直接開始 implementation milestone。`
+`先 commit 目前 city_chaisang 的 implementation milestone；commit 後把它標記為 done，再盤點下一個待建 area。`

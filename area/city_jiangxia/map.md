@@ -336,7 +336,8 @@
       "coord": [5, 0, 0],
       "labels": ["east-edge", "world-link-east"],
       "exits": [
-        { "direction": "west", "to": 14408 }
+        { "direction": "west", "to": 14408 },
+        { "direction": "east", "to": 14701, "external": true }
       ],
       "keywords": [
         {

@@ -91,6 +91,7 @@ title: Current Game Areas
 | `city_jiangxia` | 江夏 / 荊州東岸江港主城 | `14401-14430` | `rebuild addition` | 承接江夏水道東界，落成渡口外門、港前主街、市集補給區與水軍官署骨架。 |
 | `wild_yunmeng` | 雲夢大澤 / 迷霧濕地野外 | `14501-14530` | `rebuild addition` | 承接江夏南向水巷外側，落成濕地邊樁、霧中高埠、半沉石碑與深沼前帶。 |
 | `dng_sunken_temple` | 沉沒古廟 / 濕地下探 dungeon | `14601-14630` | `rebuild addition` | 承接雲夢深沼下方，落成積水前庭、封紋中殿、鎖鏈祭室與深封井口骨架。 |
+| `city_chaisang` | 柴桑 / 江岸東口城市 | `14701-14730` | `rebuild addition` | 承接江夏東向幹道，落成西向江門、江岸主街、市集補給與南向轉場區骨架。 |
 
 ## Recent Rebuild Areas
 
@@ -171,6 +172,7 @@ title: Current Game Areas
 - `city_jiangxia`：把江夏水道東界正式接進江港主城，透過渡口外門、港前木棧、市集補給與水軍官署把主線重新收束成東岸港務 hub。
 - `wild_yunmeng`：把江夏南向水巷正式接進雲夢濕地前帶，透過蘆牆泥道、半乾草洲、石碑泥潭與深沼前帶把主線轉入詭異濕地探索節奏。
 - `dng_sunken_temple`：把雲夢深沼正式接進沉沒古廟，透過積水前庭、漏水廊道、封紋中殿與深封井口把主線轉入下探遺跡 dungeon。
+- `city_chaisang`：把江夏東向幹道正式接進柴桑，透過西向江門、江岸主街、水行市集與城務前院把主線重新收束成江岸東進的城市 hub。
 
 ## 維護規則
 

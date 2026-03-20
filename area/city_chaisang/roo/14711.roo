@@ -1,0 +1,24 @@
+Vnum            14711
+Name            江樓望臺~
+Description
+沿著短階走上望臺後，江岸街屋、碼頭棚影與外側水路都盡收眼底。這樣的高度不只是為了景色，更像是讓城裡始終有人能提早看清哪一批船正靠近、哪一條路又要開始忙起來。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       DOWN
+ExitVnum        14704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         望臺~
+End
+
+#Enquire
+Keyword         江岸~
+End
+
+End

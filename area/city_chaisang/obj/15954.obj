@@ -1,0 +1,14 @@
+Vnum            15954
+Name            river tower lamp~
+ShortDesc       江樓提燈(tower lamp)~
+Description
+一盞掛在江樓邊也能把台階與街口照得分明的江樓提燈(tower lamp)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           63
+Value           0 0 40 0
+Weight          2
+Cost            160
+End

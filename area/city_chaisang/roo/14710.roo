@@ -1,0 +1,24 @@
+Vnum            14710
+Name            荊南南牌~
+Description
+南口牌樓把長沙方向的去路立得很明確，牌腳則堆著幾捆剛綁好的布袋與行裝，像總有人準備從這裡再往南走很遠。站在牌樓下時，柴桑作為中繼城市的性格就再明顯不過了。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        14707
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         長沙~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+End

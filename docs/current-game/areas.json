@@ -1260,6 +1260,25 @@
         "plans/area/0061-dng-sunken-temple.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "city_chaisang",
+      "title": "柴桑",
+      "room_range": "14701-14730",
+      "load_order": 68,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_jiangxia",
+      "theme_primary": "歷史城市",
+      "theme_secondary": "江岸城鎮 / 江東門戶",
+      "summary": "承接江夏東向幹道，落成西向江門、江岸主街、市集補給與南向轉場區骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/city_chaisang/index",
+        "area/city_chaisang/map.md",
+        "plans/area/0062-city-chaisang.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

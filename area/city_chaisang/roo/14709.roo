@@ -1,0 +1,24 @@
+Vnum            14709
+Name            城務前院~
+Description
+前院不算宏大，卻收拾得格外利落，進出的人要不是差役，就是有事來報的行腳客。這裡不像單純辦公的地方，更像整座柴桑把水路、城路與南向支線重新整理在一起的節點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        14704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         官府~
+End
+
+#Enquire
+Keyword         差役~
+End
+
+End
