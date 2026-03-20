@@ -1,0 +1,14 @@
+Vnum            16054
+Name            ember watch lamp~
+ShortDesc       望火提燈(ember watch lamp)~
+Description
+一盞在灰坡與戰場夜風中仍勉強守著火芯的望火提燈(ember watch lamp)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           69
+Value           0 0 40 0
+Weight          2
+Cost            175
+End

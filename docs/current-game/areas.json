@@ -1279,6 +1279,25 @@
         "plans/area/0062-city-chaisang.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_chibi_battlefield",
+      "title": "赤壁古戰場",
+      "room_range": "14801-14830",
+      "load_order": 69,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_chaisang",
+      "theme_primary": "軍旅",
+      "theme_secondary": "江岸古戰場 / 戰痕幻境",
+      "summary": "承接柴桑南緣路標，落成灰燼坡帶、殘艦灘口、火痕主陣與祭火高地骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_chibi_battlefield/index",
+        "area/sec_chibi_battlefield/map.md",
+        "plans/area/0063-sec-chibi-battlefield.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

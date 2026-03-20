@@ -1,0 +1,32 @@
+Vnum            16032
+Name            burned bank scout~
+ShortDesc       焦岸斥候~
+Description
+這名在焦岸與灰坡間巡走的斥候腳步輕快，像仍習慣在混亂火線裡先一步找
+到可通行的路。他望向遠處時，神情總像在防著某種尚未完全過去的危險。
+~
+Sentinel        No
+StayArea        Yes
+NoKill          No
+Alignment       120
+Level           70
+Hitroll         4
+Protect         0
+Damroll         4
+Str             13
+Int             11
+Wis             12
+Dex             14
+Con             13
+Hp              2900
+Mana            100
+Move            130
+Class           0
+Gold            200
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

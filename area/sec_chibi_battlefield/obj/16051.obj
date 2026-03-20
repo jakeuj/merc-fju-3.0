@@ -1,0 +1,14 @@
+Vnum            16051
+Name            cinder ration~
+ShortDesc       灰燼乾糧包(cinder ration)~
+Description
+一包專給還要在焦土地帶再撐一段路的人帶著走的灰燼乾糧包(cinder ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           68
+Value           26 40 4 0
+Weight          1
+Cost            150
+End

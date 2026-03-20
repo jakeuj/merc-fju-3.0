@@ -1,0 +1,44 @@
+Vnum            14801
+Name            赤壁北標~
+Description
+由柴桑一路南行到此，路牌與江風一起把人送進這片明顯不再屬於城鎮秩序的地帶。地面摻著灰黑色碎炭，遠處還能看到燒成歪影的木樁與斷旗，像戰火雖已遠去，餘意卻還黏在風裡。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        14712
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         柴桑~
+End
+
+#Enquire
+Keyword         赤壁~
+End
+
+#Enquire
+Keyword         戰場~
+End
+
+End

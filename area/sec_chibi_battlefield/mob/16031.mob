@@ -1,0 +1,32 @@
+Vnum            16031
+Name            ashfront sutler~
+ShortDesc       灰前軍需販~
+Description
+這名守在殘艦灘口附近的灰前軍需販熟悉哪些東西還能用、哪些地方最好
+別踩進去。他說話不多，但眼神總在戰場邊界與旅人的裝備間來回。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       80
+Level           68
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             15
+Wis             14
+Dex             11
+Con             12
+Hp              2300
+Mana            140
+Move            130
+Class           0
+Gold            360
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

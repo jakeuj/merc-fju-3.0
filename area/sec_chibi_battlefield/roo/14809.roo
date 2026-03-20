@@ -1,0 +1,31 @@
+Vnum            14809
+Name            斷戟散地~
+Description
+地上散著斷裂戟尖、燒彎箭鏃與碎裂甲片，像有人在混亂中把整場交鋒的殘痕都抖落在這一小片灰地上。這裡不算廣，卻比任何地方都更像戰鬥真正貼身發生過的證據。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        14808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         斷戟~
+Description
+戟刃與槍鐏散得毫無章法，卻正因如此，更顯得這裡曾不是排演，而是真正的死戰。
+~
+End
+
+#Enquire
+Keyword         兵器~
+End
+
+#Enquire
+Keyword         殘痕~
+End
+
+End

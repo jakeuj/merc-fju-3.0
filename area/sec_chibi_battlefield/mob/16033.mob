@@ -1,0 +1,33 @@
+Vnum            16033
+Name            wreck scavenger~
+ShortDesc       殘艦拾遺客~
+Description
+這名長年在殘艦邊翻找可用物什的拾遺客動作熟練得過分，像已把每一道裂
+舟縫隙都摸得清清楚楚。你不確定他究竟是在找補給，還是在避開某些不想
+被再度驚動的東西。
+~
+Sentinel        No
+StayArea        Yes
+NoKill          No
+Alignment       -40
+Level           72
+Hitroll         5
+Protect         0
+Damroll         5
+Str             12
+Int             12
+Wis             11
+Dex             14
+Con             14
+Hp              3200
+Mana            90
+Move            125
+Class           0
+Gold            240
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1,0 +1,39 @@
+Vnum            14803
+Name            斷旗壕口~
+Description
+幾支斷得只剩半截的旗杆插在壕口邊，旗面早被燒得不成樣子，卻仍保留著曾經指向陣線的姿態。站在這裡時，你會直覺地覺得往前不是單純探路，而是在跨進某種仍未散盡的交鋒記憶。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        14801
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14806
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         斷旗~
+Description
+旗杆焦黑而傾斜，布面只剩幾縷黏在木刺上，像還記得當年曾指向哪一支軍勢。
+~
+End
+
+#Enquire
+Keyword         陣線~
+End
+
+#Enquire
+Keyword         戰火~
+End
+
+End

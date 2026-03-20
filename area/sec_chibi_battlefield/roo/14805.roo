@@ -1,0 +1,56 @@
+Vnum            14805
+Name            焦木坡面~
+Description
+坡面斜斜朝主戰場展開，幾截被燒空的木柱從灰裡探出頭來，像一排早已倒下的拒馬骨架。視野在這裡開始往南拉開，戰場的開闊與危險也同時變得更真切。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        14802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        14804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14806
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        14811
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         主陣~
+End
+
+#Enquire
+Keyword         江風~
+End
+
+End

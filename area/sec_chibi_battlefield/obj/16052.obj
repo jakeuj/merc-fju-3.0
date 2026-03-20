@@ -1,0 +1,14 @@
+Vnum            16052
+Name            ash canteen~
+ShortDesc       焦岸水囊(ash canteen)~
+Description
+一只外皮沾著灰屑與炭痕的焦岸水囊(ash canteen)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           68
+Value           12 12 LIQ_WATER 0
+Weight          2
+Cost            165
+End

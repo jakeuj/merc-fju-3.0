@@ -1,0 +1,43 @@
+Vnum            14812
+Name            祭火殘臺~
+Description
+石臺一半傾倒在岸邊碎石與焦木之間，另一半仍保留著被煙熏黑的紋路。它看起來不像普通軍營用具，更像戰後有人曾在此停留、祭告、或試圖替這片地留下某種能被記住的意義。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        14811
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        14807
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         祭臺~
+Description
+石面紋路已被煙火熏得模糊，仍能看出它不是自然形成，而是帶著某種儀式意圖所立。
+~
+End
+
+#Enquire
+Keyword         祭火~
+End
+
+#Enquire
+Keyword         異象~
+End
+
+#Enquire
+Keyword         出口~
+End
+
+End

@@ -1,0 +1,40 @@
+Vnum            14802
+Name            灰燼緩坡~
+Description
+坡面覆著一層被踩碎的灰燼與燒裂木片，每走一步都會帶起細碎黑屑。這裡不像真正的山坡，更像曾有大量帳棚、器械與火線在此聚集，等一切燒過之後，只留下高低起伏的灰色地脈。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        14801
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        14804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         焦土~
+End
+
+#Enquire
+Keyword         灰燼~
+End
+
+End

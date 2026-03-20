@@ -1,0 +1,40 @@
+Vnum            14806
+Name            殘艦灘口~
+Description
+江岸這一帶堆著燒裂船板、斷槳與被火熏黑的纜繩，殘骸在潮聲裡撞擊出乾硬聲響。比起一般水邊，這裡更像一段被水留住、卻始終沒被水真正洗乾淨的戰敗遺面。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        14803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        14805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14807
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         殘艦~
+End
+
+#Enquire
+Keyword         江岸~
+End
+
+End

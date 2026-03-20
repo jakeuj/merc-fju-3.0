@@ -1,0 +1,52 @@
+Vnum            14808
+Name            火痕主陣~
+Description
+這裡的地面比別處更黑，灰層下還露出被高溫燒裂的泥紋，像整片土地都曾被迫記住那場火。站在主陣中央，四周風聲與殘木摩擦聲混在一起，會讓人一時分不清自己聽見的是現在還是往昔。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        14805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14807
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14810
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        14809
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         赤壁~
+End
+
+#Enquire
+Keyword         主陣~
+End
+
+#Enquire
+Keyword         戰痕~
+End
+
+End

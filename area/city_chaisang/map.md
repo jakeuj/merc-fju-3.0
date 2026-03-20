@@ -239,7 +239,8 @@
       "coord": [4, -1, 0],
       "labels": ["battle-link", "marker"],
       "exits": [
-        { "direction": "north", "to": 14708 }
+        { "direction": "north", "to": 14708 },
+        { "direction": "south", "to": 14801, "external": true }
       ],
       "enquires": ["赤壁", "戰場", "去路"]
     }

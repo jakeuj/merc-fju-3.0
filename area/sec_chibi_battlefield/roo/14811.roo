@@ -1,0 +1,32 @@
+Vnum            14811
+Name            望火高臺~
+Description
+高臺本來也許只是陣地裡較高的一角，如今卻成了俯瞰整片灰坡與殘艦灘最清楚的地方。站在這裡向北望去，能看見柴桑方向的生氣仍在遠處，而腳下這片地則像被兩種時間硬生生割開。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       DOWN
+ExitVnum        14805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14812
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         高臺~
+End
+
+#Enquire
+Keyword         柴桑~
+End
+
+End

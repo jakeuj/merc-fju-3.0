@@ -22,7 +22,7 @@
   - `north`: `city_chaisang` / 赤壁路標
   - `south`: `wild_old_battlefield` / 江岸焦土外帶預留
   - `east`: `river_crossing` / 殘艦與浮橋支線預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Fun / Variety Check
 
@@ -113,7 +113,29 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_chibi_battlefield/map.md --validate-only`
   - passed for `12` room(s)
+- `python -X utf8 tools/mapmd_validate.py area/city_chaisang/map.md`
+  - passed with `0 error(s), 0 warning(s)` after aligning the `14712 <-> 14801` boundary
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_chaisang/map.md`
+  - rewrote `roo/14701-14712` to include the south boundary into `14801`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_chibi_battlefield/map.md`
+  - wrote `roo/14801-14812`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed; Linux build path reports `merc` up to date
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - startup log `log/1029.log` reached `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/badobject` remained empty
+  - `debug/error` only records the forced shutdown path caused by timeout, not a loader failure
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `sec_chibi_battlefield`
+- `area/sec_chibi_battlefield/index` 採首版江岸古戰場 scaffold，房號段 `14801-14830`、序號 `152`
+- `mob/16031-16034` 與 `obj/16051-16054` 提供灰前軍需販、焦岸斥候、殘艦拾遺客、火痕殘卒與戰場補給骨架
+- `res/battlefield.res` 與 `shp/supplies.shp` 已建立，keeper 為 `16031`
+- `area/city_chaisang/map.md` 與 `area/sec_chibi_battlefield/map.md` 已同步把 `14712 <-> 14801` 落成正式 runtime boundary
+- `area/city_chaisang/roo/14712.roo` 與 `area/sec_chibi_battlefield/roo/14801.roo` 現在雙向一致
+- `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已加入 `sec_chibi_battlefield` loadable registry
 
 ## Next Step Prompt
 
-`先 commit 目前 sec_chibi_battlefield 的 spec milestone；commit 後把它標記為 done，再直接做 implementation milestone。`
+`先 commit 目前 sec_chibi_battlefield 的 implementation milestone；commit 後把它標記為 done，再盤點下一個待建 area。`

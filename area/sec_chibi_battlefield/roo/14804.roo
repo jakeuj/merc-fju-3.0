@@ -1,0 +1,32 @@
+Vnum            14804
+Name            灰坑壕溝~
+Description
+壕溝裡積著一層混了泥與炭的冷灰，踩下去比地表更軟，彷彿這裡曾長時間承受燃燒與重踏。壕底的視線被兩側灰坡壓低，會讓人很快失去對整片戰場方位的掌握。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       UP
+ExitVnum        14802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         壕溝~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

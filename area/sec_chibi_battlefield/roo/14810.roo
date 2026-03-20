@@ -1,0 +1,24 @@
+Vnum            14810
+Name            南緣焦土~
+Description
+再往南去，焦土地帶漸漸往更遠處散開，像這片古戰場的傷口其實還沒在這裡結束。邊界不像城門那樣明確，反而是一種只要再多走幾步，就會完全脫離目前可辨地標的危險提示。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        14808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+#Enquire
+Keyword         焦土~
+End
+
+End

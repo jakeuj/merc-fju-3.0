@@ -1,0 +1,32 @@
+Vnum            16034
+Name            emberline remnant~
+ShortDesc       火痕殘卒~
+Description
+這名像被戰火與焦土一起留下來的殘卒在主陣附近徘徊，動作僵而不慢，像
+還記得當年衝鋒時該往哪裡去。靠近他時，連風聲都像帶上了一點乾裂火氣。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       -180
+Level           74
+Hitroll         6
+Protect         0
+Damroll         6
+Str             14
+Int             10
+Wis             10
+Dex             13
+Con             15
+Hp              3600
+Mana            80
+Move            120
+Class           0
+Gold            260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

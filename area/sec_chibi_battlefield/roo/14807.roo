@@ -1,0 +1,47 @@
+Vnum            14807
+Name            裂舟泊處~
+Description
+半截破船卡在淺灘邊，船身焦黑卻還保留了勉強可辨的舷緣輪廓。靠近時，能看到船板裡外都留下猛烈火舌舔過的痕跡，讓人難以不去想像這裡曾經如何亂成一片。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        14806
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        14808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14812
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         殘艦~
+Description
+燒焦船板上仍有鐵釘與纜孔，說明它曾是真正負載軍士與火勢的戰船，而不是普通民舟。
+~
+End
+
+#Enquire
+Keyword         船火~
+End
+
+#Enquire
+Keyword         水戰~
+End
+
+End
