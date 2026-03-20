@@ -1,0 +1,32 @@
+Vnum            16132
+Name            changsha gate patrol~
+ShortDesc       城門巡役~
+Description
+這名守在北向城門附近的巡役步伐穩健，目光總在來人與官道路標之間來回。
+他不像在找碴，更像是在替這座南境主城維持一種該有的秩序。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       150
+Level           74
+Hitroll         4
+Protect         0
+Damroll         4
+Str             13
+Int             11
+Wis             12
+Dex             12
+Con             13
+Hp              3200
+Mana            100
+Move            130
+Class           0
+Gold            220
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

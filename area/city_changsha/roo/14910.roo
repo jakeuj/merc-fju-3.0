@@ -1,0 +1,24 @@
+Vnum            14910
+Name            南門官道~
+Description
+南門外的官道把長沙往更深南境送去，地面上清楚可見長年車馬壓出的兩道深痕。站在這裡時，你會很自然地明白長沙不是終點，而是所有更南旅程真正開始被整理好的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        14907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         零陵~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+End

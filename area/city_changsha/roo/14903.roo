@@ -1,0 +1,40 @@
+Vnum            14903
+Name            長沙主街~
+Description
+主街把北門、市集與官署穩穩串成一條線，街旁店招、車聲與行人談話都帶著主城才有的規模感。這裡不像碼頭邊那樣急促，而是一種能把南境消息慢慢匯進來、再重新分出去的厚實節奏。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        14901
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14906
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         長沙~
+End
+
+#Enquire
+Keyword         市集~
+End
+
+End

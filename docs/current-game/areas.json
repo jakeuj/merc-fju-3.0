@@ -1298,6 +1298,25 @@
         "plans/area/0063-sec-chibi-battlefield.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "city_changsha",
+      "title": "長沙",
+      "room_range": "14901-14930",
+      "load_order": 70,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_chaisang",
+      "theme_primary": "歷史城市",
+      "theme_secondary": "荊南主城 / 南境轉運 hub",
+      "summary": "承接柴桑南向官道，落成北門、主街、市集補給、官署前街與南門官道骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/city_changsha/index",
+        "area/city_changsha/map.md",
+        "plans/area/0064-city-changsha.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

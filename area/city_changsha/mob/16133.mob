@@ -1,0 +1,32 @@
+Vnum            16133
+Name            yamen clerk~
+ShortDesc       官署書吏~
+Description
+這名坐鎮官署前街的書吏看似斯文，卻對榜示、路線與來報消息記得極牢。
+站在他附近時，總會覺得整座長沙的南線情報都先在他腦中排過一次。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       120
+Level           76
+Hitroll         4
+Protect         0
+Damroll         4
+Str             11
+Int             14
+Wis             15
+Dex             11
+Con             12
+Hp              3000
+Mana            150
+Move            120
+Class           0
+Gold            240
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

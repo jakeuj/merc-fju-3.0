@@ -1,0 +1,14 @@
+Vnum            16154
+Name            tower lamp~
+ShortDesc       城樓提燈(tower lamp)~
+Description
+一盞掛在望樓與城牆邊最實用的城樓提燈(tower lamp)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           73
+Value           0 0 40 0
+Weight          2
+Cost            180
+End

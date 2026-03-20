@@ -1,0 +1,48 @@
+Vnum            14901
+Name            北向城門~
+Description
+北路官道一路把旅人送到長沙城門前，門下石面雖被南來北往的車馬磨得發亮，城門內外仍維持著一座荊南主城該有的穩定秩序。和柴桑相比，這裡少了江風，多了內陸大城把四方來路收束起來的厚重感。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        14710
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        14905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         柴桑~
+End
+
+#Enquire
+Keyword         進城~
+End
+
+End

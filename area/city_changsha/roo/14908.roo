@@ -1,0 +1,47 @@
+Vnum            14908
+Name            官署前街~
+Description
+官署前街收拾得格外齊整，榜示、差役與來報事的人讓這一帶始終維持著有條理的忙碌感。這裡不只是辦事所在，更像長沙這座城把四方消息重新整理與派發出去的心臟地帶。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        14909
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        14904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14912
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         告示~
+Description
+榜示一張張貼得端正，從巡查、徵調到驛路消息都分得清清楚楚，看得出這座主城對秩序的執著。
+~
+End
+
+#Enquire
+Keyword         官府~
+End
+
+#Enquire
+Keyword         榜示~
+End
+
+End

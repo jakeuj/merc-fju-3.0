@@ -1,0 +1,32 @@
+Vnum            16134
+Name            tower watch officer~
+ShortDesc       望樓哨官~
+Description
+這名守在望樓上的哨官習慣從高處看街道與官道的動靜，神情裡總帶著一點
+提早半步的警覺。對他來說，長沙最重要的事就是別讓南線失了節奏。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       150
+Level           78
+Hitroll         5
+Protect         0
+Damroll         5
+Str             13
+Int             12
+Wis             13
+Dex             13
+Con             14
+Hp              3600
+Mana            110
+Move            130
+Class           0
+Gold            260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

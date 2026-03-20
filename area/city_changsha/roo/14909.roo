@@ -1,0 +1,24 @@
+Vnum            14909
+Name            驛站偏院~
+Description
+偏院裡停著幾匹待換的馬，牆邊堆著備用草料與包袱。和熱鬧市口相比，這裡像主城真正用來把遠路接力下去的後勤核心，安靜得更有力量。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        14908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         驛站~
+End
+
+#Enquire
+Keyword         馬匹~
+End
+
+End

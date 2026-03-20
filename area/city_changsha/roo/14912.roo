@@ -1,0 +1,28 @@
+Vnum            14912
+Name            武陵西牌~
+Description
+西牌邊立著指往武陵山路的木標，字體深而穩，像常有人在這裡停下腳步判斷下一段究竟該往城內還是往山裡。它替長沙添上一層不只管官道，也能把人送往更偏遠支線的氣味。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        14908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         武陵~
+End
+
+#Enquire
+Keyword         山路~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

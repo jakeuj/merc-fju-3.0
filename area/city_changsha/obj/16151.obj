@@ -1,0 +1,14 @@
+Vnum            16151
+Name            south route ration~
+ShortDesc       南路乾糧包(south route ration)~
+Description
+一包專給南線長途行旅帶在身邊最順手的南路乾糧包(south route ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           72
+Value           26 42 4 0
+Weight          1
+Cost            165
+End

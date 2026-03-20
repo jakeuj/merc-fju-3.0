@@ -1,0 +1,24 @@
+Vnum            14905
+Name            北城偏巷~
+Description
+偏巷比主街安靜，卻仍能聽見遠處市聲與驛馬踏石的聲音。這裡像專供熟門熟路的人穿行，沒有太多排場，卻讓整座城顯得更有深度與日常呼吸。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        14901
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         巷子~
+End
+
+#Enquire
+Keyword         城門~
+End
+
+End

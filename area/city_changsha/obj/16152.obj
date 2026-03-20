@@ -1,0 +1,14 @@
+Vnum            16152
+Name            post flask~
+ShortDesc       驛站水囊(post flask)~
+Description
+一只最適合在南線驛路上隨身攜帶的驛站水囊(post flask)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           72
+Value           12 12 LIQ_WATER 0
+Weight          2
+Cost            150
+End

@@ -1,0 +1,15 @@
+Vnum            16153
+Name            changsha patrol saber~
+ShortDesc       長沙巡城刀(patrol saber)~
+Description
+一柄常見於城門巡役與官署差役腰間的長沙巡城刀(patrol saber)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           74
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            230
+End

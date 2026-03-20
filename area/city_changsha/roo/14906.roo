@@ -1,0 +1,32 @@
+Vnum            14906
+Name            南市口~
+Description
+市口把藥材、乾糧、布匹與各路雜貨都堆在最順手的位置，像專門替長途行旅與差役補上一口氣。和柴桑的江岸補給不同，這裡更像一座內陸主城把整片南境日常都壓縮進同一個街角。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        14903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         市集~
+End
+
+#Enquire
+Keyword         補給~
+End
+
+End

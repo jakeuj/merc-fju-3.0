@@ -1,0 +1,60 @@
+Vnum            14904
+Name            主街十字~
+Description
+幾條街道在此交會，榜示、店招與差役巡行讓長沙作為南境主城的節奏一眼可辨。站在十字口時，你會很自然地明白哪裡能補給、哪裡能問路、哪裡則會把你送向更遠的南境。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        14902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        14903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        14911
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         官府~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+#Enquire
+Keyword         武陵~
+End
+
+End

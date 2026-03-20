@@ -1,0 +1,24 @@
+Vnum            14911
+Name            北城望樓~
+Description
+走上望樓後，能把北門、主街與遠處官道都收入眼底。這樣的高度不只是為了守望，也像在提醒城中每一條消息與每一次轉場，最終都會先被長沙這座主城看見。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       DOWN
+ExitVnum        14904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         望樓~
+End
+
+#Enquire
+Keyword         北門~
+End
+
+End

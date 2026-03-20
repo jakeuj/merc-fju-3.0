@@ -1,0 +1,32 @@
+Vnum            16131
+Name            south post quartermaster~
+ShortDesc       南驛掌櫃~
+Description
+這名長沙南驛掌櫃對來往官道與驛路的節奏熟得很，常常只掃一眼旅人的包
+袱與鞋塵，就知道對方是剛從柴桑趕來，還是正打算往更南的路走。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           72
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             15
+Wis             15
+Dex             11
+Con             12
+Hp              2500
+Mana            150
+Move            140
+Class           0
+Gold            380
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

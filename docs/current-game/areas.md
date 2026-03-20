@@ -93,6 +93,7 @@ title: Current Game Areas
 | `dng_sunken_temple` | 沉沒古廟 / 濕地下探 dungeon | `14601-14630` | `rebuild addition` | 承接雲夢深沼下方，落成積水前庭、封紋中殿、鎖鏈祭室與深封井口骨架。 |
 | `city_chaisang` | 柴桑 / 江岸東口城市 | `14701-14730` | `rebuild addition` | 承接江夏東向幹道，落成西向江門、江岸主街、市集補給與南向轉場區骨架。 |
 | `sec_chibi_battlefield` | 赤壁古戰場 / 江岸古戰場祕區 | `14801-14830` | `rebuild addition` | 承接柴桑南緣路標，落成灰燼坡帶、殘艦灘口、火痕主陣與祭火高地骨架。 |
+| `city_changsha` | 長沙 / 荊南主城 | `14901-14930` | `rebuild addition` | 承接柴桑南向官道，落成北門、主街、市集補給、官署前街與南門官道骨架。 |
 
 ## Recent Rebuild Areas
 
@@ -175,6 +176,7 @@ title: Current Game Areas
 - `dng_sunken_temple`：把雲夢深沼正式接進沉沒古廟，透過積水前庭、漏水廊道、封紋中殿與深封井口把主線轉入下探遺跡 dungeon。
 - `city_chaisang`：把江夏東向幹道正式接進柴桑，透過西向江門、江岸主街、水行市集與城務前院把主線重新收束成江岸東進的城市 hub。
 - `sec_chibi_battlefield`：把柴桑南向赤壁路標正式接進江岸古戰場祕區，透過灰坡、殘艦灘、火痕主陣與祭火高地把節奏切進帶戰痕回聲的 secret battlefield。
+- `city_changsha`：把柴桑南向官道正式接進長沙，透過北門、主街、市集補給、官署前街與南門官道把主線重新收束成荊南主城 hub。
 
 ## 維護規則
 

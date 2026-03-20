@@ -1,0 +1,32 @@
+Vnum            14902
+Name            北驛牌亭~
+Description
+牌亭邊掛著幾面指往柴桑、零陵與武陵的舊木牌，字跡被風吹雨打得微白，卻仍看得出這裡長年是南線轉運的重要節點。即使只是稍停，也能感受到消息與人流都會先在這裡打個照面。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14901
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         驛站~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

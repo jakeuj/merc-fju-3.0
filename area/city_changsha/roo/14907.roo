@@ -1,0 +1,40 @@
+Vnum            14907
+Name            藥材街角~
+Description
+幾家藥鋪與雜行把街角擠得滿是草藥與桐油氣味，來往的人不是提著包袱，就是正要替更遠的行程添上幾樣必需品。這裡不喧嘩，卻總讓人覺得沒有哪條遠路是真的脫離了長沙的照應。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        14904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        14906
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14910
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         藥鋪~
+End
+
+#Enquire
+Keyword         南路~
+End
+
+End

@@ -213,7 +213,8 @@
       "coord": [3, -2, 0],
       "labels": ["south-edge", "world-link-south"],
       "exits": [
-        { "direction": "north", "to": 14707 }
+        { "direction": "north", "to": 14707 },
+        { "direction": "south", "to": 14901, "external": true }
       ],
       "enquires": ["長沙", "南邊"]
     },
