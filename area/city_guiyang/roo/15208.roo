@@ -1,0 +1,47 @@
+Vnum            15208
+Name            官署前街~
+Description
+官署前街雖然整齊，卻不像帝都那樣板正，反而有一種邊地辦事講效率也講人情的風格。榜示貼得清楚，來往的人也總會下意識瞄上一眼，像這裡是整座桂陽的節奏器。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15209
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15212
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         告示~
+Description
+榜示上既有官道消息，也有更南路線與邊地盤查的提醒，讓人一看就知道這裡已接近主線末段。
+~
+End
+
+#Enquire
+Keyword         官府~
+End
+
+#Enquire
+Keyword         榜示~
+End
+
+End

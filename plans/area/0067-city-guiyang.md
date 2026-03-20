@@ -22,7 +22,7 @@
   - `north`: `city_lingling` / 零陵北路
   - `south`: `city_nanhai` / 南海港路預留
   - `west`: `wild_nanman_jungle` / 南蠻外帶預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Fun / Variety Check
 
@@ -108,7 +108,33 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_guiyang/map.md --validate-only`
   - passed for `12` room(s)
+- `python -X utf8 tools/mapmd_validate.py area/city_lingling/map.md`
+  - passed with `0 error(s), 0 warning(s)` after aligning `15110 <-> 15201`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_lingling/map.md`
+  - rewrote `roo/15101-15112` to include the `15110 south -> 15201 external` boundary
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_guiyang/map.md`
+  - wrote `roo/15201-15212`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - startup smoke test passed; success signal found in `log/1032.log`
+- `debug/badobject`
+  - empty after smoke test
+- `debug/error`
+  - only contains the expected timeout-forced shutdown path, no new area loader failure
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `city_guiyang`，保留房號段 `15201-15230`
+- `area/city_guiyang/index` 已建立，`Serial 156`
+- 第一輪 runtime scaffold 已加入：
+  - `mob/16431-16434`
+  - `obj/16451-16454`
+  - `res/city.res`
+  - `shp/supplies.shp`
+- `city_lingling/15110 <-> city_guiyang/15201` 已成為正式 runtime boundary
+- `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步登錄 `city_guiyang`
 
 ## Next Step Prompt
 
-`先 commit 目前 city_guiyang 的 spec milestone；commit 後直接做 implementation milestone。`
+`先 commit 目前 city_guiyang 的 implementation milestone；commit 後直接盤點並建立下一個待建 area 的 spec milestone。`

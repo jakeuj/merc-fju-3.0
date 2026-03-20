@@ -1,0 +1,32 @@
+Vnum            16432
+Name            guiyang gate patrol~
+ShortDesc       城門巡役~
+Description
+這名桂陽城門巡役腳步穩健，目光總在來人、路牌與行李間來回。對他來說，
+邊地最重要的就是別讓真正有問題的人輕易穿城而過。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       150
+Level           92
+Hitroll         6
+Protect         0
+Damroll         6
+Str             13
+Int             11
+Wis             12
+Dex             12
+Con             13
+Hp              4400
+Mana            120
+Move            135
+Class           0
+Gold            300
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1,0 +1,24 @@
+Vnum            15211
+Name            坡城望樓~
+Description
+走上望樓後，能把北門、主街與更遠的南路都收入眼底。從這裡看桂陽，會更明白它雖是邊地城鎮，卻有一種替所有遠行人先穩住局面的力量。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       DOWN
+ExitVnum        15204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         望樓~
+End
+
+#Enquire
+Keyword         北門~
+End
+
+End

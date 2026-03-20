@@ -1,0 +1,32 @@
+Vnum            15202
+Name            北牌坡口~
+Description
+坡口邊掛著幾面指往零陵、南海與邊地林線的路牌，木面斑駁卻仍收拾得乾淨。來往商旅總會在這裡停一下，像在心裡重新盤算自己接下來要走的是哪一種遠路。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        15201
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         路牌~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

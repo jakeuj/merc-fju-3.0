@@ -1,0 +1,14 @@
+Vnum            16451
+Name            frontier ration~
+ShortDesc       邊地乾糧包(frontier ration)~
+Description
+一包專給準備往更深南路走的人攜帶的邊地乾糧包(frontier ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           90
+Value           30 48 4 0
+Weight          1
+Cost            205
+End

@@ -1,0 +1,60 @@
+Vnum            15204
+Name            主街十字~
+Description
+榜示、店招與南貨叫賣聲在這裡交會，讓桂陽作為邊地轉運城鎮的節奏一眼可辨。站在十字口時，你會自然明白哪裡能補給、哪裡能問路、哪裡則會把你送向更南與更野的方向。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15208
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        15211
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         官府~
+End
+
+#Enquire
+Keyword         南海~
+End
+
+#Enquire
+Keyword         南蠻~
+End
+
+End

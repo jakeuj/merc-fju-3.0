@@ -1,0 +1,48 @@
+Vnum            15201
+Name            北向城門~
+Description
+自零陵再往南行到此，城門與坡道讓人明顯感覺到自己已更靠近邊地。這裡仍保有城市秩序，卻多了一種『再往下去就不是普通官道了』的臨界感。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15110
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         零陵~
+End
+
+#Enquire
+Keyword         進城~
+End
+
+End

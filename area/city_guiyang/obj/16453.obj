@@ -1,0 +1,15 @@
+Vnum            16453
+Name            guiyang patrol saber~
+ShortDesc       桂陽巡城刀(patrol saber)~
+Description
+一柄常見於桂陽城門巡役與差役腰間的桂陽巡城刀(patrol saber)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           92
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            270
+End

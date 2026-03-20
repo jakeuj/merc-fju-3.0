@@ -1,0 +1,14 @@
+Vnum            16454
+Name            tower lantern~
+ShortDesc       城樓提燈(tower lantern)~
+Description
+一盞常掛在桂陽城樓與路牌旁的城樓提燈(tower lantern)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           91
+Value           0 0 40 0
+Weight          2
+Cost            210
+End

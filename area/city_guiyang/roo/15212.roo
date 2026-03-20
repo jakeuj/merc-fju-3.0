@@ -1,0 +1,28 @@
+Vnum            15212
+Name            西岔路牌~
+Description
+一面路牌立在南街側緣，明白指著西向外徑與更深邊地林線。它替桂陽添上一層不只守著官道，也能把人送往更野外帶的氣味，讓這座城顯得更接近主線末段邊界。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15208
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         南蠻~
+End
+
+#Enquire
+Keyword         西邊~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

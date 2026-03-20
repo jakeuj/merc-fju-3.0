@@ -1,0 +1,40 @@
+Vnum            15207
+Name            藥鋪街角~
+Description
+幾家藥鋪與雜行把街角擠得滿是乾草藥與桐油味，來往行旅在這裡總會不自覺多停一會。這種節奏讓桂陽顯得既不張揚，卻又明顯是所有遠路前該來的一站。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15210
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         藥鋪~
+End
+
+#Enquire
+Keyword         南路~
+End
+
+End

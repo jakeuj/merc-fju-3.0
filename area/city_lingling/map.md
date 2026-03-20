@@ -205,7 +205,8 @@
       "coord": [1, -3, 0],
       "labels": ["south-edge", "road"],
       "exits": [
-        { "direction": "north", "to": 15107 }
+        { "direction": "north", "to": 15107 },
+        { "direction": "south", "to": 15201, "external": true }
       ],
       "enquires": ["桂陽", "南邊"]
     },

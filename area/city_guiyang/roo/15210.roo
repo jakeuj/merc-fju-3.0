@@ -1,0 +1,24 @@
+Vnum            15210
+Name            南門官道~
+Description
+南門外的官道把桂陽再往更深南境送去，地面上留下了長年車馬與遠行包袱壓出的痕跡。站在這裡時，你會清楚地知道，這一帶的安全與秩序正慢慢變成一種需要自己維持的事。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         南海~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+End

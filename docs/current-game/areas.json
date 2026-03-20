@@ -1355,6 +1355,25 @@
         "plans/area/0066-city-lingling.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "city_guiyang",
+      "title": "桂陽",
+      "room_range": "15201-15230",
+      "load_order": 73,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_lingling",
+      "theme_primary": "江湖",
+      "theme_secondary": "南嶺城鎮 / 邊地轉運",
+      "summary": "承接零陵南向官道，落成北門、主街、市集補給、官署前街與南門官道骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/city_guiyang/index",
+        "area/city_guiyang/map.md",
+        "plans/area/0067-city-guiyang.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

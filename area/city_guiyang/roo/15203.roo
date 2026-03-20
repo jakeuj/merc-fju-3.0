@@ -1,0 +1,40 @@
+Vnum            15203
+Name            桂陽主街~
+Description
+主街把城門、市集與官署串成穩定的一條線，行人雖不算擁擠，卻總帶著一種邊地城鎮才有的務實與緊湊。站在這裡時，很容易感覺到桂陽是讓更南路線重新變得可控的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15201
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         桂陽~
+End
+
+#Enquire
+Keyword         市集~
+End
+
+End

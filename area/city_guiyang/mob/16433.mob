@@ -1,0 +1,32 @@
+Vnum            16433
+Name            frontier clerk~
+ShortDesc       官署書吏~
+Description
+這名坐鎮官署前街的書吏對邊地消息、盤查文書與南路狀況記得極牢，說起
+話來雖不急，卻總讓人覺得桂陽真正的節奏多半先在他手裡整理過一遍。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       120
+Level           94
+Hitroll         6
+Protect         0
+Damroll         6
+Str             11
+Int             14
+Wis             15
+Dex             11
+Con             12
+Hp              4100
+Mana            170
+Move            125
+Class           0
+Gold            320
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
