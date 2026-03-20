@@ -71,7 +71,7 @@
 
 - `west` from `14401`: planned link to `wild_jiangxia_river`
 - `east` from `14412`: planned link to `city_chaisang`
-- `south` from `14407`: planned link to `wild_yunmeng_marsh`
+- `south` from `14407`: planned link to `wild_yunmeng`
 - `north` from `14410`: planned link to `jingxiang_road`
 
 ## Runtime Metadata Notes
@@ -128,7 +128,7 @@
       {
         "direction": "south",
         "source_vnum": 14407,
-        "target_area": "wild_yunmeng_marsh",
+        "target_area": "wild_yunmeng",
         "label": "雲夢水巷"
       },
       {

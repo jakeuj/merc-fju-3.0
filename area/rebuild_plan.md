@@ -298,6 +298,30 @@
     - `wild_jiangxia_river` 已先把主線從襄陽推進到水岸前帶，現在適合回到一座提供補給、問路與港務秩序的主城
   - compliance_check:
     - compliant；延續 `City -> Wild -> City` 的交通節奏，但主題已從內陸城門轉成江港與水軍，不是重複上一座陸城
+- `wild_yunmeng`
+  - area_family: `Wild`
+  - reserved_room_block: `14501-14530`
+  - level_range: `50-60`
+  - theme: `詭異民俗`
+  - subtheme: `雲夢大澤 / 迷霧濕地`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/wild_yunmeng/map.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/map/shanyan.html`
+    - `ref/sanguo-area-specfirst/area/city_jianye/map.md`
+    - `ref/sanguo-area-specfirst/area/district_jianye_port/map.md`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `progression-map` 在 `江夏水域` 之後明確給出 `Lv45 雲夢大澤`，支持這一段轉入更詭異、更濕重的探索帶
+    - `題材分布表` 把 `雲夢大澤` 定位為 `詭異 + 仙俠` 的大型濕地秘境，能有效拉開和江港城市的體驗差
+    - `players.json / skills.json` 沒有提供江夏後段穩定的服務點證據，反而支持先做高辨識度野外 / 濕地風險帶，而不是直接複製另一座港城
+  - compliance_check:
+    - compliant；queue 在 `city_jiangxia` 後切回 `Wild`，且題材從江港秩序轉成迷霧濕地，不是直接順著最新城區複製下一座城市
 
 ## Todo
 
@@ -305,23 +329,21 @@
 
 ## In Progress
 
-- `city_jiangxia`
-  - plan: `plans/area/0059-city-jiangxia.md`
-  - delivery_gate: `implementation_ready_for_commit`
+- `wild_yunmeng`
+  - plan: `plans/area/0060-wild-yunmeng.md`
+  - delivery_gate: `spec_ready_for_commit`
   - current_status:
-    - 已建立最小 loadable runtime scaffold：`index / mob / obj / res / shp / roo`
-    - 已將 `14312 <-> 14401` 落成 `wild_jiangxia_river` 與 `city_jiangxia` 的雙向 runtime boundary
-    - `tools/mapmd_validate.py`、generator `--validate-only`、generator write 均已通過
-    - WSL Linux build 與 startup smoke test 已通過；成功 log 為 `log/1025.log`
-    - `debug/badobject` 為空，`debug/error` 只有 timeout 強制關機紀錄
+    - 已建立單區 plan 與 `area/wild_yunmeng/map.md` 第一版 spec
+    - 已固定房號段 `14501-14530` 與 `city_jiangxia/14407 -> wild_yunmeng/14501` 的南向濕地邊界意圖
+    - `tools/mapmd_validate.py` 與 generator `--validate-only` 均已通過
   - next_action:
-    - commit `city_jiangxia` 的 implementation milestone
-    - commit 後把 `city_jiangxia` 移到 done
-    - 若 queue 清空，依 queue variety gate 重新盤點下一個主世界候選區
+    - commit `wild_yunmeng` 的 spec milestone
+    - commit 後開始 `wild_yunmeng` 的 implementation milestone
 
 
 ## Done
 
+- `2026-03-21` `city_jiangxia` 已完成第一輪 runtime implementation、commit `3ae44fc`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `wild_jiangxia_river` 已完成第一輪 runtime implementation、commit `91a57d6`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `city_xiangyang` 已完成第一輪 runtime implementation、commit `df3aa5e`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-20` `fort_hulao` 已完成第一輪 runtime implementation、commit `9457877`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
@@ -445,15 +467,19 @@
 
 ## Current Recommended Next Step
 
-`city_jiangxia` 已完成第一輪 runtime implementation。下一步應先 commit 目前的 implementation milestone；commit 後把它移到 done，再依 queue variety gate 盤點下一個主世界候選區。
+`wild_yunmeng` 已完成 spec 並通過 validate-only。下一步應先 commit spec milestone，再進入 implementation milestone。
 
 ## Next Action
 
 - 完成 `city_jiangxia`：
-  - commit implementation milestone
-  - commit 後把它移到 done
-  - 若 queue 清空，回到 `world_map + progression + 題材分布 + players/skills` 盤點下一個候選區
+  - 已提交 implementation milestone
+- 完成 `wild_yunmeng`：
+  - 建立單區 plan
+  - 建立 `area/wild_yunmeng/map.md`
+  - 跑 `tools/mapmd_validate.py` 與 generator `--validate-only`
+  - commit spec milestone
+  - commit 後開始 implementation milestone
 
 ## Next Prompt
 
-`先 commit 目前 city_jiangxia 的 implementation milestone；commit 後把它標記為 done，再依 queue variety gate 盤點下一個待建 area。`
+`先 commit 目前 wild_yunmeng 的 spec milestone；commit 後直接開始 implementation milestone。`
