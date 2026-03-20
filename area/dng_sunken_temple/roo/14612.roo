@@ -1,0 +1,28 @@
+Vnum            14612
+Name            深封井口~
+Description
+井底在這裡終於收成一個更窄、更深的封井口，四周刻痕比上層更完整，連水聲都像被它們壓得只剩細碎回響。只要再往下探，走的就不再只是沉沒古廟，而是更像整片大澤底下真正不該見光的部分。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        14608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         下面~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

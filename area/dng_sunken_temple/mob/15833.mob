@@ -1,0 +1,33 @@
+Vnum            15833
+Name            seal well guardian~
+ShortDesc       封紋守井者~
+Description
+這名靠近封檻落井的守井者身上滿是水蝕與舊紋交錯的痕跡，像是很久以
+前就被留在這裡，專門確認哪一種腳步可以靠近井邊，哪一種腳步只能停
+在更遠的地方。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       -120
+Level           64
+Hitroll         5
+Protect         0
+Damroll         5
+Str             14
+Int             12
+Wis             14
+Dex             12
+Con             14
+Hp              3100
+Mana            130
+Move            120
+Class           0
+Gold            220
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1241,6 +1241,25 @@
         "plans/area/0060-wild-yunmeng.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "dng_sunken_temple",
+      "title": "沉沒古廟",
+      "room_range": "14601-14630",
+      "load_order": 67,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "wild_yunmeng",
+      "theme_primary": "仙俠",
+      "theme_secondary": "沉沒古廟 / 濕地下探",
+      "summary": "承接雲夢深沼下方，落成積水前庭、封紋中殿、鎖鏈祭室與深封井口骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/dng_sunken_temple/index",
+        "area/dng_sunken_temple/map.md",
+        "plans/area/0061-dng-sunken-temple.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

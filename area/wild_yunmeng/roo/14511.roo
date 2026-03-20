@@ -21,14 +21,6 @@ ExitKeyword     ~
 ExitKey         0
 End
 
-#Exit
-Direction       UP
-ExitVnum        14512
-ExitDesc        ~
-ExitKeyword     ~
-ExitKey         0
-End
-
 #Keyword
 Keyword         祭壇~
 Description

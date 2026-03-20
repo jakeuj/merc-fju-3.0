@@ -1,0 +1,32 @@
+Vnum            14605
+Name            碑廊偏室~
+Description
+一排立碑斜靠在偏室牆邊，碑面大多被水蝕得發白，卻還能看出原本用來記人、記名或記某種祭序。濕氣在這裡帶著更細的霉味，讓人不自覺放慢了呼吸。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        14603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14606
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         石門~
+End
+
+#Enquire
+Keyword         名字~
+End
+
+End

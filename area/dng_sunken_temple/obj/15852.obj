@@ -1,0 +1,14 @@
+Vnum            15852
+Name            waxed water skin~
+ShortDesc       蠟封水囊(water skin)~
+Description
+一只為了避免積水與髒水混進去而特別加過蠟封的水囊(water skin)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           58
+Value           12 12 LIQ_WATER 0
+Weight          2
+Cost            135
+End

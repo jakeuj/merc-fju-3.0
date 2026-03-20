@@ -1,0 +1,32 @@
+Vnum            14609
+Name            殘門石階~
+Description
+一段通往側翼的石階在這裡只剩半邊完整，另一半早被水蝕與地裂吞掉。破門框斜倒在旁，讓這條路看起來像不歡迎人，卻又明顯曾是廟裡很重要的一條進退線。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        14604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14610
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         側室~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

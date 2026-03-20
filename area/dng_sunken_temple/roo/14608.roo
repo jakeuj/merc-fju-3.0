@@ -1,0 +1,39 @@
+Vnum            14608
+Name            封檻落井~
+Description
+中殿東側斷開一道直通下方黑水的落井，井緣則以厚重封檻與石鏈圍了一圈。站在這裡往下看，會覺得井裡的黑不只是沒光，而像有什麼東西把所有反光都壓了回去。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        14604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        14612
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14610
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         鎖鏈~
+Description
+粗石鏈半沉在水邊，明明早該鬆朽，卻仍維持著一種不像自然留下的拉力。
+~
+End
+
+End

@@ -90,6 +90,7 @@ title: Current Game Areas
 | `wild_jiangxia_river` | 江夏水道 / 江岸水路野外 | `14301-14330` | `rebuild addition` | 承接襄陽東碼頭外緣，落成離城木棧、蘆葦濕灘、水寨殘樁與東向渡口前帶。 |
 | `city_jiangxia` | 江夏 / 荊州東岸江港主城 | `14401-14430` | `rebuild addition` | 承接江夏水道東界，落成渡口外門、港前主街、市集補給區與水軍官署骨架。 |
 | `wild_yunmeng` | 雲夢大澤 / 迷霧濕地野外 | `14501-14530` | `rebuild addition` | 承接江夏南向水巷外側，落成濕地邊樁、霧中高埠、半沉石碑與深沼前帶。 |
+| `dng_sunken_temple` | 沉沒古廟 / 濕地下探 dungeon | `14601-14630` | `rebuild addition` | 承接雲夢深沼下方，落成積水前庭、封紋中殿、鎖鏈祭室與深封井口骨架。 |
 
 ## Recent Rebuild Areas
 
@@ -169,6 +170,7 @@ title: Current Game Areas
 - `wild_jiangxia_river`：把襄陽東碼頭正式接進江岸水路野外，透過離城木棧、蘆葦濕灘、水寨殘樁與候船渡口把主線推往江夏方向。
 - `city_jiangxia`：把江夏水道東界正式接進江港主城，透過渡口外門、港前木棧、市集補給與水軍官署把主線重新收束成東岸港務 hub。
 - `wild_yunmeng`：把江夏南向水巷正式接進雲夢濕地前帶，透過蘆牆泥道、半乾草洲、石碑泥潭與深沼前帶把主線轉入詭異濕地探索節奏。
+- `dng_sunken_temple`：把雲夢深沼正式接進沉沒古廟，透過積水前庭、漏水廊道、封紋中殿與深封井口把主線轉入下探遺跡 dungeon。
 
 ## 維護規則
 

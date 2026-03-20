@@ -1,0 +1,32 @@
+Vnum            15831
+Name            stair relic scavenger~
+ShortDesc       落階拾遺客~
+Description
+這名在裂口落階附近徘徊的拾遺客總低頭看著水邊與石縫，像比起前方的
+黑暗，他更相信古廟邊角偶爾會吐出一點仍能換錢或換命的舊東西。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       -10
+Level           58
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             13
+Dex             11
+Con             12
+Hp              2100
+Mana            90
+Move            110
+Class           0
+Gold            260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

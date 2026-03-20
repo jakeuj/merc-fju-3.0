@@ -1,0 +1,32 @@
+Vnum            14602
+Name            積水前庭~
+Description
+前庭的石磚幾乎全被積水淹過一層，踩下去時會帶出細小渦紋與沉響。幾根斷柱仍勉強撐著上方黑影，讓人分不清這裡是迎人的大廳，還是早已失去正面意義的廢墟。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        14601
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         前面~
+End
+
+#Enquire
+Keyword         古廟~
+End
+
+End

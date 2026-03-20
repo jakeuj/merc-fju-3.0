@@ -1,0 +1,33 @@
+Vnum            15834
+Name            chained ritual warden~
+ShortDesc       祭室鎖衛~
+Description
+這名守在祭室裡的鎖衛與垂落石鏈幾乎像長在一起，轉身時總伴著低沉碰
+撞聲。他的視線並不急躁，卻像只要有人再往深封井靠近半步，他就會立
+刻知道該如何讓對方停下來。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       -200
+Level           66
+Hitroll         5
+Protect         0
+Damroll         6
+Str             15
+Int             11
+Wis             13
+Dex             13
+Con             15
+Hp              3500
+Mana            100
+Move            120
+Class           0
+Gold            260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

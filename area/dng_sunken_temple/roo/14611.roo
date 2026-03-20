@@ -1,0 +1,32 @@
+Vnum            14611
+Name            回水暗渠~
+Description
+暗渠裡的水並不急，卻總在往看不見的更深處回流，像整座古廟仍悄悄把多餘的水與聲音都送往同一個地方。牆面靠近水線的位置浮著一層細亮苔光，使這裡比其他地方更像活著。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        14610
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        14607
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         暗渠~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

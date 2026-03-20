@@ -1,0 +1,32 @@
+Vnum            14601
+Name            裂口落階~
+Description
+深沼下方裂開一道斜斜沉下去的石階，階面滿是滑冷水膜與淤泥。每往下走一步，地表的霧聲就淡一分，而古廟裡那種悶住水氣的回音便更近一層。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        14512
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        14602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         入口~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

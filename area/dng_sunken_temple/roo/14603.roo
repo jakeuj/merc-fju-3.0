@@ -1,0 +1,47 @@
+Vnum            14603
+Name            漏水廊道~
+Description
+廊頂不時滴下細冷水珠，打在地面積水上，像一個永遠數不完拍子的鼓點。兩側牆面殘留的舊紋早被水痕拉開，只剩幾段筆劃還倔強地黏在石上。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        14602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         水痕~
+Description
+牆上的水痕層層疊疊，像在替這座古廟默默記著每一次水位曾漲到哪裡。
+~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+#Enquire
+Keyword         碑廊~
+End
+
+End

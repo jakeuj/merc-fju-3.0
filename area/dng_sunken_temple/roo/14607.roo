@@ -1,0 +1,32 @@
+Vnum            14607
+Name            水蝕後堂~
+Description
+後堂已被水氣侵得像快化開一樣，牆角與樑底都有細碎石屑不時剝落。堂內最古怪的不是殘敗，而是那種好像曾經有什麼東西在這裡久留、直到最近才終於離開的空感。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        14606
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14611
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         後面~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

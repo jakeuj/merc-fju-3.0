@@ -326,8 +326,7 @@
       "labels": ["ritual", "downward-pull"],
       "exits": [
         { "direction": "east", "to": 14508 },
-        { "direction": "north", "to": 14507 },
-        { "direction": "up", "to": 14512 }
+        { "direction": "north", "to": 14507 }
       ],
       "keywords": [
         {
@@ -347,7 +346,7 @@
       "labels": ["deep-edge", "world-link-down"],
       "exits": [
         { "direction": "up", "to": 14508 },
-        { "direction": "down", "to": 14511 }
+        { "direction": "down", "to": 14601, "external": true }
       ],
       "enquires": ["深處", "下面", "去路"]
     }

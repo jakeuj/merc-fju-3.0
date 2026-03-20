@@ -1,0 +1,47 @@
+Vnum            14604
+Name            封紋中殿~
+Description
+中殿的地面刻著大半已被磨鈍的封紋，只有中心幾道痕線仍隱約看得出當年的用意。空氣在這裡格外安靜，安靜得連腳邊水聲都像被某種更老、更重的東西壓低了。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        14603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14609
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         符文~
+Description
+封紋邊角被泥水磨得模糊，唯有幾筆還保留著微微外擴的走勢，像仍在死守某條不該鬆開的界線。
+~
+End
+
+#Enquire
+Keyword         封印~
+End
+
+#Enquire
+Keyword         石門~
+End
+
+End

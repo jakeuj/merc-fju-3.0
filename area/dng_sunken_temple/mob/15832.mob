@@ -1,0 +1,33 @@
+Vnum            15832
+Name            flooded corridor shade~
+ShortDesc       漏廊殘影~
+Description
+這道在漏水廊道間徘徊的殘影像被滴水聲一點點喚醒，形體模糊卻總沿著
+同一段濕地來回。你幾乎分不清它是在守路，還是在找某條早就回不去的
+退路。
+~
+Sentinel        No
+StayArea        Yes
+NoKill          No
+Alignment       -180
+Level           61
+Hitroll         4
+Protect         0
+Damroll         4
+Str             12
+Int             13
+Wis             14
+Dex             13
+Con             13
+Hp              2600
+Mana            140
+Move            120
+Class           0
+Gold            180
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

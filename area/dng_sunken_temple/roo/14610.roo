@@ -1,0 +1,47 @@
+Vnum            14610
+Name            鎖鏈祭室~
+Description
+祭室四周垂著幾道長短不一的石鏈，鏈尾浸在水裡，隨著細微水波輕輕撞出悶聲。中央祭臺只剩輪廓，卻仍讓人很難忽視這裡當年曾有某種需要被牢牢鎖住的東西。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        14609
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        14608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14611
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         祭臺~
+Description
+祭臺中央凹得極深，邊緣還看得出曾經嵌放過某種圓形或印紋物件的痕跡。
+~
+End
+
+#Enquire
+Keyword         祭室~
+End
+
+#Enquire
+Keyword         封印~
+End
+
+End

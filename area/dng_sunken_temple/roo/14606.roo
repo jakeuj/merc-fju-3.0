@@ -1,0 +1,31 @@
+Vnum            14606
+Name            祭器殘庫~
+Description
+石架與木箱的殘片散在水裡，還有些看不出原形的銅器半浸半露，像只差一點就能被重新辨認。只是越往裡看，越能感覺這裡當年收藏的恐怕不只是祭器，而是整套不想再被打開的儀式。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        14605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14607
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         石門~
+Description
+偏室盡頭的石門雖然早已鬆動，門縫間卻仍卡著幾條像故意留住不讓它完全敞開的鎖紋。
+~
+End
+
+End
