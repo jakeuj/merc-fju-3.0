@@ -586,6 +586,33 @@
     - `ref/sanguo-area-specfirst` 已提供可改寫 scaffold，可直接轉成目前南境最南端港城所需版本
   - compliance_check:
     - compliant；在 `Dungeon` 之後切回 `City`，延續 `city_guiyang` 預留南向主線，也恢復主線母城節奏
+- `wild_south_sea_route`
+  - area_family: `Wild`
+  - reserved_room_block: `15601-15630`
+  - level_range: `98-100`
+  - theme: `探險`
+  - subtheme: `外海南航 / 礁岸水道`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/city_nanhai/map.md`
+    - `ref/sanguo-area-specfirst/area/district_jianye_port/map.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `plans/area/0070-city-nanhai.md`
+  - ref_inputs_deferred:
+    - `ref/sanguo-area-specfirst/area/wild_nanman_jungle/map.md`
+    - `docs/3yWebsite/map/shanyan.html`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `city_nanhai` 已在 spec 與 runtime 內明確預留南向外海南航，適合把主線從港城正式推到海路 wild
+    - `progression-map` 的高等帶強調遠征探索，支持在南海之後轉入更開闊的海上前帶而不是再次折回內陸城市
+    - `district_jianye_port` ref scaffold 提供了港埠與棧橋語彙，可借來支撐南海後的水路辨位與港外分流設計
+    - `players.json / skills.json` 沒有提供南海後穩定城市服務鏈證據，因此先做 `Wild` 更符合 queue variety 與港城後節奏
+  - compliance_check:
+    - compliant；在 `City` 之後切回 `Wild`，延續 `city_nanhai` 預留南向主線，也維持 family 多樣性
 
 ## Todo
 
@@ -593,25 +620,24 @@
 
 ## In Progress
 
-- `city_nanhai`
-  - plan: `plans/area/0070-city-nanhai.md`
-  - delivery_gate: `implementation_ready_for_commit`
+- `wild_south_sea_route`
+  - plan: `plans/area/0071-wild-south-sea-route.md`
+  - delivery_gate: `spec_ready_for_commit`
   - current_status:
-    - 已建立最小可載入 runtime scaffold：`index / mob / obj / res / shp / roo`
-    - 已完成 `city_guiyang/15210 <-> city_nanhai/15501` 正式 boundary 掛接
-    - `tools/mapmd_validate.py` 已通過 `city_nanhai` 與更新後的 `city_guiyang`
-    - generator `--validate-only` 已通過，generator write 已寫出 `city_nanhai` 與更新後的 `city_guiyang` `roo`
-    - WSL Linux build 已通過
-    - startup smoke test 已通過；成功訊號見 `log/1036.log`
-    - `debug/badobject` 為空，`debug/error` 僅有 timeout 強制關機路徑
+    - 已建立 `plans/area/0071-wild-south-sea-route.md`
+    - 已建立 `area/wild_south_sea_route/map.md` 第一版 spec
+    - 已選定房號段 `15601-15630`
+    - 已根據 `city_nanhai` 南向預留邊界與 queue variety gate 選定為下一個 actionable area
+    - `tools/mapmd_validate.py` 已通過
+    - generator `--validate-only` 已通過
   - next_action:
-    - commit `city_nanhai` 的 implementation milestone
-    - commit 後將 `city_nanhai` 移入 `done`
-    - 盤點並建立下一個主世界候選 area 的 spec milestone
+    - commit `wild_south_sea_route` 的 spec milestone
+    - commit 後直接進 implementation milestone
 
 
 ## Done
 
+- `2026-03-21` `city_nanhai` 已完成第一輪 runtime implementation、commit `4662263`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `dng_serpent_temple` 已完成第一輪 runtime implementation、commit `528e4a2`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `wild_nanman_jungle` 已完成第一輪 runtime implementation、commit `61cb0c6`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `city_guiyang` 已完成第一輪 runtime implementation、commit `39fa444`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
@@ -746,7 +772,7 @@
 
 ## Current Recommended Next Step
 
-`city_nanhai` 已完成第一輪 runtime scaffold、boundary 掛接、WSL build 與 startup smoke test。下一步應先提交 implementation milestone，接著直接盤點並建立下一個待建 area 的 spec milestone。
+`city_nanhai` 已完成並提交 implementation milestone。`wild_south_sea_route` 的 spec 驗證也已完成；下一步應先提交 spec milestone，再直接進 implementation milestone。
 
 ## Next Action
 
@@ -767,12 +793,15 @@
 - 完成 `dng_serpent_temple`：
   - 已提交 implementation milestone
 - 完成 `city_nanhai`：
-  - 已建立可載入 runtime scaffold
-  - 已完成 `15210 <-> 15501` boundary 掛接
-  - 已完成 `map.md` validate、generator write、WSL build 與 startup smoke test
-  - commit implementation milestone
-  - commit 後直接盤點下一個待建 area 並建立 spec
+  - 已提交 implementation milestone
+- 完成 `wild_south_sea_route`：
+  - 已建立 spec 與單區 plan
+  - 已選定 `15601-15630`
+  - 已完成 `map.md` validate
+  - 已完成 generator `--validate-only`
+  - commit spec milestone
+  - commit 後直接進 implementation milestone
 
 ## Next Prompt
 
-`先 commit 目前 city_nanhai 的 implementation milestone；commit 後直接盤點並建立下一個待建 area 的 spec milestone。`
+`先 commit 目前 wild_south_sea_route 的 spec milestone；commit 後直接做 implementation milestone。`
