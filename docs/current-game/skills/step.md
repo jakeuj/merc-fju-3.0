@@ -12,6 +12,15 @@ title: Current Game 步法 Skills
 - Registry note: [`skills.md`](../skills.html)
 - Index: [`skills-index.md`](../skills-index.html)
 
+## Legacy Damage Policy
+
+- Balance goal: `hybrid runtime-first`
+- Formula policy: `piecewise linear default`
+- Primary metrics: `failenable_mean / practice_adjusted_mean(30, 60, 90, npc_100) / tempo_pressure`
+- Player tier model: `level_equals_practice_tier`
+- Separate tracks: `TAR_CHAR_OFFENSIVE -> offensive ladder; TAR_DODGE -> dodge ladder`
+- Non-linear exceptions: `disallowed unless explicitly documented in combat_tuning_profile`
+
 ## Family Overview
 
 | Family | Legacy Chain | Skills | Audit States |
@@ -49,6 +58,9 @@ Legacy chain: `cloud steps -> gdragon steps -> mirage steps`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `65`
+- Practice-adjusted mean: `player_30=45.95; player_60=61.66; player_90=77.38; npc_100=65`
+- Tempo pressure: `player_30=45.95; player_60=61.66; player_90=77.38; npc_100=65`
 - Legacy page source: `skill/step.html`
 
 ### 青玄身法 / `gdragon steps`
@@ -71,6 +83,9 @@ Legacy chain: `cloud steps -> gdragon steps -> mirage steps`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `125`
+- Practice-adjusted mean: `player_30=96.43; player_60=120; player_90=143.57; npc_100=125`
+- Tempo pressure: `player_30=9.64; player_60=12; player_90=14.36; npc_100=12.5`
 - Legacy page source: `skill/step.html`
 
 ### 離影迷蹤步 / `mirage steps`
@@ -93,6 +108,9 @@ Legacy chain: `cloud steps -> gdragon steps -> mirage steps`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `175.71`
+- Practice-adjusted mean: `player_30=136.9; player_60=168.33; player_90=200.23; npc_100=175.71`
+- Tempo pressure: `player_30=13.69; player_60=16.83; player_90=20.02; npc_100=17.57`
 - Legacy page source: `skill/step.html`
 
 ## legacy-step-cloud-ghost
@@ -119,6 +137,9 @@ Legacy chain: `cloud ghost -> wind color steps`
 - Chance values: `[10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `120`
+- Practice-adjusted mean: `player_30=87.76; player_60=114.43; player_90=141.1; npc_100=120`
+- Tempo pressure: `player_30=8.78; player_60=11.44; player_90=14.11; npc_100=12`
 - Legacy page source: `skill/step.html`
 
 ### 破風彩雲步 / `wind color steps`
@@ -141,6 +162,9 @@ Legacy chain: `cloud ghost -> wind color steps`
 - Chance values: `[20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `160.83`
+- Practice-adjusted mean: `player_30=127.77; player_60=154.44; player_90=181.85; npc_100=160.83`
+- Tempo pressure: `player_30=12.78; player_60=15.44; player_90=18.18; npc_100=16.08`
 - Legacy page source: `skill/step.html`
 
 ## legacy-step-nine
@@ -167,6 +191,9 @@ Legacy chain: `nine steps -> color steps`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `127.14`
+- Practice-adjusted mean: `player_30=96.43; player_60=120; player_90=146.1; npc_100=127.14`
+- Tempo pressure: `player_30=19.29; player_60=24; player_90=29.22; npc_100=25.43`
 - Legacy page source: `skill/step.html`
 
 ### 九天靈影步 / `nine steps`
@@ -189,6 +216,9 @@ Legacy chain: `nine steps -> color steps`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `90`
+- Practice-adjusted mean: `player_30=58.33; player_60=81.24; player_90=108.6; npc_100=90`
+- Tempo pressure: `player_30=58.33; player_60=81.24; player_90=108.6; npc_100=90`
 - Legacy page source: `skill/step.html`
 
 ## legacy-step-shade
@@ -215,6 +245,9 @@ Legacy chain: `shade steps -> wind steps`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `105`
+- Practice-adjusted mean: `player_30=76.43; player_60=100; player_90=123.57; npc_100=105`
+- Tempo pressure: `player_30=7.64; player_60=10; player_90=12.36; npc_100=10.5`
 - Legacy page source: `skill/step.html`
 
 ### 風影藏 / `wind steps`
@@ -237,6 +270,9 @@ Legacy chain: `shade steps -> wind steps`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `160.62`
+- Practice-adjusted mean: `player_30=116.66; player_60=151.66; player_90=188.05; npc_100=160.62`
+- Tempo pressure: `player_30=11.67; player_60=15.17; player_90=18.8; npc_100=16.06`
 - Legacy page source: `skill/step.html`
 
 ## legacy-step-sleev
@@ -263,6 +299,9 @@ Legacy chain: `sleev steps -> sky steps`
 - Chance values: `[20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `145`
+- Practice-adjusted mean: `player_30=112.77; player_60=139.44; player_90=166.11; npc_100=145`
+- Tempo pressure: `player_30=11.28; player_60=13.94; player_90=16.61; npc_100=14.5`
 - Legacy page source: `skill/step.html`
 
 ### 風雲袖步 / `sleev steps`
@@ -285,6 +324,9 @@ Legacy chain: `sleev steps -> sky steps`
 - Chance values: `[20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `90`
+- Practice-adjusted mean: `player_30=66.66; player_60=86.66; player_90=104.44; npc_100=90`
+- Tempo pressure: `player_30=6.67; player_60=8.67; player_90=10.44; npc_100=9`
 - Legacy page source: `skill/step.html`
 
 ## legacy-step-standalone
@@ -311,6 +353,9 @@ Legacy chain: `eight steps / free steps / hundred steps / night steps`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `20`
+- Practice-adjusted mean: `player_30=20; player_60=20; player_90=20; npc_100=20`
+- Tempo pressure: `player_30=20; player_60=20; player_90=20; npc_100=20`
 - Legacy page source: `skill/step.html`
 
 ### 逍遙遊 / `free steps`
@@ -333,6 +378,9 @@ Legacy chain: `eight steps / free steps / hundred steps / night steps`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `20`
+- Practice-adjusted mean: `player_30=20; player_60=20; player_90=20; npc_100=20`
+- Tempo pressure: `player_30=2; player_60=2; player_90=2; npc_100=2`
 - Legacy page source: `skill/step.html`
 
 ### 百幻身法 / `hundred steps`
@@ -355,6 +403,9 @@ Legacy chain: `eight steps / free steps / hundred steps / night steps`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `20`
+- Practice-adjusted mean: `player_30=20; player_60=20; player_90=20; npc_100=20`
+- Tempo pressure: `player_30=2; player_60=2; player_90=2; npc_100=2`
 - Legacy page source: `skill/step.html`
 
 ### 百鬼夜行步 / `night steps`
@@ -377,5 +428,8 @@ Legacy chain: `eight steps / free steps / hundred steps / night steps`
 - Chance values: `[10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `20`
+- Practice-adjusted mean: `player_30=20; player_60=20; player_90=20; npc_100=20`
+- Tempo pressure: `player_30=2; player_60=2; player_90=2; npc_100=2`
 - Legacy page source: `skill/step.html`
 

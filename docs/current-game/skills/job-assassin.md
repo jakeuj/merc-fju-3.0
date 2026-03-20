@@ -12,6 +12,15 @@ title: Current Game 暗殺系 Skills
 - Registry note: [`skills.md`](../skills.html)
 - Index: [`skills-index.md`](../skills-index.html)
 
+## Legacy Damage Policy
+
+- Balance goal: `hybrid runtime-first`
+- Formula policy: `piecewise linear default`
+- Primary metrics: `failenable_mean / practice_adjusted_mean(30, 60, 90, npc_100) / tempo_pressure`
+- Player tier model: `level_equals_practice_tier`
+- Separate tracks: `TAR_CHAR_OFFENSIVE -> offensive ladder; TAR_DODGE -> dodge ladder`
+- Non-linear exceptions: `disallowed unless explicitly documented in combat_tuning_profile`
+
 ## Family Overview
 
 | Family | Legacy Chain | Skills | Audit States |
@@ -65,6 +74,9 @@ Legacy chain: `bystander fist / hate sword / iron shield`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `318.75`
+- Practice-adjusted mean: `player_30=201.1; player_60=274.43; player_90=382.39; npc_100=318.75`
+- Tempo pressure: `player_30=22.34; player_60=30.49; player_90=42.49; npc_100=35.42`
 - Legacy page source: `skill/bravo.html`
 
 ### 鐵布衫 / `iron shield`

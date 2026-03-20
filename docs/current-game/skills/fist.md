@@ -12,6 +12,15 @@ title: Current Game 拳法 Skills
 - Registry note: [`skills.md`](../skills.html)
 - Index: [`skills-index.md`](../skills-index.html)
 
+## Legacy Damage Policy
+
+- Balance goal: `hybrid runtime-first`
+- Formula policy: `piecewise linear default`
+- Primary metrics: `failenable_mean / practice_adjusted_mean(30, 60, 90, npc_100) / tempo_pressure`
+- Player tier model: `level_equals_practice_tier`
+- Separate tracks: `TAR_CHAR_OFFENSIVE -> offensive ladder; TAR_DODGE -> dodge ladder`
+- Non-linear exceptions: `disallowed unless explicitly documented in combat_tuning_profile`
+
 ## Family Overview
 
 | Family | Legacy Chain | Skills | Audit States |
@@ -44,6 +53,9 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - Chance values: `[10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `120.71`
+- Practice-adjusted mean: `player_30=86.43; player_60=110; player_90=139.6; npc_100=120.71`
+- Tempo pressure: `player_30=8.64; player_60=11; player_90=13.96; npc_100=12.07`
 - Legacy page source: `skill/fist.html`
 
 ### 邪皇拳 / `evil king`
@@ -66,6 +78,9 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `201.88`
+- Practice-adjusted mean: `player_30=151.66; player_60=186.66; player_90=230.27; npc_100=201.88`
+- Tempo pressure: `player_30=18.96; player_60=23.33; player_90=28.78; npc_100=25.23`
 - Legacy page source: `skill/fist.html`
 
 ### 鬼拳 / `ghost marial`
@@ -88,6 +103,9 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - Chance values: `[20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `200.83`
+- Practice-adjusted mean: `player_30=157.21; player_60=190.55; player_90=227.96; npc_100=200.83`
+- Tempo pressure: `player_30=22.46; player_60=27.22; player_90=32.57; npc_100=28.69`
 - Legacy page source: `skill/fist.html`
 
 ### 玄陰掌 / `ghost strike`
@@ -110,6 +128,9 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - Chance values: `[20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `137.86`
+- Practice-adjusted mean: `player_30=96.9; player_60=128.33; player_90=162.77; npc_100=137.86`
+- Tempo pressure: `player_30=9.69; player_60=12.83; player_90=16.28; npc_100=13.79`
 - Legacy page source: `skill/fist.html`
 
 ### 秘拳．八神 / `hashin`
@@ -132,6 +153,9 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `310.5`
+- Practice-adjusted mean: `player_30=211.66; player_60=276.66; player_90=363.88; npc_100=310.5`
+- Tempo pressure: `player_30=42.33; player_60=55.33; player_90=72.78; npc_100=62.1`
 - Legacy page source: `skill/fist.html`
 
 ### 王拳 / `king fist`
@@ -154,6 +178,9 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - Chance values: `[10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `157.86`
+- Practice-adjusted mean: `player_30=116.9; player_60=148.33; player_90=182.77; npc_100=157.86`
+- Tempo pressure: `player_30=9.74; player_60=12.36; player_90=15.23; npc_100=13.16`
 - Legacy page source: `skill/fist.html`
 
 ### 泰山長拳 / `long fist`
@@ -176,6 +203,9 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `87.78`
+- Practice-adjusted mean: `player_30=62.78; player_60=82.96; player_90=103.27; npc_100=87.78`
+- Tempo pressure: `player_30=12.56; player_60=16.59; player_90=20.65; npc_100=17.56`
 - Legacy page source: `skill/fist.html`
 
 ### 瀧山拳法 / `lung shan`
@@ -198,6 +228,9 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - Chance values: `[20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `147.86`
+- Practice-adjusted mean: `player_30=116.43; player_60=140; player_90=166.58; npc_100=147.86`
+- Tempo pressure: `player_30=23.29; player_60=28; player_90=33.32; npc_100=29.57`
 - Legacy page source: `skill/fist.html`
 
 ### 如來神掌 / `rulai`
@@ -220,6 +253,9 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `231.11`
+- Practice-adjusted mean: `player_30=157.96; player_60=209.62; player_90=273.08; npc_100=231.11`
+- Tempo pressure: `player_30=15.8; player_60=20.96; player_90=27.31; npc_100=23.11`
 - Legacy page source: `skill/fist.html`
 
 ### 草薙拳法 / `ryo`
@@ -242,6 +278,9 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - Chance values: `[20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `182.86`
+- Practice-adjusted mean: `player_30=136.9; player_60=168.33; player_90=202.77; npc_100=182.86`
+- Tempo pressure: `player_30=27.38; player_60=33.67; player_90=40.55; npc_100=36.57`
 - Legacy page source: `skill/fist.html`
 
 ### 天龍真氣 / `sky dragon force`
@@ -264,6 +303,9 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - Chance values: `[10, 10, 10]`
 - Parry values: `[0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0']`
+- Failenable mean: `273.33`
+- Practice-adjusted mean: `player_30=220; player_60=264.4; player_90=301.09; npc_100=273.33`
+- Tempo pressure: `player_30=220; player_60=264.4; player_90=301.09; npc_100=273.33`
 - Legacy page source: `skill/fist.html`
 
 ### 小擒拿手 / `tackle`
@@ -286,5 +328,8 @@ Legacy chain: `evil fist -> evil king / ghost strike -> ghost marial / king fist
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `211.25`
+- Practice-adjusted mean: `player_30=166.66; player_60=201.66; player_90=238.33; npc_100=211.25`
+- Tempo pressure: `player_30=33.33; player_60=40.33; player_90=47.67; npc_100=42.25`
 - Legacy page source: `skill/fist.html`
 

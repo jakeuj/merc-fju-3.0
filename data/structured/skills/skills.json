@@ -4,8 +4,64 @@
   "notes": [
     "This file is the authoring-layer source for skill runtime artifacts.",
     "docs/current-game/skills.json remains a generated read model.",
-    "The AST in document preserves field order and section structure so export can round-trip existing .ski files."
+    "The AST in document preserves field order and section structure so export can round-trip existing .ski files.",
+    "legacy_damage_policy records the default ladder formula, generated metrics, guardrails, and non-linear exception rules for legacy skill damage rebuild work."
   ],
+  "legacy_damage_policy": {
+    "version": 1,
+    "balance_goal": "hybrid runtime-first",
+    "formula_policy": "piecewise linear default",
+    "summary": [
+      "Old-site data and rebuild notes define chain identity, progression, and intended strength impressions.",
+      "Actual runtime balancing is driven by current driver_kill/driver_dodge behavior, loader guardrails, and structured authoring flow.",
+      "Global tanh-style formulas are not the default; non-linear curves are reserved for explicit signature-skill exceptions."
+    ],
+    "primary_metrics": {
+      "failenable_mean": {
+        "description": "Chance-weighted mean that matches the static template view used by get_adeptation-style failenable guardrails."
+      },
+      "practice_adjusted_mean": {
+        "description": "Expected realized mean under the current driver_kill/driver_dodge selection flow.",
+        "player_practice_tiers": [
+          30,
+          60,
+          90
+        ],
+        "npc_practice": 100,
+        "player_level_model": "level_equals_practice_tier",
+        "driver_alignment": [
+          "src/skill.c:driver_kill",
+          "src/enable.c:driver_dodge"
+        ]
+      },
+      "tempo_pressure": {
+        "description": "realized_mean / Wait using the generated practice-adjusted means; Cost stays as a separate balancing constraint."
+      }
+    },
+    "guardrails": {
+      "promotion_file": "data/promotion.txt",
+      "handler_path": "src/handler.c:get_adeptation",
+      "usage": "guardrail_only",
+      "mob_fields": [
+        "AutoEnable",
+        "AttackRatio",
+        "DodgeRatio"
+      ]
+    },
+    "template_tracks": {
+      "TAR_CHAR_OFFENSIVE": "offensive ladder",
+      "TAR_DODGE": "dodge ladder"
+    },
+    "non_linear_exceptions": {
+      "default_policy": "disallowed unless explicitly documented in combat_tuning_profile",
+      "per_skill_override_field": "combat_tuning_profile",
+      "required_fields": [
+        "curve",
+        "reason",
+        "intent"
+      ]
+    }
+  },
   "skill_lst": {
     "relative_path": "skill/skill.lst",
     "nodes": [

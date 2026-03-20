@@ -65,6 +65,21 @@ def bool_text(value: object) -> str:
     return "-"
 
 
+def metric_text(value: object) -> str:
+    if value is None:
+        return "-"
+    if isinstance(value, float):
+        return f"{value:.2f}".rstrip("0").rstrip(".")
+    return str(value)
+
+
+def metric_map_text(values: dict[str, object]) -> str:
+    if not values:
+        return "-"
+    parts = [f"{key}={metric_text(value)}" for key, value in values.items()]
+    return "; ".join(parts)
+
+
 def md_table(headers: list[str], rows: list[list[str]]) -> str:
     out = [
         "| " + " | ".join(headers) + " |",
@@ -145,6 +160,30 @@ def restriction_summary(restrictions: dict) -> str:
     return "; ".join(parts) if parts else "-"
 
 
+def legacy_damage_policy_lines(policy: dict) -> list[str]:
+    if not policy:
+        return []
+
+    practice_metric = (policy.get("primary_metrics") or {}).get("practice_adjusted_mean") or {}
+    player_tiers = practice_metric.get("player_practice_tiers") or [30, 60, 90]
+    npc_tier = practice_metric.get("npc_practice") or 100
+    player_level_model = practice_metric.get("player_level_model") or "-"
+    template_tracks = policy.get("template_tracks") or {}
+    non_linear = policy.get("non_linear_exceptions") or {}
+
+    return [
+        "## Legacy Damage Policy",
+        "",
+        f"- Balance goal: `{policy.get('balance_goal') or '-'}`",
+        f"- Formula policy: `{policy.get('formula_policy') or '-'}`",
+        f"- Primary metrics: `failenable_mean / practice_adjusted_mean({', '.join(str(t) for t in player_tiers)}, npc_{npc_tier}) / tempo_pressure`",
+        f"- Player tier model: `{player_level_model}`",
+        f"- Separate tracks: `TAR_CHAR_OFFENSIVE -> {template_tracks.get('TAR_CHAR_OFFENSIVE') or '-'}; TAR_DODGE -> {template_tracks.get('TAR_DODGE') or '-'}`",
+        f"- Non-linear exceptions: `{non_linear.get('default_policy') or '-'}`",
+        "",
+    ]
+
+
 def write_index(data: dict) -> None:
     skills = data["skills"]
     by_leaf: dict[tuple[str, str], list[dict]] = defaultdict(list)
@@ -166,6 +205,7 @@ def write_index(data: dict) -> None:
         "這些子頁由 `scripts/generate_current_game_skills_pages.py` 從同一份 registry 靜態生成。",
         "",
     ]
+    lines.extend(legacy_damage_policy_lines(data.get("legacy_damage_policy") or {}))
 
     for group, leaves in data["legacy_site_navigation"]["groups"].items():
         rows = []
@@ -194,6 +234,7 @@ def skill_section(skill: dict) -> str:
     legacy_catalog = skill.get("legacy_catalog") or {}
     legacy_requirements = skill.get("legacy_requirements") or {}
     restrictions = legacy_requirements.get("restrictions") or {}
+    tuning = skill.get("combat_tuning_profile") or {}
     lines = [
         f"### {skill['chinese_name']} / `{skill['english_name']}`",
         "",
@@ -211,6 +252,14 @@ def skill_section(skill: dict) -> str:
         f"- Class limits: `{class_limit_summary(legacy_requirements.get('class_limits') or [])}`",
         f"- Restrictions: `{restriction_summary(restrictions)}`",
     ]
+    if tuning:
+        lines.append(
+            f"- Tuning profile: `{tuning.get('template_track') or '-'} / {tuning.get('curve_policy') or '-'} / {tuning.get('intent') or '-'}`"
+        )
+        if tuning.get("curve"):
+            lines.append(f"- Curve override: `{tuning.get('curve')}`")
+        if tuning.get("reason"):
+            lines.append(f"- Curve reason: `{tuning.get('reason')}`")
     damage_source = combat.get("damage_source")
     if damage_source == "code-driven":
         lines.extend(
@@ -251,6 +300,14 @@ def skill_section(skill: dict) -> str:
                 f"- Chance values: `{combat.get('chance_values') or []}`",
                 f"- Parry values: `{combat.get('parry_values') or []}`",
                 f"- Innate values: `{combat.get('innate_values') or []}`",
+            ]
+        )
+    if combat.get("failenable_mean") is not None:
+        lines.extend(
+            [
+                f"- Failenable mean: `{metric_text(combat.get('failenable_mean'))}`",
+                f"- Practice-adjusted mean: `{metric_map_text(combat.get('practice_adjusted_mean') or {})}`",
+                f"- Tempo pressure: `{metric_map_text(combat.get('tempo_pressure') or {})}`",
             ]
         )
     if legacy_catalog:
@@ -303,6 +360,7 @@ def write_leaf_page(data: dict, group: str, leaf: str) -> None:
         "- Registry note: [`skills.md`](../skills.html)",
         "- Index: [`skills-index.md`](../skills-index.html)",
         "",
+        *legacy_damage_policy_lines(data.get("legacy_damage_policy") or {}),
         "## Family Overview",
         "",
         md_table(["Family", "Legacy Chain", "Skills", "Audit States"], family_rows),

@@ -12,7 +12,10 @@ LEGACY_SKILLS_JSON = ROOT / "docs/3yWebsite/docs/data/skills.json"
 LEGACY_SKILL_DIR = ROOT / "docs/3yWebsite/skill"
 CURRENT_SKILLS_JSON = ROOT / "docs/current-game/skills.json"
 STRUCTURED_SKILLS_JSON = ROOT / "data/structured/skills/skills.json"
+PROMOTION_TXT = ROOT / "data/promotion.txt"
 CODE_DAMAGE_SOURCE_FILES = [ROOT / "src/spell.c", ROOT / "src/ex_spell.c"]
+PLAYER_PRACTICE_TIERS = (30, 60, 90)
+NPC_PRACTICE_TIER = 100
 
 
 NPC_RUNTIME_SKILLS = {
@@ -58,6 +61,12 @@ def read_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def load_structured_skill_data() -> dict:
+    if not STRUCTURED_SKILLS_JSON.exists():
+        return {}
+    return read_json(STRUCTURED_SKILLS_JSON)
+
+
 def load_existing_registry() -> dict[str, dict]:
     if not CURRENT_SKILLS_JSON.exists():
         return {}
@@ -66,10 +75,14 @@ def load_existing_registry() -> dict[str, dict]:
 
 
 def load_structured_skill_source() -> dict[str, dict]:
-    if not STRUCTURED_SKILLS_JSON.exists():
-        return {}
-    data = read_json(STRUCTURED_SKILLS_JSON)
+    data = load_structured_skill_data()
     return {item["english_name"]: item for item in data.get("skills", []) if item.get("english_name")}
+
+
+def load_legacy_damage_policy() -> dict | None:
+    data = load_structured_skill_data()
+    policy = data.get("legacy_damage_policy")
+    return policy if isinstance(policy, dict) else None
 
 
 def load_skill_lst() -> dict[str, str]:
@@ -163,6 +176,95 @@ def parse_runtime_skills(skill_lst: dict[str, str]) -> dict[str, dict]:
         runtime["combat_dimensions"] = combat
         runtime_by_name[runtime_name] = runtime
     return runtime_by_name
+
+
+def round_metric(value: float | None) -> float | None:
+    if value is None:
+        return None
+    return round(value, 2)
+
+
+def chance_weighted_mean(values: list[int], chances: list[int]) -> float | None:
+    if not values or not chances or len(values) != len(chances):
+        return None
+    total = sum(chance for chance in chances if chance > 0)
+    if total <= 0:
+        return None
+    return sum(value * chance for value, chance in zip(values, chances)) / total
+
+
+def expand_damage_window(values: list[int], chances: list[int]) -> list[int]:
+    expanded: list[int] = []
+    for value, chance in zip(values, chances):
+        if chance <= 0:
+            continue
+        expanded.extend([value] * (chance * 100))
+    return expanded
+
+
+def driver_expected_mean(values: list[int], chances: list[int], practice: int, *, npc: bool) -> float | None:
+    if practice <= 0:
+        return None
+
+    total = sum(chance for chance in chances if chance > 0)
+    if total <= 0:
+        return None
+
+    expanded = expand_damage_window(values, chances)
+    if not expanded:
+        return None
+
+    if npc:
+        lower = 1
+    else:
+        level = practice
+        lower = max(1, min(practice, level // 2) * total)
+
+    upper = min(practice * total, total * 100)
+    if lower > upper:
+        return None
+
+    window = expanded[lower - 1 : upper]
+    if not window:
+        return None
+
+    return sum(window) / len(window)
+
+
+def build_generated_combat_metrics(runtime_type: str | None, values: list[int], chances: list[int], wait: int | None) -> dict:
+    if not values or not chances or len(values) != len(chances):
+        return {}
+
+    failenable_mean = chance_weighted_mean(values, chances)
+    if failenable_mean is None:
+        return {}
+
+    practice_adjusted_mean: dict[str, float] = {}
+    for practice in PLAYER_PRACTICE_TIERS:
+        mean = driver_expected_mean(values, chances, practice, npc=False)
+        if mean is not None:
+            practice_adjusted_mean[f"player_{practice}"] = round_metric(mean)
+
+    npc_mean = driver_expected_mean(values, chances, NPC_PRACTICE_TIER, npc=True)
+    if npc_mean is not None:
+        practice_adjusted_mean[f"npc_{NPC_PRACTICE_TIER}"] = round_metric(npc_mean)
+
+    tempo_pressure: dict[str, float | None] = {}
+    for label, mean in practice_adjusted_mean.items():
+        tempo_pressure[label] = round_metric(mean / wait) if wait and wait > 0 else None
+
+    metrics = {
+        "failenable_mean": round_metric(failenable_mean),
+        "practice_adjusted_mean": practice_adjusted_mean,
+        "tempo_pressure": tempo_pressure,
+    }
+
+    if runtime_type == "TAR_CHAR_OFFENSIVE":
+        metrics["guardrail_axis"] = "damage"
+    elif runtime_type == "TAR_DODGE":
+        metrics["guardrail_axis"] = "dodge"
+
+    return metrics
 
 
 def merge_structured_runtime(structured_skill: dict | None, runtime_readback: dict) -> tuple[dict, dict | None]:
@@ -606,6 +708,7 @@ def analyze_code_damage(function_name: str | None) -> dict | None:
 def build_registry() -> dict:
     existing = load_existing_registry()
     structured_by_name = load_structured_skill_source()
+    legacy_damage_policy = load_legacy_damage_policy()
     legacy_rows = read_json(LEGACY_SKILLS_JSON)
     legacy_by_name = {row.get("英文名稱") or row.get("display_name"): row for row in legacy_rows}
     skill_lst = load_skill_lst()
@@ -726,6 +829,8 @@ def build_registry() -> dict:
             "prepared_for_adjustment": bool(runtime.get("exists")),
             "notes": [],
         }))
+        for field in ("failenable_mean", "practice_adjusted_mean", "tempo_pressure", "guardrail_axis"):
+            combat.pop(field, None)
         if existing_combat.get("notes"):
             combat["notes"] = dedupe_notes(list(existing_combat["notes"]))
         if not runtime.get("exists"):
@@ -767,6 +872,15 @@ def build_registry() -> dict:
                 ]
             )
 
+        combat.update(
+            build_generated_combat_metrics(
+                runtime.get("type"),
+                combat.get("damage_values") or [],
+                combat.get("chance_values") or [],
+                combat.get("wait"),
+            )
+        )
+
         item = {
             "english_name": name,
             "chinese_name": chinese_name,
@@ -780,6 +894,8 @@ def build_registry() -> dict:
             "combat_dimensions": combat,
             "status": build_status(existing, name, player_facing, npc_only),
         }
+        if structured_skill and structured_skill.get("combat_tuning_profile"):
+            item["combat_tuning_profile"] = structured_skill["combat_tuning_profile"]
         if structured_skill:
             item["structured_source"] = {
                 "path": str(STRUCTURED_SKILLS_JSON.relative_to(ROOT)).replace("\\", "/"),
@@ -795,7 +911,7 @@ def build_registry() -> dict:
         skills.append(item)
 
     return {
-        "registry_version": 5,
+        "registry_version": 6,
         "scope": "Integrated current-game skill registry for merc-fju-3.0. It combines old-site catalog data, structured skill source, runtime readback audit, and skill-combat fields without changing the legacy loader contract.",
         "coverage": {
             "seeded_families": [
@@ -816,6 +932,7 @@ def build_registry() -> dict:
             "legacy_guides": ["docs/3yWebsite/newhand/newbies/index.html"],
             "runtime": ["skill/*.ski", "skill/skill.lst", "src/merc.h", "data/symbol.def"],
         },
+        "legacy_damage_policy": legacy_damage_policy,
         "legacy_site_navigation": legacy_site_navigation,
         "combat_dimension_schema": {
             "purpose": "Keep one audit-ready place for current skill templates, legacy requirements, and future tuning deltas.",
@@ -829,6 +946,10 @@ def build_registry() -> dict:
                 "cost_type",
                 "weapon",
                 "check",
+                "failenable_mean",
+                "practice_adjusted_mean",
+                "tempo_pressure",
+                "guardrail_axis",
                 "damage_source",
                 "damage_gap_classification",
                 "code_path",
@@ -836,6 +957,10 @@ def build_registry() -> dict:
             ],
             "usage_notes": [
                 "Do not tune by damage_values alone; read chance/parry/innate/wait/cost/weapon/check together.",
+                "Treat failenable_mean and data/promotion.txt as guardrails for mob calibration, not as the only balance target.",
+                "practice_adjusted_mean follows the current driver_kill/driver_dodge selection flow for player tiers 30/60/90 and npc_100.",
+                "The generated player practice tiers assume player level equals the practice tier so the level/2 lower bound remains active.",
+                "tempo_pressure is realized_mean / Wait; Cost still remains a separate constraint rather than part of the scalar.",
                 "Use legacy_requirements to preserve old-site class, attribute, and prerequisite constraints even before runtime reconciliation is complete.",
                 "When a batch changes a skill, append batch-specific notes rather than overwriting historical context.",
                 "When damage_values is empty, do not assume the skill is broken until you distinguish code-driven offensive exceptions from unresolved runtime gaps.",
@@ -848,6 +973,7 @@ def build_registry() -> dict:
             "combat_dimensions is intended to hold both current runtime values and future tuning metadata.",
             "Runtime files are still parsed so the registry can surface structured-vs-runtime drift as audit metadata.",
             "Player-facing offensive skills without .ski #Damage now distinguish code-driven offensive exceptions from unresolved gaps.",
+            "legacy_damage_policy is sourced from data/structured/skills/skills.json so formula rules live in the structured authoring layer rather than only in handwritten audit notes.",
         ],
         "skills": skills,
     }

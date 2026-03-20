@@ -12,6 +12,15 @@ title: Current Game 劍 Skills
 - Registry note: [`skills.md`](../skills.html)
 - Index: [`skills-index.md`](../skills-index.html)
 
+## Legacy Damage Policy
+
+- Balance goal: `hybrid runtime-first`
+- Formula policy: `piecewise linear default`
+- Primary metrics: `failenable_mean / practice_adjusted_mean(30, 60, 90, npc_100) / tempo_pressure`
+- Player tier model: `level_equals_practice_tier`
+- Separate tracks: `TAR_CHAR_OFFENSIVE -> offensive ladder; TAR_DODGE -> dodge ladder`
+- Non-linear exceptions: `disallowed unless explicitly documented in combat_tuning_profile`
+
 ## Family Overview
 
 | Family | Legacy Chain | Skills | Audit States |
@@ -44,6 +53,9 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `116.88`
+- Practice-adjusted mean: `player_30=80; player_60=106.24; player_90=138.6; npc_100=116.88`
+- Tempo pressure: `player_30=80; player_60=106.24; player_90=138.6; npc_100=116.88`
 - Legacy page source: `skill/sword.html`
 
 ### 龍袖劍法 / `dragon sleeve sword`
@@ -66,6 +78,9 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `288.75`
+- Practice-adjusted mean: `player_30=220; player_60=272.49; player_90=328.33; npc_100=288.75`
+- Tempo pressure: `player_30=20; player_60=24.77; player_90=29.85; npc_100=26.25`
 - Legacy page source: `skill/sword.html`
 
 ### 斷家蝕日劍法 / `duansun sword`
@@ -88,6 +103,9 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - Chance values: `[10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `289.29`
+- Practice-adjusted mean: `player_30=227.38; player_60=270.47; player_90=326.33; npc_100=289.29`
+- Tempo pressure: `player_30=22.74; player_60=27.05; player_90=32.63; npc_100=28.93`
 - Legacy page source: `skill/sword.html`
 
 ### 封山劍法 / `fonxan sword`
@@ -110,6 +128,9 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `180`
+- Practice-adjusted mean: `player_30=136.66; player_60=171.66; player_90=207.77; npc_100=180`
+- Tempo pressure: `player_30=17.08; player_60=21.46; player_90=25.97; npc_100=22.5`
 - Legacy page source: `skill/sword.html`
 
 ### 神龍劍法 / `fu sword`
@@ -132,6 +153,9 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `206.36`
+- Practice-adjusted mean: `player_30=134.39; player_60=187.42; player_90=249.13; npc_100=206.36`
+- Tempo pressure: `player_30=10.34; player_60=14.42; player_90=19.16; npc_100=15.87`
 - Legacy page source: `skill/sword.html`
 
 ### 無量神劍 / `gsword`
@@ -154,6 +178,9 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `224.09`
+- Practice-adjusted mean: `player_30=149.39; player_60=202.42; player_90=266.96; npc_100=224.09`
+- Tempo pressure: `player_30=11.49; player_60=15.57; player_90=20.54; npc_100=17.24`
 - Legacy page source: `skill/sword.html`
 
 ### 華山劍法 / `hua sword`
@@ -176,6 +203,9 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - Chance values: `[10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[2, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `105`
+- Practice-adjusted mean: `player_30=76.43; player_60=100; player_90=123.57; npc_100=105`
+- Tempo pressure: `player_30=15.29; player_60=20; player_90=24.71; npc_100=21`
 - Legacy page source: `skill/sword.html`
 
 ### 無名劍法 / `noname`
@@ -198,6 +228,9 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `245.56`
+- Practice-adjusted mean: `player_30=185.36; player_60=226.84; player_90=280.05; npc_100=245.56`
+- Tempo pressure: `player_30=18.54; player_60=22.68; player_90=28.01; npc_100=24.56`
 - Legacy page source: `skill/sword.html`
 
 ### 暗影劍法 / `shadow kill sword`
@@ -220,6 +253,9 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `213.82`
+- Practice-adjusted mean: `player_30=139.4; player_60=197.35; player_90=257.34; npc_100=213.82`
+- Tempo pressure: `player_30=139.4; player_60=197.35; player_90=257.34; npc_100=213.82`
 - Legacy page source: `skill/sword.html`
 
 ### 銷魂劍法 / `shan sword`
@@ -242,6 +278,9 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `108.12`
+- Practice-adjusted mean: `player_30=75; player_60=101.24; player_90=128.6; npc_100=108.12`
+- Tempo pressure: `player_30=75; player_60=101.24; player_90=128.6; npc_100=108.12`
 - Legacy page source: `skill/sword.html`
 
 ### 六劍訣 / `six sword`
@@ -264,6 +303,9 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - Chance values: `[10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `252.14`
+- Practice-adjusted mean: `player_30=197.38; player_60=237.13; player_90=285.15; npc_100=252.14`
+- Tempo pressure: `player_30=197.38; player_60=237.13; player_90=285.15; npc_100=252.14`
 - Legacy page source: `skill/sword.html`
 
 ### 雙十旋龍斬 / `sky dragon sword`
@@ -286,6 +328,9 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `267.5`
+- Practice-adjusted mean: `player_30=190; player_60=244.16; player_90=313.32; npc_100=267.5`
+- Tempo pressure: `player_30=13.57; player_60=17.44; player_90=22.38; npc_100=19.11`
 - Legacy page source: `skill/sword.html`
 
 ### 天道九劍 / `tendo slash`
@@ -308,6 +353,9 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `299.44`
+- Practice-adjusted mean: `player_30=217.96; player_60=272.96; player_90=345.98; npc_100=299.44`
+- Tempo pressure: `player_30=15.57; player_60=19.5; player_90=24.71; npc_100=21.39`
 - Legacy page source: `skill/sword.html`
 
 ### 兩儀劍法 / `two sword`
@@ -330,6 +378,9 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - Chance values: `[20, 30, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '404 150', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `152`
+- Practice-adjusted mean: `player_30=125.35; player_60=124; player_90=166.66; npc_100=152`
+- Tempo pressure: `player_30=10.45; player_60=10.33; player_90=13.89; npc_100=12.67`
 - Legacy page source: `skill/sword.html`
 
 ### 無名劍 / `wumin sword`
@@ -352,5 +403,8 @@ Legacy chain: `bad sword -> wumin sword -> noname / fu sword -> sky dragon sword
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `202.78`
+- Practice-adjusted mean: `player_30=145.36; player_60=186.84; player_90=236.1; npc_100=202.78`
+- Tempo pressure: `player_30=12.11; player_60=15.57; player_90=19.68; npc_100=16.9`
 - Legacy page source: `skill/sword.html`
 

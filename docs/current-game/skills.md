@@ -214,6 +214,38 @@ title: Current Game Skills
 - `src/skill.c`
   - 會把等待時間、資源與武器限制帶進技能體感
 
+目前這套規則已正式落在 `data/structured/skills/skills.json -> legacy_damage_policy`，而不是只存在於手寫 audit 記錄。對應的 generated read model 會把結果投影到 `docs/current-game/skills.json` 與各 leaf page。
+
+後續每條 ladder 的主要指標改成：
+
+- `failenable_mean`
+  - 以 `#Damage Chance` 加權後的平均值
+  - 對應 `src/handler.c -> get_adeptation()` 比較接近的 guardrail 視角
+- `practice_adjusted_mean`
+  - 依 `src/skill.c -> driver_kill()` 與 `src/enable.c -> driver_dodge()` 的抽招邏輯，至少看玩家 `30 / 60 / 90` 與 `npc_100`
+  - 目前 generated metric 的玩家假設是 `level == practice tier`，保留 `level / 2` 下限對抽招窗口的影響
+- `tempo_pressure`
+  - `realized_mean / Wait`
+  - 用來看節奏壓力，但不取代 `Cost`、武器需求或其他 gating
+
+另外目前政策也把模板分成兩條：
+
+- `TAR_CHAR_OFFENSIVE`
+  - offensive ladder 與 `AttackRatio` guardrail 分開看
+- `TAR_DODGE`
+  - dodge ladder 與 `DodgeRatio` guardrail 分開看
+
+也就是說，之後不要再拿同一條全域曲線同時推攻擊技和步法。
+
+至於非線性函數，目前 repo 政策不是全域禁止，而是只允許明確例外：
+
+- 預設：`piecewise linear`
+- 例外：只有 signature skill 才能用非線性曲線，例如 `tanh`
+- 例外必須在 structured source 的 `combat_tuning_profile` 裡明寫：
+  - `curve`
+  - `reason`
+  - `intent`
+
 因此目前的維護原則是：
 
 - 先承認 `Value=20` 大量殘留本身是問題

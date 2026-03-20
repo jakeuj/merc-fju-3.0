@@ -12,6 +12,15 @@ title: Current Game 筆扇 Skills
 - Registry note: [`skills.md`](../skills.html)
 - Index: [`skills-index.md`](../skills-index.html)
 
+## Legacy Damage Policy
+
+- Balance goal: `hybrid runtime-first`
+- Formula policy: `piecewise linear default`
+- Primary metrics: `failenable_mean / practice_adjusted_mean(30, 60, 90, npc_100) / tempo_pressure`
+- Player tier model: `level_equals_practice_tier`
+- Separate tracks: `TAR_CHAR_OFFENSIVE -> offensive ladder; TAR_DODGE -> dodge ladder`
+- Non-linear exceptions: `disallowed unless explicitly documented in combat_tuning_profile`
+
 ## Family Overview
 
 | Family | Legacy Chain | Skills | Audit States |
@@ -110,6 +119,9 @@ Legacy chain: `butterfly fan -> cloud fan -> flower fan / ink pen -> bamboo pen 
 - Chance values: `[10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `253.33`
+- Practice-adjusted mean: `player_30=196.64; player_60=238.31; player_90=288.5; npc_100=253.33`
+- Tempo pressure: `player_30=19.66; player_60=23.83; player_90=28.85; npc_100=25.33`
 - Legacy page source: `skill/fan.html`
 
 ### 萬千花顏扇 / `flower fan`
@@ -176,6 +188,9 @@ Legacy chain: `butterfly fan -> cloud fan -> flower fan / ink pen -> bamboo pen 
 - Chance values: `[10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `98.75`
+- Practice-adjusted mean: `player_30=79.99; player_60=95; player_90=109.99; npc_100=98.75`
+- Tempo pressure: `player_30=6.67; player_60=7.92; player_90=9.17; npc_100=8.23`
 - Legacy page source: `skill/fan.html`
 
 ### 情詩一百篇 / `love poem`
@@ -220,5 +235,8 @@ Legacy chain: `butterfly fan -> cloud fan -> flower fan / ink pen -> bamboo pen 
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `162.31`
+- Practice-adjusted mean: `player_30=119.36; player_60=148.59; player_90=185.94; npc_100=162.31`
+- Tempo pressure: `player_30=9.95; player_60=12.38; player_90=15.49; npc_100=13.53`
 - Legacy page source: `skill/fan.html`
 

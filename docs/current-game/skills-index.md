@@ -9,6 +9,15 @@ title: Current Game Skills Index
 
 這些子頁由 `scripts/generate_current_game_skills_pages.py` 從同一份 registry 靜態生成。
 
+## Legacy Damage Policy
+
+- Balance goal: `hybrid runtime-first`
+- Formula policy: `piecewise linear default`
+- Primary metrics: `failenable_mean / practice_adjusted_mean(30, 60, 90, npc_100) / tempo_pressure`
+- Player tier model: `level_equals_practice_tier`
+- Separate tracks: `TAR_CHAR_OFFENSIVE -> offensive ladder; TAR_DODGE -> dodge ladder`
+- Non-linear exceptions: `disallowed unless explicitly documented in combat_tuning_profile`
+
 ## 武器技能
 
 | Leaf | Skills | Examples | Readable Page |

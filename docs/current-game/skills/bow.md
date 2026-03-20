@@ -12,6 +12,15 @@ title: Current Game 弓 Skills
 - Registry note: [`skills.md`](../skills.html)
 - Index: [`skills-index.md`](../skills-index.html)
 
+## Legacy Damage Policy
+
+- Balance goal: `hybrid runtime-first`
+- Formula policy: `piecewise linear default`
+- Primary metrics: `failenable_mean / practice_adjusted_mean(30, 60, 90, npc_100) / tempo_pressure`
+- Player tier model: `level_equals_practice_tier`
+- Separate tracks: `TAR_CHAR_OFFENSIVE -> offensive ladder; TAR_DODGE -> dodge ladder`
+- Non-linear exceptions: `disallowed unless explicitly documented in combat_tuning_profile`
+
 ## Family Overview
 
 | Family | Legacy Chain | Skills | Audit States |
@@ -67,6 +76,9 @@ Legacy chain: `shoot sun -> water cloud blast -> fun wu blast`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `127.14`
+- Practice-adjusted mean: `player_30=96.43; player_60=120; player_90=146.11; npc_100=127.14`
+- Tempo pressure: `player_30=9.64; player_60=12; player_90=14.61; npc_100=12.71`
 - Legacy page source: `skill/bow.html`
 
 ### 水雲箭法 / `water cloud blast`

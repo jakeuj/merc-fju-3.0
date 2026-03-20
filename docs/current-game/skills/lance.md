@@ -12,6 +12,15 @@ title: Current Game 槍 Skills
 - Registry note: [`skills.md`](../skills.html)
 - Index: [`skills-index.md`](../skills-index.html)
 
+## Legacy Damage Policy
+
+- Balance goal: `hybrid runtime-first`
+- Formula policy: `piecewise linear default`
+- Primary metrics: `failenable_mean / practice_adjusted_mean(30, 60, 90, npc_100) / tempo_pressure`
+- Player tier model: `level_equals_practice_tier`
+- Separate tracks: `TAR_CHAR_OFFENSIVE -> offensive ladder; TAR_DODGE -> dodge ladder`
+- Non-linear exceptions: `disallowed unless explicitly documented in combat_tuning_profile`
+
 ## Family Overview
 
 | Family | Legacy Chain | Skills | Audit States |
@@ -44,6 +53,9 @@ Legacy chain: `young gun -> eight gun`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `281.11`
+- Practice-adjusted mean: `player_30=207.95; player_60=259.61; player_90=323.07; npc_100=281.11`
+- Tempo pressure: `player_30=12.23; player_60=15.27; player_90=19; npc_100=16.54`
 - Legacy page source: `skill/lance.html`
 
 ### 楊家槍法 / `young gun`
@@ -66,5 +78,8 @@ Legacy chain: `young gun -> eight gun`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `152.14`
+- Practice-adjusted mean: `player_30=111.9; player_60=143.33; player_90=177.3; npc_100=152.14`
+- Tempo pressure: `player_30=7.99; player_60=10.24; player_90=12.66; npc_100=10.87`
 - Legacy page source: `skill/lance.html`
 

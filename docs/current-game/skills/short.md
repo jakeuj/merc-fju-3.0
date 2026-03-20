@@ -12,6 +12,15 @@ title: Current Game 短兵 Skills
 - Registry note: [`skills.md`](../skills.html)
 - Index: [`skills-index.md`](../skills-index.html)
 
+## Legacy Damage Policy
+
+- Balance goal: `hybrid runtime-first`
+- Formula policy: `piecewise linear default`
+- Primary metrics: `failenable_mean / practice_adjusted_mean(30, 60, 90, npc_100) / tempo_pressure`
+- Player tier model: `level_equals_practice_tier`
+- Separate tracks: `TAR_CHAR_OFFENSIVE -> offensive ladder; TAR_DODGE -> dodge ladder`
+- Non-linear exceptions: `disallowed unless explicitly documented in combat_tuning_profile`
+
 ## Family Overview
 
 | Family | Legacy Chain | Skills | Audit States |
@@ -44,6 +53,9 @@ Legacy chain: `be needle -> seven dagger / dragon dagger -> rain throwing`
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `83.75`
+- Practice-adjusted mean: `player_30=66.11; player_60=79.44; player_90=93.7; npc_100=83.75`
+- Tempo pressure: `player_30=33.05; player_60=39.72; player_90=46.85; npc_100=41.88`
 - Legacy page source: `skill/dagger.html`
 
 ### 盤龍匕法 / `dragon dagger`
@@ -66,6 +78,9 @@ Legacy chain: `be needle -> seven dagger / dragon dagger -> rain throwing`
 - Chance values: `[10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `146`
+- Practice-adjusted mean: `player_30=118.32; player_60=138.32; player_90=163.88; npc_100=146`
+- Tempo pressure: `player_30=11.83; player_60=13.83; player_90=16.39; npc_100=14.6`
 - Legacy page source: `skill/dagger.html`
 
 ### 霸雨螫魂 / `rain throwing`
@@ -88,6 +103,9 @@ Legacy chain: `be needle -> seven dagger / dragon dagger -> rain throwing`
 - Chance values: `[10, 20, 20, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `182.5`
+- Practice-adjusted mean: `player_30=155; player_60=169.99; player_90=197.22; npc_100=182.5`
+- Tempo pressure: `player_30=155; player_60=169.99; player_90=197.22; npc_100=182.5`
 - Legacy page source: `skill/dagger.html`
 
 ### 七奇炙針訣 / `seven dagger`
@@ -110,5 +128,8 @@ Legacy chain: `be needle -> seven dagger / dragon dagger -> rain throwing`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `152.69`
+- Practice-adjusted mean: `player_30=114.36; player_60=143.59; player_90=174.87; npc_100=152.69`
+- Tempo pressure: `player_30=38.12; player_60=47.86; player_90=58.29; npc_100=50.9`
 - Legacy page source: `skill/dagger.html`
 

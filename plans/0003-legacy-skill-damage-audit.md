@@ -9,6 +9,17 @@
 
 因此後續不能只靠替 mob 換成 NPC-only 新技能止血，還需要逐批重建舊技能鏈本身的 damage ladder。
 
+目前正式政策補充如下：
+
+- 平衡目標採混合式
+  - 舊站與重建筆記只定義技能鏈路、身分與強弱印象
+  - 實際數值基準以目前 runtime 行為為主
+- 通用公式採 `piecewise linear` 預設
+  - 不採全域 `tanh`
+  - 非線性只保留給明確標記的 signature skill
+- 這套政策以 `data/structured/skills/skills.json -> legacy_damage_policy` 為 canonical authoring source
+  - `docs/current-game/skills.json` 與 `docs/current-game/skills/*.md` 只做 generated read model
+
 ## Why This Exists
 
 目前 repo 已確認：
@@ -36,6 +47,13 @@
 
 ## Source Of Truth
 
+技能公式政策與例外規則以 structured authoring layer 為準：
+
+- `data/structured/skills/skills.json`
+- `scripts/export_structured_skills.py`
+- `scripts/build_current_game_skill_registry.py`
+- `scripts/generate_current_game_skills_pages.py`
+
 技能模板與驗證以 runtime 為準：
 
 - `skill/*.ski`
@@ -62,6 +80,43 @@
 - `docs/3yWebsite/newhand/newbies/index.html`
 
 另外，repo 現在已補上 current-game 技能文件頁；之後遇到「玩家文案和 `.ski` 是否一致」這類問題時，先用文件頁快速對照，再回頭以 runtime source 決定最終答案，避免把舊 help 範例或玩家整理文直接當成現況。
+
+## Current Formula Policy
+
+這份 audit 後續預設採用：
+
+- `piecewise linear` 當一般 ladder 的主規則
+- `failenable_mean` 當 mob guardrail 視角
+- `practice_adjusted_mean(30/60/90, npc_100)` 當玩家與 NPC 實際抽招視角
+- `tempo_pressure = realized_mean / Wait` 當節奏視角
+
+其中：
+
+- `failenable_mean`
+  - 對齊 `src/handler.c -> get_adeptation()` 的平均模板視角
+  - 只當 guardrail，不是唯一平衡目標
+- `practice_adjusted_mean`
+  - 對齊 `src/skill.c -> driver_kill()` 與 `src/enable.c -> driver_dodge()`
+  - 目前 generated metric 的玩家假設是 `level == practice tier`
+  - 這樣可以保留 `level / 2` 對抽招窗口的影響
+- `tempo_pressure`
+  - 只反映 `realized_mean / Wait`
+  - 不把 `Cost` 混進同一個 scalar
+
+另外，offensive 與 dodge 必須分開建模板：
+
+- `TAR_CHAR_OFFENSIVE`
+  - 搭配 `AttackRatio` / `data/promotion.txt` 的 damage guardrail 看
+- `TAR_DODGE`
+  - 搭配 `DodgeRatio` / `data/promotion.txt` 的 dodge guardrail 看
+
+若要使用非線性公式：
+
+- 只能作為明確例外
+- 必須在 structured source 的 `combat_tuning_profile` 裡註明：
+  - `curve`
+  - `reason`
+  - `intent`
 
 ## Core Hypothesis
 
@@ -140,6 +195,16 @@
    - `dodge`
    - `armor/ac`
 
+另外每批交付時，至少補三組 generated metric：
+
+- `failenable_mean`
+- `practice_adjusted_mean`
+  - `player_30`
+  - `player_60`
+  - `player_90`
+  - `npc_100`
+- `tempo_pressure`
+
 ## Design Rule
 
 同鏈技能不追求單純的 `Value` 線性上升，而是追求：
@@ -166,12 +231,28 @@
 - `Weapon`
 - `Check`
 
+並同步記錄 generated metric baseline：
+
+- `failenable_mean`
+- `practice_adjusted_mean`
+  - `player_30`
+  - `player_60`
+  - `player_90`
+  - `npc_100`
+- `tempo_pressure`
+
 並先判斷：
 
 - 目前差異是不是已被清值清到幾乎消失
 - 還是原本就有刻意設計成「低 damage / 高頻率」或「高爆發 / 高消耗」
 
 只有確認該鏈真的被壓平，才直接上修 `Value`。
+
+若 `failenable_mean` 與 `practice_adjusted_mean` 指向不同結論，優先視為：
+
+- 玩家體感與 mob guardrail 分離
+- 不直接用單一平均值拍板
+- 先檢查該技能是否屬於快節奏、重成本、或特殊身法類型
 
 若這條鏈目前明顯被 mob 大量使用，或前一輪已發現 failenable / 身份錯位樣本，再額外列：
 

@@ -12,6 +12,15 @@ title: Current Game 棍 Skills
 - Registry note: [`skills.md`](../skills.html)
 - Index: [`skills-index.md`](../skills-index.html)
 
+## Legacy Damage Policy
+
+- Balance goal: `hybrid runtime-first`
+- Formula policy: `piecewise linear default`
+- Primary metrics: `failenable_mean / practice_adjusted_mean(30, 60, 90, npc_100) / tempo_pressure`
+- Player tier model: `level_equals_practice_tier`
+- Separate tracks: `TAR_CHAR_OFFENSIVE -> offensive ladder; TAR_DODGE -> dodge ladder`
+- Non-linear exceptions: `disallowed unless explicitly documented in combat_tuning_profile`
+
 ## Family Overview
 
 | Family | Legacy Chain | Skills | Audit States |
@@ -44,6 +53,9 @@ Legacy chain: `monkey stick -> day stick`
 - Chance values: `[20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `166`
+- Practice-adjusted mean: `player_30=138.32; player_60=158.33; player_90=183.88; npc_100=166`
+- Tempo pressure: `player_30=9.88; player_60=11.31; player_90=13.13; npc_100=11.86`
 - Legacy page source: `skill/stick.html`
 
 ### 猴棍 / `monkey stick`
@@ -66,5 +78,8 @@ Legacy chain: `monkey stick -> day stick`
 - Chance values: `[10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `113`
+- Practice-adjusted mean: `player_30=89.99; player_60=104.99; player_90=127.77; npc_100=113`
+- Tempo pressure: `player_30=5.29; player_60=6.18; player_90=7.52; npc_100=6.65`
 - Legacy page source: `skill/stick.html`
 

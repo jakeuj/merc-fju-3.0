@@ -12,6 +12,15 @@ title: Current Game 刀 Skills
 - Registry note: [`skills.md`](../skills.html)
 - Index: [`skills-index.md`](../skills-index.html)
 
+## Legacy Damage Policy
+
+- Balance goal: `hybrid runtime-first`
+- Formula policy: `piecewise linear default`
+- Primary metrics: `failenable_mean / practice_adjusted_mean(30, 60, 90, npc_100) / tempo_pressure`
+- Player tier model: `level_equals_practice_tier`
+- Separate tracks: `TAR_CHAR_OFFENSIVE -> offensive ladder; TAR_DODGE -> dodge ladder`
+- Non-linear exceptions: `disallowed unless explicitly documented in combat_tuning_profile`
+
 ## Family Overview
 
 | Family | Legacy Chain | Skills | Audit States |
@@ -44,6 +53,9 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `222.22`
+- Practice-adjusted mean: `player_30=170.37; player_60=211.11; player_90=253.21; npc_100=222.22`
+- Tempo pressure: `player_30=12.17; player_60=15.08; player_90=18.09; npc_100=15.87`
 - Legacy page source: `skill/blade.html`
 
 ### 相思碎夢刀法 / `dream blade`
@@ -66,6 +78,9 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `177.22`
+- Practice-adjusted mean: `player_30=125.37; player_60=166.11; player_90=208.21; npc_100=177.22`
+- Tempo pressure: `player_30=8.36; player_60=11.07; player_90=13.88; npc_100=11.81`
 - Legacy page source: `skill/blade.html`
 
 ### 夢魂七絕 / `dream soul`
@@ -88,6 +103,9 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `332.5`
+- Practice-adjusted mean: `player_30=231.66; player_60=299.99; player_90=389.43; npc_100=332.5`
+- Tempo pressure: `player_30=14.48; player_60=18.75; player_90=24.34; npc_100=20.78`
 - Legacy page source: `skill/blade.html`
 
 ### 幔羅千葉刀法 / `fast blade`
@@ -110,6 +128,9 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `354.32`
+- Practice-adjusted mean: `player_30=256.81; player_60=330.91; player_90=412.37; npc_100=354.32`
+- Tempo pressure: `player_30=23.35; player_60=30.08; player_90=37.49; npc_100=32.21`
 - Legacy page source: `skill/blade.html`
 
 ### 紫金六陽刀法 / `gold blade`
@@ -132,6 +153,9 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `249.5`
+- Practice-adjusted mean: `player_30=183.32; player_60=231.65; player_90=286.65; npc_100=249.5`
+- Tempo pressure: `player_30=18.33; player_60=23.16; player_90=28.66; npc_100=24.95`
 - Legacy page source: `skill/blade.html`
 
 ### 猛龍刀法 / `her blade`
@@ -154,6 +178,9 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `128.12`
+- Practice-adjusted mean: `player_30=95; player_60=121.24; player_90=148.6; npc_100=128.12`
+- Tempo pressure: `player_30=11.88; player_60=15.15; player_90=18.57; npc_100=16.02`
 - Legacy page source: `skill/blade.html`
 
 ### 傲寒六訣 / `ice blade`
@@ -176,6 +203,9 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - Chance values: `[10, 10, 10, 10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `193.89`
+- Practice-adjusted mean: `player_30=140.36; player_60=181.1; player_90=225.79; npc_100=193.89`
+- Tempo pressure: `player_30=14.04; player_60=18.11; player_90=22.58; npc_100=19.39`
 - Legacy page source: `skill/blade.html`
 
 ### 花語刀法 / `sea flow blade`
@@ -198,6 +228,9 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `228.75`
+- Practice-adjusted mean: `player_30=173.33; player_60=217.08; player_90=262.77; npc_100=228.75`
+- Tempo pressure: `player_30=14.44; player_60=18.09; player_90=21.9; npc_100=19.06`
 - Legacy page source: `skill/blade.html`
 
 ### 皓日刀法 / `sun blade`
@@ -220,6 +253,9 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - Chance values: `[10, 10, 10, 10, 10, 10]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `92.5`
+- Practice-adjusted mean: `player_30=68.32; player_60=88.32; player_90=108.32; npc_100=92.5`
+- Tempo pressure: `player_30=68.32; player_60=88.32; player_90=108.32; npc_100=92.5`
 - Legacy page source: `skill/blade.html`
 
 ### 三千古皇刀法 / `tiger blade`
@@ -242,5 +278,8 @@ Legacy chain: `dream blade -> sea flow blade -> fast blade / her blade -> dragon
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `392`
+- Practice-adjusted mean: `player_30=289.99; player_60=363.32; player_90=448.88; npc_100=392`
+- Tempo pressure: `player_30=16.11; player_60=20.18; player_90=24.94; npc_100=21.78`
 - Legacy page source: `skill/blade.html`
 

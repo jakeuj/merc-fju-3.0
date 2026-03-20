@@ -28,8 +28,45 @@ def load_structured_skills() -> dict:
     return read_json(STRUCTURED_SKILLS_JSON)
 
 
-def validate_structured_skills(data: dict) -> list[str]:
+def validate_legacy_damage_policy(data: dict) -> list[str]:
     errors: list[str] = []
+    policy = data.get("legacy_damage_policy")
+    if not isinstance(policy, dict):
+        return ["Missing top-level legacy_damage_policy block."]
+
+    required_top_level = (
+        "version",
+        "balance_goal",
+        "formula_policy",
+        "primary_metrics",
+        "guardrails",
+        "template_tracks",
+        "non_linear_exceptions",
+    )
+    for field in required_top_level:
+        if field not in policy:
+            errors.append(f"legacy_damage_policy missing {field}")
+
+    primary_metrics = policy.get("primary_metrics") or {}
+    practice_metric = primary_metrics.get("practice_adjusted_mean") or {}
+    if practice_metric.get("player_practice_tiers") != [30, 60, 90]:
+        errors.append("legacy_damage_policy.primary_metrics.practice_adjusted_mean.player_practice_tiers must be [30, 60, 90]")
+    if practice_metric.get("npc_practice") != 100:
+        errors.append("legacy_damage_policy.primary_metrics.practice_adjusted_mean.npc_practice must be 100")
+
+    guardrails = policy.get("guardrails") or {}
+    if guardrails.get("promotion_file") != "data/promotion.txt":
+        errors.append("legacy_damage_policy.guardrails.promotion_file must be data/promotion.txt")
+
+    non_linear = policy.get("non_linear_exceptions") or {}
+    if non_linear.get("per_skill_override_field") != "combat_tuning_profile":
+        errors.append("legacy_damage_policy.non_linear_exceptions.per_skill_override_field must be combat_tuning_profile")
+
+    return errors
+
+
+def validate_structured_skills(data: dict) -> list[str]:
+    errors: list[str] = validate_legacy_damage_policy(data)
     allowlists = load_symbol_allowlists()
     valid_checks = load_check_allowlist()
     seen_names: set[str] = set()
@@ -88,6 +125,24 @@ def validate_structured_skills(data: dict) -> list[str]:
 
         if doc_name and doc_name != name:
             errors.append(f"{name}: document Name mismatch ({doc_name})")
+
+        tuning = skill.get("combat_tuning_profile")
+        if tuning is not None:
+            if not isinstance(tuning, dict):
+                errors.append(f"{name}: combat_tuning_profile must be an object")
+            else:
+                template_track = tuning.get("template_track")
+                if template_track not in {None, "offensive", "dodge", "code-driven"}:
+                    errors.append(f"{name}: illegal combat_tuning_profile.template_track {template_track}")
+
+                curve_policy = tuning.get("curve_policy")
+                if curve_policy not in {None, "piecewise_linear_default", "non_linear_exception"}:
+                    errors.append(f"{name}: illegal combat_tuning_profile.curve_policy {curve_policy}")
+
+                if curve_policy == "non_linear_exception":
+                    for field in ("curve", "reason", "intent"):
+                        if not tuning.get(field):
+                            errors.append(f"{name}: combat_tuning_profile.{field} is required for non_linear_exception")
 
     skill_lst_doc = data.get("skill_lst") or {}
     lst_entries = skill_lst_entries(skill_lst_doc)

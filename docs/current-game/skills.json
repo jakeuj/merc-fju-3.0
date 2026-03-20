@@ -1,5 +1,5 @@
 {
-  "registry_version": 5,
+  "registry_version": 6,
   "scope": "Integrated current-game skill registry for merc-fju-3.0. It combines old-site catalog data, structured skill source, runtime readback audit, and skill-combat fields without changing the legacy loader contract.",
   "coverage": {
     "seeded_families": [
@@ -33,6 +33,61 @@
       "src/merc.h",
       "data/symbol.def"
     ]
+  },
+  "legacy_damage_policy": {
+    "version": 1,
+    "balance_goal": "hybrid runtime-first",
+    "formula_policy": "piecewise linear default",
+    "summary": [
+      "Old-site data and rebuild notes define chain identity, progression, and intended strength impressions.",
+      "Actual runtime balancing is driven by current driver_kill/driver_dodge behavior, loader guardrails, and structured authoring flow.",
+      "Global tanh-style formulas are not the default; non-linear curves are reserved for explicit signature-skill exceptions."
+    ],
+    "primary_metrics": {
+      "failenable_mean": {
+        "description": "Chance-weighted mean that matches the static template view used by get_adeptation-style failenable guardrails."
+      },
+      "practice_adjusted_mean": {
+        "description": "Expected realized mean under the current driver_kill/driver_dodge selection flow.",
+        "player_practice_tiers": [
+          30,
+          60,
+          90
+        ],
+        "npc_practice": 100,
+        "player_level_model": "level_equals_practice_tier",
+        "driver_alignment": [
+          "src/skill.c:driver_kill",
+          "src/enable.c:driver_dodge"
+        ]
+      },
+      "tempo_pressure": {
+        "description": "realized_mean / Wait using the generated practice-adjusted means; Cost stays as a separate balancing constraint."
+      }
+    },
+    "guardrails": {
+      "promotion_file": "data/promotion.txt",
+      "handler_path": "src/handler.c:get_adeptation",
+      "usage": "guardrail_only",
+      "mob_fields": [
+        "AutoEnable",
+        "AttackRatio",
+        "DodgeRatio"
+      ]
+    },
+    "template_tracks": {
+      "TAR_CHAR_OFFENSIVE": "offensive ladder",
+      "TAR_DODGE": "dodge ladder"
+    },
+    "non_linear_exceptions": {
+      "default_policy": "disallowed unless explicitly documented in combat_tuning_profile",
+      "per_skill_override_field": "combat_tuning_profile",
+      "required_fields": [
+        "curve",
+        "reason",
+        "intent"
+      ]
+    }
   },
   "legacy_site_navigation": {
     "source": "docs/3yWebsite/skill/index.html and per-page category layout",
@@ -95,6 +150,10 @@
       "cost_type",
       "weapon",
       "check",
+      "failenable_mean",
+      "practice_adjusted_mean",
+      "tempo_pressure",
+      "guardrail_axis",
       "damage_source",
       "damage_gap_classification",
       "code_path",
@@ -102,6 +161,10 @@
     ],
     "usage_notes": [
       "Do not tune by damage_values alone; read chance/parry/innate/wait/cost/weapon/check together.",
+      "Treat failenable_mean and data/promotion.txt as guardrails for mob calibration, not as the only balance target.",
+      "practice_adjusted_mean follows the current driver_kill/driver_dodge selection flow for player tiers 30/60/90 and npc_100.",
+      "The generated player practice tiers assume player level equals the practice tier so the level/2 lower bound remains active.",
+      "tempo_pressure is realized_mean / Wait; Cost still remains a separate constraint rather than part of the scalar.",
       "Use legacy_requirements to preserve old-site class, attribute, and prerequisite constraints even before runtime reconciliation is complete.",
       "When a batch changes a skill, append batch-specific notes rather than overwriting historical context.",
       "When damage_values is empty, do not assume the skill is broken until you distinguish code-driven offensive exceptions from unresolved runtime gaps."
@@ -113,7 +176,8 @@
     "docs/3yWebsite/newhand/newbies/index.html is used as a starter-play reference for early learnable skills, beginner enable expectations, and class progression context.",
     "combat_dimensions is intended to hold both current runtime values and future tuning metadata.",
     "Runtime files are still parsed so the registry can surface structured-vs-runtime drift as audit metadata.",
-    "Player-facing offensive skills without .ski #Damage now distinguish code-driven offensive exceptions from unresolved gaps."
+    "Player-facing offensive skills without .ski #Damage now distinguish code-driven offensive exceptions from unresolved gaps.",
+    "legacy_damage_policy is sourced from data/structured/skills/skills.json so formula rules live in the structured authoring layer rather than only in handwritten audit notes."
   ],
   "skills": [
     {
@@ -1069,7 +1133,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 344.29,
+        "practice_adjusted_mean": {
+          "player_30": 137.13,
+          "player_60": 248.55,
+          "player_90": 444.1,
+          "npc_100": 344.29
+        },
+        "tempo_pressure": {
+          "player_30": 137.13,
+          "player_60": 248.55,
+          "player_90": 444.1,
+          "npc_100": 344.29
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -1283,7 +1361,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 401.79,
+        "practice_adjusted_mean": {
+          "player_30": 160.47,
+          "player_60": 292.6,
+          "player_90": 520.36,
+          "npc_100": 401.79
+        },
+        "tempo_pressure": {
+          "player_30": 160.47,
+          "player_60": 292.6,
+          "player_90": 520.36,
+          "npc_100": 401.79
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -1753,7 +1845,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 116.88,
+        "practice_adjusted_mean": {
+          "player_30": 80.0,
+          "player_60": 106.24,
+          "player_90": 138.6,
+          "npc_100": 116.88
+        },
+        "tempo_pressure": {
+          "player_30": 80.0,
+          "player_60": 106.24,
+          "player_90": 138.6,
+          "npc_100": 116.88
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -2218,7 +2324,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 83.75,
+        "practice_adjusted_mean": {
+          "player_30": 66.11,
+          "player_60": 79.44,
+          "player_90": 93.7,
+          "npc_100": 83.75
+        },
+        "tempo_pressure": {
+          "player_30": 33.05,
+          "player_60": 39.72,
+          "player_90": 46.85,
+          "npc_100": 41.88
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -2673,7 +2793,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 258.0,
+        "practice_adjusted_mean": {
+          "player_30": 156.66,
+          "player_60": 221.65,
+          "player_90": 309.98,
+          "npc_100": 258.0
+        },
+        "tempo_pressure": {
+          "player_30": 156.66,
+          "player_60": 221.65,
+          "player_90": 309.98,
+          "npc_100": 258.0
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -4400,7 +4534,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 270.0,
+        "practice_adjusted_mean": {
+          "player_30": 169.97,
+          "player_60": 236.65,
+          "player_90": 333.32,
+          "npc_100": 270.0
+        },
+        "tempo_pressure": {
+          "player_30": 28.33,
+          "player_60": 39.44,
+          "player_90": 55.55,
+          "npc_100": 45.0
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": false,
@@ -4909,7 +5057,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 56.67,
+        "practice_adjusted_mean": {
+          "player_30": 40.0,
+          "player_60": 53.32,
+          "player_90": 65.36,
+          "npc_100": 56.67
+        },
+        "tempo_pressure": {
+          "player_30": 8.0,
+          "player_60": 10.66,
+          "player_90": 13.07,
+          "npc_100": 11.33
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -5252,7 +5414,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 272.27,
+        "practice_adjusted_mean": {
+          "player_30": 170.29,
+          "player_60": 235.59,
+          "player_90": 327.05,
+          "npc_100": 272.27
+        },
+        "tempo_pressure": {
+          "player_30": 17.03,
+          "player_60": 23.56,
+          "player_90": 32.7,
+          "npc_100": 27.23
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -5498,7 +5674,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 120.0,
+        "practice_adjusted_mean": {
+          "player_30": 87.76,
+          "player_60": 114.43,
+          "player_90": 141.1,
+          "npc_100": 120.0
+        },
+        "tempo_pressure": {
+          "player_30": 8.78,
+          "player_60": 11.44,
+          "player_90": 14.11,
+          "npc_100": 12.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -5897,7 +6087,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 65.0,
+        "practice_adjusted_mean": {
+          "player_30": 45.95,
+          "player_60": 61.66,
+          "player_90": 77.38,
+          "npc_100": 65.0
+        },
+        "tempo_pressure": {
+          "player_30": 45.95,
+          "player_60": 61.66,
+          "player_90": 77.38,
+          "npc_100": 65.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -6113,7 +6317,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 127.14,
+        "practice_adjusted_mean": {
+          "player_30": 96.43,
+          "player_60": 120.0,
+          "player_90": 146.1,
+          "npc_100": 127.14
+        },
+        "tempo_pressure": {
+          "player_30": 19.29,
+          "player_60": 24.0,
+          "player_90": 29.22,
+          "npc_100": 25.43
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -7319,7 +7537,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 260.0,
+        "practice_adjusted_mean": {
+          "player_30": 260.0,
+          "player_60": 260.0,
+          "player_90": 260.0,
+          "npc_100": 260.0
+        },
+        "tempo_pressure": {
+          "player_30": 260.0,
+          "player_60": 260.0,
+          "player_90": 260.0,
+          "npc_100": 260.0
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -8868,7 +9100,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 268.75,
+        "practice_adjusted_mean": {
+          "player_30": 174.99,
+          "player_60": 234.57,
+          "player_90": 319.98,
+          "npc_100": 268.75
+        },
+        "tempo_pressure": {
+          "player_30": 14.58,
+          "player_60": 19.55,
+          "player_90": 26.67,
+          "npc_100": 22.4
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -9066,7 +9312,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 166.0,
+        "practice_adjusted_mean": {
+          "player_30": 138.32,
+          "player_60": 158.33,
+          "player_90": 183.88,
+          "npc_100": 166.0
+        },
+        "tempo_pressure": {
+          "player_30": 9.88,
+          "player_60": 11.31,
+          "player_90": 13.13,
+          "npc_100": 11.86
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -11085,7 +11345,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 222.22,
+        "practice_adjusted_mean": {
+          "player_30": 170.37,
+          "player_60": 211.11,
+          "player_90": 253.21,
+          "npc_100": 222.22
+        },
+        "tempo_pressure": {
+          "player_30": 12.17,
+          "player_60": 15.08,
+          "player_90": 18.09,
+          "npc_100": 15.87
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -11324,7 +11598,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 146.0,
+        "practice_adjusted_mean": {
+          "player_30": 118.32,
+          "player_60": 138.32,
+          "player_90": 163.88,
+          "npc_100": 146.0
+        },
+        "tempo_pressure": {
+          "player_30": 11.83,
+          "player_60": 13.83,
+          "player_90": 16.39,
+          "npc_100": 14.6
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -11570,7 +11858,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 435.0,
+        "practice_adjusted_mean": {
+          "player_30": 224.44,
+          "player_60": 349.44,
+          "player_90": 544.19,
+          "npc_100": 435.0
+        },
+        "tempo_pressure": {
+          "player_30": 22.44,
+          "player_60": 34.94,
+          "player_90": 54.42,
+          "npc_100": 43.5
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -11736,7 +12038,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 229.44,
+        "practice_adjusted_mean": {
+          "player_30": 142.95,
+          "player_60": 197.95,
+          "player_90": 272.58,
+          "npc_100": 229.44
+        },
+        "tempo_pressure": {
+          "player_30": 10.21,
+          "player_60": 14.14,
+          "player_90": 19.47,
+          "npc_100": 16.39
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -11918,7 +12234,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 300.0,
+        "practice_adjusted_mean": {
+          "player_30": 181.66,
+          "player_60": 256.64,
+          "player_90": 359.42,
+          "npc_100": 300.0
+        },
+        "tempo_pressure": {
+          "player_30": 15.14,
+          "player_60": 21.39,
+          "player_90": 29.95,
+          "npc_100": 25.0
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -12164,7 +12494,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 320.0,
+        "practice_adjusted_mean": {
+          "player_30": 225.55,
+          "player_60": 290.73,
+          "player_90": 374.0,
+          "npc_100": 320.0
+        },
+        "tempo_pressure": {
+          "player_30": 22.55,
+          "player_60": 29.07,
+          "player_90": 37.4,
+          "npc_100": 32.0
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -12322,7 +12666,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 246.43,
+        "practice_adjusted_mean": {
+          "player_30": 172.86,
+          "player_60": 223.8,
+          "player_90": 288.48,
+          "npc_100": 246.43
+        },
+        "tempo_pressure": {
+          "player_30": 15.71,
+          "player_60": 20.35,
+          "player_90": 26.23,
+          "npc_100": 22.4
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -12546,7 +12904,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 288.75,
+        "practice_adjusted_mean": {
+          "player_30": 220.0,
+          "player_60": 272.49,
+          "player_90": 328.33,
+          "npc_100": 288.75
+        },
+        "tempo_pressure": {
+          "player_30": 20.0,
+          "player_60": 24.77,
+          "player_90": 29.85,
+          "npc_100": 26.25
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -12815,7 +13187,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 177.22,
+        "practice_adjusted_mean": {
+          "player_30": 125.37,
+          "player_60": 166.11,
+          "player_90": 208.21,
+          "npc_100": 177.22
+        },
+        "tempo_pressure": {
+          "player_30": 8.36,
+          "player_60": 11.07,
+          "player_90": 13.88,
+          "npc_100": 11.81
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -12973,7 +13359,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 230.71,
+        "practice_adjusted_mean": {
+          "player_30": 157.85,
+          "player_60": 208.8,
+          "player_90": 273.0,
+          "npc_100": 230.71
+        },
+        "tempo_pressure": {
+          "player_30": 13.15,
+          "player_60": 17.4,
+          "player_90": 22.75,
+          "npc_100": 19.23
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -13218,7 +13618,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 332.5,
+        "practice_adjusted_mean": {
+          "player_30": 231.66,
+          "player_60": 299.99,
+          "player_90": 389.43,
+          "npc_100": 332.5
+        },
+        "tempo_pressure": {
+          "player_30": 14.48,
+          "player_60": 18.75,
+          "player_90": 24.34,
+          "npc_100": 20.78
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -13392,7 +13806,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 276.67,
+        "practice_adjusted_mean": {
+          "player_30": 182.96,
+          "player_60": 245.73,
+          "player_90": 329.0,
+          "npc_100": 276.67
+        },
+        "tempo_pressure": {
+          "player_30": 36.59,
+          "player_60": 49.15,
+          "player_90": 65.8,
+          "npc_100": 55.33
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -13558,7 +13986,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 169.38,
+        "practice_adjusted_mean": {
+          "player_30": 115.0,
+          "player_60": 148.32,
+          "player_90": 199.43,
+          "npc_100": 169.38
+        },
+        "tempo_pressure": {
+          "player_30": 115.0,
+          "player_60": 148.32,
+          "player_90": 199.43,
+          "npc_100": 169.38
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -13836,7 +14278,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 289.29,
+        "practice_adjusted_mean": {
+          "player_30": 227.38,
+          "player_60": 270.47,
+          "player_90": 326.33,
+          "npc_100": 289.29
+        },
+        "tempo_pressure": {
+          "player_30": 22.74,
+          "player_60": 27.05,
+          "player_90": 32.63,
+          "npc_100": 28.93
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -14026,7 +14482,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 301.82,
+        "practice_adjusted_mean": {
+          "player_30": 170.14,
+          "player_60": 255.13,
+          "player_90": 372.25,
+          "npc_100": 301.82
+        },
+        "tempo_pressure": {
+          "player_30": 170.14,
+          "player_60": 255.13,
+          "player_90": 372.25,
+          "npc_100": 301.82
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -14445,7 +14915,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 281.11,
+        "practice_adjusted_mean": {
+          "player_30": 207.95,
+          "player_60": 259.61,
+          "player_90": 323.07,
+          "npc_100": 281.11
+        },
+        "tempo_pressure": {
+          "player_30": 12.23,
+          "player_60": 15.27,
+          "player_90": 19.0,
+          "npc_100": 16.54
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -14728,7 +15212,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 20.0,
+        "practice_adjusted_mean": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "tempo_pressure": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -15219,7 +15717,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 253.33,
+        "practice_adjusted_mean": {
+          "player_30": 196.64,
+          "player_60": 238.31,
+          "player_90": 288.5,
+          "npc_100": 253.33
+        },
+        "tempo_pressure": {
+          "player_30": 19.66,
+          "player_60": 23.83,
+          "player_90": 28.85,
+          "npc_100": 25.33
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -15499,7 +16011,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 120.71,
+        "practice_adjusted_mean": {
+          "player_30": 86.43,
+          "player_60": 110.0,
+          "player_90": 139.6,
+          "npc_100": 120.71
+        },
+        "tempo_pressure": {
+          "player_30": 8.64,
+          "player_60": 11.0,
+          "player_90": 13.96,
+          "npc_100": 12.07
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -15728,7 +16254,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 201.88,
+        "practice_adjusted_mean": {
+          "player_30": 151.66,
+          "player_60": 186.66,
+          "player_90": 230.27,
+          "npc_100": 201.88
+        },
+        "tempo_pressure": {
+          "player_30": 18.96,
+          "player_60": 23.33,
+          "player_90": 28.78,
+          "npc_100": 25.23
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -16328,7 +16868,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 222.5,
+        "practice_adjusted_mean": {
+          "player_30": 143.33,
+          "player_60": 194.15,
+          "player_90": 265.53,
+          "npc_100": 222.5
+        },
+        "tempo_pressure": {
+          "player_30": 143.33,
+          "player_60": 194.15,
+          "player_90": 265.53,
+          "npc_100": 222.5
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -16670,7 +17224,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 354.32,
+        "practice_adjusted_mean": {
+          "player_30": 256.81,
+          "player_60": 330.91,
+          "player_90": 412.37,
+          "npc_100": 354.32
+        },
+        "tempo_pressure": {
+          "player_30": 23.35,
+          "player_60": 30.08,
+          "player_90": 37.49,
+          "npc_100": 32.21
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -16983,7 +17551,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 352.22,
+        "practice_adjusted_mean": {
+          "player_30": 265.55,
+          "player_60": 327.4,
+          "player_90": 401.23,
+          "npc_100": 352.22
+        },
+        "tempo_pressure": {
+          "player_30": 37.94,
+          "player_60": 46.77,
+          "player_90": 57.32,
+          "npc_100": 50.32
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -17327,7 +17909,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 325.0,
+        "practice_adjusted_mean": {
+          "player_30": 156.01,
+          "player_60": 252.03,
+          "player_90": 407.45,
+          "npc_100": 325.0
+        },
+        "tempo_pressure": {
+          "player_30": 13.0,
+          "player_60": 21.0,
+          "player_90": 33.95,
+          "npc_100": 27.08
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -17501,7 +18097,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 316.67,
+        "practice_adjusted_mean": {
+          "player_30": 185.55,
+          "player_60": 267.02,
+          "player_90": 384.86,
+          "npc_100": 316.67
+        },
+        "tempo_pressure": {
+          "player_30": 12.37,
+          "player_60": 17.8,
+          "player_90": 25.66,
+          "npc_100": 21.11
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -18105,7 +18715,20 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 2.0,
+        "practice_adjusted_mean": {
+          "player_30": 1.0,
+          "player_60": 1.89,
+          "player_90": 2.52,
+          "npc_100": 2.0
+        },
+        "tempo_pressure": {
+          "player_30": 1.0,
+          "player_60": 1.89,
+          "player_90": 2.52,
+          "npc_100": 2.0
+        }
       },
       "status": {
         "player_facing": true,
@@ -18414,7 +19037,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 143.75,
+        "practice_adjusted_mean": {
+          "player_30": 91.65,
+          "player_60": 129.99,
+          "player_90": 174.97,
+          "npc_100": 143.75
+        },
+        "tempo_pressure": {
+          "player_30": 91.65,
+          "player_60": 129.99,
+          "player_90": 174.97,
+          "npc_100": 143.75
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -18540,7 +19177,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 186.67,
+        "practice_adjusted_mean": {
+          "player_30": 130.0,
+          "player_60": 174.4,
+          "player_90": 216.27,
+          "npc_100": 186.67
+        },
+        "tempo_pressure": {
+          "player_30": 130.0,
+          "player_60": 174.4,
+          "player_90": 216.27,
+          "npc_100": 186.67
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -18865,7 +19516,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 279.44,
+        "practice_adjusted_mean": {
+          "player_30": 160.55,
+          "player_60": 234.25,
+          "player_90": 341.84,
+          "npc_100": 279.44
+        },
+        "tempo_pressure": {
+          "player_30": 32.11,
+          "player_60": 46.85,
+          "player_90": 68.37,
+          "npc_100": 55.89
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -18999,7 +19664,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 20.0,
+        "practice_adjusted_mean": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "tempo_pressure": {
+          "player_30": 2.0,
+          "player_60": 2.0,
+          "player_90": 2.0,
+          "npc_100": 2.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -19365,7 +20044,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 254.38,
+        "practice_adjusted_mean": {
+          "player_30": 159.99,
+          "player_60": 219.57,
+          "player_90": 305.25,
+          "npc_100": 254.38
+        },
+        "tempo_pressure": {
+          "player_30": 13.33,
+          "player_60": 18.3,
+          "player_90": 25.44,
+          "npc_100": 21.2
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -19603,7 +20296,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 180.0,
+        "practice_adjusted_mean": {
+          "player_30": 136.66,
+          "player_60": 171.66,
+          "player_90": 207.77,
+          "npc_100": 180.0
+        },
+        "tempo_pressure": {
+          "player_30": 17.08,
+          "player_60": 21.46,
+          "player_90": 25.97,
+          "npc_100": 22.5
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -19769,7 +20476,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 203.12,
+        "practice_adjusted_mean": {
+          "player_30": 123.33,
+          "player_60": 174.15,
+          "player_90": 245.81,
+          "npc_100": 203.12
+        },
+        "tempo_pressure": {
+          "player_30": 123.33,
+          "player_60": 174.15,
+          "player_90": 245.81,
+          "npc_100": 203.12
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -20004,7 +20725,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 20.0,
+        "practice_adjusted_mean": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "tempo_pressure": {
+          "player_30": 2.0,
+          "player_60": 2.0,
+          "player_90": 2.0,
+          "npc_100": 2.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -20234,7 +20969,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 20.0,
+        "practice_adjusted_mean": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "tempo_pressure": {
+          "player_30": 2.0,
+          "player_60": 2.0,
+          "player_90": 2.0,
+          "npc_100": 2.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -20500,7 +21249,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 206.36,
+        "practice_adjusted_mean": {
+          "player_30": 134.39,
+          "player_60": 187.42,
+          "player_90": 249.13,
+          "npc_100": 206.36
+        },
+        "tempo_pressure": {
+          "player_30": 10.34,
+          "player_60": 14.42,
+          "player_90": 19.16,
+          "npc_100": 15.87
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -20791,7 +21554,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 266.25,
+        "practice_adjusted_mean": {
+          "player_30": 169.97,
+          "player_60": 238.31,
+          "player_90": 323.83,
+          "npc_100": 266.25
+        },
+        "tempo_pressure": {
+          "player_30": 14.16,
+          "player_60": 19.86,
+          "player_90": 26.99,
+          "npc_100": 22.19
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -20925,7 +21702,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 20.0,
+        "practice_adjusted_mean": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "tempo_pressure": {
+          "player_30": 2.0,
+          "player_60": 2.0,
+          "player_90": 2.0,
+          "npc_100": 2.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -21394,7 +22185,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 125.0,
+        "practice_adjusted_mean": {
+          "player_30": 96.43,
+          "player_60": 120.0,
+          "player_90": 143.57,
+          "npc_100": 125.0
+        },
+        "tempo_pressure": {
+          "player_30": 9.64,
+          "player_60": 12.0,
+          "player_90": 14.36,
+          "npc_100": 12.5
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -21787,7 +22592,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 148.33,
+        "practice_adjusted_mean": {
+          "player_30": 112.77,
+          "player_60": 139.44,
+          "player_90": 170.18,
+          "npc_100": 148.33
+        },
+        "tempo_pressure": {
+          "player_30": 7.52,
+          "player_60": 9.3,
+          "player_90": 11.35,
+          "npc_100": 9.89
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -22021,7 +22840,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 200.83,
+        "practice_adjusted_mean": {
+          "player_30": 157.21,
+          "player_60": 190.55,
+          "player_90": 227.96,
+          "npc_100": 200.83
+        },
+        "tempo_pressure": {
+          "player_30": 22.46,
+          "player_60": 27.22,
+          "player_90": 32.57,
+          "npc_100": 28.69
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -22155,7 +22988,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 20.0,
+        "practice_adjusted_mean": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "tempo_pressure": {
+          "player_30": 2.0,
+          "player_60": 2.0,
+          "player_90": 2.0,
+          "npc_100": 2.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -22437,7 +23284,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 137.86,
+        "practice_adjusted_mean": {
+          "player_30": 96.9,
+          "player_60": 128.33,
+          "player_90": 162.77,
+          "npc_100": 137.86
+        },
+        "tempo_pressure": {
+          "player_30": 9.69,
+          "player_60": 12.83,
+          "player_90": 16.28,
+          "npc_100": 13.79
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -22787,7 +23648,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 267.78,
+        "practice_adjusted_mean": {
+          "player_30": 155.54,
+          "player_60": 228.5,
+          "player_90": 327.57,
+          "npc_100": 267.78
+        },
+        "tempo_pressure": {
+          "player_30": 15.55,
+          "player_60": 22.85,
+          "player_90": 32.76,
+          "npc_100": 26.78
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -23080,7 +23955,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 249.5,
+        "practice_adjusted_mean": {
+          "player_30": 183.32,
+          "player_60": 231.65,
+          "player_90": 286.65,
+          "npc_100": 249.5
+        },
+        "tempo_pressure": {
+          "player_30": 18.33,
+          "player_60": 23.16,
+          "player_90": 28.66,
+          "npc_100": 24.95
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -23546,7 +24435,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 224.09,
+        "practice_adjusted_mean": {
+          "player_30": 149.39,
+          "player_60": 202.42,
+          "player_90": 266.96,
+          "npc_100": 224.09
+        },
+        "tempo_pressure": {
+          "player_30": 11.49,
+          "player_60": 15.57,
+          "player_90": 20.54,
+          "npc_100": 17.24
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -23847,7 +24750,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 168.18,
+        "practice_adjusted_mean": {
+          "player_30": 114.54,
+          "player_60": 152.72,
+          "player_90": 199.54,
+          "npc_100": 168.18
+        },
+        "tempo_pressure": {
+          "player_30": 11.45,
+          "player_60": 15.27,
+          "player_90": 19.95,
+          "npc_100": 16.82
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -24013,7 +24930,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 245.62,
+        "practice_adjusted_mean": {
+          "player_30": 154.99,
+          "player_60": 214.57,
+          "player_90": 295.25,
+          "npc_100": 245.62
+        },
+        "tempo_pressure": {
+          "player_30": 15.5,
+          "player_60": 21.46,
+          "player_90": 29.52,
+          "npc_100": 24.56
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -24393,7 +25324,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 310.5,
+        "practice_adjusted_mean": {
+          "player_30": 211.66,
+          "player_60": 276.66,
+          "player_90": 363.88,
+          "npc_100": 310.5
+        },
+        "tempo_pressure": {
+          "player_30": 42.33,
+          "player_60": 55.33,
+          "player_90": 72.78,
+          "npc_100": 62.1
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -24812,7 +25757,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 318.75,
+        "practice_adjusted_mean": {
+          "player_30": 201.1,
+          "player_60": 274.43,
+          "player_90": 382.39,
+          "npc_100": 318.75
+        },
+        "tempo_pressure": {
+          "player_30": 22.34,
+          "player_60": 30.49,
+          "player_90": 42.49,
+          "npc_100": 35.42
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -25140,7 +26099,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 255.91,
+        "practice_adjusted_mean": {
+          "player_30": 130.29,
+          "player_60": 202.86,
+          "player_90": 317.09,
+          "npc_100": 255.91
+        },
+        "tempo_pressure": {
+          "player_30": 130.29,
+          "player_60": 202.86,
+          "player_90": 317.09,
+          "npc_100": 255.91
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -25282,7 +26255,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 20.0,
+        "practice_adjusted_mean": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "tempo_pressure": {
+          "player_30": 2.0,
+          "player_60": 2.0,
+          "player_90": 2.0,
+          "npc_100": 2.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -25513,7 +26500,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 128.12,
+        "practice_adjusted_mean": {
+          "player_30": 95.0,
+          "player_60": 121.24,
+          "player_90": 148.6,
+          "npc_100": 128.12
+        },
+        "tempo_pressure": {
+          "player_30": 11.88,
+          "player_60": 15.15,
+          "player_90": 18.57,
+          "npc_100": 16.02
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -26007,7 +27008,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 297.0,
+        "practice_adjusted_mean": {
+          "player_30": 181.66,
+          "player_60": 256.64,
+          "player_90": 356.09,
+          "npc_100": 297.0
+        },
+        "tempo_pressure": {
+          "player_30": 36.33,
+          "player_60": 51.33,
+          "player_90": 71.22,
+          "npc_100": 59.4
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -26379,7 +27394,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 105.0,
+        "practice_adjusted_mean": {
+          "player_30": 76.43,
+          "player_60": 100.0,
+          "player_90": 123.57,
+          "npc_100": 105.0
+        },
+        "tempo_pressure": {
+          "player_30": 15.29,
+          "player_60": 20.0,
+          "player_90": 24.71,
+          "npc_100": 21.0
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -26663,7 +27692,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 20.0,
+        "practice_adjusted_mean": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "tempo_pressure": {
+          "player_30": 2.0,
+          "player_60": 2.0,
+          "player_90": 2.0,
+          "npc_100": 2.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -26940,7 +27983,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 193.89,
+        "practice_adjusted_mean": {
+          "player_30": 140.36,
+          "player_60": 181.1,
+          "player_90": 225.79,
+          "npc_100": 193.89
+        },
+        "tempo_pressure": {
+          "player_30": 14.04,
+          "player_60": 18.11,
+          "player_90": 22.58,
+          "npc_100": 19.39
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -27106,7 +28163,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 193.12,
+        "practice_adjusted_mean": {
+          "player_30": 113.33,
+          "player_60": 164.15,
+          "player_90": 235.81,
+          "npc_100": 193.12
+        },
+        "tempo_pressure": {
+          "player_30": 113.33,
+          "player_60": 164.15,
+          "player_90": 235.81,
+          "npc_100": 193.12
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -27272,7 +28343,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 248.75,
+        "practice_adjusted_mean": {
+          "player_30": 155.0,
+          "player_60": 214.58,
+          "player_90": 299.99,
+          "npc_100": 248.75
+        },
+        "tempo_pressure": {
+          "player_30": 155.0,
+          "player_60": 214.58,
+          "player_90": 299.99,
+          "npc_100": 248.75
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -27552,7 +28637,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 202.0,
+        "practice_adjusted_mean": {
+          "player_30": 126.65,
+          "player_60": 173.32,
+          "player_90": 247.76,
+          "npc_100": 202.0
+        },
+        "tempo_pressure": {
+          "player_30": 21.11,
+          "player_60": 28.89,
+          "player_90": 41.29,
+          "npc_100": 33.67
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": false,
@@ -27698,7 +28797,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 352.0,
+        "practice_adjusted_mean": {
+          "player_30": 196.64,
+          "player_60": 286.64,
+          "player_90": 444.42,
+          "npc_100": 352.0
+        },
+        "tempo_pressure": {
+          "player_30": 28.09,
+          "player_60": 40.95,
+          "player_90": 63.49,
+          "npc_100": 50.29
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": false,
@@ -28525,7 +29638,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 263.75,
+        "practice_adjusted_mean": {
+          "player_30": 174.99,
+          "player_60": 234.57,
+          "player_90": 313.31,
+          "npc_100": 263.75
+        },
+        "tempo_pressure": {
+          "player_30": 35.0,
+          "player_60": 46.91,
+          "player_90": 62.66,
+          "npc_100": 52.75
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -28921,7 +30048,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 157.86,
+        "practice_adjusted_mean": {
+          "player_30": 116.9,
+          "player_60": 148.33,
+          "player_90": 182.77,
+          "npc_100": 157.86
+        },
+        "tempo_pressure": {
+          "player_30": 9.74,
+          "player_60": 12.36,
+          "player_90": 15.23,
+          "npc_100": 13.16
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -29111,7 +30252,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 315.91,
+        "practice_adjusted_mean": {
+          "player_30": 170.14,
+          "player_60": 256.04,
+          "player_90": 390.52,
+          "npc_100": 315.91
+        },
+        "tempo_pressure": {
+          "player_30": 14.18,
+          "player_60": 21.34,
+          "player_90": 32.54,
+          "npc_100": 26.33
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -29484,7 +30639,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 98.75,
+        "practice_adjusted_mean": {
+          "player_30": 79.99,
+          "player_60": 95.0,
+          "player_90": 109.99,
+          "npc_100": 98.75
+        },
+        "tempo_pressure": {
+          "player_30": 6.67,
+          "player_60": 7.92,
+          "player_90": 9.17,
+          "npc_100": 8.23
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -29905,7 +31074,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 20.0,
+        "practice_adjusted_mean": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "tempo_pressure": {
+          "player_30": 2.0,
+          "player_60": 2.0,
+          "player_90": 2.0,
+          "npc_100": 2.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -30503,7 +31686,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 87.78,
+        "practice_adjusted_mean": {
+          "player_30": 62.78,
+          "player_60": 82.96,
+          "player_90": 103.27,
+          "npc_100": 87.78
+        },
+        "tempo_pressure": {
+          "player_30": 12.56,
+          "player_60": 16.59,
+          "player_90": 20.65,
+          "npc_100": 17.56
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -30653,7 +31850,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 20.0,
+        "practice_adjusted_mean": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "tempo_pressure": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -30944,7 +32155,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 620.0,
+        "practice_adjusted_mean": {
+          "player_30": 620.0,
+          "player_60": 620.0,
+          "player_90": 620.0,
+          "npc_100": 620.0
+        },
+        "tempo_pressure": {
+          "player_30": 620.0,
+          "player_60": 620.0,
+          "player_90": 620.0,
+          "npc_100": 620.0
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -31160,7 +32385,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 147.86,
+        "practice_adjusted_mean": {
+          "player_30": 116.43,
+          "player_60": 140.0,
+          "player_90": 166.58,
+          "npc_100": 147.86
+        },
+        "tempo_pressure": {
+          "player_30": 23.29,
+          "player_60": 28.0,
+          "player_90": 33.32,
+          "npc_100": 29.57
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -31334,7 +32573,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 299.44,
+        "practice_adjusted_mean": {
+          "player_30": 180.54,
+          "player_60": 254.24,
+          "player_90": 361.83,
+          "npc_100": 299.44
+        },
+        "tempo_pressure": {
+          "player_30": 18.05,
+          "player_60": 25.42,
+          "player_90": 36.18,
+          "npc_100": 29.94
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -32789,7 +34042,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 230.0,
+        "practice_adjusted_mean": {
+          "player_30": 146.65,
+          "player_60": 199.99,
+          "player_90": 282.21,
+          "npc_100": 230.0
+        },
+        "tempo_pressure": {
+          "player_30": 24.44,
+          "player_60": 33.33,
+          "player_90": 47.03,
+          "npc_100": 38.33
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": false,
@@ -32936,7 +34203,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 136.0,
+        "practice_adjusted_mean": {
+          "player_30": 89.99,
+          "player_60": 119.99,
+          "player_90": 165.55,
+          "npc_100": 136.0
+        },
+        "tempo_pressure": {
+          "player_30": 18.0,
+          "player_60": 24.0,
+          "player_90": 33.11,
+          "npc_100": 27.2
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": false,
@@ -33163,7 +34444,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 198.75,
+        "practice_adjusted_mean": {
+          "player_30": 146.66,
+          "player_60": 183.32,
+          "player_90": 229.43,
+          "npc_100": 198.75
+        },
+        "tempo_pressure": {
+          "player_30": 14.67,
+          "player_60": 18.33,
+          "player_90": 22.94,
+          "npc_100": 19.88
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -33599,7 +34894,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 175.71,
+        "practice_adjusted_mean": {
+          "player_30": 136.9,
+          "player_60": 168.33,
+          "player_90": 200.23,
+          "npc_100": 175.71
+        },
+        "tempo_pressure": {
+          "player_30": 13.69,
+          "player_60": 16.83,
+          "player_90": 20.02,
+          "npc_100": 17.57
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -33749,7 +35058,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 177.5,
+        "practice_adjusted_mean": {
+          "player_30": 117.2,
+          "player_60": 158.31,
+          "player_90": 212.57,
+          "npc_100": 177.5
+        },
+        "tempo_pressure": {
+          "player_30": 23.44,
+          "player_60": 31.66,
+          "player_90": 42.51,
+          "npc_100": 35.5
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -33891,7 +35214,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 20.0,
+        "practice_adjusted_mean": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "tempo_pressure": {
+          "player_30": 4.0,
+          "player_60": 4.0,
+          "player_90": 4.0,
+          "npc_100": 4.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -34073,7 +35410,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 365.5,
+        "practice_adjusted_mean": {
+          "player_30": 204.99,
+          "player_60": 298.31,
+          "player_90": 443.86,
+          "npc_100": 365.5
+        },
+        "tempo_pressure": {
+          "player_30": 10.25,
+          "player_60": 14.92,
+          "player_90": 22.19,
+          "npc_100": 18.27
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -34346,7 +35697,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 113.0,
+        "practice_adjusted_mean": {
+          "player_30": 89.99,
+          "player_60": 104.99,
+          "player_90": 127.77,
+          "npc_100": 113.0
+        },
+        "tempo_pressure": {
+          "player_30": 5.29,
+          "player_60": 6.18,
+          "player_90": 7.52,
+          "npc_100": 6.65
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -34504,7 +35869,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 20.0,
+        "practice_adjusted_mean": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "tempo_pressure": {
+          "player_30": 2.0,
+          "player_60": 2.0,
+          "player_90": 2.0,
+          "npc_100": 2.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -34921,7 +36300,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 284.0,
+        "practice_adjusted_mean": {
+          "player_30": 149.97,
+          "player_60": 229.98,
+          "player_90": 362.2,
+          "npc_100": 284.0
+        },
+        "tempo_pressure": {
+          "player_30": 29.99,
+          "player_60": 46.0,
+          "player_90": 72.44,
+          "npc_100": 56.8
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": false,
@@ -35158,7 +36551,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 20.0,
+        "practice_adjusted_mean": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "tempo_pressure": {
+          "player_30": 2.0,
+          "player_60": 2.0,
+          "player_90": 2.0,
+          "npc_100": 2.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -35419,7 +36826,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 90.0,
+        "practice_adjusted_mean": {
+          "player_30": 58.33,
+          "player_60": 81.24,
+          "player_90": 108.6,
+          "npc_100": 90.0
+        },
+        "tempo_pressure": {
+          "player_30": 58.33,
+          "player_60": 81.24,
+          "player_90": 108.6,
+          "npc_100": 90.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -35707,7 +37128,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 245.56,
+        "practice_adjusted_mean": {
+          "player_30": 185.36,
+          "player_60": 226.84,
+          "player_90": 280.05,
+          "npc_100": 245.56
+        },
+        "tempo_pressure": {
+          "player_30": 18.54,
+          "player_60": 22.68,
+          "player_90": 28.01,
+          "npc_100": 24.56
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -37171,7 +38606,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 20.0,
+        "practice_adjusted_mean": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "tempo_pressure": {
+          "player_30": 2.0,
+          "player_60": 2.0,
+          "player_90": 2.0,
+          "npc_100": 2.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -37422,7 +38871,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 182.5,
+        "practice_adjusted_mean": {
+          "player_30": 155.0,
+          "player_60": 169.99,
+          "player_90": 197.22,
+          "npc_100": 182.5
+        },
+        "tempo_pressure": {
+          "player_30": 155.0,
+          "player_60": 169.99,
+          "player_90": 197.22,
+          "npc_100": 182.5
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -38483,7 +39946,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 673.33,
+        "practice_adjusted_mean": {
+          "player_30": 1200.0,
+          "player_60": 454.16,
+          "player_90": 411.81,
+          "npc_100": 673.33
+        },
+        "tempo_pressure": {
+          "player_30": 1200.0,
+          "player_60": 454.16,
+          "player_90": 411.81,
+          "npc_100": 673.33
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -38697,7 +40174,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 231.11,
+        "practice_adjusted_mean": {
+          "player_30": 157.96,
+          "player_60": 209.62,
+          "player_90": 273.08,
+          "npc_100": 231.11
+        },
+        "tempo_pressure": {
+          "player_30": 15.8,
+          "player_60": 20.96,
+          "player_90": 27.31,
+          "npc_100": 23.11
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -38969,7 +40460,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 182.86,
+        "practice_adjusted_mean": {
+          "player_30": 136.9,
+          "player_60": 168.33,
+          "player_90": 202.77,
+          "npc_100": 182.86
+        },
+        "tempo_pressure": {
+          "player_30": 27.38,
+          "player_60": 33.67,
+          "player_90": 40.55,
+          "npc_100": 36.57
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -39341,7 +40846,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 228.75,
+        "practice_adjusted_mean": {
+          "player_30": 173.33,
+          "player_60": 217.08,
+          "player_90": 262.77,
+          "npc_100": 228.75
+        },
+        "tempo_pressure": {
+          "player_30": 14.44,
+          "player_60": 18.09,
+          "player_90": 21.9,
+          "npc_100": 19.06
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -39609,7 +41128,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 233.89,
+        "practice_adjusted_mean": {
+          "player_30": 137.95,
+          "player_60": 200.72,
+          "player_90": 285.48,
+          "npc_100": 233.89
+        },
+        "tempo_pressure": {
+          "player_30": 137.95,
+          "player_60": 200.72,
+          "player_90": 285.48,
+          "npc_100": 233.89
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -39885,7 +41418,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 152.69,
+        "practice_adjusted_mean": {
+          "player_30": 114.36,
+          "player_60": 143.59,
+          "player_90": 174.87,
+          "npc_100": 152.69
+        },
+        "tempo_pressure": {
+          "player_30": 38.12,
+          "player_60": 47.86,
+          "player_90": 58.29,
+          "npc_100": 50.9
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -40181,7 +41728,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 20.0,
+        "practice_adjusted_mean": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "tempo_pressure": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -40339,7 +41900,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 20.0,
+        "practice_adjusted_mean": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "tempo_pressure": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -40489,7 +42064,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 20.0,
+        "practice_adjusted_mean": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "tempo_pressure": {
+          "player_30": 2.0,
+          "player_60": 2.0,
+          "player_90": 2.0,
+          "npc_100": 2.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -40764,7 +42353,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 105.0,
+        "practice_adjusted_mean": {
+          "player_30": 76.43,
+          "player_60": 100.0,
+          "player_90": 123.57,
+          "npc_100": 105.0
+        },
+        "tempo_pressure": {
+          "player_30": 7.64,
+          "player_60": 10.0,
+          "player_90": 12.36,
+          "npc_100": 10.5
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -41104,7 +42707,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 213.82,
+        "practice_adjusted_mean": {
+          "player_30": 139.4,
+          "player_60": 197.35,
+          "player_90": 257.34,
+          "npc_100": 213.82
+        },
+        "tempo_pressure": {
+          "player_30": 139.4,
+          "player_60": 197.35,
+          "player_90": 257.34,
+          "npc_100": 213.82
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -41246,7 +42863,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 188.0,
+        "practice_adjusted_mean": {
+          "player_30": 106.65,
+          "player_60": 159.99,
+          "player_90": 237.76,
+          "npc_100": 188.0
+        },
+        "tempo_pressure": {
+          "player_30": 26.66,
+          "player_60": 40.0,
+          "player_90": 59.44,
+          "npc_100": 47.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": false,
@@ -41548,7 +43179,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 108.12,
+        "practice_adjusted_mean": {
+          "player_30": 75.0,
+          "player_60": 101.24,
+          "player_90": 128.6,
+          "npc_100": 108.12
+        },
+        "tempo_pressure": {
+          "player_30": 75.0,
+          "player_60": 101.24,
+          "player_90": 128.6,
+          "npc_100": 108.12
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -42155,7 +43800,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 127.14,
+        "practice_adjusted_mean": {
+          "player_30": 96.43,
+          "player_60": 120.0,
+          "player_90": 146.11,
+          "npc_100": 127.14
+        },
+        "tempo_pressure": {
+          "player_30": 9.64,
+          "player_60": 12.0,
+          "player_90": 14.61,
+          "npc_100": 12.71
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -42289,7 +43948,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 182.5,
+        "practice_adjusted_mean": {
+          "player_30": 131.65,
+          "player_60": 169.99,
+          "player_90": 213.3,
+          "npc_100": 182.5
+        },
+        "tempo_pressure": {
+          "player_30": 131.65,
+          "player_60": 169.99,
+          "player_90": 213.3,
+          "npc_100": 182.5
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -42527,7 +44200,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 385.0,
+        "practice_adjusted_mean": {
+          "player_30": 198.22,
+          "player_60": 309.79,
+          "player_90": 481.15,
+          "npc_100": 385.0
+        },
+        "tempo_pressure": {
+          "player_30": 16.52,
+          "player_60": 25.82,
+          "player_90": 40.1,
+          "npc_100": 32.08
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -42743,7 +44430,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 195.83,
+        "practice_adjusted_mean": {
+          "player_30": 157.77,
+          "player_60": 186.1,
+          "player_90": 219.62,
+          "npc_100": 195.83
+        },
+        "tempo_pressure": {
+          "player_30": 31.55,
+          "player_60": 37.22,
+          "player_90": 43.92,
+          "npc_100": 39.17
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -43162,7 +44863,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 252.14,
+        "practice_adjusted_mean": {
+          "player_30": 197.38,
+          "player_60": 237.13,
+          "player_90": 285.15,
+          "npc_100": 252.14
+        },
+        "tempo_pressure": {
+          "player_30": 197.38,
+          "player_60": 237.13,
+          "player_90": 285.15,
+          "npc_100": 252.14
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -43360,7 +45075,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 376.25,
+        "practice_adjusted_mean": {
+          "player_30": 227.21,
+          "player_60": 323.32,
+          "player_90": 458.32,
+          "npc_100": 376.25
+        },
+        "tempo_pressure": {
+          "player_30": 22.72,
+          "player_60": 32.33,
+          "player_90": 45.83,
+          "npc_100": 37.62
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -43566,7 +45295,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 279.23,
+        "practice_adjusted_mean": {
+          "player_30": 183.7,
+          "player_60": 245.5,
+          "player_90": 331.56,
+          "npc_100": 279.23
+        },
+        "tempo_pressure": {
+          "player_30": 183.7,
+          "player_60": 245.5,
+          "player_90": 331.56,
+          "npc_100": 279.23
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -43786,7 +45529,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 273.33,
+        "practice_adjusted_mean": {
+          "player_30": 220.0,
+          "player_60": 264.4,
+          "player_90": 301.09,
+          "npc_100": 273.33
+        },
+        "tempo_pressure": {
+          "player_30": 220.0,
+          "player_60": 264.4,
+          "player_90": 301.09,
+          "npc_100": 273.33
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -44024,7 +45781,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 267.5,
+        "practice_adjusted_mean": {
+          "player_30": 190.0,
+          "player_60": 244.16,
+          "player_90": 313.32,
+          "npc_100": 267.5
+        },
+        "tempo_pressure": {
+          "player_30": 13.57,
+          "player_60": 17.44,
+          "player_90": 22.38,
+          "npc_100": 19.11
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -44238,7 +46009,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 145.0,
+        "practice_adjusted_mean": {
+          "player_30": 112.77,
+          "player_60": 139.44,
+          "player_90": 166.11,
+          "npc_100": 145.0
+        },
+        "tempo_pressure": {
+          "player_30": 11.28,
+          "player_60": 13.94,
+          "player_90": 16.61,
+          "npc_100": 14.5
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -44388,7 +46173,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 225.0,
+        "practice_adjusted_mean": {
+          "player_30": 151.65,
+          "player_60": 201.1,
+          "player_90": 268.13,
+          "npc_100": 225.0
+        },
+        "tempo_pressure": {
+          "player_30": 151.65,
+          "player_60": 201.1,
+          "player_90": 268.13,
+          "npc_100": 225.0
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -44793,7 +46592,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 90.0,
+        "practice_adjusted_mean": {
+          "player_30": 66.66,
+          "player_60": 86.66,
+          "player_90": 104.44,
+          "npc_100": 90.0
+        },
+        "tempo_pressure": {
+          "player_30": 6.67,
+          "player_60": 8.67,
+          "player_90": 10.44,
+          "npc_100": 9.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -45297,7 +47110,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 156.0,
+        "practice_adjusted_mean": {
+          "player_30": 118.32,
+          "player_60": 141.66,
+          "player_90": 178.88,
+          "npc_100": 156.0
+        },
+        "tempo_pressure": {
+          "player_30": 118.32,
+          "player_60": 141.66,
+          "player_90": 178.88,
+          "npc_100": 156.0
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -46141,7 +47968,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 92.5,
+        "practice_adjusted_mean": {
+          "player_30": 68.32,
+          "player_60": 88.32,
+          "player_90": 108.32,
+          "npc_100": 92.5
+        },
+        "tempo_pressure": {
+          "player_30": 68.32,
+          "player_60": 88.32,
+          "player_90": 108.32,
+          "npc_100": 92.5
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -46586,7 +48427,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 211.25,
+        "practice_adjusted_mean": {
+          "player_30": 166.66,
+          "player_60": 201.66,
+          "player_90": 238.33,
+          "npc_100": 211.25
+        },
+        "tempo_pressure": {
+          "player_30": 33.33,
+          "player_60": 40.33,
+          "player_90": 47.67,
+          "npc_100": 42.25
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -46752,7 +48607,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 223.12,
+        "practice_adjusted_mean": {
+          "player_30": 153.33,
+          "player_60": 198.74,
+          "player_90": 261.1,
+          "npc_100": 223.12
+        },
+        "tempo_pressure": {
+          "player_30": 30.67,
+          "player_60": 39.75,
+          "player_90": 52.22,
+          "npc_100": 44.62
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -46886,7 +48755,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 20.0,
+        "practice_adjusted_mean": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "tempo_pressure": {
+          "player_30": 2.0,
+          "player_60": 2.0,
+          "player_90": 2.0,
+          "npc_100": 2.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -47269,7 +49152,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 299.44,
+        "practice_adjusted_mean": {
+          "player_30": 217.96,
+          "player_60": 272.96,
+          "player_90": 345.98,
+          "npc_100": 299.44
+        },
+        "tempo_pressure": {
+          "player_30": 15.57,
+          "player_60": 19.5,
+          "player_90": 24.71,
+          "npc_100": 21.39
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -47435,7 +49332,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 258.75,
+        "practice_adjusted_mean": {
+          "player_30": 164.99,
+          "player_60": 224.57,
+          "player_90": 309.98,
+          "npc_100": 258.75
+        },
+        "tempo_pressure": {
+          "player_30": 164.99,
+          "player_60": 224.57,
+          "player_90": 309.98,
+          "npc_100": 258.75
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -47699,7 +49610,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 355.38,
+        "practice_adjusted_mean": {
+          "player_30": 240.89,
+          "player_60": 317.3,
+          "player_90": 418.58,
+          "npc_100": 355.38
+        },
+        "tempo_pressure": {
+          "player_30": 13.38,
+          "player_60": 17.63,
+          "player_90": 23.25,
+          "npc_100": 19.74
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -47937,7 +49862,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 392.0,
+        "practice_adjusted_mean": {
+          "player_30": 289.99,
+          "player_60": 363.32,
+          "player_90": 448.88,
+          "npc_100": 392.0
+        },
+        "tempo_pressure": {
+          "player_30": 16.11,
+          "player_60": 20.18,
+          "player_90": 24.94,
+          "npc_100": 21.78
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -48047,7 +49986,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 180.0,
+        "practice_adjusted_mean": {
+          "player_30": 180.0,
+          "player_60": 180.0,
+          "player_90": 180.0,
+          "npc_100": 180.0
+        },
+        "tempo_pressure": {
+          "player_30": 180.0,
+          "player_60": 180.0,
+          "player_90": 180.0,
+          "npc_100": 180.0
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -48406,7 +50359,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 152.0,
+        "practice_adjusted_mean": {
+          "player_30": 125.35,
+          "player_60": 124.0,
+          "player_90": 166.66,
+          "npc_100": 152.0
+        },
+        "tempo_pressure": {
+          "player_30": 10.45,
+          "player_60": 10.33,
+          "player_90": 13.89,
+          "npc_100": 12.67
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -48634,7 +50601,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 117.14,
+        "practice_adjusted_mean": {
+          "player_30": 86.43,
+          "player_60": 110.0,
+          "player_90": 136.11,
+          "npc_100": 117.14
+        },
+        "tempo_pressure": {
+          "player_30": 17.29,
+          "player_60": 22.0,
+          "player_90": 27.22,
+          "npc_100": 23.43
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -50052,7 +52033,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 160.83,
+        "practice_adjusted_mean": {
+          "player_30": 127.77,
+          "player_60": 154.44,
+          "player_90": 181.85,
+          "npc_100": 160.83
+        },
+        "tempo_pressure": {
+          "player_30": 12.78,
+          "player_60": 15.44,
+          "player_90": 18.18,
+          "npc_100": 16.08
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -50226,7 +52221,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 263.89,
+        "practice_adjusted_mean": {
+          "player_30": 167.95,
+          "player_60": 230.72,
+          "player_90": 315.48,
+          "npc_100": 263.89
+        },
+        "tempo_pressure": {
+          "player_30": 14.0,
+          "player_60": 19.23,
+          "player_90": 26.29,
+          "npc_100": 21.99
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -50442,7 +52451,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 160.62,
+        "practice_adjusted_mean": {
+          "player_30": 116.66,
+          "player_60": 151.66,
+          "player_90": 188.05,
+          "npc_100": 160.62
+        },
+        "tempo_pressure": {
+          "player_30": 11.67,
+          "player_60": 15.17,
+          "player_90": 18.8,
+          "npc_100": 16.06
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,
@@ -50807,7 +52830,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 162.31,
+        "practice_adjusted_mean": {
+          "player_30": 119.36,
+          "player_60": 148.59,
+          "player_90": 185.94,
+          "npc_100": 162.31
+        },
+        "tempo_pressure": {
+          "player_30": 9.95,
+          "player_60": 12.38,
+          "player_90": 15.49,
+          "npc_100": 13.53
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -51083,7 +53120,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 202.78,
+        "practice_adjusted_mean": {
+          "player_30": 145.36,
+          "player_60": 186.84,
+          "player_90": 236.1,
+          "npc_100": 202.78
+        },
+        "tempo_pressure": {
+          "player_30": 12.11,
+          "player_60": 15.57,
+          "player_90": 19.68,
+          "npc_100": 16.9
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -51296,7 +53347,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 152.14,
+        "practice_adjusted_mean": {
+          "player_30": 111.9,
+          "player_60": 143.33,
+          "player_90": 177.3,
+          "npc_100": 152.14
+        },
+        "tempo_pressure": {
+          "player_30": 7.99,
+          "player_60": 10.24,
+          "player_90": 12.66,
+          "npc_100": 10.87
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -51518,7 +53583,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 252.0,
+        "practice_adjusted_mean": {
+          "player_30": 139.44,
+          "player_60": 211.1,
+          "player_90": 310.54,
+          "npc_100": 252.0
+        },
+        "tempo_pressure": {
+          "player_30": 139.44,
+          "player_60": 211.1,
+          "player_90": 310.54,
+          "npc_100": 252.0
+        },
+        "guardrail_axis": "damage"
       },
       "status": {
         "player_facing": true,
@@ -51660,7 +53739,21 @@
         "damage_source": "data-driven",
         "damage_gap_classification": null,
         "code_path": null,
-        "code_damage_summary": null
+        "code_damage_summary": null,
+        "failenable_mean": 20.0,
+        "practice_adjusted_mean": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "tempo_pressure": {
+          "player_30": 20.0,
+          "player_60": 20.0,
+          "player_90": 20.0,
+          "npc_100": 20.0
+        },
+        "guardrail_axis": "dodge"
       },
       "status": {
         "player_facing": true,

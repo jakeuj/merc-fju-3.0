@@ -12,6 +12,15 @@ title: Current Game 氣功 Skills
 - Registry note: [`skills.md`](../skills.html)
 - Index: [`skills-index.md`](../skills-index.html)
 
+## Legacy Damage Policy
+
+- Balance goal: `hybrid runtime-first`
+- Formula policy: `piecewise linear default`
+- Primary metrics: `failenable_mean / practice_adjusted_mean(30, 60, 90, npc_100) / tempo_pressure`
+- Player tier model: `level_equals_practice_tier`
+- Separate tracks: `TAR_CHAR_OFFENSIVE -> offensive ladder; TAR_DODGE -> dodge ladder`
+- Non-linear exceptions: `disallowed unless explicitly documented in combat_tuning_profile`
+
 ## Family Overview
 
 | Family | Legacy Chain | Skills | Audit States |
@@ -44,6 +53,9 @@ Legacy chain: `universe -> six fire -> fire dragon`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `352.22`
+- Practice-adjusted mean: `player_30=265.55; player_60=327.4; player_90=401.23; npc_100=352.22`
+- Tempo pressure: `player_30=37.94; player_60=46.77; player_90=57.32; npc_100=50.32`
 - Legacy page source: `skill/energy.html`
 
 ### 極火六陽 / `six fire`
@@ -66,6 +78,9 @@ Legacy chain: `universe -> six fire -> fire dragon`
 - Chance values: `[20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `195.83`
+- Practice-adjusted mean: `player_30=157.77; player_60=186.1; player_90=219.62; npc_100=195.83`
+- Tempo pressure: `player_30=31.55; player_60=37.22; player_90=43.92; npc_100=39.17`
 - Legacy page source: `skill/energy.html`
 
 ### 先天乾坤功 / `universe`
@@ -88,5 +103,8 @@ Legacy chain: `universe -> six fire -> fire dragon`
 - Chance values: `[20, 20, 20, 20, 20, 20, 20]`
 - Parry values: `[0, 0, 0, 0, 0, 0, 0]`
 - Innate values: `['0 0', '0 0', '0 0', '0 0', '0 0', '0 0', '0 0']`
+- Failenable mean: `117.14`
+- Practice-adjusted mean: `player_30=86.43; player_60=110; player_90=136.11; npc_100=117.14`
+- Tempo pressure: `player_30=17.29; player_60=22; player_90=27.22; npc_100=23.43`
 - Legacy page source: `skill/energy.html`
 
