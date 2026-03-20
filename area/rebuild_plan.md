@@ -508,6 +508,32 @@
     - `ref/sanguo-area-specfirst` 已提供城市 scaffold，可直接改寫成符合目前南線節奏的版本
   - compliance_check:
     - compliant；延續 `City` 主線推進，且為南海與南蠻前的母城補位，不是跳去無連接支線
+- `wild_nanman_jungle`
+  - area_family: `Wild`
+  - reserved_room_block: `15301-15330`
+  - level_range: `94-100`
+  - theme: `探險`
+  - subtheme: `南蠻密林 / 部族邊徑`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/wild_nanman_jungle/map.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `plans/area/0067-city-guiyang.md`
+  - ref_inputs_deferred:
+    - `ref/sanguo-area-specfirst/area/city_nanhai/map.md`
+    - `docs/3yWebsite/map/shanyan.html`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `city_guiyang` 已在 runtime 與 spec 內明確預留西向 `wild_nanman_jungle` 邊界，適合把南境母城之後的第一段 wild 正式落地
+    - `題材分布表` 把南方蠻荒區的 `南蠻森林` 定位成 `探險 / 詭異` 的原始森林，能有效拉開和 `city_guiyang` 的城鎮節奏
+    - `players.json / skills.json` 沒有提供必須優先跳到 `city_nanhai` 的服務鏈證據，因此先做 `Wild` 能維持 queue variety gate
+    - `ref/sanguo-area-specfirst` 已提供可改寫 scaffold，可直接轉成目前桂陽西向密林前帶所需版本
+  - compliance_check:
+    - compliant；在連續兩個 `City` 里程碑後切回 `Wild`，延續 `city_guiyang` 預留 world-link，也恢復 family 多樣性
 
 ## Todo
 
@@ -515,25 +541,24 @@
 
 ## In Progress
 
-- `city_guiyang`
-  - plan: `plans/area/0067-city-guiyang.md`
-  - delivery_gate: `implementation_ready_for_commit`
+- `wild_nanman_jungle`
+  - plan: `plans/area/0068-wild-nanman-jungle.md`
+  - delivery_gate: `spec_ready_for_commit`
   - current_status:
-    - 已建立最小可載入 runtime scaffold：`index / mob / obj / res / shp / roo`
-    - 已完成 `city_lingling/15110 <-> city_guiyang/15201` 正式 boundary 掛接
-    - `tools/mapmd_validate.py` 已通過 `city_guiyang` 與更新後的 `city_lingling`
-    - generator `--validate-only` 已通過，generator write 已寫出 `city_guiyang` 與更新後的 `city_lingling` `roo`
-    - WSL Linux build 已通過
-    - startup smoke test 已通過；成功訊號見 `log/1032.log`
-    - `debug/badobject` 為空，`debug/error` 僅有 timeout 強制關機路徑
+    - 已建立 `plans/area/0068-wild-nanman-jungle.md`
+    - 已建立 `area/wild_nanman_jungle/map.md` 第一版 spec
+    - 已選定房號段 `15301-15330`
+    - 已根據 `city_guiyang` 西向預留邊界與 queue variety gate 選定為下一個 actionable area
+    - `tools/mapmd_validate.py` 已通過
+    - generator `--validate-only` 已通過
   - next_action:
-    - commit `city_guiyang` 的 implementation milestone
-    - commit 後將 `city_guiyang` 移入 `done`
-    - 盤點並建立下一個主世界候選 area 的 spec milestone
+    - commit `wild_nanman_jungle` 的 spec milestone
+    - commit 後直接進 implementation milestone
 
 
 ## Done
 
+- `2026-03-21` `city_guiyang` 已完成第一輪 runtime implementation、commit `39fa444`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `city_lingling` 已完成第一輪 runtime implementation、commit `48ce226`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `wild_wuling` 已完成第一輪 runtime implementation、commit `4074996`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `city_changsha` 已完成第一輪 runtime implementation、commit `b0970db`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
@@ -665,7 +690,7 @@
 
 ## Current Recommended Next Step
 
-`city_guiyang` 已完成第一輪 runtime scaffold、boundary 掛接、WSL build 與 startup smoke test。下一步應先 commit implementation milestone，接著直接盤點並建立下一個待建 area 的 spec milestone。
+`city_guiyang` 已完成並提交 implementation milestone。`wild_nanman_jungle` 的 spec 驗證也已完成；下一步應先提交 spec milestone，再直接進 implementation milestone。
 
 ## Next Action
 
@@ -680,12 +705,15 @@
 - 完成 `city_lingling`：
   - 已提交 implementation milestone
 - 完成 `city_guiyang`：
-  - 已建立可載入 runtime scaffold
-  - 已完成 `15110 <-> 15201` boundary 掛接
-  - 已完成 `map.md` validate、generator write、WSL build 與 startup smoke test
-  - commit implementation milestone
-  - commit 後直接盤點下一個待建 area 並建立 spec
+  - 已提交 implementation milestone
+- 完成 `wild_nanman_jungle`：
+  - 已建立 spec 與單區 plan
+  - 已選定 `15301-15330`
+  - 已完成 `map.md` validate
+  - 已完成 generator `--validate-only`
+  - commit spec milestone
+  - commit 後直接進 implementation milestone
 
 ## Next Prompt
 
-`先 commit 目前 city_guiyang 的 implementation milestone；commit 後直接盤點並建立下一個待建 area 的 spec milestone。`
+`先 commit 目前 wild_nanman_jungle 的 spec milestone；commit 後直接做 implementation milestone。`
