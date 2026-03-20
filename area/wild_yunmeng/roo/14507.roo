@@ -1,0 +1,32 @@
+Vnum            14507
+Name            舊棚殘架~
+Description
+幾根斜歪的棚柱從蘆霧裡突了出來，破蓆與碎繩還掛在柱頭，讓人看不出這裡曾是漁棚、獵棚，還是誰臨時搭來躲霧的地方。真正讓人在意的是，這殘架明明該荒了很久，卻又像最近才被誰碰過。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        14506
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14511
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         失蹤~
+End
+
+#Enquire
+Keyword         棚子~
+End
+
+End

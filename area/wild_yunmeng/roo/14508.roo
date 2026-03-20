@@ -1,0 +1,52 @@
+Vnum            14508
+Name            霧中高埠~
+Description
+這一處地勢比周圍稍高，腳下泥意忽然薄了一層，讓人第一次能抬頭看清霧頂的走向。從這裡望出去，整片大澤像一層層灰白色的布往外鋪開，既讓人覺得終於能辨位，又更清楚意識到深處其實還有更沉、更黑的地方。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       NORTH
+ExitVnum        14504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        14512
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14510
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        14511
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         高處~
+End
+
+#Enquire
+Keyword         大澤~
+End
+
+#Enquire
+Keyword         東邊~
+End
+
+End

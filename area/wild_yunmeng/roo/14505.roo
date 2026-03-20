@@ -1,0 +1,32 @@
+Vnum            14505
+Name            半乾草洲~
+Description
+一小片略高於周圍泥面的草洲像在霧裡勉強浮著，雖不能算真正乾燥，至少比主沼的泥水更像能讓人站穩一口氣。草叢裡還留著些被踩歪的細枝，像不久前才有人在這裡短暫停過腳。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        14503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14506
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         草洲~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+End

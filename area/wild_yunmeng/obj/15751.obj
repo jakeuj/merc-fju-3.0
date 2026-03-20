@@ -1,0 +1,14 @@
+Vnum            15751
+Name            marsh ration cake~
+ShortDesc       濕地乾糧餅(ration cake)~
+Description
+一塊方便在濕地趕路時邊走邊吃的濕地乾糧餅(ration cake)被放在這裡。
+~
+Unit            塊~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           50
+Value           22 36 4 0
+Weight          1
+Cost            105
+End

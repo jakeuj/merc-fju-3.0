@@ -1,0 +1,32 @@
+Vnum            14502
+Name            濕地邊樁~
+Description
+幾根被水浸黑的木樁插在泥地邊，像是早有人想替這片濕地劃出一條能走的入口，只是如今樁與樁之間的界線早被霧和積水模糊得差不多了。再往前一步，地面就不像城外那樣肯老實承受人的重量。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        14501
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         大澤~
+End
+
+#Enquire
+Keyword         前面~
+End
+
+End

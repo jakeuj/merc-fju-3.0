@@ -1,0 +1,31 @@
+Vnum            14506
+Name            倒木短徑~
+Description
+幾根橫倒的朽木恰好搭成一條勉強能踏的短徑，走在上面時木心發出空悶聲，彷彿底下全是更深的水與泥。這條路不像正式修成的橋，卻又明顯是走過的人不願再踩進泥裡時留下的選擇。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        14505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         浮木~
+Description
+這些木頭表面滑得厲害，邊緣還纏著藻絲，像是從更深處漂來後被人硬留在這裡充路。
+~
+End
+
+End

@@ -1,0 +1,14 @@
+Vnum            15752
+Name            sealed reed flask~
+ShortDesc       蘆封水囊(reed flask)~
+Description
+一只用蘆皮與細繩封緊口部的蘆封水囊(reed flask)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           50
+Value           12 12 LIQ_WATER 0
+Weight          2
+Cost            125
+End

@@ -1,0 +1,36 @@
+Vnum            14512
+Name            深沼前帶~
+Description
+高埠下方的霧在這裡聚成一團更濃的灰白，連腳下積水都黑得像沒有底。四周聲音忽然變少，只剩偶爾一聲從泥底或霧心傳來的悶響，提醒你再往前一步，走的就不再只是大澤表面了。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       UP
+ExitVnum        14508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        14511
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         深處~
+End
+
+#Enquire
+Keyword         下面~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

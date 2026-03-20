@@ -1,0 +1,47 @@
+Vnum            14503
+Name            蘆牆泥道~
+Description
+蘆葦在兩側長得像牆一樣高，泥道被夾在中間，窄得只能容人專心看著腳下。偶爾有不知是鳥還是獸的聲音在霧後一閃而過，讓這條路既像有人帶過，又像從來沒真正屬於任何人。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        14502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         蘆葦~
+Description
+蘆葉上盡是潮珠，貼身擦過時帶來一種又冷又癢的濕意，像大澤正在用最細碎的方式記住每個闖進來的人。
+~
+End
+
+#Enquire
+Keyword         霧路~
+End
+
+#Enquire
+Keyword         東邊~
+End
+
+End

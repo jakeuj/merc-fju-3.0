@@ -1222,6 +1222,25 @@
         "plans/area/0059-city-jiangxia.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "wild_yunmeng",
+      "title": "雲夢大澤",
+      "room_range": "14501-14530",
+      "load_order": 66,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_jiangxia",
+      "theme_primary": "詭異民俗",
+      "theme_secondary": "雲夢大澤 / 迷霧濕地",
+      "summary": "承接江夏南向水巷外側，落成濕地邊樁、霧中高埠、半沉石碑與深沼前帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/wild_yunmeng/index",
+        "area/wild_yunmeng/map.md",
+        "plans/area/0060-wild-yunmeng.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

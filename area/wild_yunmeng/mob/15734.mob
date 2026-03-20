@@ -1,0 +1,33 @@
+Vnum            15734
+Name            deep bog scavenger~
+ShortDesc       深沼拾荒客~
+Description
+這名滿身泥污的深沼拾荒客蹲在霧裡，像總能從別人不想再踏進去的地方
+翻出還有價值的東西。他的動作慢，卻不笨重，反而像對哪一塊泥會陷、
+哪一塊泥只是嚇人早就心裡有數。
+~
+Sentinel        No
+StayArea        Yes
+NoKill          No
+Alignment       -80
+Level           58
+Hitroll         4
+Protect         0
+Damroll         4
+Str             14
+Int             11
+Wis             12
+Dex             13
+Con             14
+Hp              2800
+Mana            90
+Move            140
+Class           0
+Gold            240
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

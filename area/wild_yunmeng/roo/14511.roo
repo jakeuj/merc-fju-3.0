@@ -1,0 +1,47 @@
+Vnum            14511
+Name            半沉祭壇~
+Description
+幾塊被泥水吞到只剩稜角的石臺在這裡勉強拼出一個圓形輪廓，中央則陷成更黑的一潭。你很難說這是祭壇、舊祠基，還是某種被故意掩埋的入口，但站在旁邊時，總會覺得腳下的泥比別處更像在慢慢往下拉人。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        14508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        14507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        14512
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         祭壇~
+Description
+石臺邊緣刻痕早被泥與水磨平，唯獨中央的下陷處仍像保留著某種不想完全露面的形狀。
+~
+End
+
+#Enquire
+Keyword         祭壇~
+End
+
+#Enquire
+Keyword         下面~
+End
+
+End

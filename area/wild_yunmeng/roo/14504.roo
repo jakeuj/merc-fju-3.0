@@ -1,0 +1,47 @@
+Vnum            14504
+Name            迷霧岔灘~
+Description
+地勢在這裡散成幾條濕灘和淺水交錯的岔路，哪一條像正路、哪一條像死路，往往要走進霧裡兩三步後才分得出來。泥面上留下的腳印也不像可靠指引，因為你很難確定那到底是人的，還是別的什麼。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        14503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        14509
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         泥痕~
+Description
+泥面上的痕跡有深有淺，有的像人踩過，有的卻更像什麼拖著濕重身子從霧裡慢慢滑過。
+~
+End
+
+#Enquire
+Keyword         岔路~
+End
+
+#Enquire
+Keyword         石碑~
+End
+
+End

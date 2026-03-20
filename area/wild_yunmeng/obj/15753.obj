@@ -1,0 +1,15 @@
+Vnum            15753
+Name            bog machete~
+ShortDesc       開沼短刀(bog machete)~
+Description
+一柄專門拿來劈開蘆葉、藤蔓與濕地雜草的開沼短刀(bog machete)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           54
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            205
+End

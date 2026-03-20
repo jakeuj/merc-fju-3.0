@@ -1,0 +1,33 @@
+Vnum            15732
+Name            marsh hunter~
+ShortDesc       濕地獵戶~
+Description
+這名沉默的濕地獵戶背著簡單獵具，腳步踩在倒木與泥面上幾乎不出聲。
+他看人的眼神不算敵意，卻總像在衡量你究竟是旅人、獵物，還是會把路
+線全踩壞的麻煩。
+~
+Sentinel        No
+StayArea        Yes
+NoKill          No
+Alignment       0
+Level           53
+Hitroll         3
+Protect         0
+Damroll         3
+Str             13
+Int             11
+Wis             12
+Dex             14
+Con             13
+Hp              2200
+Mana            80
+Move            140
+Class           0
+Gold            150
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

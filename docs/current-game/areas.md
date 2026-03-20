@@ -89,6 +89,7 @@ title: Current Game Areas
 | `city_xiangyang` | 襄陽城 / 荊州門戶主城 | `14201-14230` | `rebuild addition` | 承接荊襄大道北界，落成南城門、主街十字、西市補給線與東碼頭構成的城市 hub。 |
 | `wild_jiangxia_river` | 江夏水道 / 江岸水路野外 | `14301-14330` | `rebuild addition` | 承接襄陽東碼頭外緣，落成離城木棧、蘆葦濕灘、水寨殘樁與東向渡口前帶。 |
 | `city_jiangxia` | 江夏 / 荊州東岸江港主城 | `14401-14430` | `rebuild addition` | 承接江夏水道東界，落成渡口外門、港前主街、市集補給區與水軍官署骨架。 |
+| `wild_yunmeng` | 雲夢大澤 / 迷霧濕地野外 | `14501-14530` | `rebuild addition` | 承接江夏南向水巷外側，落成濕地邊樁、霧中高埠、半沉石碑與深沼前帶。 |
 
 ## Recent Rebuild Areas
 
@@ -167,6 +168,7 @@ title: Current Game Areas
 - `city_xiangyang`：把荊襄大道北界正式接進襄陽城，透過城門、市集、官署與東碼頭把節奏從關隘轉回荊州主城與水陸交通 hub。
 - `wild_jiangxia_river`：把襄陽東碼頭正式接進江岸水路野外，透過離城木棧、蘆葦濕灘、水寨殘樁與候船渡口把主線推往江夏方向。
 - `city_jiangxia`：把江夏水道東界正式接進江港主城，透過渡口外門、港前木棧、市集補給與水軍官署把主線重新收束成東岸港務 hub。
+- `wild_yunmeng`：把江夏南向水巷正式接進雲夢濕地前帶，透過蘆牆泥道、半乾草洲、石碑泥潭與深沼前帶把主線轉入詭異濕地探索節奏。
 
 ## 維護規則
 

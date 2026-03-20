@@ -253,7 +253,8 @@
       "labels": ["south-edge", "future-link-south"],
       "exits": [
         { "direction": "west", "to": 14406 },
-        { "direction": "east", "to": 14411 }
+        { "direction": "east", "to": 14411 },
+        { "direction": "south", "to": 14501, "external": true }
       ],
       "enquires": ["雲夢", "去路"]
     },

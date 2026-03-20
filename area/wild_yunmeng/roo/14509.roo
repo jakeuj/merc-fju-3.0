@@ -1,0 +1,39 @@
+Vnum            14509
+Name            石碑泥潭~
+Description
+半截石碑斜斜插在泥潭裡，碑面被水紋與青苔蓋得難以辨字，卻仍能看出它原本不該立在這種地方。四周泥水安靜得過分，連霧都像在繞著碑身走，讓人很難不把這裡當成某種刻意留下的記號。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        14504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14510
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         石碑~
+Description
+碑角已被泥水磨圓，碑身卻還殘留幾道像祭刻或地名的舊痕，讓人覺得它或許曾為一條更早以前的路指過方向。
+~
+End
+
+#Enquire
+Keyword         石碑~
+End
+
+#Enquire
+Keyword         地標~
+End
+
+End

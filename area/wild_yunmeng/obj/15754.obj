@@ -1,0 +1,14 @@
+Vnum            15754
+Name            marsh oil lamp~
+ShortDesc       霧沼油燈(marsh lamp)~
+Description
+一盞在濕氣裡也能勉強照清腳邊泥面的霧沼油燈(marsh lamp)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           51
+Value           0 0 40 0
+Weight          2
+Cost            145
+End

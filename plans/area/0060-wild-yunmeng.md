@@ -23,7 +23,7 @@
   - `down`: `dng_yunmeng_swamp` / 沉沒神廟或更深濕地密穴
   - `south`: `city_changsha` / 荊南方向遠端主線
   - `east`: `city_chaisang` / 江東水陸轉接
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Fun / Variety Check
 
@@ -163,7 +163,27 @@
   - passed for `12` room(s)
 - `python -X utf8 tools/mapmd_validate.py area/city_jiangxia/map.md`
   - passed with `0 error(s), 0 warning(s)` after aligning the south planned link target to `wild_yunmeng`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_jiangxia/map.md`
+  - rewrote `roo/14401-14412` to include the south boundary into `14501`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_yunmeng/map.md`
+  - wrote `roo/14501-14512`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed; Linux build path reports `merc` up to date
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - startup log `log/1026.log` reached `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/badobject` remained empty
+  - `debug/error` only records the forced shutdown path caused by timeout, not a loader failure
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `wild_yunmeng`
+- `area/wild_yunmeng/index` 採首版濕地 wild scaffold，房號段 `14501-14530`、序號 `149`
+- `mob/15731-15734` 與 `obj/15751-15754` 提供引路客、獵戶、守望者、拾荒客與濕地補給骨架
+- `res/marsh.res` 與 `shp/supplies.shp` 已建立，keeper 為 `15731`
+- `area/city_jiangxia/map.md` 與 `area/wild_yunmeng/map.md` 已同步把 `14407 <-> 14501` 落成正式 runtime boundary
+- `area/city_jiangxia/roo/14407.roo` 與 `area/wild_yunmeng/roo/14501.roo` 現在雙向一致
+- `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已加入 `wild_yunmeng` loadable registry
 
 ## Next Step Prompt
 
-`先 commit 目前 wild_yunmeng 的 spec milestone；commit 後直接開始 implementation milestone。`
+`先 commit 目前 wild_yunmeng 的 implementation milestone；commit 後把它標記為 done，再盤點下一個待建 area。`

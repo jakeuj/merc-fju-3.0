@@ -1,0 +1,32 @@
+Vnum            14501
+Name            水巷盡頭~
+Description
+江夏南向水巷在這裡終於收成一條被泥水吞咬的窄路，腳邊不再是整齊石地，而是一層一層被踩爛的濕草與水痕。回頭仍能辨出城裡的牆影，往前卻只剩蘆聲與霧氣慢慢把視線吞薄。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        14407
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         江夏~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

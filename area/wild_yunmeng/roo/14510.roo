@@ -1,0 +1,32 @@
+Vnum            14510
+Name            南向蘆口~
+Description
+蘆牆在這裡裂出一道更長、更暗的南向開口，風從裡頭吹來時夾著一股更厚的泥腥與水草味。這道去路不像通往正常官道，倒更像把人慢慢引進一整片不願被地圖記清的地方。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        14509
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        14508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End
