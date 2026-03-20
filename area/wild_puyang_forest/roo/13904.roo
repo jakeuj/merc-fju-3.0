@@ -1,0 +1,48 @@
+Vnum            13904
+Name            樵夫歇棚~
+Description
+簡陋木棚靠著老樹搭起，棚下留著熄滅的柴火與兩三束尚未綁緊的柴薪。這裡仍有人類活動痕跡，但久留的人說話都壓低聲音，像怕把林裡更遠的東西喚醒。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       SOUTH
+ExitVnum        13903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        13905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13906
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         樵棚~
+End
+
+#Enquire
+Keyword         濮陽~
+End
+
+#Enquire
+Keyword         亂兵~
+End
+
+#Enquire
+Keyword         官渡~
+End
+
+End

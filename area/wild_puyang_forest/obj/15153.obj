@@ -1,0 +1,14 @@
+Vnum            15153
+Name            scout handlamp~
+ShortDesc       斥候提燈(handlamp)~
+Description
+一盞防風罩做得格外厚實的斥候提燈(handlamp)被掛在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           20
+Value           0 0 18 0
+Weight          1
+Cost            55
+End

@@ -1,0 +1,14 @@
+Vnum            15151
+Name            smoked field ration~
+ShortDesc       林野燻肉乾糧(smoked ration)~
+Description
+一包便於趕路攜帶的林野燻肉乾糧(smoked ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           20
+Value           16 26 4 0
+Weight          1
+Cost            70
+End

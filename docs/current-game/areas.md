@@ -83,6 +83,7 @@ title: Current Game Areas
 | `sec_rift_spirit_core_infernal` | 裂魄冥獄 / 冥獄井腹 | `13601-13612` | `rebuild addition` | 承接裂魄冥淵座，下探到冥獄內庭、獄冥偏廊與業獄前座。 |
 | `sec_rift_spirit_core_gehennal` | 裂魄業獄 / 業獄井腹 | `13701-13712` | `rebuild addition` | 承接裂魄冥獄座，下探到業獄內庭、業冥偏廊與寒獄前座。 |
 | `city_chenliu` | 陳留 / 中原樞紐城 | `13801-13830` | `rebuild addition` | queue reset 後的第一個主世界城市 hub，先落地主街、服務區、軍旅區與南驛轉接骨架。 |
+| `wild_puyang_forest` | 濮陽林野 / 官渡前帶野外 | `13901-13930` | `rebuild addition` | 承接陳留北路的林野探索帶，整合林間主徑、濕窪側線與舊哨土塍。 |
 
 ## Recent Rebuild Areas
 
@@ -152,6 +153,10 @@ title: Current Game Areas
 ### 中原城市鏈
 
 - `city_chenliu`：把陳留先落成可載入的中原樞紐城骨架，整合西門、主街、商旅補給、軍旅訓練與南驛轉接，作為 queue reset 後回到三國地表主線的第一個正式城市 hub。
+
+### 官渡前帶鏈
+
+- `wild_puyang_forest`：把陳留北路外的林野前帶先落成可載入 area，透過林蔭主徑、濕窪獵徑與舊哨高地把玩家節奏從城市補給推到官渡戰前外圍。
 
 ## 維護規則
 

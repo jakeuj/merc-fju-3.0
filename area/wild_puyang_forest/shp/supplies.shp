@@ -1,0 +1,9 @@
+Type            SHOP_STORE
+Keeper          15131
+Object          ITEM_FOOD ITEM_DRINK_CON ITEM_LIGHT
+OpenHour        5
+CloseHour       21
+SellProfit      85
+BuyProfit       125
+Sential         13904
+End

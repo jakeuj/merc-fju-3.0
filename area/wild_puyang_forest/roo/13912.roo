@@ -1,0 +1,28 @@
+Vnum            13912
+Name            北向荒路~
+Description
+林木到這裡開始稀疏，泥地上混進更多舊車轍與凌亂馬蹄印。北風從空曠處直接灌來，帶著比林內更乾、更硬的塵土味，像在提醒你再往前一步，就不只是探路，而是要開始碰見真正的戰前世界。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        13905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         官渡~
+End
+
+#Enquire
+Keyword         前線~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

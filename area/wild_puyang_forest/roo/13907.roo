@@ -1,0 +1,24 @@
+Vnum            13907
+Name            蘆草泥路~
+Description
+蘆草高過肩頭，泥路被踩出一道道深淺不一的凹痕。風吹過時，草浪遮住人影，讓人很難判斷前方究竟只是空路，還是有人正沿著另一側悄悄跟著你走。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        13906
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

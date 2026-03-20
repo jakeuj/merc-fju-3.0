@@ -1,0 +1,43 @@
+Vnum            13909
+Name            殘旗監看點~
+Description
+幾根折斷木樁斜插在高一點的硬地上，其中一根仍掛著破爛布旗。站在這裡可以勉強越過蘆草頂端遠望北邊荒路，風一吹，殘布拍打聲像極了遠處行軍前某種不願明說的預兆。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        13908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        13911
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         殘旗~
+Description
+旗布顏色幾乎褪盡，只剩邊角仍能看出它曾屬於某支行伍。
+~
+End
+
+#Enquire
+Keyword         官渡~
+End
+
+#Enquire
+Keyword         殘旗~
+End
+
+#Enquire
+Keyword         北邊~
+End
+
+End

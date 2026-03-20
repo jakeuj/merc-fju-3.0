@@ -1,0 +1,44 @@
+Vnum            13905
+Name            荒藤岔徑~
+Description
+往北的主徑仍可勉強辨認，另一條被荒藤纏住的舊徑則沿著高土塍往上。地上散著零碎馬蹄印與斷裂草繩，像有人不久前才匆忙從這裡分流。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       SOUTH
+ExitVnum        13904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        13912
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        13910
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         岔路~
+End
+
+#Enquire
+Keyword         北邊~
+End
+
+#Enquire
+Keyword         高處~
+End
+
+End

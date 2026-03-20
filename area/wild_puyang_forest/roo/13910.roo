@@ -1,0 +1,31 @@
+Vnum            13910
+Name            舊哨木梯~
+Description
+沿土塍側邊架起的舊木梯早已發黑發脆，踩上去時會發出不太讓人安心的聲音。梯邊留著碎裂的瞭望欄木，顯示這裡曾是用來觀望林外動靜的地方。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       DOWN
+ExitVnum        13905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13911
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         哨樓~
+Description
+哨樓本體早已不存，只剩木梯、斷樁與被風磨裂的地基。
+~
+End
+
+End

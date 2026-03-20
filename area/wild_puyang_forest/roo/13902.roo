@@ -1,0 +1,32 @@
+Vnum            13902
+Name            林蔭官道~
+Description
+道路仍勉強保有官道的寬度，但兩側樹蔭已把天光切成碎片。偶爾可見車轍印入泥地，卻看不見車隊本身，只剩風從林上掠過，像在替更遠的消息遮掩聲音。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       SOUTH
+ExitVnum        13901
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        13903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         林道~
+End
+
+#Enquire
+Keyword         路況~
+End
+
+End

@@ -1,0 +1,31 @@
+Vnum            15132
+Name            old scout watcher~
+ShortDesc       舊哨斥候~
+Description
+這名縮著肩的斥候踩在高土塍邊緣，總是先聽風再轉頭，像連他自己也
+拿不準北邊傳來的到底是行軍聲，還是林裡別的動靜。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       110
+Level           25
+Hitroll         3
+Protect         0
+Damroll         2
+Str             13
+Int             11
+Wis             12
+Dex             15
+Con             13
+Hp              2100
+Mana            100
+Move            120
+Class           CLASS_THIEF
+Gold            140
+Multipile       100
+AttackRatio     105
+DodgeRatio      108
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

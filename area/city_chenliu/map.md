@@ -320,7 +320,8 @@
       "labels": ["north-edge", "world-link-north", "gate"],
       "exits": [
         { "direction": "south", "to": 13804 },
-        { "direction": "east", "to": 13811 }
+        { "direction": "east", "to": 13811 },
+        { "direction": "north", "to": 13901, "external": true }
       ],
       "keywords": [
         {

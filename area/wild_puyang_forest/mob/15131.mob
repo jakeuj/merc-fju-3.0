@@ -1,0 +1,32 @@
+Vnum            15131
+Name            forest shack trapper~
+ShortDesc       林棚獵戶~
+Description
+這名披著舊獸皮披肩的林棚獵戶守著柴火與水囊，說起話來總先回頭看
+看林深處，像是怕哪句消息被不該聽見的東西記住。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       60
+Level           21
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             13
+Dex             12
+Con             11
+Hp              950
+Mana            100
+Move            110
+Class           0
+Gold            90
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

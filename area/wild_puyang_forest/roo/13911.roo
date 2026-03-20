@@ -1,0 +1,36 @@
+Vnum            13911
+Name            斥候土塍~
+Description
+高土塍把林線與北向荒路切開一道微妙高差，站在這裡可以看見林子如何慢慢往北退去。若說前面的濕地像自然形成的阻礙，這裡就更像人為留下的戰前視線控制點。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        13910
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13909
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         舊哨~
+End
+
+#Enquire
+Keyword         斥候~
+End
+
+#Enquire
+Keyword         前線~
+End
+
+End

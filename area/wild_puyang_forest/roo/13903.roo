@@ -1,0 +1,31 @@
+Vnum            13903
+Name            倒木彎道~
+Description
+巨木橫倒在彎道一側，迫使行人從較窄的泥邊繞過。枝枒與藤蔓把視線切得支離破碎，若真有人伏在林後等路過的人，這裡大概會是最舒服的位置。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       SOUTH
+ExitVnum        13902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        13904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         倒木~
+Description
+倒木表面仍殘留刀斧削過的痕跡，像是有人曾想清出道路，卻又半途停手。
+~
+End
+
+End

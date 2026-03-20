@@ -1,0 +1,31 @@
+Vnum            15134
+Name            northroad deserter~
+ShortDesc       北路流寇~
+Description
+這名神情焦躁的流寇把破甲與布條胡亂綁在身上，握刀的手很緊，像是
+已經分不清自己到底是在埋伏別人，還是在等別人先找到他。
+~
+Sentinel        Yes
+StayArea        No
+Alignment       -120
+Level           28
+Hitroll         4
+Protect         0
+Damroll         3
+Str             15
+Int             10
+Wis             10
+Dex             14
+Con             14
+Hp              2600
+Mana            100
+Move            120
+Class           CLASS_THIEF
+Gold            180
+Multipile       100
+AttackRatio     108
+DodgeRatio      102
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

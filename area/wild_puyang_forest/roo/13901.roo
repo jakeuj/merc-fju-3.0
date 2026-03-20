@@ -1,0 +1,43 @@
+Vnum            13901
+Name            北路林口~
+Description
+陳留北出的最後一段寬路在這裡被林影吞去一半，路旁木牌仍寫著往北行旅須防盜匪與亂兵。再往南還像在城外，向北卻已像把人慢慢送進一片不再由城門管束的地帶。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        13809
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        13902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         路牌~
+Description
+木牌上的字跡被風吹雨打得有些模糊，仍能看出濮陽與官渡方向，只是警語比地名更醒目。
+~
+End
+
+#Enquire
+Keyword         陳留~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+#Enquire
+Keyword         北路~
+End
+
+End

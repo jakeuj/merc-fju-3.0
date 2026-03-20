@@ -23,7 +23,7 @@
   - `north`: `dng_guandu_battlefield` / 官渡古戰場前帶
   - `east`: 濮陽方向的林外官道
   - `west`: 廢棧道與林間斥候支線
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Fun / Variety Check
 
@@ -144,6 +144,28 @@
 - 方向只使用 `north / east / south / west / up / down / enter / out`
 - `wild_puyang_forest` 不得退化成單一路直通 connector；必須保留側線、視線壓力與戰前前哨氣氛
 
+## Validation Results
+
+- `python -X utf8 tools/mapmd_validate.py area/wild_puyang_forest/map.md`
+  - passed with `0 error(s), 0 warning(s)`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_puyang_forest/map.md --validate-only`
+  - passed for `12` room(s)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_puyang_forest/map.md`
+  - wrote `roo/13901-13912`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed; Linux build path reports `merc` up to date
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - startup log `log/1019.log` reached `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/badobject` remained empty
+  - `debug/error` only records the forced shutdown path caused by timeout, not a loader failure
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `wild_puyang_forest`
+- `area/wild_puyang_forest/roo/*.roo` 由 `map.md` scaffold 生成
+- `area/city_chenliu/roo/13809.roo` 已正式補上 north 出口到 `13901`
+- `13912` 的更北戰場 world link 仍停留在 spec，不先做假的 runtime boundary
+
 ## Next Step Prompt
 
-`先 commit 目前 wild_puyang_forest 的 spec milestone；commit 後開始 Milestone 2，依 area/wild_puyang_forest/map.md 生成 roo 草案並建立最小 runtime index/mob/obj/res/shp。`
+`先 commit 目前 wild_puyang_forest 的 implementation milestone；commit 後將 wild_puyang_forest 標記為 done，再把 dng_guandu_battlefield 推進為下一個 actionable area。`

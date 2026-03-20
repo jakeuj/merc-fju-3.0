@@ -1,0 +1,31 @@
+Vnum            15133
+Name            reed marsh broker~
+ShortDesc       濕地掮客~
+Description
+這名穿著半乾不濕短衫的掮客在蘆草邊來回踱步，眼神比一般行商更快
+也更碎，像是熟悉每條能避開正路的泥徑。
+~
+Sentinel        Yes
+StayArea        No
+Alignment       -20
+Level           24
+Hitroll         2
+Protect         0
+Damroll         2
+Str             12
+Int             11
+Wis             10
+Dex             14
+Con             12
+Hp              1800
+Mana            100
+Move            110
+Class           CLASS_THIEF
+Gold            110
+Multipile       100
+AttackRatio     102
+DodgeRatio      104
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

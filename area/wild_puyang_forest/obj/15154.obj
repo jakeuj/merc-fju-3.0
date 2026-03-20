@@ -1,0 +1,15 @@
+Vnum            15154
+Name            northroad short blade~
+ShortDesc       北路短刀(short blade)~
+Description
+一把刀身帶著泥斑的北路短刀(short blade)被丟在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           24
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            140
+End

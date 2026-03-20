@@ -21,6 +21,14 @@ ExitKeyword     ~
 ExitKey         0
 End
 
+#Exit
+Direction       NORTH
+ExitVnum        13901
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
 #Keyword
 Keyword         路牌~
 Description

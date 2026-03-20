@@ -1,0 +1,24 @@
+Vnum            13908
+Name            下陷獵徑~
+Description
+這條小徑像被兩側泥土慢慢擠壓成溝，走在其中時視線會比地表低上一截。路邊可見折斷木箭與被踩進泥裡的皮繩，讓人分不清這裡究竟是獵人常走的近路，還是某種更不安穩的通道。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        13907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        13909
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -149,6 +149,7 @@
       "coord": [0, 0, 0],
       "labels": ["entry", "world-link-south"],
       "exits": [
+        { "direction": "south", "to": 13809, "external": true },
         { "direction": "north", "to": 13902 }
       ],
       "keywords": [
@@ -226,7 +227,7 @@
       "vnum": 13906,
       "name": "枯池濕窪",
       "description": "原本像是池塘的低地只剩半乾泥水與大片發黑蘆草，地面踩下去會慢半拍才把水滲上來。若從林道暫時失去方向，這片濕窪足以讓人越走越覺得四周都長得一樣。",
-      "sector_type": "SECT_SWAMP",
+      "sector_type": "SECT_FIELD",
       "cluster": "wet-hollow",
       "coord": [4, -1, 0],
       "labels": ["wetland", "world-link-east"],
@@ -246,7 +247,7 @@
       "vnum": 13907,
       "name": "蘆草泥路",
       "description": "蘆草高過肩頭，泥路被踩出一道道深淺不一的凹痕。風吹過時，草浪遮住人影，讓人很難判斷前方究竟只是空路，還是有人正沿著另一側悄悄跟著你走。",
-      "sector_type": "SECT_SWAMP",
+      "sector_type": "SECT_FIELD",
       "cluster": "wet-hollow",
       "coord": [5, -1, 0],
       "labels": ["concealment", "side-route"],
@@ -259,7 +260,7 @@
       "vnum": 13908,
       "name": "下陷獵徑",
       "description": "這條小徑像被兩側泥土慢慢擠壓成溝，走在其中時視線會比地表低上一截。路邊可見折斷木箭與被踩進泥裡的皮繩，讓人分不清這裡究竟是獵人常走的近路，還是某種更不安穩的通道。",
-      "sector_type": "SECT_SWAMP",
+      "sector_type": "SECT_FIELD",
       "cluster": "wet-hollow",
       "coord": [6, -1, -1],
       "labels": ["sunken", "risk"],

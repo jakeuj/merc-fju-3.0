@@ -1,0 +1,43 @@
+Vnum            13906
+Name            枯池濕窪~
+Description
+原本像是池塘的低地只剩半乾泥水與大片發黑蘆草，地面踩下去會慢半拍才把水滲上來。若從林道暫時失去方向，這片濕窪足以讓人越走越覺得四周都長得一樣。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        13904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         枯池~
+Description
+池底龜裂與積水並存，說不清是季節使然，還是曾有人刻意引水又棄置。
+~
+End
+
+#Enquire
+Keyword         枯池~
+End
+
+#Enquire
+Keyword         濕地~
+End
+
+#Enquire
+Keyword         東路~
+End
+
+End

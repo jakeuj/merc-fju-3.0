@@ -1108,6 +1108,25 @@
         "plans/area/0053-city-chenliu.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "wild_puyang_forest",
+      "title": "濮陽林野",
+      "room_range": "13901-13930",
+      "load_order": 60,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_chenliu",
+      "theme_primary": "探險",
+      "theme_secondary": "中原林野 / 官渡前哨外圍",
+      "summary": "承接陳留北路的林野探索帶，整合林間主徑、濕窪側線與舊哨土塍。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/wild_puyang_forest/index",
+        "area/wild_puyang_forest/map.md",
+        "plans/area/0054-wild-puyang-forest.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }
