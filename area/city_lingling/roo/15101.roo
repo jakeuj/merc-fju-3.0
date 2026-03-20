@@ -1,0 +1,48 @@
+Vnum            15101
+Name            北向城門~
+Description
+由長沙一路南下到此，城門與坡城石路把人慢慢從官道節奏收進零陵自己的步調。這裡不若大城那樣寬闊，卻有一種靠山而築、靠消息與人情維持秩序的厚實感。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        14910
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         長沙~
+End
+
+#Enquire
+Keyword         進城~
+End
+
+End

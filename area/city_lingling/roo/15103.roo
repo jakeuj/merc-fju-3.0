@@ -1,0 +1,40 @@
+Vnum            15103
+Name            零陵主街~
+Description
+主街不算特別寬，卻把城門、市集與官署穩穩串在一起，來往行人與沿街招牌都帶著地方生活的密度。和長沙相比，這裡更像一座把江湖傳聞與日常買賣混在同一條街上的山城。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15101
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15106
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         零陵~
+End
+
+#Enquire
+Keyword         市集~
+End
+
+End

@@ -1,0 +1,24 @@
+Vnum            15105
+Name            北巷轉角~
+Description
+這段北巷比主街安靜許多，卻仍能聽見遠處市聲與坡城馬蹄聲。牆角積著些許山霧帶來的潮氣，讓零陵的城與山始終像黏在一起，分也分不乾淨。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        15101
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         巷子~
+End
+
+#Enquire
+Keyword         城門~
+End
+
+End

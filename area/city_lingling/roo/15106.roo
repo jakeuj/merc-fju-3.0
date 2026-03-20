@@ -1,0 +1,32 @@
+Vnum            15106
+Name            南市口~
+Description
+市口把藥材、乾糧、布匹與些許奇特小物都集中在同一帶，像一座真正靠遠近行旅、地方傳聞與山路交易一起活著的城市。這裡不像大市那樣喧鬧，卻有種讓人不知不覺停下腳步的吸力。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15107
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         市集~
+End
+
+#Enquire
+Keyword         補給~
+End
+
+End

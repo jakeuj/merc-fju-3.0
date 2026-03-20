@@ -1,0 +1,32 @@
+Vnum            16333
+Name            county clerk~
+ShortDesc       官署書吏~
+Description
+這名坐鎮官署前街的書吏把榜示、來報與南路消息都記得極牢，說起話來不
+疾不徐，卻總讓人覺得零陵許多真正重要的事都先經過他耳裡。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       120
+Level           88
+Hitroll         5
+Protect         0
+Damroll         5
+Str             11
+Int             14
+Wis             15
+Dex             11
+Con             12
+Hp              3700
+Mana            160
+Move            120
+Class           0
+Gold            280
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

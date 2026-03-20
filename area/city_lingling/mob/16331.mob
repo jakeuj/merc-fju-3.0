@@ -1,0 +1,32 @@
+Vnum            16331
+Name            hilltown quartermaster~
+ShortDesc       山城掌櫃~
+Description
+這名熟悉南境來路與地方消息的山城掌櫃站在市口邊，像只要看一眼旅人的
+衣鞋與包袱，就知道對方是剛從長沙趕來，還是正要往更南的路走。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       90
+Level           84
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             15
+Wis             15
+Dex             11
+Con             12
+Hp              2900
+Mana            160
+Move            140
+Class           0
+Gold            420
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

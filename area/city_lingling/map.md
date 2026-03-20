@@ -67,6 +67,7 @@
       "coord": [0, 0, 0],
       "labels": ["entry", "north-link"],
       "exits": [
+        { "direction": "north", "to": 14910, "external": true },
         { "direction": "south", "to": 15103 },
         { "direction": "east", "to": 15102 },
         { "direction": "west", "to": 15105 }

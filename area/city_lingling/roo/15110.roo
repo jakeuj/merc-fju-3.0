@@ -1,0 +1,24 @@
+Vnum            15110
+Name            南門官道~
+Description
+南門外的官道沿著地勢一路往更深南境延去，路面上留著明顯車轍與山路磨痕。站在這裡時，你會很清楚地知道零陵不是終點，而是把人再往南送一段的重要山城中繼。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15107
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         桂陽~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+End

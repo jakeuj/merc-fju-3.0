@@ -1,0 +1,28 @@
+Vnum            15112
+Name            南街路牌~
+Description
+路牌邊的木柱被歲月磨得發亮，卻仍牢牢指著更南的官道路線。它不像什麼大場面的地標，卻是每個繼續往下走的人都會本能停一下、重新確認方向的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15108
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         路牌~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+End

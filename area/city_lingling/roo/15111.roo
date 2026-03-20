@@ -1,0 +1,24 @@
+Vnum            15111
+Name            坡城望樓~
+Description
+走上望樓後，能把北門、主街與坡道上的來路都收入眼底。從這裡俯看零陵，你會更明白這座城雖不巨大，卻有種把南境來路都收進眼中的穩定力量。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       DOWN
+ExitVnum        15104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         望樓~
+End
+
+#Enquire
+Keyword         北門~
+End
+
+End

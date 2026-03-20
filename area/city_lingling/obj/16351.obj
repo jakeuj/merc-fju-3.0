@@ -1,0 +1,14 @@
+Vnum            16351
+Name            southbound ration~
+ShortDesc       南途乾糧包(southbound ration)~
+Description
+一包專給繼續往更南官道走的人帶在身邊的南途乾糧包(southbound ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           84
+Value           28 46 4 0
+Weight          1
+Cost            190
+End

@@ -1,0 +1,32 @@
+Vnum            15102
+Name            北牌坡口~
+Description
+坡口邊立著幾面指向長沙與更南路線的舊木牌，字體不算工整，卻帶著地方城鎮才有的實用感。站在這裡時，很容易感覺到零陵不是帝都式的中心，而是南境真正靠熟路人維持運作的節點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        15101
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         路牌~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

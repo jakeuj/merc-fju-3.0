@@ -490,16 +490,17 @@
 
 - `city_lingling`
   - plan: `plans/area/0066-city-lingling.md`
-  - delivery_gate: `spec_ready_for_commit`
+  - delivery_gate: `implementation_ready_for_commit`
   - current_status:
-    - 已建立 `plans/area/0066-city-lingling.md`
-    - 已建立 `area/city_lingling/map.md` 第一版 spec
-    - 已選定房號段 `15101-15130`
-    - `tools/mapmd_validate.py` 已通過
-    - generator `--validate-only` 已通過
+    - 已建立最小 loadable runtime scaffold：`index / mob / obj / res / shp / roo`
+    - 已將 `14910 <-> 15101` 落成 `city_changsha` 與 `city_lingling` 的雙向 runtime boundary
+    - `tools/mapmd_validate.py`、generator `--validate-only`、generator write 均已通過
+    - WSL Linux build 與 startup smoke test 已通過；成功 log 為 `log/1032.log`
+    - `debug/badobject` 為空，`debug/error` 只有 timeout 強制關機紀錄
   - next_action:
-    - commit `city_lingling` 的 spec milestone
-    - commit 後直接進 implementation milestone
+    - commit `city_lingling` 的 implementation milestone
+    - commit 後把 `city_lingling` 移到 done
+    - 盤點下一個主世界候選區
 
 
 ## Done
@@ -634,7 +635,7 @@
 
 ## Current Recommended Next Step
 
-`city_lingling` 已建立第一版 spec 並完成 validate-only 驗證。下一步應先 commit spec milestone，接著直接進入 implementation milestone。
+`city_lingling` 已完成第一輪 runtime implementation。下一步應先 commit 目前的 implementation milestone；commit 後把它移到 done，再盤點下一個主世界候選區。
 
 ## Next Action
 
@@ -647,12 +648,12 @@
 - 完成 `wild_wuling`：
   - 已提交 implementation milestone
 - 完成 `city_lingling`：
-  - 已建立 spec 與單區 plan
-  - 已完成 validate `map.md`
-  - 已完成 generator `--validate-only`
-  - commit spec milestone
-  - commit 後直接進 implementation milestone
+  - 已建立最小 loadable runtime scaffold
+  - 已完成 build / smoke 驗證
+  - commit implementation milestone
+  - commit 後把它移到 done
+  - 盤點下一個主世界候選區
 
 ## Next Prompt
 
-`先 commit 目前 city_lingling 的 spec milestone；commit 後直接做 implementation milestone。`
+`先 commit 目前 city_lingling 的 implementation milestone；commit 後把它標記為 done，再盤點下一個待建 area。`

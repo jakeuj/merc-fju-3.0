@@ -21,7 +21,7 @@
 - external_links:
   - `north`: `city_changsha` / 北向官道
   - `south`: `city_guiyang` / 更南主城預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Fun / Variety Check
 
@@ -113,7 +113,29 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_lingling/map.md --validate-only`
   - passed for `12` room(s)
+- `python -X utf8 tools/mapmd_validate.py area/city_changsha/map.md`
+  - passed with `0 error(s), 0 warning(s)` after aligning the `14910 <-> 15101` boundary
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_changsha/map.md`
+  - rewrote `roo/14901-14912` to include the south boundary into `15101`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_lingling/map.md`
+  - wrote `roo/15101-15112`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed; Linux build path reports `merc` up to date
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - startup log `log/1032.log` reached `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/badobject` remained empty
+  - `debug/error` only records the forced shutdown path caused by timeout, not a loader failure
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `city_lingling`
+- `area/city_lingling/index` 採首版南境山城 scaffold，房號段 `15101-15130`、序號 `155`
+- `mob/16331-16334` 與 `obj/16351-16354` 提供山城掌櫃、城門巡役、官署書吏、坡城哨官與城市補給骨架
+- `res/city.res` 與 `shp/supplies.shp` 已建立，keeper 為 `16331`
+- `area/city_changsha/map.md` 與 `area/city_lingling/map.md` 已同步把 `14910 <-> 15101` 落成正式 runtime boundary
+- `area/city_changsha/roo/14910.roo` 與 `area/city_lingling/roo/15101.roo` 現在雙向一致
+- `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已加入 `city_lingling` loadable registry
 
 ## Next Step Prompt
 
-`先 commit 目前 city_lingling 的 spec milestone；commit 後直接做 implementation milestone。`
+`先 commit 目前 city_lingling 的 implementation milestone；commit 後把它標記為 done，再盤點下一個待建 area。`

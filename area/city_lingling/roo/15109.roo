@@ -1,0 +1,24 @@
+Vnum            15109
+Name            城巷偏院~
+Description
+偏院不大，卻收拾得頗有秩序，像是這座山城把日常雜務與地方消息暫時收進來整理的地方。比起熱鬧市口，這裡更容易讓人感覺到零陵真正的生活脈搏。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        15108
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         偏院~
+End
+
+#Enquire
+Keyword         消息~
+End
+
+End

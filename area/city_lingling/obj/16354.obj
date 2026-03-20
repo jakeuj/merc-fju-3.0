@@ -1,0 +1,14 @@
+Vnum            16354
+Name            lookout lamp~
+ShortDesc       坡城提燈(lookout lamp)~
+Description
+一盞最常掛在坡城望樓與城巷口的坡城提燈(lookout lamp)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           85
+Value           0 0 40 0
+Weight          2
+Cost            195
+End

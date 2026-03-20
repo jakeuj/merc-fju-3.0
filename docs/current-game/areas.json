@@ -1336,6 +1336,25 @@
         "plans/area/0065-wild-wuling.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "city_lingling",
+      "title": "零陵",
+      "room_range": "15101-15130",
+      "load_order": 72,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_changsha",
+      "theme_primary": "江湖",
+      "theme_secondary": "山城主邑 / 奇聞與轉運",
+      "summary": "承接長沙南向官道，落成北門、主街、市集補給、官署前街與南門官道骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/city_lingling/index",
+        "area/city_lingling/map.md",
+        "plans/area/0066-city-lingling.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

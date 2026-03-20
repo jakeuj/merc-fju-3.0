@@ -1,0 +1,32 @@
+Vnum            16334
+Name            hillside watch officer~
+ShortDesc       坡城哨官~
+Description
+這名守在坡城望樓上的哨官習慣從高處看北門與南街的動靜，神情裡總帶著
+一點比旁人更早半步的警覺。對他來說，零陵真正重要的是別讓南線失了序。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       150
+Level           90
+Hitroll         6
+Protect         0
+Damroll         6
+Str             13
+Int             12
+Wis             13
+Dex             13
+Con             14
+Hp              4300
+Mana            120
+Move            130
+Class           0
+Gold            300
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

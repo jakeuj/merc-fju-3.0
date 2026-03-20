@@ -1,0 +1,14 @@
+Vnum            16352
+Name            hill flask~
+ShortDesc       山城水囊(hill flask)~
+Description
+一只最適合南境長路與坡城往返時隨身攜帶的山城水囊(hill flask)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           84
+Value           12 12 LIQ_WATER 0
+Weight          2
+Cost            170
+End

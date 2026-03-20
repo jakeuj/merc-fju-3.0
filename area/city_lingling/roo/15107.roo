@@ -1,0 +1,40 @@
+Vnum            15107
+Name            藥鋪街角~
+Description
+幾家藥鋪與雜貨攤把街角擠得滿是草藥、桐油與乾貨味，像再遠的南路也總得先在這裡添齊東西才敢出發。比起長沙的官道補給，零陵這裡更像熟門熟路的人彼此照應的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15106
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15110
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         藥鋪~
+End
+
+#Enquire
+Keyword         南路~
+End
+
+End

@@ -1,0 +1,47 @@
+Vnum            15108
+Name            官署前街~
+Description
+官署前街收拾得相當齊整，卻不像大城那樣刻板，反而保留了一種地方主事者才有的靈活與人情。榜示貼得端正，路過的人也總會多看兩眼，像零陵的消息有時就藏在這些細節裡。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15109
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15112
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         告示~
+Description
+榜示上除了例行巡查與徵調，也常夾著些地方上才懂的暗示與傳聞，讓人忍不住多看幾眼。
+~
+End
+
+#Enquire
+Keyword         官府~
+End
+
+#Enquire
+Keyword         榜示~
+End
+
+End

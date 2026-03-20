@@ -1,0 +1,32 @@
+Vnum            16332
+Name            lingling gate patrol~
+ShortDesc       城門巡役~
+Description
+這名零陵城門巡役腳步穩而不慢，目光總在來人與坡城路口之間來回。比起
+嚴厲盤問，他更像在用自己的站位替這座山城維持一種地方秩序。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       150
+Level           86
+Hitroll         5
+Protect         0
+Damroll         5
+Str             13
+Int             11
+Wis             12
+Dex             12
+Con             13
+Hp              3900
+Mana            110
+Move            130
+Class           0
+Gold            260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
