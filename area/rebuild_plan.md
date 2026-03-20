@@ -282,24 +282,23 @@
 
 ## In Progress
 
-- `wild_puyang_forest`
-  - plan: `plans/area/0054-wild-puyang-forest.md`
-  - delivery_gate: `implementation_ready_for_commit`
+- `dng_guandu_battlefield`
+  - plan: `plans/area/0055-dng-guandu-battlefield.md`
+  - delivery_gate: `spec_ready_for_commit`
   - current_status:
-    - 已生成 `roo/13901-13912`，並落地最小 `index / mob / obj / res / shp`
-    - `area/directory.lst` 已掛上 `wild_puyang_forest`
-    - `city_chenliu/13809` 與 `wild_puyang_forest/13901` 已形成正式雙向 runtime 邊界
-    - `tools/mapmd_validate.py`、generator `--validate-only`、WSL Linux build 與 startup smoke test 已通過
-    - `log/1019.log` 已出現 `三國歪傳之降龍伏虎開始正常運作`
-    - `debug/badobject` 為空；`debug/error` 只有 timeout 強制關機留下的 shutdown 記錄
+    - 已建立 `plans/area/0055-dng-guandu-battlefield.md`
+    - 已建立 `area/dng_guandu_battlefield/map.md` 第一版
+    - 已定義 `south-approach / trench-line / burned-wagons / banner-ridge / north-deadground`
+    - `tools/mapmd_validate.py` 與 generator `--validate-only` 已通過
+    - 目前仍維持 spec-level world links，不提早掛載 runtime boundary
   - next_action:
-    - 先 commit `wild_puyang_forest` 的 implementation milestone
-    - commit 後將 `wild_puyang_forest` 移到 `done`
-    - commit 後把 `dng_guandu_battlefield` 推進為下一個 actionable area
+    - 先 commit `dng_guandu_battlefield` 的 spec milestone
+    - commit 後開始 Milestone 2，依 `map.md` 生成 `roo` 草案並建立最小 runtime 資產
 
 
 ## Done
 
+- `2026-03-20` `wild_puyang_forest` 已完成第一輪 runtime implementation、commit `a9c7398`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-20` `city_chenliu` 已完成第一輪 runtime implementation、commit `e6756ff`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 
 - `2026-03-20` 已正式凍結 `sec_rift_spirit_core_*` 晚期尾鏈的自動續寫流程，active queue 改回 `City / Wild / Dungeon / Fort` 交錯的三國主線節奏，並把 `city_chenliu` 設為下一個正式 `todo`
@@ -418,14 +417,16 @@
 
 ## Current Recommended Next Step
 
-`wild_puyang_forest` 已進入 `implementation_ready_for_commit`。下一步應先 commit 目前的 implementation milestone；commit 後將其移到 `done`，再把 `dng_guandu_battlefield` 推進為下一個 actionable area。
+`dng_guandu_battlefield` 已進入 `spec_ready_for_commit`。下一步應先 commit 目前的 spec milestone；commit 後開始 Milestone 2，依 `area/dng_guandu_battlefield/map.md` 生成 `roo` 並建立最小 `index / mob / obj / res / shp`。
 
 ## Next Action
 
-- commit `wild_puyang_forest` 的 implementation milestone
-- commit 後把 `wild_puyang_forest` 移到 `done`
-- commit 後把 `dng_guandu_battlefield` 推進為下一個 actionable area
+- commit `dng_guandu_battlefield` 的 spec milestone
+- commit 後開始 Milestone 2：
+  - 依 `map.md` 生成 `roo/14001-*`
+  - 建立最小 `index / mob / obj / res / shp`
+  - 暫時只保留 spec-level world link，不提早製造假 boundary room
 
 ## Next Prompt
 
-`先 commit 目前 wild_puyang_forest 的 implementation milestone；commit 後將 wild_puyang_forest 標記為 done，再把 dng_guandu_battlefield 推進為下一個 actionable area。`
+`先 commit 目前 dng_guandu_battlefield 的 spec milestone；commit 後再依 area/dng_guandu_battlefield/map.md 開始 Milestone 2，生成 roo 草案並建立最小 runtime index/mob/obj/res/shp。`
