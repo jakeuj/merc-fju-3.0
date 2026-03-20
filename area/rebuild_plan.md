@@ -427,6 +427,33 @@
     - `ref/sanguo-area-specfirst` 已提供城市 scaffold，可直接改寫成符合目前南線的版本
   - compliance_check:
     - compliant；在 `Secret` 之後切回 `City`，延續柴桑預留主線，也維持 queue 多樣性
+- `wild_wuling`
+  - area_family: `Wild`
+  - reserved_room_block: `15001-15030`
+  - level_range: `78-88`
+  - theme: `仙俠`
+  - subtheme: `山路野外 / 靈木深山`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/wild_wuling/map.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `plans/area/0064-city-changsha.md`
+  - ref_inputs_deferred:
+    - `ref/sanguo-area-specfirst/area/city_lingling/map.md`
+    - `ref/sanguo-area-specfirst/area/wild_hidden_valley/map.md`
+    - `docs/3yWebsite/map/shanyan.html`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `world_map` 顯示 `江陵 - 武陵 - 長沙` 這條內陸山線與長沙西向延伸高度吻合
+    - `題材分布表` 把 `武陵` 定位成 `仙俠 / 探險` 的神秘山林，適合在主城後切入 wild family
+    - `players.json / skills.json` 沒有要求此刻先回另一座城市，先補一段山區 wild 可維持 queue 多樣性
+    - `ref/sanguo-area-specfirst` 已提供可改寫 scaffold，可直接轉成長沙西向山路所需版本
+  - compliance_check:
+    - compliant；在 `City` 之後切回 `Wild`，延續長沙預留 world-link，也維持 family 與題材變化
 
 ## Todo
 
@@ -434,23 +461,23 @@
 
 ## In Progress
 
-- `city_changsha`
-  - plan: `plans/area/0064-city-changsha.md`
-  - delivery_gate: `implementation_ready_for_commit`
+- `wild_wuling`
+  - plan: `plans/area/0065-wild-wuling.md`
+  - delivery_gate: `spec_ready_for_commit`
   - current_status:
-    - 已建立最小 loadable runtime scaffold：`index / mob / obj / res / shp / roo`
-    - 已將 `14710 <-> 14901` 落成 `city_chaisang` 與 `city_changsha` 的雙向 runtime boundary
-    - `tools/mapmd_validate.py`、generator `--validate-only`、generator write 均已通過
-    - WSL Linux build 與 startup smoke test 已通過；成功 log 為 `log/1030.log`
-    - `debug/badobject` 為空，`debug/error` 只有 timeout 強制關機紀錄
+    - 已建立 `plans/area/0065-wild-wuling.md`
+    - 已建立 `area/wild_wuling/map.md` 第一版 spec
+    - 已選定房號段 `15001-15030`
+    - `tools/mapmd_validate.py` 已通過
+    - generator `--validate-only` 已通過
   - next_action:
-    - commit `city_changsha` 的 implementation milestone
-    - commit 後把 `city_changsha` 移到 done
-    - 盤點下一個主世界候選區
+    - commit `wild_wuling` 的 spec milestone
+    - commit 後直接進 implementation milestone
 
 
 ## Done
 
+- `2026-03-21` `city_changsha` 已完成第一輪 runtime implementation、commit `b0970db`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `sec_chibi_battlefield` 已完成第一輪 runtime implementation、commit `d3d7a41`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `city_chaisang` 已完成第一輪 runtime implementation、commit `d4abd20`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `dng_sunken_temple` 已完成第一輪 runtime implementation、commit `3f1b489`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
@@ -579,7 +606,7 @@
 
 ## Current Recommended Next Step
 
-`city_changsha` 已完成第一輪 runtime implementation。下一步應先 commit 目前的 implementation milestone；commit 後把它移到 done，再盤點下一個主世界候選區。
+`wild_wuling` 已建立第一版 spec 並完成 validate-only 驗證。下一步應先 commit spec milestone，接著直接進入 implementation milestone。
 
 ## Next Action
 
@@ -588,12 +615,14 @@
 - 完成 `sec_chibi_battlefield`：
   - 已提交 implementation milestone
 - 完成 `city_changsha`：
-  - 已建立最小 loadable runtime scaffold
-  - 已完成 build / smoke 驗證
-  - commit implementation milestone
-  - commit 後把它移到 done
-  - 盤點下一個主世界候選區
+  - 已提交 implementation milestone
+- 完成 `wild_wuling`：
+  - 已建立 spec 與單區 plan
+  - 已完成 validate `map.md`
+  - 已完成 generator `--validate-only`
+  - commit spec milestone
+  - commit 後直接進 implementation milestone
 
 ## Next Prompt
 
-`先 commit 目前 city_changsha 的 implementation milestone；commit 後把它標記為 done，再盤點下一個待建 area。`
+`先 commit 目前 wild_wuling 的 spec milestone；commit 後直接做 implementation milestone。`
