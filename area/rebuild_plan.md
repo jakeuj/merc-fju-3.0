@@ -534,6 +534,32 @@
     - `ref/sanguo-area-specfirst` 已提供可改寫 scaffold，可直接轉成目前桂陽西向密林前帶所需版本
   - compliance_check:
     - compliant；在連續兩個 `City` 里程碑後切回 `Wild`，延續 `city_guiyang` 預留 world-link，也恢復 family 多樣性
+- `dng_serpent_temple`
+  - area_family: `Dungeon`
+  - reserved_room_block: `15401-15430`
+  - level_range: `98-100`
+  - theme: `詭異民俗`
+  - subtheme: `蛇殿 / 血祭`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/dng_serpent_temple/map.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `plans/area/0068-wild-nanman-jungle.md`
+  - ref_inputs_deferred:
+    - `ref/sanguo-area-specfirst/area/city_nanhai/map.md`
+    - `docs/3yWebsite/map/shanyan.html`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `wild_nanman_jungle` 已在 spec 與 runtime 內明確預留 `down` 向林下古祠，適合把南蠻支線的第一個 dungeon 正式落地
+    - `ref` scaffold 已提供 `蛇神殿` 類型，與南蠻密林的圖騰、祭柱與古祠痕跡有直接題材連續性
+    - `players.json / skills.json` 沒有提供必須先回到 `city_nanhai` 的服務鏈證據，因此在 `Wild` 後切入 `Dungeon` 更符合 queue variety 與支線張力
+    - `題材分布表` 的南方蠻荒區與特殊探索區都支持把這段南境外帶延伸成更詭異、更封閉的祭祀遺跡
+  - compliance_check:
+    - compliant；在 `Wild` 之後切入 `Dungeon`，延續 `wild_nanman_jungle` 的 `down` 向預留 world-link，也維持 family 多樣性
 
 ## Todo
 
@@ -541,25 +567,24 @@
 
 ## In Progress
 
-- `wild_nanman_jungle`
-  - plan: `plans/area/0068-wild-nanman-jungle.md`
-  - delivery_gate: `implementation_ready_for_commit`
+- `dng_serpent_temple`
+  - plan: `plans/area/0069-dng-serpent-temple.md`
+  - delivery_gate: `spec_ready_for_commit`
   - current_status:
-    - 已建立最小可載入 runtime scaffold：`index / mob / obj / res / shp / roo`
-    - 已完成 `city_guiyang/15212 <-> wild_nanman_jungle/15301` 正式 boundary 掛接
-    - `tools/mapmd_validate.py` 已通過 `wild_nanman_jungle` 與更新後的 `city_guiyang`
-    - generator `--validate-only` 已通過，generator write 已寫出 `wild_nanman_jungle` 與更新後的 `city_guiyang` `roo`
-    - WSL Linux build 已通過
-    - startup smoke test 已通過；成功訊號見 `log/1034.log`
-    - `debug/badobject` 為空，`debug/error` 僅有 timeout 強制關機路徑
+    - 已建立 `plans/area/0069-dng-serpent-temple.md`
+    - 已建立 `area/dng_serpent_temple/map.md` 第一版 spec
+    - 已選定房號段 `15401-15430`
+    - 已根據 `wild_nanman_jungle` 的 `down` 向預留邊界與 queue variety gate 選定為下一個 actionable area
+    - `tools/mapmd_validate.py` 已通過
+    - generator `--validate-only` 已通過
   - next_action:
-    - commit `wild_nanman_jungle` 的 implementation milestone
-    - commit 後將 `wild_nanman_jungle` 移入 `done`
-    - 盤點並建立下一個主世界候選 area 的 spec milestone
+    - commit `dng_serpent_temple` 的 spec milestone
+    - commit 後直接進 implementation milestone
 
 
 ## Done
 
+- `2026-03-21` `wild_nanman_jungle` 已完成第一輪 runtime implementation、commit `61cb0c6`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `city_guiyang` 已完成第一輪 runtime implementation、commit `39fa444`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `city_lingling` 已完成第一輪 runtime implementation、commit `48ce226`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `wild_wuling` 已完成第一輪 runtime implementation、commit `4074996`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
@@ -692,7 +717,7 @@
 
 ## Current Recommended Next Step
 
-`wild_nanman_jungle` 已完成第一輪 runtime scaffold、boundary 掛接、WSL build 與 startup smoke test。下一步應先提交 implementation milestone，接著直接盤點並建立下一個待建 area 的 spec milestone。
+`wild_nanman_jungle` 已完成並提交 implementation milestone。`dng_serpent_temple` 的 spec 驗證也已完成；下一步應先提交 spec milestone，再直接進 implementation milestone。
 
 ## Next Action
 
@@ -709,12 +734,15 @@
 - 完成 `city_guiyang`：
   - 已提交 implementation milestone
 - 完成 `wild_nanman_jungle`：
-  - 已建立可載入 runtime scaffold
-  - 已完成 `15212 <-> 15301` boundary 掛接
-  - 已完成 `map.md` validate、generator write、WSL build 與 startup smoke test
-  - commit implementation milestone
-  - commit 後直接盤點下一個待建 area 並建立 spec
+  - 已提交 implementation milestone
+- 完成 `dng_serpent_temple`：
+  - 已建立 spec 與單區 plan
+  - 已選定 `15401-15430`
+  - 已完成 `map.md` validate
+  - 已完成 generator `--validate-only`
+  - commit spec milestone
+  - commit 後直接進 implementation milestone
 
 ## Next Prompt
 
-`先 commit 目前 wild_nanman_jungle 的 implementation milestone；commit 後直接盤點並建立下一個待建 area 的 spec milestone。`
+`先 commit 目前 dng_serpent_temple 的 spec milestone；commit 後直接做 implementation milestone。`
