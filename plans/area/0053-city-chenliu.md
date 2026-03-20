@@ -23,7 +23,7 @@
   - `north`: `wild_puyang_forest` / 濮陽主線
   - `east`: 徐州向主幹
   - `south`: `district_chenliu_station` / 許昌支線
-- delivery_gate: `spec_in_progress`
+- delivery_gate: `spec_ready_for_commit`
 
 ## Fun / Variety Check
 
@@ -159,6 +159,13 @@
 - 方向只使用 `north / east / south / west / up / down / enter / out`
 - `city_chenliu` 不得退化成純戰鬥 dungeon prose；必須保留城市生活、軍旅與交通可讀性
 
+## Validation Results
+
+- `python -X utf8 tools/mapmd_validate.py area/city_chenliu/map.md`
+  - passed with `0 error(s), 0 warning(s)`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_chenliu/map.md --validate-only`
+  - passed for `17` room(s)
+
 ## Next Step Prompt
 
-`根據 plans/area/0053-city-chenliu.md、area/world_map.md、ref/mud-area-templates/city_loyang.md、ref/sanguo-area-specfirst/area/city_chenliu/map.md 與 docs/3yWebsite/map/chenliu.html，建立 area/city_chenliu/map.md 的第一版 spec 草案。`
+`先 commit 目前 city_chenliu 的 spec milestone；commit 後再開始 Milestone 2，依 area/city_chenliu/map.md 生成 roo 草案並建立最小 runtime index/mob/obj/res/shp。`

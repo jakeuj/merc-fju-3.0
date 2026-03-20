@@ -270,17 +270,20 @@
 
 ## Todo
 
-- `city_chenliu`
-  - plan: `plans/area/0053-city-chenliu.md`
-  - delivery_gate: `spec_in_progress`
-  - next_action:
-    - 建立 `city_chenliu` 單區 spec-first plan
-    - 依陳留舊站地圖與玩家攻略補齊服務 loop
-    - 下一輪建立 `area/city_chenliu/map.md` 第一版 spec 草案
+(目前無 `todo` 項目。)
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `city_chenliu`
+  - plan: `plans/area/0053-city-chenliu.md`
+  - delivery_gate: `spec_ready_for_commit`
+  - current_status:
+    - `area/city_chenliu/map.md` 第一版已建立
+    - 已落地 `west-gate / main-street / service-quarter / militia-quarter / south-station`
+    - `tools/mapmd_validate.py` 與 generator `--validate-only` 已通過
+  - next_action:
+    - 先 commit `city_chenliu` 的 spec milestone
+    - commit 後開始 Milestone 2，依 `map.md` 生成 `roo` 草案並補最小 runtime 資產
 
 
 ## Done
@@ -401,19 +404,16 @@
 
 ## Current Recommended Next Step
 
-將 `city_chenliu` 視為目前第一個正式 actionable area：先依 `plans/area/0053-city-chenliu.md`、`area/world_map.md`、`ref/mud-area-templates/city_loyang.md`、`ref/sanguo-area-specfirst/area/city_chenliu/map.md` 與 `docs/3yWebsite/map/chenliu.html` 建立 `area/city_chenliu/map.md` 第一版 spec，優先落地城市服務 loop、交通節點與師父 / 補給配置，而不是先做 runtime data。
+`city_chenliu` 已進入 `spec_ready_for_commit`。下一步應先 commit 目前的 spec milestone；commit 後再依 `area/city_chenliu/map.md` 開始 Milestone 2，生成 `roo` 並建立最小 `index / mob / obj / res / shp`。
 
 ## Next Action
 
-- 把 `city_chenliu` 從 queue reset 的第一個 `todo` 推進成實際 spec work
-- 先建立 `area/city_chenliu/map.md` 第一版，明確包含：
-  - `west-gate`
-  - `main-street`
-  - `service-quarter`
-  - `militia-quarter`
-  - `south-station`
-- 把 `食堂 / 錢莊 / 武器店 / 防具店 / 打鐵舖 / 馬廄 / 太守衙門 / 虎豹騎招募處 / 義勇軍 / 拳館 / 驛站` 放進節點或 `#Enquire`
+- commit `city_chenliu` 的 spec milestone
+- commit 後開始 Milestone 2：
+  - 依 `map.md` 生成 `roo/13801-13817`
+  - 建立最小 `index / mob / obj / res / shp`
+  - 暫時只保留 spec-level world link，不提早製造假 boundary room
 
 ## Next Prompt
 
-`根據 plans/area/0053-city-chenliu.md、area/world_map.md、ref/mud-area-templates/city_loyang.md、ref/sanguo-area-specfirst/area/city_chenliu/map.md 與 docs/3yWebsite/map/chenliu.html，建立 area/city_chenliu/map.md 的第一版 spec 草案。`
+`先 commit 目前 city_chenliu 的 spec milestone；commit 後再依 area/city_chenliu/map.md 開始 Milestone 2，生成 roo 草案並建立最小 runtime index/mob/obj/res/shp。`
