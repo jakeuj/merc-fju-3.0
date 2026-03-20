@@ -1,0 +1,24 @@
+Vnum            15611
+Name            風望高臺~
+Description
+沿著高起礁脊走上來後，能看見港城、近岸棧道與外航前帶如何一段段向海面打開。這樣的高度讓人暫時恢復判斷，卻也讓海路的風險變得更一目了然。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       DOWN
+ExitVnum        15608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         風向~
+End
+
+#Enquire
+Keyword         望臺~
+End
+
+End

@@ -1,0 +1,39 @@
+Vnum            15607
+Name            浮標水道~
+Description
+幾支被海風與鹽霧磨得發白的浮標排出一道勉強算穩的水道，像替真正要往外海去的人留下一條最基本的秩序。只是那秩序看起來永遠都比城裡任何路牌脆弱得多。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       WEST
+ExitVnum        15604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15609
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         浮標~
+Description
+木製浮標雖然被潮水與鹽霧侵蝕得厲害，仍盡力把可通行的那道水線指給真正懂得看路的人。
+~
+End
+
+#Enquire
+Keyword         浮標~
+End
+
+#Enquire
+Keyword         水道~
+End
+
+End

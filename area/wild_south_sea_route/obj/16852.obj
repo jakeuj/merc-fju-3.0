@@ -1,0 +1,14 @@
+Vnum            16852
+Name            salt flask~
+ShortDesc       海行水囊(salt flask)~
+Description
+一只專給走近海外航道的人帶在身邊的海行水囊(salt flask)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           98
+Value           14 14 LIQ_WATER 0
+Weight          2
+Cost            240
+End

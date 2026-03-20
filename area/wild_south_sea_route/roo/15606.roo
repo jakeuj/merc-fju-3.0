@@ -1,0 +1,32 @@
+Vnum            15606
+Name            浪痕低道~
+Description
+低道沿著礁面邊緣延伸，兩側浪痕一層壓著一層，像在告訴人這段路從來不真正屬於誰。你若在這裡停得太久，連方向感都會被潮聲慢慢磨散。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       NORTH
+ExitVnum        15605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         浪痕~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

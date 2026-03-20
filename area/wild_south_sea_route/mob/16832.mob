@@ -1,0 +1,33 @@
+Vnum            16832
+Name            reef path watcher~
+ShortDesc       礁道巡看者~
+Description
+這名沿著潮石灣與礁岸岔帶巡看的礁道巡看者步伐穩健，目光卻總在浪痕與
+浮標之間來回。對他來說，海路真正危險的往往不是巨浪，而是人高估自己
+看路的能力。
+~
+Sentinel        No
+StayArea        Yes
+NoKill          No
+Alignment       60
+Level           99
+Hitroll         6
+Protect         0
+Damroll         6
+Str             13
+Int             11
+Wis             13
+Dex             14
+Con             13
+Hp              7600
+Mana            120
+Move            180
+Class           0
+Gold            320
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

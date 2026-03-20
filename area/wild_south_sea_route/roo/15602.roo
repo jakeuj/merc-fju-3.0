@@ -1,0 +1,24 @@
+Vnum            15602
+Name            漁具歇棚~
+Description
+幾面曬網與木桶靠在歇棚邊，棚角還掛著被海風吹得發硬的繩圈。比起城內的貨棚，這裡更像真正準備面對海面變化的人才會停下來整理裝備的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        15601
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         漁具~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+End

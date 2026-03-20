@@ -22,7 +22,7 @@
   - `north`: `city_nanhai` / 南海臨海南口
   - `south`: `sea_outer_isles` / 外海群島預留
   - `east`: `district_nanhai_port` / 港外棧橋預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Fun / Variety Check
 
@@ -109,7 +109,33 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_south_sea_route/map.md --validate-only`
   - passed for `12` room(s)
+- `python -X utf8 tools/mapmd_validate.py area/city_nanhai/map.md`
+  - passed with `0 error(s), 0 warning(s)` after aligning `15510 <-> 15601`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_nanhai/map.md`
+  - rewrote `roo/15501-15512` to include the `15510 south -> 15601 external` boundary
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_south_sea_route/map.md`
+  - wrote `roo/15601-15612`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed; Linux build path reported `merc` up to date
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - startup smoke test passed; success signal found in `log/1037.log`
+- `debug/badobject`
+  - empty after smoke test
+- `debug/error`
+  - only contains the expected timeout-forced shutdown path after the successful run
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `wild_south_sea_route`，保留房號段 `15601-15630`
+- `area/wild_south_sea_route/index` 已建立，`Serial 160`
+- 第一輪 runtime scaffold 已加入：
+  - `mob/16831-16834`
+  - `obj/16851-16854`
+  - `res/wild.res`
+  - `shp/supplies.shp`
+- `city_nanhai/15510 <-> wild_south_sea_route/15601` 已成為正式 runtime boundary
+- `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步登錄 `wild_south_sea_route`
 
 ## Next Step Prompt
 
-`先 commit 目前 wild_south_sea_route 的 spec milestone；commit 後直接做 implementation milestone。`
+`先 commit 目前 wild_south_sea_route 的 implementation milestone；commit 後直接盤點並建立下一個待建 area 的 spec milestone。`

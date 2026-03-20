@@ -1431,6 +1431,25 @@
         "plans/area/0070-city-nanhai.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "wild_south_sea_route",
+      "title": "南海外航道",
+      "room_range": "15601-15630",
+      "load_order": 77,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_nanhai",
+      "theme_primary": "探險",
+      "theme_secondary": "外海南航 / 礁岸水道",
+      "summary": "承接南海臨海南口，落成近海棧道、潮石灣、退潮礁坪與外航前帶骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/wild_south_sea_route/index",
+        "area/wild_south_sea_route/map.md",
+        "plans/area/0071-wild-south-sea-route.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

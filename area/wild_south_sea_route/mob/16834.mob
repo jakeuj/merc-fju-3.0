@@ -1,0 +1,33 @@
+Vnum            16834
+Name            tideflat scavenger~
+ShortDesc       礁坪拾潮客~
+Description
+這名總在退潮礁坪與浪痕低道翻找海貨與殘片的拾潮客動作很快，像深怕潮
+水與好運同時退走。只看一眼，就知道他很熟這段海路最容易讓人失足與失
+算的地方。
+~
+Sentinel        No
+StayArea        Yes
+NoKill          No
+Alignment       -20
+Level           100
+Hitroll         8
+Protect         0
+Damroll         8
+Str             13
+Int             12
+Wis             11
+Dex             15
+Con             14
+Hp              8400
+Mana            110
+Move            185
+Class           0
+Gold            350
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

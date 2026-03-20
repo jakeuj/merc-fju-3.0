@@ -1,0 +1,15 @@
+Vnum            16853
+Name            reef machete~
+ShortDesc       礁道短刀(reef machete)~
+Description
+一柄用來劈繩、斬藤與應付近岸危險的礁道短刀(reef machete)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           100
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            360
+End

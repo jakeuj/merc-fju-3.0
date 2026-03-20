@@ -1,0 +1,28 @@
+Vnum            15612
+Name            港外指標~
+Description
+一組立在側棧邊的繩柱與木牌把港外方向、回港方向與棧橋分區清楚分開，像是海面上少數還願意講道理的秩序殘片。只要再往東去，節奏就會更偏向真正的港埠網與船泊區。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       SOUTH
+ExitVnum        15609
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         港外~
+End
+
+#Enquire
+Keyword         指標~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

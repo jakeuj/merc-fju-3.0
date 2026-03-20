@@ -1,0 +1,14 @@
+Vnum            16854
+Name            storm lamp~
+ShortDesc       風燈(storm lamp)~
+Description
+一盞在潮風與鹽霧裡仍勉強守住亮光的風燈(storm lamp)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           99
+Value           0 0 45 0
+Weight          2
+Cost            260
+End

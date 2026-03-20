@@ -1,0 +1,33 @@
+Vnum            16831
+Name            coastal route guide~
+ShortDesc       近岸引航客~
+Description
+這名熟悉南海近岸棧道與潮線變化的近岸引航客總站在棧道主路附近，像只
+要看一眼浪色與旅人的步伐，就知道對方是剛離港，還是已在外航前帶繞得
+不敢再往前。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       90
+Level           98
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             16
+Dex             12
+Con             12
+Hp              5600
+Mana            170
+Move            180
+Class           0
+Gold            460
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

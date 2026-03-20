@@ -1,0 +1,40 @@
+Vnum            15604
+Name            潮石灣~
+Description
+幾塊黑亮潮石把灣口分成若隱若現的幾條水線，熟路的人一眼就看得出哪邊能過，外人卻很容易被表面平靜騙住。這裡像是南海外航道真正開始考驗判斷力的地方。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       NORTH
+ExitVnum        15603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15607
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         礁石~
+End
+
+#Enquire
+Keyword         水道~
+End
+
+End

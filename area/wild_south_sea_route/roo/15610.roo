@@ -1,0 +1,24 @@
+Vnum            15610
+Name            南航分水~
+Description
+前方水面逐漸把近岸與外海分成不同顏色與不同脾氣的幾條線，像任何一步都可能正式把你送進另一個尺度的航程。這裡不像終點，更像真正遠行開始被海面承認的地方。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       NORTH
+ExitVnum        15608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         南航~
+End
+
+#Enquire
+Keyword         更南~
+End
+
+End

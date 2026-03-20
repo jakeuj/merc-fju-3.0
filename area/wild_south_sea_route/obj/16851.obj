@@ -1,0 +1,14 @@
+Vnum            16851
+Name            sea ration pack~
+ShortDesc       海路乾糧包(sea ration pack)~
+Description
+一包最適合在近海外航前帶邊走邊補上一口氣的海路乾糧包(sea ration pack)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           98
+Value           32 54 4 0
+Weight          1
+Cost            280
+End

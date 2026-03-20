@@ -211,7 +211,8 @@
       "coord": [1, -3, 0],
       "labels": ["south-edge", "seafront"],
       "exits": [
-        { "direction": "north", "to": 15507 }
+        { "direction": "north", "to": 15507 },
+        { "direction": "south", "to": 15601, "external": true }
       ],
       "enquires": ["外海", "南邊"]
     },

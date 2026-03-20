@@ -1,0 +1,52 @@
+Vnum            15608
+Name            外航前帶~
+Description
+再往前去，岸影開始後退，風聲則明顯多了更寬闊水面的空曠感。這裡不像真正的外海中心，卻已經足夠讓人感受到，回港與繼續往前之間的差別正在快速變大。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       NORTH
+ExitVnum        15604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15606
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15610
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        15611
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         外海~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            15605
+Name            退潮礁坪~
+Description
+退潮時露出的礁坪表面濕滑卻寬闊，像多出了一段暫時可走、卻不一定能準時回收的路。站在這裡時，很容易明白海路最麻煩的地方不是有沒有路，而是路什麼時候還算你的。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       EAST
+ExitVnum        15603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15606
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退潮~
+End
+
+#Enquire
+Keyword         礁坪~
+End
+
+End

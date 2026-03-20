@@ -1,0 +1,32 @@
+Vnum            15609
+Name            東向側棧~
+Description
+一道較窄的側棧往東偏出，木板聲和海風在這裡貼得更近，讓人感覺自己像站在港城與外海之間最細的一條縫上。它不是主路，卻像所有熟門熟路的人都會記住的一條捷徑。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       NORTH
+ExitVnum        15612
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15607
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         東邊~
+End
+
+#Enquire
+Keyword         棧橋~
+End
+
+End

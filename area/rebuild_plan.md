@@ -622,17 +622,19 @@
 
 - `wild_south_sea_route`
   - plan: `plans/area/0071-wild-south-sea-route.md`
-  - delivery_gate: `spec_ready_for_commit`
+  - delivery_gate: `implementation_ready_for_commit`
   - current_status:
-    - 已建立 `plans/area/0071-wild-south-sea-route.md`
-    - 已建立 `area/wild_south_sea_route/map.md` 第一版 spec
-    - 已選定房號段 `15601-15630`
-    - 已根據 `city_nanhai` 南向預留邊界與 queue variety gate 選定為下一個 actionable area
-    - `tools/mapmd_validate.py` 已通過
-    - generator `--validate-only` 已通過
+    - 已建立最小可載入 runtime scaffold：`index / mob / obj / res / shp / roo`
+    - 已完成 `city_nanhai/15510 <-> wild_south_sea_route/15601` 正式 boundary 掛接
+    - `tools/mapmd_validate.py` 已通過 `wild_south_sea_route` 與更新後的 `city_nanhai`
+    - generator `--validate-only` 已通過，generator write 已寫出 `wild_south_sea_route` 與更新後的 `city_nanhai` `roo`
+    - WSL Linux build 已通過
+    - startup smoke test 已通過；成功訊號見 `log/1037.log`
+    - `debug/badobject` 為空，`debug/error` 僅有 timeout 強制關機路徑
   - next_action:
-    - commit `wild_south_sea_route` 的 spec milestone
-    - commit 後直接進 implementation milestone
+    - commit `wild_south_sea_route` 的 implementation milestone
+    - commit 後將 `wild_south_sea_route` 移入 `done`
+    - 盤點並建立下一個主世界候選 area 的 spec milestone
 
 
 ## Done
@@ -772,7 +774,7 @@
 
 ## Current Recommended Next Step
 
-`city_nanhai` 已完成並提交 implementation milestone。`wild_south_sea_route` 的 spec 驗證也已完成；下一步應先提交 spec milestone，再直接進 implementation milestone。
+`wild_south_sea_route` 已完成第一輪 runtime scaffold、boundary 掛接、WSL build 與 startup smoke test。下一步應先提交 implementation milestone，接著直接盤點並建立下一個待建 area 的 spec milestone。
 
 ## Next Action
 
@@ -795,13 +797,12 @@
 - 完成 `city_nanhai`：
   - 已提交 implementation milestone
 - 完成 `wild_south_sea_route`：
-  - 已建立 spec 與單區 plan
-  - 已選定 `15601-15630`
-  - 已完成 `map.md` validate
-  - 已完成 generator `--validate-only`
-  - commit spec milestone
-  - commit 後直接進 implementation milestone
+  - 已建立可載入 runtime scaffold
+  - 已完成 `15510 <-> 15601` boundary 掛接
+  - 已完成 `map.md` validate、generator write、WSL build 與 startup smoke test
+  - commit implementation milestone
+  - commit 後直接盤點下一個待建 area 並建立 spec
 
 ## Next Prompt
 
-`先 commit 目前 wild_south_sea_route 的 spec milestone；commit 後直接做 implementation milestone。`
+`先 commit 目前 wild_south_sea_route 的 implementation milestone；commit 後直接盤點並建立下一個待建 area 的 spec milestone。`

@@ -1,0 +1,40 @@
+Vnum            15601
+Name            近岸棧口~
+Description
+離開南海南口後，石地很快就被潮濕木板與繩柱接手，連腳步聲也從城街的乾脆變成帶著海水回響的節奏。站在這裡時，你會立刻感覺到自己已經離開單純的陸路。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        15510
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         南海~
+End
+
+#Enquire
+Keyword         入口~
+End
+
+End

@@ -1,0 +1,33 @@
+Vnum            16833
+Name            windwatch marker keeper~
+ShortDesc       風望守標人~
+Description
+這名守在風望高臺與港外指標附近的守標人像比普通水手更懂這片海面的脾
+氣，站著不動時幾乎像也成了繩柱與風向的一部分。你不確定他是在看守標
+記，還是在防人誤闖更深航道。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       120
+Level           100
+Hitroll         7
+Protect         0
+Damroll         7
+Str             12
+Int             12
+Wis             15
+Dex             13
+Con             14
+Hp              8200
+Mana            170
+Move            170
+Class           0
+Gold            340
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1,0 +1,40 @@
+Vnum            15603
+Name            近海棧道~
+Description
+棧道順著岸線一路向南伸去，腳下木板會隨浪聲微微響動，讓每一步都像在提醒你海面永遠不是完全靜止的。這裡還算貼著岸，但節奏已經不是城裡能掌控的那種穩定。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       NORTH
+ExitVnum        15601
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         海路~
+End
+
+#Enquire
+Keyword         外海~
+End
+
+End
