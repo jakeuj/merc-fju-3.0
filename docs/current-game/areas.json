@@ -1203,6 +1203,25 @@
         "plans/area/0058-wild-jiangxia-river.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "city_jiangxia",
+      "title": "江夏",
+      "room_range": "14401-14430",
+      "load_order": 65,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "wild_jiangxia_river",
+      "theme_primary": "歷史城市",
+      "theme_secondary": "江港水軍 / 荊州東岸重鎮",
+      "summary": "承接江夏水道東界，落成渡口外門、港前主街、市集補給區與水軍官署骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/city_jiangxia/index",
+        "area/city_jiangxia/map.md",
+        "plans/area/0059-city-jiangxia.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

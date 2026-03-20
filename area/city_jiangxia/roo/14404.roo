@@ -1,0 +1,31 @@
+Vnum            14404
+Name            港前街口~
+Description
+從外港木棧再往內一步，木板地很快讓位給踩得平整的石地與街面。臨街的幌子、路牌與公告牆一樣樣出現，像城市正在把水路的凌亂重新整理成可以理解的秩序。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         路牌~
+Description
+路牌上把主街、市集、官署與東向碼頭幹道分得很清楚，讓外地旅人一進城就不至於找不到方向。
+~
+End
+
+End

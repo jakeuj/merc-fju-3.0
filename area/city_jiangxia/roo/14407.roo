@@ -1,0 +1,32 @@
+Vnum            14407
+Name            南向水巷~
+Description
+巷子往南越走越潮，牆邊堆著木桶、竹簍與幾片剛曬到一半的船帆，像再往前就會重新碰上濕地與水路。這裡仍在城裡，卻已把雲夢方向那種更散、更濕的氣味先帶了進來。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14406
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14411
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         雲夢~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

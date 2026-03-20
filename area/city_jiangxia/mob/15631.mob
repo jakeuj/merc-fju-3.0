@@ -1,0 +1,33 @@
+Vnum            15631
+Name            harbor quartermaster~
+ShortDesc       江夏港務掌櫃~
+Description
+這名對船貨與旅人都看得很快的江夏港務掌櫃站在棚下，像只要掃一眼行
+囊與鞋上的泥痕，就知道對方是剛從江岸進城，還是正準備往更東邊的港
+路出發。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       90
+Level           46
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             15
+Wis             15
+Dex             11
+Con             12
+Hp              1350
+Mana            120
+Move            120
+Class           0
+Gold            260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1,0 +1,32 @@
+Vnum            14405
+Name            乾貨市集~
+Description
+這一帶滿是曬魚、鹽袋、乾糧與草藥混在一起的味道，攤棚彼此挨得很近，叫賣聲卻又像各守各的地盤。水路上的旅人到了這裡，多半都會先停下來補一輪真正適合上船與長途攜帶的東西。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        14403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14406
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         市集~
+End
+
+#Enquire
+Keyword         乾糧~
+End
+
+End

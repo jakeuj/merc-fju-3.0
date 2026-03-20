@@ -13,6 +13,14 @@ ExitKeyword     ~
 ExitKey         0
 End
 
+#Exit
+Direction       EAST
+ExitVnum        14401
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
 #Keyword
 Keyword         漁網~
 Description

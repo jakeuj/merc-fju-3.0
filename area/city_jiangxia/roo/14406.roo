@@ -1,0 +1,32 @@
+Vnum            14406
+Name            藥鋪前巷~
+Description
+小巷比主街安靜許多，只聽得見藥鋪裡搗藥的細碎聲響和外頭木桶偶爾碰撞的回音。門外掛著的藥草束、包紮布與驅濕香料，都明白告訴來往船工這裡懂得處理江風與濕氣帶來的麻煩。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        14405
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14407
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         藥鋪~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+End

@@ -1,0 +1,47 @@
+Vnum            14403
+Name            外港木棧~
+Description
+木棧沿著港前水線層層伸展，纜繩、木樁與曬網架把江夏的生氣全掛在岸邊。耳邊除了水聲，還有船工拉索時的吆喝與船鐘偶爾敲響的悶音，讓人一聽就知道這裡不是內陸城鎮。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14405
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         纜樁~
+Description
+粗大的纜樁表面被水氣與繩索磨得發亮，樁腳附近還堆著剛換下來的舊麻索。
+~
+End
+
+#Enquire
+Keyword         碼頭~
+End
+
+#Enquire
+Keyword         市集~
+End
+
+End

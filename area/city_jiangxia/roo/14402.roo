@@ -1,0 +1,32 @@
+Vnum            14402
+Name            驗貨棚前~
+Description
+幾座臨時木棚沿路一字排開，棚下堆著魚簍、麻袋與待驗的貨箱。差役偶爾掀開封布看上一眼，再把旅人與船工分流往不同方向，引得整段路都帶著一股忙碌卻不混亂的港口節奏。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14401
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         驗貨~
+End
+
+#Enquire
+Keyword         主街~
+End
+
+End

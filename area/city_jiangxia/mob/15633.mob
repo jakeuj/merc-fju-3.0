@@ -1,0 +1,32 @@
+Vnum            15633
+Name            naval records clerk~
+ShortDesc       水軍書吏~
+Description
+這名神情審慎的水軍書吏在官署前總抱著一疊文冊，說話不大聲，卻像每
+一條船的來去、每一張榜文的張貼時間都早已被他記進心裡。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       150
+Level           49
+Hitroll         2
+Protect         0
+Damroll         2
+Str             11
+Int             16
+Wis             15
+Dex             11
+Con             12
+Hp              1700
+Mana            140
+Move            110
+Class           0
+Gold            180
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

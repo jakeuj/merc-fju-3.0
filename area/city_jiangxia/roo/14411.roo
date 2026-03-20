@@ -1,0 +1,39 @@
+Vnum            14411
+Name            港務官署~
+Description
+官署前庭不算華麗，卻收拾得格外整齊，牆邊立著船籍牌與幾張剛換上的通告。無論是貨、船還是人，只要與江上往來有關，多半都得在這座院子附近留下某種痕跡。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14407
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        14408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         榜文~
+Description
+榜文上除了例行告示，還夾著幾條與近期船路、盤查和南向濕地異聞有關的短訊。
+~
+End
+
+#Enquire
+Keyword         官府~
+End
+
+#Enquire
+Keyword         榜文~
+End
+
+End

@@ -1,0 +1,35 @@
+Vnum            14412
+Name            東向幹道~
+Description
+主街在這裡往東漸漸拉直，沿路店招與堤牆一起把視線推向更遠的江東水路。站在這段幹道上，會感覺江夏既是一座城，也是更大一串港口與船路的起點，而柴桑的名字已經開始在路牌與行人口中反覆出現。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         帆索~
+Description
+沿街架上晾著幾綹剛修過的帆索，麻線與桐油味把這條東向幹道也染上了濃濃的船路氣息。
+~
+End
+
+#Enquire
+Keyword         柴桑~
+End
+
+#Enquire
+Keyword         東邊~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

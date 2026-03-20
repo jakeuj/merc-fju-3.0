@@ -1,0 +1,32 @@
+Vnum            14401
+Name            渡口外門~
+Description
+粗木牌坊立在江夏西側渡口外，門下不斷有挑貨的人與下船的旅人交錯而過。和蘆葦濕灘那種風裡藏事的感覺不同，這裡連呼喝與腳步都顯得有秩序許多，像整座城先用規矩把江水擋在門外。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14312
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         碼頭~
+End
+
+#Enquire
+Keyword         進城~
+End
+
+End

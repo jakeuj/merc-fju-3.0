@@ -1,0 +1,14 @@
+Vnum            15654
+Name            harbor bell lantern~
+ShortDesc       港鐘提燈(bell lantern)~
+Description
+一盞能在潮風吹拂下穩穩照亮木棧與榜牆的港鐘提燈(bell lantern)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           46
+Value           0 0 40 0
+Weight          2
+Cost            135
+End

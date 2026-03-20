@@ -23,7 +23,7 @@
   - `east`: `city_chaisang` / 江東水路主城
   - `south`: `wild_yunmeng_marsh` / 雲夢大澤前帶
   - `north`: `jingxiang_road` / 荊州陸路回程
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Fun / Variety Check
 
@@ -157,7 +157,29 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_jiangxia/map.md --validate-only`
   - passed for `12` room(s)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_jiangxia/map.md`
+  - wrote `roo/14401-14412`
+- `python -X utf8 tools/mapmd_validate.py area/wild_jiangxia_river/map.md`
+  - passed with `0 error(s), 0 warning(s)` after aligning the `14312 <-> 14401` boundary
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_jiangxia_river/map.md`
+  - rewrote `roo/14301-14312` to include the east boundary into `14401`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed; Linux build path reports `merc` up to date
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - startup log `log/1025.log` reached `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/badobject` remained empty
+  - `debug/error` only records the forced shutdown path caused by timeout, not a loader failure
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `city_jiangxia`
+- `area/city_jiangxia/index` 採首版江港城市 scaffold，房號段 `14401-14430`、序號 `148`
+- `mob/15631-15634` 與 `obj/15651-15654` 提供港務掌櫃、驗貨差役、水軍書吏、堤上哨官與江港補給骨架
+- `res/city.res` 與 `shp/supplies.shp` 已建立，keeper 為 `15631`
+- `area/wild_jiangxia_river/map.md` 與 `area/city_jiangxia/map.md` 已同步把 `14312 <-> 14401` 落成正式 runtime boundary
+- `area/wild_jiangxia_river/roo/14312.roo` 與 `area/city_jiangxia/roo/14401.roo` 現在雙向一致
+- `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已加入 `city_jiangxia` loadable registry
 
 ## Next Step Prompt
 
-`先 commit 目前 city_jiangxia 的 spec milestone；commit 後直接開始 implementation milestone。`
+`先 commit 目前 city_jiangxia 的 implementation milestone；commit 後把它標記為 done，再依 queue variety gate 盤點下一個待建 area。`

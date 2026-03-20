@@ -1,0 +1,33 @@
+Vnum            15632
+Name            ferry gate inspector~
+ShortDesc       渡口驗貨差役~
+Description
+這名衣著俐落的渡口驗貨差役守在門邊，手裡總捏著一卷登記竹簡，視線
+在貨箱、船票與旅人臉上來回巡走，像任何不合規矩的東西都很難躲過他
+的眼睛。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       120
+Level           47
+Hitroll         2
+Protect         0
+Damroll         2
+Str             13
+Int             11
+Wis             11
+Dex             12
+Con             13
+Hp              1550
+Mana            80
+Move            110
+Class           0
+Gold            140
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

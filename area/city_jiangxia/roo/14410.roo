@@ -1,0 +1,31 @@
+Vnum            14410
+Name            水軍哨棚~
+Description
+堤上哨棚用粗梁與厚布搭得結實，棚下掛著號角、船鉤與幾面尚未完全收起的旗號。守在這裡的人不必很多，光是這片視野和器具，就足夠說明誰在掌握江夏一帶的船路動靜。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14409
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         船鐘~
+Description
+青銅船鐘掛在棚角，外表被風吹得發暗，敲起來卻能把聲音送得很遠。
+~
+End
+
+#Enquire
+Keyword         北路~
+End
+
+#Enquire
+Keyword         水軍~
+End
+
+End

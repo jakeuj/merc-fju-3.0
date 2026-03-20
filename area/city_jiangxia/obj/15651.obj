@@ -1,0 +1,14 @@
+Vnum            15651
+Name            harbor dry ration~
+ShortDesc       江港乾糧包(dry ration)~
+Description
+一包便於上船攜帶的江港乾糧包(dry ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           45
+Value           20 34 4 0
+Weight          1
+Cost            95
+End

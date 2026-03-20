@@ -1,0 +1,52 @@
+Vnum            14408
+Name            主街十字~
+Description
+江夏主街在這裡與幾條側路交會，旅人、差役、船工與小販各自朝不同方向流動，卻又像都知道自己在這座城裡該占哪一條線。榜文牆前時不時有人駐足，顯得這裡既是城心，也是消息匯流之處。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        14404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14412
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14411
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        14409
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         主街~
+End
+
+#Enquire
+Keyword         官府~
+End
+
+#Enquire
+Keyword         柴桑~
+End
+
+End

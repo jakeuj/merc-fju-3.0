@@ -1,0 +1,32 @@
+Vnum            14409
+Name            堤上望臺~
+Description
+沿著石階走上堤頂後，江港、水線與主街都收進視野裡，連哪條巷子最忙、哪一段木棧剛靠船都看得一清二楚。站在這裡，會很明白江夏不是順著江邊長出來的散市，而是刻意看守船路的城。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       DOWN
+ExitVnum        14408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14410
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         望臺~
+End
+
+#Enquire
+Keyword         水軍~
+End
+
+End

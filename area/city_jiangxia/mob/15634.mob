@@ -1,0 +1,33 @@
+Vnum            15634
+Name            riverside watch sergeant~
+ShortDesc       堤上哨官~
+Description
+這名肩背微闊的堤上哨官站在高處，一手按著腰刀，一手不時掀起棚邊的
+旗角望向江面。他不需要大聲斥喝，只要站在那裡，就足以讓人明白這座
+城對船路與來路從未真正鬆懈。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       180
+Level           50
+Hitroll         3
+Protect         0
+Damroll         3
+Str             14
+Int             12
+Wis             12
+Dex             13
+Con             14
+Hp              1900
+Mana            90
+Move            120
+Class           0
+Gold            210
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
