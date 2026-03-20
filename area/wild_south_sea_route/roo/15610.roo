@@ -13,12 +13,24 @@ ExitKeyword     ~
 ExitKey         0
 End
 
+#Exit
+Direction       DOWN
+ExitVnum        15701
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
 #Enquire
 Keyword         南航~
 End
 
 #Enquire
 Keyword         更南~
+End
+
+#Enquire
+Keyword         下面~
 End
 
 End

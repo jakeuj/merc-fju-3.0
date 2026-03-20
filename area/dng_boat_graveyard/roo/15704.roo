@@ -1,0 +1,40 @@
+Vnum            15704
+Name            沉索轉角~
+Description
+厚重濕索在轉角纏成一團，像有人當年急著想把整艘船拴住，最後卻只把絕望留在這裡。你每跨過一圈繩索，都像跨過一段失敗遠航留下的最後秩序。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        15703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15707
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         繩索~
+End
+
+#Enquire
+Keyword         更深~
+End
+
+End

@@ -1,0 +1,14 @@
+Vnum            17054
+Name            storm lantern~
+ShortDesc       風障提燈(storm lantern)~
+Description
+一盞本該掛在船腹裡抵擋風潮的風障提燈(storm lantern)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           99
+Value           0 0 45 0
+Weight          2
+Cost            290
+End

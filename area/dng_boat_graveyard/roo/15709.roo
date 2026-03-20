@@ -1,0 +1,40 @@
+Vnum            15709
+Name            錨鏈井口~
+Description
+粗重錨鏈從井口一路沉進黑得看不清底的船腹深處，鏈節彼此磨碰時發出的聲音，像有人正在下面慢慢整理另一種完全不屬於活人的秩序。這裡很明顯已經不是單純殘骸，而是深處真正開始接管人的地方。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        15707
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15710
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         錨鏈~
+End
+
+#Enquire
+Keyword         井口~
+End
+
+End

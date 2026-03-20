@@ -1,0 +1,32 @@
+Vnum            15706
+Name            斷槳台~
+Description
+幾支斷槳和折裂木座橫在一塊微微抬高的平台上，像整艘船最後還想保住一點向前的姿勢。可在這種地方，任何前進的象徵看起來都只剩下諷刺。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        15705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         斷槳~
+End
+
+#Enquire
+Keyword         方向~
+End
+
+End

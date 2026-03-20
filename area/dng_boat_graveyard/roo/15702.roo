@@ -1,0 +1,24 @@
+Vnum            15702
+Name            破桅前廊~
+Description
+幾截斷裂船桅斜插在前廊邊，木紋和鏽釘都被海水泡得發黑，像一群還不肯完全倒下的殘兵。站在這裡時，連光線都像被船骨分割成破碎的幾段。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        15701
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         殘桅~
+End
+
+#Enquire
+Keyword         前面~
+End
+
+End

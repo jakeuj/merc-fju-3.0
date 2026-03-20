@@ -1,0 +1,32 @@
+Vnum            17031
+Name            wreck gleaner~
+ShortDesc       渦口撿潮客~
+Description
+這名沿著渦口與破艙邊緣撿拾殘物的撿潮客總把目光壓得很低，像生怕只要往
+更深處多看一眼，沉舟裡那些不該回頭的東西就會立刻跟著看回來。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       -40
+Level           99
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             14
+Dex             11
+Con             12
+Hp              6000
+Mana            150
+Move            150
+Class           0
+Gold            460
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

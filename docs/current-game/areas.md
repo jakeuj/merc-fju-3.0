@@ -187,6 +187,7 @@ title: Current Game Areas
 - `dng_serpent_temple`：把南蠻密林的林下祠痕正式接進蛇神殿，透過潮濕前廳、蛇紋甬道、滴血祭槽與封紋內殿把節奏切進封閉 dungeon。
 - `city_nanhai`：把桂陽南路正式接進南海港城，透過港街、市集補給、港務前街與臨海南口把節奏收束成南境海港 hub。
 - `wild_south_sea_route`：把南海臨海南口正式接進近海外航前帶，透過近海棧道、潮石灣、退潮礁坪與外航前帶把節奏切進海路 wild。
+- `dng_boat_graveyard`：把南航分水下方的渦潮裂口正式接進沉舟墓場，透過破桅前廊、漏艙窄道、錨鏈井口與墓場深艙把節奏切進海上 wreck dungeon。
 
 ## 維護規則
 

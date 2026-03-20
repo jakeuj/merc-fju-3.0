@@ -1,0 +1,15 @@
+Vnum            17053
+Name            hooked cutlass~
+ShortDesc       倒鉤短彎刀(hooked cutlass)~
+Description
+一柄刀鋒已被鹽蝕卻仍留著狠勁的倒鉤短彎刀(hooked cutlass)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           100
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            390
+End

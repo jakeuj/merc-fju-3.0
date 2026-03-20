@@ -1,0 +1,52 @@
+Vnum            15708
+Name            中艙殘庭~
+Description
+這片原本該是船腹中央的開闊艙段，如今只剩被扯裂的木梁與向內傾斜的艙壁，把它變成一座扭曲又過於安靜的殘庭。從這裡再往前，深處的壓力已經開始不再只是水，而像某種更久遠的怨氣。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        15704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15706
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15709
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        15711
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         中艙~
+End
+
+#Enquire
+Keyword         下面~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

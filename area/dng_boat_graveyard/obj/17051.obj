@@ -1,0 +1,14 @@
+Vnum            17051
+Name            salt ration pack~
+ShortDesc       鹽封糧包(salt ration pack)~
+Description
+一包能在海上久放、專給沉舟邊緣巡看的鹽封糧包(salt ration pack)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           99
+Value           30 48 4 0
+Weight          1
+Cost            280
+End

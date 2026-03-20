@@ -1,0 +1,40 @@
+Vnum            15703
+Name            漏艙窄道~
+Description
+窄道兩側艙壁不停滲著海水，腳邊偶爾還會被卷過來的碎木與海草擦過。這裡不像一條真正留給人走的路，卻偏偏仍保留著足夠讓人繼續深入的縫隙。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        15701
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         艙道~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

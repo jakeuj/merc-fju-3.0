@@ -1,0 +1,32 @@
+Vnum            17034
+Name            deep hold sentinel~
+ShortDesc       深艙鎖衛~
+Description
+這名立在更低艙層暗水邊的鎖衛像是專替沉舟保住最後一道界線的人影，沉默
+得近乎石像，卻又讓人無法懷疑他隨時都會替深處那些更黑的東西先伸出手。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       -90
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             15
+Int             11
+Wis             12
+Dex             10
+Con             15
+Hp              6600
+Mana            100
+Move            150
+Class           0
+Gold            560
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

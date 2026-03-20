@@ -1,0 +1,14 @@
+Vnum            17052
+Name            cork flask~
+ShortDesc       軟木水壺(cork flask)~
+Description
+一只用軟木緊緊塞住、避免在濕艙裡再進海水的軟木水壺(cork flask)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           99
+Value           14 14 LIQ_WATER 0
+Weight          2
+Cost            250
+End

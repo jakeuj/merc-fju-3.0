@@ -1,0 +1,39 @@
+Vnum            15707
+Name            船鐘暗壁~
+Description
+一口撞裂的船鐘半陷在暗壁邊，潮聲一撞上金屬殘面，便會拖出低沉得像嘆息的回音。它不再報時，卻仍能把人在這艘船裡停留得過久這件事，提醒得分外清楚。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        15704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15709
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         沉鐘~
+Description
+裂開的船鐘仍會在潮聲裡擠出低啞回音，像這艘船的最後一點規矩還不肯完全散掉。
+~
+End
+
+#Enquire
+Keyword         沉鐘~
+End
+
+#Enquire
+Keyword         回音~
+End
+
+End

@@ -1,0 +1,44 @@
+Vnum            15701
+Name            渦潮裂口~
+Description
+南航分水下方有一道被亂流與破船殘骨撕出的裂口，水聲從四周擠壓過來，像任何回頭的念頭都會被潮流先壓低一截。只要再往裡一步，海路的開闊感就會立刻被沉舟的陰影吞掉。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       UP
+ExitVnum        15610
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15702
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         上面~
+End
+
+#Enquire
+Keyword         沉舟~
+End
+
+End

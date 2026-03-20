@@ -1450,6 +1450,25 @@
         "plans/area/0071-wild-south-sea-route.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "dng_boat_graveyard",
+      "title": "沉舟墓場",
+      "room_range": "15701-15730",
+      "load_order": 78,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "wild_south_sea_route",
+      "theme_primary": "探險遺跡",
+      "theme_secondary": "沉舟 / 水鬼",
+      "summary": "承接南航分水下方的渦潮裂口，落成破桅前廊、漏艙窄道、錨鏈井口與墓場深艙骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/dng_boat_graveyard/index",
+        "area/dng_boat_graveyard/map.md",
+        "plans/area/0072-dng-boat-graveyard.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

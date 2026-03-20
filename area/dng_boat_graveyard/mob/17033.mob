@@ -1,0 +1,32 @@
+Vnum            17033
+Name            chain keeper~
+ShortDesc       錨鏈守艙者~
+Description
+這名守在錨鏈井口邊的守艙者全身都帶著濕重鐵味，像他早就分不清自己是在
+看守這些鏈節，還是早已被這艘船拿來充當另一截不會離位的鎖鏈。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       -60
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             14
+Int             12
+Wis             13
+Dex             11
+Con             14
+Hp              6400
+Mana            120
+Move            150
+Class           0
+Gold            520
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

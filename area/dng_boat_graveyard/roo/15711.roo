@@ -1,0 +1,40 @@
+Vnum            15711
+Name            浮屍掛橋~
+Description
+幾根斷裂橫梁和繩索勉強在更低一層搭出一段掛橋，橋下則是看不清深度的黑水。這裡最可怕的不是搖晃，而是你很難分辨那些在下方輕碰木梁的聲音，到底只是水還是別的東西。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       UP
+ExitVnum        15708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15710
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15712
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         掛橋~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

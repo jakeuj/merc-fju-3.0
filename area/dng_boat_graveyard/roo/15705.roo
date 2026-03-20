@@ -1,0 +1,32 @@
+Vnum            15705
+Name            潮骨偏艙~
+Description
+偏艙裡堆著被海水洗得發白的殘骨與器具，像船難後所有來不及記下名字的人都只剩下這種安靜。這裡不吵，卻讓人比任何吵鬧都更清楚地感到不安。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       EAST
+ExitVnum        15703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15706
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         殘骨~
+End
+
+#Enquire
+Keyword         偏艙~
+End
+
+End

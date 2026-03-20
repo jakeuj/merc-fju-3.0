@@ -209,9 +209,10 @@
       "coord": [0, -4, 0],
       "labels": ["south-edge", "deep-route"],
       "exits": [
-        { "direction": "north", "to": 15608 }
+        { "direction": "north", "to": 15608 },
+        { "direction": "down", "to": 15701, "external": true }
       ],
-      "enquires": ["南航", "更南"]
+      "enquires": ["南航", "更南", "下面"]
     },
     {
       "vnum": 15611,

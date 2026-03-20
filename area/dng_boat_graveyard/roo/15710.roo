@@ -1,0 +1,36 @@
+Vnum            15710
+Name            墓場深艙~
+Description
+深艙裡的海水幾乎靜得異常，碎木、殘布與不知名影子都像被同一種沉默按在水面下。你站在這裡時，會很自然地理解，這艘船之所以還留著，不只是因為沒沉完，而是因為深處還有東西不肯讓它散掉。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       NORTH
+ExitVnum        15709
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15711
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         深處~
+End
+
+#Enquire
+Keyword         下面~
+End
+
+#Enquire
+Keyword         水府~
+End
+
+End
