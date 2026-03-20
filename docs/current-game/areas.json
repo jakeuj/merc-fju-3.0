@@ -1032,6 +1032,25 @@
         "plans/area/0049-sec-rift-spirit-core-abysmal.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_rift_spirit_core_tartarean",
+      "title": "裂魄冥淵",
+      "room_range": "13501-13512",
+      "load_order": 56,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "sec_rift_spirit_core_abysmal",
+      "theme_primary": "仙俠",
+      "theme_secondary": "裂魄冥淵 / 冥淵井腹",
+      "summary": "承接裂魄玄幽座，下探到冥淵內庭、淵冥偏廊與冥獄前座的冥淵井腹過渡帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_rift_spirit_core_tartarean/index",
+        "area/sec_rift_spirit_core_tartarean/map.md",
+        "plans/area/0050-sec-rift-spirit-core-tartarean.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

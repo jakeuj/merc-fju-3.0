@@ -78,6 +78,8 @@ title: Current Game Areas
 | `sec_rift_spirit_core_nether` | 裂魄冥界 / 冥界井腹 | `13101-13112` | `rebuild addition` | 承接裂魄晦界座，下探到冥界內庭、幽冥偏廊與玄冥前座。 |
 | `sec_rift_spirit_core_stygian` | 裂魄玄冥 / 玄冥井腹 | `13201-13212` | `rebuild addition` | 承接裂魄冥界座，下探到玄冥內庭、玄幽偏廊與玄冥前座。 |
 | `sec_rift_spirit_core_chthonic` | 裂魄幽玄 / 幽玄井腹 | `13301-13312` | `rebuild addition` | 承接裂魄玄冥座，下探到幽玄內庭、冥幽偏廊與玄幽前座。 |
+| `sec_rift_spirit_core_abysmal` | 裂魄玄幽 / 玄幽井腹 | `13401-13412` | `rebuild addition` | 承接裂魄幽玄座，下探到玄幽內庭、幽冥偏廊與玄幽前座。 |
+| `sec_rift_spirit_core_tartarean` | 裂魄冥淵 / 冥淵井腹 | `13501-13512` | `rebuild addition` | 承接裂魄玄幽座，下探到冥淵內庭、淵冥偏廊與冥獄前座。 |
 
 ## Recent Rebuild Areas
 
@@ -132,6 +134,7 @@ title: Current Game Areas
 - `sec_rift_spirit_core_stygian`：承接裂魄冥界座，下探到玄冥內庭、玄幽偏廊與玄冥前座，作為更深裂魄幽玄區前的玄冥井腹 plateau 過渡帶。
 - `sec_rift_spirit_core_chthonic`：承接裂魄玄冥座，下探到幽玄內庭、冥幽偏廊與玄幽前座，作為更深裂魄玄幽區前的幽玄井腹 plateau 過渡帶。
 - `sec_rift_spirit_core_abysmal`：承接裂魄幽玄座，下探到玄幽內庭、幽冥偏廊與玄幽前座，作為更深裂魄冥淵區前的玄幽井腹 plateau 過渡帶。
+- `sec_rift_spirit_core_tartarean`：承接裂魄玄幽座，下探到冥淵內庭、淵冥偏廊與冥獄前座，作為更深裂魄冥獄區前的冥淵井腹 plateau 過渡帶。
 
 ### 北方鏈
 

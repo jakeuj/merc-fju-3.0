@@ -1,0 +1,32 @@
+Vnum            13504
+Name            聽淵鎮魄臺~
+Description
+鎮魄臺旁的聽淵碑只剩幾道像由冥紋勉強排成的浮痕，碑與界之間的差別在此只靠一種還沒完全墜盡的秩序苦撐，像再深一步就會整片改寫成純粹冥獄。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         聽淵~
+End
+
+#Enquire
+Keyword         鎮魄~
+End
+
+End

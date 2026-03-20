@@ -1,0 +1,32 @@
+Vnum            13501
+Name            冥淵落座~
+Description
+落座像嵌在冥淵邊緣的一截冥魄石座，腳下環界已薄到只剩一圈幾乎會被感知直接漏過的冥紋，像連最後還能被辨識的輪廓都被更深處的冥獄慢慢磨成冷闇一筆。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        13412
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         冥淵~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

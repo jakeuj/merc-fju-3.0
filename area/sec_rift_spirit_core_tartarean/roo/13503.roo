@@ -1,0 +1,32 @@
+Vnum            13503
+Name            冥淵內庭前緣~
+Description
+前緣俯瞰整座向內沉落的冥淵內庭，庭底像一潭由無數冥紋暫時聚住的靜井，視線一旦停得稍久，就會連自己原本勉強還能抓住的重量也被一併拖向更深的冥闇。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        13502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        13507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End
