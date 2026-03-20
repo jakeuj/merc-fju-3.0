@@ -1,0 +1,32 @@
+Vnum            16007
+Name            補給橫街~
+Description
+橫街上滿是往返搬貨和補貨的人影，讓市集不只像交易場所，也像整座都城真正能持續運作的後場。走過這裡時，很容易感受到建業和海上那些臨時據點之間最大的差別。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        16005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         補給~
+End
+
+#Enquire
+Keyword         商鋪~
+End
+
+End

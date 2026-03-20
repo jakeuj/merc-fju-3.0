@@ -1507,6 +1507,25 @@
         "plans/area/0074-fort-naval-base.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "city_jianye",
+      "title": "建業",
+      "room_range": "16001-16030",
+      "load_order": 81,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "fort_naval_base",
+      "theme_primary": "歷史城市",
+      "theme_secondary": "江東都城",
+      "summary": "承接水軍大營內港水門，落成南街、中街、市集牌樓、官署前街與港向街口骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/city_jianye/index",
+        "area/city_jianye/map.md",
+        "plans/area/0075-city-jianye.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

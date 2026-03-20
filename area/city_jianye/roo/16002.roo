@@ -1,0 +1,24 @@
+Vnum            16002
+Name            水門值房~
+Description
+值房內外擺著筆架、燈座與簡短告示，讓人一看就知道這裡既管通行，也管消息。和軍營相比，這裡的壓力少了殺氣，多了制度本身的穩定重量。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        16001
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         值房~
+End
+
+#Enquire
+Keyword         告示~
+End
+
+End

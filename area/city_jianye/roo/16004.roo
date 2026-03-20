@@ -1,0 +1,44 @@
+Vnum            16004
+Name            建業中街~
+Description
+這段中街把都城的節奏推得更清楚了些，招牌、人聲、腳步和車輪聲不再彼此搶奪，而像被一座大城自然編進同一條脈動裡。海路帶來的緊繃，在這裡終於能稍微放下。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        16003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        16008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16006
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         中街~
+End
+
+#Enquire
+Keyword         官署~
+End
+
+#Enquire
+Keyword         港區~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            16006
+Name            官署前街~
+Description
+官署前街比主街安靜得多，但那種安靜反而讓往來差役與文吏顯得更有分量。這裡不是用來放鬆的地方，而是讓一座城真正把命令、文書與秩序落下來的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        16004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        16009
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         官署~
+End
+
+#Enquire
+Keyword         差役~
+End
+
+End

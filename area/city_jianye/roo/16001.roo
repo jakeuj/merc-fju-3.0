@@ -1,0 +1,44 @@
+Vnum            16001
+Name            建業水門~
+Description
+穿過內港水門後，海防大營的鐵硬節奏忽然被更厚重也更穩定的城牆秩序接手。這裡不像前線，卻仍保留著水路都城特有的警醒，像任何進城的人都還在被建業先看上一眼。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        15910
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        16003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         水門~
+End
+
+#Enquire
+Keyword         城裡~
+End
+
+#Enquire
+Keyword         建業~
+End
+
+End

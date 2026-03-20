@@ -1,0 +1,14 @@
+Vnum            17652
+Name            city flask~
+ShortDesc       都城水囊(city flask)~
+Description
+一只方便在主街、市集與港向街口之間帶著走的都城水囊(city flask)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           100
+Value           14 14 LIQ_WATER 0
+Weight          2
+Cost            250
+End

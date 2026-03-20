@@ -1,0 +1,36 @@
+Vnum            16005
+Name            市集牌樓~
+Description
+牌樓下掛滿商鋪招牌和指路木牌，讓補給、交易與打聽消息都變得比海上世界理所當然得多。這裡的繁忙不是混亂，而是一種只有主城才養得起的厚實流動。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        16003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        16007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         市集~
+End
+
+#Enquire
+Keyword         補給~
+End
+
+#Enquire
+Keyword         招牌~
+End
+
+End

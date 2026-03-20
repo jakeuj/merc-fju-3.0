@@ -1,0 +1,40 @@
+Vnum            16003
+Name            建業南街~
+Description
+街面寬闊而乾淨，來往行人、差役與商旅把都城氣息一層層疊了起來。站在這裡時，你會立刻明白建業的秩序不是靠關卡撐住，而是靠這種日常運作本身維持。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        16001
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        16004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        16005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         主街~
+End
+
+#Enquire
+Keyword         市集~
+End
+
+End

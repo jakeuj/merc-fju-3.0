@@ -1,0 +1,32 @@
+Vnum            16009
+Name            東坊路口~
+Description
+東坊路口的行人和車流明顯更偏向水路與商務，像整座城在這裡開始把視線往港區和對外往來轉去。比起前線的守備，這裡更像建業真正把外海變成資源的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        16008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16006
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         東坊~
+End
+
+#Enquire
+Keyword         港區~
+End
+
+End

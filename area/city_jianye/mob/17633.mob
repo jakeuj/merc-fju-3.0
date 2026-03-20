@@ -1,0 +1,32 @@
+Vnum            17633
+Name            office scribe~
+ShortDesc       官署書吏~
+Description
+這名在官署前街來回整理文書的書吏腳步不快，卻讓人感覺整座都城某些更重
+要的運作正是靠這種看似不起眼的細密節奏一筆筆撐起來。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             16
+Wis             15
+Dex             11
+Con             12
+Hp              3700
+Mana            200
+Move            150
+Class           0
+Gold            540
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -22,7 +22,7 @@
   - `south`: `fort_naval_base` / 建業水門
   - `east`: `district_jianye_port` / 港區預留
   - `west`: `wild_jianye_west` / 西郊預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Reference Entry Points
 
@@ -66,7 +66,33 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_jianye/map.md --validate-only`
   - passed for `10` room(s)
+- `python -X utf8 tools/mapmd_validate.py area/fort_naval_base/map.md`
+  - passed with `0 error(s), 0 warning(s)` after aligning `15910 <-> 16001`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/fort_naval_base/map.md`
+  - rewrote `roo/15901-15912` to include the `15910 north -> 16001 external` boundary
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_jianye/map.md`
+  - wrote `roo/16001-16010`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed; Linux build path reported `merc` up to date
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - startup smoke test passed; success signal found in `log/1042.log`
+- `debug/badobject`
+  - empty after smoke test
+- `debug/error`
+  - only contains the expected timeout-forced shutdown path after the successful run
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `city_jianye`，保留房號段 `16001-16030`
+- `area/city_jianye/index` 已建立，`Serial 164`
+- 第一輪 runtime scaffold 已加入：
+  - `mob/17631-17634`
+  - `obj/17651-17654`
+  - `res/city.res`
+  - `shp/supplies.shp`
+- `fort_naval_base/15910 <-> city_jianye/16001` 已成為正式 runtime boundary
+- `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步登錄 `city_jianye`
 
 ## Next Step Prompt
 
-`先 commit 目前 city_jianye 的 spec milestone；commit 後直接做 implementation milestone，補 boundary、roo、index/mob/obj/res/shp，並跑 WSL build 與 startup smoke test。`
+`先 commit 目前 city_jianye 的 implementation milestone；commit 後直接盤點並建立下一個待建 area 的 spec milestone。`

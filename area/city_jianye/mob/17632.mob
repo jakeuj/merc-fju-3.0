@@ -1,0 +1,32 @@
+Vnum            17632
+Name            market keeper~
+ShortDesc       市集掌櫃~
+Description
+這名在市集牌樓下招呼往來商旅的掌櫃說話俐落、眼光也很準，像不管你是剛
+從海上回來還是正準備往港區走，他都能比你更快看出你接下來最缺的是什麼。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             15
+Wis             15
+Dex             11
+Con             12
+Hp              3900
+Mana            180
+Move            150
+Class           0
+Gold            600
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

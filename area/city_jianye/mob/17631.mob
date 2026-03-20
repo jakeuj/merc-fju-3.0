@@ -1,0 +1,33 @@
+Vnum            17631
+Name            watergate clerk~
+ShortDesc       水門值役~
+Description
+這名守在建業水門附近的值役看起來不像前線軍卒那樣緊繃，卻有另一種更屬
+於都城制度的沉穩，像只要他抬頭看你一眼，就能先替這座城替你分出來客、
+商旅還是麻煩。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             15
+Wis             15
+Dex             11
+Con             12
+Hp              3800
+Mana            180
+Move            150
+Class           0
+Gold            560
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

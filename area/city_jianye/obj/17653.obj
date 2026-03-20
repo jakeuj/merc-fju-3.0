@@ -1,0 +1,15 @@
+Vnum            17653
+Name            city patrol blade~
+ShortDesc       建業巡城刀(city patrol blade)~
+Description
+一把用於主城巡役與值門差役的建業巡城刀(city patrol blade)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           100
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            360
+End

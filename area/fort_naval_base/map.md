@@ -150,7 +150,7 @@
       "labels": ["signal", "core"],
       "exits": [
         { "direction": "west", "to": 15904 },
-        { "direction": "south", "to": 15910 }
+        { "direction": "east", "to": 15910 }
       ],
       "enquires": ["號台", "軍令", "南邊"]
     },
@@ -163,7 +163,8 @@
       "coord": [3, -1, 0],
       "labels": ["north-link", "dock"],
       "exits": [
-        { "direction": "north", "to": 15908 },
+        { "direction": "north", "to": 16001, "external": true },
+        { "direction": "west", "to": 15908 },
         { "direction": "south", "to": 15912 }
       ],
       "enquires": ["建業", "水門", "北邊"]

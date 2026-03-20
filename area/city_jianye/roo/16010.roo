@@ -1,0 +1,28 @@
+Vnum            16010
+Name            港向街口~
+Description
+再往東去，空氣裡就會更明顯地混進港埠、船貨與水路消息的味道。這裡像是建業主城節奏正式向外海與商路展開的一道街口，不再只是城內，而是整個江東對外的臉面之一。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        16008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         港區~
+End
+
+#Enquire
+Keyword         東邊~
+End
+
+#Enquire
+Keyword         船~
+End
+
+End

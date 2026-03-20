@@ -1,0 +1,14 @@
+Vnum            17651
+Name            city ration~
+ShortDesc       都城乾糧包(city ration)~
+Description
+一包專給進出主城與港區的旅人隨身攜帶的都城乾糧包(city ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           100
+Value           32 50 4 0
+Weight          1
+Cost            260
+End

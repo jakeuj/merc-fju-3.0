@@ -1,0 +1,52 @@
+Vnum            16008
+Name            都城前庭~
+Description
+前庭像把主街、市集與官署三股節奏都收在同一處交會點上，任何人只要站在這裡，就能看出建業不是單靠城牆偉大，而是靠整個體系一起在運作。這種厚度正是都城和普通城鎮最大的差別。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        16004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        16007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16009
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        16010
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         前庭~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+#Enquire
+Keyword         都城~
+End
+
+End

@@ -14,7 +14,7 @@ ExitKey         0
 End
 
 #Exit
-Direction       SOUTH
+Direction       EAST
 ExitVnum        15910
 ExitDesc        ~
 ExitKeyword     ~

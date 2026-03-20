@@ -622,15 +622,19 @@
 
 - `city_jianye`
   - plan: `plans/area/0075-city-jianye.md`
-  - delivery_gate: `spec_ready_for_commit`
+  - delivery_gate: `implementation_ready_for_commit`
   - current_status:
-    - 已建立第一版 spec 與 `mapmd-json`
-    - 題材定位為水軍大營之後正式回城的江東都城 hub
-    - 預留 `south -> fort_naval_base`、`east -> district_jianye_port` 與 `west -> wild_jianye_west`
-    - `tools/mapmd_validate.py` 已通過
-    - generator `--validate-only` 已通過
+    - 已建立最小可載入 runtime scaffold：`index / mob / obj / res / shp / roo`
+    - 已完成 `fort_naval_base/15910 <-> city_jianye/16001` 正式 boundary 掛接
+    - `tools/mapmd_validate.py` 已通過 `city_jianye` 與更新後的 `fort_naval_base`
+    - generator `--validate-only` 已通過，generator write 已寫出 `city_jianye` 與更新後的 `fort_naval_base` `roo`
+    - WSL Linux build 已通過
+    - startup smoke test 已通過；成功訊號見 `log/1042.log`
+    - `debug/badobject` 為空，`debug/error` 僅有 timeout 強制關機路徑
   - next_action:
-    - commit `city_jianye` 的 spec milestone
+    - commit `city_jianye` 的 implementation milestone
+    - commit 後將 `city_jianye` 移入 `done`
+    - 盤點並建立下一個主世界候選 area 的 spec milestone
 
 
 ## Done
@@ -774,7 +778,7 @@
 
 ## Current Recommended Next Step
 
-`fort_naval_base` 已完成第一輪 runtime implementation 並提交。下一步應先驗證並提交 `city_jianye` 的 spec milestone，接著直接做 implementation milestone。
+`city_jianye` 已完成第一輪 runtime scaffold、boundary 掛接、WSL build 與 startup smoke test。下一步應先提交 implementation milestone，接著直接盤點並建立下一個待建 area 的 spec milestone。
 
 ## Next Action
 
@@ -805,12 +809,12 @@
 - 完成 `fort_naval_base`：
   - 已提交 implementation milestone
 - 完成 `city_jianye`：
-  - 建立第一版 spec 與 `mapmd-json`
-  - 執行 `map.md` validate
-  - 執行 generator `--validate-only`
-  - commit spec milestone
-  - commit 後直接做 implementation milestone
+  - 已建立可載入 runtime scaffold
+  - 已完成 `15910 <-> 16001` boundary 掛接
+  - 已完成 `map.md` validate、generator write、WSL build 與 startup smoke test
+  - commit implementation milestone
+  - commit 後直接盤點下一個待建 area 並建立 spec
 
 ## Next Prompt
 
-`先驗證並 commit 目前 city_jianye 的 spec milestone；commit 後直接做 implementation milestone，補 boundary、roo、index/mob/obj/res/shp，並跑 WSL build 與 startup smoke test。`
+`先 commit 目前 city_jianye 的 implementation milestone；commit 後直接盤點並建立下一個待建 area 的 spec milestone。`

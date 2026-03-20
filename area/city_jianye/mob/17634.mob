@@ -1,0 +1,32 @@
+Vnum            17634
+Name            east ward patrol~
+ShortDesc       東坊巡役~
+Description
+這名巡役在東坊路口的來回步伐比尋常城役更帶一點水路地帶特有的警醒，像
+港貨、旅人與消息只要一湧進城，他就得先替建業把秩序重新排整齊。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             14
+Dex             12
+Con             13
+Hp              4000
+Mana            150
+Move            150
+Class           0
+Gold            620
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

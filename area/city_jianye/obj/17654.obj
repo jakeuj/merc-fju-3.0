@@ -1,0 +1,14 @@
+Vnum            17654
+Name            city lamp~
+ShortDesc       城街提燈(city lamp)~
+Description
+一盞適合在城街、值房與官署前街間照明的城街提燈(city lamp)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           100
+Value           0 0 45 0
+Weight          2
+Cost            270
+End
