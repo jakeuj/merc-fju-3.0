@@ -1,0 +1,52 @@
+Vnum            15808
+Name            海寇舊寨~
+Description
+石牆、碎桶與半塌棚架把這裡拼成一座勉強還看得出輪廓的舊寨，像主人雖然早就不在，規矩卻還留在每條小徑與每個藏風口裡。這裡比海面更危險，因為有人曾經把它當成家。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        15804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15806
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15810
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        15811
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         寨子~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+#Enquire
+Keyword         上面~
+End
+
+End

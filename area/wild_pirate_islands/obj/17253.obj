@@ -1,0 +1,15 @@
+Vnum            17253
+Name            raider cutlass~
+ShortDesc       海寇短彎刀(raider cutlass)~
+Description
+一柄刀背帶著缺口、卻仍十分順手的海寇短彎刀(raider cutlass)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           100
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            410
+End

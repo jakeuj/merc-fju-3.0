@@ -1,0 +1,24 @@
+Vnum            15802
+Name            碎木潮棚~
+Description
+幾片勉強還能遮風的棚面用碎木與舊帆拼成，像任何在群島上活得夠久的人，最後都學會先替自己向海風偷一點陰影。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        15801
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         棚子~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+End

@@ -1469,6 +1469,25 @@
         "plans/area/0072-dng-boat-graveyard.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "wild_pirate_islands",
+      "title": "海盜群島",
+      "room_range": "15801-15830",
+      "load_order": 79,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "dng_boat_graveyard",
+      "theme_primary": "江湖",
+      "theme_secondary": "群島 / 海寇",
+      "summary": "承接沉舟墓場外海破舷，落成礁灣主徑、海寇舊寨、風旗高脊與外礁深灘骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/wild_pirate_islands/index",
+        "area/wild_pirate_islands/map.md",
+        "plans/area/0073-wild-pirate-islands.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

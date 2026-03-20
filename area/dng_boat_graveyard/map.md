@@ -239,9 +239,10 @@
       "coord": [0, -5, -2],
       "labels": ["south-edge", "outer-sea"],
       "exits": [
-        { "direction": "north", "to": 15711 }
+        { "direction": "north", "to": 15711 },
+        { "direction": "south", "to": 15801, "external": true }
       ],
-      "enquires": ["外海", "南邊", "出去"]
+      "enquires": ["外海", "南邊", "出去", "群島"]
     }
   ]
 }

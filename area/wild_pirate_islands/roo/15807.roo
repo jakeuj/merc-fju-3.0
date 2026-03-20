@@ -1,0 +1,32 @@
+Vnum            15807
+Name            舊寨外棧~
+Description
+幾段搭在礁邊的外棧還保留著海寇寨留下的粗糙手法，繩結打得結實，木板卻全憑膽子撐著。這裡不像正規碼頭，卻很明顯曾是某種人常年靠船、卸貨與藏身的地方。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       WEST
+ExitVnum        15804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        15812
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         舊寨~
+End
+
+#Enquire
+Keyword         棧橋~
+End
+
+End

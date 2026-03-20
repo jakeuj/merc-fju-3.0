@@ -1,0 +1,32 @@
+Vnum            17232
+Name            island scavenger~
+ShortDesc       碎島拾荒客~
+Description
+這名長年在碎島之間撿殘物的拾荒客看起來像早已學會不去追問貨物原本屬於誰，
+只專心判斷眼前這塊木板、這截繩索、這口桶還能不能再替自己多撐一天。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       -40
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             13
+Dex             12
+Con             12
+Hp              6500
+Mana            140
+Move            160
+Class           0
+Gold            540
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

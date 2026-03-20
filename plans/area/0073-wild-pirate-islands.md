@@ -22,7 +22,7 @@
   - `north`: `dng_boat_graveyard` / 外海破舷
   - `down`: `sec_water_ruins` / 水府裂井預留
   - `east`: `fort_naval_base` / 海寇前哨預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Fun / Variety Check
 
@@ -93,7 +93,33 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_pirate_islands/map.md --validate-only`
   - passed for `11` room(s)
+- `python -X utf8 tools/mapmd_validate.py area/dng_boat_graveyard/map.md`
+  - passed with `0 error(s), 0 warning(s)` after aligning `15712 <-> 15801`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/dng_boat_graveyard/map.md`
+  - rewrote `roo/15701-15712` to include the `15712 south -> 15801 external` boundary
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_pirate_islands/map.md`
+  - wrote `roo/15801-15812`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed; Linux build path reported `merc` up to date
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - startup smoke test passed; success signal found in `log/1039.log`
+- `debug/badobject`
+  - empty after smoke test
+- `debug/error`
+  - only contains the expected timeout-forced shutdown path after the successful run
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `wild_pirate_islands`，保留房號段 `15801-15830`
+- `area/wild_pirate_islands/index` 已建立，`Serial 162`
+- 第一輪 runtime scaffold 已加入：
+  - `mob/17231-17234`
+  - `obj/17251-17254`
+  - `res/islands.res`
+  - `shp/supplies.shp`
+- `dng_boat_graveyard/15712 <-> wild_pirate_islands/15801` 已成為正式 runtime boundary
+- `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步登錄 `wild_pirate_islands`
 
 ## Next Step Prompt
 
-`先 commit 目前 wild_pirate_islands 的 spec milestone；commit 後直接做 implementation milestone，補 boundary、roo、index/mob/obj/res/shp，並跑 WSL build 與 startup smoke test。`
+`先 commit 目前 wild_pirate_islands 的 implementation milestone；commit 後直接盤點並建立下一個待建 area 的 spec milestone。`

@@ -13,6 +13,14 @@ ExitKeyword     ~
 ExitKey         0
 End
 
+#Exit
+Direction       SOUTH
+ExitVnum        15801
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
 #Enquire
 Keyword         外海~
 End
@@ -23,6 +31,10 @@ End
 
 #Enquire
 Keyword         出去~
+End
+
+#Enquire
+Keyword         群島~
 End
 
 End

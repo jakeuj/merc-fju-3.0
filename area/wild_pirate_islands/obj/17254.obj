@@ -1,0 +1,14 @@
+Vnum            17254
+Name            wind lamp~
+ShortDesc       迎風提燈(wind lamp)~
+Description
+一盞專為礁岸夜風打造、罩面收得很緊的迎風提燈(wind lamp)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           100
+Value           0 0 45 0
+Weight          2
+Cost            300
+End

@@ -1,0 +1,32 @@
+Vnum            15805
+Name            低潮礁橋~
+Description
+退潮時露出的礁橋像一道勉強能走的灰白背脊，把幾塊小島暫時縫在一起。這種路最危險的地方不是難走，而是它永遠只暫時屬於你。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       EAST
+ExitVnum        15803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15806
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         退潮~
+End
+
+#Enquire
+Keyword         礁橋~
+End
+
+End

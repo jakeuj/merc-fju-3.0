@@ -1,0 +1,32 @@
+Vnum            17234
+Name            shoal ambusher~
+ShortDesc       外灘伏擊手~
+Description
+這名伏在外礁深灘邊的伏擊手幾乎和潮影融成一塊，只剩偶爾露出的兵刃冷光證明
+他不是礁石的一部分，而是專等迷路者自己走進刀口的人。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       -90
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             14
+Int             11
+Wis             12
+Dex             14
+Con             13
+Hp              7000
+Mana            100
+Move            160
+Class           0
+Gold            660
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

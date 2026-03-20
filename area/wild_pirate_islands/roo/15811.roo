@@ -1,0 +1,24 @@
+Vnum            15811
+Name            風旗高脊~
+Description
+站上高脊後，整片碎島、舊寨、礁灣和外灘都被海風吹得像一張隨時會改寫的圖。這種高度暫時給了人判斷力，也讓外海真正有多大這件事變得更刺眼。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       DOWN
+ExitVnum        15808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         風旗~
+End
+
+#Enquire
+Keyword         望路~
+End
+
+End

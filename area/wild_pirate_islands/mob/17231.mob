@@ -1,0 +1,32 @@
+Vnum            17231
+Name            reef raider~
+ShortDesc       礁灣巡寇~
+Description
+這名沿著礁灣與舊棧來回巡視的巡寇總把腳步放得很輕，像只要風聲稍微不對，
+他就能比浪還早一步知道又有誰闖進了這片不屬於官府的海面。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       -70
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             12
+Wis             12
+Dex             13
+Con             13
+Hp              6700
+Mana            120
+Move            160
+Class           0
+Gold            580
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

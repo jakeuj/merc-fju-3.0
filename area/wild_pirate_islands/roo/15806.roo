@@ -1,0 +1,32 @@
+Vnum            15806
+Name            裂礁側灘~
+Description
+裂開的礁面在側灘邊排成一道道不規則陰影，像一群蹲伏著等海色變化的人。你若不仔細看，很容易把能落腳的地方和下一步就會滑進海裡的地方混在一起。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       NORTH
+ExitVnum        15805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         裂礁~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

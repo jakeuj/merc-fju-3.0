@@ -1,0 +1,40 @@
+Vnum            15803
+Name            礁灣主徑~
+Description
+一條被腳印、繩痕與礁石磨出的主徑沿著海灣向南轉去，路況並不整齊，卻看得出長年有人在這裡來往。這種秩序不像官道，倒更像一種只有海寇和倖存者才認得的默契。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       NORTH
+ExitVnum        15801
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        15805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         礁灣~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

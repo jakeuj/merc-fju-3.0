@@ -1,0 +1,14 @@
+Vnum            17251
+Name            smoked fish pack~
+ShortDesc       燻魚糧包(smoked fish pack)~
+Description
+一包適合在鹹風和海水間久放的燻魚糧包(smoked fish pack)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           100
+Value           30 48 4 0
+Weight          1
+Cost            300
+End

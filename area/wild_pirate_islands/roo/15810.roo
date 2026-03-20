@@ -1,0 +1,28 @@
+Vnum            15810
+Name            外礁深灘~
+Description
+再往南去，礁石之間的水色忽然轉深，像整片海面都在提醒你這裡不只是群島邊緣，還是更深水域真正開始張口的地方。站在這裡時，往回和往下都像一樣需要膽量。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       NORTH
+ExitVnum        15808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         深水~
+End
+
+#Enquire
+Keyword         下面~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+End

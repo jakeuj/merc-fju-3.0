@@ -622,15 +622,19 @@
 
 - `wild_pirate_islands`
   - plan: `plans/area/0073-wild-pirate-islands.md`
-  - delivery_gate: `spec_ready_for_commit`
+  - delivery_gate: `implementation_ready_for_commit`
   - current_status:
-    - 已建立第一版 spec 與 `mapmd-json`
-    - 題材定位為沉舟墓場之後重新打開的外海群島 wild
-    - 預留 `north -> dng_boat_graveyard`、`down -> sec_water_ruins` 與 `east -> fort_naval_base`
-    - `tools/mapmd_validate.py` 已通過
-    - generator `--validate-only` 已通過
+    - 已建立最小可載入 runtime scaffold：`index / mob / obj / res / shp / roo`
+    - 已完成 `dng_boat_graveyard/15712 <-> wild_pirate_islands/15801` 正式 boundary 掛接
+    - `tools/mapmd_validate.py` 已通過 `wild_pirate_islands` 與更新後的 `dng_boat_graveyard`
+    - generator `--validate-only` 已通過，generator write 已寫出 `wild_pirate_islands` 與更新後的 `dng_boat_graveyard` `roo`
+    - WSL Linux build 已通過
+    - startup smoke test 已通過；成功訊號見 `log/1039.log`
+    - `debug/badobject` 為空，`debug/error` 僅有 timeout 強制關機路徑
   - next_action:
-    - commit `wild_pirate_islands` 的 spec milestone
+    - commit `wild_pirate_islands` 的 implementation milestone
+    - commit 後將 `wild_pirate_islands` 移入 `done`
+    - 盤點並建立下一個主世界候選 area 的 spec milestone
 
 
 ## Done
@@ -772,7 +776,7 @@
 
 ## Current Recommended Next Step
 
-`dng_boat_graveyard` 已完成第一輪 runtime implementation 並提交。下一步應先驗證並提交 `wild_pirate_islands` 的 spec milestone，接著直接做 implementation milestone。
+`wild_pirate_islands` 已完成第一輪 runtime scaffold、boundary 掛接、WSL build 與 startup smoke test。下一步應先提交 implementation milestone，接著直接盤點並建立下一個待建 area 的 spec milestone。
 
 ## Next Action
 
@@ -799,12 +803,12 @@
 - 完成 `dng_boat_graveyard`：
   - 已提交 implementation milestone
 - 完成 `wild_pirate_islands`：
-  - 建立第一版 spec 與 `mapmd-json`
-  - 執行 `map.md` validate
-  - 執行 generator `--validate-only`
-  - commit spec milestone
-  - commit 後直接做 implementation milestone
+  - 已建立可載入 runtime scaffold
+  - 已完成 `15712 <-> 15801` boundary 掛接
+  - 已完成 `map.md` validate、generator write、WSL build 與 startup smoke test
+  - commit implementation milestone
+  - commit 後直接盤點下一個待建 area 並建立 spec
 
 ## Next Prompt
 
-`先驗證並 commit 目前 wild_pirate_islands 的 spec milestone；commit 後直接做 implementation milestone，補 boundary、roo、index/mob/obj/res/shp，並跑 WSL build 與 startup smoke test。`
+`先 commit 目前 wild_pirate_islands 的 implementation milestone；commit 後直接盤點並建立下一個待建 area 的 spec milestone。`

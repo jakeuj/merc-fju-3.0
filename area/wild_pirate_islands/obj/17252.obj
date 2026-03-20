@@ -1,0 +1,14 @@
+Vnum            17252
+Name            rope flask~
+ShortDesc       繩束水壺(rope flask)~
+Description
+一只壺身外還纏著防滑繩圈的繩束水壺(rope flask)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           100
+Value           14 14 LIQ_WATER 0
+Weight          2
+Cost            270
+End

@@ -1,0 +1,28 @@
+Vnum            15812
+Name            東向暗棧~
+Description
+一道偏窄的暗棧往東延出，棧上釘痕和藏鉤都說明它從來不是替普通旅人準備的。只要再往東走，節奏就會更偏向前哨、看守與真正有人佔地盤的世界。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       SOUTH
+ExitVnum        15807
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         東邊~
+End
+
+#Enquire
+Keyword         前哨~
+End
+
+#Enquire
+Keyword         棧橋~
+End
+
+End

@@ -1,0 +1,40 @@
+Vnum            15804
+Name            破旗灣口~
+Description
+灣口斜插著幾支早被鹽風扯碎的舊旗桿，剩下的布條在風裡拍出一種既像示警又像招呼的聲音。這裡明顯曾有人想把群島劃成自己的地盤，只是海從來不太認帳。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       NORTH
+ExitVnum        15803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15807
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         海寇~
+End
+
+#Enquire
+Keyword         灣口~
+End
+
+End

@@ -1,0 +1,44 @@
+Vnum            15801
+Name            破舷登岸點~
+Description
+從沉舟裂口脫身後，最先踩上的不是穩固碼頭，而是一塊被潮水與碎木反覆磨蝕的斜礁。站穩腳步的瞬間，你就會明白這裡雖然終於離開沉艙，卻也正式進入外海真正不講理的地帶。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       NORTH
+ExitVnum        15712
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        15803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        15802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         北邊~
+End
+
+#Enquire
+Keyword         沉舟~
+End
+
+#Enquire
+Keyword         群島~
+End
+
+End
