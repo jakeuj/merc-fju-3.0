@@ -322,6 +322,31 @@
     - `players.json / skills.json` 沒有提供江夏後段穩定的服務點證據，反而支持先做高辨識度野外 / 濕地風險帶，而不是直接複製另一座港城
   - compliance_check:
     - compliant；queue 在 `city_jiangxia` 後切回 `Wild`，且題材從江港秩序轉成迷霧濕地，不是直接順著最新城區複製下一座城市
+- `dng_sunken_temple`
+  - area_family: `Dungeon`
+  - reserved_room_block: `14601-14630`
+  - level_range: `58-68`
+  - theme: `仙俠`
+  - subtheme: `沉沒古廟 / 濕地下探`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/dng_sunken_temple/map.md`
+    - `plans/area/0060-wild-yunmeng.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/map/shanyan.html`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `ref/sanguo-area-specfirst/area/city_changsha/map.md`
+    - `ref/sanguo-area-specfirst/area/city_chaisang/map.md`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `progression-map` 在雲夢大澤之後明確要求進入一段 `Dungeon`
+    - `dng_sunken_temple` 參考 spec 已提供濕地下探與封印古廟的穩定模板，能自然承接 `wild_yunmeng`
+    - `題材分布表` 讓荊州段在 `詭異` 濕地之後切向更 `仙俠` 的沉沒遺跡，題材轉折明確
+  - compliance_check:
+    - compliant；在 `Wild` 之後切入 `Dungeon`，符合 progression 與 queue variety，不是回頭重做另一段濕地平路
 
 ## Todo
 
@@ -329,23 +354,21 @@
 
 ## In Progress
 
-- `wild_yunmeng`
-  - plan: `plans/area/0060-wild-yunmeng.md`
-  - delivery_gate: `implementation_ready_for_commit`
+- `dng_sunken_temple`
+  - plan: `plans/area/0061-dng-sunken-temple.md`
+  - delivery_gate: `spec_ready_for_commit`
   - current_status:
-    - 已建立最小 loadable runtime scaffold：`index / mob / obj / res / shp / roo`
-    - 已將 `14407 <-> 14501` 落成 `city_jiangxia` 與 `wild_yunmeng` 的雙向 runtime boundary
-    - `tools/mapmd_validate.py`、generator `--validate-only`、generator write 均已通過
-    - WSL Linux build 與 startup smoke test 已通過；成功 log 為 `log/1026.log`
-    - `debug/badobject` 為空，`debug/error` 只有 timeout 強制關機紀錄
+    - 已建立單區 plan 與 `area/dng_sunken_temple/map.md` 第一版 spec
+    - 已固定房號段 `14601-14630` 與 `wild_yunmeng/14512 -> dng_sunken_temple/14601` 的濕地下探邊界意圖
+    - `tools/mapmd_validate.py` 與 generator `--validate-only` 均已通過
   - next_action:
-    - commit `wild_yunmeng` 的 implementation milestone
-    - commit 後把 `wild_yunmeng` 移到 done
-    - 接著盤點下一個主世界候選區
+    - commit `dng_sunken_temple` 的 spec milestone
+    - commit 後開始 `dng_sunken_temple` 的 implementation milestone
 
 
 ## Done
 
+- `2026-03-21` `wild_yunmeng` 已完成第一輪 runtime implementation、commit `e36be11`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `city_jiangxia` 已完成第一輪 runtime implementation、commit `3ae44fc`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `wild_jiangxia_river` 已完成第一輪 runtime implementation、commit `91a57d6`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `city_xiangyang` 已完成第一輪 runtime implementation、commit `df3aa5e`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
@@ -470,17 +493,21 @@
 
 ## Current Recommended Next Step
 
-`wild_yunmeng` 已完成第一輪 runtime implementation。下一步應先 commit 目前的 implementation milestone；commit 後把它移到 done，再盤點下一個主世界候選區。
+`dng_sunken_temple` 已完成 spec 並通過 validate-only。下一步應先 commit spec milestone，再進入 implementation milestone。
 
 ## Next Action
 
 - 完成 `city_jiangxia`：
   - 已提交 implementation milestone
 - 完成 `wild_yunmeng`：
-  - commit implementation milestone
-  - commit 後把它移到 done
-  - 盤點下一個主世界候選區
+  - 已提交 implementation milestone
+- 完成 `dng_sunken_temple`：
+  - 建立單區 plan
+  - 建立 `area/dng_sunken_temple/map.md`
+  - 跑 `tools/mapmd_validate.py` 與 generator `--validate-only`
+  - commit spec milestone
+  - commit 後開始 implementation milestone
 
 ## Next Prompt
 
-`先 commit 目前 wild_yunmeng 的 implementation milestone；commit 後把它標記為 done，再盤點下一個待建 area。`
+`先 commit 目前 dng_sunken_temple 的 spec milestone；commit 後直接開始 implementation milestone。`

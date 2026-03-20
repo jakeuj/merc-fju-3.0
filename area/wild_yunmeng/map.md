@@ -70,7 +70,7 @@
 這些是世界層連接意圖；目前先固定在 spec，不提前建立 runtime 假邊界：
 
 - `north` from `14501`: planned link to `city_jiangxia`
-- `down` from `14512`: planned link to `dng_yunmeng_swamp`
+- `down` from `14512`: planned link to `dng_sunken_temple`
 - `south` from `14510`: planned link to `city_changsha`
 - `east` from `14508`: planned link to `city_chaisang`
 
@@ -124,7 +124,7 @@
       {
         "direction": "down",
         "source_vnum": 14512,
-        "target_area": "dng_yunmeng_swamp",
+        "target_area": "dng_sunken_temple",
         "label": "深沼裂口"
       },
       {
