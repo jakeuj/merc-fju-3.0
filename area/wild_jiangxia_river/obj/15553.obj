@@ -1,0 +1,14 @@
+Vnum            15553
+Name            river lantern~
+ShortDesc       江道提燈(river lantern)~
+Description
+一盞罩著薄油紙的江道提燈(river lantern)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           41
+Value           0 0 42 0
+Weight          2
+Cost            135
+End

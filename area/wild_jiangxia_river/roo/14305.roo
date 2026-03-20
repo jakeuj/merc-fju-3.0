@@ -1,0 +1,39 @@
+Vnum            14305
+Name            蘆葦濕灘~
+Description
+蘆葦在這片濕灘長得極密，風一過便整片伏倒又立起，像有看不見的人從裡面悄悄穿行。腳下泥地吸著鞋跟，讓人每一步都很難走得乾脆。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        14303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14306
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         蘆葦~
+Description
+蘆葉邊緣割手，風吹時聲音又足夠蓋住細碎腳步，實在像天生為埋伏準備的地方。
+~
+End
+
+#Enquire
+Keyword         濕地~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+End

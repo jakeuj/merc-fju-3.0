@@ -1,0 +1,32 @@
+Vnum            14307
+Name            下陷汊口~
+Description
+小汊口在這裡向更南方的濕地陷去，水面上浮著斷芒、殘木與幾截被潮水泡白的竹竿。這裡看起來不值得久留，卻也正因如此，最容易藏住不想讓主路看見的東西。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        14306
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14311
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         去路~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+End

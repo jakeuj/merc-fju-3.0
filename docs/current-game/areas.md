@@ -87,6 +87,7 @@ title: Current Game Areas
 | `dng_guandu_battlefield` | 官渡古戰場 / 鏖兵戰地 dungeon | `14001-14030` | `rebuild addition` | 承接濮陽林野北向荒路，落成壕溝、焚糧車與殘旗高地交錯的古戰場前段。 |
 | `fort_hulao` | 虎牢關 / 東都門戶關隘 | `14101-14120` | `rebuild addition` | 承接官渡古戰場北界，落成關前坡道、甕城、軍營與關樓高差構成的軍事 choke point。 |
 | `city_xiangyang` | 襄陽城 / 荊州門戶主城 | `14201-14230` | `rebuild addition` | 承接荊襄大道北界，落成南城門、主街十字、西市補給線與東碼頭構成的城市 hub。 |
+| `wild_jiangxia_river` | 江夏水道 / 江岸水路野外 | `14301-14330` | `rebuild addition` | 承接襄陽東碼頭外緣，落成離城木棧、蘆葦濕灘、水寨殘樁與東向渡口前帶。 |
 
 ## Recent Rebuild Areas
 
@@ -163,6 +164,7 @@ title: Current Game Areas
 - `dng_guandu_battlefield`：把濮陽林野北向荒路正式接進官渡古戰場，透過壕溝、焚糧車列、殘旗坡與死地前帶把節奏推進到真正的戰地 dungeon。
 - `fort_hulao`：把官渡古戰場北界正式接進虎牢關，透過關門、甕城、軍需棚與關樓望樓把節奏轉成重兵把守的戰略門戶。
 - `city_xiangyang`：把荊襄大道北界正式接進襄陽城，透過城門、市集、官署與東碼頭把節奏從關隘轉回荊州主城與水陸交通 hub。
+- `wild_jiangxia_river`：把襄陽東碼頭正式接進江岸水路野外，透過離城木棧、蘆葦濕灘、水寨殘樁與候船渡口把主線推往江夏方向。
 
 ## 維護規則
 

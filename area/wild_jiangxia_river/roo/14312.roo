@@ -1,0 +1,35 @@
+Vnum            14312
+Name            候船路牌~
+Description
+渡口旁立著一面被潮氣熏得發暗的路牌，上頭勉強還看得出江夏與更東幾處水路地名。走到這裡時，江岸野外的味道已經足夠濃，而更前方顯然正等著一個真正靠水吃飯、靠水守城的世界。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        14308
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         漁網~
+Description
+幾張半乾的漁網被捲在木柱邊，看似平常，卻和候船的人、待搬的貨一起把渡口氣味先鋪滿了周圍。
+~
+End
+
+#Enquire
+Keyword         江夏~
+End
+
+#Enquire
+Keyword         候船~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

@@ -325,6 +325,7 @@
       "coord": [3, 4, 0],
       "labels": ["wharf", "world-link-east"],
       "exits": [
+        { "direction": "east", "to": 14301, "external": true },
         { "direction": "west", "to": 14211 }
       ],
       "enquires": ["碼頭", "江夏", "船路"]

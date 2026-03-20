@@ -1,0 +1,31 @@
+Vnum            14304
+Name            河汊木橋~
+Description
+一座簡陋木橋橫跨淺汊，木板在潮濕中發出細小嘎響，像每一步都在提醒你這裡不是為了舒服通行而修。橋下水色不深，卻被蘆葦與陰影遮得難以看清。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        14303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14308
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         棧橋~
+Description
+橋板邊緣磨得發滑，顯示船工與行腳人都把這裡當作最省力的一段短捷徑。
+~
+End
+
+End

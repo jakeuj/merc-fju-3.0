@@ -1,0 +1,32 @@
+Vnum            15531
+Name            river ferry hand~
+ShortDesc       河岸船伕~
+Description
+這名守在離城木棧邊的河岸船伕肩上搭著粗繩，腳步穩得像對每一段水位
+與木樁高低都熟到不能再熟。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       60
+Level           41
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             11
+Wis             12
+Dex             12
+Con             13
+Hp              1500
+Mana            100
+Move            120
+Class           0
+Gold            180
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1,0 +1,32 @@
+Vnum            14301
+Name            離城木棧~
+Description
+木棧從襄陽東碼頭外緣一路伸到江岸邊的濕地木樁上，腳下木板仍殘留城市搬運留下的磨痕。回頭還能看見城影與桅杆，往前卻只剩風裡越來越重的水氣與蘆葉聲。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        14212
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         碼頭~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

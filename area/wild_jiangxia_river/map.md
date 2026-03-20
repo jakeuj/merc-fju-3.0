@@ -156,6 +156,7 @@
       "coord": [0, 0, 0],
       "labels": ["entry", "world-link-west"],
       "exits": [
+        { "direction": "west", "to": 14212, "external": true },
         { "direction": "east", "to": 14302 }
       ],
       "enquires": ["碼頭", "去路"]
@@ -218,7 +219,7 @@
       "vnum": 14305,
       "name": "蘆葦濕灘",
       "description": "蘆葦在這片濕灘長得極密，風一過便整片伏倒又立起，像有看不見的人從裡面悄悄穿行。腳下泥地吸著鞋跟，讓人每一步都很難走得乾脆。",
-      "sector_type": "SECT_SWAMP",
+      "sector_type": "SECT_FIELD",
       "cluster": "reed-marsh",
       "coord": [2, -1, 0],
       "labels": ["marsh", "concealment"],
@@ -238,7 +239,7 @@
       "vnum": 14306,
       "name": "泥岸窪口",
       "description": "泥岸在這裡凹成一道半隱的窪口，積水混著漂來的木片與舊網線，散出一股濕冷腥味。若不是刻意往下探，主路上的人多半不會知道這裡還藏著另一條能貼著江邊走的偏線。",
-      "sector_type": "SECT_SWAMP",
+      "sector_type": "SECT_FIELD",
       "cluster": "reed-marsh",
       "coord": [2, -2, -1],
       "labels": ["depression", "side-route"],
@@ -252,7 +253,7 @@
       "vnum": 14307,
       "name": "下陷汊口",
       "description": "小汊口在這裡向更南方的濕地陷去，水面上浮著斷芒、殘木與幾截被潮水泡白的竹竿。這裡看起來不值得久留，卻也正因如此，最容易藏住不想讓主路看見的東西。",
-      "sector_type": "SECT_SWAMP",
+      "sector_type": "SECT_FIELD",
       "cluster": "reed-marsh",
       "coord": [3, -2, -1],
       "labels": ["south-edge", "hidden"],

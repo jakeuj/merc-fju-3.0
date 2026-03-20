@@ -1,0 +1,31 @@
+Vnum            15532
+Name            reedbank scout~
+ShortDesc       蘆灘巡汊手~
+Description
+這名在蘆灘邊巡看的巡汊手總把身形壓得很低，像是早已習慣在視線最差
+的地方先一步看見別人。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       40
+Level           43
+Hitroll         3
+Protect         0
+Damroll         4
+Str             14
+Int             11
+Wis             12
+Dex             15
+Con             13
+Hp              2200
+Mana            100
+Move            135
+Class           0
+Gold            150
+Multipile       100
+AttackRatio     110
+DodgeRatio      112
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

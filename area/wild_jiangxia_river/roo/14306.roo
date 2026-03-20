@@ -1,0 +1,32 @@
+Vnum            14306
+Name            泥岸窪口~
+Description
+泥岸在這裡凹成一道半隱的窪口，積水混著漂來的木片與舊網線，散出一股濕冷腥味。若不是刻意往下探，主路上的人多半不會知道這裡還藏著另一條能貼著江邊走的偏線。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        14305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         泥岸~
+End
+
+#Enquire
+Keyword         偏路~
+End
+
+End

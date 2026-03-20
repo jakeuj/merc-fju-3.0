@@ -1,0 +1,47 @@
+Vnum            14303
+Name            繫船樁旁~
+Description
+幾根粗大的繫船樁歪斜插在泥地裡，樁身一圈圈纏著舊麻繩與潮水留下的深痕。這裡既像臨時停泊點，也像曾有人故意守著誰該靠岸、誰不該靠岸的位置。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        14302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         繫船樁~
+Description
+繫船樁上的舊麻繩被水浸得發黑，卻看得出不久前還有人在這裡重新打過結。
+~
+End
+
+#Enquire
+Keyword         停船~
+End
+
+#Enquire
+Keyword         江路~
+End
+
+End

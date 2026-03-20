@@ -1,0 +1,32 @@
+Vnum            14311
+Name            水寨殘樁~
+Description
+數排木樁半沒在淺水與泥灘間，排列看似凌亂，仔細看卻像曾是某種水寨外沿的防線。如今木樁斷得參差，仍足以讓人想像當年船隻若硬闖進來，會先撞得多狼狽。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        14307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        14308
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         水寨~
+End
+
+#Enquire
+Keyword         舊哨~
+End
+
+End

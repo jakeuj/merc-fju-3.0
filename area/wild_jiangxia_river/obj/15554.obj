@@ -1,0 +1,15 @@
+Vnum            15554
+Name            river hook blade~
+ShortDesc       江汊鉤刀(hook blade)~
+Description
+一柄適合在濕滑江岸近身搏鬥的江汊鉤刀(hook blade)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+WearLoc         ITEM_WIELD
+Takeable        Yes
+Level           44
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            205
+End

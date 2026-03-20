@@ -1,0 +1,31 @@
+Vnum            15533
+Name            waterfort raider~
+ShortDesc       舊哨水匪~
+Description
+這名佔據水寨殘樁一帶的水匪動作很輕，眼神卻始終帶著不肯讓路的狠勁，
+像是把整片殘破江岸都當成了自己的伏線。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       -80
+Level           46
+Hitroll         4
+Protect         0
+Damroll         5
+Str             15
+Int             10
+Wis             10
+Dex             15
+Con             14
+Hp              2550
+Mana            100
+Move            140
+Class           0
+Gold            170
+Multipile       100
+AttackRatio     115
+DodgeRatio      110
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

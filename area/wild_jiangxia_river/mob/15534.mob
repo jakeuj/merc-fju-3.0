@@ -1,0 +1,31 @@
+Vnum            15534
+Name            dock line guard~
+ShortDesc       渡口護纜手~
+Description
+這名守著候船路牌與渡口纜繩的護纜手站姿沉穩，像是比誰都清楚在江風
+最亂的時候，哪一條繩、哪一條路最先不能出錯。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       70
+Level           48
+Hitroll         4
+Protect         0
+Damroll         5
+Str             15
+Int             11
+Wis             12
+Dex             14
+Con             14
+Hp              2750
+Mana            100
+Move            140
+Class           0
+Gold            190
+Multipile       100
+AttackRatio     115
+DodgeRatio      110
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

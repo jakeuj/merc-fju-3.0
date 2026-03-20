@@ -6,6 +6,14 @@ Description
 SectorType      SECT_CITY
 
 #Exit
+Direction       EAST
+ExitVnum        14301
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
 Direction       WEST
 ExitVnum        14211
 ExitDesc        ~

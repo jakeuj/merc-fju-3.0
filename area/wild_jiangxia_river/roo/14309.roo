@@ -1,0 +1,32 @@
+Vnum            14309
+Name            堤岸高徑~
+Description
+順著堤岸往上走後，江風忽然變得更直更冷，連蘆葦擺動的方向都一目了然。從這裡看下去，主路、濕灘與水線交錯成數條可選又可伏的線，讓人明白這片江岸從來不是單純給旅人通過。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       DOWN
+ExitVnum        14308
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14310
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         高處~
+End
+
+#Enquire
+Keyword         江岸~
+End
+
+End

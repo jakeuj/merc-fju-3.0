@@ -1,0 +1,23 @@
+Vnum            14310
+Name            舊哨棚~
+Description
+一座臨江舊哨棚還勉強立著，棚頂被風掀去一角，木樑上卻仍殘留著掛旗與掛燈的鐵鉤。這地方顯然曾被用來盯著江面與來路，如今雖荒，視野卻依舊是整段江岸最好的一處。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        14309
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         水旗~
+Description
+旗杆底部還留著幾縷被風吹爛的藍黑布條，像是某支水軍早已退去，只把顏色丟在了江風裡。
+~
+End
+
+End

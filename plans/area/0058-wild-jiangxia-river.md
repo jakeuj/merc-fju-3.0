@@ -23,7 +23,7 @@
   - `east`: `city_jiangxia` / 江夏水軍重鎮
   - `south`: `wild_yunmeng_marsh` / 雲夢濕澤前帶
   - `north`: 江岸巡防與上游渡口
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Fun / Variety Check
 
@@ -69,6 +69,19 @@
 - 將 `蘆葦 / 棧橋 / 繫船樁 / 漁網 / 水旗` 視為正式 `#Keyword` 候選
 - 至少保留一組 `up/down` 堤岸 / 棧橋 / 濕地高差位移
 - 本 milestone 不建立 `index / mob / obj / res / shp` runtime data
+
+## Scope (Milestone 2: Runtime Scaffold)
+
+- 依 `area/wild_jiangxia_river/map.md` 生成 `roo/14301-14312`
+- 建立最小 loadable runtime 結構：
+  - `index`
+  - `mob/`
+  - `obj/`
+  - `res/`
+  - `shp/`
+- 將 area 登錄到 `area/directory.lst`
+- 正式把 `city_xiangyang/14212` 與 `wild_jiangxia_river/14301` 做成雙向 runtime boundary
+- 同步更新 `docs/current-game/areas.md` 與 `docs/current-game/areas.json`
 
 ## Birthplace Policy
 
@@ -145,7 +158,28 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_jiangxia_river/map.md --validate-only`
   - passed for `12` room(s)
+- `python -X utf8 tools/mapmd_validate.py area/city_xiangyang/map.md`
+  - passed with `0 error(s), 0 warning(s)` after aligning the `14212 <-> 14301` boundary
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_xiangyang/map.md`
+  - rewrote `roo/14201-14212` to include the east boundary into `14301`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_jiangxia_river/map.md`
+  - wrote `roo/14301-14312`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed; Linux build path reports `merc` up to date
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - startup log `log/1024.log` reached `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/badobject` remained empty
+  - `debug/error` only records the forced shutdown path caused by timeout, not a loader failure
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `wild_jiangxia_river`
+- `area/wild_jiangxia_river/index` 採首版水路野外 scaffold，房號段 `14301-14330`、序號 `147`
+- `mob/15531-15534` 與 `obj/15551-15554` 提供船伕、巡汊手、水匪、護纜手與江岸補給骨架
+- `res/river.res` 與 `shp/supplies.shp` 已建立，keeper 為 `15531`
+- `area/city_xiangyang/map.md` 與 `area/wild_jiangxia_river/map.md` 已同步把 `14212 <-> 14301` 落成正式 runtime boundary
+- `area/city_xiangyang/roo/14212.roo` 與 `area/wild_jiangxia_river/roo/14301.roo` 現在雙向一致
 
 ## Next Step Prompt
 
-`先驗證並 commit 目前 wild_jiangxia_river 的 spec milestone；commit 後再依 area/wild_jiangxia_river/map.md 開始 Milestone 2，生成 roo 草案並建立最小 runtime index/mob/obj/res/shp。`
+`先 commit 目前 wild_jiangxia_river 的 implementation milestone；commit 後把此區標記為 done，再開始 city_jiangxia 的 spec milestone。`

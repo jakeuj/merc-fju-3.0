@@ -1,0 +1,52 @@
+Vnum            14308
+Name            東向渡口前帶~
+Description
+江岸在這裡變得稍寬，地上多了拖船留下的深槽與一些臨時搭棚的痕跡。雖還沒真正到渡口，但人與貨都像在這裡先稍作整理，再決定是繼續向東還是等船南下。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        14304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14312
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        14311
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        14309
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         渡口~
+End
+
+#Enquire
+Keyword         江夏~
+End
+
+#Enquire
+Keyword         前面~
+End
+
+End

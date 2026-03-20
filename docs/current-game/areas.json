@@ -1184,6 +1184,25 @@
         "plans/area/0057-city-xiangyang.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "wild_jiangxia_river",
+      "title": "江夏水道",
+      "room_range": "14301-14330",
+      "load_order": 64,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_xiangyang",
+      "theme_primary": "探險",
+      "theme_secondary": "江夏水道 / 水軍河岸",
+      "summary": "承接襄陽東碼頭外緣，落成離城木棧、蘆葦濕灘、水寨殘樁與東向渡口前帶。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/wild_jiangxia_river/index",
+        "area/wild_jiangxia_river/map.md",
+        "plans/area/0058-wild-jiangxia-river.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

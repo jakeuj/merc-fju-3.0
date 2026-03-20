@@ -1,0 +1,32 @@
+Vnum            14302
+Name            江岸起道~
+Description
+木棧在這裡改接成沿江土道，左手是潮痕斑駁的水線，右手則是高低不一的草灘與蘆影。再往前走，襄陽城裡那種整齊的人聲已被水拍木樁的聲音慢慢吞掉。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        14301
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         江路~
+End
+
+#Enquire
+Keyword         東邊~
+End
+
+End
