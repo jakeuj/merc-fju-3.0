@@ -1,0 +1,39 @@
+Vnum            13808
+Name            鏢局旗埕~
+Description
+一面寫著鏢字的旗幟迎風拍打，埕上停著兩輛待發的貨車。鏢師、浪人與外地客商在這裡最容易搭上話頭，誰要往北、往東或往南，往往比官道告示還要先傳開。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        13807
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         鏢旗~
+Description
+鏢旗邊角磨得起毛，卻仍被洗得乾乾淨淨，顯示這家鏢局近來走鏢相當頻繁。
+~
+End
+
+#Enquire
+Keyword         鏢局~
+End
+
+#Enquire
+Keyword         浪人~
+End
+
+#Enquire
+Keyword         風雲袖步~
+End
+
+#Enquire
+Keyword         押運~
+End
+
+End

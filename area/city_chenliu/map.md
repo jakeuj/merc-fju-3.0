@@ -112,7 +112,7 @@
     "title": "陳留",
     "design_notes": "第一版 spec-first 草案。先固定中原城市 hub 的主街、服務區、軍旅區與南驛轉場，讓城市玩法和晚期 spirit-core 深井明確分流。",
     "level_range": "15-26",
-    "planned_vnum_range": "13801-13817",
+    "planned_vnum_range": "13801-13830",
     "reserved_room_block": "13801-13830",
     "theme": {
       "primary": "歷史城市",

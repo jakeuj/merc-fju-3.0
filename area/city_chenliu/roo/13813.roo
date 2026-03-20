@@ -1,0 +1,35 @@
+Vnum            13813
+Name            虎豹騎營前~
+Description
+營門前豎著黑底軍旗，值勤兵卒個個神情肅然。若只是路過商旅，多半會加快腳步；若是有意從軍的人，則難免在門外多看幾眼，衡量自己是否夠資格踏進這道門。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        13812
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         軍旗~
+Description
+黑底軍旗在風裡繃得筆直，旗面邊緣繡著虎紋，像是連觀望的人都要先被它試上一回膽氣。
+~
+End
+
+#Enquire
+Keyword         虎豹騎~
+End
+
+#Enquire
+Keyword         招募處~
+End
+
+#Enquire
+Keyword         從軍~
+End
+
+End

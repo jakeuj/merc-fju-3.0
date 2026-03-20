@@ -1,0 +1,14 @@
+Vnum            15054
+Name            station handlamp~
+ShortDesc       驛站提燈(handlamp)~
+Description
+一盞方便夜裡趕路的驛站提燈(handlamp)被掛在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           15
+Value           0 0 18 0
+Weight          1
+Cost            35
+End

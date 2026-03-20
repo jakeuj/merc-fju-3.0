@@ -1,0 +1,36 @@
+Vnum            13815
+Name            南驛街口~
+Description
+街面比主街更雜亂些，載貨車隊與牽馬的驛卒常在此交錯。再往南走，城中商旅喧聲開始被車輪、馬嘶與催程聲取代，像是整座陳留正在這裡把人送往下一段路。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        13804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        13816
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         驛站~
+End
+
+#Enquire
+Keyword         許昌~
+End
+
+#Enquire
+Keyword         南路~
+End
+
+End

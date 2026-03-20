@@ -1,0 +1,15 @@
+Vnum            15053
+Name            chenliu escort blade~
+ShortDesc       陳留護行短刀(escort blade)~
+Description
+一柄刀鞘磨得發亮的陳留護行短刀(escort blade)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           18
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            120
+End

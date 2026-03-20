@@ -1,0 +1,14 @@
+Vnum            15051
+Name            travel hot soup~
+ShortDesc       商旅熱湯(hot soup)~
+Description
+一碗還冒著白氣的商旅熱湯(hot soup)被放在這裡。
+~
+Unit            碗~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           15
+Value           16 24 4 0
+Weight          1
+Cost            45
+End

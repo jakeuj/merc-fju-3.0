@@ -1,0 +1,32 @@
+Vnum            15033
+Name            chenliu militia captain~
+ShortDesc       陳留義勇校尉~
+Description
+一名披著半舊披風的義勇校尉在演武場邊來回巡視，聲音不大，卻總能
+讓想偷懶的人立刻重新站直。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       140
+Level           20
+Hitroll         2
+Protect         0
+Damroll         2
+Str             14
+Int             11
+Wis             12
+Dex             13
+Con             14
+Hp              1800
+Mana            100
+Move            110
+Class           0
+Gold            90
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

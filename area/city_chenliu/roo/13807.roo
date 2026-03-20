@@ -1,0 +1,40 @@
+Vnum            13807
+Name            錢莊馬市街~
+Description
+街北是錢莊厚重門面，街南則連著馬廄與幾家替行腳商整備韁具的小店。銀票、鞍具與遠路旅程在這裡同時被談價，空氣裡滿是銅錢、草料與牲口熱氣混雜的味道。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        13806
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         錢莊~
+End
+
+#Enquire
+Keyword         馬廄~
+End
+
+#Enquire
+Keyword         銀票~
+End
+
+#Enquire
+Keyword         車馬~
+End
+
+End

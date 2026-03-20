@@ -1,0 +1,43 @@
+Vnum            13811
+Name            太守衙門前~
+Description
+衙門石階打掃得一塵不染，階前長戟與木牌把閒人自然而然隔在外圍。來此的人有的是遞狀紙，有的是打探軍報，也有人只是想看看北地兵馬調動是否又有新變化。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        13809
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13812
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         官牌~
+Description
+門旁官牌寫著出入規矩與近日巡防安排，措辭平實，卻讓人看得出現在城中風聲不算鬆。
+~
+End
+
+#Enquire
+Keyword         太守~
+End
+
+#Enquire
+Keyword         官府~
+End
+
+#Enquire
+Keyword         軍報~
+End
+
+End

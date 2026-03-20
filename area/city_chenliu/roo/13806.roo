@@ -1,0 +1,51 @@
+Vnum            13806
+Name            兵甲作坊街~
+Description
+鐵鎚敲擊與磨刀聲在這條街上此起彼落，武器店、防具店與打鐵舖都把貨架擺到門前。幾名想拜師學劍的年輕人不時朝內張望，像是在等那位傳聞中的十文字劍現身。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        13805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13807
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         鐵砧~
+Description
+一旁鐵砧火花四濺，鐵匠剛替人收尾一柄重劍，還沒冷卻的鋒面映出紅光。
+~
+End
+
+#Enquire
+Keyword         武器店~
+End
+
+#Enquire
+Keyword         防具店~
+End
+
+#Enquire
+Keyword         打鐵舖~
+End
+
+#Enquire
+Keyword         十文字劍~
+End
+
+#Enquire
+Keyword         華山劍法~
+End
+
+End

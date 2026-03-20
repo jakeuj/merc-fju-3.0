@@ -1,0 +1,35 @@
+Vnum            13801
+Name            西城門外牌樓~
+Description
+青灰城牆在身後筆直抬起，西城門外的牌樓下聚著等待盤查的旅人與車隊。再往西便是洛陳驛路，回首仍可看見一路趕來的塵煙，提醒你陳留不是盡頭，而是更大中原網路的中繼點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        13802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         城門~
+Description
+城門上方懸著「陳留」大字門匾，門洞兩側的鐵甲守卒正逐一核對旅人的來路。
+~
+End
+
+#Enquire
+Keyword         洛陽~
+End
+
+#Enquire
+Keyword         城門~
+End
+
+#Enquire
+Keyword         回路~
+End
+
+End

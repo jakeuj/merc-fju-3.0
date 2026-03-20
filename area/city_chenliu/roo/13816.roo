@@ -1,0 +1,47 @@
+Vnum            13816
+Name            陳留驛站前院~
+Description
+前院停著幾輛剛卸貨的車，馬槽邊堆滿草料與繩索。趕路的人在此問價、問時辰、問下一站，對真正長途奔波的人來說，這裡比太守衙門更像陳留的心口。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        13815
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       ENTER
+ExitVnum        13817
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         站牌~
+Description
+驛站站牌刻著往許昌、徐州與附近縣鄉的車馬時辰，邊角還壓著幾張鏢局與貨行的加貼紙條。
+~
+End
+
+#Enquire
+Keyword         驛站~
+End
+
+#Enquire
+Keyword         許昌~
+End
+
+#Enquire
+Keyword         車馬~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

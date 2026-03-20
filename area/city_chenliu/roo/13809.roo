@@ -1,0 +1,43 @@
+Vnum            13809
+Name            北街牌樓~
+Description
+北街牌樓下往來的多半不是尋常商旅，而是帶甲的兵卒、送文書的差人與準備北上的壯士。牌樓外的路勢逐漸開闊，像是把人慢慢送向濮陽與官渡的戰前地帶。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        13804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13811
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         路牌~
+Description
+路牌上刻著濮陽、官渡等方向，旁邊還多了幾筆兵站改道的臨時註記。
+~
+End
+
+#Enquire
+Keyword         濮陽~
+End
+
+#Enquire
+Keyword         官渡~
+End
+
+#Enquire
+Keyword         北路~
+End
+
+End

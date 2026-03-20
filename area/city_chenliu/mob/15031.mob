@@ -1,0 +1,32 @@
+Vnum            15031
+Name            springwind innkeeper~
+ShortDesc       春風閣掌櫃~
+Description
+一名笑容圓滑的春風閣掌櫃站在巷口旁，眼神一面招呼客人，一面留意
+誰像是剛走完長路、正需要熱湯與消息。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       80
+Level           16
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             13
+Wis             13
+Dex             10
+Con             11
+Hp              900
+Mana            100
+Move            100
+Class           0
+Gold            120
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

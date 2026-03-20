@@ -1,0 +1,36 @@
+Vnum            13805
+Name            春風食肆巷口~
+Description
+一轉進巷子便聞到熱湯與油香，春風閣的伙計正忙著招呼來往客商。巷口桌凳擺得外溢，總有人一面填飽肚子，一面聽別人講哪裡的路最近不太平。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       OUT
+ExitVnum        13804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13806
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         食堂~
+End
+
+#Enquire
+Keyword         春風閣~
+End
+
+#Enquire
+Keyword         熱湯~
+End
+
+End

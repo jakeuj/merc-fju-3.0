@@ -1,0 +1,14 @@
+Vnum            15052
+Name            clay travel flask~
+ShortDesc       行旅陶水壺(travel flask)~
+Description
+一只便於趕路攜帶的行旅陶水壺(travel flask)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           15
+Value           8 8 LIQ_WATER 0
+Weight          1
+Cost            40
+End

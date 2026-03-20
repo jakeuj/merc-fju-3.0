@@ -1,0 +1,43 @@
+Vnum            13802
+Name            西門甬道~
+Description
+甬道內牆釘著官府新貼的告示與盤查條例，行人腳步進出不絕。門洞外是長路塵土，門洞內則是主街喧聲，陳留的秩序與煙火氣在這裡自然交界。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        13801
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         告示~
+Description
+告示上除了城門盤查與夜禁時辰，還提到北路近來兵馬調動頻繁，行旅最好先問清楚去向。
+~
+End
+
+#Enquire
+Keyword         告示~
+End
+
+#Enquire
+Keyword         盤查~
+End
+
+#Enquire
+Keyword         北路~
+End
+
+End

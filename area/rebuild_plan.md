@@ -284,14 +284,19 @@
 
 - `city_chenliu`
   - plan: `plans/area/0053-city-chenliu.md`
-  - delivery_gate: `spec_ready_for_commit`
+  - delivery_gate: `implementation_ready_for_commit`
   - current_status:
-    - `area/city_chenliu/map.md` 第一版已建立
-    - 已落地 `west-gate / main-street / service-quarter / militia-quarter / south-station`
-    - `tools/mapmd_validate.py` 與 generator `--validate-only` 已通過
+    - `area/city_chenliu/map.md` 已對齊 `planned_vnum_range: 13801-13830`
+    - 已生成 `roo/13801-13817`，並落地最小 `index / mob / obj / res / shp`
+    - `area/directory.lst` 已掛上 `city_chenliu`
+    - `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步登錄
+    - `tools/mapmd_validate.py`、generator `--validate-only`、WSL Linux build 與 startup smoke test 已通過
+    - `log/1017.log` 已出現 `三國歪傳之降龍伏虎開始正常運作`
+    - `debug/badobject` 為空；`debug/error` 只有 timeout 強制關機留下的 shutdown 記錄
   - next_action:
-    - 先 commit `city_chenliu` 的 spec milestone
-    - commit 後開始 Milestone 2，依 `map.md` 生成 `roo` 草案並補最小 runtime 資產
+    - 先 commit `city_chenliu` 的 implementation milestone
+    - commit 後將 `city_chenliu` 移到 `done`
+    - commit 後把 `wild_puyang_forest` 推進為下一個 actionable area
 
 
 ## Done
@@ -412,16 +417,14 @@
 
 ## Current Recommended Next Step
 
-`city_chenliu` 已進入 `spec_ready_for_commit`。下一步應先 commit 目前的 spec milestone；commit 後再依 `area/city_chenliu/map.md` 開始 Milestone 2，生成 `roo` 並建立最小 `index / mob / obj / res / shp`。
+`city_chenliu` 已進入 `implementation_ready_for_commit`。下一步應先 commit 目前的 implementation milestone；commit 後將其移到 `done`，再把 `wild_puyang_forest` 推進為下一個 actionable area。
 
 ## Next Action
 
-- commit `city_chenliu` 的 spec milestone
-- commit 後開始 Milestone 2：
-  - 依 `map.md` 生成 `roo/13801-13817`
-  - 建立最小 `index / mob / obj / res / shp`
-  - 暫時只保留 spec-level world link，不提早製造假 boundary room
+- commit `city_chenliu` 的 implementation milestone
+- commit 後把 `city_chenliu` 移到 `done`
+- commit 後把 `wild_puyang_forest` 推進為下一個 actionable area
 
 ## Next Prompt
 
-`先 commit 目前 city_chenliu 的 spec milestone；commit 後再依 area/city_chenliu/map.md 開始 Milestone 2，生成 roo 草案並建立最小 runtime index/mob/obj/res/shp。`
+`先 commit 目前 city_chenliu 的 implementation milestone；commit 後將 city_chenliu 標記為 done，再把 wild_puyang_forest 推進為下一個 actionable area。`

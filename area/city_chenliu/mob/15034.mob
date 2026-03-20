@@ -1,0 +1,32 @@
+Vnum            15034
+Name            zhen nanshan~
+ShortDesc       震南山~
+Description
+這位身形沉穩的拳館師父站在門前，視線像釘子一樣落在人身上，彷彿
+每個想進門的人都得先被他看穿膽氣與腳步。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       110
+Level           24
+Hitroll         3
+Protect         0
+Damroll         3
+Str             16
+Int             12
+Wis             14
+Dex             15
+Con             15
+Hp              2400
+Mana            120
+Move            120
+Class           0
+Gold            200
+Multipile       100
+AttackRatio     105
+DodgeRatio      110
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

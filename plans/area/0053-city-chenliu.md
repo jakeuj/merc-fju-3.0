@@ -23,7 +23,7 @@
   - `north`: `wild_puyang_forest` / 濮陽主線
   - `east`: 徐州向主幹
   - `south`: `district_chenliu_station` / 許昌支線
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Fun / Variety Check
 
@@ -170,7 +170,15 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_chenliu/map.md --validate-only`
   - passed for `17` room(s)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_chenliu/map.md`
+  - wrote `roo/13801-13817`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed; Linux build path reports `merc` up to date
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - startup log `log/1017.log` reached `三國歪傳之降龍伏虎開始正常運作`
+  - `debug/badobject` remained empty
+  - `debug/error` only records the forced shutdown path caused by timeout, not a loader failure
 
 ## Next Step Prompt
 
-`先 commit 目前 city_chenliu 的 spec milestone；commit 後再開始 Milestone 2，依 area/city_chenliu/map.md 生成 roo 草案並建立最小 runtime index/mob/obj/res/shp。`
+`先 commit 目前 city_chenliu 的 implementation milestone；commit 後將 city_chenliu 標記為 done，再把 wild_puyang_forest 推進成下一個 actionable area。`

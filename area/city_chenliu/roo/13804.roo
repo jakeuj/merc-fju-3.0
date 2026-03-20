@@ -1,0 +1,71 @@
+Vnum            13804
+Name            西市十字~
+Description
+四條街路在此交會，吆喝聲、車輪聲與報價聲混成一片。北街通往軍旅與牌樓，南邊則漸漸轉入驛站人潮，若想在陳留久留或趕路，幾乎都得先經過這裡。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        13803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        13809
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13810
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        13815
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       ENTER
+ExitVnum        13805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         招牌~
+Description
+十字口四面垂著不同店家的招牌，有酒旗、有布幌，也有畫著刀劍與鞍具的木牌。
+~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+#Enquire
+Keyword         北街~
+End
+
+#Enquire
+Keyword         南驛~
+End
+
+#Enquire
+Keyword         東街~
+End
+
+End

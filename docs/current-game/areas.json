@@ -1089,6 +1089,25 @@
         "plans/area/0052-sec-rift-spirit-core-gehennal.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "city_chenliu",
+      "title": "陳留",
+      "room_range": "13801-13830",
+      "load_order": 59,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": null,
+      "theme_primary": "歷史城市",
+      "theme_secondary": "中原樞紐城 / 軍旅與江湖中繼",
+      "summary": "queue reset 後的第一個主世界城市 hub，先落地主街、服務區、軍旅區與南驛轉接骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/city_chenliu/index",
+        "area/city_chenliu/map.md",
+        "plans/area/0053-city-chenliu.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

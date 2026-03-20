@@ -1,0 +1,44 @@
+Vnum            13812
+Name            義勇演武場~
+Description
+場中木樁與兵器架排列整齊，偶爾有義勇軍在此對打試手。圍觀者之中既有想投軍的年輕人，也有盤算自己是否該先學些保命身法的旅人。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        13811
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13813
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        13814
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         義勇軍~
+End
+
+#Enquire
+Keyword         測驗場~
+End
+
+#Enquire
+Keyword         試武~
+End
+
+End

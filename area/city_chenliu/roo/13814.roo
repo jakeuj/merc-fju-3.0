@@ -1,0 +1,36 @@
+Vnum            13814
+Name            震南山拳館外~
+Description
+拳館門前石磚被來往腳步磨得發亮，門內隱約傳出喝聲與落地聲。有人來此學拳腳，有人來問逃命身法，也有人只是想先探探那位震南山到底肯不肯見客。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        13812
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         拳館~
+End
+
+#Enquire
+Keyword         震南山~
+End
+
+#Enquire
+Keyword         翦雲步~
+End
+
+#Enquire
+Keyword         金蟬脫殼~
+End
+
+#Enquire
+Keyword         flee~
+End
+
+End

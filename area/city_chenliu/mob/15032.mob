@@ -1,0 +1,32 @@
+Vnum            15032
+Name            shiwenzi swordman~
+ShortDesc       十文字劍~
+Description
+這名背著長劍的中年劍客站在兵甲作坊街邊，目光時而掃過路人握刀的
+姿勢，像是只要看上一眼，就能知道誰是真想學劍、誰只是來湊熱鬧。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          No
+Alignment       90
+Level           22
+Hitroll         3
+Protect         0
+Damroll         2
+Str             15
+Int             12
+Wis             13
+Dex             15
+Con             14
+Hp              2100
+Mana            100
+Move            120
+Class           0
+Gold            160
+Multipile       100
+AttackRatio     105
+DodgeRatio      105
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

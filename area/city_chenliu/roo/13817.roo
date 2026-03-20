@@ -1,0 +1,28 @@
+Vnum            13817
+Name            驛站大堂~
+Description
+堂內長案擺滿竹簡與行程簿，牆上掛著各地路引與時刻板。進門的人不是在討價還價，就是壓低聲音交換沿路情報；一座城市是否活著，往往看這樣的地方最清楚。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       OUT
+ExitVnum        13816
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         車次~
+End
+
+#Enquire
+Keyword         路引~
+End
+
+#Enquire
+Keyword         下一站~
+End
+
+End

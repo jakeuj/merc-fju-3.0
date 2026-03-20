@@ -1,0 +1,24 @@
+Vnum            13803
+Name            陳留主街西段~
+Description
+寬闊石板街往東一路伸展，兩旁掛著新舊交錯的店招與布幌。行商、軍士、鏢客與江湖人擦肩而過，誰都像是路過，卻也都在這裡交換下一程消息。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        13802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        13804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

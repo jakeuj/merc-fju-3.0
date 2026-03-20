@@ -1,0 +1,28 @@
+Vnum            13810
+Name            東街路標~
+Description
+東街較少豪奢喧鬧，多的是外地行商與抄寫地名的書吏。路標一面指向徐州，一面又寫著南轉驛站，像是在提醒旅人：陳留真正的價值，在於你能從這裡繼續走向更多地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        13804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         徐州~
+End
+
+#Enquire
+Keyword         東路~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End
