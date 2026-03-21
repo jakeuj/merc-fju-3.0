@@ -586,35 +586,35 @@
     - `ref/sanguo-area-specfirst` 已提供可改寫 scaffold，可直接轉成目前南境最南端港城所需版本
   - compliance_check:
     - compliant；在 `Dungeon` 之後切回 `City`，延續 `city_guiyang` 預留南向主線，也恢復主線母城節奏
-- `wild_mountain_pass`
-  - area_family: `Wild`
-  - reserved_room_block: `16301-16330`
+- `city_kuaiji`
+  - area_family: `City`
+  - reserved_room_block: `16401-16430`
   - level_range: `100-100`
   - theme: `江湖`
-  - subtheme: `山道 / 棧路`
+  - subtheme: `山城 / 門派`
   - ref_inputs_used:
     - `area/world_map.md`
     - `ref/Readme.md`
     - `ref/sanguo-progression-map.md`
     - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/wild_mountain_pass/map.md`
     - `ref/sanguo-area-specfirst/area/city_kuaiji/map.md`
+    - `ref/sanguo-area-specfirst/area/wild_mountain_pass/map.md`
     - `ref/world-graph.md`
     - `docs/3yWebsite/docs/data/maps.json`
     - `docs/3yWebsite/map/quaji.html`
-    - `plans/area/0077-wild-jianye-west.md`
+    - `plans/area/0078-wild-mountain-pass.md`
   - ref_inputs_deferred:
     - `docs/3yWebsite/docs/data/players.json`
     - `docs/3yWebsite/docs/data/skills.json`
     - `ref/sanguo-area-specfirst/area/dng_temple_ruins/map.md`
     - 各類原型工具與模擬系統
   - theme_basis:
-    - `world_map` 明確把 `建業 - 會稽` 放在同一條江東主線上，適合先用山道 wild 把主城外帶收束進更高壓的地形節奏
-    - `題材分布表` 把 `會稽` 定位成 `江湖 / 仙俠` 的山城節點，支持先以前置山路建立氣氛與路線辨位
-    - `wild_mountain_pass` scaffold 本身就提供岔路、地標與疑似支線的語彙，能自然承接 `wild_jianye_west` 的南向坡口
-    - `maps.json` 與 `quaji.html` 證明會稽在舊站地圖上是正式主城節點，因此先補它前方的山口過渡帶合理
+    - `world_map` 與 `world-graph` 都把會稽放在建業之後的江東主城節點，適合在山道 wild 之後立刻收束成正式城市 hub
+    - `題材分布表` 把會稽定位成 `江湖 / 仙俠` 的山城與門派節點，支持在城市語氣中保留地方勢力與傳聞感
+    - `city_kuaiji` scaffold 提供城門、主街、市集與官府骨架，能直接轉成目前需要的山城主街版本
+    - `maps.json` 與 `quaji.html` 證明會稽在舊站地圖上具有完整城市輪廓，適合作為下一個主城落點
   - compliance_check:
-    - compliant；在 `Outskirts` 之後切進 `Wild`，維持建業鏈的 family 變化，也避免過早回到下一個 city-like 片區
+    - compliant；在 `Wild` 之後切回 `City`，延續 `City -> Outskirts -> Wild -> City` 的節奏，也讓建業鏈恢復母城回補節點
 
 ## Todo
 
@@ -622,23 +622,22 @@
 
 ## In Progress
 
-- `wild_mountain_pass`
-  - plan: `plans/area/0078-wild-mountain-pass.md`
-  - delivery_gate: `implementation_ready_for_commit`
+- `city_kuaiji`
+  - plan: `plans/area/0079-city-kuaiji.md`
+  - delivery_gate: `spec_ready_for_commit`
   - current_status:
-    - 已生成 `roo/16301-16310` 並補齊最小 `index / mob / obj / res / shp`
-    - 已把 `wild_jianye_west/16210` 與 `wild_mountain_pass/16301` 對齊成正式 runtime boundary
-    - `south -> city_kuaiji` 與 `down -> dng_temple_ruins` 仍保留在 spec，待後續 area 落地
-    - 已通過 WSL Linux build 與 startup smoke test
-    - 成功 log：`log/1045.log`
-    - `debug/badobject` 為空
+    - 已建立第一版 spec 與 `mapmd-json`
+    - 題材定位為建業鏈進入會稽後的山城 city hub
+    - 預留 `north -> wild_mountain_pass`、`east -> district_kuaiji_market` 與 `down -> dng_temple_ruins`
+    - 已通過 `tools/mapmd_validate.py`
+    - 已通過 generator `--validate-only`
   - next_action:
-    - commit `wild_mountain_pass` 的 implementation milestone
+    - commit `city_kuaiji` 的 spec milestone
 
 
 ## Done
 
-- `2026-03-21` `wild_mountain_pass` 已完成第一輪 runtime implementation，完成 `wild_jianye_west/16210 <-> 16301` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1045.log`），達成可提交狀態
+- `2026-03-21` `wild_mountain_pass` 已完成第一輪 runtime implementation、commit `5c175b4`，完成 `wild_jianye_west/16210 <-> 16301` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1045.log`），並達成可前進下一區狀態
 - `2026-03-21` `wild_jianye_west` 已完成第一輪 runtime implementation、commit `22375a9`，完成 `city_jianye/16007 <-> 16201` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1045.log`），並達成可前進下一區狀態
 - `2026-03-21` `district_jianye_port` 已完成第一輪 runtime implementation、commit `619f21b`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `city_jianye` 已完成第一輪 runtime implementation、commit `6ec3d72`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
@@ -781,7 +780,7 @@
 
 ## Current Recommended Next Step
 
-`wild_mountain_pass` 已完成第一輪 runtime implementation 並通過 build / smoke test。下一步應先提交 implementation milestone，接著回到 queue 規則盤點下一個待建 area。
+`wild_mountain_pass` 已完成第一輪 runtime implementation 並提交。下一步應先驗證並提交 `city_kuaiji` 的 spec milestone，接著直接做 implementation milestone。
 
 ## Next Action
 
@@ -820,10 +819,14 @@
   - 已提交 implementation milestone
 - 完成 `wild_mountain_pass`：
   - 已提交 spec milestone
-  - 已完成 implementation milestone
-  - 已通過 WSL build 與 startup smoke
-  - commit implementation milestone
+  - 已提交 implementation milestone
+- 完成 `city_kuaiji`：
+  - 建立第一版 spec 與 `mapmd-json`
+  - 執行 `map.md` validate
+  - 執行 generator `--validate-only`
+  - commit spec milestone
+  - commit 後直接做 implementation milestone
 
 ## Next Prompt
 
-`先 commit 目前 wild_mountain_pass 的 implementation milestone；commit 後回到 queue 規則盤點下一個待建 area，建立新的 spec milestone。`
+`先驗證並 commit 目前 city_kuaiji 的 spec milestone；commit 後直接做 implementation milestone，補 boundary、roo、index/mob/obj/res/shp，並跑 WSL build 與 startup smoke test。`
