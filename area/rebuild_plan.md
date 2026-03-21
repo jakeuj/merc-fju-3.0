@@ -586,33 +586,35 @@
     - `ref/sanguo-area-specfirst` 已提供可改寫 scaffold，可直接轉成目前南境最南端港城所需版本
   - compliance_check:
     - compliant；在 `Dungeon` 之後切回 `City`，延續 `city_guiyang` 預留南向主線，也恢復主線母城節奏
-- `wild_jianye_west`
-  - area_family: `Outskirts`
-  - reserved_room_block: `16201-16230`
+- `wild_mountain_pass`
+  - area_family: `Wild`
+  - reserved_room_block: `16301-16330`
   - level_range: `100-100`
   - theme: `江湖`
-  - subtheme: `郊野 / 水鄉`
+  - subtheme: `山道 / 棧路`
   - ref_inputs_used:
     - `area/world_map.md`
     - `ref/Readme.md`
     - `ref/sanguo-progression-map.md`
     - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/wild_jianye_west/map.md`
+    - `ref/sanguo-area-specfirst/area/wild_mountain_pass/map.md`
+    - `ref/sanguo-area-specfirst/area/city_kuaiji/map.md`
     - `ref/world-graph.md`
+    - `docs/3yWebsite/docs/data/maps.json`
+    - `docs/3yWebsite/map/quaji.html`
+    - `plans/area/0077-wild-jianye-west.md`
+  - ref_inputs_deferred:
     - `docs/3yWebsite/docs/data/players.json`
     - `docs/3yWebsite/docs/data/skills.json`
-    - `plans/area/0075-city-jianye.md`
-  - ref_inputs_deferred:
-    - `ref/sanguo-area-specfirst/area/city_kuaiji/map.md`
-    - `ref/sanguo-area-specfirst/area/wild_mountain_pass/map.md`
+    - `ref/sanguo-area-specfirst/area/dng_temple_ruins/map.md`
     - 各類原型工具與模擬系統
   - theme_basis:
-    - `city_jianye` 已把海路主線收束到江東主城，適合先往西補上一段城郊外帶，讓主城的陸路出口也正式成形
-    - `wild_jianye_west` scaffold 提供官道、水鄉與茶亭語彙，能直接承接建業主城的都會節奏並轉成較鬆的郊外探索感
-    - `world-graph` 把建業西郊放在建業旁的主城外帶位置，適合作為未來再往會稽或山道延伸的前置區
-    - `players.json / skills.json` 沒有提供此時必須先跳去另一座城市的強證據，因此先補郊外過渡更符合 loop 完整性
+    - `world_map` 明確把 `建業 - 會稽` 放在同一條江東主線上，適合先用山道 wild 把主城外帶收束進更高壓的地形節奏
+    - `題材分布表` 把 `會稽` 定位成 `江湖 / 仙俠` 的山城節點，支持先以前置山路建立氣氛與路線辨位
+    - `wild_mountain_pass` scaffold 本身就提供岔路、地標與疑似支線的語彙，能自然承接 `wild_jianye_west` 的南向坡口
+    - `maps.json` 與 `quaji.html` 證明會稽在舊站地圖上是正式主城節點，因此先補它前方的山口過渡帶合理
   - compliance_check:
-    - compliant；在 `City / District` 之後切回 `Outskirts`，讓建業鏈維持 family 多樣性，也避免主城片區連續堆疊過多 city-like 區塊
+    - compliant；在 `Outskirts` 之後切進 `Wild`，維持建業鏈的 family 變化，也避免過早回到下一個 city-like 片區
 
 ## Todo
 
@@ -620,22 +622,22 @@
 
 ## In Progress
 
-- `wild_jianye_west`
-  - plan: `plans/area/0077-wild-jianye-west.md`
-  - delivery_gate: `implementation_ready_for_commit`
+- `wild_mountain_pass`
+  - plan: `plans/area/0078-wild-mountain-pass.md`
+  - delivery_gate: `spec_ready_for_commit`
   - current_status:
-    - 已生成 `roo/16201-16210` 並補齊最小 `index / mob / obj / res / shp`
-    - 已把 `city_jianye/16007` 與 `wild_jianye_west/16201` 對齊成正式 runtime boundary
-    - 已通過 `tools/mapmd_validate.py`、generator 寫檔、WSL Linux build 與 startup smoke test
-    - 成功 log：`log/1045.log`
-    - `debug/badobject` 為空
+    - 已建立第一版 spec 與 `mapmd-json`
+    - 題材定位為建業鏈往會稽方向推進前的山道 wild
+    - 預留 `north -> wild_jianye_west`、`south -> city_kuaiji` 與 `down -> dng_temple_ruins`
+    - 已通過 `tools/mapmd_validate.py`
+    - 已通過 generator `--validate-only`
   - next_action:
-    - commit `wild_jianye_west` 的 implementation milestone
+    - commit `wild_mountain_pass` 的 spec milestone
 
 
 ## Done
 
-- `2026-03-21` `wild_jianye_west` 已完成第一輪 runtime implementation，完成 `city_jianye/16007 <-> 16201` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1045.log`），達成可提交狀態
+- `2026-03-21` `wild_jianye_west` 已完成第一輪 runtime implementation、commit `22375a9`，完成 `city_jianye/16007 <-> 16201` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1045.log`），並達成可前進下一區狀態
 - `2026-03-21` `district_jianye_port` 已完成第一輪 runtime implementation、commit `619f21b`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `city_jianye` 已完成第一輪 runtime implementation、commit `6ec3d72`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `fort_naval_base` 已完成第一輪 runtime implementation、commit `8650611`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
@@ -777,7 +779,7 @@
 
 ## Current Recommended Next Step
 
-`wild_jianye_west` 已完成第一輪 runtime implementation 並通過 build / smoke test。下一步應先提交 implementation milestone，接著回到 queue 規則盤點下一個待建 area。
+`wild_jianye_west` 已完成第一輪 runtime implementation 並提交。下一步應先驗證並提交 `wild_mountain_pass` 的 spec milestone，接著直接做 implementation milestone。
 
 ## Next Action
 
@@ -813,13 +815,14 @@
   - 已提交 implementation milestone
 - 完成 `wild_jianye_west`：
   - 已提交 spec milestone
-  - 已完成 implementation milestone
-  - 已通過 WSL build 與 startup smoke
-  - commit implementation milestone
-- 盤點下一個待建 area：
-  - 回到 `world_map / progression / players / skills` 與 queue variety gate
-  - 建立下一個 spec milestone
+  - 已提交 implementation milestone
+- 完成 `wild_mountain_pass`：
+  - 建立第一版 spec 與 `mapmd-json`
+  - 執行 `map.md` validate
+  - 執行 generator `--validate-only`
+  - commit spec milestone
+  - commit 後直接做 implementation milestone
 
 ## Next Prompt
 
-`先 commit 目前 wild_jianye_west 的 implementation milestone；commit 後回到 queue 規則盤點下一個待建 area，建立新的 spec milestone。`
+`先驗證並 commit 目前 wild_mountain_pass 的 spec milestone；commit 後直接做 implementation milestone，補 boundary、roo、index/mob/obj/res/shp，並跑 WSL build 與 startup smoke test。`
