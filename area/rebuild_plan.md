@@ -615,6 +615,35 @@
     - `maps.json` 與 `quaji.html` 證明會稽在舊站地圖上具有完整城市輪廓，適合作為下一個主城落點
   - compliance_check:
     - compliant；在 `Wild` 之後切回 `City`，延續 `City -> Outskirts -> Wild -> City` 的節奏，也讓建業鏈恢復母城回補節點
+- `dng_temple_ruins`
+  - area_family: `Dungeon`
+  - reserved_room_block: `16501-16530`
+  - level_range: `100-100`
+  - theme: `仙俠`
+  - subtheme: `古寺 / 異聞`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/dng_temple_ruins/map.md`
+    - `ref/sanguo-area-specfirst/area/city_kuaiji/map.md`
+    - `ref/world-graph.md`
+    - `docs/3yWebsite/docs/data/maps.json`
+    - `docs/3yWebsite/map/quaji.html`
+    - `plans/area/0079-city-kuaiji.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `ref/sanguo-area-specfirst/area/sec_water_ruins/map.md`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `world-graph` 已把 `dng_temple_ruins` 放在 `city_kuaiji` 之下的江東 dungeon 節點，適合直接承接會稽山城的異聞與地脈感
+    - `題材分布表` 對會稽所在區帶給了 `仙俠` 補題空間，支持在主城之後切進帶封印與殘祠感的地底探索
+    - `dng_temple_ruins` scaffold 直接提供古寺、封印與深處節點語彙，能自然轉成目前會稽鏈需要的地下 dungeon
+    - `quaji.html` 證明會稽本身是一座有完整城市輪廓的山城，因此把地下異聞留在其下方作為支線延伸是合理的
+  - compliance_check:
+    - compliant；在 `City` 之後切進 `Dungeon`，避免會稽鏈連續堆疊 city-like 片區，也符合 `City -> Wild -> Dungeon` 的節奏切換
 
 ## Todo
 
@@ -622,23 +651,22 @@
 
 ## In Progress
 
-- `city_kuaiji`
-  - plan: `plans/area/0079-city-kuaiji.md`
-  - delivery_gate: `implementation_ready_for_commit`
+- `dng_temple_ruins`
+  - plan: `plans/area/0080-dng-temple-ruins.md`
+  - delivery_gate: `spec_ready_for_commit`
   - current_status:
-    - 已生成 `roo/16401-16410` 並補齊最小 `index / mob / obj / res / shp`
-    - 已把 `wild_mountain_pass/16310` 與 `city_kuaiji/16401` 對齊成正式 runtime boundary
-    - `east -> district_kuaiji_market` 與 `down -> dng_temple_ruins` 仍保留在 spec，待後續 area 落地
-    - 已通過 WSL Linux build 與 startup smoke test
-    - 成功 log：`log/1048.log`
-    - `debug/badobject` 為空
+    - 已建立第一版 spec 與 `mapmd-json`
+    - 題材定位為會稽山城之下的古寺 dungeon
+    - 預留 `up -> city_kuaiji` 與 `down -> sec_kuaiji_seal_chamber`
+    - 已通過 `tools/mapmd_validate.py`
+    - 已通過 generator `--validate-only`
   - next_action:
-    - commit `city_kuaiji` 的 implementation milestone
+    - commit `dng_temple_ruins` 的 spec milestone
 
 
 ## Done
 
-- `2026-03-21` `city_kuaiji` 已完成第一輪 runtime implementation，完成 `wild_mountain_pass/16310 <-> 16401` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1048.log`），達成可提交狀態
+- `2026-03-21` `city_kuaiji` 已完成第一輪 runtime implementation、commit `b0150ea`，完成 `wild_mountain_pass/16310 <-> 16401` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1048.log`），並達成可前進下一區狀態
 - `2026-03-21` `wild_mountain_pass` 已完成第一輪 runtime implementation、commit `5c175b4`，完成 `wild_jianye_west/16210 <-> 16301` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1045.log`），並達成可前進下一區狀態
 - `2026-03-21` `wild_jianye_west` 已完成第一輪 runtime implementation、commit `22375a9`，完成 `city_jianye/16007 <-> 16201` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1045.log`），並達成可前進下一區狀態
 - `2026-03-21` `district_jianye_port` 已完成第一輪 runtime implementation、commit `619f21b`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
@@ -782,7 +810,7 @@
 
 ## Current Recommended Next Step
 
-`city_kuaiji` 已完成第一輪 runtime implementation 並通過 build / smoke test。下一步應先提交 implementation milestone，接著回到 queue 規則盤點下一個待建 area。
+`city_kuaiji` 已完成第一輪 runtime implementation 並提交。下一步應先驗證並提交 `dng_temple_ruins` 的 spec milestone，接著直接做 implementation milestone。
 
 ## Next Action
 
@@ -827,7 +855,13 @@
   - 已完成 implementation milestone
   - 已通過 WSL build 與 startup smoke
   - commit implementation milestone
+- 完成 `dng_temple_ruins`：
+  - 建立第一版 spec 與 `mapmd-json`
+  - 執行 `map.md` validate
+  - 執行 generator `--validate-only`
+  - commit spec milestone
+  - commit 後直接做 implementation milestone
 
 ## Next Prompt
 
-`先 commit 目前 city_kuaiji 的 implementation milestone；commit 後回到 queue 規則盤點下一個待建 area，建立新的 spec milestone。`
+`先驗證並 commit 目前 dng_temple_ruins 的 spec milestone；commit 後直接做 implementation milestone，補 boundary、roo、index/mob/obj/res/shp，並跑 WSL build 與 startup smoke test。`
