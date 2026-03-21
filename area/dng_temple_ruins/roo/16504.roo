@@ -1,0 +1,52 @@
+Vnum            16504
+Name            供臺中殿~
+Description
+中殿前的供臺大半已經崩塌，卻仍看得出這裡曾經是整座古寺最核心的敬奉之地。如今香灰成了潮泥，殘燭成了黑痕，只剩那股被人刻意壓住的禁制感還死死盤在這裡。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        16503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16510
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        16507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16506
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         供臺~
+End
+
+#Enquire
+Keyword         中殿~
+End
+
+#Enquire
+Keyword         封印~
+End
+
+End

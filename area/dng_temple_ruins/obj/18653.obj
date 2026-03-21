@@ -1,0 +1,15 @@
+Vnum            18653
+Name            temple rust blade~
+ShortDesc       古寺鏽刃(temple rust blade)~
+Description
+一把在濕氣與歲月裡幾乎鏽成暗褐色的古寺鏽刃(temple rust blade)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           100
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            340
+End

@@ -1,0 +1,32 @@
+Vnum            18633
+Name            seal keeper~
+ShortDesc       封印看守者~
+Description
+這名看守者總守在供臺與偏室交界，像比任何人都更清楚這些崩裂的封印紋到底在
+替什麼東西續命，也比任何人都更不願讓外人看見那答案。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       -80
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             13
+Wis             14
+Dex             12
+Con             13
+Hp              4400
+Mana            160
+Move            150
+Class           0
+Gold            560
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

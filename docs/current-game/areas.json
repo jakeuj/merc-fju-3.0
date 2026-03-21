@@ -1602,6 +1602,25 @@
         "plans/area/0079-city-kuaiji.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "dng_temple_ruins",
+      "title": "山中古寺",
+      "room_range": "16501-16530",
+      "load_order": 86,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_kuaiji",
+      "theme_primary": "仙俠",
+      "theme_secondary": "古寺 / 異聞",
+      "summary": "承接古祠地脈，落成地脈石梯、滴水甬道、供臺中殿與深封石室前帶骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/dng_temple_ruins/index",
+        "area/dng_temple_ruins/map.md",
+        "plans/area/0080-dng-temple-ruins.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

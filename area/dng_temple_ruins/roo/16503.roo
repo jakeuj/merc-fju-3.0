@@ -1,0 +1,44 @@
+Vnum            16503
+Name            滴水甬道~
+Description
+甬道狹長而陰濕，頂上的裂隙不停有細水滴下來，讓每一步回音都像在替更深處數拍子。會稽城裡那種帶著人情和秩序的氣味在這裡已完全退去，只剩石與水把整段路守得死死的。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        16501
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         甬道~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+#Enquire
+Keyword         水聲~
+End
+
+End

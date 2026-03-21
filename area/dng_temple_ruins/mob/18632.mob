@@ -1,0 +1,32 @@
+Vnum            18632
+Name            dripping shade~
+ShortDesc       滴水殘影~
+Description
+這道沿著滴水甬道游移的殘影幾乎沒有真正固定的形體，只有當水滴落地、石壁回
+音一起泛開時，你才會意識到它一直就在那裡看著人走近。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       -60
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             13
+Wis             14
+Dex             13
+Con             12
+Hp              4100
+Mana            220
+Move            150
+Class           0
+Gold            500
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

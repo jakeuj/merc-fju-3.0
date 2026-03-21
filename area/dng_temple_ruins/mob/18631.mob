@@ -1,0 +1,32 @@
+Vnum            18631
+Name            bell watcher~
+ShortDesc       殘鐘守廟人~
+Description
+這名守在殘鐘與前廳附近的人影看起來像僧又不像僧，只是長年站在潮氣和灰塵裡，
+彷彿連說話都帶著古鐘內壁回出來的空響。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       -20
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             14
+Wis             14
+Dex             11
+Con             12
+Hp              4200
+Mana            180
+Move            140
+Class           0
+Gold            620
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

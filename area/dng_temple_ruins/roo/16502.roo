@@ -1,0 +1,24 @@
+Vnum            16502
+Name            殘鐘前廳~
+Description
+前廳裡掛著半裂的殘鐘，鐘身上的紋路早已斑駁，卻仍透著某種不願徹底消散的靈意。空氣裡沒有風，鐘卻偶爾發出極輕的震顫聲，像深處還有什麼正沿著石壁慢慢醒來。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        16501
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         殘鐘~
+End
+
+#Enquire
+Keyword         前廳~
+End
+
+End

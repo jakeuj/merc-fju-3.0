@@ -1,0 +1,32 @@
+Vnum            18634
+Name            stone chamber wraith~
+ShortDesc       石室巡魂~
+Description
+這道在深封石室前來回徘徊的巡魂沒有明顯腳步，卻總在最不該有風的地方掀起一
+陣極冷的氣息，像在替更深的黑暗試探來者到底走到了哪一步。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       -100
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             14
+Wis             13
+Dex             13
+Con             12
+Hp              4300
+Mana            200
+Move            160
+Class           0
+Gold            580
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

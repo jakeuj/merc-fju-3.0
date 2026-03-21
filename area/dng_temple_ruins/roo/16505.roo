@@ -1,0 +1,32 @@
+Vnum            16505
+Name            裂壁偏龕~
+Description
+偏龕藏在甬道旁的裂壁內側，石龕邊緣還殘留著被刀器刮去符文的痕跡。這裡不像真正的退路，倒更像有人曾想在正殿外側偷偷做些不該被發現的事。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        16503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16506
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         偏龕~
+End
+
+#Enquire
+Keyword         符文~
+End
+
+End

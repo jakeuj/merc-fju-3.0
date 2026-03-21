@@ -1,0 +1,44 @@
+Vnum            16501
+Name            地脈石梯~
+Description
+石梯從山城底下的地脈縫隙一路往下，潮氣與舊灰味在這裡已經濃到能把城上的人聲整個隔開。你很難說這裡究竟還算不算古寺入口，只能確定從踏上這階開始，會稽城裡那些不能明說的傳聞就不再只是傳聞。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        16406
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         入口~
+End
+
+#Enquire
+Keyword         石梯~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

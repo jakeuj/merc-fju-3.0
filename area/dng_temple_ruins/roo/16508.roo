@@ -1,0 +1,32 @@
+Vnum            16508
+Name            石縫水牢~
+Description
+石縫間積著冷水，讓這裡像半間牢室、半段天然裂穴。腳下每一次踩動水面，四周都會回出比你預期更遠的空響，像下方還有更深一層的東西正等待被驚動。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        16507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16510
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         水牢~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

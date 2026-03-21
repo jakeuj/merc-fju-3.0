@@ -1,0 +1,14 @@
+Vnum            18651
+Name            sealed ration~
+ShortDesc       密封乾糧包(sealed ration)~
+Description
+一包適合在濕冷石室和長甬道間勉強果腹的密封乾糧包(sealed ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           100
+Value           28 46 4 0
+Weight          1
+Cost            300
+End

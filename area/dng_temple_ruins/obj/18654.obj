@@ -1,0 +1,14 @@
+Vnum            18654
+Name            shrine lamp~
+ShortDesc       廟前油燈(shrine lamp)~
+Description
+一盞適合在殘鐘前廳、滴水甬道與供臺中殿間照明的廟前油燈(shrine lamp)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           100
+Value           0 0 45 0
+Weight          2
+Cost            280
+End

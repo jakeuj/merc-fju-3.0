@@ -1,0 +1,36 @@
+Vnum            16506
+Name            封印偏室~
+Description
+偏室裡的地面和石柱都刻滿了曾被修補又再度崩裂的封印紋，像每一次補強都只證明了一件事，那就是這裡真正鎮著的東西從來沒有安分過。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        16505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        16504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         封印~
+End
+
+#Enquire
+Keyword         偏室~
+End
+
+#Enquire
+Keyword         石柱~
+End
+
+End

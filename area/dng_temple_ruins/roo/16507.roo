@@ -1,0 +1,32 @@
+Vnum            16507
+Name            殘經藏角~
+Description
+這一角曾經似乎堆滿經卷，如今只剩發黑紙灰與被水浸爛的木架。可即使經文早散，這裡仍有一種像被字句和祈願長久壓過的沉重，讓人不敢久待。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       EAST
+ExitVnum        16504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         殘經~
+End
+
+#Enquire
+Keyword         紙灰~
+End
+
+End

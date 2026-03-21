@@ -1,0 +1,36 @@
+Vnum            16510
+Name            深封石室前~
+Description
+石室前的空氣幾乎凝成了看不見的重量，像只要再向下探一步，古寺真正想藏住的東西就會從更深的黑暗裡把目光投上來。這裡不像終點，更像一道在多年失守後勉強仍算存在的最後界線。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        16504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        16508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         石室~
+End
+
+#Enquire
+Keyword         封印~
+End
+
+#Enquire
+Keyword         更深~
+End
+
+End
