@@ -1,0 +1,28 @@
+Vnum            17207
+Name            南驛牌口~
+Description
+往南的驛路牌口把濮陽和更後方的城市聯繫收得很緊，像任何離城的人都會被提醒，前線所需的一切仍得靠這條路反覆輸送。站在這裡時，才會真正理解濮陽和純戰地之間最大的差別，就是它還保有一條能把秩序往後送的命脈。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        17206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         南路~
+End
+
+#Enquire
+Keyword         驛站~
+End
+
+#Enquire
+Keyword         後方~
+End
+
+End

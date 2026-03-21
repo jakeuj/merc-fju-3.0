@@ -233,7 +233,8 @@
       "labels": ["wetland", "world-link-east"],
       "exits": [
         { "direction": "west", "to": 13904 },
-        { "direction": "east", "to": 13907 }
+        { "direction": "east", "to": 13907 },
+        { "direction": "enter", "to": 17201, "external": true }
       ],
       "keywords": [
         {

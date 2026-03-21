@@ -1,0 +1,36 @@
+Vnum            17208
+Name            東糧道口~
+Description
+東向糧道口比城中其他地方都更能感到壓力堆積，車轍、泥灰與換馬聲把『官渡不遠』這件事說得非常明白。再往東，濮陽的城市氣息會很快讓位給戰場留下的焦痕與殘線，因此這裡像是一道把城市秩序送進戰地的門檻。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        17204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        14007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         糧道~
+End
+
+#Enquire
+Keyword         官渡~
+End
+
+#Enquire
+Keyword         東邊~
+End
+
+End

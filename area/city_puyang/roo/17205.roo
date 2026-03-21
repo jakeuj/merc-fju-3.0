@@ -1,0 +1,28 @@
+Vnum            17205
+Name            前街市集~
+Description
+牌樓與攤棚把這裡撐出一塊比戰線稍微鬆口氣的空間，卻依然能從貨色看出濮陽的前沿性格: 乾糧、水囊、燈油、繩索都比精巧玩物多得多。這裡賣的不是悠閒，而是讓人再走一段的把握。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        17203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         市集~
+End
+
+#Enquire
+Keyword         補給~
+End
+
+#Enquire
+Keyword         糧行~
+End
+
+End

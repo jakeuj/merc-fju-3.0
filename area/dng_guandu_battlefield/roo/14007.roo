@@ -21,6 +21,14 @@ ExitKeyword     ~
 ExitKey         0
 End
 
+#Exit
+Direction       OUT
+ExitVnum        17208
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
 #Keyword
 Keyword         焦木~
 Description

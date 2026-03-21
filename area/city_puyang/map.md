@@ -169,7 +169,8 @@
       "coord": [4, 0, 0],
       "labels": ["east-link", "war-route"],
       "exits": [
-        { "direction": "west", "to": 17204 }
+        { "direction": "west", "to": 17204 },
+        { "direction": "east", "to": 14007, "external": true }
       ],
       "enquires": ["糧道", "官渡", "東邊"]
     },
@@ -189,4 +190,3 @@
   ]
 }
 ```
-

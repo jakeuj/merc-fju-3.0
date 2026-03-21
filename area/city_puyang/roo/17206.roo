@@ -1,0 +1,36 @@
+Vnum            17206
+Name            軍務前街~
+Description
+這條街比主街安靜得多，糧冊、文牘與巡令卻比人聲更有存在感。濮陽能在河北前沿站穩，不只是因為有牆有兵，也因為所有通往官渡與北路的消息，都會先在這裡被整理、核對與分派。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        17204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        17207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         軍務~
+End
+
+#Enquire
+Keyword         官府~
+End
+
+#Enquire
+Keyword         糧冊~
+End
+
+End

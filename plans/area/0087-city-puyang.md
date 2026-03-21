@@ -23,7 +23,7 @@
   - `east`: `dng_guandu_battlefield` / 官渡糧道殘線
   - `south`: `road_puyang` / 南驛官道預留
   - `north`: `city_nanpi` / 河北北路預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Reference Entry Points
 
@@ -72,7 +72,30 @@
   - passed (`Validated 9 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`)
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_puyang/map.md --validate-only`
   - passed (`Validation succeeded for 9 room(s).`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_puyang/map.md`
+  - passed (`Wrote 9 room scaffold file(s) to H:\repos\merc-fju-3.0\area\city_puyang\roo`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_puyang_forest/map.md`
+  - passed；同步把 `wild_puyang_forest/13906` 補成 `enter -> 17201` runtime boundary
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/dng_guandu_battlefield/map.md`
+  - passed；同步把 `dng_guandu_battlefield/14007` 補成 `out -> 17208` runtime boundary
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - passed；成功訊號寫入 `log/1058.log`（`三國歪傳之降龍伏虎開始正常運作`）
+- `debug/badobject`
+  - empty
+- `debug/error`
+  - only timeout-triggered shutdown path after smoke window closed；無新增 area loader blocker
+
+## Runtime Notes
+
+- 已建立最小 loadable runtime scaffold：`index`、`mob/19631-19634`、`obj/19651-19654`、`res/city.res`、`shp/supplies.shp`、`roo/17201-17209`
+- 已正式落成兩個 runtime boundary：
+  - `wild_puyang_forest/13906 <-> city_puyang/17201`
+  - `dng_guandu_battlefield/14007 <-> city_puyang/17208`
+- `south -> road_puyang` 與 `north -> city_nanpi` 仍維持 spec 預留，不在本輪 implementation scope
+- `docs/current-game/areas.md`、`docs/current-game/areas.json` 與 `area/directory.lst` 已同步納入 `city_puyang`
 
 ## Next Step Prompt
 
-`先 commit 目前 city_puyang 的 spec milestone；commit 後直接進 implementation，補齊對 wild_puyang_forest / dng_guandu_battlefield 的 runtime boundary、生成 roo 與最小 area runtime scaffold。`
+`先 commit 目前 city_puyang 的 implementation milestone；commit 後依 queue 規則重建下一個 actionable area，建立新 spec 並在通過 validate-only 後直接前進。`

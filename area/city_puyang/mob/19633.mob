@@ -1,0 +1,33 @@
+Vnum            19633
+Name            military clerk~
+ShortDesc       軍務書吏~
+Description
+這名站在軍務前街抱著文冊的書吏腳步極快，卻能在最短時間裡把糧道、巡令與北
+路來報整理成旁人聽得懂的幾句重點。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       110
+Level           24
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             15
+Wis             15
+Dex             11
+Con             11
+Hp              930
+Mana            125
+Move            110
+Class           0
+Gold            210
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
+

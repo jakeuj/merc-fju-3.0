@@ -1,0 +1,16 @@
+Vnum            19654
+Name            grain lantern~
+ShortDesc       糧道提燈(grain lantern)~
+Description
+一盞適合在濮陽市集與東糧道口之間夜巡照明的糧道提燈(grain lantern)被放在這
+裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           20
+Value           0 0 32 0
+Weight          2
+Cost            94
+End
+

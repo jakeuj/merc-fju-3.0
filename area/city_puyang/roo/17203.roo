@@ -1,0 +1,44 @@
+Vnum            17203
+Name            濮陽主街~
+Description
+主街上來往的人不算少，卻沒有大城那種純商旅喧鬧，反而總透著一股『任何人都可能跟前線有關』的氣息。糧商、差役、押車人與臨時徵調的腳夫混在一起，讓整條街都像在替更遠的戰事運作。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        17202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        17204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        17205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         主街~
+End
+
+#Enquire
+Keyword         市集~
+End
+
+#Enquire
+Keyword         官渡~
+End
+
+End

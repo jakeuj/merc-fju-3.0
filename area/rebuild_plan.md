@@ -709,45 +709,12 @@
 
 ## In Progress
 
-- `city_puyang`
-  - area_family: `City`
-  - reserved_room_block: `17201-17220`
-  - level_range: `20-32`
-  - theme: `軍旅`
-  - subtheme: `河北前沿 / 糧道與軍政中繼`
-  - external_links:
-    - `west`: `wild_puyang_forest` / `13906`
-    - `east`: `dng_guandu_battlefield` / `14007`
-    - `south`: `road_puyang` / 南驛官道預留
-    - `north`: `city_nanpi` / 河北北路預留
-  - delivery_gate: `spec_ready_for_commit`
-  - ref_inputs_used:
-    - `area/world_map.md`
-    - `ref/Readme.md`
-    - `ref/sanguo-progression-map.md`
-    - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/city_puyang/map.md`
-    - `ref/world-graph.md`
-    - `docs/3yWebsite/map/puyang.html`
-    - `docs/3yWebsite/docs/data/players.json`
-    - `docs/3yWebsite/docs/data/skills.json`
-    - `plans/area/0054-wild-puyang-forest.md`
-    - `plans/area/0055-dng-guandu-battlefield.md`
-  - ref_inputs_deferred:
-    - `ref/sanguo-area-specfirst/area/city_nanpi/map.md`
-    - `ref/sanguo-area-specfirst/area/wild_floodplain/map.md`
-    - 各類原型工具與模擬系統
-  - theme_basis:
-    - `world-graph` 已把濮陽放成兗州河北的前沿城市節點，並和 `city_nanpi`、戰場 / 野外節點同屬河北主線
-    - `wild_puyang_forest` 與 `dng_guandu_battlefield` 都已把 `city_puyang` 當相鄰目標，支持現在回補這個缺口
-    - `題材分布表` 將濮陽定位為軍旅城鎮，適合先落成帶糧道與軍務壓力的 frontier city
-    - `puyang.html` 證明濮陽具備獨立城市規模，不只是路線標籤
-  - compliance_check:
-    - compliant；在 `Wild` 後切回 `City`，同時補的是既有河北鏈缺口，不是另外開一段無耦合支線
+(目前無 `in_progress` 項目。)
 
 
 ## Done
 
+- `2026-03-21` `city_puyang` 已完成第一輪 runtime implementation，完成 `wild_puyang_forest/13906 <-> 17201` 與 `dng_guandu_battlefield/14007 <-> 17208` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1058.log`），達成可提交狀態
 - `2026-03-21` `wild_shouchun_fields` 已完成第一輪 runtime implementation，完成 `city_shouchun/17008 <-> 17101` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1057.log`），達成可提交狀態
 - `2026-03-21` `city_shouchun` 已完成第一輪 runtime implementation，完成 `road_shouchun_xuzhou/16908 <-> 17001` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1056.log`），達成可提交狀態
 - `2026-03-21` `road_shouchun_xuzhou` 已完成第一輪 runtime implementation，完成 `city_xuzhou/16808 <-> 16901` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1055.log`），達成可提交狀態
@@ -899,16 +866,20 @@
 
 ## Current Recommended Next Step
 
-`city_puyang` 已完成 spec 建立並待驗證 / 提交。下一步應先完成 validate-only 檢查與 spec milestone commit，再直接推進 implementation。
+目前 `todo` 與 `in_progress` 都為空。下一步應依 queue 規則重新盤點 `world_map + progression + 題材分布 + players/skills`，建立新的 next actionable area spec。
 
 ## Next Action
 
-- 完成 `city_puyang` spec gate：
-  - 驗證 `area/city_puyang/map.md`
-  - 更新單區 plan 的 validation 結果
-  - commit spec milestone
-  - commit 後直接進 implementation milestone
+- 重新盤點下一個主世界 actionable area：
+  - 檢查 `area/world_map.md`
+  - 檢查 `ref/sanguo-progression-map.md`
+  - 檢查 `ref/三國-MUD-題材分布表.md`
+  - 檢查 `docs/3yWebsite/docs/data/players.json`
+  - 檢查 `docs/3yWebsite/docs/data/skills.json`
+  - 選出符合 queue variety 的下一區
+  - 建立單區 plan、`map.md` spec 與 validate-only 結果
+  - 通過後直接 commit spec milestone
 
 ## Next Prompt
 
-`續做 city_puyang：先完成 spec 驗證與 commit，接著直接進 implementation milestone；需要時自動 commit，並在通過 gate 後直接往下一步推進。`
+`依 queue 規則盤點並建立下一個待建 area：先重建 next actionable area 的 spec，validate-only 通過後自動 commit，接著再直接進 implementation milestone。`

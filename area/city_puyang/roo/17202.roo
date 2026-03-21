@@ -1,0 +1,32 @@
+Vnum            17202
+Name            西門甬道~
+Description
+甬道兩側的木牌與盤查名冊讓剛進城的人立刻明白，濮陽雖有煙火氣，卻不是能隨便鬆懈的地方。越靠近官渡，連一座城怎麼看人、怎麼留人，都會多出幾分軍務緊張。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        17201
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        17203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         盤查~
+End
+
+#Enquire
+Keyword         路引~
+End
+
+End

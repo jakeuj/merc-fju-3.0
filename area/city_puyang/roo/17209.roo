@@ -1,0 +1,28 @@
+Vnum            17209
+Name            北路牌樓~
+Description
+北路牌樓把濮陽往河北深處的氣息慢慢拉直，與東邊官渡的壓力相比，這裡更多的是長線行旅與邊地消息的感覺。可即使方向不同，那股前沿城市特有的緊繃仍在，像任何一條路都不是純粹平靜的出城路。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        17204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         北路~
+End
+
+#Enquire
+Keyword         南皮~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

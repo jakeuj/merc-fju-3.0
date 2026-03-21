@@ -1,0 +1,36 @@
+Vnum            17201
+Name            西門林外口~
+Description
+從林野邊路走到這裡時，濮陽西門的輪廓並不帶來純然安定，反而更像一道把散亂消息重新收進城裡的關口。門外還沾著林泥與濕草氣，門內卻已經能聞到糧車、兵甲與市聲混成的前沿城氣。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        13906
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        17202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         濮陽~
+End
+
+#Enquire
+Keyword         西門~
+End
+
+#Enquire
+Keyword         林外~
+End
+
+End

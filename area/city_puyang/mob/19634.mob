@@ -1,0 +1,33 @@
+Vnum            19634
+Name            grain road guide~
+ShortDesc       糧道引客~
+Description
+這名站在東糧道口附近替人指路的引客對哪段路能快、哪段路該避，都有自己的一
+套說法，像任何想往官渡靠近的人都得先過他這關。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       95
+Level           23
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             12
+Dex             12
+Con             12
+Hp              880
+Mana            85
+Move            120
+Class           0
+Gold            200
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
+

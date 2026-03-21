@@ -1735,6 +1735,25 @@
         "plans/area/0086-wild-shouchun-fields.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "city_puyang",
+      "title": "濮陽",
+      "room_range": "17201-17220",
+      "load_order": 93,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "wild_puyang_forest",
+      "theme_primary": "軍旅",
+      "theme_secondary": "河北前沿 / 糧道與軍政中繼",
+      "summary": "承接濮陽林野與官渡糧道殘線，落成西門、主街十字、市集、軍務前街與東糧道口骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/city_puyang/index",
+        "area/city_puyang/map.md",
+        "plans/area/0087-city-puyang.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

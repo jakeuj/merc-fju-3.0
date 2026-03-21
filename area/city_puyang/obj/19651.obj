@@ -1,0 +1,16 @@
+Vnum            19651
+Name            puyang ration~
+ShortDesc       濮陽乾糧包(puyang ration)~
+Description
+一包專給前線押車人與臨時腳夫隨身帶著走的濮陽乾糧包(puyang ration)被放在這
+裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           20
+Value           16 30 4 0
+Weight          1
+Cost            92
+End
+

@@ -1,0 +1,33 @@
+Vnum            19632
+Name            market quartermaster~
+ShortDesc       市集掌櫃~
+Description
+這位掌櫃把乾糧、水囊、燈油和繩索排得一絲不亂，說起濮陽最新行情時卻總會順手
+多提一句前線哪裡又缺人缺貨。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       115
+Level           20
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             14
+Wis             14
+Dex             11
+Con             11
+Hp              820
+Mana            110
+Move            105
+Class           0
+Gold            240
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
+

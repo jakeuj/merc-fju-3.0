@@ -21,6 +21,14 @@ ExitKeyword     ~
 ExitKey         0
 End
 
+#Exit
+Direction       ENTER
+ExitVnum        17201
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
 #Keyword
 Keyword         枯池~
 Description

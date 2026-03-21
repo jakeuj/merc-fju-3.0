@@ -1,0 +1,33 @@
+Vnum            19631
+Name            west gate guard~
+ShortDesc       西門值役~
+Description
+這名守在濮陽西門附近的值役總先看鞋上泥色，再決定該不該問第二句話，像林外
+來的人與城裡出去的人，在他眼裡本來就該分得很清楚。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       105
+Level           22
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             12
+Wis             12
+Dex             12
+Con             12
+Hp              860
+Mana            80
+Move            115
+Class           0
+Gold            190
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
+

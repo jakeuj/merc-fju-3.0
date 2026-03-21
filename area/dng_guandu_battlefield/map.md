@@ -256,7 +256,8 @@
       "labels": ["pit", "ash"],
       "exits": [
         { "direction": "west", "to": 14006 },
-        { "direction": "east", "to": 14008 }
+        { "direction": "east", "to": 14008 },
+        { "direction": "out", "to": 17208, "external": true }
       ],
       "keywords": [
         {

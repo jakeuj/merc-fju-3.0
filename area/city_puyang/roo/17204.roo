@@ -1,0 +1,52 @@
+Vnum            17204
+Name            城心十字~
+Description
+城心十字把濮陽的真正性格都攤在眼前：一邊是補給與人煙，一邊是軍務與糧道，再往北還有河北各路傳來的消息。站在這裡時最能感覺到濮陽不是單純前線，而是把整個前線壓力整理成可運作秩序的樞紐。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        17203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        17206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        17208
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17209
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         去路~
+End
+
+#Enquire
+Keyword         糧道~
+End
+
+#Enquire
+Keyword         北路~
+End
+
+End

@@ -1,0 +1,16 @@
+Vnum            19653
+Name            puyang side blade~
+ShortDesc       濮陽短刀(puyang side blade)~
+Description
+一把配給濮陽門役與糧道引客隨身防備的濮陽短刀(puyang side blade)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           22
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            126
+End
+
