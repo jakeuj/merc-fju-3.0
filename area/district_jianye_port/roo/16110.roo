@@ -1,0 +1,28 @@
+Vnum            16110
+Name            商船外棧~
+Description
+外棧邊停著的多是準備往更遠水路去的商船，和城內可預期的節奏相比，這裡更像建業把手真正伸向外面的地方。只要再往南去，城市的庇護感就會迅速被航線本身接手。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        16108
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         商船~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+#Enquire
+Keyword         航路~
+End
+
+End

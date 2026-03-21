@@ -22,7 +22,7 @@
   - `west`: `city_jianye` / 港向街口
   - `south`: `sea_trade_route` / 商船航路預留
   - `east`: `district_shipyards` / 造船區預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Reference Entry Points
 
@@ -66,7 +66,33 @@
   - passed with `0 error(s), 0 warning(s)`
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/district_jianye_port/map.md --validate-only`
   - passed for `8` room(s)
+- `python -X utf8 tools/mapmd_validate.py area/city_jianye/map.md`
+  - passed with `0 error(s), 0 warning(s)` after aligning `16010 <-> 16101`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_jianye/map.md`
+  - rewrote `roo/16001-16010` to include the `16010 east -> 16101 external` boundary
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/district_jianye_port/map.md`
+  - wrote `roo/16101-16110`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed; Linux build path reported `merc` up to date
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - startup smoke test passed; success signal found in `log/1043.log`
+- `debug/badobject`
+  - empty after smoke test
+- `debug/error`
+  - only contains the expected timeout-forced shutdown path after the successful run
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `district_jianye_port`，保留房號段 `16101-16130`
+- `area/district_jianye_port/index` 已建立，`Serial 165`
+- 第一輪 runtime scaffold 已加入：
+  - `mob/17831-17834`
+  - `obj/17851-17854`
+  - `res/port.res`
+  - `shp/supplies.shp`
+- `city_jianye/16010 <-> district_jianye_port/16101` 已成為正式 runtime boundary
+- `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步登錄 `district_jianye_port`
 
 ## Next Step Prompt
 
-`先 commit 目前 district_jianye_port 的 spec milestone；commit 後直接做 implementation milestone，補 boundary、roo、index/mob/obj/res/shp，並跑 WSL build 與 startup smoke test。`
+`先 commit 目前 district_jianye_port 的 implementation milestone；commit 後直接盤點並建立下一個待建 area 的 spec milestone。`

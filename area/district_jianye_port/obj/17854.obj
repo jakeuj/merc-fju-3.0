@@ -1,0 +1,14 @@
+Vnum            17854
+Name            harbor lantern~
+ShortDesc       港棚提燈(harbor lantern)~
+Description
+一盞常掛在港棚與碼頭邊，方便夜間點貨與看棧的港棚提燈(harbor lantern)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           100
+Value           0 0 45 0
+Weight          2
+Cost            280
+End

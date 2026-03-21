@@ -1,0 +1,14 @@
+Vnum            17852
+Name            travel flask~
+ShortDesc       航路水囊(travel flask)~
+Description
+一只常見於碼頭、泊位與外棧之間，方便帶著趕路的航路水囊(travel flask)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           100
+Value           14 14 LIQ_WATER 0
+Weight          2
+Cost            260
+End

@@ -1526,6 +1526,25 @@
         "plans/area/0075-city-jianye.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "district_jianye_port",
+      "title": "建業港區",
+      "room_range": "16101-16130",
+      "load_order": 82,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_jianye",
+      "theme_primary": "歷史城市",
+      "theme_secondary": "碼頭 / 商港",
+      "summary": "承接建業港向街口，落成碼頭主道、貨棚泊位、船行牌坊與商船外棧骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/district_jianye_port/index",
+        "area/district_jianye_port/map.md",
+        "plans/area/0076-district-jianye-port.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

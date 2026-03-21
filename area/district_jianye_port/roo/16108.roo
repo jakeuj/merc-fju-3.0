@@ -1,0 +1,44 @@
+Vnum            16108
+Name            外港號棚~
+Description
+號棚立在主泊位和外棧之間，專管喊價、點貨與安排船期，像整個港區所有最喧嘩的聲音最後都得在這裡變成真正能執行的次序。這裡不是城門，卻同樣掌著出入。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        16105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        16104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16110
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         號棚~
+End
+
+#Enquire
+Keyword         船期~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+End

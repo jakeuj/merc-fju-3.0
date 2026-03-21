@@ -1,0 +1,32 @@
+Vnum            17834
+Name            outer pier patrol~
+ShortDesc       外棧巡役~
+Description
+這名在商船外棧邊來回巡看的巡役步伐比城內更貼近水路節奏，像他真正要防
+的不只是麻煩旅人，更是任何可能趁港口繁忙混進航線裡的異常。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             14
+Dex             12
+Con             13
+Hp              4100
+Mana            150
+Move            150
+Class           0
+Gold            660
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

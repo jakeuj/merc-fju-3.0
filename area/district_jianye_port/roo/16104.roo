@@ -1,0 +1,44 @@
+Vnum            16104
+Name            船行牌坊~
+Description
+幾座掛滿船行招牌與航線木牌的牌坊把港區最精明、也最世故的一面清楚亮了出來。這裡的每一塊字牌都像在說，遠方再遠，也得先經過這些人手裡的秤與帳。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        16103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16108
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16109
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         船行~
+End
+
+#Enquire
+Keyword         航路~
+End
+
+#Enquire
+Keyword         牌坊~
+End
+
+End

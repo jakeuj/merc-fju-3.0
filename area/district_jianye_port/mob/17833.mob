@@ -1,0 +1,32 @@
+Vnum            17833
+Name            shipping scribe~
+ShortDesc       船行書手~
+Description
+這名在船行牌坊附近持筆記帳的書手動作很快，像一條新航線、一筆新貨單或
+一個陌生名字，只要進了港區，就終究得先在他的紙上留下一道痕跡。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             16
+Wis             15
+Dex             11
+Con             11
+Hp              3800
+Mana            190
+Move            150
+Class           0
+Gold            610
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

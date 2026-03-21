@@ -1,0 +1,32 @@
+Vnum            17832
+Name            berth steward~
+ShortDesc       泊位管事~
+Description
+這名在貨棚和泊位間來回清點的管事看似只是忙著點貨和催人，實際上卻像替
+整個港區守著一張誰都不能輕易打亂的次序表。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             14
+Wis             14
+Dex             11
+Con             12
+Hp              3900
+Mana            170
+Move            150
+Class           0
+Gold            620
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

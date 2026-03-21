@@ -1,0 +1,32 @@
+Vnum            17831
+Name            harbor broker~
+ShortDesc       港棚掌櫃~
+Description
+這名熟悉港區貨流和船期的掌櫃總能在喧嘩裡先分辨出誰是來買補給、誰是來
+問船、又有誰只是想從建業港口打聽更遠的消息。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             15
+Wis             15
+Dex             11
+Con             12
+Hp              4000
+Mana            180
+Move            150
+Class           0
+Gold            640
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

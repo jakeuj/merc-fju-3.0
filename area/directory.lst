@@ -234,3 +234,6 @@ fort_naval_base
 
 * city_jianye 房間 16001-16030 (建業)
 city_jianye
+
+* district_jianye_port 房間 16101-16130 (建業港區)
+district_jianye_port

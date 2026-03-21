@@ -1,0 +1,32 @@
+Vnum            16105
+Name            貨棚泊位~
+Description
+貨棚和泊位在這裡直接接在一起，讓裝卸、盤點和搬運幾乎沒有空隙。港區真正讓人佩服的地方不是熱鬧，而是這種熱鬧居然還能維持成秩序。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        16103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16108
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         貨棚~
+End
+
+#Enquire
+Keyword         泊位~
+End
+
+End

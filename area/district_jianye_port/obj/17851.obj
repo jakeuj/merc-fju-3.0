@@ -1,0 +1,14 @@
+Vnum            17851
+Name            dock ration~
+ShortDesc       港區乾糧包(dock ration)~
+Description
+一包專給忙著在碼頭與船棚間奔走的人準備的港區乾糧包(dock ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           100
+Value           32 50 4 0
+Weight          1
+Cost            270
+End

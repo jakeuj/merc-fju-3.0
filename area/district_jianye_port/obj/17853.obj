@@ -1,0 +1,15 @@
+Vnum            17853
+Name            dock patrol blade~
+ShortDesc       港巡短刀(dock patrol blade)~
+Description
+一把專給港區巡役與值棚差役佩帶的港巡短刀(dock patrol blade)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           100
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            370
+End

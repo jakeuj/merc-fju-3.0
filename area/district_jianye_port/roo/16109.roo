@@ -1,0 +1,28 @@
+Vnum            16109
+Name            東向工棧~
+Description
+幾座工棧和木料堆把港區更偏技術與製造的一面露了出來，像再往東去，節奏就不只是裝卸和交易，而會更靠近造船、修補和長線準備本身。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        16104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         東邊~
+End
+
+#Enquire
+Keyword         工棧~
+End
+
+#Enquire
+Keyword         造船~
+End
+
+End

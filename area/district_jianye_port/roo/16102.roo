@@ -1,0 +1,24 @@
+Vnum            16102
+Name            綁纜側棚~
+Description
+側棚下堆著纜繩、木樁和各種補修雜物，讓人一看就知道這裡真正重視的不是好看，而是任何一艘靠岸的船都得立刻能被接住。港埠的秩序往往就是從這種不起眼的地方開始。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        16101
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         纜繩~
+End
+
+#Enquire
+Keyword         棚子~
+End
+
+End

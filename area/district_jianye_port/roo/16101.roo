@@ -1,0 +1,44 @@
+Vnum            16101
+Name            港向街口~
+Description
+離開建業主城後，街面上的節奏很快就被貨聲、叫價和纜繩摩擦木樁的聲音接手。這裡仍屬於建業，但已經明顯不是內城治理的節奏，而是對外往來真正開始湧動的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        16010
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         港區~
+End
+
+#Enquire
+Keyword         主城~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

@@ -194,7 +194,8 @@
       "coord": [0, 4, 0],
       "labels": ["east-link", "port-road"],
       "exits": [
-        { "direction": "south", "to": 16008 }
+        { "direction": "south", "to": 16008 },
+        { "direction": "east", "to": 16101, "external": true }
       ],
       "enquires": ["港區", "東邊", "船"]
     }

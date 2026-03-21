@@ -1,0 +1,40 @@
+Vnum            16103
+Name            碼頭主道~
+Description
+主道比城內街巷更寬，也更願意讓車輪和人潮同時擠出自己的聲量。走在這裡時，很難不感覺整個港區真正的心跳正在腳下這條道上往復奔忙。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        16101
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         碼頭~
+End
+
+#Enquire
+Keyword         貨棚~
+End
+
+End
