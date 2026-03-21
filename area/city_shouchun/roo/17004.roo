@@ -1,0 +1,60 @@
+Vnum            17004
+Name            城心十字~
+Description
+四面街路在這裡交會，一邊往官署，一邊往田野外口，還有更南的道路繼續把人往江東帶去。壽春真正的價值，就在這種既能收束旅程又能迅速再分流的城心節奏。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        17003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        17006
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        17007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       OUT
+ExitVnum        17008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        17009
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         去路~
+End
+
+#Enquire
+Keyword         田野~
+End
+
+#Enquire
+Keyword         南路~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            19431
+Name            north gate constable~
+ShortDesc       北門值役~
+Description
+這名守在壽春北門附近的值役不只盤查來路，還像能從旅人腳上的灰和車上的土色
+分辨出對方到底是剛從官道趕來，還是在外郊繞了一圈才回城。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       105
+Level           26
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             12
+Wis             12
+Dex             12
+Con             12
+Hp              980
+Mana            85
+Move            120
+Class           0
+Gold            210
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

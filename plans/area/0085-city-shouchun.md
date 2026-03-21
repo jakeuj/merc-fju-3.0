@@ -22,7 +22,7 @@
   - `north`: `road_shouchun_xuzhou` / 淮東官道
   - `out`: `wild_shouchun_fields` / 城外田野預留
   - `south`: `city_jianye` / 建業方向預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Reference Entry Points
 
@@ -66,7 +66,33 @@
   - passed (`Validated 9 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`)
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_shouchun/map.md --validate-only`
   - passed (`Validation succeeded for 9 room(s).`)
+- `python -X utf8 tools/mapmd_validate.py area/road_shouchun_xuzhou/map.md`
+  - passed (`Validated 8 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`) after aligning `16908 <-> 17001`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_shouchun/map.md`
+  - passed (`Wrote 9 room scaffold file(s) to area/city_shouchun/roo`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/road_shouchun_xuzhou/map.md`
+  - passed (`Wrote 8 room scaffold file(s) to area/road_shouchun_xuzhou/roo`) after aligning `16908 <-> 17001`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed (`make: 'merc' is up to date.`)
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - passed via startup success log `log/1056.log`
+- `debug/badobject`
+  - passed (empty after smoke test)
+- `debug/error`
+  - only contains the expected timeout-forced shutdown path after the successful run
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `city_shouchun`，保留房號段 `17001-17020`
+- `area/city_shouchun/index` 已建立，`Serial 174`
+- 第一輪 runtime scaffold 已加入：
+  - `mob/19431-19434`
+  - `obj/19451-19454`
+  - `res/city.res`
+  - `shp/supplies.shp`
+- `road_shouchun_xuzhou/16908 <-> city_shouchun/17001` 已成為正式 runtime boundary
+- `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步登錄 `city_shouchun`
 
 ## Next Step Prompt
 
-`先 commit 目前 city_shouchun 的 spec milestone；commit 後直接做 implementation milestone，補 runtime scaffold、接上 road_shouchun_xuzhou 邊界並跑 build / smoke test。`
+`先 commit 目前 city_shouchun 的 implementation milestone；commit 後回到 queue 規則盤點下一個待建 area，建立新的 spec milestone。`

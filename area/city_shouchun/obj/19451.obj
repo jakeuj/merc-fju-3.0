@@ -1,0 +1,15 @@
+Vnum            19451
+Name            shouchun ration~
+ShortDesc       壽春乾糧包(shouchun ration)~
+Description
+一包專給北路旅人與城中轉運人隨身帶著走的壽春乾糧包(shouchun ration)被放在
+這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           24
+Value           18 32 4 0
+Weight          1
+Cost            100
+End

@@ -1,0 +1,28 @@
+Vnum            17009
+Name            南路牌口~
+Description
+往南的路牌把視線一路拖向更遠的江東腹地，像是在提醒旅人壽春不是終點，而是下一段主線真正重新發動的地方。站在這裡時，北路疲態與城內補給已經混成了新的出發感。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        17004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         南路~
+End
+
+#Enquire
+Keyword         建業~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

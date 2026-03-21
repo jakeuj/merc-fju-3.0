@@ -64,6 +64,7 @@
       "coord": [0, 0, 0],
       "labels": ["entry", "north-edge", "world-link-north"],
       "exits": [
+        { "direction": "north", "to": 16908, "external": true },
         { "direction": "south", "to": 17002 }
       ],
       "enquires": ["壽春", "北門", "官道"]

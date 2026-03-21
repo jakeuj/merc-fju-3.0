@@ -1,0 +1,24 @@
+Vnum            17007
+Name            東街坊口~
+Description
+東街坊口的氣氛比城心輕些，像專門留給本地人和中短程行旅喘口氣的地方。可只要往外看，就會知道這座城並沒有真正鬆下來，因為田野和南路都還等著被分派出去。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        17004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         坊口~
+End
+
+#Enquire
+Keyword         外城~
+End
+
+End

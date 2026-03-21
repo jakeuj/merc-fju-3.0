@@ -1,0 +1,28 @@
+Vnum            17006
+Name            官署前街~
+Description
+官署前街比主街安靜得多，來往的多是抱文冊的人與等候通傳的差役。這裡把壽春從普通商鎮拉成一座真正有軍政分量的據點，也讓北路消息在此多了一層過濾與判斷。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        17004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         官署~
+End
+
+#Enquire
+Keyword         差役~
+End
+
+#Enquire
+Keyword         公文~
+End
+
+End

@@ -1697,6 +1697,25 @@
         "plans/area/0084-road-shouchun-xuzhou.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "city_shouchun",
+      "title": "壽春",
+      "room_range": "17001-17020",
+      "load_order": 91,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "road_shouchun_xuzhou",
+      "theme_primary": "歷史城市",
+      "theme_secondary": "淮南據點 / 北段轉運城",
+      "summary": "承接淮東官道南口，落成北門甬道、城心十字、市集牌樓、官署前街與田野外口骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/city_shouchun/index",
+        "area/city_shouchun/map.md",
+        "plans/area/0085-city-shouchun.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

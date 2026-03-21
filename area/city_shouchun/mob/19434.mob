@@ -1,0 +1,32 @@
+Vnum            19434
+Name            south road guide~
+ShortDesc       南路引客~
+Description
+這名站在南路牌口附近替人指路的引客對哪條路能快、哪條路該慢都有自己的說法
+，像整座壽春最後會把旅人交給哪條路，總要先經過他一番掂量。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       95
+Level           25
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             12
+Dex             12
+Con             12
+Hp              930
+Mana            90
+Move            125
+Class           0
+Gold            190
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1,0 +1,28 @@
+Vnum            17005
+Name            市集牌樓~
+Description
+牌樓下糧袋、藥包與水囊堆得很整齊，讓人一看就知道這是專門服務長路與轉運的市集。和北路官道相比，這裡終於有了可以真正停下來整補行囊的厚度。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        17003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         市集~
+End
+
+#Enquire
+Keyword         糧行~
+End
+
+#Enquire
+Keyword         補給~
+End
+
+End

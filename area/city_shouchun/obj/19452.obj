@@ -1,0 +1,15 @@
+Vnum            19452
+Name            huainan flask~
+ShortDesc       淮南水囊(huainan flask)~
+Description
+一只方便在北門、城心與南路牌口之間帶著走的淮南水囊(huainan flask)被放在這
+裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           24
+Value           12 12 LIQ_WATER 0
+Weight          2
+Cost            88
+End

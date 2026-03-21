@@ -1,0 +1,36 @@
+Vnum            17001
+Name            北門外道~
+Description
+經過長段官道後，壽春北門終於在視野裡站穩了下來。門外仍帶著旅路塵氣，但城牆、旌牌與盤查目光已經把這裡的節奏從路上的漂移重新收回一座城的秩序裡。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        16908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        17002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         壽春~
+End
+
+#Enquire
+Keyword         北門~
+End
+
+#Enquire
+Keyword         官道~
+End
+
+End

@@ -1,0 +1,44 @@
+Vnum            17003
+Name            壽春主街~
+Description
+主街上人流雖多，卻不像州城那樣四面消息翻湧，而更像一座據點城市把路上來的人逐一消化。糧車、差役與店招都在說同一件事：這裡是往南與往外再分流前的穩定落腳點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        17002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        17004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        17005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         主街~
+End
+
+#Enquire
+Keyword         市集~
+End
+
+#Enquire
+Keyword         官署~
+End
+
+End

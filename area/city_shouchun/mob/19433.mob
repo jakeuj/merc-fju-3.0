@@ -1,0 +1,32 @@
+Vnum            19433
+Name            office clerk~
+ShortDesc       官署書吏~
+Description
+這名在官署前街抱著文冊快步行走的書吏總是一副沒空抬頭的樣子，可只要有人真
+問到路務或城中差事，他又會把該說的重點講得十分清楚。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       110
+Level           28
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             15
+Wis             15
+Dex             11
+Con             11
+Hp              1020
+Mana            135
+Move            115
+Class           0
+Gold            220
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

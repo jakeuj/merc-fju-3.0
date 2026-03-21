@@ -1,0 +1,28 @@
+Vnum            17008
+Name            田野外口~
+Description
+出了外口，城牆的壓力立刻薄了幾分，取而代之的是田埂、風聲與外郊路感。這裡像壽春特地留給人往外試探的一道口子，讓城市和田野彼此只隔著一步之遙。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       ENTER
+ExitVnum        17004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         田野~
+End
+
+#Enquire
+Keyword         外面~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

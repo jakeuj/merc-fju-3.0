@@ -1,0 +1,16 @@
+Vnum            19453
+Name            shouchun side blade~
+ShortDesc       壽春短刀(shouchun side blade)~
+Description
+一把配給壽春城門值役與路口引客隨身防備的壽春短刀(shouchun side blade)被放
+在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           25
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            130
+End

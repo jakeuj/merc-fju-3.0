@@ -709,20 +709,12 @@
 
 ## In Progress
 
-- `city_shouchun`
-  - plan: `plans/area/0085-city-shouchun.md`
-  - delivery_gate: `spec_ready_for_commit`
-  - current_status:
-    - 已建立 `plans/area/0085-city-shouchun.md`
-    - 已建立 `area/city_shouchun/map.md`
-    - 已固定 `reserved_room_block: 17001-17020`
-    - 已鎖定 `road_shouchun_xuzhou/16908 -> city_shouchun/17001` 作為後續 runtime boundary 起點
-  - next_action:
-    - validate `city_shouchun` spec，通過後 commit spec milestone
+(目前無 `in_progress` 項目。)
 
 
 ## Done
 
+- `2026-03-21` `city_shouchun` 已完成第一輪 runtime implementation，完成 `road_shouchun_xuzhou/16908 <-> 17001` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1056.log`），達成可提交狀態
 - `2026-03-21` `road_shouchun_xuzhou` 已完成第一輪 runtime implementation，完成 `city_xuzhou/16808 <-> 16901` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1055.log`），達成可提交狀態
 - `2026-03-21` `city_xuzhou` 已完成第一輪 runtime implementation，完成 `city_chenliu/13810 <-> 16801` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1054.log`），達成可提交狀態
 - `2026-03-21` `sec_water_ruins` 已完成第一輪 runtime implementation、commit `62ffa01`，完成 `wild_pirate_islands/15810 <-> 16701` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1053.log`），並達成可前進下一區狀態
@@ -872,16 +864,17 @@
 
 ## Current Recommended Next Step
 
-`city_shouchun` 已完成 spec 草案。下一步應先做 validate-only，通過後提交 spec milestone，接著直接進入 implementation milestone。
+`city_shouchun` 已完成第一輪 runtime implementation 並通過 build / smoke test。下一步應回到 queue 規則盤點下一個待建 area，建立新的 spec milestone。
 
 ## Next Action
 
-- 完成 `city_shouchun`：
-  - 跑 `tools/mapmd_validate.py`
-  - 跑 generator `--validate-only`
-  - commit spec milestone
-  - 直接進入 implementation milestone
+- 依 queue 規則重建下一個 actionable area：
+  - 檢查 `area/world_map.md`
+  - 檢查 `ref/sanguo-progression-map.md`
+  - 檢查 `ref/三國-MUD-題材分布表.md`
+  - 交叉比對 `docs/3yWebsite/docs/data/players.json` / `skills.json`
+  - 建立新的 spec milestone
 
 ## Next Prompt
 
-`先 validate 並 commit 目前 city_shouchun 的 spec milestone；commit 後直接做 implementation milestone，補 runtime scaffold、接上 road_shouchun_xuzhou 邊界並跑 build / smoke test。`
+`回到 queue 規則盤點下一個待建 area，建立新的 spec milestone；需要時自動 commit，並在通過 gate 後直接往 implementation 推進。`

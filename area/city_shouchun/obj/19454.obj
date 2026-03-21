@@ -1,0 +1,15 @@
+Vnum            19454
+Name            city lantern~
+ShortDesc       城街提燈(city lantern)~
+Description
+一盞適合在壽春市集、官署前街與夜色城心間照明的城街提燈(city lantern)被放
+在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           24
+Value           0 0 32 0
+Weight          2
+Cost            96
+End

@@ -1,0 +1,32 @@
+Vnum            17002
+Name            北門甬道~
+Description
+甬道兩側的木牌與巡夜告示讓剛進城的人立刻收起旅路上的鬆散。和徐州相比，這裡多了幾分淮南重鎮的防備感，像任何進出都會先被這座城默默記上一筆。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        17001
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        17003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         告示~
+End
+
+#Enquire
+Keyword         巡夜~
+End
+
+End

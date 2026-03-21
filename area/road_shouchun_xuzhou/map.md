@@ -161,7 +161,8 @@
       "coord": [0, 5, 0],
       "labels": ["south-edge", "world-link-south"],
       "exits": [
-        { "direction": "north", "to": 16907 }
+        { "direction": "north", "to": 16907 },
+        { "direction": "south", "to": 17001, "external": true }
       ],
       "enquires": ["南邊", "壽春", "去路"]
     }
