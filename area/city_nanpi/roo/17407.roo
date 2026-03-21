@@ -1,0 +1,28 @@
+Vnum            17407
+Name            官署前街~
+Description
+越靠近官署，街上的聲音就會自然壓低一些。這裡讓人強烈感受到南皮並不是鬆散城鎮，而是一座有地方勢力、有行政秩序，也有明確權力層次的北方主城。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        17406
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         官署~
+End
+
+#Enquire
+Keyword         勢力~
+End
+
+#Enquire
+Keyword         告示~
+End
+
+End

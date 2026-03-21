@@ -1,0 +1,15 @@
+Vnum            19853
+Name            nanpi side blade~
+ShortDesc       南皮短刀(nanpi side blade)~
+Description
+一把配給南門值役與北道引路人隨身防備的南皮短刀(nanpi side blade)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           26
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            138
+End

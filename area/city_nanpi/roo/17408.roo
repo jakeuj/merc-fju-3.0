@@ -1,0 +1,28 @@
+Vnum            17408
+Name            東向平原口~
+Description
+東邊的城口把視線慢慢放向更開闊的河北平原，連風都像變得更直接一些。這裡不像主街那麼有人聲，卻能讓人清楚意識到南皮並不是終點，而只是更大北地路網的一個節點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        17404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         平原~
+End
+
+#Enquire
+Keyword         東路~
+End
+
+#Enquire
+Keyword         外道~
+End
+
+End

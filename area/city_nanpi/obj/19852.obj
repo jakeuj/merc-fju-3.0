@@ -1,0 +1,14 @@
+Vnum            19852
+Name            north road flask~
+ShortDesc       北路水囊(north road flask)~
+Description
+一只方便在河北主線上隨身攜帶的北路水囊(north road flask)被擺在一旁。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           24
+Value           10 10 0 0
+Weight          1
+Cost            88
+End

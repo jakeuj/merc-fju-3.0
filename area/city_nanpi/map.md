@@ -64,6 +64,7 @@
       "coord": [0, 0, 0],
       "labels": ["entry", "south-edge", "world-link-south"],
       "exits": [
+        { "direction": "south", "to": 17209, "external": true },
         { "direction": "north", "to": 17402 }
       ],
       "enquires": ["南路", "濮陽", "進城"]

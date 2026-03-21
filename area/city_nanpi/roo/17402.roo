@@ -1,0 +1,32 @@
+Vnum            17402
+Name            南皮南街~
+Description
+南街的屋舍與牌樓比濮陽更有地方城鎮的煙火氣，卻也不乏守望與打量的眼神。越往城心走，越能感覺這裡並非單純商街，而是一座會把各路人等重新編進地方秩序的北方城鎮。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        17401
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         南街~
+End
+
+#Enquire
+Keyword         城裡~
+End
+
+End

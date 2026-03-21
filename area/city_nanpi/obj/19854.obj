@@ -1,0 +1,14 @@
+Vnum            19854
+Name            market lantern~
+ShortDesc       市樓提燈(market lantern)~
+Description
+一盞掛在市樓與牌棚邊都很合用的市樓提燈(market lantern)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           24
+Value           0 0 28 0
+Weight          2
+Cost            94
+End

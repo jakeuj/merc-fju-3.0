@@ -1,0 +1,32 @@
+Vnum            19832
+Name            market steward~
+ShortDesc       市集掌事~
+Description
+這名掌著市集牌樓一帶雜務的掌事對來往貨色和行腳人都很熟，光看眼神就知道誰是
+常客、誰只是路過。他把南皮的日用秩序維持得相當俐落。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           24
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             12
+Wis             12
+Dex             11
+Con             11
+Hp              810
+Mana            85
+Move            122
+Class           0
+Gold            190
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1,0 +1,28 @@
+Vnum            17409
+Name            北道牌樓~
+Description
+北道牌樓比南路牌口更有遠行感，來往者的裝束與口音也明顯更雜。站在這裡時，會覺得南皮真正的角色不是把路收住，而是把不同方向的河北消息整成能繼續往北送出的秩序。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        17404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         北道~
+End
+
+#Enquire
+Keyword         北邊~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

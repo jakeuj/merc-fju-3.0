@@ -1,0 +1,32 @@
+Vnum            19831
+Name            south gate guard~
+ShortDesc       南門值役~
+Description
+這名站在南路牌口附近的值役眼神銳利，對從濮陽北來的旅人尤其看得仔細。他不是
+前線守軍那種緊繃模樣，卻有一種地方城門特有的不容含糊。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           26
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             11
+Wis             11
+Dex             12
+Con             12
+Hp              920
+Mana            70
+Move            135
+Class           0
+Gold            170
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

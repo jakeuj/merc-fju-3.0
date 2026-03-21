@@ -184,7 +184,8 @@
       "coord": [3, 1, 0],
       "labels": ["north-link", "gate-road"],
       "exits": [
-        { "direction": "south", "to": 17204 }
+        { "direction": "south", "to": 17204 },
+        { "direction": "north", "to": 17401, "external": true }
       ],
       "enquires": ["北路", "南皮", "去路"]
     }

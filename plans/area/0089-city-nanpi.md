@@ -22,7 +22,7 @@
   - `south`: `city_puyang` / 河北南路
   - `east`: `wild_hebei_plain` / 平原外道預留
   - `north`: `road_nanpi_beiping` / 河北北道預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Reference Entry Points
 
@@ -69,7 +69,26 @@
   - passed (`Validated 9 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`)
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_nanpi/map.md --validate-only`
   - passed (`Validation succeeded for 9 room(s).`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_nanpi/map.md`
+  - passed (`Wrote 9 room scaffold file(s) to H:\repos\merc-fju-3.0\area\city_nanpi\roo`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_puyang/map.md`
+  - passed；同步把 `city_puyang/17209` 補成 `north -> 17401` runtime boundary
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - passed；成功訊號寫入 `log/1061.log`（`三國歪傳之降龍伏虎開始正常運作`）
+- `debug/badobject`
+  - empty
+- `debug/error`
+  - only timeout-triggered shutdown path after smoke window closed；無新增 area loader blocker
+
+## Runtime Notes
+
+- 已建立最小 loadable runtime scaffold：`index`、`mob/19831-19834`、`obj/19851-19854`、`res/city.res`、`shp/supplies.shp`、`roo/17401-17409`
+- 已正式落成 runtime boundary：`city_puyang/17209 <-> city_nanpi/17401`
+- `east -> wild_hebei_plain` 與 `north -> road_nanpi_beiping` 仍維持 spec 預留，不在本輪 implementation scope
+- `area/directory.lst`、`docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步納入 `city_nanpi`
 
 ## Next Step Prompt
 
-`先 commit 目前 city_nanpi 的 spec milestone；commit 後直接進 implementation，補齊對 city_puyang 的 runtime boundary、生成 roo 與最小 area runtime scaffold。`
+`先 commit 目前 city_nanpi 的 implementation milestone；commit 後依 queue 規則盤點下一個待建 area，建立新 spec 並在通過 validate-only 後直接前進。`

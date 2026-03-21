@@ -1,0 +1,36 @@
+Vnum            17406
+Name            市集牌樓~
+Description
+牌樓和棚市把這裡撐成一塊熱鬧卻不失規矩的補給帶，貨色以布匹、乾糧、路具和日用雜貨為主。與濮陽賣的是前線急用不同，南皮市集更像在替整個河北主線維持穩定流通。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        17404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17407
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         市集~
+End
+
+#Enquire
+Keyword         補給~
+End
+
+#Enquire
+Keyword         買賣~
+End
+
+End

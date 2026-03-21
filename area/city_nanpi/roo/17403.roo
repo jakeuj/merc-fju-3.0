@@ -1,0 +1,44 @@
+Vnum            17403
+Name            南皮主街~
+Description
+主街上人流穩定，往來的不只是貨客，也有替各方勢力跑腿的差人與傳話者。與濮陽那種隨時聞得到前線的味道不同，這裡更像是一座把北地消息慢慢沉澱成地方秩序的城市。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        17402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        17405
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         主街~
+End
+
+#Enquire
+Keyword         南皮~
+End
+
+#Enquire
+Keyword         消息~
+End
+
+End

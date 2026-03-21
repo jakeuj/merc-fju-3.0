@@ -1773,6 +1773,25 @@
         "plans/area/0088-road-puyang.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "city_nanpi",
+      "title": "南皮",
+      "room_range": "17401-17420",
+      "load_order": 95,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_puyang",
+      "theme_primary": "歷史城市",
+      "theme_secondary": "河北城鎮 / 袁紹勢力前帶",
+      "summary": "承接濮陽北路與河北主線，落成南路牌口、主街十字、市集、官署前街與北道牌樓構成的北方主城骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/city_nanpi/index",
+        "area/city_nanpi/map.md",
+        "plans/area/0089-city-nanpi.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

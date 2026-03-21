@@ -1,0 +1,32 @@
+Vnum            19834
+Name            north road guide~
+ShortDesc       北道引路人~
+Description
+這名常在北道牌樓附近替旅人指路的引路人，口音比城裡其他人雜一些，像是見過更
+多北地路線與外來客。他很清楚哪條路通平原，哪條路又繼續往更北邊去。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           27
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             12
+Dex             12
+Con             12
+Hp              950
+Mana            80
+Move            138
+Class           0
+Gold            160
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

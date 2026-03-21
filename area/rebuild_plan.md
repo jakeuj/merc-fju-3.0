@@ -709,44 +709,12 @@
 
 ## In Progress
 
-- `city_nanpi`
-  - area_family: `City`
-  - reserved_room_block: `17401-17420`
-  - level_range: `24-36`
-  - theme: `歷史城市`
-  - subtheme: `河北城鎮 / 袁紹勢力前帶`
-  - external_links:
-    - `south`: `city_puyang` / 河北南路
-    - `east`: `wild_hebei_plain` / 平原外道預留
-    - `north`: `road_nanpi_beiping` / 河北北道預留
-  - delivery_gate: `spec_ready_for_commit`
-  - ref_inputs_used:
-    - `area/world_map.md`
-    - `ref/Readme.md`
-    - `ref/sanguo-progression-map.md`
-    - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/city_nanpi/map.md`
-    - `ref/world-graph.md`
-    - `docs/3yWebsite/docs/data/players.json`
-    - `docs/3yWebsite/docs/data/skills.json`
-    - `plans/area/0087-city-puyang.md`
-    - `plans/area/0088-road-puyang.md`
-  - ref_inputs_deferred:
-    - `docs/3yWebsite/map/puyang.html`
-    - `ref/sanguo-area-specfirst/area/wild_hebei_plain/map.md`
-    - `ref/sanguo-area-specfirst/area/road_nanpi_beiping/map.md`
-    - 各類原型工具與模擬系統
-  - theme_basis:
-    - `world-graph` 明確把 `city_nanpi` 放成 `city_puyang` 北側的城市 hub，並向 `wild_hebei_plain` 與 `road_nanpi_beiping` 分流
-    - `題材分布表` 把南皮標成 `歷史 / 軍旅` 的河北城鎮，適合把玩法拉回帶地方勢力感的北方主城
-    - `city_puyang` 已保留 `17209 north -> city_nanpi`，支持現在補齊河北主線的下一座城市節點
-    - `players.json / skills.json` 沒有要求在 `road_puyang` 後立刻切入秘境或支洞，支持先把北線城市骨架補起來
-  - compliance_check:
-    - compliant；在 `Road` 之後切回 `City`，符合 queue variety，也直接承接 `city_puyang` 的既有北向預留
+(目前無 `in_progress` 項目。)
 
 
 ## Done
 
+- `2026-03-21` `city_nanpi` 已完成第一輪 runtime implementation，完成 `city_puyang/17209 <-> 17401` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1061.log`），達成可提交狀態
 - `2026-03-21` `road_puyang` 已完成第一輪 runtime implementation，完成 `loyang/508 <-> 17301` 與 `city_puyang/17207 <-> 17308` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1060.log`），達成可提交狀態
 - `2026-03-21` `city_puyang` 已完成第一輪 runtime implementation，完成 `wild_puyang_forest/13906 <-> 17201` 與 `dng_guandu_battlefield/14007 <-> 17208` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1058.log`），達成可提交狀態
 - `2026-03-21` `wild_shouchun_fields` 已完成第一輪 runtime implementation，完成 `city_shouchun/17008 <-> 17101` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1057.log`），達成可提交狀態
@@ -900,16 +868,20 @@
 
 ## Current Recommended Next Step
 
-`city_nanpi` 已完成 spec 起稿。下一步應先完成 validate-only 檢查與 spec milestone commit，再直接推進 implementation。
+目前 `todo` 與 `in_progress` 都為空。下一步應依 queue 規則重新盤點 `world_map + progression + 題材分布 + players/skills`，建立新的 next actionable area spec。
 
 ## Next Action
 
-- 完成 `city_nanpi` spec gate：
-  - 驗證 `area/city_nanpi/map.md`
-  - 更新單區 plan 的 validation 結果
-  - commit spec milestone
-  - commit 後直接進 implementation milestone
+- 重新盤點下一個主世界 actionable area：
+  - 檢查 `area/world_map.md`
+  - 檢查 `ref/sanguo-progression-map.md`
+  - 檢查 `ref/三國-MUD-題材分布表.md`
+  - 檢查 `docs/3yWebsite/docs/data/players.json`
+  - 檢查 `docs/3yWebsite/docs/data/skills.json`
+  - 選出符合 queue variety 的下一區
+  - 建立單區 plan、`map.md` spec 與 validate-only 結果
+  - 通過後直接 commit spec milestone
 
 ## Next Prompt
 
-`續做 city_nanpi：先完成 spec 驗證與 commit，接著直接進 implementation milestone；需要時自動 commit，並在通過 gate 後直接往下一步推進。`
+`依 queue 規則盤點並建立下一個待建 area：先重建 next actionable area 的 spec，validate-only 通過後自動 commit，接著再直接進 implementation milestone。`

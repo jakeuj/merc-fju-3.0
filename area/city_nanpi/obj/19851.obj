@@ -1,0 +1,14 @@
+Vnum            19851
+Name            nanpi ration~
+ShortDesc       南皮乾糧包(nanpi ration)~
+Description
+一包給北路旅人與城內差役隨身帶著走的南皮乾糧包(nanpi ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           24
+Value           16 32 4 0
+Weight          1
+Cost            98
+End

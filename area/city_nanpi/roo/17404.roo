@@ -1,0 +1,52 @@
+Vnum            17404
+Name            城心十字~
+Description
+城心十字把南皮真正的性格攤在眼前：西邊是較有人聲的市集，東邊是往平原外道的分流，北邊則是更遠的河北北路。站在這裡時，最能感覺這座城不是前線，也不是單純後方，而是北地主線的真正轉運點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        17403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        17406
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        17408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17409
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         去路~
+End
+
+#Enquire
+Keyword         平原~
+End
+
+#Enquire
+Keyword         北道~
+End
+
+End

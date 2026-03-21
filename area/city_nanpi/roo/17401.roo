@@ -1,0 +1,36 @@
+Vnum            17401
+Name            南路牌口~
+Description
+從濮陽一路北來時，南皮的第一印象不像前線那麼緊，而是帶著一種有勢力、有秩序、也有地方脾氣的北城感。南路牌口把進城的腳步慢慢收緊，像任何外來消息都會先在這裡被看上一眼。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        17209
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         南路~
+End
+
+#Enquire
+Keyword         濮陽~
+End
+
+#Enquire
+Keyword         進城~
+End
+
+End

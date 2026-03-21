@@ -1,0 +1,32 @@
+Vnum            19833
+Name            notice clerk~
+ShortDesc       告示書吏~
+Description
+這名官署前街的書吏手裡總抱著簿冊和告示紙，說話不大聲，卻帶著一種「這裡凡事
+都有章法」的口氣。多看兩眼就能感覺到南皮的地方勢力是怎麼被寫進日常裡的。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           25
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             13
+Wis             12
+Dex             11
+Con             11
+Hp              860
+Mana            100
+Move            118
+Class           0
+Gold            150
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

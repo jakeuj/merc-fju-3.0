@@ -1,0 +1,24 @@
+Vnum            17405
+Name            里坊側街~
+Description
+這條側街沒有主街那麼開闊，卻能更清楚看見南皮居民日常生活的節奏。坊門、院牆和低聲談話把城市的地方性格收得很緊，像外人很容易在這裡被一眼認出來。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        17403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         里坊~
+End
+
+#Enquire
+Keyword         住戶~
+End
+
+End
