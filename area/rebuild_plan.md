@@ -674,6 +674,34 @@
     - `players.json` 雖未直接提供會稽後段服務 loop，但反而支持在會稽之後先做高辨識度的交通 / 探索 wild，而非立刻再疊一個城市片區
   - compliance_check:
     - compliant；在 `City -> Dungeon` 之後切回 `Wild`，既符合 queue variety，也讓江東鏈從封閉古寺重新回到開放水域節奏
+- `sec_water_ruins`
+  - area_family: `Secret`
+  - reserved_room_block: `16701-16730`
+  - level_range: `100-100`
+  - theme: `仙俠`
+  - subtheme: `水府遺跡 / 裂井殘宮`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/sec_water_ruins/map.md`
+    - `ref/world-graph.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `plans/area/0073-wild-pirate-islands.md`
+    - `plans/area/0081-wild-river-delta.md`
+  - ref_inputs_deferred:
+    - `ref/sanguo-area-specfirst/area/wild_river_delta/map.md`
+    - `ref/sanguo-area-specfirst/area/fort_naval_base/map.md`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `world-graph` 已把 `sec_water_ruins` 放在江東海路的 secret 節點，適合在 `Wild` 之後切進更高風險的水底祕境
+    - `題材分布表` 為江東區保留 `仙俠` 補題空間，支持把外海與江汊探索延伸成更神祕的水府遺跡
+    - `sec_water_ruins` scaffold 已提供 `異象核心 / 條件入口 / 獎勵區` 骨架，能直接轉成目前需要的裂井殘宮版本
+    - `players.json / skills.json` 沒有要求這一段必須優先回到城市服務 loop，反而支持用高辨識度 secret 拉開和前段 wild 的體驗差
+  - compliance_check:
+    - compliant；在 `Wild` 之後切到 `Secret`，避免江東鏈連續堆疊水域 wild，也符合 queue variety
 
 ## Todo
 
@@ -681,18 +709,16 @@
 
 ## In Progress
 
-- `wild_river_delta`
-  - plan: `plans/area/0081-wild-river-delta.md`
-  - delivery_gate: `implementation_ready_for_commit`
+- `sec_water_ruins`
+  - plan: `plans/area/0082-sec-water-ruins.md`
+  - delivery_gate: `spec_ready_for_commit`
   - current_status:
-    - 已生成 `roo/16601-16610` 並補齊最小 `index / mob / obj / res / shp`
-    - 已把 `city_kuaiji/16410` 與 `wild_river_delta/16601` 對齊成正式 runtime boundary
-    - 已同步 `city_kuaiji` 的東向 spec 到 `wild_river_delta`
-    - 已通過 WSL Linux build 與 startup smoke test
-    - 成功 log：`log/1052.log`
-    - `debug/badobject` 為空
+    - 已確認 `wild_river_delta` runtime milestone 已於 commit `4ebf2bf` 完成
+    - 已建立 `sec_water_ruins` 的單區 plan 與 `map.md` 草案
+    - `tools/mapmd_validate.py` 已通過
+    - generator `--validate-only` 已通過
   - next_action:
-    - commit `wild_river_delta` 的 implementation milestone
+    - commit `sec_water_ruins` 的 spec milestone
 
 
 ## Done
@@ -843,16 +869,24 @@
 
 ## Current Recommended Next Step
 
-`wild_river_delta` 已完成第一輪 runtime implementation 並通過 build / smoke test。下一步應先提交 implementation milestone，接著回到 queue 規則盤點下一個待建 area。
+`sec_water_ruins` spec 已通過 validate。下一步應先提交 spec milestone，接著直接進入 implementation milestone，把 `wild_pirate_islands/15810 <-> 16701` 接成正式 runtime boundary。
 
 ## Next Action
 
 - 完成 `wild_river_delta`：
-  - 已提交 spec milestone
   - 已完成 implementation milestone
   - 已通過 WSL build 與 startup smoke
+  - 已提交 implementation milestone
+- 完成 `sec_water_ruins`：
+  - 已通過 `tools/mapmd_validate.py`
+  - 已通過 generator `--validate-only`
+  - commit spec milestone
+  - 生成 `roo`
+  - 補最小 `index / mob / obj / res / shp`
+  - 補 `wild_pirate_islands/15810 <-> sec_water_ruins/16701` runtime boundary
+  - 跑 WSL Linux build 與 startup smoke
   - commit implementation milestone
 
 ## Next Prompt
 
-`先 commit 目前 wild_river_delta 的 implementation milestone；commit 後回到 queue 規則盤點下一個待建 area，建立新的 spec milestone。`
+`先 validate 並 commit 目前 sec_water_ruins 的 spec milestone；commit 後直接做 implementation milestone，補 runtime scaffold、boundary link、WSL build 與 startup smoke。`
