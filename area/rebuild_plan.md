@@ -644,6 +644,36 @@
     - `quaji.html` 證明會稽本身是一座有完整城市輪廓的山城，因此把地下異聞留在其下方作為支線延伸是合理的
   - compliance_check:
     - compliant；在 `City` 之後切進 `Dungeon`，避免會稽鏈連續堆疊 city-like 片區，也符合 `City -> Wild -> Dungeon` 的節奏切換
+- `wild_river_delta`
+  - area_family: `Wild`
+  - reserved_room_block: `16601-16630`
+  - level_range: `100-100`
+  - theme: `探險遺跡`
+  - subtheme: `江東水域 / 洲灘渡汊`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/wild_river_delta/map.md`
+    - `ref/world-graph.md`
+    - `docs/3yWebsite/docs/data/maps.json`
+    - `docs/3yWebsite/map/quaji.html`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `plans/area/0079-city-kuaiji.md`
+    - `plans/area/0080-dng-temple-ruins.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `ref/sanguo-area-specfirst/area/sec_water_ruins/map.md`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `world-graph` 已把 `wild_river_delta` 放在 `city_kuaiji` 與更深江東水路之間，適合在會稽的 city / dungeon 節奏後重新打開成外水 wild
+    - `題材分布表` 將江東區的 `江東水道` 定位為 `探險` 主題，支持用河汊、洲灘與航道辨位來拉開和山城、古寺的體驗差
+    - `wild_river_delta` scaffold 已提供河汊 / 航道骨架，可直接轉成目前需要的洲灘渡汊版本
+    - `quaji.html` 與 `maps.json` 證明會稽本身是完整城市節點，從東市再往外展開成江汊野外具有舊站地圖語意上的合理性
+    - `players.json` 雖未直接提供會稽後段服務 loop，但反而支持在會稽之後先做高辨識度的交通 / 探索 wild，而非立刻再疊一個城市片區
+  - compliance_check:
+    - compliant；在 `City -> Dungeon` 之後切回 `Wild`，既符合 queue variety，也讓江東鏈從封閉古寺重新回到開放水域節奏
 
 ## Todo
 
@@ -651,18 +681,16 @@
 
 ## In Progress
 
-- `dng_temple_ruins`
-  - plan: `plans/area/0080-dng-temple-ruins.md`
-  - delivery_gate: `implementation_ready_for_commit`
+- `wild_river_delta`
+  - plan: `plans/area/0081-wild-river-delta.md`
+  - delivery_gate: `spec_ready_for_commit`
   - current_status:
-    - 已生成 `roo/16501-16510` 並補齊最小 `index / mob / obj / res / shp`
-    - 已把 `city_kuaiji/16406` 與 `dng_temple_ruins/16501` 對齊成正式 runtime boundary
-    - `down -> sec_kuaiji_seal_chamber` 仍保留在 spec，待後續 area 落地
-    - 已通過 WSL Linux build 與 startup smoke test
-    - 成功 log：`log/1050.log`
-    - `debug/badobject` 為空
+    - 已重建 queue，確認 `dng_temple_ruins` runtime milestone 已於 commit `9887340` 完成
+    - 已建立 `wild_river_delta` 的單區 plan 與 `map.md` 草案
+    - `tools/mapmd_validate.py` 已通過
+    - generator `--validate-only` 已通過
   - next_action:
-    - commit `dng_temple_ruins` 的 implementation milestone
+    - commit `wild_river_delta` 的 spec milestone
 
 
 ## Done
@@ -812,57 +840,20 @@
 
 ## Current Recommended Next Step
 
-`dng_temple_ruins` 已完成第一輪 runtime implementation 並通過 build / smoke test。下一步應先提交 implementation milestone，接著回到 queue 規則盤點下一個待建 area。
+`wild_river_delta` spec 已通過 validate。下一步應先提交 spec milestone，接著直接進入 implementation milestone，把 `city_kuaiji/16410 <-> 16601` 接成正式 runtime boundary。
 
 ## Next Action
 
-- 完成 `city_chaisang`：
-  - 已提交 implementation milestone
-- 完成 `sec_chibi_battlefield`：
-  - 已提交 implementation milestone
-- 完成 `city_changsha`：
-  - 已提交 implementation milestone
-- 完成 `wild_wuling`：
-  - 已提交 implementation milestone
-- 完成 `city_lingling`：
-  - 已提交 implementation milestone
-- 完成 `city_guiyang`：
-  - 已提交 implementation milestone
-- 完成 `wild_nanman_jungle`：
-  - 已提交 implementation milestone
-- 完成 `dng_serpent_temple`：
-  - 已提交 implementation milestone
-- 完成 `city_nanhai`：
-  - 已提交 implementation milestone
-- 完成 `wild_south_sea_route`：
-  - 已提交 implementation milestone
-- 完成 `dng_boat_graveyard`：
-  - 已提交 implementation milestone
-- 完成 `wild_pirate_islands`：
-  - 已提交 implementation milestone
-- 完成 `fort_naval_base`：
-  - 已提交 implementation milestone
-- 完成 `city_jianye`：
-  - 已提交 implementation milestone
-- 完成 `district_jianye_port`：
-  - 已提交 implementation milestone
-- 完成 `wild_jianye_west`：
-  - 已提交 spec milestone
-  - 已提交 implementation milestone
-- 完成 `wild_mountain_pass`：
-  - 已提交 spec milestone
-  - 已提交 implementation milestone
-- 完成 `city_kuaiji`：
-  - 已提交 spec milestone
-  - 已完成 implementation milestone
-  - 已通過 WSL build 與 startup smoke
-  - commit implementation milestone
-- 完成 `dng_temple_ruins`：
-  - 已提交 spec milestone
-  - 已完成 implementation milestone
-  - 已通過 WSL build 與 startup smoke
+- 完成 `wild_river_delta`：
+  - 已通過 `tools/mapmd_validate.py`
+  - 已通過 generator `--validate-only`
+  - commit spec milestone
+  - 生成 `roo`
+  - 補最小 `index / mob / obj / res / shp`
+  - 補 `city_kuaiji/16410 <-> wild_river_delta/16601` runtime boundary
+  - 跑 WSL Linux build 與 startup smoke
   - commit implementation milestone
 
 ## Next Prompt
 
-`先 commit 目前 dng_temple_ruins 的 implementation milestone；commit 後回到 queue 規則盤點下一個待建 area，建立新的 spec milestone。`
+`先 commit 目前 wild_river_delta 的 spec milestone；commit 後直接做 implementation milestone，補 runtime scaffold、boundary link、WSL build 與 startup smoke。`
