@@ -1,0 +1,52 @@
+Vnum            16408
+Name            城心前庭~
+Description
+前庭把主街、市集和官廳街的節奏都交會在一起，站在這裡時，很容易感覺到會稽雖不如大都龐雜，卻已足夠把山道來客、城中勢力和各種流言都收進同一座城市的呼吸裡。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        16404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        16407
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16409
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16410
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         前庭~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+#Enquire
+Keyword         城心~
+End
+
+End

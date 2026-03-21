@@ -1,0 +1,32 @@
+Vnum            16407
+Name            石階橫街~
+Description
+橫街被石階切出一層一層的視線，讓行人、挑夫和市集腳色都像在同一處來回錯身。比起建業那種寬闊主城感，這裡更像一座真正在山裡長出來的城市。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        16405
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         石階~
+End
+
+#Enquire
+Keyword         橫街~
+End
+
+End

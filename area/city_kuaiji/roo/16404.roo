@@ -1,0 +1,44 @@
+Vnum            16404
+Name            會稽主街~
+Description
+主街把城裡的人流、貨流和傳聞都攏在一條帶坡的石路上，像每一間鋪面與每一段街階都在提醒人這裡並不是單純的地方小城，而是足以聚攏江東各路人的真正節點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        16403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16406
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         主街~
+End
+
+#Enquire
+Keyword         官廳~
+End
+
+#Enquire
+Keyword         東市~
+End
+
+End

@@ -1,0 +1,24 @@
+Vnum            16402
+Name            門旁值舍~
+Description
+值舍不大，卻把文書、告示與進出盤查都安排得井然有序，像會稽雖處山地，城裡的秩序卻並不打算讓山路旅人帶著太多僥倖混進來。比起大城官氣，這裡更像地方勢力自己磨出來的穩。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        16401
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         值舍~
+End
+
+#Enquire
+Keyword         告示~
+End
+
+End

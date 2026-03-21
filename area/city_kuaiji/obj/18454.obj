@@ -1,0 +1,14 @@
+Vnum            18454
+Name            city lantern~
+ShortDesc       山城提燈(city lantern)~
+Description
+一盞適合在北口山門、坡上市集與夜色石街間照明的山城提燈(city lantern)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           100
+Value           0 0 45 0
+Weight          2
+Cost            270
+End

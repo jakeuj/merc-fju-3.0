@@ -1,0 +1,14 @@
+Vnum            18451
+Name            kuaiji ration~
+ShortDesc       會稽乾糧包(kuaiji ration)~
+Description
+一包專給進出山城與山道旅人隨身攜帶的會稽乾糧包(kuaiji ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           100
+Value           32 50 4 0
+Weight          1
+Cost            280
+End

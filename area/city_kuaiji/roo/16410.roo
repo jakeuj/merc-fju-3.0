@@ -1,0 +1,28 @@
+Vnum            16410
+Name            東市轉角~
+Description
+再往東去，街面的氣味和聲量都開始更偏向商販、外客與地方消息的聚散點，像會稽把更多對外往來和更細碎的江湖耳語都收在那個方向。這裡既是城內轉角，也是許多支線準備展開的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        16408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         東市~
+End
+
+#Enquire
+Keyword         外客~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

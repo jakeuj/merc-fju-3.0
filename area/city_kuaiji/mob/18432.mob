@@ -1,0 +1,32 @@
+Vnum            18432
+Name            market keeper~
+ShortDesc       市集掌櫃~
+Description
+這名掌櫃對山貨、城中補給和外路旅人的需求都算得很精，像只要人在坡上市集多
+站一會兒，他就能猜出對方到底是要回補、問路，還是打聽門派風聲。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       110
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             15
+Wis             15
+Dex             11
+Con             12
+Hp              4000
+Mana            200
+Move            150
+Class           0
+Gold            680
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

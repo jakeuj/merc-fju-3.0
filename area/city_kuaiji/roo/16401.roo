@@ -1,0 +1,44 @@
+Vnum            16401
+Name            北口山門~
+Description
+走出山道最後一段風口後，會稽北口的石門與城牆便把散亂的山路節奏重新收成有秩序的人聲和燈火。這裡不像建業那樣厚重，卻有一種山城才有的收束感，像每個進城的人都先得把一路風塵留在門外。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        16310
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         山門~
+End
+
+#Enquire
+Keyword         北口~
+End
+
+#Enquire
+Keyword         會稽~
+End
+
+End

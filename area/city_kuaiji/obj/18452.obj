@@ -1,0 +1,14 @@
+Vnum            18452
+Name            mountain flask~
+ShortDesc       山城水囊(mountain flask)~
+Description
+一只方便在主街、市集與門派街口之間帶著走的山城水囊(mountain flask)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           100
+Value           14 14 LIQ_WATER 0
+Weight          2
+Cost            240
+End

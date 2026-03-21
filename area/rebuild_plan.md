@@ -624,19 +624,21 @@
 
 - `city_kuaiji`
   - plan: `plans/area/0079-city-kuaiji.md`
-  - delivery_gate: `spec_ready_for_commit`
+  - delivery_gate: `implementation_ready_for_commit`
   - current_status:
-    - 已建立第一版 spec 與 `mapmd-json`
-    - 題材定位為建業鏈進入會稽後的山城 city hub
-    - 預留 `north -> wild_mountain_pass`、`east -> district_kuaiji_market` 與 `down -> dng_temple_ruins`
-    - 已通過 `tools/mapmd_validate.py`
-    - 已通過 generator `--validate-only`
+    - 已生成 `roo/16401-16410` 並補齊最小 `index / mob / obj / res / shp`
+    - 已把 `wild_mountain_pass/16310` 與 `city_kuaiji/16401` 對齊成正式 runtime boundary
+    - `east -> district_kuaiji_market` 與 `down -> dng_temple_ruins` 仍保留在 spec，待後續 area 落地
+    - 已通過 WSL Linux build 與 startup smoke test
+    - 成功 log：`log/1048.log`
+    - `debug/badobject` 為空
   - next_action:
-    - commit `city_kuaiji` 的 spec milestone
+    - commit `city_kuaiji` 的 implementation milestone
 
 
 ## Done
 
+- `2026-03-21` `city_kuaiji` 已完成第一輪 runtime implementation，完成 `wild_mountain_pass/16310 <-> 16401` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1048.log`），達成可提交狀態
 - `2026-03-21` `wild_mountain_pass` 已完成第一輪 runtime implementation、commit `5c175b4`，完成 `wild_jianye_west/16210 <-> 16301` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1045.log`），並達成可前進下一區狀態
 - `2026-03-21` `wild_jianye_west` 已完成第一輪 runtime implementation、commit `22375a9`，完成 `city_jianye/16007 <-> 16201` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1045.log`），並達成可前進下一區狀態
 - `2026-03-21` `district_jianye_port` 已完成第一輪 runtime implementation、commit `619f21b`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
@@ -780,7 +782,7 @@
 
 ## Current Recommended Next Step
 
-`wild_mountain_pass` 已完成第一輪 runtime implementation 並提交。下一步應先驗證並提交 `city_kuaiji` 的 spec milestone，接著直接做 implementation milestone。
+`city_kuaiji` 已完成第一輪 runtime implementation 並通過 build / smoke test。下一步應先提交 implementation milestone，接著回到 queue 規則盤點下一個待建 area。
 
 ## Next Action
 
@@ -821,12 +823,11 @@
   - 已提交 spec milestone
   - 已提交 implementation milestone
 - 完成 `city_kuaiji`：
-  - 建立第一版 spec 與 `mapmd-json`
-  - 執行 `map.md` validate
-  - 執行 generator `--validate-only`
-  - commit spec milestone
-  - commit 後直接做 implementation milestone
+  - 已提交 spec milestone
+  - 已完成 implementation milestone
+  - 已通過 WSL build 與 startup smoke
+  - commit implementation milestone
 
 ## Next Prompt
 
-`先驗證並 commit 目前 city_kuaiji 的 spec milestone；commit 後直接做 implementation milestone，補 boundary、roo、index/mob/obj/res/shp，並跑 WSL build 與 startup smoke test。`
+`先 commit 目前 city_kuaiji 的 implementation milestone；commit 後回到 queue 規則盤點下一個待建 area，建立新的 spec milestone。`

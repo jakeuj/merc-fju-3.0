@@ -1,0 +1,32 @@
+Vnum            18433
+Name            office scribe~
+ShortDesc       官廳書役~
+Description
+這名在官廳街前來回出入的書役總抱著文簿與告示，看起來斯文，卻比誰都清楚會
+稽城裡哪些消息該寫進冊子，哪些消息只適合在門派街口低聲傳。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       80
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             16
+Wis             15
+Dex             11
+Con             12
+Hp              3900
+Mana            220
+Move            150
+Class           0
+Gold            540
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

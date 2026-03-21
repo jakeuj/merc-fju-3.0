@@ -1583,6 +1583,25 @@
         "plans/area/0078-wild-mountain-pass.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "city_kuaiji",
+      "title": "會稽",
+      "room_range": "16401-16430",
+      "load_order": 85,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "wild_mountain_pass",
+      "theme_primary": "江湖",
+      "theme_secondary": "山城 / 門派",
+      "summary": "承接會稽北口，落成北口山門、會稽主街、坡上市集與門派街口骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/city_kuaiji/index",
+        "area/city_kuaiji/map.md",
+        "plans/area/0079-city-kuaiji.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

@@ -1,0 +1,36 @@
+Vnum            16409
+Name            門派街口~
+Description
+街口一帶的人聲明顯比別處更壓低幾分，像很多事不是真的不能說，而是更適合在懂的人面前說。這裡不像宗門本身，卻已經足夠讓人意識到會稽並不只是普通城鎮。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        16408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16406
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         門派~
+End
+
+#Enquire
+Keyword         傳聞~
+End
+
+#Enquire
+Keyword         街口~
+End
+
+End

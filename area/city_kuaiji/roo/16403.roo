@@ -1,0 +1,44 @@
+Vnum            16403
+Name            會稽北街~
+Description
+北街沿著山城地勢微微起伏，路旁的人聲和招牌不像平地城市那麼鋪張，卻自有一種靠山勢和久住之人撐出的熟稔感。走到這裡時，旅人很容易明白會稽既是城，也是許多江湖消息真正落腳的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        16401
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        16405
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         北街~
+End
+
+#Enquire
+Keyword         市集~
+End
+
+#Enquire
+Keyword         主街~
+End
+
+End

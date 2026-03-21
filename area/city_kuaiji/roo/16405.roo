@@ -1,0 +1,36 @@
+Vnum            16405
+Name            坡上市集~
+Description
+市集沿著坡面擺開，攤架和屋簷一層層疊著，讓叫賣聲不像平地市街那樣橫向散開，而是順著高低起伏此起彼落。這裡最能讓人感覺到會稽那種山城特有的煙火氣。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        16403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16407
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         市集~
+End
+
+#Enquire
+Keyword         補給~
+End
+
+#Enquire
+Keyword         攤子~
+End
+
+End

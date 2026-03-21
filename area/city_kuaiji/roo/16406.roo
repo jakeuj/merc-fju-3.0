@@ -1,0 +1,36 @@
+Vnum            16406
+Name            官廳街前~
+Description
+官廳街前比主街安靜，但那種安靜裡明顯還混著地方門派、城中頭面與官署彼此觀望的味道。會稽的秩序不像帝都那樣單一，卻正因如此，這條街反而更耐人尋味。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        16404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        16409
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         官廳~
+End
+
+#Enquire
+Keyword         門派~
+End
+
+#Enquire
+Keyword         地脈~
+End
+
+End

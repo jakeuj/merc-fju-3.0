@@ -1,0 +1,32 @@
+Vnum            18431
+Name            north gate guard~
+ShortDesc       北門值役~
+Description
+這名守在北口山門附近的值役看似只管盤查與開關城門，實際上卻總能先一步分辨
+出誰是剛翻過山道的疲客、誰又是帶著麻煩消息進城的人。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       120
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             13
+Dex             12
+Con             13
+Hp              4300
+Mana            140
+Move            160
+Class           0
+Gold            620
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
