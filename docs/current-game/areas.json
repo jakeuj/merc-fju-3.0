@@ -1754,6 +1754,25 @@
         "plans/area/0087-city-puyang.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "road_puyang",
+      "title": "往濮陽官道",
+      "room_range": "17301-17320",
+      "load_order": 94,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_puyang",
+      "theme_primary": "軍旅",
+      "theme_secondary": "官道 / 北行",
+      "summary": "承接洛陽北門與濮陽南驛，落成北郊驛口、官道木樁邊、路亭與盤查坡口構成的中原北行 road 骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/road_puyang/index",
+        "area/road_puyang/map.md",
+        "plans/area/0088-road-puyang.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

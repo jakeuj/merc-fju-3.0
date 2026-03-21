@@ -1,0 +1,36 @@
+Vnum            17308
+Name            濮陽南驛道口~
+Description
+官道在此繼續往北伸去，路面上的車痕與兵履印記都明顯重了起來，像是在提醒你濮陽已經不只是普通城鎮，而是前線壓力會真正落地的地方。站在這裡時，中原長路與河北前沿之間只剩最後一步。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        17307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         濮陽~
+End
+
+#Enquire
+Keyword         南驛~
+End
+
+#Enquire
+Keyword         前線~
+End
+
+End

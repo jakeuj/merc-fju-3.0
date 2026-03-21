@@ -1,0 +1,36 @@
+Vnum            17301
+Name            洛陽北郊驛口~
+Description
+一離開洛陽北門，城內的喧鬧就被官道上的風聲和車轍聲慢慢沖淡。這裡仍看得見最後整理行裝的旅人與準備北上的差役，像所有真正要往濮陽去的人，都會先在這裡把城內節奏換成長路節奏。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         洛陽~
+End
+
+#Enquire
+Keyword         北路~
+End
+
+#Enquire
+Keyword         出城~
+End
+
+End

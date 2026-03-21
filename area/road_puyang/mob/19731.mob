@@ -1,0 +1,32 @@
+Vnum            19731
+Name            courier guard~
+ShortDesc       北行驛卒~
+Description
+這名守在官道南口的驛卒看起來沒有前線守軍那麼緊繃，卻仍保持著一種不讓旅隊
+亂散的警覺。他熟悉來往時刻，也很清楚哪種人只是趕路，哪種人像在打探消息。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           14
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             11
+Wis             11
+Dex             12
+Con             11
+Hp              520
+Mana            60
+Move            120
+Class           0
+Gold            90
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

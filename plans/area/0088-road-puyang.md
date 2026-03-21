@@ -21,7 +21,7 @@
 - external_links:
   - `south`: `city_loyang` / 洛陽北門
   - `north`: `city_puyang` / 濮陽南驛
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Reference Entry Points
 
@@ -65,7 +65,27 @@
   - passed (`Validated 8 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`)
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/road_puyang/map.md --validate-only`
   - passed (`Validation succeeded for 8 room(s).`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/road_puyang/map.md`
+  - passed (`Wrote 8 room scaffold file(s) to H:\repos\merc-fju-3.0\area\road_puyang\roo`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_puyang/map.md`
+  - passed；同步把 `city_puyang/17207` 補成 `south -> 17308` runtime boundary
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - passed；成功訊號寫入 `log/1060.log`（`三國歪傳之降龍伏虎開始正常運作`）
+- `debug/badobject`
+  - empty
+- `debug/error`
+  - only timeout-triggered shutdown path after smoke window closed；無新增 area loader blocker
+
+## Runtime Notes
+
+- 已建立最小 loadable runtime scaffold：`index`、`mob/19731-19734`、`obj/19751-19754`、`res/road.res`、`shp/supplies.shp`、`roo/17301-17308`
+- 已正式落成兩個 runtime boundary：
+  - `loyang/508 <-> road_puyang/17301`
+  - `city_puyang/17207 <-> road_puyang/17308`
+- `area/directory.lst`、`docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步納入 `road_puyang`
 
 ## Next Step Prompt
 
-`先 commit 目前 road_puyang 的 spec milestone；commit 後直接進 implementation，補齊對 city_puyang 與 city_loyang 的 runtime boundary、生成 roo 與最小 area runtime scaffold。`
+`先 commit 目前 road_puyang 的 implementation milestone；commit 後依 queue 規則盤點下一個待建 area，建立新 spec 並在通過 validate-only 後直接前進。`

@@ -1,0 +1,44 @@
+Vnum            17305
+Name            路亭前坪~
+Description
+官道在此稍微放寬，形成讓車馬與步客都能歇上一口氣的前坪。有人在這裡換水囊、有人低聲打聽北邊傳來的消息，讓整個地方像一個把前後兩座城短暫接在一起的縫口。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        17303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       ENTER
+ExitVnum        17306
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         路亭~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+#Enquire
+Keyword         消息~
+End
+
+End

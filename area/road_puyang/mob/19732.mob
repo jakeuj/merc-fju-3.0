@@ -1,0 +1,32 @@
+Vnum            19732
+Name            road hostler~
+ShortDesc       路亭掌事~
+Description
+這名在路亭裡忙進忙出的掌事，對茶桶、水囊和木牌的擺放次序格外講究。看他的樣
+子就知道，這條路上的秩序有一部分其實是靠這種不起眼的人撐住的。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           12
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             12
+Wis             12
+Dex             11
+Con             11
+Hp              470
+Mana            70
+Move            110
+Class           0
+Gold            110
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1,0 +1,32 @@
+Vnum            19733
+Name            pack traveler~
+ShortDesc       背貨旅人~
+Description
+這名背著雜貨與布包的旅人走得不快，卻一步也不肯亂。對他來說，這條官道不是風
+景，而是必須準時走完的生計。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           11
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             10
+Wis             10
+Dex             11
+Con             11
+Hp              430
+Mana            45
+Move            108
+Class           0
+Gold            75
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -709,41 +709,12 @@
 
 ## In Progress
 
-- `road_puyang`
-  - area_family: `Road`
-  - reserved_room_block: `17301-17320`
-  - level_range: `8-18`
-  - theme: `軍旅`
-  - subtheme: `官道 / 北行`
-  - external_links:
-    - `south`: `city_loyang` / 洛陽北門
-    - `north`: `city_puyang` / 濮陽南驛
-  - delivery_gate: `spec_ready_for_commit`
-  - ref_inputs_used:
-    - `area/world_map.md`
-    - `ref/Readme.md`
-    - `ref/sanguo-progression-map.md`
-    - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/road_puyang/map.md`
-    - `ref/world-graph.md`
-    - `docs/3yWebsite/docs/data/players.json`
-    - `docs/3yWebsite/docs/data/skills.json`
-    - `plans/area/0087-city-puyang.md`
-  - ref_inputs_deferred:
-    - `docs/3yWebsite/map/loyang.html`
-    - `ref/sanguo-area-specfirst/area/city_nanpi/map.md`
-    - 各類原型工具與模擬系統
-  - theme_basis:
-    - `world-graph` 明確把 `road_puyang` 視為 `city_loyang <-> city_puyang` 的獨立官道節點
-    - `city_puyang` 已保留 `17207 south -> road_puyang`，支持本區作為既有邊界的自然承接
-    - `題材分布表` 讓此段維持 `軍旅 / 官道`，適合先落成路亭、盤查點與長路節奏
-    - `players.json / skills.json` 沒有要求濮陽之後立刻切到另一座城市 hub，支持先補 connector area
-  - compliance_check:
-    - compliant；在 `City` 之後切到 `Road`，符合 queue variety，也直接承接剛完成的 `city_puyang` 南向預留
+(目前無 `in_progress` 項目。)
 
 
 ## Done
 
+- `2026-03-21` `road_puyang` 已完成第一輪 runtime implementation，完成 `loyang/508 <-> 17301` 與 `city_puyang/17207 <-> 17308` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1060.log`），達成可提交狀態
 - `2026-03-21` `city_puyang` 已完成第一輪 runtime implementation，完成 `wild_puyang_forest/13906 <-> 17201` 與 `dng_guandu_battlefield/14007 <-> 17208` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1058.log`），達成可提交狀態
 - `2026-03-21` `wild_shouchun_fields` 已完成第一輪 runtime implementation，完成 `city_shouchun/17008 <-> 17101` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1057.log`），達成可提交狀態
 - `2026-03-21` `city_shouchun` 已完成第一輪 runtime implementation，完成 `road_shouchun_xuzhou/16908 <-> 17001` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1056.log`），達成可提交狀態
@@ -896,16 +867,20 @@
 
 ## Current Recommended Next Step
 
-`road_puyang` 已完成 spec 起稿。下一步應先完成 validate-only 檢查與 spec milestone commit，再直接推進 implementation。
+目前 `todo` 與 `in_progress` 都為空。下一步應依 queue 規則重新盤點 `world_map + progression + 題材分布 + players/skills`，建立新的 next actionable area spec。
 
 ## Next Action
 
-- 完成 `road_puyang` spec gate：
-  - 驗證 `area/road_puyang/map.md`
-  - 更新單區 plan 的 validation 結果
-  - commit spec milestone
-  - commit 後直接進 implementation milestone
+- 重新盤點下一個主世界 actionable area：
+  - 檢查 `area/world_map.md`
+  - 檢查 `ref/sanguo-progression-map.md`
+  - 檢查 `ref/三國-MUD-題材分布表.md`
+  - 檢查 `docs/3yWebsite/docs/data/players.json`
+  - 檢查 `docs/3yWebsite/docs/data/skills.json`
+  - 選出符合 queue variety 的下一區
+  - 建立單區 plan、`map.md` spec 與 validate-only 結果
+  - 通過後直接 commit spec milestone
 
 ## Next Prompt
 
-`續做 road_puyang：先完成 spec 驗證與 commit，接著直接進 implementation milestone；需要時自動 commit，並在通過 gate 後直接往下一步推進。`
+`依 queue 規則盤點並建立下一個待建 area：先重建 next actionable area 的 spec，validate-only 通過後自動 commit，接著再直接進 implementation milestone。`

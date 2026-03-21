@@ -1,0 +1,44 @@
+Vnum            17303
+Name            北行大道中段~
+Description
+官道在這裡筆直舒展，路面上層層疊疊的車痕把方向感拉得非常明白。你很容易在這段路上意識到，自己已經離洛陽有一小段距離，卻還遠沒進入濮陽的前沿氣氛。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        17302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        17304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         官道~
+End
+
+#Enquire
+Keyword         濮陽~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

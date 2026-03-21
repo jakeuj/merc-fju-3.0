@@ -1,0 +1,14 @@
+Vnum            19754
+Name            way lantern~
+ShortDesc       路亭提燈(way lantern)~
+Description
+一盞方便在昏暗時照路的提燈，被擦拭得還算乾淨。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           12
+Value           0 0 24 0
+Weight          1
+Cost            70
+End

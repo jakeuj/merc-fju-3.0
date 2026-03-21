@@ -156,7 +156,8 @@
       "coord": [3, -2, 0],
       "labels": ["south-link", "route-node"],
       "exits": [
-        { "direction": "north", "to": 17206 }
+        { "direction": "north", "to": 17206 },
+        { "direction": "south", "to": 17308, "external": true }
       ],
       "enquires": ["南路", "驛站", "後方"]
     },

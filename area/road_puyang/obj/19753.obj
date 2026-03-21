@@ -1,0 +1,15 @@
+Vnum            19753
+Name            courier blade~
+ShortDesc       差役短刀(courier blade)~
+Description
+這把短刀不花俏，但刀身磨得乾淨利落，顯然是官道差役常備的順手傢伙。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           16
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            150
+End

@@ -1,0 +1,32 @@
+Vnum            19734
+Name            checkpoint runner~
+ShortDesc       盤查差役~
+Description
+這名守在坡口附近的差役手裡常握著短刀和名冊，表情不兇，眼神卻不肯放過任何一
+個想含糊帶過的人。越靠近濮陽，像他這樣的人就越多。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           16
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             11
+Wis             11
+Dex             12
+Con             12
+Hp              590
+Mana            55
+Move            125
+Class           0
+Gold            120
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

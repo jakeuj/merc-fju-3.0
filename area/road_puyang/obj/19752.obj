@@ -1,0 +1,14 @@
+Vnum            19752
+Name            road flask~
+ShortDesc       路途水囊(road flask)~
+Description
+一只常見的路途水囊掛著舊繩，看起來很適合官道行旅反覆使用。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           12
+Value           10 10 0 0
+Weight          1
+Cost            80
+End

@@ -57,6 +57,7 @@
       "coord": [0, 0, 0],
       "labels": ["entry", "south-edge", "world-link-south"],
       "exits": [
+        { "direction": "south", "to": 508, "external": true },
         { "direction": "north", "to": 17302 }
       ],
       "enquires": ["洛陽", "北路", "出城"]
@@ -160,7 +161,8 @@
       "coord": [0, 5, 0],
       "labels": ["north-edge", "world-link-north"],
       "exits": [
-        { "direction": "south", "to": 17307 }
+        { "direction": "south", "to": 17307 },
+        { "direction": "north", "to": 17207, "external": true }
       ],
       "enquires": ["濮陽", "南驛", "前線"]
     }

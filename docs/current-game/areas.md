@@ -117,6 +117,7 @@ title: Current Game Areas
 | `city_shouchun` | 壽春 / 淮南據點 hub | `17001-17020` | `rebuild addition` | 承接淮東官道南口，落成北門甬道、城心十字、市集牌樓、官署前街與田野外口骨架。 |
 | `wild_shouchun_fields` | 壽春田野 / 近郊田埂 wild | `17101-17120` | `rebuild addition` | 承接壽春田野外口，落成田埂岔路、灌渠小橋、曬穀場前與南向土道骨架。 |
 | `city_puyang` | 濮陽 / 河北前沿 hub | `17201-17220` | `rebuild addition` | 承接濮陽林野與官渡糧道殘線，落成西門、主街十字、市集、軍務前街與東糧道口骨架。 |
+| `road_puyang` | 往濮陽官道 / 中原北行 road | `17301-17320` | `rebuild addition` | 承接洛陽北門與濮陽南驛，落成北郊驛口、官道中段、路亭與盤查坡口骨架。 |
 
 ## Recent Rebuild Areas
 
@@ -223,6 +224,7 @@ title: Current Game Areas
 - `city_shouchun`：把淮東官道南口正式接進壽春，透過北門、城心十字、市集牌樓、官署前街與田野外口把節奏從驛路重新收束成淮南母城與下一段分流 hub。
 - `wild_shouchun_fields`：把壽春田野外口正式接進近郊 wild，透過田埂岔路、灌渠小橋、曬穀場前與南向土道把節奏從城內秩序鬆開成可辨位的外郊前帶。
 - `city_puyang`：把濮陽林野與官渡糧道之間的缺口正式補成前沿主城，透過西門、城心十字、市集、軍務前街與東糧道口把河北前線的補給與軍旅節奏重新收束成城市 hub。
+- `road_puyang`：把洛陽北門與濮陽南驛之間的抽象 world link 正式補成北行官道，透過北郊驛口、路牌石、路亭與盤查坡口把長路節奏重新接回中原主線。
 
 ## 維護規則
 
