@@ -1,0 +1,14 @@
+Vnum            18051
+Name            west ration~
+ShortDesc       西坊乾糧包(west ration)~
+Description
+一包適合在城郊官道和水鄉小徑間邊走邊吃的西坊乾糧包(west ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           100
+Value           28 46 4 0
+Weight          1
+Cost            280
+End

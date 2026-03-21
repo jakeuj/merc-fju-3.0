@@ -1,0 +1,28 @@
+Vnum            16210
+Name            南去坡口~
+Description
+坡口邊的土路明顯更朝山勢和遠行方向傾去，像只要再往前，水鄉的柔和就會慢慢被山道的逼仄和高低起伏接手。這裡不像危險本身，卻像所有真正離城旅程的開始。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        16206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+#Enquire
+Keyword         山道~
+End
+
+#Enquire
+Keyword         遠路~
+End
+
+End

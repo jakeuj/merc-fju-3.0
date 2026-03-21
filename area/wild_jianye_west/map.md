@@ -31,7 +31,7 @@
         "direction": "east",
         "source_vnum": 16201,
         "target_area": "city_jianye",
-        "label": "建業西門"
+        "label": "建業西坊"
       },
       {
         "direction": "south",
@@ -57,8 +57,8 @@
   "rooms": [
     {
       "vnum": 16201,
-      "name": "西門回道",
-      "description": "離開建業西門後，最先迎上來的是官道邊帶水氣的風和比城內鬆得多的腳步節奏。這裡仍貼著都城，但已經能明顯感到人聲和規矩都開始往郊外稀釋開去。 ",
+      "name": "西坊回道",
+      "description": "離開建業西坊後，最先迎上來的是官道邊帶水氣的風和比城內鬆得多的腳步節奏。這裡仍貼著都城，但已經能明顯感到人聲和規矩都開始往郊外稀釋開去。 ",
       "sector_type": "SECT_FIELD",
       "cluster": "gate-return",
       "coord": [0, 0, 0],
@@ -68,7 +68,7 @@
         { "direction": "west", "to": 16203 },
         { "direction": "south", "to": 16202 }
       ],
-      "enquires": ["回城", "西門", "官道"]
+      "enquires": ["回城", "西坊", "官道"]
     },
     {
       "vnum": 16202,

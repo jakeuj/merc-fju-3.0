@@ -19,10 +19,10 @@
 - planned_vnum_range: `16201-16230`
 - level_range: `100-100`
 - external_links:
-  - `east`: `city_jianye` / 建業西門
+  - `east`: `city_jianye` / 建業西坊
   - `south`: `wild_mountain_pass` / 山道預留
   - `west`: `river_villages` / 水鄉村路預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Reference Entry Points
 
@@ -66,7 +66,15 @@
   - passed (`Validated 9 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`)
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_jianye_west/map.md --validate-only`
   - passed (`Validation succeeded for 9 room(s).`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_jianye_west/map.md`
+  - passed (`Wrote 9 room scaffold file(s) to H:\\repos\\merc-fju-3.0\\area\\wild_jianye_west\\roo`)
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed (`make: 'merc' is up to date.`)
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - passed via startup success log `log/1045.log`
+- `debug/badobject`
+  - passed (empty after smoke test)
 
 ## Next Step Prompt
 
-`先 commit 目前 wild_jianye_west 的 spec milestone；commit 後直接做 implementation milestone，補 boundary、roo、index/mob/obj/res/shp，並跑 WSL build 與 startup smoke test。`
+`先 commit 目前 wild_jianye_west 的 implementation milestone；commit 後回到 queue 規則盤點下一個待建 area，建立下一個 spec milestone。`

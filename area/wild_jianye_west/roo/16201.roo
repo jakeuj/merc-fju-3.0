@@ -1,0 +1,44 @@
+Vnum            16201
+Name            西坊回道~
+Description
+離開建業西坊後，最先迎上來的是官道邊帶水氣的風和比城內鬆得多的腳步節奏。這裡仍貼著都城，但已經能明顯感到人聲和規矩都開始往郊外稀釋開去。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        16007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        16203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         回城~
+End
+
+#Enquire
+Keyword         西坊~
+End
+
+#Enquire
+Keyword         官道~
+End
+
+End

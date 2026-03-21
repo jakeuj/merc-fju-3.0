@@ -1,0 +1,33 @@
+Vnum            18034
+Name            slope lookout~
+ShortDesc       坡口望路客~
+Description
+這名守在南去坡口附近的望路客總把視線放得很遠，像再多走幾步就能看見水鄉節
+奏如何慢慢被山道的高低與遠行感接手。他不像守軍，卻比大多數人更懂離城旅程
+真正從哪裡開始。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       30
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             13
+Dex             13
+Con             12
+Hp              4100
+Mana            140
+Move            180
+Class           0
+Gold            560
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

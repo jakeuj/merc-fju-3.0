@@ -1,0 +1,15 @@
+Vnum            18053
+Name            bank knife~
+ShortDesc       蘆岸短刀(bank knife)~
+Description
+一把適合在蘆岸、側路與坡口間防身用的蘆岸短刀(bank knife)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           100
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            320
+End

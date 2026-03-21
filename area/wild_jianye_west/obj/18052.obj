@@ -1,0 +1,14 @@
+Vnum            18052
+Name            bamboo flask~
+ShortDesc       竹筒水囊(bamboo flask)~
+Description
+一只方便在蘆岸小堤和茶亭前坪間隨身攜帶的竹筒水囊(bamboo flask)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           100
+Value           12 12 LIQ_WATER 0
+Weight          2
+Cost            220
+End

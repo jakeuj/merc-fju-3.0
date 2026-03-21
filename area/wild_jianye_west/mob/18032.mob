@@ -1,0 +1,33 @@
+Vnum            18032
+Name            road guide~
+ShortDesc       官道引路客~
+Description
+這名熟悉建業西郊路況的引路客總沿著官道主線和茶亭前坪來回張望，像只要有人
+多問兩句，他就能把哪條旁徑通水圳、哪一段村路最不該在暮色裡硬闖說得清清
+楚楚。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       80
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             14
+Dex             12
+Con             12
+Hp              4200
+Mana            160
+Move            160
+Class           0
+Gold            540
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

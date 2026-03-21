@@ -622,19 +622,20 @@
 
 - `wild_jianye_west`
   - plan: `plans/area/0077-wild-jianye-west.md`
-  - delivery_gate: `spec_ready_for_commit`
+  - delivery_gate: `implementation_ready_for_commit`
   - current_status:
-    - 已建立第一版 spec 與 `mapmd-json`
-    - 題材定位為建業主城之後往西展開的城郊外帶
-    - 預留 `east -> city_jianye`、`south -> wild_mountain_pass` 與 `west -> river_villages`
-    - 已通過 `tools/mapmd_validate.py`
-    - 已通過 generator `--validate-only`
+    - 已生成 `roo/16201-16210` 並補齊最小 `index / mob / obj / res / shp`
+    - 已把 `city_jianye/16007` 與 `wild_jianye_west/16201` 對齊成正式 runtime boundary
+    - 已通過 `tools/mapmd_validate.py`、generator 寫檔、WSL Linux build 與 startup smoke test
+    - 成功 log：`log/1045.log`
+    - `debug/badobject` 為空
   - next_action:
-    - commit `wild_jianye_west` 的 spec milestone
+    - commit `wild_jianye_west` 的 implementation milestone
 
 
 ## Done
 
+- `2026-03-21` `wild_jianye_west` 已完成第一輪 runtime implementation，完成 `city_jianye/16007 <-> 16201` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1045.log`），達成可提交狀態
 - `2026-03-21` `district_jianye_port` 已完成第一輪 runtime implementation、commit `619f21b`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `city_jianye` 已完成第一輪 runtime implementation、commit `6ec3d72`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
 - `2026-03-21` `fort_naval_base` 已完成第一輪 runtime implementation、commit `8650611`，完成 WSL Linux build 與 startup smoke test，並達成可前進下一區狀態
@@ -776,7 +777,7 @@
 
 ## Current Recommended Next Step
 
-`district_jianye_port` 已完成第一輪 runtime implementation 並提交。`wild_jianye_west` 的 spec 也已完成驗證；下一步應先提交 spec milestone，接著直接做 implementation milestone。
+`wild_jianye_west` 已完成第一輪 runtime implementation 並通過 build / smoke test。下一步應先提交 implementation milestone，接著回到 queue 規則盤點下一個待建 area。
 
 ## Next Action
 
@@ -811,12 +812,14 @@
 - 完成 `district_jianye_port`：
   - 已提交 implementation milestone
 - 完成 `wild_jianye_west`：
-  - 建立第一版 spec 與 `mapmd-json`
-  - 執行 `map.md` validate
-  - 執行 generator `--validate-only`
-  - commit spec milestone
-  - commit 後直接做 implementation milestone
+  - 已提交 spec milestone
+  - 已完成 implementation milestone
+  - 已通過 WSL build 與 startup smoke
+  - commit implementation milestone
+- 盤點下一個待建 area：
+  - 回到 `world_map / progression / players / skills` 與 queue variety gate
+  - 建立下一個 spec milestone
 
 ## Next Prompt
 
-`先 commit 目前 wild_jianye_west 的 spec milestone；commit 後直接做 implementation milestone，補 boundary、roo、index/mob/obj/res/shp，並跑 WSL build 與 startup smoke test。`
+`先 commit 目前 wild_jianye_west 的 implementation milestone；commit 後回到 queue 規則盤點下一個待建 area，建立新的 spec milestone。`

@@ -1,0 +1,24 @@
+Vnum            16202
+Name            水圳旁徑~
+Description
+一道貼著水圳的旁徑往南繞開主道，路面雖窄，卻顯然常有人拿來避開車流與城門口的眼睛。這種看似不起眼的小路，往往才最能說明城郊真正的生活方式。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        16201
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         水圳~
+End
+
+#Enquire
+Keyword         小路~
+End
+
+End

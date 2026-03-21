@@ -1545,6 +1545,25 @@
         "plans/area/0076-district-jianye-port.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "wild_jianye_west",
+      "title": "建業西郊",
+      "room_range": "16201-16230",
+      "load_order": 83,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_jianye",
+      "theme_primary": "江湖",
+      "theme_secondary": "郊野 / 水鄉",
+      "summary": "承接建業西坊，落成西坊回道、水圳旁徑、茶亭前坪與更西村路骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/wild_jianye_west/index",
+        "area/wild_jianye_west/map.md",
+        "plans/area/0077-wild-jianye-west.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

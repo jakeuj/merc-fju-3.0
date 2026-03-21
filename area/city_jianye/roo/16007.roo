@@ -1,7 +1,7 @@
 Vnum            16007
-Name            補給橫街~
+Name            西坊橫街~
 Description
-橫街上滿是往返搬貨和補貨的人影，讓市集不只像交易場所，也像整座都城真正能持續運作的後場。走過這裡時，很容易感受到建業和海上那些臨時據點之間最大的差別。
+橫街上滿是往返搬貨和補貨的人影，讓西坊不只像市集後場，也像整座都城真正把人潮往城郊導出去的邊帶。走過這裡時，很容易感受到建業的厚實秩序正開始向外鬆開，準備把旅人交還給城外的官道與水鄉。
 ~
 SectorType      SECT_CITY
 
@@ -21,12 +21,24 @@ ExitKeyword     ~
 ExitKey         0
 End
 
-#Enquire
-Keyword         補給~
+#Exit
+Direction       WEST
+ExitVnum        16201
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
 End
 
 #Enquire
-Keyword         商鋪~
+Keyword         西坊~
+End
+
+#Enquire
+Keyword         西郊~
+End
+
+#Enquire
+Keyword         補給~
 End
 
 End

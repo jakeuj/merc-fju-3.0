@@ -1,0 +1,33 @@
+Vnum            18031
+Name            tea host~
+ShortDesc       茶亭主人~
+Description
+這名守著茶亭和前坪的主人總能一眼分出誰是剛離開建業、誰是準備往更西村路
+慢慢摸去的過客，說起路況時也比城裡人更懂哪一段官道會先起霧、哪一道水圳
+最近又漫了出來。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       120
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             15
+Wis             15
+Dex             11
+Con             12
+Hp              3900
+Mana            200
+Move            150
+Class           0
+Gold            620
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

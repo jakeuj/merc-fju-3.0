@@ -1,0 +1,36 @@
+Vnum            16205
+Name            茶亭前坪~
+Description
+茶亭前的空坪不算大，卻總有一點歇腳、換氣和交換消息的意思。和城裡那些被制度撐起的秩序相比，這裡的平靜更像人與路長久磨出來的默契。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        16203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         茶亭~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+#Enquire
+Keyword         消息~
+End
+
+End

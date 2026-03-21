@@ -1,0 +1,28 @@
+Vnum            16208
+Name            更西村路~
+Description
+再往西去，建業留下的痕跡便越來越薄，只剩官道習慣還在勉強維持方向感。這裡很明顯已經是城郊真正準備把旅人交出去的地方。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        16204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         村路~
+End
+
+#Enquire
+Keyword         更西~
+End
+
+#Enquire
+Keyword         離城~
+End
+
+End

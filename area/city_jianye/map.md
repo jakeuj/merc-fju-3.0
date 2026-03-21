@@ -41,9 +41,9 @@
       },
       {
         "direction": "west",
-        "source_vnum": 16009,
+        "source_vnum": 16007,
         "target_area": "wild_jianye_west",
-        "label": "建業西郊"
+        "label": "建業西坊"
       }
     ],
     "clusters": [
@@ -143,17 +143,18 @@
     },
     {
       "vnum": 16007,
-      "name": "補給橫街",
-      "description": "橫街上滿是往返搬貨和補貨的人影，讓市集不只像交易場所，也像整座都城真正能持續運作的後場。走過這裡時，很容易感受到建業和海上那些臨時據點之間最大的差別。 ",
+      "name": "西坊橫街",
+      "description": "橫街上滿是往返搬貨和補貨的人影，讓西坊不只像市集後場，也像整座都城真正把人潮往城郊導出去的邊帶。走過這裡時，很容易感受到建業的厚實秩序正開始向外鬆開，準備把旅人交還給城外的官道與水鄉。 ",
       "sector_type": "SECT_CITY",
       "cluster": "market-yard",
       "coord": [-1, 2, 0],
-      "labels": ["supply-lane", "shops"],
+      "labels": ["west-ward", "shops"],
       "exits": [
         { "direction": "south", "to": 16005 },
-        { "direction": "east", "to": 16008 }
+        { "direction": "east", "to": 16008 },
+        { "direction": "west", "to": 16201, "external": true }
       ],
-      "enquires": ["補給", "商鋪"]
+      "enquires": ["西坊", "西郊", "補給"]
     },
     {
       "vnum": 16008,

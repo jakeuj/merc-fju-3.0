@@ -1,0 +1,44 @@
+Vnum            16204
+Name            路碑岔口~
+Description
+岔口邊立著被風雨磨鈍字跡的路碑，一邊指回建業，一邊則指向更遠的鄉里與山道。這裡不像真正的終點，卻已經很清楚地把城內和城外分成兩種不同的生活。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        16203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        16208
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         路碑~
+End
+
+#Enquire
+Keyword         岔口~
+End
+
+#Enquire
+Keyword         村路~
+End
+
+End

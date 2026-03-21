@@ -1,0 +1,32 @@
+Vnum            16207
+Name            圩田側路~
+Description
+側路在圩田間收得很窄，卻有一種比大路更貼近水鄉地氣的穩定。這裡不適合大張旗鼓地趕路，卻很適合真正想看清一座城外帶是怎麼活著的人慢慢走。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        16205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         圩田~
+End
+
+#Enquire
+Keyword         側路~
+End
+
+End

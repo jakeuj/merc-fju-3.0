@@ -1,0 +1,44 @@
+Vnum            16206
+Name            蘆岸小堤~
+Description
+小堤沿著蘆岸往南壓低，走起來比官道安靜得多，只有水聲和草葉摩擦提醒你這裡已經很接近更鬆散也更真實的鄉野生活。若要離開建業的目光，這裡顯然是個好方向。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        16204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        16207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16210
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         蘆岸~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+#Enquire
+Keyword         小堤~
+End
+
+End

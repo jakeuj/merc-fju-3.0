@@ -1,0 +1,44 @@
+Vnum            16203
+Name            西郊官道~
+Description
+官道往西平平伸開，路旁既有田圩也有行人，像都城的力量還沒完全退去，卻也已經開始讓位給真正屬於郊野的節奏。走在這裡時，很容易感受到建業其實是被這些外帶一圈圈托住的。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        16201
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        16204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         官道~
+End
+
+#Enquire
+Keyword         西邊~
+End
+
+#Enquire
+Keyword         茶亭~
+End
+
+End
