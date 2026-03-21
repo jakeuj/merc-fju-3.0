@@ -709,22 +709,21 @@
 
 ## In Progress
 
-- `sec_water_ruins`
-  - plan: `plans/area/0082-sec-water-ruins.md`
-  - delivery_gate: `implementation_ready_for_commit`
+- `city_xuzhou`
+  - plan: `plans/area/0083-city-xuzhou.md`
+  - delivery_gate: `spec_ready_for_commit`
   - current_status:
-    - 已生成 `roo/16701-16708` 並補齊最小 `index / mob / obj / res / shp`
-    - 已把 `wild_pirate_islands/15810` 與 `sec_water_ruins/16701` 對齊成正式 runtime boundary
-    - 已通過 WSL Linux build 與 startup smoke test
-    - 成功 log：`log/1053.log`
-    - `debug/badobject` 為空
+    - 已建立 `plans/area/0083-city-xuzhou.md`
+    - 已建立 `area/city_xuzhou/map.md`
+    - 已固定 `reserved_room_block: 16801-16820`
+    - 已鎖定 `city_chenliu/13810 -> city_xuzhou/16801` 為後續 runtime boundary
   - next_action:
-    - commit `sec_water_ruins` 的 implementation milestone
+    - validate `city_xuzhou` spec，通過後 commit spec milestone
 
 
 ## Done
 
-- `2026-03-21` `sec_water_ruins` 已完成第一輪 runtime implementation，完成 `wild_pirate_islands/15810 <-> 16701` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1053.log`），達成可提交狀態
+- `2026-03-21` `sec_water_ruins` 已完成第一輪 runtime implementation、commit `62ffa01`，完成 `wild_pirate_islands/15810 <-> 16701` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1053.log`），並達成可前進下一區狀態
 - `2026-03-21` `wild_river_delta` 已完成第一輪 runtime implementation，完成 `city_kuaiji/16410 <-> 16601` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1052.log`），達成可提交狀態
 - `2026-03-21` `dng_temple_ruins` 已完成第一輪 runtime implementation，完成 `city_kuaiji/16406 <-> 16501` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1050.log`），達成可提交狀態
 - `2026-03-21` `city_kuaiji` 已完成第一輪 runtime implementation、commit `b0150ea`，完成 `wild_mountain_pass/16310 <-> 16401` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1048.log`），並達成可前進下一區狀態
@@ -871,20 +870,16 @@
 
 ## Current Recommended Next Step
 
-`sec_water_ruins` 已完成第一輪 runtime implementation 並通過 build / smoke test。下一步應先提交 implementation milestone，接著回到 queue 規則盤點下一個待建 area。
+`city_xuzhou` 已完成 spec 草案。下一步應先做 validate-only，通過後提交 spec milestone，接著直接進入 implementation milestone。
 
 ## Next Action
 
-- 完成 `wild_river_delta`：
-  - 已完成 implementation milestone
-  - 已通過 WSL build 與 startup smoke
-  - 已提交 implementation milestone
-- 完成 `sec_water_ruins`：
-  - 已提交 spec milestone
-  - 已完成 implementation milestone
-  - 已通過 WSL build 與 startup smoke
-  - commit implementation milestone
+- 完成 `city_xuzhou`：
+  - 跑 `tools/mapmd_validate.py`
+  - 跑 generator `--validate-only`
+  - commit spec milestone
+  - 直接進入 implementation milestone
 
 ## Next Prompt
 
-`先 commit 目前 sec_water_ruins 的 implementation milestone；commit 後回到 queue 規則盤點下一個待建 area，建立新的 spec milestone。`
+`先 validate 並 commit 目前 city_xuzhou 的 spec milestone；commit 後直接做 implementation milestone，補 runtime scaffold、接上 city_chenliu 邊界並跑 build / smoke test。`
