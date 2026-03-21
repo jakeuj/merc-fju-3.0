@@ -709,7 +709,16 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `road_shouchun_xuzhou`
+  - plan: `plans/area/0084-road-shouchun-xuzhou.md`
+  - delivery_gate: `spec_ready_for_commit`
+  - current_status:
+    - 已建立 `plans/area/0084-road-shouchun-xuzhou.md`
+    - 已建立 `area/road_shouchun_xuzhou/map.md`
+    - 已固定 `reserved_room_block: 16901-16920`
+    - 已鎖定 `city_xuzhou/16808 -> road_shouchun_xuzhou/16901` 作為後續 runtime boundary 起點
+  - next_action:
+    - validate `road_shouchun_xuzhou` spec，通過後 commit spec milestone
 
 
 ## Done
@@ -862,17 +871,16 @@
 
 ## Current Recommended Next Step
 
-`city_xuzhou` 已完成第一輪 runtime implementation 並通過 build / smoke test。下一步應回到 queue 規則盤點下一個待建 area，建立新的 spec milestone。
+`road_shouchun_xuzhou` 已完成 spec 草案。下一步應先做 validate-only，通過後提交 spec milestone，接著直接進入 implementation milestone。
 
 ## Next Action
 
-- 依 queue 規則重建下一個 actionable area：
-  - 檢查 `area/world_map.md`
-  - 檢查 `ref/sanguo-progression-map.md`
-  - 檢查 `ref/三國-MUD-題材分布表.md`
-  - 交叉比對 `docs/3yWebsite/docs/data/players.json` / `skills.json`
-  - 建立新的 spec milestone
+- 完成 `road_shouchun_xuzhou`：
+  - 跑 `tools/mapmd_validate.py`
+  - 跑 generator `--validate-only`
+  - commit spec milestone
+  - 直接進入 implementation milestone
 
 ## Next Prompt
 
-`回到 queue 規則盤點下一個待建 area，建立新的 spec milestone；需要時自動 commit，並在通過 gate 後直接往 implementation 推進。`
+`先 validate 並 commit 目前 road_shouchun_xuzhou 的 spec milestone；commit 後直接做 implementation milestone，補 runtime scaffold、接上 city_xuzhou 邊界並跑 build / smoke test。`
