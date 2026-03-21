@@ -709,7 +709,37 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `wild_hebei_plain`
+  - area_family: `Wild`
+  - reserved_room_block: `17501-17520`
+  - level_range: `24-36`
+  - theme: `軍旅`
+  - subtheme: `平原 / 官道`
+  - external_links:
+    - `west`: `city_nanpi` / 南皮東口
+    - `south`: `fort_river_crossing` / 渡河營寨預留
+  - delivery_gate: `spec_ready_for_commit`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/wild_hebei_plain/map.md`
+    - `ref/world-graph.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `plans/area/0089-city-nanpi.md`
+  - ref_inputs_deferred:
+    - `ref/sanguo-area-specfirst/area/fort_river_crossing/map.md`
+    - `ref/sanguo-area-specfirst/area/road_nanpi_beiping/map.md`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `world-graph` 明確把 `wild_hebei_plain` 放成 `city_nanpi` 之後的 `wild` 節點，並向 `fort_river_crossing` 延伸
+    - `題材分布表` 讓這段北地維持 `軍旅 / 平原` 的主題，適合把城市主線鬆開成更開闊的野外轉場
+    - `city_nanpi` 已保留 `17408 east -> wild_hebei_plain`，支持現在接續東向平原外帶
+    - `players.json / skills.json` 沒有要求南皮之後立刻回到另一座城市 hub，支持先把野外骨架補齊
+  - compliance_check:
+    - compliant；在 `City` 之後切到 `Wild`，符合 queue variety，也直接承接 `city_nanpi` 的既有東向預留
 
 
 ## Done
@@ -868,20 +898,16 @@
 
 ## Current Recommended Next Step
 
-目前 `todo` 與 `in_progress` 都為空。下一步應依 queue 規則重新盤點 `world_map + progression + 題材分布 + players/skills`，建立新的 next actionable area spec。
+`wild_hebei_plain` 已完成 spec 起稿。下一步應先完成 validate-only 檢查與 spec milestone commit，再直接推進 implementation。
 
 ## Next Action
 
-- 重新盤點下一個主世界 actionable area：
-  - 檢查 `area/world_map.md`
-  - 檢查 `ref/sanguo-progression-map.md`
-  - 檢查 `ref/三國-MUD-題材分布表.md`
-  - 檢查 `docs/3yWebsite/docs/data/players.json`
-  - 檢查 `docs/3yWebsite/docs/data/skills.json`
-  - 選出符合 queue variety 的下一區
-  - 建立單區 plan、`map.md` spec 與 validate-only 結果
-  - 通過後直接 commit spec milestone
+- 完成 `wild_hebei_plain` spec gate：
+  - 驗證 `area/wild_hebei_plain/map.md`
+  - 更新單區 plan 的 validation 結果
+  - commit spec milestone
+  - commit 後直接進 implementation milestone
 
 ## Next Prompt
 
-`依 queue 規則盤點並建立下一個待建 area：先重建 next actionable area 的 spec，validate-only 通過後自動 commit，接著再直接進 implementation milestone。`
+`續做 wild_hebei_plain：先完成 spec 驗證與 commit，接著直接進 implementation milestone；需要時自動 commit，並在通過 gate 後直接往下一步推進。`
