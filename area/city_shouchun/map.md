@@ -163,7 +163,8 @@
       "coord": [1, 3, 0],
       "labels": ["out-link", "field-edge"],
       "exits": [
-        { "direction": "enter", "to": 17004 }
+        { "direction": "enter", "to": 17004 },
+        { "direction": "out", "to": 17101, "external": true }
       ],
       "enquires": ["田野", "外面", "去路"]
     },
