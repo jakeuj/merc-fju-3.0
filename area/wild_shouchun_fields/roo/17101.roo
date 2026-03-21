@@ -1,0 +1,44 @@
+Vnum            17101
+Name            田野外口~
+Description
+一出壽春外口，城牆與旗牌的壓力立刻退到身後，迎面換成被春泥與田氣撐開的視野。這裡仍看得見城門輪廓，卻已經是另一種節奏: 人不再被城裡的規矩推著走，而得自己分辨田埂、灌渠與遠村之間哪條路才算正途。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       ENTER
+ExitVnum        17008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        17102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        17103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         壽春~
+End
+
+#Enquire
+Keyword         外口~
+End
+
+#Enquire
+Keyword         田野~
+End
+
+End

@@ -1,0 +1,44 @@
+Vnum            17105
+Name            渠畔草路~
+Description
+草路沿著渠岸往南拖去，腳下雖仍是泥土與碎草，走起來卻比田埂穩得多。只是越往前，城門聲響越薄，取而代之的是田水聲、蟲鳴與一些說不清從哪個村落傳來的人語，讓人自然意識到自己正從主城邊緣滑進更廣的外郊。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        17103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        17104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        17107
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         草路~
+End
+
+#Enquire
+Keyword         渠岸~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+End

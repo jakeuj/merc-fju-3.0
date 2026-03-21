@@ -1,0 +1,33 @@
+Vnum            19532
+Name            grain steward~
+ShortDesc       曬場掌櫃~
+Description
+這名看著曬穀場與村舍雜貨的掌櫃說話不急不慢，像任何外路旅人到了這裡，總得
+先學會照鄉間的節奏停下來再往前走。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           26
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             13
+Wis             13
+Dex             11
+Con             12
+Hp              1040
+Mana            90
+Move            120
+Class           0
+Gold            240
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
+

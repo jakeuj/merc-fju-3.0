@@ -1,0 +1,36 @@
+Vnum            17106
+Name            村舍籬旁~
+Description
+幾戶低矮村舍靠著竹籬圍成一小片安靜角落，屋外還掛著剛洗過的布衫與農具。這裡沒有城中鋪面的熱鬧，也沒有遠野那種空曠危險，反而像主線旅途難得能看見的一段真正有人過日子的縫隙。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        17104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        17108
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         村舍~
+End
+
+#Enquire
+Keyword         籬笆~
+End
+
+#Enquire
+Keyword         借宿~
+End
+
+End

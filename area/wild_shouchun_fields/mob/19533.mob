@@ -1,0 +1,30 @@
+Vnum            19533
+Name            canal watcher~
+ShortDesc       渠畔守望者~
+Description
+這名守在渠畔草路旁的守望者手裡總握著一把舊鐮，眼神像同時盯著水勢和陌生人
+的腳步，生怕誰把近郊小路踩成了真正的麻煩。
+~
+Alignment       0
+Level           28
+Hitroll         10
+Protect         0
+Damroll         12
+Str             14
+Int             11
+Wis             11
+Dex             13
+Con             13
+Hp              1380
+Mana            80
+Move            145
+Class           0
+Gold            260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
+

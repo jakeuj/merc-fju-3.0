@@ -1,0 +1,15 @@
+Vnum            19552
+Name            gourd flask~
+ShortDesc       葫蘆水囊(gourd flask)~
+Description
+一只外層磨得很順手、適合鄉間慢走時隨身帶著的葫蘆水囊(gourd flask)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           22
+Value           8 8 0 0
+Weight          1
+Cost            88
+End
+

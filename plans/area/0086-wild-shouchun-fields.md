@@ -21,7 +21,7 @@
 - external_links:
   - `enter`: `city_shouchun` / 田野外口
   - `south`: `city_jianye` / 建業方向預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Reference Entry Points
 
@@ -67,7 +67,31 @@
   - passed (`Validation succeeded for 8 room(s).`)
 - `python -X utf8 tools/mapmd_validate.py area/city_shouchun/map.md`
   - passed (`Validated 9 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`) after aligning `17008 <-> 17101`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_shouchun_fields/map.md`
+  - passed (`Wrote 8 room scaffold file(s) to area/wild_shouchun_fields/roo`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_shouchun/map.md`
+  - passed (`Wrote 9 room scaffold file(s) to area/city_shouchun/roo`) after aligning `17008 <-> 17101`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed (`make: 'merc' is up to date.`)
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - passed via startup success log `log/1057.log`
+- `debug/badobject`
+  - passed (empty after smoke test)
+- `debug/error`
+  - only contains the expected timeout-forced shutdown path after the successful run
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `wild_shouchun_fields`，保留房號段 `17101-17120`
+- `area/wild_shouchun_fields/index` 已建立，`Serial 175`
+- 第一輪 runtime scaffold 已加入：
+  - `mob/19531-19534`
+  - `obj/19551-19554`
+  - `res/fields.res`
+  - `shp/supplies.shp`
+- `city_shouchun/17008 <-> wild_shouchun_fields/17101` 已成為正式 runtime boundary
+- `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步登錄 `wild_shouchun_fields`
 
 ## Next Step Prompt
 
-`先 commit 目前 wild_shouchun_fields 的 spec milestone；commit 後直接進 implementation，補齊 city_shouchun/17008 <-> 17101 runtime boundary、生成 roo 與最小 area runtime scaffold。`
+`先 commit 目前 wild_shouchun_fields 的 implementation milestone；commit 後回到 queue 規則盤點下一個待建 area，建立新的 spec milestone。`

@@ -1,0 +1,36 @@
+Vnum            17102
+Name            田埂岔路~
+Description
+幾條窄田埂在此分開，踩上去時既不算真正的路，也不是能放心亂走的泥地。城裡的人多半只把這裡當外圍農路，可對行腳的人來說，正是從這裡開始，壽春的主城秩序慢慢被鄉野的方向感取代。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        17101
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        17104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         岔路~
+End
+
+#Enquire
+Keyword         田埂~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

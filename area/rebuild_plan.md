@@ -709,41 +709,12 @@
 
 ## In Progress
 
-- `wild_shouchun_fields`
-  - area_family: `Wild`
-  - reserved_room_block: `17101-17120`
-  - level_range: `22-34`
-  - theme: `歷史城市`
-  - subtheme: `田野 / 村舍`
-  - external_links:
-    - `enter`: `city_shouchun` / `17008`
-    - `south`: `city_jianye` / 建業方向預留
-  - delivery_gate: `spec_ready_for_commit`
-  - ref_inputs_used:
-    - `area/world_map.md`
-    - `ref/Readme.md`
-    - `ref/sanguo-progression-map.md`
-    - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/wild_shouchun_fields/map.md`
-    - `ref/world-graph.md`
-    - `docs/3yWebsite/docs/data/players.json`
-    - `docs/3yWebsite/docs/data/skills.json`
-    - `plans/area/0085-city-shouchun.md`
-  - ref_inputs_deferred:
-    - `ref/sanguo-area-specfirst/area/city_jianye/map.md`
-    - `ref/sanguo-area-specfirst/area/wild_jianye_west/map.md`
-    - 各類原型工具與模擬系統
-  - theme_basis:
-    - `world-graph` 已把 `wild_shouchun_fields` 放在 `city_shouchun` 與 `city_jianye` 之間，支持先以近郊 wild 承接壽春，而不是立刻跳回另一座城市
-    - `area/world_map.md` 的東線骨架 `徐州 - 壽春 - 建業` 支持把壽春外圍補成真正可行走的田野轉場
-    - `題材分布表` 將壽春定為江東北段的歷史據點，適合往外展成田埂、村舍與灌渠感明確的近郊帶
-    - `players.json / skills.json` 沒有要求此段必須先切高服務節點，支持先把外郊節奏補齊
-  - compliance_check:
-    - compliant；在 `Road -> City` 後切到 `Wild`，符合 queue variety，也自然承接建業主線前帶
+(目前無 `in_progress` 項目。)
 
 
 ## Done
 
+- `2026-03-21` `wild_shouchun_fields` 已完成第一輪 runtime implementation，完成 `city_shouchun/17008 <-> 17101` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1057.log`），達成可提交狀態
 - `2026-03-21` `city_shouchun` 已完成第一輪 runtime implementation，完成 `road_shouchun_xuzhou/16908 <-> 17001` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1056.log`），達成可提交狀態
 - `2026-03-21` `road_shouchun_xuzhou` 已完成第一輪 runtime implementation，完成 `city_xuzhou/16808 <-> 16901` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1055.log`），達成可提交狀態
 - `2026-03-21` `city_xuzhou` 已完成第一輪 runtime implementation，完成 `city_chenliu/13810 <-> 16801` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1054.log`），達成可提交狀態
@@ -894,17 +865,17 @@
 
 ## Current Recommended Next Step
 
-`wild_shouchun_fields` 已完成 spec 建立並待驗證/提交。下一步應先完成 validate-only 檢查與 spec milestone commit，再直接推進 implementation。
+`wild_shouchun_fields` 已完成第一輪 runtime implementation 並通過 build / smoke test。下一步應回到 queue 規則盤點下一個待建 area，建立新的 spec milestone。
 
 ## Next Action
 
-- 完成 `wild_shouchun_fields` spec gate：
-  - 驗證 `area/wild_shouchun_fields/map.md`
-  - 驗證對齊後的 `area/city_shouchun/map.md`
-  - 更新單區 plan 的 validation 結果
-  - commit spec milestone
-  - commit 後直接進 implementation milestone
+- 依 queue 規則重建下一個 actionable area：
+  - 檢查 `area/world_map.md`
+  - 檢查 `ref/sanguo-progression-map.md`
+  - 檢查 `ref/三國-MUD-題材分布表.md`
+  - 交叉比對 `docs/3yWebsite/docs/data/players.json` / `skills.json`
+  - 建立新的 spec milestone
 
 ## Next Prompt
 
-`續做 wild_shouchun_fields：先完成 spec 驗證與 commit，接著直接進 implementation milestone；需要時自動 commit，並在通過 gate 後直接往下一步推進。`
+`回到 queue 規則盤點下一個待建 area，建立新的 spec milestone；需要時自動 commit，並在通過 gate 後直接往 implementation 推進。`

@@ -1,0 +1,36 @@
+Vnum            17103
+Name            灌渠小橋~
+Description
+一條不寬的灌渠沿著田畦斜斜切過，小橋的木板因久曬而微微起翹。站在橋上時，能同時看見壽春外牆、近處耕地與更遠處的低矮村舍，像整片近郊的脈絡都在這條水線旁變得清楚了些。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        17101
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        17105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         灌渠~
+End
+
+#Enquire
+Keyword         小橋~
+End
+
+#Enquire
+Keyword         村舍~
+End
+
+End

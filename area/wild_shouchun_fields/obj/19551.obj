@@ -1,0 +1,15 @@
+Vnum            19551
+Name            field ration~
+ShortDesc       田野乾糧(field ration)~
+Description
+一包適合在田埂與村舍間邊走邊吃的田野乾糧(field ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           22
+Value           16 28 4 0
+Weight          1
+Cost            95
+End
+

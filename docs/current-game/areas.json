@@ -1716,6 +1716,25 @@
         "plans/area/0085-city-shouchun.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "wild_shouchun_fields",
+      "title": "壽春田野",
+      "room_range": "17101-17120",
+      "load_order": 92,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_shouchun",
+      "theme_primary": "歷史城市",
+      "theme_secondary": "田野 / 村舍",
+      "summary": "承接壽春田野外口，落成田埂岔路、灌渠小橋、曬穀場前與南向土道骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/wild_shouchun_fields/index",
+        "area/wild_shouchun_fields/map.md",
+        "plans/area/0086-wild-shouchun-fields.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

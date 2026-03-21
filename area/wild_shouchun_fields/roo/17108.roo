@@ -1,0 +1,36 @@
+Vnum            17108
+Name            南向土道~
+Description
+土道在這裡終於脫離零碎田埂，慢慢收成一條能讓長途旅人放心辨認的南向道路。再往前，壽春的近郊氣息會一步步淡下去，取而代之的是更南主線的遠行感，因此這裡像整片田野留給旅人的最後一個明白路標。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        17107
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        17106
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         南路~
+End
+
+#Enquire
+Keyword         土道~
+End
+
+#Enquire
+Keyword         遠行~
+End
+
+End

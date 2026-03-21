@@ -1,0 +1,15 @@
+Vnum            19554
+Name            hood lantern~
+ShortDesc       罩風提燈(hood lantern)~
+Description
+一盞為田風與夜露特地做了外罩的罩風提燈(hood lantern)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           24
+Value           0 0 40 0
+Weight          2
+Cost            120
+End
+

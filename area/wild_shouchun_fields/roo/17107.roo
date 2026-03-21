@@ -1,0 +1,36 @@
+Vnum            17107
+Name            田間望路臺~
+Description
+一處略高的土臺被踩成了天然望點，向北能回看壽春外口，向南則能看見道路慢慢從田地邊緣拉直。站在這裡最容易明白，壽春田野不是零散農地，而是一段正把主城與更南遠路安靜接起來的過渡地帶。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        17105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        17108
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         望路~
+End
+
+#Enquire
+Keyword         南路~
+End
+
+#Enquire
+Keyword         建業~
+End
+
+End

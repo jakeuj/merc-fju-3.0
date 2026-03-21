@@ -1,0 +1,33 @@
+Vnum            19531
+Name            field guide~
+ShortDesc       田埂引路客~
+Description
+這名常在田野外口與田埂岔路間來回走動的引路客，對哪片泥地近日較難走、哪條
+小路能更快回城都說得很熟。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       90
+Level           24
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             13
+Dex             12
+Con             12
+Hp              920
+Mana            80
+Move            120
+Class           0
+Gold            180
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
+

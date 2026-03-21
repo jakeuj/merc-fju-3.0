@@ -1,0 +1,44 @@
+Vnum            17104
+Name            曬穀場前~
+Description
+幾片平整空地上攤著曬穀竹蓆，風一過便帶起細碎穀香。這種離城不遠、卻完全屬於農時的景象，正好提醒人壽春之所以能穩，靠的不只是官署與糧車，也靠城外這些看似平凡的田家勞作。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        17102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        17105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        17106
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         曬穀~
+End
+
+#Enquire
+Keyword         村舍~
+End
+
+#Enquire
+Keyword         農家~
+End
+
+End

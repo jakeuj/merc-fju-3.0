@@ -1,0 +1,30 @@
+Vnum            19534
+Name            south track scout~
+ShortDesc       南路巡田人~
+Description
+這名常在南向土道附近巡看的巡田人腳步很穩，像任何想從壽春田野繼續往更遠處
+走的人，都會先被他看出是不是準備好了。
+~
+Alignment       0
+Level           30
+Hitroll         11
+Protect         0
+Damroll         13
+Str             14
+Int             11
+Wis             12
+Dex             14
+Con             13
+Hp              1520
+Mana            80
+Move            155
+Class           0
+Gold            300
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
+
