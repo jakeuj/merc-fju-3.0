@@ -1,0 +1,28 @@
+Vnum            16708
+Name            殘宮核心~
+Description
+核心空間已看不出完整殿制，只剩斷柱、沉座與一道像祭壇又像封口的中樞殘構。海水在這裡安靜得近乎不自然，像整座遺跡真正想留下的東西，都還藏在這片靜壓裡。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       NORTH
+ExitVnum        16705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         核心~
+End
+
+#Enquire
+Keyword         祭壇~
+End
+
+#Enquire
+Keyword         殘宮~
+End
+
+End

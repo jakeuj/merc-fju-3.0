@@ -1,0 +1,44 @@
+Vnum            16705
+Name            殘宮迴水廊~
+Description
+一道半塌的迴廊把水流切成緩慢旋轉的暗帶，讓人分不清眼前是通路、屏風，還是某種仍在運作的古老守勢。站在這裡時，方向感比勇氣更像一種珍貴資源。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       NORTH
+ExitVnum        16703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16706
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         迴廊~
+End
+
+#Enquire
+Keyword         水流~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

@@ -111,6 +111,7 @@ title: Current Game Areas
 | `city_kuaiji` | 會稽 / 山城與門派主城 | `16401-16430` | `rebuild addition` | 承接會稽北口，落成北口山門、會稽主街、坡上市集與門派街口骨架。 |
 | `dng_temple_ruins` | 山中古寺 / 古祠地脈 dungeon | `16501-16530` | `rebuild addition` | 承接古祠地脈，落成地脈石梯、滴水甬道、供臺中殿與深封石室前帶骨架。 |
 | `wild_river_delta` | 江東水域 / 洲灘渡汊 wild | `16601-16630` | `rebuild addition` | 承接會稽東市，落成出城木棧、分流渡灣、舊樁灘岸與洲心渡口骨架。 |
+| `sec_water_ruins` | 水底遺跡 / 裂井殘宮 secret | `16701-16730` | `rebuild addition` | 承接海盜群島外礁深灘，落成裂井落點、沉殿前甬、光紋偏廊與殘宮核心骨架。 |
 
 ## Recent Rebuild Areas
 
@@ -211,6 +212,7 @@ title: Current Game Areas
 - `city_kuaiji`：把會稽北口正式接進會稽城，透過北口山門、會稽主街、坡上市集與門派街口把節奏從山道收束成山城 city hub。
 - `dng_temple_ruins`：把古祠地脈正式接進山中古寺，透過地脈石梯、滴水甬道、供臺中殿與深封石室前帶把節奏從山城傳聞切進封閉 dungeon。
 - `wild_river_delta`：把會稽東市正式接進江東外水 wild，透過出城木棧、分流渡灣、舊樁灘岸與洲心渡口把節奏從封閉古寺重新打開成可辨位的江汊探索帶。
+- `sec_water_ruins`：把海盜群島外礁深灘正式接進水底 secret，透過裂井落點、沉殿前甬、光紋偏廊與殘宮核心把節奏從外海 wild 切進靜壓殘宮。
 
 ## 維護規則
 

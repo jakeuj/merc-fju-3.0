@@ -1,0 +1,44 @@
+Vnum            16703
+Name            沉殿前甬~
+Description
+水流在這條前甬裡忽然變得很慢，像整片海都到了這裡先收聲。前方石構仍看得出殿廊輪廓，只是所有棱角都被歲月和水壓磨得像一段已經不太肯開口的記憶。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       NORTH
+ExitVnum        16701
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        16704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         甬道~
+End
+
+#Enquire
+Keyword         沉殿~
+End
+
+#Enquire
+Keyword         前面~
+End
+
+End

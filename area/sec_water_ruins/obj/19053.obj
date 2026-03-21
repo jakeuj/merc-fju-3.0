@@ -1,0 +1,15 @@
+Vnum            19053
+Name            palace rust blade~
+ShortDesc       水府鏽刃(palace rust blade)~
+Description
+一把在水壓與歲月裡仍保留鋒形的水府鏽刃(palace rust blade)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           100
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            360
+End

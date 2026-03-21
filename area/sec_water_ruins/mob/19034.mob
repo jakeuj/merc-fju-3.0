@@ -1,0 +1,29 @@
+Vnum            19034
+Name            ruin envoy~
+ShortDesc       殘宮巡使~
+Description
+這名在殘宮核心靜靜巡行的巡使步子很慢，卻帶著一種整片水壓都在替它讓路的
+沉穩，像整座遺跡最後的秩序仍暫時站在它這邊。
+~
+Alignment       0
+Level           100
+Hitroll         12
+Protect         0
+Damroll         14
+Str             14
+Int             13
+Wis             14
+Dex             14
+Con             13
+Hp              5000
+Mana            200
+Move            180
+Class           0
+Gold            760
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

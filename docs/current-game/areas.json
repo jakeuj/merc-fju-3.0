@@ -1640,6 +1640,25 @@
         "plans/area/0081-wild-river-delta.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_water_ruins",
+      "title": "水底遺跡",
+      "room_range": "16701-16730",
+      "load_order": 88,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "wild_pirate_islands",
+      "theme_primary": "仙俠",
+      "theme_secondary": "水府遺跡 / 裂井殘宮",
+      "summary": "承接海盜群島外礁深灘，落成裂井落點、沉殿前甬、光紋偏廊與殘宮核心骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_water_ruins/index",
+        "area/sec_water_ruins/map.md",
+        "plans/area/0082-sec-water-ruins.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

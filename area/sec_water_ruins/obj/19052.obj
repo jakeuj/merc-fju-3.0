@@ -1,0 +1,14 @@
+Vnum            19052
+Name            pearl flask~
+ShortDesc       珠光水囊(pearl flask)~
+Description
+一只瓶身帶著淡淡珠光、適合在深水遺跡裡隨身攜帶的珠光水囊(pearl flask)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           100
+Value           8 8 0 0
+Weight          1
+Cost            240
+End

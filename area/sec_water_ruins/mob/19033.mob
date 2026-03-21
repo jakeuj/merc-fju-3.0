@@ -1,0 +1,29 @@
+Vnum            19033
+Name            glyph guardian~
+ShortDesc       光紋護宮人~
+Description
+這名護宮人的身影被光紋映得忽明忽暗，像它真正守著的不是廊道，而是某條早
+已不再對外人說明的儀式路徑。
+~
+Alignment       0
+Level           100
+Hitroll         12
+Protect         0
+Damroll         14
+Str             15
+Int             12
+Wis             13
+Dex             14
+Con             13
+Hp              5200
+Mana            180
+Move            180
+Class           0
+Gold            780
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1,0 +1,32 @@
+Vnum            16706
+Name            光紋偏廊~
+Description
+偏廊地面還留著連成一線的光紋，像某種早已沉睡的儀式路徑仍在水底微微呼吸。它不像正門那樣顯眼，卻更像真正懂路的人會選擇的地方。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       WEST
+ExitVnum        16705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        16704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         光紋~
+End
+
+#Enquire
+Keyword         偏廊~
+End
+
+End

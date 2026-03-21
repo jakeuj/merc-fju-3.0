@@ -1,0 +1,14 @@
+Vnum            19051
+Name            sealed ration~
+ShortDesc       密封糧包(sealed ration)~
+Description
+一包專為深水下探準備、外層封得十分嚴實的密封糧包(sealed ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           100
+Value           30 48 4 0
+Weight          1
+Cost            320
+End

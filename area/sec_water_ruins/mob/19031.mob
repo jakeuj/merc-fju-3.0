@@ -1,0 +1,32 @@
+Vnum            19031
+Name            rift watcher~
+ShortDesc       裂井守望者~
+Description
+這名守在裂井落點旁的守望者像是已和井壁上的微光一起沉了很多年，連看人時
+的神情都像在分辨你是闖入者，還是又一段被海帶下來的殘響。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             15
+Wis             16
+Dex             11
+Con             12
+Hp              4000
+Mana            260
+Move            150
+Class           0
+Gold            680
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

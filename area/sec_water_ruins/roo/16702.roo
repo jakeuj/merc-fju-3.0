@@ -1,0 +1,24 @@
+Vnum            16702
+Name            沉壁光痕~
+Description
+井壁旁殘著幾道像魚骨又像符篆的光痕，在水流裡一明一滅。它們不只照亮落點，也像在提醒後來者，真正的路不是看水勢，而是看這些還未完全熄去的古老指引。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       WEST
+ExitVnum        16701
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         光痕~
+End
+
+#Enquire
+Keyword         井壁~
+End
+
+End

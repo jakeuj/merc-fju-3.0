@@ -1,0 +1,32 @@
+Vnum            16704
+Name            裂磚側穴~
+Description
+側穴裡滿是被水壓推倒的殘磚與碎柱，卻也因此讓人更容易發現這座遺跡並不是單層結構。很多不屬於主殿的痕跡都被推擠到這裡，像整個殘宮最不肯消失的旁證。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       EAST
+ExitVnum        16703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16706
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         裂磚~
+End
+
+#Enquire
+Keyword         側穴~
+End
+
+End

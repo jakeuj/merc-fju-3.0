@@ -180,7 +180,8 @@
       "coord": [0, -4, 0],
       "labels": ["south-edge", "deep-water"],
       "exits": [
-        { "direction": "north", "to": 15808 }
+        { "direction": "north", "to": 15808 },
+        { "direction": "down", "to": 16701, "external": true }
       ],
       "enquires": ["深水", "下面", "南邊"]
     },

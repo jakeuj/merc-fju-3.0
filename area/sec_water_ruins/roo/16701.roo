@@ -1,0 +1,44 @@
+Vnum            16701
+Name            裂井落點~
+Description
+從外礁深灘下沉後，最先看見的不是無盡黑水，而是一口被暗光照出的裂井落點。井壁像被某種古老力量從內側撐裂，讓人明白這裡雖在海底，卻不是自然形成的水穴。
+~
+SectorType      SECT_WATER_SWIM
+
+#Exit
+Direction       UP
+ExitVnum        15810
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16702
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         裂井~
+End
+
+#Enquire
+Keyword         上面~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End
