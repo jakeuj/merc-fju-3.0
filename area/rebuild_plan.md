@@ -709,7 +709,41 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `city_puyang`
+  - area_family: `City`
+  - reserved_room_block: `17201-17220`
+  - level_range: `20-32`
+  - theme: `軍旅`
+  - subtheme: `河北前沿 / 糧道與軍政中繼`
+  - external_links:
+    - `west`: `wild_puyang_forest` / `13906`
+    - `east`: `dng_guandu_battlefield` / `14007`
+    - `south`: `road_puyang` / 南驛官道預留
+    - `north`: `city_nanpi` / 河北北路預留
+  - delivery_gate: `spec_ready_for_commit`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/city_puyang/map.md`
+    - `ref/world-graph.md`
+    - `docs/3yWebsite/map/puyang.html`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `plans/area/0054-wild-puyang-forest.md`
+    - `plans/area/0055-dng-guandu-battlefield.md`
+  - ref_inputs_deferred:
+    - `ref/sanguo-area-specfirst/area/city_nanpi/map.md`
+    - `ref/sanguo-area-specfirst/area/wild_floodplain/map.md`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `world-graph` 已把濮陽放成兗州河北的前沿城市節點，並和 `city_nanpi`、戰場 / 野外節點同屬河北主線
+    - `wild_puyang_forest` 與 `dng_guandu_battlefield` 都已把 `city_puyang` 當相鄰目標，支持現在回補這個缺口
+    - `題材分布表` 將濮陽定位為軍旅城鎮，適合先落成帶糧道與軍務壓力的 frontier city
+    - `puyang.html` 證明濮陽具備獨立城市規模，不只是路線標籤
+  - compliance_check:
+    - compliant；在 `Wild` 後切回 `City`，同時補的是既有河北鏈缺口，不是另外開一段無耦合支線
 
 
 ## Done
@@ -865,17 +899,16 @@
 
 ## Current Recommended Next Step
 
-`wild_shouchun_fields` 已完成第一輪 runtime implementation 並通過 build / smoke test。下一步應回到 queue 規則盤點下一個待建 area，建立新的 spec milestone。
+`city_puyang` 已完成 spec 建立並待驗證 / 提交。下一步應先完成 validate-only 檢查與 spec milestone commit，再直接推進 implementation。
 
 ## Next Action
 
-- 依 queue 規則重建下一個 actionable area：
-  - 檢查 `area/world_map.md`
-  - 檢查 `ref/sanguo-progression-map.md`
-  - 檢查 `ref/三國-MUD-題材分布表.md`
-  - 交叉比對 `docs/3yWebsite/docs/data/players.json` / `skills.json`
-  - 建立新的 spec milestone
+- 完成 `city_puyang` spec gate：
+  - 驗證 `area/city_puyang/map.md`
+  - 更新單區 plan 的 validation 結果
+  - commit spec milestone
+  - commit 後直接進 implementation milestone
 
 ## Next Prompt
 
-`回到 queue 規則盤點下一個待建 area，建立新的 spec milestone；需要時自動 commit，並在通過 gate 後直接往 implementation 推進。`
+`續做 city_puyang：先完成 spec 驗證與 commit，接著直接進 implementation milestone；需要時自動 commit，並在通過 gate 後直接往下一步推進。`
