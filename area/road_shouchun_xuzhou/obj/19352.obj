@@ -1,0 +1,14 @@
+Vnum            19352
+Name            travel flask~
+ShortDesc       旅路水囊(travel flask)~
+Description
+一只方便在驛道、路亭與坡口之間帶著走的旅路水囊(travel flask)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           21
+Value           10 10 LIQ_WATER 0
+Weight          2
+Cost            75
+End

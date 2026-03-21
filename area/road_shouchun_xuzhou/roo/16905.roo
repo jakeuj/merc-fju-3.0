@@ -1,0 +1,44 @@
+Vnum            16905
+Name            路亭前坪~
+Description
+官道在這裡稍稍放寬，讓車馬與步客都能在路亭前歇一口氣。棚下總有人談論南邊糧價、壽春消息，或猜測下一批從州城趕下來的差人究竟帶著什麼急文。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        16903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       ENTER
+ExitVnum        16906
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         路亭~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+#Enquire
+Keyword         消息~
+End
+
+End

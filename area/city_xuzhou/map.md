@@ -225,6 +225,7 @@
       "labels": ["south-edge", "world-link-south", "travel"],
       "exits": [
         { "direction": "north", "to": 16804 },
+        { "direction": "south", "to": 16901, "external": true },
         { "direction": "enter", "to": 16809 }
       ],
       "enquires": ["南門", "壽春", "官道", "驛馬"]

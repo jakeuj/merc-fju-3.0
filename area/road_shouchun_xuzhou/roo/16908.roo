@@ -1,0 +1,28 @@
+Vnum            16908
+Name            南下官道口~
+Description
+官道在此繼續往南舒展，路面上的車痕比北段更深，像整條路都在催促旅人不要在這裡停太久。站在這裡時，徐州已經成了背後的支點，而壽春則成了真正正在逼近的下一站。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        16907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+#Enquire
+Keyword         壽春~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

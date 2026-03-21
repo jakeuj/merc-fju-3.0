@@ -1,0 +1,36 @@
+Vnum            16907
+Name            換馬坡口~
+Description
+坡口旁留著一片被馬蹄踩得結實的土面，顯示很多長途差人與鏢客都會在此做最後一次整理。再往南，路勢就會更加明顯地把人送向壽春，不再像前半段那樣還能回頭望見州城餘影。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        16905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         換馬~
+End
+
+#Enquire
+Keyword         壽春~
+End
+
+#Enquire
+Keyword         坡口~
+End
+
+End

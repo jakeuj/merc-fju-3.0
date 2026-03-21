@@ -1,0 +1,36 @@
+Vnum            16901
+Name            徐州南口驛道~
+Description
+一離開徐州南門，城牆後方的喧聲很快就被官道上的車轍與風聲取代。這裡仍看得見驛卒、換馬人與最後回頭看州城的旅客，像是在提醒你真正的南路現在才剛開始。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        16808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         徐州~
+End
+
+#Enquire
+Keyword         回城~
+End
+
+#Enquire
+Keyword         南路~
+End
+
+End

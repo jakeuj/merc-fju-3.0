@@ -14,6 +14,14 @@ ExitKey         0
 End
 
 #Exit
+Direction       SOUTH
+ExitVnum        16901
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
 Direction       ENTER
 ExitVnum        16809
 ExitDesc        ~

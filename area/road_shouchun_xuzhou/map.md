@@ -57,6 +57,7 @@
       "coord": [0, 0, 0],
       "labels": ["north-edge", "world-link-north", "entry"],
       "exits": [
+        { "direction": "north", "to": 16808, "external": true },
         { "direction": "south", "to": 16902 }
       ],
       "enquires": ["徐州", "回城", "南路"]

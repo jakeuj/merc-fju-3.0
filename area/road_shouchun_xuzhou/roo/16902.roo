@@ -1,0 +1,39 @@
+Vnum            16902
+Name            官道木樁旁~
+Description
+官道旁立著一排磨舊的木樁，上頭留著無數繩結與馬索痕跡。這裡不像正式驛站那樣忙，卻總有人在此停一下，把水囊繫緊、把貨繩重打，然後才真正踏上較長的一段南下路。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        16901
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         木樁~
+Description
+木樁被繩索磨得光亮，看得出這段路多年來一直都是車馬南北往返的固定歇手點。
+~
+End
+
+#Enquire
+Keyword         木樁~
+End
+
+#Enquire
+Keyword         車馬~
+End
+
+End

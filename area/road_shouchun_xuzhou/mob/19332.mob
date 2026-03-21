@@ -1,0 +1,32 @@
+Vnum            19332
+Name            pavilion keeper~
+ShortDesc       路亭掌事~
+Description
+這位在路亭前照看茶桶與木牌的掌事說話不急，卻總能把旅人最想知道的消息講在
+最前頭，像是整條淮東官道的節奏都先經過了他耳邊一輪。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       110
+Level           21
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             13
+Wis             14
+Dex             10
+Con             11
+Hp              790
+Mana            110
+Move            105
+Class           0
+Gold            170
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

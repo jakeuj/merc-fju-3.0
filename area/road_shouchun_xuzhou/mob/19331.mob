@@ -1,0 +1,32 @@
+Vnum            19331
+Name            courier runner~
+ShortDesc       驛道驛卒~
+Description
+這名守在徐州南口驛道附近的驛卒腳步利落，像是隨時都能帶著急文再往南跑上一
+段。他對誰該快走、誰該先歇口氣，有種長年在官道上磨出來的直覺。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           22
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             12
+Dex             13
+Con             12
+Hp              840
+Mana            80
+Move            135
+Class           0
+Gold            140
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

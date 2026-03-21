@@ -1,0 +1,24 @@
+Vnum            16906
+Name            路亭內~
+Description
+路亭裡擺著長凳、茶桶與幾只被磨得發亮的木碗，牆上還釘著供旅人記路的簡單木牌。這裡給人的安全感很薄，卻也正因如此，任何一句打聽到的消息都顯得格外實用。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       OUT
+ExitVnum        16905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         木牌~
+End
+
+#Enquire
+Keyword         茶水~
+End
+
+End

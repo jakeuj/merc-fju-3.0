@@ -1678,6 +1678,25 @@
         "plans/area/0083-city-xuzhou.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "road_shouchun_xuzhou",
+      "title": "淮東官道",
+      "room_range": "16901-16920",
+      "load_order": 90,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_xuzhou",
+      "theme_primary": "歷史城市",
+      "theme_secondary": "淮東官道 / 驛路轉場",
+      "summary": "承接徐州南門驛口，落成北口驛道、官道中段、路亭歇腳點與南下官道口骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/road_shouchun_xuzhou/index",
+        "area/road_shouchun_xuzhou/map.md",
+        "plans/area/0084-road-shouchun-xuzhou.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

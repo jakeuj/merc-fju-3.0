@@ -1,0 +1,44 @@
+Vnum            16903
+Name            淮東官道中段~
+Description
+這段官道筆直開闊，兩旁田色與低樹把視線拉得很長。走在這裡時，你會清楚感受到自己已不在州城之內，卻也還沒真正進入下一座城，只能靠路感、天色與偶爾經過的旅隊判斷節奏。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        16902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         官道~
+End
+
+#Enquire
+Keyword         壽春~
+End
+
+#Enquire
+Keyword         下一站~
+End
+
+End

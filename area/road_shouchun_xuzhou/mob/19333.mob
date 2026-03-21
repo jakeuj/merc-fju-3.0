@@ -1,0 +1,32 @@
+Vnum            19333
+Name            escorted trader~
+ShortDesc       押運客~
+Description
+這名押運客總把視線放在車轍、繩結和同行人的腳步上，像任何看起來不對勁的小
+變化，都可能讓他重新盤算今天要不要繼續往壽春趕。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       80
+Level           24
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             11
+Wis             11
+Dex             12
+Con             12
+Hp              900
+Mana            70
+Move            120
+Class           0
+Gold            160
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

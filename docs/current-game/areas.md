@@ -113,6 +113,7 @@ title: Current Game Areas
 | `wild_river_delta` | 江東水域 / 洲灘渡汊 wild | `16601-16630` | `rebuild addition` | 承接會稽東市，落成出城木棧、分流渡灣、舊樁灘岸與洲心渡口骨架。 |
 | `sec_water_ruins` | 水底遺跡 / 裂井殘宮 secret | `16701-16730` | `rebuild addition` | 承接海盜群島外礁深灘，落成裂井落點、沉殿前甬、光紋偏廊與殘宮核心骨架。 |
 | `city_xuzhou` | 徐州 / 東線州府 hub | `16801-16820` | `rebuild addition` | 承接陳留東街路標，落成西門甬道、州府十字、市集牌樓、州府前街與南門驛帶骨架。 |
+| `road_shouchun_xuzhou` | 淮東官道 / 徐壽驛路 road | `16901-16920` | `rebuild addition` | 承接徐州南門驛口，落成北口驛道、官道中段、路亭歇腳點與南下官道口骨架。 |
 
 ## Recent Rebuild Areas
 
@@ -215,6 +216,7 @@ title: Current Game Areas
 - `wild_river_delta`：把會稽東市正式接進江東外水 wild，透過出城木棧、分流渡灣、舊樁灘岸與洲心渡口把節奏從封閉古寺重新打開成可辨位的江汊探索帶。
 - `sec_water_ruins`：把海盜群島外礁深灘正式接進水底 secret，透過裂井落點、沉殿前甬、光紋偏廊與殘宮核心把節奏從外海 wild 切進靜壓殘宮。
 - `city_xuzhou`：把陳留東街路標正式接進徐州，透過西門、主街十字、市集牌樓、州府前街與南門驛帶把節奏從祕境鏈拉回東線州府與陸路交通 hub。
+- `road_shouchun_xuzhou`：把徐州南門驛口正式接進淮東官道，透過北口驛道、路亭前坪、換馬坡口與南下官道口把節奏從州城收束推進成真正的壽春南路旅程。
 
 ## 維護規則
 

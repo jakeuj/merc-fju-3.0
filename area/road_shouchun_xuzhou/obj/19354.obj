@@ -1,0 +1,14 @@
+Vnum            19354
+Name            road lantern~
+ShortDesc       路亭提燈(road lantern)~
+Description
+一盞適合在路亭前坪與夜色官道間照明的路亭提燈(road lantern)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           20
+Value           0 0 28 0
+Weight          2
+Cost            90
+End

@@ -1,0 +1,24 @@
+Vnum            16904
+Name            里程石旁~
+Description
+一座半人高的里程石立在道旁，石面上的刻字經風雨磨蝕後依然還能辨出徐州與壽春的字樣。對趕路的人來說，這種石頭不只是記里數，更像在替長路留下能抓住方向感的證據。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        16903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         里程石~
+End
+
+#Enquire
+Keyword         距離~
+End
+
+End
