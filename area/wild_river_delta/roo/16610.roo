@@ -1,0 +1,28 @@
+Vnum            16610
+Name            洲心渡口~
+Description
+這座渡口不大，卻比前面的洲灘更有一種『若真要往別處去，就得在這裡決定』的意味。往南的水道被草影和低霧慢慢收細，像把一條更私密、更古老的支線藏在看似平常的洲心之後。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        16606
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         渡口~
+End
+
+#Enquire
+Keyword         洲心~
+End
+
+#Enquire
+Keyword         古祠~
+End
+
+End

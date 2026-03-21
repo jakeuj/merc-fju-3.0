@@ -1,0 +1,44 @@
+Vnum            16604
+Name            舊樁灘岸~
+Description
+岸邊還留著一些半朽的舊樁，像曾有人打算在這裡長久停舟，最後卻只把痕跡留給潮水和藻苔。比起會稽城內那種穩定的人煙感，這裡更像許多計畫都曾來過、又都沒有真正留下。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        16603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16606
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         舊樁~
+End
+
+#Enquire
+Keyword         灘岸~
+End
+
+#Enquire
+Keyword         外埠~
+End
+
+End

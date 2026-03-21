@@ -97,6 +97,20 @@ title: Current Game Areas
 | `wild_wuling` | 武陵山 / 深山野外前帶 | `15001-15030` | `rebuild addition` | 承接長沙西牌山路，落成石碑山路、靈木坡面、山腹高徑與霧帶谷口骨架。 |
 | `city_lingling` | 零陵 / 南境山城 | `15101-15130` | `rebuild addition` | 承接長沙南向官道，落成北門、主街、市集補給、官署前街與南門官道骨架。 |
 | `city_guiyang` | 桂陽 / 南嶺邊地城鎮 | `15201-15230` | `rebuild addition` | 承接零陵南向官道，落成北門、主街、市集補給、官署前街與南門官道骨架。 |
+| `wild_nanman_jungle` | 南蠻密林 / 部族邊徑 wild | `15301-15330` | `rebuild addition` | 承接桂陽西岔，落成濕根主路、圖騰林口、祭柱空地與根台高徑骨架。 |
+| `dng_serpent_temple` | 蛇神殿 / 血祭封殿 dungeon | `15401-15430` | `rebuild addition` | 承接南蠻密林林下祠痕，落成潮濕前廳、蛇紋甬道、滴血祭槽與封紋內殿骨架。 |
+| `city_nanhai` | 南海 / 南境海港 hub | `15501-15530` | `rebuild addition` | 承接桂陽南路，落成港街、市集補給、港務前街與臨海南口骨架。 |
+| `wild_south_sea_route` | 南海外航道 / 礁岸海路 wild | `15601-15630` | `rebuild addition` | 承接南海臨海南口，落成近海棧道、潮石灣、退潮礁坪與外航前帶骨架。 |
+| `dng_boat_graveyard` | 沉舟墓場 / 外海 wreck dungeon | `15701-15730` | `rebuild addition` | 承接南航分水渦口，落成破桅前廊、漏艙窄道、錨鏈井口與墓場深艙骨架。 |
+| `wild_pirate_islands` | 海盜群島 / 外海碎島 wild | `15801-15830` | `rebuild addition` | 承接沉舟墓場外海破舷，落成礁灣主徑、海寇舊寨、風旗高脊與外礁深灘骨架。 |
+| `fort_naval_base` | 水軍大營 / 海防軍營 fort | `15901-15930` | `rebuild addition` | 承接海盜群島東向暗棧，落成棧門柵關、補給棚區、望樓高位與內港水門骨架。 |
+| `city_jianye` | 建業 / 江東都城 hub | `16001-16030` | `rebuild addition` | 承接水軍大營內港水門，落成南街、中街、市集牌樓、官署前街與港向街口骨架。 |
+| `district_jianye_port` | 建業港區 / 商港分區 | `16101-16130` | `rebuild addition` | 承接建業港向街口，落成碼頭主道、貨棚泊位、船行牌坊與商船外棧骨架。 |
+| `wild_jianye_west` | 建業西郊 / 水鄉外帶 | `16201-16230` | `rebuild addition` | 承接建業西坊，落成西坊回道、水圳旁徑、茶亭前坪與更西村路骨架。 |
+| `wild_mountain_pass` | 會稽山道 / 抬升山路 wild | `16301-16330` | `rebuild addition` | 承接建業南坡，落成入山坡口、松風棧道、風碑岔台與山腰茶棚骨架。 |
+| `city_kuaiji` | 會稽 / 山城與門派主城 | `16401-16430` | `rebuild addition` | 承接會稽北口，落成北口山門、會稽主街、坡上市集與門派街口骨架。 |
+| `dng_temple_ruins` | 山中古寺 / 古祠地脈 dungeon | `16501-16530` | `rebuild addition` | 承接古祠地脈，落成地脈石梯、滴水甬道、供臺中殿與深封石室前帶骨架。 |
+| `wild_river_delta` | 江東水域 / 洲灘渡汊 wild | `16601-16630` | `rebuild addition` | 承接會稽東市，落成出城木棧、分流渡灣、舊樁灘岸與洲心渡口骨架。 |
 
 ## Recent Rebuild Areas
 
@@ -196,6 +210,7 @@ title: Current Game Areas
 - `wild_mountain_pass`：把建業南坡正式接進會稽山道，透過入山坡口、松風棧道、風碑岔台與山腰茶棚把節奏從水鄉城郊切進抬升的山路 wild。
 - `city_kuaiji`：把會稽北口正式接進會稽城，透過北口山門、會稽主街、坡上市集與門派街口把節奏從山道收束成山城 city hub。
 - `dng_temple_ruins`：把古祠地脈正式接進山中古寺，透過地脈石梯、滴水甬道、供臺中殿與深封石室前帶把節奏從山城傳聞切進封閉 dungeon。
+- `wild_river_delta`：把會稽東市正式接進江東外水 wild，透過出城木棧、分流渡灣、舊樁灘岸與洲心渡口把節奏從封閉古寺重新打開成可辨位的江汊探索帶。
 
 ## 維護規則
 

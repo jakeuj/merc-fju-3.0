@@ -1,0 +1,14 @@
+Vnum            18854
+Name            tide lantern~
+ShortDesc       潮路提燈(tide lantern)~
+Description
+一盞專為潮霧與低風打造、罩面收得很緊的潮路提燈(tide lantern)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           100
+Value           0 0 45 0
+Weight          2
+Cost            310
+End

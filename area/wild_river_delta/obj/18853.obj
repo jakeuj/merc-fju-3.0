@@ -1,0 +1,15 @@
+Vnum            18853
+Name            stake knife~
+ShortDesc       汊路短刀(stake knife)~
+Description
+一把適合在木樁、纜索與淺灘間近身用的汊路短刀(stake knife)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           100
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            420
+End

@@ -14,13 +14,13 @@
   - 相對於 `wild_jianye_west` 的水鄉城郊與 `wild_mountain_pass` 的抬升山道，`city_kuaiji` 應把節奏重新收束成有人煙、有秩序、但仍明顯帶著地方門派與山城流動感的主城節點
 - 世界缺口角色：
   - 把建業鏈正式從山道轉進會稽主城
-  - 為後續 `dng_temple_ruins`、更深江東支線與會稽周邊片區建立母城節點
+  - 為後續 `wild_river_delta`、`dng_temple_ruins` 與更深江東支線建立母城節點
 - reserved_room_block: `16401-16430`
 - planned_vnum_range: `16401-16430`
 - level_range: `100-100`
 - external_links:
   - `north`: `wild_mountain_pass` / 會稽北口
-  - `east`: `district_kuaiji_market` / 東市預留
+  - `east`: `wild_river_delta` / 會稽東市外水
   - `down`: `dng_temple_ruins` / 古祠地脈預留
 - delivery_gate: `implementation_ready_for_commit`
 

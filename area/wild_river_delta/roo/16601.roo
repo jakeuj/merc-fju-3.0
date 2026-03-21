@@ -1,0 +1,44 @@
+Vnum            16601
+Name            出城木棧~
+Description
+離開會稽東市最後一排鋪面後，腳下的青石很快被潮濕木棧與縛樁纜索取代。城裡的人聲仍在身後，但眼前已是被水氣撐開的視野與更碎、更散的江汊路線，像整座山城到了這裡才真正把人放出去。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        16410
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         木棧~
+End
+
+#Enquire
+Keyword         會稽~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

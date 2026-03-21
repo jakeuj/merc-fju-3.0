@@ -1,0 +1,14 @@
+Vnum            18852
+Name            reed waterskin~
+ShortDesc       蘆編水囊(reed waterskin)~
+Description
+一只外層纏著蘆編、很適合掛在木棧邊的蘆編水囊(reed waterskin)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           100
+Value           8 8 0 0
+Weight          1
+Cost            230
+End

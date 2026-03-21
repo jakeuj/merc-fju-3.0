@@ -151,8 +151,7 @@
       "coord": [3, 0, 0],
       "labels": ["east-link", "outer-branch"],
       "exits": [
-        { "direction": "west", "to": 16604 },
-        { "direction": "east", "to": 16701, "external": true }
+        { "direction": "west", "to": 16604 }
       ],
       "enquires": ["外汊", "外埠", "航道"]
     },
@@ -165,8 +164,7 @@
       "coord": [2, 2, 0],
       "labels": ["south-link", "ford"],
       "exits": [
-        { "direction": "north", "to": 16606 },
-        { "direction": "south", "to": 16801, "external": true }
+        { "direction": "north", "to": 16606 }
       ],
       "enquires": ["渡口", "洲心", "古祠"]
     }

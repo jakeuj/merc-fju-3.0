@@ -1,0 +1,29 @@
+Vnum            18834
+Name            ford scout~
+ShortDesc       洲心巡汊人~
+Description
+這名在洲心渡口來回巡看的汊路巡人步子很穩，像早就把哪裡是淺灘、哪裡是低
+霧裡真正危險的暗水都記在了腳下。
+~
+Alignment       0
+Level           100
+Hitroll         12
+Protect         0
+Damroll         14
+Str             14
+Int             11
+Wis             12
+Dex             15
+Con             13
+Hp              5000
+Mana            100
+Move            190
+Class           0
+Gold            740
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

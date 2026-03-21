@@ -1,0 +1,29 @@
+Vnum            18833
+Name            pile watcher~
+ShortDesc       舊樁守望者~
+Description
+這名靠在舊樁灘岸邊的守望者總帶著一把短刀，眼神像在看潮路，也像在看哪個
+外來人會不小心把自己走進更東的陌生航道。
+~
+Alignment       0
+Level           100
+Hitroll         12
+Protect         0
+Damroll         14
+Str             15
+Int             11
+Wis             11
+Dex             14
+Con             13
+Hp              5200
+Mana            100
+Move            180
+Class           0
+Gold            760
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

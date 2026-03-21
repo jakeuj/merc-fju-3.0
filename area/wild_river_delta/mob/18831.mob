@@ -1,0 +1,32 @@
+Vnum            18831
+Name            ferryman~
+ShortDesc       木棧渡頭人~
+Description
+這名守在木棧邊的渡頭人熟得很，城裡外客、水路潮勢和哪條汊路今天比較不好
+走，他多半都比旁人更早看出來。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             15
+Wis             15
+Dex             11
+Con             12
+Hp              4000
+Mana            200
+Move            150
+Class           0
+Gold            660
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

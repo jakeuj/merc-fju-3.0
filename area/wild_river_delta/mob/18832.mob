@@ -1,0 +1,32 @@
+Vnum            18832
+Name            delta guide~
+ShortDesc       分汊引路客~
+Description
+這名常在分流渡灣晃來晃去的引路客，不像真正的船夫，卻總能在旁人迷路前先
+說出哪一條水汊今天該避開。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       80
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             14
+Wis             14
+Dex             12
+Con             12
+Hp              3600
+Mana            180
+Move            160
+Class           0
+Gold            520
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

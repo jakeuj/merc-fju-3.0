@@ -683,18 +683,21 @@
 
 - `wild_river_delta`
   - plan: `plans/area/0081-wild-river-delta.md`
-  - delivery_gate: `spec_ready_for_commit`
+  - delivery_gate: `implementation_ready_for_commit`
   - current_status:
-    - 已重建 queue，確認 `dng_temple_ruins` runtime milestone 已於 commit `9887340` 完成
-    - 已建立 `wild_river_delta` 的單區 plan 與 `map.md` 草案
-    - `tools/mapmd_validate.py` 已通過
-    - generator `--validate-only` 已通過
+    - 已生成 `roo/16601-16610` 並補齊最小 `index / mob / obj / res / shp`
+    - 已把 `city_kuaiji/16410` 與 `wild_river_delta/16601` 對齊成正式 runtime boundary
+    - 已同步 `city_kuaiji` 的東向 spec 到 `wild_river_delta`
+    - 已通過 WSL Linux build 與 startup smoke test
+    - 成功 log：`log/1052.log`
+    - `debug/badobject` 為空
   - next_action:
-    - commit `wild_river_delta` 的 spec milestone
+    - commit `wild_river_delta` 的 implementation milestone
 
 
 ## Done
 
+- `2026-03-21` `wild_river_delta` 已完成第一輪 runtime implementation，完成 `city_kuaiji/16410 <-> 16601` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1052.log`），達成可提交狀態
 - `2026-03-21` `dng_temple_ruins` 已完成第一輪 runtime implementation，完成 `city_kuaiji/16406 <-> 16501` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1050.log`），達成可提交狀態
 - `2026-03-21` `city_kuaiji` 已完成第一輪 runtime implementation、commit `b0150ea`，完成 `wild_mountain_pass/16310 <-> 16401` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1048.log`），並達成可前進下一區狀態
 - `2026-03-21` `wild_mountain_pass` 已完成第一輪 runtime implementation、commit `5c175b4`，完成 `wild_jianye_west/16210 <-> 16301` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1045.log`），並達成可前進下一區狀態
@@ -840,20 +843,16 @@
 
 ## Current Recommended Next Step
 
-`wild_river_delta` spec 已通過 validate。下一步應先提交 spec milestone，接著直接進入 implementation milestone，把 `city_kuaiji/16410 <-> 16601` 接成正式 runtime boundary。
+`wild_river_delta` 已完成第一輪 runtime implementation 並通過 build / smoke test。下一步應先提交 implementation milestone，接著回到 queue 規則盤點下一個待建 area。
 
 ## Next Action
 
 - 完成 `wild_river_delta`：
-  - 已通過 `tools/mapmd_validate.py`
-  - 已通過 generator `--validate-only`
-  - commit spec milestone
-  - 生成 `roo`
-  - 補最小 `index / mob / obj / res / shp`
-  - 補 `city_kuaiji/16410 <-> wild_river_delta/16601` runtime boundary
-  - 跑 WSL Linux build 與 startup smoke
+  - 已提交 spec milestone
+  - 已完成 implementation milestone
+  - 已通過 WSL build 與 startup smoke
   - commit implementation milestone
 
 ## Next Prompt
 
-`先 commit 目前 wild_river_delta 的 spec milestone；commit 後直接做 implementation milestone，補 runtime scaffold、boundary link、WSL build 與 startup smoke。`
+`先 commit 目前 wild_river_delta 的 implementation milestone；commit 後回到 queue 規則盤點下一個待建 area，建立新的 spec milestone。`

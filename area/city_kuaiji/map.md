@@ -36,8 +36,8 @@
       {
         "direction": "east",
         "source_vnum": 16410,
-        "target_area": "district_kuaiji_market",
-        "label": "會稽東市"
+        "target_area": "wild_river_delta",
+        "label": "會稽東市外水"
       },
       {
         "direction": "down",
@@ -194,7 +194,8 @@
       "coord": [0, 4, 0],
       "labels": ["east-link", "market-turn"],
       "exits": [
-        { "direction": "north", "to": 16408 }
+        { "direction": "north", "to": 16408 },
+        { "direction": "east", "to": 16601, "external": true }
       ],
       "enquires": ["東市", "外客", "去路"]
     }

@@ -1,0 +1,32 @@
+Vnum            16605
+Name            沙嘴小路~
+Description
+一條被水和風慢慢推成的沙嘴小路勉強把兩片洲灘接在一起。路很窄，卻也因此讓人更能感覺自己不是走在平地，而是在幾條江汊互相妥協後留下的暫時空隙上。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        16603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16606
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         沙嘴~
+End
+
+#Enquire
+Keyword         小路~
+End
+
+End

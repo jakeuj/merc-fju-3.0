@@ -1,0 +1,28 @@
+Vnum            16608
+Name            更東外汊~
+Description
+水面到這裡明顯更開，連風向都像比前頭多了一層鹹濕與空曠。若再往東，便不只是會稽外圍的水路，而是更靠近外埠與陌生航道的地方，許多還沒落地的支線都像正從那頭招手。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        16604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         外汊~
+End
+
+#Enquire
+Keyword         外埠~
+End
+
+#Enquire
+Keyword         航道~
+End
+
+End

@@ -1,0 +1,44 @@
+Vnum            16603
+Name            分流渡灣~
+Description
+幾股水路在這裡互相牽扯，既不寬闊到像主河，也不狹窄到能一眼看清走向。站在渡灣中段時，玩家能清楚感覺到這片水域真正的危險不是怪，而是你以為自己記得來路。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        16601
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         分流~
+End
+
+#Enquire
+Keyword         渡灣~
+End
+
+#Enquire
+Keyword         外汊~
+End
+
+End

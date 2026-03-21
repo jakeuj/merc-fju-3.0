@@ -1,0 +1,24 @@
+Vnum            16602
+Name            蘆汊淺灘~
+Description
+蘆草把水面切成一道道不明顯的暗縫，鞋底踩下去時總會帶起一層細泥。這裡不像真正的深水，卻也不是能隨便快走的平地，只要一分心，就可能把自己帶進更低更濕的泥汊裡。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        16601
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         蘆草~
+End
+
+#Enquire
+Keyword         淺灘~
+End
+
+End

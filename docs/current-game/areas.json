@@ -1621,6 +1621,25 @@
         "plans/area/0080-dng-temple-ruins.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "wild_river_delta",
+      "title": "江東水域",
+      "room_range": "16601-16630",
+      "load_order": 87,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_kuaiji",
+      "theme_primary": "探險遺跡",
+      "theme_secondary": "江東水域 / 洲灘渡汊",
+      "summary": "承接會稽東市，落成出城木棧、分流渡灣、舊樁灘岸與洲心渡口骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/wild_river_delta/index",
+        "area/wild_river_delta/map.md",
+        "plans/area/0081-wild-river-delta.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

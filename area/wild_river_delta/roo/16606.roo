@@ -1,0 +1,44 @@
+Vnum            16606
+Name            漁火淺洲~
+Description
+洲上殘著幾點不知是昨夜還是更早留下的漁火灰痕，四周卻安靜得像這裡從來沒有真正熱鬧過。這份半有人氣、半被潮汐吞沒的感覺，正是江東外水最容易讓人記錯安全感的地方。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        16605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        16604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16610
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         漁火~
+End
+
+#Enquire
+Keyword         淺洲~
+End
+
+#Enquire
+Keyword         渡口~
+End
+
+End
