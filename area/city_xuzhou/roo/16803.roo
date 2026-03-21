@@ -1,0 +1,24 @@
+Vnum            16803
+Name            徐州主街西段~
+Description
+寬闊街道沿著城心筆直向東伸去，布幌、藥材箱、糧袋與驛馬行李在街邊堆出一種東線州城特有的忙碌。這裡不像邊關那樣劍拔弩張，卻也比普通城鎮更能讓人感覺到各方消息正不斷流進流出。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        16802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+End

@@ -112,6 +112,7 @@ title: Current Game Areas
 | `dng_temple_ruins` | 山中古寺 / 古祠地脈 dungeon | `16501-16530` | `rebuild addition` | 承接古祠地脈，落成地脈石梯、滴水甬道、供臺中殿與深封石室前帶骨架。 |
 | `wild_river_delta` | 江東水域 / 洲灘渡汊 wild | `16601-16630` | `rebuild addition` | 承接會稽東市，落成出城木棧、分流渡灣、舊樁灘岸與洲心渡口骨架。 |
 | `sec_water_ruins` | 水底遺跡 / 裂井殘宮 secret | `16701-16730` | `rebuild addition` | 承接海盜群島外礁深灘，落成裂井落點、沉殿前甬、光紋偏廊與殘宮核心骨架。 |
+| `city_xuzhou` | 徐州 / 東線州府 hub | `16801-16820` | `rebuild addition` | 承接陳留東街路標，落成西門甬道、州府十字、市集牌樓、州府前街與南門驛帶骨架。 |
 
 ## Recent Rebuild Areas
 
@@ -213,6 +214,7 @@ title: Current Game Areas
 - `dng_temple_ruins`：把古祠地脈正式接進山中古寺，透過地脈石梯、滴水甬道、供臺中殿與深封石室前帶把節奏從山城傳聞切進封閉 dungeon。
 - `wild_river_delta`：把會稽東市正式接進江東外水 wild，透過出城木棧、分流渡灣、舊樁灘岸與洲心渡口把節奏從封閉古寺重新打開成可辨位的江汊探索帶。
 - `sec_water_ruins`：把海盜群島外礁深灘正式接進水底 secret，透過裂井落點、沉殿前甬、光紋偏廊與殘宮核心把節奏從外海 wild 切進靜壓殘宮。
+- `city_xuzhou`：把陳留東街路標正式接進徐州，透過西門、主街十字、市集牌樓、州府前街與南門驛帶把節奏從祕境鏈拉回東線州府與陸路交通 hub。
 
 ## 維護規則
 

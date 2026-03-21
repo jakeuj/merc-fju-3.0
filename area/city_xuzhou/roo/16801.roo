@@ -1,0 +1,36 @@
+Vnum            16801
+Name            西城門外~
+Description
+高大的徐州西門把東線塵路與州城秩序切成兩種截然不同的節奏。門外還留著遠路商旅的車轍與風塵，門內卻已經能聽見城中市聲與差役喝問，像是在提醒你這裡不是普通路站，而是一座真正承接州郡消息的城。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        13810
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         徐州~
+End
+
+#Enquire
+Keyword         城門~
+End
+
+#Enquire
+Keyword         陳留~
+End
+
+End

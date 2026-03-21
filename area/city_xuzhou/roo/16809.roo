@@ -1,0 +1,28 @@
+Vnum            16809
+Name            驛舍大堂~
+Description
+大堂裡的長案排著車次、換馬與路引記錄，掌事人說話不快，卻總能在幾句之間把旅人的路重新排清楚。比起豪華或熱鬧，這裡更讓人感受到一座州城真正的可靠，是它能把下一段路準備得有條有理。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       OUT
+ExitVnum        16808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         車次~
+End
+
+#Enquire
+Keyword         路引~
+End
+
+#Enquire
+Keyword         換馬~
+End
+
+End

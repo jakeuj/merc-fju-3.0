@@ -21,7 +21,7 @@
 - external_links:
   - `west`: `city_chenliu` / 徐州大道
   - `south`: `road_shouchun_xuzhou` / 淮東官道預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Reference Entry Points
 
@@ -65,7 +65,33 @@
   - passed (`Validated 9 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`)
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_xuzhou/map.md --validate-only`
   - passed (`Validation succeeded for 9 room(s).`)
+- `python -X utf8 tools/mapmd_validate.py area/city_chenliu/map.md`
+  - passed (`Validated 17 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`) after aligning `13810 <-> 16801`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_xuzhou/map.md`
+  - passed (`Wrote 9 room scaffold file(s) to area/city_xuzhou/roo`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_chenliu/map.md`
+  - passed (`Wrote 17 room scaffold file(s) to area/city_chenliu/roo`) after aligning `13810 <-> 16801`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed (`make: 'merc' is up to date.`)
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - passed via startup success log `log/1054.log`
+- `debug/badobject`
+  - passed (empty after smoke test)
+- `debug/error`
+  - only contains the expected timeout-forced shutdown path after the successful run
+
+## Runtime Notes
+
+- `area/directory.lst` 已加入 `city_xuzhou`，保留房號段 `16801-16820`
+- `area/city_xuzhou/index` 已建立，`Serial 172`
+- 第一輪 runtime scaffold 已加入：
+  - `mob/19231-19234`
+  - `obj/19251-19254`
+  - `res/city.res`
+  - `shp/supplies.shp`
+- `city_chenliu/13810 <-> city_xuzhou/16801` 已成為正式 runtime boundary
+- `docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步登錄 `city_xuzhou`
 
 ## Next Step Prompt
 
-`先 commit 目前 city_xuzhou 的 spec milestone；commit 後直接做 implementation milestone，補 runtime scaffold、接上 city_chenliu 邊界並跑 build / smoke test。`
+`先 commit 目前 city_xuzhou 的 implementation milestone；commit 後回到 queue 規則盤點下一個待建 area，建立新的 spec milestone。`

@@ -1,0 +1,28 @@
+Vnum            16807
+Name            東街書肆口~
+Description
+這一帶比市集少了些叫賣，多了抄寫文書、記錄貨單與整理路引的書肆氣味。幾名書吏正對著卷冊核對地名與車次，讓人一眼就明白徐州為何總能把四面八方的旅人重新安頓進正確的路上。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        16804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         書肆~
+End
+
+#Enquire
+Keyword         路引~
+End
+
+#Enquire
+Keyword         地名~
+End
+
+End

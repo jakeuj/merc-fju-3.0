@@ -1,0 +1,32 @@
+Vnum            19231
+Name            west gate constable~
+ShortDesc       西門值役~
+Description
+這名守在徐州西門附近的值役看似只是照例盤查往來旅人，實際上卻總能先一步看
+出誰是剛從陳留趕來的疲客、誰又是帶著急報與貨單進城的差人。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           24
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             12
+Wis             12
+Dex             12
+Con             12
+Hp              920
+Mana            80
+Move            120
+Class           0
+Gold            180
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

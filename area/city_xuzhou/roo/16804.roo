@@ -1,0 +1,71 @@
+Vnum            16804
+Name            州府十字~
+Description
+四條街路在州府十字交會，往北偏靜、往南偏忙、往東則更多書吏與抄手走動。若說徐州是一張把中原與江東北段重新編起來的路網，那麼這裡就是線頭與線頭彼此纏住又分開的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        16803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16807
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       ENTER
+ExitVnum        16805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        16806
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         路牌~
+Description
+路牌一面指著陳留大道，一面指著淮東官道與南門驛舍，還有幾筆急就章似的補註寫著近日換馬與糧價。
+~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+#Enquire
+Keyword         州府~
+End
+
+#Enquire
+Keyword         南門~
+End
+
+#Enquire
+Keyword         市集~
+End
+
+End

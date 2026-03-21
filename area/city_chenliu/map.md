@@ -340,7 +340,8 @@
       "coord": [4, 0, 0],
       "labels": ["east-edge", "world-link-east", "route-node"],
       "exits": [
-        { "direction": "west", "to": 13804 }
+        { "direction": "west", "to": 13804 },
+        { "direction": "east", "to": 16801, "external": true }
       ],
       "enquires": ["徐州", "東路", "去路"]
     },

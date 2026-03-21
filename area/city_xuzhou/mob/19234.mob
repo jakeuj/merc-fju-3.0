@@ -1,0 +1,32 @@
+Vnum            19234
+Name            station groom~
+ShortDesc       驛舍馬伕~
+Description
+這名守在南門驛口附近的馬伕滿身草料與皮革味，說話不多，卻總能在旅人還沒開
+口前就看出對方是要換馬、問路，還是準備硬著頭皮連夜趕南路。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       90
+Level           23
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             11
+Wis             11
+Dex             12
+Con             12
+Hp              900
+Mana            70
+Move            130
+Class           0
+Gold            190
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

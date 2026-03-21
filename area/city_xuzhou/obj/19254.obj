@@ -1,0 +1,14 @@
+Vnum            19254
+Name            station lantern~
+ShortDesc       驛舍提燈(station lantern)~
+Description
+一盞適合在徐州主街與南門驛帶間照明的驛舍提燈(station lantern)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           20
+Value           0 0 30 0
+Weight          2
+Cost            95
+End

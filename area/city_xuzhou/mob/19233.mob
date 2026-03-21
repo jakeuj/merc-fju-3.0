@@ -1,0 +1,32 @@
+Vnum            19233
+Name            prefecture clerk~
+ShortDesc       州府書吏~
+Description
+這名在州府前街來回奔走的書吏抱著卷冊與木板，像是連抬頭看人都嫌浪費時辰，
+可一旦有人問對了門路，他又總能把州城與南路的消息講得清清楚楚。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       110
+Level           26
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             15
+Wis             15
+Dex             11
+Con             11
+Hp              980
+Mana            130
+Move            115
+Class           0
+Gold            210
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

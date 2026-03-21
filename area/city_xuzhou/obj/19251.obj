@@ -1,0 +1,15 @@
+Vnum            19251
+Name            xuzhou ration~
+ShortDesc       徐州乾糧包(xuzhou ration)~
+Description
+一包專給進出徐州與淮東驛路旅人隨身攜帶的徐州乾糧包(xuzhou ration)被放在這
+裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           22
+Value           18 30 4 0
+Weight          1
+Cost            90
+End

@@ -1,0 +1,15 @@
+Vnum            19252
+Name            courier flask~
+ShortDesc       驛路水囊(courier flask)~
+Description
+一只方便在州府、市集與南門驛口之間帶著走的驛路水囊(courier flask)被放在這
+裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           22
+Value           10 10 LIQ_WATER 0
+Weight          2
+Cost            80
+End

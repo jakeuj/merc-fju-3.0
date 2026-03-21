@@ -1,0 +1,32 @@
+Vnum            16805
+Name            市集牌樓~
+Description
+一進牌樓，米糧、藥材、燈油與旅貨的氣味立刻混成一股飽滿的州城市聲。這裡不只賣東西，更像整座徐州把外來消息過一道手的地方，常有人一邊採買，一邊聽掌櫃講哪條路最近比較通。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       OUT
+ExitVnum        16804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         市集~
+End
+
+#Enquire
+Keyword         糧行~
+End
+
+#Enquire
+Keyword         補給~
+End
+
+#Enquire
+Keyword         掌櫃~
+End
+
+End

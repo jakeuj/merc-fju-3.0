@@ -1,0 +1,40 @@
+Vnum            16808
+Name            南門驛口~
+Description
+南門一帶滿是換馬、整索與重新綁緊行囊的聲音，整座徐州像在這裡把人與貨推往更南的淮東官道。這種忙碌和主街不同，不是逗留，而是準備再度上路。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        16804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       ENTER
+ExitVnum        16809
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         南門~
+End
+
+#Enquire
+Keyword         壽春~
+End
+
+#Enquire
+Keyword         官道~
+End
+
+#Enquire
+Keyword         驛馬~
+End
+
+End

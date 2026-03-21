@@ -13,6 +13,14 @@ ExitKeyword     ~
 ExitKey         0
 End
 
+#Exit
+Direction       EAST
+ExitVnum        16801
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
 #Enquire
 Keyword         徐州~
 End

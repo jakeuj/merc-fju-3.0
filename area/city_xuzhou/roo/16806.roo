@@ -1,0 +1,35 @@
+Vnum            16806
+Name            州府前街~
+Description
+州府前街的步調明顯比主街更穩，差役、抄手與來報公文的人說話都壓低了幾分。站在這裡時，你很容易感受到徐州不是只靠商旅熱鬧撐起來，它真正的重量還在於州郡秩序本身。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        16804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         州府~
+Description
+州府門前木牌列著近日本城糧運、巡夜與驛路調度，看得出這裡最關心的是如何讓整個東線不要亂了節奏。
+~
+End
+
+#Enquire
+Keyword         州府~
+End
+
+#Enquire
+Keyword         差役~
+End
+
+#Enquire
+Keyword         公文~
+End
+
+End

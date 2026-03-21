@@ -109,6 +109,7 @@
       "coord": [0, 0, 0],
       "labels": ["entry", "west-edge", "world-link-west"],
       "exits": [
+        { "direction": "west", "to": 13810, "external": true },
         { "direction": "east", "to": 16802 }
       ],
       "enquires": ["徐州", "城門", "陳留"]

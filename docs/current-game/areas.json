@@ -1659,6 +1659,25 @@
         "plans/area/0082-sec-water-ruins.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "city_xuzhou",
+      "title": "徐州",
+      "room_range": "16801-16820",
+      "load_order": 89,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_chenliu",
+      "theme_primary": "歷史城市",
+      "theme_secondary": "東線州府 / 商旅樞紐",
+      "summary": "承接陳留東街路標，落成西門甬道、州府十字、市集牌樓、州府前街與南門驛帶骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/city_xuzhou/index",
+        "area/city_xuzhou/map.md",
+        "plans/area/0083-city-xuzhou.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

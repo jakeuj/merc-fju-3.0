@@ -1,0 +1,43 @@
+Vnum            16802
+Name            西門甬道~
+Description
+甬道牆上貼著通商、盤查與巡夜條例，往來旅人都會在這裡下意識放慢腳步。比起陳留那種中原樞紐的四面消息，徐州的門洞更像把東線貨流與州城制度一道一道收進來。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        16801
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         告示~
+Description
+告示上除了通商時辰與夜禁規矩，還特別提到南路驛馬吃緊，勸旅人提早問清楚行程。
+~
+End
+
+#Enquire
+Keyword         告示~
+End
+
+#Enquire
+Keyword         盤查~
+End
+
+#Enquire
+Keyword         南路~
+End
+
+End
