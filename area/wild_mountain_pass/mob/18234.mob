@@ -1,0 +1,32 @@
+Vnum            18234
+Name            south gate lookout~
+ShortDesc       南口望山客~
+Description
+這名守在南下山門附近的望山客不時往會稽方向張望，像是在替每個將進城的人
+先估量一路風塵，也替每個準備回頭的人記住哪一陣山風最難受。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       30
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             13
+Dex             13
+Con             12
+Hp              4100
+Mana            140
+Move            180
+Class           0
+Gold            580
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

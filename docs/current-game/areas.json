@@ -1564,6 +1564,25 @@
         "plans/area/0077-wild-jianye-west.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "wild_mountain_pass",
+      "title": "會稽山道",
+      "room_range": "16301-16330",
+      "load_order": 84,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "wild_jianye_west",
+      "theme_primary": "江湖",
+      "theme_secondary": "山道 / 棧路",
+      "summary": "承接建業南坡，落成入山坡口、松風棧道、風碑岔台與山腰茶棚骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/wild_mountain_pass/index",
+        "area/wild_mountain_pass/map.md",
+        "plans/area/0078-wild-mountain-pass.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

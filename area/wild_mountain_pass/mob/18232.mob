@@ -1,0 +1,32 @@
+Vnum            18232
+Name            mountain guide~
+ShortDesc       山路引客~
+Description
+這名熟悉棧道與風口的引客總把眼神放在來人腳下，像只要看幾步步伐，就能判
+斷對方究竟撐不撐得過接下來那段要命的石磴和岔台。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       60
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             14
+Dex             12
+Con             12
+Hp              4200
+Mana            160
+Move            170
+Class           0
+Gold            560
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

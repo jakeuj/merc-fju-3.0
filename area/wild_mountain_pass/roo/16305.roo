@@ -1,0 +1,36 @@
+Vnum            16305
+Name            山腰茶棚~
+Description
+茶棚靠著山腰平出的一小塊地搭起來，遠不如城郊茶亭寬鬆，卻正好有一種只夠旅人喘口氣、聽一兩句路況的分寸。真正走山的人多半不求舒服，只求知道接下來哪一段最難走。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        16303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16306
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         茶棚~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+#Enquire
+Keyword         路況~
+End
+
+End

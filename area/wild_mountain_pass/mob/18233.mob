@@ -1,0 +1,32 @@
+Vnum            18233
+Name            stair watcher~
+ShortDesc       裂階守望人~
+Description
+這名長年在祠痕裂階附近守望的人講話極少，卻總像能先一步聽見山腹的空響從
+哪一層石縫裡滲出來，也知道哪種人不該貿然往更深處探。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       20
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             12
+Wis             14
+Dex             12
+Con             13
+Hp              4300
+Mana            120
+Move            165
+Class           0
+Gold            520
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

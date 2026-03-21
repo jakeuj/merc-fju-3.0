@@ -1,0 +1,14 @@
+Vnum            18254
+Name            wind lantern~
+ShortDesc       風口提燈(wind lantern)~
+Description
+一盞適合在山腰茶棚、風碑岔台與暮色棧道間照明的風口提燈(wind lantern)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           100
+Value           0 0 45 0
+Weight          2
+Cost            270
+End

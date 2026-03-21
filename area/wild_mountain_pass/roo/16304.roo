@@ -1,0 +1,52 @@
+Vnum            16304
+Name            風碑岔台~
+Description
+岔台上立著被山風吹得發白的舊碑，碑面上的指向雖然模糊，卻仍看得出一條往會稽、一條繞入更深山腹的分流。這裡不像真正的關口，卻是每個人都得先做選擇的地方。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        16303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16310
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16306
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        16307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         風碑~
+End
+
+#Enquire
+Keyword         岔路~
+End
+
+#Enquire
+Keyword         會稽~
+End
+
+End

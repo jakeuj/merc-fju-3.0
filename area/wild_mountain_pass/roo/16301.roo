@@ -1,0 +1,44 @@
+Vnum            16301
+Name            入山坡口~
+Description
+從建業西郊再往南走，地勢終於開始把人的步子往上拉。這裡還留著官道餘韻，但風已經先一步變成山風，像在提醒每個旅人從這裡開始，路不再只是把人送離主城，而是真正把人帶進另一種地貌。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        16210
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         山路~
+End
+
+#Enquire
+Keyword         北邊~
+End
+
+#Enquire
+Keyword         建業~
+End
+
+End

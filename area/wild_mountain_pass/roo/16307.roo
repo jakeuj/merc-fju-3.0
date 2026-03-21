@@ -1,0 +1,32 @@
+Vnum            16307
+Name            崖邊小徑~
+Description
+小徑沿著崖邊收得很窄，明明不算深谷，卻已足夠讓人下意識把腳步壓穩。這條側徑不像主線那樣直白，卻更能讓人聽見山裡真正的風聲和水聲從哪裡穿出來。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        16304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16308
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         小徑~
+End
+
+#Enquire
+Keyword         崖邊~
+End
+
+End

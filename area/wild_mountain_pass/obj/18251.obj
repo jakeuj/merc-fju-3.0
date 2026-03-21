@@ -1,0 +1,14 @@
+Vnum            18251
+Name            mountain ration~
+ShortDesc       山路乾糧包(mountain ration)~
+Description
+一包適合在石磴與棧道間邊走邊吃的山路乾糧包(mountain ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           100
+Value           30 48 4 0
+Weight          1
+Cost            290
+End

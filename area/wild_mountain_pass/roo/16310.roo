@@ -1,0 +1,36 @@
+Vnum            16310
+Name            南下山門~
+Description
+山門前的路勢忽然收束得很整齊，像亂石、棧路和風口到這裡都先被看不見的城鎮秩序接住了。再往南去，旅人要面對的便不再只是山，而是會稽本身的門戶與人聲。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        16304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        16308
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         山門~
+End
+
+#Enquire
+Keyword         會稽~
+End
+
+#Enquire
+Keyword         進城~
+End
+
+End

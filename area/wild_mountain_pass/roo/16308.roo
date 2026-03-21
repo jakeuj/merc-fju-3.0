@@ -1,0 +1,36 @@
+Vnum            16308
+Name            雲縫觀路~
+Description
+站在這裡往回看，建業方向的平地已經被雲縫和山稜切得零碎，只剩依稀可辨的來路。前方的坡勢則更明顯地往南收攏，像整條山道正在把人一步步送向真正的山城地界。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        16307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16310
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         雲縫~
+End
+
+#Enquire
+Keyword         來路~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+End

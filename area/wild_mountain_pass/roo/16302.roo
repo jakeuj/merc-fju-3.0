@@ -1,0 +1,24 @@
+Vnum            16302
+Name            坡邊石級~
+Description
+石級沿著坡邊一階一階往上盤去，讓視野雖然還沒有真正打開，腳底卻已經先學會該怎麼跟著山勢呼吸。這裡不像險地，卻已經很明白地把平地上的直線習慣改成了山路的耐心。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        16301
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         石級~
+End
+
+#Enquire
+Keyword         坡邊~
+End
+
+End

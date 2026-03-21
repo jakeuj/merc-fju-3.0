@@ -1,0 +1,14 @@
+Vnum            18252
+Name            traveler gourd~
+ShortDesc       行山水囊(traveler gourd)~
+Description
+一只方便在山腰茶棚與風碑岔台間隨身攜帶的行山水囊(traveler gourd)被放在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           100
+Value           12 12 LIQ_WATER 0
+Weight          2
+Cost            230
+End

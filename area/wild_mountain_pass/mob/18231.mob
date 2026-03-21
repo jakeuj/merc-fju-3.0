@@ -1,0 +1,32 @@
+Vnum            18231
+Name            tea shed host~
+ShortDesc       茶棚主人~
+Description
+這名守著山腰茶棚的主人總能先看出誰只是路過歇腳、誰已經走到腿發硬、又有
+誰其實是在借問路況時偷偷打探更深山腹的祠痕與岔台。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           100
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             15
+Wis             15
+Dex             11
+Con             12
+Hp              4000
+Mana            200
+Move            150
+Class           0
+Gold            640
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

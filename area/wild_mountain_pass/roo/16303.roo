@@ -1,0 +1,44 @@
+Vnum            16303
+Name            松風棧道~
+Description
+棧道貼著山壁往前伸去，松風從高處一陣陣掃下來，讓人很難再把這裡當成單純的離城路。走到這一段時，主城的秩序感已經退成背後的記憶，取而代之的是山路本身的節奏。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        16301
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        16304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        16305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         棧道~
+End
+
+#Enquire
+Keyword         松風~
+End
+
+#Enquire
+Keyword         前路~
+End
+
+End

@@ -1,0 +1,36 @@
+Vnum            16306
+Name            祠痕裂階~
+Description
+裂開的石階往山腹陰處斜斜沉下去，兩側還留著模糊可辨的香灰痕與殘祠構件。它不像現在就會把人吞進去，卻很明白地暗示這條山道底下還藏著更古老也更不穩定的東西。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        16305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        16304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         古祠~
+End
+
+#Enquire
+Keyword         裂階~
+End
+
+#Enquire
+Keyword         山腹~
+End
+
+End
