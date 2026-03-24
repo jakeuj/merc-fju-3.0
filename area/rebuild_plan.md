@@ -709,7 +709,36 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `fort_northern_watch`
+  - area_family: `Fort`
+  - reserved_room_block: `18601-18620`
+  - planned_vnum_range: `18601-18620`
+  - level_range: `36-48`
+  - theme: `軍旅`
+  - subtheme: `哨站 / 狼煙`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/fort_northern_watch/map.md`
+    - `ref/world-graph.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `plans/area/0094-fort-yijing.md`
+    - `plans/area/0100-road-north-border.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/map/bepin.html`
+    - `ref/sanguo-area-specfirst/area/sec_starfall_crater/map.md`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `world-graph` 只給出 `fort_yijing up -> fort_northern_watch` 這組明確連線，表示它是北境鏈上最自然的下一個 `Fort` family 節點
+    - `fort_yijing` 現有 spec/runtime 已保留 `17907 up -> fort_northern_watch` metadata，現在補這個 spec 能直接承接既有分流母點
+    - `ref` scaffold 將其定成 `哨站 / 狼煙` 的高處 watch fort，能和 `road_north_border` 的平面旅途感形成清楚題材切換
+    - `players.json / skills.json` 的高頻襄平訊號仍集中在服務與訓練，支持此時切回前線 `Fort`
+  - compliance_check:
+    - compliant；在 `Road` 之後切到 `Fort`，同時回應 `world-graph` 的既有 `up/down` 預留與北境題材節奏
+  - delivery_gate: `spec_ready_for_commit`
 
 
 ## Done
@@ -879,15 +908,15 @@
 
 ## Current Recommended Next Step
 
-依 queue 規則盤點下一個遼東待建 area，優先檢查是否切進下一個 `Fort` family 節點。
+先 commit `fort_northern_watch` 的 spec milestone；commit 後直接做 implementation milestone，正式把 `fort_yijing/17907` 接進北方哨樓。
 
 ## Next Action
 
-- 依 `world_map / progression / 題材分布表 / players.json / skills.json` 盤點遼東下一個 actionable area
-- 優先檢查 `fort_northern_watch` 是否符合目前 family variety 與主線拓撲
-- 建立下一個 area 的 spec milestone、更新 tracker 與單區 plan
-- 跑 validate-only；通過後自動 commit
+- 跑 `tools/mapmd_validate.py` 與 generator `--validate-only`
+- commit `fort_northern_watch` 的 spec milestone
+- 接著直接做 implementation milestone
+- 正式落成 `fort_yijing/17907 <-> fort_northern_watch/18601` runtime boundary
 
 ## Next Prompt
 
-`盤點遼東下一個待建 area，優先檢查 fort_northern_watch 是否成為新的 spec milestone；需要時自動 commit，並直接進行下一步。`
+`先 commit fort_northern_watch 的 spec milestone，接著直接做 implementation milestone：補齊 fort_yijing/17907 <-> fort_northern_watch/18601 runtime boundary、跑 validate / build / startup smoke，並在需要時自動 commit、直接進行下一步。`
