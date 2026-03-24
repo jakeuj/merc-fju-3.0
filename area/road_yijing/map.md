@@ -161,7 +161,8 @@
       "coord": [0, 5, 0],
       "labels": ["north-edge", "world-link-north"],
       "exits": [
-        { "direction": "south", "to": 17807 }
+        { "direction": "south", "to": 17807 },
+        { "direction": "north", "to": 17901, "external": true }
       ],
       "enquires": ["易京", "北路", "前線"]
     }
