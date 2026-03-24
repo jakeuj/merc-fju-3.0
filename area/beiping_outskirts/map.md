@@ -43,6 +43,7 @@
     "design_notes": "北平北門外的軍旅驛道過渡區，先落地主線、補給支線與兩條後續 world link 邊界點。",
     "level_range": "8-18",
     "planned_vnum_range": "9101-9108",
+    "reserved_room_block": "9101-9110",
     "theme": {
       "primary": "軍旅風",
       "secondary": "歷史城市風"
@@ -140,7 +141,8 @@
       "coord": [0, 3, 0],
       "labels": ["frontier", "world-link-north"],
       "exits": [
-        { "direction": "south", "to": 9103 }
+        { "direction": "south", "to": 9103 },
+        { "direction": "north", "to": 17801, "external": true }
       ],
       "enquires": ["邊關", "官道"]
     },

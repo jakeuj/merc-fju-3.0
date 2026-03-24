@@ -21,7 +21,7 @@
 - external_links:
   - `south`: `beiping_outskirts` / 邊關整隊場
   - `north`: `fort_yijing` / 易京方向預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Reference Entry Points
 
@@ -65,9 +65,34 @@
 
 - `python -X utf8 tools/mapmd_validate.py area/road_yijing/map.md`
   - passed (`Validated 8 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`)
+- `python -X utf8 tools/mapmd_validate.py area/beiping_outskirts/map.md`
+  - passed (`Validated 8 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`)
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/road_yijing/map.md --validate-only`
   - passed (`Validation succeeded for 8 room(s).`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/beiping_outskirts/map.md --validate-only`
+  - passed (`Validation succeeded for 8 room(s).`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/road_yijing/map.md`
+  - passed (`Wrote 8 room scaffold file(s) to H:\repos\merc-fju-3.0\area\road_yijing\roo`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/beiping_outskirts/map.md`
+  - passed；同步把 `beiping_outskirts/9105` 補成 `north -> 17801` runtime boundary，並補齊 `reserved_room_block`
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed
+- WSL startup smoke
+  - passed；有效結果寫入 `log/1065.log`（`三國歪傳之降龍伏虎開始正常運作`）
+- `debug/badobject`
+  - empty
+- `debug/error`
+  - only timeout-triggered shutdown path after smoke window closed；無新增 area loader blocker
+- `debug/failexit`
+  - only legacy baseline `17201/17208` fixups；無 `road_yijing` 與 `road_nanpi_beiping` 相關新 warning
 
 ## Next Step Prompt
 
-`先完成 road_yijing 的 validate-only 檢查與 spec milestone commit；commit 後直接進 implementation，補齊對 beiping_outskirts 的 runtime boundary、生成 roo 與最小 area runtime scaffold。`
+`road_yijing` 的 implementation milestone 已完成；下一步依 queue 規則盤點下一個待建 area，優先檢查北境鏈在 family variety 與既有 world-link 預留下的下一個 actionable 節點。`
+
+## Runtime Notes
+
+- 已建立最小 loadable runtime scaffold：`index`、`mob/20231-20234`、`obj/20251-20254`、`res/road.res`、`shp/supplies.shp`、`roo/17801-17808`
+- 已正式落成南側 runtime boundary：`beiping_outskirts/9105 <-> road_yijing/17801`
+- 北側 `fort_yijing` 仍維持 world-link metadata，待下一個 fort milestone 再正式接上
+- `area/directory.lst`、`docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步納入 `road_yijing`

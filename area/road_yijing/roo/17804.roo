@@ -1,0 +1,31 @@
+Vnum            17804
+Name            換班木樁旁~
+Description
+幾根磨損的木樁立在側線旁，看得出巡隊與驛馬常在這裡短暫換手整裝。木樁本身不起眼，卻像是整條路能一直維持秩序流動的小證據。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        17803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         木樁~
+Description
+木樁上留著馬索與繩結磨出的痕跡，顯示這裡長期被拿來作為換班與整裝的小停點。
+~
+End
+
+#Enquire
+Keyword         木樁~
+End
+
+#Enquire
+Keyword         換班~
+End
+
+End

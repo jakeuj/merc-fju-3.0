@@ -1,0 +1,14 @@
+Vnum            20254
+Name            way torch~
+ShortDesc       路亭風燈(way torch)~
+Description
+一盞方便在風大時也能穩穩照路的路亭風燈，被擦得還算明亮。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           22
+Value           0 0 24 0
+Weight          1
+Cost            74
+End

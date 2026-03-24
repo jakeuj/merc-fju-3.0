@@ -1,0 +1,24 @@
+Vnum            17806
+Name            路亭內~
+Description
+亭內擺著長凳、粗布帳與掛在牆邊的舊路牌，讓人能在這裡稍微把風寒擋掉一點。留在這裡的人大多只是歇口氣，很少有人會把這裡當成真正安心的停留處。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       OUT
+ExitVnum        17805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         路牌~
+End
+
+#Enquire
+Keyword         帳布~
+End
+
+End

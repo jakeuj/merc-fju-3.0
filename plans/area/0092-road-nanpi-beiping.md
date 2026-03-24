@@ -20,7 +20,7 @@
 - level_range: `24-36`
 - external_links:
   - `south`: `city_nanpi` / 北道牌樓
-  - `north`: `city_beiping` / 北平大通驛站
+  - `north`: `city_beiping` / 北平永定渡口
 - delivery_gate: `implementation_ready_for_commit`
 
 ## Reference Entry Points
@@ -92,6 +92,6 @@
 
 - 已建立最小 loadable runtime scaffold：`index`、`mob/20131-20134`、`obj/20151-20154`、`res/road.res`、`shp/supplies.shp`、`roo/17701-17708`
 - 已正式落成南側 runtime boundary：`city_nanpi/17409 <-> road_nanpi_beiping/17701`
-- 北側 runtime anchor 先採 legacy 北平的 `beiping/9059`，形成 `road_nanpi_beiping/17708 north -> beiping/9059` 與 `beiping/9059 out -> road_nanpi_beiping/17708`
-- 選用 `9059` 的原因是它本身就是驛站 travel node，且不必拆掉現有 `south -> 9030` 的 legacy 內部流向；這一版先以最小侵入方式把河北北道正式接上北平
+- 北側 runtime anchor 現在採 legacy 北平的 `beiping/9060`，形成 `road_nanpi_beiping/17708 north -> beiping/9060` 與 `beiping/9060 south -> road_nanpi_beiping/17708`
+- 最初嘗試用 `9059` 驛站作為 anchor，但 loader 會因 reverse exit 不對稱而在 `fix_exits` 階段把出口改寫；改用 `9060 永定渡口` 後可在不拆舊城主流向的前提下保住正式 reciprocal boundary
 - `area/directory.lst`、`docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步納入 `road_nanpi_beiping`

@@ -1,0 +1,28 @@
+Vnum            17808
+Name            易京前路口~
+Description
+官道在此繼續往北伸展，地面上更密的車痕和巡隊腳印提醒人們，前方已經不是單純旅人往來之地，而是更接近軍鎮與勢力前線的路口。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        17807
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         易京~
+End
+
+#Enquire
+Keyword         北路~
+End
+
+#Enquire
+Keyword         前線~
+End
+
+End

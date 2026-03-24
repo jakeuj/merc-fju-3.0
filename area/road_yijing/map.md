@@ -57,6 +57,7 @@
       "coord": [0, 0, 0],
       "labels": ["entry", "south-edge", "world-link-south"],
       "exits": [
+        { "direction": "south", "to": 9105, "external": true },
         { "direction": "north", "to": 17802 }
       ],
       "enquires": ["北平", "整隊", "出發"]

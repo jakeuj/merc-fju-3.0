@@ -1,0 +1,36 @@
+Vnum            17807
+Name            北向坡口~
+Description
+地勢在這裡微微抬升，讓前方的道路和更遠的北地輪廓都變得更清楚。越過這段坡口之後，官道的氣味就不再只是旅路，而更像正式進入軍鎮前帶。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        17805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         坡口~
+End
+
+#Enquire
+Keyword         前面~
+End
+
+#Enquire
+Keyword         易京~
+End
+
+End

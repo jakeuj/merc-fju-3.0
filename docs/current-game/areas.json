@@ -1849,6 +1849,25 @@
         "plans/area/0092-road-nanpi-beiping.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "road_yijing",
+      "title": "易京官道",
+      "room_range": "17801-17820",
+      "load_order": 99,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "beiping_outskirts",
+      "theme_primary": "軍旅",
+      "theme_secondary": "北方驛道",
+      "summary": "承接北平郊區邊關整隊場，落成驛道石坊、路亭與易京前路口構成的北境軍旅 road 骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/road_yijing/index",
+        "area/road_yijing/map.md",
+        "plans/area/0093-road-yijing.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

@@ -1,0 +1,44 @@
+Vnum            17803
+Name            北地驛道中段~
+Description
+驛道在這裡拉得筆直，兩側地勢開闊卻不再像單純平野。風裡常夾著巡隊換班的動靜與北邊傳來的零散消息，讓人清楚知道自己正一步步往邊境靠近。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        17802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        17804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         去路~
+End
+
+#Enquire
+Keyword         易京~
+End
+
+#Enquire
+Keyword         北邊~
+End
+
+End

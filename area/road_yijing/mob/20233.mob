@@ -1,0 +1,32 @@
+Vnum            20233
+Name            wagon traveler~
+ShortDesc       押車旅人~
+Description
+這名押車旅人把衣袍裹得很緊，說起話來總會先瞄一眼北方的路況。他顯然不是頭一
+次走這條驛道，卻仍保持著那種對邊線消息特別敏感的戒備。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       50
+Level           25
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             11
+Wis             11
+Dex             12
+Con             11
+Hp              740
+Mana            60
+Move            130
+Class           0
+Gold            115
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

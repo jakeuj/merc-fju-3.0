@@ -1,0 +1,32 @@
+Vnum            17802
+Name            驛道石坊~
+Description
+一座舊石坊立在道旁，坊角被多年風雪磨鈍，卻仍撐著北境驛道的門面。從這裡開始，旅人與差役都會自然把腳步收成更適合長程軍路的節奏。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        17801
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         石坊~
+End
+
+#Enquire
+Keyword         驛道~
+End
+
+End

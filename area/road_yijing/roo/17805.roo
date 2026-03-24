@@ -1,0 +1,44 @@
+Vnum            17805
+Name            路亭前坪~
+Description
+路亭前坪讓長路上的緊繃稍微鬆開一些，幾名驛卒與行旅正低聲交換路況和北境傳聞。這裡不像大城驛站那樣熱鬧，卻更有一種真正邊線前帶的實用氣味。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        17803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       ENTER
+ExitVnum        17806
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17807
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         路亭~
+End
+
+#Enquire
+Keyword         消息~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+End

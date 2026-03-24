@@ -1,0 +1,36 @@
+Vnum            17801
+Name            北境整隊口~
+Description
+一離開北平郊區的整隊場，官道上的氣味就明顯變了。這裡還看得見巡隊踩出的硬土地痕，卻已經更像一段真正會把人送往北境據點的起行口。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        9105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         北平~
+End
+
+#Enquire
+Keyword         整隊~
+End
+
+#Enquire
+Keyword         出發~
+End
+
+End

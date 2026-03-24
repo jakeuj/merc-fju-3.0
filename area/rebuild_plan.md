@@ -709,43 +709,13 @@
 
 ## In Progress
 
-- `road_yijing`
-  - area_family: `Road`
-  - reserved_room_block: `17801-17820`
-  - level_range: `22-32`
-  - theme: `軍旅`
-  - subtheme: `北方驛道`
-  - external_links:
-    - `south`: `beiping_outskirts` / 邊關整隊場
-    - `north`: `fort_yijing` / 易京方向預留
-  - delivery_gate: `spec_ready_for_commit`
-  - ref_inputs_used:
-    - `area/world_map.md`
-    - `ref/Readme.md`
-    - `ref/sanguo-progression-map.md`
-    - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/road_yijing/map.md`
-    - `ref/world-graph.md`
-    - `docs/3yWebsite/docs/data/players.json`
-    - `docs/3yWebsite/docs/data/skills.json`
-    - `plans/area/0003-beiping-outskirts.md`
-    - `plans/area/0092-road-nanpi-beiping.md`
-  - ref_inputs_deferred:
-    - `docs/3yWebsite/map/bepin.html`
-    - `ref/sanguo-area-specfirst/area/fort_yijing/map.md`
-    - 各類原型工具與模擬系統
-  - theme_basis:
-    - `world_map` 與 `world-graph` 都明確把北平往易京方向定成北境主線，`road_yijing` 是 `beiping_outskirts` 之後的自然承接節點
-    - `beiping_outskirts` 的既有 spec/runtime 已保留 `9105 north -> yijing_road` 預留，支持這區直接接著落地
-    - `題材分布表` 把 `北平郊區 -> 易京` 這段定成 `江湖 / 軍旅 / 關隘` 漸進帶，適合先用一段軍旅驛道把主線拉向易京
-    - `players.json / skills.json` 沒有對北平內城分區提出比既有北境預留更強的優先訊號，支持先補這條已明示的北向驛道路骨架
-  - compliance_check:
-    - compliant；雖然這輪形成 `Road -> Road` 連續 family，但 `road_yijing` 是既有 `beiping_outskirts` 明確預留的 next actionable boundary，且 world-map / dataset 沒有更強的內城服務區優先訊號，屬於可說明的 queue variety 例外
+(目前無 `in_progress` 項目。)
 
 
 ## Done
 
-- `2026-03-24` `road_nanpi_beiping` 已完成第一輪 runtime implementation，完成 `city_nanpi/17409 <-> 17701` 與 `17708 north -> beiping/9059 / 9059 out -> 17708` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1063.log`），達成可提交狀態
+- `2026-03-24` `road_yijing` 已完成第一輪 runtime implementation，完成 `beiping_outskirts/9105 <-> 17801` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1065.log`），達成可提交狀態
+- `2026-03-24` `road_nanpi_beiping` 已完成第一輪 runtime implementation，完成 `city_nanpi/17409 <-> 17701` 與 `17708 north -> beiping/9060 / 9060 south -> 17708` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1063.log`），達成可提交狀態
 - `2026-03-24` `fort_river_crossing` 已完成第一輪 runtime implementation，完成 `wild_hebei_plain/17508 <-> 17601` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1063.log`），達成可提交狀態
 - `2026-03-24` `wild_hebei_plain` 已完成第一輪 runtime implementation，完成 `city_nanpi/17408 <-> 17501` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1062.log`），達成可提交狀態
 - `2026-03-21` `city_nanpi` 已完成第一輪 runtime implementation，完成 `city_puyang/17209 <-> 17401` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1061.log`），達成可提交狀態
@@ -902,16 +872,19 @@
 
 ## Current Recommended Next Step
 
-`road_yijing` 已通過 validate-only。下一步應先 commit spec milestone，再直接推進 implementation。
+目前 `candidate queue`、`todo`、`in_progress` 都是空的。下一步應依 queue 規則重建下一個 next actionable area，優先檢查北境鏈在 `Road -> Fort` family 切換下的下一個合理節點。
 
 ## Next Action
 
-- 完成 `road_yijing` spec gate：
-  - 驗證 `area/road_yijing/map.md`
-  - 更新單區 plan 的 validation 結果
-  - commit spec milestone
-  - commit 後直接進 implementation milestone
+- 一起盤點：
+  - `area/world_map.md`
+  - `ref/sanguo-progression-map.md`
+  - `ref/三國-MUD-題材分布表.md`
+  - `docs/3yWebsite/docs/data/players.json`
+  - `docs/3yWebsite/docs/data/skills.json`
+- 依 family variety 與北境主線決定下一個 actionable area
+- 建立新的 spec milestone，通過 validate-only 後直接進下一步
 
 ## Next Prompt
 
-`續做 road_yijing：先完成 spec 驗證與 commit，接著直接進 implementation milestone；需要時自動 commit，並在通過 gate 後直接往下一步推進。`
+`依 queue 規則盤點下一個待建 area：優先檢查北境鏈的 world_map、progression、題材分布與 players/skills dataset，選出新的 next actionable area，建立 spec 並在需要時自動 commit、直接進行下一步。`

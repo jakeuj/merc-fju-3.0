@@ -17,6 +17,14 @@ ExitKeyword     ~
 ExitKey         0
 End
 
+#Exit
+Direction       SOUTH
+ExitVnum        17708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
 #Keyword
 Keyword         sign~
 Description

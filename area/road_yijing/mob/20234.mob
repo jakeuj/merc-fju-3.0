@@ -1,0 +1,32 @@
+Vnum            20234
+Name            frontier runner~
+ShortDesc       邊路差役~
+Description
+這名差役腰間短刀磨得很利，腳步也快，像一有新消息就會沿路往北送去。他不像大
+城裡的差役那麼講究門面，卻更像真的靠腿力和膽氣在跑邊線。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           26
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             11
+Wis             11
+Dex             13
+Con             12
+Hp              810
+Mana            65
+Move            136
+Class           0
+Gold            160
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

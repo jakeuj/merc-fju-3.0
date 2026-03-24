@@ -1,0 +1,32 @@
+Vnum            20232
+Name            post keeper~
+ShortDesc       路亭掌事~
+Description
+這位掌事把帳布、茶桶與舊路牌都收拾得井井有條，看來對這條驛道的巡隊換班與路
+況消息都熟得很。他不愛多話，但一開口往往就是有用的去路提醒。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           23
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             12
+Dex             11
+Con             11
+Hp              720
+Mana            80
+Move            124
+Class           0
+Gold            150
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

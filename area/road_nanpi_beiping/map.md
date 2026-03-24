@@ -162,7 +162,7 @@
       "labels": ["north-edge", "world-link-north"],
       "exits": [
         { "direction": "south", "to": 17707 },
-        { "direction": "north", "to": 9059, "external": true }
+        { "direction": "north", "to": 9060, "external": true }
       ],
       "enquires": ["北路", "北平", "去向"]
     }

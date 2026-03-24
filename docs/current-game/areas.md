@@ -122,6 +122,7 @@ title: Current Game Areas
 | `wild_hebei_plain` | 河北平原 / 北地主線 wild | `17501-17520` | `rebuild addition` | 承接南皮東口與更南營道，落成平原外道、風碑岔台、低坡草道與營道前帶骨架。 |
 | `fort_river_crossing` | 渡河營寨 / 河渡要地 fort | `17601-17620` | `rebuild addition` | 承接河北平原營道與渡河要地，落成關前營道、寨門、內營主道、軍需棚與望樓骨架。 |
 | `road_nanpi_beiping` | 河北北道 / 北地主線 road | `17701-17720` | `rebuild addition` | 承接南皮北道牌樓與北平大通驛站，落成官道中段、路亭與北行坡口骨架。 |
+| `road_yijing` | 易京官道 / 北境軍旅 road | `17801-17820` | `rebuild addition` | 承接北平郊區邊關整隊場，落成驛道石坊、路亭與易京前路口骨架。 |
 
 ## Recent Rebuild Areas
 
@@ -233,6 +234,7 @@ title: Current Game Areas
 - `wild_hebei_plain`：把南皮東口正式接進河北平原，透過官道平野、風碑岔台、低坡草道與營道前帶把北地主線重新打開成開闊的平原 wild。
 - `fort_river_crossing`：把河北平原南向營道正式接進渡河營寨，透過關前營道、寨門、內營主道、軍需棚與望樓把平原節奏重新收束成河渡要地的 fort。
 - `road_nanpi_beiping`：把南皮北道牌樓正式接進河北北道，透過官道中段、里程石、路亭與北行官道口把河北主線重新拉長成往北平去的旅途節奏，並先以北平大通驛站作為 legacy travel anchor。
+- `road_yijing`：把北平郊區邊關整隊場正式接進易京官道，透過驛道石坊、換班木樁、路亭與易京前路口把北平北境外帶再往軍鎮前線推進一層，北側 `fort_yijing` 則先保留為後續 world-link metadata。
 
 ## 維護規則
 

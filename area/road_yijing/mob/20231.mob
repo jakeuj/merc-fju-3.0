@@ -1,0 +1,32 @@
+Vnum            20231
+Name            frontier courier~
+ShortDesc       驛道巡卒~
+Description
+這名守在南口的巡卒看起來比一般官道差役更習慣北地風寒，連說話都像在替人量腳
+程。他盯人不算兇狠，卻很清楚哪些旅隊只是趕路，哪些人像在探邊境消息。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           24
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             11
+Wis             11
+Dex             12
+Con             12
+Hp              760
+Mana            65
+Move            128
+Class           0
+Gold            130
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
