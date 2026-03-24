@@ -709,7 +709,35 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `wild_liaodong_plain`
+  - area_family: `Wild`
+  - reserved_room_block: `18401-18420`
+  - planned_vnum_range: `18401-18420`
+  - level_range: `32-44`
+  - theme: `軍旅`
+  - subtheme: `草原 / 騎兵前帶`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/wild_liaodong_plain/map.md`
+    - `ref/world-graph.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `plans/area/0098-city-xiangping.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/map/bepin.html`
+    - `ref/sanguo-area-specfirst/area/road_north_border/map.md`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `world-graph` 把 `wild_liaodong_plain` 放在 `city_xiangping` 北側，level 帶自然承接邊城節奏，是襄平之後最順的 open-field 主線節點
+    - `題材分布表` 的北地平原 / 草原母題支持先把城市之後的開闊 wild 補出來，再談更窄的 road connector
+    - `players.json / skills.json` 對襄平提供的是服務與整補訊號，而不是要求立刻切進另一段驛路，支持城市之後先回 `Wild`
+    - `city_xiangping` runtime 已把 `18308 north` 留在 metadata，現在補這個 spec 能讓下一輪 implementation 直接承接北原牌樓
+  - compliance_check:
+    - compliant；在 `City` 之後切回 `Wild`，同時回應遼東主線拓撲與 queue variety，不讓 `road_north_border` 先把節奏收窄成純 connector
+  - delivery_gate: `spec_ready_for_commit`
 
 
 ## Done
@@ -877,20 +905,15 @@
 
 ## Current Recommended Next Step
 
-目前 `candidate queue`、`todo`、`in_progress` 都是空的。下一步應依 queue 規則重建下一個遼東 next actionable area，優先檢查 `city_xiangping` 之後在 family variety 與世界拓撲下應先進 `wild_liaodong_plain` 還是 `road_north_border`。
+先 commit `wild_liaodong_plain` 的 spec milestone；commit 後直接做 implementation milestone，正式把 `city_xiangping/18308` 接進遼東平原。
 
 ## Next Action
 
-- 一起盤點：
-  - `area/world_map.md`
-  - `ref/sanguo-progression-map.md`
-  - `ref/三國-MUD-題材分布表.md`
-  - `docs/3yWebsite/docs/data/players.json`
-  - `docs/3yWebsite/docs/data/skills.json`
-- 依 family variety 與遼東主線決定下一個 actionable area
-- 優先檢查 `wild_liaodong_plain` 與 `road_north_border` 的主線價值與服務節奏
-- 建立新的 spec milestone，通過 validate-only 後直接進下一步
+- commit `wild_liaodong_plain` 的 spec milestone
+- 生成 `roo` 與最小 `index / mob / obj / res / shp` runtime scaffold
+- 正式落成 `city_xiangping/18308 <-> wild_liaodong_plain/18401` runtime boundary
+- 跑 build / startup smoke；通過後再決定下一個遼東節點
 
 ## Next Prompt
 
-`依 queue 規則盤點下一個待建 area：優先檢查遼東鏈在 city_xiangping 之後的 world_map、progression、題材分布與 players/skills dataset，評估 wild_liaodong_plain 或 road_north_border 哪個是新的 next actionable area，建立 spec 並在需要時自動 commit、直接進行下一步。`
+`先 commit wild_liaodong_plain 的 spec milestone，接著直接做 implementation milestone：補齊 city_xiangping/18308 <-> wild_liaodong_plain/18401 runtime boundary、跑 validate / build / startup smoke，並在需要時自動 commit、直接進行下一步。`
