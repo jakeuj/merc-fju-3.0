@@ -1,0 +1,28 @@
+Vnum            18508
+Name            更北邊道口~
+Description
+道面在這裡繼續往更北方舒展出去，車痕和行腳印都證明這不是一條偶然的土路，而是一條還會把人送得更遠的正式邊道。它像一個未完的承諾，提醒你襄平之北還有更大的邊境世界等待落成。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        18507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         更北~
+End
+
+#Enquire
+Keyword         邊境~
+End
+
+#Enquire
+Keyword         去向~
+End
+
+End

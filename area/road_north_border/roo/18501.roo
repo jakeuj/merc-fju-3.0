@@ -1,0 +1,36 @@
+Vnum            18501
+Name            北境邊道路口~
+Description
+一離開襄平的北境邊道路口，城中的規矩與人聲就被拉成背後的依靠，而不是眼前的主體。這裡像一條真正往更北邊境送人的起點，讓人很清楚知道自己不再只是出城，而是正式踏上長路。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        18309
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         襄平~
+End
+
+#Enquire
+Keyword         邊道~
+End
+
+#Enquire
+Keyword         出城~
+End
+
+End

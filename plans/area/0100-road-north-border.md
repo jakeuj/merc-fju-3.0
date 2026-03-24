@@ -20,7 +20,7 @@
 - level_range: `34-46`
 - external_links:
   - `south`: `city_xiangping` / 北境邊道路口
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Reference Entry Points
 
@@ -66,11 +66,29 @@
   - passed (`Validated 8 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`)
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/road_north_border/map.md --validate-only`
   - passed (`Validation succeeded for 8 room(s).`)
+- `python -X utf8 tools/mapmd_validate.py area/city_xiangping/map.md`
+  - passed (`Validated 9 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/road_north_border/map.md`
+  - passed (`Wrote 8 room scaffold file(s) to H:\repos\merc-fju-3.0\area\road_north_border\roo`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_xiangping/map.md`
+  - passed；同步把 `city_xiangping/18309` 補成 `north -> 18501` runtime boundary
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0/src && timeout 45 ./merc merc.test.ini"`
+  - passed；因使用中的遊戲實例已占用預設 `3838`，改以臨時測試 port `23838/21234/28888` 做 direct-load smoke，並在 console 看見 `三國歪傳之降龍伏虎開始正常運作`
+- `debug/badobject`
+  - empty；中途修正 `20954` 的 `ITEM_LIGHT` value 格式後再跑 smoke，已清空 blocker
+- `debug/error`
+  - only timeout-triggered shutdown path after smoke window closed；無新增 area loader blocker
+- `debug/failexit`
+  - only legacy baseline `17201/17208` fixups；無 `road_north_border` 與 `city_xiangping` 相關新 warning
 
 ## Runtime Notes
 
-- pending
+- 已建立最小 loadable runtime scaffold：`index`、`mob/20931-20934`、`obj/20951-20954`、`res/road.res`、`shp/supplies.shp`、`roo/18501-18508`
+- 已正式落成南側 runtime boundary：`city_xiangping/18309 <-> road_north_border/18501`
+- `area/directory.lst`、`docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步納入 `road_north_border`
 
 ## Next Step Prompt
 
-`先完成 road_north_border 的 spec milestone：跑 map validate 與 generator --validate-only，通過後自動 commit；接著直接做 implementation milestone，正式把 city_xiangping/18309 接進北境邊道。`
+`road_north_border` 的 implementation milestone 已完成；下一步依 queue 規則盤點下一個遼東待建 area，優先檢查是否切進下一個 `Fort` family 節點。`

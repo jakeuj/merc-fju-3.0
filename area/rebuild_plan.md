@@ -709,40 +709,12 @@
 
 ## In Progress
 
-- `road_north_border`
-  - area_family: `Road`
-  - reserved_room_block: `18501-18520`
-  - planned_vnum_range: `18501-18520`
-  - level_range: `34-46`
-  - theme: `軍旅`
-  - subtheme: `往更北疆道`
-  - ref_inputs_used:
-    - `area/world_map.md`
-    - `ref/Readme.md`
-    - `ref/sanguo-progression-map.md`
-    - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/road_north_border/map.md`
-    - `ref/world-graph.md`
-    - `docs/3yWebsite/docs/data/players.json`
-    - `docs/3yWebsite/docs/data/skills.json`
-    - `plans/area/0098-city-xiangping.md`
-    - `plans/area/0099-wild-liaodong-plain.md`
-  - ref_inputs_deferred:
-    - `docs/3yWebsite/map/bepin.html`
-    - `ref/sanguo-area-specfirst/area/sec_starfall_crater/map.md`
-    - 各類原型工具與模擬系統
-  - theme_basis:
-    - `world-graph` 明確把 `road_north_border` 放在 `city_xiangping` 北側，型別也是 `road`，支持在 `wild_liaodong_plain` 之後改用邊道收束節奏
-    - `area/world_map.md` 的 `北平 - 襄平` 北線主幹與襄平驛站訊號，支持襄平之後存在一段帶旅訊與盤查感的北向 road
-    - `players.json / skills.json` 對襄平主要提供服務節點訊號，表示襄平已足夠承接整補 loop；下一步更合理的是把 outbound road 補齊
-    - `city_xiangping` 已保留 `18309 north -> road_north_border` world-link metadata，而目前 active family 節奏正好是 `City -> Wild -> Road`
-  - compliance_check:
-    - compliant；在 `City` 與 `Wild` 之後切到 `Road`，同時回應遼東主線拓撲、舊站服務節點與 queue variety
-  - delivery_gate: `spec_ready_for_commit`
+(目前無 `in_progress` 項目。)
 
 
 ## Done
 
+- `2026-03-24` `road_north_border` 已完成第一輪 runtime implementation，完成 `city_xiangping/18309 <-> 18501` runtime boundary、通過 WSL Linux build 與臨時 test-port direct-load smoke，達成可提交狀態
 - `2026-03-24` `wild_liaodong_plain` 已完成第一輪 runtime implementation，完成 `city_xiangping/18308 <-> 18401` runtime boundary、通過 WSL Linux build 與臨時 test-port direct-load smoke，達成可提交狀態
 - `2026-03-24` `city_xiangping` 已完成第一輪 runtime implementation，完成 `wild_barbarian_camp/18208 <-> 18301` runtime boundary、通過 WSL Linux build 與臨時 test-port direct-load smoke，達成可提交狀態
 - `2026-03-24` `wild_barbarian_camp` 已完成第一輪 runtime implementation，完成 `wild_bailang/18007 <-> 18201` runtime boundary、通過 WSL Linux build 與臨時 test-port direct-load smoke，達成可提交狀態
@@ -907,15 +879,15 @@
 
 ## Current Recommended Next Step
 
-先 commit `road_north_border` 的 spec milestone；commit 後直接做 implementation milestone，正式把 `city_xiangping/18309` 接進北境邊道。
+依 queue 規則盤點下一個遼東待建 area，優先檢查是否切進下一個 `Fort` family 節點。
 
 ## Next Action
 
-- 跑 `tools/mapmd_validate.py` 與 generator `--validate-only`
-- commit `road_north_border` 的 spec milestone
-- 接著直接做 implementation milestone
-- 正式落成 `city_xiangping/18309 <-> road_north_border/18501` runtime boundary
+- 依 `world_map / progression / 題材分布表 / players.json / skills.json` 盤點遼東下一個 actionable area
+- 優先檢查 `fort_northern_watch` 是否符合目前 family variety 與主線拓撲
+- 建立下一個 area 的 spec milestone、更新 tracker 與單區 plan
+- 跑 validate-only；通過後自動 commit
 
 ## Next Prompt
 
-`先 commit road_north_border 的 spec milestone，接著直接做 implementation milestone：補齊 city_xiangping/18309 <-> road_north_border/18501 runtime boundary、跑 validate / build / startup smoke，並在需要時自動 commit、直接進行下一步。`
+`盤點遼東下一個待建 area，優先檢查 fort_northern_watch 是否成為新的 spec milestone；需要時自動 commit，並直接進行下一步。`

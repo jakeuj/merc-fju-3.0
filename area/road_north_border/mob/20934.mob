@@ -1,0 +1,29 @@
+Vnum            20934
+Name            watchslope patrol~
+ShortDesc       哨坡巡役~
+Description
+這名在北風哨坡來回巡看的差役總把視線停得比別人更遠一些，像是在分辨遠處動靜究
+竟只是風草還是有誰真的在接近。他的步子很穩，看得出長路與盤查早已是日常。
+~
+Alignment       100
+Level           44
+Hitroll         0
+Protect         0
+Damroll         0
+Str             14
+Int             11
+Wis             12
+Dex             14
+Con             13
+Hp              1550
+Mana            65
+Move            172
+Class           0
+Gold            210
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

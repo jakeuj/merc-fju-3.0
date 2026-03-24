@@ -1,0 +1,44 @@
+Vnum            18503
+Name            北境官道中段~
+Description
+官道在這裡被車痕和軍靴踩得更實，讓路本身像一道明確的秩序線穿過北地。走在這裡時，會感到襄平雖然還不算遠，但旅途的主角已經從城市生活換成路況、盤查和前方傳聞。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        18502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         官道~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+#Enquire
+Keyword         北邊~
+End
+
+End

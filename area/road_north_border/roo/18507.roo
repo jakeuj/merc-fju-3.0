@@ -1,0 +1,36 @@
+Vnum            18507
+Name            北風哨坡~
+Description
+地勢在這裡稍稍抬高，讓前方道路與更北的空線都被拉得更清楚。風裡常夾著比襄平更硬冷的味道，使人明白這條邊道再往前走，就真的會逐漸遠離邊城的庇護。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        18505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         北風~
+End
+
+#Enquire
+Keyword         前面~
+End
+
+#Enquire
+Keyword         坡口~
+End
+
+End

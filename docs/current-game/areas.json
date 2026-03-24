@@ -1982,6 +1982,25 @@
         "plans/area/0099-wild-liaodong-plain.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "road_north_border",
+      "title": "北境邊道",
+      "room_range": "18501-18520",
+      "load_order": 106,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_xiangping",
+      "theme_primary": "軍旅",
+      "theme_secondary": "往更北疆道",
+      "summary": "承接襄平北境邊道路口，落成驛牌木樁邊、官道中段、盤查側棚、路亭與北風哨坡構成的遼東北向 road 骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/road_north_border/index",
+        "area/road_north_border/map.md",
+        "plans/area/0100-road-north-border.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

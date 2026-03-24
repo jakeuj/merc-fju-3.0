@@ -1,0 +1,44 @@
+Vnum            18505
+Name            路亭前坪~
+Description
+路亭前坪稍微把長路上的硬氣收住一些，讓驛卒、押貨人和要往北去的旅人能在這裡交換消息。人聲不多，但每一句談話幾乎都和前方天候、路況或可疑動靜有關。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        18503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       ENTER
+ExitVnum        18506
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         路亭~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+#Enquire
+Keyword         消息~
+End
+
+End

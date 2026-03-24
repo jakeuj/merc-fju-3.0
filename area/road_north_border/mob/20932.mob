@@ -1,0 +1,32 @@
+Vnum            20932
+Name            road steward~
+ShortDesc       路亭掌事~
+Description
+這名照看路亭的掌事對粗茶、路牌和過路消息都很熟，說話像在替每個人量路程。他看
+起來不愛多管閒事，但若你真要往更北去，他多半能先提醒你哪裡該小心。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           39
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             13
+Dex             12
+Con             12
+Hp              1260
+Mana            80
+Move            156
+Class           0
+Gold            220
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

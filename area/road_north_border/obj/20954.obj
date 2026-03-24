@@ -1,0 +1,14 @@
+Vnum            20954
+Name            roadside lantern~
+ShortDesc       邊道風燈(roadside lantern)~
+Description
+一盞常掛在路亭內外、用來替夜路留點光線的邊道風燈(roadside lantern)被收在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           35
+Value           0 0 18 0
+Weight          1
+Cost            88
+End

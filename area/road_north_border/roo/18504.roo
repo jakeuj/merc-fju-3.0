@@ -1,0 +1,28 @@
+Vnum            18504
+Name            盤查側棚~
+Description
+道旁立著一處簡陋側棚，棚下有翻看的包袱痕和短暫盤問後留下的凌亂腳印。這裡讓整條邊道更像一條帶著軍務戒心的路，而不是單純方便旅人往返的通道。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        18503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         盤查~
+End
+
+#Enquire
+Keyword         側棚~
+End
+
+#Enquire
+Keyword         過客~
+End
+
+End

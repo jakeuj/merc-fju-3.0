@@ -1,0 +1,14 @@
+Vnum            20952
+Name            border waterskin~
+ShortDesc       北境水囊(border waterskin)~
+Description
+一只掛帶磨得發亮的北境水囊(border waterskin)看起來就是給長路上反覆補水用的。
+~
+Unit            個~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           34
+Value           10 10 0 0
+Weight          1
+Cost            96
+End

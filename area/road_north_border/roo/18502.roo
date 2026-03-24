@@ -1,0 +1,43 @@
+Vnum            18502
+Name            驛牌木樁邊~
+Description
+一面驛牌和幾根磨損木樁把這裡標成常有人馬短停整裝的位置。與開闊平原不同，這條路更強調秩序、盤點與下一站的意識，像是在提醒你北境旅途從來不是隨便走走而已。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        18501
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         驛牌~
+Description
+驛牌上的墨字已被風砂磨淡，卻仍能看出這條路是往更北邊境去的正式官道。
+~
+End
+
+#Enquire
+Keyword         驛牌~
+End
+
+#Enquire
+Keyword         木樁~
+End
+
+#Enquire
+Keyword         下一站~
+End
+
+End

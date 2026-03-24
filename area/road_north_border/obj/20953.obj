@@ -1,0 +1,15 @@
+Vnum            20953
+Name            border saber~
+ShortDesc       邊道短刀(border saber)~
+Description
+一把便於在長路與盤查間隨手抽用的邊道短刀(border saber)被牢牢掛在腰側。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+WearLoc         ITEM_WIELD
+Level           36
+Value           0 -1 -1 WEAPON_BLADE
+Weight          3
+Cost            210
+End

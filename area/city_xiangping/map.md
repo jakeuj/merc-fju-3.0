@@ -45,6 +45,7 @@
         "direction": "north",
         "source_vnum": 18309,
         "target_area": "road_north_border",
+        "target_room_vnum": 18501,
         "label": "北境邊道"
       }
     ],
@@ -179,7 +180,8 @@
       "coord": [4, 0, 0],
       "labels": ["north-link", "border-road"],
       "exits": [
-        { "direction": "west", "to": 18304 }
+        { "direction": "west", "to": 18304 },
+        { "direction": "north", "to": 18501, "external": true }
       ],
       "enquires": ["邊道", "北路", "出關"]
     }
