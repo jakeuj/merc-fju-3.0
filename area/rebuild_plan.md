@@ -709,7 +709,38 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `road_nanpi_beiping`
+  - area_family: `Road`
+  - reserved_room_block: `17701-17720`
+  - level_range: `24-36`
+  - theme: `歷史城市`
+  - subtheme: `往北平官道`
+  - external_links:
+    - `south`: `city_nanpi` / 北道牌樓
+    - `north`: `city_beiping` / 北平方向預留
+  - delivery_gate: `spec_ready_for_commit`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/road_nanpi_beiping/map.md`
+    - `ref/world-graph.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `plans/area/0089-city-nanpi.md`
+    - `plans/area/0091-fort-river-crossing.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/map/bepin.html`
+    - `ref/sanguo-area-specfirst/area/city_beiping/map.md`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `world-graph` 明確把 `road_nanpi_beiping` 放成 `city_nanpi` 北側的 `road` 節點，並以 `city_beiping` 作為北向目標
+    - `題材分布表` 與 `road_nanpi_beiping` 參考 spec 都支持把這段做成北地驛路與官道節點，而不是另一塊平原或營寨
+    - `city_nanpi` 已保留 `17409 north -> road_nanpi_beiping`，支持現在把河北北路正式展開
+    - `players.json / skills.json` 沒有對河北北段提出更強的秘境或服務點要求，支持先補交通骨架
+  - compliance_check:
+    - compliant；在 `Fort` 之後切到 `Road`，符合 queue variety，也不是直接沿最新完成 area 的預留硬往下接
 
 
 ## Done
@@ -870,20 +901,16 @@
 
 ## Current Recommended Next Step
 
-目前 `todo` 與 `in_progress` 都為空。下一步應依 queue 規則重新盤點 `world_map + progression + 題材分布 + players/skills`，建立新的 next actionable area spec。
+`road_nanpi_beiping` 已完成 spec 起稿。下一步應先完成 validate-only 檢查與 spec milestone commit，再直接推進 implementation。
 
 ## Next Action
 
-- 重新盤點下一個主世界 actionable area：
-  - 檢查 `area/world_map.md`
-  - 檢查 `ref/sanguo-progression-map.md`
-  - 檢查 `ref/三國-MUD-題材分布表.md`
-  - 檢查 `docs/3yWebsite/docs/data/players.json`
-  - 檢查 `docs/3yWebsite/docs/data/skills.json`
-  - 選出符合 queue variety 的下一區
-  - 建立單區 plan、`map.md` spec 與 validate-only 結果
-  - 通過後直接 commit spec milestone
+- 完成 `road_nanpi_beiping` spec gate：
+  - 驗證 `area/road_nanpi_beiping/map.md`
+  - 更新單區 plan 的 validation 結果
+  - commit spec milestone
+  - commit 後直接進 implementation milestone
 
 ## Next Prompt
 
-`依 queue 規則盤點並建立下一個待建 area：先重建 next actionable area 的 spec，validate-only 通過後自動 commit，接著再直接進 implementation milestone。`
+`續做 road_nanpi_beiping：先完成 spec 驗證與 commit，接著直接進 implementation milestone；需要時自動 commit，並在通過 gate 後直接往下一步推進。`
