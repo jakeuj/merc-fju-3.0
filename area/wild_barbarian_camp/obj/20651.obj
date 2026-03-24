@@ -1,0 +1,14 @@
+Vnum            20651
+Name            camp ration~
+ShortDesc       邊營乾糧包(camp ration)~
+Description
+一包適合在邊地舊營與荒徑間匆匆果腹的邊營乾糧包(camp ration)被妥善收在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           34
+Value           18 36 4 0
+Weight          1
+Cost            120
+End

@@ -1,0 +1,31 @@
+Vnum            20634
+Name            lookout raider~
+ShortDesc       高臺巡望兵~
+Description
+這名巡望兵站在高臺邊時，像早就把經過這片舊營的人分成了該放過和不該放過兩類
+，目光裡幾乎沒有遲疑。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       -150
+Level           45
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             11
+Wis             11
+Dex             13
+Con             13
+Hp              1520
+Mana            58
+Move            166
+Class           0
+Gold            340
+Multipile       100
+AttackRatio     114
+DodgeRatio      108
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

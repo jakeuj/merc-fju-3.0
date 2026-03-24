@@ -1,0 +1,31 @@
+Vnum            20632
+Name            remnant scout~
+ShortDesc       殘營斥候~
+Description
+這名殘營斥候的步子輕而快，眼神卻老是停在比人更遠的地方，像任何風吹草動都值
+得先被他收進心裡。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       -50
+Level           38
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             10
+Wis             10
+Dex             13
+Con             12
+Hp              1180
+Mana            60
+Move            152
+Class           0
+Gold            230
+Multipile       100
+AttackRatio     110
+DodgeRatio      105
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

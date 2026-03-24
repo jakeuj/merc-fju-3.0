@@ -1,0 +1,31 @@
+Vnum            20633
+Name            firepit guard~
+ShortDesc       火堆守視者~
+Description
+這名守視者守在熄掉多時的火堆邊，像連灰燼與獸骨都還算得上營地資產，不容別人
+隨便碰動。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       -100
+Level           42
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             10
+Wis             10
+Dex             11
+Con             13
+Hp              1360
+Mana            54
+Move            158
+Class           0
+Gold            280
+Multipile       100
+AttackRatio     112
+DodgeRatio      104
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

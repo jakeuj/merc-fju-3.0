@@ -1,0 +1,32 @@
+Vnum            20631
+Name            border watcher~
+ShortDesc       邊地望路人~
+Description
+這名熟悉白狼山與邊地營痕的望路人，像是能從一串腳印就看出哪裡還有活路、哪裡
+只剩危險的舊記憶。這樣的人在胡營舊地很少會沒有價值。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           35
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             12
+Dex             12
+Con             11
+Hp              980
+Mana            82
+Move            148
+Class           0
+Gold            180
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

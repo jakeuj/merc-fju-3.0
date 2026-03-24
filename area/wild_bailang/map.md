@@ -50,6 +50,7 @@
         "direction": "east",
         "source_vnum": 18007,
         "target_area": "wild_barbarian_camp",
+        "target_room_vnum": 18201,
         "label": "胡營舊地方向"
       },
       {
@@ -162,7 +163,8 @@
       "coord": [3, 0, 0],
       "labels": ["east-edge", "world-link-east"],
       "exits": [
-        { "direction": "west", "to": 18003 }
+        { "direction": "west", "to": 18003 },
+        { "direction": "east", "to": 18201, "external": true }
       ],
       "enquires": ["東邊", "胡營", "荒徑"]
     },

@@ -1,0 +1,28 @@
+Vnum            18207
+Name            巡望高臺~
+Description
+一小段土臺被人為墊高，站上去後能把西邊荒徑與東邊去路都看得更清楚。這裡沒有真正的箭樓，卻具備同樣的意義: 任何想通過這片舊地的人，都很容易先被看見。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        18206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         高臺~
+End
+
+#Enquire
+Keyword         巡望~
+End
+
+#Enquire
+Keyword         遠處~
+End
+
+End

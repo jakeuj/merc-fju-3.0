@@ -1,0 +1,14 @@
+Vnum            20654
+Name            watch torch~
+ShortDesc       巡望火把(watch torch)~
+Description
+一支為了夜裡巡視舊營外帶而備下的巡望火把(watch torch)斜靠在一旁。
+~
+Unit            支~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           35
+Weight          2
+Cost            88
+Value           0 0 18 0
+End

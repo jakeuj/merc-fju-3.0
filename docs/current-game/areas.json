@@ -1925,6 +1925,25 @@
         "plans/area/0096-dng-ancient-cave.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "wild_barbarian_camp",
+      "title": "胡營舊地",
+      "room_range": "18201-18220",
+      "load_order": 103,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "wild_bailang",
+      "theme_primary": "軍旅",
+      "theme_secondary": "邊地敵蹤",
+      "summary": "承接白狼山東向荒徑，落成舊柵外口、獸骨火堆、破帳空坪與東向城路口構成的北境 hostile wild 骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/wild_barbarian_camp/index",
+        "area/wild_barbarian_camp/map.md",
+        "plans/area/0097-wild-barbarian-camp.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

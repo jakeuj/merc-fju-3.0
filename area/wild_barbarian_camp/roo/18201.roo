@@ -1,0 +1,36 @@
+Vnum            18201
+Name            胡地西荒口~
+Description
+白狼山東荒徑在這裡慢慢收成更平、更乾硬的一段野地，地上卻已不只是風吹與獸蹄留下的痕跡，而開始混進人為踩踏與重物拖曳的舊印。站在這裡時，會明顯感覺東邊不再只是深山，而是一塊曾有人長時間盤踞的邊地。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        18007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         白狼山~
+End
+
+#Enquire
+Keyword         胡營~
+End
+
+#Enquire
+Keyword         東邊~
+End
+
+End

@@ -1,0 +1,36 @@
+Vnum            18204
+Name            舊柵外口~
+Description
+幾段半倒的木柵把這裡收成一個不再完整的營地外口，木頭裂面上還留著長久曝曬後的白痕。這地方不像正在守備，卻也不像完全荒廢，像有人隨時可能重新回到這片舊地，把邊地秩序再度拉緊。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        18203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18208
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         木柵~
+End
+
+#Enquire
+Keyword         舊營~
+End
+
+#Enquire
+Keyword         出口~
+End
+
+End

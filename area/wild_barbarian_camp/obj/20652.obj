@@ -1,0 +1,14 @@
+Vnum            20652
+Name            skin canteen~
+ShortDesc       皮囊水袋(skin canteen)~
+Description
+一只方便在風乾荒地與舊營地間攜行的皮囊水袋(skin canteen)擱在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           34
+Value           8 8 LIQ_WATER 0
+Weight          2
+Cost            92
+End

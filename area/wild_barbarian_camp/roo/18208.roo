@@ -1,0 +1,28 @@
+Vnum            18208
+Name            東向城路口~
+Description
+再往東去，腳下的路痕開始比營地周邊更穩、更寬，像是零散邊地活動終究要重新匯進真正的人煙與城路。站在這個路口時，會很清楚感覺到胡營舊地不是終點，而只是抵達襄平前最後一段帶敵意記憶的外帶。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        18204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         襄平~
+End
+
+#Enquire
+Keyword         城路~
+End
+
+#Enquire
+Keyword         東邊~
+End
+
+End

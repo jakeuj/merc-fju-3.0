@@ -1,0 +1,44 @@
+Vnum            18202
+Name            斷草營徑~
+Description
+原本的荒草在這裡被踏出一條較硬的窄徑，兩旁還能看見倒伏後沒再長整齊的草痕。這不是官道式的規整路線，卻比野獸走出的徑線更帶方向感，像有人曾經反覆把它用成接近營地的外帶。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        18201
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         營徑~
+End
+
+#Enquire
+Keyword         草痕~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

@@ -73,6 +73,8 @@
   - passed (`Wrote 8 room scaffold file(s) to H:\repos\merc-fju-3.0\area\wild_bailang\roo`)
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_bailang/map.md`
   - passed；後續 `dng_ancient_cave` implementation milestone 已同步把 `wild_bailang/18006` 補成 `down -> 18101` runtime boundary
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_bailang/map.md`
+  - passed；後續 `wild_barbarian_camp` implementation milestone 已同步把 `wild_bailang/18007` 補成 `east -> 18201` runtime boundary
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/fort_yijing/map.md`
   - passed；同步把 `fort_yijing/17908` 補成 `east -> 18001` runtime boundary
 - `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
@@ -91,7 +93,8 @@
 - 已建立最小 loadable runtime scaffold：`index`、`mob/20431-20434`、`obj/20451-20454`、`res/wild.res`、`shp/supplies.shp`、`roo/18001-18008`
 - 已正式落成西側 runtime boundary：`fort_yijing/17908 <-> wild_bailang/18001`
 - 已正式落成下側 runtime boundary：`wild_bailang/18006 <-> dng_ancient_cave/18101`
-- `north -> wild_wolf_forest`、`east -> wild_barbarian_camp` 與 `up -> sec_starfall_crater` 仍維持 world-link metadata，待後續北境節點 milestone 再正式接上
+- 已正式落成東側 runtime boundary：`wild_bailang/18007 <-> wild_barbarian_camp/18201`
+- `north -> wild_wolf_forest` 與 `up -> sec_starfall_crater` 仍維持 world-link metadata，待後續北境節點 milestone 再正式接上
 - `area/directory.lst`、`docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步納入 `wild_bailang`
 
 ## Next Step Prompt

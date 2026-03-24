@@ -1,0 +1,44 @@
+Vnum            18206
+Name            破帳空坪~
+Description
+空坪邊緣還釘著幾根繫帳樁，風一吹就會讓散落布片擦過地面，發出很輕卻很難忽略的響動。站在這裡時，會覺得這塊地方並未真正死去，它只是暫時空著，像隨時還能被誰重新占回來。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        18205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         帳篷~
+End
+
+#Enquire
+Keyword         空地~
+End
+
+#Enquire
+Keyword         營心~
+End
+
+End

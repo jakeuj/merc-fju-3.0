@@ -1,0 +1,44 @@
+Vnum            18203
+Name            風旗殘道~
+Description
+幾根殘破木桿斜插在路旁，桿頭還掛著被風撕碎的布條，讓這裡像是一段曾經刻意宣示地盤、如今卻只剩餘威的舊路。比起白狼山的傳說感，這裡更直接提醒人前方有過營地，也有過衝突。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        18202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        18206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         旗桿~
+End
+
+#Enquire
+Keyword         殘旗~
+End
+
+#Enquire
+Keyword         前面~
+End
+
+End

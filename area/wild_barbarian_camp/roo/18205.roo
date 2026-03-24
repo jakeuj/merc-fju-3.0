@@ -1,0 +1,36 @@
+Vnum            18205
+Name            獸骨火堆~
+Description
+火堆早已熄冷，只剩黑灰、碎炭與幾截沒清乾淨的獸骨散在地上。這裡最讓人不安的不是狼藉本身，而是它顯示出這地方曾經有人停留、進食、守夜，而且把一整套營地生活過得相當熟練。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        18202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         火堆~
+End
+
+#Enquire
+Keyword         獸骨~
+End
+
+#Enquire
+Keyword         守夜~
+End
+
+End
