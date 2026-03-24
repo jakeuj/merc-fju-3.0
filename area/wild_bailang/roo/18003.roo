@@ -1,0 +1,44 @@
+Vnum            18003
+Name            風裂石徑~
+Description
+石徑邊緣裂出一道道乾硬縫隙，像是多年北風吹出來的傷口。站在這裡時，軍鎮留下的安全感已經退到背後，只剩山裡的未知慢慢往前壓。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        18002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        18006
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         石徑~
+End
+
+#Enquire
+Keyword         裂縫~
+End
+
+#Enquire
+Keyword         東邊~
+End
+
+End

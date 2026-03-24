@@ -1,0 +1,28 @@
+Vnum            18008
+Name            北狼隘口~
+Description
+脊線在這裡收成一道狹窄隘口，風從更北邊的林帶與坡谷一路灌進來，帶著狼群與深山都還沒完全露面的消息。這裡不像終點，更像真正進入白狼山深處前的最後提醒。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       SOUTH
+ExitVnum        18004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         狼林~
+End
+
+#Enquire
+Keyword         隘口~
+End
+
+#Enquire
+Keyword         北路~
+End
+
+End

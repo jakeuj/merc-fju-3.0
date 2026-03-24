@@ -1,0 +1,44 @@
+Vnum            18002
+Name            山前碎石坡~
+Description
+碎石坡被冷風一層層削過，踩起來既鬆又響，讓人很難在這裡藏住腳步。往北可見更高的脊線，往東則是更像被風長年撕裂過的山徑。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        18001
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         山路~
+End
+
+#Enquire
+Keyword         風~
+End
+
+#Enquire
+Keyword         前面~
+End
+
+End

@@ -1887,6 +1887,25 @@
         "plans/area/0094-fort-yijing.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "wild_bailang",
+      "title": "白狼山",
+      "room_range": "18001-18020",
+      "load_order": 101,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "fort_yijing",
+      "theme_primary": "探險遺跡",
+      "theme_secondary": "山前異域",
+      "summary": "承接易京東側寨牆，落成碎石坡、狼煙岔脊、風蝕石壇與北狼隘口構成的北境 wild 骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/wild_bailang/index",
+        "area/wild_bailang/map.md",
+        "plans/area/0095-wild-bailang.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

@@ -1,0 +1,44 @@
+Vnum            18004
+Name            狼煙岔脊~
+Description
+脊線上還留著早年燃過狼煙的黑痕，讓這裡既像古老警點，又像邊地傳說會停下來回頭看人的地方。從這裡往北看去，山勢與林帶都顯得更深。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       SOUTH
+ExitVnum        18002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        18005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         狼煙~
+End
+
+#Enquire
+Keyword         北邊~
+End
+
+#Enquire
+Keyword         岔路~
+End
+
+End

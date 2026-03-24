@@ -1,0 +1,28 @@
+Vnum            18007
+Name            東向荒徑~
+Description
+荒徑朝東延去，路跡不像官道那樣清楚，卻能從踩踏痕與斷草方向看出仍有人在往那頭走。那種不是軍隊、也不像一般旅人的去向，讓東邊多了一層異樣感。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        18003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         東邊~
+End
+
+#Enquire
+Keyword         胡營~
+End
+
+#Enquire
+Keyword         荒徑~
+End
+
+End

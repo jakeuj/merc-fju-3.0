@@ -1,0 +1,28 @@
+Vnum            18006
+Name            裂縫洞口~
+Description
+地面上的裂痕在這裡忽然收成一道真正的洞口，冷風從下方往外滲，帶著明顯不是地表該有的濕冷氣味。站在邊上時，會很自然懷疑下面還藏著更舊的東西。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       NORTH
+ExitVnum        18003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         洞口~
+End
+
+#Enquire
+Keyword         下面~
+End
+
+#Enquire
+Keyword         古洞~
+End
+
+End

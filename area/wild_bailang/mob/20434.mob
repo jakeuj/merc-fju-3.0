@@ -1,0 +1,32 @@
+Vnum            20434
+Name            north pass scout~
+ShortDesc       北隘巡山人~
+Description
+這名巡山人站在北狼隘口時幾乎像和整條山脊融在一起，只有偶爾移步時才讓人意識
+到那裡一直有雙眼睛盯著更北的林帶與風口。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           36
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             12
+Wis             12
+Dex             13
+Con             12
+Hp              1100
+Mana            84
+Move            154
+Class           0
+Gold            230
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1,0 +1,14 @@
+Vnum            20451
+Name            mountain ration~
+ShortDesc       山行乾糧包(mountain ration)~
+Description
+一包適合在碎石坡與山脊上邊走邊吃的山行乾糧包(mountain ration)被妥善收在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           30
+Value           18 34 4 0
+Weight          1
+Cost            112
+End

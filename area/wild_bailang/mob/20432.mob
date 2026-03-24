@@ -1,0 +1,32 @@
+Vnum            20432
+Name            ridge hunter~
+ShortDesc       裂風獵戶~
+Description
+這名獵戶的衣角長年被山風磨得發白，看得出他很習慣在裸露山脊與碎石坡上追蹤獵
+物。即使只是站著，他也像隨時在聽下一陣風帶回來什麼。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           33
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             11
+Wis             11
+Dex             13
+Con             12
+Hp              980
+Mana            72
+Move            150
+Class           0
+Gold            190
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

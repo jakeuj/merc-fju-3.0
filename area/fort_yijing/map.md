@@ -162,7 +162,8 @@
       "coord": [2, 3, 0],
       "labels": ["east-edge", "world-link-east"],
       "exits": [
-        { "direction": "west", "to": 17906 }
+        { "direction": "west", "to": 17906 },
+        { "direction": "east", "to": 18001, "external": true }
       ],
       "enquires": ["白狼山", "東邊", "寨牆"]
     }

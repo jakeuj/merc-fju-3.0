@@ -1,0 +1,28 @@
+Vnum            18005
+Name            風蝕石壇~
+Description
+一座被風蝕得稜角模糊的石壇立在坡脊旁，壇面上殘留的刻痕不像中原軍物，也不像尋常山民會留下的東西。這裡有一種讓人想多看兩眼又不太敢久留的古怪感。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       EAST
+ExitVnum        18004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         石壇~
+End
+
+#Enquire
+Keyword         刻痕~
+End
+
+#Enquire
+Keyword         天上~
+End
+
+End

@@ -75,6 +75,8 @@
   - passed (`Wrote 8 room scaffold file(s) to H:\repos\merc-fju-3.0\area\fort_yijing\roo`)
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/road_yijing/map.md`
   - passed；同步把 `road_yijing/17808` 補成 `north -> 17901` runtime boundary
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/fort_yijing/map.md`
+  - passed；後續 `wild_bailang` implementation milestone 已同步把 `fort_yijing/17908` 補成 `east -> 18001` runtime boundary
 - `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
   - passed
 - WSL startup smoke
@@ -90,7 +92,8 @@
 
 - 已建立最小 loadable runtime scaffold：`index`、`mob/20331-20334`、`obj/20351-20354`、`res/fort.res`、`shp/supplies.shp`、`roo/17901-17908`
 - 已正式落成南側 runtime boundary：`road_yijing/17808 <-> fort_yijing/17901`
-- `up -> fort_northern_watch` 與 `east -> wild_bailang` 仍維持 world-link metadata，待後續北境節點 milestone 再正式接上
+- 已正式落成東側 runtime boundary：`fort_yijing/17908 <-> wild_bailang/18001`
+- `up -> fort_northern_watch` 仍維持 world-link metadata，待後續北境節點 milestone 再正式接上
 - `area/directory.lst`、`docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步納入 `fort_yijing`
 
 ## Next Step Prompt

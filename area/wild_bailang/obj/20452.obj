@@ -1,0 +1,15 @@
+Vnum            20452
+Name            ridge waterskin~
+ShortDesc       山脊水囊(ridge waterskin)~
+Description
+一只專門給巡山人與獵戶帶著走的山脊水囊(ridge waterskin)綁著厚皮繩，看來很耐
+冷風與長路。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           30
+Value           10 10 0 0
+Weight          1
+Cost            88
+End

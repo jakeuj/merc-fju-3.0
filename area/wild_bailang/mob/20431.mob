@@ -1,0 +1,32 @@
+Vnum            20431
+Name            mountain guide~
+ShortDesc       山前引路客~
+Description
+這名熟悉易京外山前道路的引路客，像是能單靠風聲和石面回音就分出哪條路還算安
+全。在白狼山前帶，這樣的人很少會沒價值。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           31
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             12
+Dex             12
+Con             11
+Hp              920
+Mana            78
+Move            144
+Class           0
+Gold            170
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

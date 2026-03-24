@@ -1,0 +1,14 @@
+Vnum            20454
+Name            ridge lantern~
+ShortDesc       脊口提燈(ridge lantern)~
+Description
+一盞方便在山口強風中仍能勉強照路的脊口提燈(ridge lantern)被仔細護著燈罩。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           30
+Value           0 0 24 0
+Weight          1
+Cost            82
+End

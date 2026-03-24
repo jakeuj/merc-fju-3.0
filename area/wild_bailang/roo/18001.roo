@@ -1,0 +1,36 @@
+Vnum            18001
+Name            山前出牆口~
+Description
+一離開易京東側寨牆，腳下的土色與風感就立刻變了。軍鎮的秩序還在背後撐著膽氣，可眼前已經是更荒更冷的山前地帶，連空氣都像在提醒人別把這裡當普通郊野。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        17908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         易京~
+End
+
+#Enquire
+Keyword         白狼山~
+End
+
+#Enquire
+Keyword         回去~
+End
+
+End

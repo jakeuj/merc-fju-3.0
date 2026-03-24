@@ -709,40 +709,12 @@
 
 ## In Progress
 
-- `wild_bailang`
-  - area_family: `Wild`
-  - reserved_room_block: `18001-18020`
-  - planned_vnum_range: `18001-18020`
-  - level_range: `30-42`
-  - theme: `探險遺跡`
-  - subtheme: `山前異域`
-  - ref_inputs_used:
-    - `area/world_map.md`
-    - `ref/Readme.md`
-    - `ref/sanguo-progression-map.md`
-    - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/wild_bailang/map.md`
-    - `ref/world-graph.md`
-    - `docs/3yWebsite/docs/data/players.json`
-    - `docs/3yWebsite/docs/data/skills.json`
-    - `plans/area/0094-fort-yijing.md`
-  - ref_inputs_deferred:
-    - `docs/3yWebsite/map/bepin.html`
-    - `ref/sanguo-area-specfirst/area/wild_wolf_forest/map.md`
-    - `ref/sanguo-area-specfirst/area/dng_ancient_cave/map.md`
-    - 各類原型工具與模擬系統
-  - theme_basis:
-    - `world_map` 把 `S 白狼山` 標成遼東 / 襄平方向的邊境節點，支持此區成為易京之後的下一個探險前帶
-    - `world-graph` 明確把 `fort_yijing` 後的自然 family 切換點之一定成 `wild_bailang`
-    - `題材分布表` 把 `白狼山` 定位成 `探險遺跡 / 詭異` 的山區與異族傳說帶，能和 `fort_yijing` 的軍鎮秩序形成清楚體驗差
-    - `players.json / skills.json` 沒有提出比既有北境預留更強的城市服務區優先訊號，支持先補這個東向 wild 節點
-  - compliance_check:
-    - compliant；在 `Fort` 之後切到 `Wild`，符合 queue variety，也直接承接 `fort_yijing/17908` 的既有東向預留
-  - delivery_gate: `spec_ready_for_commit`
+(目前無 `in_progress` 項目。)
 
 
 ## Done
 
+- `2026-03-24` `wild_bailang` 已完成第一輪 runtime implementation，完成 `fort_yijing/17908 <-> 18001` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1067.log`），達成可提交狀態
 - `2026-03-24` `fort_yijing` 已完成第一輪 runtime implementation，完成 `road_yijing/17808 <-> 17901` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1066.log`），達成可提交狀態
 - `2026-03-24` `road_yijing` 已完成第一輪 runtime implementation，完成 `beiping_outskirts/9105 <-> 17801` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1065.log`），達成可提交狀態
 - `2026-03-24` `road_nanpi_beiping` 已完成第一輪 runtime implementation，完成 `city_nanpi/17409 <-> 17701` 與 `17708 north -> beiping/9060 / 9060 south -> 17708` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1063.log`），達成可提交狀態
@@ -902,15 +874,19 @@
 
 ## Current Recommended Next Step
 
-先 commit `wild_bailang` 的 spec milestone；commit 後直接做 implementation milestone，正式補上 `fort_yijing/17908 <-> wild_bailang/18001` runtime boundary，再依結果往下一個北境節點前進。
+目前 `candidate queue`、`todo`、`in_progress` 都是空的。下一步應依 queue 規則重建下一個北境 next actionable area，優先檢查 `wild_bailang` 之後在 `Wild -> Dungeon` family 切換下的合理節點。
 
 ## Next Action
 
-- commit `wild_bailang` 的 spec milestone
-- 生成 `roo` 與最小 `index / mob / obj / res / shp` runtime scaffold
-- 正式落成 `fort_yijing/17908 <-> wild_bailang/18001` runtime boundary
-- 跑 validate / build / startup smoke；通過後再決定下一個北境 `Wild -> ...` 候選
+- 一起盤點：
+  - `area/world_map.md`
+  - `ref/sanguo-progression-map.md`
+  - `ref/三國-MUD-題材分布表.md`
+  - `docs/3yWebsite/docs/data/players.json`
+  - `docs/3yWebsite/docs/data/skills.json`
+- 依 family variety 與北境主線決定下一個 actionable area
+- 建立新的 spec milestone，通過 validate-only 後直接進下一步
 
 ## Next Prompt
 
-`先 commit wild_bailang 的 spec milestone，接著直接做 implementation milestone：補齊 fort_yijing/17908 <-> wild_bailang/18001 runtime boundary、跑 validate / build / startup smoke，並在需要時自動 commit、直接進行下一步。`
+`依 queue 規則盤點下一個待建 area：優先檢查北境鏈在 wild_bailang 之後的 world_map、progression、題材分布與 players/skills dataset，選出新的 next actionable area，建立 spec 並在需要時自動 commit、直接進行下一步。`

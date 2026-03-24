@@ -24,7 +24,7 @@
   - `down`: `dng_ancient_cave` / 古洞遺跡預留
   - `east`: `wild_barbarian_camp` / 胡營舊地方向預留
   - `up`: `sec_starfall_crater` / 星墜天坑預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Reference Entry Points
 
@@ -69,11 +69,28 @@
   - passed (`Validated 8 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`)
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_bailang/map.md --validate-only`
   - passed (`Validation succeeded for 8 room(s).`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_bailang/map.md`
+  - passed (`Wrote 8 room scaffold file(s) to H:\repos\merc-fju-3.0\area\wild_bailang\roo`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/fort_yijing/map.md`
+  - passed；同步把 `fort_yijing/17908` 補成 `east -> 18001` runtime boundary
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed
+- WSL startup smoke
+  - passed；有效結果寫入 `log/1067.log`（`三國歪傳之降龍伏虎開始正常運作`）
+- `debug/badobject`
+  - empty
+- `debug/error`
+  - only timeout-triggered shutdown path after smoke window closed；無新增 area loader blocker
+- `debug/failexit`
+  - only legacy baseline `17201/17208` fixups；無 `wild_bailang` 與 `fort_yijing` 相關新 warning
 
 ## Runtime Notes
 
-- pending
+- 已建立最小 loadable runtime scaffold：`index`、`mob/20431-20434`、`obj/20451-20454`、`res/wild.res`、`shp/supplies.shp`、`roo/18001-18008`
+- 已正式落成西側 runtime boundary：`fort_yijing/17908 <-> wild_bailang/18001`
+- `north -> wild_wolf_forest`、`down -> dng_ancient_cave`、`east -> wild_barbarian_camp` 與 `up -> sec_starfall_crater` 仍維持 world-link metadata，待後續北境節點 milestone 再正式接上
+- `area/directory.lst`、`docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步納入 `wild_bailang`
 
 ## Next Step Prompt
 
-`先 commit 目前 wild_bailang 的 spec milestone；commit 後直接做 implementation milestone，補齊 fort_yijing/17908 <-> wild_bailang/18001 runtime boundary 並在通過 validate / build / smoke 後自動前進。`
+`wild_bailang` 的 implementation milestone 已完成；下一步依 queue 規則盤點下一個北境待建 area，優先檢查 `Wild -> Dungeon` 的 family 切換下 `dng_ancient_cave` 是否成為新的 next actionable area。`

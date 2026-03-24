@@ -1,0 +1,16 @@
+Vnum            20453
+Name            mountain blade~
+ShortDesc       山前短刀(mountain blade)~
+Description
+這把短刀沒有多餘飾樣，卻被磨得很能應付山路、獸襲與突發近身衝突，看起來正是
+白狼山前帶常見的隨身兵器。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           32
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            174
+End
