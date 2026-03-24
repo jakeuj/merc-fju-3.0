@@ -709,7 +709,36 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `fort_river_crossing`
+  - area_family: `Fort`
+  - reserved_room_block: `17601-17620`
+  - level_range: `26-38`
+  - theme: `軍旅`
+  - subtheme: `河渡要地`
+  - external_links:
+    - `north`: `wild_hebei_plain` / 平原營道
+  - delivery_gate: `spec_ready_for_commit`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/fort_river_crossing/map.md`
+    - `ref/world-graph.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `plans/area/0090-wild-hebei-plain.md`
+  - ref_inputs_deferred:
+    - `ref/sanguo-area-specfirst/area/road_nanpi_beiping/map.md`
+    - `ref/sanguo-area-specfirst/area/sec_yellow_turban_ruins/map.md`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `world-graph` 明確把 `fort_river_crossing` 放在 `wild_hebei_plain` 之後，作為河北平原主線上的 `fort` 節點
+    - `題材分布表` 讓這段北地延續 `軍旅` 但從平原轉成關卡與渡河壓迫，題材切換清楚
+    - `wild_hebei_plain` 已保留 `17508 south -> fort_river_crossing`，支持現在把南向營道收束成軍事 choke point
+    - `players.json / skills.json` 沒有要求平原之後立刻回到服務型城市，支持先補軍事關卡節點
+  - compliance_check:
+    - compliant；在 `Wild` 之後切到 `Fort`，符合 queue variety，也直接承接 `wild_hebei_plain` 的既有南向預留
 
 
 ## Done
@@ -869,20 +898,16 @@
 
 ## Current Recommended Next Step
 
-目前 `todo` 與 `in_progress` 都為空。下一步應依 queue 規則重新盤點 `world_map + progression + 題材分布 + players/skills`，建立新的 next actionable area spec。
+`fort_river_crossing` 已完成 spec 起稿。下一步應先完成 validate-only 檢查與 spec milestone commit，再直接推進 implementation。
 
 ## Next Action
 
-- 重新盤點下一個主世界 actionable area：
-  - 檢查 `area/world_map.md`
-  - 檢查 `ref/sanguo-progression-map.md`
-  - 檢查 `ref/三國-MUD-題材分布表.md`
-  - 檢查 `docs/3yWebsite/docs/data/players.json`
-  - 檢查 `docs/3yWebsite/docs/data/skills.json`
-  - 選出符合 queue variety 的下一區
-  - 建立單區 plan、`map.md` spec 與 validate-only 結果
-  - 通過後直接 commit spec milestone
+- 完成 `fort_river_crossing` spec gate：
+  - 驗證 `area/fort_river_crossing/map.md`
+  - 更新單區 plan 的 validation 結果
+  - commit spec milestone
+  - commit 後直接進 implementation milestone
 
 ## Next Prompt
 
-`依 queue 規則盤點並建立下一個待建 area：先重建 next actionable area 的 spec，validate-only 通過後自動 commit，接著再直接進 implementation milestone。`
+`續做 fort_river_crossing：先完成 spec 驗證與 commit，接著直接進 implementation milestone；需要時自動 commit，並在通過 gate 後直接往下一步推進。`
