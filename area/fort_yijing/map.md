@@ -149,7 +149,8 @@
       "coord": [0, 3, 1],
       "labels": ["watchtower", "high-ground", "world-link-up", "nonplanar"],
       "exits": [
-        { "direction": "down", "to": 17904 }
+        { "direction": "down", "to": 17904 },
+        { "direction": "up", "to": 18601, "external": true }
       ],
       "enquires": ["望樓", "高處", "北方"]
     },

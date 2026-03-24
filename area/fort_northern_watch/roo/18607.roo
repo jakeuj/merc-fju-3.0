@@ -1,0 +1,36 @@
+Vnum            18607
+Name            狼煙高臺~
+Description
+登上高臺後，風勢與視野都不再允許人保有半點鬆懈。這裡是整座哨樓真正的心臟，狼煙、旗號與遠處動靜都會先在此被看見，再決定要不要把緊張往下方軍鎮壓回去。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       DOWN
+ExitVnum        18604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         狼煙~
+End
+
+#Enquire
+Keyword         高臺~
+End
+
+#Enquire
+Keyword         遠處~
+End
+
+End

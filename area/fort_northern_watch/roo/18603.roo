@@ -1,0 +1,36 @@
+Vnum            18603
+Name            北哨柵門~
+Description
+一道較矮卻更厚實的柵門把哨樓真正的內外分開，讓任何踏進來的人都像被迫接受一次無聲盤查。這裡的壓力不是來自人多，而是來自每一件設施都只為戒備而存在。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        18602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         柵門~
+End
+
+#Enquire
+Keyword         盤查~
+End
+
+#Enquire
+Keyword         放行~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            18602
+Name            哨樓外臺~
+Description
+外臺比下方望樓更窄，也更直接暴露在北風裡，讓每一步都像是在提醒你這裡不是給人久站觀景的地方。真正留在此處的人，多半都有明確的軍務或巡望責任。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        18601
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         外臺~
+End
+
+#Enquire
+Keyword         北風~
+End
+
+End

@@ -1,0 +1,36 @@
+Vnum            18601
+Name            升梯接臺~
+Description
+自易京北望樓再往上攀，腳下木梯與風聲很快就把人和下方軍鎮拉開距離。站上接臺時，最先感受到的不是視野，而是前線 watch fort 那種不容鬆懈的空氣。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       DOWN
+ExitVnum        17907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         易京~
+End
+
+#Enquire
+Keyword         下去~
+End
+
+#Enquire
+Keyword         哨樓~
+End
+
+End

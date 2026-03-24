@@ -1,0 +1,32 @@
+Vnum            21031
+Name            watch gate sentry~
+ShortDesc       北哨值守~
+Description
+這名守在柵門前的北哨值守站姿很穩，像早已習慣把每一道上樓腳步都先當成需要核對
+的動靜。越靠近他，就越難把這座高處哨樓當成單純觀景臺。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           38
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             11
+Wis             12
+Dex             13
+Con             13
+Hp              1280
+Mana            70
+Move            150
+Class           0
+Gold            210
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

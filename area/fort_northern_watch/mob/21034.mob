@@ -1,0 +1,32 @@
+Vnum            21034
+Name            beacon lookout~
+ShortDesc       狼煙守望~
+Description
+這名守在高臺的狼煙守望眼神總是比別人再往北放遠一些，彷彿任何風勢或影子都可能
+先在他那裡被看成警訊。站在附近時，整座哨樓的壓力都會變得更具體。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           44
+Hitroll         0
+Protect         0
+Damroll         0
+Str             14
+Int             11
+Wis             13
+Dex             14
+Con             13
+Hp              1500
+Mana            80
+Move            160
+Class           0
+Gold            260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

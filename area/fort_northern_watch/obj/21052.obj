@@ -1,0 +1,15 @@
+Vnum            21052
+Name            watch waterskin~
+ShortDesc       哨樓水囊(watch waterskin)~
+Description
+一只常掛在哨樓木柱邊、給值守與守望換班時輪流取用的哨樓水囊(watch waterskin)被
+收在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           36
+Value           10 10 0 0
+Weight          1
+Cost            92
+End

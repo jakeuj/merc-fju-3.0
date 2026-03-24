@@ -20,7 +20,7 @@
 - level_range: `36-48`
 - external_links:
   - `down`: `fort_yijing` / 北望樓
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Reference Entry Points
 
@@ -66,11 +66,22 @@
   - passed (`Validated 8 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`)
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/fort_northern_watch/map.md --validate-only`
   - passed (`Validation succeeded for 8 room(s).`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/fort_northern_watch/map.md`
+  - passed (`Wrote 8 room scaffold file(s) to area/fort_northern_watch/roo`)
+- `wsl.exe bash -lc 'cd /mnt/h/repos/merc-fju-3.0/src && make -f Makefile.lin clean && make -f Makefile.lin merc'`
+  - passed (warning-free WSL Linux build)
+- `wsl.exe bash -lc 'cd /mnt/h/repos/merc-fju-3.0 && find debug -maxdepth 1 -type f -exec truncate -s 0 {} + && cd src && timeout 60s ./startup.bash || true'`
+  - passed startup smoke via `log/1073.log`; observed `三國歪傳之降龍伏虎開始正常運作`
+- `wsl.exe bash -lc 'cd /mnt/h/repos/merc-fju-3.0 && python3 tools/area_acceptance_gate.py fort_northern_watch'`
+  - returned `implementation_ready_for_commit`
 
 ## Runtime Notes
 
-- pending
+- 已建立 `index / mob / obj / res / shp / roo` 最小可載入集合，room vnum `18601-18608`、mob vnum `21031-21034`、obj vnum `21051-21054`
+- 已正式落成 runtime boundary：`fort_yijing/17907 up -> fort_northern_watch/18601` 與 `fort_northern_watch/18601 down -> fort_yijing/17907`
+- `area/directory.lst` 已新增 `fort_northern_watch`
+- smoke test 後 `debug/error` 與 `debug/failexit` 僅反映 `timeout` 主動中止，不是 area loader 錯誤；未見 `Load_room`、`Load_mobiles`、`Load_objects`、`Load_resets` 相關異常
 
 ## Next Step Prompt
 
-`先完成 fort_northern_watch 的 spec milestone：跑 map validate 與 generator --validate-only，通過後自動 commit；接著直接做 implementation milestone，正式把 fort_yijing/17907 接進北方哨樓。`
+`先 commit fort_northern_watch 的 implementation milestone：包含 fort_yijing/17907 <-> fort_northern_watch/18601 runtime boundary、index / roo / mob / obj / res / shp、directory.lst 與 current-game area registry 更新；commit 後再決定是否推進下一個 queue 節點。`

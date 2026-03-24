@@ -1,0 +1,52 @@
+Vnum            18604
+Name            哨樓主層~
+Description
+主層木廊把軍令、糧箭與巡望動線全都收在一起，形成一種高處 watch fort 特有的緊湊秩序。站在這裡時，會很清楚感到這座哨樓的存在目的只有一個：比下方更早看見邊境變化。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        18603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        18605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18606
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        18607
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         主層~
+End
+
+#Enquire
+Keyword         軍令~
+End
+
+#Enquire
+Keyword         狼煙~
+End
+
+End

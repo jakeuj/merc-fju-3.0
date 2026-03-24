@@ -1,0 +1,32 @@
+Vnum            21033
+Name            watch courier~
+ShortDesc       巡望傳令~
+Description
+這名巡望傳令身上的木牌和筆札被風磨得發舊，卻仍隨時準備把高臺上的動靜往下傳。
+他不像守卒那樣沉默，卻更像整座哨樓節奏真正流動的那條線。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           41
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             12
+Wis             12
+Dex             13
+Con             12
+Hp              1380
+Mana            90
+Move            154
+Class           0
+Gold            220
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

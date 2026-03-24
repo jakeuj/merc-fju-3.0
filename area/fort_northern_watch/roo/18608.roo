@@ -1,0 +1,28 @@
+Vnum            18608
+Name            北望風口~
+Description
+更靠北的風口把整片前線氣息直接送到眼前，讓這裡幾乎像站在未落成邊境的門檻上。它不像一個終點，更像是在提醒人們：真正的北方壓力還在更遠處等著被補成下一個節點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        18607
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         北邊~
+End
+
+#Enquire
+Keyword         風口~
+End
+
+#Enquire
+Keyword         前線~
+End
+
+End

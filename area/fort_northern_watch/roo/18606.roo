@@ -1,0 +1,28 @@
+Vnum            18606
+Name            糧箭棚~
+Description
+箭壺、乾糧與燈油被整整齊齊地收在棚下，每一樣都在告訴人這裡雖然狹窄，卻必須能獨自撐住一段時間。哨樓的壓力有一部分就來自這種對持久戒備的預設。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        18604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         糧箭~
+End
+
+#Enquire
+Keyword         燈油~
+End
+
+#Enquire
+Keyword         備料~
+End
+
+End

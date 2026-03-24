@@ -1,0 +1,32 @@
+Vnum            21032
+Name            beacon quartermaster~
+ShortDesc       糧箭掌事~
+Description
+這位掌事把箭壺、乾糧與燈油分得井井有條，看得出他很清楚哪一樣物資會先在高處哨
+樓用完。若真要在北境前線繼續待下去，很多補給都得先問過他。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           40
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             12
+Dex             11
+Con             12
+Hp              1340
+Mana            90
+Move            144
+Class           0
+Gold            260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

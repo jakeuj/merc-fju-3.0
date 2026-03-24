@@ -738,7 +738,17 @@
     - `players.json / skills.json` 的高頻襄平訊號仍集中在服務與訓練，支持此時切回前線 `Fort`
   - compliance_check:
     - compliant；在 `Road` 之後切到 `Fort`，同時回應 `world-graph` 的既有 `up/down` 預留與北境題材節奏
-  - delivery_gate: `spec_ready_for_commit`
+  - implementation_notes:
+    - 已建立 `index / roo / mob / obj / res / shp` 最小可載入集合，room `18601-18608`、mob `21031-21034`、obj `21051-21054`
+    - 已正式落成 `fort_yijing/17907 up -> 18601` 與 `18601 down -> fort_yijing/17907` runtime boundary，並同步 `fort_yijing/map.md`
+    - 已新增 `area/directory.lst` 與 `docs/current-game/areas.md/json` 台帳
+  - validation:
+    - `python -X utf8 tools/mapmd_validate.py area/fort_northern_watch/map.md` passed
+    - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/fort_northern_watch/map.md` passed
+    - WSL `make -f Makefile.lin clean && make -f Makefile.lin merc` passed
+    - `timeout 60s ./startup.bash` passed with success signal in `log/1073.log`
+    - `debug/error` 與 `debug/failexit` 僅反映 timeout 終止，未見 area-specific loader error
+  - delivery_gate: `implementation_ready_for_commit`
 
 
 ## Done
@@ -908,15 +918,14 @@
 
 ## Current Recommended Next Step
 
-先 commit `fort_northern_watch` 的 spec milestone；commit 後直接做 implementation milestone，正式把 `fort_yijing/17907` 接進北方哨樓。
+先 commit `fort_northern_watch` 的 implementation milestone；commit 後再回到 queue 決定下一個 actionable area。
 
 ## Next Action
 
-- 跑 `tools/mapmd_validate.py` 與 generator `--validate-only`
-- commit `fort_northern_watch` 的 spec milestone
-- 接著直接做 implementation milestone
-- 正式落成 `fort_yijing/17907 <-> fort_northern_watch/18601` runtime boundary
+- commit `fort_northern_watch` 的 implementation milestone
+- 確認 tracker / current-game registry 與 commit 訊息一致
+- commit 後再依 queue 規則決定是否推進下一個 area
 
 ## Next Prompt
 
-`先 commit fort_northern_watch 的 spec milestone，接著直接做 implementation milestone：補齊 fort_yijing/17907 <-> fort_northern_watch/18601 runtime boundary、跑 validate / build / startup smoke，並在需要時自動 commit、直接進行下一步。`
+`先 commit fort_northern_watch 的 implementation milestone：包含 fort_yijing/17907 <-> fort_northern_watch/18601 runtime boundary、index / roo / mob / obj / res / shp、directory.lst 與 current-game registry 更新；commit 後再依 queue 規則決定下一個 area。`

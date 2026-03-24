@@ -2001,6 +2001,25 @@
         "plans/area/0100-road-north-border.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "fort_northern_watch",
+      "title": "北方哨樓",
+      "room_range": "18601-18620",
+      "load_order": 107,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "fort_yijing",
+      "theme_primary": "軍旅",
+      "theme_secondary": "哨站 / 狼煙",
+      "summary": "承接易京北望樓上層，落成升梯接臺、北哨柵門、軍令木案、糧箭棚與狼煙高臺構成的高處 watch fort 骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/fort_northern_watch/index",
+        "area/fort_northern_watch/map.md",
+        "plans/area/0101-fort-northern-watch.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

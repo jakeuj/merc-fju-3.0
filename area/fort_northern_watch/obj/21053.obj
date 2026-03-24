@@ -1,0 +1,16 @@
+Vnum            21053
+Name            watch shortblade~
+ShortDesc       北哨短刀(watch shortblade)~
+Description
+這把北哨短刀(watch shortblade)沒有多餘裝飾，刀身卻磨得乾淨利落，看起來正是高處
+值守與狼煙守望長期佩在身邊的制式兵器。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           38
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            182
+End

@@ -1,0 +1,28 @@
+Vnum            18605
+Name            軍令木案側~
+Description
+厚木案上壓著巡望簿、交接木牌與幾封待命的軍令，使這裡比想像中更安靜，也更有一種不能出錯的冷硬感。很多真正改變前線動向的命令，在這裡看起來都只是幾行字。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        18604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         軍令~
+End
+
+#Enquire
+Keyword         簿冊~
+End
+
+#Enquire
+Keyword         交接~
+End
+
+End

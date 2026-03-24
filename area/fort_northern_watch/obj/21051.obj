@@ -1,0 +1,14 @@
+Vnum            21051
+Name            watch ration~
+ShortDesc       哨樓乾糧包(watch ration)~
+Description
+一包給高處哨樓值役與傳令帶在身上的哨樓乾糧包(watch ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           36
+Value           16 34 4 0
+Weight          1
+Cost            126
+End

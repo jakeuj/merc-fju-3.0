@@ -1,0 +1,15 @@
+Vnum            21054
+Name            beacon lantern~
+ShortDesc       狼煙風燈(beacon lantern)~
+Description
+一盞專門掛在高臺與糧箭棚邊、方便夜裡辨認旗號與巡望輪替的狼煙風燈(beacon
+lantern)被收在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           36
+Value           0 0 24 0
+Weight          1
+Cost            96
+End
