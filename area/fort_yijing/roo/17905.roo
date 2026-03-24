@@ -1,0 +1,28 @@
+Vnum            17905
+Name            將令木案側~
+Description
+一張厚實木案靠在寨牆內側，上頭壓著巡路簿冊與幾封未送出的軍令。這裡不像軍需棚那樣雜亂，反而更有一種任何調度都會先在此定下的冷靜壓力。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        17904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         將令~
+End
+
+#Enquire
+Keyword         簿冊~
+End
+
+#Enquire
+Keyword         巡路~
+End
+
+End

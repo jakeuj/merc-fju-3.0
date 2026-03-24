@@ -1,0 +1,28 @@
+Vnum            17908
+Name            東側寨牆~
+Description
+東側寨牆比主門一帶更安靜，卻能清楚看見牆外地勢逐漸轉成更荒、更冷的山前前帶。站在這裡時，白狼山方向的壓力不像傳聞那麼遙遠，反而像隨時會從風裡逼近。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        17906
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         白狼山~
+End
+
+#Enquire
+Keyword         東邊~
+End
+
+#Enquire
+Keyword         寨牆~
+End
+
+End

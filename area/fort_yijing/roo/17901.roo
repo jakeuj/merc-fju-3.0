@@ -1,0 +1,36 @@
+Vnum            17901
+Name            易京前寨口~
+Description
+官道在此被木柵、拒馬與整隊痕跡收成一道真正的寨口，讓人一腳踏進來就明白自己已經離開單純旅路，開始進入北境軍鎮的勢力邊線。南邊還能看見易京前路口的車痕，往內則是更明確的軍令秩序。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        17808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         易京~
+End
+
+#Enquire
+Keyword         寨口~
+End
+
+#Enquire
+Keyword         前面~
+End
+
+End

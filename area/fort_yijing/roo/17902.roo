@@ -1,0 +1,32 @@
+Vnum            17902
+Name            關前柵道~
+Description
+狹長柵道把往來人流壓成一條不得不放慢的進路，兩側木樁與拒馬都留著反覆加固過的痕跡。站在這裡時，很難不去注意每一道目光都在默默盤點你的來意。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        17901
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         盤查~
+End
+
+#Enquire
+Keyword         拒馬~
+End
+
+End

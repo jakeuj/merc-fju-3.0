@@ -22,7 +22,7 @@
   - `south`: `road_yijing` / 易京前路口
   - `up`: `fort_northern_watch` / 北方哨樓預留
   - `east`: `wild_bailang` / 白狼山方向預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Reference Entry Points
 
@@ -71,11 +71,28 @@
   - passed (`Validated 8 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`)
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/fort_yijing/map.md --validate-only`
   - passed (`Validation succeeded for 8 room(s).`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/fort_yijing/map.md`
+  - passed (`Wrote 8 room scaffold file(s) to H:\repos\merc-fju-3.0\area\fort_yijing\roo`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/road_yijing/map.md`
+  - passed；同步把 `road_yijing/17808` 補成 `north -> 17901` runtime boundary
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed
+- WSL startup smoke
+  - passed；有效結果寫入 `log/1066.log`（`三國歪傳之降龍伏虎開始正常運作`）
+- `debug/badobject`
+  - empty
+- `debug/error`
+  - only timeout-triggered shutdown path after smoke window closed；無新增 area loader blocker
+- `debug/failexit`
+  - only legacy baseline `17201/17208` fixups；無 `fort_yijing` 與 `road_yijing` 相關新 warning
 
 ## Runtime Notes
 
-- pending
+- 已建立最小 loadable runtime scaffold：`index`、`mob/20331-20334`、`obj/20351-20354`、`res/fort.res`、`shp/supplies.shp`、`roo/17901-17908`
+- 已正式落成南側 runtime boundary：`road_yijing/17808 <-> fort_yijing/17901`
+- `up -> fort_northern_watch` 與 `east -> wild_bailang` 仍維持 world-link metadata，待後續北境節點 milestone 再正式接上
+- `area/directory.lst`、`docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步納入 `fort_yijing`
 
 ## Next Step Prompt
 
-`先 commit 目前 fort_yijing 的 spec milestone；commit 後直接做 implementation milestone，補齊 road_yijing/17808 <-> fort_yijing/17901 runtime boundary 並在通過 build / smoke 後自動前進。`
+`fort_yijing` 的 implementation milestone 已完成；下一步依 queue 規則盤點下一個北境待建 area，優先檢查 `Fort -> Wild` 的 family 切換下 `wild_bailang` 是否成為新的 next actionable area。`

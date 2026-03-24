@@ -1,0 +1,15 @@
+Vnum            20352
+Name            garrison waterskin~
+ShortDesc       軍鎮水囊(garrison waterskin)~
+Description
+一只常見的軍鎮水囊(garrison waterskin)繫著厚實皮帶，看起來很適合跟著巡隊走長
+路或守在寨牆邊。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           26
+Value           10 10 0 0
+Weight          1
+Cost            84
+End

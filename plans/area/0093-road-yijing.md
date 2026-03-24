@@ -73,6 +73,8 @@
   - passed (`Validation succeeded for 8 room(s).`)
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/road_yijing/map.md`
   - passed (`Wrote 8 room scaffold file(s) to H:\repos\merc-fju-3.0\area\road_yijing\roo`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/road_yijing/map.md`
+  - passed；後續 `fort_yijing` implementation milestone 已同步把 `road_yijing/17808` 補成 `north -> 17901` runtime boundary
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/beiping_outskirts/map.md`
   - passed；同步把 `beiping_outskirts/9105` 補成 `north -> 17801` runtime boundary，並補齊 `reserved_room_block`
 - `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
@@ -88,11 +90,11 @@
 
 ## Next Step Prompt
 
-`road_yijing` 的 implementation milestone 已完成；下一步依 queue 規則盤點下一個待建 area，優先檢查北境鏈在 family variety 與既有 world-link 預留下的下一個 actionable 節點。`
+`road_yijing` 的 implementation milestone 已完成；其北界已正式接上 `fort_yijing/17901`。下一步依 queue 規則盤點下一個北境待建 area，優先檢查 `Fort -> Wild` family 切換下的新節點。`
 
 ## Runtime Notes
 
 - 已建立最小 loadable runtime scaffold：`index`、`mob/20231-20234`、`obj/20251-20254`、`res/road.res`、`shp/supplies.shp`、`roo/17801-17808`
 - 已正式落成南側 runtime boundary：`beiping_outskirts/9105 <-> road_yijing/17801`
-- 北側 `fort_yijing` 仍維持 world-link metadata，待下一個 fort milestone 再正式接上
+- 已正式落成北側 runtime boundary：`road_yijing/17808 <-> fort_yijing/17901`
 - `area/directory.lst`、`docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步納入 `road_yijing`

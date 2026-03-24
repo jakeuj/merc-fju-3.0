@@ -1,0 +1,36 @@
+Vnum            17906
+Name            軍需棚前~
+Description
+軍需棚前堆著草料、皮囊、燈油與打包妥當的巡路物資，看得出易京不是單純守門，而是一處會持續把兵與補給往更北邊推送出去的軍鎮節點。這裡的忙碌帶著明確用途感。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        17904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        17908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         軍需~
+End
+
+#Enquire
+Keyword         草料~
+End
+
+#Enquire
+Keyword         補給~
+End
+
+End

@@ -1868,6 +1868,25 @@
         "plans/area/0093-road-yijing.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "fort_yijing",
+      "title": "易京",
+      "room_range": "17901-17920",
+      "load_order": 100,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "road_yijing",
+      "theme_primary": "軍旅",
+      "theme_secondary": "北境軍鎮",
+      "summary": "承接易京官道北界，落成前寨口、關門、內營主道、軍需棚與北望樓構成的北境 fort 骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/fort_yijing/index",
+        "area/fort_yijing/map.md",
+        "plans/area/0094-fort-yijing.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

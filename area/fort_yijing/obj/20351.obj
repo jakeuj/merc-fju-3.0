@@ -1,0 +1,14 @@
+Vnum            20351
+Name            frontier ration~
+ShortDesc       北境乾糧包(frontier ration)~
+Description
+一包讓守軍和巡路差役能邊走邊吃的北境乾糧包(frontier ration)被整齊地放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           26
+Value           18 36 4 0
+Weight          1
+Cost            108
+End

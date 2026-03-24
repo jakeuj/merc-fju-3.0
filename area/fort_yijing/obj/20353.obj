@@ -1,0 +1,16 @@
+Vnum            20353
+Name            garrison saber~
+ShortDesc       關軍短刀(garrison saber)~
+Description
+這把短刀沒有華麗裝飾，卻打磨得平衡結實，看起來正是易京守卒和巡尉會長期隨身
+佩著的制式兵器。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           28
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            166
+End

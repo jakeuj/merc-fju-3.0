@@ -1,0 +1,32 @@
+Vnum            20334
+Name            watch scout~
+ShortDesc       望樓斥候~
+Description
+這名斥候站在高處時幾乎像和風一起靜下來，只有偶爾轉頭時才讓人意識到他一直在
+看更遠的北地與東側山前。那份警覺讓望樓本身都顯得更冷了。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           34
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             12
+Wis             12
+Dex             13
+Con             12
+Hp              1120
+Mana            80
+Move            150
+Class           0
+Gold            260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

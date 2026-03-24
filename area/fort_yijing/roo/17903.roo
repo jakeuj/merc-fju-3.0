@@ -1,0 +1,36 @@
+Vnum            17903
+Name            易京關門~
+Description
+厚木關門與兩側柵牆把整座軍鎮的重心收在這個窄口上，任何想真正進入易京的人都得先穿過這裡。風一吹過門樓，就會把更北方的冷意和軍鎮壓迫一起帶下來。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        17902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         關門~
+End
+
+#Enquire
+Keyword         放行~
+End
+
+#Enquire
+Keyword         軍令~
+End
+
+End

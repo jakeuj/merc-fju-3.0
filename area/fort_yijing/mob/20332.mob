@@ -1,0 +1,32 @@
+Vnum            20332
+Name            quartermaster clerk~
+ShortDesc       軍需掌事~
+Description
+這位掌事把草料、水囊與燈油都分門別類整理得清清楚楚，看得出他對易京的補給節
+奏和巡路去向都熟得很。若真想在北境繼續走遠，很多事都得先問過他。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           31
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             12
+Dex             11
+Con             11
+Hp              860
+Mana            90
+Move            130
+Class           0
+Gold            220
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

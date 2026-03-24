@@ -1,0 +1,52 @@
+Vnum            17904
+Name            內營主道~
+Description
+進了關門之後，腳下道路雖然還算寬敞，氣氛卻不再像外路那樣可隨意停留。傳令、換班與搬運在這裡形成一種緊繃但穩定的節奏，整座易京的軍事用途也因此顯得更具體。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        17903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        17905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        17906
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        17907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         內營~
+End
+
+#Enquire
+Keyword         軍需~
+End
+
+#Enquire
+Keyword         將令~
+End
+
+End

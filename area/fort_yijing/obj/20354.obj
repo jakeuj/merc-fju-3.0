@@ -1,0 +1,15 @@
+Vnum            20354
+Name            signal lantern~
+ShortDesc       軍旗風燈(signal lantern)~
+Description
+一盞專門掛在軍寨高處的軍旗風燈(signal lantern)被擦得還算明亮，看起來足以在夜
+裡替巡路或望樓訊號照出清楚輪廓。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           26
+Value           0 0 24 0
+Weight          1
+Cost            78
+End

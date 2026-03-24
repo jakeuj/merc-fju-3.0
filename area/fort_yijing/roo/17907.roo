@@ -1,0 +1,28 @@
+Vnum            17907
+Name            北望樓~
+Description
+站上望樓後，南面的官道起伏與北面的邊地風勢都變得一覽無遺。這種高度讓人很容易理解，易京真正的作用並不是收人停留，而是盯住更遠方的邊境變化並及時把消息壓回關內。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       DOWN
+ExitVnum        17904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         望樓~
+End
+
+#Enquire
+Keyword         高處~
+End
+
+#Enquire
+Keyword         北方~
+End
+
+End
