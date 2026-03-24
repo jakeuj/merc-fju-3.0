@@ -1,0 +1,24 @@
+Vnum            17504
+Name            草高側線~
+Description
+稍高的草線把這裡和主道隔出一點距離，適合暫時停下腳步觀察前後動靜。雖然不算真正隱蔽，卻足夠讓旅人重新抓回對地勢的理解。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        17503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         草叢~
+End
+
+#Enquire
+Keyword         觀望~
+End
+
+End

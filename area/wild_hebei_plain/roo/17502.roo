@@ -1,0 +1,32 @@
+Vnum            17502
+Name            官道平野~
+Description
+官道在平原上沒有太多遮蔽，只靠車轍與零散路標把方向維持住。走在這裡時，會很清楚感到自己已離開城市，卻還沒真正進入另一個據點，只能靠風向與地勢辨位。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        17501
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        17503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         官道~
+End
+
+#Enquire
+Keyword         方向~
+End
+
+End

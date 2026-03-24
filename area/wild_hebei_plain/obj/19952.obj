@@ -1,0 +1,14 @@
+Vnum            19952
+Name            field flask~
+ShortDesc       平野水囊(field flask)~
+Description
+一只在長風與乾草氣裡格外實用的平野水囊(field flask)被擺在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           24
+Value           10 10 0 0
+Weight          1
+Cost            86
+End

@@ -1,0 +1,28 @@
+Vnum            17508
+Name            渡河營道口~
+Description
+官道在此繼續朝南推去，地面上的車印與駐行痕跡都變得更密。站在這裡時，南皮的城市氣息已經被風與土色沖淡，只剩更前方的營寨與渡河線在等待人靠近。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        17507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         營寨~
+End
+
+#Enquire
+Keyword         渡河~
+End
+
+#Enquire
+Keyword         南路~
+End
+
+End

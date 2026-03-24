@@ -1,0 +1,14 @@
+Vnum            19954
+Name            wind lantern~
+ShortDesc       風碑提燈(wind lantern)~
+Description
+一盞適合在平原暮色裡照路的風碑提燈(wind lantern)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           24
+Value           0 0 26 0
+Weight          2
+Cost            92
+End

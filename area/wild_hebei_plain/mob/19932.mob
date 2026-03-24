@@ -1,0 +1,32 @@
+Vnum            19932
+Name            grassland hunter~
+ShortDesc       草野獵戶~
+Description
+這名在平原中段活動的獵戶步子穩，說話不多，像早就習慣在遠處辨認一切動靜。對
+他來說，這片平原的空曠不是麻煩，而是一種可以利用的視野。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           27
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             10
+Wis             11
+Dex             12
+Con             12
+Hp              960
+Mana            60
+Move            142
+Class           0
+Gold            150
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

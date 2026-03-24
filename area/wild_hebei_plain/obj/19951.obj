@@ -1,0 +1,14 @@
+Vnum            19951
+Name            plain ration~
+ShortDesc       平原乾糧包(plain ration)~
+Description
+一包適合在開闊平原上邊走邊吃的平原乾糧包(plain ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           24
+Value           16 30 4 0
+Weight          1
+Cost            96
+End

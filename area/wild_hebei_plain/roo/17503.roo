@@ -1,0 +1,44 @@
+Vnum            17503
+Name            平原中段~
+Description
+視野在這裡被拉得非常長，遠處任何人馬移動都很容易被先看見。這種毫不遮掩的空曠讓河北平原的風險感變得很直接，也讓整條路比城內更講究提早判斷去向。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        17502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        17505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         風~
+End
+
+#Enquire
+Keyword         平野~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

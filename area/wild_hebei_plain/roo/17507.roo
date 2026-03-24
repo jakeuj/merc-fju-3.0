@@ -1,0 +1,32 @@
+Vnum            17507
+Name            營道前帶~
+Description
+再往南走，路上的痕跡就不只屬於商旅或零散差人，而開始有更多軍用補給與駐行往返留下的重量。這裡像是在提醒你，平原並不是純然空曠，它同時也是軍路延伸的場域。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        17506
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        17508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         軍路~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+End

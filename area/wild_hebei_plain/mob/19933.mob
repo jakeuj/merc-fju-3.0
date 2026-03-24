@@ -1,0 +1,32 @@
+Vnum            19933
+Name            stele watcher~
+ShortDesc       風碑守望者~
+Description
+這名常在風碑岔台附近停留的守望者，不時會抬頭看雲勢與遠方路線，像是把整片平
+原的變化都當成一種需要提早讀懂的訊號。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           28
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             12
+Dex             12
+Con             12
+Hp              990
+Mana            85
+Move            145
+Class           0
+Gold            155
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

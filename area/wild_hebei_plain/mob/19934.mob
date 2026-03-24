@@ -1,0 +1,32 @@
+Vnum            19934
+Name            route patrol~
+ShortDesc       營道巡行人~
+Description
+這名在南向營道前帶來回巡行的人步伐很快，像隨時準備把平原上的消息再往更南送
+出去。越靠近營道，他看人的眼神就越不肯鬆。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           29
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             11
+Wis             11
+Dex             13
+Con             12
+Hp              1020
+Mana            70
+Move            148
+Class           0
+Gold            160
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1,0 +1,32 @@
+Vnum            19931
+Name            plain guide~
+ShortDesc       平原引路客~
+Description
+這名常在南皮東外道附近替旅人指方向的引路客，熟得像能用風向判斷你會不會走偏。
+在這片容易讓人失去距離感的平原上，像他這樣的人格外實用。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           25
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             12
+Dex             12
+Con             11
+Hp              880
+Mana            75
+Move            138
+Class           0
+Gold            140
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

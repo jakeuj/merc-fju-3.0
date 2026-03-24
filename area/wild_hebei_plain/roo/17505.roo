@@ -1,0 +1,32 @@
+Vnum            17505
+Name            風碑岔台~
+Description
+一座半斷的石碑立在岔台邊，像是替這片過分開闊的平原留下方向證據。站在這裡時，風聲總會比人聲更明顯，讓人自然把注意力放回路向、雲勢和遠處地形。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        17503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        17506
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         風碑~
+End
+
+#Enquire
+Keyword         岔路~
+End
+
+End

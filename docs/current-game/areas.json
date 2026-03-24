@@ -1792,6 +1792,25 @@
         "plans/area/0089-city-nanpi.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "wild_hebei_plain",
+      "title": "河北平原",
+      "room_range": "17501-17520",
+      "load_order": 96,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_nanpi",
+      "theme_primary": "軍旅",
+      "theme_secondary": "平原 / 官道",
+      "summary": "承接南皮東口與更南營道，落成平原外道、官道平野、風碑岔台與營道前帶構成的河北 wild 骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/wild_hebei_plain/index",
+        "area/wild_hebei_plain/map.md",
+        "plans/area/0090-wild-hebei-plain.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

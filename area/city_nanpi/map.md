@@ -163,7 +163,8 @@
       "coord": [1, 3, 0],
       "labels": ["east-link", "open-road"],
       "exits": [
-        { "direction": "west", "to": 17404 }
+        { "direction": "west", "to": 17404 },
+        { "direction": "east", "to": 17501, "external": true }
       ],
       "enquires": ["平原", "東路", "外道"]
     },

@@ -1,0 +1,32 @@
+Vnum            17506
+Name            低坡草道~
+Description
+地勢在這裡略略往南傾，讓草道與車痕都變得更清楚一些。與其說這是顯眼的道路，不如說是一條被太多人走過、因此再也無法忽視的方向感。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        17505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        17507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         南路~
+End
+
+#Enquire
+Keyword         營寨~
+End
+
+End

@@ -57,6 +57,7 @@
       "coord": [0, 0, 0],
       "labels": ["entry", "west-edge", "world-link-west"],
       "exits": [
+        { "direction": "west", "to": 17408, "external": true },
         { "direction": "east", "to": 17502 }
       ],
       "enquires": ["南皮", "外道", "平原"]

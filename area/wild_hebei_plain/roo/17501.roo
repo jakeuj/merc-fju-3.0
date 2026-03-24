@@ -1,0 +1,36 @@
+Vnum            17501
+Name            南皮東外道~
+Description
+一離開南皮東口，城牆與牌樓帶來的秩序感很快就被開闊平原沖淡。西邊仍能回望見城市輪廓，東南北卻只剩更長的風線與官道痕跡，像河北的真正幅員從這裡才開始展開。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        17408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        17502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         南皮~
+End
+
+#Enquire
+Keyword         外道~
+End
+
+#Enquire
+Keyword         平原~
+End
+
+End
