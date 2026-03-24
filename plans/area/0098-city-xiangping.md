@@ -75,6 +75,8 @@
   - passed
 - `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0/src && timeout 45 ./merc merc.test.ini"`
   - passed；因使用中的遊戲實例已占用預設 `3838`，改以臨時測試 port `23838/21234/28888` 做 direct-load smoke，並在 console 看見 `三國歪傳之降龍伏虎開始正常運作`
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_liaodong_plain/map.md`
+  - passed；後續 `wild_liaodong_plain` implementation 已正式接上 `city_xiangping/18308 <-> 18401`，並同步把 `city_xiangping/18308` 投影成 `north -> 18401` runtime boundary
 - `debug/badobject`
   - empty
 - `debug/error`
@@ -86,9 +88,10 @@
 
 - 已建立最小 loadable runtime scaffold：`index`、`mob/20731-20734`、`obj/20751-20754`、`res/city.res`、`shp/supplies.shp`、`roo/18301-18309`
 - 已正式落成西側 runtime boundary：`wild_barbarian_camp/18208 <-> city_xiangping/18301`
-- `north -> wild_liaodong_plain` 與 `north -> road_north_border` 仍維持 world-link metadata，待後續遼東節點 milestone 再正式接上
+- `north -> wild_liaodong_plain` 已於後續 milestone 正式落成 `city_xiangping/18308 <-> wild_liaodong_plain/18401`
+- `north -> road_north_border` 仍維持 world-link metadata，待後續遼東節點 milestone 再正式接上
 - `area/directory.lst`、`docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步納入 `city_xiangping`
 
 ## Next Step Prompt
 
-`city_xiangping` 的 implementation milestone 已完成；下一步依 queue 規則盤點下一個遼東待建 area，優先檢查 city 後在 family variety 與主線拓撲下應先進 wild_liaodong_plain 還是 road_north_border 的 spec milestone。`
+`city_xiangping` 的 implementation milestone 已完成，且 `wild_liaodong_plain` 已正式接上北原牌樓；下一步依 queue 規則盤點下一個遼東待建 area，優先檢查在目前 family variety 與主線拓撲下應先進 `road_north_border` 還是其他更北遼東節點的 spec milestone。`

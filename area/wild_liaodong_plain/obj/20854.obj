@@ -1,0 +1,14 @@
+Vnum            20854
+Name            wind lantern~
+ShortDesc       風草提燈(wind lantern)~
+Description
+一盞為了在風草臺與低帶邊緣辨位而備的風草提燈(wind lantern)被掛在方便取用的位置。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           33
+Value           0 0 18 0
+Weight          2
+Cost            92
+End

@@ -1,0 +1,36 @@
+Vnum            18407
+Name            牧馬低帶~
+Description
+地勢在這裡稍稍往下收，草色也更深，讓整片低帶看起來像長久有人放馬停留的地方。這裡既有生活痕跡，也有一種若敵騎突然從遠處逼近就會來不及回頭的開闊風險。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        18405
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         牧馬~
+End
+
+#Enquire
+Keyword         低地~
+End
+
+#Enquire
+Keyword         前面~
+End
+
+End

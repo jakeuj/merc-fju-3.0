@@ -1,0 +1,15 @@
+Vnum            20853
+Name            plain saber~
+ShortDesc       平野長刀(plain saber)~
+Description
+這柄平野長刀(plain saber)刀身厚實簡潔，像是專門為開闊地帶上突然拉近的衝突而備。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           36
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_BLADE
+Weight          4
+Cost            190
+End

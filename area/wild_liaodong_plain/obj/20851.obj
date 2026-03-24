@@ -1,0 +1,14 @@
+Vnum            20851
+Name            plain ration~
+ShortDesc       平野乾糧包(plain ration)~
+Description
+一包適合在遼東平原上邊走邊吃的平野乾糧包(plain ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           32
+Value           16 32 4 0
+Weight          1
+Cost            102
+End

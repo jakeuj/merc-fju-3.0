@@ -1,0 +1,31 @@
+Vnum            20833
+Name            grasswind watcher~
+ShortDesc       風草守望者~
+Description
+這名守望者站在高草臺邊時，目光總會比人先落到更遠的地方，像整片平原的風吹草
+動都已先替他報過一次消息。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       50
+Level           40
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             11
+Wis             12
+Dex             12
+Con             13
+Hp              1300
+Mana            68
+Move            158
+Class           0
+Gold            280
+Multipile       100
+AttackRatio     110
+DodgeRatio      105
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

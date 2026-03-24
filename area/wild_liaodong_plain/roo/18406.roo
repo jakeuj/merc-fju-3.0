@@ -1,0 +1,28 @@
+Vnum            18406
+Name            風折路標~
+Description
+一根被風折得有些斜的舊路標立在這裡，字跡早已模糊，卻仍像在努力證明這片平野並非無人來去。它最有價值的地方不是文字，而是提醒你在如此開闊的地帶，任何人為標記都值得再看一眼。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        18403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         路標~
+End
+
+#Enquire
+Keyword         方向~
+End
+
+#Enquire
+Keyword         舊字~
+End
+
+End

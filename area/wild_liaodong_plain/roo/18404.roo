@@ -1,0 +1,28 @@
+Vnum            18404
+Name            北風草臺~
+Description
+略高的草臺讓風在這裡總比別處更急一些，也讓人更容易看清地勢和遠方的馬跡。站在這裡時，會覺得襄平已經退到背後，而更北的遼東腹地才正要開始露出自己的尺度。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        18403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         北風~
+End
+
+#Enquire
+Keyword         遠處~
+End
+
+#Enquire
+Keyword         草臺~
+End
+
+End

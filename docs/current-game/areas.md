@@ -128,6 +128,7 @@ title: Current Game Areas
 | `dng_ancient_cave` | 古洞遺跡 / 洞窟遺封 dungeon | `18101-18120` | `rebuild addition` | 承接白狼山裂縫洞口，落成潮濕前廳、斷紋甬道、封印主室與靈峰裂井骨架。 |
 | `wild_barbarian_camp` | 胡營舊地 / 邊地敵蹤 wild | `18201-18220` | `rebuild addition` | 承接白狼山東向荒徑，落成舊柵外口、獸骨火堆、破帳空坪與東向城路口骨架。 |
 | `city_xiangping` | 襄平 / 遼東邊城 city | `18301-18330` | `rebuild addition` | 承接胡營舊地東向城路口，落成主街、驛站、太守府前街與北向分流骨架。 |
+| `wild_liaodong_plain` | 遼東平原 / 北地開闊 wild | `18401-18420` | `rebuild addition` | 承接襄平北原牌樓，落成外坡、草痕官跡、風草臺與牧馬低帶骨架。 |
 
 ## Recent Rebuild Areas
 
@@ -245,6 +246,7 @@ title: Current Game Areas
 - `dng_ancient_cave`：把白狼山裂縫洞口正式接進古洞遺跡，透過裂縫落台、潮濕前廳、斷紋甬道、石門前廊與封印主室把北境主線再往地下遺跡壓深一層。
 - `wild_barbarian_camp`：把白狼山東向荒徑正式接進胡營舊地，透過斷草營徑、風旗殘道、獸骨火堆與巡望高臺把北境主線重新拉回帶人為敵蹤記憶的 hostile wild。
 - `city_xiangping`：把胡營舊地東向城路口正式接進襄平，透過西城路口、主街、驛站前街、藥材行前與太守府前街把北境主線重新收束成可整補、訓練與北向分流的遼東邊城 hub。
+- `wild_liaodong_plain`：把襄平北原牌樓正式接進遼東平原，透過北原外坡、草痕官跡、遼東平野、風草臺與牧馬低帶把北境主線重新打開成可辨位的開闊北地 wild。
 
 ## 維護規則
 

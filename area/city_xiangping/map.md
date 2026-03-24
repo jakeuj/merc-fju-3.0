@@ -38,6 +38,7 @@
         "direction": "north",
         "source_vnum": 18308,
         "target_area": "wild_liaodong_plain",
+        "target_room_vnum": 18401,
         "label": "遼東平原"
       },
       {
@@ -164,7 +165,8 @@
       "coord": [3, 2, 0],
       "labels": ["north-link", "plain-route"],
       "exits": [
-        { "direction": "south", "to": 18304 }
+        { "direction": "south", "to": 18304 },
+        { "direction": "north", "to": 18401, "external": true }
       ],
       "enquires": ["平原", "北原", "遼東"]
     },

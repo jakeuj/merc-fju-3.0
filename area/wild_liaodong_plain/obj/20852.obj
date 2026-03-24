@@ -1,0 +1,14 @@
+Vnum            20852
+Name            grass waterskin~
+ShortDesc       平原水囊(grass waterskin)~
+Description
+一只方便在長風吹拂的平野上隨身攜帶的平原水囊(grass waterskin)擱在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           32
+Value           10 10 0 0
+Weight          1
+Cost            90
+End

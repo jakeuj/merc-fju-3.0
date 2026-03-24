@@ -1,0 +1,44 @@
+Vnum            18402
+Name            草痕官跡~
+Description
+平原上的草痕被反覆踩出幾條隱約的官跡，沒有真正修成硬路，卻明顯看得出往來人馬總會沿著這一線走。比起城市裡的路，這裡更像是一種被長年使用出來的方向共識。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        18401
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18405
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         官跡~
+End
+
+#Enquire
+Keyword         草痕~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

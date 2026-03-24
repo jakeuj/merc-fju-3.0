@@ -1,0 +1,32 @@
+Vnum            20831
+Name            plain guide~
+ShortDesc       平野引路客~
+Description
+這名常在襄平北原外坡附近替旅人指方向的引路客，熟得像能用風勢和草浪分出哪條
+去路比較像活路。在開闊平原上，這種人總是特別有價值。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           33
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             12
+Dex             12
+Con             11
+Hp              920
+Mana            80
+Move            142
+Class           0
+Gold            160
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1,0 +1,36 @@
+Vnum            18405
+Name            側線牧痕~
+Description
+偏離主要草痕後，地面上開始混進更散、更淺的牧痕與蹄印，像有人把這片平野同時當成通路與生活空間。這裡讓遼東平原不像單純軍路，而更像一塊仍在呼吸的北地前帶。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        18402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18407
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         馬跡~
+End
+
+#Enquire
+Keyword         側線~
+End
+
+#Enquire
+Keyword         牧地~
+End
+
+End

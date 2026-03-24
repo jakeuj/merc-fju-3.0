@@ -1,0 +1,28 @@
+Vnum            18408
+Name            更北平原口~
+Description
+再往北走，草地與風勢像還要繼續無止境地展開出去，讓這裡明顯不像終點，只像遼東更大區域真正開始的門口。襄平在身後提供秩序，而這裡則把人重新交還給北地本身。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        18407
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         北邊~
+End
+
+#Enquire
+Keyword         更遠~
+End
+
+#Enquire
+Keyword         平原口~
+End
+
+End

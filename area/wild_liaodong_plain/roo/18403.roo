@@ -1,0 +1,44 @@
+Vnum            18403
+Name            遼東平野~
+Description
+視野在這裡徹底打開，草浪與風線幾乎沒有遮蔽，遠處任何移動都會先成為視覺裡的一小個訊號。遼東平原真正的壓力不在於地形複雜，而在於它讓每一個判斷都變得更早、更直接。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        18402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        18406
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         平野~
+End
+
+#Enquire
+Keyword         北邊~
+End
+
+#Enquire
+Keyword         風~
+End
+
+End

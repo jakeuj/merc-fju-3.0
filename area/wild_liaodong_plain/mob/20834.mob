@@ -1,0 +1,31 @@
+Vnum            20834
+Name            lowland rider~
+ShortDesc       低帶巡行人~
+Description
+這名巡行人踩著低帶草勢來回走動時，像總在預先評估哪裡可能冒出騎影、哪裡又還
+能及時回身。那種從不真正放鬆的節奏，很像遼東平原本身的脾氣。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       0
+Level           43
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             10
+Wis             11
+Dex             13
+Con             13
+Hp              1480
+Mana            60
+Move            165
+Class           0
+Gold            330
+Multipile       100
+AttackRatio     112
+DodgeRatio      108
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

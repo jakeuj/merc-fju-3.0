@@ -1,0 +1,31 @@
+Vnum            20832
+Name            hoofprint hunter~
+ShortDesc       牧痕獵戶~
+Description
+這名獵戶老盯著地上的蹄印與風折草痕，像平原上真正能說話的不是人，而是那些總
+被別人忽略掉的細小痕跡。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       0
+Level           36
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             10
+Wis             11
+Dex             13
+Con             12
+Hp              1120
+Mana            62
+Move            150
+Class           0
+Gold            220
+Multipile       100
+AttackRatio     108
+DodgeRatio      104
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
