@@ -709,7 +709,38 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `wild_barbarian_camp`
+  - area_family: `Wild`
+  - reserved_room_block: `18201-18220`
+  - planned_vnum_range: `18201-18220`
+  - level_range: `34-46`
+  - theme: `軍旅`
+  - subtheme: `部族營地 / 邊地敵蹤`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/wild_barbarian_camp/map.md`
+    - `ref/sanguo-area-specfirst/area/city_xiangping/map.md`
+    - `ref/world-graph.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `plans/area/0095-wild-bailang.md`
+    - `plans/area/0096-dng-ancient-cave.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/map/bepin.html`
+    - `ref/sanguo-area-specfirst/area/wild_wolf_forest/map.md`
+    - `ref/sanguo-area-specfirst/area/sec_spirit_peak/map.md`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `world-graph` 明確把 `wild_bailang -> wild_barbarian_camp -> city_xiangping` 放成同一段北境主線，`wild_barbarian_camp` 是白狼山往襄平的直接中介節點
+    - `題材分布表` 把白狼山與襄平之間切成 `探險遺跡 -> 軍旅邊城` 的北境帶，適合用帶部族駐留痕跡的 hostile wild 承接這個氣氛轉換
+    - `players.json / skills.json` 對 `襄平` 提出 `refresh`、訓練與 `venom` 等服務訊號，支持先把通往 `city_xiangping` 的前置野外補起來，而不是讓邊城 hub 在 implementation 時變成孤點
+    - `wild_bailang` 既有 spec/runtime 已保留 `18007 east -> wild_barbarian_camp`，使本區成為目前最可直接延續且不會卡住下一輪 implementation 的北境候選
+  - compliance_check:
+    - compliant；在 `Dungeon` 後切回 `Wild`，同時滿足 runtime 可接性、主線通往 `city_xiangping` 的過渡需求，以及 queue variety 不先行孤立高階 `secret` 的原則
+  - delivery_gate: `spec_ready_for_commit`
 
 
 ## Done
@@ -875,19 +906,15 @@
 
 ## Current Recommended Next Step
 
-目前 `candidate queue`、`todo`、`in_progress` 都是空的。下一步應依 queue 規則重建下一個北境 next actionable area，優先檢查 `dng_ancient_cave` 之後在 family variety 與世界拓撲下的合理節點。
+先 commit `wild_barbarian_camp` 的 spec milestone；commit 後直接做 implementation milestone，正式把 `wild_bailang/18007` 接進新的北境 hostile wild。
 
 ## Next Action
 
-- 一起盤點：
-  - `area/world_map.md`
-  - `ref/sanguo-progression-map.md`
-  - `ref/三國-MUD-題材分布表.md`
-  - `docs/3yWebsite/docs/data/players.json`
-  - `docs/3yWebsite/docs/data/skills.json`
-- 依 family variety 與北境主線決定下一個 actionable area
-- 建立新的 spec milestone，通過 validate-only 後直接進下一步
+- commit `wild_barbarian_camp` 的 spec milestone
+- 生成 `roo` 與最小 `index / mob / obj / res / shp` runtime scaffold
+- 正式落成 `wild_bailang/18007 <-> wild_barbarian_camp/18201` runtime boundary
+- 跑 build / startup smoke；通過後再進 `city_xiangping` spec
 
 ## Next Prompt
 
-`依 queue 規則盤點下一個待建 area：優先檢查北境鏈在 dng_ancient_cave 之後的 world_map、progression、題材分布與 players/skills dataset，選出新的 next actionable area，建立 spec 並在需要時自動 commit、直接進行下一步。`
+`先 commit wild_barbarian_camp 的 spec milestone，接著直接做 implementation milestone：補齊 wild_bailang/18007 <-> wild_barbarian_camp/18201 runtime boundary、跑 validate / build / startup smoke，並在需要時自動 commit、直接進行下一步。`
