@@ -1,0 +1,32 @@
+Vnum            20032
+Name            quartermaster~
+ShortDesc       軍需掌事~
+Description
+這名在內營一帶調度軍需的掌事說話簡短，眼裡卻總在算人手、繩索和木箱還差多少。
+從他身上很容易看出，這座營寨不是為了擺樣子，而是真的要運作。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           27
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             12
+Dex             11
+Con             11
+Hp              910
+Mana            85
+Move            125
+Class           0
+Gold            190
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1,0 +1,28 @@
+Vnum            17605
+Name            軍需棚外~
+Description
+軍需棚外堆著木箱、繩索與渡河用具，讓人一眼就看出這座營寨不只是守門，更是要把人與物真正送過河線的地方。這裡的秩序帶著很強的用途感。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        17604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         軍需~
+End
+
+#Enquire
+Keyword         木箱~
+End
+
+#Enquire
+Keyword         渡具~
+End
+
+End

@@ -51,6 +51,7 @@
       "coord": [0, 0, 0],
       "labels": ["entry", "north-edge", "world-link-north"],
       "exits": [
+        { "direction": "north", "to": 17508, "external": true },
         { "direction": "south", "to": 17602 }
       ],
       "enquires": ["營道", "寨門", "前方"]

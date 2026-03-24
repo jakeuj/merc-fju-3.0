@@ -155,7 +155,8 @@
       "coord": [3, -3, 0],
       "labels": ["south-edge", "world-link-south"],
       "exits": [
-        { "direction": "north", "to": 17507 }
+        { "direction": "north", "to": 17507 },
+        { "direction": "south", "to": 17601, "external": true }
       ],
       "enquires": ["營寨", "渡河", "南路"]
     }

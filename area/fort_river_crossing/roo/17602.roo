@@ -1,0 +1,32 @@
+Vnum            17602
+Name            寨前柵道~
+Description
+柵道兩旁的拒馬與木樁把人流壓成一道狹窄的進路，連腳步都會自然放慢。這裡最強烈的感覺不是熱鬧，而是任何往來都被軍令默默測量的壓迫。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        17601
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        17603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         拒馬~
+End
+
+#Enquire
+Keyword         盤查~
+End
+
+End

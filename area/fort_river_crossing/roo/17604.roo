@@ -1,0 +1,52 @@
+Vnum            17604
+Name            內營主道~
+Description
+內營主道上人馬往返頻繁，但沒有城市市集那種鬆散人聲，更多是軍需、傳令與駐守輪替的秩序。這裡讓人很清楚感受到，營寨的一切都是圍著河渡與軍路而運作。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        17603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        17605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        17606
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        17607
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         內營~
+End
+
+#Enquire
+Keyword         軍需~
+End
+
+#Enquire
+Keyword         河渡~
+End
+
+End

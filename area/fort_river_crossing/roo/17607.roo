@@ -1,0 +1,28 @@
+Vnum            17607
+Name            望樓高位~
+Description
+從望樓往北看，平原上的動靜幾乎無所遁形；往南看，河渡帶來的壓力又會讓整座營寨顯得更像一枚釘在要道上的軍事節點。這種高度把營寨真正的戰略角色說得很明白。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       DOWN
+ExitVnum        17604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         望樓~
+End
+
+#Enquire
+Keyword         高處~
+End
+
+#Enquire
+Keyword         遠望~
+End
+
+End

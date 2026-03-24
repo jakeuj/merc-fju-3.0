@@ -1,0 +1,32 @@
+Vnum            20031
+Name            gate sentry~
+ShortDesc       寨門值役~
+Description
+這名守在寨門前的值役眼神緊，不只在看你要不要進寨，也像在判斷你究竟屬於哪一
+條軍路。站在他附近時，很難還把這裡當成普通路口。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           28
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             11
+Wis             11
+Dex             12
+Con             12
+Hp              980
+Mana            70
+Move            138
+Class           0
+Gold            180
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

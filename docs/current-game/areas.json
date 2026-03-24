@@ -1811,6 +1811,25 @@
         "plans/area/0090-wild-hebei-plain.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "fort_river_crossing",
+      "title": "渡河營寨",
+      "room_range": "17601-17620",
+      "load_order": 97,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "wild_hebei_plain",
+      "theme_primary": "軍旅",
+      "theme_secondary": "河渡要地",
+      "summary": "承接河北平原營道與渡河要地，落成關前營道、寨門、內營主道、軍需棚與望樓構成的 fort 骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/fort_river_crossing/index",
+        "area/fort_river_crossing/map.md",
+        "plans/area/0091-fort-river-crossing.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

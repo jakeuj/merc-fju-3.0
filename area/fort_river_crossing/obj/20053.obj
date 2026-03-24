@@ -1,0 +1,16 @@
+Vnum            20053
+Name            sentry blade~
+ShortDesc       守寨短刀(sentry blade)~
+Description
+一把配給寨門值役、木台看守與望樓哨卒隨身防備的守寨短刀(sentry blade)被放在這
+裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           28
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            140
+End

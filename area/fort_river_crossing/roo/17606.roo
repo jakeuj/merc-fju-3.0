@@ -1,0 +1,24 @@
+Vnum            17606
+Name            渡河木台~
+Description
+木台邊可以看見更多與河渡有關的痕跡，連木板上的磨損方向都透露出駐行與器材搬運的固定節奏。站在這裡時，會很自然把注意力放到更前方的河線與水路上。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        17604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         木台~
+End
+
+#Enquire
+Keyword         河邊~
+End
+
+End

@@ -1,0 +1,36 @@
+Vnum            17601
+Name            關前營道~
+Description
+從河北平原一路南下到這裡時，開闊地形帶來的自由感會立刻被收緊。木柵、哨火與駐行痕跡讓人很清楚知道，前方已經不是單純路帶，而是一處會先盤問再放行的軍事要地。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        17508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        17602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         營道~
+End
+
+#Enquire
+Keyword         寨門~
+End
+
+#Enquire
+Keyword         前方~
+End
+
+End

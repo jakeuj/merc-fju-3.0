@@ -20,7 +20,7 @@
 - level_range: `26-38`
 - external_links:
   - `north`: `wild_hebei_plain` / 渡河營道口
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Reference Entry Points
 
@@ -64,7 +64,25 @@
   - passed (`Validated 7 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`)
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/fort_river_crossing/map.md --validate-only`
   - passed (`Validation succeeded for 7 room(s).`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/fort_river_crossing/map.md`
+  - passed (`Wrote 7 room scaffold file(s) to H:\repos\merc-fju-3.0\area\fort_river_crossing\roo`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_hebei_plain/map.md`
+  - passed；同步把 `wild_hebei_plain/17508` 補成 `south -> 17601` runtime boundary
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - passed；成功訊號寫入 `log/1063.log`（`三國歪傳之降龍伏虎開始正常運作`）
+- `debug/badobject`
+  - empty
+- `debug/error`
+  - only timeout-triggered shutdown path after smoke window closed；無新增 area loader blocker
+
+## Runtime Notes
+
+- 已建立最小 loadable runtime scaffold：`index`、`mob/20031-20034`、`obj/20051-20054`、`res/fort.res`、`shp/supplies.shp`、`roo/17601-17607`
+- 已正式落成 runtime boundary：`wild_hebei_plain/17508 <-> fort_river_crossing/17601`
+- `area/directory.lst`、`docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步納入 `fort_river_crossing`
 
 ## Next Step Prompt
 
-`先 commit 目前 fort_river_crossing 的 spec milestone；commit 後直接進 implementation，補齊對 wild_hebei_plain 的 runtime boundary、生成 roo 與最小 area runtime scaffold。`
+`先 commit 目前 fort_river_crossing 的 implementation milestone；commit 後依 queue 規則盤點下一個待建 area，建立新 spec 並在通過 validate-only 後直接前進。`

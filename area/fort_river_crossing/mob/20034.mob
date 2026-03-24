@@ -1,0 +1,32 @@
+Vnum            20034
+Name            tower scout~
+ShortDesc       望樓哨卒~
+Description
+這名長年待在望樓上的哨卒，眼神已經習慣用高度丈量一切。對他而言，北邊平原上
+每一個遲疑的身影都可能代表需要先提早回報的訊號。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           30
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             12
+Dex             13
+Con             12
+Hp              1040
+Mana            80
+Move            145
+Class           0
+Gold            175
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

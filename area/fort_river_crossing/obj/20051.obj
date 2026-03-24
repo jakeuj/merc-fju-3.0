@@ -1,0 +1,14 @@
+Vnum            20051
+Name            camp ration~
+ShortDesc       軍營乾糧包(camp ration)~
+Description
+一包給營寨值役與差行隨身帶著走的軍營乾糧包(camp ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           26
+Value           16 32 4 0
+Weight          1
+Cost            102
+End

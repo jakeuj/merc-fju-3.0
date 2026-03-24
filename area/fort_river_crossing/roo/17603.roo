@@ -1,0 +1,32 @@
+Vnum            17603
+Name            渡河寨門~
+Description
+厚木寨門與兩側矮牆把整個營寨的重心都收在這裡，任何想進內營的人都得先穿過這道軍令氣息濃厚的門口。站在這裡時，會明顯感覺平原上的風感已經被營寨秩序壓住。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        17602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        17604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         寨門~
+End
+
+#Enquire
+Keyword         進寨~
+End
+
+End

@@ -1,0 +1,14 @@
+Vnum            20054
+Name            watch lantern~
+ShortDesc       望樓提燈(watch lantern)~
+Description
+一盞適合在寨前與望樓間夜巡照明的望樓提燈(watch lantern)被放在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           26
+Value           0 0 28 0
+Weight          2
+Cost            96
+End
