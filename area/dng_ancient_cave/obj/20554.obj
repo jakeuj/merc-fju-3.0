@@ -1,0 +1,14 @@
+Vnum            20554
+Name            cave oil lamp~
+ShortDesc       洞前油燈(cave oil lamp)~
+Description
+一盞適合擺在洞前或潮濕石室邊的洞前油燈(cave oil lamp)被小心護著燈芯。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           35
+Value           0 0 24 0
+Weight          1
+Cost            84
+End

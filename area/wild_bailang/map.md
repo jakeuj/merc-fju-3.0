@@ -148,7 +148,8 @@
       "coord": [2, -1, 0],
       "labels": ["cave-mouth", "world-link-down"],
       "exits": [
-        { "direction": "north", "to": 18003 }
+        { "direction": "north", "to": 18003 },
+        { "direction": "down", "to": 18101, "external": true }
       ],
       "enquires": ["洞口", "下面", "古洞"]
     },

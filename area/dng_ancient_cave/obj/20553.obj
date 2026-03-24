@@ -1,0 +1,16 @@
+Vnum            20553
+Name            cave rust blade~
+ShortDesc       古洞鏽刃(rust blade)~
+Description
+這把帶著舊銹痕的短刃雖然不算漂亮，卻仍保有足夠的鋒口與份量，看起來正是古洞
+看守者會長期攜帶的制式兵器。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           37
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            178
+End

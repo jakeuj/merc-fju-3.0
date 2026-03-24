@@ -125,6 +125,7 @@ title: Current Game Areas
 | `road_yijing` | 易京官道 / 北境軍旅 road | `17801-17820` | `rebuild addition` | 承接北平郊區邊關整隊場，落成驛道石坊、路亭與易京前路口骨架。 |
 | `fort_yijing` | 易京 / 北境軍鎮 fort | `17901-17920` | `rebuild addition` | 承接易京官道北界，落成前寨口、關門、內營主道、軍需棚與北望樓骨架。 |
 | `wild_bailang` | 白狼山 / 山前異域 wild | `18001-18020` | `rebuild addition` | 承接易京東側寨牆，落成碎石坡、狼煙岔脊、風蝕石壇與北狼隘口骨架。 |
+| `dng_ancient_cave` | 古洞遺跡 / 洞窟遺封 dungeon | `18101-18120` | `rebuild addition` | 承接白狼山裂縫洞口，落成潮濕前廳、斷紋甬道、封印主室與靈峰裂井骨架。 |
 
 ## Recent Rebuild Areas
 
@@ -239,6 +240,7 @@ title: Current Game Areas
 - `road_yijing`：把北平郊區邊關整隊場正式接進易京官道，透過驛道石坊、換班木樁、路亭與易京前路口把北平北境外帶再往軍鎮前線推進一層，並已正式銜接 `fort_yijing`。
 - `fort_yijing`：把易京官道北界正式收束成北境軍鎮關隘，透過前寨口、關前柵道、易京關門、軍需棚與北望樓把北境主線從 road 切進真正的 fort choke point，並已正式銜接 `wild_bailang`。
 - `wild_bailang`：把易京東側寨牆正式接進白狼山前帶，透過碎石坡、風裂石徑、狼煙岔脊、裂縫洞口與北狼隘口把北境主線從軍鎮秩序切進邊山探索 wild。
+- `dng_ancient_cave`：把白狼山裂縫洞口正式接進古洞遺跡，透過裂縫落台、潮濕前廳、斷紋甬道、石門前廊與封印主室把北境主線再往地下遺跡壓深一層。
 
 ## 維護規則
 

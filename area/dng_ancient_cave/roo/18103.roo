@@ -1,0 +1,36 @@
+Vnum            18103
+Name            斷紋甬道~
+Description
+甬道兩側殘留著一圈圈被切斷的紋路，像是某種封印曾經沿著石壁完整流動，卻在很久以前被硬生生打斷。越往裡走，洞中的回聲就越像壓低聲音的警告。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        18102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18106
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         符文~
+End
+
+#Enquire
+Keyword         甬道~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

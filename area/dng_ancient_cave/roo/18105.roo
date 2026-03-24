@@ -1,0 +1,28 @@
+Vnum            18105
+Name            殘碑暗井~
+Description
+暗井邊立著半截殘碑，碑面上的字早被水痕與青苔磨得難以辨讀，只剩幾筆像在反覆提醒後人不要再往下驚動什麼。這裡的靜比黑暗本身更有壓力。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        18104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         殘碑~
+End
+
+#Enquire
+Keyword         暗井~
+End
+
+#Enquire
+Keyword         警告~
+End
+
+End

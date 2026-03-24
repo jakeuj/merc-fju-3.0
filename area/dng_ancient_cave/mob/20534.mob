@@ -1,0 +1,32 @@
+Vnum            20534
+Name            stone gate watcher~
+ShortDesc       石門巡守~
+Description
+這名巡守在石門前廊與主室附近來回的步伐很輕，卻讓人完全不敢忽略他的存在。那
+種像替石門本身巡看的感覺，比亮刀更能讓人緊張。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       -20
+Level           43
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             12
+Wis             12
+Dex             13
+Con             12
+Hp              1760
+Mana            96
+Move            126
+Class           0
+Gold            230
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1906,6 +1906,25 @@
         "plans/area/0095-wild-bailang.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "dng_ancient_cave",
+      "title": "古洞遺跡",
+      "room_range": "18101-18120",
+      "load_order": 102,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "wild_bailang",
+      "theme_primary": "探險遺跡",
+      "theme_secondary": "洞窟遺封",
+      "summary": "承接白狼山裂縫洞口，落成潮濕前廳、斷紋甬道、封印主室與靈峰裂井構成的北境 dungeon 骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/dng_ancient_cave/index",
+        "area/dng_ancient_cave/map.md",
+        "plans/area/0096-dng-ancient-cave.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

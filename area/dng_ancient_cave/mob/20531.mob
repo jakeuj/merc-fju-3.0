@@ -1,0 +1,32 @@
+Vnum            20531
+Name            ledge scavenger~
+ShortDesc       落台拾遺客~
+Description
+這名徘徊在裂縫落台附近的拾遺客總低頭看著石縫與積水邊，像比起前方的黑暗，他
+更相信古洞入口附近還會吐出一些值錢或保命的舊東西。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       -10
+Level           35
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             13
+Dex             11
+Con             12
+Hp              1380
+Mana            88
+Move            116
+Class           0
+Gold            180
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

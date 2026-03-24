@@ -1,0 +1,44 @@
+Vnum            18102
+Name            潮濕前廳~
+Description
+前廳的石面被長年滲水磨得發亮，牆角還堆著辨不清年代的碎瓦與殘骨。這裡既像天然洞廳，又像曾被人刻意修整成某種入口前帶。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        18101
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        18104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         入口~
+End
+
+#Enquire
+Keyword         潮氣~
+End
+
+#Enquire
+Keyword         前面~
+End
+
+End

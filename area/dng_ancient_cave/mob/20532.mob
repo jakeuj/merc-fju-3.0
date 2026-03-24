@@ -1,0 +1,32 @@
+Vnum            20532
+Name            rune shadow~
+ShortDesc       斷紋殘影~
+Description
+這道沿著甬道殘紋徘徊的模糊影子不像真正的人，也不像單純的鬼魅，反而更像封印
+被打斷後留下的一段秩序殘響。它的存在讓整條甬道更難令人安心。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       -30
+Level           38
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             12
+Wis             12
+Dex             12
+Con             12
+Hp              1520
+Mana            94
+Move            120
+Class           0
+Gold            200
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

@@ -1,0 +1,36 @@
+Vnum            18106
+Name            石門前廊~
+Description
+前廊盡頭的石門沒有真正關死，卻讓人很自然放慢腳步。門縫滲出的冷氣和石門周圍留下的刻痕，像是在共同守著後頭那個不該被輕率打開的核心。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        18103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18107
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         石門~
+End
+
+#Enquire
+Keyword         前廊~
+End
+
+#Enquire
+Keyword         裡面~
+End
+
+End

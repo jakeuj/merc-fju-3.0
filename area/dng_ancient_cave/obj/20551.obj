@@ -1,0 +1,14 @@
+Vnum            20551
+Name            cave ration brick~
+ShortDesc       洞窟乾糧磚(ration brick)~
+Description
+一塊適合在潮濕古洞裡久撐一段時間的洞窟乾糧磚(ration brick)被收在這裡。
+~
+Unit            塊~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           35
+Value           20 36 4 0
+Weight          1
+Cost            118
+End

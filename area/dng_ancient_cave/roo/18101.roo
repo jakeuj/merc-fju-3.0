@@ -1,0 +1,36 @@
+Vnum            18101
+Name            裂縫落台~
+Description
+從白狼山的裂縫口滑落到這裡時，外頭的風聲像被石壁一層層壓遠，只剩冷濕的回音還留在耳邊。腳下石台不大，卻明確告訴人自己已經不在山前地表，而進入了更舊的地下空間。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        18006
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         上面~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+#Enquire
+Keyword         洞口~
+End
+
+End

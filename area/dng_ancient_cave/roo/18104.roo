@@ -1,0 +1,36 @@
+Vnum            18104
+Name            偏廊石室~
+Description
+偏廊旁的石室不算寬闊，卻留著不少被搬動過的痕跡，像有人曾把這裡當作暫時存放或躲藏之處。牆上的刮痕和地上的碎片都讓人懷疑這裡曾發生過倉促離去。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       NORTH
+ExitVnum        18102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        18105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         石室~
+End
+
+#Enquire
+Keyword         痕跡~
+End
+
+#Enquire
+Keyword         碎片~
+End
+
+End

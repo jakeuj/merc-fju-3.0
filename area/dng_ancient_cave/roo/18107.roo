@@ -1,0 +1,36 @@
+Vnum            18107
+Name            封印主室~
+Description
+主室中央的地面與牆面交會處還能看見一圈圈殘破封紋，把這裡的空氣都壓得比外面更沉。即使封印早已不完整，留下的秩序感仍然強到像有人還在暗處守著它。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        18106
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18108
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         封印~
+End
+
+#Enquire
+Keyword         主室~
+End
+
+#Enquire
+Keyword         符紋~
+End
+
+End

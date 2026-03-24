@@ -1,0 +1,28 @@
+Vnum            18108
+Name            靈峰裂井~
+Description
+裂井一路往上收成一線極窄的冷光，讓人分不清那到底是地表的天光，還是更高處某種異樣空間的反照。站在井下時，會很自然感覺自己離普通洞窟已經不只一步之遙。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       SOUTH
+ExitVnum        18107
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         井口~
+End
+
+#Enquire
+Keyword         上方~
+End
+
+#Enquire
+Keyword         靈峰~
+End
+
+End

@@ -1,0 +1,14 @@
+Vnum            20552
+Name            wax waterskin~
+ShortDesc       蠟封水囊(wax waterskin)~
+Description
+一只經過簡單蠟封處理的水囊(wax waterskin)看起來很適合在濕冷洞中帶著走。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           35
+Value           10 10 0 0
+Weight          1
+Cost            90
+End

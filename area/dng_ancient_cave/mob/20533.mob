@@ -1,0 +1,32 @@
+Vnum            20533
+Name            seal keeper~
+ShortDesc       封印看守者~
+Description
+這名看守者守在封印主室附近時幾乎和石壁一樣沉默，只有當人靠近時，才會讓人發
+現那份安靜其實是一種更冷的警告。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       -40
+Level           41
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             12
+Wis             13
+Dex             12
+Con             12
+Hp              1680
+Mana            100
+Move            122
+Class           0
+Gold            220
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

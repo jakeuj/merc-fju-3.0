@@ -21,7 +21,7 @@
 - external_links:
   - `up`: `wild_bailang` / 裂縫洞口
   - `up`: `sec_spirit_peak` / 白狼靈峰預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Reference Entry Points
 
@@ -66,11 +66,28 @@
   - passed (`Validated 8 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`)
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/dng_ancient_cave/map.md --validate-only`
   - passed (`Validation succeeded for 8 room(s).`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/dng_ancient_cave/map.md`
+  - passed (`Wrote 8 room scaffold file(s) to H:\repos\merc-fju-3.0\area\dng_ancient_cave\roo`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_bailang/map.md`
+  - passed；同步把 `wild_bailang/18006` 補成 `down -> 18101` runtime boundary
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed
+- WSL startup smoke
+  - passed；有效結果寫入 `log/1068.log`（`三國歪傳之降龍伏虎開始正常運作`）
+- `debug/badobject`
+  - empty
+- `debug/error`
+  - only timeout-triggered shutdown path after smoke window closed；無新增 area loader blocker
+- `debug/failexit`
+  - only legacy baseline `17201/17208` fixups；無 `dng_ancient_cave` 與 `wild_bailang` 相關新 warning
 
 ## Runtime Notes
 
-- pending
+- 已建立最小 loadable runtime scaffold：`index`、`mob/20531-20534`、`obj/20551-20554`、`res/cave.res`、`shp/supplies.shp`、`roo/18101-18108`
+- 已正式落成上側 runtime boundary：`wild_bailang/18006 <-> dng_ancient_cave/18101`
+- `up -> sec_spirit_peak` 仍維持 world-link metadata，待後續北境節點 milestone 再正式接上
+- `area/directory.lst`、`docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步納入 `dng_ancient_cave`
 
 ## Next Step Prompt
 
-`先 commit 目前 dng_ancient_cave 的 spec milestone；commit 後直接做 implementation milestone，補齊 wild_bailang/18006 <-> dng_ancient_cave/18101 runtime boundary 並在通過 validate / build / smoke 後自動前進。`
+`dng_ancient_cave` 的 implementation milestone 已完成；下一步依 queue 規則盤點下一個北境待建 area，優先檢查 `Dungeon` 之後在 family variety 與世界拓撲下的合理節點。`
