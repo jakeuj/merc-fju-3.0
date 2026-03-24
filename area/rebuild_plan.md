@@ -709,7 +709,36 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `dng_ancient_cave`
+  - area_family: `Dungeon`
+  - reserved_room_block: `18101-18120`
+  - planned_vnum_range: `18101-18120`
+  - level_range: `35-48`
+  - theme: `探險遺跡`
+  - subtheme: `洞窟遺封`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/dng_ancient_cave/map.md`
+    - `ref/world-graph.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `plans/area/0095-wild-bailang.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/map/bepin.html`
+    - `ref/sanguo-area-specfirst/area/sec_spirit_peak/map.md`
+    - `ref/sanguo-area-specfirst/area/city_xiangping/map.md`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `world-graph` 明確把 `dng_ancient_cave` 放在 `wild_bailang` 之後，形成北境鏈的 `Wild -> Dungeon` family 切換
+    - `題材分布表` 與白狼山傳說帶相容，支持由山前 wild 轉入更封閉的洞窟遺跡壓力
+    - `world_map` 把白狼山定位成遼東 / 襄平方向的邊境節點，適合在此補一個地下探索缺口
+    - `players.json / skills.json` 沒有提出比既有下探預留更強的城市服務優先訊號，支持先補這個 dungeon 節點
+  - compliance_check:
+    - compliant；在 `Wild` 之後切到 `Dungeon`，符合 queue variety，也直接承接 `wild_bailang/18006` 的既有下探預留
+  - delivery_gate: `spec_ready_for_commit`
 
 
 ## Done
@@ -874,19 +903,15 @@
 
 ## Current Recommended Next Step
 
-目前 `candidate queue`、`todo`、`in_progress` 都是空的。下一步應依 queue 規則重建下一個北境 next actionable area，優先檢查 `wild_bailang` 之後在 `Wild -> Dungeon` family 切換下的合理節點。
+先 commit `dng_ancient_cave` 的 spec milestone；commit 後直接做 implementation milestone，正式補上 `wild_bailang/18006 <-> dng_ancient_cave/18101` runtime boundary，再依結果往下一個北境節點前進。
 
 ## Next Action
 
-- 一起盤點：
-  - `area/world_map.md`
-  - `ref/sanguo-progression-map.md`
-  - `ref/三國-MUD-題材分布表.md`
-  - `docs/3yWebsite/docs/data/players.json`
-  - `docs/3yWebsite/docs/data/skills.json`
-- 依 family variety 與北境主線決定下一個 actionable area
-- 建立新的 spec milestone，通過 validate-only 後直接進下一步
+- commit `dng_ancient_cave` 的 spec milestone
+- 生成 `roo` 與最小 `index / mob / obj / res / shp` runtime scaffold
+- 正式落成 `wild_bailang/18006 <-> dng_ancient_cave/18101` runtime boundary
+- 跑 validate / build / startup smoke；通過後再決定下一個北境 `Dungeon -> ...` 候選
 
 ## Next Prompt
 
-`依 queue 規則盤點下一個待建 area：優先檢查北境鏈在 wild_bailang 之後的 world_map、progression、題材分布與 players/skills dataset，選出新的 next actionable area，建立 spec 並在需要時自動 commit、直接進行下一步。`
+`先 commit dng_ancient_cave 的 spec milestone，接著直接做 implementation milestone：補齊 wild_bailang/18006 <-> dng_ancient_cave/18101 runtime boundary、跑 validate / build / startup smoke，並在需要時自動 commit、直接進行下一步。`
