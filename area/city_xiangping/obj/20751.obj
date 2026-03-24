@@ -1,0 +1,14 @@
+Vnum            20751
+Name            xiangping ration~
+ShortDesc       襄平乾糧包(xiangping ration)~
+Description
+一包給邊城旅人與驛站差役隨身帶著走的襄平乾糧包(xiangping ration)被放在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           34
+Value           16 34 4 0
+Weight          1
+Cost            110
+End

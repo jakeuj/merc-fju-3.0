@@ -31,6 +31,7 @@
         "direction": "west",
         "source_vnum": 18301,
         "target_area": "wild_barbarian_camp",
+        "target_room_vnum": 18208,
         "label": "胡營舊地方向"
       },
       {

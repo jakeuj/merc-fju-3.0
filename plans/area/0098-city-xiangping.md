@@ -22,7 +22,7 @@
   - `west`: `wild_barbarian_camp` / 胡營舊地方向
   - `north`: `wild_liaodong_plain` / 遼東平原預留
   - `north`: `road_north_border` / 北境邊道預留
-- delivery_gate: `spec_ready_for_commit`
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Reference Entry Points
 
@@ -67,11 +67,28 @@
   - passed (`Validated 9 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`)
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_xiangping/map.md --validate-only`
   - passed (`Validation succeeded for 9 room(s).`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_xiangping/map.md`
+  - passed (`Wrote 9 room scaffold file(s) to H:\repos\merc-fju-3.0\area\city_xiangping\roo`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_barbarian_camp/map.md`
+  - passed；同步把 `wild_barbarian_camp/18208` 補成 `east -> 18301` runtime boundary
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0/src && timeout 45 ./merc merc.test.ini"`
+  - passed；因使用中的遊戲實例已占用預設 `3838`，改以臨時測試 port `23838/21234/28888` 做 direct-load smoke，並在 console 看見 `三國歪傳之降龍伏虎開始正常運作`
+- `debug/badobject`
+  - empty
+- `debug/error`
+  - only timeout-triggered shutdown path after smoke window closed；無新增 area loader blocker
+- `debug/failexit`
+  - only legacy baseline `17201/17208` fixups；無 `city_xiangping` 與 `wild_barbarian_camp` 相關新 warning
 
 ## Runtime Notes
 
-- pending
+- 已建立最小 loadable runtime scaffold：`index`、`mob/20731-20734`、`obj/20751-20754`、`res/city.res`、`shp/supplies.shp`、`roo/18301-18309`
+- 已正式落成西側 runtime boundary：`wild_barbarian_camp/18208 <-> city_xiangping/18301`
+- `north -> wild_liaodong_plain` 與 `north -> road_north_border` 仍維持 world-link metadata，待後續遼東節點 milestone 再正式接上
+- `area/directory.lst`、`docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步納入 `city_xiangping`
 
 ## Next Step Prompt
 
-`先 commit 目前 city_xiangping 的 spec milestone；commit 後直接做 implementation milestone：生成 roo、補最小 index / mob / obj / res / shp、正式接上 wild_barbarian_camp/18208 <-> city_xiangping/18301 runtime boundary，並把北向雙分流保留為後續遼東節點的 spec 預留。`
+`city_xiangping` 的 implementation milestone 已完成；下一步依 queue 規則盤點下一個遼東待建 area，優先檢查 city 後在 family variety 與主線拓撲下應先進 wild_liaodong_plain 還是 road_north_border 的 spec milestone。`

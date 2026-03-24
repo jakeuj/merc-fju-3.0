@@ -1,0 +1,14 @@
+Vnum            20754
+Name            station lantern~
+ShortDesc       驛站提燈(station lantern)~
+Description
+一盞為夜間整補與看路準備的驛站提燈(station lantern)被掛在方便取用的位置。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           35
+Value           0 0 18 0
+Weight          2
+Cost            96
+End

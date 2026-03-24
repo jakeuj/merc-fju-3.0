@@ -1,0 +1,16 @@
+Vnum            20753
+Name            border saber~
+ShortDesc       邊城長刀(border saber)~
+Description
+這柄邊城長刀(border saber)刀身厚實，沒有多餘裝飾，卻很明顯是拿來應付城外長路
+與邊地衝突的實用兵器。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           38
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_BLADE
+Weight          4
+Cost            220
+End

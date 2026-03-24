@@ -1,0 +1,28 @@
+Vnum            18308
+Name            北原牌樓~
+Description
+北原牌樓把視線從城心重新放向更開闊的遼東平原，出城的人多半不是只想碰碰運氣，而是有明確目的地與補給計畫。站在這裡時，襄平的角色就很清楚: 它是北境長路前最後一個真正像樣的城市整補點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        18304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         平原~
+End
+
+#Enquire
+Keyword         北原~
+End
+
+#Enquire
+Keyword         遼東~
+End
+
+End

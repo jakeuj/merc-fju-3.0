@@ -38,6 +38,7 @@
         "direction": "east",
         "source_vnum": 18208,
         "target_area": "city_xiangping",
+        "target_room_vnum": 18301,
         "label": "襄平城路"
       }
     ],
@@ -158,7 +159,8 @@
       "coord": [4, 0, 0],
       "labels": ["east-edge", "world-link-east"],
       "exits": [
-        { "direction": "west", "to": 18204 }
+        { "direction": "west", "to": 18204 },
+        { "direction": "east", "to": 18301, "external": true }
       ],
       "enquires": ["襄平", "城路", "東邊"]
     }

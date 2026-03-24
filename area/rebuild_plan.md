@@ -709,40 +709,12 @@
 
 ## In Progress
 
-- `city_xiangping`
-  - area_family: `City`
-  - reserved_room_block: `18301-18330`
-  - planned_vnum_range: `18301-18330`
-  - level_range: `34-46`
-  - theme: `軍旅`
-  - subtheme: `遼東邊城 / 驛站與服務樞紐`
-  - ref_inputs_used:
-    - `area/world_map.md`
-    - `ref/Readme.md`
-    - `ref/sanguo-progression-map.md`
-    - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/city_xiangping/map.md`
-    - `ref/world-graph.md`
-    - `docs/3yWebsite/docs/data/players.json`
-    - `docs/3yWebsite/docs/data/skills.json`
-    - `plans/area/0097-wild-barbarian-camp.md`
-  - ref_inputs_deferred:
-    - `docs/3yWebsite/map/bepin.html`
-    - `ref/sanguo-area-specfirst/area/wild_liaodong_plain/map.md`
-    - `ref/sanguo-area-specfirst/area/road_north_border/map.md`
-    - 各類原型工具與模擬系統
-  - theme_basis:
-    - `world-graph` 明確把 `city_xiangping` 放在 `wild_barbarian_camp` 之後，並向 `wild_liaodong_plain` 與 `road_north_border` 分流，是北境主線自然的城市回補節點
-    - `world_map` 直接把 `襄平` 放進北線主幹，並點出 `襄平驛站`，支持此區作為交通與服務樞紐
-    - `players.json / skills.json` 對 `襄平` 提出 `refresh`、訓練與 `venom` 等明確服務訊號，支持此區優先補成真正可承接玩家 loop 的邊城 hub
-    - `wild_barbarian_camp` runtime 已把 `18208 east` 保留給襄平，現在補城市 spec 能讓下一輪 implementation 直接延續
-  - compliance_check:
-    - compliant；在 `Wild` 後切回 `City`，同時回應舊站服務鏈、交通節點與 queue variety，不再把邊城 hub 繼續延後
-  - delivery_gate: `spec_ready_for_commit`
+(目前無 `in_progress` 項目。)
 
 
 ## Done
 
+- `2026-03-24` `city_xiangping` 已完成第一輪 runtime implementation，完成 `wild_barbarian_camp/18208 <-> 18301` runtime boundary、通過 WSL Linux build 與臨時 test-port direct-load smoke，達成可提交狀態
 - `2026-03-24` `wild_barbarian_camp` 已完成第一輪 runtime implementation，完成 `wild_bailang/18007 <-> 18201` runtime boundary、通過 WSL Linux build 與臨時 test-port direct-load smoke，達成可提交狀態
 - `2026-03-24` `dng_ancient_cave` 已完成第一輪 runtime implementation，完成 `wild_bailang/18006 <-> 18101` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1068.log`），達成可提交狀態
 - `2026-03-24` `wild_bailang` 已完成第一輪 runtime implementation，完成 `fort_yijing/17908 <-> 18001` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1067.log`），達成可提交狀態
@@ -905,15 +877,20 @@
 
 ## Current Recommended Next Step
 
-先 commit `city_xiangping` 的 spec milestone；commit 後直接做 implementation milestone，正式把 `wild_barbarian_camp/18208` 接進遼東邊城 hub。
+目前 `candidate queue`、`todo`、`in_progress` 都是空的。下一步應依 queue 規則重建下一個遼東 next actionable area，優先檢查 `city_xiangping` 之後在 family variety 與世界拓撲下應先進 `wild_liaodong_plain` 還是 `road_north_border`。
 
 ## Next Action
 
-- commit `city_xiangping` 的 spec milestone
-- 生成 `roo` 與最小 `index / mob / obj / res / shp` runtime scaffold
-- 正式落成 `wild_barbarian_camp/18208 <-> city_xiangping/18301` runtime boundary
-- 跑 build / startup smoke；通過後再決定 `wild_liaodong_plain` 或 `road_north_border`
+- 一起盤點：
+  - `area/world_map.md`
+  - `ref/sanguo-progression-map.md`
+  - `ref/三國-MUD-題材分布表.md`
+  - `docs/3yWebsite/docs/data/players.json`
+  - `docs/3yWebsite/docs/data/skills.json`
+- 依 family variety 與遼東主線決定下一個 actionable area
+- 優先檢查 `wild_liaodong_plain` 與 `road_north_border` 的主線價值與服務節奏
+- 建立新的 spec milestone，通過 validate-only 後直接進下一步
 
 ## Next Prompt
 
-`先 commit city_xiangping 的 spec milestone，接著直接做 implementation milestone：補齊 wild_barbarian_camp/18208 <-> city_xiangping/18301 runtime boundary、跑 validate / build / startup smoke，並在需要時自動 commit、直接進行下一步。`
+`依 queue 規則盤點下一個待建 area：優先檢查遼東鏈在 city_xiangping 之後的 world_map、progression、題材分布與 players/skills dataset，評估 wild_liaodong_plain 或 road_north_border 哪個是新的 next actionable area，建立 spec 並在需要時自動 commit、直接進行下一步。`

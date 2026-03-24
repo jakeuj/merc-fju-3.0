@@ -1,0 +1,14 @@
+Vnum            20752
+Name            station waterskin~
+ShortDesc       驛站水囊(station waterskin)~
+Description
+一只方便長路旅人掛在腰間、隨時補充體力與水分的驛站水囊(station waterskin)擱在這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           34
+Value           10 10 0 0
+Weight          1
+Cost            90
+End

@@ -1,0 +1,32 @@
+Vnum            20731
+Name            west gate guard~
+ShortDesc       西門守兵~
+Description
+這名守在西城路口的守兵不像前線營哨那般緊繃，卻有邊城老兵特有的眼力，能很快
+分出誰只是過路、誰可能會把麻煩帶進城裡。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           36
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             11
+Wis             11
+Dex             12
+Con             12
+Hp              980
+Mana            70
+Move            142
+Class           0
+Gold            180
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

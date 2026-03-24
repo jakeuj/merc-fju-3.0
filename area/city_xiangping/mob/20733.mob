@@ -1,0 +1,32 @@
+Vnum            20733
+Name            yulin master~
+ShortDesc       玉霖大師~
+Description
+這位被稱作玉霖大師的修行者立在太守府前街時，氣息沉穩得像把邊城裡浮動的人心
+和消息都先看透了一層。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       300
+Level           44
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             14
+Wis             15
+Dex             11
+Con             12
+Hp              1260
+Mana            220
+Move            160
+Class           0
+Gold            360
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

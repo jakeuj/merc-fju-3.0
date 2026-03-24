@@ -1,0 +1,36 @@
+Vnum            18305
+Name            驛站前街~
+Description
+驛站前街比城門口更忙，馬匹、差票與短暫停腳的人把這裡撐出一種實用而不拖泥帶水的熱鬧。對長路上的玩家來說，這裡最像一個真正能重新整理狀態、問清去向再上路的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        18303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         驛站~
+End
+
+#Enquire
+Keyword         補給~
+End
+
+#Enquire
+Keyword         倫直~
+End
+
+End

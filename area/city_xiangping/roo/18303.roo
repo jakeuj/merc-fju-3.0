@@ -1,0 +1,44 @@
+Vnum            18303
+Name            襄平主街~
+Description
+主街上的聲音很雜，卻不是混亂，而是把商旅、差役、教導者和遠路消息混成一種只有邊城才有的節奏。站在這裡時，會明顯感到襄平真正的價值不只在守邊，更在於它能把四面來的人都重新編入可運作的城市網。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        18302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         主街~
+End
+
+#Enquire
+Keyword         消息~
+End
+
+#Enquire
+Keyword         去處~
+End
+
+End

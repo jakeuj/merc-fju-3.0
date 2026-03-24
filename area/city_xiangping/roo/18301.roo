@@ -1,0 +1,36 @@
+Vnum            18301
+Name            西城路口~
+Description
+胡營舊地帶來的緊繃感在這裡被城牆、門洞與守望秩序慢慢收住，像一路從邊地荒痕走來的人終於被重新放回人煙裡。西城路口讓人第一眼就明白，襄平不是更大的營地，而是一座能把北境消息和旅人重新整進規矩的邊城。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        18208
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         胡營~
+End
+
+#Enquire
+Keyword         進城~
+End
+
+#Enquire
+Keyword         襄平~
+End
+
+End

@@ -1,0 +1,28 @@
+Vnum            18306
+Name            藥材行前~
+Description
+藥香和乾草氣在這條前街混得很濃，讓人一靠近就知道這裡不只是補藥的地方，也可能碰上更講究門道的邊城技藝。與前線營地相比，襄平真正厲害的地方，往往就在這些能把生存手段變成服務節點的店面。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        18304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         藥材行~
+End
+
+#Enquire
+Keyword         抹毒~
+End
+
+#Enquire
+Keyword         藥~
+End
+
+End

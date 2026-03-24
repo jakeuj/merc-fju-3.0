@@ -74,6 +74,8 @@
   - passed (`Wrote 8 room scaffold file(s) to H:\repos\merc-fju-3.0\area\wild_barbarian_camp\roo`)
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_bailang/map.md`
   - passed；同步把 `wild_bailang/18007` 補成 `east -> 18201` runtime boundary
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_barbarian_camp/map.md`
+  - passed；後續 `city_xiangping` implementation milestone 已同步把 `wild_barbarian_camp/18208` 補成 `east -> 18301` runtime boundary
 - `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
   - passed
 - `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0/src && timeout 45 ./merc merc.test.ini"`
@@ -89,7 +91,7 @@
 
 - 已建立最小 loadable runtime scaffold：`index`、`mob/20631-20634`、`obj/20651-20654`、`res/wild.res`、`shp/supplies.shp`、`roo/18201-18208`
 - 已正式落成西側 runtime boundary：`wild_bailang/18007 <-> wild_barbarian_camp/18201`
-- `east -> city_xiangping` 仍維持 world-link metadata，待後續邊城 milestone 再正式接上
+- 已正式落成東側 runtime boundary：`wild_barbarian_camp/18208 <-> city_xiangping/18301`
 - `area/directory.lst`、`docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步納入 `wild_barbarian_camp`
 
 ## Next Step Prompt

@@ -1,0 +1,32 @@
+Vnum            20734
+Name            druggist~
+ShortDesc       藥材行老闆~
+Description
+這位藥材行老闆一邊理著藥草，一邊不動聲色地打量來客，像總能分出誰只是買藥，
+誰其實在問更帶門道的生存手段。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           38
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             13
+Wis             12
+Dex             11
+Con             11
+Hp              1040
+Mana            120
+Move            150
+Class           0
+Gold            260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

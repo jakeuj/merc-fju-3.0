@@ -1944,6 +1944,25 @@
         "plans/area/0097-wild-barbarian-camp.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "city_xiangping",
+      "title": "襄平",
+      "room_range": "18301-18330",
+      "load_order": 104,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "wild_barbarian_camp",
+      "theme_primary": "軍旅",
+      "theme_secondary": "遼東邊城",
+      "summary": "承接胡營舊地東向城路口，落成主街、驛站、太守府前街與北向分流構成的遼東邊城 hub 骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/city_xiangping/index",
+        "area/city_xiangping/map.md",
+        "plans/area/0098-city-xiangping.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

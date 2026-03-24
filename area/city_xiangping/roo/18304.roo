@@ -1,0 +1,52 @@
+Vnum            18304
+Name            城心十字~
+Description
+城心十字把襄平的邊城功能攤開在眼前：西邊是進城與出城的過渡，北邊是更遠遼東的分流，南北兩側則各自聚著補給、教導與官府秩序。這裡不像內地大城那樣繁富，但每一條去路都帶著明顯用途。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        18303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18308
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        18306
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18309
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         驛站~
+End
+
+#Enquire
+Keyword         太守府~
+End
+
+#Enquire
+Keyword         北路~
+End
+
+End

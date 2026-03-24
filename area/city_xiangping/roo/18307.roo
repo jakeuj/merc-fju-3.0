@@ -1,0 +1,28 @@
+Vnum            18307
+Name            太守府前街~
+Description
+越靠近太守府，街上的氣氛就越像從旅路與市聲裡抽出一條更安靜的秩序線。這裡不只代表官府，也代表那些在邊城裡真正掌握知識、訓練與消息分配的人，讓襄平不只是守邊，更是能培養與篩選人的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        18305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         太守府~
+End
+
+#Enquire
+Keyword         訓練~
+End
+
+#Enquire
+Keyword         玉霖~
+End
+
+End

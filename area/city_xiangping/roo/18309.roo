@@ -1,0 +1,28 @@
+Vnum            18309
+Name            北境邊道路口~
+Description
+這條路口比北原牌樓更帶軍務與長途色彩，連看路的人都更像在算距離與風險，而不是單純問去哪裡。它把襄平和更北更遠的邊道真正接起來，也讓這座城市的邊城屬性在此顯得格外明確。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        18304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         邊道~
+End
+
+#Enquire
+Keyword         北路~
+End
+
+#Enquire
+Keyword         出關~
+End
+
+End

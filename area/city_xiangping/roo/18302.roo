@@ -1,0 +1,32 @@
+Vnum            18302
+Name            襄平西街~
+Description
+西街把外來人先從門口的打量，慢慢帶進有生意、有差役、有驛務來往的城市節奏裡。即使還能聞到邊地塵土，這裡也已經開始是襄平自己的秩序，而不是荒外帶進來的規矩。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        18301
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         西街~
+End
+
+#Enquire
+Keyword         城裡~
+End
+
+End
