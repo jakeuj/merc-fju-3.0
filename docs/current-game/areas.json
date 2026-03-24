@@ -1830,6 +1830,25 @@
         "plans/area/0091-fort-river-crossing.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "road_nanpi_beiping",
+      "title": "河北北道",
+      "room_range": "17701-17720",
+      "load_order": 98,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_nanpi",
+      "theme_primary": "歷史城市",
+      "theme_secondary": "往北平官道",
+      "summary": "承接南皮北道牌樓與北平大通驛站，落成官道中段、路亭與北行坡口構成的河北北段 road 骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/road_nanpi_beiping/index",
+        "area/road_nanpi_beiping/map.md",
+        "plans/area/0092-road-nanpi-beiping.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

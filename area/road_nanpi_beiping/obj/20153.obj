@@ -1,0 +1,15 @@
+Vnum            20153
+Name            relay saber~
+ShortDesc       驛差短刀(relay saber)~
+Description
+這把短刀刀身短而利，握柄纏得很緊，看來正是驛差和巡路差役偏愛的實用傢伙。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           28
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            168
+End

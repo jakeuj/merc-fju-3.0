@@ -1,0 +1,36 @@
+Vnum            17707
+Name            北向坡口~
+Description
+地勢在這裡微微往北抬起，讓路上的視線也跟著拉長。站在這裡時，會覺得南皮已經成了後方的支點，而更北的城鎮與邊地消息才是現在真正要接近的方向。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        17705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         北邊~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+#Enquire
+Keyword         坡口~
+End
+
+End

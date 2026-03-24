@@ -1,0 +1,32 @@
+Vnum            20134
+Name            relay runner~
+ShortDesc       驛站差役~
+Description
+這名差役腳步快、目光也快，像是一有新消息就會立刻沿路送進北平。他腰間的短刀
+不算華麗，但打磨得很勤，顯然不是只拿來充場面的配件。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           30
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             11
+Wis             11
+Dex             13
+Con             12
+Hp              980
+Mana            70
+Move            144
+Class           0
+Gold            180
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

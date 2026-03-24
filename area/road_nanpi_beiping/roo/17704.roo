@@ -1,0 +1,24 @@
+Vnum            17704
+Name            里程石側線~
+Description
+一座略顯斑駁的里程石立在道旁，石面上的字跡被風磨得有些發淺，卻仍保留著指向北平的方向感。對長路旅人來說，這類石頭就是能讓心神穩住的證據。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        17703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         里程石~
+End
+
+#Enquire
+Keyword         方向~
+End
+
+End

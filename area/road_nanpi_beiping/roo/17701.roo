@@ -1,0 +1,36 @@
+Vnum            17701
+Name            南皮北道口~
+Description
+一離開南皮北道牌樓，城市的煙火氣就慢慢被北地長路的空闊感取代。這裡仍留著地方主城的秩序餘韻，卻已經更像一段真正會把人送往更北之地的起點。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        17409
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17702
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         南皮~
+End
+
+#Enquire
+Keyword         北道~
+End
+
+#Enquire
+Keyword         出城~
+End
+
+End

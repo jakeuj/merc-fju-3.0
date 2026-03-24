@@ -1,0 +1,32 @@
+Vnum            20133
+Name            north traveler~
+ShortDesc       北行旅客~
+Description
+這名旅客把行囊捆得很緊，像是不打算在半路停留太久。他時不時會抬眼往北看，顯
+然心思早就已經放到更前頭的北平城裡去了。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       50
+Level           27
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             11
+Wis             11
+Dex             12
+Con             11
+Hp              820
+Mana            60
+Move            136
+Class           0
+Gold            120
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

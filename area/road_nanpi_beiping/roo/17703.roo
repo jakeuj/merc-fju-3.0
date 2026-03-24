@@ -1,0 +1,44 @@
+Vnum            17703
+Name            河北北道中段~
+Description
+官道在這裡筆直向前延展，兩側地勢與風線都讓方向感變得更加單純也更加漫長。走在這裡時，會清楚知道自己已經離開南皮的城市節奏，真正進入北地旅途。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        17702
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        17704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         官道~
+End
+
+#Enquire
+Keyword         北平~
+End
+
+#Enquire
+Keyword         下一站~
+End
+
+End

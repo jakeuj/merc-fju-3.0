@@ -1,0 +1,39 @@
+Vnum            17702
+Name            官道木樁旁~
+Description
+木樁與馬索痕把這裡標成長年有人馬整裝的固定停手點。再往北走，路感會愈來愈明顯，讓人很難再把自己當成只是站在南皮城外打轉。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        17701
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         木樁~
+Description
+木樁被繩索反覆磨亮，看得出這條北道長久以來一直都是車馬北行的重要停整點。
+~
+End
+
+#Enquire
+Keyword         木樁~
+End
+
+#Enquire
+Keyword         旅隊~
+End
+
+End

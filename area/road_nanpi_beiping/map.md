@@ -57,6 +57,7 @@
       "coord": [0, 0, 0],
       "labels": ["entry", "south-edge", "world-link-south"],
       "exits": [
+        { "direction": "south", "to": 17409, "external": true },
         { "direction": "north", "to": 17702 }
       ],
       "enquires": ["南皮", "北道", "出城"]
@@ -160,7 +161,8 @@
       "coord": [0, 5, 0],
       "labels": ["north-edge", "world-link-north"],
       "exits": [
-        { "direction": "south", "to": 17707 }
+        { "direction": "south", "to": 17707 },
+        { "direction": "north", "to": 9059, "external": true }
       ],
       "enquires": ["北路", "北平", "去向"]
     }

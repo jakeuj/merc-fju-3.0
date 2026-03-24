@@ -1,0 +1,14 @@
+Vnum            20154
+Name            post lantern~
+ShortDesc       路亭風燈(post lantern)~
+Description
+一盞掛在路亭邊緣也不怕風太大的風燈，被擦得還算明亮。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           24
+Value           0 0 24 0
+Weight          1
+Cost            76
+End

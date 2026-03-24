@@ -1,0 +1,14 @@
+Vnum            20152
+Name            travel waterskin~
+ShortDesc       北地水囊(travel waterskin)~
+Description
+一只常見的北地水囊(travel waterskin)掛著舊皮繩，像是已陪不少旅人走過長路。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           24
+Value           10 10 0 0
+Weight          1
+Cost            84
+End

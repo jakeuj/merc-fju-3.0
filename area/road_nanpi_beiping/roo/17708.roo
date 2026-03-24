@@ -1,0 +1,36 @@
+Vnum            17708
+Name            北行官道口~
+Description
+官道在此繼續往北舒展，路面的車痕和行腳痕跡讓人很清楚知道，這並不是一條偶然被踩出來的小路，而是一條持續把人送往更北城市的正式路線。站在這裡時，旅途感比任何時候都更強。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        17707
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        9059
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         北路~
+End
+
+#Enquire
+Keyword         北平~
+End
+
+#Enquire
+Keyword         去向~
+End
+
+End

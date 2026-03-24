@@ -1,0 +1,32 @@
+Vnum            20132
+Name            post steward~
+ShortDesc       路亭掌事~
+Description
+這位掌事把茶桶、路牌和歇腳凳都整理得乾乾淨淨，看來對往來旅人和驛訊流向都很
+熟。他說話不多，但一開口通常就是哪裡好走、哪裡別逗留的實在提醒。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           26
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             12
+Dex             11
+Con             11
+Hp              860
+Mana            80
+Move            132
+Class           0
+Gold            170
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

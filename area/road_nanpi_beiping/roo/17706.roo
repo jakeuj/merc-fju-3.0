@@ -1,0 +1,24 @@
+Vnum            17706
+Name            路亭內~
+Description
+亭內擺著長凳、粗茶桶與掛在牆上的驛牌，給人一種薄薄的安穩感。這裡不是停留很久的地方，卻足夠讓人重新把方向和心緒都整好，再繼續往北。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       OUT
+ExitVnum        17705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         驛牌~
+End
+
+#Enquire
+Keyword         茶水~
+End
+
+End

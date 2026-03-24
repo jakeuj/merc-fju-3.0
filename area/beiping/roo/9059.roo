@@ -18,6 +18,14 @@ ExitKeyword     ~
 ExitKey         0
 End
 
+#Exit
+Direction       OUT
+ExitVnum        17708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
 #Enquire
 Keyword         車站~
 End

@@ -1,0 +1,44 @@
+Vnum            17705
+Name            路亭前坪~
+Description
+路亭前坪把長路上的緊繃稍微鬆開一點，讓驛卒、旅客與押貨人都能在這裡調整腳步。有人低聲談論更北邊的天候與路況，使這裡像是把整條北道消息暫時收束起來的節點。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        17703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       ENTER
+ExitVnum        17706
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        17707
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         路亭~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+#Enquire
+Keyword         消息~
+End
+
+End

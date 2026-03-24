@@ -1,0 +1,32 @@
+Vnum            20131
+Name            north courier~
+ShortDesc       北路驛卒~
+Description
+這名守在河北北道南口的驛卒眼神沉穩，像任何要往北平去的人都得先被他打量上一
+遍。他不像軍關值役那樣殺氣逼人，卻很清楚哪種人只是趕路，哪種人像在探消息。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           28
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             11
+Wis             11
+Dex             12
+Con             12
+Hp              930
+Mana            70
+Move            138
+Class           0
+Gold            150
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

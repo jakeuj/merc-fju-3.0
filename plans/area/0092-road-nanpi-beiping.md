@@ -20,8 +20,8 @@
 - level_range: `24-36`
 - external_links:
   - `south`: `city_nanpi` / 北道牌樓
-  - `north`: `city_beiping` / 北平方向預留
-- delivery_gate: `spec_ready_for_commit`
+  - `north`: `city_beiping` / 北平大通驛站
+- delivery_gate: `implementation_ready_for_commit`
 
 ## Reference Entry Points
 
@@ -44,6 +44,7 @@
   - `ref/sanguo-progression-map.md`
   - `ref/三國-MUD-題材分布表.md`
   - `ref/sanguo-area-specfirst/area/road_nanpi_beiping/map.md`
+  - `ref/sanguo-area-specfirst/area/city_beiping/map.md`
   - `ref/world-graph.md`
   - `docs/3yWebsite/docs/data/players.json`
   - `docs/3yWebsite/docs/data/skills.json`
@@ -51,7 +52,6 @@
   - `plans/area/0091-fort-river-crossing.md`
 - `ref_inputs_deferred`
   - `docs/3yWebsite/map/bepin.html`
-  - `ref/sanguo-area-specfirst/area/city_beiping/map.md`
   - 各類原型工具與模擬系統
 - `theme_basis`
   - `world-graph` 明確把 `road_nanpi_beiping` 放成 `city_nanpi` 北側的 `road` 節點，並以 `city_beiping` 作為北向目標
@@ -65,9 +65,33 @@
 
 - `python -X utf8 tools/mapmd_validate.py area/road_nanpi_beiping/map.md`
   - passed (`Validated 8 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`)
+- `python -X utf8 tools/mapmd_validate.py area/city_nanpi/map.md`
+  - passed (`Validated 9 room(s) across 1 file(s). Result: 0 error(s), 0 warning(s).`)
 - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/road_nanpi_beiping/map.md --validate-only`
   - passed (`Validation succeeded for 8 room(s).`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_nanpi/map.md --validate-only`
+  - passed (`Validation succeeded for 9 room(s).`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/road_nanpi_beiping/map.md`
+  - passed (`Wrote 8 room scaffold file(s) to H:\repos\merc-fju-3.0\area\road_nanpi_beiping\roo`)
+- `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/city_nanpi/map.md`
+  - passed；同步把 `city_nanpi/17409` 補成 `north -> 17701` runtime boundary
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && make -C src -f Makefile.lin merc"`
+  - passed
+- `wsl bash -lc "cd /mnt/h/repos/merc-fju-3.0 && timeout 45 bash -lc 'cd src && ./startup.bash'"`
+  - passed；成功訊號寫入 `log/1063.log`（`三國歪傳之降龍伏虎開始正常運作`）
+- `debug/badobject`
+  - empty
+- `debug/error`
+  - empty；無新增 area loader blocker
 
 ## Next Step Prompt
 
-`先 commit 目前 road_nanpi_beiping 的 spec milestone；commit 後直接進 implementation，補齊對 city_nanpi 的 runtime boundary、生成 roo 與最小 area runtime scaffold。`
+`road_nanpi_beiping` 的 implementation milestone 已完成；下一步依 queue 規則重建下一個待建 area，建立新 spec 並在通過 validate-only 後直接前進。`
+
+## Runtime Notes
+
+- 已建立最小 loadable runtime scaffold：`index`、`mob/20131-20134`、`obj/20151-20154`、`res/road.res`、`shp/supplies.shp`、`roo/17701-17708`
+- 已正式落成南側 runtime boundary：`city_nanpi/17409 <-> road_nanpi_beiping/17701`
+- 北側 runtime anchor 先採 legacy 北平的 `beiping/9059`，形成 `road_nanpi_beiping/17708 north -> beiping/9059` 與 `beiping/9059 out -> road_nanpi_beiping/17708`
+- 選用 `9059` 的原因是它本身就是驛站 travel node，且不必拆掉現有 `south -> 9030` 的 legacy 內部流向；這一版先以最小侵入方式把河北北道正式接上北平
+- `area/directory.lst`、`docs/current-game/areas.md` 與 `docs/current-game/areas.json` 已同步納入 `road_nanpi_beiping`

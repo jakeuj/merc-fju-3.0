@@ -177,7 +177,8 @@
       "coord": [0, 4, 0],
       "labels": ["north-link", "gate-road"],
       "exits": [
-        { "direction": "south", "to": 17404 }
+        { "direction": "south", "to": 17404 },
+        { "direction": "north", "to": 17701, "external": true }
       ],
       "enquires": ["北道", "北邊", "去路"]
     }
