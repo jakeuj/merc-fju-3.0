@@ -709,46 +709,11 @@
 
 ## In Progress
 
-- `road_chenliu`
-  - status: `implementation_ready_for_commit`
-  - area_family: `Road`
-  - reserved_room_block: `20901-20920`
-  - level_range: `15-25`
-  - theme: `歷史城市`
-  - subtheme: `西行驛道 / 中原長路`
-  - ref_inputs_used:
-    - `area/world_map.md`
-    - `ref/Readme.md`
-    - `ref/sanguo-progression-map.md`
-    - `ref/三國-MUD-題材分布表.md`
-    - `ref/world-graph.md`
-    - `ref/sanguo-area-specfirst/area/road_chenliu/map.md`
-    - `ref/sanguo-area-specfirst/area/road_chenliu_loyang/map.md`
-    - `docs/3yWebsite/docs/data/players.json`
-    - `docs/3yWebsite/docs/data/skills.json`
-    - `area/wild_chenliu_west/map.md`
-    - `area/wild_chenliu_west/roo/20808.roo`
-    - `area/loyang_outskirts/map.md`
-    - `area/loyang/roo/556.roo`
-    - `plans/area/0123-wild-chenliu-west.md`
-  - ref_inputs_deferred:
-    - `docs/3yWebsite/map/chenliu.html`
-    - `docs/3yWebsite/map/loyang.html`
-    - 各類原型工具與模擬系統
-  - theme_basis:
-    - `wild_chenliu_west` 已經把陳留西門外做成可載入近郊，因此下一個 actionable area 應切回 `Road` family，而不是再堆同質外帶
-    - `world-graph` 仍把 `road_chenliu` 視為較 canonical 的 Luoyang <-> Chenliu 主路節點，優先度高於只剩單側 scaffold 的 `road_chenliu_loyang`
-    - `loyang/556 <-> loyang_outskirts/7501` 已是穩定東郊拓樸，因此本輪先從 `wild_chenliu_west/20808` 落成 westbound road，避免把 Luoyang 東門 east-edge 重疊成雙出口交通層
-  - compliance_check:
-    - compliant；先把 `wild_chenliu_west` 的 `future-road` 收斂成真正的 `Road`，同時保留 Luoyang 端契約給後續不衝突設計
-  - runtime_status:
-    - `road_chenliu` 的 `index / roo / mob / obj / res / shp` 最小可載入集合已建立，首版房間落在 `20901-20908`
-    - `wild_chenliu_west/20808 west <-> road_chenliu/20901 east` 已正式落成
-    - `mapmd_validate`、generator、`python -m json.tool docs/current-game/areas.json`、WSL Linux build 與 direct merc smoke 已通過
-    - `tools/area_acceptance_gate.py road_chenliu` 已回報 `implementation_ready_for_commit`
+(目前無 `in_progress` 項目。)
 
 ## Done
 
+- `2026-03-30` `road_chenliu` 已完成第一輪 runtime implementation、commit `71c8bc1`，完成 `wild_chenliu_west/20808 <-> 20901` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `wild_chenliu_west` 已完成第一輪 runtime implementation、commit `2238d7f`，完成 `city_chenliu/13801 <-> 20801` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `district_chenliu_station` 已完成第一輪 runtime implementation、commit `f602dab`，完成 `city_chenliu/13816 <-> 20701` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `wild_wan_outer` 已完成第一輪 runtime implementation、commit `3c8534b`，完成 `city_wan/20408 <-> 20601` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
@@ -937,14 +902,14 @@
 
 ## Current Recommended Next Step
 
-先提交 `road_chenliu` 的 implementation milestone commit，再做 tracker gate 收尾；不要直接跳下一區。
+回到 queue 規則重建 `todo`，優先比較 Luoyang / Chenliu 線上能提供 family variety 的非 `Road` 候選，避免在 `road_chenliu` 後立刻再堆另一條同質官道。
 
 ## Next Action
 
-- 提交 `road_chenliu` implementation milestone commit
-- 將 tracker 從 `implementation_ready_for_commit` 收尾到已完成狀態
-- commit 完成後再回到 queue 規則盤點下一個 actionable area
+- 依 queue 規則重建 `todo` 與 candidate 判斷
+- 優先比較 `district_loyang_east_market`、`district_loyang_west_market` 與其他可提供 family variety 的非 `Road` 候選
+- 重新盤點 Luoyang / Chenliu 中原段的 service loop、城內分區與外圍長路承接順序，避免把未定義的西向 / 東向契約又收斂回同質 road
 
 ## Next Prompt
 
-`提交 road_chenliu implementation milestone commit，完成 tracker gate 收尾後再回到 queue 規則盤點下一個待建 area。`
+`依 queue 規則重建 todo，優先盤點 district_loyang_east_market、district_loyang_west_market 與其他非 Road 候選，再決定下一個 actionable area。`
