@@ -1,0 +1,44 @@
+Vnum            20805
+Name            柳溝田埂~
+Description
+田埂沿著一條細窄柳溝往前拖去，泥氣、草味與牲口踏出的痕跡把官道邊緣洗得很有活路感。這裡沒有城內那種被整理好的邊界，只剩誰常走、誰想避人耳目，全慢慢留在土色與草影裡。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        20802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20806
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         田埂~
+End
+
+#Enquire
+Keyword         柳溝~
+End
+
+#Enquire
+Keyword         巡邏~
+End
+
+End

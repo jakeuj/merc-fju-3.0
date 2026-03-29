@@ -1,0 +1,32 @@
+Vnum            21984
+Name            chenliu roadside drifter~
+ShortDesc       陳西流民~
+Description
+這名陳西流民縮在灰地邊，看似只是想熬過今晚，卻也像隨時準備聽見城門外一點風吹草動
+就立刻換地方躲。
+~
+Sentinel        No
+StayArea        Yes
+NoKill          Yes
+Alignment       -20
+Level           15
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             11
+Con             10
+Hp              610
+Mana            40
+Move            105
+Class           0
+Gold            60
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

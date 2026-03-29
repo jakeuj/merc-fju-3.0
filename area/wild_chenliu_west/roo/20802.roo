@@ -1,0 +1,51 @@
+Vnum            20802
+Name            陳西官道~
+Description
+官道在城外還保留著幾分被反覆踩實的硬度，卻已經沒有城門內那種處處被人看著的緊。商旅、差役與不太願意報姓名的路人都在這裡重新混成一股鬆散卻仍有方向的西郊節奏。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        20801
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         路碑~
+Description
+這塊路碑只簡單刻著回城與更西方向，字跡不算工整，卻明顯是留給真正要在外頭辨路的人看。
+~
+End
+
+#Enquire
+Keyword         官道~
+End
+
+#Enquire
+Keyword         茶亭~
+End
+
+#Enquire
+Keyword         更西~
+End
+
+End

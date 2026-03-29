@@ -2419,6 +2419,25 @@
         "plans/area/0122-district-chenliu-station.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "wild_chenliu_west",
+      "title": "陳留西郊",
+      "room_range": "20801-20820",
+      "load_order": 129,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_chenliu",
+      "theme_primary": "江湖",
+      "theme_secondary": "西郊 / 茶亭",
+      "summary": "承接陳留西城門外牌樓，落成西門郊道口、陳西官道、茶亭前坪、柳溝田埂與流民營灰地構成的近郊 wild。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/wild_chenliu_west/index",
+        "area/wild_chenliu_west/map.md",
+        "plans/area/0123-wild-chenliu-west.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

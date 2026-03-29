@@ -1,0 +1,32 @@
+Vnum            21981
+Name            chenliu west patrol~
+ShortDesc       陳西巡哨~
+Description
+這名陳西巡哨守在西門郊道口，眼神沒有城門守卒那麼硬，卻很明顯習慣替來往旅人與可疑
+影子一起留心。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       90
+Level           16
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             11
+Wis             11
+Dex             12
+Con             12
+Hp              720
+Mana            70
+Move            120
+Class           0
+Gold            120
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

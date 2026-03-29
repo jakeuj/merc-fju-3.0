@@ -1,0 +1,28 @@
+Vnum            20808
+Name            更西荒道~
+Description
+再往西去，陳留留下的牆影與牌樓都開始淡成一種只夠回頭辨位的背景，只剩荒道本身還替人勉強維持方向感。這裡不像真正的盡頭，卻很清楚是陳留正式把旅人交還給更寬、更雜，也更難完全被管住的中原外圍之處。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        20804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         更西~
+End
+
+#Enquire
+Keyword         遠路~
+End
+
+#Enquire
+Keyword         荒道~
+End
+
+End

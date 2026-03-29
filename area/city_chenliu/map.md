@@ -39,7 +39,7 @@
 
 - 房間重點：西城門、門洞、盤查告示
 - 玩家感受：秩序、盤查、回洛陽仍很近
-- 對外角色：作為日後接 `road_chenliu_loyang` 的城市邊界
+- 對外角色：作為正式接 `wild_chenliu_west`、並可再往更西長路延伸的城市邊界
 
 ### `main-street`
 
@@ -69,7 +69,7 @@
 
 這些是世界層連接意圖；目前先固定在 spec，不提前建立 runtime 假邊界：
 
-- `west` from `13801`: planned link to `road_chenliu_loyang`
+- `west` from `13801`: planned link to `wild_chenliu_west`
 - `north` from `13809`: planned link to `wild_puyang_forest`
 - `east` from `13810`: planned link to `city_xuzhou`
 - `south` from `13816`: planned link to `district_chenliu_station`
@@ -83,7 +83,7 @@
 ## Suggested Layout
 
 ```text
-洛陽 / 洛陳驛路方向
+洛陽 / 陳留西郊方向
    |
 [13801] 西城門外牌樓 -- [13802] 西門甬道 -- [13803] 陳留主街西段 -- [13804] 西市十字 -- [13809] 北街牌樓
                                                         |                    |
@@ -122,8 +122,9 @@
       {
         "direction": "west",
         "source_vnum": 13801,
-        "target_area": "road_chenliu_loyang",
-        "label": "洛陳驛路"
+        "target_area": "wild_chenliu_west",
+        "target_room_vnum": 20801,
+        "label": "陳留西郊"
       },
       {
         "direction": "north",
@@ -172,12 +173,13 @@
     {
       "vnum": 13801,
       "name": "西城門外牌樓",
-      "description": "青灰城牆在身後筆直抬起，西城門外的牌樓下聚著等待盤查的旅人與車隊。再往西便是洛陳驛路，回首仍可看見一路趕來的塵煙，提醒你陳留不是盡頭，而是更大中原網路的中繼點。",
+      "description": "青灰城牆在身後筆直抬起，西城門外的牌樓下聚著等待盤查的旅人與車隊。再往西不再只是抽象長路，而是先被茶亭、田埂與郊道灰帶慢慢接手，提醒你陳留不是盡頭，而是更大中原網路的中繼點。",
       "sector_type": "SECT_CITY",
       "cluster": "west-gate",
       "coord": [0, 0, 0],
       "labels": ["west-edge", "world-link-west", "entry"],
       "exits": [
+        { "direction": "west", "to": 20801, "external": true },
         { "direction": "east", "to": 13802 }
       ],
       "keywords": [

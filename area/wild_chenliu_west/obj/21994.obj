@@ -1,0 +1,16 @@
+Vnum            21994
+Name            escort road cudgel~
+ShortDesc       鏢客短棍(road cudgel)~
+Description
+這根鏢客短棍(road cudgel)不像軍中兵器那麼講究，卻很適合在郊道與茶亭邊用來壯膽、趕
+人，或者提醒別人別靠得太近。
+~
+Unit            根~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+WearLoc         ITEM_WIELD
+Level           15
+Value           0 -1 -1 WEAPON_CLUB
+Weight          3
+Cost            136
+End

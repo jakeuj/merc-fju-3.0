@@ -1,0 +1,15 @@
+Vnum            21991
+Name            west tea ration~
+ShortDesc       西郊乾糧包(ration pack)~
+Description
+這份西郊乾糧包(ration pack)包得不算講究，卻很明顯是專給真正準備一路走出城外的人填
+肚子用的。
+~
+Unit            份~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           14
+Value           18 28 4 0
+Weight          1
+Cost            84
+End

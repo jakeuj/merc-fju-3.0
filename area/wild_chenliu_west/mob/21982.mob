@@ -1,0 +1,32 @@
+Vnum            21982
+Name            chenliu west tea host~
+ShortDesc       陳西茶亭婆婆~
+Description
+這位陳西茶亭婆婆一面看著熱壺，一面也看著每個想坐下的人，顯然很懂哪些人只是歇腳，
+哪些人則是在等別人的去向先露出口風。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       120
+Level           15
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             12
+Wis             13
+Dex             10
+Con             11
+Hp              640
+Mana            90
+Move            110
+Class           0
+Gold            180
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_FEMALE
+End

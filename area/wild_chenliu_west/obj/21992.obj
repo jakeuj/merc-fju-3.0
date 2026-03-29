@@ -1,0 +1,15 @@
+Vnum            21992
+Name            west tea gourd~
+ShortDesc       西郊茶水葫蘆(tea gourd)~
+Description
+這只西郊茶水葫蘆(tea gourd)帶著一點剛煮過的暖氣，正適合讓趕路人在茶亭前坪停下來灌
+一口。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           14
+Value           12 12 LIQ_WATER 0
+Weight          2
+Cost            96
+End

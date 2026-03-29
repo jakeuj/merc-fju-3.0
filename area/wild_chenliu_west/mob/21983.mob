@@ -1,0 +1,32 @@
+Vnum            21983
+Name            chenliu passing escort~
+ShortDesc       過路鏢客~
+Description
+這名過路鏢客在官道與田埂之間來回看著地面痕跡，像是在替自己下一段路先挑一條比較不
+惹事、也比較不浪費力氣的方向。
+~
+Sentinel        No
+StayArea        Yes
+NoKill          Yes
+Alignment       40
+Level           18
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             11
+Wis             11
+Dex             12
+Con             12
+Hp              780
+Mana            60
+Move            120
+Class           0
+Gold            150
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

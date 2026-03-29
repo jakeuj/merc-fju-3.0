@@ -1,0 +1,44 @@
+Vnum            20801
+Name            西門郊道口~
+Description
+一離開陳留西城門外牌樓，腳下的整齊石地很快就鬆成帶著車痕與土灰的郊道口。回頭還能清楚看見城牆與門匾，往前卻已經只剩茶亭、田埂與路旁林影，像是陳留正把所有真正要上路的人慢慢交給西郊。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        13801
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         回城~
+End
+
+#Enquire
+Keyword         城門~
+End
+
+#Enquire
+Keyword         郊道~
+End
+
+End

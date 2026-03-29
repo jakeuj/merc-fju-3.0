@@ -709,7 +709,17 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `wild_chenliu_west`
+  - area_family: `Wild`
+  - reserved_room_block: `20801-20820`
+  - level_range: `14-24`
+  - status: `第一輪 runtime implementation 已完成，等待 implementation milestone commit`
+  - delivery_gate: `implementation_ready_for_commit`
+  - summary:
+    - 已建立 `map.md`、`index / roo / mob / obj / res / shp` 最小可載入集合，首版房間落在 `20801-20808`
+    - 已正式落成 `city_chenliu/13801 west <-> wild_chenliu_west/20801 east` runtime boundary
+    - `mapmd_validate`、generator `--validate-only`、實際 `.roo` 生成、WSL Linux build、direct merc smoke 與 acceptance gate 均已通過
+    - `city_chenliu` 的 west-edge 已從抽象 `road_chenliu_loyang` 收斂成 `wild_chenliu_west`，避免與 `loyang/556 <-> loyang_outskirts/7501` 的既有東郊拓樸衝突
 
 ## Done
 
@@ -900,14 +910,14 @@
 
 ## Current Recommended Next Step
 
-回到 queue 規則重建 `todo`，優先比較 `road_chenliu`、`road_chenliu_loyang` 與其他能提供 family variety 的非 `District` 候選，避免在 `district_chenliu_station` 後立刻再堆同質城內交通分區。
+先提交 `wild_chenliu_west` 的 implementation milestone，因為 tracker 已到 `implementation_ready_for_commit`，不能直接跳下一個 area。
 
 ## Next Action
 
-- 依 queue 規則重建 `todo` 與 candidate 判斷
-- 優先比較 `road_chenliu`、`road_chenliu_loyang` 與其他可提供 family variety 的非 `District` 候選
-- 優先釐清陳留西向 / 洛陽東向的 boundary 契約，避免把還沒對齊的驛路直接推進成下一個 actionable area
+- 提交 `wild_chenliu_west` implementation milestone commit
+- 再補一個 tracker-only commit，把本區從 `in_progress` 推進成已完成狀態
+- 之後才回到 queue 規則盤點下一個 actionable area
 
 ## Next Prompt
 
-`依 queue 規則重建 todo，優先盤點 road_chenliu、road_chenliu_loyang 與其他非 District 候選，先釐清陳留西向與洛陽東向的邊界契約，再決定下一個 actionable area。`
+`先提交 wild_chenliu_west implementation milestone，接著更新 rebuild tracker 的 delivery gate，然後再回到 queue 規則盤點下一個待建 area。`

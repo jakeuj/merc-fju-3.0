@@ -1,0 +1,43 @@
+Vnum            20803
+Name            茶亭前坪~
+Description
+一塊不大的前坪勉強容得下幾張長凳與卸貨包袱，對真正要上路的人來說，這裡的價值往往在熱水、閒話與別人不小心漏出的去向。比起城內整齊的食肆補給，這裡更像一種勉強卻可靠的城外人情。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        20801
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         茶亭~
+Description
+這座茶亭只靠幾根老木柱與斜歪的棚布撐著，卻很穩地替西郊上的人留下一小塊能坐、能問、也能喘口氣的地方。
+~
+End
+
+#Enquire
+Keyword         茶亭~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+#Enquire
+Keyword         消息~
+End
+
+End
