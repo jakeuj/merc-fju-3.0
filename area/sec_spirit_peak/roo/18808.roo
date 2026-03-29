@@ -1,0 +1,36 @@
+Vnum            18808
+Name            天熒觀台~
+Description
+觀台上方的天色比正常高處更亮，像整片山與雲都在這裡默默把光聚成一口看不見的火。站在這裡時，很難分清自己看到的是遠景、異象，還是某種只願意短暫讓人窺見的舊秩序殘影。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       SOUTH
+ExitVnum        18806
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        18807
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         觀台~
+End
+
+#Enquire
+Keyword         天光~
+End
+
+#Enquire
+Keyword         遠處~
+End
+
+End

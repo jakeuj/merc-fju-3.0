@@ -1,0 +1,15 @@
+Vnum            21252
+Name            ritual flask~
+ShortDesc       祭泉水囊(ritual flask)~
+Description
+一只從側壇與祭井之間帶著走的祭泉水囊(ritual flask)綁著細皮繩，像是既能解渴，
+也帶著一點不宜隨便浪費的儀式意味。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           44
+Value           10 10 0 0
+Weight          1
+Cost            104
+End

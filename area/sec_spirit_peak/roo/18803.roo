@@ -1,0 +1,44 @@
+Vnum            18803
+Name            雲裂祭坪~
+Description
+祭坪正好卡在雲勢最容易被山脊撕開的位置，讓上方天光與下方陰影像在這裡反覆交手。站在坪上時，最容易產生的念頭不是抬頭看風景，而是懷疑這片空地原本就不是給凡常人停留的地方。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       SOUTH
+ExitVnum        18802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        18806
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         祭坪~
+End
+
+#Enquire
+Keyword         雲裂~
+End
+
+#Enquire
+Keyword         光~
+End
+
+End

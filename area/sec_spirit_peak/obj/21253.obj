@@ -1,0 +1,16 @@
+Vnum            21253
+Name            ritual blade~
+ShortDesc       祭峰短刃(ritual blade)~
+Description
+這把祭峰短刃(ritual blade)雖然不大，卻被磨得足以應付高處突發衝突與守壇警戒，
+看起來正是靈峰守望者最常帶在身上的隨手兵器。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           46
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            228
+End

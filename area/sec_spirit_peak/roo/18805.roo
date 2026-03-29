@@ -1,0 +1,36 @@
+Vnum            18805
+Name            祈霧側壇~
+Description
+側壇比主祭坪更小，也更像是留給真正懂儀式的人短暫停步調息的地方。石邊還擺著幾件不知何時留下的祭器殘件，讓人相信這片靈峰並不是只有一條進退路。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        18802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18807
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         側壇~
+End
+
+#Enquire
+Keyword         祭器~
+End
+
+#Enquire
+Keyword         霧~
+End
+
+End

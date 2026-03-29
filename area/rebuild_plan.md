@@ -709,7 +709,49 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `sec_spirit_peak`
+  - area_family: `Secret`
+  - reserved_room_block: `18801-18820`
+  - planned_vnum_range: `18801-18820`
+  - level_range: `44-56`
+  - theme: `仙俠`
+  - subtheme: `靈峰 / 祭天`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/sec_spirit_peak/map.md`
+    - `ref/world-graph.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `plans/area/0096-dng-ancient-cave.md`
+    - `plans/area/0101-fort-northern-watch.md`
+    - `plans/area/0102-wild-wolf-forest.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/map/bepin.html`
+    - `ref/sanguo-area-specfirst/area/sec_starfall_crater/map.md`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `dng_ancient_cave` 現有 spec/runtime 已保留 `18108 up -> sec_spirit_peak` metadata，表示它是北境鏈最成熟也最直接的下一個 `Secret` family 母點
+    - `world-graph` 將 `sec_spirit_peak` 放在 `dng_ancient_cave` 之後，提供 `Dungeon -> Secret` 的自然 family 切換
+    - `題材分布表` 與 ref scaffold 都把此區拉向 `仙俠 / 靈峰 / 祭天`，能和 `wild_wolf_forest` 的 folklore 林壓力形成清楚題材轉折
+    - `players.json / skills.json` 對遼東北線仍未提出比既有 reserved link 更強的城市服務優先訊號，支持這時候補上高處祕境而不是再新增一般城鎮節點
+  - compliance_check:
+    - compliant；在 `Wild` 之後切到 `Secret`，同時承接 `dng_ancient_cave` 的既有 `up` 預留與 queue variety，不是沿最新 surface route 任意外插
+  - implementation_notes:
+    - 已建立 `index / roo / mob / obj / res / shp` 最小可載入集合，room `18801-18808`、mob `21231-21234`、obj `21251-21254`
+    - 已正式落成 `dng_ancient_cave/18108 up -> 18801` 與 `18801 down -> dng_ancient_cave/18108` runtime boundary，並同步 `dng_ancient_cave/map.md`
+    - 已新增 `area/directory.lst` 與 `docs/current-game/areas.md/json` 台帳
+  - validation:
+    - `python -X utf8 tools/mapmd_validate.py area/sec_spirit_peak/map.md` passed
+    - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_spirit_peak/map.md --validate-only` passed
+    - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_spirit_peak/map.md` passed
+    - WSL `make -f Makefile.lin clean && make -f Makefile.lin merc` passed
+    - `timeout 60s ./startup.bash` passed with success signal in `log/1075.log`
+    - `debug/error` 僅反映 timeout 終止；`debug/failexit` 僅有既有 baseline `17201/17208` fixups，未見 area-specific loader error
+    - `$env:PYTHONUTF8='1'; python tools/area_acceptance_gate.py sec_spirit_peak` returned `implementation_ready_for_commit`
+  - delivery_gate: `implementation_ready_for_commit`
 
 
 ## Done
@@ -881,14 +923,14 @@
 
 ## Current Recommended Next Step
 
-重建北境鏈的下一個 `Secret` family queue 與 `todo`，優先比較 `sec_spirit_peak` 和 `sec_starfall_crater` 哪個更適合作為新的 next actionable area。
+先 commit `sec_spirit_peak` 的 implementation milestone；commit 後再回到 queue 決定下一個 actionable area。
 
 ## Next Action
 
-- 依 `area/world_map.md`、`ref/sanguo-progression-map.md`、`ref/三國-MUD-題材分布表.md`、`ref/world-graph.md` 重新盤點北境下一個 `Secret` family 候選
-- 優先比較 `dng_ancient_cave -> sec_spirit_peak` 與 `wild_bailang -> sec_starfall_crater` 哪條線更符合 queue variety 與現有 world-link 成熟度
-- 盤點完成後，建立新的 `todo` 或直接建立下一個單區 plan / spec milestone
+- commit `sec_spirit_peak` 的 implementation milestone
+- 確認 tracker / current-game registry 與 commit 訊息一致
+- commit 後再依 queue 規則決定是否推進下一個 area
 
 ## Next Prompt
 
-`wild_wolf_forest` 已完成 commit；現在請依 queue 規則盤點北境下一個待建 `Secret` area，優先比較 `sec_spirit_peak` 與 `sec_starfall_crater`，決定新的 next actionable area 並建立對應 plan / spec milestone。`
+`先 commit sec_spirit_peak 的 implementation milestone：包含 dng_ancient_cave/18108 <-> sec_spirit_peak/18801 runtime boundary、index / roo / mob / obj / res / shp、directory.lst 與 current-game registry 更新；commit 後再依 queue 規則決定下一個 area。`

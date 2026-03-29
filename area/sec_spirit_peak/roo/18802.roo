@@ -1,0 +1,44 @@
+Vnum            18802
+Name            風祭石階~
+Description
+一段被長年山風磨白的石階一路往上收，踏面上還能隱約辨出早已淡去的祭行刻痕。每往上一步，都會更清楚感到這裡曾是某種把天象與山勢一起納進秩序的地方。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       SOUTH
+ExitVnum        18801
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         石階~
+End
+
+#Enquire
+Keyword         祭路~
+End
+
+#Enquire
+Keyword         山風~
+End
+
+End

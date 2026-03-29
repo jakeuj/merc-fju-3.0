@@ -1,0 +1,36 @@
+Vnum            18806
+Name            裂光峰脊~
+Description
+峰脊把天光切成一道道偏白的裂線，讓整條山脊像正被更高處某種看不見的秩序重新描過。這裡的危險不來自狹窄本身，而來自一種越往前越難確定自己是否仍站在凡間地勢上的不穩感。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       DOWN
+ExitVnum        18803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         峰脊~
+End
+
+#Enquire
+Keyword         裂光~
+End
+
+#Enquire
+Keyword         前面~
+End
+
+End

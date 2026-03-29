@@ -1,0 +1,15 @@
+Vnum            21251
+Name            peak ration~
+ShortDesc       靈峰乾糧包(peak ration)~
+Description
+一包專給攀上高處祕境的人隨身備著的靈峰乾糧包(peak ration)被妥善包好，看得出
+很適合在風口與祭階間快速補充體力。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           44
+Value           24 48 4 0
+Weight          1
+Cost            156
+End

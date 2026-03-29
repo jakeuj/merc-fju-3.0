@@ -1,0 +1,15 @@
+Vnum            21254
+Name            altar lamp~
+ShortDesc       祭壇明燈(altar lamp)~
+Description
+一盞用來在高處風口仍勉強維持火意的祭壇明燈(altar lamp)被細心護住燈罩，像是
+比起照亮路，更在意別讓祭路上的光先熄掉。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           44
+Value           0 0 24 0
+Weight          1
+Cost            98
+End

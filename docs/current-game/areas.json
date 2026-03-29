@@ -2039,6 +2039,25 @@
         "plans/area/0102-wild-wolf-forest.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_spirit_peak",
+      "title": "白狼靈峰",
+      "room_range": "18801-18820",
+      "load_order": 109,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "dng_ancient_cave",
+      "theme_primary": "仙俠",
+      "theme_secondary": "靈峰 / 祭天",
+      "summary": "承接古洞遺跡靈峰裂井，落成風祭石階、雲裂祭坪、狼紋天壇與天熒觀台構成的高處 secret 骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_spirit_peak/index",
+        "area/sec_spirit_peak/map.md",
+        "plans/area/0103-sec-spirit-peak.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

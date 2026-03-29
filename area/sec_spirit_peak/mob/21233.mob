@@ -1,0 +1,32 @@
+Vnum            21233
+Name            well glyph keeper~
+ShortDesc       祭井護紋人~
+Description
+這名護紋人守在靈泉祭井邊時幾乎像和井沿光痕一起穩定呼吸，讓人很難判斷他是在
+看守一口井，還是在維持整片靈峰不致失衡的某個細小環節。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           50
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             14
+Wis             14
+Dex             13
+Con             13
+Hp              1760
+Mana            126
+Move            198
+Class           0
+Gold            390
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

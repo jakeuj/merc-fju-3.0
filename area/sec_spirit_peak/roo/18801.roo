@@ -1,0 +1,36 @@
+Vnum            18801
+Name            靈峰井口~
+Description
+從古洞的裂井一路往上攀到這裡時，最先撞上的不是山風，而是一種帶著光意的高處靜壓。井口四周的石面像被很久以前的祭火燒亮過，讓人很難把這裡只當成地下出口。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       DOWN
+ExitVnum        18108
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         下面~
+End
+
+#Enquire
+Keyword         井口~
+End
+
+#Enquire
+Keyword         古洞~
+End
+
+End

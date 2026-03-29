@@ -1,0 +1,32 @@
+Vnum            21231
+Name            peak usher~
+ShortDesc       引峰人~
+Description
+這名引峰人站在井口附近時總會下意識先看一眼天色，再回頭確認來者是不是走對了
+地方。那種對山勢與異象都很熟悉的從容，讓他看起來像早就屬於這片靈峰。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           44
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             14
+Dex             12
+Con             12
+Hp              1500
+Mana            112
+Move            188
+Class           0
+Gold            320
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

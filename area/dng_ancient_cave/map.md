@@ -38,6 +38,7 @@
         "direction": "up",
         "source_vnum": 18108,
         "target_area": "sec_spirit_peak",
+        "target_room_vnum": 18801,
         "label": "白狼靈峰預留"
       }
     ],
@@ -156,7 +157,8 @@
       "coord": [4, 1, 0],
       "labels": ["shaft", "world-link-up"],
       "exits": [
-        { "direction": "south", "to": 18107 }
+        { "direction": "south", "to": 18107 },
+        { "direction": "up", "to": 18801, "external": true }
       ],
       "enquires": ["井口", "上方", "靈峰"]
     }

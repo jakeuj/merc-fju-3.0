@@ -1,0 +1,36 @@
+Vnum            18807
+Name            靈泉祭井~
+Description
+一口清冷得近乎沒有聲音的祭井嵌在側壇後方，井邊水痕卻不帶半點俗世濕氣，反而像把整片靈峰的亮度都收進去了。很多關於祭天與啟路的傳聞，在這裡看起來都突然有了實感。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       SOUTH
+ExitVnum        18805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         靈泉~
+End
+
+#Enquire
+Keyword         祭井~
+End
+
+#Enquire
+Keyword         水~
+End
+
+End

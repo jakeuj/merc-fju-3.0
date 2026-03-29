@@ -1,0 +1,28 @@
+Vnum            18804
+Name            狼紋天壇~
+Description
+天壇石面上還殘著像狼紋又像星軌的圓環刻痕，把整座高臺的古怪感壓得很實。它不像單純祭壇，更像一處曾拿來對照山、狼與天象異動的核心場所。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        18803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         天壇~
+End
+
+#Enquire
+Keyword         狼紋~
+End
+
+#Enquire
+Keyword         異象~
+End
+
+End
