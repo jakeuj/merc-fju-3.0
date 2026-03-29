@@ -709,20 +709,11 @@
 
 ## In Progress
 
-- `district_chenliu_station`
-  - area_family: `District`
-  - reserved_room_block: `20701-20720`
-  - level_range: `15-25`
-  - status: `第一輪 runtime implementation 已完成，等待 implementation milestone commit`
-  - delivery_gate: `implementation_ready_for_commit`
-  - summary:
-    - 已建立 `map.md`、`index / roo / mob / obj / res / shp` 最小可載入集合，首版房間落在 `20701-20708`
-    - 已正式落成 `city_chenliu/13816 south <-> district_chenliu_station/20701 north` runtime boundary
-    - `mapmd_validate`、generator `--validate-only`、實際 `.roo` 生成、WSL Linux build、direct merc smoke 與 acceptance gate 均已通過
-    - 本輪修正 `21974.obj` 的 weapon loader 型別，將不存在的 `WEAPON_STAFF` 改為 `WEAPON_CLUB`
+(目前無 `in_progress` 項目。)
 
 ## Done
 
+- `2026-03-29` `district_chenliu_station` 已完成第一輪 runtime implementation、commit `f602dab`，完成 `city_chenliu/13816 <-> 20701` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `wild_wan_outer` 已完成第一輪 runtime implementation、commit `3c8534b`，完成 `city_wan/20408 <-> 20601` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `road_wan` 已完成第一輪 runtime implementation、commit `a8eea18`，完成 `loyang/593 <-> 20501` 與 `city_wan/20407 <-> 20508` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `city_wan` 已完成第一輪 runtime implementation、commit `ca1b28e`，完成 `city_xinye/20207 <-> 20401` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
@@ -909,14 +900,14 @@
 
 ## Current Recommended Next Step
 
-先提交 `district_chenliu_station` 的 implementation milestone，因為 tracker 已到 `implementation_ready_for_commit`，不能直接跳下一個 area。
+回到 queue 規則重建 `todo`，優先比較 `road_chenliu`、`road_chenliu_loyang` 與其他能提供 family variety 的非 `District` 候選，避免在 `district_chenliu_station` 後立刻再堆同質城內交通分區。
 
 ## Next Action
 
-- 提交 `district_chenliu_station` implementation milestone commit
-- 再補一個 tracker-only commit，把本區從 `in_progress` 推進成已完成狀態
-- 之後才回到 queue 規則盤點下一個 actionable area
+- 依 queue 規則重建 `todo` 與 candidate 判斷
+- 優先比較 `road_chenliu`、`road_chenliu_loyang` 與其他可提供 family variety 的非 `District` 候選
+- 優先釐清陳留西向 / 洛陽東向的 boundary 契約，避免把還沒對齊的驛路直接推進成下一個 actionable area
 
 ## Next Prompt
 
-`先提交 district_chenliu_station implementation milestone，接著更新 rebuild tracker 的 delivery gate，然後再回到 queue 規則盤點下一個待建 area。`
+`依 queue 規則重建 todo，優先盤點 road_chenliu、road_chenliu_loyang 與其他非 District 候選，先釐清陳留西向與洛陽東向的邊界契約，再決定下一個 actionable area。`
