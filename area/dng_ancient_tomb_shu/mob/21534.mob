@@ -1,0 +1,31 @@
+Vnum            21534
+Name            gate sentinel~
+ShortDesc       沉門巡守者~
+Description
+沉門巡守者長時間守在厚重石門前，像已把門後的沉默也納進自己的職責裡。他看人的
+方式不是防備旅人，而像在防備任何可能讓石門重新開口的變數。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       0
+Level           62
+Hitroll         4
+Protect         0
+Damroll         7
+Str             16
+Int             13
+Wis             14
+Dex             13
+Con             15
+Hp              3480
+Mana            118
+Move            178
+Class           0
+Gold            820
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_FEMALE
+End

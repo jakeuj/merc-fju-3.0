@@ -2096,6 +2096,25 @@
         "plans/area/0105-wild-hidden-valley.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "dng_ancient_tomb_shu",
+      "title": "蜀漢古墓",
+      "room_range": "19101-19120",
+      "load_order": 112,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "wild_hidden_valley",
+      "theme_primary": "探險遺跡",
+      "theme_secondary": "古墓 / 石門",
+      "summary": "承接隱谷沉陵坳口，落成前廳石券、斷燈墓道、封紋中庭與內槨石門構成的蜀地古墓 dungeon 骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/dng_ancient_tomb_shu/index",
+        "area/dng_ancient_tomb_shu/map.md",
+        "plans/area/0106-dng-ancient-tomb-shu.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

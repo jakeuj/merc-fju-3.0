@@ -38,6 +38,7 @@
         "direction": "down",
         "source_vnum": 19008,
         "target_area": "dng_ancient_tomb_shu",
+        "target_room_vnum": 19101,
         "label": "沉陵坳口"
       }
     ],
@@ -160,7 +161,8 @@
       "labels": ["sink", "future-down", "deep-link"],
       "exits": [
         { "direction": "east", "to": 19006 },
-        { "direction": "north", "to": 19007 }
+        { "direction": "north", "to": 19007 },
+        { "direction": "down", "to": 19101, "external": true }
       ],
       "enquires": ["坳口", "下面", "古陵"]
     }

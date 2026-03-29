@@ -1,0 +1,36 @@
+Vnum            19107
+Name            沉門前廊~
+Description
+前廊盡頭那扇沉門比前段石券都更厚，像不是防賊，而是防某種已經在墓裡待太久的東西回到外側。站在這裡時，會很清楚地感覺到自己離真正的核心只差最後一層隔絕。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        19106
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         沉門~
+End
+
+#Enquire
+Keyword         前廊~
+End
+
+#Enquire
+Keyword         核心~
+End
+
+End

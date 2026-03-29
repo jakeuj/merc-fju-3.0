@@ -1,0 +1,28 @@
+Vnum            19104
+Name            偏室石櫃~
+Description
+這間偏室被一座半裂石櫃與幾件翻倒器具佔住大半空間，看得出曾有人試著在這裡搜找或搬動什麼。可越是這樣，越讓人懷疑真正重要的東西早就不在表面。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       EAST
+ExitVnum        19103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         石櫃~
+End
+
+#Enquire
+Keyword         偏室~
+End
+
+#Enquire
+Keyword         器具~
+End
+
+End

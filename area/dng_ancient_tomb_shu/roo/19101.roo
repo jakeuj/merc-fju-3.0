@@ -1,0 +1,36 @@
+Vnum            19101
+Name            沉陵落階~
+Description
+從沉陵坳口往下踏入時，地勢很快就從泥石與根痕轉成刻意修出的狹長石階。這裡最令人不安的不是陰暗，而是那種「有人早就預料會有人從上面找到這裡」的設計感。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       UP
+ExitVnum        19008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        19102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         上面~
+End
+
+#Enquire
+Keyword         石階~
+End
+
+#Enquire
+Keyword         入口~
+End
+
+End

@@ -1,0 +1,15 @@
+Vnum            21554
+Name            tomb lamp~
+ShortDesc       墓道明燈(tomb lamp)~
+Description
+這盞墓道明燈(tomb lamp)的燈罩刻著簡單防風紋，亮度不強，卻足夠在封閉石道裡撐住
+一小段可靠視線。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           48
+Value           0 0 42 0
+Weight          1
+Cost            116
+End

@@ -1,0 +1,44 @@
+Vnum            19106
+Name            封紋中庭~
+Description
+中庭不像真正開闊，反而像墓道刻意在這裡鬆一口氣，好讓來人先看見地面那圈被磨得發白的封紋。那些紋路沒有完全失效，只是正在用更安靜、更陰冷的方式提醒人這裡不該被輕易跨過。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       SOUTH
+ExitVnum        19103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        19107
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        19108
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         封紋~
+End
+
+#Enquire
+Keyword         中庭~
+End
+
+#Enquire
+Keyword         下面~
+End
+
+End

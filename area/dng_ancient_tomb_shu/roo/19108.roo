@@ -1,0 +1,28 @@
+Vnum            19108
+Name            內槨石門~
+Description
+石門表面幾乎看不見多餘裝飾，只在靠近時才會發現門緣有一圈極細卻完整的縫紋，像它從未真正敞開過。這裡不像終點，更像整座古墓真正開始閉口不言的地方。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       SOUTH
+ExitVnum        19106
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         石門~
+End
+
+#Enquire
+Keyword         裡面~
+End
+
+#Enquire
+Keyword         封印~
+End
+
+End

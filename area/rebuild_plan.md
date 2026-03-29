@@ -709,7 +709,49 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `dng_ancient_tomb_shu`
+  - area_family: `Dungeon`
+  - reserved_room_block: `19101-19120`
+  - planned_vnum_range: `19101-19120`
+  - level_range: `48-62`
+  - theme: `探險遺跡`
+  - subtheme: `古墓 / 石門`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/dng_ancient_tomb_shu/map.md`
+    - `ref/world-graph.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `plans/area/0105-wild-hidden-valley.md`
+    - `plans/area/0067-wild-wuling.md`
+    - `plans/area/0104-sec-starfall-crater.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/map/chendo.html`
+    - `ref/sanguo-area-specfirst/area/wild_spirit_forest/map.md`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `wild_hidden_valley` 現有 spec 已保留 `19008 down -> dng_ancient_tomb_shu` metadata，表示這個古墓是蜀地深谷鏈最直接也最成熟的下一個下探節點
+    - `world-graph` 將 `dng_ancient_tomb_shu` 放在 `wild_hidden_valley` 之後，提供 `Wild -> Dungeon` 的自然 family 切換，不必再回到平面山林
+    - `題材分布表` 對蜀漢區保留 `探險遺跡` 與 `仙俠` 疊合的深山空間，支持把谷底陰口正式翻成古墓石門 dungeon
+    - `players.json / skills.json` 對蜀地高段區沒有提出比既有谷底預留 link 更強的城市服務優先訊號，支持先展開墓道調查鏈
+  - compliance_check:
+    - compliant；在 `Wild` 之後切到 `Dungeon`，而且直接承接已存在的 `wild_hidden_valley` 下探口，符合 queue variety 與既有拓樸約束
+  - implementation_notes:
+    - 已建立 `index / roo / mob / obj / res / shp` 最小可載入集合，room `19101-19108`、mob `21531-21534`、obj `21551-21554`
+    - 已正式落成 `wild_hidden_valley/19008 down -> 19101` 與 `19101 up -> wild_hidden_valley/19008` runtime boundary，並同步 `wild_hidden_valley/map.md`
+    - 已新增 `area/directory.lst` 與 `docs/current-game/areas.md/json` 台帳
+  - validation:
+    - `python -X utf8 tools/mapmd_validate.py area/dng_ancient_tomb_shu/map.md` passed
+    - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/dng_ancient_tomb_shu/map.md --validate-only` passed
+    - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/dng_ancient_tomb_shu/map.md` passed
+    - WSL `make -f Makefile.lin clean && make -f Makefile.lin merc` passed
+    - direct `timeout 45s ./merc merc.ini || true` smoke passed with observed success signal
+    - `debug/error` 僅反映 timeout 終止；`debug/failexit` 僅有既有 baseline `17201/17208` fixups，未見 area-specific loader error
+    - `$env:PYTHONUTF8='1'; python tools/area_acceptance_gate.py dng_ancient_tomb_shu` returned `implementation_ready_for_commit`
+  - delivery_gate: `implementation_ready_for_commit`
 
 
 ## Done
@@ -884,14 +926,14 @@
 
 ## Current Recommended Next Step
 
-回到 queue 規則盤點下一個 actionable area；優先比較 `wild_spirit_forest`、`dng_ancient_tomb_shu` 與可切回 `City / Fort` 的高段候選，避免蜀地鏈連續同質化。
+先 commit `dng_ancient_tomb_shu` 的 implementation milestone；commit 後再回到 queue 規則決定下一個 actionable area。
 
 ## Next Action
 
-- 依 `world_map / progression / 題材分布 / players / skills` 重新盤點蜀地下一個 actionable area
-- 優先比較 `wild_spirit_forest`、`dng_ancient_tomb_shu` 與可提供 family variety 的高段候選
-- 決定後再建立下一個單區 plan / spec milestone
+- commit `dng_ancient_tomb_shu` 的 implementation milestone
+- 確認 tracker / current-game registry 與 commit 訊息一致
+- commit 後再依 queue 規則決定是否推進下一個 area
 
 ## Next Prompt
 
-`依 queue 規則盤點蜀地下一個 actionable area：先一起檢查 world_map / progression / 題材分布 / players / skills，優先比較 wild_spirit_forest、dng_ancient_tomb_shu 與可提供 family variety 的高段候選，再決定下一個要開工的 area。`
+`先 commit dng_ancient_tomb_shu 的 implementation milestone：包含 wild_hidden_valley/19008 <-> dng_ancient_tomb_shu/19101 runtime boundary、index / roo / mob / obj / res / shp、directory.lst 與 current-game area registry 更新；commit 後再依 queue 規則決定下一個 area。`

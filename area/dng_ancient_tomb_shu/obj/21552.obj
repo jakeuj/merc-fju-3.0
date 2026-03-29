@@ -1,0 +1,15 @@
+Vnum            21552
+Name            tomb flask~
+ShortDesc       墓道水囊(tomb flask)~
+Description
+這只墓道水囊(tomb flask)外層包著舊布與細繩，看得出是專為潮濕墓道環境準備的隨
+身水具。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           48
+Value           10 10 LIQ_WATER 0
+Weight          1
+Cost            188
+End

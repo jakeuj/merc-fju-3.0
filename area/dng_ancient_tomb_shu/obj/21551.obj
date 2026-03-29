@@ -1,0 +1,15 @@
+Vnum            21551
+Name            tomb ration~
+ShortDesc       古墓乾糧包(tomb ration)~
+Description
+一包專給墓道巡查者隨身備著的古墓乾糧包(tomb ration)收得很密，像是為了在封閉墓
+道裡久待也不容易受潮變質。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           48
+Value           26 54 4 0
+Weight          1
+Cost            176
+End

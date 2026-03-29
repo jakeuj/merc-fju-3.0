@@ -1,0 +1,31 @@
+Vnum            21533
+Name            armored remnant~
+ShortDesc       耳室殘甲兵~
+Description
+耳室殘甲兵身上的舊甲早已失去整齊樣貌，卻仍保留著某種不肯退場的軍氣。他站在耳
+室陰影裡時，會讓人很難分清他到底是守墓者，還是被古墓留下來的另一段歷史。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       10
+Level           58
+Hitroll         3
+Protect         0
+Damroll         6
+Str             16
+Int             11
+Wis             12
+Dex             13
+Con             15
+Hp              3020
+Mana            82
+Move            172
+Class           0
+Gold            680
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1,0 +1,44 @@
+Vnum            19103
+Name            斷燈墓道~
+Description
+墓道兩側還能看見早年燈座留下的黑痕，可真正的燈火與守墓秩序早已退去，只剩石壁把聲音一層層往前送。越往裡走，越會覺得這地方不是廢棄，而是在長時間等待某種重新開啟。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       SOUTH
+ExitVnum        19102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        19106
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         墓道~
+End
+
+#Enquire
+Keyword         燈~
+End
+
+#Enquire
+Keyword         前面~
+End
+
+End

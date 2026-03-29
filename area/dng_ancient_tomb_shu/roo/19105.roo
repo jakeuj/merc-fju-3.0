@@ -1,0 +1,36 @@
+Vnum            19105
+Name            殘兵耳室~
+Description
+耳室裡靠牆散著幾件早已鏽死的殘兵與破甲片，像這座古墓在封起來之前曾經短暫拿來藏過更倉促、更世俗的東西。這種不合典禮的痕跡，反而讓整座墓顯得更真實也更難測。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       WEST
+ExitVnum        19102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        19107
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         殘兵~
+End
+
+#Enquire
+Keyword         耳室~
+End
+
+#Enquire
+Keyword         誰~
+End
+
+End

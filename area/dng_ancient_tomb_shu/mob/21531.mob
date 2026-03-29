@@ -1,0 +1,32 @@
+Vnum            21531
+Name            tomb usher~
+ShortDesc       落階引路人~
+Description
+這名落階引路人守在墓口附近時總像在分辨來者究竟是迷路、尋寶，還是真的知道自己
+正往哪裡走。他對這條落階的熟悉感，反而讓整座古墓顯得更不該被輕視。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       80
+Level           48
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             14
+Dex             12
+Con             13
+Hp              1700
+Mana            108
+Move            176
+Class           0
+Gold            360
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

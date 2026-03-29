@@ -1,0 +1,16 @@
+Vnum            21553
+Name            tomb short blade~
+ShortDesc       守紋短刃(tomb short blade)~
+Description
+這把守紋短刃(tomb short blade)沒有多餘裝飾，卻被保養得仍能應付墓道裡的近身防
+備與狹窄空間搏鬥。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           52
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            228
+End

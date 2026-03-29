@@ -1,0 +1,31 @@
+Vnum            21532
+Name            seal guard~
+ShortDesc       墓道守紋者~
+Description
+墓道守紋者對牆上的封紋與地面刻痕極為敏感，像任何異動都會立刻驚醒他。他那股不
+准外人輕易越過墓道界線的姿態，比石壁本身更有壓迫感。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       40
+Level           54
+Hitroll         2
+Protect         0
+Damroll         5
+Str             15
+Int             12
+Wis             13
+Dex             12
+Con             14
+Hp              2420
+Mana            96
+Move            168
+Class           0
+Gold            520
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

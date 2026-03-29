@@ -1,0 +1,44 @@
+Vnum            19102
+Name            前廳石券~
+Description
+前廳頂上的石券拱得很低，逼得來人很難完全抬頭，只能先專注在腳下與前方那幾步。牆面殘留的刻紋像曾有過完整的墓誌與警語，只是現在大半都故意看不清了。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       SOUTH
+ExitVnum        19101
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        19103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        19105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         前廳~
+End
+
+#Enquire
+Keyword         石券~
+End
+
+#Enquire
+Keyword         刻紋~
+End
+
+End
