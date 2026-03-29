@@ -1,0 +1,32 @@
+Vnum            21821
+Name            chengdu book steward~
+ShortDesc       成都掌書先生~
+Description
+這名成都掌書先生說話不快，卻總能在抬眼之間看出來人是為了找書、問路，還是單純想打
+聽學舍裡最近又有什麼新消息。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           40
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             16
+Wis             16
+Dex             10
+Con             11
+Hp              1620
+Mana            160
+Move            110
+Class           0
+Gold            240
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

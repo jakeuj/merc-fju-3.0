@@ -45,6 +45,7 @@
         "direction": "north",
         "source_vnum": 19706,
         "target_area": "district_chengdu_scholar",
+        "target_room_vnum": 20001,
         "label": "學舍街"
       },
       {
@@ -152,15 +153,16 @@
     {
       "vnum": 19706,
       "name": "學舍外街",
-      "description": "外街比主十字安靜許多，卻不冷清，紙墨、木簡與低聲議論把空氣撐出一種都城才有的知性秩序。它讓人很清楚知道，成都不只靠市聲與官威立城，也靠這些讀書與議論的氣味把整座都城撐得更厚。",
+      "description": "外街比主十字安靜許多，卻不冷清，紙墨、木簡與低聲議論把空氣撐出一種都城才有的知性秩序。如今再往北走，便會真正踏進成都的書院腹地，讓人很清楚知道這座都城不只靠市聲與官威立城，也靠讀書與議論的氣味把自己撐得更厚。",
       "sector_type": "SECT_CITY",
       "cluster": "official-quarter",
       "coord": [-2, 1, 0],
-      "labels": ["scholar", "quiet", "future-district"],
+      "labels": ["scholar", "quiet", "district-link"],
       "exits": [
-        { "direction": "south", "to": 19703 }
+        { "direction": "south", "to": 19703 },
+        { "direction": "north", "to": 20001, "external": true }
       ],
-      "enquires": ["學舍", "書院", "讀書人"]
+      "enquires": ["學舍", "書院", "讀書人", "講席"]
     },
     {
       "vnum": 19707,

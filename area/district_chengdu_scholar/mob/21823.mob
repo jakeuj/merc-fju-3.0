@@ -1,0 +1,32 @@
+Vnum            21823
+Name            chengdu notice runner~
+ShortDesc       成都榜帖差役~
+Description
+這名成都榜帖差役不像官府裡那種只管張榜收文的差人，反倒更熟悉學舍裡哪些消息該貼、
+哪些話該傳，哪些留字又該讓誰自己來看。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       95
+Level           39
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             12
+Wis             13
+Dex             12
+Con             11
+Hp              1480
+Mana            110
+Move            125
+Class           0
+Gold            210
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

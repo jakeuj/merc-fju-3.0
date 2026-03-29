@@ -1,0 +1,36 @@
+Vnum            20008
+Name            北院牌門~
+Description
+走到北院牌門時，成都的喧聲已經遠得像另一層世界，只留下更深、更靜的書院秩序在前頭延伸。這裡不像真正的終點，反而像在提醒人，眼前這一段仍只是成都問學腹地的第一層外圈。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        20006
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         北院~
+End
+
+#Enquire
+Keyword         內舍~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+End

@@ -1,0 +1,36 @@
+Vnum            20006
+Name            靜讀側院~
+Description
+側院裡連風聲都像放低了幾分，只有偶爾翻頁或落筆的細響，讓人很難不跟著收斂動作。這裡不是無事可做，而是所有事情都必須慢下來，才能真正讀得進去。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        20003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        20008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         靜院~
+End
+
+#Enquire
+Keyword         讀書~
+End
+
+#Enquire
+Keyword         抄寫~
+End
+
+End

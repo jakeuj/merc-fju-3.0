@@ -1,0 +1,15 @@
+Vnum            21831
+Name            chengdu scholar ration~
+ShortDesc       成都書院點心(scholar ration)~
+Description
+這份成都書院點心(scholar ration)做得細巧卻不花俏，看起來就是替長時間讀書與抄寫的人
+準備的簡單口糧。
+~
+Unit            份~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           36
+Value           20 30 4 0
+Weight          1
+Cost            108
+End

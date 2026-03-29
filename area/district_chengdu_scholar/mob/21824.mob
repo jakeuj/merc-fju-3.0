@@ -1,0 +1,32 @@
+Vnum            21824
+Name            chengdu questioning student~
+ShortDesc       成都問學士子~
+Description
+這名成都問學士子抱著書卷與筆札，神情看似專心，卻又總像隨時準備好要向人追問一句更
+細的去路、典故或消息來源。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           37
+Hitroll         0
+Protect         0
+Damroll         0
+Str             9
+Int             15
+Wis             15
+Dex             11
+Con             10
+Hp              1260
+Mana            170
+Move            105
+Class           0
+Gold            150
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

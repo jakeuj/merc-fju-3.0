@@ -1,0 +1,15 @@
+Vnum            21832
+Name            chengdu ink tea cup~
+ShortDesc       成都清茶杯(ink tea cup)~
+Description
+這只成都清茶杯(ink tea cup)上還留著一點茶色與淡墨氣，像是書院裡最常見那種邊讀邊飲
+的杯子。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           36
+Value           12 12 0 0
+Weight          2
+Cost            124
+End

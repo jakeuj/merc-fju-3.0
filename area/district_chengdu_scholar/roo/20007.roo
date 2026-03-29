@@ -1,0 +1,44 @@
+Vnum            20007
+Name            抄書小巷~
+Description
+小巷不寬，牆邊卻擺滿了晾紙、竹簡與半乾的墨字，像知識在這裡不是只被講述，也被一筆筆地重新抄寫與整理。比起主街顯眼的書坊，這裡更像真正把學舍日常默默運轉起來的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        20005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         抄書~
+End
+
+#Enquire
+Keyword         紙墨~
+End
+
+#Enquire
+Keyword         筆札~
+End
+
+End

@@ -709,7 +709,39 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `district_chengdu_scholar`
+  - area_family: `District`
+  - parent_area: `city_chengdu`
+  - reserved_room_block: `20001-20020`
+  - planned_vnum_range: `20001-20020`
+  - level_range: `36-48`
+  - theme: `歷史城市`
+  - subtheme: `文士 / 書院`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/district_chengdu_scholar/map.md`
+    - `ref/world-graph.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `area/city_chengdu/map.md`
+    - `plans/area/0112-city-chengdu.md`
+    - `plans/area/0114-district-chengdu-market.md`
+  - ref_inputs_deferred:
+    - `ref/sanguo-area-specfirst/area/city_xinye/map.md`
+    - `ref/sanguo-area-specfirst/area/city_wan/map.md`
+    - `docs/3yWebsite/map/chendo.html`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `city_chengdu/19706` 已有成熟的學舍外街 stub，只需補一個 `north` boundary 就能掛上書院 district
+    - `district_chengdu_scholar` 雖然同屬 `District`，但與 `district_chengdu_market` 在題材、語氣與玩家 loop 上形成明確的商街 / 書院切換
+    - 比起本輪比較過的 `city_xinye` 等非 `District` 候選，這一區不需同時重排多個既有 area 的內部方向，實作風險與耦合成本更低
+    - `players.json / skills.json` 沒有提供 scholar-first 的硬性 gameplay 訊號，但也沒有反證；在現成成都 stub 成熟度最高的前提下可接受
+  - compliance_check:
+    - conditionally compliant；雖然連續兩個 `District` 不是 queue variety 的理想節奏，但本輪未找到同等成熟、又不用大改既有 runtime 邊界的非 `District` 候選，因此先完成成都第二個核心分區
+  - delivery_gate: `implementation_ready_for_commit`
 
 
 ## Done
@@ -893,14 +925,14 @@
 
 ## Current Recommended Next Step
 
-回到 queue 規則重建 `todo`，優先比較 `district_chengdu_scholar` 與其他能提供 family variety 的非 `District` 候選，避免在 `district_chengdu_market` 後立刻再堆同質成都城內分區節奏。
+先提交 `district_chengdu_scholar` implementation milestone；commit 完成後，再把 tracker 從 `in_progress` 推進成 `done`。
 
 ## Next Action
 
-- 依 `world_map + progression + 題材分布表 + players/skills` 重建下一個 actionable area 候選
-- 優先比較 `district_chengdu_scholar` 與其他能提供 family variety 的非 `District` 候選
-- 避免在 `district_chengdu_market` 後立刻再開另一段同質成都城內市井 / 學舍節奏
+- 提交 `district_chengdu_scholar` implementation milestone
+- commit 後把 tracker 從 `in_progress` 推進成 `done`
+- 下一輪再回到 queue 規則，比較能重新拉開 family variety 的非 `District` 候選
 
 ## Next Prompt
 
-`回到 queue 規則重建 todo，優先比較 district_chengdu_scholar 與其他非 District 候選，選出下一個 actionable area。`
+`先提交 district_chengdu_scholar implementation milestone，然後把 tracker 從 in_progress 推進成 done。`

@@ -1,0 +1,44 @@
+Vnum            20001
+Name            書院街口~
+Description
+從學舍外街再往北踏進來時，城心的喧聲很快就被壓成較遠的背景，只剩紙墨、木簡與低聲問答把空氣撐得清亮。這裡仍然屬於成都，卻像都城把最浮動的人潮先留在外面，再把願意慢下來的人收進更講秩序的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        19706
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        20002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         學舍~
+End
+
+#Enquire
+Keyword         書院~
+End
+
+#Enquire
+Keyword         講席~
+End
+
+End

@@ -1,0 +1,51 @@
+Vnum            20002
+Name            書坊長街~
+Description
+長街兩側不是米袋與布幌，而是書箱、筆架與一塊塊寫得端正的木牌，讓腳步也自然跟著輕了幾分。成都真正的厚度不只在官署與商街，也在這種不靠喊價、卻一樣讓消息流得很快的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        20001
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        20004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         書牌~
+Description
+一排排書牌字體端正，標著抄本、筆札與講義所在，像連做買賣這件事都得先講求章法。
+~
+End
+
+#Enquire
+Keyword         書坊~
+End
+
+#Enquire
+Keyword         抄本~
+End
+
+#Enquire
+Keyword         講義~
+End
+
+End

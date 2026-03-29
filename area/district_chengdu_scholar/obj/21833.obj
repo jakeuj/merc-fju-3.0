@@ -1,0 +1,15 @@
+Vnum            21833
+Name            chengdu study lamp~
+ShortDesc       成都讀書燈(study lamp)~
+Description
+這盞成都讀書燈(study lamp)火色不盛，卻照得很穩，像是專門替長夜誦讀與抄寫留的一點
+清亮。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           37
+Value           0 0 32 0
+Weight          1
+Cost            142
+End

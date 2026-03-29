@@ -2267,6 +2267,25 @@
         "plans/area/0114-district-chengdu-market.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "district_chengdu_scholar",
+      "title": "成都學舍",
+      "room_range": "20001-20020",
+      "load_order": 121,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_chengdu",
+      "theme_primary": "歷史城市",
+      "theme_secondary": "文士 / 書院",
+      "summary": "承接成都學舍外街，落成書院街口、書坊長街、講席中庭、碑廊轉角、榜帖角與靜讀側院構成的都城文士 district。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/district_chengdu_scholar/index",
+        "area/district_chengdu_scholar/map.md",
+        "plans/area/0115-district-chengdu-scholar.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

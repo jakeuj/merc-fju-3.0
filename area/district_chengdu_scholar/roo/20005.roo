@@ -1,0 +1,51 @@
+Vnum            20005
+Name            榜帖角~
+Description
+牆邊貼著的榜帖不像官府那樣處處帶命令口氣，而更像把徵文、會講、徵抄與問學消息悄悄傳給會來看的人。這裡讓人明白，成都的消息不只靠差役傳，也靠讀書人彼此之間的留字與流轉。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        20003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        20007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         榜帖~
+Description
+榜帖有新有舊，有些正經得像官文，有些卻只是幾行留字，偏偏最容易讓有心人停下來讀。
+~
+End
+
+#Enquire
+Keyword         榜帖~
+End
+
+#Enquire
+Keyword         徵文~
+End
+
+#Enquire
+Keyword         問學~
+End
+
+End

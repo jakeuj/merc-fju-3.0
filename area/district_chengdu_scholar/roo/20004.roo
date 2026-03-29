@@ -1,0 +1,36 @@
+Vnum            20004
+Name            講席中庭~
+Description
+中庭鋪得平正，席位與木案也排得乾淨，像只要再多幾個人坐下來，就能立刻把一場講論撐起來。比起市井那種熱鬧，這裡更像另一種收束得很好的力量，靠著辯論、記誦與提問把都城撐得更穩。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        20002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         講席~
+End
+
+#Enquire
+Keyword         先生~
+End
+
+#Enquire
+Keyword         學問~
+End
+
+End

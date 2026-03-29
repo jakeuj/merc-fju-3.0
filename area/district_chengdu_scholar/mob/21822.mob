@@ -1,0 +1,32 @@
+Vnum            21822
+Name            chengdu lecture overseer~
+ShortDesc       成都講席學官~
+Description
+這名成都講席學官衣袍整潔，神情也比市井裡的人更收斂些，像是即便站在街邊，也始終還
+維持著書院裡那套看人、聽話與整理問題的方式。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           42
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             15
+Wis             15
+Dex             11
+Con             12
+Hp              1750
+Mana            150
+Move            120
+Class           0
+Gold            260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

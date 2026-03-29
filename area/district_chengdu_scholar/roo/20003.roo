@@ -1,0 +1,51 @@
+Vnum            20003
+Name            碑廊轉角~
+Description
+石碑與木廊在這裡轉出一個安靜的角度，往來學子總會順手停下來看上兩眼。它不像榜文長廊那樣偏官府氣，卻同樣讓人意識到成都的消息與學問常常寫在牆上、留在路口，也留在每一次側眼經過之間。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        20001
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        20005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20006
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         石碑~
+Description
+碑面刻著舊文、講題與名家題字，邊角雖有磨痕，卻反而讓人覺得這裡的字是真的被一代代人看過。
+~
+End
+
+#Enquire
+Keyword         石碑~
+End
+
+#Enquire
+Keyword         題字~
+End
+
+#Enquire
+Keyword         舊文~
+End
+
+End

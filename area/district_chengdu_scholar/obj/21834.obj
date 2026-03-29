@@ -1,0 +1,16 @@
+Vnum            21834
+Name            chengdu scholar baton~
+ShortDesc       成都學舍戒尺(scholar baton)~
+Description
+這把成都學舍戒尺(scholar baton)看起來更像用來整肅秩序與提醒坐姿，而不是拿去與人真
+正廝鬥的兵器。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+WearLoc         ITEM_WIELD
+Level           40
+Value           0 -1 -1 WEAPON_WHIP
+Weight          2
+Cost            188
+End
