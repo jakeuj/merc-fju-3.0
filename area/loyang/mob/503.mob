@@ -30,6 +30,7 @@ Multipile       100
 AttackRatio     100
 DodgeRatio      100
 Migrate         0
+Speak           YES
 Sex             SEX_MALE
 Enable          70 'military blade'
 Enable          65 'military steps'

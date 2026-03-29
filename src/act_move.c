@@ -2969,7 +2969,7 @@ FUNCTION( do_enquire )
   depth = UMAX( 1, UMIN( level * 3, MAX_SCAN_DEPTH - 1 ) );
 
   clean_scan();
-  scan_room( pRoom->vnum, depth, -1 );
+  scan_room_world( pRoom->vnum, depth, -1 );
 
   buf[0] = '\x0';
   for ( rem = -1, total = loop = 0; loop < ScanPointer; loop++ )

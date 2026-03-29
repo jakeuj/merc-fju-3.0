@@ -2,7 +2,9 @@ Vnum            555
 Name            十字路口~
 Description
 東邊是東陽門﹐可以到達城外﹐上面可以見到高高的城牆﹐另外還有
-許多士兵在上面巡邏﹐戒備森嚴。
+許多士兵在上面巡邏﹐戒備森嚴。若再穿出城門﹐便是新整理過的東
+郊橋頭、路亭與官道﹐對第一次離城的人來說﹐正好適合先認熟回城
+與出城的方向。
 
 ~
 SectorType      SECT_CITY
@@ -38,6 +40,14 @@ ExitVnum        554
 ExitDesc        ~
 ExitKeyword     ~
 ExitKey         0
+End
+
+#Enquire
+Keyword         回城~
+End
+
+#Enquire
+Keyword         城裡~
 End
 
 End

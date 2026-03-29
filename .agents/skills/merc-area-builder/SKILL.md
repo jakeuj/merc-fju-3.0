@@ -118,6 +118,7 @@ source of truth 要分兩種：
 - 若靈感來自歷史人物或《三國演義》這類公共領域題材，仍要優先對齊本專案既有世界線、國家、城市、技能與 help 用語，不要只因典故好用就破壞現有設定一致性
 - 在 spec prose 中，不只描述地圖拓樸，也主動寫出「這個節點想讓玩家感受到什麼」：例如軍鎮壓力、郊野詭譎、江湖祕聞、邊關肅殺、地下水道潮濕危險
 - 在 room/NPC/quest 設計上，優先讓玩家從文字就能推得出玩法：誰可問路、誰像師父、哪裡像埋伏點、哪個物件可能可檢視、哪句傳聞暗示支線
+- 若房間互動依賴 `#Keyword` / `#Job`，房間描述要先把玩家會試的詞露出來；可直接像 `area/new/roo/452.roo` 提示 `look sign`，像 `area/loyang/roo/501.roo` 用顏色突顯操作點，像 `area/loyang/roo/522.roo` 先露出 `east_wall` 再讓可疑牆面與既有出口/door schema 承接，或像 `area/newfight/roo/1211.roo` 先露出 `hole` 再用 keyword/job 承接 `bore hole`。英文 keyword 混在中文敘述裡通常已自然醒目；中文 keyword 若屬新手主線或必要路徑，預設用小括弧、顏色或直指指令額外 highlight，把完全隱性的 keyword 留給 puzzle / secret 類互動。若既有 `#Exit` / `ExitKeyword` / `IsDoor` / `Closed` 已足夠表達入口，不要急著為了每個秘密入口新增 `#Job`；`document/room.txt` 也明寫 `ExitKeyword` 是門名、`ExitDesc` 是看方向時的描述、door flags 是出口狀態。若設計的是兩段式探索入口，前一房只放玩家當下真看得到的 clue，並讓 clue 對應的 `ExitKeyword` 真正控制出口；例如 `7507` 用 `草痕/枯草` 承接 `south`，`7511` 才用 `石板` 承接 `down`。如果出口仍是明顯開放的 `south/down`，而 keyword 只是在重述同一條路，通常代表 keyword 應刪掉或出口應改成 door schema。area flat files 目前慣例直接寫 ANSI，例如 `[1;32mnew[0m`、`[1;33mfight[0m`；若在 `map.md` 的 JSON 字串內寫色碼，ESC 要改寫成 `\u001b`。若想查 repo 既有色名與 token 對照，可看 `command/t/title.ins` 與 `src/ansi.c`。細則讀 `references/room-exits-and-interactions.md`
 - 技能、武功、道具與裝備命名可帶有古風、兵法、江湖或異聞色彩，但要避免和既有 `skills.md` / help / docs 的名稱體系衝突；若要新增來源，需同步規劃 teacher、study 物件、掉落或任務導引
 - 若一個區域明顯採用某種主題語彙（例如軍旅、俠客、山寨、妖異水脈），就讓房間描述、NPC 口吻、物件命名、遭遇事件與 `#Enquire` 詞彙維持同一語氣，不要風格跳躍
 - 若需要題材資料支撐世界觀、地理、國家、技能或玩家導流，優先仍以 `docs/3yWebsite` 與 repo 既有內容為主，再把外部作品當作 flavor inspiration，而不是新的 source of truth

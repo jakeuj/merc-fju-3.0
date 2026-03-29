@@ -16,6 +16,7 @@ SCAN_DATA       ScanData[MAX_SCAN_COUNT];
 int             ScanPointer = 0;
 
 bool    add_scan        args( ( int, int, int[] ) );
+static void scan_room_internal args( ( int, int, int, bool ) );
 
 void clean_scan( void )
 {
@@ -38,6 +39,16 @@ void clean_scan( void )
 }
 
 void scan_room( int vnum, int depth, int source )
+{
+  scan_room_internal( vnum, depth, source, TRUE );
+}
+
+void scan_room_world( int vnum, int depth, int source )
+{
+  scan_room_internal( vnum, depth, source, FALSE );
+}
+
+static void scan_room_internal( int vnum, int depth, int source, bool same_area_only )
 {
   extern const sh_int  rev_dir [];
   static int           ScanDir[MAX_SCAN_DEPTH + 1];
@@ -65,11 +76,11 @@ void scan_room( int vnum, int depth, int source )
 
     if ( ( pExit = pRoom->exit[dir] )
       && ( pEnd = pExit->to_room )
-      && pEnd->area == pRoom->area
+      && ( !same_area_only || pEnd->area == pRoom->area )
       && rev_dir[dir] != source
       && add_scan( pEnd->vnum, depth, ScanDir ) )
     {
-      scan_room( pEnd->vnum, depth - 1, dir );
+      scan_room_internal( pEnd->vnum, depth - 1, dir, same_area_only );
     }
   }
 

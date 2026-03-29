@@ -1,9 +1,9 @@
 Vnum            7507
 Name            田埂岔口~
 Description
-狹長的田埂在此分成兩條，一條往東去農舍，一條往南靠近被雜草半掩的舊井。回頭往北仍能看到官道邊的告示牌，讓這處岔口帶著一種介於民生與隱患之間的微妙氣氛。
+狹長的田埂在此分成兩條，一條往東去農舍，一條往南順著被雜草遮住的岔路沒入暗處。岔口木樁上掛著巡檢夜裡留下的風燈，昏黃光圈剛好照住那條貼地延伸的[1;32m草痕[0m與一叢過分潮濕的枯草，像是故意把某條不該太醒目的路留給看得懂的人。若想弄清南邊那條隱路通往哪裡，不妨先留意草痕與枯草。回頭往北仍能看到官道邊的告示牌，讓這處岔口帶著一種介於民生與隱患之間的微妙氣氛；若不是熟門熟路的人，往南那條草痕很容易被當成普通田埂漏看過去。
 ~
-SectorType      SECT_FIELD
+SectorType      SECT_CITY
 
 #Exit
 Direction       NORTH
@@ -32,9 +32,25 @@ End
 #Exit
 Direction       SOUTH
 ExitVnum        7511
-ExitDesc        ~
-ExitKeyword     ~
+ExitDesc        南邊那叢過分潮濕的枯草斜壓在窄道口，後頭像還藏著能再往裡摸去的空隙。若想看清楚這條隱路，得先把枯草撥開。~
+ExitKeyword     枯草~
 ExitKey         0
+IsDoor          Yes
+Closed          Yes
+End
+
+#Keyword
+Keyword         草痕~
+Description
+一條被反覆踩伏的草痕貼著田埂往南延去，不像農人日常走出的短路，反而像有人刻意留著通往某處隱蔽入口的暗路。若順著這道草痕再往南摸去，多半就能靠近草後藏著的東西。
+~
+End
+
+#Keyword
+Keyword         枯草~
+Description
+南邊那叢枯草表面沾著不合時節的潮氣，底下像還壓著更冷硬的東西。草根被人反覆撥開又合攏，像是專門拿來遮住後頭那條窄道；若想看清草後到底藏了什麼，不妨試著把枯草打開(open)。
+~
 End
 
 #Enquire
@@ -42,11 +58,11 @@ Keyword         農舍~
 End
 
 #Enquire
-Keyword         水渠~
+Keyword         田埂~
 End
 
 #Enquire
-Keyword         暗井~
+Keyword         岔口~
 End
 
 End

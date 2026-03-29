@@ -22,6 +22,13 @@ ExitKey         0
 End
 
 #Keyword
+Keyword         井口~
+Description
+抬頭能看到一圈灰白天光掛在井壁上方，偶爾還會有遠遠的腳步聲自井沿傳下來，提醒你回到地面的路仍在上頭。
+~
+End
+
+#Keyword
 Keyword         水門~
 Description
 檢修道更深處有一扇生鏽水門半掩在黑暗中，門縫後不時傳來水流拍擊石壁的聲音，像是在提醒你真正的地下水路還在前方。
@@ -34,6 +41,10 @@ End
 
 #Enquire
 Keyword         上去~
+End
+
+#Enquire
+Keyword         井底~
 End
 
 End

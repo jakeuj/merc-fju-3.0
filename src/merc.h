@@ -4936,6 +4936,7 @@ extern int      QuestionLock;
 /* scan.c */
 void            clean_scan              args( ( void ) );
 void            scan_room               args( ( int, int, int ) );
+void            scan_room_world         args( ( int, int, int ) );
 void            print_scan              args( ( CD *, OD * ) );
 extern SCAN_DATA                        ScanData[];
 extern int                              ScanPointer;

@@ -5,11 +5,13 @@ Description
 一名披著半舊皮甲的巡檢兵站得筆直﹐手總是不自覺按在腰間刀柄附
 近。看得出他已在東郊路上來回巡了很久﹐對每一個停在告示牌前太
 久的人都多看兩眼。
+官道、田埂與暗井口那些不該在夜裡亂闖的地方﹐他顯然已記得比誰
+都清楚。
 ~
 Sentinel        Yes
 StayArea        Yes
 Alignment       150
-Level           10
+Level           20
 Hitroll         3
 Protect         -2
 Damroll         2

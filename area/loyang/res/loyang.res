@@ -49,6 +49,9 @@ M  501    6      555   城市守衛
 E  540    503    16    裝備鋼刀
 E  539    503    WEAR_BODY     裝備鎧甲
 E  541    503    WEAR_FEET     裝備靴子
+M  503    20     501   城門守衛
+E  539    503    WEAR_BODY     裝備鎧甲
+E  541    503    WEAR_FEET     裝備靴子
 M  560    4      713   禁軍
 E  556    560    WEAR_WIELD    裝備鋼刀
 E  575    560    WEAR_BODY     裝備鎧甲

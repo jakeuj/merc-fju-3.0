@@ -4,12 +4,14 @@ ShortDesc       路亭茶販~
 Description
 一名在東郊路亭做小買賣的茶販守著他的木桶與陶杯﹐不時伸長脖子
 往西看看橋頭和來路﹐像是在確認今天是否還會有更多旅人經過。
+凡是第一次出城的人若在此停下來問路﹐他總能把橋頭、丘陵與哪裡
+不能亂闖說得比茶還熱。
 ~
 Sentinel        Yes
 StayArea        Yes
 NoKill          Yes
 Alignment       50
-Level           8
+Level           20
 Hitroll         0
 Protect         0
 Damroll         0

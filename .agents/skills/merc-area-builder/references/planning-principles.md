@@ -34,6 +34,14 @@
 - 若匯入的是更接近原始 Merc 的 reset 寫法，記得 `R` 也是合法 reset 類型，用於亂數出口
 - 新手區或主城服務鏈改動時，優先維持 `newbie.md` 中玩家預期仍找得到的核心流程
 - 房間若依賴 `#Keyword` 提示特殊動詞才能前進或觸發事件，優先維持「玩家看到描述就能推得出指令」這個原則
+- 若要玩家 `look foo` 或 `verb foo`，先把 `foo` 直接寫進房間描述；教學點可像 `area/new/roo/452.roo` 直接提示 `look sign`，可疑入口可像 `area/loyang/roo/522.roo` 先露出 `east_wall` 再讓 exit/door schema 承接，互動點才像 `area/newfight/roo/1211.roo` 先露出 `hole` 再讓 `#Keyword/#Job` 承接
+- 英文 keyword 混在中文敘述裡時，通常已足夠醒目；中文 keyword 若混在中文句內，且又屬新手主線、必要路徑或核心導引，預設用小括弧、顏色或直指指令額外 highlight
+- 若採 ANSI 顏色突顯 keyword，沿用 repo 慣例直接寫 raw ANSI；在 `.roo` 類 flat file 可直接寫 `[1;32mnew[0m`，在 `mapmd-json` string 內則改寫為 `\u001b[1;32mnew\u001b[0m`。若需要色名或 token 對照，參考 `command/t/title.ins` 與 `src/ansi.c`
+- 完全隱性的 keyword 預設只用在 puzzle、secret、支線捷徑或彩蛋，不要要求新手靠猜中文 keyword 才能走主線
+- 若秘密入口本質上還是門或出口，優先用 `#Exit` / `ExitKeyword` / `IsDoor` / `Closed` 表達；只有門語意不夠時，才新增 room job。這點可回看 `document/room.txt` 對門名、方向描述與 door flags 的定義。
+- 若探索拆成前置 clue 房與真正入口房，讓每一房只承接自己看得到的東西；不要在 clue 房偷塞下一房才真正接觸到的 noun。
+- 若出口仍是明顯開放的 `south/down`，而房內 keyword 只是重述這條路，代表設計還沒收乾淨；要嘛刪 keyword，要嘛把出口改成 `ExitKeyword + IsDoor + Closed`，讓 keyword 真正參與探索。
+- `7507 -> 7511` 這種兩段式入口鏈可當範例：先讓 `草痕/枯草` 承接南向暗路，再讓 `石板` 承接井口往下的入口。
 - `#Enquire` 不是裝飾資料；它是玩家查服務與找地點的入口
 - 若要新增這類互動，先確認它屬於哪一種：
 - 通用移動/操作：實作或修改 `src/act_move.c` / 其他 `do_*` 指令

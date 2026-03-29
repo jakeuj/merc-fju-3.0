@@ -6,7 +6,8 @@ Description
 
 再看城外﹐一條深深的護城河環繞著洛陽﹐看來果然是一個易守難攻
 的城。東邊的橋頭與官道已逐漸整理成新的東郊路線﹐可往城外近郊
-探索。
+探索。若是第一次離城﹐先過橋去路亭認熟回城、丘陵與暗井方向﹐
+會比直接悶頭往更深處亂走安全得多。
 
 ~
 SectorType      SECT_CITY
@@ -26,6 +27,14 @@ ExitVnum        7501
 ExitDesc        ~
 ExitKeyword     ~
 ExitKey         0
+End
+
+#Enquire
+Keyword         東陽門~
+End
+
+#Enquire
+Keyword         東門~
 End
 
 End

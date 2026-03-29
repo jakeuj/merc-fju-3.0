@@ -4,11 +4,12 @@
   "balance_metadata": {
     "planned_level_range": [
       1,
-      12
+      20
     ],
     "notes": [
       "Pilot structured content layer seeded from existing runtime files.",
-      "Topology remains owned by map.md + mapmd-json."
+      "Topology remains owned by map.md + mapmd-json.",
+      "Guide NPCs are kept at level 20 so legacy enquire routing can cover the first-touch road network."
     ]
   },
   "mob_files": [
@@ -35,7 +36,9 @@
           "key": "Description",
           "lines": [
             "一名在東郊路亭做小買賣的茶販守著他的木桶與陶杯﹐不時伸長脖子",
-            "往西看看橋頭和來路﹐像是在確認今天是否還會有更多旅人經過。"
+            "往西看看橋頭和來路﹐像是在確認今天是否還會有更多旅人經過。",
+            "凡是第一次出城的人若在此停下來問路﹐他總能把橋頭、丘陵與哪裡",
+            "不能亂闖說得比茶還熱。"
           ],
           "terminator_style": "line"
         },
@@ -62,7 +65,7 @@
         {
           "kind": "field",
           "key": "Level",
-          "value": "8"
+          "value": "20"
         },
         {
           "kind": "field",
@@ -185,7 +188,9 @@
           "lines": [
             "一名披著半舊皮甲的巡檢兵站得筆直﹐手總是不自覺按在腰間刀柄附",
             "近。看得出他已在東郊路上來回巡了很久﹐對每一個停在告示牌前太",
-            "久的人都多看兩眼。"
+            "久的人都多看兩眼。",
+            "官道、田埂與暗井口那些不該在夜裡亂闖的地方﹐他顯然已記得比誰",
+            "都清楚。"
           ],
           "terminator_style": "line"
         },
@@ -207,7 +212,7 @@
         {
           "kind": "field",
           "key": "Level",
-          "value": "10"
+          "value": "20"
         },
         {
           "kind": "field",
