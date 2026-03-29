@@ -1,0 +1,14 @@
+Vnum            21753
+Name            chengdu hall lantern~
+ShortDesc       成都廊燈(hall lantern)~
+Description
+這盞成都廊燈(hall lantern)做得端整穩重，像是連照路這件事在都城裡都得顧到幾分氣度。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           36
+Value           0 0 36 0
+Weight          1
+Cost            130
+End

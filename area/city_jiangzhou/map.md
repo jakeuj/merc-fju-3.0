@@ -38,6 +38,7 @@
         "direction": "west",
         "source_vnum": 19608,
         "target_area": "city_chengdu",
+        "target_room_vnum": 19701,
         "label": "西向官道"
       }
     ],
@@ -169,7 +170,8 @@
       "coord": [-4, 0, 0],
       "labels": ["west-edge", "future-link", "forward"],
       "exits": [
-        { "direction": "east", "to": 19604 }
+        { "direction": "east", "to": 19604 },
+        { "direction": "west", "to": 19701, "external": true }
       ],
       "enquires": ["西邊", "成都", "官道"]
     }

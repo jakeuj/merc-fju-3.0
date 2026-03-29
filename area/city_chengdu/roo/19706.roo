@@ -1,0 +1,28 @@
+Vnum            19706
+Name            學舍外街~
+Description
+外街比主十字安靜許多，卻不冷清，紙墨、木簡與低聲議論把空氣撐出一種都城才有的知性秩序。它讓人很清楚知道，成都不只靠市聲與官威立城，也靠這些讀書與議論的氣味把整座都城撐得更厚。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        19703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         學舍~
+End
+
+#Enquire
+Keyword         書院~
+End
+
+#Enquire
+Keyword         讀書人~
+End
+
+End

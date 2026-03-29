@@ -1,0 +1,24 @@
+Echo    WILL_ECHO
+Editor  Codex~
+Name    成都~
+Fog     10
+Upper   LEVEL_PC
+Lower   34
+Serial  201
+Capital 0
+Description
+成都﹕
+
+地理狀況﹕位於江州更西、蜀漢主線都城帶的核心節點﹐由東城門、入城御道、錦城十字、
+市樓牌坊、行旅客舍、學舍外街、蜀府前廊與西郊城關構成﹐是把上游轉運節奏重新收束
+成都城秩序、母城服務與蜀中核心感的第一段 city 骨架。
+
+交通狀況﹕東城門已正式銜接 `city_jiangzhou/19608`﹐玩家可由江州一路西行進入本區；
+更深的 `district_chengdu_market`、`district_chengdu_scholar` 與 `wild_chengdu_outer` 仍保
+留給後續掛接﹐這一版先穩定御道、十字、市樓、學舍與西郊城關骨架。
+
+怪物等級﹕第一版預定為 34 到 48 級左右﹐以成都客舍掌櫃、東城守兵、府衙差役與都城
+行腳吏為主﹐強調補給、問路、官務消息與都城主線母城 loop。
+
+~
+End

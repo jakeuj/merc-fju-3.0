@@ -1,0 +1,31 @@
+Vnum            21733
+Name            chengdu clerk~
+ShortDesc       成都府衙差役~
+Description
+這名成都府衙差役走動時總帶著一種不願浪費半步路的乾脆，像整座城裡的榜示、公文與
+差事都得先從他這種人手裡排整齊，才有資格被送進都城的秩序中。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       90
+Level           42
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             13
+Dex             12
+Con             12
+Hp              1700
+Mana            90
+Move            132
+Class           0
+Gold            340
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

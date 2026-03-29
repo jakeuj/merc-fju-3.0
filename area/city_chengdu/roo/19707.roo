@@ -1,0 +1,28 @@
+Vnum            19707
+Name            蜀府前廊~
+Description
+前廊下的差役、榜示與往來文書把這一帶撐得比市樓更乾更穩，連腳步聲都像被地面收得俐落。比起單純管事，這裡更像成都把四方消息整理成國都秩序的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        19704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         官府~
+End
+
+#Enquire
+Keyword         榜示~
+End
+
+#Enquire
+Keyword         差役~
+End
+
+End

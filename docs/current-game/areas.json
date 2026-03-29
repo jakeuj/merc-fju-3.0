@@ -2210,6 +2210,25 @@
         "plans/area/0111-city-jiangzhou.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "city_chengdu",
+      "title": "成都",
+      "room_range": "19701-19720",
+      "load_order": 118,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_jiangzhou",
+      "theme_primary": "歷史城市",
+      "theme_secondary": "蜀漢都城",
+      "summary": "承接江州西城官道口，落成東城門、錦城十字、市樓牌坊、學舍外街與西郊城關構成的蜀漢都城母城。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/city_chengdu/index",
+        "area/city_chengdu/map.md",
+        "plans/area/0112-city-chengdu.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

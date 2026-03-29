@@ -1,0 +1,15 @@
+Vnum            21752
+Name            chengdu travel flask~
+ShortDesc       成都行旅水囊(travel flask)~
+Description
+這只成都行旅水囊(travel flask)縫得厚實牢靠，顯然是給還要往市樓、學舍或西郊奔走的
+人隨身帶著用的。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           34
+Value           12 12 0 0
+Weight          2
+Cost            112
+End

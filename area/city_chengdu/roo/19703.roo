@@ -1,0 +1,52 @@
+Vnum            19703
+Name            錦城十字~
+Description
+錦城十字把成都的節奏全攤在眼前，南邊有行旅歇腳，北邊是讀書與官務，西邊則通向更廣的都城外帶。它不像江州那樣偏重轉運，而更像一個天生用來吸納四方、再把所有事情都安排回體面的中心點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19702
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        19706
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         成都~
+End
+
+#Enquire
+Keyword         十字~
+End
+
+#Enquire
+Keyword         蜀都~
+End
+
+End

@@ -1,0 +1,15 @@
+Vnum            21751
+Name            chengdu warm rice~
+ShortDesc       成都熱飯(warm rice)~
+Description
+一碗成都熱飯(warm rice)蒸氣穩穩往上冒，看起來不華麗，卻很像都城最懂得讓遠路人安
+定下來的那種熱食。
+~
+Unit            碗~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           34
+Value           20 32 4 0
+Weight          1
+Cost            90
+End

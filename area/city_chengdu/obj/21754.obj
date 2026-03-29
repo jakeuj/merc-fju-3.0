@@ -1,0 +1,16 @@
+Vnum            21754
+Name            chengdu patrol blade~
+ShortDesc       成都巡城短刀(patrol blade)~
+Description
+這把成都巡城短刀(patrol blade)被磨得很平整，刀身不見炫耀，只讓人想到都城守軍長年
+巡行所需的穩與準。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+WearLoc         ITEM_WIELD
+Level           38
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            182
+End

@@ -1,0 +1,32 @@
+Vnum            21731
+Name            chengdu innkeeper~
+ShortDesc       成都客舍掌櫃~
+Description
+這名成都客舍掌櫃待人不急不徐，像是早就看慣了各地旅人帶著不同口音和不同麻煩進城，
+再一個個被成都的秩序安頓下來。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       95
+Level           34
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             14
+Wis             14
+Dex             11
+Con             12
+Hp              1200
+Mana            115
+Move            120
+Class           0
+Gold            260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

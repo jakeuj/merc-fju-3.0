@@ -1,0 +1,51 @@
+Vnum            19702
+Name            入城御道~
+Description
+御道比沿途任何一段城路都更寬也更穩，連路旗、車痕與巡行腳步都像被一種看不見的手重新排過。這種不需大聲宣示就能讓人自動放慢聲音的秩序，正是都城與一般城鎮最直接的差別。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19701
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         路牌~
+Description
+立在御道邊的路牌把市樓、學舍與西郊門都標得清清楚楚，像是整座成都連問路都嫌太吵。
+~
+End
+
+#Enquire
+Keyword         路牌~
+End
+
+#Enquire
+Keyword         市樓~
+End
+
+#Enquire
+Keyword         學舍~
+End
+
+End

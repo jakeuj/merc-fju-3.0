@@ -1,0 +1,36 @@
+Vnum            19701
+Name            東城門~
+Description
+自江州再一路西來到這裡時，官道的塵氣會先撞上更厚的牆影與更整齊的旗號。東城門不像上游城帶那樣忙著分流，而更像一座真正的大城在確認你是否已經來到它的秩序之內。站在這裡時，遠路感會第一次明顯被都城規模壓住。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19702
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         江州~
+End
+
+#Enquire
+Keyword         東門~
+End
+
+#Enquire
+Keyword         官道~
+End
+
+End

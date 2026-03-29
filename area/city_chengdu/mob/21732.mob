@@ -1,0 +1,31 @@
+Vnum            21732
+Name            chengdu eastguard~
+ShortDesc       成都東城守兵~
+Description
+這名成都東城守兵的眼神比上游關兵少幾分緊迫，卻多了一種都城守軍特有的沉穩與分寸，
+讓人很難在他面前把任何事敷衍過去。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       80
+Level           38
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             11
+Wis             12
+Dex             12
+Con             13
+Hp              1500
+Mana            80
+Move            126
+Class           0
+Gold            320
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

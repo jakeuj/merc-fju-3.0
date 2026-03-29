@@ -1,0 +1,31 @@
+Vnum            21734
+Name            chengdu courier~
+ShortDesc       成都行腳吏~
+Description
+這名成都行腳吏身上的封條、木簡與路引都整理得乾乾淨淨，像是即使要出城奔走，也得
+先把都城該有的體面一起背在肩上。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       85
+Level           44
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             12
+Dex             13
+Con             12
+Hp              1780
+Mana            90
+Move            136
+Class           0
+Gold            360
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

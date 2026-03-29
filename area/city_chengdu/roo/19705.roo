@@ -1,0 +1,28 @@
+Vnum            19705
+Name            行旅客舍~
+Description
+客舍前的木箱、熱食與換洗水盆看起來都比一般客棧更講究，彷彿連休息這件事在成都也得被照看得體面些。對剛從東來官道進城的人而言，這裡最像都城給遠路人的第一份安穩。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        19702
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         客舍~
+End
+
+#Enquire
+Keyword         熱食~
+End
+
+#Enquire
+Keyword         歇息~
+End
+
+End

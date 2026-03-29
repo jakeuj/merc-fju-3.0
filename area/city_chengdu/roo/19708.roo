@@ -1,0 +1,28 @@
+Vnum            19708
+Name            西郊城關~
+Description
+西郊城關不像東門那樣帶著入城壓力，而更像都城緩緩把秩序往外推送的邊界。站在這裡時，能明顯感到成都的厚度還沒有結束，只是開始把人送往更廣的郊外與蜀地腹心。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         西邊~
+End
+
+#Enquire
+Keyword         近郊~
+End
+
+#Enquire
+Keyword         出城~
+End
+
+End
