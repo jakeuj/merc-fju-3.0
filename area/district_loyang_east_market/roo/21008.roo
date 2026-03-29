@@ -1,0 +1,36 @@
+Vnum            21008
+Name            東市尾棚~
+Description
+走到市尾後，人聲終於鬆開一點，卻沒有真正散掉，反而像被更深的巷路慢慢吸走。這裡讓人知道眼前的東市還只是第一層，真正屬於洛陽腹地的細密生活，仍能在棚後和巷尾再往裡展開。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        21007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        21006
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         市尾~
+End
+
+#Enquire
+Keyword         巷尾~
+End
+
+#Enquire
+Keyword         更裡頭~
+End
+
+End

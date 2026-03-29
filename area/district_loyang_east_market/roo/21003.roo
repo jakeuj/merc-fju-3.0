@@ -1,0 +1,44 @@
+Vnum            21003
+Name            票據棚前~
+Description
+幾張長案、帳冊與說話急促的人把這一角撐得比別處更像一種忙碌的秩序。有人在此兌銀、有人記帳、有人只是湊近了聽聽最近哪裡又傳出新價與新事，讓這裡成了東市最會把消息和買賣綁在一起的節點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        21001
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        21005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        21006
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         票據~
+End
+
+#Enquire
+Keyword         帳冊~
+End
+
+#Enquire
+Keyword         兌銀~
+End
+
+End

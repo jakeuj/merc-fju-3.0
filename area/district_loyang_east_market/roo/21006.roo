@@ -1,0 +1,36 @@
+Vnum            21006
+Name            布棚巷~
+Description
+色布從棚沿一路垂到行人肩頭，巷子因此比主街更亮、更近，也更有一種能把人腳步慢下來的柔韌感。這裡不像主街那樣吵，卻更能看出東市究竟是靠多少熟手眼光與細碎交易撐起來的。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        21003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        21008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         布棚~
+End
+
+#Enquire
+Keyword         裁衣~
+End
+
+#Enquire
+Keyword         細貨~
+End
+
+End

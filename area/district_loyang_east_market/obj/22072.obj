@@ -1,0 +1,14 @@
+Vnum            22072
+Name            hot tea flask~
+ShortDesc       東市熱茶竹筒(hot tea flask)~
+Description
+這只東市熱茶竹筒(hot tea flask)摸起來還帶點溫度，像是專給在人潮和叫賣聲裡走久了的人回一口氣用的。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           5
+Value           10 10 LIQ_WATER 0
+Weight          1
+Cost            84
+End

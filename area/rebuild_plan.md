@@ -709,7 +709,44 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `district_loyang_east_market`
+  - status: `implementation_ready_for_commit`
+  - area_family: `District`
+  - reserved_room_block: `21001-21020`
+  - level_range: `1-10`
+  - theme: `歷史城市`
+  - subtheme: `市集 / 商業`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/world-graph.md`
+    - `ref/sanguo-area-specfirst/area/district_loyang_east_market/map.md`
+    - `ref/sanguo-area-specfirst/area/district_loyang_west_market/map.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `area/loyang/roo/553.roo`
+    - `area/loyang/roo/563.roo`
+    - `area/loyang/roo/597.roo`
+    - `area/loyang/roo/598.roo`
+    - `area/loyang/roo/612.roo`
+    - `area/loyang/roo/613.roo`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/map/loyang.html`
+    - `ref/sanguo-area-specfirst/area/district_loyang_scholar/map.md`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `world-graph` 已將 `district_loyang_east_market` 定義成 `city_loyang` 旁的低等商業 `District`
+    - `players.json` 反覆提到洛陽武器店、馬房與大校場，支持先補城內商業與新手 service loop 最直接的市場分區
+    - `loyang/553` 本身就是商街前帶，而且周邊已連到票據所、武防具店與馬房相關服務，actionability 明顯高於目前較鬆散的西市
+  - compliance_check:
+    - compliant；在 `road_chenliu` 之後切回 `District`，補齊洛陽 service loop，同時避免再堆同質 road
+  - runtime_status:
+    - `district_loyang_east_market` 的 `index / roo / mob / obj / res / shp` 最小可載入集合已建立，首版房間落在 `21001-21008`
+    - `loyang/553 enter <-> district_loyang_east_market/21001 out` 已正式落成
+    - `mapmd_validate`、generator、`python -m json.tool docs/current-game/areas.json`、WSL Linux build 與 direct merc smoke 已通過
+    - `tools/area_acceptance_gate.py district_loyang_east_market` 已回報 `implementation_ready_for_commit`
 
 ## Done
 
@@ -902,14 +939,14 @@
 
 ## Current Recommended Next Step
 
-回到 queue 規則重建 `todo`，優先比較 Luoyang / Chenliu 線上能提供 family variety 的非 `Road` 候選，避免在 `road_chenliu` 後立刻再堆另一條同質官道。
+先提交 `district_loyang_east_market` 的 implementation milestone commit，再做 tracker gate 收尾；不要直接跳下一區。
 
 ## Next Action
 
-- 依 queue 規則重建 `todo` 與 candidate 判斷
-- 優先比較 `district_loyang_east_market`、`district_loyang_west_market` 與其他可提供 family variety 的非 `Road` 候選
-- 重新盤點 Luoyang / Chenliu 中原段的 service loop、城內分區與外圍長路承接順序，避免把未定義的西向 / 東向契約又收斂回同質 road
+- 提交 `district_loyang_east_market` implementation milestone commit
+- 將 tracker 從 `implementation_ready_for_commit` 收尾到已完成狀態
+- commit 完成後再回到 queue 規則盤點下一個 actionable area
 
 ## Next Prompt
 
-`依 queue 規則重建 todo，優先盤點 district_loyang_east_market、district_loyang_west_market 與其他非 Road 候選，再決定下一個 actionable area。`
+`提交 district_loyang_east_market implementation milestone，然後把 tracker 從 in_progress 推進成 done。`

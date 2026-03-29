@@ -1,0 +1,51 @@
+Vnum            21002
+Name            東市主街~
+Description
+主街被成排伸出的木招、布幌與棚影切得層層疊疊，行人和買賣聲則把整條街擠成一股穩定向前的熱氣。洛陽的富裕感在這裡不需要官府證明，光是看貨色、看人潮，就知道這是帝都真正養活日常的一條商脈。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        21001
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        21004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        21005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         木招~
+Description
+幾塊寫著糧、布、馬具與雜貨的木招一塊壓著一塊往外伸，像恨不得先把買客的目光搶過來再說。
+~
+End
+
+#Enquire
+Keyword         店家~
+End
+
+#Enquire
+Keyword         招牌~
+End
+
+#Enquire
+Keyword         採買~
+End
+
+End

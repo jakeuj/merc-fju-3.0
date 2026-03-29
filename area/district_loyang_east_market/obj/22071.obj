@@ -1,0 +1,14 @@
+Vnum            22071
+Name            east market ration~
+ShortDesc       東市乾糧包(east market ration)~
+Description
+這份東市乾糧包(east market ration)包得緊實俐落，看起來就是替邊採買邊趕路的人預備的實用口糧。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           5
+Value           12 18 4 0
+Weight          1
+Cost            72
+End

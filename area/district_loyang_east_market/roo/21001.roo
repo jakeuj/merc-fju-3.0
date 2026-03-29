@@ -1,0 +1,44 @@
+Vnum            21001
+Name            東市街口~
+Description
+一從洛陽城內商街轉進來，原本只是路過耳邊的叫賣聲就立刻變成迎面撲來的人潮、貨擔與招牌。這裡離帝都主街並不遠，卻已經是另一種節奏更密、眼神更快、每個人都像正在盤算著要買什麼或問什麼的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       OUT
+ExitVnum        553
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        21002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        21003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         東市~
+End
+
+#Enquire
+Keyword         街口~
+End
+
+#Enquire
+Keyword         商街~
+End
+
+End

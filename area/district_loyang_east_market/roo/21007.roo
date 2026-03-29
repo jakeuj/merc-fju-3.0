@@ -1,0 +1,51 @@
+Vnum            21007
+Name            差役榜口~
+Description
+幾張新貼的榜示和幾個故意沒寫太明白的名字被釘在牆上，旁邊總有人駐足，也總有人裝作只是順路看一眼。比起官府門前那種正經威嚴，這裡更像東市真正把消息散進人群的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        21004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        21005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        21008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         榜示~
+Description
+榜紙上有招工、有尋物、有催討，也有一些看著就像會把膽子大的人引去偏門巷角的模糊委託。
+~
+End
+
+#Enquire
+Keyword         榜示~
+End
+
+#Enquire
+Keyword         差役~
+End
+
+#Enquire
+Keyword         委託~
+End
+
+End

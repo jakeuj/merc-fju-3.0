@@ -1,0 +1,14 @@
+Vnum            22073
+Name            market lantern~
+ShortDesc       東市提燈(market lantern)~
+Description
+這盞東市提燈(market lantern)不算講究，卻足夠把攤棚、榜紙和晚些時候還沒散掉的人影照得清楚。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           6
+Value           0 0 24 0
+Weight          1
+Cost            96
+End

@@ -1,0 +1,32 @@
+Vnum            22052
+Name            tally clerk~
+ShortDesc       帳房先生~
+Description
+這位帳房先生抱著帳冊站在票據棚前，說話不快，目光卻總先落在人手裡的紙、袋與銀兩上。
+他不像街口掌櫃那樣會招呼人，卻讓人一看就知道東市的許多秩序其實是靠他這種人一筆筆記住。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           6
+Hitroll         0
+Protect         0
+Damroll         0
+Str             9
+Int             13
+Wis             12
+Dex             10
+Con             10
+Hp              260
+Mana            80
+Move            90
+Class           0
+Gold            82
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

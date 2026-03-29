@@ -1,0 +1,15 @@
+Vnum            22074
+Name            market short blade~
+ShortDesc       巡市短刀(market short blade)~
+Description
+這把巡市短刀(market short blade)講究的是在人潮和窄巷裡好使喚，而不是拿來擺軍威。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+WearLoc         ITEM_WIELD
+Level           8
+Value           0 -1 -1 WEAPON_SWORD
+Weight          2
+Cost            120
+End

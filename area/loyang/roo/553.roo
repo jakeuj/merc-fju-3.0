@@ -2,7 +2,8 @@ Vnum            553
 Name            城內道路~
 Description
 南邊有一條路﹐路上有許多商家﹐十分的興榮﹐你可以看到許多的人
-走來走去﹐爭著購買好的東西。
+走來走去﹐爭著購買好的東西。如今東市街口也已被整理成一條可以
+正式轉入的市場支線﹐想走進更熱鬧的商業腹地﹐可由此入市。
 
 ~
 SectorType      SECT_CITY
@@ -38,6 +39,22 @@ ExitVnum        552
 ExitDesc        ~
 ExitKeyword     ~
 ExitKey         0
+End
+
+#Exit
+Direction       ENTER
+ExitVnum        21001
+ExitDesc        東市街口~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         東市~
+End
+
+#Enquire
+Keyword         市場~
 End
 
 End

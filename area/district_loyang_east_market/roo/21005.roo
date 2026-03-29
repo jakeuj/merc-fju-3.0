@@ -1,0 +1,51 @@
+Vnum            21005
+Name            茶湯攤~
+Description
+熱湯和蒸氣把這段街角養成一種專收留腳步的地方，無論是採買回來的人、剛換好票據的人，還是準備去看馬的旅客，都會在這裡先停下一口氣。也正因如此，東市最好打聽的消息往往不在榜上，而在湯氣上頭。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        21002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        21003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        21007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         茶湯~
+Description
+一鍋鍋熱氣在攤前連成不斷的白霧，讓東市這一角總像同時有飯香和閒話在往外冒。
+~
+End
+
+#Enquire
+Keyword         茶湯~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+#Enquire
+Keyword         傳聞~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            22051
+Name            east market keeper~
+ShortDesc       東市掌櫃~
+Description
+這位東市掌櫃站在人流正密的街口旁，眼神像早就習慣在一瞬間分清誰是來看貨、誰是來問路、
+誰又只是想先借著熱鬧喘口氣。他不算熱情，卻很懂得怎麼把買賣和消息一起遞到人手裡。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       120
+Level           7
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             12
+Wis             12
+Dex             11
+Con             10
+Hp              280
+Mana            70
+Move            100
+Class           0
+Gold            70
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

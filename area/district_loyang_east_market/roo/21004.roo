@@ -1,0 +1,36 @@
+Vnum            21004
+Name            馬販角~
+Description
+繩索、草料與鞍具味把這一角和一般商街明顯分開，連人們站的位置都像習慣留出給牲口轉身的空間。對真正要上路的人來說，這裡不只是買賣，更像決定你接下來走得快不快、遠不遠的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        21002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        21007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         馬匹~
+End
+
+#Enquire
+Keyword         鞍具~
+End
+
+#Enquire
+Keyword         趕路~
+End
+
+End

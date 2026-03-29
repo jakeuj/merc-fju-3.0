@@ -2457,6 +2457,25 @@
           "plans/area/0124-road-chenliu.md",
           "area/rebuild_plan.md"
         ]
+      },
+      {
+        "name": "district_loyang_east_market",
+        "title": "洛陽東市",
+        "room_range": "21001-21020",
+        "load_order": 131,
+        "category": "rebuild addition",
+        "origin": "rebuild",
+        "parent_area": "loyang",
+        "theme_primary": "歷史城市",
+        "theme_secondary": "市集 / 商業",
+        "summary": "承接 loyang 的商街前帶，落成東市街口、東市主街、票據棚前、馬販角與差役榜口構成的洛陽商業 district。",
+        "source_paths": [
+          "area/directory.lst",
+          "area/district_loyang_east_market/index",
+          "area/district_loyang_east_market/map.md",
+          "plans/area/0125-district-loyang-east-market.md",
+          "area/rebuild_plan.md"
+        ]
       }
     ]
   }

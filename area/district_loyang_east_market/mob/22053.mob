@@ -1,0 +1,32 @@
+Vnum            22053
+Name            horse boy broker~
+ShortDesc       馬販學徒~
+Description
+這名馬販學徒身上總帶著草料、繩索和一種說不上是忙還是急的味道，像是整天都在幫人把趕路
+的決定往前推一步。他年紀不大，卻已經很懂哪些客人想快些上路，哪些人只是來摸摸鞍具問價錢。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       70
+Level           5
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             10
+Wis             10
+Dex             12
+Con             10
+Hp              240
+Mana            50
+Move            110
+Class           0
+Gold            56
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

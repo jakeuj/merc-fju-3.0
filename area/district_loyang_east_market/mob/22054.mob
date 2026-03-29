@@ -1,0 +1,32 @@
+Vnum            22054
+Name            market bailiff~
+ShortDesc       榜口差役~
+Description
+這名榜口差役站在告示旁時總顯得不緊不慢，像他真正看守的不是幾張紙，而是那些讀完榜示後
+會不會多走一步的人。他不一定會先開口，但你很難忽略他其實正把每個停下來的眼神都記在心裡。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       80
+Level           8
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             11
+Wis             11
+Dex             11
+Con             11
+Hp              300
+Mana            60
+Move            100
+Class           0
+Gold            88
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
