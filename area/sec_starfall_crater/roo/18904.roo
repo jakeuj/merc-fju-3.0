@@ -1,0 +1,36 @@
+Vnum            18904
+Name            星核碎坪~
+Description
+碎坪中央散著幾塊還保留奇異冷亮的隕片，周圍地面卻像被反覆灼燒過一樣發黑。這裡最讓人不安的不是安靜，而是那些隕片像仍在默默牽動整個坑底的光線走向。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        18903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         隕片~
+End
+
+#Enquire
+Keyword         星核~
+End
+
+#Enquire
+Keyword         碎坪~
+End
+
+End

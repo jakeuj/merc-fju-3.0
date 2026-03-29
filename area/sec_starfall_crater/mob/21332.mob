@@ -1,0 +1,31 @@
+Vnum            21332
+Name            altar warden~
+ShortDesc       焦痕守壇人~
+Description
+焦痕守壇人守在熾紋祭壇附近時總會盯著地上的亮紋與裂縫，好像任何小變化都可能代
+表坑底異象又在翻動。他身上那股不肯讓人亂碰祭壇的壓力，比兵卒更沉。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       60
+Level           52
+Hitroll         2
+Protect         0
+Damroll         4
+Str             15
+Int             12
+Wis             13
+Dex             12
+Con             14
+Hp              2280
+Mana            96
+Move            174
+Class           0
+Gold            520
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

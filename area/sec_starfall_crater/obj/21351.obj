@@ -1,0 +1,15 @@
+Vnum            21351
+Name            crater ration~
+ShortDesc       天坑乾糧包(crater ration)~
+Description
+一包專給天坑巡路者隨身備著的天坑乾糧包(crater ration)被包得很緊，看得出是為了
+在強風與焦地之間快速補充體力。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           46
+Value           26 52 4 0
+Weight          1
+Cost            168
+End

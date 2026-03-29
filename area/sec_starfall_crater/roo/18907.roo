@@ -1,0 +1,44 @@
+Vnum            18907
+Name            殞光裂庭~
+Description
+裂庭像是環壁與祭壇之間被硬撕出來的一段過渡帶，地上光紋忽明忽暗，彷彿整片坑底的殘火都在這裡換氣。這裡沒有真正安全的落腳點，只有相對沒那麼容易被異象拖住的地方。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       SOUTH
+ExitVnum        18905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        18906
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        18908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         裂庭~
+End
+
+#Enquire
+Keyword         殞光~
+End
+
+#Enquire
+Keyword         安全~
+End
+
+End

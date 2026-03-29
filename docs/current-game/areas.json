@@ -2058,6 +2058,25 @@
         "plans/area/0103-sec-spirit-peak.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "sec_starfall_crater",
+      "title": "星墜天坑",
+      "room_range": "18901-18920",
+      "load_order": 110,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "wild_bailang",
+      "theme_primary": "仙俠",
+      "theme_secondary": "天坑 / 隕石",
+      "summary": "承接白狼山風蝕石壇，落成焦痕坑緣、裂星斜坡、星核碎坪與天隕觀缺構成的墜星 secret 骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/sec_starfall_crater/index",
+        "area/sec_starfall_crater/map.md",
+        "plans/area/0104-sec-starfall-crater.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

@@ -1,0 +1,44 @@
+Vnum            18903
+Name            裂星斜坡~
+Description
+斜坡上滿是被撞裂後又高溫熔黏過的石紋，踩起來既脆又滑，像一整片地面都還記得那場墜落。越往下走，四周的光色越不穩，讓人連距離感都開始失真。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       SOUTH
+ExitVnum        18902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        18906
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         斜坡~
+End
+
+#Enquire
+Keyword         裂紋~
+End
+
+#Enquire
+Keyword         光~
+End
+
+End

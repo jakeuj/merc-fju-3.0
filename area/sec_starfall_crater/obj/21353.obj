@@ -1,0 +1,16 @@
+Vnum            21353
+Name            crater shard blade~
+ShortDesc       裂星短刃(crater shard blade)~
+Description
+這把裂星短刃(crater shard blade)的刃口帶著細碎亮痕，像是以隕坑邊緣剝落的硬石
+重新磨出來的武器。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           52
+WearLoc         ITEM_WIELD
+Weight          3
+Cost            760
+Value           0 -1 -1 WEAPON_SWORD
+End

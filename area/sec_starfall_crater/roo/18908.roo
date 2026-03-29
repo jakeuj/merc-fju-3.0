@@ -1,0 +1,36 @@
+Vnum            18908
+Name            天隕觀缺~
+Description
+觀缺位在坑內最高、卻也最不完整的一段斷臺上，像有人曾試著從這裡觀測墜星後殘留下來的天象規律。可真正站穩後才會發現，這地方更像一處被異象反過來觀察人的缺口。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       SOUTH
+ExitVnum        18904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        18907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         觀缺~
+End
+
+#Enquire
+Keyword         天隕~
+End
+
+#Enquire
+Keyword         上面~
+End
+
+End

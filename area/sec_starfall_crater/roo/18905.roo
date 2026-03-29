@@ -1,0 +1,36 @@
+Vnum            18905
+Name            熾紋祭壇~
+Description
+祭壇像是在天坑形成之後才被人補築上去，壇面沿著裂紋嵌了一圈早已黯淡卻仍能映光的金石紋路。它讓人懷疑後來的人不是來祭天，而是想試著和坑底那股力量談條件。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       WEST
+ExitVnum        18902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         祭壇~
+End
+
+#Enquire
+Keyword         熾紋~
+End
+
+#Enquire
+Keyword         誰~
+End
+
+End

@@ -1,0 +1,31 @@
+Vnum            21334
+Name            sky watcher~
+ShortDesc       觀缺望星人~
+Description
+觀缺望星人站在高處斷臺邊時總像在聽什麼比風更細的聲音，讓人分不清他在觀天，還
+是在等坑內某種異象再次回應。他身上那股長期守望後留下的冷靜，反而更叫人不安。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       40
+Level           60
+Hitroll         4
+Protect         0
+Damroll         7
+Str             15
+Int             14
+Wis             15
+Dex             14
+Con             14
+Hp              3320
+Mana            150
+Move            190
+Class           0
+Gold            760
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_FEMALE
+End

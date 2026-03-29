@@ -58,6 +58,7 @@
         "direction": "up",
         "source_vnum": 18005,
         "target_area": "sec_starfall_crater",
+        "target_room_vnum": 18901,
         "label": "星墜天坑預留"
       }
     ],
@@ -137,7 +138,8 @@
       "coord": [0, 1, 0],
       "labels": ["landmark", "world-link-up"],
       "exits": [
-        { "direction": "east", "to": 18004 }
+        { "direction": "east", "to": 18004 },
+        { "direction": "up", "to": 18901, "external": true }
       ],
       "enquires": ["石壇", "刻痕", "天上"]
     },

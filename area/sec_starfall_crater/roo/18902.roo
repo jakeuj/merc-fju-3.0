@@ -1,0 +1,44 @@
+Vnum            18902
+Name            焦痕坑緣~
+Description
+坑緣一圈都留著像火燒又像被光硬刻過的焦痕，連風從這裡掠過時都帶著不太像山氣的乾裂味。往內望去，整個天坑不像天然塌陷，更像某顆東西直接從天上嵌進了山裡。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       SOUTH
+ExitVnum        18901
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         焦痕~
+End
+
+#Enquire
+Keyword         坑緣~
+End
+
+#Enquire
+Keyword         裡面~
+End
+
+End

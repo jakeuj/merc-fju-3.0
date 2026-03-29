@@ -1,0 +1,15 @@
+Vnum            21352
+Name            meteor flask~
+ShortDesc       隕光水囊(meteor flask)~
+Description
+這只隕光水囊(meteor flask)外層包著隔熱布，像是專門拿來裝在天坑裡也不容易變味
+的冷泉水。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           46
+Value           10 10 LIQ_WATER 0
+Weight          1
+Cost            184
+End

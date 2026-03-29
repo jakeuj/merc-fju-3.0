@@ -1,0 +1,36 @@
+Vnum            18906
+Name            墜火環壁~
+Description
+環壁內側保留著一道道向外翻卷的熔痕，像是墜下來的火先撞穿地勢，再沿壁面朝四周濺開。站在這裡時，任何抬頭動作都會讓人本能地去想像當年那一擊究竟有多大。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       UP
+ExitVnum        18903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         環壁~
+End
+
+#Enquire
+Keyword         熔痕~
+End
+
+#Enquire
+Keyword         當年~
+End
+
+End

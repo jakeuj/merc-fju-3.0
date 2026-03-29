@@ -1,0 +1,15 @@
+Vnum            21354
+Name            crater lamp~
+ShortDesc       墜星明燈(crater lamp)~
+Description
+這盞墜星明燈(crater lamp)的罩面內側帶著淡淡焦黑痕，點亮後散出的卻不是暖火，而
+是偏冷的白亮光。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           48
+Value           0 0 80 0
+Weight          1
+Cost            220
+End

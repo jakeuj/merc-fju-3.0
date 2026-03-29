@@ -1,0 +1,32 @@
+Vnum            21331
+Name            crater guide~
+ShortDesc       墜星引路者~
+Description
+這名墜星引路者對坑緣與風向變化都熟得可怕，像早就學會如何在不穩的光紋之間替來
+客找出還算安全的落腳點。他看向坑內時的神情，不像敬畏，更像戒備。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           46
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             14
+Wis             14
+Dex             13
+Con             12
+Hp              1640
+Mana            128
+Move            196
+Class           0
+Gold            360
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

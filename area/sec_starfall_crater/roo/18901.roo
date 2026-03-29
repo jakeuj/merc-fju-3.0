@@ -1,0 +1,36 @@
+Vnum            18901
+Name            墜星入口~
+Description
+從風蝕石壇再往上踏出的那一步，地勢忽然不再像普通山坡，而像被某種巨力掀開後又勉強凝住的斷層邊。腳下石色一半灰白一半焦黑，讓人很難相信這裡只是白狼山的更高處。
+~
+SectorType      SECT_HILLS
+
+#Exit
+Direction       DOWN
+ExitVnum        18005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         下面~
+End
+
+#Enquire
+Keyword         石壇~
+End
+
+#Enquire
+Keyword         天坑~
+End
+
+End

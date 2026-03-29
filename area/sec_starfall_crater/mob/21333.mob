@@ -1,0 +1,31 @@
+Vnum            21333
+Name            rift patrol~
+ShortDesc       裂庭巡視者~
+Description
+裂庭巡視者踩過那些忽明忽暗的光紋時幾乎沒有半點遲疑，顯然早已把這片不穩地勢當
+成自己熟悉的巡路。他看人的眼神很快，像在判斷你會不會成為下一個坑底意外。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       20
+Level           56
+Hitroll         3
+Protect         0
+Damroll         6
+Str             16
+Int             12
+Wis             12
+Dex             14
+Con             15
+Hp              2840
+Mana            88
+Move            182
+Class           0
+Gold            640
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
