@@ -1,0 +1,28 @@
+Vnum            19305
+Name            行旅客棧前~
+Description
+客棧前街雖不算寬，卻堆滿了熱湯香氣、行囊、乾糧與準備再上路的木箱，看得出這裡常替剛進城的人把疲憊和方向一起安頓下來。比起單純住店，它更像一個把旅程重新接起來的節點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         客棧~
+End
+
+#Enquire
+Keyword         熱湯~
+End
+
+#Enquire
+Keyword         休息~
+End
+
+End

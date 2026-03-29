@@ -1,0 +1,28 @@
+Vnum            19307
+Name            榜文長廊~
+Description
+長廊一側掛著新舊榜文，從道路消息、盤查令到某些不願寫得太明白的地方異聞，全都在這裡留下過痕跡。若只想知道下一段該往哪裡去，這裡往往比街上更快給出答案。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        19306
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         榜文~
+End
+
+#Enquire
+Keyword         消息~
+End
+
+#Enquire
+Keyword         西關~
+End
+
+End

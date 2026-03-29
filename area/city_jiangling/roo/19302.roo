@@ -1,0 +1,43 @@
+Vnum            19302
+Name            入城大道~
+Description
+入城大道兩旁的路牌、布旗與木棚把人流自然整理開來，讓剛離開深山的人很快就能重新讀懂哪些方向屬於補給、哪些方向屬於官務。這種一眼可辨的秩序，本身就是城市給旅人的第一種安定。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        19301
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        19303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         路牌~
+Description
+木牌上把西市、官署與西關路口都寫得很清楚，像是不想讓任何剛出山的人再在城裡迷一次路。
+~
+End
+
+#Enquire
+Keyword         路牌~
+End
+
+#Enquire
+Keyword         西市~
+End
+
+#Enquire
+Keyword         官署~
+End
+
+End

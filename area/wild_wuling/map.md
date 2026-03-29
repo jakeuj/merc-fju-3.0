@@ -53,6 +53,7 @@
         "direction": "north",
         "source_vnum": 15011,
         "target_area": "city_jiangling",
+        "target_room_vnum": 19301,
         "label": "北山關路"
       },
       {
@@ -231,7 +232,8 @@
       "coord": [-3, 1, 0],
       "labels": ["north-link", "old-road"],
       "exits": [
-        { "direction": "south", "to": 15007 }
+        { "direction": "south", "to": 15007 },
+        { "direction": "north", "to": 19301, "external": true }
       ],
       "enquires": ["北路", "舊道"]
     },

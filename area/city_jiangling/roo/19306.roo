@@ -1,0 +1,36 @@
+Vnum            19306
+Name            官署前街~
+Description
+官署前街比主街安靜得多，靴聲、差役回報與偶爾翻動公文的聲響把整條街撐出一種乾燥而穩定的秩序。這裡提醒人，江陵不只是中繼城，也是會把邊地消息往更大地方送出去的節點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        19303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        19307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         官府~
+End
+
+#Enquire
+Keyword         差役~
+End
+
+#Enquire
+Keyword         榜文~
+End
+
+End

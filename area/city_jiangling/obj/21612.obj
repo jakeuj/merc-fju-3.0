@@ -1,0 +1,15 @@
+Vnum            21612
+Name            hanshui flask~
+ShortDesc       漢水皮囊(hanshui flask)~
+Description
+這只裝得扎實的漢水皮囊(hanshui flask)明顯是給長途路上反覆帶著用的，磨痕不少，卻
+也因此看得出相當耐用。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           38
+Value           12 12 0 0
+Weight          2
+Cost            110
+End

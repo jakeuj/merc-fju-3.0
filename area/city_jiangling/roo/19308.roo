@@ -1,0 +1,28 @@
+Vnum            19308
+Name            西關路口~
+Description
+再往北一點，街面開始收束成更偏軍務與遠行用途的路口，木柵、備馬處與西去路標都比城心十字更少煙火氣。站在這裡時，會很清楚地感覺到江陵既是城市，也是更大蜀荊主線重新分流的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        19303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         西關~
+End
+
+#Enquire
+Keyword         夷陵~
+End
+
+#Enquire
+Keyword         遠路~
+End
+
+End

@@ -1,0 +1,31 @@
+Vnum            21594
+Name            west road guide~
+ShortDesc       西關引路吏~
+Description
+這名西關引路吏守在較靠外的路口時，口氣裡總帶著一種既熟門熟路又不願把遠路說得太
+輕鬆的慎重，像是早看慣了出城比進城更容易出錯的人。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       55
+Level           46
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             13
+Wis             13
+Dex             12
+Con             13
+Hp              1820
+Mana            98
+Move            144
+Class           0
+Gold            340
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

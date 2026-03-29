@@ -136,6 +136,7 @@ title: Current Game Areas
 | `sec_starfall_crater` | 星墜天坑 / 墜星異坑 secret | `18901-18920` | `rebuild addition` | 承接白狼山風蝕石壇，落成焦痕坑緣、裂星斜坡、星核碎坪與天隕觀缺骨架。 |
 | `wild_hidden_valley` | 隱谷 / 深谷秘徑 wild | `19001-19020` | `rebuild addition` | 承接武陵山隱谷西徑，落成殘碑岔地、靜風谷坪、裂石空場與沉陵坳口骨架。 |
 | `dng_ancient_tomb_shu` | 蜀漢古墓 / 石門古墓 dungeon | `19101-19120` | `rebuild addition` | 承接隱谷沉陵坳口，落成前廳石券、斷燈墓道、封紋中庭與內槨石門骨架。 |
+| `city_jiangling` | 江陵 / 荊蜀轉接主城 | `19301-19320` | `rebuild addition` | 承接武陵山北山關路，落成南城門、城心十字、西市補給線與西關路口構成的城市 hub。 |
 
 ## Recent Rebuild Areas
 
@@ -262,6 +263,7 @@ title: Current Game Areas
 - `wild_hidden_valley`：把武陵山隱谷西徑正式接進隱谷，透過殘碑岔地、伏苔斷階、靜風谷坪、裂石空場與沉陵坳口把蜀漢西山鏈切進更收束也更帶古痕壓力的深谷 wild。
 - `dng_ancient_tomb_shu`：把隱谷沉陵坳口正式接進蜀漢古墓，透過沉陵落階、前廳石券、斷燈墓道、封紋中庭與內槨石門把蜀地深谷主線切進封閉石門 dungeon。
 - `wild_spirit_forest`：把武陵山東岔靈林正式接進靈木森林，透過藤影小徑、古碑風根地、靈木空場、懸藤高台與青燐深處把蜀地西山鏈重新打開成仙俠 wild 支線。
+- `city_jiangling`：把武陵山北山關路正式接進江陵，透過南城門、入城大道、城心十字、西市補給線與西關路口把蜀地山林節奏重新收束成荊蜀轉接主城。
 
 ## 維護規則
 

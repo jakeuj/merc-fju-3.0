@@ -1,0 +1,32 @@
+Vnum            21591
+Name            jiangling innkeeper~
+ShortDesc       江陵客棧掌櫃~
+Description
+這名江陵客棧掌櫃站在街邊時總像已看過太多剛出山的人，只要多聽一兩句口氣，就能猜
+出對方是缺熱湯、缺路，還是缺一個肯把城裡事情說明白的人。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       90
+Level           38
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             14
+Wis             14
+Dex             11
+Con             12
+Hp              1280
+Mana            110
+Move            118
+Class           0
+Gold            240
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

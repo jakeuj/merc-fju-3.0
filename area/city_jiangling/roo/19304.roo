@@ -1,0 +1,43 @@
+Vnum            19304
+Name            西市口~
+Description
+西市口的人聲比城門更碎更密，叫賣、議價與遠路消息全擠在一起，聽久了幾乎分不清哪句是買賣、哪句是傳聞。對趕路人來說，這種雜而不亂的熱度反而最能證明自己真的回到了主世界的節奏裡。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         招牌~
+Description
+木招牌與布幌從屋簷下層層伸出，把整條西市口擠成一片熱鬧而熟練的補給帶。
+~
+End
+
+#Enquire
+Keyword         市集~
+End
+
+#Enquire
+Keyword         補給~
+End
+
+#Enquire
+Keyword         客棧~
+End
+
+End

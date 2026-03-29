@@ -1,0 +1,15 @@
+Vnum            21613
+Name            travel lantern~
+ShortDesc       旅路提燈(travel lantern)~
+Description
+這盞旅路提燈(travel lantern)不算華麗，但火光很穩，顯然是替城門、街口與西關路上都
+能帶著走的實用燈具。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           40
+Value           0 0 28 0
+Weight          2
+Cost            120
+End

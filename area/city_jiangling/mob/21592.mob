@@ -1,0 +1,31 @@
+Vnum            21592
+Name            jiangling gateguard~
+ShortDesc       江陵巡門兵~
+Description
+這名江陵巡門兵站在城門邊時並不刻意兇狠，可那種熟於盤查與辨人的眼神仍讓人很難把
+他當成只是例行站崗的城兵。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       70
+Level           42
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             11
+Wis             12
+Dex             12
+Con             13
+Hp              1620
+Mana            80
+Move            132
+Class           0
+Gold            280
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

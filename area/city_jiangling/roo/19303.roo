@@ -1,0 +1,52 @@
+Vnum            19303
+Name            城心十字~
+Description
+城心十字把江陵的用途拆得很乾淨，西邊是行旅與補給，東邊是官署與榜文，往北則更接近出關與遠行的路。站在這裡時，整座城的節奏會一下子變得很好懂，像它本來就是拿來替人重新整理方向的。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        19302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        19306
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        19308
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         江陵~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+#Enquire
+Keyword         西關~
+End
+
+End

@@ -2134,6 +2134,25 @@
         "plans/area/0107-wild-spirit-forest.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "city_jiangling",
+      "title": "江陵",
+      "room_range": "19301-19320",
+      "load_order": 114,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "wild_wuling",
+      "theme_primary": "歷史城市",
+      "theme_secondary": "荊蜀轉接",
+      "summary": "承接武陵山北山關路，落成南城門、城心十字、西市補給線與西關路口構成的荊蜀轉接城市 hub。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/city_jiangling/index",
+        "area/city_jiangling/map.md",
+        "plans/area/0108-city-jiangling.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

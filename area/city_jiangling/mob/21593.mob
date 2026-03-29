@@ -1,0 +1,31 @@
+Vnum            21593
+Name            jiangling runner~
+ShortDesc       江陵差役~
+Description
+這名江陵差役抱著竹簡與告示匣在官署前街來回穿行時，腳步快得像整座城的消息都得靠
+他這樣的人才能勉強跟上。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       65
+Level           44
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             12
+Wis             13
+Dex             13
+Con             12
+Hp              1700
+Mana            90
+Move            138
+Class           0
+Gold            300
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

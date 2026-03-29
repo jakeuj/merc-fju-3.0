@@ -1,0 +1,36 @@
+Vnum            19301
+Name            南城門~
+Description
+江陵南城門不像邊關那樣壓得人喘不過氣，卻也不會讓剛出山的人誤以為自己已完全脫離盤查與秩序。門外還留著山路帶來的風土與草氣，門內卻已能聞到熱湯、藥材與木牌墨痕混在一起的城市味道。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        15011
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        19302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         城門~
+End
+
+#Enquire
+Keyword         北山~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

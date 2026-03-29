@@ -1,0 +1,15 @@
+Vnum            21611
+Name            jiangling hot stew~
+ShortDesc       江陵熱羹(hot stew)~
+Description
+一碗剛起鍋的江陵熱羹(hot stew)散著穩定而實在的香氣，像是專門拿來替遠路人把山氣
+和疲色一起壓下去。
+~
+Unit            碗~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           38
+Value           20 34 4 0
+Weight          1
+Cost            96
+End
