@@ -1,0 +1,52 @@
+Vnum            20305
+Name            稻田路肩~
+Description
+路肩緊貼著一片片矮水田，泥氣、秧苗和腳印把這裡的方向感都染得很實。它不像官道那樣替人把步伐整理乾淨，卻更能讓人明白新野外圍真正托住城鎮日常的，其實就是這樣一段段不起眼的田路。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        20302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20306
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         稻田~
+End
+
+#Enquire
+Keyword         田埂~
+End
+
+#Enquire
+Keyword         腳印~
+End
+
+End

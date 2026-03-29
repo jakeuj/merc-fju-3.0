@@ -709,7 +709,38 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `wild_xinye_fields`
+  - area_family: `Wild`
+  - reserved_room_block: `20301-20320`
+  - planned_vnum_range: `20301-20320`
+  - level_range: `18-28`
+  - theme: `江湖`
+  - subtheme: `田野 / 村落`
+  - delivery_gate: `implementation_ready_for_commit`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/wild_xinye_fields/map.md`
+    - `ref/sanguo-area-specfirst/area/city_wan/map.md`
+    - `ref/world-graph.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `area/city_xinye/map.md`
+    - `area/jingxiang_road/map.md`
+    - `plans/area/0117-city-xinye.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/map/sinya.html`
+    - `ref/sanguo-area-specfirst/area/road_wan/map.md`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `world-graph` 已把 `wild_xinye_fields` 列為 `江湖 / 18-28` 的 `Wild` 節點，適合直接承接 `city_xinye`
+    - `題材分布表` 把荊州段的新野定位成更有人情的邊鎮，因此下一步先做貼著田地與村落生活的郊野外帶，比立刻再堆一個城市更能維持題材起伏
+    - `city_xinye/20205` 已有成熟的 `西田路牌` runtime stub，能低風險轉成正式 boundary；相較之下，`city_wan` 與 `jingxiang_road` 仍各自帶著待整理的方向契約
+    - `players.json / skills.json` 沒有提供「新野之後必須立刻再做服務城市」的強訊號，當前荊州服務感仍偏在襄陽，因此先補 travel / exploration belt 更符合 queue 判斷
+  - compliance_check:
+    - compliant；在 `fort_fancheng -> city_xinye` 之後接 `wild_xinye_fields`，可恢復 `Fort -> City -> Wild` 的 family variety，並優先落地已成熟的西向邊界 stub
 
 ## Done
 
@@ -895,14 +926,14 @@
 
 ## Current Recommended Next Step
 
-回到 queue 規則重建 `todo`，優先比較 `wild_xinye_fields`、`city_wan` 與 `jingxiang_road` 的後續整理路徑，但先釐清 `city_xinye` 周邊剩餘 world link 的方向契約。
+提交 `wild_xinye_fields` implementation milestone，然後把 tracker 從 `implementation_ready_for_commit` 推進成 done。
 
 ## Next Action
 
-- 依 queue 規則重建 `todo` 與 `candidate` 判斷
-- 優先比較 `wild_xinye_fields`、`city_wan` 與 `jingxiang_road` 的 family variety 與 runtime 成熟度
-- 先整理 `city_xinye`、`jingxiang_road` 與 ref scaffold 之間剩餘的方向契約，再決定下一個 actionable area
+- 提交 `wild_xinye_fields` implementation milestone commit
+- 把 `area/rebuild_plan.md` 從 `implementation_ready_for_commit` 推進成 done
+- 再回到 queue 規則盤點 `city_wan`、`jingxiang_road` 與其他可提供 family variety 的非 `Wild` 候選
 
 ## Next Prompt
 
-`依 queue 規則重建 todo，優先盤點 wild_xinye_fields、city_wan、jingxiang_road，並先釐清 city_xinye 周邊剩餘 world link 的方向契約後，再決定下一個 actionable area。`
+`提交 wild_xinye_fields implementation milestone，然後把 tracker 從 implementation_ready_for_commit 推進成 done。`

@@ -1,0 +1,15 @@
+Vnum            21893
+Name            hooded lantern~
+ShortDesc       新野罩風提燈(hooded lantern)~
+Description
+這盞新野罩風提燈(hooded lantern)沒有什麼裝飾，只求入夜後還能替田路、籬邊與
+風碑附近照出一點不至於誤路的亮光。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           20
+Value           0 0 28 0
+Weight          1
+Cost            110
+End

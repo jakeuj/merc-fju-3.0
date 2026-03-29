@@ -1,0 +1,29 @@
+Vnum            21884
+Name            west field watcher~
+ShortDesc       西野守望人~
+Description
+這名守在西野風碑附近的守望人步子站得很穩，像任何想再往外走的人，都會先被
+他看出是不是有足夠本事分清這片郊野的去路。
+~
+Alignment       0
+Level           26
+Hitroll         11
+Protect         0
+Damroll         12
+Str             14
+Int             11
+Wis             12
+Dex             14
+Con             13
+Hp              1420
+Mana            80
+Move            150
+Class           0
+Gold            280
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

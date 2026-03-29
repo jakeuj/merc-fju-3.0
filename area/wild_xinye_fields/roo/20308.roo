@@ -1,0 +1,36 @@
+Vnum            20308
+Name            西野風碑~
+Description
+風碑立在更西一點的高些處，碑面早被風雨磨淡，只剩幾個還勉強看得清的方向字樣。站在這裡時，新野的屋影已經退成背景，眼前只剩更深的田野與還沒完全寫進地圖的小路，像是在提醒旅人這片郊野往後仍有更多空白要自己走出來。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        20306
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         風碑~
+End
+
+#Enquire
+Keyword         西野~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

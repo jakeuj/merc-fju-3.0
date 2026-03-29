@@ -1,13 +1,21 @@
 Vnum            20205
 Name            西田路牌~
 Description
-再往西一點，街面慢慢鬆成帶土氣的路肩，旁邊豎著寫往郊野田路的舊木牌。它提醒人新野雖是鎮城，卻也還牢牢貼著田地、村落與那些不在官圖上寫得太清楚的小路生活。
+再往西一點，街面慢慢鬆成帶土氣的路肩，旁邊豎著寫往郊野田路的舊木牌。如今順著牌指前行，已能真正走進新野外圍的田地與村路，讓人明白這座邊鎮始終牢牢貼著那些不在官圖上寫得太清楚的小路生活。
 ~
 SectorType      SECT_CITY
 
 #Exit
 Direction       EAST
 ExitVnum        20204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20301
 ExitDesc        ~
 ExitKeyword     ~
 ExitKey         0

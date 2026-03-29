@@ -1,0 +1,16 @@
+Vnum            21894
+Name            field hook blade~
+ShortDesc       野路鉤刀(field hook blade)~
+Description
+這把野路鉤刀(field hook blade)不像軍中兵刃那樣講究，倒更適合田邊巡看、破草
+開路，也順手拿來防身。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           24
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            158
+End

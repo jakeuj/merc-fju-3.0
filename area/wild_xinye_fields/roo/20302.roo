@@ -1,0 +1,51 @@
+Vnum            20302
+Name            田埂岔路~
+Description
+幾條踩得發實的田埂在這裡分成不同方向，沒有城裡那種把去路寫得清清楚楚的體面，卻有種只要問對人、看對地勢就不會走丟的鄉間熟路感。站在這裡時，會很清楚感到自己已經離開鎮內那種靠招牌辨位的節奏。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        20301
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         路樁~
+Description
+路邊木樁只刻了幾筆很簡單的方向記號，像是留給熟地方的人自己意會，不打算替陌生人把每條去路都講明白。
+~
+End
+
+#Enquire
+Keyword         岔路~
+End
+
+#Enquire
+Keyword         村口~
+End
+
+#Enquire
+Keyword         水路~
+End
+
+End

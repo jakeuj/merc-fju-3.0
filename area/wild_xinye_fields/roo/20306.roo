@@ -1,0 +1,44 @@
+Vnum            20306
+Name            籬旁曬場~
+Description
+幾道低籬把曬場和田路勉強分開，場上留著竹篩、舊木架與有人常來常去的生活痕跡。這裡不像真正的村內腹地，卻已經足夠讓外路人感到自己正從新野邊鎮的街面，走進更貼近地方人手與收成節奏的世界。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        20304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20308
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         曬場~
+End
+
+#Enquire
+Keyword         村舍~
+End
+
+#Enquire
+Keyword         獵戶~
+End
+
+End

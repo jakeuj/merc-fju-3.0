@@ -1,0 +1,44 @@
+Vnum            20301
+Name            田路出口~
+Description
+一離開新野西田路牌，腳下石地便很快鬆成帶著土粒與草根的田路。回頭仍看得到鎮邊屋影與舊木牌，往前卻已經是得靠田埂、水聲與腳印自己辨方向的外圍生活帶。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        20205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20303
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         新野~
+End
+
+#Enquire
+Keyword         回鎮~
+End
+
+#Enquire
+Keyword         田路~
+End
+
+End

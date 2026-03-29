@@ -2,7 +2,7 @@
 
 ## Area Intent
 
-`city_xinye` 承接 `city_xiangyang` 官署前街外那條內陸去路，把原本只停在「往新野」路牌語意上的地方支線，正式展開成一座有酒旗、榜牆、義舍與北門路口的小型邊鎮。這裡不是另一座像襄陽那樣的州府大城，而是一個會讓人從腳步、招呼與街面尺度就感到「消息靠人情流動、方向靠熟路人指點」的地方城市。
+`city_xinye` 承接 `city_xiangyang` 官署前街外那條內陸去路，把原本只停在「往新野」路牌語意上的地方支線，正式展開成一座有酒旗、榜牆、義舍、西田路牌與北門路口的小型邊鎮。這裡不是另一座像襄陽那樣的州府大城，而是一個會讓人從腳步、招呼與街面尺度就感到「消息靠人情流動、方向靠熟路人指點」的地方城市。
 
 ## Theme Positioning
 
@@ -18,7 +18,7 @@
     "schema": "mapmd-json/v1",
     "name": "city_xinye",
     "title": "新野",
-    "design_notes": "第一版 spec-first 草案。先固定東來牌門、入鎮石街、義市十字、酒旗街、榜牆前街、義舍小院與北門路口，把襄陽內陸支線正式落成為可載入的新野邊鎮骨架。",
+    "design_notes": "第一版 spec-first 草案。先固定東來牌門、入鎮石街、義市十字、酒旗街、榜牆前街、義舍小院、西田路牌與北門路口，把襄陽內陸支線正式落成為可載入的新野邊鎮骨架，並把西向郊野田路正式接到新野外圍。",
     "level_range": "18-30",
     "planned_vnum_range": "20201-20220",
     "reserved_room_block": "20201-20220",
@@ -44,6 +44,7 @@
         "direction": "west",
         "source_vnum": 20205,
         "target_area": "wild_xinye_fields",
+        "target_room_vnum": 20301,
         "label": "郊野田路"
       }
     ],
@@ -129,13 +130,14 @@
     {
       "vnum": 20205,
       "name": "西田路牌",
-      "description": "再往西一點，街面慢慢鬆成帶土氣的路肩，旁邊豎著寫往郊野田路的舊木牌。它提醒人新野雖是鎮城，卻也還牢牢貼著田地、村落與那些不在官圖上寫得太清楚的小路生活。",
+      "description": "再往西一點，街面慢慢鬆成帶土氣的路肩，旁邊豎著寫往郊野田路的舊木牌。如今順著牌指前行，已能真正走進新野外圍的田地與村路，讓人明白這座邊鎮始終牢牢貼著那些不在官圖上寫得太清楚的小路生活。",
       "sector_type": "SECT_CITY",
       "cluster": "market-quarter",
       "coord": [-4, 0, 0],
-      "labels": ["west-edge", "future-link", "field-road"],
+      "labels": ["west-edge", "field-road", "world-link-west"],
       "exits": [
-        { "direction": "east", "to": 20204 }
+        { "direction": "east", "to": 20204 },
+        { "direction": "west", "to": 20301, "external": true }
       ],
       "enquires": ["郊野", "田路", "西邊"]
     },

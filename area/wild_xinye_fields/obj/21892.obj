@@ -1,0 +1,15 @@
+Vnum            21892
+Name            gourd flask~
+ShortDesc       新野葫蘆水囊(gourd flask)~
+Description
+這只新野葫蘆水囊(gourd flask)看得出是村口常見的隨身器物，輕便耐用，剛好夠
+人沿著田埂與灌渠走一段。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           18
+Value           10 10 0 0
+Weight          2
+Cost            92
+End

@@ -1,0 +1,51 @@
+Vnum            20304
+Name            村口茶棚~
+Description
+茶棚靠著村口樹蔭搭起，棚下擺著幾張不怎麼講究卻夠實用的矮桌凳。比起新野鎮中的酒旗街，這裡更像外圍生活替遠路人留下的一口熱水、一句方向與一點不必多問來歷的歇腳情分。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        20302
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20306
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20307
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         茶棚~
+Description
+棚頂蓋得不高，卻剛好能替趕田路的人擋下一點日頭與塵氣，也讓路過的人自然慢下來問一句前頭好不好走。
+~
+End
+
+#Enquire
+Keyword         茶水~
+End
+
+#Enquire
+Keyword         村口~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+End

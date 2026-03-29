@@ -1,0 +1,44 @@
+Vnum            20307
+Name            獵戶石堆~
+Description
+路旁堆著一小圈石塊與折斷的木樁，看得出是獵戶或巡看的鄉人留下的簡單落腳點。它沒有什麼能稱作景色的排場，卻讓人意識到再往外走，腳步就得同時注意地勢、痕跡與那些不一定想讓陌生人太快看懂的地方規矩。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        20305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20304
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20308
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         獵戶~
+End
+
+#Enquire
+Keyword         石堆~
+End
+
+#Enquire
+Keyword         外路~
+End
+
+End

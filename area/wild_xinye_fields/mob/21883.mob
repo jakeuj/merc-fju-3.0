@@ -1,0 +1,29 @@
+Vnum            21883
+Name            field hunter~
+ShortDesc       新野田畔獵戶~
+Description
+這名沿著田畔與籬旁曬場巡看的獵戶手裡總握著一把舊鉤刀，眼神像同時在看地上
+足跡、天色變化和陌生人的腳步。
+~
+Alignment       0
+Level           24
+Hitroll         10
+Protect         0
+Damroll         11
+Str             14
+Int             11
+Wis             11
+Dex             13
+Con             13
+Hp              1260
+Mana            80
+Move            140
+Class           0
+Gold            240
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

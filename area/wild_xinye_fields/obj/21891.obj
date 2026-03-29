@@ -1,0 +1,15 @@
+Vnum            21891
+Name            field ration~
+ShortDesc       新野郊路乾糧(field ration)~
+Description
+這包新野郊路乾糧(field ration)紮得緊實簡單，看起來就是給剛離鎮不久、還得
+沿田路繼續趕路的人填口腹用的。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           18
+Value           16 26 4 0
+Weight          1
+Cost            78
+End

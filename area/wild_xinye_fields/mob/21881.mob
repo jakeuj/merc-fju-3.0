@@ -1,0 +1,32 @@
+Vnum            21881
+Name            field guide~
+ShortDesc       新野田路引客~
+Description
+這名常在新野鎮西田路與外圍田埂間來回走動的引客，對哪段泥路近日較難走、
+哪片田肩能避開積水都說得十分熟。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       90
+Level           20
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             13
+Dex             12
+Con             12
+Hp              860
+Mana            80
+Move            120
+Class           0
+Gold            160
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

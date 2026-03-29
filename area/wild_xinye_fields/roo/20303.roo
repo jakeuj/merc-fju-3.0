@@ -1,0 +1,36 @@
+Vnum            20303
+Name            灌渠木橋~
+Description
+細窄木橋跨在灌渠上，水聲不大，卻替整片田路帶出一種離鎮後才會慢慢聽清楚的生活節奏。這裡沒有大路的排場，只有一點點夠人會車、夠人停腳看水勢的鄉間實用感。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        20301
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20305
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         木橋~
+End
+
+#Enquire
+Keyword         灌渠~
+End
+
+#Enquire
+Keyword         水路~
+End
+
+End

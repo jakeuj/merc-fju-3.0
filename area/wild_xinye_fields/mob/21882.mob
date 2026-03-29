@@ -1,0 +1,32 @@
+Vnum            21882
+Name            tea vendor~
+ShortDesc       新野村口茶販~
+Description
+這名守著村口茶棚的茶販說話不急不徐，像任何離鎮不久的外路人到了這裡，都
+該先學會照田野的節奏喝口熱水再問前路。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           22
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             13
+Wis             13
+Dex             11
+Con             12
+Hp              980
+Mana            90
+Move            120
+Class           0
+Gold            220
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
