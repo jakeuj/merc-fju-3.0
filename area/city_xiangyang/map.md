@@ -67,12 +67,12 @@
 
 ## Planned World Links
 
-這些是世界層連接意圖；目前先固定在 spec，不提前建立 runtime 假邊界：
+這些是世界層連接意圖；目前先固定在 spec。已正式落成的 runtime 邊界會直接標明，其餘仍維持 planned link：
 
 - `south` from `14201`: planned link to `jingxiang_road`
 - `north` from `14208`: runtime link to `fort_fancheng`
 - `east` from `14212`: planned link to `wild_jiangxia_river`
-- `west` from `14209`: planned link to `city_xinye`
+- `out` from `14209`: runtime link to `city_xinye`
 
 ## Runtime Metadata Notes
 
@@ -129,9 +129,10 @@
         "label": "江夏水路"
       },
       {
-        "direction": "west",
+        "direction": "out",
         "source_vnum": 14209,
         "target_area": "city_xinye",
+        "target_room_vnum": 20201,
         "label": "新野大道"
       }
     ],
@@ -273,16 +274,17 @@
     {
       "vnum": 14209,
       "name": "官署前街",
-      "description": "東側街道明顯安靜得多，差役與文書腳步快而短，與西市那種拖長的叫賣節奏完全不同。這裡沒有那麼多煙火氣，卻能讓人感覺到襄陽真正如何維持秩序與消息流通。",
+      "description": "東側街道明顯安靜得多，差役與文書腳步快而短，與西市那種拖長的叫賣節奏完全不同。這裡沒有那麼多煙火氣，卻能讓人感覺到襄陽真正如何維持秩序與消息流通；而街外那條通往新野的內陸去路，也讓這裡比表面看來更像整座州府把地方消息往外送出的縫口。",
       "sector_type": "SECT_CITY",
       "cluster": "yamen-quarter",
       "coord": [3, 1, 0],
       "labels": ["official", "quiet"],
       "exits": [
         { "direction": "west", "to": 14204 },
-        { "direction": "east", "to": 14210 }
+        { "direction": "east", "to": 14210 },
+        { "direction": "out", "to": 20201, "external": true }
       ],
-      "enquires": ["官府", "差役"]
+      "enquires": ["官府", "差役", "新野"]
     },
     {
       "vnum": 14210,

@@ -1,0 +1,32 @@
+Vnum            21864
+Name            xinye guide~
+ShortDesc       義舍引路人~
+Description
+這名義舍引路人說話不快，卻總能把去路、熟人和地方規矩講得很清楚，像是新野這座鎮
+子把人情和方向都托在他身上一樣。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       95
+Level           21
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             12
+Wis             14
+Dex             11
+Con             11
+Hp              900
+Mana            90
+Move            102
+Class           0
+Gold            175
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

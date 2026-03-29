@@ -1,0 +1,28 @@
+Vnum            20208
+Name            義舍小院~
+Description
+小院不大，卻收得很整齊，牆邊有水缸、舊木架與幾張留給熟路人暫坐的長凳。這裡不像客棧那樣熱鬧，反而更像新野真正的人情腹地，很多去路、很多消息，也常是在這種院裡被低聲講明白的。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        20206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         義舍~
+End
+
+#Enquire
+Keyword         義士~
+End
+
+#Enquire
+Keyword         問路~
+End
+
+End

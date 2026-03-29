@@ -1,0 +1,36 @@
+Vnum            20201
+Name            東來牌門~
+Description
+從襄陽方向轉進來後，路口先經過一座不算高大的木牌門，門板上寫著新野二字，筆劃不華美，卻有種一眼就能讓人放鬆幾分的熟地方氣。這裡沒有州府那種逼人的門威，反而更像一座替遠路人重新收拾心情的小鎮入口。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       ENTER
+ExitVnum        14209
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         襄陽~
+End
+
+#Enquire
+Keyword         來路~
+End
+
+#Enquire
+Keyword         新野~
+End
+
+End

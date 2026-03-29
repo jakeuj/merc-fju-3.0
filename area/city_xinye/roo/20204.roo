@@ -1,0 +1,43 @@
+Vnum            20204
+Name            酒旗街~
+Description
+一排酒旗在屋簷下晃得很近，讓整條街先聞到熱湯、舊酒和行囊上的路灰。新野的熱鬧不靠大鋪面，而是靠這種能讓人停下腳、順手換一口吃食再多打聽兩句的邊鎮熟絡感。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        20203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         酒旗~
+Description
+布旗被風和油煙磨得有些舊，反倒讓人更相信這裡確實是熟客和遠路人都願意停腳的老地方。
+~
+End
+
+#Enquire
+Keyword         酒肆~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+#Enquire
+Keyword         熱湯~
+End
+
+End

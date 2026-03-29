@@ -709,7 +709,40 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `city_xinye`
+  - area_family: `City`
+  - parent_area: `city_xiangyang`
+  - reserved_room_block: `20201-20220`
+  - planned_vnum_range: `20201-20220`
+  - level_range: `18-30`
+  - theme: `江湖`
+  - subtheme: `邊鎮 / 義士`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/city_xinye/map.md`
+    - `ref/sanguo-area-specfirst/area/wild_xinye_fields/map.md`
+    - `ref/sanguo-area-specfirst/area/city_wan/map.md`
+    - `ref/world-graph.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `docs/3yWebsite/map/sinya.html`
+    - `area/city_xiangyang/map.md`
+    - `area/jingxiang_road/map.md`
+    - `plans/area/0117-city-xinye.md`
+  - ref_inputs_deferred:
+    - `ref/sanguo-area-specfirst/area/road_wan/map.md`
+    - `docs/3yWebsite/map/shanyan.html`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `world_map` 與 `world-graph` 都把新野放在荊州北段內陸支鏈上，適合作為 `fort_fancheng` 後把節奏從軍令壓力拉回人情邊鎮的下一個 `City`
+    - `city_xiangyang` 現有 spec 雖然保留新野去路，但原本 `14209 west` 會和內部拓樸衝突，因此本輪先把它修正為可落地的 `out/enter` runtime boundary
+    - `jingxiang_road/9305` 與 ref scaffold 的方向契約仍未對齊，本輪先不硬接，避免把衝突寫死成第二個 runtime 邊界
+  - compliance_check:
+    - conditionally compliant；在 queue 為空時重新盤點後，`city_xinye` 仍是最 actionable 的非 `Fort` 候選，但本輪只先正式接回 `city_xiangyang`，其餘世界連線留待後續整理
+  - delivery_gate: `implementation_ready_for_commit`
 
 ## Done
 
@@ -894,14 +927,14 @@
 
 ## Current Recommended Next Step
 
-回到 queue 規則重建 `todo`，優先比較 `city_xinye`、`wild_xinye_fields` 與 `city_wan`，但先釐清 `city_xiangyang` / `jingxiang_road` / ref scaffold 的方位契約。
+先完成 `city_xinye` implementation milestone，確認 `city_xiangyang/14209 out <-> city_xinye/20201 enter` 可正常載入，再決定是否重建下一輪荊州 queue。
 
 ## Next Action
 
-- 依 queue 規則重建 `todo` 與 `candidate` 判斷
-- 優先比較 `city_xinye`、`wild_xinye_fields`、`city_wan` 的 family variety 與 runtime 成熟度
-- 先整理 `city_xiangyang`、`jingxiang_road` 與 ref scaffold 之間的方向契約，再決定是否推進 `city_xinye`
+- 完成 `city_xinye` 的 spec / runtime / boundary / registry 更新
+- 跑 `mapmd_validate`、`.roo` 生成、WSL Linux build 與 direct merc smoke
+- 暫時保留 `jingxiang_road` 與 `city_wan` 的方向契約整理，不在本輪硬接第二條新外連
 
 ## Next Prompt
 
-`依 queue 規則重建 todo，優先盤點 city_xinye、wild_xinye_fields、city_wan，並先釐清 city_xiangyang / jingxiang_road / ref scaffold 的方位契約後，再決定下一個 actionable area。`
+`完成 city_xinye implementation milestone，並確認 city_xiangyang/14209 out <-> city_xinye/20201 enter boundary 可正常載入。`

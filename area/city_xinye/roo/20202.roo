@@ -1,0 +1,43 @@
+Vnum            20202
+Name            入鎮石街~
+Description
+石街不寬，卻收拾得乾淨，兩側店面、矮牆與過路人之間始終留著剛好不擁擠也不冷清的距離。跟襄陽那種一眼看出官府秩序的節奏不同，新野的方向感更像是被人聲、酒氣和熟路腳步慢慢帶出來的。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        20201
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         牌門~
+Description
+木牌門後方掛著幾條舊布幡，看得出這座鎮子不靠威勢撐場，而是靠來來往往的人把名氣活出來。
+~
+End
+
+#Enquire
+Keyword         酒肆~
+End
+
+#Enquire
+Keyword         榜牆~
+End
+
+#Enquire
+Keyword         義舍~
+End
+
+End

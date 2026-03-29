@@ -1,0 +1,43 @@
+Vnum            20206
+Name            榜牆前街~
+Description
+南邊這條街比酒旗街安靜得多，榜牆、驛牌和幾名差役把地方消息牢牢釘在視線裡。若說西邊是拿來讓人補氣歇腳的，那這裡就是新野把人、貨與傳聞重新整理清楚的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        20203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20208
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         榜牆~
+Description
+榜牆上既有官面消息，也夾著不少地方人私下補寫的路況與找人字條，看得出這座鎮子的資訊從不只走一種路子。
+~
+End
+
+#Enquire
+Keyword         榜文~
+End
+
+#Enquire
+Keyword         驛牌~
+End
+
+#Enquire
+Keyword         消息~
+End
+
+End

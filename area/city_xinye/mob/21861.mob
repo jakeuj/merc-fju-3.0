@@ -1,0 +1,32 @@
+Vnum            21861
+Name            xinye barkeep~
+ShortDesc       新野酒肆掌櫃~
+Description
+這名新野酒肆掌櫃站在酒旗街邊時總像知道誰只是路過、誰是真在找下一段去路，只要多
+看你一眼，就像能把熱湯和消息一起端上來。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       85
+Level           20
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             13
+Wis             13
+Dex             11
+Con             12
+Hp              920
+Mana            80
+Move            96
+Class           0
+Gold            180
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

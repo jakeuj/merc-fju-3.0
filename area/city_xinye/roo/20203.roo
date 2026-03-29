@@ -1,0 +1,52 @@
+Vnum            20203
+Name            義市十字~
+Description
+街心十字把新野的用途分得很直接，西邊是酒旗和集棚，南邊是榜牆與官驛，北邊則是更安靜也更像熟人聚腳的義舍路。這裡不像大城那樣靠建築壓出秩序，而是讓你從每條岔口的人味和步調自己讀懂該往哪裡去。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        20202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        20207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         去路~
+End
+
+#Enquire
+Keyword         義士~
+End
+
+#Enquire
+Keyword         宛道~
+End
+
+End

@@ -1,0 +1,15 @@
+Vnum            21874
+Name            border saber~
+ShortDesc       邊鎮短刀(border saber)~
+Description
+一柄為新野守門兵與差役常用的邊鎮短刀(border saber)被放在這裡。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           22
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          4
+Cost            132
+End

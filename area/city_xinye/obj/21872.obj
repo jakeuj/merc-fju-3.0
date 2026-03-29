@@ -1,0 +1,14 @@
+Vnum            21872
+Name            clay wine flask~
+ShortDesc       瓦封酒囊(clay wine flask)~
+Description
+這只瓦封酒囊(clay wine flask)封口紮得很緊，顯然是替遠路行腳人準備的實用攜帶酒水。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           18
+Value           10 10 0 0
+Weight          2
+Cost            84
+End

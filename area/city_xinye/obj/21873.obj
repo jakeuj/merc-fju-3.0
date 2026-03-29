@@ -1,0 +1,15 @@
+Vnum            21873
+Name            duty lantern~
+ShortDesc       義行燈籠(duty lantern)~
+Description
+這盞義行燈籠(duty lantern)火光不算亮得張揚，卻很穩，像是專門陪著地方人把夜路和去
+向一樣照清楚。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           20
+Value           0 0 24 0
+Weight          2
+Cost            96
+End

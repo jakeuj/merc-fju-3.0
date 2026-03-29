@@ -1,0 +1,31 @@
+Vnum            21863
+Name            xinye clerk~
+ShortDesc       榜牆差役~
+Description
+這名榜牆差役手邊總夾著幾張新舊消息，不管是官面告示還是地方人偷偷補上的字條，他
+都像早已看過，也早已替它們排好了輕重。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       75
+Level           22
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             13
+Wis             13
+Dex             11
+Con             12
+Hp              980
+Mana            75
+Move            94
+Class           0
+Gold            190
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

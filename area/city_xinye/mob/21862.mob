@@ -1,0 +1,31 @@
+Vnum            21862
+Name            xinye gateguard~
+ShortDesc       新野守門兵~
+Description
+這名新野守門兵不像大城軍兵那樣壓人，卻有一種看慣來往行腳與地方風聲後養成的穩
+勁，讓人很難在他面前隨口亂編去路。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       70
+Level           24
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             11
+Wis             12
+Dex             12
+Con             13
+Hp              1160
+Mana            60
+Move            108
+Class           0
+Gold            210
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

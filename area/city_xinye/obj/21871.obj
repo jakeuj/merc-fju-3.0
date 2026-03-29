@@ -1,0 +1,15 @@
+Vnum            21871
+Name            xinye hot noodles~
+ShortDesc       新野湯餅(hot noodles)~
+Description
+一碗熱氣很足的新野湯餅(hot noodles)被穩穩端在這裡，光聞起來就像能把長路上的灰和
+疲色一起壓下去。
+~
+Unit            碗~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           18
+Value           16 24 3 0
+Weight          1
+Cost            72
+End

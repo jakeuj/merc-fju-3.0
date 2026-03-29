@@ -2305,6 +2305,25 @@
         "plans/area/0116-fort-fancheng.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "city_xinye",
+      "title": "新野",
+      "room_range": "20201-20220",
+      "load_order": 123,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_xiangyang",
+      "theme_primary": "江湖",
+      "theme_secondary": "邊鎮 / 義士",
+      "summary": "承接襄陽官署前街外路，落成東來牌門、義市十字、酒旗街、榜牆前街與義舍小院構成的荊州內陸邊鎮 city。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/city_xinye/index",
+        "area/city_xinye/map.md",
+        "plans/area/0117-city-xinye.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

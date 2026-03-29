@@ -1,7 +1,7 @@
 Vnum            14209
 Name            官署前街~
 Description
-東側街道明顯安靜得多，差役與文書腳步快而短，與西市那種拖長的叫賣節奏完全不同。這裡沒有那麼多煙火氣，卻能讓人感覺到襄陽真正如何維持秩序與消息流通。
+東側街道明顯安靜得多，差役與文書腳步快而短，與西市那種拖長的叫賣節奏完全不同。這裡沒有那麼多煙火氣，卻能讓人感覺到襄陽真正如何維持秩序與消息流通；而街外那條通往新野的內陸去路，也讓這裡比表面看來更像整座州府把地方消息往外送出的縫口。
 ~
 SectorType      SECT_CITY
 
@@ -21,12 +21,24 @@ ExitKeyword     ~
 ExitKey         0
 End
 
+#Exit
+Direction       OUT
+ExitVnum        20201
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
 #Enquire
 Keyword         官府~
 End
 
 #Enquire
 Keyword         差役~
+End
+
+#Enquire
+Keyword         新野~
 End
 
 End
