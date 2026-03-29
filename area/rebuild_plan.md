@@ -709,41 +709,11 @@
 
 ## In Progress
 
-- `fort_fancheng`
-  - area_family: `Fort`
-  - parent_area: `city_xiangyang`
-  - reserved_room_block: `20101-20120`
-  - planned_vnum_range: `20101-20120`
-  - level_range: `38-52`
-  - theme: `軍旅`
-  - subtheme: `北岸城防 / 軍令關門`
-  - ref_inputs_used:
-    - `area/world_map.md`
-    - `ref/Readme.md`
-    - `ref/sanguo-progression-map.md`
-    - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/fort_fancheng/map.md`
-    - `ref/world-graph.md`
-    - `docs/3yWebsite/docs/data/players.json`
-    - `docs/3yWebsite/docs/data/skills.json`
-    - `docs/3yWebsite/map/sinya.html`
-    - `area/city_xiangyang/map.md`
-    - `plans/area/0116-fort-fancheng.md`
-  - ref_inputs_deferred:
-    - `ref/sanguo-area-specfirst/area/city_xinye/map.md`
-    - `ref/sanguo-area-specfirst/area/city_wan/map.md`
-    - `ref/sanguo-area-specfirst/area/wild_xinye_fields/map.md`
-    - 各類原型工具與模擬系統
-  - theme_basis:
-    - `city_xiangyang/14208` 已有成熟的北向大道 stub，可低風險接成 `Fort`
-    - `players.json` 對襄陽的訊號偏向高段訓練與中繼 hub，支持先補它北側的軍事前帶
-    - `city_xinye` 雖然仍是合理候選，但 ref scaffold 與現行 runtime stub 在方位上互相衝突，本輪不宜硬推
-  - compliance_check:
-    - compliant；在 queue 為空時重新盤點後，`fort_fancheng` 同時滿足非 `District` family variety 與 runtime 邊界成熟度
-  - delivery_gate: `implementation_ready_for_commit`
+(目前無 `in_progress` 項目。)
 
 ## Done
 
+- `2026-03-29` `fort_fancheng` 已完成第一輪 runtime implementation、commit `dff8cc9`，完成 `city_xiangyang/14208 <-> 20101` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `district_chengdu_scholar` 已完成第一輪 runtime implementation、commit `6001df4`，完成 `city_chengdu/19706 <-> 20001` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `district_chengdu_market` 已完成第一輪 runtime implementation、commit `e442069`，完成 `city_chengdu/19704 <-> 19901` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `wild_chengdu_outer` 已完成第一輪 runtime implementation、commit `4fe7090`，完成 `city_chengdu/19708 <-> 19801` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
@@ -924,14 +894,14 @@
 
 ## Current Recommended Next Step
 
-先完成 `fort_fancheng` implementation milestone；驗證完成後停在可提交 gate。
+回到 queue 規則重建 `todo`，優先比較 `city_xinye`、`wild_xinye_fields` 與 `city_wan`，但先釐清 `city_xiangyang` / `jingxiang_road` / ref scaffold 的方位契約。
 
 ## Next Action
 
-- 完成 `fort_fancheng` 的 spec / runtime / boundary / registry 更新
-- 跑 `mapmd_validate`、`.roo` 生成、WSL Linux build 與 direct merc smoke
-- 保留 `city_xinye` 到後續先整理方位契約後再進 queue
+- 依 queue 規則重建 `todo` 與 `candidate` 判斷
+- 優先比較 `city_xinye`、`wild_xinye_fields`、`city_wan` 的 family variety 與 runtime 成熟度
+- 先整理 `city_xiangyang`、`jingxiang_road` 與 ref scaffold 之間的方向契約，再決定是否推進 `city_xinye`
 
 ## Next Prompt
 
-`完成 fort_fancheng implementation milestone，並確認 city_xiangyang/14208 <-> fort_fancheng/20101 boundary 可正常載入。`
+`依 queue 規則重建 todo，優先盤點 city_xinye、wild_xinye_fields、city_wan，並先釐清 city_xiangyang / jingxiang_road / ref scaffold 的方位契約後，再決定下一個 actionable area。`
