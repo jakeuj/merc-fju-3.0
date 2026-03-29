@@ -1,0 +1,16 @@
+Vnum            21974
+Name            station tally baton~
+ShortDesc       驛站短杖(tally baton)~
+Description
+這根驛站短杖(tally baton)不算兵器，卻很適合讓掌事在人群與車馬間敲出一點不容亂掉
+的節奏。
+~
+Unit            根~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+WearLoc         ITEM_WIELD
+Level           16
+Value           0 -1 -1 WEAPON_CLUB
+Weight          3
+Cost            144
+End

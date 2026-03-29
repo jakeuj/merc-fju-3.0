@@ -1,0 +1,43 @@
+Vnum            20707
+Name            小販棚口~
+Description
+棚口只擺了幾樣最趕路的人一定會買的東西，乾糧、燈油、水囊，外加一些總被順手問起的小道消息。它的存在像在提醒人，真正懂旅路的人，賣的從來不只是一口吃食。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        20705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         招牌~
+Description
+木招牌上只寫著幾個大字：乾糧、熱水、夜燈，像是在說真正趕路的人其實要不了太多花樣。
+~
+End
+
+#Enquire
+Keyword         乾糧~
+End
+
+#Enquire
+Keyword         夜燈~
+End
+
+#Enquire
+Keyword         小販~
+End
+
+End

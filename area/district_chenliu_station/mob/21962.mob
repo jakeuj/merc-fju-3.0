@@ -1,0 +1,32 @@
+Vnum            21962
+Name            chenliu stable porter~
+ShortDesc       陳留車馬掌事~
+Description
+這名陳留車馬掌事一手牽馬一手點貨，看起來永遠在估算哪一批人該先走、哪一輛車得再
+等等。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       80
+Level           18
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             10
+Wis             11
+Dex             11
+Con             12
+Hp              840
+Mana            60
+Move            115
+Class           0
+Gold            120
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

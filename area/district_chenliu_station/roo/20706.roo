@@ -1,0 +1,36 @@
+Vnum            20706
+Name            旅舍前廊~
+Description
+前廊掛著幾盞並不講究卻足夠暖人的燈，總有人在這裡灌下一口熱湯、問一聲價錢，或是先讓緊繃的腳步慢半拍再決定要不要繼續趕路。驛站分區若真有一點人情味，通常都藏在這種地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        20703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         旅舍~
+End
+
+#Enquire
+Keyword         熱湯~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+End

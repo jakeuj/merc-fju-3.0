@@ -1,0 +1,44 @@
+Vnum            20701
+Name            南驛街口~
+Description
+一離開陳留驛站前院，街面上的節奏便不再只是問時辰，而是直接化成牽馬、抬箱、催車與四處打聽下一站的忙亂。這裡仍屬於陳留城內，卻已經是旅人真正開始被交給驛站系統與長路規矩的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        13816
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20702
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         驛站~
+End
+
+#Enquire
+Keyword         回城~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

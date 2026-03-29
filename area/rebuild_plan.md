@@ -709,7 +709,17 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `district_chenliu_station`
+  - area_family: `District`
+  - reserved_room_block: `20701-20720`
+  - level_range: `15-25`
+  - status: `第一輪 runtime implementation 已完成，等待 implementation milestone commit`
+  - delivery_gate: `implementation_ready_for_commit`
+  - summary:
+    - 已建立 `map.md`、`index / roo / mob / obj / res / shp` 最小可載入集合，首版房間落在 `20701-20708`
+    - 已正式落成 `city_chenliu/13816 south <-> district_chenliu_station/20701 north` runtime boundary
+    - `mapmd_validate`、generator `--validate-only`、實際 `.roo` 生成、WSL Linux build、direct merc smoke 與 acceptance gate 均已通過
+    - 本輪修正 `21974.obj` 的 weapon loader 型別，將不存在的 `WEAPON_STAFF` 改為 `WEAPON_CLUB`
 
 ## Done
 
@@ -899,14 +909,14 @@
 
 ## Current Recommended Next Step
 
-回到 queue 規則重建 `todo`，優先比較 `road_chenliu`、`district_chenliu_station` 與其他能提供 family variety 的非 `Wild` 候選，避免在 `wild_wan_outer` 後立刻再堆另一段同質近郊外帶。
+先提交 `district_chenliu_station` 的 implementation milestone，因為 tracker 已到 `implementation_ready_for_commit`，不能直接跳下一個 area。
 
 ## Next Action
 
-- 依 queue 規則重建 `todo` 與 candidate 判斷
-- 優先比較 `road_chenliu`、`district_chenliu_station` 與其他可提供 family variety 的非 `Wild` 候選
-- 避免在 `wild_wan_outer` 後立刻再堆另一段同質城郊外帶，先確認下一區是否要切回 `Road`、`District` 或其他不同 family
+- 提交 `district_chenliu_station` implementation milestone commit
+- 再補一個 tracker-only commit，把本區從 `in_progress` 推進成已完成狀態
+- 之後才回到 queue 規則盤點下一個 actionable area
 
 ## Next Prompt
 
-`依 queue 規則重建 todo，優先盤點 road_chenliu、district_chenliu_station 與其他非 Wild 候選，避免在 wild_wan_outer 後立刻再堆另一段同質近郊外帶，然後再決定下一個 actionable area。`
+`先提交 district_chenliu_station implementation milestone，接著更新 rebuild tracker 的 delivery gate，然後再回到 queue 規則盤點下一個待建 area。`

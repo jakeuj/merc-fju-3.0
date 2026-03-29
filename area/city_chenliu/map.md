@@ -141,6 +141,7 @@
         "direction": "south",
         "source_vnum": 13816,
         "target_area": "district_chenliu_station",
+        "target_room_vnum": 20701,
         "label": "陳留驛站"
       }
     ],
@@ -436,7 +437,8 @@
       "labels": ["south-edge", "world-link-south", "travel-service"],
       "exits": [
         { "direction": "north", "to": 13815 },
-        { "direction": "enter", "to": 13817 }
+        { "direction": "enter", "to": 13817 },
+        { "direction": "south", "to": 20701, "external": true }
       ],
       "keywords": [
         {

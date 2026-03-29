@@ -1,0 +1,36 @@
+Vnum            20708
+Name            南站尾街~
+Description
+走到站尾後，人聲雖然還在，卻已經被拉成較長、較鬆，也更接近真正離城前的尾音。這裡不像終點，反而像陳留把旅人交給更南方路網之前，最後一段還帶著城內秩序的緩衝帶。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        20707
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20706
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         站尾~
+End
+
+#Enquire
+Keyword         南邊~
+End
+
+#Enquire
+Keyword         下一站~
+End
+
+End

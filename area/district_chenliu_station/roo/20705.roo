@@ -1,0 +1,44 @@
+Vnum            20705
+Name            行李長棚~
+Description
+長棚下堆著包袱、木箱、草索與寫著人名地點的短牌，讓整片空間像被各種尚未上路、卻已經半只腳踩進遠行的人生暫時借住。這裡不是城市最顯眼的地方，卻很像一座樞紐真正的內臟。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        20702
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20707
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         行李~
+End
+
+#Enquire
+Keyword         木箱~
+End
+
+#Enquire
+Keyword         寄放~
+End
+
+End

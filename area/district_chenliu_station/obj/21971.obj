@@ -1,0 +1,14 @@
+Vnum            21971
+Name            station ration pack~
+ShortDesc       驛站乾糧包(ration pack)~
+Description
+這份驛站乾糧包(ration pack)包得緊實簡單，明顯是專給準備立刻上路的人填口腹用的。
+~
+Unit            份~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           15
+Value           18 28 4 0
+Weight          1
+Cost            86
+End

@@ -1,0 +1,14 @@
+Vnum            21972
+Name            station water flask~
+ShortDesc       驛站水囊(water flask)~
+Description
+這只驛站水囊(water flask)摸起來還微微發暖，像剛有人替趕路人重新灌滿。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           15
+Value           12 12 LIQ_WATER 0
+Weight          2
+Cost            98
+End

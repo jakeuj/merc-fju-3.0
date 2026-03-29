@@ -1,0 +1,28 @@
+Vnum            20704
+Name            驛丞櫃口~
+Description
+櫃口後方堆著竹簡、行程簿與木牌，桌面被翻得很勤，像每一筆紀錄都在替陳留和更遠的地方維持某種看不見卻不能亂掉的節奏。能不能順利上路，很多時候就在這方櫃口前被決定。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       OUT
+ExitVnum        20703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         驛丞~
+End
+
+#Enquire
+Keyword         櫃口~
+End
+
+#Enquire
+Keyword         路引~
+End
+
+End

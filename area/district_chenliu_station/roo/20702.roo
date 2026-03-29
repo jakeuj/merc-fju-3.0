@@ -1,0 +1,43 @@
+Vnum            20702
+Name            車馬棚道~
+Description
+棚道邊繫著幾匹正換韁整鞍的驛馬，車輪、草料與木樁把整條路挤得滿滿的。這裡真正重要的不是體面，而是任何要上路的人都得在這裡先被整理進某種可運作的次序。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        20701
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         木樁~
+Description
+幾根磨得發亮的木樁沿棚道排開，繩痕深得一看就知道陳留往南的旅運從來沒有真正停過。
+~
+End
+
+#Enquire
+Keyword         車馬~
+End
+
+#Enquire
+Keyword         驛馬~
+End
+
+#Enquire
+Keyword         木樁~
+End
+
+End

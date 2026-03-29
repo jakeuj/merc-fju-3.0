@@ -1,0 +1,31 @@
+Vnum            21963
+Name            chenliu inn runner~
+ShortDesc       陳留旅舍夥計~
+Description
+這名陳留旅舍夥計嘴上總掛著招呼聲，眼裡卻明顯會先看人是不是已經走到快撐不住。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       85
+Level           17
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             11
+Wis             12
+Dex             11
+Con             11
+Hp              700
+Mana            90
+Move            108
+Class           0
+Gold            130
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

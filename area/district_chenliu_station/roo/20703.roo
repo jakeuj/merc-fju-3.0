@@ -1,0 +1,52 @@
+Vnum            20703
+Name            旅票棚前~
+Description
+棚前擠著等時辰、等座位，也等人順手替自己把消息一起帶出去的旅人。很多人嘴上問的是票、問的是車，真正想確認的卻往往是哪條路最近還算太平。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        20701
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20706
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       ENTER
+ExitVnum        20704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         票~
+End
+
+#Enquire
+Keyword         時辰~
+End
+
+#Enquire
+Keyword         南路~
+End
+
+End

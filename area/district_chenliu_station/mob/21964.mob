@@ -1,0 +1,32 @@
+Vnum            21964
+Name            chenliu passing student~
+ShortDesc       陳留過站書生~
+Description
+這名陳留過站書生抱著竹簡與包袱，不像真要久留，更像總在替自己挑一條不會太麻煩的
+下一站。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       70
+Level           16
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             12
+Wis             12
+Dex             10
+Con             10
+Hp              620
+Mana            100
+Move            105
+Class           0
+Gold            100
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

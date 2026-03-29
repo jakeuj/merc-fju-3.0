@@ -2400,6 +2400,25 @@
         "plans/area/0121-wild-wan-outer.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "district_chenliu_station",
+      "title": "陳留驛站",
+      "room_range": "20701-20720",
+      "load_order": 128,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_chenliu",
+      "theme_primary": "歷史城市",
+      "theme_secondary": "驛站 / 補給",
+      "summary": "承接陳留南驛前院，落成南驛街口、車馬棚道、旅票棚前、行李長棚與旅舍前廊構成的驛站 district。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/district_chenliu_station/index",
+        "area/district_chenliu_station/map.md",
+        "plans/area/0122-district-chenliu-station.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

@@ -1,0 +1,32 @@
+Vnum            21961
+Name            chenliu station clerk~
+ShortDesc       陳留驛站差役~
+Description
+這名陳留驛站差役站在街口與票棚之間，手上簿冊翻得飛快，顯然很習慣替一團亂的人流
+整理出能上路的順序。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       90
+Level           17
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             12
+Dex             11
+Con             11
+Hp              760
+Mana            80
+Move            110
+Class           0
+Gold            140
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
