@@ -709,54 +709,12 @@
 
 ## In Progress
 
-- `sec_starfall_crater`
-  - area_family: `Secret`
-  - reserved_room_block: `18901-18920`
-  - planned_vnum_range: `18901-18920`
-  - level_range: `46-60`
-  - theme: `仙俠`
-  - subtheme: `天坑 / 隕石`
-  - ref_inputs_used:
-    - `area/world_map.md`
-    - `ref/Readme.md`
-    - `ref/sanguo-progression-map.md`
-    - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/sec_starfall_crater/map.md`
-    - `ref/world-graph.md`
-    - `docs/3yWebsite/docs/data/players.json`
-    - `docs/3yWebsite/docs/data/skills.json`
-    - `plans/area/0095-wild-bailang.md`
-    - `plans/area/0102-wild-wolf-forest.md`
-    - `plans/area/0103-sec-spirit-peak.md`
-  - ref_inputs_deferred:
-    - `docs/3yWebsite/map/bepin.html`
-    - `ref/sanguo-area-specfirst/area/city_chengdu/map.md`
-    - `ref/sanguo-area-specfirst/area/fort_yiling/map.md`
-    - 各類原型工具與模擬系統
-  - theme_basis:
-    - `wild_bailang` 現有 spec/runtime 已保留 `18005 up -> sec_starfall_crater` metadata，表示它是目前北境鏈最直接也最低摩擦的下一個未落地節點
-    - `world-graph` 已將 `sec_starfall_crater` 列在幽州遼東鏈內，提供 `Wild -> Secret` 的高風險分支，不必再強行回收成一般軍旅或城市節奏
-    - `題材分布表` 雖未點名天坑，但北方幽州區仍保留高辨識度異域 / 傳說空間，適合把白狼山高處異象翻成墜星祕境
-    - `players.json / skills.json` 對遼東北線的明確服務節點仍集中在襄平，沒有比既有 reserved link 更強的理由要求本輪先切回城市或教學 loop
-  - compliance_check:
-    - compliant；這次雖然仍是 `Secret`，但最近三個完成區是 `Fort -> Wild -> Secret`，尚未違反連續三個同 family 的 queue variety rule，而且題材已從祭天靈峰切換到墜星異坑
-  - implementation_notes:
-    - 已建立 `index / roo / mob / obj / res / shp` 最小可載入集合，room `18901-18908`、mob `21331-21334`、obj `21351-21354`
-    - 已正式落成 `wild_bailang/18005 up -> 18901` 與 `18901 down -> wild_bailang/18005` runtime boundary，並同步 `wild_bailang/map.md`
-    - 已新增 `area/directory.lst` 與 `docs/current-game/areas.md/json` 台帳
-  - validation:
-    - `python -X utf8 tools/mapmd_validate.py area/sec_starfall_crater/map.md` passed
-    - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_starfall_crater/map.md --validate-only` passed
-    - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_starfall_crater/map.md` passed
-    - WSL `make -f Makefile.lin clean && make -f Makefile.lin merc` passed
-    - `timeout 45s ./merc merc.ini || true` passed with success signal captured in `log/1078.log`
-    - `debug/error` 僅反映 timeout 終止；`debug/failexit` 僅有既有 baseline `17201/17208` fixups，未見 area-specific loader error
-    - `$env:PYTHONUTF8='1'; python tools/area_acceptance_gate.py sec_starfall_crater` returned `implementation_ready_for_commit`
-  - delivery_gate: `implementation_ready_for_commit`
+(目前無 `in_progress` 項目。)
 
 
 ## Done
 
+- `2026-03-29` `sec_starfall_crater` 已完成第一輪 runtime implementation、commit `987734a`，完成 `wild_bailang/18005 <-> 18901` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1078.log`），並達成可前進下一區狀態
 - `2026-03-29` `sec_spirit_peak` 已完成第一輪 runtime implementation、commit `a573b69`，完成 `dng_ancient_cave/18108 <-> 18801` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1075.log`），並達成可前進下一區狀態
 - `2026-03-29` `wild_wolf_forest` 已完成第一輪 runtime implementation、commit `990a3d5`，完成 `wild_bailang/18008 <-> 18701` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1074.log`），並達成可前進下一區狀態
 - `2026-03-28` `fort_northern_watch` 已完成第一輪 runtime implementation、commit `f9b0607`，完成 `fort_yijing/17907 <-> 18601` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1073.log`），並達成可前進下一區狀態
@@ -925,14 +883,14 @@
 
 ## Current Recommended Next Step
 
-先 commit `sec_starfall_crater` 的 implementation milestone；commit 後再回到 queue 規則決定下一個 actionable area。
+回到 queue 規則盤點下一個 actionable area；優先檢查是否該切回非 `Secret` family，避免北境鏈題材連續過深。
 
 ## Next Action
 
-- commit `sec_starfall_crater` 的 implementation milestone
-- 確認 tracker / current-game registry 與 commit 訊息一致
-- commit 後再依 queue 規則決定是否推進下一個 area
+- 依 `world_map / progression / 題材分布 / players / skills` 重新盤點北境下一個 actionable area
+- 優先比較非 `Secret` family 候選，確認 queue variety 是否需要切回 `City / Wild / Dungeon / Fort`
+- 決定後再建立下一個單區 plan / spec milestone
 
 ## Next Prompt
 
-`先 commit sec_starfall_crater 的 implementation milestone：包含 wild_bailang/18005 <-> sec_starfall_crater/18901 runtime boundary、index / roo / mob / obj / res / shp、directory.lst 與 current-game area registry 更新；commit 後再依 queue 規則決定下一個 area。`
+`依 queue 規則盤點北境下一個 actionable area：先一起檢查 world_map / progression / 題材分布 / players / skills，優先比較非 Secret family 候選與剩餘北境節點，再決定下一個要開工的 area。`
