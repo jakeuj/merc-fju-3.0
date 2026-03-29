@@ -709,20 +709,11 @@
 
 ## In Progress
 
-- `wild_chenliu_west`
-  - area_family: `Wild`
-  - reserved_room_block: `20801-20820`
-  - level_range: `14-24`
-  - status: `第一輪 runtime implementation 已完成，等待 implementation milestone commit`
-  - delivery_gate: `implementation_ready_for_commit`
-  - summary:
-    - 已建立 `map.md`、`index / roo / mob / obj / res / shp` 最小可載入集合，首版房間落在 `20801-20808`
-    - 已正式落成 `city_chenliu/13801 west <-> wild_chenliu_west/20801 east` runtime boundary
-    - `mapmd_validate`、generator `--validate-only`、實際 `.roo` 生成、WSL Linux build、direct merc smoke 與 acceptance gate 均已通過
-    - `city_chenliu` 的 west-edge 已從抽象 `road_chenliu_loyang` 收斂成 `wild_chenliu_west`，避免與 `loyang/556 <-> loyang_outskirts/7501` 的既有東郊拓樸衝突
+(目前無 `in_progress` 項目。)
 
 ## Done
 
+- `2026-03-29` `wild_chenliu_west` 已完成第一輪 runtime implementation、commit `2238d7f`，完成 `city_chenliu/13801 <-> 20801` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `district_chenliu_station` 已完成第一輪 runtime implementation、commit `f602dab`，完成 `city_chenliu/13816 <-> 20701` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `wild_wan_outer` 已完成第一輪 runtime implementation、commit `3c8534b`，完成 `city_wan/20408 <-> 20601` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `road_wan` 已完成第一輪 runtime implementation、commit `a8eea18`，完成 `loyang/593 <-> 20501` 與 `city_wan/20407 <-> 20508` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
@@ -910,14 +901,14 @@
 
 ## Current Recommended Next Step
 
-先提交 `wild_chenliu_west` 的 implementation milestone，因為 tracker 已到 `implementation_ready_for_commit`，不能直接跳下一個 area。
+回到 queue 規則重建 `todo`，優先比較 `road_chenliu`、`road_chenliu_loyang` 與其他能提供 family variety 的非 `Wild` 候選，避免在 `wild_chenliu_west` 後立刻再堆同質城郊外帶。
 
 ## Next Action
 
-- 提交 `wild_chenliu_west` implementation milestone commit
-- 再補一個 tracker-only commit，把本區從 `in_progress` 推進成已完成狀態
-- 之後才回到 queue 規則盤點下一個 actionable area
+- 依 queue 規則重建 `todo` 與 candidate 判斷
+- 優先比較 `road_chenliu`、`road_chenliu_loyang` 與其他可提供 family variety 的非 `Wild` 候選
+- 先釐清 `wild_chenliu_west` 更西端如何與洛陽既有東郊線或其他中原過渡帶銜接，避免把交通層硬疊在同一條東向出口上
 
 ## Next Prompt
 
-`先提交 wild_chenliu_west implementation milestone，接著更新 rebuild tracker 的 delivery gate，然後再回到 queue 規則盤點下一個待建 area。`
+`依 queue 規則重建 todo，優先盤點 road_chenliu、road_chenliu_loyang 與其他非 Wild 候選，先釐清 wild_chenliu_west 更西端與洛陽既有東郊線的銜接契約，再決定下一個 actionable area。`
