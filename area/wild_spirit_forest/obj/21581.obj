@@ -1,0 +1,15 @@
+Vnum            21581
+Name            moss ration~
+ShortDesc       山行乾糧包(moss ration)~
+Description
+一包專替深山行腳人準備的山行乾糧包(moss ration)紮得很緊，外層還細心裹了葉片與布
+繩，免得沿路被濕氣吃壞。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           42
+Value           24 48 4 0
+Weight          1
+Cost            162
+End

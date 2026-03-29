@@ -1,0 +1,31 @@
+Vnum            21562
+Name            spirit warden~
+ShortDesc       靈木守望者~
+Description
+這名靈木守望者靠近老樹時幾乎像跟整片林子連成一體，讓人很難判斷他到底是在看守
+路，還是在看守那些不想被外人帶走的林中痕跡。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       50
+Level           48
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             12
+Wis             14
+Dex             13
+Con             13
+Hp              1780
+Mana            96
+Move            188
+Class           0
+Gold            380
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

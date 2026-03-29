@@ -59,6 +59,7 @@
         "direction": "east",
         "source_vnum": 15012,
         "target_area": "wild_spirit_forest",
+        "target_room_vnum": 19201,
         "label": "東岔靈林"
       }
     ],
@@ -243,7 +244,8 @@
       "coord": [-3, -2, -1],
       "labels": ["east-branch", "forest-link"],
       "exits": [
-        { "direction": "up", "to": 15008 }
+        { "direction": "up", "to": 15008 },
+        { "direction": "east", "to": 19201, "external": true }
       ],
       "enquires": ["靈林", "岔路", "去路"]
     }

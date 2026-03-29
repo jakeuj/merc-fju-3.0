@@ -1,0 +1,15 @@
+Vnum            21583
+Name            resin lamp~
+ShortDesc       樹脂行燈(resin lamp)~
+Description
+這盞樹脂行燈(resin lamp)比尋常野外燈火更穩，火光不大，卻特別適合在藤影與濕氣較
+重的林路裡慢慢照路。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           44
+Value           0 0 28 0
+Weight          2
+Cost            186
+End

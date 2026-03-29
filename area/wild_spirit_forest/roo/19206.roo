@@ -1,0 +1,44 @@
+Vnum            19206
+Name            根橋下灣~
+Description
+幾段粗根從坡面橫跨過來，剛好在這片下灣上方搭出像天然木橋的陰影，讓人一時分不清自己是在樹下穿行，還是在被什麼古老東西俯看。四周沒有真正封死，可每一步都像會被林子多記住一點。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       WEST
+ExitVnum        19205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        19204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        19207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         樹根~
+End
+
+#Enquire
+Keyword         下灣~
+End
+
+#Enquire
+Keyword         上面~
+End
+
+End

@@ -1,0 +1,43 @@
+Vnum            19203
+Name            古碑風根地~
+Description
+一塊半埋的舊碑斜卡在糾結樹根之間，碑面文字大多被潮氣與苔色吃掉，只剩零星筆畫像還想勉強提醒誰曾在這裡立過界。可真正先讓人停下腳步的，反而是那些從碑腳一路伸出去的根脈，像整片森林都在借這塊石頭記路。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       SOUTH
+ExitVnum        19201
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        19205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         石碑~
+Description
+碑面殘紋早已難辨全句，只看得出它本來並不是替觀景立的，而是替辨路與立界留下的舊記。
+~
+End
+
+#Enquire
+Keyword         石碑~
+End
+
+#Enquire
+Keyword         界~
+End
+
+#Enquire
+Keyword         根~
+End
+
+End

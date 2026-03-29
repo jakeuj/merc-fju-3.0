@@ -1,0 +1,31 @@
+Vnum            21564
+Name            vine watcher~
+ShortDesc       深處藤影行者~
+Description
+這名深處藤影行者站在更裡面的林影間時，總讓人分不清是人借了藤影藏身，還是藤影
+自己在模仿一個仍願意走動的輪廓。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       -20
+Level           56
+Hitroll         0
+Protect         0
+Damroll         0
+Str             14
+Int             13
+Wis             13
+Dex             15
+Con             14
+Hp              2150
+Mana            126
+Move            202
+Class           0
+Gold            460
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_FEMALE
+End

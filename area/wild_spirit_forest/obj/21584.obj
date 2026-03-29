@@ -1,0 +1,15 @@
+Vnum            21584
+Name            spirit bark token~
+ShortDesc       靈木護符(spirit bark token)~
+Description
+一枚削得很薄的靈木護符(spirit bark token)帶著乾淨卻不刺眼的木色，像是從真正有靈
+性的老木上小心取下來的一片記號。
+~
+Unit            枚~
+ItemType        ITEM_TREASURE
+Takeable        Yes
+Level           48
+Value           0 0 0 0
+Weight          1
+Cost            220
+End

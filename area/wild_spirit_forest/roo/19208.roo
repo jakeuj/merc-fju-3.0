@@ -1,0 +1,36 @@
+Vnum            19208
+Name            青燐深處~
+Description
+更深處的樹影間偶爾會浮出一點近乎青燐的冷光，既不像燈，也不像單純的月色反射。站在這裡時，真正令人不安的不是看見了什麼，而是你開始分不清那些微光究竟在更裡面，還是其實一直就在自己身邊。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       WEST
+ExitVnum        19204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         青光~
+End
+
+#Enquire
+Keyword         深處~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

@@ -1,0 +1,52 @@
+Vnum            19204
+Name            靈木空場~
+Description
+林子忽然在這裡鬆出一小塊空場，幾株老木的樹皮裂紋裡卻透著近乎溫潤的亮色，像這裡的氣息一直比周圍濃厚半分。這不是誇張到像祕境開口的景象，但已足夠讓人確信，武陵的靈氣在這裡不是傳聞。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       WEST
+ExitVnum        19202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        19207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        19208
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         靈木~
+End
+
+#Enquire
+Keyword         空場~
+End
+
+#Enquire
+Keyword         異樣~
+End
+
+End

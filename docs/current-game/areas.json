@@ -2115,6 +2115,25 @@
         "plans/area/0106-dng-ancient-tomb-shu.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "wild_spirit_forest",
+      "title": "靈木森林",
+      "room_range": "19201-19220",
+      "load_order": 113,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "wild_wuling",
+      "theme_primary": "仙俠",
+      "theme_secondary": "靈木 / 妖藤",
+      "summary": "承接武陵山東岔靈林，落成藤影小徑、古碑風根地、靈木空場與青燐深處構成的蜀地深山 wild 骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/wild_spirit_forest/index",
+        "area/wild_spirit_forest/map.md",
+        "plans/area/0107-wild-spirit-forest.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

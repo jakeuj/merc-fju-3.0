@@ -1,0 +1,15 @@
+Vnum            21582
+Name            dew gourd~
+ShortDesc       靈露水葫蘆(dew gourd)~
+Description
+這只靈露水葫蘆(dew gourd)外表看來只是普通山行水具，打開時卻會先聞到一股混著木
+氣與晨露的清涼味。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           42
+Value           12 12 0 0
+Weight          2
+Cost            168
+End

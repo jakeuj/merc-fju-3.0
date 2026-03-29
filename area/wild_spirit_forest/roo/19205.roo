@@ -1,0 +1,44 @@
+Vnum            19205
+Name            伏苔低窪~
+Description
+低窪地帶積著一層看似柔軟的濕苔，踩下去卻會立刻知道底下還藏著碎枝、細石和不太穩的泥水。這裡不像真正的陷阱，更像森林用自己的方式提醒你，離主路愈遠，腳底的誠實就愈重要。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       NORTH
+ExitVnum        19202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        19206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        19203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         低處~
+End
+
+#Enquire
+Keyword         濕苔~
+End
+
+#Enquire
+Keyword         退路~
+End
+
+End

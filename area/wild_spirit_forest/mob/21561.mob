@@ -1,0 +1,33 @@
+Vnum            21561
+Name            spirit guide~
+ShortDesc       識路行腳客~
+Description
+這名識路行腳客總像已和這片靈林打了很久交道，連停腳的位置都剛好落在不會被藤影
+完全吞掉的地方。比起單純賣東西，他更像在用自己的穩定提醒外人這裡還沒真的離主
+路太遠。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       90
+Level           42
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             14
+Dex             12
+Con             13
+Hp              1520
+Mana            108
+Move            182
+Class           0
+Gold            320
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

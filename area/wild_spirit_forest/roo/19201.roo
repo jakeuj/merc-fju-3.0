@@ -1,0 +1,44 @@
+Vnum            19201
+Name            靈林岔入口~
+Description
+一踏進這段往東偏去的林路，山腹主徑的風聲就像被身後那些更高、更密的樹影整片截住。路還算看得見，卻已經不像給外人走的通道，而像森林只暫時允許你從邊上摸進來看看。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       WEST
+ExitVnum        15012
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        19202
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        19203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         靈林~
+End
+
+#Enquire
+Keyword         武陵~
+End
+
+#Enquire
+Keyword         來路~
+End
+
+End

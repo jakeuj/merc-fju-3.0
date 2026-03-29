@@ -1,0 +1,44 @@
+Vnum            19202
+Name            藤影小徑~
+Description
+小徑被垂藤切成一段段狹窄的視線，腳邊卻還留著零散的舊足跡，像有人曾反覆進出這裡，只是不願意替後來的人把路講明。走在這裡時，會開始懷疑森林是不是故意把主路和支路混成一種東西。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       WEST
+ExitVnum        19201
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        19204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19205
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         藤~
+End
+
+#Enquire
+Keyword         小徑~
+End
+
+#Enquire
+Keyword         足跡~
+End
+
+End

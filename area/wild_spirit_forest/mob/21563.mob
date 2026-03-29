@@ -1,0 +1,31 @@
+Vnum            21563
+Name            moss prowler~
+ShortDesc       伏苔巡林獸~
+Description
+這頭伏苔巡林獸在濕地和低根之間來回時幾乎沒有多餘聲音，只有偶爾翻開苔層的動作
+才會讓人意識到它並不是林子的一部分。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       -40
+Level           51
+Hitroll         0
+Protect         0
+Damroll         0
+Str             14
+Int             10
+Wis             11
+Dex             14
+Con             14
+Hp              1910
+Mana            60
+Move            194
+Class           0
+Gold            410
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_NEUTRAL
+End

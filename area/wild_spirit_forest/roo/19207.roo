@@ -1,0 +1,44 @@
+Vnum            19207
+Name            懸藤高台~
+Description
+高台其實只是樹根與土層自然拱起的一塊突地，可垂落的藤影和略高的視野，仍讓人第一次能把前面幾段林路重新串回成一條完整線。也正因如此，你才更容易看出更東邊那片林影不是出口，而是另一層更深的招引。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       SOUTH
+ExitVnum        19204
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       DOWN
+ExitVnum        19206
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        19208
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         高處~
+End
+
+#Enquire
+Keyword         藤~
+End
+
+#Enquire
+Keyword         東邊~
+End
+
+End
