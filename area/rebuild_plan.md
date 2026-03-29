@@ -709,54 +709,12 @@
 
 ## In Progress
 
-- `wild_wolf_forest`
-  - area_family: `Wild`
-  - reserved_room_block: `18701-18720`
-  - planned_vnum_range: `18701-18720`
-  - level_range: `40-52`
-  - theme: `詭異民俗`
-  - subtheme: `林區 / 狼群`
-  - ref_inputs_used:
-    - `area/world_map.md`
-    - `ref/Readme.md`
-    - `ref/sanguo-progression-map.md`
-    - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/wild_wolf_forest/map.md`
-    - `ref/world-graph.md`
-    - `docs/3yWebsite/docs/data/players.json`
-    - `docs/3yWebsite/docs/data/skills.json`
-    - `plans/area/0095-wild-bailang.md`
-    - `plans/area/0100-road-north-border.md`
-    - `plans/area/0101-fort-northern-watch.md`
-  - ref_inputs_deferred:
-    - `docs/3yWebsite/map/bepin.html`
-    - `ref/sanguo-area-specfirst/area/sec_spirit_peak/map.md`
-    - `ref/sanguo-area-specfirst/area/sec_starfall_crater/map.md`
-    - 各類原型工具與模擬系統
-  - theme_basis:
-    - `wild_bailang` 現有 spec/runtime 已保留 `18008 north -> wild_wolf_forest` metadata，表示這裡是白狼山之後最自然的北向承接 wild
-    - `world-graph` 明確把 `wild_wolf_forest` 定成 `Wild` family，支持在 `Fort` 之後切回更收束、更遮蔽的林地探索節奏
-    - `題材分布表` 與 ref scaffold 都把此區拉向 `詭異民俗 / 狼群`，能和 `wild_bailang` 的山前異域、`fort_northern_watch` 的狼煙哨站形成清楚題材差
-    - `players.json / skills.json` 對遼東北線的高頻訊號仍集中在襄平服務節點，支持在邊城與軍鎮補給已齊的前提下，把下一區做成非服務導向的深林壓力帶
-  - compliance_check:
-    - compliant；在 `Fort` 之後切回 `Wild`，同時承接 `wild_bailang` 的既有北向預留與北境 family variety，不是任意跳到無關城市或秘境
-  - implementation_notes:
-    - 已建立 `index / roo / mob / obj / res / shp` 最小可載入集合，room `18701-18708`、mob `21131-21134`、obj `21151-21154`
-    - 已正式落成 `wild_bailang/18008 north -> 18701` 與 `18701 south -> wild_bailang/18008` runtime boundary，並同步 `wild_bailang/map.md`
-    - 已新增 `area/directory.lst` 與 `docs/current-game/areas.md/json` 台帳
-  - validation:
-    - `python -X utf8 tools/mapmd_validate.py area/wild_wolf_forest/map.md` passed
-    - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_wolf_forest/map.md --validate-only` passed
-    - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_wolf_forest/map.md` passed
-    - WSL `make -f Makefile.lin clean && make -f Makefile.lin merc` passed
-    - `timeout 60s ./startup.bash` passed with success signal in `log/1074.log`
-    - `debug/error` 僅反映 timeout 終止；`debug/failexit` 僅有既有 baseline `17201/17208` fixups，未見 area-specific loader error
-    - `$env:PYTHONUTF8='1'; python tools/area_acceptance_gate.py wild_wolf_forest` returned `implementation_ready_for_commit`
-  - delivery_gate: `implementation_ready_for_commit`
+(目前無 `in_progress` 項目。)
 
 
 ## Done
 
+- `2026-03-29` `wild_wolf_forest` 已完成第一輪 runtime implementation、commit `990a3d5`，完成 `wild_bailang/18008 <-> 18701` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1074.log`），並達成可前進下一區狀態
 - `2026-03-28` `fort_northern_watch` 已完成第一輪 runtime implementation、commit `f9b0607`，完成 `fort_yijing/17907 <-> 18601` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1073.log`），並達成可前進下一區狀態
 - `2026-03-24` `road_north_border` 已完成第一輪 runtime implementation，完成 `city_xiangping/18309 <-> 18501` runtime boundary、通過 WSL Linux build 與臨時 test-port direct-load smoke，達成可提交狀態
 - `2026-03-24` `wild_liaodong_plain` 已完成第一輪 runtime implementation，完成 `city_xiangping/18308 <-> 18401` runtime boundary、通過 WSL Linux build 與臨時 test-port direct-load smoke，達成可提交狀態
@@ -923,14 +881,14 @@
 
 ## Current Recommended Next Step
 
-先 commit `wild_wolf_forest` 的 implementation milestone；commit 後再回到 queue 決定下一個 actionable area。
+重建北境鏈的下一個 `Secret` family queue 與 `todo`，優先比較 `sec_spirit_peak` 和 `sec_starfall_crater` 哪個更適合作為新的 next actionable area。
 
 ## Next Action
 
-- commit `wild_wolf_forest` 的 implementation milestone
-- 確認 tracker / current-game registry 與 commit 訊息一致
-- commit 後再依 queue 規則決定是否推進下一個 area
+- 依 `area/world_map.md`、`ref/sanguo-progression-map.md`、`ref/三國-MUD-題材分布表.md`、`ref/world-graph.md` 重新盤點北境下一個 `Secret` family 候選
+- 優先比較 `dng_ancient_cave -> sec_spirit_peak` 與 `wild_bailang -> sec_starfall_crater` 哪條線更符合 queue variety 與現有 world-link 成熟度
+- 盤點完成後，建立新的 `todo` 或直接建立下一個單區 plan / spec milestone
 
 ## Next Prompt
 
-`先 commit wild_wolf_forest 的 implementation milestone：包含 wild_bailang/18008 <-> wild_wolf_forest/18701 runtime boundary、index / roo / mob / obj / res / shp、directory.lst 與 current-game registry 更新；commit 後再依 queue 規則決定下一個 area。`
+`wild_wolf_forest` 已完成 commit；現在請依 queue 規則盤點北境下一個待建 `Secret` area，優先比較 `sec_spirit_peak` 與 `sec_starfall_crater`，決定新的 next actionable area 並建立對應 plan / spec milestone。`
