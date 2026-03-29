@@ -1,0 +1,44 @@
+Vnum            20904
+Name            驛棚前坪~
+Description
+幾張長凳、粗布棚腳與栓馬木柱把這塊前坪整理成驛路上最像樣的停手點。真正趕路的人會在這裡補水、換口糧，也會在天色轉暗前最後打聽前頭那一段路是不是又有差役加重盤問。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        20902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       ENTER
+ExitVnum        20906
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         驛棚~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+#Enquire
+Keyword         補給~
+End
+
+End

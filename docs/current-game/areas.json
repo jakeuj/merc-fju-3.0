@@ -2420,11 +2420,11 @@
         "area/rebuild_plan.md"
       ]
     },
-    {
-      "name": "wild_chenliu_west",
-      "title": "陳留西郊",
-      "room_range": "20801-20820",
-      "load_order": 129,
+      {
+        "name": "wild_chenliu_west",
+        "title": "陳留西郊",
+        "room_range": "20801-20820",
+        "load_order": 129,
       "category": "rebuild addition",
       "origin": "rebuild",
       "parent_area": "city_chenliu",
@@ -2435,9 +2435,28 @@
         "area/directory.lst",
         "area/wild_chenliu_west/index",
         "area/wild_chenliu_west/map.md",
-        "plans/area/0123-wild-chenliu-west.md",
-        "area/rebuild_plan.md"
-      ]
-    }
-  ]
-}
+          "plans/area/0123-wild-chenliu-west.md",
+          "area/rebuild_plan.md"
+        ]
+      },
+      {
+        "name": "road_chenliu",
+        "title": "往陳留驛路",
+        "room_range": "20901-20920",
+        "load_order": 130,
+        "category": "rebuild addition",
+        "origin": "rebuild",
+        "parent_area": "wild_chenliu_west",
+        "theme_primary": "歷史城市",
+        "theme_secondary": "西行驛道 / 中原長路",
+        "summary": "承接 wild_chenliu_west 的更西荒道，落成更西驛路口、車轍長段、驛牌木堠、驛棚前坪與盤查土坡構成的西行 road。",
+        "source_paths": [
+          "area/directory.lst",
+          "area/road_chenliu/index",
+          "area/road_chenliu/map.md",
+          "plans/area/0124-road-chenliu.md",
+          "area/rebuild_plan.md"
+        ]
+      }
+    ]
+  }

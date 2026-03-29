@@ -1,0 +1,14 @@
+Vnum            22031
+Name            relay ration~
+ShortDesc       驛路乾糧包(relay ration)~
+Description
+一包用粗布束好的乾糧包看起來正適合在西行驛路上邊走邊補口糧。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           16
+Value           16 24 4 0
+Weight          1
+Cost            96
+End

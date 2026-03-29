@@ -1,0 +1,33 @@
+Vnum            22021
+Name            west road courier~
+ShortDesc       西行驛卒~
+Description
+這名守在驛路口的西行驛卒雖不如城門衛士那般緊繃，卻仍習慣用目光把每個旅人的
+行囊、腳步與說詞都掃上一遍。他很清楚誰只是趕路，誰又像是想趁著路長和天色混
+進更西的灰地裡。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       90
+Level           16
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             11
+Wis             11
+Dex             12
+Con             11
+Hp              600
+Mana            70
+Move            130
+Class           0
+Gold            96
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

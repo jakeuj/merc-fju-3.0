@@ -1,0 +1,32 @@
+Vnum            22022
+Name            relay steward~
+ShortDesc       驛棚掌事~
+Description
+這位驛棚掌事總是一手扶著茶桶，一手留神看著過路人有沒有把東西拿穩。他熟悉每
+一批旅人停下來時會先問什麼，也知道哪些消息該講、哪些方向只說到剛好夠人上路。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       120
+Level           17
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             12
+Wis             12
+Dex             11
+Con             11
+Hp              640
+Mana            90
+Move            120
+Class           0
+Gold            120
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

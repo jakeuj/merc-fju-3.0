@@ -1,0 +1,28 @@
+Vnum            20908
+Name            更西驛道前帶~
+Description
+再往西去，陳留方向的痕跡已經只剩偶爾回頭時才能抓住的背景，真正支撐人不迷路的，只剩更寬的驛路本身、輪痕的深淺與風裡傳來的遠處棚燈味。它還沒有把你真正送進洛陽，但很清楚已經把人正式放上兩城之間該有的長路。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        20905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         更西~
+End
+
+#Enquire
+Keyword         洛陽~
+End
+
+#Enquire
+Keyword         遠路~
+End
+
+End

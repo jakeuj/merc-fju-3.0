@@ -1,0 +1,43 @@
+Vnum            20903
+Name            驛牌木堠~
+Description
+路邊立著刻痕已深的木堠與驛牌，字跡雖被風吹雨打得不算完整，卻仍清楚提醒旅人東邊是陳留、往西才是真正更遠的去處。站在這裡時，你會第一次感到自己不再只是離城，而是已經被正式交給一條跨城長路。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        20902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         驛牌~
+Description
+木牌上的刻字被風磨得有些毛邊，但還能辨出陳留方向與更西路段的提示，顯示這裡早就不是只憑口耳相傳辨路的灰帶。
+~
+End
+
+#Enquire
+Keyword         驛牌~
+End
+
+#Enquire
+Keyword         陳留~
+End
+
+#Enquire
+Keyword         更西~
+End
+
+End

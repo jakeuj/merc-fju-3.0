@@ -1,0 +1,44 @@
+Vnum            20902
+Name            車轍長段~
+Description
+這段路被車轍壓得很深，連泥色都被往返人馬磨出一種穩定的舊亮。它沒有城郊茶亭那種鬆散人情，取而代之的是一種誰都知道該往哪走、也知道哪些地方最好不要在天黑後停太久的長路秩序。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        20901
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         車轍~
+End
+
+#Enquire
+Keyword         長路~
+End
+
+#Enquire
+Keyword         旅隊~
+End
+
+End

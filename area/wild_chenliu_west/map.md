@@ -33,6 +33,13 @@
         "target_area": "city_chenliu",
         "target_room_vnum": 13801,
         "label": "西城門外牌樓"
+      },
+      {
+        "direction": "west",
+        "source_vnum": 20808,
+        "target_area": "road_chenliu",
+        "target_room_vnum": 20901,
+        "label": "往陳留驛路"
       }
     ],
     "clusters": [
@@ -167,15 +174,16 @@
     {
       "vnum": 20808,
       "name": "更西荒道",
-      "description": "再往西去，陳留留下的牆影與牌樓都開始淡成一種只夠回頭辨位的背景，只剩荒道本身還替人勉強維持方向感。這裡不像真正的盡頭，卻很清楚是陳留正式把旅人交還給更寬、更雜，也更難完全被管住的中原外圍之處。",
+      "description": "再往西去，陳留留下的牆影與牌樓都開始淡成一種只夠回頭辨位的背景，只剩荒道本身還替人勉強維持方向感。如今更前頭已隱約看得見被車轍壓實的驛路開口與棚燈痕影，顯示這裡不再只是抽象的遠路，而是真正開始把旅人交還給更長、更穩，也更講路規的中原驛道。",
       "sector_type": "SECT_FIELD",
       "cluster": "west-track",
       "coord": [-3, 0, 0],
-      "labels": ["west-edge", "future-road", "departure"],
+      "labels": ["west-edge", "road-connection", "departure"],
       "exits": [
-        { "direction": "east", "to": 20804 }
+        { "direction": "east", "to": 20804 },
+        { "direction": "west", "to": 20901, "external": true }
       ],
-      "enquires": ["更西", "遠路", "荒道"]
+      "enquires": ["更西", "遠路", "荒道", "驛路"]
     }
   ]
 }

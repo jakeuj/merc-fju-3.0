@@ -1,0 +1,33 @@
+Vnum            22024
+Name            west patrol runner~
+ShortDesc       西驛巡差~
+Description
+這名西驛巡差在坡口來回走動時步子很穩，像是隨時都準備把想混過去的人攔下來。
+他對這條路的耐心不在於聊天，而在於反覆確認每個人是不是看起來都像自己說的那
+樣只是單純上路。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       70
+Level           19
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             11
+Wis             11
+Dex             12
+Con             12
+Hp              760
+Mana            60
+Move            135
+Class           0
+Gold            110
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

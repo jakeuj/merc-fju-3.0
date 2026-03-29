@@ -1,0 +1,24 @@
+Vnum            20906
+Name            驛棚內~
+Description
+棚內擺著粗茶桶、舊水囊與幾面已被擦得發亮的木碗，角落還掛著幾塊替旅人記方向的木牌。這裡談不上安穩，只能算是在真正重新上路前，勉強把人和行囊都整理回長路節奏的小縫口。
+~
+SectorType      SECT_INSIDE
+
+#Exit
+Direction       OUT
+ExitVnum        20904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         木牌~
+End
+
+#Enquire
+Keyword         茶水~
+End
+
+End

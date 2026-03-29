@@ -1,13 +1,21 @@
 Vnum            20808
 Name            更西荒道~
 Description
-再往西去，陳留留下的牆影與牌樓都開始淡成一種只夠回頭辨位的背景，只剩荒道本身還替人勉強維持方向感。這裡不像真正的盡頭，卻很清楚是陳留正式把旅人交還給更寬、更雜，也更難完全被管住的中原外圍之處。
+再往西去，陳留留下的牆影與牌樓都開始淡成一種只夠回頭辨位的背景，只剩荒道本身還替人勉強維持方向感。如今更前頭已隱約看得見被車轍壓實的驛路開口與棚燈痕影，顯示這裡不再只是抽象的遠路，而是真正開始把旅人交還給更長、更穩，也更講路規的中原驛道。
 ~
 SectorType      SECT_FIELD
 
 #Exit
 Direction       EAST
 ExitVnum        20804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20901
 ExitDesc        ~
 ExitKeyword     ~
 ExitKey         0
@@ -23,6 +31,10 @@ End
 
 #Enquire
 Keyword         荒道~
+End
+
+#Enquire
+Keyword         驛路~
 End
 
 End

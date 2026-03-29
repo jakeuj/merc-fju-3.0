@@ -95,6 +95,7 @@ title: Current Game Areas
 | `wild_wan_outer` | 宛城外道 / 宛西近郊 wild | `20601-20620` | `rebuild addition` | 承接 `city_wan` 西城牌樓，落成西城外道口、宛西郊道、茶棚前坪、田埂側路與路旁樹叢構成的近郊 wild。 |
 | `district_chenliu_station` | 陳留驛站 / 南驛分區 district | `20701-20720` | `rebuild addition` | 承接 `city_chenliu` 陳留驛站前院，落成南驛街口、車馬棚道、旅票棚前、行李長棚與旅舍前廊構成的驛站 district。 |
 | `wild_chenliu_west` | 陳留西郊 / 西城外帶 wild | `20801-20820` | `rebuild addition` | 承接 `city_chenliu` 西城門外牌樓，落成西門郊道口、陳西官道、茶亭前坪、柳溝田埂與流民營灰地構成的近郊 wild。 |
+| `road_chenliu` | 往陳留驛路 / 陳西長路 road | `20901-20920` | `rebuild addition` | 承接 `wild_chenliu_west` 的更西荒道，落成更西驛路口、車轍長段、驛牌木堠、驛棚前坪與盤查土坡構成的西行 road。 |
 | `wild_jiangxia_river` | 江夏水道 / 江岸水路野外 | `14301-14330` | `rebuild addition` | 承接襄陽東碼頭外緣，落成離城木棧、蘆葦濕灘、水寨殘樁與東向渡口前帶。 |
 | `city_jiangxia` | 江夏 / 荊州東岸江港主城 | `14401-14430` | `rebuild addition` | 承接江夏水道東界，落成渡口外門、港前主街、市集補給區與水軍官署骨架。 |
 | `wild_yunmeng` | 雲夢大澤 / 迷霧濕地野外 | `14501-14530` | `rebuild addition` | 承接江夏南向水巷外側，落成濕地邊樁、霧中高埠、半沉石碑與深沼前帶。 |

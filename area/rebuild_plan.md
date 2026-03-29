@@ -709,7 +709,43 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `road_chenliu`
+  - status: `implementation_ready_for_commit`
+  - area_family: `Road`
+  - reserved_room_block: `20901-20920`
+  - level_range: `15-25`
+  - theme: `歷史城市`
+  - subtheme: `西行驛道 / 中原長路`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/world-graph.md`
+    - `ref/sanguo-area-specfirst/area/road_chenliu/map.md`
+    - `ref/sanguo-area-specfirst/area/road_chenliu_loyang/map.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `area/wild_chenliu_west/map.md`
+    - `area/wild_chenliu_west/roo/20808.roo`
+    - `area/loyang_outskirts/map.md`
+    - `area/loyang/roo/556.roo`
+    - `plans/area/0123-wild-chenliu-west.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/map/chenliu.html`
+    - `docs/3yWebsite/map/loyang.html`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `wild_chenliu_west` 已經把陳留西門外做成可載入近郊，因此下一個 actionable area 應切回 `Road` family，而不是再堆同質外帶
+    - `world-graph` 仍把 `road_chenliu` 視為較 canonical 的 Luoyang <-> Chenliu 主路節點，優先度高於只剩單側 scaffold 的 `road_chenliu_loyang`
+    - `loyang/556 <-> loyang_outskirts/7501` 已是穩定東郊拓樸，因此本輪先從 `wild_chenliu_west/20808` 落成 westbound road，避免把 Luoyang 東門 east-edge 重疊成雙出口交通層
+  - compliance_check:
+    - compliant；先把 `wild_chenliu_west` 的 `future-road` 收斂成真正的 `Road`，同時保留 Luoyang 端契約給後續不衝突設計
+  - runtime_status:
+    - `road_chenliu` 的 `index / roo / mob / obj / res / shp` 最小可載入集合已建立，首版房間落在 `20901-20908`
+    - `wild_chenliu_west/20808 west <-> road_chenliu/20901 east` 已正式落成
+    - `mapmd_validate`、generator、`python -m json.tool docs/current-game/areas.json`、WSL Linux build 與 direct merc smoke 已通過
+    - `tools/area_acceptance_gate.py road_chenliu` 已回報 `implementation_ready_for_commit`
 
 ## Done
 
@@ -901,14 +937,14 @@
 
 ## Current Recommended Next Step
 
-回到 queue 規則重建 `todo`，優先比較 `road_chenliu`、`road_chenliu_loyang` 與其他能提供 family variety 的非 `Wild` 候選，避免在 `wild_chenliu_west` 後立刻再堆同質城郊外帶。
+先提交 `road_chenliu` 的 implementation milestone commit，再做 tracker gate 收尾；不要直接跳下一區。
 
 ## Next Action
 
-- 依 queue 規則重建 `todo` 與 candidate 判斷
-- 優先比較 `road_chenliu`、`road_chenliu_loyang` 與其他可提供 family variety 的非 `Wild` 候選
-- 先釐清 `wild_chenliu_west` 更西端如何與洛陽既有東郊線或其他中原過渡帶銜接，避免把交通層硬疊在同一條東向出口上
+- 提交 `road_chenliu` implementation milestone commit
+- 將 tracker 從 `implementation_ready_for_commit` 收尾到已完成狀態
+- commit 完成後再回到 queue 規則盤點下一個 actionable area
 
 ## Next Prompt
 
-`依 queue 規則重建 todo，優先盤點 road_chenliu、road_chenliu_loyang 與其他非 Wild 候選，先釐清 wild_chenliu_west 更西端與洛陽既有東郊線的銜接契約，再決定下一個 actionable area。`
+`提交 road_chenliu implementation milestone commit，完成 tracker gate 收尾後再回到 queue 規則盤點下一個待建 area。`

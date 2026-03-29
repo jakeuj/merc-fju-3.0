@@ -1,0 +1,15 @@
+Vnum            22033
+Name            patrol short blade~
+ShortDesc       差役短刀(patrol short blade)~
+Description
+這把短刀不算精巧，但刀背與握柄都被磨得相當順手，顯然是驛路巡差常備的實用傢伙。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           18
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            156
+End

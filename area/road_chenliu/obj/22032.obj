@@ -1,0 +1,14 @@
+Vnum            22032
+Name            relay water skin~
+ShortDesc       驛路皮水囊(relay water skin)~
+Description
+這只皮水囊被收口繩束得很緊，明顯是替真正要走長路的人準備的常備飲水。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           16
+Value           10 10 LIQ_WATER 0
+Weight          1
+Cost            76
+End

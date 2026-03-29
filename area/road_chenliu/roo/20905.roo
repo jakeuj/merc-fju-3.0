@@ -1,0 +1,44 @@
+Vnum            20905
+Name            西行岔堠~
+Description
+木堠旁的路面微微抬高，讓主路與旁邊較低的一段盤查坡清楚分出層次。往東仍是驛牌與陳留方向，往西則是更長、更安靜，也更需要靠自己判斷天色與路感的西行驛路。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        20903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         木堠~
+End
+
+#Enquire
+Keyword         岔路~
+End
+
+#Enquire
+Keyword         盤查~
+End
+
+End

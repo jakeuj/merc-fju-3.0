@@ -1,0 +1,33 @@
+Vnum            22023
+Name            wagon traveler~
+ShortDesc       押車旅人~
+Description
+這名押車旅人的肩背和手掌都帶著長年趕路留下的硬繭，眼神卻仍習慣在停下來時先
+掃過路面與風向。他不像差役那麼講規矩，但看得出來早就知道這條路上該跟誰點頭、
+該避開哪些夜色。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       40
+Level           18
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             10
+Wis             10
+Dex             11
+Con             12
+Hp              700
+Mana            50
+Move            130
+Class           0
+Gold            84
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

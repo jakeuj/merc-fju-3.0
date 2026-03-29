@@ -1,0 +1,36 @@
+Vnum            20907
+Name            盤查土坡~
+Description
+坡口地面被靴底、輪痕與牲口蹄印踩得結實，顯示差役與驛卒常在這裡攔人問話。比起城門那種公開的盤查，這裡更像旅路上的次一級節點，專門用來篩掉那些看起來不像單純趕路的人。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        20905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         盤查~
+End
+
+#Enquire
+Keyword         差役~
+End
+
+#Enquire
+Keyword         夜路~
+End
+
+End

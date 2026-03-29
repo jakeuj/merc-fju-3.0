@@ -1,0 +1,36 @@
+Vnum            20901
+Name            更西驛路口~
+Description
+從陳留西郊的荒道再往前走，腳下的散土與灰痕慢慢被反覆碾實成更有方向感的驛路口。回頭還能辨出陳留方向殘留的牆影與棚煙，往西卻已經是一種真正交給車轍、木堠與旅隊節奏接手的長路開頭。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        20808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         陳留~
+End
+
+#Enquire
+Keyword         驛路~
+End
+
+#Enquire
+Keyword         去向~
+End
+
+End

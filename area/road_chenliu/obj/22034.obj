@@ -1,0 +1,14 @@
+Vnum            22034
+Name            relay lantern~
+ShortDesc       驛棚提燈(relay lantern)~
+Description
+這盞驛棚提燈外罩粗紙與細竹骨，點起後足夠把前坪、木柱與停下來的人影照得明明白白。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           17
+Value           0 0 28 0
+Weight          1
+Cost            112
+End
