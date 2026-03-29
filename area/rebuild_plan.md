@@ -709,55 +709,12 @@
 
 ## In Progress
 
-- `city_chengdu`
-  - area_family: `City`
-  - reserved_room_block: `19701-19720`
-  - planned_vnum_range: `19701-19720`
-  - level_range: `34-48`
-  - theme: `歷史城市`
-  - subtheme: `蜀漢都城`
-  - ref_inputs_used:
-    - `area/world_map.md`
-    - `ref/Readme.md`
-    - `ref/sanguo-progression-map.md`
-    - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/city_chengdu/map.md`
-    - `ref/sanguo-area-specfirst/area/wild_chengdu_outer/map.md`
-    - `ref/world-graph.md`
-    - `docs/3yWebsite/docs/data/players.json`
-    - `docs/3yWebsite/docs/data/skills.json`
-    - `area/city_jiangzhou/map.md`
-    - `plans/area/0111-city-jiangzhou.md`
-  - ref_inputs_deferred:
-    - `ref/sanguo-area-specfirst/area/district_chengdu_market/map.md`
-    - `ref/sanguo-area-specfirst/area/district_chengdu_scholar/map.md`
-    - `docs/3yWebsite/map/chendo.html`
-    - 各類原型工具與模擬系統
-  - theme_basis:
-    - `city_jiangzhou` 已把 `19608` 明確塑造成西向官道口，代表 `city_chengdu` 已有成熟的 runtime 掛接入口，而不是純抽象 world link
-    - `world_map` 與 `world-graph` 都將主線寫成 `成都 -> 江州 -> 永安 -> 江陵`，若此時先跳去 `wild_chengdu_outer`，反而會繞過都城母區與最直接的主線掛點
-    - `wild_chengdu_outer` 雖能提供 family variety，但目前只有 `enter -> city_chengdu` 的 scaffold，缺少與現行 runtime 直接對接的成熟邊界 stub
-    - `題材分布表` 把成都定位成蜀漢首都，適合在上游港城之後把節奏正式收束回更厚重的都城秩序
-  - compliance_check:
-    - conditional-but-acceptable；雖然此選擇形成 `City -> City` 連續，理論上不如 non-`City` variety 理想，但在 `world_map + progression + 題材分布表 + players/skills + current runtime stub` 共同檢查後，`city_chengdu` 是目前唯一既符合主線位置、又能直接落地 runtime boundary 的候選，因此作為 queue variety gate 的例外前進
-  - implementation_notes:
-    - 已建立 `plans/area/0112-city-chengdu.md` 與 `area/city_chengdu/map.md`，並保留 `19701-19720` 作為首段 room block
-    - 已建立 `index / roo / mob / obj / res / shp` 最小可載入集合，首版 runtime 房間落在 `19701-19708`
-    - 已正式落成 `city_jiangzhou/19608 west <-> city_chengdu/19701 east` runtime boundary
-    - 已同步 `area/directory.lst`、`docs/current-game/areas.md` 與 `docs/current-game/areas.json`
-    - smoke 初次載入抓到 `區域 成都 的首都 1 不存在`，已把 `area/city_chengdu/index` 的 `Capital` 修正為 `0`
-  - validation:
-    - `mapmd_validate` 對 `city_chengdu` 與受邊界影響的 `city_jiangzhou` 均通過，結果為 `0 error / 0 warning`
-    - generator `--validate-only` 與正式 `.roo` 生成均通過，並已核對 `19608 <-> 19701` 雙向邊界投影
-    - WSL Linux `make -f Makefile.lin clean && make -f Makefile.lin merc` 通過
-    - direct `timeout 45s ./merc merc.ini || true` smoke 明確出現 `三國歪傳之降龍伏虎開始正常運作`
-    - `debug/error` 只有 timeout 關機訊息，`debug/failexit` 只有既有 baseline `17201/17208` fixup，`debug/badobject` 為空
-    - `tools/area_acceptance_gate.py city_chengdu` 回報 `implementation_ready_for_commit`
-  - delivery_gate: `implementation_ready_for_commit`
+(目前無 `in_progress` 項目。)
 
 
 ## Done
 
+- `2026-03-29` `city_chengdu` 已完成第一輪 runtime implementation、commit `9f44d75`，完成 `city_jiangzhou/19608 <-> 19701` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `city_jiangzhou` 已完成第一輪 runtime implementation、commit `5043331`，完成 `fort_yongan/19508 <-> 19601` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `fort_yongan` 已完成第一輪 runtime implementation、commit `8527b13`，完成 `fort_yiling/19408 <-> 19501` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `fort_yiling` 已完成第一輪 runtime implementation、commit `ac9f979`，完成 `city_jiangling/19308 <-> 19401` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
@@ -934,14 +891,14 @@
 
 ## Current Recommended Next Step
 
-提交 `city_chengdu` implementation milestone，然後把 tracker 從 `in_progress` 推進到 `done`。
+回到 queue 規則重建 `todo`，優先比較 `wild_chengdu_outer` 與其他能提供 family variety 的非 `City` 候選，避免在 `city_chengdu` 後立刻再堆都城分區節奏。
 
 ## Next Action
 
-- 提交 `city_chengdu` implementation milestone
-- commit 後把 `city_chengdu` 從 `In Progress` 移到 `Done`
-- 再回到 queue 規則比較下一個能提供 family variety 的非 `City` 候選
+- 依 `world_map + progression + 題材分布表 + players/skills` 重建下一個 actionable area 候選
+- 優先比較 `wild_chengdu_outer` 與其他能提供 family variety 的非 `City` 候選
+- 避免在 `city_chengdu` 後立刻再開 `district_chengdu_*` 這類同質城市分區
 
 ## Next Prompt
 
-`先提交 city_chengdu implementation milestone，再更新 tracker 並回到 queue 規則盤點下一個 actionable area。`
+`回到 queue 規則重建 todo，優先比較 wild_chengdu_outer 與其他非 City 候選，選出下一個 actionable area。`
