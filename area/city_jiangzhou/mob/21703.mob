@@ -1,0 +1,31 @@
+Vnum            21703
+Name            jiangzhou clerk~
+ShortDesc       江州州府差役~
+Description
+這名江州州府差役走動時總帶著一種不想浪費半句話的乾脆，像是每天都在把各路消息、
+公文與城裡麻煩事一件件整理回正軌。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       85
+Level           44
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             13
+Dex             12
+Con             12
+Hp              1760
+Mana            90
+Move            132
+Class           0
+Gold            320
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -38,6 +38,7 @@
         "direction": "west",
         "source_vnum": 19508,
         "target_area": "city_jiangzhou",
+        "target_room_vnum": 19601,
         "label": "上游城路"
       }
     ],
@@ -156,7 +157,8 @@
       "coord": [-4, 0, 0],
       "labels": ["west-edge", "future-link", "forward"],
       "exits": [
-        { "direction": "east", "to": 19504 }
+        { "direction": "east", "to": 19504 },
+        { "direction": "west", "to": 19601, "external": true }
       ],
       "enquires": ["江州", "西邊", "上游"]
     }

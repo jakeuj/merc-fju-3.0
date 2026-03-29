@@ -1,0 +1,28 @@
+Vnum            19605
+Name            行旅客棧前~
+Description
+客棧前堆著剛卸下的竹簍、熱湯木桶與還沒擦淨泥痕的行囊，看得出這裡經常替剛走完關路的人把疲憊和路程一起安頓下來。江州若說有哪一處最能把軍旅餘味慢慢洗成城市節奏，大概就是這裡。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        19602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         客棧~
+End
+
+#Enquire
+Keyword         熱湯~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+End

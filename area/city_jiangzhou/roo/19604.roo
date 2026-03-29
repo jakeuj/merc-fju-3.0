@@ -1,0 +1,51 @@
+Vnum            19604
+Name            臨江市口~
+Description
+臨江市口的人聲帶著更重的水路與貨旅氣味，布幌、秤桿與船腳消息一起把這條街撐得繁而不亂。比起單純買賣，它更像一個會把江上與陸路消息先攪在一起，再分送往各條官道的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19607
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         招牌~
+Description
+沿街的招牌、木幌與價牌把江州最熱鬧的一段市口擠得滿滿當當，像連風都得先學會排隊才能穿過去。
+~
+End
+
+#Enquire
+Keyword         市口~
+End
+
+#Enquire
+Keyword         貨船~
+End
+
+#Enquire
+Keyword         客商~
+End
+
+End

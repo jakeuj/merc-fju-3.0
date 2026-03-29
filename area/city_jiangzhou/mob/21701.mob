@@ -1,0 +1,32 @@
+Vnum            21701
+Name            jiangzhou innkeeper~
+ShortDesc       江州客棧掌櫃~
+Description
+這名江州客棧掌櫃看起來很懂得分辨來客是剛出關、剛下船，還是正準備往更西邊趕路，
+只要多聽幾句口氣，便能猜到對方究竟缺熱湯、缺路，還是缺一句更可靠的消息。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       90
+Level           36
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             14
+Wis             14
+Dex             11
+Con             12
+Hp              1240
+Mana            110
+Move            118
+Class           0
+Gold            250
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

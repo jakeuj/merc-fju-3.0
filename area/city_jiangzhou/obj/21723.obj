@@ -1,0 +1,15 @@
+Vnum            21723
+Name            jiangzhou way lantern~
+ShortDesc       江州路引提燈(way lantern)~
+Description
+這盞江州路引提燈(way lantern)做得厚實而耐晃，像是專門給夜裡還得穿過長街與官道的
+行腳人預備的。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           38
+Value           0 0 36 0
+Weight          1
+Cost            128
+End

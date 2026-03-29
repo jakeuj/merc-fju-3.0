@@ -1,0 +1,15 @@
+Vnum            21722
+Name            jiangzhou travel gourd~
+ShortDesc       江州行旅皮囊(travel gourd)~
+Description
+這只江州行旅皮囊(travel gourd)以油布和皮繩仔細封好，正適合帶著上游城路與更西官道
+之間來回奔走。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           36
+Value           12 12 0 0
+Weight          2
+Cost            110
+End

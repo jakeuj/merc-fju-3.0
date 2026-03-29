@@ -1,0 +1,44 @@
+Vnum            19603
+Name            江州十字~
+Description
+站在江州十字時，城裡的節奏會突然變得很好懂，南邊是行旅歇腳，北邊是州府消息，西邊則是更深蜀中的官道去向。它不像江陵那樣帶著荊蜀交界的邊緣感，而更像一座真正把上游人流與地方秩序攏在手心裡的蜀地城市心臟。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        19606
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         江州~
+End
+
+#Enquire
+Keyword         十字~
+End
+
+#Enquire
+Keyword         成都~
+End
+
+End

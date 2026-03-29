@@ -1,0 +1,31 @@
+Vnum            21702
+Name            jiangzhou eastguard~
+ShortDesc       江州東門守兵~
+Description
+這名江州東門守兵仍帶著幾分看慣關道來人的警覺，說話不算兇，眼神卻很明顯不會放過
+任何一個看起來像想混進城裡的人。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       75
+Level           40
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             11
+Wis             12
+Dex             12
+Con             13
+Hp              1540
+Mana            80
+Move            128
+Class           0
+Gold            300
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

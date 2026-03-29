@@ -1,0 +1,31 @@
+Vnum            21704
+Name            jiangzhou courier~
+ShortDesc       江州西道行腳吏~
+Description
+這名江州西道行腳吏身上總掛著封條、木牌與兩三段不同去向的路引，看得出他每天的工
+作就是把人、貨與消息一一送往更深的蜀中官道。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       80
+Level           46
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             12
+Dex             13
+Con             12
+Hp              1840
+Mana            90
+Move            138
+Class           0
+Gold            340
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -2191,6 +2191,25 @@
         "plans/area/0110-fort-yongan.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "city_jiangzhou",
+      "title": "江州",
+      "room_range": "19601-19620",
+      "load_order": 117,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "fort_yongan",
+      "theme_primary": "歷史城市",
+      "theme_secondary": "上游港城 / 蜀中轉運",
+      "summary": "承接永安西嶺堡口，落成東嶺城門、江州十字、臨江市口、州府前街與西城官道口構成的蜀中上游城市 hub。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/city_jiangzhou/index",
+        "area/city_jiangzhou/map.md",
+        "plans/area/0111-city-jiangzhou.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

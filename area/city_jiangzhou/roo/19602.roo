@@ -1,0 +1,51 @@
+Vnum            19602
+Name            入城長街~
+Description
+長街兩旁的布旗、貨挑與路牌把江州的用途寫得很清楚，東邊收人進城，西邊送人上路，支巷則把人分流到客棧與官署。這種不必大聲張揚卻人人都讀得懂的秩序，正是上游港城最可靠的安定感。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19601
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         路牌~
+Description
+木牌上把臨江市口、州府與西城官道都標得分明，像是專門替剛走出關路的人重新整理方向。
+~
+End
+
+#Enquire
+Keyword         路牌~
+End
+
+#Enquire
+Keyword         市口~
+End
+
+#Enquire
+Keyword         州府~
+End
+
+End

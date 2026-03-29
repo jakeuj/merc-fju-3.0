@@ -1,0 +1,28 @@
+Vnum            19607
+Name            貨棧長廊~
+Description
+長廊一側堆著寫好去向的箱籠與封條，另一側則掛滿等著送往更西城道與更東堡路的行腳名冊。它不像官署那樣冷，也不像市口那樣鬧，卻最能讓人看懂江州真正的本事其實是替各路貨旅重新排好秩序。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        19604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         貨棧~
+End
+
+#Enquire
+Keyword         封條~
+End
+
+#Enquire
+Keyword         行腳~
+End
+
+End

@@ -1,0 +1,16 @@
+Vnum            21724
+Name            jiangzhou guard blade~
+ShortDesc       江州巡街短刀(guard blade)~
+Description
+這把江州巡街短刀(guard blade)刀身不長，卻磨得很勤，明顯是給守門兵與差役長年帶在
+身邊用的實務兵刃。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+WearLoc         ITEM_WIELD
+Level           40
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            180
+End

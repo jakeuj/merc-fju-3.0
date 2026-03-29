@@ -1,0 +1,28 @@
+Vnum            19608
+Name            西城官道口~
+Description
+再往西去，街面開始慢慢收束成更長、更平穩的內陸官道氣味，遠遠不像東邊那樣還帶著堡寨壓力。西城官道口讓人明白江州既是遠路的終點，也是往成都與蜀中腹地重新啟程的起點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         西邊~
+End
+
+#Enquire
+Keyword         成都~
+End
+
+#Enquire
+Keyword         官道~
+End
+
+End

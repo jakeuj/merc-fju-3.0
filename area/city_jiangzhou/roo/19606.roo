@@ -1,0 +1,28 @@
+Vnum            19606
+Name            州府前街~
+Description
+州府前街的氣味比市口乾得多，靴聲、公文與差役回報的節奏把整條街撐出一種可靠又不近人的秩序。對旅人而言，這裡最重要的功能從來不只是管事，而是把四方消息整理成可理解、可依循的方向。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        19603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         州府~
+End
+
+#Enquire
+Keyword         差役~
+End
+
+#Enquire
+Keyword         告示~
+End
+
+End

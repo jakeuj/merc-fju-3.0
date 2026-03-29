@@ -1,0 +1,36 @@
+Vnum            19601
+Name            東嶺城門~
+Description
+剛離開永安的堡路走到這裡時，牆影與市聲會一起把人的心口鬆開半寸。東嶺城門仍保留了面向關道的盤查與秩序，可門內已能聞到熱湯、濕木與貨車麻繩混在一起的城氣，像是在告訴遠路人自己終於從堡寨節奏回到了真正有人生活的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         永安~
+End
+
+#Enquire
+Keyword         東門~
+End
+
+#Enquire
+Keyword         堡路~
+End
+
+End
