@@ -709,55 +709,12 @@
 
 ## In Progress
 
-- `city_jiangling`
-  - area_family: `City`
-  - reserved_room_block: `19301-19320`
-  - planned_vnum_range: `19301-19320`
-  - level_range: `38-52`
-  - theme: `歷史城市`
-  - subtheme: `荊蜀轉接`
-  - ref_inputs_used:
-    - `area/world_map.md`
-    - `ref/Readme.md`
-    - `ref/sanguo-progression-map.md`
-    - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/city_jiangling/map.md`
-    - `ref/world-graph.md`
-    - `docs/3yWebsite/docs/data/players.json`
-    - `docs/3yWebsite/docs/data/skills.json`
-    - `area/wild_wuling/map.md`
-    - `plans/area/0107-wild-spirit-forest.md`
-    - `plans/area/0106-dng-ancient-tomb-shu.md`
-  - ref_inputs_deferred:
-    - `ref/sanguo-area-specfirst/area/city_chengdu/map.md`
-    - `ref/sanguo-area-specfirst/area/fort_yiling/map.md`
-    - `docs/3yWebsite/map/chendo.html`
-    - 各類原型工具與模擬系統
-  - theme_basis:
-    - `wild_wuling` 現有 spec 已保留 `15011 north -> city_jiangling` metadata，表示江陵是武陵北出主路上最成熟的城市回收節點
-    - `world-graph` 將 `city_jiangling` 放在 `fort_yiling` 與 `wild_wuling` 之間，提供 `Wild -> City` 的 family 切換，也替後續 `fort_yiling` 建立母城支點
-    - `題材分布表` 對蜀漢區保留成都 / 江州 / 永安 / 江陵 / 武陵的主線骨架，支持先用 `江陵` 來把山林節奏收束回歷史城市
-    - `players.json / skills.json` 雖未對蜀地高段區指出更強的特定服務 NPC，但城市 hub 仍比再做一段山林或先開一座未掛接關隘更能提供 loop variety
-  - compliance_check:
-    - compliant；雖然上一輪 tracker 舉例是 `city_chengdu` 與 `fort_yiling`，但 `city_jiangling` 同樣屬於非 `Wild` family，且更 actionable，因為它已有 `wild_wuling/15011` 的現成 runtime 邊界 stub 可正式落地
-  - implementation_notes:
-    - 已建立 `plans/area/0108-city-jiangling.md` 與 `area/city_jiangling/map.md`，並保留 `19301-19320` 作為首段 room block
-    - 已建立 `index / roo / mob / obj / res / shp` 最小可載入集合，房間落地 `19301-19308`
-    - 已把 `wild_wuling/15011` 的北山關路正式補成 `city_jiangling/19301` 的 runtime boundary
-    - 已同步 `area/directory.lst`、`docs/current-game/areas.md` 與 `docs/current-game/areas.json`
-  - validation:
-    - `2026-03-29` `mapmd_validate` 通過：`8 room(s)`、`0 error`、`0 warning`
-    - `2026-03-29` generator `--validate-only` 通過，並已實際生成 `19301-19308.roo`
-    - `2026-03-29` `docs/current-game/areas.json` 經 `python -m json.tool` 驗證格式正常
-    - `2026-03-29` WSL Linux `make -f Makefile.lin clean && make -f Makefile.lin merc` 通過
-    - `2026-03-29` direct `timeout 45s ./merc merc.ini || true` smoke 在 stdout 明確出現 `三國歪傳之降龍伏虎開始正常運作`
-    - `2026-03-29` `debug/error` 只有 timeout 關機訊息；`debug/failexit` 只有既有 baseline `17201/17208` fixup；`debug/badobject` 為空
-    - `2026-03-29` `tools/area_acceptance_gate.py city_jiangling` 回報 `implementation_ready_for_commit`；腳本未自動帶入本輪 log/debug evidence，但人工驗證已補齊
-  - delivery_gate: `implementation_ready_for_commit`
+(目前無 `in_progress` 項目。)
 
 
 ## Done
 
+- `2026-03-29` `city_jiangling` 已完成第一輪 runtime implementation、commit `dc5b4fc`，完成 `wild_wuling/15011 <-> 19301` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `wild_spirit_forest` 已完成第一輪 runtime implementation、commit `ef7960e`，完成 `wild_wuling/15012 <-> 19201` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `dng_ancient_tomb_shu` 已完成第一輪 runtime implementation、commit `577c10f`，完成 `wild_hidden_valley/19008 <-> 19101` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `wild_hidden_valley` 已完成第一輪 runtime implementation、commit `d777a44`，完成 `wild_wuling/15010 <-> 19001` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
@@ -930,14 +887,14 @@
 
 ## Current Recommended Next Step
 
-提交 `city_jiangling` implementation milestone commit，之後再把 tracker 從本輪 implementation 完成態推進到已交付狀態。
+回到 queue 規則重建 `todo`，優先比較 `fort_yiling` 與其他能提供 family variety 的非 `City` 候選，避免在 `city_jiangling` 後連續再堆一個同質城市節奏。
 
 ## Next Action
 
-- 提交 `city_jiangling` implementation milestone commit
-- commit 後把本區 tracker 從 `implementation_ready_for_commit` 推進到已完成狀態
-- 下一輪再回到 queue 規則比較 `fort_yiling` 與其他可提供 family variety 的非 `City` 候選
+- 先依 `world_map + progression + 題材分布表 + players/skills` 重建 `todo`
+- 比較 `fort_yiling` 與其他可提供 family variety 的非 `City` 候選是否更 actionable
+- 確認新候選不只是承接 `city_jiangling` 預留 world link，而是真的符合目前 queue variety gate
 
 ## Next Prompt
 
-`提交 city_jiangling implementation milestone，然後更新 rebuild tracker 讓 queue 回到可選下一個 actionable area 的狀態。`
+`依 queue 規則盤點下一個 actionable area：優先比較 fort_yiling 與其他能提供 family variety 的非 City 候選，重建 todo 後再開始下一區。`
