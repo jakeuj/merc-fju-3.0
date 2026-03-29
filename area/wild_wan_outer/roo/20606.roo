@@ -1,0 +1,51 @@
+Vnum            20606
+Name            路旁樹叢~
+Description
+樹叢貼著側路慢慢密起來，只要視線一離開土路，很快就會被低枝與陰影切斷。它還不算真正的野林，卻已經夠讓流民、藏物，或者不想回應盤問的人，借著樹影躲上一陣子。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       NORTH
+ExitVnum        20604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20607
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         樹叢~
+Description
+幾叢矮灌木被踩出不太乾淨的窄痕，像有人常在這裡停下來等官道上的腳步聲走遠。
+~
+End
+
+#Enquire
+Keyword         樹叢~
+End
+
+#Enquire
+Keyword         流民~
+End
+
+#Enquire
+Keyword         腳步~
+End
+
+End

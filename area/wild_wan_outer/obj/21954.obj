@@ -1,0 +1,16 @@
+Vnum            21954
+Name            wan patrol blade~
+ShortDesc       宛郊巡刀(patrol blade)~
+Description
+這把宛郊巡刀(patrol blade)做得務實俐落，明顯是給城外巡哨日常盤問與防身用的標
+準兵刃。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+WearLoc         ITEM_WIELD
+Level           16
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            150
+End

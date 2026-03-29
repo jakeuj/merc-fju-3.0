@@ -1,0 +1,44 @@
+Vnum            20604
+Name            風碑岔路~
+Description
+風碑邊的土路向西與向南慢慢分開，連車轍深淺都在提醒人這裡開始不再只有一條最正經的去路。站在這裡時，宛城還沒有遠到看不見，卻已經夠遠得讓灰色腳步與耳語有地方分流。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        20602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20608
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20606
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         風碑~
+End
+
+#Enquire
+Keyword         岔路~
+End
+
+#Enquire
+Keyword         去向~
+End
+
+End

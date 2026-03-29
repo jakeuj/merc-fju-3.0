@@ -1,0 +1,15 @@
+Vnum            21952
+Name            wan tea gourd~
+ShortDesc       宛郊茶水葫蘆(tea gourd)~
+Description
+這只宛郊茶水葫蘆(tea gourd)還帶著淡淡熱氣，像是茶棚主人專門替趕路人留下的一口
+順手照料。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           15
+Value           12 12 LIQ_WATER 0
+Weight          2
+Cost            96
+End

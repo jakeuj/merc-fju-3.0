@@ -1,0 +1,31 @@
+Vnum            21944
+Name            wan roadside drifter~
+ShortDesc       宛郊路旁流民~
+Description
+這名宛郊路旁流民看起來既像在等下一口吃的，也像在等某個能趁亂鑽進樹叢的時機。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       -10
+Level           19
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             9
+Wis             9
+Dex             11
+Con             12
+Hp              880
+Mana            40
+Move            110
+Class           0
+Gold            95
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

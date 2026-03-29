@@ -1,0 +1,43 @@
+Vnum            20603
+Name            茶棚前坪~
+Description
+小小一塊前坪剛好夠讓旅人卸下包袱、換口熱水，再順手打聽城外最近是不是又有人鬧事。比起宛城內整齊的補給節點，這裡更像一種不保證太多、卻足夠讓人接著往下走的城外人情。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        20601
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         茶棚~
+Description
+這座茶棚並不講究，只靠幾根木柱和舊篷布勉強撐著，卻很穩地替外道上的人留下一小塊能坐、能問、也能稍微喘口氣的地方。
+~
+End
+
+#Enquire
+Keyword         茶棚~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+#Enquire
+Keyword         消息~
+End
+
+End

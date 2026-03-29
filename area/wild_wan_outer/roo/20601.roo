@@ -1,0 +1,44 @@
+Vnum            20601
+Name            西城外道口~
+Description
+一踏出宛城西城牌樓，腳下石地很快鬆成帶著土氣與車痕的外道口，城牆後方那股講規矩的秩序也跟著退成背景。回頭仍能借城影辨位，往前卻已經是茶棚、田埂與樹叢把人慢慢交給外圍世界的真正城外。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       ENTER
+ExitVnum        20408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         回城~
+End
+
+#Enquire
+Keyword         牌樓~
+End
+
+#Enquire
+Keyword         出城~
+End
+
+End

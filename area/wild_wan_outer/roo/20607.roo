@@ -1,0 +1,28 @@
+Vnum            20607
+Name            流民營火~
+Description
+地上只剩一圈燒得不怎麼完整的火痕與幾根折木，既像流民夜裡歇腳的痕跡，也像某些不願讓宛城差役知道的人暫時留下的影子。這裡讓宛城外道第一次真正露出秩序之外的灰色。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        20606
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         流民~
+End
+
+#Enquire
+Keyword         營火~
+End
+
+#Enquire
+Keyword         夜路~
+End
+
+End

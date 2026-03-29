@@ -45,6 +45,7 @@
         "direction": "out",
         "source_vnum": 20408,
         "target_area": "wild_wan_outer",
+        "target_room_vnum": 20601,
         "label": "宛城外道"
       }
     ],
@@ -182,9 +183,10 @@
       "sector_type": "SECT_CITY",
       "cluster": "north-west-edge",
       "coord": [-2, 2, 0],
-      "labels": ["west-edge", "future-link", "outer-gate"],
+      "labels": ["west-edge", "world-link-out", "outer-gate"],
       "exits": [
-        { "direction": "east", "to": 20405 }
+        { "direction": "east", "to": 20405 },
+        { "direction": "out", "to": 20601, "external": true }
       ],
       "enquires": ["外城", "茶棚", "出城"]
     }

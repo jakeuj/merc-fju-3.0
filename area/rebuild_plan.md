@@ -709,7 +709,16 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `wild_wan_outer`
+  - area_family: `Wild`
+  - reserved_room_block: `20601-20620`
+  - level_range: `14-24`
+  - status: `第一輪 runtime implementation 已完成，等待 implementation milestone commit`
+  - delivery_gate: `implementation_ready_for_commit`
+  - summary:
+    - 已完成 `city_wan/20408 out <-> wild_wan_outer/20601 enter` runtime boundary
+    - 已建立 `index / roo / mob / obj / res / shp` 最小可載入集合
+    - 已完成 validate-only、WSL Linux build、direct merc smoke 與 acceptance gate 檢查
 
 ## Done
 
@@ -898,14 +907,14 @@
 
 ## Current Recommended Next Step
 
-回到 queue 規則重建 `todo`，優先比較 `wild_wan_outer`、`road_chenliu` 與其他能提供 family variety 的非 `Road` 候選，但先避免在 `road_wan` 後立刻再堆另一條同質官道。
+提交 `wild_wan_outer` 的 implementation milestone commit，因為目前 tracker 已進入 `implementation_ready_for_commit`，在正式 commit 前不應跳下一區。
 
 ## Next Action
 
-- 依 queue 規則重建 `todo` 與 candidate 判斷
-- 優先比較 `wild_wan_outer`、`road_chenliu` 與其他可提供 family variety 的非 `Road` 候選
-- 避免在 `road_wan` 後立刻再堆另一條同質官道，先確認下一區是否能把節奏切回 `Wild` 或其他不同 family
+- 提交 `wild_wan_outer` implementation milestone commit
+- commit 內容需包含 `city_wan/20408 out <-> wild_wan_outer/20601 enter` runtime boundary、`index / roo / mob / obj / res / shp` 與 registry 更新
+- commit 完成後再把 tracker 從 `in_progress` 推進成 `done`
 
 ## Next Prompt
 
-`依 queue 規則重建 todo，優先盤點 wild_wan_outer、road_chenliu 與其他非 Road 候選，避免在 road_wan 後立刻再堆另一條同質官道，然後再決定下一個 actionable area。`
+`提交 wild_wan_outer implementation milestone commit：內容包含 city_wan/20408 out <-> wild_wan_outer/20601 enter runtime boundary、index / roo / mob / obj / res / shp、directory.lst 與 current-game area registry 更新。`

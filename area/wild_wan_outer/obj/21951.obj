@@ -1,0 +1,15 @@
+Vnum            21951
+Name            wan road ration~
+ShortDesc       宛郊乾糧包(road ration)~
+Description
+這份宛郊乾糧包(road ration)包得乾淨紮實，看起來就是給剛離城還沒走遠的人墊口腹
+用的。
+~
+Unit            份~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           15
+Value           18 28 4 0
+Weight          1
+Cost            84
+End

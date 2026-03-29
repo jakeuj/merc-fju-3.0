@@ -1,0 +1,32 @@
+Vnum            21942
+Name            wan tea keeper~
+ShortDesc       宛郊茶棚主人~
+Description
+這名宛郊茶棚主人動作不快，卻總能在旅人真的開口前先把熱水、乾糧和幾句路上消息
+備好。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       80
+Level           17
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             12
+Dex             11
+Con             11
+Hp              680
+Mana            90
+Move            110
+Class           0
+Gold            140
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1,0 +1,15 @@
+Vnum            21953
+Name            roadside lantern~
+ShortDesc       郊道提燈(roadside lantern)~
+Description
+這盞郊道提燈(roadside lantern)罩著舊紙與細竹骨，點起後足夠把茶棚與外道口照得
+清楚。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           15
+Value           0 0 28 0
+Weight          1
+Cost            110
+End

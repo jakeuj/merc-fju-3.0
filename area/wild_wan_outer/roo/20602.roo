@@ -1,0 +1,51 @@
+Vnum            20602
+Name            宛西郊道~
+Description
+郊道在城外還保留著幾分筆直與踩實的痕跡，卻已經沒有城門內那種處處被人看著的緊。商旅、差役與不太願意報姓名的路人都在這裡重新混成一股鬆散卻有方向的外城節奏。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        20601
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20605
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         路碑~
+Description
+道旁這塊路碑只簡單寫著回城與更西土道的方向，看得出它不是替官面排場設的，而是專門給真正要辨位趕路的人看的。
+~
+End
+
+#Enquire
+Keyword         郊道~
+End
+
+#Enquire
+Keyword         茶棚~
+End
+
+#Enquire
+Keyword         更西~
+End
+
+End

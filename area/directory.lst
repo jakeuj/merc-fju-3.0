@@ -338,3 +338,5 @@ wild_xinye_fields
 city_wan
 * road_wan 房間 20501-20520 (往宛官道)
 road_wan
+* wild_wan_outer 房間 20601-20620 (宛城外道)
+wild_wan_outer

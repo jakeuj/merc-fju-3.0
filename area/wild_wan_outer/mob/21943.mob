@@ -1,0 +1,32 @@
+Vnum            21943
+Name            wan caravan porter~
+ShortDesc       宛郊過路腳夫~
+Description
+這名宛郊過路腳夫一看就是常在城內外兩邊跑的人，肩背還沒卸下，耳朵卻已經先在替
+下一段去路打聽風聲。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       70
+Level           18
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             10
+Wis             10
+Dex             11
+Con             12
+Hp              760
+Mana            60
+Move            115
+Class           0
+Gold            110
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

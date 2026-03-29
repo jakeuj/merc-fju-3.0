@@ -1,0 +1,28 @@
+Vnum            20608
+Name            更西土道~
+Description
+再往西去，宛城留下的牆影與牌樓都開始淡成一種只夠回頭辨位的背景，只剩土道本身還替人勉強維持方向感。這裡不像真正的盡頭，卻很清楚是宛把旅人正式交還給更寬、更雜，也更難完全被管住的外圍世界之處。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        20604
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         更西~
+End
+
+#Enquire
+Keyword         遠路~
+End
+
+#Enquire
+Keyword         土道~
+End
+
+End

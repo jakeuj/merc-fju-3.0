@@ -1,0 +1,44 @@
+Vnum            20605
+Name            田埂側路~
+Description
+側路沿著田埂外緣斜斜地往前拖去，泥水、草氣與人踩出的窄痕把官道邊緣洗得很有活路感。這裡沒有城裡那種被整理好的邊界，只有誰常走、誰不願被人看見，全慢慢留在土色裡。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        20602
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20603
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20606
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         田埂~
+End
+
+#Enquire
+Keyword         側路~
+End
+
+#Enquire
+Keyword         巡邏~
+End
+
+End
