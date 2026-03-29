@@ -709,55 +709,12 @@
 
 ## In Progress
 
-- `wild_spirit_forest`
-  - area_family: `Wild`
-  - reserved_room_block: `19201-19220`
-  - planned_vnum_range: `19201-19220`
-  - level_range: `42-56`
-  - theme: `仙俠`
-  - subtheme: `靈木 / 妖藤`
-  - ref_inputs_used:
-    - `area/world_map.md`
-    - `ref/Readme.md`
-    - `ref/sanguo-progression-map.md`
-    - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/wild_spirit_forest/map.md`
-    - `ref/world-graph.md`
-    - `docs/3yWebsite/docs/data/players.json`
-    - `docs/3yWebsite/docs/data/skills.json`
-    - `area/wild_wuling/map.md`
-    - `plans/area/0106-dng-ancient-tomb-shu.md`
-    - `plans/area/0105-wild-hidden-valley.md`
-  - ref_inputs_deferred:
-    - `ref/sanguo-area-specfirst/area/city_chengdu/map.md`
-    - `ref/sanguo-area-specfirst/area/fort_yiling/map.md`
-    - `docs/3yWebsite/map/chendo.html`
-    - 各類原型工具與模擬系統
-  - theme_basis:
-    - `wild_wuling` 現有 spec 已保留 `15012 east -> wild_spirit_forest` metadata，表示靈木森林是武陵山支線裡最成熟的直接延伸節點
-    - `world-graph` 將 `wild_spirit_forest` 放在 `wild_wuling` 之後，提供 `Dungeon -> Wild` 的 family 切換，不讓蜀地節奏連續往更深地底堆疊
-    - `題材分布表` 對蜀漢區保留 `武陵` 與 `武陵秘境` 的 `仙俠` 疊合空間，支持把東岔支線翻成靈木與妖藤主導的深山 wild
-    - `players.json / skills.json` 對蜀地高段區沒有提出比現成武陵支線更強的城市服務優先訊號，支持先補齊山林探索 loop
-  - compliance_check:
-    - compliant；在 `dng_ancient_tomb_shu` 之後切回 `Wild`，而且直接承接已存在的 `wild_wuling` 側枝 world-link，符合 queue variety 與既有拓樸約束
-  - implementation_notes:
-    - 已建立 `plans/area/0107-wild-spirit-forest.md` 與 `area/wild_spirit_forest/map.md`，並保留 `19201-19220` 作為首段 room block
-    - 已建立 `index / roo / mob / obj / res / shp` 最小可載入集合，room `19201-19208`、mob `21561-21564`、obj `21581-21584`
-    - 已正式落成 `wild_wuling/15012 east -> 19201` 與 `19201 west -> wild_wuling/15012` runtime boundary，並同步 `wild_wuling/map.md`
-    - 已新增 `area/directory.lst` 與 `docs/current-game/areas.md/json` 台帳
-  - validation:
-    - `python -X utf8 tools/mapmd_validate.py area/wild_spirit_forest/map.md` passed
-    - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_spirit_forest/map.md --validate-only` passed
-    - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_spirit_forest/map.md` passed
-    - WSL `make -f Makefile.lin clean && make -f Makefile.lin merc` passed
-    - direct `timeout 45s ./merc merc.ini || true` smoke passed with observed success signal
-    - `debug/error` 僅反映 timeout 終止；`debug/failexit` 僅有既有 baseline `17201/17208` fixups，未見 area-specific loader error
-    - `$env:PYTHONUTF8='1'; python tools/area_acceptance_gate.py wild_spirit_forest` returned `implementation_ready_for_commit`
-  - delivery_gate: `implementation_ready_for_commit`
+(目前無 `in_progress` 項目。)
 
 
 ## Done
 
+- `2026-03-29` `wild_spirit_forest` 已完成第一輪 runtime implementation、commit `ef7960e`，完成 `wild_wuling/15012 <-> 19201` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `dng_ancient_tomb_shu` 已完成第一輪 runtime implementation、commit `577c10f`，完成 `wild_hidden_valley/19008 <-> 19101` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `wild_hidden_valley` 已完成第一輪 runtime implementation、commit `d777a44`，完成 `wild_wuling/15010 <-> 19001` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `sec_starfall_crater` 已完成第一輪 runtime implementation、commit `987734a`，完成 `wild_bailang/18005 <-> 18901` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1078.log`），並達成可前進下一區狀態
@@ -929,14 +886,14 @@
 
 ## Current Recommended Next Step
 
-先 commit `wild_spirit_forest` 的 implementation milestone；commit 後再回到 queue 規則決定下一個 actionable area。
+回到 queue 規則重建 `todo`，再決定下一個 actionable area；優先比較蜀地可提供 family variety 的非 `Wild` 候選，例如 `city_chengdu` 與 `fort_yiling`。
 
 ## Next Action
 
-- commit `wild_spirit_forest` 的 implementation milestone
-- 確認 tracker / current-game registry 與 commit 訊息一致
-- commit 後再依 queue 規則決定是否推進下一個 area
+- 依 `area/world_map.md`、`ref/sanguo-progression-map.md`、`ref/三國-MUD-題材分布表.md`、`players.json`、`skills.json` 重建 `todo`
+- 比較 `city_chengdu`、`fort_yiling` 與其他可提供 family variety 的非 `Wild` 候選，避免蜀地連續堆疊山林節奏
+- 選出下一個 actionable area 後，再建立新的單區 milestone
 
 ## Next Prompt
 
-`先 commit wild_spirit_forest 的 implementation milestone：包含 wild_wuling/15012 <-> wild_spirit_forest/19201 runtime boundary、index / roo / mob / obj / res / shp、directory.lst 與 current-game area registry 更新；commit 後再依 queue 規則決定下一個 area。`
+`依 queue 規則重新盤點下一個 actionable area：先用 area/world_map.md、ref/sanguo-progression-map.md、ref/三國-MUD-題材分布表.md、docs/3yWebsite/docs/data/players.json、docs/3yWebsite/docs/data/skills.json 重建 todo，再比較 city_chengdu、fort_yiling 與其他可提供 family variety 的非 Wild 候選，然後實作下一個待建 area。`
