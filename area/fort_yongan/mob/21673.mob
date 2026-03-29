@@ -1,0 +1,32 @@
+Vnum            21673
+Name            yongan scout runner~
+ShortDesc       斥候通令~
+Description
+這名斥候通令身上的木牌、路塵與短披風都帶著剛從外線回來的痕跡，像他本身就是永
+安和更外層關道之間那條不停往返的消息線。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           44
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             12
+Wis             12
+Dex             14
+Con             12
+Hp              1640
+Mana            92
+Move            168
+Class           0
+Gold            250
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

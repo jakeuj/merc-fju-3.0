@@ -1,0 +1,28 @@
+Vnum            19508
+Name            西嶺堡口~
+Description
+再往西去，路勢開始鬆開成更像通往上游城帶的山嶺堡口，與東側那種純粹盤關的壓力有了明顯差別。站在這裡會知道永安不只是防守的結束點，也是把人正式送往江州與蜀中腹地的軍旅前口。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         江州~
+End
+
+#Enquire
+Keyword         西邊~
+End
+
+#Enquire
+Keyword         上游~
+End
+
+End

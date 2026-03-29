@@ -2172,6 +2172,25 @@
         "plans/area/0109-fort-yiling.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "fort_yongan",
+      "title": "永安",
+      "room_range": "19501-19520",
+      "load_order": 116,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "fort_yiling",
+      "theme_primary": "軍旅",
+      "theme_secondary": "險關 / 堡壘",
+      "summary": "承接夷陵西關，落成永安柵道、永安堡門、堡門內道、軍械棚區與西嶺堡口構成的上游堡寨 fort 骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/fort_yongan/index",
+        "area/fort_yongan/map.md",
+        "plans/area/0110-fort-yongan.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

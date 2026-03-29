@@ -1,0 +1,15 @@
+Vnum            21692
+Name            yongan waterskin~
+ShortDesc       永安水囊(yongan waterskin)~
+Description
+一只掛在軍械棚邊、供值守與通令輪替時取用的永安水囊(yongan waterskin)被放在這
+裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           40
+Value           10 10 0 0
+Weight          1
+Cost            100
+End

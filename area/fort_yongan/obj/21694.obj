@@ -1,0 +1,15 @@
+Vnum            21694
+Name            fortress lantern~
+ShortDesc       堡樓風燈(fortress lantern)~
+Description
+一盞專門掛在內道與關樓間、供夜裡巡視與辨識旗號的堡樓風燈(fortress lantern)被收
+在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           40
+Value           0 0 24 0
+Weight          1
+Cost            108
+End

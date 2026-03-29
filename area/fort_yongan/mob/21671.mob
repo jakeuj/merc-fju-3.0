@@ -1,0 +1,32 @@
+Vnum            21671
+Name            yongan gate soldier~
+ShortDesc       永安堡卒~
+Description
+這名永安堡卒立在堡門前時幾乎不多動一下，像任何腳步聲都先得在他那裡被辨成是否
+該放行的理由。靠近他時，很難不把這座堡壘的厚重感一起感受到。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           40
+Hitroll         0
+Protect         0
+Damroll         0
+Str             14
+Int             11
+Wis             12
+Dex             12
+Con             14
+Hp              1500
+Mana            78
+Move            154
+Class           0
+Gold            240
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -1,0 +1,28 @@
+Vnum            19507
+Name            關樓望台~
+Description
+望台把東來關道、西去城路與堡門內外的動靜一口氣收進視線裡，讓人幾乎能感覺到命令如何從這裡往下壓。它不像夷陵那種偏外線的前哨高點，而更像一座堡壘真正管住節奏的眼睛。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       DOWN
+ExitVnum        19504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         望台~
+End
+
+#Enquire
+Keyword         旗號~
+End
+
+#Enquire
+Keyword         軍令~
+End
+
+End

@@ -1,0 +1,36 @@
+Vnum            19503
+Name            永安堡門~
+Description
+厚重堡門比前一道夷陵關門更像真正的內層邊界，木鐵結構和牆影一起把外頭旅路與裡頭軍務分得十分清楚。站在這裡時，會明顯感到自己正從邊地咽喉進一步走進蜀漢上游的堡寨腹地。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         堡門~
+End
+
+#Enquire
+Keyword         放行~
+End
+
+#Enquire
+Keyword         關防~
+End
+
+End

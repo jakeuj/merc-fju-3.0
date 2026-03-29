@@ -1,0 +1,32 @@
+Vnum            21672
+Name            yongan armorer~
+ShortDesc       軍械掌事~
+Description
+這位軍械掌事看起來比尋常掌事更少話，注意力幾乎全放在兵械、皮囊與燈油的數量上。
+若永安要長守，很多真正撐住節奏的細節都得先經過他。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           42
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             12
+Wis             12
+Dex             11
+Con             13
+Hp              1580
+Mana            88
+Move            148
+Class           0
+Gold            300
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

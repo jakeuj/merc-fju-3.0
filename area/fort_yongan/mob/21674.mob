@@ -1,0 +1,32 @@
+Vnum            21674
+Name            yongan watch captain~
+ShortDesc       堡樓校尉~
+Description
+這名守在關樓上的校尉視線總在東西兩側之間來回掃過，像任何旗號或塵煙都能先在他
+心裡被排成軍情輕重。站在附近時，整座永安的堡壘節奏都會變得更實體。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           47
+Hitroll         0
+Protect         0
+Damroll         0
+Str             15
+Int             11
+Wis             13
+Dex             14
+Con             14
+Hp              1760
+Mana            90
+Move            172
+Class           0
+Gold            320
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

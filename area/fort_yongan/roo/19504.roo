@@ -1,0 +1,52 @@
+Vnum            19504
+Name            堡門內道~
+Description
+一進內道，整座永安的節奏就不再是對外盤查，而更像為了持久防守與軍令調度而存在的緊密秩序。短短一段內道卻把軍械棚、望樓和更西的上游去路都壓在同一條視線裡，讓堡壘的厚度變得很具體。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19506
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        19507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         內道~
+End
+
+#Enquire
+Keyword         軍械~
+End
+
+#Enquire
+Keyword         望樓~
+End
+
+End

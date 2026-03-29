@@ -38,6 +38,7 @@
         "direction": "west",
         "source_vnum": 19408,
         "target_area": "fort_yongan",
+        "target_room_vnum": 19501,
         "label": "西進關道"
       }
     ],
@@ -156,7 +157,8 @@
       "coord": [-4, 0, 0],
       "labels": ["west-edge", "future-link", "forward"],
       "exits": [
-        { "direction": "east", "to": 19404 }
+        { "direction": "east", "to": 19404 },
+        { "direction": "west", "to": 19501, "external": true }
       ],
       "enquires": ["西邊", "永安", "遠路"]
     }

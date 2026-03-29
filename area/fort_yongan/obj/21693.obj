@@ -1,0 +1,16 @@
+Vnum            21693
+Name            yongan saber~
+ShortDesc       永安堡刀(yongan saber)~
+Description
+這把永安堡刀(yongan saber)比邊關用刀更厚實一些，看起來正適合堡門守卒、斥候與堡
+樓校尉長期配在身邊應付近身盤關與警備。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           42
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            204
+End

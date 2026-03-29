@@ -1,0 +1,36 @@
+Vnum            19501
+Name            東向堡前~
+Description
+自夷陵西關再走到這裡後，路面的風聲和牆影都變得更厚，像整條西進關道終於把人送進了真正的堡寨前層。東向堡前不像單純的關坪，更像一道把外緣軍旅壓力重新收進蜀漢內部秩序的門檻。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         夷陵~
+End
+
+#Enquire
+Keyword         東邊~
+End
+
+#Enquire
+Keyword         堡前~
+End
+
+End

@@ -1,0 +1,44 @@
+Vnum            19502
+Name            永安柵道~
+Description
+永安柵道比夷陵那段更沉更直，木柵和地樁都像是為了逼迫來者在尚未看見堡門前就先放慢腳步。這種不容迴避的收束感，讓人一站上來就知道這裡不是路過，而是接受一座堡壘重新安排你的動線。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19501
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         柵道~
+End
+
+#Enquire
+Keyword         盤關~
+End
+
+#Enquire
+Keyword         守兵~
+End
+
+End

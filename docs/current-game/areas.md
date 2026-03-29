@@ -138,6 +138,7 @@ title: Current Game Areas
 | `dng_ancient_tomb_shu` | 蜀漢古墓 / 石門古墓 dungeon | `19101-19120` | `rebuild addition` | 承接隱谷沉陵坳口，落成前廳石券、斷燈墓道、封紋中庭與內槨石門骨架。 |
 | `city_jiangling` | 江陵 / 荊蜀轉接主城 | `19301-19320` | `rebuild addition` | 承接武陵山北山關路，落成南城門、城心十字、西市補給線與西關路口構成的城市 hub。 |
 | `fort_yiling` | 夷陵 / 蜀荊咽喉 fort | `19401-19420` | `rebuild addition` | 承接江陵西關，落成關前柵道、夷陵關門、甕城主道與西向關坪構成的主線關隘。 |
+| `fort_yongan` | 永安 / 上游堡寨 fort | `19501-19520` | `rebuild addition` | 承接夷陵西關，落成永安柵道、永安堡門、堡門內道與西嶺堡口構成的內層堡壘。 |
 
 ## Recent Rebuild Areas
 
@@ -266,6 +267,7 @@ title: Current Game Areas
 - `wild_spirit_forest`：把武陵山東岔靈林正式接進靈木森林，透過藤影小徑、古碑風根地、靈木空場、懸藤高台與青燐深處把蜀地西山鏈重新打開成仙俠 wild 支線。
 - `city_jiangling`：把武陵山北山關路正式接進江陵，透過南城門、入城大道、城心十字、西市補給線與西關路口把蜀地山林節奏重新收束成荊蜀轉接主城。
 - `fort_yiling`：把江陵西關路口正式接進夷陵，透過關前柵道、夷陵關門、甕城主道、軍需棚區與西向關坪把城市節奏再收束成蜀荊咽喉的主線 fort。
+- `fort_yongan`：把夷陵西向關坪正式接進永安，透過永安柵道、永安堡門、堡門內道、軍械棚區與西嶺堡口把邊界軍旅再收成更厚重的上游堡寨 fort。
 
 ## 維護規則
 

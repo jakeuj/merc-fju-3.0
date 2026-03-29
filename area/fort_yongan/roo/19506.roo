@@ -1,0 +1,28 @@
+Vnum            19506
+Name            軍械棚區~
+Description
+軍械棚裡整齊堆著槍桿、弓匣、燈油和備用皮囊，每一樣都像是為了告訴人這座堡壘預設自己要撐很久。比起夷陵的軍需更替，永安這裡多了一層真正為長守而準備的厚重感。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        19504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         軍械~
+End
+
+#Enquire
+Keyword         糧草~
+End
+
+#Enquire
+Keyword         備守~
+End
+
+End

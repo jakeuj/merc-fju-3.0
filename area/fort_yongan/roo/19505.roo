@@ -1,0 +1,28 @@
+Vnum            19505
+Name            斥候木棚~
+Description
+木棚下掛著風乾披風、行圖板和換班木牌，看得出這裡更偏向長路回報與關外視線整理，而不是臨時歇腳。堡壘真正的前線感，往往就是從這種看似不起眼的斥候節奏慢慢堆起來的。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        19502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         斥候~
+End
+
+#Enquire
+Keyword         回報~
+End
+
+#Enquire
+Keyword         地圖~
+End
+
+End

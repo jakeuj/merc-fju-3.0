@@ -1,0 +1,14 @@
+Vnum            21691
+Name            yongan ration~
+ShortDesc       永安軍糧(yongan ration)~
+Description
+一包給永安堡卒與斥候通令輪流取用的永安軍糧(yongan ration)被收在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           40
+Value           18 36 4 0
+Weight          1
+Cost            140
+End
