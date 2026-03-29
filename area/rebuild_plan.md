@@ -709,53 +709,12 @@
 
 ## In Progress
 
-- `wild_hidden_valley`
-  - area_family: `Wild`
-  - reserved_room_block: `19001-19020`
-  - planned_vnum_range: `19001-19020`
-  - level_range: `44-58`
-  - theme: `探險遺跡`
-  - subtheme: `隱谷 / 秘徑`
-  - ref_inputs_used:
-    - `area/world_map.md`
-    - `ref/Readme.md`
-    - `ref/sanguo-progression-map.md`
-    - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/wild_hidden_valley/map.md`
-    - `ref/world-graph.md`
-    - `docs/3yWebsite/docs/data/players.json`
-    - `docs/3yWebsite/docs/data/skills.json`
-    - `plans/area/0067-wild-wuling.md`
-    - `plans/area/0103-sec-spirit-peak.md`
-    - `plans/area/0104-sec-starfall-crater.md`
-  - ref_inputs_deferred:
-    - `docs/3yWebsite/map/chendo.html`
-    - `ref/sanguo-area-specfirst/area/wild_spirit_forest/map.md`
-    - 各類原型工具與模擬系統
-  - theme_basis:
-    - `wild_wuling` 現有 spec/runtime 已保留 `15010 west -> wild_hidden_valley` metadata，表示它是蜀漢西山鏈最直接也最低摩擦的下一個未落地節點
-    - `world-graph` 將 `wild_hidden_valley` 放在 `wild_wuling` 之後，並預留往 `dng_ancient_tomb_shu` 的下探可能，適合拿來當高段蜀地探索鏈的新入口
-    - `題材分布表` 對蜀漢區保留 `仙俠 / 探險` 的山區配置空間，支持把武陵山之後的下一段節奏做成更偏隱谷與古痕的 `Wild`，而不是再接一個 `Secret`
-    - `players.json / skills.json` 對這段蜀地高段區沒有提出比既有 world link 更強的城市服務優先訊號，支持先利用現成山區母點展開新 wild 支線
-  - compliance_check:
-    - compliant；在連續兩個北境 `Secret` 之後切回 `Wild`，而且直接承接已存在的 `wild_wuling` 預留 world link，符合 queue variety 與既有拓樸約束
-  - implementation_notes:
-    - 已建立 `index / roo / mob / obj / res / shp` 最小可載入集合，room `19001-19008`、mob `21431-21434`、obj `21451-21454`
-    - 已正式落成 `wild_wuling/15010 west -> 19001` 與 `19001 east -> wild_wuling/15010` runtime boundary，並同步 `wild_wuling/map.md`
-    - 已新增 `area/directory.lst` 與 `docs/current-game/areas.md/json` 台帳
-  - validation:
-    - `python -X utf8 tools/mapmd_validate.py area/wild_hidden_valley/map.md` passed
-    - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_hidden_valley/map.md --validate-only` passed
-    - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/wild_hidden_valley/map.md` passed
-    - WSL `make -f Makefile.lin clean && make -f Makefile.lin merc` passed
-    - direct `timeout 45s ./merc merc.ini || true` smoke passed with observed success signal
-    - `debug/error` 僅反映 timeout 終止；`debug/failexit` 僅有既有 baseline `17201/17208` fixups，未見 area-specific loader error
-    - `$env:PYTHONUTF8='1'; python tools/area_acceptance_gate.py wild_hidden_valley` returned `implementation_ready_for_commit`
-  - delivery_gate: `implementation_ready_for_commit`
+(目前無 `in_progress` 項目。)
 
 
 ## Done
 
+- `2026-03-29` `wild_hidden_valley` 已完成第一輪 runtime implementation、commit `d777a44`，完成 `wild_wuling/15010 <-> 19001` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `sec_starfall_crater` 已完成第一輪 runtime implementation、commit `987734a`，完成 `wild_bailang/18005 <-> 18901` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1078.log`），並達成可前進下一區狀態
 - `2026-03-29` `sec_spirit_peak` 已完成第一輪 runtime implementation、commit `a573b69`，完成 `dng_ancient_cave/18108 <-> 18801` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1075.log`），並達成可前進下一區狀態
 - `2026-03-29` `wild_wolf_forest` 已完成第一輪 runtime implementation、commit `990a3d5`，完成 `wild_bailang/18008 <-> 18701` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1074.log`），並達成可前進下一區狀態
@@ -925,14 +884,14 @@
 
 ## Current Recommended Next Step
 
-先 commit `wild_hidden_valley` 的 implementation milestone；commit 後再回到 queue 規則決定下一個 actionable area。
+回到 queue 規則盤點下一個 actionable area；優先比較 `wild_spirit_forest`、`dng_ancient_tomb_shu` 與可切回 `City / Fort` 的高段候選，避免蜀地鏈連續同質化。
 
 ## Next Action
 
-- commit `wild_hidden_valley` 的 implementation milestone
-- 確認 tracker / current-game registry 與 commit 訊息一致
-- commit 後再依 queue 規則決定是否推進下一個 area
+- 依 `world_map / progression / 題材分布 / players / skills` 重新盤點蜀地下一個 actionable area
+- 優先比較 `wild_spirit_forest`、`dng_ancient_tomb_shu` 與可提供 family variety 的高段候選
+- 決定後再建立下一個單區 plan / spec milestone
 
 ## Next Prompt
 
-`先 commit wild_hidden_valley 的 implementation milestone：包含 wild_wuling/15010 <-> wild_hidden_valley/19001 runtime boundary、index / roo / mob / obj / res / shp、directory.lst 與 current-game area registry 更新；commit 後再依 queue 規則決定下一個 area。`
+`依 queue 規則盤點蜀地下一個 actionable area：先一起檢查 world_map / progression / 題材分布 / players / skills，優先比較 wild_spirit_forest、dng_ancient_tomb_shu 與可提供 family variety 的高段候選，再決定下一個要開工的 area。`
