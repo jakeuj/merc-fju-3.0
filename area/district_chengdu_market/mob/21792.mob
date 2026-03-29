@@ -1,0 +1,32 @@
+Vnum            21792
+Name            chengdu cloth appraiser~
+ShortDesc       成都布莊掌眼~
+Description
+這名成都布莊掌眼眼神比說話更快，稍一掃過行人衣料與貨包，就像已經把價值、來路和對
+方底氣全估了個大概。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       95
+Level           36
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             14
+Wis             14
+Dex             12
+Con             11
+Hp              1300
+Mana            110
+Move            120
+Class           0
+Gold            220
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_FEMALE
+End

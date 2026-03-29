@@ -324,3 +324,5 @@ city_jiangzhou
 city_chengdu
 * wild_chengdu_outer 房間 19801-19820 (成都近郊)
 wild_chengdu_outer
+* district_chengdu_market 房間 19901-19920 (成都市井)
+district_chengdu_market

@@ -1,0 +1,44 @@
+Vnum            19903
+Name            糧行棚廊~
+Description
+棚廊下堆著米袋、秤盤與草繩，連空氣都像混著穀氣與木板被拖磨過的乾響。比起主街的表面熱鬧，這裡更像成都把真正民生與補給撐起來的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        19901
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        19905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19906
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         糧行~
+End
+
+#Enquire
+Keyword         米袋~
+End
+
+#Enquire
+Keyword         採買~
+End
+
+End

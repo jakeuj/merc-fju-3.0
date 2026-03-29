@@ -2248,6 +2248,25 @@
         "plans/area/0113-wild-chengdu-outer.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "district_chengdu_market",
+      "title": "成都市井",
+      "room_range": "19901-19920",
+      "load_order": 120,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_chengdu",
+      "theme_primary": "歷史城市",
+      "theme_secondary": "市井 / 商街",
+      "summary": "承接成都市樓牌坊，落成東牌坊口、市井主街、糧行棚廊、茶食街棚、民居窄巷與差役告示口構成的都城市井 district。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/district_chengdu_market/index",
+        "area/district_chengdu_market/map.md",
+        "plans/area/0114-district-chengdu-market.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

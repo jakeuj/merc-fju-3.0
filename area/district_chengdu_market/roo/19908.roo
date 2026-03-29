@@ -1,0 +1,36 @@
+Vnum            19908
+Name            東市尾棚~
+Description
+走到市尾後，人潮終於鬆開些，喧嘩仍在，卻更像被長街慢慢拉成了尾音。這裡不像真正的出口，反而像成都市場還能再往更深處展開的暗示，提醒人眼前這一段仍只是都城腹地的第一層。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        19907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19906
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         市尾~
+End
+
+#Enquire
+Keyword         東邊~
+End
+
+#Enquire
+Keyword         深巷~
+End
+
+End

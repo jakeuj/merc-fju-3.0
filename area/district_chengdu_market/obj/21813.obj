@@ -1,0 +1,15 @@
+Vnum            21813
+Name            chengdu market lantern~
+ShortDesc       成都市燈(lantern)~
+Description
+這盞成都市燈(lantern)不像府衙燈火那樣講究整齊，卻足夠把市尾與窄巷照得溫亮，讓晚些
+時候的生意與腳步還能繼續下去。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           35
+Value           0 0 32 0
+Weight          1
+Cost            136
+End

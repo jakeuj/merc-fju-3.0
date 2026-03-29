@@ -1,0 +1,32 @@
+Vnum            21794
+Name            chengdu wayfinding scholar~
+ShortDesc       成都問路學子~
+Description
+這名成都問路學子手裡抱著書卷，卻對市街去向與各處傳聞意外地熟，像是平日就在這些茶
+棚和告示口之間把消息一點一點記了下來。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           35
+Hitroll         0
+Protect         0
+Damroll         0
+Str             9
+Int             15
+Wis             14
+Dex             11
+Con             10
+Hp              1180
+Mana            150
+Move            110
+Class           0
+Gold            160
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

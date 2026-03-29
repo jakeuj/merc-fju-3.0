@@ -1,0 +1,51 @@
+Vnum            19907
+Name            差役告示口~
+Description
+幾張新舊不一的榜示貼在牆邊，旁邊總有差役、行腳人和順路停下來看熱鬧的人。這裡不像官府前廊那樣嚴整，卻更接近地方消息真正被散出去、再被各色人等接住的節點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        19904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         告示~
+Description
+榜紙上有尋人、有催繳、有臨時徵工，也有看起來像故意留給膽子大的人去接的模糊委託。
+~
+End
+
+#Enquire
+Keyword         告示~
+End
+
+#Enquire
+Keyword         差役~
+End
+
+#Enquire
+Keyword         委託~
+End
+
+End

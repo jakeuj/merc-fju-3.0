@@ -1,0 +1,51 @@
+Vnum            19902
+Name            市井主街~
+Description
+主街把各色招牌、人潮與喊價聲全攏成一股穩穩往前推的熱氣，讓人一眼就懂成都真正會吞吐四方貨流的，不是官道，而是這些被市聲撐滿的街面。即使再熱鬧，腳步和生意仍像被都城習慣梳理得不至於亂掉。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        19901
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        19904
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19905
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         招牌~
+Description
+布莊、糧行、茶棚與小鋪的招牌一層疊一層地伸出來，幾乎把天光都切成了細碎的市聲。
+~
+End
+
+#Enquire
+Keyword         招牌~
+End
+
+#Enquire
+Keyword         糧行~
+End
+
+#Enquire
+Keyword         茶棚~
+End
+
+End

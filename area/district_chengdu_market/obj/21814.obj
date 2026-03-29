@@ -1,0 +1,16 @@
+Vnum            21814
+Name            chengdu patrol shortblade~
+ShortDesc       成都巡市短刀(patrol shortblade)~
+Description
+這把成都巡市短刀(patrol shortblade)更講究在窄街和人群裡好使喚，而不是軍營裡那種排
+場與制式威嚇。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+WearLoc         ITEM_WIELD
+Level           38
+Value           0 -1 -1 WEAPON_SWORD
+Weight          2
+Cost            182
+End

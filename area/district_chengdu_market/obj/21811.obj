@@ -1,0 +1,15 @@
+Vnum            21811
+Name            chengdu market ration~
+ShortDesc       成都市井乾糧(market ration)~
+Description
+這份成都市井乾糧(market ration)包得緊實俐落，看起來就是替在商街裡邊走邊忙的人準備
+的隨手口糧。
+~
+Unit            份~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           34
+Value           22 34 4 0
+Weight          1
+Cost            96
+End

@@ -1,7 +1,7 @@
 Vnum            19704
 Name            市樓牌坊~
 Description
-市樓牌坊下的人聲、木幌與布色都比上游城市更繁更穩，熱鬧卻沒有半點倉促，像整條街早已習慣接住來自四方的貨與人。這裡讓人一眼就懂成都不只是大，而是早就學會把大城的吵雜收進秩序裡。
+市樓牌坊下的人聲、木幌與布色都比上游城市更繁更穩，熱鬧卻沒有半點倉促，像整條街早已習慣接住來自四方的貨與人。如今再往東踏一步，便會真正走進成都的市場腹地，讓人明白這座都城不只是大，而是早就學會把大城的吵雜收進秩序裡。
 ~
 SectorType      SECT_CITY
 
@@ -16,6 +16,14 @@ End
 #Exit
 Direction       SOUTH
 ExitVnum        19707
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        19901
 ExitDesc        ~
 ExitKeyword     ~
 ExitKey         0
@@ -38,6 +46,10 @@ End
 
 #Enquire
 Keyword         牌坊~
+End
+
+#Enquire
+Keyword         市井~
 End
 
 End

@@ -38,6 +38,7 @@
         "direction": "east",
         "source_vnum": 19704,
         "target_area": "district_chengdu_market",
+        "target_room_vnum": 19901,
         "label": "市井分區"
       },
       {
@@ -117,14 +118,15 @@
     {
       "vnum": 19704,
       "name": "市樓牌坊",
-      "description": "市樓牌坊下的人聲、木幌與布色都比上游城市更繁更穩，熱鬧卻沒有半點倉促，像整條街早已習慣接住來自四方的貨與人。這裡讓人一眼就懂成都不只是大，而是早就學會把大城的吵雜收進秩序裡。",
+      "description": "市樓牌坊下的人聲、木幌與布色都比上游城市更繁更穩，熱鬧卻沒有半點倉促，像整條街早已習慣接住來自四方的貨與人。如今再往東踏一步，便會真正走進成都的市場腹地，讓人明白這座都城不只是大，而是早就學會把大城的吵雜收進秩序裡。",
       "sector_type": "SECT_CITY",
       "cluster": "market-quarter",
       "coord": [-2, -1, 0],
-      "labels": ["market", "archway", "future-district"],
+      "labels": ["market", "archway", "district-link"],
       "exits": [
         { "direction": "north", "to": 19703 },
-        { "direction": "south", "to": 19707 }
+        { "direction": "south", "to": 19707 },
+        { "direction": "east", "to": 19901, "external": true }
       ],
       "keywords": [
         {
@@ -132,7 +134,7 @@
           "description": "一層又一層伸出的招牌和市幌幾乎把牌坊後的視線切碎，卻也讓人清楚知道這裡就是成都最會吞吐人潮的一帶。"
         }
       ],
-      "enquires": ["市樓", "市集", "牌坊"]
+      "enquires": ["市樓", "市集", "牌坊", "市井"]
     },
     {
       "vnum": 19705,

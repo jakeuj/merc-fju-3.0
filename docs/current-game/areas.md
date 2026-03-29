@@ -142,6 +142,7 @@ title: Current Game Areas
 | `city_jiangzhou` | 江州 / 上游港城 hub | `19601-19620` | `rebuild addition` | 承接永安西嶺堡口，落成東嶺城門、江州十字、臨江市口、州府前街與西城官道口構成的蜀中上游城市 hub。 |
 | `city_chengdu` | 成都 / 蜀漢都城 hub | `19701-19720` | `rebuild addition` | 承接江州西城官道口，落成東城門、錦城十字、市樓牌坊、學舍外街與西郊城關構成的蜀漢都城母城。 |
 | `wild_chengdu_outer` | 成都近郊 / 都城西側城外外帶 | `19801-19820` | `rebuild addition` | 承接 `city_chengdu` 西郊城關，落成官道、茶亭、圩田與林地構成的近郊 wild 骨架。 |
+| `district_chengdu_market` | 成都市井 / 市場分區 district | `19901-19920` | `rebuild addition` | 承接 `city_chengdu` 市樓牌坊，落成市井主街、糧行棚廊、茶食街棚、民居窄巷與差役告示口構成的都城市井 district。 |
 
 ## Recent Rebuild Areas
 
@@ -274,6 +275,7 @@ title: Current Game Areas
 - `city_jiangzhou`：把永安西嶺堡口正式接進江州，透過東嶺城門、江州十字、臨江市口、州府前街與西城官道口把蜀地上游主線重新收束成城市 hub。
 - `city_chengdu`：把江州西城官道口正式接進成都，透過東城門、入城御道、錦城十字、市樓牌坊、學舍外街與西郊城關把蜀地上游主線重新收束成蜀漢都城母城。
 - `wild_chengdu_outer`：把成都西郊城關正式接進成都近郊，透過城關外坡、西郊官道、茶亭前坪、圩田路肩、路旁林地與更西官道把都城節奏重新鬆開成可辨位的近郊 wild。
+- `district_chengdu_market`：把成都市樓牌坊正式接進成都市井，透過東牌坊口、市井主街、糧行棚廊、茶食街棚、民居窄巷與差役告示口把都城主街旁的市場腹地真正展開成可停留、可問路也可接傳聞的 district。
 
 ## 維護規則
 

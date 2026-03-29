@@ -1,0 +1,36 @@
+Vnum            19904
+Name            錦布招街~
+Description
+布色從棚沿一路垂到行人肩頭，讓這條招街比別處更亮、更密，也更容易讓人一腳放慢。成都的體面與富庶不是只寫在官府牆外，更多時候其實就被這些柔亮布面與熟練眼光靜靜撐著。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        19902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         布莊~
+End
+
+#Enquire
+Keyword         錦布~
+End
+
+#Enquire
+Keyword         裁縫~
+End
+
+End

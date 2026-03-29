@@ -1,0 +1,32 @@
+Vnum            21791
+Name            chengdu market broker~
+ShortDesc       成都市井掌櫃~
+Description
+這名成都市井掌櫃一邊顧著糧袋、茶棚和來往人潮，一邊也總有本事在幾句閒話裡分出誰是
+來採買、誰是來問路、誰又只是想打聽成都最近的新消息。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           38
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             15
+Wis             15
+Dex             11
+Con             12
+Hp              1500
+Mana            130
+Move            120
+Class           0
+Gold            260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

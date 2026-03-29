@@ -1,0 +1,51 @@
+Vnum            19905
+Name            茶食街棚~
+Description
+熱湯、薄餅與剛出爐的香氣把街棚撐成一段專門收留腳步的地帶，許多話題在這裡被端上桌，又在下一口熱氣裡變成新的傳聞。對外來人而言，這裡往往是市井最容易開口、也最容易聽見消息的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        19902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        19907
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         街棚~
+Description
+幾座臨時又熟練的棚架把熱湯、蒸氣與低聲閒談全攏在一起，讓整條巷口像永遠有故事正在煨著。
+~
+End
+
+#Enquire
+Keyword         茶食~
+End
+
+#Enquire
+Keyword         傳聞~
+End
+
+#Enquire
+Keyword         問路~
+End
+
+End

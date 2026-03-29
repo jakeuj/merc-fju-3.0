@@ -1,0 +1,44 @@
+Vnum            19901
+Name            東牌坊口~
+Description
+一穿過市樓牌坊，成都的熱鬧便不再只是遠遠望見，而是立刻化成迎面壓來的人聲、木幌、肩挑與討價還價。這裡依舊有都城該有的秩序，卻比主街更貼近真正維持城市呼吸的日常流動。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        19704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        19902
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         牌坊~
+End
+
+#Enquire
+Keyword         市井~
+End
+
+#Enquire
+Keyword         主街~
+End
+
+End

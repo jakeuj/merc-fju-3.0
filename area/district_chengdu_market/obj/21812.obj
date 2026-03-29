@@ -1,0 +1,15 @@
+Vnum            21812
+Name            chengdu tea bamboo flask~
+ShortDesc       成都茶湯竹筒(tea bamboo flask)~
+Description
+這只成都茶湯竹筒(tea bamboo flask)摸起來還帶點溫度，像是茶食街棚裡專給趕路與採買人
+解口乾用的那種實在照料。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           34
+Value           12 12 0 0
+Weight          2
+Cost            118
+End

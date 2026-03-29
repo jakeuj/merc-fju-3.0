@@ -1,0 +1,43 @@
+Vnum            19906
+Name            民居窄巷~
+Description
+巷子一窄下來，市聲便被壓成更貼牆、更近人的細碎聲響，晾衣、木桶和門牌把這一帶的生活氣息全攤在眼前。這裡提醒人，成都的市井並不只是做買賣，也同時養著真正住在這裡的人家。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        19903
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        19908
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         門牌~
+Description
+斑駁門牌被掛得很低，像是專替熟門熟路的人辨認，不特地向陌生人解釋。
+~
+End
+
+#Enquire
+Keyword         民居~
+End
+
+#Enquire
+Keyword         巷子~
+End
+
+#Enquire
+Keyword         住戶~
+End
+
+End

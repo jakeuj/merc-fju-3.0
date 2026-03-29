@@ -1,0 +1,32 @@
+Vnum            21793
+Name            chengdu market bailiff~
+ShortDesc       成都巷口差役~
+Description
+這名成都巷口差役守在榜示與人潮交會處，神情沒有城門兵那麼板硬，卻顯然很懂怎麼在市
+井裡把麻煩先擋在真正鬧大之前。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       90
+Level           40
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             11
+Wis             12
+Dex             12
+Con             12
+Hp              1650
+Mana            90
+Move            130
+Class           0
+Gold            240
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
