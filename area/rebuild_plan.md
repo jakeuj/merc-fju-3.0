@@ -709,54 +709,12 @@
 
 ## In Progress
 
-- `fort_yiling`
-  - area_family: `Fort`
-  - reserved_room_block: `19401-19420`
-  - planned_vnum_range: `19401-19420`
-  - level_range: `42-56`
-  - theme: `軍旅`
-  - subtheme: `咽喉 / 關道`
-  - ref_inputs_used:
-    - `area/world_map.md`
-    - `ref/Readme.md`
-    - `ref/sanguo-progression-map.md`
-    - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/fort_yiling/map.md`
-    - `ref/world-graph.md`
-    - `docs/3yWebsite/docs/data/players.json`
-    - `docs/3yWebsite/docs/data/skills.json`
-    - `area/city_jiangling/map.md`
-    - `plans/area/0108-city-jiangling.md`
-    - `area/fort_northern_watch/map.md`
-  - ref_inputs_deferred:
-    - `ref/sanguo-area-specfirst/area/city_chengdu/map.md`
-    - `ref/sanguo-area-specfirst/area/fort_yongan/map.md`
-    - 各類原型工具與模擬系統
-  - theme_basis:
-    - `city_jiangling` 已把 `19308` 明確塑造成西關路口，代表 `fort_yiling` 已有成熟的 runtime 掛接入口，而不是抽象 world link
-    - `world-graph` 將 `fort_yiling` 放在 `city_jiangling` 與 `fort_yongan` 之間，正好提供 `City -> Fort` 的 family 切換
-    - `題材分布表` 把夷陵放在蜀漢主線軍旅關道上，適合在江陵補給節奏後收成更強烈的軍事 choke point
-    - `players.json / skills.json` 沒有提供另一個更強、更成熟的蜀地非 `City` 服務節點；在目前 runtime 現況下，`fort_yiling` 比重新跳去無掛接的新城市更 actionable
-  - compliance_check:
-    - compliant；本輪不是因為 `city_jiangling` 剛做完就機械沿預留 link 往下走，而是在 `world_map + progression + 題材分布表 + players/skills + current runtime stub` 共同檢查後，確認 `fort_yiling` 同時滿足 family variety 與掛接成熟度
-  - implementation_notes:
-    - 已建立 `plans/area/0109-fort-yiling.md` 與 `area/fort_yiling/map.md`，並保留 `19401-19420` 作為首段 room block
-    - 已建立 `index / roo / mob / obj / res / shp` 最小可載入集合，房間落地 `19401-19408`
-    - 已把 `city_jiangling/19308` 的西關路口正式補成 `fort_yiling/19401` 的 runtime boundary
-    - 已同步 `area/directory.lst`、`docs/current-game/areas.md` 與 `docs/current-game/areas.json`
-  - validation:
-    - `2026-03-29` `mapmd_validate` 通過：`8 room(s)`、`0 error`、`0 warning`
-    - `2026-03-29` generator `--validate-only` 通過，並已實際生成 `19401-19408.roo`
-    - `2026-03-29` `docs/current-game/areas.json` 經 `python -m json.tool` 驗證格式正常
-    - `2026-03-29` WSL Linux `make -f Makefile.lin clean && make -f Makefile.lin merc` 通過
-    - `2026-03-29` direct `timeout 45s ./merc merc.ini || true` smoke 在 stdout 明確出現 `三國歪傳之降龍伏虎開始正常運作`
-    - `2026-03-29` `debug/error` 只有 timeout 關機訊息；`debug/failexit` 只有既有 baseline `17201/17208` fixup；`debug/badobject` 為空
-    - `2026-03-29` `tools/area_acceptance_gate.py fort_yiling` 回報 `implementation_ready_for_commit`；腳本未自動帶入本輪 log/debug evidence，但人工驗證已補齊
-  - delivery_gate: `implementation_ready_for_commit`
+(目前無 `in_progress` 項目。)
 
 
 ## Done
 
+- `2026-03-29` `fort_yiling` 已完成第一輪 runtime implementation、commit `ac9f979`，完成 `city_jiangling/19308 <-> 19401` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `city_jiangling` 已完成第一輪 runtime implementation、commit `dc5b4fc`，完成 `wild_wuling/15011 <-> 19301` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `wild_spirit_forest` 已完成第一輪 runtime implementation、commit `ef7960e`，完成 `wild_wuling/15012 <-> 19201` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `dng_ancient_tomb_shu` 已完成第一輪 runtime implementation、commit `577c10f`，完成 `wild_hidden_valley/19008 <-> 19101` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
@@ -930,14 +888,14 @@
 
 ## Current Recommended Next Step
 
-提交 `fort_yiling` implementation milestone commit，之後再把 tracker 從本輪 implementation 完成態推進到已交付狀態。
+回到 queue 規則重建 `todo`，優先比較 `fort_yongan` 與其他能提供 family variety 的非 `Fort` 候選，避免在 `fort_yiling` 後立刻再堆同質關隘節奏。
 
 ## Next Action
 
-- 提交 `fort_yiling` implementation milestone commit
-- commit 後把本區 tracker 從 `implementation_ready_for_commit` 推進到已完成狀態
-- 下一輪再回到 queue 規則比較 `fort_yongan` 與其他能提供 family variety 的非 `Fort` 候選
+- 先依 `world_map + progression + 題材分布表 + players/skills` 重建 `todo`
+- 比較 `fort_yongan` 與其他能提供 family variety 的非 `Fort` 候選是否更 actionable
+- 確認新候選不只是承接 `fort_yiling` 預留 world link，而是真的符合目前 queue variety gate
 
 ## Next Prompt
 
-`提交 fort_yiling implementation milestone，然後更新 rebuild tracker 讓 queue 回到可選下一個 actionable area 的狀態。`
+`依 queue 規則盤點下一個 actionable area：優先比較 fort_yongan 與其他能提供 family variety 的非 Fort 候選，重建 todo 後再開始下一區。`
