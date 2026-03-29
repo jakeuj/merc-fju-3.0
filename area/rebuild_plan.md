@@ -709,46 +709,11 @@
 
 ## In Progress
 
-- `road_wan`
-  - area_family: `Road`
-  - reserved_room_block: `20501-20520`
-  - planned_vnum_range: `20501-20520`
-  - level_range: `8-18`
-  - theme: `江湖`
-  - subtheme: `官道 / 南行`
-  - delivery_gate: `implementation_ready_for_commit`
-  - ref_inputs_used:
-    - `area/world_map.md`
-    - `ref/Readme.md`
-    - `ref/sanguo-progression-map.md`
-    - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/road_wan/map.md`
-    - `ref/sanguo-area-specfirst/area/wild_wan_outer/map.md`
-    - `ref/world-graph.md`
-    - `docs/3yWebsite/docs/data/players.json`
-    - `docs/3yWebsite/docs/data/skills.json`
-    - `docs/3yWebsite/docs/data/maps.json`
-    - `docs/3yWebsite/map/index.html`
-    - `area/city_wan/map.md`
-    - `area/loyang/roo/593.roo`
-    - `area/directory.lst`
-    - `plans/area/0119-city-wan.md`
-  - ref_inputs_deferred:
-    - `docs/3yWebsite/map/sinya.html`
-    - `docs/3yWebsite/map/shanyan.html`
-    - `ref/sanguo-area-specfirst/area/city_wan/map.md`
-    - 各類原型工具與模擬系統
-  - theme_basis:
-    - `area/world_map.md` 與 `docs/3yWebsite/map/index.html` 都把主骨架寫成 `洛陽 -> 宛 -> 新野 -> 襄陽`，支持先補 `road_wan` 這條南北主線，而不是先展開 `wild_wan_outer` 這種側向外帶
-    - `world-graph` 已把 `road_wan` 定位成 `city_loyang <-> city_wan` 間的 `road / 8-18` 節點，而 `wild_wan_outer` 只是 `city_wan` 西側的 outskirts，主次順序清楚
-    - `loyang/593` 與 `city_wan/20407` 都已有成熟的「往宛 / 官道」語意 stub，落地 `593 south <-> 20501 north` 與 `20508 south <-> 20407 north` 的風險明顯低於先去展開新側帶
-    - `area/directory.lst` 已顯示 `jingxiang_road` 是既有 loadable runtime area，不屬於本輪「下一個待建 area」的真正候選
-    - `players.json / skills.json` 在荊州段提供的強訊號仍偏向 `襄陽 / 新野` 的服務與練功 loop，沒有足以推翻主線官道先行的 `宛城外道` 優先證據
-  - compliance_check:
-    - compliant；本輪在 `city_wan` 之後選 `Road`，既維持 family variety，也先補世界主骨架缺口，沒有把已存在的 `jingxiang_road` 誤判成待建新區
+(目前無 `in_progress` 項目。)
 
 ## Done
 
+- `2026-03-29` `road_wan` 已完成第一輪 runtime implementation、commit `a8eea18`，完成 `loyang/593 <-> 20501` 與 `city_wan/20407 <-> 20508` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `city_wan` 已完成第一輪 runtime implementation、commit `ca1b28e`，完成 `city_xinye/20207 <-> 20401` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `wild_xinye_fields` 已完成第一輪 runtime implementation、commit `f0ab7b6`，完成 `city_xinye/20205 <-> 20301` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `city_xinye` 已完成第一輪 runtime implementation、commit `d4f9f17`，完成 `city_xiangyang/14209 <-> 20201` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
@@ -933,14 +898,14 @@
 
 ## Current Recommended Next Step
 
-提交 `road_wan` implementation milestone，然後把 tracker 從 `implementation_ready_for_commit` 推進成 done。
+回到 queue 規則重建 `todo`，優先比較 `wild_wan_outer`、`road_chenliu` 與其他能提供 family variety 的非 `Road` 候選，但先避免在 `road_wan` 後立刻再堆另一條同質官道。
 
 ## Next Action
 
-- 提交 `road_wan` implementation milestone commit
-- 把 `area/rebuild_plan.md` 從 `implementation_ready_for_commit` 推進成 done
-- 再回到 queue 規則盤點 `wild_wan_outer` 與其他可提供 family variety 的非 `Road` 候選
+- 依 queue 規則重建 `todo` 與 candidate 判斷
+- 優先比較 `wild_wan_outer`、`road_chenliu` 與其他可提供 family variety 的非 `Road` 候選
+- 避免在 `road_wan` 後立刻再堆另一條同質官道，先確認下一區是否能把節奏切回 `Wild` 或其他不同 family
 
 ## Next Prompt
 
-`提交 road_wan implementation milestone，然後把 tracker 從 implementation_ready_for_commit 推進成 done。`
+`依 queue 規則重建 todo，優先盤點 wild_wan_outer、road_chenliu 與其他非 Road 候選，避免在 road_wan 後立刻再堆另一條同質官道，然後再決定下一個 actionable area。`
