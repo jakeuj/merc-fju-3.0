@@ -46,6 +46,7 @@
         "direction": "west",
         "source_vnum": 15010,
         "target_area": "wild_hidden_valley",
+        "target_room_vnum": 19001,
         "label": "隱谷獵徑"
       },
       {
@@ -215,7 +216,8 @@
       "coord": [-4, -1, 0],
       "labels": ["west-edge", "deep-link"],
       "exits": [
-        { "direction": "east", "to": 15008 }
+        { "direction": "east", "to": 15008 },
+        { "direction": "west", "to": 19001, "external": true }
       ],
       "enquires": ["隱谷", "西邊"]
     },

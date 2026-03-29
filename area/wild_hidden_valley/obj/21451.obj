@@ -1,0 +1,15 @@
+Vnum            21451
+Name            valley ration~
+ShortDesc       隱谷乾糧包(valley ration)~
+Description
+一包專給深谷巡路者隨身備著的隱谷乾糧包(valley ration)被捆得很緊，看得出是為了
+應付長時間辨位與少有補給的山谷路程。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           44
+Value           24 50 4 0
+Weight          1
+Cost            162
+End

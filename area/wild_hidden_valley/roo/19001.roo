@@ -1,0 +1,36 @@
+Vnum            19001
+Name            谷口折徑~
+Description
+從武陵山的隱谷西徑再往內一步，山路就忽然收成一道較低而更靜的折徑。這裡的風不像高處那麼顯眼，卻總帶著一種讓人下意識放輕腳步的壓力，像谷裡本來就不歡迎太張揚的來客。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        15010
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         山路~
+End
+
+#Enquire
+Keyword         回去~
+End
+
+#Enquire
+Keyword         谷裡~
+End
+
+End

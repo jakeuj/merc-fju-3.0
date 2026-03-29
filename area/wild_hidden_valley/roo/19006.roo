@@ -1,0 +1,36 @@
+Vnum            19006
+Name            裂石空場~
+Description
+空場中央有一道向內收束的裂石縫，像地面曾被什麼東西從裡頭硬頂開過，再慢慢冷掉。周圍沒有真正的遺構，卻到處是讓人懷疑這裡曾被當成某種前場或試探口的痕跡。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        19004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         裂石~
+End
+
+#Enquire
+Keyword         空場~
+End
+
+#Enquire
+Keyword         下面~
+End
+
+End

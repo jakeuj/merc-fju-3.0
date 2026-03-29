@@ -1,0 +1,44 @@
+Vnum            19005
+Name            舊獵人棚~
+Description
+幾根灰木與傾倒棚架還勉強支著這處舊獵人棚，棚下殘留的繩鉤、火痕與刮刀口讓人看得出曾有人在谷裡待得比普通路過更久。最奇怪的是，這些痕跡都停在某個時間點之後，再也沒人回來補完它們。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        19004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        19003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         獵人~
+End
+
+#Enquire
+Keyword         棚子~
+End
+
+#Enquire
+Keyword         痕跡~
+End
+
+End

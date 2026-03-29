@@ -1,0 +1,32 @@
+Vnum            21431
+Name            valley guide~
+ShortDesc       谷口引客~
+Description
+這名谷口引客站在折徑旁時總會先看一眼四周山影，再決定要不要提醒來人哪裡不能亂
+走。他不像真的在招呼客人，更像在衡量誰可能安全回去。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       80
+Level           44
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             14
+Dex             12
+Con             12
+Hp              1520
+Mana            104
+Move            188
+Class           0
+Gold            320
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

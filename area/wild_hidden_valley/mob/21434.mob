@@ -1,0 +1,31 @@
+Vnum            21434
+Name            ridge ranger~
+ShortDesc       坳口巡山者~
+Description
+坳口巡山者習慣站在邊緣往下聽動靜，像只靠聲音就能分出下面是落石、野獸，還是更不
+該出現在谷裡的東西。他看人的眼神很冷，像先假設你不該來這裡。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       10
+Level           58
+Hitroll         4
+Protect         0
+Damroll         6
+Str             15
+Int             13
+Wis             14
+Dex             14
+Con             14
+Hp              3260
+Mana            114
+Move            190
+Class           0
+Gold            730
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_FEMALE
+End

@@ -1,0 +1,31 @@
+Vnum            21432
+Name            old camp walker~
+ShortDesc       舊棚行腳客~
+Description
+舊棚行腳客在破棚邊翻找舊物時動作很慢，像不是在尋路，而是在確認哪些線索還留著。
+他對這谷裡的沉默習以為常，反而讓人更不敢大意。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       50
+Level           48
+Hitroll         1
+Protect         0
+Damroll         3
+Str             13
+Int             13
+Wis             13
+Dex             12
+Con             13
+Hp              1960
+Mana            96
+Move            178
+Class           0
+Gold            430
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

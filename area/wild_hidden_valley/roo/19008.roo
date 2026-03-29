@@ -1,0 +1,36 @@
+Vnum            19008
+Name            沉陵坳口~
+Description
+坳口地勢往內塌出一道不太自然的陰口，像山谷在這裡忽然轉成了另一種更古、更閉鎖的地形語言。即使還沒真正下探，也能感覺到底下那股氣息跟普通深谷完全不是一回事。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        19006
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        19007
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         坳口~
+End
+
+#Enquire
+Keyword         下面~
+End
+
+#Enquire
+Keyword         古陵~
+End
+
+End

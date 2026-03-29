@@ -1,0 +1,44 @@
+Vnum            19002
+Name            殘碑岔地~
+Description
+一截半埋在土裡的殘碑斜斜立在岔地中央，碑面字痕幾乎被苔與泥吃光，只剩它還努力維持著這裡曾有路名與去向的樣子。比起指路，它現在更像在提醒人不要太相信眼前任何看似自然的通道。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        19001
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        19003
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19004
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         石碑~
+End
+
+#Enquire
+Keyword         岔路~
+End
+
+#Enquire
+Keyword         方向~
+End
+
+End

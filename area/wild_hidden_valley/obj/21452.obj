@@ -1,0 +1,15 @@
+Vnum            21452
+Name            spring flask~
+ShortDesc       藏泉水囊(spring flask)~
+Description
+這只藏泉水囊(spring flask)外層還沾著些許冷霧，看起來正是從石罅細泉邊汲起後匆
+匆封好的行路水。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           44
+Value           10 10 LIQ_WATER 0
+Weight          1
+Cost            176
+End

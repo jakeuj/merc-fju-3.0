@@ -2077,6 +2077,25 @@
         "plans/area/0104-sec-starfall-crater.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "wild_hidden_valley",
+      "title": "隱谷",
+      "room_range": "19001-19020",
+      "load_order": 111,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "wild_wuling",
+      "theme_primary": "探險遺跡",
+      "theme_secondary": "隱谷 / 秘徑",
+      "summary": "承接武陵山隱谷西徑，落成殘碑岔地、靜風谷坪、裂石空場與沉陵坳口構成的深谷 wild 骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/wild_hidden_valley/index",
+        "area/wild_hidden_valley/map.md",
+        "plans/area/0105-wild-hidden-valley.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

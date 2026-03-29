@@ -1,0 +1,31 @@
+Vnum            21433
+Name            valley warden~
+ShortDesc       裂石守谷人~
+Description
+裂石守谷人站在空場邊緣時幾乎不會把視線完全離開那道裂縫，好像稍一分神，谷裡更
+深處的東西就會順著口子冒上來。他那股守著危險邊界的姿態比說話更有威懾力。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       20
+Level           54
+Hitroll         3
+Protect         0
+Damroll         5
+Str             15
+Int             12
+Wis             12
+Dex             13
+Con             14
+Hp              2740
+Mana            88
+Move            182
+Class           0
+Gold            610
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

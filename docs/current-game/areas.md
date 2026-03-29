@@ -134,6 +134,7 @@ title: Current Game Areas
 | `wild_wolf_forest` | 狼林 / 深林狼群 wild | `18701-18720` | `rebuild addition` | 承接白狼山北狼隘口，落成枯針松徑、狼骨岔路、霧痕林腹與月嚎空地骨架。 |
 | `sec_spirit_peak` | 白狼靈峰 / 高處祭天 secret | `18801-18820` | `rebuild addition` | 承接古洞遺跡靈峰裂井，落成風祭石階、雲裂祭坪、狼紋天壇與天熒觀台骨架。 |
 | `sec_starfall_crater` | 星墜天坑 / 墜星異坑 secret | `18901-18920` | `rebuild addition` | 承接白狼山風蝕石壇，落成焦痕坑緣、裂星斜坡、星核碎坪與天隕觀缺骨架。 |
+| `wild_hidden_valley` | 隱谷 / 深谷秘徑 wild | `19001-19020` | `rebuild addition` | 承接武陵山隱谷西徑，落成殘碑岔地、靜風谷坪、裂石空場與沉陵坳口骨架。 |
 
 ## Recent Rebuild Areas
 
@@ -257,6 +258,7 @@ title: Current Game Areas
 - `wild_wolf_forest`：把白狼山北狼隘口正式接進狼林，透過枯針松徑、狼骨岔路、霧痕林腹、失蹤者舊營與月嚎空地把北境主線切進更封閉也更偏 folklore 的深林 wild。
 - `sec_spirit_peak`：把古洞遺跡的靈峰裂井正式接進白狼靈峰，透過風祭石階、雲裂祭坪、狼紋天壇、靈泉祭井與天熒觀台把北境主線切進更高處也更稀有的祭天祕境。
 - `sec_starfall_crater`：把白狼山風蝕石壇正式接進星墜天坑，透過焦痕坑緣、裂星斜坡、星核碎坪、殞光裂庭與天隕觀缺把北境主線切進更焦灼也更失衡的墜星祕境。
+- `wild_hidden_valley`：把武陵山隱谷西徑正式接進隱谷，透過殘碑岔地、伏苔斷階、靜風谷坪、裂石空場與沉陵坳口把蜀漢西山鏈切進更收束也更帶古痕壓力的深谷 wild。
 
 ## 維護規則
 

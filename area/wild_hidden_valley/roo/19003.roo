@@ -1,0 +1,36 @@
+Vnum            19003
+Name            伏苔斷階~
+Description
+斷階沿著低坡斜斜往上露出，石面全被厚苔覆住，只剩踩上去時那種過於整齊的硬感提醒你它原本不是天然形成。這裡像一段被山谷慢慢吞掉的舊路，既像遺跡，也像警告。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       SOUTH
+ExitVnum        19002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         斷階~
+End
+
+#Enquire
+Keyword         苔~
+End
+
+#Enquire
+Keyword         舊路~
+End
+
+End

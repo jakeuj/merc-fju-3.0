@@ -1,0 +1,36 @@
+Vnum            19007
+Name            藏泉石罅~
+Description
+石罅裡滲出的細泉很清，卻沒有讓這附近多出半分安穩感，反而像把谷裡更深處的冷氣息慢慢帶了上來。站在這裡時，很容易覺得自己離某種真正被掩起來的入口已經不遠了。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        19005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         泉~
+End
+
+#Enquire
+Keyword         石縫~
+End
+
+#Enquire
+Keyword         入口~
+End
+
+End

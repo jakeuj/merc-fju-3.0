@@ -1,0 +1,15 @@
+Vnum            21454
+Name            path lamp~
+ShortDesc       谷路小燈(path lamp)~
+Description
+這盞谷路小燈(path lamp)被細心罩住燈火，亮度不大，卻足夠在濕氣與薄霧裡替行腳客
+保住前方幾步的視線。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           44
+Value           0 0 36 0
+Weight          1
+Cost            104
+End

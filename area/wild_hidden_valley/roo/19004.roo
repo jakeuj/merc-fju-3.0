@@ -1,0 +1,44 @@
+Vnum            19004
+Name            靜風谷坪~
+Description
+谷坪看起來平整得近乎不自然，連風到了這裡都像先停一拍再繼續往前走。你很難說出哪裡不對，只會本能覺得這塊地曾經被人用過，而且用途恐怕不只是獵戶歇腳那麼單純。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        19002
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        19005
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19006
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         谷坪~
+End
+
+#Enquire
+Keyword         風~
+End
+
+#Enquire
+Keyword         這裡~
+End
+
+End

@@ -1,0 +1,16 @@
+Vnum            21453
+Name            valley machete~
+ShortDesc       破藤短刀(valley machete)~
+Description
+這把破藤短刀(valley machete)的刀身不算長，卻被磨得剛好適合在谷地砍藤、劈草與
+近身應變，看來正是巡谷人最常帶在腰間的兵器。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           48
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            214
+End
