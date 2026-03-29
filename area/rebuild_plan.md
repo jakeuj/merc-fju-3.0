@@ -709,42 +709,12 @@
 
 ## In Progress
 
-- `district_chengdu_market`
-  - area_family: `District`
-  - parent_area: `city_chengdu`
-  - reserved_room_block: `19901-19920`
-  - planned_vnum_range: `19901-19920`
-  - level_range: `34-46`
-  - theme: `歷史城市`
-  - subtheme: `市井 / 商街`
-  - ref_inputs_used:
-    - `area/world_map.md`
-    - `ref/Readme.md`
-    - `ref/sanguo-progression-map.md`
-    - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/district_chengdu_market/map.md`
-    - `ref/world-graph.md`
-    - `docs/3yWebsite/docs/data/players.json`
-    - `docs/3yWebsite/docs/data/skills.json`
-    - `area/city_chengdu/map.md`
-    - `plans/area/0112-city-chengdu.md`
-    - `plans/area/0113-wild-chengdu-outer.md`
-  - ref_inputs_deferred:
-    - `ref/sanguo-area-specfirst/area/district_chengdu_scholar/map.md`
-    - `docs/3yWebsite/map/chendo.html`
-    - 各類原型工具與模擬系統
-  - theme_basis:
-    - `city_chengdu/19704` 已有成熟的市場邊界 stub，可直接把市樓牌坊正式接成商街 district
-    - `world-graph` 將 `district_chengdu_market` 放在成都旁的 `district / 34-46` 節點，比 scholar 分區更貼近當前已落地的市場語彙
-    - `wild_chengdu_outer` 剛完成後，回切一個 `District` 能維持 family variety，而不會再堆疊同質郊野
-    - `players.json / skills.json` 沒有提供 scholar-first 的硬性玩法證據，因此先補市場補給與傳聞 loop
-  - compliance_check:
-    - compliant；這次選區遵守 queue variety gate，也沿用成都母城既有 stub，不需跳離蜀地成都主線
-  - delivery_gate: `implementation_ready_for_commit`
+(目前無 `in_progress` 項目。)
 
 
 ## Done
 
+- `2026-03-29` `district_chengdu_market` 已完成第一輪 runtime implementation、commit `e442069`，完成 `city_chengdu/19704 <-> 19901` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `wild_chengdu_outer` 已完成第一輪 runtime implementation、commit `4fe7090`，完成 `city_chengdu/19708 <-> 19801` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `city_chengdu` 已完成第一輪 runtime implementation、commit `9f44d75`，完成 `city_jiangzhou/19608 <-> 19701` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `city_jiangzhou` 已完成第一輪 runtime implementation、commit `5043331`，完成 `fort_yongan/19508 <-> 19601` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
@@ -923,14 +893,14 @@
 
 ## Current Recommended Next Step
 
-先提交 `district_chengdu_market` implementation milestone；commit 完成後，再把 tracker 從 `in_progress` 推進成 `done`。
+回到 queue 規則重建 `todo`，優先比較 `district_chengdu_scholar` 與其他能提供 family variety 的非 `District` 候選，避免在 `district_chengdu_market` 後立刻再堆同質成都城內分區節奏。
 
 ## Next Action
 
-- 提交 `district_chengdu_market` implementation milestone
-- commit 後把 tracker 從 `in_progress` 推進成 `done`
-- 下一輪再從成都剩餘候選重新比較 `district_chengdu_scholar` 與其他可提供 family variety 的非 `District` 候選
+- 依 `world_map + progression + 題材分布表 + players/skills` 重建下一個 actionable area 候選
+- 優先比較 `district_chengdu_scholar` 與其他能提供 family variety 的非 `District` 候選
+- 避免在 `district_chengdu_market` 後立刻再開另一段同質成都城內市井 / 學舍節奏
 
 ## Next Prompt
 
-`先提交 district_chengdu_market implementation milestone，然後把 tracker 從 in_progress 推進成 done。`
+`回到 queue 規則重建 todo，優先比較 district_chengdu_scholar 與其他非 District 候選，選出下一個 actionable area。`
