@@ -1,0 +1,32 @@
+Vnum            21634
+Name            yiling watch captain~
+ShortDesc       望樓校尉~
+Description
+這名守在望樓上的校尉眼神始終比旁人再往西放遠一些，像任何旗號、塵煙與馬蹄聲都
+會先在他心裡被辨成軍情。站在附近時，夷陵這座關隘的壓力會變得格外具體。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           48
+Hitroll         0
+Protect         0
+Damroll         0
+Str             15
+Int             11
+Wis             13
+Dex             14
+Con             14
+Hp              1700
+Mana            88
+Move            170
+Class           0
+Gold            320
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

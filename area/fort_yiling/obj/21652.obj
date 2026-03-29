@@ -1,0 +1,15 @@
+Vnum            21652
+Name            yiling waterskin~
+ShortDesc       夷陵水囊(yiling waterskin)~
+Description
+一只常掛在軍需棚邊、方便值守與傳令換班時取用的夷陵水囊(yiling waterskin)被放在
+這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           42
+Value           10 10 0 0
+Weight          1
+Cost            98
+End

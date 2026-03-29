@@ -1,0 +1,44 @@
+Vnum            19402
+Name            關前柵道~
+Description
+柵道把來者的步伐自然壓慢，兩側木柵和巡視視線一起把人流擠成一條不容亂走的線。這裡不像真正戰地那樣混亂，卻比江陵任何一條街更讓人清楚感覺到自己已站在關隘的脈搏上。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19401
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19405
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         柵道~
+End
+
+#Enquire
+Keyword         盤查~
+End
+
+#Enquire
+Keyword         守兵~
+End
+
+End

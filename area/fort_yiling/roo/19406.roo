@@ -1,0 +1,28 @@
+Vnum            19406
+Name            軍需棚區~
+Description
+糧包、燈油、皮囊與兵械在棚下分得清清楚楚，連空氣都帶著一種只屬於行軍前線的乾燥秩序。對夷陵來說，真正撐住整座關隘節奏的，往往不是牆，而是這些看似不起眼卻不能斷的備給。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        19404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         軍需~
+End
+
+#Enquire
+Keyword         糧草~
+End
+
+#Enquire
+Keyword         燈油~
+End
+
+End

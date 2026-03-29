@@ -1,0 +1,28 @@
+Vnum            19408
+Name            西向關坪~
+Description
+再往西去，地勢與風向都開始帶出更長、更硬的遠路感，連關坪上的馬樁與路牌都像是在提醒人這不是回城用的出口，而是通往下一段更深軍旅主線的前口。夷陵在這裡不只是關門，也是西進節奏真正被重新點燃的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         西邊~
+End
+
+#Enquire
+Keyword         永安~
+End
+
+#Enquire
+Keyword         遠路~
+End
+
+End

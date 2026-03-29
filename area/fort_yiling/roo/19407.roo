@@ -1,0 +1,28 @@
+Vnum            19407
+Name            軍令望樓~
+Description
+望樓上不只看得見關前來路，也能把甕城內外的節奏一口氣收進眼底。木案上的軍令與更換班次的記號讓這裡顯得比下方任何地方都更冷，也更像真正決定關隘心跳速度的高點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       DOWN
+ExitVnum        19404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         望樓~
+End
+
+#Enquire
+Keyword         軍令~
+End
+
+#Enquire
+Keyword         旗號~
+End
+
+End

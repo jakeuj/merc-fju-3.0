@@ -1,0 +1,15 @@
+Vnum            21654
+Name            signal lantern~
+ShortDesc       關樓風燈(signal lantern)~
+Description
+一盞專門掛在甕城與望樓之間、用來辨認旗號與夜間巡望節奏的關樓風燈(signal
+lantern)被收在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           42
+Value           0 0 24 0
+Weight          1
+Cost            104
+End

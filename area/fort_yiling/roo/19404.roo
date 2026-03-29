@@ -1,0 +1,52 @@
+Vnum            19404
+Name            甕城主道~
+Description
+甕城把關防的壓力再收得更緊，短短一段主道上卻同時能看見軍需、傳令與望樓的節奏。比起單純防禦，它更像一個把所有西進與東回動線先壓縮、再重新分配的軍事節點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19406
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        19407
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         甕城~
+End
+
+#Enquire
+Keyword         內營~
+End
+
+#Enquire
+Keyword         望樓~
+End
+
+End

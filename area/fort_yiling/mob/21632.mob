@@ -1,0 +1,32 @@
+Vnum            21632
+Name            yiling quartermaster~
+ShortDesc       軍需掌事~
+Description
+這位軍需掌事把糧包、水囊和燈油分得極細，看得出他很清楚夷陵這種關隘最怕的不是
+少打一仗，而是少撐一刻。很多真正撐住整座 fort 節奏的東西，都得先經他手。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           44
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             12
+Wis             12
+Dex             11
+Con             13
+Hp              1540
+Mana            92
+Move            148
+Class           0
+Gold            280
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

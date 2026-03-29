@@ -1,0 +1,14 @@
+Vnum            21651
+Name            yiling ration~
+ShortDesc       夷陵軍糧(yiling ration)~
+Description
+一包給夷陵關卒與斥候值守時輪流取用的夷陵軍糧(yiling ration)被收在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           42
+Value           18 38 4 0
+Weight          1
+Cost            138
+End

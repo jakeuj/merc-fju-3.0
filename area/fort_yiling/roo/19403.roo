@@ -1,0 +1,36 @@
+Vnum            19403
+Name            夷陵關門~
+Description
+厚實關門把內外空氣切得很乾淨，門外是仍可回頭的城市邊界，門內則是更偏軍務、命令與備戰的空間。站在這裡時，會很清楚感到夷陵不是給人停留發呆的地方，而是一座只問你是否該被放進去的咽喉。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         關門~
+End
+
+#Enquire
+Keyword         放行~
+End
+
+#Enquire
+Keyword         軍令~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            21631
+Name            yiling gate soldier~
+ShortDesc       夷陵關卒~
+Description
+這名夷陵關卒的目光和站姿都比尋常城門兵更沉，像早已習慣把每一個靠近關門的人先
+當成需要盤問的對象。越接近他，越難把這道關門只看成單純的路口。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           42
+Hitroll         0
+Protect         0
+Damroll         0
+Str             14
+Int             11
+Wis             12
+Dex             13
+Con             14
+Hp              1460
+Mana            80
+Move            156
+Class           0
+Gold            240
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

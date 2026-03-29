@@ -1,0 +1,36 @@
+Vnum            19401
+Name            東關路口~
+Description
+自江陵西關一路走到這裡後，木柵、軍旗與關牆影子會立刻把街路的煙火氣壓下去。東關路口像是一道把城市秩序收成軍事秩序的門檻，讓人明白再往前每一步都不只是旅行，而是進入有人盤查、也有人決定你該往哪裡去的地帶。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        19308
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         江陵~
+End
+
+#Enquire
+Keyword         西關~
+End
+
+#Enquire
+Keyword         關道~
+End
+
+End

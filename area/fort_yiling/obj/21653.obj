@@ -1,0 +1,16 @@
+Vnum            21653
+Name            yiling saber~
+ShortDesc       夷陵關刀(yiling saber)~
+Description
+這把夷陵關刀(yiling saber)刀身不寬，卻磨得扎實利落，看起來正是關門守卒、斥候與
+望樓校尉日常佩在身邊的制式兵器。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           44
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            196
+End

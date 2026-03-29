@@ -38,6 +38,7 @@
         "direction": "west",
         "source_vnum": 19308,
         "target_area": "fort_yiling",
+        "target_room_vnum": 19401,
         "label": "西關去路"
       }
     ],
@@ -169,7 +170,8 @@
       "coord": [0, 3, 0],
       "labels": ["west-road", "future-link", "outer-route"],
       "exits": [
-        { "direction": "south", "to": 19303 }
+        { "direction": "south", "to": 19303 },
+        { "direction": "west", "to": 19401, "external": true }
       ],
       "enquires": ["西關", "夷陵", "遠路"]
     }

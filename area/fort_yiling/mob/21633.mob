@@ -1,0 +1,32 @@
+Vnum            21633
+Name            yiling scout courier~
+ShortDesc       斥候傳令~
+Description
+這名斥候傳令披著帶灰的短披風，腳下塵痕和身上的木牌都像剛從關外路上收回來。比
+起守兵，他更像夷陵裡真正把情報和命令來回接起來的那條線。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           45
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             12
+Wis             12
+Dex             14
+Con             12
+Hp              1580
+Mana            90
+Move            166
+Class           0
+Gold            240
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

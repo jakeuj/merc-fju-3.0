@@ -1,0 +1,28 @@
+Vnum            19405
+Name            斥候側棚~
+Description
+側棚裡堆著地圖木板、備用水囊與剛交回來的塵土披風，看得出這裡真正面對的是路況、敵情與關外風吹草動。它不像主道那麼緊繃，卻反而讓人更直接感受到夷陵的關隘價值來自看得遠、回得快。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       NORTH
+ExitVnum        19402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         斥候~
+End
+
+#Enquire
+Keyword         敵情~
+End
+
+#Enquire
+Keyword         地圖~
+End
+
+End

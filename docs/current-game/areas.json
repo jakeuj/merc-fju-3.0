@@ -2153,6 +2153,25 @@
         "plans/area/0108-city-jiangling.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "fort_yiling",
+      "title": "夷陵",
+      "room_range": "19401-19420",
+      "load_order": 115,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_jiangling",
+      "theme_primary": "軍旅",
+      "theme_secondary": "咽喉 / 關道",
+      "summary": "承接江陵西關，落成關前柵道、夷陵關門、甕城主道、軍需棚區與西向關坪構成的主線 fort 骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/fort_yiling/index",
+        "area/fort_yiling/map.md",
+        "plans/area/0109-fort-yiling.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }
