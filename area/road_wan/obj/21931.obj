@@ -1,0 +1,14 @@
+Vnum            21931
+Name            travel ration~
+ShortDesc       官道乾糧包(travel ration)~
+Description
+一包適合南行長路攜帶的乾糧整整齊齊地束在粗布裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           14
+Value           16 24 4 0
+Weight          1
+Cost            90
+End

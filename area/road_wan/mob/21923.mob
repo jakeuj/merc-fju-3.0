@@ -1,0 +1,32 @@
+Vnum            21923
+Name            pack caravan traveler~
+ShortDesc       押貨旅人~
+Description
+這名押貨旅人的肩背與手掌都留下長年牽車與整索的痕跡，看得出他比誰都更知道
+官道上的每一次停手和每一次趕路究竟值多少工夫。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       70
+Level           13
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             10
+Wis             10
+Dex             11
+Con             12
+Hp              560
+Mana            40
+Move            110
+Class           0
+Gold            96
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

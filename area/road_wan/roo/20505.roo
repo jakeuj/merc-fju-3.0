@@ -1,0 +1,44 @@
+Vnum            20505
+Name            路亭前坪~
+Description
+官道在此稍微放寬，形成讓車馬與步客都能歇上一口氣的前坪。有人在這裡換水囊、有人低聲打聽南邊宛城的消息，讓整個地方像一個把帝都與內陸轉接城短暫縫在一起的停手點。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        20503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       ENTER
+ExitVnum        20506
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         路亭~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+#Enquire
+Keyword         消息~
+End
+
+End

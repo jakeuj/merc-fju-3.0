@@ -1,13 +1,21 @@
 Vnum            20407
 Name            北門官道口~
 Description
-北門外的官道口比南門更開闊，備馬樁、里程石與守卒站位都透露出這裡才是宛真正朝向中原主線的出口。站在這裡時，會很自然覺得宛不是終點，而是把南來的路重新接回更長官道的北向節點。
+北門外的官道口比南門更開闊，備馬樁、里程石與守卒站位都透露出這裡才是宛真正朝向中原主線的出口。如今順著這裡北上，已能正式踏上往洛陽去的官道，讓人更明白宛不是終點，而是把南來的路重新接回更長官道的北向節點。
 ~
 SectorType      SECT_CITY
 
 #Exit
 Direction       SOUTH
 ExitVnum        20404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        20508
 ExitDesc        ~
 ExitKeyword     ~
 ExitKey         0

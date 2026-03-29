@@ -1,0 +1,15 @@
+Vnum            21934
+Name            road lantern~
+ShortDesc       路亭提燈(road lantern)~
+Description
+這盞路亭提燈(road lantern)外罩粗紙與細竹骨，點起後足夠把官道邊的停手點照
+得清清楚楚。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           15
+Value           0 0 28 0
+Weight          1
+Cost            108
+End

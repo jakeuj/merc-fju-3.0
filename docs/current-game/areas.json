@@ -2362,6 +2362,25 @@
         "plans/area/0119-city-wan.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "road_wan",
+      "title": "往宛官道",
+      "room_range": "20501-20520",
+      "load_order": 126,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_wan",
+      "theme_primary": "江湖",
+      "theme_secondary": "官道 / 南行",
+      "summary": "承接洛陽津陽門與宛北門官道口，落成南驛口、官道中段、路亭與盤查坡口構成的南行官道 road。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/road_wan/index",
+        "area/road_wan/map.md",
+        "plans/area/0120-road-wan.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

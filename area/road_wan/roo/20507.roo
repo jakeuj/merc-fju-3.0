@@ -1,0 +1,36 @@
+Vnum            20507
+Name            盤查坡口~
+Description
+坡口旁的地面被人馬踩得相當結實，顯示這裡常有驛卒與巡差暫停盤問來往過客。再往南，宛的官道節奏會愈來愈明顯，因此不少人都會在這裡最後整理行囊與說詞。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        20505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20508
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         盤查~
+End
+
+#Enquire
+Keyword         差役~
+End
+
+#Enquire
+Keyword         宛~
+End
+
+End

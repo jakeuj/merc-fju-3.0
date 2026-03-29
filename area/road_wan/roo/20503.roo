@@ -1,0 +1,44 @@
+Vnum            20503
+Name            南行官道中段~
+Description
+官道在這裡筆直舒展，兩側田色與低樹把視線拉得很長。走在這裡時，你會很清楚自己已經離開洛陽，卻還沒真正進入宛的城門秩序，只能靠路感、天色與偶爾經過的旅隊判斷節奏。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        20502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20505
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20504
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         官道~
+End
+
+#Enquire
+Keyword         宛~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

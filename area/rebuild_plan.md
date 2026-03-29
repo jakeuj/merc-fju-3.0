@@ -709,7 +709,43 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `road_wan`
+  - area_family: `Road`
+  - reserved_room_block: `20501-20520`
+  - planned_vnum_range: `20501-20520`
+  - level_range: `8-18`
+  - theme: `江湖`
+  - subtheme: `官道 / 南行`
+  - delivery_gate: `implementation_ready_for_commit`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/road_wan/map.md`
+    - `ref/sanguo-area-specfirst/area/wild_wan_outer/map.md`
+    - `ref/world-graph.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `docs/3yWebsite/docs/data/maps.json`
+    - `docs/3yWebsite/map/index.html`
+    - `area/city_wan/map.md`
+    - `area/loyang/roo/593.roo`
+    - `area/directory.lst`
+    - `plans/area/0119-city-wan.md`
+  - ref_inputs_deferred:
+    - `docs/3yWebsite/map/sinya.html`
+    - `docs/3yWebsite/map/shanyan.html`
+    - `ref/sanguo-area-specfirst/area/city_wan/map.md`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `area/world_map.md` 與 `docs/3yWebsite/map/index.html` 都把主骨架寫成 `洛陽 -> 宛 -> 新野 -> 襄陽`，支持先補 `road_wan` 這條南北主線，而不是先展開 `wild_wan_outer` 這種側向外帶
+    - `world-graph` 已把 `road_wan` 定位成 `city_loyang <-> city_wan` 間的 `road / 8-18` 節點，而 `wild_wan_outer` 只是 `city_wan` 西側的 outskirts，主次順序清楚
+    - `loyang/593` 與 `city_wan/20407` 都已有成熟的「往宛 / 官道」語意 stub，落地 `593 south <-> 20501 north` 與 `20508 south <-> 20407 north` 的風險明顯低於先去展開新側帶
+    - `area/directory.lst` 已顯示 `jingxiang_road` 是既有 loadable runtime area，不屬於本輪「下一個待建 area」的真正候選
+    - `players.json / skills.json` 在荊州段提供的強訊號仍偏向 `襄陽 / 新野` 的服務與練功 loop，沒有足以推翻主線官道先行的 `宛城外道` 優先證據
+  - compliance_check:
+    - compliant；本輪在 `city_wan` 之後選 `Road`，既維持 family variety，也先補世界主骨架缺口，沒有把已存在的 `jingxiang_road` 誤判成待建新區
 
 ## Done
 
@@ -897,14 +933,14 @@
 
 ## Current Recommended Next Step
 
-回到 queue 規則重建 `todo`，優先比較 `road_wan`、`wild_wan_outer`、`jingxiang_road` 與其他能提供 family variety 的非 `City` 候選，但先釐清 `city_wan` 北向與西向 world link 的承接順序。
+提交 `road_wan` implementation milestone，然後把 tracker 從 `implementation_ready_for_commit` 推進成 done。
 
 ## Next Action
 
-- 依 queue 規則重建 `todo` 與 candidate 判斷
-- 優先比較 `road_wan`、`wild_wan_outer`、`jingxiang_road` 與其他可提供 family variety 的非 `City` 候選
-- 先整理 `city_wan` 目前保留的 `north / out` 契約與荊州、洛陽主線的銜接順序，再決定下一個 actionable area
+- 提交 `road_wan` implementation milestone commit
+- 把 `area/rebuild_plan.md` 從 `implementation_ready_for_commit` 推進成 done
+- 再回到 queue 規則盤點 `wild_wan_outer` 與其他可提供 family variety 的非 `Road` 候選
 
 ## Next Prompt
 
-`依 queue 規則重建 todo，優先盤點 road_wan、wild_wan_outer、jingxiang_road 與其他非 City 候選，並先釐清 city_wan 北向與西向 world link 的承接順序後，再決定下一個 actionable area。`
+`提交 road_wan implementation milestone，然後把 tracker 從 implementation_ready_for_commit 推進成 done。`

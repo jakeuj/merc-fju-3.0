@@ -1,0 +1,32 @@
+Vnum            21922
+Name            road rest steward~
+ShortDesc       路亭掌事~
+Description
+這名路亭掌事總把茶桶、乾糧與提燈收得整整齊齊，像是很明白真正趕遠路的人最
+怕的不是累，而是臨上路前少帶了一樣東西。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       85
+Level           15
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             12
+Wis             13
+Dex             11
+Con             11
+Hp              680
+Mana            80
+Move            108
+Class           0
+Gold            140
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

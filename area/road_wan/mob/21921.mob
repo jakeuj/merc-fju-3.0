@@ -1,0 +1,33 @@
+Vnum            21921
+Name            south road courier~
+ShortDesc       南路驛卒~
+Description
+這名守在津陽門外的南路驛卒看起來沒有城內衛士那麼森嚴，卻仍保持著一種不讓
+旅隊亂散的警覺。他熟悉南下往宛的節奏，也很清楚哪種人只是趕路，哪種人像在
+沿途打探消息。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       90
+Level           14
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             11
+Wis             11
+Dex             12
+Con             11
+Hp              520
+Mana            60
+Move            120
+Class           0
+Gold            90
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

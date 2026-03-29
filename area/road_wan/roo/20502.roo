@@ -1,0 +1,39 @@
+Vnum            20502
+Name            官道木樁旁~
+Description
+路旁一排木樁被纜繩與馬索磨得發亮，顯示這裡長年都是人馬整裝的固定停手點。再往南，路感會愈來愈強，讓人很難再把自己當成仍在洛陽城門附近徘徊。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        20501
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         木樁~
+Description
+木樁上的新舊繩痕一層層纏在一起，看得出這條官道多年來一直穩穩承擔著往宛的南北旅運。
+~
+End
+
+#Enquire
+Keyword         木樁~
+End
+
+#Enquire
+Keyword         旅隊~
+End
+
+End

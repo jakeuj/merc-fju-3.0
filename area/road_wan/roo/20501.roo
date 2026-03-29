@@ -1,0 +1,36 @@
+Vnum            20501
+Name            津陽門南驛口~
+Description
+一離開津陽門，洛陽城內那股壓得分明的帝都秩序就被官道上的風聲與車轍聲慢慢拉散。這裡仍看得見最後整理衣裝的旅人與準備南下的差役，像所有真正要往宛去的人，都會先在這裡把城內節奏換成長路節奏。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        593
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20502
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         洛陽~
+End
+
+#Enquire
+Keyword         津陽門~
+End
+
+#Enquire
+Keyword         南路~
+End
+
+End

@@ -1,0 +1,24 @@
+Vnum            20504
+Name            里程石側線~
+Description
+一座低矮的里程石立在道旁，石面經風雨磨蝕後仍還能辨出洛陽與宛的方向字樣。對真正趕遠路的人來說，這種石頭不只是記路，更像替整條官道留下不會走失的秩序。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       WEST
+ExitVnum        20503
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         里程石~
+End
+
+#Enquire
+Keyword         距離~
+End
+
+End

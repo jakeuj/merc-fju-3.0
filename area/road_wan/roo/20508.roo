@@ -1,0 +1,36 @@
+Vnum            20508
+Name            宛北官道路口~
+Description
+官道在此繼續往南收進宛城北門的城廓與里程石影裡，路面上的車痕與人聲也明顯比前段更密。站在這裡時，洛陽已成了背後那座遙遠卻仍在發力的帝都，而宛則成了真正正在逼近的下一站。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        20507
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        20407
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         宛~
+End
+
+#Enquire
+Keyword         北門~
+End
+
+#Enquire
+Keyword         去路~
+End
+
+End

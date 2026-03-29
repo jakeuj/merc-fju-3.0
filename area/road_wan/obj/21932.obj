@@ -1,0 +1,14 @@
+Vnum            21932
+Name            road water skin~
+ShortDesc       驛路水囊(road water skin)~
+Description
+這只皮水囊被收口繩束得很緊，顯然是替真正要走長路的人備著的。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           14
+Value           10 10 LIQ_WATER 0
+Weight          1
+Cost            72
+End

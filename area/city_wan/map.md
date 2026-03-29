@@ -38,6 +38,7 @@
         "direction": "north",
         "source_vnum": 20407,
         "target_area": "road_wan",
+        "target_room_vnum": 20508,
         "label": "往宛官道"
       },
       {
@@ -163,13 +164,14 @@
     {
       "vnum": 20407,
       "name": "北門官道口",
-      "description": "北門外的官道口比南門更開闊，備馬樁、里程石與守卒站位都透露出這裡才是宛真正朝向中原主線的出口。站在這裡時，會很自然覺得宛不是終點，而是把南來的路重新接回更長官道的北向節點。",
+      "description": "北門外的官道口比南門更開闊，備馬樁、里程石與守卒站位都透露出這裡才是宛真正朝向中原主線的出口。如今順著這裡北上，已能正式踏上往洛陽去的官道，讓人更明白宛不是終點，而是把南來的路重新接回更長官道的北向節點。",
       "sector_type": "SECT_CITY",
       "cluster": "north-west-edge",
       "coord": [0, 3, 0],
-      "labels": ["north-edge", "future-link", "road-gate"],
+      "labels": ["north-edge", "world-link-north", "road-gate"],
       "exits": [
-        { "direction": "south", "to": 20404 }
+        { "direction": "south", "to": 20404 },
+        { "direction": "north", "to": 20508, "external": true }
       ],
       "enquires": ["官道", "洛陽", "北門"]
     },

@@ -1,0 +1,32 @@
+Vnum            21924
+Name            wan road inspector~
+ShortDesc       宛道巡差~
+Description
+這名守在坡口的宛道巡差眼神總像在衡量來人到底只是趕路，還是準備把洛陽與宛
+之間的傳聞一路帶進下一座城裡。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       95
+Level           16
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             11
+Wis             11
+Dex             12
+Con             11
+Hp              760
+Mana            70
+Move            116
+Class           0
+Gold            110
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
