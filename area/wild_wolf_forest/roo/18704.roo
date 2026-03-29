@@ -1,0 +1,44 @@
+Vnum            18704
+Name            霧痕林腹~
+Description
+林腹的樹幹上留著一層像水氣又像手痕的淡白霧印，讓整段道路都像剛被什麼看不見的東西沿途摸過。走進來之後，最明顯的變化不是更暗，而是更難相信自己的方向感。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       SOUTH
+ExitVnum        18702
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18707
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        18705
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         霧痕~
+End
+
+#Enquire
+Keyword         林腹~
+End
+
+#Enquire
+Keyword         方向~
+End
+
+End

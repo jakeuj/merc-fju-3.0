@@ -1,0 +1,16 @@
+Vnum            21153
+Name            wolf trail knife~
+ShortDesc       搜跡短刀(wolf trail knife)~
+Description
+這把搜跡短刀(wolf trail knife)沒有多餘裝飾，卻被磨得足以應付林間突襲、割藤
+與近身防備，看來正是狼林獵戶與夜巡人最常帶在身上的兵器。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+Level           42
+WearLoc         ITEM_WIELD
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            206
+End

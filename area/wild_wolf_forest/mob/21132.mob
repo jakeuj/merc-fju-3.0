@@ -1,0 +1,32 @@
+Vnum            21132
+Name            wolf trail hunter~
+ShortDesc       狼跡獵戶~
+Description
+這名獵戶的步子幾乎不會在濕地上留下多餘聲音，像是早已習慣把自己也變成狼林裡
+不該被太早發現的一部分。只看他的眼神，就知道他一直在算哪裡可能先冒出狼影。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           43
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             11
+Wis             12
+Dex             14
+Con             13
+Hp              1440
+Mana            88
+Move            182
+Class           0
+Gold            290
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

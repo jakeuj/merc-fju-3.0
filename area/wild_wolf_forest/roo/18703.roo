@@ -1,0 +1,36 @@
+Vnum            18703
+Name            狼骨岔路~
+Description
+兩三截發白獸骨被有意無意地插在泥地旁，把原本就難辨的岔路硬是添上一層更不吉利的指引意味。無論那是警告還是標記，都讓人很難再把這裡當成普通山林。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       WEST
+ExitVnum        18702
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18706
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         狼骨~
+End
+
+#Enquire
+Keyword         岔路~
+End
+
+#Enquire
+Keyword         標記~
+End
+
+End

@@ -1,0 +1,36 @@
+Vnum            18701
+Name            南隘林口~
+Description
+一踏過北狼隘口，裸露山風就立刻被更低沉的樹聲接手。腳下仍留著從白狼山北脊延進來的舊路，可那條路一進林便不再像軍旅路線，而像某種只靠記憶與膽氣勉強維持的邊地小徑。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       SOUTH
+ExitVnum        18008
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18702
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         白狼山~
+End
+
+#Enquire
+Keyword         林口~
+End
+
+#Enquire
+Keyword         回去~
+End
+
+End

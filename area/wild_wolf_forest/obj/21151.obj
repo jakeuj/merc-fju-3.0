@@ -1,0 +1,15 @@
+Vnum            21151
+Name            forest ration~
+ShortDesc       林路乾糧包(forest ration)~
+Description
+一包方便在狼林小徑上邊走邊補充體力的林路乾糧包(forest ration)被緊緊綁好，看
+得出很適合濕冷山林中的急行者。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           40
+Value           22 42 4 0
+Weight          1
+Cost            138
+End

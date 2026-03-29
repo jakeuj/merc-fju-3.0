@@ -38,6 +38,7 @@
         "direction": "north",
         "source_vnum": 18008,
         "target_area": "wild_wolf_forest",
+        "target_room_vnum": 18701,
         "label": "狼林方向"
       },
       {
@@ -177,7 +178,8 @@
       "coord": [1, 2, 0],
       "labels": ["north-edge", "world-link-north"],
       "exits": [
-        { "direction": "south", "to": 18004 }
+        { "direction": "south", "to": 18004 },
+        { "direction": "north", "to": 18701, "external": true }
       ],
       "enquires": ["狼林", "隘口", "北路"]
     }

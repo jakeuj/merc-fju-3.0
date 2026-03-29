@@ -1,0 +1,36 @@
+Vnum            18706
+Name            狼爪石碑~
+Description
+林中的殘石碑被劃出幾道深長痕跡，遠看像舊字，近看又更像狼爪在濕石上反覆磨出的印子。這塊石碑不像單純地標，反而像某種提醒外人不該再往前的邊界。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       SOUTH
+ExitVnum        18703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         石碑~
+End
+
+#Enquire
+Keyword         爪痕~
+End
+
+#Enquire
+Keyword         警告~
+End
+
+End

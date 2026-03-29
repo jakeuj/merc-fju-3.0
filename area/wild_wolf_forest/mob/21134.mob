@@ -1,0 +1,32 @@
+Vnum            21134
+Name            night trace scout~
+ShortDesc       夜巡搜跡人~
+Description
+這名夜巡搜跡人站在更深處空地邊時，幾乎像早就和狼嚎、月色與泥地混成同一層陰
+影。只有他偶爾低頭查看地面時，人才會意識到這裡一直有人在盯著更北的動靜。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           48
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             12
+Wis             13
+Dex             14
+Con             13
+Hp              1680
+Mana            100
+Move            186
+Class           0
+Gold            350
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

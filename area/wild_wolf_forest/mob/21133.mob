@@ -1,0 +1,32 @@
+Vnum            21133
+Name            stone marker watcher~
+ShortDesc       石碑守望者~
+Description
+這名守望者長時間停在殘碑附近，像是既在提防狼群，也在提防有人看懂了不該太快
+看懂的痕跡。他的安靜帶著某種比直白警告更難忽視的邊界感。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           46
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             12
+Wis             13
+Dex             13
+Con             13
+Hp              1560
+Mana            96
+Move            180
+Class           0
+Gold            320
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

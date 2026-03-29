@@ -1,0 +1,28 @@
+Vnum            18705
+Name            獵戶歇棚~
+Description
+一座被苔與松脂半吞掉的小歇棚倚在樹根旁，裡頭還留著乾柴、舊皮囊與幾件顯然是給急行旅人應急的東西。它提供的不是安全，只是一種前人也曾在這裡勉強撐過去的證據。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       EAST
+ExitVnum        18704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         歇棚~
+End
+
+#Enquire
+Keyword         獵戶~
+End
+
+#Enquire
+Keyword         補給~
+End
+
+End

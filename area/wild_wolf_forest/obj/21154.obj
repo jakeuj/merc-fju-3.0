@@ -1,0 +1,15 @@
+Vnum            21154
+Name            mist lantern~
+ShortDesc       霧林提燈(mist lantern)~
+Description
+一盞專門給濃霧與樹影之間勉強照路的霧林提燈(mist lantern)被仔細護著燈罩，像
+是比起照亮四周，更重視別讓自己太快失去方向。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           40
+Value           0 0 24 0
+Weight          1
+Cost            92
+End

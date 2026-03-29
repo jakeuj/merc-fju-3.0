@@ -1,0 +1,32 @@
+Vnum            21131
+Name            forest guide~
+ShortDesc       林路引客~
+Description
+這名熟悉狼林南帶小路的引客會不時用目光確認樹根、泥痕與風向，像是只靠幾個極
+細微的訊號就能判斷哪裡還算能走。在這片深林裡，這樣的人顯得異常珍貴。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           40
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             12
+Wis             13
+Dex             13
+Con             12
+Hp              1320
+Mana            90
+Move            176
+Class           0
+Gold            260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

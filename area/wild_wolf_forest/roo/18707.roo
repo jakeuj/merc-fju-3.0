@@ -1,0 +1,36 @@
+Vnum            18707
+Name            失蹤者舊營~
+Description
+兩頂塌掉的舊帳與一圈快被泥土吃回去的火痕留在這裡，像是有人曾在林腹深處短暫停留，卻沒能把故事完整地帶出去。最不舒服的地方，是周圍幾乎看不見任何慌亂逃離的痕跡。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       SOUTH
+ExitVnum        18704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         失蹤~
+End
+
+#Enquire
+Keyword         舊營~
+End
+
+#Enquire
+Keyword         火痕~
+End
+
+End

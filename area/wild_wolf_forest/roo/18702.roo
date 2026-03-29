@@ -1,0 +1,44 @@
+Vnum            18702
+Name            枯針松徑~
+Description
+厚厚松針把路聲壓得很低，只剩偶爾踩斷枯枝時才提醒人自己仍在前進。林中風向不再像山脊那樣坦白，連遠處狼嚎聽起來都像故意從錯的方向傳來。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       SOUTH
+ExitVnum        18701
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        18704
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        18703
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         松徑~
+End
+
+#Enquire
+Keyword         風聲~
+End
+
+#Enquire
+Keyword         狼嚎~
+End
+
+End

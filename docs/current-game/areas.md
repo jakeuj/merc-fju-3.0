@@ -131,6 +131,7 @@ title: Current Game Areas
 | `wild_liaodong_plain` | 遼東平原 / 北地開闊 wild | `18401-18420` | `rebuild addition` | 承接襄平北原牌樓，落成外坡、草痕官跡、風草臺與牧馬低帶骨架。 |
 | `road_north_border` | 北境邊道 / 遼東北向 road | `18501-18520` | `rebuild addition` | 承接襄平北境邊道路口，落成驛牌、盤查側棚、路亭與北風哨坡骨架。 |
 | `fort_northern_watch` | 北方哨樓 / 高處狼煙哨 fort | `18601-18620` | `rebuild addition` | 承接易京北望樓上層，落成升梯接臺、北哨柵門、軍令帶與狼煙高臺骨架。 |
+| `wild_wolf_forest` | 狼林 / 深林狼群 wild | `18701-18720` | `rebuild addition` | 承接白狼山北狼隘口，落成枯針松徑、狼骨岔路、霧痕林腹與月嚎空地骨架。 |
 
 ## Recent Rebuild Areas
 
@@ -251,6 +252,7 @@ title: Current Game Areas
 - `wild_liaodong_plain`：把襄平北原牌樓正式接進遼東平原，透過北原外坡、草痕官跡、遼東平野、風草臺與牧馬低帶把北境主線重新打開成可辨位的開闊北地 wild。
 - `road_north_border`：把襄平北境邊道路口正式接進北境邊道，透過驛牌木樁邊、北境官道中段、盤查側棚、路亭前坪與北風哨坡把北境主線重新收成更有軍務秩序感的 road。
 - `fort_northern_watch`：把易京北望樓正式接進更高處的北方哨樓，透過升梯接臺、北哨柵門、軍令木案、糧箭棚與狼煙高臺把北境主線再往上抬成更純粹的前線 watch fort。
+- `wild_wolf_forest`：把白狼山北狼隘口正式接進狼林，透過枯針松徑、狼骨岔路、霧痕林腹、失蹤者舊營與月嚎空地把北境主線切進更封閉也更偏 folklore 的深林 wild。
 
 ## 維護規則
 

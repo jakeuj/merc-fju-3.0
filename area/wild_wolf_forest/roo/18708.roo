@@ -1,0 +1,36 @@
+Vnum            18708
+Name            月嚎空地~
+Description
+樹冠在這片空地忽然張開，讓上方月色與下方潮泥一起把狼嚎放大得過於清楚。它不像一個終點，更像整片狼林真正開始回頭看你的地方，彷彿再往前就會進到不該被輕易說穿的北境異聞裡。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       SOUTH
+ExitVnum        18706
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        18707
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         月色~
+End
+
+#Enquire
+Keyword         狼嚎~
+End
+
+#Enquire
+Keyword         前面~
+End
+
+End

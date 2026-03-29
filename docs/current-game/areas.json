@@ -2020,6 +2020,25 @@
         "plans/area/0101-fort-northern-watch.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "wild_wolf_forest",
+      "title": "狼林",
+      "room_range": "18701-18720",
+      "load_order": 108,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "wild_bailang",
+      "theme_primary": "詭異民俗",
+      "theme_secondary": "林區 / 狼群",
+      "summary": "承接白狼山北狼隘口，落成枯針松徑、狼骨岔路、霧痕林腹與月嚎空地構成的深林 wild 骨架。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/wild_wolf_forest/index",
+        "area/wild_wolf_forest/map.md",
+        "plans/area/0102-wild-wolf-forest.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }
