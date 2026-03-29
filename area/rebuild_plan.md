@@ -709,19 +709,11 @@
 
 ## In Progress
 
-- `wild_wan_outer`
-  - area_family: `Wild`
-  - reserved_room_block: `20601-20620`
-  - level_range: `14-24`
-  - status: `第一輪 runtime implementation 已完成，等待 implementation milestone commit`
-  - delivery_gate: `implementation_ready_for_commit`
-  - summary:
-    - 已完成 `city_wan/20408 out <-> wild_wan_outer/20601 enter` runtime boundary
-    - 已建立 `index / roo / mob / obj / res / shp` 最小可載入集合
-    - 已完成 validate-only、WSL Linux build、direct merc smoke 與 acceptance gate 檢查
+(目前無 `in_progress` 項目。)
 
 ## Done
 
+- `2026-03-29` `wild_wan_outer` 已完成第一輪 runtime implementation、commit `3c8534b`，完成 `city_wan/20408 <-> 20601` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `road_wan` 已完成第一輪 runtime implementation、commit `a8eea18`，完成 `loyang/593 <-> 20501` 與 `city_wan/20407 <-> 20508` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `city_wan` 已完成第一輪 runtime implementation、commit `ca1b28e`，完成 `city_xinye/20207 <-> 20401` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `wild_xinye_fields` 已完成第一輪 runtime implementation、commit `f0ab7b6`，完成 `city_xinye/20205 <-> 20301` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
@@ -907,14 +899,14 @@
 
 ## Current Recommended Next Step
 
-提交 `wild_wan_outer` 的 implementation milestone commit，因為目前 tracker 已進入 `implementation_ready_for_commit`，在正式 commit 前不應跳下一區。
+回到 queue 規則重建 `todo`，優先比較 `road_chenliu`、`district_chenliu_station` 與其他能提供 family variety 的非 `Wild` 候選，避免在 `wild_wan_outer` 後立刻再堆另一段同質近郊外帶。
 
 ## Next Action
 
-- 提交 `wild_wan_outer` implementation milestone commit
-- commit 內容需包含 `city_wan/20408 out <-> wild_wan_outer/20601 enter` runtime boundary、`index / roo / mob / obj / res / shp` 與 registry 更新
-- commit 完成後再把 tracker 從 `in_progress` 推進成 `done`
+- 依 queue 規則重建 `todo` 與 candidate 判斷
+- 優先比較 `road_chenliu`、`district_chenliu_station` 與其他可提供 family variety 的非 `Wild` 候選
+- 避免在 `wild_wan_outer` 後立刻再堆另一段同質城郊外帶，先確認下一區是否要切回 `Road`、`District` 或其他不同 family
 
 ## Next Prompt
 
-`提交 wild_wan_outer implementation milestone commit：內容包含 city_wan/20408 out <-> wild_wan_outer/20601 enter runtime boundary、index / roo / mob / obj / res / shp、directory.lst 與 current-game area registry 更新。`
+`依 queue 規則重建 todo，優先盤點 road_chenliu、district_chenliu_station 與其他非 Wild 候選，避免在 wild_wan_outer 後立刻再堆另一段同質近郊外帶，然後再決定下一個 actionable area。`
