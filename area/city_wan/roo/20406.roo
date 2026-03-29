@@ -1,0 +1,35 @@
+Vnum            20406
+Name            郡府榜廊~
+Description
+榜廊下貼著官告、行旅規條與地方通報，紙張新舊交錯，看得出這裡平常就有很多人停下來核對路況與城中風聲。比起新野那種民間補寫很多的榜牆，宛的榜牌更像城內秩序正經運作的表面。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        20404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         告示~
+Description
+榜牌上的告示寫得工整而直接，從官道盤查到驛傳交遞都列得清楚，像是在提醒人這座城靠的是把流程講明白。
+~
+End
+
+#Enquire
+Keyword         官府~
+End
+
+#Enquire
+Keyword         榜牌~
+End
+
+#Enquire
+Keyword         差役~
+End
+
+End

@@ -1,0 +1,44 @@
+Vnum            20405
+Name            驛舍前街~
+Description
+前街靠著驛舍外牆展開，換馬聲、腳步聲與傳信人的低語讓這裡始終有一種不算吵卻很忙的節奏。宛城真正的氣口之一就在這裡，很多消息不是在官面公告上先出現，而是先從這段前街被人帶走。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        20403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20408
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         驛舍~
+End
+
+#Enquire
+Keyword         送信~
+End
+
+#Enquire
+Keyword         換馬~
+End
+
+End

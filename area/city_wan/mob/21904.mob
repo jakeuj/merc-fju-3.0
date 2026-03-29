@@ -1,0 +1,31 @@
+Vnum            21904
+Name            wan north marshal~
+ShortDesc       宛北門巡尉~
+Description
+這名守在北門官道口的巡尉站姿沉穩，目光總在里程石、備馬樁與來往旅人之間移
+動，像任何想從宛再往北走的人都得先經過他的判量。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       75
+Level           22
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             11
+Wis             12
+Dex             12
+Con             13
+Hp              1120
+Mana            60
+Move            112
+Class           0
+Gold            220
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

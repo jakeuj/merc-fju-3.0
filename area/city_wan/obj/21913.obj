@@ -1,0 +1,15 @@
+Vnum            21913
+Name            wan street lantern~
+ShortDesc       宛街紙燈(street lantern)~
+Description
+這盞宛街紙燈(street lantern)沒有太多裝飾，只求在夜裡還能把長街、棚廊與驛舍
+前街照得分明。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           16
+Value           0 0 28 0
+Weight          1
+Cost            108
+End

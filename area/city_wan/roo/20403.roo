@@ -1,0 +1,43 @@
+Vnum            20403
+Name            南市棚廊~
+Description
+棚廊下堆著乾糧、酒囊、燈盞與各種趕路人真正會需要的雜物，叫賣聲和討價聲在木樑間來回撞著。比起新野的熟客式熱鬧，宛的市集更像一條專門替旅人整理行囊與下一段去向的補給帶。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        20402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        20405
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         招牌~
+Description
+棚廊木樑上掛著幾塊寫得利落的招牌，內容不花哨，只求讓外地人一眼就知道哪裡能補糧、補水與補燈。
+~
+End
+
+#Enquire
+Keyword         掌櫃~
+End
+
+#Enquire
+Keyword         乾糧~
+End
+
+#Enquire
+Keyword         燈盞~
+End
+
+End

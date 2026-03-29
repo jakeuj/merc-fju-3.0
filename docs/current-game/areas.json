@@ -2343,6 +2343,25 @@
         "plans/area/0118-wild-xinye-fields.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "city_wan",
+      "title": "宛",
+      "room_range": "20401-20420",
+      "load_order": 125,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_xinye",
+      "theme_primary": "歷史城市",
+      "theme_secondary": "南北轉接城",
+      "summary": "承接新野北門路口，落成南門驛口、入城長街、宛城十字、驛舍前街與北門官道口構成的內陸轉接 city。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/city_wan/index",
+        "area/city_wan/map.md",
+        "plans/area/0119-city-wan.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

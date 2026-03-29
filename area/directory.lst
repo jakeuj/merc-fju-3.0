@@ -334,3 +334,5 @@ fort_fancheng
 city_xinye
 * wild_xinye_fields 房間 20301-20320 (新野郊野)
 wild_xinye_fields
+* city_wan 房間 20401-20420 (宛)
+city_wan

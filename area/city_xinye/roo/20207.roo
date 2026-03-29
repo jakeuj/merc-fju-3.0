@@ -1,13 +1,21 @@
 Vnum            20207
 Name            北門路口~
 Description
-北門路口沒有大城那種遠遠就逼來的城威，卻能從備馬樁、舊路痕與行人眼神裡看出這裡確實連著更遠的宛道。站在這裡時，會很自然地感到新野不是旅程的終點，而是把路交給下一段內陸世界的轉接點。
+北門路口沒有大城那種遠遠就逼來的城威，卻能從備馬樁、舊路痕與行人眼神裡看出這裡確實連著更遠的宛道。如今順著北門再往上走，已能真正進入宛城，使這裡更明顯成了把新野交給下一段內陸城市節奏的轉接點。
 ~
 SectorType      SECT_CITY
 
 #Exit
 Direction       SOUTH
 ExitVnum        20203
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        20401
 ExitDesc        ~
 ExitKeyword     ~
 ExitKey         0

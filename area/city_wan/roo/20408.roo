@@ -1,0 +1,28 @@
+Vnum            20408
+Name            西城牌樓~
+Description
+西側牌樓把城內石地慢慢放鬆回帶土氣的外街，牆影後方已經能感到城外官道與郊邊茶棚的風氣。這裡不像真正離城那樣空曠，卻很明顯是宛把旅人再一次交還給外圍世界的出口前帶。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       EAST
+ExitVnum        20405
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         外城~
+End
+
+#Enquire
+Keyword         茶棚~
+End
+
+#Enquire
+Keyword         出城~
+End
+
+End

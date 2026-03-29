@@ -1,0 +1,14 @@
+Vnum            21912
+Name            wan clay flask~
+ShortDesc       宛陶封水囊(clay flask)~
+Description
+這只宛陶封水囊(clay flask)用起來樸實耐碰，正適合城內補給後再帶著往外趕路。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           14
+Value           10 10 0 0
+Weight          2
+Cost            88
+End

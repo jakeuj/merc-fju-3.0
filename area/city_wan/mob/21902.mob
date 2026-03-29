@@ -1,0 +1,31 @@
+Vnum            21902
+Name            wan south guard~
+ShortDesc       宛南門守卒~
+Description
+這名宛南門守卒不像前線軍兵那樣咄咄逼人，卻有一種看慣南來旅人和驛傳交遞後
+養出的穩勁，讓人很難在他面前把去路說得太含糊。
+~
+Sentinel        Yes
+StayArea        Yes
+Alignment       70
+Level           18
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             11
+Wis             12
+Dex             12
+Con             13
+Hp              980
+Mana            60
+Move            108
+Class           0
+Gold            200
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

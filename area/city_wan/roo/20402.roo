@@ -1,0 +1,51 @@
+Vnum            20402
+Name            入城長街~
+Description
+長街沿著城門內線筆直展開，兩側鋪子與行人留出的距離比新野更有秩序，卻還保留著足夠的煙火氣。這裡不像州府那樣壓得人喘不過氣，卻已經很清楚地讓你知道：宛是拿來轉路、補給與打聽正經消息的地方。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        20401
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        20404
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20403
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         路牌~
+Description
+木牌沿著長街把市集、驛舍與北門方向寫得一清二楚，像是替一路北上的旅人省下不少多問的力氣。
+~
+End
+
+#Enquire
+Keyword         市集~
+End
+
+#Enquire
+Keyword         驛舍~
+End
+
+#Enquire
+Keyword         北門~
+End
+
+End

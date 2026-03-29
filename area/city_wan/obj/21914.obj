@@ -1,0 +1,16 @@
+Vnum            21914
+Name            wan patrol blade~
+ShortDesc       宛巡城短刀(patrol blade)~
+Description
+這把宛巡城短刀(patrol blade)做得務實俐落，明顯是給守卒與巡尉日常巡城、盤問
+與防身用的標準兵刃。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+WearLoc         ITEM_WIELD
+Level           18
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            150
+End

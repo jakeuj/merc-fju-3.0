@@ -1,0 +1,32 @@
+Vnum            21903
+Name            wan courier~
+ShortDesc       宛驛舍差使~
+Description
+這名在驛舍前街來回奔走的差使走路很快，像任何想在宛多停半步的人，都會被他
+從眼角餘光裡先算進下一趟交遞時刻。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       90
+Level           20
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             12
+Wis             12
+Dex             13
+Con             12
+Hp              920
+Mana            70
+Move            118
+Class           0
+Gold            190
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

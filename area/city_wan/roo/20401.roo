@@ -1,0 +1,36 @@
+Vnum            20401
+Name            南門驛口~
+Description
+自新野北門一路上來後，最先撞進視線的是宛城南門外這段帶著驛馬氣味的入城口。門道比邊鎮收得更整，行人、差役與換馬客也更懂得沿線讓路，讓人一踏進來就能感到這裡確實是一座把南北流動重新整理起來的城。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        20207
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        20402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         新野~
+End
+
+#Enquire
+Keyword         南門~
+End
+
+#Enquire
+Keyword         來路~
+End
+
+End

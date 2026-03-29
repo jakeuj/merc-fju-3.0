@@ -1,0 +1,15 @@
+Vnum            21911
+Name            wan travel ration~
+ShortDesc       宛行路乾糧(travel ration)~
+Description
+這份宛行路乾糧(travel ration)包得整整齊齊，看起來就是替剛入城或準備北上官道
+的人先墊一口肚子用的。
+~
+Unit            份~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           14
+Value           16 24 4 0
+Weight          1
+Cost            74
+End

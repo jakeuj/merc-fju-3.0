@@ -38,6 +38,7 @@
         "direction": "north",
         "source_vnum": 20207,
         "target_area": "city_wan",
+        "target_room_vnum": 20401,
         "label": "宛道"
       },
       {
@@ -164,13 +165,14 @@
     {
       "vnum": 20207,
       "name": "北門路口",
-      "description": "北門路口沒有大城那種遠遠就逼來的城威，卻能從備馬樁、舊路痕與行人眼神裡看出這裡確實連著更遠的宛道。站在這裡時，會很自然地感到新野不是旅程的終點，而是把路交給下一段內陸世界的轉接點。",
+      "description": "北門路口沒有大城那種遠遠就逼來的城威，卻能從備馬樁、舊路痕與行人眼神裡看出這裡確實連著更遠的宛道。如今順著北門再往上走，已能真正進入宛城，使這裡更明顯成了把新野交給下一段內陸城市節奏的轉接點。",
       "sector_type": "SECT_CITY",
       "cluster": "north-road",
       "coord": [-2, -1, 0],
-      "labels": ["north-edge", "future-link", "departure"],
+      "labels": ["north-edge", "departure", "world-link-north"],
       "exits": [
-        { "direction": "south", "to": 20203 }
+        { "direction": "south", "to": 20203 },
+        { "direction": "north", "to": 20401, "external": true }
       ],
       "enquires": ["宛", "北門", "遠路"]
     },

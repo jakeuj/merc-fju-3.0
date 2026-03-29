@@ -1,0 +1,32 @@
+Vnum            21901
+Name            wan vendor~
+ShortDesc       宛南市掌櫃~
+Description
+這名宛南市掌櫃站在棚廊下時總像能一眼看出誰是剛進城的旅人，誰又是準備北上
+官道前還缺點乾糧和燈火的人。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       85
+Level           16
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             13
+Wis             13
+Dex             11
+Con             12
+Hp              840
+Mana            80
+Move            96
+Class           0
+Gold            180
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

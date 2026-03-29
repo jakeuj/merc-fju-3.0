@@ -1,0 +1,52 @@
+Vnum            20404
+Name            宛城十字~
+Description
+十字街口把宛城的用途分得十分明白，南面收著來自新野的路氣，北面是官道出城，西邊走向驛舍與外城牌樓，東側則是榜牌與郡府消息聚集的地方。站在這裡時，整座城最重要的秩序不是威嚇，而是把去路講清楚。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        20402
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        20407
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        20405
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20406
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         去路~
+End
+
+#Enquire
+Keyword         官道~
+End
+
+#Enquire
+Keyword         城中~
+End
+
+End
