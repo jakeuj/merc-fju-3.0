@@ -714,6 +714,7 @@
 
 ## Done
 
+- `2026-03-29` `city_jiangzhou` 已完成第一輪 runtime implementation、commit `5043331`，完成 `fort_yongan/19508 <-> 19601` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `fort_yongan` 已完成第一輪 runtime implementation、commit `8527b13`，完成 `fort_yiling/19408 <-> 19501` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `fort_yiling` 已完成第一輪 runtime implementation、commit `ac9f979`，完成 `city_jiangling/19308 <-> 19401` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
 - `2026-03-29` `city_jiangling` 已完成第一輪 runtime implementation、commit `dc5b4fc`，完成 `wild_wuling/15011 <-> 19301` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
@@ -889,14 +890,14 @@
 
 ## Current Recommended Next Step
 
-回到 queue 規則重建 `todo`，優先比較 `city_jiangzhou` 與其他能提供 family variety 的非 `Fort` 候選，避免在 `fort_yongan` 後立刻再堆同質關隘節奏。
+回到 queue 規則重建 `todo`，優先比較 `city_chengdu` 與其他能提供 family variety 的非 `City` 候選，避免在 `city_jiangzhou` 後立刻再堆同質城市節奏。
 
 ## Next Action
 
 - 先依 `world_map + progression + 題材分布表 + players/skills` 重建 `todo`
-- 比較 `city_jiangzhou` 與其他能提供 family variety 的非 `Fort` 候選是否更 actionable
-- 確認新候選不只是承接 `fort_yongan` 預留 world link，而是真的符合目前 queue variety gate
+- 比較 `city_chengdu` 與其他能提供 family variety 的非 `City` 候選是否更 actionable
+- 確認新候選不只是承接 `city_jiangzhou` 預留 world link，而是真的符合目前 queue variety gate
 
 ## Next Prompt
 
-`依 queue 規則盤點下一個 actionable area：優先比較 city_jiangzhou 與其他能提供 family variety 的非 Fort 候選，重建 todo 後再開始下一區。`
+`依 queue 規則盤點下一個 actionable area：優先比較 city_chengdu 與其他能提供 family variety 的非 City 候選，重建 todo 後再開始下一區。`
