@@ -50,6 +50,7 @@
         "direction": "out",
         "source_vnum": 19708,
         "target_area": "wild_chengdu_outer",
+        "target_room_vnum": 19801,
         "label": "西郊去路"
       }
     ],
@@ -181,7 +182,8 @@
       "coord": [-3, 0, 0],
       "labels": ["west-edge", "future-link", "capital-outgate"],
       "exits": [
-        { "direction": "east", "to": 19703 }
+        { "direction": "east", "to": 19703 },
+        { "direction": "out", "to": 19801, "external": true }
       ],
       "enquires": ["西邊", "近郊", "出城"]
     }

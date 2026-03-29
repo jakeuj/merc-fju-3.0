@@ -1,0 +1,15 @@
+Vnum            21801
+Name            chengdu road ration~
+ShortDesc       成都郊路乾糧(road ration)~
+Description
+這份成都郊路乾糧(road ration)包得俐落紮實，看起來就是給剛離城又還沒走遠的人填口腹
+用的。
+~
+Unit            份~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           30
+Value           18 28 4 0
+Weight          1
+Cost            82
+End

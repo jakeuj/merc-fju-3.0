@@ -322,3 +322,5 @@ fort_yongan
 city_jiangzhou
 * city_chengdu 房間 19701-19720 (成都)
 city_chengdu
+* wild_chengdu_outer 房間 19801-19820 (成都近郊)
+wild_chengdu_outer

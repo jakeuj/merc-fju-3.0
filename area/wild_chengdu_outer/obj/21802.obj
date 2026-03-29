@@ -1,0 +1,15 @@
+Vnum            21802
+Name            chengdu tea flask~
+ShortDesc       成都茶湯竹瓶(tea flask)~
+Description
+這只成都茶湯竹瓶(tea flask)還留著淡淡熱氣，像是茶亭主人專門替趕路人準備的那一種順
+口卻不多話的照料。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           30
+Value           12 12 0 0
+Weight          2
+Cost            104
+End

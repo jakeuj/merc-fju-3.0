@@ -1,0 +1,44 @@
+Vnum            19801
+Name            城關外坡~
+Description
+一離開成都西郊城關，腳下的石地便很快鬆成帶土氣的坡路，連風裡的聲音都比城內散得開。回頭仍看得見城牆與旗影，往前卻已經是會把人慢慢交給官道與郊野的真正城外。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       ENTER
+ExitVnum        19708
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19803
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         回城~
+End
+
+#Enquire
+Keyword         城關~
+End
+
+#Enquire
+Keyword         出城~
+End
+
+End

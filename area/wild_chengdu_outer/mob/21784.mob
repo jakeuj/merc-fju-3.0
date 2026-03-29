@@ -1,0 +1,32 @@
+Vnum            21784
+Name            chengdu roadside drifter~
+ShortDesc       成都路旁流民~
+Description
+這名成都路旁流民把身子縮在破亭和林地之間，像是想離成都近一點，又不願真的被都城的
+盤查和秩序重新收進去。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       -20
+Level           36
+Hitroll         0
+Protect         0
+Damroll         0
+Str             11
+Int             10
+Wis             9
+Dex             12
+Con             11
+Hp              1250
+Mana            70
+Move            110
+Class           0
+Gold            96
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

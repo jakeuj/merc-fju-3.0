@@ -14,8 +14,9 @@ Description
 成都城秩序、母城服務與蜀中核心感的第一段 city 骨架。
 
 交通狀況﹕東城門已正式銜接 `city_jiangzhou/19608`﹐玩家可由江州一路西行進入本區；
-更深的 `district_chengdu_market`、`district_chengdu_scholar` 與 `wild_chengdu_outer` 仍保
-留給後續掛接﹐這一版先穩定御道、十字、市樓、學舍與西郊城關骨架。
+西郊城關現也已正式銜接 `wild_chengdu_outer/19801`﹐讓成都真正成為上游港城與蜀地近郊
+之間的都城母城；更深的 `district_chengdu_market` 與 `district_chengdu_scholar` 仍保留
+給後續掛接﹐這一版先穩定御道、十字、市樓、學舍與出城外沿骨架。
 
 怪物等級﹕第一版預定為 34 到 48 級左右﹐以成都客舍掌櫃、東城守兵、府衙差役與都城
 行腳吏為主﹐強調補給、問路、官務消息與都城主線母城 loop。

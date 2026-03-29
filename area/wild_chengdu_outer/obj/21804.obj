@@ -1,0 +1,16 @@
+Vnum            21804
+Name            chengdu road blade~
+ShortDesc       成都巡路長刀(road blade)~
+Description
+這把成都巡路長刀(road blade)沒有都城兵器那種華整感，只留下更適合長路與野地盤查的耐
+磨與實用。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+WearLoc         ITEM_WIELD
+Level           34
+Value           0 -1 -1 WEAPON_SWORD
+Weight          3
+Cost            168
+End

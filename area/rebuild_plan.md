@@ -709,7 +709,49 @@
 
 ## In Progress
 
-(目前無 `in_progress` 項目。)
+- `wild_chengdu_outer`
+  - area_family: `Wild`
+  - reserved_room_block: `19801-19820`
+  - planned_vnum_range: `19801-19820`
+  - level_range: `30-42`
+  - theme: `江湖`
+  - subtheme: `郊外 / 農田`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/wild_chengdu_outer/map.md`
+    - `ref/world-graph.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `area/city_chengdu/map.md`
+    - `plans/area/0112-city-chengdu.md`
+  - ref_inputs_deferred:
+    - `ref/sanguo-area-specfirst/area/district_chengdu_market/map.md`
+    - `ref/sanguo-area-specfirst/area/district_chengdu_scholar/map.md`
+    - `docs/3yWebsite/map/chendo.html`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `city_chengdu` 現有 spec 已把 `19708` 定位成西郊城關，並預留 `out -> wild_chengdu_outer` metadata，代表近郊外帶已有成熟的 runtime 掛接點
+    - `world-graph` 直接把 `wild_chengdu_outer` 列為成都之後的 `outskirts / 江湖 / 30-42` 節點，是目前最直接也最不破壞蜀地主線的 non-`City` 候選
+    - `題材分布表` 將成都定位成蜀漢首都、將蜀地山野拉往更外側的探索帶，因此在都城後先補一段官道與農田近郊，比先切入 `district_chengdu_*` 更能維持題材起伏
+    - `players.json / skills.json` 沒有提供「成都城內 teacher / service district 必須優先」的強訊號，因此本輪先補城外過渡 loop 而非再堆城市分區
+  - compliance_check:
+    - compliant；在 `city_jiangzhou -> city_chengdu` 連續兩個 `City` 後，`wild_chengdu_outer` 既能恢復 family variety，又不用脫離當前蜀地主線與成熟 boundary stub
+  - implementation_notes:
+    - 已建立 `plans/area/0113-wild-chengdu-outer.md` 與 `area/wild_chengdu_outer/map.md`，並保留 `19801-19820` 作為首段 room block
+    - 已建立 `index / roo / mob / obj / res / shp` 最小可載入集合，首版 runtime 房間落在 `19801-19808`
+    - 已正式落成 `city_chengdu/19708 out <-> wild_chengdu_outer/19801 enter` runtime boundary
+    - 已同步 `area/directory.lst`、`docs/current-game/areas.md` 與 `docs/current-game/areas.json`
+  - validation:
+    - `mapmd_validate` 對 `wild_chengdu_outer` 與受邊界影響的 `city_chengdu` 均通過，結果為 `0 error / 0 warning`
+    - generator `--validate-only` 與正式 `.roo` 生成均通過，並已核對 `19708 <-> 19801` 雙向邊界投影
+    - WSL Linux `make -f Makefile.lin clean && make -f Makefile.lin merc` 通過
+    - direct `timeout 45s ./merc merc.ini || true` smoke 明確出現 `三國歪傳之降龍伏虎開始正常運作`
+    - `debug/error` 只有 timeout 關機訊息，`debug/failexit` 只有既有 baseline `17201/17208` fixup，`debug/badobject` 為空
+    - `tools/area_acceptance_gate.py wild_chengdu_outer` 回報 `implementation_ready_for_commit`
+  - delivery_gate: `implementation_ready_for_commit`
 
 
 ## Done
@@ -891,14 +933,14 @@
 
 ## Current Recommended Next Step
 
-回到 queue 規則重建 `todo`，優先比較 `wild_chengdu_outer` 與其他能提供 family variety 的非 `City` 候選，避免在 `city_chengdu` 後立刻再堆都城分區節奏。
+提交 `wild_chengdu_outer` implementation milestone，然後把 tracker 從 `in_progress` 推進到 `done`。
 
 ## Next Action
 
-- 依 `world_map + progression + 題材分布表 + players/skills` 重建下一個 actionable area 候選
-- 優先比較 `wild_chengdu_outer` 與其他能提供 family variety 的非 `City` 候選
-- 避免在 `city_chengdu` 後立刻再開 `district_chengdu_*` 這類同質城市分區
+- 提交 `wild_chengdu_outer` implementation milestone
+- commit 後把 `wild_chengdu_outer` 從 `In Progress` 移到 `Done`
+- 再回到 queue 規則比較下一個能提供 family variety 的非 `Wild` 候選
 
 ## Next Prompt
 
-`回到 queue 規則重建 todo，優先比較 wild_chengdu_outer 與其他非 City 候選，選出下一個 actionable area。`
+`先提交 wild_chengdu_outer implementation milestone，再更新 tracker 並回到 queue 規則盤點下一個 actionable area。`

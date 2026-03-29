@@ -1,0 +1,44 @@
+Vnum            19804
+Name            郊外岔碑~
+Description
+岔路邊的石碑被風吹得發白，碑字不再講究體面，只求讓人知道哪一條回成都、哪一條去更西的農路與長道。站在這裡時，會很清楚感到城外生活早就不靠都城替它整理出每個答案。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        19802
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19808
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19806
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         路碑~
+End
+
+#Enquire
+Keyword         岔口~
+End
+
+#Enquire
+Keyword         郊外~
+End
+
+End

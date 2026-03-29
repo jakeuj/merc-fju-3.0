@@ -1,0 +1,32 @@
+Vnum            21781
+Name            chengdu road sentry~
+ShortDesc       成都西郊巡哨~
+Description
+這名成都西郊巡哨立在城外坡口，眼神沒有城門守兵那麼硬，卻明顯習慣替來往旅人和可疑
+影子一起留心。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       90
+Level           32
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             11
+Wis             12
+Dex             12
+Con             12
+Hp              1100
+Mana            90
+Move            120
+Class           0
+Gold            180
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

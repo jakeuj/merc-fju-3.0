@@ -1,0 +1,51 @@
+Vnum            19806
+Name            路旁林地~
+Description
+林地貼著官道南側慢慢密起來，讓視線一離開大路就會被草木和陰影截斷。它還不算深，也還沒真正脫離成都外帶，但已經足夠讓流民、藏物和不願被盤問的人躲進去喘一口氣。
+~
+SectorType      SECT_FOREST
+
+#Exit
+Direction       NORTH
+ExitVnum        19804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        19805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19807
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         樹叢~
+Description
+幾叢壓低的灌木被踩出不太乾淨的小痕，像有人常在這裡停、躲，或是等著確認官道上的腳步是不是已經走遠。
+~
+End
+
+#Enquire
+Keyword         林地~
+End
+
+#Enquire
+Keyword         樹叢~
+End
+
+#Enquire
+Keyword         流民~
+End
+
+End

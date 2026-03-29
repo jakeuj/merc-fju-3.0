@@ -2229,6 +2229,25 @@
         "plans/area/0112-city-chengdu.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "wild_chengdu_outer",
+      "title": "成都近郊",
+      "room_range": "19801-19820",
+      "load_order": 119,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_chengdu",
+      "theme_primary": "江湖",
+      "theme_secondary": "郊外 / 農田",
+      "summary": "承接成都西郊城關，落成城關外坡、西郊官道、茶亭前坪、圩田路肩、路旁林地與更西官道構成的近郊 wild。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/wild_chengdu_outer/index",
+        "area/wild_chengdu_outer/map.md",
+        "plans/area/0113-wild-chengdu-outer.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

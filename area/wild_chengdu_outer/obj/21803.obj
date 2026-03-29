@@ -1,0 +1,15 @@
+Vnum            21803
+Name            chengdu roadside lamp~
+ShortDesc       成都路燈(roadside lamp)~
+Description
+這盞成都路燈(roadside lamp)不像城內燈火那樣講究，只求在入夜後還能替人把坡路與茶亭
+照得分明一些。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           32
+Value           0 0 32 0
+Weight          1
+Cost            122
+End

@@ -1,0 +1,28 @@
+Vnum            19808
+Name            更西官道~
+Description
+再往西去，成都留下的牆影與旗號都開始淡成背景，只剩官道習慣還替旅人勉強維持方向感。這裡不像真正的終點，卻已經是都城正式把人交還給郊外與長路的地方。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        19804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         更西~
+End
+
+#Enquire
+Keyword         遠路~
+End
+
+#Enquire
+Keyword         農路~
+End
+
+End

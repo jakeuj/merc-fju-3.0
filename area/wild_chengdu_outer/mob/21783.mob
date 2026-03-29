@@ -1,0 +1,32 @@
+Vnum            21783
+Name            chengdu caravan porter~
+ShortDesc       成都行旅腳夫~
+Description
+這名成都行旅腳夫肩膀與鞋底都很誠實地說明了官道有多長，他看起來不像英雄，卻像最知
+道哪裡能歇腳、哪裡不能久留的人。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       70
+Level           34
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             10
+Wis             11
+Dex             11
+Con             13
+Hp              1180
+Mana            80
+Move            130
+Class           0
+Gold            140
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

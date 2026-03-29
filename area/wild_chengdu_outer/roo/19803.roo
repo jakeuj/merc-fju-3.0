@@ -1,0 +1,43 @@
+Vnum            19803
+Name            茶亭前坪~
+Description
+茶亭前的小坪地不大，卻剛好夠趕路人卸下肩上的急促，換一口熱水再問一句前路。比起成都城內講究分寸的客舍，這裡更像城外世界給旅人留下的第一分人情與喘息。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        19801
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         茶亭~
+Description
+這座茶亭靠幾根老木柱勉強撐住，卻仍穩穩替路人擋下一點日頭、雨氣和從城裡帶出來的緊繃。
+~
+End
+
+#Enquire
+Keyword         茶亭~
+End
+
+#Enquire
+Keyword         商旅~
+End
+
+#Enquire
+Keyword         歇腳~
+End
+
+End

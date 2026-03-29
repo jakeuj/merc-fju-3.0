@@ -1,0 +1,51 @@
+Vnum            19802
+Name            西郊官道~
+Description
+官道在成都外帶仍維持著筆直和寬整，卻已經沒有城內那種處處被秩序扶正的壓力。行旅、巡哨和趕車的人流從這裡重新混成真正的遠路節奏，讓人明白都城只是在背後，不再包辦你的每一步。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       EAST
+ExitVnum        19801
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       WEST
+ExitVnum        19804
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       SOUTH
+ExitVnum        19805
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Keyword
+Keyword         路碑~
+Description
+立在官道旁的路碑把茶亭、田路與更西去向標得很簡單，像是在提醒離城之後真正重要的是辨位，而不是排場。
+~
+End
+
+#Enquire
+Keyword         官道~
+End
+
+#Enquire
+Keyword         茶亭~
+End
+
+#Enquire
+Keyword         西邊~
+End
+
+End

@@ -1,0 +1,32 @@
+Vnum            21782
+Name            chengdu tea host~
+ShortDesc       成都郊亭主人~
+Description
+這名成都郊亭主人把茶水和乾糧看得比話多，像是在官道邊住久了的人，早已懂得遠路人最
+需要的是哪一種安穩。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       85
+Level           30
+Hitroll         0
+Protect         0
+Damroll         0
+Str             10
+Int             13
+Wis             13
+Dex             10
+Con             11
+Hp              980
+Mana            110
+Move            115
+Class           0
+Gold            220
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

@@ -141,6 +141,7 @@ title: Current Game Areas
 | `fort_yongan` | 永安 / 上游堡寨 fort | `19501-19520` | `rebuild addition` | 承接夷陵西關，落成永安柵道、永安堡門、堡門內道與西嶺堡口構成的內層堡壘。 |
 | `city_jiangzhou` | 江州 / 上游港城 hub | `19601-19620` | `rebuild addition` | 承接永安西嶺堡口，落成東嶺城門、江州十字、臨江市口、州府前街與西城官道口構成的蜀中上游城市 hub。 |
 | `city_chengdu` | 成都 / 蜀漢都城 hub | `19701-19720` | `rebuild addition` | 承接江州西城官道口，落成東城門、錦城十字、市樓牌坊、學舍外街與西郊城關構成的蜀漢都城母城。 |
+| `wild_chengdu_outer` | 成都近郊 / 都城西側城外外帶 | `19801-19820` | `rebuild addition` | 承接 `city_chengdu` 西郊城關，落成官道、茶亭、圩田與林地構成的近郊 wild 骨架。 |
 
 ## Recent Rebuild Areas
 
@@ -272,6 +273,7 @@ title: Current Game Areas
 - `fort_yongan`：把夷陵西向關坪正式接進永安，透過永安柵道、永安堡門、堡門內道、軍械棚區與西嶺堡口把邊界軍旅再收成更厚重的上游堡寨 fort。
 - `city_jiangzhou`：把永安西嶺堡口正式接進江州，透過東嶺城門、江州十字、臨江市口、州府前街與西城官道口把蜀地上游主線重新收束成城市 hub。
 - `city_chengdu`：把江州西城官道口正式接進成都，透過東城門、入城御道、錦城十字、市樓牌坊、學舍外街與西郊城關把蜀地上游主線重新收束成蜀漢都城母城。
+- `wild_chengdu_outer`：把成都西郊城關正式接進成都近郊，透過城關外坡、西郊官道、茶亭前坪、圩田路肩、路旁林地與更西官道把都城節奏重新鬆開成可辨位的近郊 wild。
 
 ## 維護規則
 

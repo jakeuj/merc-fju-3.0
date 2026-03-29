@@ -1,0 +1,28 @@
+Vnum            19807
+Name            破亭營火~
+Description
+破亭只剩半邊歪木和一圈燒得不怎麼乾淨的火痕，既像流民夜裡借住的落腳點，也像某些不願讓官道看見的人暫時留下的影子。這裡讓成都近郊第一次露出一點秩序之外的灰色。
+~
+SectorType      SECT_FIELD
+
+#Exit
+Direction       NORTH
+ExitVnum        19806
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         流民~
+End
+
+#Enquire
+Keyword         營火~
+End
+
+#Enquire
+Keyword         夜路~
+End
+
+End
