@@ -709,53 +709,12 @@
 
 ## In Progress
 
-- `sec_spirit_peak`
-  - area_family: `Secret`
-  - reserved_room_block: `18801-18820`
-  - planned_vnum_range: `18801-18820`
-  - level_range: `44-56`
-  - theme: `仙俠`
-  - subtheme: `靈峰 / 祭天`
-  - ref_inputs_used:
-    - `area/world_map.md`
-    - `ref/Readme.md`
-    - `ref/sanguo-progression-map.md`
-    - `ref/三國-MUD-題材分布表.md`
-    - `ref/sanguo-area-specfirst/area/sec_spirit_peak/map.md`
-    - `ref/world-graph.md`
-    - `docs/3yWebsite/docs/data/players.json`
-    - `docs/3yWebsite/docs/data/skills.json`
-    - `plans/area/0096-dng-ancient-cave.md`
-    - `plans/area/0101-fort-northern-watch.md`
-    - `plans/area/0102-wild-wolf-forest.md`
-  - ref_inputs_deferred:
-    - `docs/3yWebsite/map/bepin.html`
-    - `ref/sanguo-area-specfirst/area/sec_starfall_crater/map.md`
-    - 各類原型工具與模擬系統
-  - theme_basis:
-    - `dng_ancient_cave` 現有 spec/runtime 已保留 `18108 up -> sec_spirit_peak` metadata，表示它是北境鏈最成熟也最直接的下一個 `Secret` family 母點
-    - `world-graph` 將 `sec_spirit_peak` 放在 `dng_ancient_cave` 之後，提供 `Dungeon -> Secret` 的自然 family 切換
-    - `題材分布表` 與 ref scaffold 都把此區拉向 `仙俠 / 靈峰 / 祭天`，能和 `wild_wolf_forest` 的 folklore 林壓力形成清楚題材轉折
-    - `players.json / skills.json` 對遼東北線仍未提出比既有 reserved link 更強的城市服務優先訊號，支持這時候補上高處祕境而不是再新增一般城鎮節點
-  - compliance_check:
-    - compliant；在 `Wild` 之後切到 `Secret`，同時承接 `dng_ancient_cave` 的既有 `up` 預留與 queue variety，不是沿最新 surface route 任意外插
-  - implementation_notes:
-    - 已建立 `index / roo / mob / obj / res / shp` 最小可載入集合，room `18801-18808`、mob `21231-21234`、obj `21251-21254`
-    - 已正式落成 `dng_ancient_cave/18108 up -> 18801` 與 `18801 down -> dng_ancient_cave/18108` runtime boundary，並同步 `dng_ancient_cave/map.md`
-    - 已新增 `area/directory.lst` 與 `docs/current-game/areas.md/json` 台帳
-  - validation:
-    - `python -X utf8 tools/mapmd_validate.py area/sec_spirit_peak/map.md` passed
-    - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_spirit_peak/map.md --validate-only` passed
-    - `python -X utf8 .agents/skills/merc-area-builder/scripts/generate_roo_from_map_md.py area/sec_spirit_peak/map.md` passed
-    - WSL `make -f Makefile.lin clean && make -f Makefile.lin merc` passed
-    - `timeout 60s ./startup.bash` passed with success signal in `log/1075.log`
-    - `debug/error` 僅反映 timeout 終止；`debug/failexit` 僅有既有 baseline `17201/17208` fixups，未見 area-specific loader error
-    - `$env:PYTHONUTF8='1'; python tools/area_acceptance_gate.py sec_spirit_peak` returned `implementation_ready_for_commit`
-  - delivery_gate: `implementation_ready_for_commit`
+(目前無 `in_progress` 項目。)
 
 
 ## Done
 
+- `2026-03-29` `sec_spirit_peak` 已完成第一輪 runtime implementation、commit `a573b69`，完成 `dng_ancient_cave/18108 <-> 18801` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1075.log`），並達成可前進下一區狀態
 - `2026-03-29` `wild_wolf_forest` 已完成第一輪 runtime implementation、commit `990a3d5`，完成 `wild_bailang/18008 <-> 18701` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1074.log`），並達成可前進下一區狀態
 - `2026-03-28` `fort_northern_watch` 已完成第一輪 runtime implementation、commit `f9b0607`，完成 `fort_yijing/17907 <-> 18601` runtime boundary、通過 WSL Linux build 與 startup smoke test（`log/1073.log`），並達成可前進下一區狀態
 - `2026-03-24` `road_north_border` 已完成第一輪 runtime implementation，完成 `city_xiangping/18309 <-> 18501` runtime boundary、通過 WSL Linux build 與臨時 test-port direct-load smoke，達成可提交狀態
@@ -923,14 +882,14 @@
 
 ## Current Recommended Next Step
 
-先 commit `sec_spirit_peak` 的 implementation milestone；commit 後再回到 queue 決定下一個 actionable area。
+回到 queue 規則盤點下一個 actionable area；優先以 `sec_starfall_crater` 為北境續推候選，但先確認是否需要切回非 `Secret` family 來維持 variety。
 
 ## Next Action
 
-- commit `sec_spirit_peak` 的 implementation milestone
-- 確認 tracker / current-game registry 與 commit 訊息一致
-- commit 後再依 queue 規則決定是否推進下一個 area
+- 依 `world_map / progression / 題材分布 / players / skills` 重新盤點北境下一個 actionable area
+- 優先比較 `sec_starfall_crater` 與非 `Secret` family 候選，避免 queue 失去題材 variety
+- 決定後再建立下一個單區 plan / spec milestone
 
 ## Next Prompt
 
-`先 commit sec_spirit_peak 的 implementation milestone：包含 dng_ancient_cave/18108 <-> sec_spirit_peak/18801 runtime boundary、index / roo / mob / obj / res / shp、directory.lst 與 current-game registry 更新；commit 後再依 queue 規則決定下一個 area。`
+`依 queue 規則盤點北境下一個 actionable area：先一起檢查 world_map / progression / 題材分布 / players / skills，優先比較 sec_starfall_crater 與可提供 family variety 的候選，再決定下一個要開工的 area。`
