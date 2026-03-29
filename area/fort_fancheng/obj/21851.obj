@@ -1,0 +1,14 @@
+Vnum            21851
+Name            fancheng ration~
+ShortDesc       樊城軍糧(fancheng ration)~
+Description
+一包專給樊城守備輪值時取用的樊城軍糧(fancheng ration)被收在這裡。
+~
+Unit            包~
+ItemType        ITEM_FOOD
+Takeable        Yes
+Level           38
+Value           18 40 4 0
+Weight          1
+Cost            142
+End

@@ -1,0 +1,16 @@
+Vnum            21853
+Name            fancheng spear~
+ShortDesc       樊城戍槍(fancheng spear)~
+Description
+這把樊城戍槍(fancheng spear)槍桿結實，槍鋒不花巧，看起來正是給守卒、校尉與望
+兵長年拿在手上的制式兵器。
+~
+Unit            把~
+ItemType        ITEM_WEAPON
+Takeable        Yes
+WearLoc         ITEM_WIELD
+Level           40
+Value           0 -1 -1 WEAPON_SPEAR
+Weight          3
+Cost            188
+End

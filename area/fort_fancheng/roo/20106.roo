@@ -1,0 +1,28 @@
+Vnum            20106
+Name            糧甲棚區~
+Description
+糧袋、甲片、燈油與補釘繩整整齊齊地分成數排，連空氣都像帶著倉儲與皮革混合的乾硬氣味。若說關門是樊城的臉，那麼這裡就是它真正的筋骨，因為整個北岸守備能否持久，多半就靠這些看似不起眼的供給撐著。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        20104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         軍需~
+End
+
+#Enquire
+Keyword         糧草~
+End
+
+#Enquire
+Keyword         燈油~
+End
+
+End

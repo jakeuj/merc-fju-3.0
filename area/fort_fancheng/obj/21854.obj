@@ -1,0 +1,15 @@
+Vnum            21854
+Name            signal lamp~
+ShortDesc       北堤號燈(signal lamp)~
+Description
+一盞專門掛在旗樓與甕城之間、用來辨認夜間旗號與班次的北堤號燈(signal lamp)被收
+在這裡。
+~
+Unit            盞~
+ItemType        ITEM_LIGHT
+Takeable        Yes
+Level           38
+Value           0 0 24 0
+Weight          1
+Cost            108
+End

@@ -1,0 +1,33 @@
+Vnum            21843
+Name            drill captain~
+ShortDesc       操演校尉~
+Description
+這名操演校尉說話時不太抬高聲音，卻能讓整個校場同時安靜下來。看著他在場中來回
+走動，會很清楚知道樊城的穩定不是靠運氣，而是靠一遍遍枯燥卻不能省掉的整隊與操
+演。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           42
+Hitroll         0
+Protect         0
+Damroll         0
+Str             14
+Int             12
+Wis             13
+Dex             13
+Con             14
+Hp              1580
+Mana            90
+Move            156
+Class           0
+Gold            280
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

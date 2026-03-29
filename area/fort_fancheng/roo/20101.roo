@@ -1,0 +1,36 @@
+Vnum            20101
+Name            南關坡口~
+Description
+自襄陽北向大道一路走到這裡後，原本屬於城市內部的寬整節奏會立刻被收成更硬、更直的軍事秩序。坡口上的木柵、土牆與輪值兵視線一起把人流壓成一條不容猶疑的前帶，讓人很清楚知道自己已從主城邊界踏進真正的北岸城防。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        14208
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        20102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         襄陽~
+End
+
+#Enquire
+Keyword         南路~
+End
+
+#Enquire
+Keyword         關前~
+End
+
+End

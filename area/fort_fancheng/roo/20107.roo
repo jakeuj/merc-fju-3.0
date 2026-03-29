@@ -1,0 +1,28 @@
+Vnum            20107
+Name            旗樓望臺~
+Description
+望臺上不只看得見南面來路，也能把甕城、校場與棚區的節奏一口氣收進眼底。木案上的旗號記錄與換班名冊讓這裡比下方任何地方都更冷，也更像真正決定樊城心跳速度的高點。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       DOWN
+ExitVnum        20104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         旗樓~
+End
+
+#Enquire
+Keyword         望臺~
+End
+
+#Enquire
+Keyword         旗號~
+End
+
+End

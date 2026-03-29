@@ -709,6 +709,39 @@
 
 ## In Progress
 
+- `fort_fancheng`
+  - area_family: `Fort`
+  - parent_area: `city_xiangyang`
+  - reserved_room_block: `20101-20120`
+  - planned_vnum_range: `20101-20120`
+  - level_range: `38-52`
+  - theme: `軍旅`
+  - subtheme: `北岸城防 / 軍令關門`
+  - ref_inputs_used:
+    - `area/world_map.md`
+    - `ref/Readme.md`
+    - `ref/sanguo-progression-map.md`
+    - `ref/三國-MUD-題材分布表.md`
+    - `ref/sanguo-area-specfirst/area/fort_fancheng/map.md`
+    - `ref/world-graph.md`
+    - `docs/3yWebsite/docs/data/players.json`
+    - `docs/3yWebsite/docs/data/skills.json`
+    - `docs/3yWebsite/map/sinya.html`
+    - `area/city_xiangyang/map.md`
+    - `plans/area/0116-fort-fancheng.md`
+  - ref_inputs_deferred:
+    - `ref/sanguo-area-specfirst/area/city_xinye/map.md`
+    - `ref/sanguo-area-specfirst/area/city_wan/map.md`
+    - `ref/sanguo-area-specfirst/area/wild_xinye_fields/map.md`
+    - 各類原型工具與模擬系統
+  - theme_basis:
+    - `city_xiangyang/14208` 已有成熟的北向大道 stub，可低風險接成 `Fort`
+    - `players.json` 對襄陽的訊號偏向高段訓練與中繼 hub，支持先補它北側的軍事前帶
+    - `city_xinye` 雖然仍是合理候選，但 ref scaffold 與現行 runtime stub 在方位上互相衝突，本輪不宜硬推
+  - compliance_check:
+    - compliant；在 queue 為空時重新盤點後，`fort_fancheng` 同時滿足非 `District` family variety 與 runtime 邊界成熟度
+  - delivery_gate: `implementation_ready_for_commit`
+
 ## Done
 
 - `2026-03-29` `district_chengdu_scholar` 已完成第一輪 runtime implementation、commit `6001df4`，完成 `city_chengdu/19706 <-> 20001` runtime boundary、通過 WSL Linux build 與 direct merc smoke，並達成可前進下一區狀態
@@ -891,14 +924,14 @@
 
 ## Current Recommended Next Step
 
-回到 queue 規則重建 `todo`；優先比較 `city_xinye` 與其他能重新拉開 family variety 的非 `District` 候選。
+先完成 `fort_fancheng` implementation milestone；驗證完成後停在可提交 gate。
 
 ## Next Action
 
-- 回到 `world_map + progression + players/skills` 盤點下一個 actionable area
-- 優先比較 `city_xinye` 與其他能重新拉開 family variety 的非 `District` 候選
-- 避免在 `district_chengdu_scholar` 後立刻再堆一個 `District`
+- 完成 `fort_fancheng` 的 spec / runtime / boundary / registry 更新
+- 跑 `mapmd_validate`、`.roo` 生成、WSL Linux build 與 direct merc smoke
+- 保留 `city_xinye` 到後續先整理方位契約後再進 queue
 
 ## Next Prompt
 
-`回到 queue 規則重建 todo，優先比較 city_xinye 與其他能重新拉開 family variety 的非 District 候選。`
+`完成 fort_fancheng implementation milestone，並確認 city_xiangyang/14208 <-> fort_fancheng/20101 boundary 可正常載入。`

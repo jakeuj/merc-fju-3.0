@@ -1,0 +1,44 @@
+Vnum            20102
+Name            樊城前柵~
+Description
+前柵把來者的步伐自然壓慢，兩側削尖木樁與掛旗交替排列，讓這段短路本身就像一種篩選。它不像真正交鋒中的戰地那樣混亂，卻比襄陽任何一條街都更能讓人立刻感覺到自己正接受關防的判定。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        20101
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        20103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20105
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         盤查~
+End
+
+#Enquire
+Keyword         守兵~
+End
+
+#Enquire
+Keyword         軍旗~
+End
+
+End

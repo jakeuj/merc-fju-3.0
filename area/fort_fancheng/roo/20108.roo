@@ -1,0 +1,28 @@
+Vnum            20108
+Name            北堤望口~
+Description
+再往北走，視野會忽然拉得很長，連風裡的氣味都變得更冷更薄。北堤望口不像真正出關那樣把人直接送出去，卻已足夠讓人感到北路壓力就在前方，樊城在這裡不只是守門，也是在替整條荊州北界把節奏先收緊一層。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        20104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         北邊~
+End
+
+#Enquire
+Keyword         北路~
+End
+
+#Enquire
+Keyword         前線~
+End
+
+End

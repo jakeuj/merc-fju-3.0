@@ -1,0 +1,32 @@
+Vnum            21841
+Name            fancheng gate soldier~
+ShortDesc       樊城守卒~
+Description
+這名樊城守卒的視線不算凶狠，卻沉得讓人很難把他當成普通站崗兵。越靠近他，越能
+感覺到樊城真正倚賴的不是城牆本身，而是這種日夜都不肯鬆下來的守備心氣。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           38
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             11
+Wis             12
+Dex             12
+Con             13
+Hp              1380
+Mana            80
+Move            150
+Class           0
+Gold            220
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

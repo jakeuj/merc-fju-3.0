@@ -1,0 +1,36 @@
+Vnum            20103
+Name            北岸關門~
+Description
+厚重關門把內外空氣切得十分明白，門外仍帶著襄陽往來的煙塵與人聲，門內卻只剩更偏軍務、傳令與備戰的冷硬節拍。站在這裡時，很難再把樊城看成普通城鎮，它更像是專門用來判定誰應該被放進北路的門檻。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        20102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        20104
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         關門~
+End
+
+#Enquire
+Keyword         放行~
+End
+
+#Enquire
+Keyword         軍令~
+End
+
+End

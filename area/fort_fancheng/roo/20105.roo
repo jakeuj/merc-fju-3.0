@@ -1,0 +1,28 @@
+Vnum            20105
+Name            披甲校場~
+Description
+校場上的甲片碰撞聲不大，卻始終不斷，像整座樊城關防在這裡以最直接的方式維持體溫。和襄陽的街市相比，這裡沒有多少可供停步的煙火氣，只有訓練、整隊與隨時準備北出的壓力。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       WEST
+ExitVnum        20102
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         校場~
+End
+
+#Enquire
+Keyword         操演~
+End
+
+#Enquire
+Keyword         整隊~
+End
+
+End

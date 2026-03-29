@@ -1,0 +1,32 @@
+Vnum            21842
+Name            quartermaster liu~
+ShortDesc       糧甲掌事~
+Description
+這名糧甲掌事身上總帶著一股乾燥麻布與油蠟味，說話不快，卻像對每一包糧、每一盞
+燈與每一片甲都記得分毫不差。只要他還在，樊城的守備節奏就不會輕易亂掉。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           40
+Hitroll         0
+Protect         0
+Damroll         0
+Str             12
+Int             13
+Wis             14
+Dex             11
+Con             13
+Hp              1460
+Mana            100
+Move            148
+Class           0
+Gold            260
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End

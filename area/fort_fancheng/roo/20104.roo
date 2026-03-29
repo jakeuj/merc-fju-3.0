@@ -1,0 +1,52 @@
+Vnum            20104
+Name            甕城軍道~
+Description
+甕城把關防壓力再收得更緊，短短一段軍道上卻同時能看見校場、糧甲棚與旗樓視線交錯。比起單純防禦，它更像一個把北上與南回動線先壓縮、再重新分配的軍事節點，整座樊城的節奏幾乎都由這裡重新點發。
+~
+SectorType      SECT_CITY
+
+#Exit
+Direction       SOUTH
+ExitVnum        20103
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       NORTH
+ExitVnum        20108
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       EAST
+ExitVnum        20106
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Exit
+Direction       UP
+ExitVnum        20107
+ExitDesc        ~
+ExitKeyword     ~
+ExitKey         0
+End
+
+#Enquire
+Keyword         甕城~
+End
+
+#Enquire
+Keyword         校場~
+End
+
+#Enquire
+Keyword         旗樓~
+End
+
+End

@@ -70,7 +70,7 @@
 這些是世界層連接意圖；目前先固定在 spec，不提前建立 runtime 假邊界：
 
 - `south` from `14201`: planned link to `jingxiang_road`
-- `north` from `14208`: planned link to `fort_fancheng`
+- `north` from `14208`: runtime link to `fort_fancheng`
 - `east` from `14212`: planned link to `wild_jiangxia_river`
 - `west` from `14209`: planned link to `city_xinye`
 
@@ -119,6 +119,7 @@
         "direction": "north",
         "source_vnum": 14208,
         "target_area": "fort_fancheng",
+        "target_room_vnum": 20101,
         "label": "樊城方向"
       },
       {
@@ -258,13 +259,14 @@
     {
       "vnum": 14208,
       "name": "北向大道",
-      "description": "往北的大道顯得比城中其他街道更寬，也更利於隊列通行，讓人一看就知道這裡承接著更偏軍務與外城的方向。即使不立刻出城，光看道路本身也能想像樊城與新野那邊的緊張氣息。",
+      "description": "往北的大道顯得比城中其他街道更寬，也更利於隊列通行，讓人一看就知道這裡承接著更偏軍務與外城的方向。如今大道盡頭已正式接到樊城南關，連風裡都帶著比城內更冷、更硬的北岸守備氣息。",
       "sector_type": "SECT_CITY",
       "cluster": "main-avenue",
       "coord": [4, 0, 0],
       "labels": ["north-link", "military-road"],
       "exits": [
-        { "direction": "south", "to": 14204 }
+        { "direction": "south", "to": 14204 },
+        { "direction": "north", "to": 20101, "external": true }
       ],
       "enquires": ["北路", "樊城", "新野"]
     },

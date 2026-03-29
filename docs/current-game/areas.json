@@ -2286,6 +2286,25 @@
         "plans/area/0115-district-chengdu-scholar.md",
         "area/rebuild_plan.md"
       ]
+    },
+    {
+      "name": "fort_fancheng",
+      "title": "樊城",
+      "room_range": "20101-20120",
+      "load_order": 122,
+      "category": "rebuild addition",
+      "origin": "rebuild",
+      "parent_area": "city_xiangyang",
+      "theme_primary": "軍旅",
+      "theme_secondary": "北岸城防 / 軍令關門",
+      "summary": "承接襄陽北向大道，落成南關坡口、前柵、北岸關門、甕城軍道、校場與旗樓構成的北岸城防 fort。",
+      "source_paths": [
+        "area/directory.lst",
+        "area/fort_fancheng/index",
+        "area/fort_fancheng/map.md",
+        "plans/area/0116-fort-fancheng.md",
+        "area/rebuild_plan.md"
+      ]
     }
   ]
 }

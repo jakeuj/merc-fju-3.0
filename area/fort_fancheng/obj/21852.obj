@@ -1,0 +1,15 @@
+Vnum            21852
+Name            fancheng waterskin~
+ShortDesc       樊城水囊(fancheng waterskin)~
+Description
+一只常掛在糧甲棚邊、方便守備與換班時取用的樊城水囊(fancheng waterskin)被放在
+這裡。
+~
+Unit            只~
+ItemType        ITEM_DRINK_CON
+Takeable        Yes
+Level           38
+Value           10 10 0 0
+Weight          1
+Cost            96
+End

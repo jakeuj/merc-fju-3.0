@@ -1,0 +1,32 @@
+Vnum            21844
+Name            signal watchman~
+ShortDesc       旗樓望兵~
+Description
+這名旗樓望兵站在高處時幾乎不多動一下，像把整座樊城的呼吸都先收進自己眼裡，再
+決定該不該放出警訊。那種沉住不動的樣子，比任何大聲喝令都更讓人不敢輕忽。
+~
+Sentinel        Yes
+StayArea        Yes
+NoKill          Yes
+Alignment       100
+Level           44
+Hitroll         0
+Protect         0
+Damroll         0
+Str             13
+Int             12
+Wis             14
+Dex             14
+Con             13
+Hp              1660
+Mana            100
+Move            162
+Class           0
+Gold            300
+Multipile       100
+AttackRatio     100
+DodgeRatio      100
+Migrate         0
+Speak           YES
+Sex             SEX_MALE
+End
